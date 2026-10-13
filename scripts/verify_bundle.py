@@ -53,13 +53,20 @@ KNOWN_URNS={f'urn:kumihan:schema:{name}:0.1.0':f'schemas/{name}.schema.json' for
 class _HTMLDependencies(HTMLParser):
     def __init__(self): super().__init__(convert_charrefs=True); self.refs=[]; self.active=False
     def handle_starttag(self,tag,attrs):
+        if len({key for key,_ in attrs})!=len(attrs):
+            raise ValueError('ambiguous duplicate HTML attribute')
         values=dict(attrs)
         if tag in {'script','iframe','object','embed','base'} or any(key.startswith('on') for key in values): self.active=True
         for key in ('src','poster','data'):
             if values.get(key): self.refs.append((values[key],True))
         if values.get('href'): self.refs.append((values['href'],tag!='a'))
-        if values.get('srcset'):
-            for item in values['srcset'].split(','): self.refs.append((item.strip().split()[0],True))
+        if 'srcset' in values:
+            if not isinstance(values['srcset'],str): raise ValueError('invalid srcset')
+            for item in values['srcset'].split(','):
+                fields=item.strip().split()
+                if not fields or len(fields)>2 or (len(fields)==2 and not re.fullmatch(r'(?:[1-9][0-9]*w|(?:[0-9]+(?:\.[0-9]+)?)x)',fields[1])):
+                    raise ValueError('invalid srcset')
+                self.refs.append((fields[0],True))
         if values.get('style'):
             for target in re.findall(r'url\(\s*["\']?([^\)"\']+)',values['style'],re.I): self.refs.append((target.strip(),True))
     handle_startendtag=handle_starttag
@@ -88,17 +95,42 @@ def dependency_references(name,data):
     text=data.decode('utf-8','strict')
     if re.search(r'(?m)^\s*(?:import\s+[\w.]+(?:\s+as\s+\w+)?(?:\s*,\s*[\w.]+(?:\s+as\s+\w+)?)*|from\s+[\w.]+\s+import\s+[\w*, ]+)\s*(?:#.*|;.*)?$|\b(?:import|require|__import__)\s*\(',text):
         raise ValueError('unsupported active dependency')
+    if re.search(r'\b(?:import\s+(?:["\']|\{|\*|[\w$]+\s*(?:,|from\b))|export\s+[^;\n]*\bfrom\s*["\'])',text):
+        raise ValueError('unsupported module dependency')
+    def css_escape(match):
+        value=match.group(1)
+        if re.fullmatch(r'[0-9a-fA-F]{1,6}\s?',value):
+            code=int(value.strip(),16)
+            return chr(code) if 0<code<=0x10ffff else '\ufffd'
+        return value
+    decoded=re.sub(r'\\([0-9a-fA-F]{1,6}\s?|[^\r\n])',css_escape,text)
+    if decoded!=text and re.search(r'@import\b|\burl\s*\(',decoded,re.I):
+        raise ValueError('unsupported escaped CSS dependency')
     parser=_HTMLDependencies(); parser.feed(text)
     if parser.active or re.search(r'@import\b',text,re.I): raise ValueError('unsupported active dependency')
     refs.extend((target,required,False) for target,required in parser.refs)
     refs.extend((target.strip(),True,False) for target in re.findall(r'url\(\s*["\']?([^\)"\']+)',text,re.I))
     refs.extend((match.group(2).strip('<>'),bool(match.group(1)),False)
                 for match in re.finditer(r'(!?)\[[^\]]*\]\(\s*([^\s)]+)',text))
-    refs.extend((target.strip('<>'),False,False) for target in re.findall(r'(?m)^\s*\[[^\]]+\]:\s*(\S+)',text))
+    definitions={}
+    normalize=lambda label:' '.join(label.split()).casefold()
+    for label,target in re.findall(r'(?m)^\s*\[([^\]]+)\]:\s*(\S+)',text):
+        key=normalize(label)
+        if key in definitions: raise ValueError('ambiguous Markdown reference definition')
+        definitions[key]=target.strip('<>')
+    images=set()
+    for match in re.finditer(r'!\[([^\]]*)\](?:\s*\[([^\]]*)\])?',text):
+        if text[match.end():].lstrip().startswith('('): continue
+        label=normalize(match.group(2) or match.group(1))
+        if label not in definitions: raise ValueError('unresolved Markdown image reference')
+        images.add(label)
+    refs.extend((target,label in images,False) for label,target in definitions.items())
     for target in re.findall(r'`([^`\s]+)`',text):
         if target in {'references/','rules/','profiles/','schemas/','sources/','docs/'}: continue
         if target.startswith(('references/','rules/','profiles/','schemas/','sources/','docs/')) or target in {name+'.schema.json' for name in SCHEMA_HASHES}:
             refs.append((target,True,True))
+        elif re.fullmatch(r'[A-Za-z0-9_./-]+\.(?:md|json)(?:#[A-Za-z0-9_./-]+)?',target):
+            refs.append((target,True,False))
     return refs
 
 

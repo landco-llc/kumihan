@@ -86,6 +86,47 @@ def read_bytes(path, limit=MAX_FILE, *, anchor_fd=None):
     return data
 
 
+class StableInputs:
+    """Retain data and file/ancestor handles for one admission operation.
+
+    Check each retained identity/signature again at the decision boundary.
+    This detects concurrent replacement/editing; it is not a kernel write lock.
+    The host must protect writers during admission and subsequent artifact use.
+    """
+    def __init__(self): self.records={}; self.used=0
+    @staticmethod
+    def signature(info):
+        return (info.st_dev,info.st_ino,info.st_mode,info.st_size,info.st_mtime_ns,info.st_ctime_ns)
+    def read(self,path):
+        path=Path(path).absolute()
+        if path in self.records: return self.records[path][3]
+        if len(self.records)>=1024: raise ValueError('admission inventory budget exceeded')
+        parent=PinnedDirectory(path.parent); fd=None
+        try:
+            fd=os.open(path.name,os.O_RDONLY|os.O_NONBLOCK|os.O_NOFOLLOW,dir_fd=parent.fd)
+            info=os.fstat(fd)
+            if not stat.S_ISREG(info.st_mode) or info.st_size>MAX_FILE or self.used+info.st_size>64*1024*1024:
+                raise ValueError('admission input budget/type rejected')
+            with os.fdopen(os.dup(fd),'rb') as handle: data=handle.read(info.st_size+1)
+            if len(data)!=info.st_size: raise ValueError('input changed during admission')
+            self.records[path]=(parent,fd,self.signature(info),data); self.used+=len(data)
+            parent=None; fd=None; self.check()
+            return data
+        finally:
+            if fd is not None: os.close(fd)
+            if parent is not None: parent.close()
+    def check(self):
+        for path,(parent,fd,signature,_) in self.records.items():
+            parent.check()
+            current=os.stat(path.name,dir_fd=parent.fd,follow_symlinks=False)
+            if self.signature(os.fstat(fd))!=signature or self.signature(current)!=signature:
+                raise ValueError('input changed during admission')
+    def __enter__(self): return self
+    def __exit__(self,*args):
+        for parent,fd,_,_ in self.records.values(): os.close(fd); parent.close()
+        self.records={}
+
+
 def _pairs(pairs):
     value = {}
     for key, item in pairs:
@@ -194,7 +235,10 @@ class HostAuthority:
     KUMIHAN_HOST_CONTEXT_FD designates the host's private authority directory;
     authority.json is read freshly at every decision, including atomic updates. The host must control process environment/descriptors and maintain
     this ledger as its latest identity, policy, state and observed-proof source.
-    It is re-read at every admission; replaced/stale descriptors fail closed.
+    It is re-read at every admission within the retained directory inode.
+    The protected writer must update authority.json in that inode, or invalidate
+    and reissue capabilities when rotating directories. A read-only FD alone
+    does not freeze descendants or establish the latest state at another path.
     These checks do not turn arbitrary JSON or synthetic fixtures into real
     identity/approval evidence. No referenced code is executed or fetched.
     """
@@ -290,11 +334,23 @@ class HostAuthority:
         observed=utc_stamp(record.get('observed_at'))
         if observed>self.now: raise ValueError('observation is from the future')
         self.principal(record.get('observer_ref'),'observation',check['rule_id'],check['scope'],report['artifact_digest'],observed)
-        if reference.endswith('.json'):
-            value=parse_json(data)
-            if isinstance(value,dict) and 'brief_id' in value:
-                generation=self.design_chronology(value,data,report,check,item)
-                if observed<generation: raise ValueError('design observation predates generation')
+        value=self.design_evidence(data,item)
+        if value is not None:
+            generation=self.design_chronology(value,data,report,check,item)
+            if observed<generation: raise ValueError('design observation predates generation')
+
+    @staticmethod
+    def design_evidence(data,item):
+        # DESIGN-001 is the frozen pre-generation contract rule. Its evidence
+        # role is required regardless of an instance-controlled filename suffix.
+        required=item['id']=='DESIGN-001'
+        try: value=parse_json(data)
+        except ValueError:
+            if required or data.lstrip().startswith((b'{',b'[')): raise
+            return None
+        if required and (not isinstance(value,dict) or 'brief_id' not in value):
+            raise ValueError('missing required design-contract evidence')
+        return value if isinstance(value,dict) and 'brief_id' in value else None
 
     def approval(self, requesting, purpose, subject, item, at=None):
         record=self.lookup('approvals',lambda row:row.get('approval_ref')==requesting['approval_ref'])

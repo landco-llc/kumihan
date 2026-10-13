@@ -353,5 +353,57 @@ class CycleOneReportRegressions(unittest.TestCase):
                 self.assertTrue(admission_errors(root,value,[item]))
 
 
+class CycleTwoReportRegressions(unittest.TestCase):
+    def test_r01_final_artifact_and_evidence_binding(self):
+        from scripts.validate_catalog import HostAuthority
+        from scripts.validate_report import admission_errors
+        for target in ('artifact.txt','observed.txt'):
+            with self.subTest(target=target), tempfile.TemporaryDirectory() as directory:
+                base=Path(directory); root=base/'data'; root.mkdir(); value=report(); item=rule()
+                artifact=b'Original stable synthetic artifact.'; evidence=b'Original stable observation.'
+                (root/'artifact.txt').write_bytes(artifact); (root/'observed.txt').write_bytes(evidence)
+                value['artifact_digest']='sha256:'+hashlib.sha256(artifact).hexdigest()
+                host=SyntheticHost(base/'host'); host.observe(value,item,evidence)
+                lookup=HostAuthority.lookup
+                def change(authority,group,predicate):
+                    result=lookup(authority,group,predicate)
+                    if group=='observations': (root/target).write_bytes(b'Changed during admission.')
+                    return result
+                with host, patch.object(HostAuthority,'lookup',change):
+                    self.assertTrue(admission_errors(root,value,[item]))
+
+    def test_r01_design_role_cannot_be_selected_by_suffix(self):
+        from scripts.validate_report import admission_errors
+        from test_catalog import complete_root
+        with tempfile.TemporaryDirectory() as directory:
+            base=Path(directory); root=base/'data'; root.mkdir(); rules=complete_root(root)
+            item=next(r for r in rules if r['id']=='DESIGN-001'); value=report(); value['checks'][0]['rule_id']=item['id']
+            artifact=b'Original synthetic design output.'; (root/'artifact.txt').write_bytes(artifact)
+            value['artifact_digest']='sha256:'+hashlib.sha256(artifact).hexdigest()
+            contract={'brief_id':'synthetic-brief','medium':'web-editorial','audience':'Synthetic audience','objective':'Original intent.',
+                'primary_information':['Original information.'],'primary_action':'Read.','structure_rationale':'Original order.',
+                'type_roles':[{'role':'body','family':'host-available','size':'1rem','rationale':'Original role.'}],
+                'asset_provenance':[],'brand_constraints':[],'rejected_defaults':[],'exceptions':[],'created_before_generation':True}
+            data=json.dumps(contract).encode(); now=datetime.now(timezone.utc); stamp=lambda dt:dt.strftime('%Y-%m-%dT%H:%M:%SZ')
+            for filename in ('design.json','design.txt','design.data'):
+                value['checks'][0]['evidence_refs']=[filename]; (root/filename).write_bytes(data)
+                host=SyntheticHost(base/('host-'+filename)); host.observe(value,item,data)
+                host.data['observations'][0]['observed_at']=stamp(now-timedelta(minutes=1))
+                digest='sha256:'+hashlib.sha256(data).hexdigest(); host.grant('generate',item,'whole',digest)
+                brief=json.dumps({'brief_id':'synthetic-brief'}).encode(); (host.directory/'brief.json').write_bytes(brief)
+                chronology={'brief_id':'synthetic-brief','design_contract_digest':digest,'artifact_digest':value['artifact_digest'],
+                    'created_at':stamp(now-timedelta(minutes=2)),'generation_started_at':stamp(now-timedelta(minutes=5)),
+                    'owner_ref':'synthetic-principal','scope':'whole','mode':'generate','brief':{'path':'brief.json','digest':'sha256:'+hashlib.sha256(brief).hexdigest()}}
+                host.data['chronologies']=[chronology]
+                with host:
+                    with self.subTest(filename=filename): self.assertTrue(admission_errors(root,value,rules))
+                    path=root/'report.json'; path.write_text(json.dumps(value))
+                    result=subprocess.run([sys.executable,str(ROOT/'scripts/validate_report.py'),'--root',str(root),'--report',str(path)],capture_output=True,text=True,pass_fds=(host.fd,))
+                    with self.subTest(cli=filename): self.assertEqual(result.returncode,2,result.stdout)
+                    chronology['created_at']=stamp(now-timedelta(minutes=8)); host.save()
+                    self.assertEqual(admission_errors(root,value,rules),[])
+                    chronology['created_at']=stamp(now-timedelta(minutes=2))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -12,10 +12,10 @@ import zipfile
 
 try:
     from .validate_catalog import load_catalog, rule_profile_data, read_bytes, safe_name, VERSION, SCHEMA_HASHES, emit, ResultParser, InputContentError, PinnedDirectory, MAX_FILE
-    from .verify_bundle import SKILLS, MAX_MEMBERS, MAX_TOTAL, verify_skill_files, local_targets, dependency_references, dependency_target
+    from .verify_bundle import SKILLS, MAX_MEMBERS, MAX_TOTAL, MAX_ARCHIVE, verify_skill_files, local_targets, dependency_references, dependency_target
 except ImportError:
     from validate_catalog import load_catalog, rule_profile_data, read_bytes, safe_name, VERSION, SCHEMA_HASHES, emit, ResultParser, InputContentError, PinnedDirectory, MAX_FILE
-    from verify_bundle import SKILLS, MAX_MEMBERS, MAX_TOTAL, verify_skill_files, local_targets, dependency_references, dependency_target
+    from verify_bundle import SKILLS, MAX_MEMBERS, MAX_TOTAL, MAX_ARCHIVE, verify_skill_files, local_targets, dependency_references, dependency_target
 
 
 def canonical(value):
@@ -211,13 +211,28 @@ def _package_validated_inputs(root, output_dir, version, source_epoch, destinati
         errors=verify_skill_files(files,version)
         if errors: raise InputContentError('builder: '+ '; '.join(errors))
         archive_files.update({skill+'/'+name:data for name,data in files.items()})
+    # ZIP_STORED, seekable output, ASCII names, no extra fields/comments/ZIP64:
+    # 30-byte local header + 46-byte central header + two names per member,
+    # followed by the 22-byte EOCD. Budget the exact emitted envelope too.
+    archive_size=22+sum(76+2*len(name.encode('ascii'))+len(data)
+                        for name,data in archive_files.items())
+    if archive_size>MAX_ARCHIVE:
+        raise InputContentError('builder: archive envelope budget exceeded')
     # Exclusive creation is relative to a retained no-follow parent, not a
     # previously checked pathname. A substituted ancestor cannot redirect writes.
-    destination.check(); created=False; outfd=None; archive_name=f'kumihan-{version}.zip'
+    # The parent namespace must be protected by the host from concurrent
+    # writers. POSIX mkdir does not return a handle: the first stat below cannot
+    # authenticate creation if the child was replaced before that stat. This
+    # remaining creation interval requires a host namespace contract/Human Gate.
+    destination.check(); outfd=None; archive_name=f'kumihan-{version}.zip'
     try:
-        os.mkdir(output.name,mode=0o755,dir_fd=destination.fd); created=True
+        os.mkdir(output.name,mode=0o755,dir_fd=destination.fd)
+        created=os.stat(output.name,dir_fd=destination.fd,follow_symlinks=False)
         destination.check()
         outfd=os.open(output.name,os.O_RDONLY|os.O_DIRECTORY|os.O_NOFOLLOW,dir_fd=destination.fd)
+        opened=os.fstat(outfd)
+        if not stat.S_ISDIR(created.st_mode) or (created.st_dev,created.st_ino)!=(opened.st_dev,opened.st_ino):
+            raise ValueError('builder: created output identity changed')
         with os.fdopen(os.open(archive_name,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644,dir_fd=outfd),'wb') as handle:
             with zipfile.ZipFile(handle,'w',compression=zipfile.ZIP_STORED,allowZip64=False) as bundle:
                 for name,data in sorted(archive_files.items()):
@@ -227,11 +242,6 @@ def _package_validated_inputs(root, output_dir, version, source_epoch, destinati
         entry=os.stat(output.name,dir_fd=destination.fd,follow_symlinks=False); actual=os.fstat(outfd)
         if not stat.S_ISDIR(entry.st_mode) or (entry.st_dev,entry.st_ino)!=(actual.st_dev,actual.st_ino):
             raise ValueError('builder: output namespace changed')
-    except BaseException:
-        if created and outfd is None:
-            try: os.rmdir(output.name,dir_fd=destination.fd)
-            except OSError: pass
-        raise
     finally:
         if outfd is not None: os.close(outfd)
     return output/archive_name

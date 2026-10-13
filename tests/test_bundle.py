@@ -483,5 +483,95 @@ class CycleOneFrozenLayoutGrammar(unittest.TestCase):
             self.assertIn('schemas/design-contract.schema.json',bundle.read('kumihan/references/design-contract.md').decode())
 
 
+class CycleTwoBoundaryRegressions(unittest.TestCase):
+    setUp=CycleOneBoundaryRegressions.setUp
+    files=CycleOneBoundaryRegressions.files
+    refreshed=CycleOneBoundaryRegressions.refreshed
+    def test_r03_runtime_grammar_is_not_optional_citation(self):
+        snippets=['![original][asset]\n[asset]: https://example.org/image.png',
+            '![asset]\n[asset]: https://example.org/image.png',
+            '<img src="https://example.org/remote.png" SRC="references/guidance.md">',
+            'import "sibling-private-module";', 'import { x } from "sibling-private-module";',
+            '@\\69mport "https://example.org/remote.css";',
+            '<style>.x{background:u\\72l(https://example.org/remote.png)}</style>']
+        for snippet in snippets:
+            changed=self.files(); changed['SKILL.md']+=('\n'+snippet.replace('\\n','\n')).encode()
+            with self.subTest(snippet=snippet): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+        changed=self.files(); changed['SKILL.md']+=b'\n[Original citation][source]\n[source]: https://example.org/reference\n'
+        self.assertEqual(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'),[])
+
+    def test_n01_empty_srcset_returns_sanitized_diagnostic(self):
+        for srcset in (',','',', references/guidance.md 1x','references/guidance.md 1x,','references/guidance.md nonsense'):
+            changed=self.files(); changed['SKILL.md']+=f'\n<img srcset="{srcset}">'.encode()
+            with self.subTest(srcset=srcset): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+
+
+class CycleTwoBuilderRegressions(unittest.TestCase):
+    def setUp(self): BuilderTests.setUp(self)
+    def test_r03_and_n01_public_builder_grammar_diagnostics(self):
+        entry=self.root/'skill-src/kumihan/SKILL.md'; original=entry.read_text()
+        snippets=['![original][asset]\n[asset]: https://example.org/image.png',
+            '<img src="https://example.org/remote.png" src="references/guidance.md">',
+            'import "sibling-private-module";', 'import { x } from "sibling-private-module";',
+            r'@\69mport "https://example.org/remote.css";', '<img srcset=",">']
+        for index,snippet in enumerate(snippets):
+            entry.write_text(original+'\n'+snippet)
+            output=Path(self.tmp.name)/f'grammar-{index}'
+            result=subprocess.run([sys.executable,str(ROOT/'scripts/build_skills.py'),'--root',str(self.root),'--output-dir',str(output),
+                '--version','0.1.0','--source-epoch','1700000000'],capture_output=True,text=True)
+            with self.subTest(snippet=snippet):
+                self.assertEqual(result.returncode,1,result.stdout); self.assertNotIn('Traceback',result.stderr)
+                self.assertEqual(json.loads(result.stdout)['status'],'failed'); self.assertFalse(output.exists())
+
+    def test_r12_indirect_backtick_architecture_stays_reachable(self):
+        shared=self.root/'skill-src/shared'; shared.mkdir()
+        (shared/'design-contract.md').write_text('Read `docs/architecture.md`.\n')
+        (self.root/'docs').mkdir(); (self.root/'docs/architecture.md').write_bytes((ROOT/'docs/architecture.md').read_bytes())
+        entry=self.root/'skill-src/kumihan/SKILL.md'; entry.write_text('Read [design](../shared/design-contract.md).\n')
+        (entry.parent/'references/guidance.md').unlink()
+        first=self.module.build_skills(self.root,Path(self.tmp.name)/'indirect-one','0.1.0',1700000000)
+        second=self.module.build_skills(self.root,Path(self.tmp.name)/'indirect-two','0.1.0',1700000000)
+        self.assertEqual(first.read_bytes(),second.read_bytes())
+        from scripts.verify_bundle import verify_bundle
+        self.assertEqual(verify_bundle(first,'0.1.0'),[])
+        with zipfile.ZipFile(first) as bundle:
+            self.assertIn('kumihan/references/architecture.md',bundle.namelist())
+
+    def test_r08_zip_envelope_budget_precedes_output(self):
+        first=self.module.build_skills(self.root,Path(self.tmp.name)/'ordinary','0.1.0',1700000000)
+        with zipfile.ZipFile(first) as bundle: content=sum(info.file_size for info in bundle.infolist())
+        cap=first.stat().st_size-1; self.assertLess(content,cap)
+        output=Path(self.tmp.name)/'too-large-envelope'
+        with patch.object(self.module,'MAX_ARCHIVE',cap,create=True), self.assertRaises(ValueError):
+            self.module.build_skills(self.root,output,'0.1.0',1700000000)
+        self.assertFalse(output.exists())
+
+    def test_r06_created_child_must_not_be_replaced_before_open(self):
+        parent=Path(self.tmp.name)/'authorized'; parent.mkdir(); replacement=parent/'preexisting'; replacement.mkdir()
+        output=parent/'output'; original=os.open; swapped=[]
+        def opening(path,*args,**kwargs):
+            if os.fsdecode(path)=='output' and kwargs.get('dir_fd') is not None and not swapped:
+                output.rename(parent/'created'); replacement.rename(output); swapped.append(True)
+            return original(path,*args,**kwargs)
+        with patch('os.open',side_effect=opening), self.assertRaises(ValueError):
+            self.module.build_skills(self.root,output,'0.1.0',1700000000)
+        self.assertTrue(swapped); self.assertFalse((output/'kumihan-0.1.0.zip').exists())
+
+
+    def test_r06_mkdir_identity_interval_requires_human_gate(self):
+        # The same root and final cycle: no atomic mkdir-to-handle primitive in
+        # this contract. Keep the safety assertion failing rather than hiding it.
+        parent=Path(self.tmp.name)/'authorized'; parent.mkdir(); replacement=parent/'preexisting'; replacement.mkdir()
+        output=parent/'output'; original=os.mkdir; swapped=[]
+        def creating(path,*args,**kwargs):
+            result=original(path,*args,**kwargs)
+            if os.fsdecode(path)=='output' and kwargs.get('dir_fd') is not None and not swapped:
+                output.rename(parent/'created'); replacement.rename(output); swapped.append(True)
+            return result
+        with patch('os.mkdir',side_effect=creating), self.assertRaises(ValueError):
+            self.module.build_skills(self.root,output,'0.1.0',1700000000)
+        self.assertTrue(swapped); self.assertFalse((output/'kumihan-0.1.0.zip').exists())
+
+
 if __name__ == "__main__":
     unittest.main()
