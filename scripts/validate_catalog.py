@@ -283,7 +283,7 @@ def case_errors(dataset, rules, profiles, checks):
         "expected_status": checks["report"].schema["$defs"]["status"],
         "method": checks["rule"].schema["$defs"]["method"],
         "assertions": {"type": "array", "minItems": 1, "items": text},
-        "assertion_type": {"enum": ["schema", "fixture-content", "assisted", "manual-render"]},
+        "assertion_types": {"type": "array", "items": {"enum": ["schema", "fixture-content", "assisted", "manual-render"]}},
         "limitations": {"type": "array", "items": text}}
     shape = {"type": "object", "properties": {"fixture_version": {"const": "0.1.0"},
         "cases": {"type": "array", "maxItems": 1024, "items": {"type": "object", "properties": properties,
@@ -294,6 +294,8 @@ def case_errors(dataset, rules, profiles, checks):
     errors = []; cases = {}; triads = {identity: set() for identity in PRIORITY_IDS}
     index = {rule["id"]: rule for rule in rules}; profile_index = {p["id"]: p for p in profiles}
     for case in dataset["cases"]:
+        if len(case["assertion_types"]) != len(case["assertions"]):
+            errors.append("catalog: assertion label count mismatch")
         if case["id"] in cases:
             errors.append("catalog: duplicate case ID")
         cases[case["id"]] = case

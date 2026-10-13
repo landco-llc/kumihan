@@ -60,7 +60,7 @@ def complete_root(root):
                 "profile": "web-editorial", "input": fixture,
                 "expected_status": {"positive": "passed", "negative": "failed", "exception": "needs-review"}[kind],
                 "method": "manual", "assertions": ["Compare supplied original sequences; a request is not approval."],
-                "assertion_type": "fixture-content", "limitations": ["Original structural fixture; no real approval or visual-quality evidence."]})
+                "assertion_types": ["fixture-content"], "limitations": ["Original structural fixture; no real approval or visual-quality evidence."]})
     (root / "rules/catalog.json").write_text(json.dumps(rules))
     (root / "sources").mkdir()
     (root / "sources/public-sources.json").write_text(json.dumps(registry(rules)))
@@ -155,7 +155,7 @@ class CatalogTests(unittest.TestCase):
             duplicate = copy.deepcopy(original); duplicate["cases"].append(duplicate["cases"][0]); variants.append((duplicate, "duplicate case ID"))
             wrong = copy.deepcopy(original); wrong["cases"][0]["rule_id"] = "CONTENT-005"; variants.append((wrong, "case rule binding"))
             wrong = copy.deepcopy(original); wrong["cases"][0]["method"] = "static"; variants.append((wrong, "case method mismatch"))
-            for field, replacement in [("assertion_type", "automatic-render"), ("assertions", [" "]), ("input", "external-path"), ("expected_status", "PASS"), ("extra", True)]:
+            for field, replacement in [("assertion_types", ["automatic-render"]), ("assertions", [" "]), ("input", "external-path"), ("expected_status", "PASS"), ("extra", True)]:
                 wrong = copy.deepcopy(original); wrong["cases"][0][field] = replacement; variants.append((wrong, "case schema"))
             for dataset, diagnostic in variants:
                 path.write_text(json.dumps(dataset))
@@ -165,6 +165,30 @@ class CatalogTests(unittest.TestCase):
             rules[0]["case_ids"].append("missing-case")
             (root / "rules/catalog.json").write_text(json.dumps(rules))
             with self.assertRaisesRegex(ValueError, "unresolved case reference"):
+                self.module.load_catalog(root)
+
+
+    def test_each_assertion_has_its_own_label(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory); complete_root(root)
+            path = root / "tests/fixtures/priority-cases.json"
+            dataset = json.loads(path.read_text())
+            case = dataset["cases"][0]
+            case["assertions"].append("The case record has the required fields.")
+            case["assertion_types"] = ["fixture-content", "schema"]
+            path.write_text(json.dumps(dataset))
+            self.assertEqual(len(self.module.load_catalog(root)), 38)
+            for labels in [[], ["fixture-content"], ["fixture-content", "schema", "assisted"]]:
+                case["assertion_types"] = labels
+                path.write_text(json.dumps(dataset))
+                with self.subTest(labels=labels), self.assertRaisesRegex(ValueError, "assertion label"):
+                    self.module.load_catalog(root)
+            case["assertion_types"] = ["manual-render", "assisted"]
+            path.write_text(json.dumps(dataset))
+            self.assertEqual(len(self.module.load_catalog(root)), 38)
+            del case["assertion_types"]
+            path.write_text(json.dumps(dataset))
+            with self.assertRaisesRegex(ValueError, "case schema"):
                 self.module.load_catalog(root)
 
     def test_public_loader_resolves_sources(self):
