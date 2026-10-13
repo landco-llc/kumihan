@@ -1,0 +1,39 @@
+{
+  "id": "presentation",
+  "revision": 1,
+  "title": "Presentation",
+  "description": "Purposeful readable slides under declared viewing conditions.",
+  "rule_ids": [
+    "CONTENT-001",
+    "CONTENT-002",
+    "CONTENT-003",
+    "CONTENT-004",
+    "CONTENT-005",
+    "JA-TYPE-001",
+    "JA-TYPE-002",
+    "JA-TYPE-003",
+    "JA-TYPE-004",
+    "JA-TYPE-005",
+    "JA-TYPE-006",
+    "JA-TYPE-007",
+    "JA-TYPE-008",
+    "JA-TYPE-009",
+    "JA-TYPE-010",
+    "DOC-001",
+    "DOC-002",
+    "DOC-003",
+    "DOC-004",
+    "EVIDENCE-001",
+    "EVIDENCE-002",
+    "EVIDENCE-003",
+    "EVIDENCE-004",
+    "EVIDENCE-005"
+  ],
+  "guidance": [
+    "Do not solve every overflow by reducing type size.",
+    "Prefer authorized splitting and hierarchy changes while preserving source data.",
+    "Record unavailable projection and target-application checks explicitly.",
+    "This profile selects the available non-design catalog contribution; applicable design rules must be resolved from the complete release catalog before design clearance.",
+    "No detector or rendering pass is implied by selecting a rule."
+  ]
+}
