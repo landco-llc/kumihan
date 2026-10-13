@@ -83,6 +83,8 @@ no declared assets, not verified rights. Typography roles state `role`,
 Existing brand patterns, including cards, gradients and symmetry, are judged
 against purpose and constraints rather than prohibited unconditionally.
 Exceptions require `scope`, `reason` and `approval_ref`.
+The referenced record must satisfy the approval contract below; an opaque
+reference alone does not authorize the exception.
 
 The host must establish authorized mode, editable scope, protected content and
 permission to refine in the brief workflow. Those permissions are not granted
@@ -104,6 +106,7 @@ at least one nonblank evidence reference and a named method. A `waived` check
 requires a `waiver` with `approval_ref`, `scope`, `reason` and
 `artifact_digest`; other statuses cannot carry a waiver. A waiver remains
 distinct from a pass and must match the report artifact and check scope.
+Its referenced approval must also satisfy the approval contract below.
 The environment names the actual host, tools and available renderers without
 private operating details. Missing rendering becomes `not-checked` or
 `unsupported`. A language-model judgment is assisted/manual, not deterministic
@@ -127,6 +130,121 @@ set, the independent review reference, approved stage and a current approval
 state. Changing any bound value invalidates it. Only sanitized product check
 and review references belong in public release metadata. Neither schema
 validity nor a nonblank review reference establishes independent review.
+
+### Referenced exception and waiver approvals
+
+Design exceptions and report waivers retain their existing public schema
+shapes. Their `approval_ref` resolves to a separate, restricted approval
+record; approver identity and approval records are not public package content.
+JSON Schema does not authenticate these external records.
+Every field in the following record is required.
+
+| Field | Required meaning |
+| --- | --- |
+| `approval_ref` | Unique, nonblank opaque identifier matching the requesting record; ambiguous or duplicate lookup results are rejected. |
+| `purpose` | Exactly `design-exception` or `report-waiver`; approval for one purpose cannot authorize the other. |
+| `approver_ref` | Nonblank stable principal identifier resolvable to an identifiable approver through the host's trusted identity and authorization evidence. A display name or unresolved identifier is insufficient. |
+| `issued_at` | Valid UTC issue timestamp in the exact representation specified below. |
+| `expires_at` | Required finite UTC expiry timestamp in that representation; no null, omitted or indefinite expiry. |
+| `scope` | Nonblank stable identifier for the exact authorized region or whole subject; no inferred wildcard expansion. |
+| `reason` | Nonblank explanation of the bounded exception being authorized. |
+| `subject` | Exact purpose-specific binding specified below, independently compared with the requesting subject. |
+| `state` | Latest authoritative state: `current`, `revoked` or `superseded`; unknown states are invalid. The field alone is not evidence of currency. |
+
+Missing or blank approver identity or expiry is rejected.
+Identifiable does not mean authorized.
+The approver must be authorized for that purpose and scope at issue and evaluation.
+The host verifies that authority against its independently trusted policy and
+identity evidence; an approval record cannot grant its own signer authority.
+Scope and reason must exactly match the requesting exception or waiver.
+Rule exceptions must also be allowed by the catalog rule and stay within its bounds.
+Applicable brief permissions and protected-content restrictions remain binding.
+
+For `design-exception`, `subject` requires `brief_id` and
+`design_contract_digest`: the prefixed SHA-256 digest of the exact immutable
+UTF-8 design-contract bytes retained by the host before generation. The
+approval must match that brief and digest before generation begins or an
+authorized refine action uses the exception. Changing those bytes requires
+a new bound approval. The reference may be allocated before issuance so the
+design contract can include it without embedding the external approval record.
+This pre-generation binding authorizes design intent for that contract, not
+a blanket waiver for future output artifacts.
+
+For `report-waiver`, `subject` requires `report_id`, `rule_id`, `artifact_ref`
+and `artifact_digest`. They must match the actual report, check and output
+artifact. Its `scope` must equal both the check scope and waiver scope, its
+`reason` must equal the waiver reason, and its artifact digest must equal
+both report and waiver digests. Subject digests use the existing
+`sha256:` plus 64 lowercase hexadecimal characters convention.
+The full applicable subject binding must match.
+An altered artifact, design contract, scope, reason or purpose cannot reuse
+the approval. A valid report waiver stays `waived`; waived remains distinct from passed.
+
+All approval timestamps use `YYYY-MM-DDTHH:MM:SSZ`: Gregorian calendar dates,
+24-hour time, whole seconds and a literal uppercase `Z` for UTC. Parse the
+complete string and reject invalid calendar dates or trailing characters.
+Offsets, local times, fractional seconds and leap seconds are rejected.
+issued_at must be strictly earlier than expires_at.
+The decision clock is trusted UTC host time, not an instance-supplied time.
+Evaluate the half-open interval `issued_at <= evaluated_at < expires_at` at
+the actual decision instant without rounding or a grace period. A host clock
+with finer precision must retain it when comparing against whole-second bounds.
+At evaluated_at == expires_at the approval is expired and rejected.
+A decision before issuance or after expiry is also rejected. If trusted
+decision time cannot be established, validation is incomplete and must reject
+use of the exception or waiver.
+
+Only an authoritatively verified current record may be accepted.
+Revoked, superseded, missing, mismatched or unverifiable records are rejected.
+A cached declaration of current is insufficient.
+The host-owned resolver must establish the latest state for the exact approval
+at the decision instant, using trusted records and authorization evidence.
+It must not resurrect an older revision after revocation or supersession.
+Unavailable lookup, ambiguous results or inability to establish current state
+fail closed. Recheck immediately before each generation/refine use or report
+admission and at subsequent release admission; previous acceptance is not
+permanent authorization. A trusted local resolution mechanism is sufficient;
+this contract adds no service or network-at-use requirement. If the available
+local evidence cannot establish current state, the decision remains rejected.
+
+The brief/permissions host workflow owns design-exception lookup and validation
+before generation/refine, including identity, authority, time, revocation,
+brief permissions and exact design binding. It must not pass an unresolved
+exception downstream as authorized.
+The report CLI owns report-waiver lookup and validation
+using trusted approval context supplied by its host, plus catalog exception
+allowance/bounds and exact report/check/artifact binding. The frozen
+two-argument `validate_report` callable cannot authenticate external records;
+its structural result alone cannot complete waiver admission. The CLI must
+perform the lookup checks before treating the report as semantically admitted.
+The release adapter independently rechecks both kinds
+whenever required by submitted design/report evidence. Missing, invalid,
+unverifiable or stale approval evidence produces an incomplete admission
+(exit 2); a disallowed exception produces substantive failure (exit 1).
+Neither path silently converts a rejected approval into a pass or changes
+the reviewed target. Any further edit still requires refine authorization.
+
+The following case expectations apply independently to both approval purposes.
+These are contract acceptance cases, not an implemented semantic validator.
+Later semantic tests must exercise actual trusted lookup and authorization
+against original synthetic records; prose checks alone cannot establish it.
+
+| Case | Expected | Condition |
+| --- | --- | --- |
+| `valid` | accept | All required fields, authorized principal, verified latest current state, matching scope/reason/subject, permitted rule bounds and a decision strictly before expiry. |
+| `missing-approver` | reject | The approver identifier is absent or blank. |
+| `missing-expiry` | reject | Expiry is absent, blank, null or indefinite. |
+| `expiry-boundary` | reject | Decision time equals expiry exactly. |
+| `expired` | reject | Decision time is later than expiry. |
+| `not-yet-issued` | reject | Decision time precedes issuance. |
+| `revoked` | reject | Latest authoritative state is revoked, even within the time interval. |
+| `superseded` | reject | The referenced approval has been replaced. |
+| `wrong-scope` | reject | Approval scope differs from the requesting scope. |
+| `wrong-subject` | reject | Design brief/digest or report/check/artifact binding differs. |
+| `wrong-reason` | reject | Approval authorizes a different bounded exception. |
+| `unauthorized` | reject | Identity resolves but lacks authority for this purpose and scope. |
+| `unverifiable` | reject | Lookup, identity, authority, latest state or trusted decision time cannot be verified. |
+| `offset-timestamp` | reject | Timestamp uses an offset or another noncanonical representation. |
 
 ## Module and CLI ownership
 
@@ -207,9 +325,11 @@ cannot establish catalog/source resolution through its one-argument callable.
 The report validator can establish catalog membership but its two-argument
 callable cannot authenticate external evidence. The report CLI resolves local
 evidence, using `--root` as context. Evidence authentication, chronology and
-approval freshness belong to the release adapter, which must load independently
-verified records and compare them with the supplied summaries. In-memory
-summaries alone cannot satisfy publication admission.
+approval freshness at release admission belong to the release adapter, which
+must load independently verified records and compare them with the supplied
+summaries. The earlier design and report approval decisions belong to the
+host workflow and report CLI as specified above. In-memory summaries alone
+cannot satisfy publication admission.
 
 ## Cross-record invariants and tests
 
@@ -225,7 +345,7 @@ violated; these are future implementation obligations, not current test claims.
 | Duplicate report keys | Report validator rejects repeated `(rule_id, scope)` pairs even if evidence or reasons differ. Separate scopes remain separate checks. |
 | Passed without relevant evidence | Report schema rejects empty/missing evidence. Report CLI and release adapter reject unresolved, irrelevant or wrong-artifact evidence and false method classifications. |
 | Stale release approval | Release adapter rejects an approval for another commit, tree, artifact set, review reference or publication stage, or an approval that is no longer current. A schema-valid digest is not proof of binding. |
-| Waiver binding | Report CLI/release adapter verify approval authenticity, check scope, current state and exact report digest. No waiver is converted to passed. |
+| Exception and waiver approval bounds | Host workflow/report CLI and release adapter verify the required referenced record, authorized approver, UTC half-open expiry interval, latest revocation state, rule allowance/bounds and exact scope/reason/subject binding. No waiver is converted to passed. |
 | Build integrity | Builder and verifier reject path escapes, absolute paths, symlinks, unlisted files, stale references and forbidden dependency imports. Repeated builds with fixed inputs must produce identical archive bytes and ordering. |
 | Public boundary | Boundary checker rejects secrets, private operating references, transcripts and personal/customer data before public commit or publication. |
 
