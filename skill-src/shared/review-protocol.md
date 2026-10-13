@@ -98,15 +98,88 @@ as structure validation only, if actually run; consumers need no validator.
 | `waived` | Allowed exception has independently verified, currently valid bounded approval; never a pass. |
 | `not-applicable` | Rule conditions demonstrably exclude this scope; give the reason. |
 
-Methods are exactly `static`, `rendered`, `assisted`, `manual`; record the method
-actually used, not a planned one. Split scopes when content comparison and
-render review have different evidence or outcomes. Do not upgrade unknown or
-unrun checks, hide failures in limitations, or infer all-page acceptance from
+Methods are exactly `static`, `rendered`, `assisted`, `manual`; `method` is
+required even for an unrun check. For `not-checked` or `unsupported`, the
+appropriate enum classifies the unrun check only, not an executed procedure.
+State in `reason` and `limitations` that it did not run; do not fabricate
+evidence. Use empty `evidence_refs` when no relevant observation exists and
+an empty actual renderer list when no renderer was used. A rendering
+classification supplies no rendering evidence. Once a check actually runs,
+its method describes the procedure truly used.
+
+Record any genuinely performed capability assessment under a separate scope
+with its actual method, evidence and bounded conclusion; it does not perform
+the subject check. An inspected trusted inventory can establish a declared
+capability limit, not native rendering success. If availability remains unknown,
+retain `not-checked` rather than asserting `unsupported`. Split scopes when
+content comparison and render review have different evidence or outcomes.
+Do not upgrade unknown or unrun checks, hide failures in limitations, or
+infer all-page acceptance from
 one screenshot. Audit `content_change_summary` is empty, with a separate
 immutability observation in evidence/limitations. If mutation occurred, disclose
 it instead of returning an empty-change claim. Keep recommendations in a
 separate human-readable findings section keyed to rule/scope; recommendations
 are neither extra JSON schema fields nor applied corrections.
+
+### Synthetic reporting examples
+
+These complete reports illustrate classification, not this host's results.
+Their digest identifies the original UTF-8 fixture `synthetic presentation target`
+followed by LF, not an Office file. Replace fixture identity, host and evidence
+with actual records before use; schema validity authenticates none of them.
+
+If native rendering was not run and availability was not assessed:
+
+```json
+{
+  "report_id": "synthetic-unrun",
+  "artifact_ref": "synthetic-deck.txt",
+  "artifact_digest": "sha256:c736ba89c2534b88fb073fa3ad0fdd299224d68a6a60b50b53b5ee5bd5683230",
+  "ruleset_version": "0.1.0",
+  "profile": "presentation",
+  "checks": [{
+    "rule_id": "DOC-004", "status": "not-checked", "method": "rendered",
+    "evidence_refs": [], "scope": "native-office-rendering",
+    "reason": "Rendering did not run; rendered classifies the unrun check only. Availability is unknown."
+  }],
+  "environment": {"host": "Synthetic host", "tools": {}, "renderers": []},
+  "limitations": ["Synthetic example; native Office rendering did not run. No capability assessment was performed."],
+  "content_change_summary": []
+}
+```
+
+If a tool actually inspected a trusted capability inventory and retained
+relevant evidence for this artifact/scope, record that assessment separately.
+Here `synthetic-inventory-v1` is an illustrative local record declaring native
+Office rendering unavailable. Only use the assessment pass when the observation
+and evidence exist; otherwise omit it and keep the subject check untested.
+The assessment proves the inspected inventory result, not rendering or
+exhaustive absence of every possible application.
+
+```json
+{
+  "report_id": "synthetic-assessed",
+  "artifact_ref": "synthetic-deck.txt",
+  "artifact_digest": "sha256:c736ba89c2534b88fb073fa3ad0fdd299224d68a6a60b50b53b5ee5bd5683230",
+  "ruleset_version": "0.1.0",
+  "profile": "presentation",
+  "checks": [
+    {
+      "rule_id": "EVIDENCE-002", "status": "passed", "method": "static",
+      "evidence_refs": ["synthetic-inventory-v1"], "scope": "capability-inventory",
+      "reason": "A tool inspected the trusted synthetic inventory: native Office rendering is unavailable. This scope covers inventory inspection only."
+    },
+    {
+      "rule_id": "DOC-004", "status": "unsupported", "method": "rendered",
+      "evidence_refs": [], "scope": "native-office-rendering",
+      "reason": "Rendering did not run; rendered classifies the unrun check only. The separately inspected inventory declares this capability unavailable."
+    }
+  ],
+  "environment": {"host": "Synthetic host", "tools": {"inventory-reader": "synthetic-v1"}, "renderers": []},
+  "limitations": ["Synthetic example; native Office rendering did not run. Inventory inspection does not establish native compatibility, fonts or editability."],
+  "content_change_summary": []
+}
+```
 
 ## Bound exceptions and subsequent corrections
 
