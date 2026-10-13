@@ -1,5 +1,8 @@
 """Bounded data-only ZIP inspection. Does not execute content or fetch references."""
 import hashlib
+from html.parser import HTMLParser
+from urllib.parse import urlsplit
+import struct
 from pathlib import Path, PurePosixPath
 import posixpath
 import re
@@ -9,9 +12,9 @@ import zipfile
 import zlib
 
 try:
-    from .validate_catalog import MAX_FILE, VERSION, safe_name, read_bytes, parse_json, emit, SCHEMA_HASHES, validators_from_bytes, schema_errors, ResultParser, source_errors
+    from .validate_catalog import MAX_FILE, VERSION, safe_name, read_bytes, parse_json, emit, SCHEMA_HASHES, validators_from_bytes, schema_errors, ResultParser, source_errors, implemented_errors
 except ImportError:
-    from validate_catalog import MAX_FILE, VERSION, safe_name, read_bytes, parse_json, emit, SCHEMA_HASHES, validators_from_bytes, schema_errors, ResultParser, source_errors
+    from validate_catalog import MAX_FILE, VERSION, safe_name, read_bytes, parse_json, emit, SCHEMA_HASHES, validators_from_bytes, schema_errors, ResultParser, source_errors, implemented_errors
 
 SKILLS = ("kumihan", "kumihan-web", "kumihan-documents", "kumihan-review")
 MAX_MEMBERS = 2048
@@ -38,44 +41,121 @@ def allowed_file(name):
     return len(parts) >= 2 and parts[0] == "references" and PurePosixPath(name).suffix in {".md", ".json"}
 
 
-def local_targets(name, data):
-    text = data.decode("utf-8")
-    targets = re.findall(r"\]\(\s*([^\s)]+)", text)
-    targets += re.findall(r"(?m)^\s*\[[^\]]+\]:\s*(\S+)", text)
-    targets += re.findall(r"`((?:references|rules|profiles|schemas|sources)/[^`\s]+)`", text)
-    resolved = []
-    for target in targets:
-        target = target.strip("<>")
-        if target.startswith(("https://", "http://", "#", "mailto:")):
-            continue
-        target = target.split("#", 1)[0]
-        if not target or target.startswith("/") or "\\" in target or ":" in target or "%" in target or "?" in target:
-            raise ValueError("unsafe reference")
-        result = posixpath.normpath(posixpath.join(posixpath.dirname(name), target))
-        resolved.append(safe_name(result))
-    return resolved
+
+# Supported declarative syntax: Markdown links/images/definitions, qualified
+# backtick resource paths, HTML resource attributes, CSS url/@import, and JSON
+# $ref/include. Public HTTP(S)/mailto citations are not runtime dependencies.
+# Active imports/scripts and undeclared resource forms fail closed; no execution,
+# retrieval, arbitrary schema registration or universal prose analysis occurs.
+KNOWN_URNS={f'urn:kumihan:schema:{name}:0.1.0':f'schemas/{name}.schema.json' for name in SCHEMA_HASHES}
+
+
+class _HTMLDependencies(HTMLParser):
+    def __init__(self): super().__init__(convert_charrefs=True); self.refs=[]; self.active=False
+    def handle_starttag(self,tag,attrs):
+        values=dict(attrs)
+        if tag in {'script','iframe','object','embed','base'} or any(key.startswith('on') for key in values): self.active=True
+        for key in ('src','poster','data'):
+            if values.get(key): self.refs.append((values[key],True))
+        if values.get('href'): self.refs.append((values['href'],tag!='a'))
+        if values.get('srcset'):
+            for item in values['srcset'].split(','): self.refs.append((item.strip().split()[0],True))
+        if values.get('style'):
+            for target in re.findall(r'url\(\s*["\']?([^\)"\']+)',values['style'],re.I): self.refs.append((target.strip(),True))
+    handle_startendtag=handle_starttag
+
+
+def dependency_references(name,data):
+    """Return (literal, runtime-required, project-root-qualified) declarations."""
+    refs=[]
+    if name.endswith('.json'):
+        value=parse_json(data)
+        def visit(node):
+            if isinstance(node,dict):
+                if 'approver_ref' in node or node.get('format')=='kumihan-host-authority-1':
+                    raise ValueError('restricted host control data')
+                for key,child in node.items():
+                    if key in ('$ref','include'):
+                        entries=child if isinstance(child,list) else [child]
+                        if any(not isinstance(entry,str) for entry in entries): raise ValueError('unsupported JSON dependency')
+                        refs.extend((entry,True,False) for entry in entries)
+                    else: visit(child)
+            elif isinstance(node,list):
+                for child in node: visit(child)
+        visit(value)
+        return refs
+    if not name.endswith('.md'): return refs
+    text=data.decode('utf-8','strict')
+    if re.search(r'(?m)^\s*(?:import\s+[\w.]+(?:\s+as\s+\w+)?(?:\s*,\s*[\w.]+(?:\s+as\s+\w+)?)*|from\s+[\w.]+\s+import\s+[\w*, ]+)\s*(?:#.*|;.*)?$|\b(?:import|require|__import__)\s*\(',text):
+        raise ValueError('unsupported active dependency')
+    parser=_HTMLDependencies(); parser.feed(text)
+    if parser.active or re.search(r'@import\b',text,re.I): raise ValueError('unsupported active dependency')
+    refs.extend((target,required,False) for target,required in parser.refs)
+    refs.extend((target.strip(),True,False) for target in re.findall(r'url\(\s*["\']?([^\)"\']+)',text,re.I))
+    refs.extend((match.group(2).strip('<>'),bool(match.group(1)),False)
+                for match in re.finditer(r'(!?)\[[^\]]*\]\(\s*([^\s)]+)',text))
+    refs.extend((target.strip('<>'),False,False) for target in re.findall(r'(?m)^\s*\[[^\]]+\]:\s*(\S+)',text))
+    for target in re.findall(r'`([^`\s]+)`',text):
+        if target in {'references/','rules/','profiles/','schemas/','sources/','docs/'}: continue
+        if target.startswith(('references/','rules/','profiles/','schemas/','sources/','docs/')) or target in {name+'.schema.json' for name in SCHEMA_HASHES}:
+            refs.append((target,True,True))
+    return refs
+
+
+def dependency_target(name,target,required,qualified=False):
+    target=target.strip('<>')
+    if target.startswith(('https://','http://','mailto:')):
+        if required: raise ValueError('network runtime dependency rejected')
+        return None
+    if target.startswith('#'): return None
+    head=target.split('#',1)[0]
+    if head.startswith('urn:'):
+        if head not in KNOWN_URNS: raise ValueError('unknown schema resource')
+        return KNOWN_URNS[head]
+    if not head or head.startswith('/') or any(char in head for char in ('\\',':','%','?')):
+        raise ValueError('unsafe local reference')
+    for schema in SCHEMA_HASHES:
+        if head==schema+'.schema.json': return 'schemas/'+head
+    if qualified and head.startswith(('schemas/','profiles/','rules/','sources/')): result=head
+    elif qualified and head=='docs/architecture.md': result='references/architecture.md'
+    else: result=posixpath.normpath(posixpath.join(posixpath.dirname(name),head))
+    return safe_name(result)
+
+
+def local_targets(name,data):
+    return [resolved for target,required,qualified in dependency_references(name,data)
+            if (resolved:=dependency_target(name,target,required,qualified)) is not None]
 
 
 def reference_errors(files):
-    """Check Markdown links, definitions and quoted local resource paths offline."""
-    errors = []
-    for name, data in sorted(files.items()):
-        if not name.endswith(".md"):
-            continue
+    errors=[]
+    for name,data in sorted(files.items()):
+        if not name.endswith(('.md','.json')): continue
         try:
-            text = data.decode("utf-8")
-        except UnicodeError:
-            errors.append("bundle: invalid UTF-8 guidance")
-            continue
-        # Active HTML dependencies would evade ordinary Markdown links.
-        if re.search(r"<(?:script|iframe|object)\b|\b(?:import|require)\s*\(", text, re.I):
-            errors.append("bundle: unsupported active dependency")
-        try:
-            if any(target not in files for target in local_targets(name, data)):
-                raise ValueError("missing reference")
-        except ValueError:
-            errors.append("bundle: missing, stale or unsafe local reference")
+            if any(target not in files for target in local_targets(name,data)): raise ValueError('missing dependency')
+        except (ValueError,UnicodeError,KeyError,TypeError):
+            errors.append('bundle: missing, stale or unsafe local reference')
     return sorted(set(errors))
+
+
+def prefix_conflicts(names):
+    folded={name.casefold() for name in names}
+    return any('/'.join(parts[:index]).casefold() in folded for name in names
+               for parts in [name.split('/')] for index in range(1,len(parts)))
+
+
+def provenance_errors(files,expected_version):
+    try:
+        value=parse_json(files['references/provenance.json'])
+        expected={'builder_version','version','source_epoch','license','sources','limitations'}
+        if (not isinstance(value,dict) or set(value)!=expected or value['builder_version']!='0.1.0' or value['version']!=expected_version or
+                type(value['source_epoch']) is not int or not 0<=value['source_epoch']<=4354819198 or value['license']!='LICENSE' or
+                value['sources']!='sources/public-sources.json' or not isinstance(value['limitations'],list) or
+                any(not isinstance(item,str) or not item.strip() for item in value['limitations'])):
+            raise ValueError('invalid provenance')
+        if not files[value['license']] or not files[value['sources']]: raise ValueError('missing provenance binding')
+        return []
+    except (KeyError,ValueError,TypeError): return ['bundle: missing or invalid bound provenance']
 
 
 def reference_closure(files):
@@ -84,7 +164,7 @@ def reference_closure(files):
         name = pending.pop()
         if name not in files:
             raise ValueError("missing local reference")
-        if name.endswith(".md"):
+        if name.endswith((".md", ".json")):
             for target in local_targets(name, files[name]):
                 if target not in reached:
                     reached.add(target); pending.append(target)
@@ -93,7 +173,8 @@ def reference_closure(files):
 
 def verify_skill_files(files, expected_version):
     errors = []
-    if not {"SKILL.md", "LICENSE", "inventory.json"} <= files.keys():
+    if prefix_conflicts(files): return ["bundle: file/directory prefix conflict"]
+    if not {"SKILL.md", "LICENSE", "inventory.json", "references/provenance.json"} <= files.keys():
         return ["bundle: missing skill entry, license or inventory"]
     try:
         inv = parse_json(files["inventory.json"])
@@ -118,6 +199,7 @@ def verify_skill_files(files, expected_version):
                 digest = inv["files"].get(name)
                 if not isinstance(digest, str) or not DIGEST.fullmatch(digest) or digest != "sha256:" + hashlib.sha256(data).hexdigest():
                     errors.append("bundle: skill digest mismatch")
+        errors.extend(provenance_errors(files,expected_version))
         errors.extend(reference_errors(files))
         try:
             reached = reference_closure(files)
@@ -157,7 +239,7 @@ def resource_errors(files):
                 return ["bundle: unresolved local profile rule"]
         if "sources/public-sources.json" not in files:
             return ["bundle: missing local provenance registry"]
-        return source_errors(parse_json(files["sources/public-sources.json"]), values, checks)
+        return sorted(set(source_errors(parse_json(files["sources/public-sources.json"]), values, checks) + implemented_errors(values)))
     except (ValueError, TypeError, KeyError, RecursionError):
         return ["bundle: missing, invalid or unsupported local resources"]
 
@@ -181,12 +263,53 @@ def verify_skill_directory(directory, expected_version):
         return ["bundle: missing or invalid skill directory"]
 
 
+
+def preflight_zip(data):
+    """Bound central-directory metadata before ZipFile allocates member objects.
+
+    ZIP64, spanning and archive comments are deliberately unsupported: admitted
+    inventories/byte sizes fit ordinary ZIP and the deterministic builder emits
+    this subset. No archive data is executed or extracted.
+    """
+    if len(data)<22 or data[-22:-18]!=b'PK\x05\x06': raise ValueError('unsupported ZIP envelope')
+    _,disk,start_disk,disk_count,count,size,offset,comment=struct.unpack_from('<4s4H2LH',data,len(data)-22)
+    if (disk or start_disk or comment or disk_count!=count or not 1<=count<=MAX_MEMBERS or
+            size>4*1024*1024 or offset+size!=len(data)-22 or offset>len(data) or
+            count==65535 or size==0xffffffff or offset==0xffffffff):
+        raise ValueError('unsafe central directory envelope')
+    position=offset; names=[]; expanded=0
+    for _ in range(count):
+        if position+46>offset+size or data[position:position+4]!=b'PK\x01\x02': raise ValueError('invalid central directory')
+        flags,method=struct.unpack_from('<HH',data,position+8)
+        packed,unpacked=struct.unpack_from('<LL',data,position+20)
+        name_len,extra_len,comment_len,disk_start=struct.unpack_from('<4H',data,position+28)
+        local=struct.unpack_from('<L',data,position+42)[0]
+        if (not 1<=name_len<=512 or extra_len>1024 or comment_len>1024 or disk_start or
+                local>=offset or flags&1 or method not in (0,8) or unpacked>MAX_FILE or
+                unpacked>max(packed,1)*200): raise ValueError('unsafe central member metadata')
+        end=position+46+name_len+extra_len+comment_len
+        if end>offset+size: raise ValueError('truncated central metadata')
+        name=data[position+46:position+46+name_len].decode('utf-8' if flags&0x800 else 'cp437','strict')
+        safe_name(name); names.append(name); expanded+=unpacked
+        if expanded>MAX_TOTAL: raise ValueError('unsafe expanded inventory size')
+        extra=position+46+name_len; extra_end=extra+extra_len
+        while extra<extra_end:
+            if extra+4>extra_end: raise ValueError('invalid central extra field')
+            key,length=struct.unpack_from('<HH',data,extra)
+            if key==1 or extra+4+length>extra_end: raise ValueError('unsupported ZIP64 or truncated extra field')
+            extra+=4+length
+        position=end
+    if position!=offset+size or len({name.casefold() for name in names})!=len(names) or prefix_conflicts(names):
+        raise ValueError('ambiguous central inventory')
+
+
 def verify_bundle(archive: Path, expected_version: str) -> list[str]:
     if not isinstance(expected_version, str) or not VERSION.fullmatch(expected_version):
         return ["bundle: invalid expected version"]
     try:
         # Verify the actual opened archive is regular and bound its compressed bytes.
         data = read_bytes(archive, MAX_ARCHIVE)
+        preflight_zip(data)
         import io
         with zipfile.ZipFile(io.BytesIO(data)) as bundle:
             members = bundle.infolist()
@@ -214,6 +337,7 @@ def verify_bundle(archive: Path, expected_version: str) -> list[str]:
                     parts = member.filename.split("/", 1)
                     if len(parts) != 2 or parts[0] not in SKILLS or not allowed_file(parts[1]):
                         return ["bundle: unlisted or forbidden archive entry"]
+            if prefix_conflicts(names): return ["bundle: file/directory prefix conflict"]
             # Read only after the complete central-directory inventory is admitted.
             files = {}
             for member in members:
@@ -231,7 +355,7 @@ def verify_bundle(archive: Path, expected_version: str) -> list[str]:
                 errors.extend(verify_skill_files({name[len(prefix):]: item for name, item in files.items()
                                                  if name.startswith(prefix)}, expected_version))
             return sorted(set(errors))
-    except (OSError, ValueError, TypeError, zipfile.BadZipFile, zlib.error, EOFError, RuntimeError, NotImplementedError, RecursionError):
+    except (OSError, ValueError, TypeError, zipfile.BadZipFile, zlib.error, EOFError, RuntimeError, NotImplementedError, RecursionError, MemoryError):
         return ["bundle: missing, invalid or unsafe archive"]
 
 

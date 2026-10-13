@@ -246,5 +246,82 @@ class CatalogTests(unittest.TestCase):
             self.assertTrue(self.module.schema_errors(checks[name], extra, name))
 
 
+class CycleOneCatalogRegressions(unittest.TestCase):
+    def test_r10_private_absolute_dns_and_numeric_aliases(self):
+        from scripts.validate_catalog import source_errors, validators
+        sample = [rule()]
+        for url in ["http://localhost./", "http://source.local./", "http://127.1/", "http://2130706433/", "http://0x7f000001/"]:
+            value = registry(sample); extra = copy.deepcopy(value["sources"][0])
+            extra.update(id="SYNTHETIC", type="expert-practice", classification="deferred", url=url,
+                         version=None, accessed_at=None, adopted_principle=None, statement=None, rule_ids=[])
+            value["sources"].append(extra)
+            with self.subTest(url=url): self.assertTrue(source_errors(value, sample, validators()))
+        value["sources"][-1]["url"] = "https://example.org./reference"
+        self.assertEqual(source_errors(value, sample, validators()), [])
+
+    def test_r11_nested_numeric_overflow_and_utf8_only(self):
+        from scripts.validate_catalog import parse_json, load_catalog
+        for data in [b'{"x":1e999}', b'{"x":[-1e999]}']:
+            with self.subTest(data=data), self.assertRaisesRegex(ValueError, "nonfinite"):
+                parse_json(data)
+        self.assertEqual(parse_json(b'{"x":1.25}'), {"x": 1.25})
+        with self.assertRaises(ValueError): parse_json('{"x":1}'.encode('utf-16'))
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory); complete_root(root)
+            path=root / 'tests/fixtures/priority-cases.json'; value=json.loads(path.read_text())
+            value['cases'][0]['input']['overflow']='OVERFLOWMARK'
+            path.write_text(json.dumps(value).replace('"OVERFLOWMARK"', '1e999'))
+            with self.assertRaisesRegex(ValueError, "nonfinite"): load_catalog(root)
+
+
+class CycleOneProcedureRegressions(unittest.TestCase):
+    def test_r02_host_proof_admits_implemented_and_bundle_rejects_unproven(self):
+        from scripts.validate_catalog import load_catalog
+        from scripts.build_skills import build_skills
+        from scripts.verify_bundle import verify_bundle
+        from test_report import SyntheticHost
+        from test_bundle import SKILLS
+        with tempfile.TemporaryDirectory() as directory:
+            base=Path(directory); root=base/'data'; root.mkdir(); rules=complete_root(root)
+            rules[0]['verification']['coverage']='implemented'
+            (root/'rules/catalog.json').write_text(json.dumps(rules))
+            (root/'LICENSE').write_bytes((ROOT/'LICENSE').read_bytes())
+            for skill in SKILLS:
+                target=root/'skill-src'/skill; target.mkdir(parents=True); (target/'SKILL.md').write_text('# Original synthetic workflow.\n')
+            host=SyntheticHost(base/'host'); host.procedure(rules[0])
+            with host:
+                self.assertEqual(len(load_catalog(root)),38)
+                output=build_skills(root,base/'output','0.1.0',1700000000)
+                self.assertEqual(verify_bundle(output,'0.1.0'),[])
+                proof=host.data['procedures'][0]; proof['rule_digest']='sha256:'+'b'*64; host.save()
+                with self.assertRaises(ValueError): load_catalog(root)
+                self.assertTrue(verify_bundle(output,'0.1.0'))
+            with self.assertRaises(ValueError): load_catalog(root)
+            self.assertTrue(verify_bundle(output,'0.1.0'))
+
+
+    def test_r02_static_pass_with_current_procedure_and_observation(self):
+        from scripts.validate_catalog import load_catalog
+        from scripts.validate_report import admission_errors
+        from test_report import SyntheticHost, report
+        import hashlib
+        with tempfile.TemporaryDirectory() as directory:
+            base=Path(directory); root=base/'data'; root.mkdir(); rules=complete_root(root)
+            rules[0]['verification'].update(method='static',coverage='implemented')
+            (root/'rules/catalog.json').write_text(json.dumps(rules))
+            cases=root/'tests/fixtures/priority-cases.json'; dataset=json.loads(cases.read_text())
+            for case in dataset['cases']:
+                if case['rule_id']==rules[0]['id']: case['method']='static'
+            cases.write_text(json.dumps(dataset))
+            artifact=b'original synthetic static target'; observed=b'original synthetic static observation'
+            (root/'artifact.txt').write_bytes(artifact); (root/'observed.txt').write_bytes(observed)
+            value=report(); value['artifact_digest']='sha256:'+hashlib.sha256(artifact).hexdigest(); value['checks'][0]['method']='static'
+            host=SyntheticHost(base/'host'); host.procedure(rules[0]); host.observe(value,rules[0],observed)
+            with host:
+                catalog=load_catalog(root); self.assertEqual(admission_errors(root,value,catalog),[])
+                host.data['procedures'][0]['state']='revoked'; host.save()
+                with self.assertRaises(ValueError): load_catalog(root)
+
+
 if __name__ == "__main__":
     unittest.main()

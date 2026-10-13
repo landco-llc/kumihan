@@ -4,9 +4,9 @@ from pathlib import Path
 import sys
 
 try:
-    from .validate_catalog import validators, schema_errors, read_json, read_bytes, safe_name, emit, ResultParser
+    from .validate_catalog import validators, schema_errors, read_json, read_bytes, safe_name, emit, ResultParser, HostAuthority, parse_json
 except ImportError:
-    from validate_catalog import validators, schema_errors, read_json, read_bytes, safe_name, emit, ResultParser
+    from validate_catalog import validators, schema_errors, read_json, read_bytes, safe_name, emit, ResultParser, HostAuthority, parse_json
 
 
 def validate_report(report: dict, catalog: list[dict]) -> list[str]:
@@ -57,22 +57,39 @@ def validate_report(report: dict, catalog: list[dict]) -> list[str]:
         return ["report: missing, invalid or unsupported input"]
 
 
-def local_evidence_errors(root, report):
-    """Resolve exact local artifact/evidence paths; presence cannot prove relevance."""
-    errors = []
+
+def admission_errors(root, report, catalog):
+    """Local admission with an explicit independent host capability, not summaries."""
+    errors=[]; root=Path(root); index={item['id']:item for item in catalog}
     try:
-        artifact = read_bytes(root / safe_name(report["artifact_ref"]))
-        if "sha256:" + hashlib.sha256(artifact).hexdigest() != report["artifact_digest"]:
-            errors.append("report: local artifact digest mismatch")
-        for check in report["checks"]:
-            for reference in check["evidence_refs"]:
-                read_bytes(root / safe_name(reference))
-    except (ValueError, OSError):
-        errors.append("report: missing or unsafe local artifact/evidence")
-    if any(check["status"] == "waived" for check in report["checks"]):
-        errors.append("report: trusted approval lookup/authority/time/latest-state context unavailable")
-    if any(check["status"] == "passed" for check in report["checks"]):
-        errors.append("report: evidence relevance and observed method authentication unavailable")
+        artifact=read_bytes(root/safe_name(report['artifact_ref']))
+        if 'sha256:'+hashlib.sha256(artifact).hexdigest()!=report['artifact_digest']:
+            errors.append('report: local artifact digest mismatch')
+        evidence={}
+        for check in report['checks']:
+            for reference in check['evidence_refs']:
+                evidence[reference]=read_bytes(root/safe_name(reference))
+    except (ValueError,OSError): return ['report: missing or unsafe local artifact/evidence']
+    if report['ruleset_version']!='0.1.0': errors.append('report: unsupported ruleset version binding')
+    required=[check for check in report['checks'] if check['status'] in ('passed','waived')]
+    if required:
+        try:
+            authority=HostAuthority(root)
+            for check in required:
+                if check['status']=='passed':
+                    for reference in check['evidence_refs']:
+                        authority.observation(report,check,reference,evidence[reference],index[check['rule_id']])
+                else:
+                    subject={key:report[key] for key in ('report_id','artifact_ref','artifact_digest')}; subject['rule_id']=check['rule_id']
+                    authority.approval(check['waiver'],'report-waiver',subject,index[check['rule_id']])
+                    for reference in check['evidence_refs']:
+                        if reference.endswith('.json'):
+                            value=parse_json(evidence[reference])
+                            if isinstance(value,dict) and 'brief_id' in value:
+                                authority.design_chronology(value,evidence[reference],report,check,index[check['rule_id']])
+            authority.finish()
+        except (ValueError,OSError,KeyError,TypeError,MemoryError):
+            errors.append('report: trusted host identity/authority/current-state/binding evidence unavailable or invalid')
     return sorted(set(errors))
 
 
@@ -87,19 +104,20 @@ def main():
         except ImportError:
             from validate_catalog import load_catalog
         report = read_json(args.report)
-        errors = validate_report(report, load_catalog(args.root))
+        catalog = load_catalog(args.root)
+        errors = validate_report(report, catalog)
         if not errors:
-            errors = local_evidence_errors(args.root, report)
+            errors = admission_errors(args.root, report, catalog)
         code = 2 if errors else (1 if any(c["status"] == "failed" for c in report["checks"]) else 0)
         # A catalog-disallowed exception is substantive failure, not missing approval.
-        if "report: rule exception disallowed" in errors:
+        if errors == ["report: rule exception disallowed"]:
             code = 1
         emit("incomplete" if code == 2 else "failed" if code == 1 else "passed", errors,
-             limitations=["Structural/local fixture validation does not authenticate external approvals or Japanese visual quality."])
+             limitations=["Semantic admission depends on an independently trusted host capability; this does not establish Japanese visual quality."])
         if errors:
             print("Report admission rejected; see sanitized diagnostics.", file=sys.stderr)
         return code
-    except (ValueError, OSError):
+    except (ValueError, OSError, MemoryError):
         emit("incomplete", ["report: missing, invalid or unsupported context"])
         return 2
 

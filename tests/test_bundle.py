@@ -11,6 +11,7 @@ import sys
 import tempfile
 import unittest
 import warnings
+from unittest.mock import patch
 import zipfile
 from test_report import rule
 
@@ -37,6 +38,8 @@ def archive(path, version="0.1.0", additions=None):
             content[f"profiles/{identity}.json"] = json.dumps({"id": identity, "revision": 1,
                 "title": "Synthetic profile", "description": "Original synthetic selection.",
                 "rule_ids": [r["id"] for r in rules], "guidance": ["Observe supplied original text."]}).encode()
+        content["references/provenance.json"] = json.dumps({"builder_version":"0.1.0","version":version,
+            "source_epoch":1700000000,"license":"LICENSE","sources":"sources/public-sources.json","limitations":["Synthetic fixture only."]}).encode()
         inv = {"format": "kumihan-skill-1", "version": version,
                "files": {name: "sha256:" + hashlib.sha256(data).hexdigest() for name, data in content.items()}}
         content["inventory.json"] = json.dumps(inv, sort_keys=True).encode()
@@ -324,6 +327,160 @@ class CliTests(unittest.TestCase):
                 "--archive", str(path), "--expected-version", "0.1.0"], capture_output=True, text=True, timeout=2)
             self.assertEqual(result.returncode, 2)
             self.assertEqual(json.loads(result.stdout)["status"], "incomplete")
+
+
+class CycleOneRaceRegressions(unittest.TestCase):
+    def setUp(self): BuilderTests.setUp(self)
+    def test_r05_ancestor_substitution_never_reads_ambient_bytes(self):
+        source=self.root/'skill-src/kumihan/references'; outside=Path(self.tmp.name)/'ambient'; outside.mkdir()
+        (outside/'guidance.md').write_text('Out-of-scope original synthetic sentinel.')
+        original_open=os.open; swapped=[]
+        def opening(path,*args,**kwargs):
+            if os.fsdecode(path).endswith('guidance.md') and not swapped:
+                source.rename(source.with_name('original-references')); source.symlink_to(outside,target_is_directory=True); swapped.append(True)
+            return original_open(path,*args,**kwargs)
+        with patch('os.open',side_effect=opening), self.assertRaises(ValueError):
+            self.module.build_skills(self.root,Path(self.tmp.name)/'race-output','0.1.0',1700000000)
+        self.assertTrue(swapped)
+        self.assertFalse((Path(self.tmp.name)/'race-output').exists())
+
+    def test_r06_output_parent_substitution_never_redirects_write(self):
+        parent=Path(self.tmp.name)/'authorized'; parent.mkdir(); outside=Path(self.tmp.name)/'outside'; outside.mkdir()
+        output=parent/'output'; original_mkdir=os.mkdir; swapped=[]
+        def creating(path,*args,**kwargs):
+            if Path(os.fsdecode(path)).name=='output' and not swapped:
+                parent.rename(parent.with_name('original-authorized')); parent.symlink_to(outside,target_is_directory=True); swapped.append(True)
+            return original_mkdir(path,*args,**kwargs)
+        with patch('os.mkdir',side_effect=creating), self.assertRaises(ValueError):
+            self.module.build_skills(self.root,output,'0.1.0',1700000000)
+        self.assertTrue(swapped); self.assertFalse((outside/'output').exists())
+
+
+class CycleOneBoundaryRegressions(unittest.TestCase):
+    def setUp(self): BundleTests.setUp(self)
+    def files(self):
+        archive(self.path)
+        with zipfile.ZipFile(self.path) as bundle:
+            return {name.split('/',1)[1]:bundle.read(name) for name in bundle.namelist() if name.startswith('kumihan/')}
+    def refreshed(self, files):
+        files['inventory.json']=json.dumps({'format':'kumihan-skill-1','version':'0.1.0',
+            'files':{name:'sha256:'+hashlib.sha256(data).hexdigest() for name,data in files.items() if name!='inventory.json'}}).encode()
+        return files
+    def test_r03_declared_html_python_and_json_dependencies(self):
+        original=self.files()
+        snippets=['<img src="references/missing.png">','<img src="../../ambient.png">',
+                  '<link rel="stylesheet" href="https://example.org/style.css">','import sibling_private_package']
+        for snippet in snippets:
+            changed=dict(original); changed['SKILL.md']+=snippet.encode()
+            with self.subTest(snippet=snippet): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+        for data in [b'{"$ref":"../../ambient.json"}', b'{"include":"missing.json"}', b'{"$ref":"https://example.org/arbitrary"}']:
+            changed=dict(original); changed['SKILL.md']+=b'\nRead [data](references/data.json).'
+            changed['references/data.json']=data
+            with self.subTest(data=data): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+        changed=dict(original); changed['SKILL.md']+=b'\nRead [data](references/data.json).'
+        changed['references/data.json']=b'{"include":"other.json"}'; changed['references/other.json']=b'{"original":"synthetic"}'
+        self.assertEqual(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'),[])
+    def test_r04_file_directory_prefix_and_case_alias(self):
+        for parent in ['prefix.md','Prefix.md']:
+            changed=self.files(); changed['SKILL.md']+=f'\nRead [parent](references/{parent}).'.encode()
+            changed['references/'+parent]=b'Read [child](prefix.md/child.md).'
+            changed['references/prefix.md/child.md']=b'Original synthetic child.'
+            changed=self.refreshed(changed)
+            with self.subTest(parent=parent): self.assertTrue(self.module.verify_skill_files(changed,'0.1.0'))
+            archive(self.path)
+            with zipfile.ZipFile(self.path) as bundle: whole={name:bundle.read(name) for name in bundle.namelist()}
+            whole.update({'kumihan/'+name:data for name,data in changed.items()})
+            with zipfile.ZipFile(self.path,'w') as bundle:
+                for name,data in whole.items(): bundle.writestr(name,data)
+            self.assertTrue(self.module.verify_bundle(self.path,'0.1.0'))
+    def test_r09_json_roles_and_required_bound_provenance(self):
+        original=self.files()
+        for payload in [b'\xff',b'not-json']:
+            changed=dict(original); changed['SKILL.md']+=b'\nRead [data](references/data.json).'; changed['references/data.json']=payload
+            with self.subTest(payload=payload): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+        for payload in [None,b'{}',b'not-json']:
+            changed=dict(original)
+            if payload is None: del changed['references/provenance.json']
+            else: changed['references/provenance.json']=payload
+            with self.subTest(payload=payload): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+        for key,value in [('version','9.9.9'),('license','wrong'),('sources','wrong'),('source_epoch',True)]:
+            changed=dict(original); provenance=json.loads(changed['references/provenance.json']); provenance[key]=value
+            changed['references/provenance.json']=json.dumps(provenance).encode()
+            with self.subTest(key=key): self.assertTrue(self.module.verify_skill_files(self.refreshed(changed),'0.1.0'))
+
+
+class CycleOneSharedRegressions(unittest.TestCase):
+    def setUp(self): BuilderTests.setUp(self)
+    def test_r12_reachable_shared_mapping_rewrites_links_and_rejects_collisions(self):
+        shared=self.root/'skill-src/shared'; shared.mkdir()
+        (shared/'review-protocol.md').write_text('Read [design](design-contract.md). Original synthetic protocol.\n')
+        (shared/'design-contract.md').write_text('Original synthetic design guidance.\n')
+        entry=self.root/'skill-src/kumihan/SKILL.md'
+        entry.write_text('Read [protocol](../shared/review-protocol.md).\n')
+        (entry.parent/'references/guidance.md').unlink()
+        output=self.module.build_skills(self.root,Path(self.tmp.name)/'shared-output','0.1.0',1700000000)
+        from scripts.verify_bundle import verify_bundle
+        self.assertEqual(verify_bundle(output,'0.1.0'),[])
+        with zipfile.ZipFile(output) as bundle:
+            self.assertIn('kumihan/references/review-protocol.md',bundle.namelist())
+            self.assertIn('kumihan/references/design-contract.md',bundle.namelist())
+            self.assertNotIn('../shared',bundle.read('kumihan/SKILL.md').decode())
+            self.assertNotIn('kumihan-web/references/review-protocol.md',bundle.namelist())
+        (entry.parent/'references/review-protocol.md').write_text('Conflicting original synthetic local copy.')
+        with self.assertRaises(ValueError): self.module.build_skills(self.root,Path(self.tmp.name)/'collision','0.1.0',1700000000)
+
+
+class CycleOneResourceRegressions(unittest.TestCase):
+    def setUp(self): BuilderTests.setUp(self)
+    def test_r07_member_count_rejected_before_zipfile_allocation(self):
+        from scripts.verify_bundle import verify_bundle
+        path=Path(self.tmp.name)/'large.zip'
+        with zipfile.ZipFile(path,'w') as bundle:
+            for index in range(100000): bundle.writestr(f'kumihan/references/record{index:06d}.md',b'')
+        with patch('scripts.verify_bundle.zipfile.ZipFile',side_effect=AssertionError('central directory allocated before preflight')):
+            self.assertTrue(verify_bundle(path,'0.1.0'))
+        import resource
+        def limited(): resource.setrlimit(resource.RLIMIT_AS,(96*1024*1024,96*1024*1024))
+        result=subprocess.run([sys.executable,str(ROOT/'scripts/verify_bundle.py'),'--archive',str(path),'--expected-version','0.1.0'],
+            env={'PATH':os.environ.get('PATH',''),'PYTHONDONTWRITEBYTECODE':'1'},capture_output=True,text=True,preexec_fn=limited)
+        self.assertEqual(result.returncode,2,result.stderr); self.assertNotIn('Traceback',result.stderr)
+        self.assertEqual(json.loads(result.stdout)['status'],'incomplete')
+    def test_r08_cumulative_budget_before_aggregate_allocation(self):
+        payload=b'x'*(1024*1024)
+        for skill in SKILLS:
+            entry=self.root/'skill-src'/skill/'SKILL.md'; text=entry.read_text()
+            for index in range(24):
+                name=f'large{index:02d}.md'; (entry.parent/'references'/name).write_bytes(payload)
+                text+=f'Read [original](references/{name}).\n'
+            entry.write_text(text)
+        import resource
+        def limited(): resource.setrlimit(resource.RLIMIT_AS,(112*1024*1024,112*1024*1024))
+        result=subprocess.run([sys.executable,str(ROOT/'scripts/build_skills.py'),'--root',str(self.root),
+            '--output-dir',str(Path(self.tmp.name)/'budget-output'),'--version','0.1.0','--source-epoch','1700000000'],
+            env={'PATH':os.environ.get('PATH',''),'PYTHONDONTWRITEBYTECODE':'1'},capture_output=True,text=True,preexec_fn=limited)
+        self.assertEqual(result.returncode,1,result.stderr); self.assertNotIn('Traceback',result.stderr)
+        self.assertEqual(json.loads(result.stdout)['status'],'failed')
+        self.assertFalse((Path(self.tmp.name)/'budget-output').exists())
+
+
+class CycleOneFrozenLayoutGrammar(unittest.TestCase):
+    def setUp(self): BuilderTests.setUp(self)
+    def test_r12_installed_links_resolve_single_shared_sources_and_architecture(self):
+        shared=self.root/'skill-src/shared'; shared.mkdir()
+        (shared/'design-contract.md').write_text('Use `design-contract.schema.json`; see `docs/architecture.md`.\n')
+        (shared/'review-protocol.md').write_text('Read [design](design-contract.md).\n')
+        (self.root/'docs').mkdir(); (self.root/'docs/architecture.md').write_bytes((ROOT/'docs/architecture.md').read_bytes())
+        entry=self.root/'skill-src/kumihan/SKILL.md'
+        entry.write_text('Read [review](references/review-protocol.md), [design](references/design-contract.md), [architecture](references/architecture.md).\n')
+        (entry.parent/'references/guidance.md').unlink()
+        first=self.module.build_skills(self.root,Path(self.tmp.name)/'layout-one','0.1.0',1700000000)
+        second=self.module.build_skills(self.root,Path(self.tmp.name)/'layout-two','0.1.0',1700000000)
+        self.assertEqual(first.read_bytes(),second.read_bytes())
+        from scripts.verify_bundle import verify_bundle
+        self.assertEqual(verify_bundle(first,'0.1.0'),[])
+        with zipfile.ZipFile(first) as bundle:
+            self.assertIn('kumihan/references/architecture.md',bundle.namelist())
+            self.assertIn('schemas/design-contract.schema.json',bundle.read('kumihan/references/design-contract.md').decode())
 
 
 if __name__ == "__main__":
