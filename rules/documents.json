@@ -1,0 +1,167 @@
+[
+  {
+    "id": "DOC-001",
+    "revision": 1,
+    "title_ja": "見出しと改ページのつながりを確認する",
+    "requirement_en": "Review all relevant rendered pages for stranded headings and disruptive page breaks. Judge the reading relationship between headings and their content rather than relying solely on document structure.",
+    "kind": "expert-practice",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "report-document",
+      "presentation"
+    ],
+    "source_refs": [
+      "A01",
+      "policy:pagination"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect the actual page sequence and any intentional section openings in the available output environment. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Propose pagination or section grouping without deleting or rewriting protected source."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An intentional section opening or display page can differ from body pagination when justified and approved.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "DOC-002",
+    "revision": 1,
+    "title_ja": "図表と付随情報を元資料に照合する",
+    "requirement_en": "Check figures, tables, annotations, footnotes and page numbers against original data and their rendered associations. Preserve values and explanatory notes across the entire relevant document.",
+    "kind": "expert-practice",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "report-document",
+      "presentation"
+    ],
+    "source_refs": [
+      "A01",
+      "policy:annotations"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Combine exact source-data comparison where supported with whole-page review; neither alone proves all annotation relationships. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not delete notes, alter values or invent source data to resolve crowded pages."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A deliberate bounded relocation must preserve content and associations and receive current approval.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "DOC-003",
+    "revision": 1,
+    "title_ja": "縮小だけに頼らずスライドを組み直す",
+    "requirement_en": "Evaluate presentation density and readable type under the intended viewing or projection conditions. Prefer splitting or restructuring authorized information over shrinking all text until it technically fits.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "presentation"
+    ],
+    "source_refs": [
+      "policy:reading-measures"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Review actual output at the declared viewing conditions; no universal point size is claimed. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Keep protected wording and data intact; propose slide division or hierarchy changes only within refine authorization."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A bounded secondary detail treatment needs explicit rationale, readable access and current approval; unseen projection conditions remain untested.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "DOC-004",
+    "revision": 1,
+    "title_ja": "変換後の文字と編集性を別々に確かめる",
+    "requirement_en": "After export or conversion, compare text, fonts and required editability with the original, then review the result in the actual target application when available. Another renderer does not establish native compatibility.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "report-document",
+      "presentation"
+    ],
+    "source_refs": [
+      "policy:conversion-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Record the conversion path, target application and checks actually performed; mark unavailable native rendering or editability checks separately. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not silently normalize text, replace fonts or promise all-application compatibility."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An authorized output format may intentionally remove editability; record that bounded requirement rather than claiming it was retained.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]

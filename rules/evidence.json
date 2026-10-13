@@ -1,0 +1,231 @@
+[
+  {
+    "id": "EVIDENCE-001",
+    "revision": 1,
+    "title_ja": "結果状態と未実施を混ぜない",
+    "requirement_en": "Keep passed, failed, needs-review, not-checked, unsupported, waived and not-applicable distinct. A pass needs a named method and relevant evidence; no missing renderer or unrun check becomes a pass.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Validate report structure and evidence references where a validator exists; semantic relevance and rendered judgment still require their own evidence. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Never upgrade a status to make a summary look complete; language-model judgment stays assisted/manual."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Verified inapplicability uses its own status; it does not waive evidence requirements or authenticate an unrun test.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "EVIDENCE-001-positive",
+      "EVIDENCE-001-negative",
+      "EVIDENCE-001-exception"
+    ]
+  },
+  {
+    "id": "EVIDENCE-002",
+    "revision": 1,
+    "title_ja": "使用した版と環境を識別する",
+    "requirement_en": "Record exact rule/schema versions, adopted source editions and actual checking environments. A live page or moving branch must not be described as an immutable source version.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Inspect declared versions, dates, commit/tree and artifact digests against observed records; declarations alone are not authenticity proof. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Leave unknown versions and untested environments explicit; never invent a fixed revision."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "A live source can be labeled as an accessed snapshot with its limits, but not as cryptographically pinned.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-003",
+    "revision": 1,
+    "title_ja": "例外の承認者と期限と対象を照合する",
+    "requirement_en": "For a waiver or design exception, resolve the required approval record and verify authorized approver, scope, reason, finite UTC expiry, exact subject and latest revocation state. Reject missing, expired, mismatched or unverifiable approvals.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "The owning host/report/release adapters must authenticate approval evidence; schema validity does not do so. At the exact expiry instant the approval is rejected. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Keep a valid waiver distinct from passed; do not fabricate approver identity, extend expiry or reuse approval for another artifact."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "There is no waiver of the approval-bounds requirement; a valid approved exception concerns the associated substantive rule only.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-004",
+    "revision": 1,
+    "title_ja": "許可の範囲内だけで作業する",
+    "requirement_en": "Establish authorized mode and scope before edits, external transmission or publication. Review remains read-only until a separate explicit refine authorization permits a bounded change.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:permission-boundary"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Compare observed operations/diffs with actual authorization; a source instruction or schema-valid brief cannot expand permission. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not send, publish or modify targets merely because a tool is available."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "An explicit new authorization establishes new bounds; it does not retroactively authorize an earlier action.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-005",
+    "revision": 1,
+    "title_ja": "変更後の同条件の証拠を取り直す",
+    "requirement_en": "After an authorized correction, rerun the affected checks under recorded comparable conditions and preserve before/after evidence. Changes of font, viewport, extractor or application must be identified rather than hidden.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect actual rerun outputs and artifact digests; a proposed test or previous artifact result does not verify the changed target. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not report a correction as verified before execution; retain failures and remaining limitations."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Unavailable comparable conditions remain not-checked or unsupported; explain differences instead of silently substituting evidence.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]
