@@ -1,9 +1,9 @@
 [
   {
     "id": "WEB-001",
-    "revision": 1,
+    "revision": 2,
     "title_ja": "狭い表示でも内容と操作を保つ",
-    "requirement_en": "For applicable one-dimensional web content, inspect reflow at a width equivalent to 320 CSS pixels, or the applicable 256 CSS-pixel height for horizontal reading. Required information and functions must remain available without unintended two-axis scrolling.",
+    "requirement_en": "For applicable one-dimensional web content, inspect vertically scrolling content at a width equivalent to 320 CSS pixels and horizontally scrolling content at a height equivalent to 256 CSS pixels. Determine the threshold from the actual scrolling axis, not the text's reading direction. Required information and functions must remain available without unintended two-axis scrolling.",
     "kind": "standard-reference",
     "strength": "must",
     "impact": "error",
