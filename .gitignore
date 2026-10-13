@@ -1,0 +1,14 @@
+# Generated bundles and local development environments.
+/dist/
+/build/
+/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local evidence belongs outside the source repository.
+/scratch/
+/.scratch/
+/RESULT.md
+/EVIDENCE.json
+*.log
