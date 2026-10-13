@@ -74,13 +74,13 @@ def _package_validated_inputs(root, output_dir, version, source_epoch):
                 continue
             name = path.relative_to(directory).as_posix(); safe_name(name)
             if (name != "SKILL.md" and not (name.startswith("references/") and path.suffix in {".md", ".json"})):
-                raise ValueError("builder: unlisted or forbidden skill source file")
+                raise InputContentError("builder: unlisted or forbidden skill source file")
             if name in files or name.casefold() in aliases or name.casefold() in {n.casefold() for n in files}:
-                raise ValueError("builder: ambiguous or colliding source resource")
+                raise InputContentError("builder: ambiguous or colliding source resource")
             aliases.add(name.casefold()); source_files.add(name)
             files[name] = read_bytes(path)
             if len(files) > MAX_MEMBERS:
-                raise ValueError("builder: excessive source inventory")
+                raise InputContentError("builder: excessive source inventory")
         reached = {"SKILL.md"}; pending = ["SKILL.md"]
         try:
             while pending:
@@ -90,19 +90,19 @@ def _package_validated_inputs(root, output_dir, version, source_epoch):
                         if target not in reached:
                             reached.add(target); pending.append(target)
         except (ValueError, UnicodeError):
-            raise ValueError("builder: unsafe local reference") from None
+            raise InputContentError("builder: unsafe local reference") from None
         if source_files - reached:
-            raise ValueError("builder: unreferenced skill source file")
+            raise InputContentError("builder: unreferenced skill source file")
         # Local reference checks ensure closure; all declared skill-src/reference
         # data is explicit consumer material, rather than recursive repository copy.
         files["inventory.json"] = canonical({"format": "kumihan-skill-1", "version": version,
             "files": {name: "sha256:" + hashlib.sha256(data).hexdigest() for name, data in sorted(files.items())}})
         errors = verify_skill_files(files, version)
         if errors:
-            raise ValueError("builder: " + "; ".join(errors))
+            raise InputContentError("builder: " + "; ".join(errors))
         archive_files.update({f"{skill}/{name}": data for name, data in files.items()})
     if len(archive_files) > MAX_MEMBERS or sum(map(len, archive_files.values())) > MAX_TOTAL:
-        raise ValueError("builder: excessive output inventory/size")
+        raise InputContentError("builder: excessive output inventory/size")
     # All input validation precedes output creation; exclusive mkdir prevents
     # overwrite even if another writer creates the directory during validation.
     output.mkdir()

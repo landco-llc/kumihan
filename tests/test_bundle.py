@@ -281,6 +281,19 @@ class BuilderTests(unittest.TestCase):
             self.module.build_skills(self.root, Path(self.tmp.name) / "link", "0.1.0", 1700000000)
 
 
+    def test_cli_verified_packaging_content_failures_are_exit_one(self):
+        entry = self.root / "skill-src/kumihan/SKILL.md"
+        for content in ["Read [missing](references/missing.md).", "Read [guidance](references/guidance.md). <script src='synthetic'></script>"]:
+            entry.write_text(content)
+            result = subprocess.run([sys.executable, str(ROOT / "scripts/build_skills.py"),
+                "--root", str(self.root), "--output-dir", str(Path(self.tmp.name) / "rejected"),
+                "--version", "0.1.0", "--source-epoch", "1700000000"], capture_output=True, text=True)
+            with self.subTest(content=content):
+                self.assertEqual(result.returncode, 1)
+                self.assertEqual(json.loads(result.stdout)["status"], "failed")
+                self.assertFalse((Path(self.tmp.name) / "rejected").exists())
+
+
 class CliTests(unittest.TestCase):
     def test_invalid_arguments_emit_one_json_and_exit_two(self):
         for module, arguments in [("validate_catalog", []), ("validate_report", []),
