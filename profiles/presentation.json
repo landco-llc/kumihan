@@ -1,6 +1,6 @@
 {
   "id": "presentation",
-  "revision": 1,
+  "revision": 2,
   "title": "Presentation",
   "description": "Purposeful readable slides under declared viewing conditions.",
   "rule_ids": [
@@ -23,6 +23,12 @@
     "DOC-002",
     "DOC-003",
     "DOC-004",
+    "DESIGN-001",
+    "DESIGN-002",
+    "DESIGN-003",
+    "DESIGN-004",
+    "DESIGN-005",
+    "DESIGN-006",
     "EVIDENCE-001",
     "EVIDENCE-002",
     "EVIDENCE-003",
@@ -33,7 +39,9 @@
     "Do not solve every overflow by reducing type size.",
     "Prefer authorized splitting and hierarchy changes while preserving source data.",
     "Record unavailable projection and target-application checks explicitly.",
-    "This profile selects the available non-design catalog contribution; applicable design rules must be resolved from the complete release catalog before design clearance.",
-    "No detector or rendering pass is implied by selecting a rule."
+    "No detector or rendering pass is implied by selecting a rule.",
+    "Select design rules by actual purpose, brand constraints and readable access; a motif alone is not a verdict.",
+    "Require a pre-production contract and current attributable authorization; verify bounded exception records separately.",
+    "Strict comparison of repeated structures is an explicit review policy; do not infer a universal ban on three cards or gradients."
   ]
 }

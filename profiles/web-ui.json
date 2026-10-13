@@ -1,6 +1,6 @@
 {
   "id": "web-ui",
-  "revision": 1,
+  "revision": 2,
   "title": "Interactive UI",
   "description": "Complete labels, protected identifiers and usable actual states.",
   "rule_ids": [
@@ -27,6 +27,12 @@
     "WEB-006",
     "WEB-007",
     "WEB-008",
+    "DESIGN-001",
+    "DESIGN-002",
+    "DESIGN-003",
+    "DESIGN-004",
+    "DESIGN-005",
+    "DESIGN-006",
     "EVIDENCE-001",
     "EVIDENCE-002",
     "EVIDENCE-003",
@@ -37,7 +43,9 @@
     "A two-line control can be acceptable if full content and operation remain available.",
     "Inspect focus, error and relevant loading/disabled states.",
     "Test fallback glyphs and long tokens without blanket nowrap or clipping.",
-    "This profile selects the available non-design catalog contribution; applicable design rules must be resolved from the complete release catalog before design clearance.",
-    "No detector or rendering pass is implied by selecting a rule."
+    "No detector or rendering pass is implied by selecting a rule.",
+    "Select design rules by actual purpose, brand constraints and readable access; a motif alone is not a verdict.",
+    "Require a pre-production contract and current attributable authorization; verify bounded exception records separately.",
+    "Strict comparison of repeated structures is an explicit review policy; do not infer a universal ban on three cards or gradients."
   ]
 }
