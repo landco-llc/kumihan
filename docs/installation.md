@@ -4,19 +4,22 @@
 
 **0.1.0-preview.1** is a preview for users trying installation in their own environments. It is not an audited stable v0.1 release or a public Plugin Directory listing. “Private” describes the installation's visibility; these GitHub files are public.
 
+`downloads GPT-Codex/` contains distributions for ChatGPT and Codex. ZIP names containing `GPT-Codex-plugin` identify the four-skill plugin; `GPT-Codex-skill` identifies a standalone skill. Names describe format targets, not validated host operation.
+
 ## Choose a package
 
 | Intended use | Download or source |
 | --- | --- |
 | Standalone ChatGPT Skills upload, where your UI supports it | Individual skill ZIPs below |
-| Private plugin registration in your own account | [Plugin ZIP](../downloads/kumihan-private-install-preview-0.1.0-preview.1.zip) |
+| Private plugin registration in your own account | [Plugin ZIP](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.1.zip) |
 | Local Codex or Claude Code | Complete folders under [skills](../skills/) |
 
-Individual ZIPs: [kumihan](../downloads/kumihan-0.1.0-preview.1.zip), [kumihan-web](../downloads/kumihan-web-0.1.0-preview.1.zip), [kumihan-documents](../downloads/kumihan-documents-0.1.0-preview.1.zip), [kumihan-review](../downloads/kumihan-review-0.1.0-preview.1.zip). Each contains one complete skill folder. The plugin contains all four, manifests, the original logo and licenses. Open the file on GitHub and use its Raw/download control to save the actual ZIP.
+Individual ZIPs: [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.1.zip), [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.1.zip), [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.1.zip), [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.1.zip). Each contains one complete skill folder. The plugin contains all four, manifests, the original logo and licenses. Open the file on GitHub and use its Raw/download control to save the actual ZIP.
 
-Download [SHA256SUMS.txt](../downloads/SHA256SUMS.txt) and [MANIFEST.json](../downloads/MANIFEST.json) from the same revision. With all files in one directory, verify on macOS:
+Download [SHA256SUMS.txt](../downloads%20GPT-Codex/SHA256SUMS.txt) and [MANIFEST.json](../downloads%20GPT-Codex/MANIFEST.json) from the same revision. Keep the download layout, with the plugin ZIP in `plugins/` and standalone ZIPs in `skills/`. If saving files individually, place them in those subfolders. Verify on macOS:
 
 ```sh
+cd "downloads GPT-Codex"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
@@ -40,7 +43,7 @@ After successful registration, inspect your own Personal/Created by me entry, in
 
 ## Local Codex and Claude Code
 
-This is separate from uploading a ZIP. [Codex local skill documentation](https://learn.chatgpt.com/docs/build-skills) describes project `.agents/skills/` and personal `~/.agents/skills/` locations. [Claude Code documentation](https://code.claude.com/docs/en/skills) describes `.claude/skills/` and `~/.claude/skills/`.
+Extracting an individual skill ZIP yields a complete named `SKILL.md` folder, the format Codex loads locally. The plugin ZIP contains root `plugin.json`, a `.codex-plugin/plugin.json` compatibility manifest and four `skills/` folders; the compatibility manifest declares `skills: "./skills"`. This matches the format for trying Codex local marketplace installation, but actual host acceptance and operation remain unverified. Direct folder placement is separate from uploading a ZIP. [Codex local skill documentation](https://learn.chatgpt.com/docs/build-skills) describes project `.agents/skills/` and personal `~/.agents/skills/` locations. [Claude Code documentation](https://code.claude.com/docs/en/skills) describes `.claude/skills/` and `~/.claude/skills/`.
 
 Copy a whole chosen folder without overwriting an existing installation. From this repository root, after confirming the destination has no same-named folder:
 

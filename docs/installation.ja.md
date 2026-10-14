@@ -4,19 +4,22 @@
 
 この配布物は **0.1.0-preview.1** です。個人が自分の環境で導入を試すためのプレビューであり、監査済み安定版 v0.1、実行環境での動作保証、公開 Plugin Directory 掲載を示しません。ここでの「プライベート」は導入先の公開範囲を指します。GitHub 上のファイルは公開されます。
 
+`downloads GPT-Codex/` は ChatGPT・Codex 向けの配布フォルダーです。ZIP名の `GPT-Codex-plugin` は4つの Skill をまとめたプラグイン、`GPT-Codex-skill` は単独 Skill を示します。名前は形式上の導入先を示し、実機動作の検証済み表示ではありません。
+
 ## ファイルを選ぶ
 
 | 導入先・用途 | ファイル／フォルダー |
 | --- | --- |
 | ChatGPT の単独 Skills アップロードが利用できる環境 | 以下の単独 Skill ZIP を1つずつ選択 |
-| 自分のアカウントへのプライベートプラグイン登録 | [プラグイン ZIP](../downloads/kumihan-private-install-preview-0.1.0-preview.1.zip) |
+| 自分のアカウントへのプライベートプラグイン登録 | [プラグイン ZIP](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.1.zip) |
 | ローカル Codex／Claude Code | [完全な skills フォルダー](../skills/)から必要なものをコピー |
 
-単独 ZIP: [kumihan](../downloads/kumihan-0.1.0-preview.1.zip)、[kumihan-web](../downloads/kumihan-web-0.1.0-preview.1.zip)、[kumihan-documents](../downloads/kumihan-documents-0.1.0-preview.1.zip)、[kumihan-review](../downloads/kumihan-review-0.1.0-preview.1.zip)。各 ZIP は1つの Skill フォルダーを含みます。プラグイン ZIP は4つ全部とマニフェスト、元のロゴ、ライセンスを含みます。GitHub で各ファイルを開き、Raw／ダウンロード操作で ZIP 本体を保存してください。
+単独 ZIP: [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.1.zip)、[kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.1.zip)、[kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.1.zip)、[kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.1.zip)。各 ZIP は1つの Skill フォルダーを含みます。プラグイン ZIP は4つ全部とマニフェスト、元のロゴ、ライセンスを含みます。GitHub で各ファイルを開き、Raw／ダウンロード操作で ZIP 本体を保存してください。
 
-[SHA256SUMS.txt](../downloads/SHA256SUMS.txt) と [全メンバーの検証マニフェスト](../downloads/MANIFEST.json)も同じ版から保存します。macOS では、ダウンロードしたファイルを同じディレクトリに置いて確認できます。
+[SHA256SUMS.txt](../downloads%20GPT-Codex/SHA256SUMS.txt) と [全メンバーの検証マニフェスト](../downloads%20GPT-Codex/MANIFEST.json)も同じ版から保存します。macOS では、配布フォルダーの構造を保持し、ZIPを `plugins/` と `skills/` に置いて確認できます。単独で保存した場合も対応する下位フォルダーに配置してください。
 
 ```sh
+cd "downloads GPT-Codex"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
@@ -40,7 +43,7 @@ shasum -a 256 -c SHA256SUMS.txt
 
 ## ローカル Codex と Claude Code
 
-ZIP アップロードとは別の方法です。[Codex の公式ローカル配置](https://learn.chatgpt.com/docs/build-skills)では、プロジェクトの `.agents/skills/` と個人用の `~/.agents/skills/` 等を説明しています。[Claude Code の公式配置](https://code.claude.com/docs/en/skills)は `.claude/skills/` と `~/.claude/skills/` です。同じホストの既存フォルダーを上書きせず、必要な Skill フォルダーを丸ごとコピーします。
+単独 Skill ZIP を展開すると `kumihan` 等の完全なフォルダーになります。これは Codex が扱う `SKILL.md` フォルダー形式です。プラグイン ZIP にはルート `plugin.json`、`.codex-plugin/plugin.json` の互換マニフェスト、4つの `skills/` フォルダーが含まれ、互換マニフェストは `skills: "./skills"` を宣言しています。形式上は Codex のローカル marketplace 経路で導入を試せる構成ですが、現在のホストでの受け入れや動作は未検証です。単独フォルダーの配置は ZIP アップロードとは別の方法です。[Codex の公式ローカル配置](https://learn.chatgpt.com/docs/build-skills)では、プロジェクトの `.agents/skills/` と個人用の `~/.agents/skills/` 等を説明しています。[Claude Code の公式配置](https://code.claude.com/docs/en/skills)は `.claude/skills/` と `~/.claude/skills/` です。同じホストの既存フォルダーを上書きせず、必要な Skill フォルダーを丸ごとコピーします。
 
 たとえば、このリポジトリのルートで、導入先プロジェクトに同名フォルダーがないことを確認したうえで、1つをコピーする場合:
 
