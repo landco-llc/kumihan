@@ -1,7 +1,7 @@
 {
   "format": "kumihan-standalone-inventory-2",
   "skill": "kumihan-web",
-  "version": "0.1.0-preview.3",
+  "version": "0.1.0-preview.4",
   "path_base": "skill-folder-root",
   "self_digest": "inventory.json lists every other file; its own hash is in the distribution SHA256SUMS.",
   "files": [
@@ -57,8 +57,8 @@
     },
     {
       "path": "references/document-recipes.md",
-      "bytes": 4828,
-      "sha256": "8e96da9dac00801b2559a97189fc2d3a940cedfde719e9c9cb110b7086cc3db1"
+      "bytes": 4971,
+      "sha256": "32a7710a513c5ab397a4f86905812bbbaafac0274bedc66443072cdd81c5585e"
     },
     {
       "path": "references/review-protocol.md",

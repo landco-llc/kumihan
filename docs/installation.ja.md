@@ -6,7 +6,7 @@
 
 KUMIHANをChatGPTやCodexで使うための手順です。
 
-> **プレビュー版（0.1.0-preview.3）について**  
+> **プレビュー版（0.1.0-preview.4）について**  
 > ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
 <br>
@@ -29,14 +29,14 @@ KUMIHANをChatGPTやCodexで使うための手順です。
 
 **プラグイン（4つのスキルをまとめたもの）**
 
-- [kumihan-GPT-Codex-plugin-0.1.0-preview.3.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.3.zip)
+- [kumihan-GPT-Codex-plugin-0.1.0-preview.4.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.4.zip)
 
 **スキル（1つずつ）**
 
-- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.3.zip) — 最初の入口
-- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.3.zip) — Webページ
-- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.3.zip) — 報告書・スライド
-- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.3.zip) — レビュー
+- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.4.zip) — 最初の入口
+- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.4.zip) — Webページ
+- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.4.zip) — 報告書・スライド
+- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.4.zip) — レビュー
 
 GitHubでファイルを開いたら、右上のダウンロードボタンから保存してください。
 

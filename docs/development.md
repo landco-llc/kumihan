@@ -13,7 +13,7 @@ This syncs the shared files, regenerates each `inventory.json`, rebuilds every Z
 ## Release a new version
 
 ```sh
-python3 tools/build_dist.py --set-version 0.1.0-preview.3
+python3 tools/build_dist.py --set-version 0.1.0-preview.4
 ```
 
 This updates the version in all plugin and extension manifests, in `README.md` and `docs/*.md`, then rebuilds. Old-version ZIPs are removed from the `downloads` folders; Git history keeps them.

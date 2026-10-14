@@ -90,6 +90,7 @@ p { orphans: 2; widows: 2; }
 thead { display: table-header-group; } /* Repeat table headers */
 ```
 
+- Do not set `overflow-wrap: anywhere` or `word-break: break-all` on the whole body. Apply `overflow-wrap: anywhere` only to long URLs or IDs.
 - Embed or install the Japanese font in the PDF renderer; otherwise text may fall back to a different font or show missing-glyph boxes.
 - Check that text in the PDF can be selected and copied correctly.
 
