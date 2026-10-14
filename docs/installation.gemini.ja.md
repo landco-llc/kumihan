@@ -1,51 +1,127 @@
-# KUMIHAN の Gemini での利用（プレビュー）
+# Geminiへの導入
 
-[English](installation.gemini.md) · [配布物・SHA256](../downloads%20Gemini/README.md)
+[English](installation.gemini.md) ・ [トップに戻る](../README.md)
 
-開発者: L&Co.LLC。`0.1.0-preview.1` は配布形式のプレビューです。Gemini CLI / Apps への実インストール、受理、呼び出し、更新は未検証です。安定版・Google公式掲載・対応保証を意味しません。4スキルは日本語組版の指針で、自動検出ツールではありません。公式情報確認日: 2026-10-14。
+<br>
 
-## Gemini CLI: 4スキル入り extension
+KUMIHANをGemini CLIやGeminiアプリで使うための手順です。
 
-[公式 extension 手順](https://geminicli.com/docs/extensions/reference/)に従い、CLI と Git を用意した利用者が任意で実行します。
+> **プレビュー版（0.1.0-preview.1）について**  
+> ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
+
+<br>
+
+## 1. 導入方法を選ぶ
+
+| 使いたい場所 | おすすめの方法 |
+| --- | --- |
+| Gemini CLI（4つまとめて） | [A. 拡張機能として導入する](#a-gemini-cli拡張機能として導入する) |
+| Gemini CLI（必要なものだけ） | [B. スキルを選んで導入する](#b-gemini-cliスキルを選んで導入する) |
+| Geminiアプリ（Web・Mac・スマートフォン） | [C. スキルをアップロードする](#c-geminiアプリスキルをアップロードする) |
+
+<br>
+
+## A. Gemini CLI：拡張機能として導入する
+
+4つのスキルをまとめて導入する方法です。
 
 ```sh
 gemini extensions install https://github.com/landco-llc/kumihan --ref main
 ```
 
-リポジトリ直下の `gemini-extension.json` と `skills/<name>/SKILL.md` が入口です。extension は既定で全体に有効になるため、インストール先・同意画面を確認してください。この配布に MCP サーバー、フック、秘密情報設定はありません。既に同名スキルを別経路で入れている場合は重複を確認します。
+確認画面が表示されたら、内容を確認して進めてください。拡張機能は、導入するとすべてのプロジェクトで有効になります。
 
-Gitへのpushだけで手元のコピーは更新されません。更新時は次を明示的に実行し、CLIを再起動します。将来の配布変更では extension のバージョンも更新する必要があります。
+**更新するとき**
 
 ```sh
 gemini extensions update kumihan
 ```
 
-手動ZIPは [extension ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.1.zip) を空の `kumihan` フォルダに展開します。直下に `gemini-extension.json` があることを確認し、そのフォルダをローカルソースとして指定します。
+更新したあとは、Gemini CLIを再起動してください。
 
-```sh
-gemini extensions install "/absolute/path/kumihan"
-```
+**ZIPから導入する場合**
 
-この手動経路はGit追従ではありません。新しいZIPへ手動で置き換え、利用中のCLIのローカルソース更新手順を確認してください。ZIPを直接渡す操作はここでは案内しません。
+1. [拡張機能のZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.1.zip) をダウンロードします。
+2. 空の `kumihan` フォルダーを作り、その中に展開します。
+3. フォルダーを指定して導入します。
 
-## Gemini CLI: 単独スキルを選ぶ
+   ```sh
+   gemini extensions install "/absolute/path/kumihan"
+   ```
 
-extension を使う場合、この追加操作は不要です。[公式 Agent Skills 手順](https://geminicli.com/docs/cli/skills/)に基づき、対象プロジェクトで例を実行します。
+ZIPから導入した場合は、自動では更新されません。新しい版が出たら、ZIPを入れ替えてください。
+
+<br>
+
+## B. Gemini CLI：スキルを選んで導入する
+
+必要なスキルだけを、プロジェクト単位で導入する方法です。Aで導入した場合、この手順は不要です。
+
+たとえば `kumihan` を導入する場合は、対象のプロジェクトで次を実行します。
 
 ```sh
 gemini skills install https://github.com/landco-llc/kumihan --path skills/kumihan --scope workspace
 ```
 
-必要なスキルだけ `--path` を `skills/kumihan-web`、`skills/kumihan-documents`、`skills/kumihan-review` に変えます。`workspace` はプロジェクト単位で、既定の `user` は個人全体です。更新は同じインストール操作を再実行します。[公式実装](https://github.com/google-gemini/gemini-cli/blob/main/packages/cli/src/utils/skillUtils.ts)では同名のインストール済みディレクトリを置き換えるため、ローカル編集がある場合は先に保存してください。`/skills reload` は検出一覧の読み直しで、Gitダウンロードではありません。独立した `gemini skills update` は案内しません。
+ほかのスキルを導入するときは、`--path` を次のように変えてください。
 
-公式実装のCLIファイル入力は ZIP を `.skill` 拡張子で扱います。このページの Apps 用 `.zip` はCLI用 `.skill` として検証していません。CLIには上記Git経路または展開済みスキルディレクトリを使い、拡張子だけの変更で互換性を想定しないでください。
+- `skills/kumihan-web` — Webページ
+- `skills/kumihan-documents` — 報告書・スライド
+- `skills/kumihan-review` — レビュー
 
-## Gemini Apps: 個人アカウントのアップロード
+`--scope workspace` は「このプロジェクトだけ」で使う設定です。省略すると、すべてのプロジェクトで使えるようになります。
 
-[公式 Skills ヘルプ](https://support.google.com/gemini/answer/17094296?hl=ja)では、18歳以上の個人Googleアカウント、Keep Activity有効が条件で、段階的提供です。仕事・学校アカウントは現時点で対象外です。利用者自身の設定・提供状況を確認してください。Web / Mac / モバイルでの表示はアカウントや展開状況により異なります。
+**更新するとき**
 
-Webでは Customize（見つからなければ More）→ Skills → Upload から、[skills フォルダ](../downloads%20Gemini/skills/)の Apps 用 ZIP を1つずつ選び、内容確認後 Create を選びます。4つは選択式です。各ZIP直下に `SKILL.md` と同じスキルの23参考ファイルがあります。extension ZIPはこの画面用ではありません。
+同じコマンドをもう一度実行します。導入済みのスキルは置き換えられるため、ご自身で編集した内容がある場合は先に保存してください。
 
-AppsはGit更新に追従しません。更新時は新しいZIPを手動アップロードし、既存スキルの差し替え・重複を確認します。本配布は全ファイルがテキストで、各ZIPの展開サイズは100MB未満です。Appsの実受理と適用は未検証です。
+<br>
 
-[ChatGPT / Codex](installation.ja.md) · [Claude](installation.claude.ja.md) · [更新案内](updates.md)
+## C. Geminiアプリ：スキルをアップロードする
+
+1. 使いたいスキルのZIPをダウンロードします。
+   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.0-preview.1.zip) — 最初の入口
+   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.0-preview.1.zip) — Webページ
+   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.0-preview.1.zip) — 報告書・スライド
+   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.0-preview.1.zip) — レビュー
+2. Geminiの **Customize**（見当たらない場合は **More**）→ **Skills** → **Upload** を開きます。
+3. ZIPを1つずつ選び、内容を確認して **Create** を押します。
+
+**ご注意**
+
+- 利用できるのは、18歳以上の個人のGoogleアカウントです。仕事用・学校用のアカウントでは、現在は使えません。
+- 「Keep Activity（アクティビティの保存）」をオンにしておく必要があります。
+- 機能は順次提供されているため、まだ表示されない場合があります。詳しくは [Geminiの公式ヘルプ](https://support.google.com/gemini/answer/17094296?hl=ja) をご覧ください。
+- 拡張機能のZIP（Gemini CLI用）は、ここでは使えません。
+- アップロードしたスキルは自動では更新されません。新しい版が出たら、もう一度アップロードしてください。
+
+<br>
+
+## 2. 使ってみる
+
+最初は、ファイルを変更しない依頼で試すのがおすすめです。
+
+> 日本語のプレゼン資料をつくる予定です。気をつけるポイントを教えてください。ファイルは変更しないでください。
+
+<br>
+
+## ファイルが正しいか確認する（任意）
+
+ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](../downloads%20Gemini/SHA256SUMS.txt) を使います。
+
+ダウンロードページと同じフォルダー構成（`extensions/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行します。
+
+```sh
+cd "downloads Gemini"
+shasum -a 256 -c SHA256SUMS.txt
+```
+
+すべての行に `OK` と表示されれば問題ありません。
+
+<br>
+
+---
+
+ほかのツール：[ChatGPT・Codex](installation.ja.md) ・ [Claude](installation.claude.ja.md)
+
+画面や提供条件は変わることがあります。最新の情報は各サービスの公式案内をご確認ください（本ページの確認日：2026年10月14日）。

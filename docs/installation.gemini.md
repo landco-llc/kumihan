@@ -1,51 +1,127 @@
-# KUMIHAN for Gemini (preview)
+# Install for Gemini
 
-[日本語](installation.gemini.ja.md) · [Downloads and SHA256](../downloads%20Gemini/README.md)
+[日本語](installation.gemini.ja.md) · [Back to top](../README.md)
 
-Developer: L&Co.LLC. `0.1.0-preview.1` describes a distribution preview. Installation, acceptance, invocation and updates in Gemini CLI / Apps have not been tested. This is not a stable release, Google directory listing or compatibility guarantee. The four skills provide Japanese layout guidance. Official references checked on 2026-10-14.
+<br>
 
-## Gemini CLI extension: all four skills
+This guide explains how to use KUMIHAN with Gemini CLI and the Gemini app.
 
-With CLI and Git available, optionally use the [official extension workflow](https://geminicli.com/docs/extensions/reference/):
+> **About this preview (0.1.0-preview.1)**  
+> This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
+
+<br>
+
+## 1. Choose an installation method
+
+| Where you want to use it | Recommended method |
+| --- | --- |
+| Gemini CLI (all four skills) | [A. Install as an extension](#a-gemini-cli-install-as-an-extension) |
+| Gemini CLI (only the skills you need) | [B. Install individual skills](#b-gemini-cli-install-individual-skills) |
+| Gemini app (web, Mac, mobile) | [C. Upload skills](#c-gemini-app-upload-skills) |
+
+<br>
+
+## A. Gemini CLI: install as an extension
+
+This installs all four skills at once.
 
 ```sh
 gemini extensions install https://github.com/landco-llc/kumihan --ref main
 ```
 
-The root `gemini-extension.json` and `skills/<name>/SKILL.md` are the entry points. Extensions are enabled globally by default; inspect destination and consent prompts. This extension adds no MCP server, hook or secret setting. Check for duplicate skills installed through other routes.
+Review the confirmation prompt before continuing. Once installed, the extension is active in all projects.
 
-A Git push does not refresh your installed copy. Explicitly update and restart CLI:
+**To update**
 
 ```sh
 gemini extensions update kumihan
 ```
 
-Future distribution changes also require an extension version bump. For manual transport, extract the [extension ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.1.zip) into an empty folder named `kumihan`. Confirm its manifest is directly inside that folder, then:
+Restart Gemini CLI after updating.
 
-```sh
-gemini extensions install "/absolute/path/kumihan"
-```
+**Installing from a ZIP**
 
-This local route does not follow Git. Replace files from a newer ZIP manually and consult your CLI's local-source update workflow. Direct ZIP installation is not documented here.
+1. Download the [extension ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.1.zip).
+2. Create an empty `kumihan` folder and extract the ZIP into it.
+3. Install from that folder:
 
-## Gemini CLI: select individual skills
+   ```sh
+   gemini extensions install "/absolute/path/kumihan"
+   ```
 
-Skip this route when using the extension. The [Agent Skills documentation](https://geminicli.com/docs/cli/skills/) supports installing a Git subdirectory. In your intended project:
+An extension installed from a ZIP does not update automatically. When a new version is released, replace it with the new ZIP.
+
+<br>
+
+## B. Gemini CLI: install individual skills
+
+This installs only the skills you need, for a single project. You don't need this if you used method A.
+
+For example, to install `kumihan`, run this in your project:
 
 ```sh
 gemini skills install https://github.com/landco-llc/kumihan --path skills/kumihan --scope workspace
 ```
 
-Substitute `skills/kumihan-web`, `skills/kumihan-documents` or `skills/kumihan-review` as needed. Workspace scope is project-specific; the default user scope applies personally across projects. Refresh through the same installation command. The [official implementation](https://github.com/google-gemini/gemini-cli/blob/main/packages/cli/src/utils/skillUtils.ts) replaces an existing directory of the same name; save any local edits first. `/skills reload` rescans discovery; it does not download Git changes. No `gemini skills update` command is prescribed.
+For other skills, change `--path` to:
 
-The official CLI implementation recognizes ZIP packages with a `.skill` extension. These Apps `.zip` files have not been validated as CLI `.skill` packages. Use Git or an extracted skill directory for CLI; renaming an extension does not establish compatibility.
+- `skills/kumihan-web` — web pages
+- `skills/kumihan-documents` — reports and slides
+- `skills/kumihan-review` — review
 
-## Gemini Apps: personal upload
+`--scope workspace` limits the skill to this project. Without it, the skill is available in all your projects.
 
-[Official Apps help](https://support.google.com/gemini/answer/17094296?hl=en) describes gradual availability for personal Google accounts aged 18+ with Keep Activity enabled, currently excluding work/school accounts. Check your eligibility yourself. Web, Mac and mobile UI availability varies.
+**To update**
 
-On the web, use Customize (or More) → Skills → Upload. Select one Apps ZIP from the [skills folder](../downloads%20Gemini/skills/), inspect it, then Create. Choose any of the four skills. Each ZIP has `SKILL.md` and 23 reference files directly at its root. The extension ZIP is for CLI.
+Run the same command again. The installed skill will be replaced, so save any changes you made to it first.
 
-Apps does not track Git updates. Upload a newer ZIP manually and review replacement or duplicate entries. All bundled skill files are text and each unpacked archive is below 100MB. Actual Apps acceptance and application remain unverified.
+<br>
 
-[ChatGPT / Codex](installation.md) · [Claude](installation.claude.md) · [Updates](updates.md)
+## C. Gemini app: upload skills
+
+1. Download the skill ZIPs you want to use.
+   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.0-preview.1.zip) — starting point
+   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.0-preview.1.zip) — web pages
+   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.0-preview.1.zip) — reports and slides
+   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.0-preview.1.zip) — review
+2. In Gemini, open **Customize** (or **More** if you don't see it) → **Skills** → **Upload**.
+3. Choose one ZIP at a time, review the details, and select **Create**.
+
+**Notes**
+
+- Available for personal Google accounts of users 18 and older. Work and school accounts are not supported at this time.
+- **Keep Activity** must be turned on.
+- The feature is rolling out gradually and may not be available to you yet. See [Gemini Help](https://support.google.com/gemini/answer/17094296).
+- The extension ZIP (for Gemini CLI) does not work here.
+- Uploaded skills do not update automatically. When a new version is released, upload it again.
+
+<br>
+
+## 2. Try it out
+
+We recommend starting with a request that doesn't change any files:
+
+> I'm planning a Japanese presentation. What should I keep in mind? Please don't change any files.
+
+<br>
+
+## Verify your downloads (optional)
+
+To check that your downloads are intact, use [SHA256SUMS.txt](../downloads%20Gemini/SHA256SUMS.txt).
+
+Keep the same folder layout as the downloads page (`extensions/` and `skills/`), then run this in the macOS Terminal:
+
+```sh
+cd "downloads Gemini"
+shasum -a 256 -c SHA256SUMS.txt
+```
+
+If every line shows `OK`, the files are intact.
+
+<br>
+
+---
+
+Other tools: [ChatGPT / Codex](installation.md) · [Claude](installation.claude.md)
+
+Screens and availability may change. Please check each service's official guidance for the latest information (last checked: October 14, 2026).
