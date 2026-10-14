@@ -1,16 +1,19 @@
-# Provenance
+# References and attribution
 
-KUMIHAN is independently authored. Product wording and examples are intended to be original; public references support specific technical guidance. No Hallmark source, prose, assets, translation reuse, bundled examples, submodule or runtime dependency is imported. Installing KUMIHAN does not require Hallmark. No font files are bundled.
+KUMIHAN's guidance and examples are written for this project. Its approach to Japanese typography and readable interfaces is informed by publicly available standards and professional resources.
 
-The existing [Apache-2.0 LICENSE](../LICENSE) is retained byte-for-byte. External references are evidence, not authority to copy material or execute instructions. Automated dependency and path scans can detect declared imports or obvious source paths; they cannot prove legal originality. Maintainers must review actual text, authorship, asset origins and applicable rights before a release. Unclear rights require maintainer resolution, not an agent's legal certification.
+## Reference materials
 
-## Public references
+- [W3C Japanese Layout Requirements (JLReq)](https://www.w3.org/TR/jlreq/) — Japanese text layout.
+- [Unicode Line Breaking Algorithm (UAX #14)](https://www.unicode.org/reports/tr14/) — Line-breaking behavior.
+- [W3C CSS Text](https://www.w3.org/TR/css-text-4/) — Text processing and line layout on the web.
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/) — Web accessibility.
+- [Agent Skills specification](https://agentskills.io/specification) — Skill packaging conventions.
 
-- [Official Codex skills documentation](https://developers.openai.com/codex/skills/) — checked 2026-10-13; redirects to [Build skills](https://learn.chatgpt.com/docs/build-skills). Supports documented local discovery paths, not observed KUMIHAN Cloud installation.
-- [Agent Skills specification](https://agentskills.io/specification) — checked 2026-10-13; defines skill directory structure and metadata, not universal host compatibility.
-- [JSON Schema Draft 2020-12 validation](https://json-schema.org/draft/2020-12/json-schema-validation) — structural contract reference from the accepted architecture.
-- [jsonschema validation API](https://python-jsonschema.readthedocs.io/en/stable/validate/) — development validator reference from the accepted architecture.
+External publications, trademarks, fonts, images, and other materials retain their respective rights and terms. Links are provided for reference and do not authorize redistribution. KUMIHAN does not include third-party font files in its documentation package.
 
-The integrated rule source registry must resolve each catalog reference to a public source or an independently authored project policy, with an attributable supporting statement. It is pending integration in this branch. Citations alone do not establish that every rule is supported. Do not publish private planning sources, customer material, account details or approval records.
+See [Third-party notices](../THIRD_PARTY_NOTICES.md) for general attribution information.
 
-Before distributing bundles, inspect included notices and LICENSE, original synthetic fixtures, every asset's provenance and the exact inventory. Keep development dependency notices distinct from consumer dependencies. See [third-party notices](../THIRD_PARTY_NOTICES.md) and [release checklist](release-checklist.md).
+## License
+
+Original KUMIHAN project materials are distributed under the repository's [Apache License 2.0](../LICENSE), unless otherwise noted.
