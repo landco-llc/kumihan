@@ -2,7 +2,7 @@
 
 Concrete starting points for Japanese web typography. Apply them by text role, then check the result in a real browser. Values are starting points to adjust for the actual font, column and audience, not fixed requirements.
 
-Browser support changes. The support notes below were reviewed in October 2026; confirm current support (for example on MDN) before relying on a newer property. Every property here degrades safely: an unsupported property is ignored and the browser default applies.
+Browser support changes. The support notes below follow MDN browser-compat-data as of October 2026 and were confirmed with `CSS.supports()` in Chromium 141. Check MDN again before relying on a newer property. Every property here degrades safely: an unsupported property is ignored and the browser default applies.
 
 ## 1. Page setup
 
@@ -69,12 +69,13 @@ h1, h2, h3 {
 
 | Goal | Property | Support | Use |
 | --- | --- | --- | --- |
-| Strict kinsoku (no small kana `ゃゅょっ` or `ー` at a line start) | `line-break: strict` | All major browsers | Body text and articles |
-| Break headings at phrase boundaries | `word-break: auto-phrase` | Chromium only; requires `lang="ja"` | Headings, short display text. Not needed for long body text. |
-| Even line lengths in headings | `text-wrap: balance` | All major browsers | Headings up to a few lines |
-| Avoid a single short last line | `text-wrap: pretty` | Partial | Body paragraphs, as an enhancement |
+| Strict kinsoku (no small kana `ゃゅょっ` or `ー` at a line start) | `line-break: strict` | Chrome, Firefox 69+, Safari | Body text and articles |
+| Break headings at phrase boundaries | `word-break: auto-phrase` | Chrome 119+ only (Safari in preview); requires `lang="ja"` | Headings, short display text. Not needed for long body text. |
+| Even line lengths in headings | `text-wrap: balance` | Chrome 114+, Firefox 121+, Safari 17.5+ | Headings up to a few lines |
+| Avoid a single short last line | `text-wrap: pretty` | Chrome 117+, Safari 26+; not Firefox | Body paragraphs, as an enhancement |
 | Break long URLs and IDs | `overflow-wrap: anywhere` | All major browsers | Only on the element that holds them |
 
+- Rendering check (Chromium 141, IPAGothic, 16px): across ten column widths, `line-break: normal` put a small kana or `ー` at a line start at nine widths; `line-break: strict` at none. `word-break: auto-phrase` broke a heading as 日本語の／文字組みからAIの／デザインをもっと／自然に.
 - For phrase breaks in browsers without `auto-phrase`, insert `<wbr>` at phrase boundaries in headings, or use a phrase-splitting library such as BudouX at build time. Do not insert visible spaces.
 - Avoid `word-break: keep-all` on Japanese body text; it removes normal break opportunities.
 - Avoid `word-break: break-all` and page-wide `overflow-wrap: anywhere`; they break Latin words and numbers badly.
@@ -84,11 +85,12 @@ h1, h2, h3 {
 
 | Goal | Property | Support | Use |
 | --- | --- | --- | --- |
-| Trim the extra space of brackets and punctuation | `text-spacing-trim` | Chromium | `trim-start` trims at line starts; `space-all` keeps full-width spacing. The default varies; check the output. Needs a font with the relevant OpenType features. |
+| Trim the extra space of brackets and punctuation | `text-spacing-trim` | Chrome 123+ only | `trim-start` trims at line starts; `space-all` keeps full-width spacing. The default varies; check the output. Needs a font with the relevant OpenType features. |
 | Proportional punctuation and kana in headings | `font-feature-settings: "palt" 1` | All major browsers, if the font supports `palt` | Headings and display copy only. Not for body text. |
-| Space between Japanese and Latin/numerals | `text-autospace: normal` | Partial | Adds a small gap automatically. Never type spaces into the source for this. |
+| Space between Japanese and Latin/numerals | `text-autospace: normal` | Chrome 140+, Firefox 145+, Safari 18.4+ | Adds a small gap automatically. Never type spaces into the source for this. |
 | Hanging punctuation | `hanging-punctuation: allow-end` | Safari only | Optional enhancement. |
 
+- `text-spacing-trim` had no visible effect with IPAGothic, which lacks the needed OpenType features. Check it with the actual project font.
 - Keep one punctuation style per role. Do not mix trimmed and untrimmed punctuation in the same body text.
 - When Latin text or numerals look too large or small next to Japanese, adjust the font stack or size of that span with CSS. Do not change the characters.
 

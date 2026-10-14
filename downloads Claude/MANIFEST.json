@@ -8,8 +8,8 @@
   "archives": [
     {
       "file": "plugins/kumihan-Claude-Code-plugin-0.1.0-preview.2.zip",
-      "sha256": "01d20d484050ef879acef599db07d94453c2073c48140f26d4514f1e7dad41bb",
-      "bytes": 313091,
+      "sha256": "83e0a39781d299c109676f96e8226080deac65db8a5f9c3e957345d89451645c",
+      "bytes": 307243,
       "members": [
         {
           "path": "kumihan/.claude-plugin/plugin.json",
@@ -23,8 +23,8 @@
         },
         {
           "path": "kumihan/THIRD_PARTY_NOTICES.md",
-          "bytes": 1704,
-          "sha256": "4bb0075d478ca6f16d1454180e9c5b863bee08352eaf0aab7833cf85748494a4"
+          "bytes": 1706,
+          "sha256": "d6454645c6dd4faf6a012d089deb8c967da6f65403933f44b51b50356f5c830c"
         },
         {
           "path": "kumihan/docs/development.md",
@@ -44,7 +44,7 @@
         {
           "path": "kumihan/skills/kumihan-documents/inventory.json",
           "bytes": 4234,
-          "sha256": "39605255237785430dcb4979ba3714cffb539a51367e25df5180789848f6b382"
+          "sha256": "1181995937d2520819cec66aa1e73f42bae24bc049e05cb3c40ff7fb9593be7c"
         },
         {
           "path": "kumihan/skills/kumihan-documents/profiles/display-copy.json",
@@ -98,8 +98,8 @@
         },
         {
           "path": "kumihan/skills/kumihan-documents/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan/skills/kumihan-documents/rules/catalog.json",
@@ -174,7 +174,7 @@
         {
           "path": "kumihan/skills/kumihan-review/inventory.json",
           "bytes": 4231,
-          "sha256": "202e8decb3850f6eadc1234405364f5fc6c26cec9ddba2db96926d27d9ffe742"
+          "sha256": "aae78fc819d509ef8716d048881250a8dba03385f72d00d43c813a7974ba694a"
         },
         {
           "path": "kumihan/skills/kumihan-review/profiles/display-copy.json",
@@ -228,8 +228,8 @@
         },
         {
           "path": "kumihan/skills/kumihan-review/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan/skills/kumihan-review/rules/catalog.json",
@@ -304,7 +304,7 @@
         {
           "path": "kumihan/skills/kumihan-web/inventory.json",
           "bytes": 4228,
-          "sha256": "f11be02cc28743957daebfb5415370e5a349f85b23afeabdac4db9f969c9a205"
+          "sha256": "02d9996a44ce480031820dc875045bf783bbf9f7bedb6b8fde1b658c1d6dc40c"
         },
         {
           "path": "kumihan/skills/kumihan-web/profiles/display-copy.json",
@@ -358,8 +358,8 @@
         },
         {
           "path": "kumihan/skills/kumihan-web/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan/skills/kumihan-web/rules/catalog.json",
@@ -434,7 +434,7 @@
         {
           "path": "kumihan/skills/kumihan/inventory.json",
           "bytes": 4224,
-          "sha256": "e85f3822432fa62c3acc13549ff2f0717141cc6f894f311c5934ffb691089a7a"
+          "sha256": "0ee0971ff24abe78bdb8761a61659904ec4d19d92ef92710fbe56b41138bdd6b"
         },
         {
           "path": "kumihan/skills/kumihan/profiles/display-copy.json",
@@ -488,8 +488,8 @@
         },
         {
           "path": "kumihan/skills/kumihan/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan/skills/kumihan/rules/catalog.json",
@@ -550,18 +550,13 @@
           "path": "kumihan/skills/kumihan/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
-        },
-        {
-          "path": "kumihan/sources/public-sources.json",
-          "bytes": 37479,
-          "sha256": "f765665f56f359190f8cb8874634e948a34855c251339aca5e4095e933e38262"
         }
       ]
     },
     {
       "file": "skills/kumihan-Claude-skill-0.1.0-preview.2.zip",
-      "sha256": "726365c8b727972949dca62f67ca8efc6df63f9d34163be9ea13d5a0bfc731e9",
-      "bytes": 73981,
+      "sha256": "4f1868cac9d9f8faaa6ef8c25974e86d78339bf2ec0eeda9821425576a21f172",
+      "bytes": 74300,
       "members": [
         {
           "path": "kumihan/LICENSE",
@@ -576,7 +571,7 @@
         {
           "path": "kumihan/inventory.json",
           "bytes": 4224,
-          "sha256": "e85f3822432fa62c3acc13549ff2f0717141cc6f894f311c5934ffb691089a7a"
+          "sha256": "0ee0971ff24abe78bdb8761a61659904ec4d19d92ef92710fbe56b41138bdd6b"
         },
         {
           "path": "kumihan/profiles/display-copy.json",
@@ -630,8 +625,8 @@
         },
         {
           "path": "kumihan/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan/rules/catalog.json",
@@ -697,8 +692,8 @@
     },
     {
       "file": "skills/kumihan-web-Claude-skill-0.1.0-preview.2.zip",
-      "sha256": "d2d82f06fa6ddd30dd15a800e97a3fe341d9b8870ac7fe8329429c0626b2b455",
-      "bytes": 74305,
+      "sha256": "e29a1487413c56e6b4ec39cec0ef167c6b63f8be750a0257b1d12d18ab481768",
+      "bytes": 74624,
       "members": [
         {
           "path": "kumihan-web/LICENSE",
@@ -713,7 +708,7 @@
         {
           "path": "kumihan-web/inventory.json",
           "bytes": 4228,
-          "sha256": "f11be02cc28743957daebfb5415370e5a349f85b23afeabdac4db9f969c9a205"
+          "sha256": "02d9996a44ce480031820dc875045bf783bbf9f7bedb6b8fde1b658c1d6dc40c"
         },
         {
           "path": "kumihan-web/profiles/display-copy.json",
@@ -767,8 +762,8 @@
         },
         {
           "path": "kumihan-web/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan-web/rules/catalog.json",
@@ -834,8 +829,8 @@
     },
     {
       "file": "skills/kumihan-documents-Claude-skill-0.1.0-preview.2.zip",
-      "sha256": "2cec33b35acbb9400bc25bc87428389a7f1fc1c8e359fbbae1901f7c7b073501",
-      "bytes": 74218,
+      "sha256": "c818bafb50b967ad7b17c081f7b6108fa4c69010059e916eecbbdc757cc8c45e",
+      "bytes": 74538,
       "members": [
         {
           "path": "kumihan-documents/LICENSE",
@@ -850,7 +845,7 @@
         {
           "path": "kumihan-documents/inventory.json",
           "bytes": 4234,
-          "sha256": "39605255237785430dcb4979ba3714cffb539a51367e25df5180789848f6b382"
+          "sha256": "1181995937d2520819cec66aa1e73f42bae24bc049e05cb3c40ff7fb9593be7c"
         },
         {
           "path": "kumihan-documents/profiles/display-copy.json",
@@ -904,8 +899,8 @@
         },
         {
           "path": "kumihan-documents/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan-documents/rules/catalog.json",
@@ -971,8 +966,8 @@
     },
     {
       "file": "skills/kumihan-review-Claude-skill-0.1.0-preview.2.zip",
-      "sha256": "276541f3decefaee4d067c2cdaa475bef909b0efffecd3f8137a3ee761a6c8bc",
-      "bytes": 74246,
+      "sha256": "c6fb615f0598594d13972f766804503c075e8b64d4b14d5fdc397aa0ffc7991e",
+      "bytes": 74565,
       "members": [
         {
           "path": "kumihan-review/LICENSE",
@@ -987,7 +982,7 @@
         {
           "path": "kumihan-review/inventory.json",
           "bytes": 4231,
-          "sha256": "202e8decb3850f6eadc1234405364f5fc6c26cec9ddba2db96926d27d9ffe742"
+          "sha256": "aae78fc819d509ef8716d048881250a8dba03385f72d00d43c813a7974ba694a"
         },
         {
           "path": "kumihan-review/profiles/display-copy.json",
@@ -1041,8 +1036,8 @@
         },
         {
           "path": "kumihan-review/references/web-recipes.md",
-          "bytes": 6972,
-          "sha256": "1d6ec9ca40a99bc1283a8a00156395ac415c23b222c52eac61034075ae1c2433"
+          "bytes": 7593,
+          "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
         },
         {
           "path": "kumihan-review/rules/catalog.json",
