@@ -1,0 +1,318 @@
+[
+  {
+    "id": "DESIGN-001",
+    "revision": 1,
+    "title_ja": "制作前に目的と構成判断を固定する",
+    "requirement_en": "Record the actual purpose, audience, information priorities, intended action and a purpose-specific structure rationale before production. Verify current attributable authorization for that exact contract and scope; later explanations do not replace missing chronology.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:design-intent",
+      "policy:bounded-approval",
+      "policy:permission-boundary",
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "error",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect preserved brief/contract bytes, production boundary and independently verified authorization; a true boolean or opaque approval reference cannot establish chronology or authority. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not fabricate an earlier decision, backdate a contract or change protected content. A new authorized refine pass gets its own prior contract and retains the earlier failure."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "No waiver for retroactive justification or missing production permission. Legitimate brand constraints must be recorded before use, and a fresh refine contract only governs its new production boundary.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-001-positive",
+      "DESIGN-001-negative",
+      "DESIGN-001-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-002",
+    "revision": 1,
+    "title_ja": "構成の再利用を実際の目的で説明する",
+    "requirement_en": "Choose structure from the brief instead of repeating the same Hero/cards/CTA arrangement across materially different objectives without justification. Review repeated structures against actual information relationships; changing accent colors alone is not a structural rationale.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:brand-consistency",
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      },
+      {
+        "when": "An explicit strict review policy was selected before production and materially different briefs receive repeated structure without a purpose-specific rationale.",
+        "impact": "error",
+        "scope": "compared structures under that declared policy"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Compare briefs, chosen structures and their reasons using assisted or manual review. Three peer choices may legitimately use three cards; no motif counter is a design-quality detector. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Propose a purpose-specific information structure within refine authorization. Do not remove useful brand components solely for novelty or infer a failure from the number of cards."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An approved brand component that fits the actual information can pass on its merits. Any genuine project waiver requires current authorized scope/reason/expiry/subject binding and stays waived.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-002-positive",
+      "DESIGN-002-negative",
+      "DESIGN-002-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-003",
+    "revision": 1,
+    "title_ja": "表示する装飾と主張と操作に実体を持たせる",
+    "requirement_en": "Use visual elements because they explain information, support hierarchy or provide a real action. Do not populate empty layout regions with invented metrics, testimonials, customer assets or simulated controls presented as actual functionality.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:truthful-claims",
+      "policy:asset-rights"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      },
+      {
+        "when": "Decoration or simulated UI misrepresents real claims/functions or obstructs necessary information; content and permission blockers retain their independent severity.",
+        "impact": "error",
+        "scope": "misrepresented claim/control or obscured information"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Trace real-world claims and assets to evidence/rights; examine whether each control actually works and whether decoration obscures reading. An assisted design review is not a semantic-truth detector. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not invent replacements or unauthorized assets. Distinguish a clearly labeled explanatory diagram from a real interface and preserve source information during approved changes."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Clearly labeled original fiction or noninteractive explanation may be outside real-world claim/control scope. There is no waiver for deception, unsupported claims or concealed necessary information.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-003-positive",
+      "DESIGN-003-negative",
+      "DESIGN-003-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-004",
+    "revision": 1,
+    "title_ja": "ブランドの連続性と企画の構成を分ける",
+    "requirement_en": "Keep protected brand identity and useful approved conventions consistent while tailoring structure to each actual purpose. Difference between projects does not require arbitrary changes to every familiar component.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:brand-consistency",
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Compare the current brief with attributable brand constraints, authorized components and observed readability. Brand approval alone does not prove that a component suits this brief. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not change protected identity or navigation to appear novel. Request scoped refine authorization for a justified campaign-specific adaptation."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A bounded authorized adaptation may differ from the normal brand pattern; verify current approval and preserve unaffected brand obligations and readable access.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-004-positive",
+      "DESIGN-004-negative",
+      "DESIGN-004-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-005",
+    "revision": 1,
+    "title_ja": "色と書体と余白を役割で定義する",
+    "requirement_en": "Assign color, typography and spacing choices to explicit information and interaction roles. Match the definitions to actual available fonts/assets and rendered output, including permitted fallback treatment.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:design-tokens",
+      "policy:type-roles",
+      "policy:asset-rights",
+      "A04"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect role tokens and their actual rendering, contrast/readability, glyph coverage and fallback. Token names or an adopted system example do not prove availability or universal suitability. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not import fonts without authorization and rights or silently rewrite source to fit a token. Propose only scoped changes and record unavailable rendering as untested."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An authorized local brand or fallback treatment can differ from default tokens if its roles and actual readability are evidenced; a genuine waiver needs bounded current approval.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-005-positive",
+      "DESIGN-005-negative",
+      "DESIGN-005-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-006",
+    "revision": 1,
+    "title_ja": "形式だけでデザインを排除しない",
+    "requirement_en": "Evaluate a card layout, gradient, symmetry or other visual treatment against the actual purpose, brand constraints and readability. Neither the presence nor absence of a named motif establishes quality or a design-origin verdict.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:brand-consistency"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Review purpose-specific reasons and observed readable access; a motif count cannot replace contextual judgment. Judge the actual design rather than infer its origin. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not ban whole families of treatment or blindly approve a brand motif. Propose changes only where evidence identifies a real mismatch or reading problem."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A deliberate approved treatment can pass when its actual use is appropriate; exceptions cannot hide required information or substitute for readability evidence.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-006-positive",
+      "DESIGN-006-negative",
+      "DESIGN-006-exception"
+    ]
+  }
+]

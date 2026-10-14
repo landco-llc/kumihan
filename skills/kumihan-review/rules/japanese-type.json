@@ -1,0 +1,487 @@
+[
+  {
+    "id": "JA-TYPE-001",
+    "revision": 1,
+    "title_ja": "言語と組方向と書体の前提を記す",
+    "requirement_en": "Declare the content language, intended writing direction and font/fallback policy for the selected medium. Check those declarations against actual text and available rendering.",
+    "kind": "expert-practice",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01",
+      "A03",
+      "policy:type-roles"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect host language/writing-mode settings and rendered glyphs; language metadata alone does not prove layout quality. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Change settings only in authorized regions; do not alter names or substitute unlicensed fonts."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Bound exceptions to a named mixed-language or display region; verify current approval and unchanged protected content.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "JA-TYPE-002",
+    "revision": 1,
+    "title_ja": "実際の行端で禁則を確認する",
+    "requirement_en": "Review actual rendered line starts and ends against the chosen Japanese composition profile. Punctuation occurring somewhere in source text is not itself a line-edge violation.",
+    "kind": "expert-practice",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01",
+      "A02"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Use observed line boxes and relevant character classes in the actual font, direction and width; no universal kinsoku detector is provided. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Propose layout changes instead of silently changing punctuation or source text."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A deliberate display exception needs exact scope, rationale and verified approver/expiry/subject binding; it remains waived.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-002-positive",
+      "JA-TYPE-002-negative",
+      "JA-TYPE-002-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-003",
+    "revision": 1,
+    "title_ja": "分割しない範囲を文脈で選ぶ",
+    "requirement_en": "Identify sequences that need to remain together under the selected composition and content context. Verify their rendered treatment without turning an entire paragraph or long control label into an unbreakable block.",
+    "kind": "expert-practice",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Review character sequence classes and actual line placement, including overflow introduced by attempted grouping. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Avoid blanket nowrap; preserve the source and adjust only a justified local grouping."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A context-specific break or grouping must be bounded and approved; required content and controls must stay available.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "JA-TYPE-004",
+    "revision": 1,
+    "title_ja": "意味のまとまりと禁則を別に評価する",
+    "requirement_en": "Judge whether short headings and controls remain understandable when wrapped, separately from Japanese punctuation line-edge constraints. A mid-word wrap is not automatically a kinsoku failure.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:semantic-wrap",
+      "A02",
+      "A03"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Use semantic review of the actual label and line placement; language-model judgment is assisted, not deterministic verification. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not replace every natural wrap with nowrap or insert unrequested source spaces."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Readable constrained wraps can pass on their merits; genuine project exceptions require bounded current approval.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-004-positive",
+      "JA-TYPE-004-negative",
+      "JA-TYPE-004-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-005",
+    "revision": 1,
+    "title_ja": "本文と見出しの字詰めを分けて扱う",
+    "requirement_en": "Choose spacing treatment by text role. Body reading and short display lettering require separate rationale and rendered review; a display tightening choice must not automatically cascade through body text.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:type-roles",
+      "A01"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Compare role-scoped styles and actual reading samples; no universal tracking value is prescribed. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Confine optical or tight spacing proposals to the justified role and preserve source characters."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Approved display treatment can differ from body metrics; approval and readability evidence remain scoped to that region.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-005-positive",
+      "JA-TYPE-005-negative",
+      "JA-TYPE-005-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-006",
+    "revision": 1,
+    "title_ja": "フォント機能の有無と適用範囲を調べる",
+    "requirement_en": "Before using palt or another OpenType feature, identify the actual font, feature support and intended text role. A CSS feature declaration does not prove that the font implements it or that all text benefits.",
+    "kind": "implementation-reference",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A08",
+      "policy:type-roles"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect font support and compare affected glyph positioning in the available renderer; palt is discretionary and font-dependent. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Never force palt on all body text, replace a font without permission or pretend unsupported features were tested."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Normal metrics or unavailable features may be appropriate; record inapplicability or unsupported checks instead of forcing an alternative.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-006-positive",
+      "JA-TYPE-006-negative",
+      "JA-TYPE-006-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-007",
+    "revision": 1,
+    "title_ja": "約物の空き方を組版方針と照合する",
+    "requirement_en": "Use a coherent punctuation-spacing and line-edge adjustment approach for each declared composition profile. Review consecutive punctuation and line ends rather than mixing unrelated application presets.",
+    "kind": "expert-practice",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01",
+      "policy:punctuation-consistency"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect representative punctuation combinations and real line ends; application behavior may differ. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not insert or delete source punctuation to imitate another engine; propose scoped layout changes."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Different named roles may use different deliberate conventions if their bounds, rationale and approval are recorded.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "JA-TYPE-008",
+    "revision": 1,
+    "title_ja": "和欧混植の見え方を原稿を変えず調整する",
+    "requirement_en": "Review relative glyph scale, baseline and spacing where Japanese text meets Latin letters or numerals. Use layout treatment appropriate to the role rather than automatically inserting spaces into source strings.",
+    "kind": "expert-practice",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01",
+      "policy:mixed-script"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Review mixed-script samples in actual fonts and preserve protected identifiers, prices and punctuation. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "No blanket spacing insertion or universal numeral enlargement; source tokens must remain intact."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A compact protected identifier may intentionally differ from surrounding prose; bounded approval does not authorize changing the identifier.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-008-positive",
+      "JA-TYPE-008-negative",
+      "JA-TYPE-008-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-009",
+    "revision": 1,
+    "title_ja": "行長と行送りと字間を一緒に検討する",
+    "requirement_en": "Choose measure, leading and tracking together for the actual font, text role and medium. A single character-count or line-height recipe is not a universal reading requirement.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:reading-measures",
+      "A04"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "warning",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Review sustained-reading samples and role tokens at actual output sizes; numeric examples from another system are contextual only. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Change only authorized layout tokens; do not force identical body, caption, UI and presentation measures."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Short captions and display roles can use distinct tested treatment; a genuine waiver needs scoped current approval.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-009-positive",
+      "JA-TYPE-009-negative",
+      "JA-TYPE-009-exception"
+    ]
+  },
+  {
+    "id": "JA-TYPE-010",
+    "revision": 1,
+    "title_ja": "ルビと注記の衝突と読む順序を調べる",
+    "requirement_en": "Review ruby, annotations and neighboring text throughout the relevant pages or view states. They must remain legible, correctly associated and in a usable reading order.",
+    "kind": "expert-practice",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "A01",
+      "policy:annotations"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect full relevant pages/views and annotation associations; absence of a suitable renderer remains not-checked or unsupported. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not remove notes, shrink them to illegibility or rewrite protected source to conceal collisions."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An intentional bounded annotation arrangement requires approval and evidence that necessary information remains available.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]

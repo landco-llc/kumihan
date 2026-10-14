@@ -22,8 +22,11 @@ KUMIHANは、AIによる日本語のWebサイト・記事・文書・プレゼ�
 - **Content integrity / 原稿を大切に** — Careful handling of names, numbers and original text.
 - **Practical review / 制作後の見直し** — Guidance for checking readability and layout.
 
-**Status / 開発状況:** v0.1 is in development. Installation instructions will be provided when the first version is ready.  
-v0.1を開発中です。初版の公開時に導入・利用方法を案内します。
+**Status / 開発状況:** v0.1 is in development. A private-install preview is available for trying in your own environment; host compatibility remains unverified.
+
+v0.1を開発中です。自分の環境で導入を試すためのプレビューを用意しています。ホストでの動作確認は未完了です。
+
+[導入方法（日本語）](docs/installation.ja.md) · [Installation (English)](docs/installation.md) · [Downloads and checksums](downloads/)
 
 ## License / ライセンス
 

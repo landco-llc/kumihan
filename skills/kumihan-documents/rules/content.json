@@ -1,0 +1,239 @@
+[
+  {
+    "id": "CONTENT-001",
+    "revision": 1,
+    "title_ja": "保護対象の文字列と値を維持する",
+    "requirement_en": "Keep protected source fields unchanged, including names, prices, quantities, units and punctuation. Compare exact source sequences; visual similarity does not establish preservation.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Compare the approved input and extracted output only where a supported exact-text extractor exists; otherwise require manual evidence. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not rewrite protected fields. A newly authorized source revision establishes a new comparison baseline, not a silent correction."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "No waiver for silently changed protected content; explicitly editable fields are outside the protected scope.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-001-positive",
+      "CONTENT-001-negative",
+      "CONTENT-001-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-002",
+    "revision": 1,
+    "title_ja": "実在する根拠のない主張を載せない",
+    "requirement_en": "Trace performance numbers, endorsements, customer identities and logos to supplied evidence and usage permission. Missing proof is not permission to invent a plausible claim.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:truthful-claims"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Review each factual assertion and asset against supplied evidence; this is not an automated semantic-truth detector. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Remove or flag unsubstantiated claims only under explicit refine authorization; never fabricate replacement testimonials or metrics."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Clearly labeled fictional material can be outside real-world claim scope; it must not imply actual customers or achievements.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-002-positive",
+      "CONTENT-002-negative",
+      "CONTENT-002-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-003",
+    "revision": 1,
+    "title_ja": "不可視文字と空白の必要性を確かめる",
+    "requirement_en": "Identify newly added invisible characters or spacing by source comparison and explain their function. Preserve intentional separators, combining marks and variation selectors instead of deleting every nonprinting code point.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "An exact code-point diff can locate changes; deciding whether they are legitimate requires context and may require manual review. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "No blanket whitespace stripping or deletion of joiners, variation selectors or combining characters."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Intentional source characters are not violations merely because they are invisible; unsupported extraction remains not-checked.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "CONTENT-004",
+    "revision": 1,
+    "title_ja": "原稿へ一括の文字正規化をかけない",
+    "requirement_en": "Do not apply blanket Unicode normalization to source content. Preserve compatibility forms, original punctuation, variation sequences and decomposed characters unless a specific editable field has separate explicit authorization.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Compare original code points, not only normalized strings; no normalization-based equality shortcut proves preservation. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Never use broad NFKC or NFC rewriting as an unrequested typography repair. Keep authorized derived search data separate from source."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "A separately authorized derived field may have its own transformation; protected source remains exact.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-004-positive",
+      "CONTENT-004-negative",
+      "CONTENT-004-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-005",
+    "revision": 1,
+    "title_ja": "素材の由来と利用条件を残す",
+    "requirement_en": "Record origin, source identifier, license or permission basis and intended use for images, fonts and other assets. Unavailable rights evidence must remain an explicit limitation.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:asset-rights"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect actual rights records and asset provenance; a URL or attractive preview alone is not permission. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not infer a license, copy a font file or redistribute source figures to fill missing metadata."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Original or public-domain material still needs an attributable provenance record; unverifiable rights cannot be labeled verified.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]
