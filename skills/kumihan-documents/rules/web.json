@@ -1,0 +1,358 @@
+[
+  {
+    "id": "WEB-001",
+    "revision": 2,
+    "title_ja": "狭い表示でも内容と操作を保つ",
+    "requirement_en": "For applicable one-dimensional web content, inspect vertically scrolling content at a width equivalent to 320 CSS pixels and horizontally scrolling content at a height equivalent to 256 CSS pixels. Determine the threshold from the actual scrolling axis, not the text's reading direction. Required information and functions must remain available without unintended two-axis scrolling.",
+    "kind": "standard-reference",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "WCAG22",
+      "A05a"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Use real viewport-equivalent rendering and operation; record width, direction and actual content availability. Viewport resizing does not prove text zoom or other browser coverage. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Fix the responsible width/layout; never hide required content merely to make the screenshot fit."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Criterion-specific necessary two-dimensional regions may be inapplicable locally. A project waiver with lost content remains waived and cannot establish WCAG conformance.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "WEB-001-positive",
+      "WEB-001-negative",
+      "WEB-001-exception"
+    ]
+  },
+  {
+    "id": "WEB-002",
+    "revision": 1,
+    "title_ja": "文字の拡大を実際の操作と確認する",
+    "requirement_en": "For applicable text, test an actual supported text-enlargement mechanism through 200 percent, retaining content and function. A smaller authored font must not defeat the required enlargement.",
+    "kind": "standard-reference",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "WCAG22",
+      "A05b"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Record the real enlargement mechanism and intermediate/maximum states; viewport width changes alone are not this test. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not counteract enlargement with scaling or forced tiny text; keep authorized content and controls usable."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Assess the criterion-specific exclusions and user-agent-controlled content explicitly. A project waiver is not a standards-conformance pass.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "WEB-003",
+    "revision": 1,
+    "title_ja": "利用者の文字間隔変更に耐えるか試す",
+    "requirement_en": "Where the language/script uses the relevant spacing properties, apply the criterion user-style changes and check that content and function survive. Test line height 1.5 times font size, paragraph spacing 2 times font size, letter spacing 0.12 times font size and word spacing 0.16 times font size as applicable.",
+    "kind": "standard-reference",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "WCAG22",
+      "A05c"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Apply actual user-style overrides to the target and inspect resulting states; these values are resilience tests, not required initial CSS defaults. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not force unused spacing properties into Japanese source or remove text to accommodate the override."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Only the properties meaningful for the language/script apply; document that scope rather than imposing a universal baseline.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "WEB-004",
+    "revision": 1,
+    "title_ja": "全体の切り取りで情報損失を隠さない",
+    "requirement_en": "Investigate substantive overflow instead of hiding it behind page-wide clipping. Required text, controls and focus indication must remain accessible in the tested state.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "policy:reflow-integrity",
+      "WCAG22",
+      "A05a"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect both relevant CSS and actual overflow/access; a clipping declaration alone does not prove content loss. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Correct the causal width or placement within authorization; never use global clipping as proof of successful reflow."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Bounded decorative cropping with no informational or interactive loss is outside this prohibition; required content cannot be waived away.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "WEB-004-positive",
+      "WEB-004-negative",
+      "WEB-004-exception"
+    ]
+  },
+  {
+    "id": "WEB-005",
+    "revision": 1,
+    "title_ja": "長い表示文字列を実条件で試す",
+    "requirement_en": "Exercise long labels, URLs and protected names or identifiers at narrow widths and actual enlargement. Full content access and required operation matter more than enforcing a one-line appearance.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "policy:semantic-wrap",
+      "A03"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect real rendering, focus/activation and complete text access; a usable two-line button is not automatically a failure. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "No universal nowrap or overflow-wrap:anywhere prescription; preserve protected tokens and choose a local treatment."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A justified local reveal or wrap may be acceptable with complete access; actual project exceptions require scoped approval.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "WEB-005-positive",
+      "WEB-005-negative",
+      "WEB-005-exception"
+    ]
+  },
+  {
+    "id": "WEB-006",
+    "revision": 1,
+    "title_ja": "画像内の文字の必要性を区別する",
+    "requirement_en": "Use real text for information when the available technology can provide its required presentation. Identify criterion-specific customizable or essential presentations rather than converting ordinary text to an image for convenience.",
+    "kind": "standard-reference",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "WCAG22",
+      "A05d"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect structure, image purpose and alternatives; logotypes and genuine essential presentations have distinct applicability. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not rasterize body copy to hide layout problems or infer asset rights from the criterion exception."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record the applicable essential/customizable exception and its accessible context; an ordinary waiver cannot claim WCAG conformance.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "WEB-007",
+    "revision": 1,
+    "title_ja": "読み込まれた書体と代替表示を確認する",
+    "requirement_en": "Verify actual font loading, glyph coverage and fallback rendering in the target environment. Record which fonts were observed and which fallback conditions remain untested.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "policy:asset-rights",
+      "A04"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Observe loaded/fallback faces and representative source glyphs; a declared family list is not verification of coverage. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not bundle or download font files without authorization and rights; preserve source characters when glyphs are unavailable."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Fallback can be deliberate if its actual readability and coverage are checked; missing checks remain explicit limitations.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "WEB-008",
+    "revision": 1,
+    "title_ja": "必要な操作状態を表示して検査する",
+    "requirement_en": "Review the states the actual interface requires, including focus, errors and relevant loading or disabled states. A single default screenshot cannot establish that the interaction works.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "source_refs": [
+      "policy:interaction-states"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Exercise applicable controls and inspect each required state; static content with no such control must not acquire fictitious UI states. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Modify only authorized real controls; do not invent testimonials, dashboards or interaction results."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "State applicability follows the actual UI; any genuine exception must preserve necessary information and operation with bounded approval.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]

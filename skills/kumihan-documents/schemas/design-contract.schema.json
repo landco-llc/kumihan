@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kumihan:schema:design-contract:0.1.0",
+  "title": "KUMIHAN intentional-design contract",
+  "description": "A brief recorded before generation. This declaration cannot prove chronology, permission or asset rights; the host must preserve and verify that evidence.",
+  "type": "object",
+  "properties": {
+    "brief_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "medium": {
+      "$ref": "urn:kumihan:schema:rule:0.1.0#/$defs/media_profile"
+    },
+    "audience": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "primary_information": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "primary_action": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "structure_rationale": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "type_roles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "family": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "size": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "role",
+          "family",
+          "size",
+          "rationale"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "asset_provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset_ref": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "origin": {
+            "type": "string",
+            "enum": [
+              "original",
+              "licensed",
+              "provided",
+              "public-domain"
+            ]
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "license": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "usage": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "asset_ref",
+          "origin",
+          "source_ref",
+          "license",
+          "usage"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "brand_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "rejected_defaults": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scope": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "approval_ref": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "scope",
+          "reason",
+          "approval_ref"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "created_before_generation": {
+      "const": true
+    }
+  },
+  "required": [
+    "brief_id",
+    "medium",
+    "audience",
+    "objective",
+    "primary_information",
+    "primary_action",
+    "structure_rationale",
+    "type_roles",
+    "asset_provenance",
+    "brand_constraints",
+    "rejected_defaults",
+    "exceptions",
+    "created_before_generation"
+  ],
+  "additionalProperties": false
+}
