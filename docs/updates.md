@@ -52,3 +52,7 @@ The catalog references this repository's root plugin on `main`, sharing the four
 No background updater, runtime fetch of instructions, hook, MCP server, credentials, project configuration, Actions workflow or ZIP rebuild is added. These guidance skills require no network lookup at use time. Static format checks do not prove host discovery, invocation, rendering or stable-release acceptance.
 
 Claude CodeとClaudeチャットの経路は[Claude向け案内](installation.claude.ja.md)／[English](installation.claude.md)を参照してください。
+
+## Gemini preview
+
+[Gemini 日本語](installation.gemini.ja.md) · [Gemini English](installation.gemini.md) · [Downloads](../downloads%20Gemini/README.md)

@@ -65,3 +65,7 @@ Claude Code では導入先を `.claude/skills/` に変えます。個人用デ�
 公式ページの確認日: 2026-10-14。画面や提供条件が変わった場合は、最新の公式案内と自分の画面を優先してください。
 
 Claude向けは[Claudeの導入と更新](installation.claude.ja.md)を参照してください。
+
+## Gemini preview
+
+[Gemini 日本語](installation.gemini.ja.md) · [Gemini English](installation.gemini.md) · [Downloads](../downloads%20Gemini/README.md)
