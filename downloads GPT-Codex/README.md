@@ -1,29 +1,47 @@
-# KUMIHAN：GPT・Codex 向けダウンロード
+# KUMIHAN ダウンロード：ChatGPT・Codex
 
-プレビュー版 **0.1.0-preview.1**。ZIP名の `plugin` は4つの Skill をまとめたプラグイン、`skill` は単独 Skill を示します。形式上の導入先を示す名前であり、実機動作は未検証です。
+[導入ガイド（日本語）](../docs/installation.ja.md) ・ [Installation guide (English)](../docs/installation.md) ・ [トップに戻る / Back to top](../README.md)
 
-[導入方法（日本語）](../docs/installation.ja.md) · [Installation (English)](../docs/installation.md)
+<br>
+
+プレビュー版 **0.1.0-preview.1** です。導入の手順は、上の導入ガイドをご覧ください。
+
+Preview version **0.1.0-preview.1**. See the installation guide above for setup steps.
+
+<br>
 
 ## プラグイン / Plugin
 
-[プラグイン ZIP](plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.1.zip)
+4つのスキルをまとめたパッケージです。
+
+All four skills in one package.
+
+- [kumihan-GPT-Codex-plugin-0.1.0-preview.1.zip](plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.1.zip)
+
+<br>
 
 ## スキル / Skills
 
-- [kumihan](skills/kumihan-GPT-Codex-skill-0.1.0-preview.1.zip)
-- [kumihan-web](skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.1.zip)
-- [kumihan-documents](skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.1.zip)
-- [kumihan-review](skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.1.zip)
+1つずつ追加して使います。
 
-## チェックサム / Checksums
+Add them one at a time.
 
-[SHA256SUMS.txt](SHA256SUMS.txt) · [MANIFEST.json](MANIFEST.json)
+- [kumihan](skills/kumihan-GPT-Codex-skill-0.1.0-preview.1.zip) — 最初の入口 / starting point
+- [kumihan-web](skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.1.zip) — Webページ / web pages
+- [kumihan-documents](skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.1.zip) — 報告書・スライド / reports and slides
+- [kumihan-review](skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.1.zip) — レビュー / review
 
-ZIPは `plugins/` と `skills/` の配置を保持してください。配布フォルダーの親ディレクトリから、macOSで確認する場合:
+<br>
+
+## ファイルの確認（任意） / Verify downloads (optional)
+
+ダウンロードしたファイルが壊れていないかを確認できます。このページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行してください。すべての行に `OK` と表示されれば問題ありません。
+
+To check your downloads, keep the same folder layout as this page and run the following in the macOS Terminal. Every line should show `OK`.
 
 ```sh
 cd "downloads GPT-Codex"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-The plugin ZIP contains all four skills; each standalone ZIP contains one complete skill folder. Keep the subfolder layout when checking SHA256SUMS. Host installation and operation remain unverified; this preview does not establish a stable release.
+[SHA256SUMS.txt](SHA256SUMS.txt) ・ [MANIFEST.json](MANIFEST.json)

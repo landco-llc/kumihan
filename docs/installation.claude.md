@@ -1,57 +1,119 @@
-# Claude installation and updates
+# Install for Claude
 
-[日本語](installation.claude.ja.md) · [GPT/Codex installation](installation.md) · [Claude downloads](../downloads%20Claude/)
+[日本語](installation.claude.ja.md) · [Back to top](../README.md)
 
-Preview **0.1.0-preview.1**, published by **L&Co.LLC**. Claude Code plugins and Claude chat skills use different routes. Installation, upload, discovery, invocation and updates remain untested. All 96 skill files and existing GPT-Codex downloads are unchanged.
+<br>
 
-## Claude Code: Git marketplace
+This guide explains how to use KUMIHAN with Claude Code and Claude chat.
 
-Follow the [official install guide](https://code.claude.com/docs/en/discover-plugins). Register the catalog in a supported client:
+> **About this preview (0.1.0-preview.1)**  
+> This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
-```sh
-claude plugin marketplace add "https://github.com/landco-llc/kumihan.git#main"
-```
+<br>
 
-In a Claude Code conversation, open details and review the installation scope:
+## 1. Choose an installation method
 
-```text
-/plugin install kumihan@kumihan-marketplace
-```
+| Where you want to use it | Recommended method |
+| --- | --- |
+| Claude Code | [A. Install from GitHub](#a-claude-code-install-from-github) (easy to update) |
+| Claude Code (from a ZIP) | [B. Install from a ZIP](#b-claude-code-install-from-a-zip) |
+| Claude chat (claude.ai and apps) | [C. Upload skills](#c-claude-chat-upload-skills) |
 
-After installation, check `/kumihan:kumihan`, `/kumihan:kumihan-web`, `/kumihan:kumihan-documents` and `/kumihan:kumihan-review` and their local resources. None of these operations was executed here.
+Claude Code and Claude chat use different installation methods.
 
-Explicit refresh examples:
+<br>
 
-```sh
-claude plugin marketplace update kumihan-marketplace
-claude plugin update kumihan@kumihan-marketplace
-```
+## A. Claude Code: install from GitHub
 
-The [official version guidance](https://code.claude.com/docs/en/plugins/host-marketplace) requires a version change for updated versioned packages. Future content changes must bump `.claude-plugin/plugin.json`; the catalog does not repeat the version. Third-party marketplace auto-update defaults to off. This distribution does not configure it. Confirm application/reload using your actual host.
+1. In your terminal, add the KUMIHAN marketplace.
 
-## Claude Code: manual ZIP
+   ```sh
+   claude plugin marketplace add "https://github.com/landco-llc/kumihan.git#main"
+   ```
 
-Verify and extract the [Code plugin ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.0-preview.1.zip), yielding `kumihan/`. Example local loading:
+2. In a Claude Code conversation, enter:
 
-```sh
-claude --plugin-dir "/absolute/path/kumihan"
-```
+   ```text
+   /plugin install kumihan@kumihan-marketplace
+   ```
 
-This loads an extracted folder; it is distinct from marketplace installation and chat Skill upload. Preserve the manifest, all skills, licenses and notices. Do not overwrite an existing folder or mix private files into the package.
+3. Review the details, choose a scope (just you, this project, and so on), and install.
 
-## Claude chat: individual skill ZIPs
+Once installed, these commands become available:
 
-The [official Skills guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude) includes Free and other plans and requires code execution. Check your account and organization permissions; no account setting was changed here.
+- `/kumihan:kumihan`
+- `/kumihan:kumihan-web`
+- `/kumihan:kumihan-documents`
+- `/kumihan:kumihan-review`
 
-Use the add control in `Customize > Skills`, choose `Upload a skill`, and upload [individual skill ZIPs](../downloads%20Claude/skills/) one at a time. Do not upload the Code plugin ZIP there. Each individual ZIP contains one matching skill-name folder, `SKILL.md` and all 24 files. Preserve filenames/case, then confirm enablement and use. Git pushes and Code plugin updates do not synchronize manually uploaded chat skills.
+For updates, see the [update guide](updates.md#claude-code).
 
-## Integrity and limits
+<br>
 
-Download [SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt) and [MANIFEST.json](../downloads%20Claude/MANIFEST.json) from the same revision; keep the ZIPs in `plugins/` and `skills/`. From the download folder's parent, on macOS:
+## B. Claude Code: install from a ZIP
+
+1. Download the [Claude Code plugin ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.0-preview.1.zip).
+2. Extract it to get a `kumihan` folder.
+3. Start Claude Code with that folder:
+
+   ```sh
+   claude --plugin-dir "/absolute/path/kumihan"
+   ```
+
+**Notes**
+
+- Use the folder as is. Don't remove files or add other files to it.
+- This method does not update automatically. When a new version is released, replace the folder with the new ZIP.
+
+<br>
+
+## C. Claude chat: upload skills
+
+Use this method for claude.ai and the Claude apps.
+
+1. Download the skill ZIPs you want to use.
+   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.0-preview.1.zip) — starting point
+   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.0-preview.1.zip) — web pages
+   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.0-preview.1.zip) — reports and slides
+   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.0-preview.1.zip) — review
+2. In Claude, open **Customize → Skills**, then choose **Upload a skill** from the add button.
+3. Upload the ZIPs one at a time and enable each skill.
+
+**Notes**
+
+- The Claude Code plugin ZIP does not work here. Use the individual skill ZIPs.
+- Upload the ZIPs without renaming them.
+- Skills require code execution to be turned on in your settings. See [Claude's guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
+- On organization accounts, availability may depend on your admin's settings.
+- Uploaded skills do not update automatically. When a new version is released, upload it again.
+
+<br>
+
+## 2. Try it out
+
+We recommend starting with a request that doesn't change any files:
+
+> I'm planning a Japanese web page. What should I keep in mind? Please don't change any files.
+
+<br>
+
+## Verify your downloads (optional)
+
+To check that your downloads are intact, use [SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt).
+
+Keep the same folder layout as the downloads page (`plugins/` and `skills/`), then run this in the macOS Terminal:
 
 ```sh
 cd "downloads Claude"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-Require OK for every entry. Integrity is not host acceptance or a security certification. These workflows provide guidance; they are not automatic detectors. Rendering and native Office compatibility are unverified. Claude's authoritative validator and actual host have not been run; static field/path checks do not establish successful loading.
+If every line shows `OK`, the files are intact.
+
+<br>
+
+---
+
+Other tools: [ChatGPT / Codex](installation.md) · [Gemini](installation.gemini.md)
+
+Screens and availability may change. Please check each service's official guidance for the latest information (last checked: October 14, 2026).

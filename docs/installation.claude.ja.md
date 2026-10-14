@@ -1,57 +1,119 @@
-# Claude向け導入と更新
+# Claudeへの導入
 
-[English](installation.claude.md) · [GPT・Codexの導入](installation.ja.md) · [Claude配布ファイル](../downloads%20Claude/)
+[English](installation.claude.md) ・ [トップに戻る](../README.md)
 
-**0.1.0-preview.1** の配布プレビューです。Claude CodeとClaudeチャットは別の導入経路です。実際のインストール・アップロード・検出・呼び出し・更新は未検証です。開発者名は **L&Co.LLC**。96スキルファイルとGPT-Codex配布物は変更していません。
+<br>
 
-## Claude Code：Git marketplace
+KUMIHANをClaude CodeやClaudeチャットで使うための手順です。
 
-[公式インストール案内](https://code.claude.com/docs/en/discover-plugins)に従い、対応版で内容と利用範囲を確認して導入してください。Gitからカタログを登録する例:
+> **プレビュー版（0.1.0-preview.1）について**  
+> ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
-```sh
-claude plugin marketplace add "https://github.com/landco-llc/kumihan.git#main"
-```
+<br>
 
-Claude Codeの会話内で詳細画面を開く例:
+## 1. 導入方法を選ぶ
 
-```text
-/plugin install kumihan@kumihan-marketplace
-```
+| 使いたい場所 | おすすめの方法 |
+| --- | --- |
+| Claude Code | [A. GitHubから導入する](#a-claude-codegithubから導入する)（更新もかんたん） |
+| Claude Code（ZIPで導入したい場合） | [B. ZIPから導入する](#b-claude-codezipから導入する) |
+| Claudeチャット（claude.ai・アプリ） | [C. スキルをアップロードする](#c-claudeチャットスキルをアップロードする) |
 
-内容とユーザー／プロジェクト／ローカル等のスコープを選びます。導入後は `/kumihan:kumihan`、`/kumihan:kumihan-web`、`/kumihan:kumihan-documents`、`/kumihan:kumihan-review` 等が表示されるか、ローカル参照を解決できるかを確認してください。ここでは上記操作を実行していません。
+Claude CodeとClaudeチャットは、導入方法が異なります。
 
-明示的にカタログと導入済みプラグインを更新する例:
+<br>
 
-```sh
-claude plugin marketplace update kumihan-marketplace
-claude plugin update kumihan@kumihan-marketplace
-```
+## A. Claude Code：GitHubから導入する
 
-[公式更新案内](https://code.claude.com/docs/en/plugins/host-marketplace)のとおり、versionが同じままのGit変更を新しいプラグイン版として受け取るとは限りません。今後の内容変更では `.claude-plugin/plugin.json` のversionを更新します。versionはmarketplace側に重複記載しません。第三者marketplaceの自動更新は初期OFFです。この配布で自動更新を有効化・設定しません。実際の適用・再読み込みはホストの表示に従って確認してください。
+1. ターミナルで、KUMIHANの配布元を登録します。
 
-## Claude Code：手動ZIP
+   ```sh
+   claude plugin marketplace add "https://github.com/landco-llc/kumihan.git#main"
+   ```
 
-[Claude Code用プラグインZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.0-preview.1.zip)を検証・展開すると `kumihan/` が得られます。ローカル読み込みを試す例:
+2. Claude Codeの会話の中で、次を入力します。
 
-```sh
-claude --plugin-dir "/absolute/path/kumihan"
-```
+   ```text
+   /plugin install kumihan@kumihan-marketplace
+   ```
 
-これは展開済みフォルダーの読み込み例であり、marketplace登録やClaudeチャットへのSkillアップロードではありません。`.claude-plugin/plugin.json` と全 `skills/`、ライセンス・通知を保持してください。機密ファイルを混ぜず、既存フォルダーを上書きしないでください。
+3. 内容を確認し、使う範囲（自分だけ・このプロジェクトだけ など）を選んでインストールします。
 
-## Claudeチャット：単独Skill ZIP
+導入できると、次のコマンドが使えるようになります。
 
-[公式Skills案内](https://support.claude.com/en/articles/12512180-use-skills-in-claude)はFreeを含む各プランと、コード実行機能が必要であることを説明しています。組織の権限や提供状況も確認してください。設定操作は利用者側の選択であり、ここでは変更していません。
+- `/kumihan:kumihan`
+- `/kumihan:kumihan-web`
+- `/kumihan:kumihan-documents`
+- `/kumihan:kumihan-review`
 
-`Customize > Skills` の追加操作から `Upload a skill` を選び、[単独Skill ZIP](../downloads%20Claude/skills/)を1つずつ追加します。プラグインZIPをこの画面にアップロードしないでください。単独ZIPはSkill名のトップフォルダーと `SKILL.md`、全24ファイルを含みます。ファイル名・大小文字を変更せず、追加後に有効化と利用を確認してください。Git pushやClaude Codeの更新は、手動アップロードしたSkillを自動更新しません。
+更新の方法は [更新ガイド](updates.md#claude-code) をご覧ください。
 
-## ファイルの確認と限界
+<br>
 
-[SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt) と [MANIFEST.json](../downloads%20Claude/MANIFEST.json)を同じ版から取得し、ZIPを `plugins/` と `skills/` に配置します。配布フォルダーの親からmacOSで確認する例:
+## B. Claude Code：ZIPから導入する
+
+1. [Claude Code用プラグインのZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.0-preview.1.zip) をダウンロードします。
+2. ZIPを展開すると、`kumihan` フォルダーができます。
+3. そのフォルダーを指定して、Claude Codeを起動します。
+
+   ```sh
+   claude --plugin-dir "/absolute/path/kumihan"
+   ```
+
+**ご注意**
+
+- フォルダーの中身は、そのまま使ってください。ファイルを削ったり、別のファイルを混ぜたりしないでください。
+- この方法では自動で更新されません。新しい版が出たら、ZIPを入れ替えてください。
+
+<br>
+
+## C. Claudeチャット：スキルをアップロードする
+
+claude.aiやClaudeアプリで使う方法です。
+
+1. 使いたいスキルのZIPをダウンロードします。
+   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.0-preview.1.zip) — 最初の入口
+   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.0-preview.1.zip) — Webページ
+   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.0-preview.1.zip) — 報告書・スライド
+   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.0-preview.1.zip) — レビュー
+2. Claudeの **Customize → Skills** を開き、追加ボタンから **Upload a skill** を選びます。
+3. ZIPを1つずつアップロードし、スキルを有効にします。
+
+**ご注意**
+
+- Claude Code用プラグインのZIPは、ここでは使えません。スキルのZIPを使ってください。
+- ZIPのファイル名は変えずにアップロードしてください。
+- スキルを使うには、設定で「コード実行」が有効になっている必要があります。詳しくは [Claudeの公式案内](https://support.claude.com/en/articles/12512180-use-skills-in-claude) をご覧ください。
+- 組織のアカウントでは、管理者の設定によって使えない場合があります。
+- アップロードしたスキルは自動では更新されません。新しい版が出たら、もう一度アップロードしてください。
+
+<br>
+
+## 2. 使ってみる
+
+最初は、ファイルを変更しない依頼で試すのがおすすめです。
+
+> 日本語のWebページをつくる予定です。気をつけるポイントを教えてください。ファイルは変更しないでください。
+
+<br>
+
+## ファイルが正しいか確認する（任意）
+
+ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt) を使います。
+
+ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行します。
 
 ```sh
 cd "downloads Claude"
 shasum -a 256 -c SHA256SUMS.txt
 ```
 
-全行がOKであることを確認してください。ハッシュ一致は導入成功や安全性の認証ではありません。Skillsは指針であり自動検出器ではなく、描画・Officeネイティブ互換性も未検証です。Claudeの公式validator・実機による確認は未実施です。静的な名前・構造・参照確認だけで、ホスト受け入れを保証しません。
+すべての行に `OK` と表示されれば問題ありません。
+
+<br>
+
+---
+
+ほかのツール：[ChatGPT・Codex](installation.ja.md) ・ [Gemini](installation.gemini.ja.md)
+
+画面や提供条件は変わることがあります。最新の情報は各サービスの公式案内をご確認ください（本ページの確認日：2026年10月14日）。
