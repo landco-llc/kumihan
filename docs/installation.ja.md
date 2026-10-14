@@ -54,7 +54,7 @@ cp -R skills/kumihan /path/to/your-project/.agents/skills/
 
 Claude Code では導入先を `.claude/skills/` に変えます。個人用ディレクトリへの配置は、その利用者が全プロジェクトで使いたい場合の任意の選択です。ここでは個人インストールを実行していません。フォルダー内の rules、profiles、references、schemas、sources、inventory.json、LICENSE を省略しないでください。
 
-[公式プラグインの接続・テスト案内](https://developers.openai.com/plugins/deploy/connect-chatgpt)はローカル marketplace からの導入も説明しています。プラグイン利用と単独フォルダー配置は別経路です。`npx skills add` は任意の将来候補として保留し、本手順では実行・検証済みとはしません。
+[公式プラグインの接続・テスト案内](https://developers.openai.com/plugins/deploy/connect-chatgpt)はローカル marketplace からの導入も説明しています。プラグイン利用と単独フォルダー配置は別経路です。Gitからの単独Skill導入とCodex marketplaceの登録・更新例は[Git導入と更新](updates.md)を参照してください。これらのコマンドとホスト動作は未実行・未検証です。
 
 ## 導入後の確認と限界
 
