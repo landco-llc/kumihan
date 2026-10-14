@@ -1,0 +1,43 @@
+name: Verify standalone skills
+on:
+  push:
+    branches: ['codex/kumihan-b2-s03-*']
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  integrity:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTHONHASHSEED: '0'
+      LC_ALL: C.UTF-8
+      TZ: UTC
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Prepare disposable verifier environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -c 'import sys; assert sys.version_info[:2] == (3, 12)'
+          python3 -m venv "$RUNNER_TEMP/kumihan-checks"
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -m pip --isolated install --index-url https://pypi.org/simple --only-binary=:all: --no-deps \
+            jsonschema==4.26.0 attrs==26.1.0 jsonschema-specifications==2025.9.1 \
+            referencing==0.37.0 rpds-py==2026.6.3 typing-extensions==4.16.0
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -m pip check
+      - name: Read-only integrity and offline negative controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          git ls-files -z | xargs -0 sha256sum > "$RUNNER_TEMP/kumihan-before.sha256"
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -B scripts/check_standalone.py --root .
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -B scripts/check_public_boundary.py --root .
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -B -m unittest discover -s tests -v
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -B scripts/check_standalone.py --root .
+          "$RUNNER_TEMP/kumihan-checks/bin/python" -B scripts/check_public_boundary.py --root .
+          git ls-files -z | xargs -0 sha256sum > "$RUNNER_TEMP/kumihan-after.sha256"
+          cmp "$RUNNER_TEMP/kumihan-before.sha256" "$RUNNER_TEMP/kumihan-after.sha256"
+          git diff --exit-code
