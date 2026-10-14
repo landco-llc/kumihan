@@ -6,7 +6,7 @@ This is a preparation checklist for planned v0.1, not a release record or public
 - [ ] Resolve rule wording and case integration issues; record actual coverage without converting guidance into automatic checks.
 - [ ] Run required catalog, report, package, release and public-boundary checks once implemented; preserve sanitized outputs and distinguish structural checks from host observations.
 - [ ] Build deterministically; verify safe inventories and each standalone folder's reference closure without network or sibling dependencies.
-- [ ] Review exact LICENSE bytes, notices, independent wording, external citations, synthetic examples, asset rights and absence of bundled fonts or Hallmark imports.
+- [ ] Review exact LICENSE bytes, notices, independent wording, external citations, synthetic examples, asset rights and absence of bundled fonts or unauthorized third-party materials.
 - [ ] Complete observed Codex Cloud acceptance for all four skills and update compatibility only to the demonstrated scope, including unavailable renderers and untested browser/Office behavior.
 - [ ] Review bilingual documentation, links, permissions, protected content and all seven report statuses.
 - [ ] Independently review the frozen source and artifact hashes; resolve blockers before requesting exact-candidate publication approval.
