@@ -50,3 +50,5 @@ The catalog references this repository's root plugin on `main`, sharing the four
 公開ZIP、SHA256SUMS、マニフェストは[配布フォルダー](../downloads%20GPT-Codex/)の既存版を保持しています。将来Gitプラグインの内容を変えるときは、両マニフェストのversionを同時に更新し、別途許可された配布更新として差分・ハッシュを確認してください。同じ版のZIPを黙って再生成しません。追従する `main` と固定コミットの選択は利用者の更新方針に依存します。
 
 No background updater, runtime fetch of instructions, hook, MCP server, credentials, project configuration, Actions workflow or ZIP rebuild is added. These guidance skills require no network lookup at use time. Static format checks do not prove host discovery, invocation, rendering or stable-release acceptance.
+
+Claude CodeとClaudeチャットの経路は[Claude向け案内](installation.claude.ja.md)／[English](installation.claude.md)を参照してください。

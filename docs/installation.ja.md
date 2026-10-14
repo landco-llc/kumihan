@@ -63,3 +63,5 @@ Claude Code では導入先を `.claude/skills/` に変えます。個人用デ�
 4フォルダー、合計96ファイルは [固定ソース](https://github.com/landco-llc/kumihan/tree/180fdb2439c1e6a8563f24b4b29c666394bfaf67/skills) と同じバイトです。38ルールと6プロファイルは制作・レビューの指針であり、自動検出器の数ではありません。静的検証は、ChatGPT Chat／Work、Codex、Claude Code での検出・呼び出し・動作、実際の描画、Office ネイティブ互換性を証明しません。利用結果は未検証です。利用時に Python や開発用依存関係は不要ですが、制作・描画に使えるツールと権限はホストに依存します。
 
 公式ページの確認日: 2026-10-14。画面や提供条件が変わった場合は、最新の公式案内と自分の画面を優先してください。
+
+Claude向けは[Claudeの導入と更新](installation.claude.ja.md)を参照してください。
