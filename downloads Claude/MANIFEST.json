@@ -1,0 +1,1056 @@
+{
+  "format": 1,
+  "status": "Claude distribution preview; host behavior unverified",
+  "payload_source_repository": "landco-llc/kumihan",
+  "payload_source_commit": "bfa8ae62b688ec23116ba04dc073cf17fa82de4d",
+  "payload_source_tree": "6114782298aab6b7469ddbdd8752b885c32db2a2",
+  "original_payload_pin": "180fdb2439c1e6a8563f24b4b29c666394bfaf67",
+  "plugin_name": "kumihan",
+  "marketplace_name": "kumihan-marketplace",
+  "publisher": "L&Co.LLC",
+  "plugin_version": "0.1.0-preview.1",
+  "standalone_copies": [
+    {
+      "source": "downloads GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.1.zip",
+      "file": "skills/kumihan-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "576a005ceb8c7253fca8f9ea766162f31d3b7885dc2df4ff08b14cbcffc9fed0"
+    },
+    {
+      "source": "downloads GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.1.zip",
+      "file": "skills/kumihan-web-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "3f763fb27288eab00b32f0753453ab4598d053596f89e797a1a7cefff2e2f03b"
+    },
+    {
+      "source": "downloads GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.1.zip",
+      "file": "skills/kumihan-documents-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "b3f0c292476fa6b17a6de487877ee16e8240fdec6d476132eaaf4715a8b932e9"
+    },
+    {
+      "source": "downloads GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.1.zip",
+      "file": "skills/kumihan-review-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "4b1b5e63d9b1a6ed2596f0aff1030b1ce059b5c64bc430b305c6de14810d019b"
+    }
+  ],
+  "archives": [
+    {
+      "file": "plugins/kumihan-Claude-Code-plugin-0.1.0-preview.1.zip",
+      "sha256": "9d5e14e1d09a3b259414cc794efa8504b0b0ed80a472c80ed7e931f54c91d1d3",
+      "bytes": 300503,
+      "members": [
+        {
+          "path": "kumihan/.claude-plugin/plugin.json",
+          "sha256": "69ad2468a4fd95f6c5352747c047745f36757f932cd8fe63bf59329a0a960720",
+          "bytes": 284
+        },
+        {
+          "path": "kumihan/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/THIRD_PARTY_NOTICES.md",
+          "sha256": "4bb0075d478ca6f16d1454180e9c5b863bee08352eaf0aab7833cf85748494a4",
+          "bytes": 1704
+        },
+        {
+          "path": "kumihan/docs/development.md",
+          "sha256": "18a574faa7311986bceb3f9f3a842f5a7303cc96eba28958424374d6b8c88a54",
+          "bytes": 290
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/SKILL.md",
+          "sha256": "f752454175f4f8c3fe00ef7b1e75bb60a9703702f667327a8edac1a9c4100f71",
+          "bytes": 5394
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/inventory.json",
+          "sha256": "4bf3d747494387569faa34facd431dead60d9e83492c6033e3c8e7928d5b0d81",
+          "bytes": 10634
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan/skills/kumihan-documents/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/SKILL.md",
+          "sha256": "8610c266ec1053f02de0ba0be3eda86bbed167bbb6421dc892017faddf04324d",
+          "bytes": 5435
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/inventory.json",
+          "sha256": "cba78712856d17047a17823895509ae89167c953ca51699ff2c22593c4bdb9f9",
+          "bytes": 10628
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan/skills/kumihan-review/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/SKILL.md",
+          "sha256": "9c870feca96966bbfa4b0c8f2069fe81eed7ed71e944b2d04f8033896b6b6722",
+          "bytes": 10730
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/inventory.json",
+          "sha256": "dd841e0beade64923aceb8a52490e7b832d82b55768366e9adb6eaabc5ed6410",
+          "bytes": 10623
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan/skills/kumihan-web/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        },
+        {
+          "path": "kumihan/skills/kumihan/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/skills/kumihan/SKILL.md",
+          "sha256": "520fa5547401f51d319605138210227a9223ad676ea23c023d360d9e07e99715",
+          "bytes": 8376
+        },
+        {
+          "path": "kumihan/skills/kumihan/inventory.json",
+          "sha256": "192aa4253f3b32eb083d8c83fe5b6101167c11c58791cc045e87b3dbfe4fc6b6",
+          "bytes": 10614
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan/skills/kumihan/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan/skills/kumihan/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan/skills/kumihan/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan/skills/kumihan/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan/skills/kumihan/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan/skills/kumihan/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan/skills/kumihan/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan/skills/kumihan/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan/skills/kumihan/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan/skills/kumihan/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        },
+        {
+          "path": "kumihan/sources/public-sources.json",
+          "sha256": "f765665f56f359190f8cb8874634e948a34855c251339aca5e4095e933e38262",
+          "bytes": 37479
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "576a005ceb8c7253fca8f9ea766162f31d3b7885dc2df4ff08b14cbcffc9fed0",
+      "bytes": 71299,
+      "members": [
+        {
+          "path": "kumihan/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan/SKILL.md",
+          "sha256": "520fa5547401f51d319605138210227a9223ad676ea23c023d360d9e07e99715",
+          "bytes": 8376
+        },
+        {
+          "path": "kumihan/inventory.json",
+          "sha256": "192aa4253f3b32eb083d8c83fe5b6101167c11c58791cc045e87b3dbfe4fc6b6",
+          "bytes": 10614
+        },
+        {
+          "path": "kumihan/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-documents-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "b3f0c292476fa6b17a6de487877ee16e8240fdec6d476132eaaf4715a8b932e9",
+      "bytes": 70544,
+      "members": [
+        {
+          "path": "kumihan-documents/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan-documents/SKILL.md",
+          "sha256": "f752454175f4f8c3fe00ef7b1e75bb60a9703702f667327a8edac1a9c4100f71",
+          "bytes": 5394
+        },
+        {
+          "path": "kumihan-documents/inventory.json",
+          "sha256": "4bf3d747494387569faa34facd431dead60d9e83492c6033e3c8e7928d5b0d81",
+          "bytes": 10634
+        },
+        {
+          "path": "kumihan-documents/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan-documents/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan-documents/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan-documents/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan-documents/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan-documents/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan-documents/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan-documents/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan-documents/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan-documents/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan-documents/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan-documents/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan-documents/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan-documents/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan-documents/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan-documents/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan-documents/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan-documents/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan-documents/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan-documents/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan-documents/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-review-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "4b1b5e63d9b1a6ed2596f0aff1030b1ce059b5c64bc430b305c6de14810d019b",
+      "bytes": 70368,
+      "members": [
+        {
+          "path": "kumihan-review/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan-review/SKILL.md",
+          "sha256": "8610c266ec1053f02de0ba0be3eda86bbed167bbb6421dc892017faddf04324d",
+          "bytes": 5435
+        },
+        {
+          "path": "kumihan-review/inventory.json",
+          "sha256": "cba78712856d17047a17823895509ae89167c953ca51699ff2c22593c4bdb9f9",
+          "bytes": 10628
+        },
+        {
+          "path": "kumihan-review/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan-review/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan-review/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan-review/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan-review/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan-review/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan-review/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan-review/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan-review/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan-review/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan-review/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan-review/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan-review/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan-review/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan-review/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan-review/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan-review/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan-review/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan-review/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan-review/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan-review/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-web-Claude-skill-0.1.0-preview.1.zip",
+      "sha256": "3f763fb27288eab00b32f0753453ab4598d053596f89e797a1a7cefff2e2f03b",
+      "bytes": 72518,
+      "members": [
+        {
+          "path": "kumihan-web/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "bytes": 11357
+        },
+        {
+          "path": "kumihan-web/SKILL.md",
+          "sha256": "9c870feca96966bbfa4b0c8f2069fe81eed7ed71e944b2d04f8033896b6b6722",
+          "bytes": 10730
+        },
+        {
+          "path": "kumihan-web/inventory.json",
+          "sha256": "dd841e0beade64923aceb8a52490e7b832d82b55768366e9adb6eaabc5ed6410",
+          "bytes": 10623
+        },
+        {
+          "path": "kumihan-web/profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+          "bytes": 1421
+        },
+        {
+          "path": "kumihan-web/profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+          "bytes": 1418
+        },
+        {
+          "path": "kumihan-web/profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+          "bytes": 1412
+        },
+        {
+          "path": "kumihan-web/profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+          "bytes": 1494
+        },
+        {
+          "path": "kumihan-web/profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+          "bytes": 1526
+        },
+        {
+          "path": "kumihan-web/profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+          "bytes": 1491
+        },
+        {
+          "path": "kumihan-web/references/architecture.md",
+          "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+          "bytes": 15831
+        },
+        {
+          "path": "kumihan-web/references/design-contract.md",
+          "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+          "bytes": 7083
+        },
+        {
+          "path": "kumihan-web/references/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+          "bytes": 12582
+        },
+        {
+          "path": "kumihan-web/rules/catalog.json",
+          "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+          "bytes": 70146
+        },
+        {
+          "path": "kumihan-web/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+          "bytes": 9076
+        },
+        {
+          "path": "kumihan-web/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+          "bytes": 13292
+        },
+        {
+          "path": "kumihan-web/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+          "bytes": 6634
+        },
+        {
+          "path": "kumihan-web/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+          "bytes": 8922
+        },
+        {
+          "path": "kumihan-web/rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+          "bytes": 18036
+        },
+        {
+          "path": "kumihan-web/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+          "bytes": 14201
+        },
+        {
+          "path": "kumihan-web/schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+          "bytes": 4473
+        },
+        {
+          "path": "kumihan-web/schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+          "bytes": 1185
+        },
+        {
+          "path": "kumihan-web/schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+          "bytes": 5497
+        },
+        {
+          "path": "kumihan-web/schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+          "bytes": 5654
+        },
+        {
+          "path": "kumihan-web/sources/public-sources.json",
+          "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+          "bytes": 37605
+        }
+      ]
+    }
+  ]
+}

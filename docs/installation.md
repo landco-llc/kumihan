@@ -63,3 +63,5 @@ Start a new conversation and confirm discovery, invocation, local resource resol
 All 96 files in four skill folders preserve the bytes of the [pinned source](https://github.com/landco-llc/kumihan/tree/180fdb2439c1e6a8563f24b4b29c666394bfaf67/skills). The 38 rules and six profiles are guidance, not automatic detectors. Static checks do not prove ChatGPT Chat/Work, Codex or Claude Code discovery, invocation or behavior, actual rendering, or native Office compatibility. Those results remain unverified. Consumers need no Python/development dependencies; available production/rendering tools and permissions depend on the host.
 
 Official pages checked on 2026-10-14. Follow current documentation and your actual UI when availability changes.
+
+For Claude, see [Claude installation and updates](installation.claude.md).
