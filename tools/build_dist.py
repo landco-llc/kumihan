@@ -32,7 +32,7 @@ VERSION_TEXT_FILES = ["README.md", "docs/*.md"]
 ZIP_DATE = (2026, 10, 14, 0, 0, 0)
 PUBLISHER = "L&Co.LLC"
 REPOSITORY = "landco-llc/kumihan"
-COMMON_EXTRAS = ["LICENSE", "THIRD_PARTY_NOTICES.md", "docs/development.md", "sources/public-sources.json"]
+COMMON_EXTRAS = ["LICENSE", "THIRD_PARTY_NOTICES.md", "docs/development.md"]
 SKILL_LABELS = {
     "kumihan": "最初の入口 / starting point",
     "kumihan-web": "Webページ / web pages",

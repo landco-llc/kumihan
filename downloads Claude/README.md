@@ -4,9 +4,9 @@
 
 <br>
 
-プレビュー版 **0.1.0-preview.2** です。導入の手順は、上の導入ガイドをご覧ください。
+プレビュー版 **0.1.0-preview.3** です。導入の手順は、上の導入ガイドをご覧ください。
 
-Preview version **0.1.0-preview.2**. See the installation guide above for setup steps.
+Preview version **0.1.0-preview.3**. See the installation guide above for setup steps.
 
 <br>
 
@@ -16,7 +16,7 @@ Preview version **0.1.0-preview.2**. See the installation guide above for setup 
 
 All four skills in one package, for Claude Code.
 
-- [kumihan-Claude-Code-plugin-0.1.0-preview.2.zip](plugins/kumihan-Claude-Code-plugin-0.1.0-preview.2.zip)
+- [kumihan-Claude-Code-plugin-0.1.0-preview.3.zip](plugins/kumihan-Claude-Code-plugin-0.1.0-preview.3.zip)
 
 <br>
 
@@ -26,10 +26,10 @@ claude.aiやClaudeアプリに、1つずつアップロードして使います�
 
 Upload one at a time to claude.ai or the Claude apps.
 
-- [kumihan](skills/kumihan-Claude-skill-0.1.0-preview.2.zip) — 最初の入口 / starting point
-- [kumihan-web](skills/kumihan-web-Claude-skill-0.1.0-preview.2.zip) — Webページ / web pages
-- [kumihan-documents](skills/kumihan-documents-Claude-skill-0.1.0-preview.2.zip) — 報告書・スライド / reports and slides
-- [kumihan-review](skills/kumihan-review-Claude-skill-0.1.0-preview.2.zip) — レビュー / review
+- [kumihan](skills/kumihan-Claude-skill-0.1.0-preview.3.zip) — 最初の入口 / starting point
+- [kumihan-web](skills/kumihan-web-Claude-skill-0.1.0-preview.3.zip) — Webページ / web pages
+- [kumihan-documents](skills/kumihan-documents-Claude-skill-0.1.0-preview.3.zip) — 報告書・スライド / reports and slides
+- [kumihan-review](skills/kumihan-review-Claude-skill-0.1.0-preview.3.zip) — レビュー / review
 
 <br>
 

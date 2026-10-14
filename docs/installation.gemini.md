@@ -6,7 +6,7 @@
 
 This guide explains how to use KUMIHAN with Gemini CLI and the Gemini app.
 
-> **About this preview (0.1.0-preview.2)**  
+> **About this preview (0.1.0-preview.3)**  
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -41,7 +41,7 @@ Restart Gemini CLI after updating.
 
 **Installing from a ZIP**
 
-1. Download the [extension ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.2.zip).
+1. Download the [extension ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.3.zip).
 2. Create an empty `kumihan` folder and extract the ZIP into it.
 3. Install from that folder:
 
@@ -80,10 +80,10 @@ Run the same command again. The installed skill will be replaced, so save any ch
 ## C. Gemini app: upload skills
 
 1. Download the skill ZIPs you want to use.
-   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.0-preview.2.zip) — starting point
-   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.0-preview.2.zip) — web pages
-   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.0-preview.2.zip) — reports and slides
-   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.0-preview.2.zip) — review
+   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.0-preview.3.zip) — starting point
+   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.0-preview.3.zip) — web pages
+   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.0-preview.3.zip) — reports and slides
+   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.0-preview.3.zip) — review
 2. In Gemini, open **Customize** (or **More** if you don't see it) → **Skills** → **Upload**.
 3. Choose one ZIP at a time, review the details, and select **Create**.
 
