@@ -2,19 +2,19 @@
   "format": 2,
   "product": "KUMIHAN for ChatGPT and Codex",
   "publisher": "L&Co.LLC",
-  "version": "0.1.0-preview.2",
+  "version": "0.1.0-preview.3",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.2.zip",
-      "sha256": "c3e8ce4c2c0c74d9aaecdc9205da0cf93f578713b4da18d78830c2eb3a738967",
-      "bytes": 1104685,
+      "file": "plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.3.zip",
+      "sha256": "292673745969f58679e7945296019495e0e44279f03eed85f79437dc24a94742",
+      "bytes": 1104689,
       "members": [
         {
           "path": "kumihan-private-install-preview/.codex-plugin/plugin.json",
           "bytes": 2150,
-          "sha256": "c598f2fc1b7a785c9742cbb3c04cecadc7f27017198666047ef4db672ede744b"
+          "sha256": "3691e96dde3984591cf62385df77fc3973ba8e4cff014b8779d41bad06138ff3"
         },
         {
           "path": "kumihan-private-install-preview/LICENSE",
@@ -39,7 +39,7 @@
         {
           "path": "kumihan-private-install-preview/plugin.json",
           "bytes": 2324,
-          "sha256": "5b8d18bad0d57170eb6cb674056308b2fba9eaf6665ec871ec4c7fc16ffb865f"
+          "sha256": "5fadebeeecf35a852f6fe906181668ff6d37aea922770cbf0865cb68adcd0ee6"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/LICENSE",
@@ -54,7 +54,7 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/inventory.json",
           "bytes": 4234,
-          "sha256": "1181995937d2520819cec66aa1e73f42bae24bc049e05cb3c40ff7fb9593be7c"
+          "sha256": "2f231f667fa7be56703837177e4dac438b26cc9d20c6c8e34d262b06cb8f8f27"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/profiles/display-copy.json",
@@ -184,7 +184,7 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/inventory.json",
           "bytes": 4231,
-          "sha256": "aae78fc819d509ef8716d048881250a8dba03385f72d00d43c813a7974ba694a"
+          "sha256": "89f7b2b9f7a29641fb8e34d7bde23e6317b3831b5ac5fb93a1e703a73f242427"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/profiles/display-copy.json",
@@ -314,7 +314,7 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/inventory.json",
           "bytes": 4228,
-          "sha256": "02d9996a44ce480031820dc875045bf783bbf9f7bedb6b8fde1b658c1d6dc40c"
+          "sha256": "112918e13b4aa6085ad7c9b878844b3e123a8d2c26020f27706bbbe6b81ed219"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/profiles/display-copy.json",
@@ -444,7 +444,7 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan/inventory.json",
           "bytes": 4224,
-          "sha256": "0ee0971ff24abe78bdb8761a61659904ec4d19d92ef92710fbe56b41138bdd6b"
+          "sha256": "c2b2a89a1647d2f51644f2398314a5216d69f55463e7216a4897e8ee1ee581ff"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/profiles/display-copy.json",
@@ -564,8 +564,8 @@
       ]
     },
     {
-      "file": "skills/kumihan-GPT-Codex-skill-0.1.0-preview.2.zip",
-      "sha256": "4f1868cac9d9f8faaa6ef8c25974e86d78339bf2ec0eeda9821425576a21f172",
+      "file": "skills/kumihan-GPT-Codex-skill-0.1.0-preview.3.zip",
+      "sha256": "b5a36411c08e44c197aa0d71b15214e0b9651ba9709880d6a94fe76bb2ef376c",
       "bytes": 74300,
       "members": [
         {
@@ -581,7 +581,7 @@
         {
           "path": "kumihan/inventory.json",
           "bytes": 4224,
-          "sha256": "0ee0971ff24abe78bdb8761a61659904ec4d19d92ef92710fbe56b41138bdd6b"
+          "sha256": "c2b2a89a1647d2f51644f2398314a5216d69f55463e7216a4897e8ee1ee581ff"
         },
         {
           "path": "kumihan/profiles/display-copy.json",
@@ -701,9 +701,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.2.zip",
-      "sha256": "e29a1487413c56e6b4ec39cec0ef167c6b63f8be750a0257b1d12d18ab481768",
-      "bytes": 74624,
+      "file": "skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.3.zip",
+      "sha256": "9bb8ad1dc8aa18e708b9cda390bd8dd833e28a6a29e59cdf5bb19e79783441a7",
+      "bytes": 74625,
       "members": [
         {
           "path": "kumihan-web/LICENSE",
@@ -718,7 +718,7 @@
         {
           "path": "kumihan-web/inventory.json",
           "bytes": 4228,
-          "sha256": "02d9996a44ce480031820dc875045bf783bbf9f7bedb6b8fde1b658c1d6dc40c"
+          "sha256": "112918e13b4aa6085ad7c9b878844b3e123a8d2c26020f27706bbbe6b81ed219"
         },
         {
           "path": "kumihan-web/profiles/display-copy.json",
@@ -838,9 +838,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.2.zip",
-      "sha256": "c818bafb50b967ad7b17c081f7b6108fa4c69010059e916eecbbdc757cc8c45e",
-      "bytes": 74538,
+      "file": "skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.3.zip",
+      "sha256": "ea444a8e60698aed10eb828651fa7aefcd7578b99f8d7968345f43aaf28ece02",
+      "bytes": 74539,
       "members": [
         {
           "path": "kumihan-documents/LICENSE",
@@ -855,7 +855,7 @@
         {
           "path": "kumihan-documents/inventory.json",
           "bytes": 4234,
-          "sha256": "1181995937d2520819cec66aa1e73f42bae24bc049e05cb3c40ff7fb9593be7c"
+          "sha256": "2f231f667fa7be56703837177e4dac438b26cc9d20c6c8e34d262b06cb8f8f27"
         },
         {
           "path": "kumihan-documents/profiles/display-copy.json",
@@ -975,9 +975,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.2.zip",
-      "sha256": "c6fb615f0598594d13972f766804503c075e8b64d4b14d5fdc397aa0ffc7991e",
-      "bytes": 74565,
+      "file": "skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.3.zip",
+      "sha256": "efe4b40dba46b8e738a2f3497e11ab0b333ae977c2a274a5d0b914c045a8c6a6",
+      "bytes": 74566,
       "members": [
         {
           "path": "kumihan-review/LICENSE",
@@ -992,7 +992,7 @@
         {
           "path": "kumihan-review/inventory.json",
           "bytes": 4231,
-          "sha256": "aae78fc819d509ef8716d048881250a8dba03385f72d00d43c813a7974ba694a"
+          "sha256": "89f7b2b9f7a29641fb8e34d7bde23e6317b3831b5ac5fb93a1e703a73f242427"
         },
         {
           "path": "kumihan-review/profiles/display-copy.json",
