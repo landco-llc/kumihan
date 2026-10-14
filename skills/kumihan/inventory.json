@@ -1,0 +1,306 @@
+{
+  "format": "kumihan-standalone-inventory-1",
+  "skill": "kumihan",
+  "canonical_commit": "41037860c44d65d6157cd30e1d9af40f3bf4dd38",
+  "canonical_tree": "a41c22245e38f5619d34a3a1120ecf0dfe3a45c0",
+  "path_base": "skill-folder-root",
+  "self_digest": "External evidence hashes inventory.json; inventory lists all other files.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "canonical": [
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 8376,
+      "sha256": "520fa5547401f51d319605138210227a9223ad676ea23c023d360d9e07e99715",
+      "canonical": [
+        {
+          "path": "skill-src/kumihan/SKILL.md",
+          "sha256": "7438ee9c5b5522e072c2e1382be22b4a08b197c12e89d40a3820c1efe040a21f"
+        }
+      ],
+      "adaptation": "Replace source/bundle admission prose with standalone folder inventory/closure validation where present; all operational guidance retained."
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 1421,
+      "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99",
+      "canonical": [
+        {
+          "path": "profiles/display-copy.json",
+          "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 1418,
+      "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98",
+      "canonical": [
+        {
+          "path": "profiles/presentation.json",
+          "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 1412,
+      "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79",
+      "canonical": [
+        {
+          "path": "profiles/report-document.json",
+          "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 1494,
+      "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61",
+      "canonical": [
+        {
+          "path": "profiles/web-editorial.json",
+          "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 1526,
+      "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e",
+      "canonical": [
+        {
+          "path": "profiles/web-marketing.json",
+          "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 1491,
+      "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737",
+      "canonical": [
+        {
+          "path": "profiles/web-ui.json",
+          "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "references/architecture.md",
+      "bytes": 15831,
+      "sha256": "02418df5cef8a431c5d3f8383f441fd5af1a2f23eb179cbdbeb94b6d63a9e70d",
+      "canonical": [
+        {
+          "path": "docs/architecture.md",
+          "sha256": "9f0a5ce883ac5800d6cf6e6512d62012f1a97073afb46b613af8a1b4b2b5f73a"
+        }
+      ],
+      "adaptation": "Keep pre-module rule/design/report/approval guidance. Remove historical release-manifest paragraphs and module/CLI/testing/packaging sections; replace CLI approval ownership with trusted host workflow; four consumer schemas; append standalone delivery contract. Canonical architecture remains read-only."
+    },
+    {
+      "path": "references/design-contract.md",
+      "bytes": 7083,
+      "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91",
+      "canonical": [
+        {
+          "path": "skill-src/shared/design-contract.md",
+          "sha256": "20f82221f34d435359d5adcad330d05192c2afd38c0804693d96a0cce83998a9"
+        }
+      ],
+      "adaptation": "Qualify design schema path; relocate architecture path; replace package-builder admission sentence with standalone inventory/catalog checks."
+    },
+    {
+      "path": "references/review-protocol.md",
+      "bytes": 12582,
+      "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+      "canonical": [
+        {
+          "path": "skill-src/shared/review-protocol.md",
+          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 70146,
+      "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b",
+      "canonical": [
+        {
+          "path": "rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38"
+        },
+        {
+          "path": "rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803"
+        },
+        {
+          "path": "rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893"
+        },
+        {
+          "path": "rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2"
+        },
+        {
+          "path": "rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b"
+        },
+        {
+          "path": "rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f"
+        }
+      ],
+      "adaptation": "Concatenate parsed family arrays in canonical family/numeric order; no rule-field changes."
+    },
+    {
+      "path": "rules/content.json",
+      "bytes": 9076,
+      "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38",
+      "canonical": [
+        {
+          "path": "rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/design.json",
+      "bytes": 13292,
+      "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b",
+      "canonical": [
+        {
+          "path": "rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/documents.json",
+      "bytes": 6634,
+      "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2",
+      "canonical": [
+        {
+          "path": "rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/evidence.json",
+      "bytes": 8922,
+      "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f",
+      "canonical": [
+        {
+          "path": "rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/japanese-type.json",
+      "bytes": 18036,
+      "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803",
+      "canonical": [
+        {
+          "path": "rules/japanese-type.json",
+          "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "rules/web.json",
+      "bytes": 14201,
+      "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893",
+      "canonical": [
+        {
+          "path": "rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "schemas/design-contract.schema.json",
+      "bytes": 4473,
+      "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9",
+      "canonical": [
+        {
+          "path": "schemas/design-contract.schema.json",
+          "sha256": "a38b3720b0b1a113a53bba4552bcc866f44f900db94b8187962038fe7a7555b9"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "schemas/profile.schema.json",
+      "bytes": 1185,
+      "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce",
+      "canonical": [
+        {
+          "path": "schemas/profile.schema.json",
+          "sha256": "dc2e9397d380f3260b0a69f6dd8b72980e3eb2b326a02ba343537f744b6ccbce"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 5497,
+      "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a",
+      "canonical": [
+        {
+          "path": "schemas/report.schema.json",
+          "sha256": "4396bcbc1f709f6d451319ad93dbd891436ab367865969bcd958c1cdad998d7a"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "schemas/rule.schema.json",
+      "bytes": 5654,
+      "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5",
+      "canonical": [
+        {
+          "path": "schemas/rule.schema.json",
+          "sha256": "132eda194cd883d32dd833714b75fee5da0d6a254c5d30459cccb1528538afb5"
+        }
+      ],
+      "adaptation": "exact-byte snapshot"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 37605,
+      "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004",
+      "canonical": [
+        {
+          "path": "sources/public-sources.json",
+          "sha256": "f765665f56f359190f8cb8874634e948a34855c251339aca5e4095e933e38262"
+        }
+      ],
+      "adaptation": "Replace every docs/architecture.md prose path with folder-root references/architecture.md; all other bytes retained."
+    }
+  ]
+}
