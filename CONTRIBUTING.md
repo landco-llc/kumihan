@@ -2,7 +2,7 @@
 
 Start with a focused issue or pull request explaining the user-visible problem, applicable medium, proposed scope and evidence. Keep English and Japanese usage facts consistent. The product is planned v0.1; integration and host acceptance are pending.
 
-Author independent wording and original synthetic examples. Cite public sources precisely and explain how they support the guidance. Do not include third-party source code, prose, examples, or assets without the necessary rights. Do not bundle fonts, private material, or content you cannot authorize for the proposed use. Flag uncertain license or rights questions for maintainer review rather than certifying ownership.
+Author independent wording and original synthetic examples. Cite public sources precisely and explain how they support the guidance. Do not copy or adapt other design-skill projects' source code, wording, examples, or assets into KUMIHAN; independently author product content. Do not bundle fonts, private material, or content you cannot authorize for the proposed use. Approved development dependencies are managed separately. Flag uncertain license or rights questions for maintainer review rather than certifying ownership.
 
 Preserve rule IDs and schema contracts unless a separately reviewed contract change is intended. Describe conditions, exceptions, actual verification method and honest coverage. A new rule is not an automatic detector merely because it has tests or cases. Keep protected source content intact; audit workflows remain read-only until explicit refine permission is given.
 
