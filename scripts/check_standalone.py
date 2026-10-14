@@ -378,7 +378,10 @@ def check_repository(root):
     return result
 
 
-CANONICAL_EXTRAS = {'README.md': '61d72de96f551158cf76d1a2fccac74ed88675184148aa784363f7b2c04714a4', 'schemas/release-manifest.schema.json': '1bda6b026d34932a66060c8435d8d5e31a20791c410971acc063192581ab1b36'}
+# Only fixed source contracts outside the consumer mapping belong here.
+# README.md is mutable public documentation, not a canonical consumer input.
+# check_public_boundary.py continues to scan it with every tracked file.
+CANONICAL_EXTRAS = {'schemas/release-manifest.schema.json': '1bda6b026d34932a66060c8435d8d5e31a20791c410971acc063192581ab1b36'}
 
 
 # Inventory bytes are fixed independently from their self-declared file hashes.

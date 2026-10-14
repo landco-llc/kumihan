@@ -223,15 +223,78 @@ class StaticChecks(unittest.TestCase):
             self.assertEqual(json.loads(run.stdout)['status'],'failed')
             self.assertNotIn('synthetic-invalid-type',run.stdout)
 
-    def test_canonical_baseline_includes_readme_and_historical_schema(self):
-        for path in ('README.md','schemas/release-manifest.schema.json'):
+    def documentation_copy(self, root):
+        shutil.copytree(ROOT, root, ignore=shutil.ignore_patterns('.git', '__pycache__'))
+        p=root/'README.md'
+        p.write_bytes(p.read_bytes()+b'\nPublic documentation clarification for standalone users.\n')
+        subprocess.run(['git','init','-q',str(root)],check=True)
+        subprocess.run(['git','-C',str(root),'add','.'],check=True)
+
+    def tracked_digests(self, root):
+        names=subprocess.check_output(['git','-C',str(root),'ls-files','-z']).split(b'\0')
+        return {name: hashlib.sha256((root/name.decode()).read_bytes()).hexdigest()
+                for name in names if name}
+
+    def test_public_documentation_update_and_nonmutation(self):
+        original=self.tracked_digests(ROOT)
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'repository'; self.documentation_copy(root)
+            before=self.tracked_digests(root)
+            self.assertEqual({n for n in original if original[n]!=before[n]}, {b'README.md'})
+            for _ in range(2):
+                self.s.check_repository(root)
+                self.assertEqual(self.b.check_repository(root)['fixture_exemptions'],0)
+                for name in ('check_standalone','check_public_boundary'):
+                    run=subprocess.run([sys.executable,'-B',str(root/'scripts'/(name+'.py')),
+                                        '--root',str(root)],capture_output=True,text=True)
+                    self.assertEqual(run.returncode,0,run.stdout+run.stderr)
+            self.assertEqual(before,self.tracked_digests(root))
+        self.assertEqual(original,self.tracked_digests(ROOT))
+
+    def test_documentation_update_preserves_fixed_input_rejections(self):
+        cases=[(path,'canonical-digest') for path in
+               ('rules/content.json','profiles/web-ui.json','schemas/rule.schema.json',
+                'sources/public-sources.json','skill-src/kumihan/SKILL.md',
+                'docs/architecture.md','LICENSE')]
+        cases.append(('schemas/release-manifest.schema.json','canonical-extra-digest'))
+        for skill in self.s.SKILLS:
+            cases.extend(((f'skills/{skill}/rules/content.json','inventory-file-digest'),
+                          (f'skills/{skill}/inventory.json','inventory-snapshot')))
+        original=self.tracked_digests(ROOT)
+        for path,code in cases:
             with self.subTest(path=path), tempfile.TemporaryDirectory() as d:
-                root=Path(d)
-                for directory in ('rules','profiles','schemas','sources','skill-src','docs','skills'):
-                    shutil.copytree(ROOT/directory,root/directory)
-                for name in ('LICENSE','README.md'): shutil.copy(ROOT/name,root/name)
-                p=root/path; p.write_text(p.read_text()+'\n')
-                with self.assertRaises(ValueError): self.s.check_repository(root)
+                root=Path(d)/'repository'; self.documentation_copy(root)
+                p=root/path; p.write_bytes(p.read_bytes()+b'\n')
+                before=self.tracked_digests(root)
+                with self.assertRaisesRegex(ValueError,'^'+code+'$'):
+                    self.s.check_repository(root)
+                run=subprocess.run([sys.executable,'-B',str(root/'scripts/check_standalone.py'),
+                                    '--root',str(root)],capture_output=True,text=True)
+                self.assertEqual(run.returncode,1)
+                self.assertEqual(run.stderr,'')
+                self.assertEqual(json.loads(run.stdout)['status'],'failed')
+                self.assertEqual(self.b.check_repository(root)['fixture_exemptions'],0)
+                self.assertEqual(before,self.tracked_digests(root))
+        self.assertEqual(original,self.tracked_digests(ROOT))
+
+    def test_public_documentation_still_scanned_by_boundary(self):
+        original=self.tracked_digests(ROOT)
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'repository'; self.documentation_copy(root)
+            p=root/'README.md'
+            p.write_text(p.read_text()+'customer_email: '+'synthetic'+'@'+'example.invalid')
+            before=self.tracked_digests(root)
+            self.s.check_repository(root)
+            with self.assertRaisesRegex(ValueError,'^public-boundary-rejected-file-'):
+                self.b.check_repository(root)
+            run=subprocess.run([sys.executable,'-B',str(root/'scripts/check_public_boundary.py'),
+                                '--root',str(root)],capture_output=True,text=True)
+            self.assertEqual(run.returncode,1)
+            self.assertEqual(run.stderr,'')
+            self.assertEqual(json.loads(run.stdout)['status'],'failed')
+            self.assertNotIn('example.invalid',run.stdout)
+            self.assertEqual(before,self.tracked_digests(root))
+        self.assertEqual(original,self.tracked_digests(ROOT))
 
     def test_test_source_is_public_safe_without_exemption(self):
         self.b.check_text(Path(__file__).read_text())
