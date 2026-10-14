@@ -223,7 +223,7 @@ against original synthetic records; prose checks alone cannot establish it.
 | `unverifiable` | reject | Lookup, identity, authority, latest state or trusted decision time cannot be verified. |
 | `offset-timestamp` | reject | Timestamp uses an offset or another noncanonical representation. |
 
-## Standalone folder delivery — v0.1.0
+## Standalone folder delivery
 
 This complete folder is a Git-tracked standalone Agent Skill. Copy the whole
 folder, including LICENSE and inventory.json. All consumer paths in guidance

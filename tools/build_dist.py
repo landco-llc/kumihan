@@ -4,7 +4,7 @@
 Usage:
   python3 tools/build_dist.py                      # sync, rebuild everything
   python3 tools/build_dist.py --check              # verify the tree is up to date
-  python3 tools/build_dist.py --set-version X.Y.Z  # bump the version, then rebuild
+  python3 tools/build_dist.py --set-version 0.1.5-preview  # bump, then rebuild
 
 `skills/kumihan` is the canonical copy of every shared file. The other skill
 folders differ only in SKILL.md and inventory.json. Standard library only.
@@ -45,6 +45,12 @@ def sha256(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def display_version(v):
+    """0.1.4-preview -> v0.1.4 preview (used in prose)."""
+    core, _, tag = v.partition("-")
+    return f"v{core} {tag}" if tag else f"v{core}"
+
+
 def read_version():
     versions = {f: json.loads((ROOT / f).read_text())["version"] for f in VERSION_FILES}
     if len(set(versions.values())) != 1:
@@ -61,9 +67,12 @@ def set_version(new):
         p.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n")
     for pattern in VERSION_TEXT_FILES:
         for p in ROOT.glob(pattern):
+            if p.name == "development.md":  # holds version examples, not the current version
+                continue
             text = p.read_text()
-            if old in text:
-                p.write_text(text.replace(old, new))
+            updated = text.replace(display_version(old), display_version(new)).replace(old, new)
+            if updated != text:
+                p.write_text(updated)
     print(f"Version {old} -> {new}")
 
 
@@ -140,9 +149,9 @@ def downloads_readme(folder, title, guide_ja, guide_en, bundle_heading, bundle_d
         "",
         "<br>",
         "",
-        f"プレビュー版 **{VERSION}** です。導入の手順は、上の導入ガイドをご覧ください。",
+        f"プレビュー版 **{display_version(VERSION)}** です。導入の手順は、上の導入ガイドをご覧ください。",
         "",
-        f"Preview version **{VERSION}**. See the installation guide above for setup steps.",
+        f"Preview version **{display_version(VERSION)}**. See the installation guide above for setup steps.",
         "",
         "<br>",
         "",
