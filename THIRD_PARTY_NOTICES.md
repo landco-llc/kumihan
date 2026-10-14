@@ -1,7 +1,9 @@
 # Third-party notices
 
-KUMIHAN retains the repository's [Apache-2.0 LICENSE](LICENSE). This documentation draft introduces independently written text and no bundled third-party code, fonts or assets. It imports no Hallmark source, prose, assets or dependency.
+KUMIHAN is distributed under the [Apache License 2.0](LICENSE).
 
-Public standards and documentation are cited as references, not relicensed as KUMIHAN material. Their names, pages and any external assets remain subject to their respective terms. A citation is not permission to redistribute an external work, nor a legal originality certification. Consult [provenance](docs/provenance.md) for references and the planned artifact review.
+Public standards and articles referenced by this project remain subject to their own copyright and licensing terms. A link or citation does not grant permission to redistribute external text, images, fonts, or software.
 
-Development dependencies and integrated bundle inventories require their own review before release. This notice does not certify the contents of pending branches or future artifacts.
+The current public documentation does not bundle third-party fonts, images, or source code. Any future release that includes third-party components must carry the applicable licenses, notices, and attributions.
+
+See [References and attribution](docs/provenance.md).
