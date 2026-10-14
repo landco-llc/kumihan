@@ -4,9 +4,9 @@
 
 <br>
 
-プレビュー版 **0.1.0-preview.4** です。導入の手順は、上の導入ガイドをご覧ください。
+プレビュー版 **v0.1.4 preview** です。導入の手順は、上の導入ガイドをご覧ください。
 
-Preview version **0.1.0-preview.4**. See the installation guide above for setup steps.
+Preview version **v0.1.4 preview**. See the installation guide above for setup steps.
 
 <br>
 
@@ -16,7 +16,7 @@ Preview version **0.1.0-preview.4**. See the installation guide above for setup 
 
 All four skills in one package.
 
-- [kumihan-Gemini-CLI-extension-0.1.0-preview.4.zip](extensions/kumihan-Gemini-CLI-extension-0.1.0-preview.4.zip)
+- [kumihan-Gemini-CLI-extension-0.1.4-preview.zip](extensions/kumihan-Gemini-CLI-extension-0.1.4-preview.zip)
 
 <br>
 
@@ -26,10 +26,10 @@ All four skills in one package.
 
 Upload them one at a time.
 
-- [kumihan](skills/kumihan-Gemini-Apps-skill-0.1.0-preview.4.zip) — 最初の入口 / starting point
-- [kumihan-web](skills/kumihan-web-Gemini-Apps-skill-0.1.0-preview.4.zip) — Webページ / web pages
-- [kumihan-documents](skills/kumihan-documents-Gemini-Apps-skill-0.1.0-preview.4.zip) — 報告書・スライド / reports and slides
-- [kumihan-review](skills/kumihan-review-Gemini-Apps-skill-0.1.0-preview.4.zip) — レビュー / review
+- [kumihan](skills/kumihan-Gemini-Apps-skill-0.1.4-preview.zip) — 最初の入口 / starting point
+- [kumihan-web](skills/kumihan-web-Gemini-Apps-skill-0.1.4-preview.zip) — Webページ / web pages
+- [kumihan-documents](skills/kumihan-documents-Gemini-Apps-skill-0.1.4-preview.zip) — 報告書・スライド / reports and slides
+- [kumihan-review](skills/kumihan-review-Gemini-Apps-skill-0.1.4-preview.zip) — レビュー / review
 
 <br>
 

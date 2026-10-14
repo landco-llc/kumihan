@@ -4,7 +4,12 @@
 
 <br>
 
-## 0.1.0-preview.4
+> **バージョン表記の変更について**  
+> v0.1.4 preview から、バージョンの表記を変えました。以前の「0.1.0-preview.1〜4」は、それぞれ「v0.1.1 preview〜v0.1.4 preview」と読み替えてください。次の更新は v0.1.5 preview です。
+
+<br>
+
+## v0.1.4 preview
 
 ### 主な変更
 
@@ -13,7 +18,7 @@
 
 ### 旧版との比較テスト
 
-同じ原稿を使い、最初のプレビュー版（0.1.0-preview.1）と、今回の内容の版を比べました。対象は5つの場面です。
+同じ原稿を使い、最初のプレビュー版（v0.1.1 preview）と、今回の内容の版を比べました。対象は5つの場面です。
 
 | 場面 | 手数（ターン） | 費用 | 時間 |
 | --- | --- | --- | --- |
@@ -31,7 +36,7 @@
 
 <br>
 
-## 0.1.0-preview.3
+## v0.1.3 preview
 
 ### 主な変更
 
@@ -40,7 +45,7 @@
 - **Webパターン集の対応ブラウザを最新化**：各設定の対応ブラウザを、最新の情報にもとづいて更新しました。
 - **導入ガイドを読みやすく**：README、導入ガイド、更新ガイドを、手順に沿って読める構成に書き直しました。
 
-短期間だけ公開していた 0.1.0-preview.2 の変更も、この版に含まれています。
+短期間だけ公開していた v0.1.2 preview の変更も、この版に含まれています。
 
 ### 更新のしかた
 
@@ -55,7 +60,7 @@
 
 <br>
 
-## 0.1.0-preview.1
+## v0.1.1 preview
 
 最初のプレビュー版です。
 
@@ -65,23 +70,24 @@
 
 ## English
 
-### 0.1.0-preview.4
+### v0.1.4 preview
 
+- Version naming changed. Former 0.1.0-preview.1 to 0.1.0-preview.4 correspond to v0.1.1 preview to v0.1.4 preview. The next release is v0.1.5 preview.
 - Reviews now always record the target's hash before and after, so the report alone shows the file was not changed.
 - The document recipes now warn against character-level wrapping on the whole body in HTML-to-PDF output.
-- Comparison test against 0.1.0-preview.1, using the same inputs in five scenarios (landing page, article, A4 report, slides, review): total turns 70 → 37, cost $1.90 → $1.10, time 430 → 219 seconds. Both versions kept all supplied text, numbers, table values and speaker notes intact, and both found all seven planted issues in the review test. Each scenario was run once, so treat these numbers as indicative.
+- Comparison test against v0.1.1 preview, using the same inputs in five scenarios (landing page, article, A4 report, slides, review): total turns 70 → 37, cost $1.90 → $1.10, time 430 → 219 seconds. Both versions kept all supplied text, numbers, table values and speaker notes intact, and both found all seven planted issues in the review test. Each scenario was run once, so treat these numbers as indicative.
 
-### 0.1.0-preview.3
+### v0.1.3 preview
 
 - **Lighter and faster** — skill instructions are about half as long.
 - **Typography recipes** — two new references, one for web pages and one for reports and slides. They give recommended settings for each text role, such as body, headings and buttons.
 - **Up-to-date browser support** — the web recipes now list browser support based on current information.
 - **Clearer guides** — the README, installation guides and update guide were rewritten to follow step by step.
 
-This release also includes the changes from 0.1.0-preview.2, which was available only briefly.
+This release also includes the changes from v0.1.2 preview, which was available only briefly.
 
 To update, see the table above or the [update guide](docs/updates.md).
 
-### 0.1.0-preview.1
+### v0.1.1 preview
 
 First preview.

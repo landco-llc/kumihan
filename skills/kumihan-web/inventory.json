@@ -1,7 +1,7 @@
 {
   "format": "kumihan-standalone-inventory-2",
   "skill": "kumihan-web",
-  "version": "0.1.0-preview.4",
+  "version": "0.1.4-preview",
   "path_base": "skill-folder-root",
   "self_digest": "inventory.json lists every other file; its own hash is in the distribution SHA256SUMS.",
   "files": [
@@ -47,8 +47,8 @@
     },
     {
       "path": "references/architecture.md",
-      "bytes": 15879,
-      "sha256": "6c4d26af26929917f164264ddbc6a21b696bfd79b82bbe2063de49aca96f995c"
+      "bytes": 15868,
+      "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
     },
     {
       "path": "references/design-contract.md",

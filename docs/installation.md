@@ -6,7 +6,7 @@
 
 This guide explains how to use KUMIHAN with ChatGPT and Codex.
 
-> **About this preview (0.1.0-preview.4)**  
+> **About this preview (v0.1.4 preview)**  
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -29,14 +29,14 @@ All files are on the [downloads page](../downloads%20GPT-Codex/).
 
 **Plugin (all four skills)**
 
-- [kumihan-GPT-Codex-plugin-0.1.0-preview.4.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.0-preview.4.zip)
+- [kumihan-GPT-Codex-plugin-0.1.4-preview.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.4-preview.zip)
 
 **Individual skills**
 
-- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.0-preview.4.zip) — starting point
-- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.0-preview.4.zip) — web pages
-- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.0-preview.4.zip) — reports and slides
-- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.0-preview.4.zip) — review
+- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.4-preview.zip) — starting point
+- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.4-preview.zip) — web pages
+- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.4-preview.zip) — reports and slides
+- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.4-preview.zip) — review
 
 On GitHub, open a file and use the download button at the top right.
 
