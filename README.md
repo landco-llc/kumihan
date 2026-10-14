@@ -1,7 +1,7 @@
-# KUMIHAN
+# KUMIHAN [クミハン]
 
 **Japanese typography for thoughtful AI-assisted design.**  
-**日本語の文字組みから、AIのデザインをもっと自然に。**
+**日本語の文字組みからAIのデザインをもっと自然に。**
 
 ## About KUMIHAN
 
@@ -24,7 +24,7 @@ KUMIHANは、AIによる日本語のWebサイト・記事・文書・プレゼ�
 
 **Status / 開発状況:** v0.1 is in development. A private-install preview is available for trying in your own environment; host compatibility remains unverified.
 
-v0.1を開発中です。自分の環境で導入を試すためのプレビューを用意しています。ホストでの動作確認は未完了です。
+v0.1を開発中です。自分の環境で導入を試すためのプレビューを用意しています。
 
 [導入方法（日本語）](docs/installation.ja.md) · [Installation (English)](docs/installation.md) · [Downloads and checksums](downloads/)
 
