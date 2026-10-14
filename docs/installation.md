@@ -65,3 +65,7 @@ All 96 files in four skill folders preserve the bytes of the [pinned source](htt
 Official pages checked on 2026-10-14. Follow current documentation and your actual UI when availability changes.
 
 For Claude, see [Claude installation and updates](installation.claude.md).
+
+## Gemini preview
+
+[Gemini 日本語](installation.gemini.ja.md) · [Gemini English](installation.gemini.md) · [Downloads](../downloads%20Gemini/README.md)
