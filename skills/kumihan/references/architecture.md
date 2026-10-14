@@ -234,15 +234,18 @@ media and rule resolution. The public registry retains 57 source records.
 Four consumer schemas resolve their versioned URNs locally; source URLs and
 JSON Schema dialect URLs identify provenance, not network requirements.
 
-inventory.json identifies canonical inputs, exact-byte snapshots and deliberate
-consumer prose/path adaptations. It inventories every other file; its own hash
-belongs to the external candidate evidence to avoid a recursive self-digest.
-Canonical sources remain authoritative; do not maintain independent rule copies.
+Two practical references, `references/web-recipes.md` and
+`references/document-recipes.md`, give concrete starting settings for web,
+Office and PDF output. They are guidance to adjust and verify, not rules.
 
-Historical module/CLI, generated archive and release-manifest contracts are
-excluded from consumer delivery. No builder, ZIP, runtime validator, detector,
-renderer, Python/npm package, private resource or sibling is required. Existing
-authorized host tools perform production and evidence review. Folder closure
-and byte stability do not establish host discovery or invocation, rendering,
-native Office acceptance, source truth or approval authenticity. Independent
-review and separate exact-candidate publication authorization remain required.
+inventory.json lists every other file in this folder with its size and SHA-256
+digest. Its own hash is recorded in the distribution checksums to avoid a
+recursive self-digest. The repository build script regenerates inventories,
+archives and checksums from the canonical `skills/kumihan` shared files; do not
+maintain independent rule copies.
+
+No builder, runtime validator, detector, renderer, Python/npm package, private
+resource or sibling is required to use this folder. Existing authorized host
+tools perform production and evidence review. Folder closure and byte stability
+do not establish host discovery or invocation, rendering, native Office
+acceptance, source truth or approval authenticity.
