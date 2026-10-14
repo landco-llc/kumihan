@@ -47,7 +47,7 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 | ChatGPT / Codex | [導入ガイド](docs/installation.ja.md) | [Guide](docs/installation.md) |
 | Gemini（Gemini CLI / Geminiアプリ） | [導入ガイド](docs/installation.gemini.ja.md) | [Guide](docs/installation.gemini.md) |
 
-更新の方法は [更新ガイド](docs/updates.md) にまとめています。
+更新の方法は [更新ガイド](docs/updates.md)、変更内容は [更新履歴](CHANGELOG.md) にまとめています。
 
 <br>
 
@@ -79,7 +79,7 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 - Claude: [Guide](docs/installation.claude.md)
 - ChatGPT / Codex: [Guide](docs/installation.md)
 - Gemini: [Guide](docs/installation.gemini.md)
-- Updates: [Update guide](docs/updates.md)
+- Updates: [Update guide](docs/updates.md) · [Changelog](CHANGELOG.md)
 
 ### Status
 
