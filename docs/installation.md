@@ -54,7 +54,7 @@ cp -R skills/kumihan /path/to/your-project/.agents/skills/
 
 Use `.claude/skills/` for Claude Code. Personal locations are an optional choice for users who want skills across projects; no personal installation was performed here. Preserve rules, profiles, references, schemas, sources, inventory.json and LICENSE.
 
-[Official plugin testing guidance](https://developers.openai.com/plugins/deploy/connect-chatgpt) also describes local marketplace installation. Plugins and direct skill folders are different routes. `npx skills add` remains optional and deferred; it is not a tested installation method here.
+[Official plugin testing guidance](https://developers.openai.com/plugins/deploy/connect-chatgpt) also describes local marketplace installation. Plugins and direct skill folders are different routes. See [Git installation and updates](updates.md) for standalone Git skill and Codex marketplace commands. These commands and host behavior have not been executed or validated here.
 
 ## Confirm installation and understand limits
 
