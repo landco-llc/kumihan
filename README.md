@@ -26,7 +26,9 @@ KUMIHANは、AIによる日本語のWebサイト・記事・文書・プレゼ�
 
 v0.1を開発中です。自分の環境で導入を試すためのプレビューを用意しています。
 
-[導入方法（日本語）](docs/installation.ja.md) · [Installation (English)](docs/installation.md) · [ChatGPT / Codex downloads and checksums](downloads%20GPT-Codex/)
+[導入方法（日本語）](docs/installation.ja.md) · [Installation (English)](docs/installation.md) 
+
+[downloads and checksums <ChatGPT / Codex>](downloads%20GPT-Codex/)
 
 ## License / ライセンス
 
