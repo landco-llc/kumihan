@@ -47,6 +47,6 @@ State the tools, browser or application versions, and which pages or regions you
 
 ## 4. Finish
 
-Hash the target again. If it changed, stop and report it; do not quietly restore it.
+Hash the target again and write both hashes (before and after) in the report before you finish. If they differ, stop and report it; do not quietly restore the target.
 
 If a referenced file is missing, say so and continue with what is available.
