@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ja">
+<html lang="{{ page.lang | default: 'ja' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,10 +10,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+{% if page.lang == 'zh-Hant-TW' %}
+  <meta name="description" content="在繁體中文安裝指南中了解如何將 KUMIHAN 日文排版 AI 技能加入 {{ page.platform }}。本頁包含安裝步驟、下載連結與預覽版注意事項。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title_zh }} | KUMIHAN">
+  <meta property="og:locale" content="zh_TW">
+  <title>{{ page.title_zh }} | KUMIHAN</title>
+  <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-{{ page.guide_id }}.zh-tw.html">
+{% else %}
   <meta name="description" content="KUMIHANの{{ page.platform }}向け導入方法。日本語・英語で手順、ダウンロード先、注意事項を確認できます。">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ page.title_ja }} | KUMIHAN">
   <title>{{ page.title_ja }} | KUMIHAN</title>
+{% endif %}
   <style>
     :root {
       color-scheme: light;
@@ -32,6 +41,7 @@
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 28px; }
     body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-jp); -webkit-font-smoothing: antialiased; }
+    html[lang="zh-Hant-TW"] body { font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif; }
     button, input { font: inherit; }
     a { color: inherit; }
     img { display: block; max-width: 100%; height: auto; }
@@ -152,7 +162,7 @@
       .hero h1 { font-size: clamp(30px,8vw,41px); }
       .hero-desc { font-size: 14px; }
       .language-switch { width: 100%; }
-      .language-switch button { flex: 1; }
+      .language-switch button { flex: 1; min-width: 0; padding-inline: 8px; }
       .toc ol { columns: 1; }
       .content-layout { padding-bottom: 85px; }
       .guide-pane { font-size: 14.5px; line-height: 1.9; }
@@ -165,7 +175,7 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span></a>
+  <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span><span data-ui-zh hidden>跳至主要內容</span></a>
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand" href="../" data-lang-link>KUMIHAN</a>
@@ -180,16 +190,17 @@
     <div class="shell">
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="../" data-lang-link>KUMIHAN</a><span aria-hidden="true">/</span>
-        <span><span data-ui-ja>導入ガイド</span><span data-ui-en hidden>Installation guide</span></span>
+        <span><span data-ui-ja>導入ガイド</span><span data-ui-en hidden>Installation guide</span><span data-ui-zh hidden>安裝指南</span></span>
       </nav>
       <div class="hero-grid">
         <div>
           <div class="eyebrow">INSTALL GUIDE / {{ page.guide_number }} OF 03</div>
-          <h1 id="page-title"><span data-ui-ja>{{ page.title_ja }}</span><span data-ui-en hidden>{{ page.title_en }}</span></h1>
-          <p class="hero-desc"><span data-ui-ja>{{ page.description_ja }}</span><span data-ui-en hidden>{{ page.description_en }}</span></p>
-          <div class="language-switch" role="group" aria-label="Language / 言語">
+          <h1 id="page-title"><span data-ui-ja>{{ page.title_ja }}</span><span data-ui-en hidden>{{ page.title_en }}</span><span data-ui-zh hidden>{{ page.title_zh }}</span></h1>
+          <p class="hero-desc"><span data-ui-ja>{{ page.description_ja }}</span><span data-ui-en hidden>{{ page.description_en }}</span><span data-ui-zh hidden>{{ page.description_zh }}</span></p>
+          <div class="language-switch" role="group" aria-label="Language / 言語 / 語言">
             <button type="button" data-switch="ja" aria-pressed="true" aria-controls="pane-ja">日本語</button>
             <button type="button" data-switch="en" aria-pressed="false" aria-controls="pane-en">English</button>
+            <button type="button" data-switch="zh" aria-pressed="false" aria-controls="pane-zh">繁體中文</button>
           </div>
         </div>
         <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
@@ -206,45 +217,49 @@
   <div class="shell content-layout">
     <aside class="toc" aria-label="Page sections">
       <details class="toc-details" id="toc-details" open>
-        <summary><span data-ui-ja>このページの目次を表示</span><span data-ui-en hidden>Show page contents</span></summary>
-        <h2 class="toc-title"><span data-ui-ja>このページの目次</span><span data-ui-en hidden>On this page</span></h2>
+        <summary><span data-ui-ja>このページの目次を表示</span><span data-ui-en hidden>Show page contents</span><span data-ui-zh hidden>展開本頁目錄</span></summary>
+        <h2 class="toc-title"><span data-ui-ja>このページの目次</span><span data-ui-en hidden>On this page</span><span data-ui-zh hidden>本頁目錄</span></h2>
         <ol id="guide-toc"></ol>
       </details>
       <div class="toc-note">
         <strong>PREVIEW / プレビュー版</strong>
-        <p><span data-ui-ja>正式版ではありません。利用環境によっては、掲載した操作が利用できない場合があります。</span><span data-ui-en hidden>This is a preview, not a stable release. Some steps may be unavailable in your environment.</span></p>
+        <p><span data-ui-ja>正式版ではありません。利用環境によっては、掲載した操作が利用できない場合があります。</span><span data-ui-en hidden>This is a preview, not a stable release. Some steps may be unavailable in your environment.</span><span data-ui-zh hidden>這是預覽版本，而非正式版本；部分操作可能無法在你的使用環境中執行。</span></p>
       </div>
-      <a id="source-doc-link" class="source-link" href="https://github.com/landco-llc/kumihan/blob/main/docs/{{ page.source_ja }}" target="_blank" rel="noopener noreferrer"><span data-ui-ja>元のMarkdownを開く ↗</span><span data-ui-en hidden>View source Markdown ↗</span></a>
+      <a id="source-doc-link" class="source-link" href="https://github.com/landco-llc/kumihan/blob/main/docs/{{ page.source_ja }}" target="_blank" rel="noopener noreferrer"><span data-ui-ja>元のMarkdownを開く ↗</span><span data-ui-en hidden>View source Markdown ↗</span><span data-ui-zh hidden>查看 Markdown 原始檔 ↗</span></a>
     </aside>
     <main class="guide" id="guide-content">
-      <div class="guide-head"><span>DOCUMENTATION / {{ page.platform }}</span><span class="step-label"><span data-ui-ja>手順と注意事項</span><span data-ui-en hidden>Steps &amp; guidance</span></span></div>
+      <div class="guide-head"><span>DOCUMENTATION / {{ page.platform }}</span><span class="step-label"><span data-ui-ja>手順と注意事項</span><span data-ui-en hidden>Steps &amp; guidance</span><span data-ui-zh hidden>安裝步驟與注意事項</span></span></div>
       {{ content }}
     </main>
   </div>
   <footer class="footer">
     <div class="shell footer-inner">
       <div><strong>KUMIHAN</strong><p>Japanese typography skills for AI-assisted design.<br>Developed by <a href="http://landco.co.jp" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div>
-      <div><a href="../" data-lang-link><span data-ui-ja>Topに戻る</span><span data-ui-en hidden>Back to Top</span></a> · <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+      <div><a href="../" data-lang-link><span data-ui-ja>Topに戻る</span><span data-ui-en hidden>Back to Top</span><span data-ui-zh hidden>返回首頁</span></a> · <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
     </div>
   </footer>
   <script>
     (() => {
       'use strict';
       const guide = '{{ page.guide_id }}';
-      const panels = { ja: document.getElementById('pane-ja'), en: document.getElementById('pane-en') };
+      const panels = { ja: document.getElementById('pane-ja'), en: document.getElementById('pane-en'), zh: document.getElementById('pane-zh') };
       const buttons = [...document.querySelectorAll('[data-switch]')];
       const headings = {};
-      const title = { ja: '{{ page.title_ja }}', en: '{{ page.title_en }}' };
-      const sourceNames = { ja: '{{ page.source_ja }}', en: '{{ page.source_en }}' };
+      const title = { ja: '{{ page.title_ja }}', en: '{{ page.title_en }}', zh: '{{ page.title_zh }}' };
+      const sourceNames = { ja: '{{ page.source_ja }}', en: '{{ page.source_en }}', zh: '{{ page.source_zh }}' };
       const guideFiles = new Map([
         ['installation.ja.md', 'install-chatgpt.html'], ['installation.md', 'install-chatgpt.html'],
         ['installation.claude.ja.md', 'install-claude.html'], ['installation.claude.md', 'install-claude.html'],
-        ['installation.gemini.ja.md', 'install-gemini.html'], ['installation.gemini.md', 'install-gemini.html']
+        ['installation.gemini.ja.md', 'install-gemini.html'], ['installation.gemini.md', 'install-gemini.html'],
+        ['installation.zh-tw.md', 'install-chatgpt.zh-tw.html'],
+        ['installation.claude.zh-tw.md', 'install-claude.zh-tw.html'],
+        ['installation.gemini.zh-tw.md', 'install-gemini.zh-tw.html']
       ]);
       const cleanHash = value => { try { return decodeURIComponent(value); } catch { return value; } };
       const headingName = text => text.replace(/\s+/g, ' ').trim();
       function assignHeadings(lang) {
         const panel = panels[lang];
+        if (!panel) return;
         const list = [...panel.querySelectorAll('h2, h3')];
         const oldMap = new Map();
         list.forEach((node, i) => {
@@ -279,26 +294,31 @@
       }
       function rewriteLinks(lang) {
         for (const [key, panel] of Object.entries(panels)) {
+          if (!panel) continue;
           panel.querySelectorAll('a[href]').forEach(a => {
             const original = a.getAttribute('href');
             if (!original || original.startsWith('#')) return;
             const pathname = original.split('#')[0].split('?')[0];
             const file = pathname.substring(pathname.lastIndexOf('/') + 1);
             if (guideFiles.has(file)) {
-              const chosen = file.endsWith('.ja.md') ? 'ja' : 'en';
+              const chosen = file.endsWith('.zh-tw.md') ? 'zh' : (file.endsWith('.ja.md') ? 'ja' : 'en');
               a.href = guideFiles.get(file) + (chosen === 'en' ? '?lang=en' : '');
             } else if (file === 'updates.md') {
               a.href = 'https://github.com/landco-llc/kumihan/blob/main/docs/updates.md';
             } else if (file === 'README.md') {
-              a.href = lang === 'en' ? '../en.html' : '../';
+              a.href = lang === 'en' ? '../en.html' : (lang === 'zh' ? '../zh-tw.html' : '../');
             }
           });
         }
         document.querySelectorAll('a[data-lang-link]').forEach(a => {
           const path = a.getAttribute('href').split('?')[0];
-          a.href = (path === '../' || path === '../index.html' || path === '../en.html')
-            ? (lang === 'en' ? '../en.html' : '../')
-            : path + (lang === 'en' ? '?lang=en' : '');
+          const home = lang === 'en' ? '../en.html' : (lang === 'zh' ? '../zh-tw.html' : '../');
+          if (path === '../' || path === '../index.html' || path === '../en.html' || path === '../zh-tw.html') {
+            a.href = home;
+          } else if (path.startsWith('install-')) {
+            const original = path.replace(/\.zh-tw\.html$/, '.html');
+            a.href = lang === 'zh' ? original.replace(/\.html$/, '.zh-tw.html') : original + (lang === 'en' ? '?lang=en' : '');
+          }
         });
       }
       async function copyText(text) {
@@ -323,35 +343,46 @@
           copy.dataset.copy = '1';
           copy.addEventListener('click', async () => {
             const ok = await copyText(pre.textContent);
-            copy.textContent = ok ? (document.documentElement.lang === 'en' ? 'Copied' : 'コピーしました') : (document.documentElement.lang === 'en' ? 'Copy failed' : 'コピーできませんでした');
+            const locale = document.documentElement.lang;
+            copy.textContent = ok ? (locale === 'en' ? 'Copied' : (locale === 'zh-Hant-TW' ? '已複製' : 'コピーしました')) : (locale === 'en' ? 'Copy failed' : (locale === 'zh-Hant-TW' ? '無法複製' : 'コピーできませんでした'));
             copy.setAttribute('aria-label', copy.textContent);
           });
           shell.appendChild(copy);
         });
       }
       function setLanguage(lang, modifyUrl = false) {
-        lang = lang === 'en' ? 'en' : 'ja';
-        document.documentElement.lang = lang;
+        lang = lang === 'en' ? 'en' : (lang === 'zh' ? 'zh' : 'ja');
+        if (!panels[lang]) {
+          window.location.assign('install-' + guide + (lang === 'zh' ? '.zh-tw.html' : '.html' + (lang === 'en' ? '?lang=en' : '')));
+          return;
+        }
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hant-TW' : lang;
         document.title = title[lang] + ' | KUMIHAN';
-        for (const [key, panel] of Object.entries(panels)) panel.hidden = key !== lang;
+        for (const [key, panel] of Object.entries(panels)) if (panel) panel.hidden = key !== lang;
         for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.switch === lang));
-        document.querySelectorAll('[data-ui-ja], [data-ui-en]').forEach(el => { el.hidden = el.hasAttribute('data-ui-' + (lang === 'en' ? 'ja' : 'en')); });
-        document.querySelectorAll('[data-copy]').forEach(b => { b.textContent = lang === 'en' ? 'Copy' : 'コピー'; b.setAttribute('aria-label', b.textContent); });
+        document.querySelectorAll('[data-ui-ja], [data-ui-en], [data-ui-zh]').forEach(el => { el.hidden = !el.hasAttribute('data-ui-' + lang); });
+        const copyLabel = lang === 'en' ? 'Copy' : (lang === 'zh' ? '複製' : 'コピー');
+        document.querySelectorAll('[data-copy]').forEach(b => { b.textContent = copyLabel; b.setAttribute('aria-label', b.textContent); });
         document.querySelectorAll('a[data-guide]').forEach(a => { if (a.dataset.guide === guide) a.setAttribute('aria-current', 'page'); });
         document.getElementById('source-doc-link').href = 'https://github.com/landco-llc/kumihan/blob/main/docs/' + sourceNames[lang];
+        document.getElementById('site-menu').setAttribute('aria-label', lang === 'zh' ? '安裝指南' : (lang === 'en' ? 'Installation guides' : '導入ページ'));
         rewriteLinks(lang); updateToc(lang);
         if (modifyUrl && window.history.replaceState) {
           const u = new URL(window.location.href);
-          if (lang === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
+          if (lang === 'en') u.searchParams.set('lang', 'en');
+          else u.searchParams.delete('lang');
           u.hash = '';
           window.history.replaceState(null, '', u.pathname + u.search);
         }
       }
-      for (const lang of Object.keys(panels)) { assignHeadings(lang); prepareCodeBlocks(panels[lang]); }
-      for (const button of buttons) button.addEventListener('click', () => setLanguage(button.dataset.switch, true));
+      for (const lang of Object.keys(panels)) if (panels[lang]) { assignHeadings(lang); prepareCodeBlocks(panels[lang]); }
+      for (const button of buttons) {
+        if (!panels[button.dataset.switch]) button.removeAttribute('aria-controls');
+        button.addEventListener('click', () => setLanguage(button.dataset.switch, true));
+      }
       if (window.matchMedia('(max-width: 710px)').matches) document.getElementById('toc-details').open = false;
       const initial = new URLSearchParams(window.location.search).get('lang');
-      setLanguage(initial === 'en' ? 'en' : 'ja');
+      setLanguage(document.documentElement.lang === 'zh-Hant-TW' ? 'zh' : (initial === 'en' ? 'en' : 'ja'));
     })();
   </script>
 </body>
