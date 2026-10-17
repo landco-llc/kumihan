@@ -81,6 +81,22 @@ h1, h2, h3 {
 - Avoid `word-break: break-all` and page-wide `overflow-wrap: anywhere`; they break Latin words and numbers badly.
 - Do not set `white-space: nowrap` on headings, paragraphs or long buttons.
 
+### Natural Japanese speech-group breaks (JA-TYPE-011)
+
+For a short heading, compare the meaning and natural speech pause **before** splitting at every bunsetsu boundary. Where it fits, prefer:
+
+```text
+いつものAIツールから
+はじめよう
+```
+
+over `いつもの／AIツールから／はじめよう` and especially over the orphan `いつものAIツールか／ら／はじめよう`.
+
+1. First seek a fitting layout: adjust heading width, grid-column distribution, gap and local padding. Only then consider alternative complete, accessible wraps.
+2. `word-break: auto-phrase` and `text-wrap: balance` are progressive browser-dependent aids, **not** guarantees of natural prosodic grouping. A carefully chosen `<wbr>` offers a break opportunity but does not suppress all other breaks.
+3. Never edit a protected original, insert visible spaces just for a line break, globally force `nowrap`, clip, or shrink all type. Reflow at 320 CSS px, 200% text enlargement and user-spacing settings must remain usable.
+4. Record AI-assisted semantic judgment separately from **rendered** line evidence. See the canonical specification and cases in `docs/ja-type-011-*` in the source repository.
+
 ## 4. Punctuation and spacing
 
 | Goal | Property | Support | Use |

@@ -483,5 +483,61 @@
       "approval_required": true
     },
     "case_ids": []
+  },
+  {
+    "id": "JA-TYPE-011",
+    "revision": 1,
+    "title_ja": "意味・係り受け・発話の自然なまとまりを優先して改行位置を設計する",
+    "requirement_en": "For Japanese headings, short display copy and UI labels, compare candidate line breaks by semantic cohesion, modifier–head and noun–particle attachment, natural speech pauses and actual rendered width. Prefer a larger prosodic group where it fits (いつものAIツールから／はじめよう rather than いつもの／AIツールから／はじめよう). First adapt the local layout to support the better grouping, never clip or rewrite supplied characters; readable fallback is allowed under genuine constraints.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:semantic-wrap",
+      "A02",
+      "A03"
+    ],
+    "conditions": [
+      {
+        "when": "Prioritize Japanese short headings/display labels; consider actual purpose, approved emphasis, final font, line measure, zoom and device constraints. Long body paragraphs do not require unbreakable speech units.",
+        "impact": "warning",
+        "scope": "named short Japanese copy region"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Review semantic and prosodic grouping with assisted judgment, then separately inspect actual rendered line edges and reflow. Neither a deterministic bunsetsu parser nor an automatic prosody detector is provided. Unrendered states are not checked."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Try text container width, grid ratio, gap and padding before sacrificing natural grouping. Do not inject visible spaces, mandate two lines, globally nowrap, obscure content or shrink every label. In 320px and 200% zoom states, allow complete readable reflow and record the compromise."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A valid approved local emphasis may differ. No exception allows truncation, source mutation or inaccessible layout.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "JA-TYPE-011-P01",
+      "JA-TYPE-011-P02",
+      "JA-TYPE-011-P03",
+      "JA-TYPE-011-P04",
+      "JA-TYPE-011-P05",
+      "JA-TYPE-011-E01",
+      "JA-TYPE-011-E02",
+      "JA-TYPE-011-E03"
+    ]
   }
 ]
