@@ -91,4 +91,4 @@ KUMIHAN is in development toward a stable release. A preview (**v0.1.4 preview**
 
 [Apache License 2.0](LICENSE)
 
-Developed by L&Co.LLC.
+Developed by L&Co. LLC.
