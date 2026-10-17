@@ -9,7 +9,15 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-{% if page.lang == 'en' %}
+{% if page.lang == 'zh-Hant-TW' %}
+  <meta name="description" content="KUMIHAN 是一套開放原始碼 AI 技能，協助製作與檢視日文網站、文章、報告及簡報，重視日文排版、可讀性及原始內容的完整性。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KUMIHAN — 讓 AI 協助打造更自然的日文排版">
+  <meta property="og:description" content="用 AI 技能製作與檢視日文內容，兼顧排版、資訊結構與原稿完整性。">
+  <meta property="og:locale" content="zh_TW">
+  <title>KUMIHAN — 讓 AI 協助打造更自然的日文排版</title>
+  <link rel="canonical" href="https://landco-llc.github.io/kumihan/zh-tw.html">
+{% elsif page.lang == 'en' %}
   <meta name="description" content="KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="KUMIHAN — Natural Japanese typography, made with AI">
@@ -28,6 +36,7 @@
 {% endif %}
   <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/">
   <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/en.html">
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/zh-tw.html">
   <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/">
   <style>
     :root {
@@ -54,9 +63,10 @@
     img { max-width: 100%; display: block; }
     button { font: inherit; }
     ::selection { background: #d7a6a0; color: #211c1c; }
-    .lang-en { display: none; }
-    html[lang="en"] .lang-ja { display: none !important; }
-    html[lang="en"] .lang-en { display: inline; }
+    .lang-en, .lang-zh { display: none; }
+    html[lang="en"] .lang-ja, html[lang="zh-Hant-TW"] .lang-ja { display: none !important; }
+    html[lang="en"] .lang-en, html[lang="zh-Hant-TW"] .lang-zh { display: inline; }
+    html[lang="zh-Hant-TW"] body { font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif; }
     .shell { width: var(--shell); margin-inline: auto; }
     .skip-link { position: absolute; z-index: 100; inset: -120px auto auto 12px; padding: 13px 18px; background: var(--ink); color: white; }
     .skip-link:focus { inset-block-start: 12px; }
@@ -79,6 +89,7 @@
     .hero h1 { margin: 29px 0 31px; font-weight: 820; letter-spacing: -.07em; line-height: 1.32; font-size: clamp(44px, 5.2vw, 77px); }
     .hero h1 .accent { color: var(--red); }
     html[lang="en"] .hero h1 { font-size: clamp(40px, 4.6vw, 68px); line-height: 1.24; letter-spacing: -.055em; }
+    html[lang="zh-Hant-TW"] .hero h1 { font-size: clamp(37px,4.3vw,62px); line-height: 1.3; letter-spacing: -.045em; }
     .hero-desc { margin: 0; font-size: clamp(15px,1.36vw,17px); line-height: 2.14; color: var(--ink-2); max-width: 540px; font-weight: 500; }
     .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 43px; }
     .button { display: inline-flex; align-items: center; justify-content: center; min-height: 58px; padding: 15px 24px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 13px; font-weight: 780; transition: background .2s ease, color .2s ease, transform .2s ease; }
@@ -214,6 +225,7 @@
       .hero { padding: 60px 0 66px; }
       .hero h1 { font-size: clamp(38px,9.7vw,56px); line-height: 1.4; margin: 20px 0 22px; }
       html[lang="en"] .hero h1 { font-size: clamp(33px, 8.5vw, 45px); line-height: 1.28; }
+      html[lang="zh-Hant-TW"] .hero h1 { font-size: clamp(30px,8vw,42px); line-height: 1.36; }
       .hero-desc { font-size: 15px; line-height: 1.95; }
       .hero-cta { margin-top: 28px; flex-direction: column; }
       .hero-cta .button { width: 100%; }
@@ -260,22 +272,23 @@
   </style>
 </head>
 <body id="top">
-  <a class="skip-link" href="#main"><span class="lang-ja">本文へ移動</span><span class="lang-en">Skip to content</span></a>
+  <a class="skip-link" href="#main"><span class="lang-ja">本文へ移動</span><span class="lang-en">Skip to content</span><span class="lang-zh">跳至主要內容</span></a>
   <header class="site-header">
     <div class="shell header-content">
       <a class="brand" href="#top" aria-label="KUMIHAN — Top">
         <span>KUMIHAN</span>
       </a>
-      <nav class="header-nav" aria-label="メインナビゲーション" data-nav-label-ja="メインナビゲーション" data-nav-label-en="Primary navigation">
-        <a href="#concept"><span class="lang-ja">KUMIHANとは</span><span class="lang-en">About</span></a>
-        <a href="#features"><span class="lang-ja">できること</span><span class="lang-en">Principles</span></a>
-        <a href="#skills"><span class="lang-ja">4つのスキル</span><span class="lang-en">Skills</span></a>
-        <a href="#install"><span class="lang-ja">導入方法</span><span class="lang-en">Get started</span></a>
+      <nav class="header-nav" aria-label="メインナビゲーション" data-nav-label-ja="メインナビゲーション" data-nav-label-en="Primary navigation" data-nav-label-zh="主要導覽">
+        <a href="#concept"><span class="lang-ja">KUMIHANとは</span><span class="lang-en">About</span><span class="lang-zh">關於 KUMIHAN</span></a>
+        <a href="#features"><span class="lang-ja">できること</span><span class="lang-en">Principles</span><span class="lang-zh">核心原則</span></a>
+        <a href="#skills"><span class="lang-ja">4つのスキル</span><span class="lang-en">Skills</span><span class="lang-zh">技能</span></a>
+        <a href="#install"><span class="lang-ja">導入方法</span><span class="lang-en">Get started</span><span class="lang-zh">開始使用</span></a>
       </nav>
       <div class="header-controls">
-        <div class="language-switch" role="group" aria-label="Language / 言語">
+        <div class="language-switch" role="group" aria-label="Language / 言語 / 語言">
           <button type="button" data-set-lang="ja" aria-pressed="true">JA</button>
           <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-set-lang="zh-Hant-TW" aria-pressed="false">繁中</button>
         </div>
       </div>
     </div>
@@ -285,11 +298,11 @@
       <div class="shell hero-layout">
         <div class="hero-copy">
           <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / JAPANESE TYPOGRAPHY</p>
-          <h1 id="hero-title"><span class="lang-ja">日本語の<br>デザインを<br><span class="accent">もっと自然に</span></span><span class="lang-en">Natural Japanese typography,<br><span class="accent">made with AI</span></span></h1>
-          <p class="hero-desc"><span class="lang-ja">AIとつくるWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHANは、日本語のための制作・レビュースキル集です。</span><span class="lang-en">KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.</span></p>
+          <h1 id="hero-title"><span class="lang-ja">日本語の<br>デザインを<br><span class="accent">もっと自然に</span></span><span class="lang-en">Natural Japanese typography,<br><span class="accent">made with AI</span></span><span class="lang-zh">讓 AI 協助打造<br><span class="accent">更自然的日文排版</span></span></h1>
+          <p class="hero-desc"><span class="lang-ja">AIとつくるWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHANは、日本語のための制作・レビュースキル集です。</span><span class="lang-en">KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.</span><span class="lang-zh">KUMIHAN 是一套開放原始碼 AI 技能，協助建立與檢視日文網站、文章、報告及簡報，同時兼顧可讀性、版面配置與原始內容的完整性。</span></p>
           <div class="hero-cta">
-            <a class="button button-primary" href="#install"><span class="lang-ja">使いはじめる</span><span class="lang-en">Get started</span><span class="arrow" aria-hidden="true">↗</span></a>
-            <a class="button" href="#concept"><span class="lang-ja">KUMIHANについて</span><span class="lang-en">Learn more</span><span class="arrow" aria-hidden="true">↘</span></a>
+            <a class="button button-primary" href="#install"><span class="lang-ja">使いはじめる</span><span class="lang-en">Get started</span><span class="lang-zh">開始使用</span><span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="button" href="#concept"><span class="lang-ja">KUMIHANについて</span><span class="lang-en">Learn more</span><span class="lang-zh">了解更多</span><span class="arrow" aria-hidden="true">↘</span></a>
           </div>
           <div class="hero-foot" aria-label="Open-source, four skills, Japanese-first">
             <span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span><span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span><span>JAPANESE FIRST</span>
@@ -297,7 +310,7 @@
         </div>
         <div class="hero-stage" aria-label="KUMIHAN identity">
           <div class="logo-card">
-            <img src="assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHANの正式ロゴ。黒い組版グリッドと赤い横線、KUMIHANの文字。" data-alt-ja="KUMIHANの正式ロゴ。黒い組版グリッドと赤い横線、KUMIHANの文字。" data-alt-en="Official KUMIHAN logo: a black typographic grid, a red horizontal bar, and the KUMIHAN wordmark." fetchpriority="high">
+            <img src="assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHANの正式ロゴ。黒い組版グリッドと赤い横線、KUMIHANの文字。" data-alt-ja="KUMIHANの正式ロゴ。黒い組版グリッドと赤い横線、KUMIHANの文字。" data-alt-en="Official KUMIHAN logo: a black typographic grid, a red horizontal bar, and the KUMIHAN wordmark." data-alt-zh="KUMIHAN 正式標誌，採用黑色組版格線、紅色橫線與 KUMIHAN 字樣。" fetchpriority="high">
           </div>
           <div class="stage-label">WORDS · SPACE · PURPOSE</div>
         </div>
@@ -307,22 +320,22 @@
       <div class="shell intro-layout">
         <div><span class="section-number">01 / THE IDEA</span></div>
         <div class="intro-text">
-          <h2 id="concept-title"><span class="lang-ja">「見た目をそろえる」より<br><em>「伝わる形を考える」</em></span><span class="lang-en">Not a uniform look—<br><em>the right form for each message</em></span></h2>
-          <p><span class="lang-ja">目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHANは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。</span><span class="lang-en">Every brief, audience, and message is different. KUMIHAN helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.</span></p>
+          <h2 id="concept-title"><span class="lang-ja">「見た目をそろえる」より<br><em>「伝わる形を考える」</em></span><span class="lang-en">Not a uniform look—<br><em>the right form for each message</em></span><span class="lang-zh">不追求千篇一律<br><em>讓形式回應內容</em></span></h2>
+          <p><span class="lang-ja">目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHANは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。</span><span class="lang-en">Every brief, audience, and message is different. KUMIHAN helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.</span><span class="lang-zh">每個專案的目的、讀者與訊息都不同。KUMIHAN 協助 AI 根據內容的意義與資訊優先順序，調整日文文字排版、留白與視覺層級，而不是把所有成果套進同一種範本。</span></p>
         </div>
       </div>
     </section>
     <section class="features" id="features" aria-labelledby="features-title">
       <div class="shell">
         <div class="section-heading">
-          <div><div class="section-number">02 / WHAT MATTERS</div><h2 id="features-title"><span class="lang-ja">伝えるための4つの視点</span><span class="lang-en">Four things worth getting right</span></h2></div>
-          <p><span class="lang-ja">制作と見直しに共通する、KUMIHANが大切にする考え方。</span><span class="lang-en">Practical priorities for creating and reviewing Japanese content.</span></p>
+          <div><div class="section-number">02 / WHAT MATTERS</div><h2 id="features-title"><span class="lang-ja">伝えるための4つの視点</span><span class="lang-en">Four things worth getting right</span><span class="lang-zh">讓訊息更清楚的4個原則</span></h2></div>
+          <p><span class="lang-ja">制作と見直しに共通する、KUMIHANが大切にする考え方。</span><span class="lang-en">Practical priorities for creating and reviewing Japanese content.</span><span class="lang-zh">從製作到檢視，KUMIHAN 始終重視的設計考量。</span></p>
         </div>
         <div class="feature-grid">
-          <article class="feature"><div class="feature-index">01 / TYPE</div><div class="feature-motif" aria-hidden="true">あ</div><h3><span class="lang-ja">自然な日本語組版</span><span class="lang-en">Japanese typography</span></h3><p><span class="lang-ja">改行・禁則・約物・和欧混植。文字の読みやすさを、実際の文脈から考えます。</span><span class="lang-en">Line breaks, kinsoku rules, punctuation, and mixed Japanese–Latin text—judged in context.</span></p></article>
-          <article class="feature"><div class="feature-index">02 / STRUCTURE</div><div class="feature-motif" aria-hidden="true">▮▮▯</div><h3><span class="lang-ja">内容に合う構成</span><span class="lang-en">Purposeful structure</span></h3><p><span class="lang-ja">伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。</span><span class="lang-en">Shape the layout around the information, its priority, and the reader’s goal.</span></p></article>
-          <article class="feature"><div class="feature-index">03 / FIDELITY</div><div class="feature-motif" aria-hidden="true">Aa/字</div><h3><span class="lang-ja">原稿を大切に</span><span class="lang-en">Source fidelity</span></h3><p><span class="lang-ja">名前・価格・数値・原文を勝手に変えず、意味と情報の正確さを守ります。</span><span class="lang-en">Names, prices, figures, and original wording stay exactly as supplied.</span></p></article>
-          <article class="feature"><div class="feature-index">04 / REVIEW</div><div class="feature-motif" aria-hidden="true">◌</div><h3><span class="lang-ja">制作後の見直し</span><span class="lang-en">Read-only review</span></h3><p><span class="lang-ja">完成物の気になる点を、対象を変更せずに確認・整理するための指針です。</span><span class="lang-en">Check finished work and organize issues—without touching the files.</span></p></article>
+          <article class="feature"><div class="feature-index">01 / TYPE</div><div class="feature-motif" aria-hidden="true">あ</div><h3><span class="lang-ja">自然な日本語組版</span><span class="lang-en">Japanese typography</span><span class="lang-zh">自然的日文排版</span></h3><p><span class="lang-ja">改行・禁則・約物・和欧混植。文字の読みやすさを、実際の文脈から考えます。</span><span class="lang-en">Line breaks, kinsoku rules, punctuation, and mixed Japanese–Latin text—judged in context.</span><span class="lang-zh">依據實際內容，檢視換行、禁則處理、標點符號，以及日文與拉丁文字的混排。</span></p></article>
+          <article class="feature"><div class="feature-index">02 / STRUCTURE</div><div class="feature-motif" aria-hidden="true">▮▮▯</div><h3><span class="lang-ja">内容に合う構成</span><span class="lang-en">Purposeful structure</span><span class="lang-zh">符合目的的資訊結構</span></h3><p><span class="lang-ja">伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。</span><span class="lang-en">Shape the layout around the information, its priority, and the reader’s goal.</span><span class="lang-zh">考量資訊的重要性與讀者需求，安排內容順序與版面。</span></p></article>
+          <article class="feature"><div class="feature-index">03 / FIDELITY</div><div class="feature-motif" aria-hidden="true">Aa/字</div><h3><span class="lang-ja">原稿を大切に</span><span class="lang-en">Source fidelity</span><span class="lang-zh">忠於原始內容</span></h3><p><span class="lang-ja">名前・価格・数値・原文を勝手に変えず、意味と情報の正確さを守ります。</span><span class="lang-en">Names, prices, figures, and original wording stay exactly as supplied.</span><span class="lang-zh">人名、價格、數字與原文都保持原貌，不擅自修改。</span></p></article>
+          <article class="feature"><div class="feature-index">04 / REVIEW</div><div class="feature-motif" aria-hidden="true">◌</div><h3><span class="lang-ja">制作後の見直し</span><span class="lang-en">Read-only review</span><span class="lang-zh">唯讀檢視</span></h3><p><span class="lang-ja">完成物の気になる点を、対象を変更せずに確認・整理するための指針です。</span><span class="lang-en">Check finished work and organize issues—without touching the files.</span><span class="lang-zh">檢查完成的作品並整理待改善事項，不直接修改檔案。</span></p></article>
         </div>
       </div>
     </section>
@@ -330,8 +343,8 @@
       <div class="shell idea-layout">
         <div>
           <p class="eyebrow"><span class="line" aria-hidden="true"></span> DESIGNED FOR THE MESSAGE</p>
-          <h2 id="idea-title"><span class="lang-ja">文字を並べるだけでなく<br><strong>読む体験を組み立てる</strong></span><span class="lang-en">Beyond arranging type<br><strong>Design the reading experience</strong></span></h2>
-          <p><span class="lang-ja">KUMIHANは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。</span><span class="lang-en">KUMIHAN doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.</span></p>
+          <h2 id="idea-title"><span class="lang-ja">文字を並べるだけでなく<br><strong>読む体験を組み立てる</strong></span><span class="lang-en">Beyond arranging type<br><strong>Design the reading experience</strong></span><span class="lang-zh">不只是排列文字<br><strong>更要設計閱讀體驗</strong></span></h2>
+          <p><span class="lang-ja">KUMIHANは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。</span><span class="lang-en">KUMIHAN doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.</span><span class="lang-zh">KUMIHAN 不會替每份作品決定固定外觀，而是協助 AI 根據媒體與需求做出合適的設計判斷。</span></p>
         </div>
         <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><small>FORM FOLLOWS MEANING</small></div>
       </div>
@@ -339,14 +352,14 @@
     <section class="skills-section" id="skills" aria-labelledby="skills-title">
       <div class="shell">
         <div class="section-heading">
-          <div><div class="section-number">03 / THE SKILLS</div><h2 id="skills-title"><span class="lang-ja">4つのスキル ひとつの考え方</span><span class="lang-en">Four skills<br>One approach</span></h2></div>
-          <p><span class="lang-ja">制作の入口から、Web・資料制作・レビューまで。</span><span class="lang-en">From scoping the work to web, documents, and review.</span></p>
+          <div><div class="section-number">03 / THE SKILLS</div><h2 id="skills-title"><span class="lang-ja">4つのスキル ひとつの考え方</span><span class="lang-en">Four skills<br>One approach</span><span class="lang-zh">4項技能<br>一套思考方式</span></h2></div>
+          <p><span class="lang-ja">制作の入口から、Web・資料制作・レビューまで。</span><span class="lang-en">From scoping the work to web, documents, and review.</span><span class="lang-zh">從釐清工作範圍，到網站、文件與唯讀檢視。</span></p>
         </div>
         <div class="skills-grid">
-          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">01 / ENTRY</span><span class="skill-symbol" aria-hidden="true">組</span></div><div><h3 class="skill-name">kumihan</h3><p class="skill-desc"><span class="lang-ja">最初の入口。何をつくるか、目的や作業範囲を整理するためのスキル。</span><span class="lang-en">Start here. Define what you're making, why, and how far the work should go.</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span></span><span aria-hidden="true">↗</span></div></div></a>
-          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-web" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">02 / WEB</span><span class="skill-symbol" aria-hidden="true">↗</span></div><div><h3 class="skill-name">kumihan-web</h3><p class="skill-desc"><span class="lang-ja">Webサイト、記事、LP、UIの文字組みとデザインを支援。</span><span class="lang-en">Typography and design for Japanese websites, articles, landing pages, and UI.</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span></span><span aria-hidden="true">↗</span></div></div></a>
-          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-documents" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">03 / DOCUMENTS</span><span class="skill-symbol" aria-hidden="true">文</span></div><div><h3 class="skill-name">kumihan-documents</h3><p class="skill-desc"><span class="lang-ja">報告書、資料、プレゼンテーションの構成と読みやすさを支援。</span><span class="lang-en">Structure and readability for reports, business documents, and slide decks.</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span></span><span aria-hidden="true">↗</span></div></div></a>
-          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-review" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">04 / REVIEW</span><span class="skill-symbol" aria-hidden="true">◎</span></div><div><h3 class="skill-name">kumihan-review</h3><p class="skill-desc"><span class="lang-ja">制作物を変更せず、組版・情報・デザインの見直しを支援。</span><span class="lang-en">Review typography, information, and layout without editing source files.</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span></span><span aria-hidden="true">↗</span></div></div></a>
+          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">01 / ENTRY</span><span class="skill-symbol" aria-hidden="true">組</span></div><div><h3 class="skill-name">kumihan</h3><p class="skill-desc"><span class="lang-ja">最初の入口。何をつくるか、目的や作業範囲を整理するためのスキル。</span><span class="lang-en">Start here. Define what you're making, why, and how far the work should go.</span><span class="lang-zh">從這裡開始。釐清要製作什麼、為什麼製作，以及工作範圍。</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span><span class="lang-zh">查看技能</span></span><span aria-hidden="true">↗</span></div></div></a>
+          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-web" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">02 / WEB</span><span class="skill-symbol" aria-hidden="true">↗</span></div><div><h3 class="skill-name">kumihan-web</h3><p class="skill-desc"><span class="lang-ja">Webサイト、記事、LP、UIの文字組みとデザインを支援。</span><span class="lang-en">Typography and design for Japanese websites, articles, landing pages, and UI.</span><span class="lang-zh">協助日文網站、文章、登陸頁面與使用者介面的排版與設計。</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span><span class="lang-zh">查看技能</span></span><span aria-hidden="true">↗</span></div></div></a>
+          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-documents" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">03 / DOCUMENTS</span><span class="skill-symbol" aria-hidden="true">文</span></div><div><h3 class="skill-name">kumihan-documents</h3><p class="skill-desc"><span class="lang-ja">報告書、資料、プレゼンテーションの構成と読みやすさを支援。</span><span class="lang-en">Structure and readability for reports, business documents, and slide decks.</span><span class="lang-zh">協助報告、商務文件與簡報安排結構並提升可讀性。</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span><span class="lang-zh">查看技能</span></span><span aria-hidden="true">↗</span></div></div></a>
+          <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-review" target="_blank" rel="noopener noreferrer"><div class="card-top"><span class="skill-type">04 / REVIEW</span><span class="skill-symbol" aria-hidden="true">◎</span></div><div><h3 class="skill-name">kumihan-review</h3><p class="skill-desc"><span class="lang-ja">制作物を変更せず、組版・情報・デザインの見直しを支援。</span><span class="lang-en">Review typography, information, and layout without editing source files.</span><span class="lang-zh">檢視排版、資訊與設計，不修改來源檔案。</span></p><div class="skill-end"><span><span class="lang-ja">スキルを見る</span><span class="lang-en">View skill</span><span class="lang-zh">查看技能</span></span><span aria-hidden="true">↗</span></div></div></a>
         </div>
       </div>
     </section>
@@ -354,16 +367,16 @@
       <div class="shell install-layout">
         <div class="install-intro">
           <div class="section-number">04 / GET STARTED</div>
-          <h2 id="install-title"><span class="lang-ja">いつものAIツールから<br>はじめよう</span><span class="lang-en">Start with the AI tools<br>you already use</span></h2>
-          <p><span class="lang-ja">導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。</span><span class="lang-en">Setup varies by tool. Pick the guide for yours, then choose the skills you need.</span></p>
+          <h2 id="install-title"><span class="lang-ja">いつものAIツールから<br>はじめよう</span><span class="lang-en">Start with the AI tools<br>you already use</span><span class="lang-zh">從你熟悉的 AI 工具<br>開始使用</span></h2>
+          <p><span class="lang-ja">導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。</span><span class="lang-en">Setup varies by tool. Pick the guide for yours, then choose the skills you need.</span><span class="lang-zh">不同工具有不同的安裝方式。請選擇對應的指南，再挑選需要的技能。</span></p>
         </div>
         <div>
           <div class="install-links">
-            <a class="platform-row" data-guide-ja="docs/install-chatgpt.html" data-guide-en="docs/install-chatgpt.html?lang=en" href="docs/install-chatgpt.html"><span class="platform-index">01</span><div class="platform-info"><div class="platform-name">ChatGPT / Codex</div><div class="platform-note"><span class="lang-ja">スキルの追加・プラグイン登録・ローカル導入のガイド</span><span class="lang-en">Guides for adding skills, registering plugins, and local installation</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
-            <a class="platform-row" data-guide-ja="docs/install-claude.html" data-guide-en="docs/install-claude.html?lang=en" href="docs/install-claude.html"><span class="platform-index">02</span><div class="platform-info"><div class="platform-name">Claude / Claude Code</div><div class="platform-note"><span class="lang-ja">Claude Code・チャット向けの導入ガイド</span><span class="lang-en">Setup guide for Claude Code and Claude chat</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
-            <a class="platform-row" data-guide-ja="docs/install-gemini.html" data-guide-en="docs/install-gemini.html?lang=en" href="docs/install-gemini.html"><span class="platform-index">03</span><div class="platform-info"><div class="platform-name">Gemini</div><div class="platform-note"><span class="lang-ja">Gemini CLI・Geminiアプリ向けの導入ガイド</span><span class="lang-en">Setup guide for Gemini CLI and the Gemini app</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
+            <a class="platform-row" data-guide-ja="docs/install-chatgpt.html" data-guide-en="docs/install-chatgpt.html?lang=en" data-guide-zh="docs/install-chatgpt.zh-tw.html" href="docs/install-chatgpt.html"><span class="platform-index">01</span><div class="platform-info"><div class="platform-name">ChatGPT / Codex</div><div class="platform-note"><span class="lang-ja">スキルの追加・プラグイン登録・ローカル導入のガイド</span><span class="lang-en">Guides for adding skills, registering plugins, and local installation</span><span class="lang-zh">新增技能、註冊外掛與本機安裝指南</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
+            <a class="platform-row" data-guide-ja="docs/install-claude.html" data-guide-en="docs/install-claude.html?lang=en" data-guide-zh="docs/install-claude.zh-tw.html" href="docs/install-claude.html"><span class="platform-index">02</span><div class="platform-info"><div class="platform-name">Claude / Claude Code</div><div class="platform-note"><span class="lang-ja">Claude Code・チャット向けの導入ガイド</span><span class="lang-en">Setup guide for Claude Code and Claude chat</span><span class="lang-zh">Claude Code 與 Claude 聊天安裝指南</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
+            <a class="platform-row" data-guide-ja="docs/install-gemini.html" data-guide-en="docs/install-gemini.html?lang=en" data-guide-zh="docs/install-gemini.zh-tw.html" href="docs/install-gemini.html"><span class="platform-index">03</span><div class="platform-info"><div class="platform-name">Gemini</div><div class="platform-note"><span class="lang-ja">Gemini CLI・Geminiアプリ向けの導入ガイド</span><span class="lang-en">Setup guide for Gemini CLI and the Gemini app</span><span class="lang-zh">Gemini CLI 與 Gemini 應用程式安裝指南</span></div></div><span class="platform-arrow" aria-hidden="true">↗</span></a>
           </div>
-          <div class="install-extra"><span class="lang-ja">アップデートする場合は</span><span class="lang-en">Already installed? See the</span> <a href="https://github.com/landco-llc/kumihan/blob/main/docs/updates.md" target="_blank" rel="noopener noreferrer"><span class="lang-ja">更新ガイド</span><span class="lang-en">update guide</span></a> <span class="lang-ja">をご覧ください。</span></div>
+          <div class="install-extra"><span class="lang-ja">アップデートする場合は</span><span class="lang-en">Already installed? See the</span><span class="lang-zh">已經安裝了嗎？請參閱</span> <a href="https://github.com/landco-llc/kumihan/blob/main/docs/updates.md" target="_blank" rel="noopener noreferrer"><span class="lang-ja">更新ガイド</span><span class="lang-en">update guide</span><span class="lang-zh">更新指南</span></a> <span class="lang-ja">をご覧ください。</span></div>
         </div>
       </div>
     </section>
@@ -371,15 +384,15 @@
       <div class="shell status-box">
         <div>
           <div class="status-title" id="status-title">PREVIEW / v0.1.4</div>
-          <p><span class="lang-ja">現在はプレビュー版です。正式版に向けて開発中であり、各AIツールでの動作はまだ十分に確認できていません。</span><span class="lang-en">KUMIHAN is currently in preview. A stable release is still in development, and behavior across AI tools has not yet been fully verified.</span></p>
+          <p><span class="lang-ja">現在はプレビュー版です。正式版に向けて開発中であり、各AIツールでの動作はまだ十分に確認できていません。</span><span class="lang-en">KUMIHAN is currently in preview. A stable release is still in development, and behavior across AI tools has not yet been fully verified.</span><span class="lang-zh">KUMIHAN 目前為預覽版，正式版仍在開發中。尚未充分驗證各 AI 工具中的運作情況。</span></p>
         </div>
         <div class="status-meta">OPEN SOURCE<br>APACHE 2.0</div>
       </div>
     </section>
     <section class="cta-section" aria-labelledby="cta-title">
       <div class="shell cta-layout">
-        <div><h2 id="cta-title"><span class="lang-ja">日本語のデザインに<br>もうひとつの選択肢を</span><span class="lang-en">Another way to design<br>in Japanese</span></h2><p><span class="lang-ja">KUMIHANはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。</span><span class="lang-en">KUMIHAN is open source. The skills, preview releases, and full change history are on GitHub.</span></p></div>
-        <a class="button" href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer"><span class="lang-ja">GitHubで見る</span><span class="lang-en">View on GitHub</span><span class="arrow" aria-hidden="true">↗</span></a>
+        <div><h2 id="cta-title"><span class="lang-ja">日本語のデザインに<br>もうひとつの選択肢を</span><span class="lang-en">Another way to design<br>in Japanese</span><span class="lang-zh">為日文內容的設計<br>提供另一種選擇</span></h2><p><span class="lang-ja">KUMIHANはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。</span><span class="lang-en">KUMIHAN is open source. The skills, preview releases, and full change history are on GitHub.</span><span class="lang-zh">KUMIHAN 是開放原始碼專案。你可以在 GitHub 查看技能、預覽版與完整更新紀錄。</span></p></div>
+        <a class="button" href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer"><span class="lang-ja">GitHubで見る</span><span class="lang-en">View on GitHub</span><span class="lang-zh">前往 GitHub</span><span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
@@ -389,8 +402,8 @@
       <div class="footer-links">
         <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>
-        <a href="https://github.com/landco-llc/kumihan/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer"><span class="lang-ja">更新履歴</span><span class="lang-en">Changelog</span></a>
-        <a href="#top"><span class="lang-ja">ページ上部へ ↑</span><span class="lang-en">Back to top ↑</span></a>
+        <a href="https://github.com/landco-llc/kumihan/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer"><span class="lang-ja">更新履歴</span><span class="lang-en">Changelog</span><span class="lang-zh">更新紀錄</span></a>
+        <a href="#top"><span class="lang-ja">ページ上部へ ↑</span><span class="lang-en">Back to top ↑</span><span class="lang-zh">回到頁首 ↑</span></a>
       </div>
     </div>
   </footer>
@@ -410,32 +423,41 @@
         en: {
           title: 'KUMIHAN — Natural Japanese typography, made with AI',
           description: 'KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.'
+        },
+        'zh-Hant-TW': {
+          title: 'KUMIHAN — 讓 AI 協助打造更自然的日文排版',
+          description: 'KUMIHAN 是一套開放原始碼 AI 技能，協助製作與檢視日文網站、文章、報告及簡報，重視日文排版、可讀性及原始內容的完整性。'
         }
       };
       function setLanguage(lang) {
-        const current = lang === 'en' ? 'en' : 'ja';
+        const current = lang === 'en' ? 'en' : (lang === 'zh-Hant-TW' ? 'zh-Hant-TW' : 'ja');
         document.documentElement.lang = current;
         document.title = labels[current].title;
         if (description) description.content = labels[current].description;
         buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.setLang === current)));
-        guideLinks.forEach(link => { link.href = link.dataset[current === 'ja' ? 'guideJa' : 'guideEn']; });
-        if (logo) logo.alt = logo.dataset[current === 'ja' ? 'altJa' : 'altEn'];
-        if (primaryNav) primaryNav.setAttribute('aria-label', primaryNav.dataset[current === 'ja' ? 'navLabelJa' : 'navLabelEn']);
+        guideLinks.forEach(link => { link.href = link.dataset[current === 'ja' ? 'guideJa' : (current === 'en' ? 'guideEn' : 'guideZh')]; });
+        if (logo) logo.alt = logo.dataset[current === 'ja' ? 'altJa' : (current === 'en' ? 'altEn' : 'altZh')];
+        if (primaryNav) primaryNav.setAttribute('aria-label', primaryNav.dataset[current === 'ja' ? 'navLabelJa' : (current === 'en' ? 'navLabelEn' : 'navLabelZh')]);
       }
       buttons.forEach(button => button.addEventListener('click', () => {
         const lang = button.dataset.setLang;
         if (document.documentElement.lang === lang) return;
-        const target = new URL(lang === 'en' ? 'en.html' : './', window.location.href);
+        const target = new URL(lang === 'en' ? 'en.html' : (lang === 'zh-Hant-TW' ? 'zh-tw.html' : './'), window.location.href);
         target.hash = window.location.hash;
         window.location.assign(target.href);
       }));
       const requested = new URLSearchParams(window.location.search).get('lang');
-      if (requested === 'en' && document.documentElement.lang !== 'en') {
+      const actual = document.documentElement.lang;
+      if (requested === 'en' && actual !== 'en') {
         const english = new URL('en.html', window.location.href);
         english.hash = window.location.hash;
         window.location.replace(english.href);
+      } else if (['zh', 'zh-TW', 'zh-Hant', 'zh-Hant-TW'].includes(requested) && actual !== 'zh-Hant-TW') {
+        const traditional = new URL('zh-tw.html', window.location.href);
+        traditional.hash = window.location.hash;
+        window.location.replace(traditional.href);
       } else {
-        setLanguage(document.documentElement.lang === 'en' ? 'en' : 'ja');
+        setLanguage(actual === 'en' ? 'en' : (actual === 'zh-Hant-TW' ? 'zh-Hant-TW' : 'ja'));
       }
     })();
   </script>
