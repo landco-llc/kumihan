@@ -6,7 +6,7 @@ from pathlib import Path
 path = Path(__file__).resolve().parents[1] / "docs" / "ja-type-011-cases.json"
 data = json.loads(path.read_text(encoding="utf-8"))
 assert data["rule_proposal"] == "JA-TYPE-011"
-assert data["state"] == "specification-fixtures-only-not-active-rule"
+assert data["state"] == "active-source-candidate-guidance-only"
 ids = set()
 for case in data["cases"]:
     assert case["id"] not in ids

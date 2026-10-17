@@ -1,0 +1,46 @@
+name: Generate JA-TYPE-011 preview candidate
+on:
+  push:
+    branches: [feat/ja-type-011-active-20261017]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build-candidate:
+    if: github.ref == 'refs/heads/feat/ja-type-011-active-20261017' && !contains(github.event.head_commit.message, '[skip ci]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Rebuild packages and check
+        run: |
+          python3 tools/check_ja_type_011_cases.py
+          python3 tools/build_dist.py --set-version 0.1.5-preview
+          python3 tools/build_dist.py --check
+          python3 tools/check_ja_type_011_cases.py
+      - name: Validate 39-rule catalogs and six profiles in all four Skills
+        run: |
+          python3 - <<'PY'
+          import json
+          for skill in ('kumihan','kumihan-web','kumihan-documents','kumihan-review'):
+              base=f'skills/{skill}/'
+              catalog=json.load(open(base+'rules/catalog.json',encoding='utf-8'))
+              assert len(catalog)==39 and sum(x['id']=='JA-TYPE-011' for x in catalog)==1
+              for name in ('web-editorial','web-marketing','web-ui','report-document','presentation','display-copy'):
+                  profile=json.load(open(base+'profiles/'+name+'.json',encoding='utf-8'))
+                  assert profile['rule_ids'].count('JA-TYPE-011')==1
+          PY
+      - name: Commit generated candidate on the feature branch only
+        run: |
+          test "$(git branch --show-current)" = feat/ja-type-011-active-20261017
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(dist): rebuild v0.1.5 preview JA-TYPE-011 [skip ci]"
+            git push origin HEAD:feat/ja-type-011-active-20261017
+          fi

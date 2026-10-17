@@ -54,7 +54,7 @@ Confirm which fonts and assets actually exist and may be used. A familiar patter
 
 ## 4. Build
 
-Use [web recipes](references/web-recipes.md) or [document recipes](references/document-recipes.md) for concrete settings. For display copy, tighten spacing only on the display text itself; never carry display treatment into body text.
+Use [web recipes](references/web-recipes.md) or [document recipes](references/document-recipes.md) for concrete settings. For display copy, tighten spacing only on the display text itself; never carry display treatment into body text. For short Japanese copy also use JA-TYPE-011: prefer a larger natural speech group to mechanically separated bunsetsu and first consider the layout width before conceding a weaker break.
 
 ## 5. Review
 

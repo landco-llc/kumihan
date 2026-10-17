@@ -21,7 +21,7 @@ Follow the [review protocol](references/review-protocol.md) for the full procedu
 Use the [catalog](rules/catalog.json) for each rule's conditions and impact.
 
 1. **Content** — names, prices, numbers, units, tables, captions, notes and characters match the source exactly. Claims and assets have real evidence.
-2. **Typography** — kinsoku at actual line edges, phrase breaks in headings, body vs display spacing, mixed Japanese and Latin, ruby and notes. See [web recipes](references/web-recipes.md) and [document recipes](references/document-recipes.md) for what good settings look like.
+2. **Typography** — kinsoku at actual line edges, JA-TYPE-011 semantic and natural prosodic grouping in short Japanese headings, body vs display spacing, mixed Japanese and Latin, ruby and notes. Judge larger connected speech groups versus mechanically split bunsetsu; distinguish assisted semantic conclusions from actual rendered evidence. See [web recipes](references/web-recipes.md) and [document recipes](references/document-recipes.md) for what good settings look like.
 3. **Layout and access** — web: 320 px reflow, 200% zoom, spacing overrides, long labels, fonts, interface states. Documents: every page, headings and page breaks, figures with captions, slide density and notes, export results.
 4. **Design intent** — does the structure serve the stated purpose and audience? Familiar patterns are not failures by themselves.
 
