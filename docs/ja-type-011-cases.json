@@ -1,0 +1,176 @@
+{
+  "schema_revision": 1,
+  "rule_proposal": "JA-TYPE-011",
+  "state": "specification-fixtures-only-not-active-rule",
+  "description": "Human-approved prosodic/multi-bunsetsu preference where preferred lines fit; deterministic detector not claimed.",
+  "cases": [
+    {
+      "id": "JA-TYPE-011-P01",
+      "kind": "preference",
+      "role": "heading",
+      "text": "いつものAIツールからはじめよう",
+      "context": "Ordinary heading; two lines fit at rendered width",
+      "preferred_lines": [
+        "いつものAIツールから",
+        "はじめよう"
+      ],
+      "less_preferred_lines": [
+        [
+          "いつもの",
+          "AIツールから",
+          "はじめよう"
+        ]
+      ],
+      "rejected_when_preferred_fits": [
+        [
+          "いつものAIツールか",
+          "ら",
+          "はじめよう"
+        ]
+      ],
+      "reason": "Keep modifier+noun+particle together and place main speech pause before predicate"
+    },
+    {
+      "id": "JA-TYPE-011-P02",
+      "kind": "preference",
+      "role": "heading",
+      "text": "日本語の文章をもっと読みやすく",
+      "context": "Benefit headline; preferred chunks fit",
+      "preferred_lines": [
+        "日本語の文章を",
+        "もっと読みやすく"
+      ],
+      "less_preferred_lines": [
+        [
+          "日本語の",
+          "文章をもっと",
+          "読みやすく"
+        ]
+      ],
+      "rejected_when_preferred_fits": [
+        [
+          "日本語の文章をもっと読みやす",
+          "く"
+        ]
+      ],
+      "reason": "Keep the modified object phrase intact"
+    },
+    {
+      "id": "JA-TYPE-011-P03",
+      "kind": "preference",
+      "role": "heading",
+      "text": "今日から使える便利な機能",
+      "context": "Product heading; preferred chunks fit",
+      "preferred_lines": [
+        "今日から使える",
+        "便利な機能"
+      ],
+      "less_preferred_lines": [
+        [
+          "今日から",
+          "使える便利な",
+          "機能"
+        ]
+      ],
+      "rejected_when_preferred_fits": [
+        [
+          "今日から使える便利な機",
+          "能"
+        ]
+      ],
+      "reason": "Respect natural modifier-to-noun grouping"
+    },
+    {
+      "id": "JA-TYPE-011-P04",
+      "kind": "preference",
+      "role": "heading",
+      "text": "新しい情報をわかりやすく伝える",
+      "context": "Communication benefit; preferred chunks fit",
+      "preferred_lines": [
+        "新しい情報を",
+        "わかりやすく伝える"
+      ],
+      "less_preferred_lines": [
+        [
+          "新しい",
+          "情報をわかりやすく",
+          "伝える"
+        ]
+      ],
+      "rejected_when_preferred_fits": [
+        [
+          "新しい情報をわかりやすく伝え",
+          "る"
+        ]
+      ],
+      "reason": "Preserve object and predicate phrases"
+    },
+    {
+      "id": "JA-TYPE-011-P05",
+      "kind": "preference",
+      "role": "heading",
+      "text": "毎日の暮らしをもっと便利に",
+      "context": "Consumer headline; preferred chunks fit",
+      "preferred_lines": [
+        "毎日の暮らしを",
+        "もっと便利に"
+      ],
+      "less_preferred_lines": [
+        [
+          "毎日の",
+          "暮らしをもっと",
+          "便利に"
+        ]
+      ],
+      "rejected_when_preferred_fits": [
+        [
+          "毎日の暮らしをもっと便利",
+          "に"
+        ]
+      ],
+      "reason": "Avoid isolating the final particle"
+    },
+    {
+      "id": "JA-TYPE-011-E01",
+      "kind": "constraint",
+      "role": "responsive-heading",
+      "text": "いつものAIツールからはじめよう",
+      "context": "320 CSS px or 200 percent text zoom makes preferred first line impossible within accessible layout",
+      "preferred_lines": [
+        "いつものAIツールから",
+        "はじめよう"
+      ],
+      "fallback_lines": [
+        [
+          "いつもの",
+          "AIツールから",
+          "はじめよう"
+        ]
+      ],
+      "reason": "Keep full content and reflow rather than clip or overflow; flag compromise for review"
+    },
+    {
+      "id": "JA-TYPE-011-E02",
+      "kind": "constraint",
+      "role": "body-paragraph",
+      "text": "文章を読みやすく整えるために、実際の画面幅と行端を確かめます。",
+      "context": "Long-form body reading; do not force phrase spans",
+      "preferred_lines": [
+        "文章を読みやすく整えるために、実際の画面幅と行端を確かめます。"
+      ],
+      "reason": "Source-text placeholder only: no nowrap mandate for body"
+    },
+    {
+      "id": "JA-TYPE-011-E03",
+      "kind": "constraint",
+      "role": "display-copy",
+      "text": "いつものAIツールからはじめよう",
+      "context": "User has explicitly approved a different emphasis or line break",
+      "preferred_lines": [
+        "いつものAIツールから",
+        "はじめよう"
+      ],
+      "reason": "Do not silently overwrite approved copy/design breaks"
+    }
+  ]
+}
