@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f3ee">
+  <meta name="description" content="KUMIHANの{{ page.platform }}向け導入方法。日本語・英語で手順、ダウンロード先、注意事項を確認できます。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title_ja }} | KUMIHAN">
+  <title>{{ page.title_ja }} | KUMIHAN</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ee;
+      --white: #fff;
+      --paper-soft: #eeebe4;
+      --ink: #252521;
+      --ink-2: #4a4943;
+      --muted: #625f58;
+      --line: #d9d5cc;
+      --red: #ae2d31;
+      --red-soft: #f5e6e2;
+      --measure: 72ch;
+      --font-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-jp); -webkit-font-smoothing: antialiased; }
+    button, input { font: inherit; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; height: auto; }
+    [hidden] { display: none !important; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--red); outline-offset: 4px; }
+    .shell { width: min(1184px, calc(100% - 88px)); margin-inline: auto; }
+    .skip-link { position: absolute; z-index: 100; top: -90px; left: 16px; background: var(--ink); color: #fff; padding: 12px 18px; }
+    .skip-link:focus { top: 12px; }
+    .site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .header-inner { min-height: 83px; display: flex; align-items: center; gap: 28px; }
+    .brand { font: 850 22px/1 Arial, Helvetica, sans-serif; letter-spacing: -.055em; text-decoration: none; white-space: nowrap; }
+    .brand::before { content: ""; display: inline-block; background: var(--red); width: 9px; height: 9px; margin-inline-end: 12px; vertical-align: 2px; }
+    .header-nav { display: flex; gap: 24px; margin-left: auto; align-items: center; }
+    .header-nav a { text-decoration: none; font-size: 13px; color: var(--ink-2); font-weight: 680; text-underline-offset: 5px; }
+    .header-nav a:hover, .header-nav a[aria-current="page"] { color: var(--red); text-decoration: underline; }
+    .header-home { text-decoration: none; border: 1px solid var(--ink); background: var(--ink); color: #fff; font-size: 12px; font-weight: 720; padding: 12px 16px; white-space: nowrap; }
+    .header-home:hover { background: var(--ink-2); }
+    .hero { border-bottom: 1px solid var(--line); }
+    .breadcrumb { display: flex; align-items: center; gap: 9px; color: var(--muted); padding-top: 31px; font-size: 12px; }
+    .breadcrumb a { text-underline-offset: 4px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 170px; align-items: center; gap: 40px; padding: 54px 0 66px; }
+    .eyebrow { font: 760 11px/1.6 Arial, Helvetica, sans-serif; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
+    .hero h1 { font-size: clamp(33px,4.1vw,54px); font-weight: 790; line-height: 1.28; letter-spacing: -.065em; margin: 18px 0 19px; overflow-wrap: break-word; }
+    .hero-desc { margin: 0; font-size: clamp(15px,1.28vw,17px); line-height: 1.9; color: var(--ink-2); max-width: 660px; }
+    .hero-logo { background: #fff; padding: 15px; border: 1px solid #dedbd4; box-shadow: 10px 10px 0 #e8e4dc; }
+    .hero-logo img { width: 100%; }
+    .language-switch { display: inline-flex; gap: 4px; margin-top: 30px; padding: 4px; border: 1px solid #bcb6a9; background: #eeebe5; border-radius: 5px; }
+    .language-switch button { border: 0; background: transparent; min-width: 90px; min-height: 44px; padding: 10px 16px; border-radius: 3px; color: var(--ink-2); font-size: 13px; font-weight: 760; cursor: pointer; }
+    .language-switch button[aria-pressed="true"] { color: white; background: var(--ink); }
+    .platform-nav { border-bottom: 1px solid var(--line); background: var(--white); }
+    .platform-inner { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 0; }
+    .platform-nav a { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 23px 24px; border-right: 1px solid var(--line); text-decoration: none; color: var(--ink-2); font-size: 13px; font-weight: 740; }
+    .platform-nav a:first-child { border-left: 1px solid var(--line); }
+    .platform-nav a[aria-current="page"] { box-shadow: inset 0 -4px 0 var(--red); background: #fbf9f5; color: var(--ink); }
+    .platform-nav a:hover { background: var(--paper-soft); }
+    .platform-nav .arrow { color: var(--red); }
+    .content-layout { display: grid; grid-template-columns: 236px minmax(0,1fr); gap: clamp(42px,6vw,94px); align-items: start; padding-top: 75px; padding-bottom: 140px; }
+    .toc { position: sticky; top: 28px; padding-top: 4px; min-width: 0; }
+    .toc-title { margin: 0 0 18px; color: var(--ink); font-weight: 790; font-size: 12px; letter-spacing: .035em; }
+    .toc-details summary { display: none; }
+    .toc ol { list-style: none; padding: 0; margin: 0; border-left: 1px solid var(--line); }
+    .toc li a { display: block; padding: 9px 10px 9px 15px; margin-left: -1px; border-left: 2px solid transparent; font-size: 12px; line-height: 1.65; color: var(--muted); text-decoration: none; overflow-wrap: anywhere; }
+    .toc li a:hover, .toc li a[aria-current="location"] { border-left-color: var(--red); color: var(--ink); }
+    .toc li.secondary a { padding-left: 25px; font-size: 11px; }
+    .toc-note { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 28px; }
+    .toc-note strong { display: block; color: var(--red); font: 780 12px/1.7 Arial, Helvetica, sans-serif; }
+    .toc-note p { font-size: 12px; line-height: 1.85; color: var(--muted); margin: 7px 0 0; }
+    .source-link { display: inline-block; margin-top: 18px; font-size: 12px; font-weight: 750; text-underline-offset: 4px; }
+    .guide { min-width: 0; }
+    .guide-head { border-top: 3px solid var(--ink); padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .guide-head span { color: var(--muted); font: 700 11px/1.4 Arial, Helvetica, sans-serif; letter-spacing: .11em; }
+    .guide-head .step-label { color: var(--red); }
+    .guide-pane > h1:first-child, .guide-pane > h1:first-child + p { display: none; }
+    .guide-pane > br { display: none; }
+    .guide-pane { font-size: 15.5px; line-height: 1.95; color: var(--ink-2); overflow-wrap: break-word; }
+    .guide-pane > p { max-width: var(--measure); margin: 0 0 21px; }
+    .guide-pane h2 { text-wrap: balance; margin: 58px 0 20px; padding: 0 0 15px; border-bottom: 1px solid var(--line); color: var(--ink); font-size: clamp(24px,2.6vw,33px); line-height: 1.46; font-weight: 780; letter-spacing: -.035em; scroll-margin-top: 26px; }
+    .guide-pane h2:first-of-type { margin-top: 15px; }
+    .guide-pane h3 { text-wrap: balance; margin: 35px 0 14px; color: var(--ink); font-size: 19px; line-height: 1.5; letter-spacing: -.025em; scroll-margin-top: 26px; }
+    .guide-pane strong { color: var(--ink); font-weight: 785; }
+    .guide-pane a { color: #8f2529; text-decoration-thickness: 1px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .guide-pane a:hover { color: #501618; }
+    .guide-pane ul, .guide-pane ol { padding-left: 1.55em; margin: 0 0 22px; }
+    .guide-pane li { margin-bottom: 9px; padding-left: 2px; }
+    .guide-pane li > ul, .guide-pane li > ol { margin-top: 11px; }
+    .guide-pane blockquote { margin: 25px 0 30px; padding: 20px 25px; border-left: 4px solid var(--red); background: #efe8e1; color: var(--ink); }
+    .guide-pane blockquote p { margin: 0 0 9px; }
+    .guide-pane blockquote p:last-child { margin-bottom: 0; }
+    .guide-pane table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 23px 0 29px; font-size: 14px; -webkit-overflow-scrolling: touch; }
+    .guide-pane th, .guide-pane td { min-width: 110px; padding: 12px 13px; border: 1px solid var(--line); line-height: 1.7; text-align: left; vertical-align: top; }
+    .guide-pane th { background: #ebe7dd; color: var(--ink); font-weight: 770; }
+    .guide-pane td { background: #fffefa; }
+    .guide-pane code { font: 500 .9em/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #e9e7e1; padding: 2px 5px; border-radius: 3px; overflow-wrap: anywhere; }
+    .guide-pane pre { margin: 0; padding: 22px 22px 24px; overflow-x: auto; -webkit-overflow-scrolling: touch; font: 500 13px/1.8 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #faf7f0; background: #252521; tab-size: 2; white-space: pre; }
+    .guide-pane pre code { padding: 0; margin: 0; color: inherit; background: transparent; font-size: inherit; line-height: inherit; overflow-wrap: normal; }
+    .code-shell { position: relative; margin: 22px 0 26px; border: 1px solid #3c3c35; min-width: 0; }
+    .code-shell .highlighter-rouge, .code-shell .highlight { margin: 0; }
+    .code-shell pre { padding-top: 58px; }
+    .copy-code { position: absolute; top: 11px; right: 11px; z-index: 2; min-height: 36px; padding: 7px 15px; background: #44443d; border: 1px solid #77736b; color: white; font-size: 12px; font-weight: 700; cursor: pointer; }
+    .copy-code:hover { background: #656056; }
+    .guide-pane hr { margin: 52px 0 35px; border: 0; border-top: 1px solid var(--line); }
+    .footer { background: #20201d; color: #f6f3ec; padding: 48px 0 52px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 30px; align-items: start; }
+    .footer strong { font: 790 22px Arial, Helvetica, sans-serif; }
+    .footer p { font-size: 12px; line-height: 1.8; color: #bbb6ad; margin: 10px 0 0; }
+    .footer a { color: #f6f3ec; text-underline-offset: 4px; font-size: 12px; }
+    @media (max-width: 950px) {
+      .shell { width: min(100% - 52px,1184px); }
+      .header-nav { gap: 13px; }
+      .content-layout { grid-template-columns: 188px minmax(0,1fr); gap: 35px; }
+      .hero-grid { grid-template-columns: minmax(0,1fr) 125px; gap: 25px; }
+      .platform-nav a { padding-inline: 15px; }
+    }
+    @media (max-width: 710px) {
+      .header-inner { flex-wrap: wrap; padding: 20px 0 13px; gap: 18px; }
+      .header-nav { order: 3; width: 100%; margin-left: 0; padding-top: 13px; border-top: 1px solid var(--line); justify-content: space-between; }
+      .header-home { margin-left: auto; }
+      .hero-grid { padding: 40px 0 52px; grid-template-columns: minmax(0,1fr) 96px; gap: 20px; }
+      .hero-logo { padding: 7px; box-shadow: 6px 6px 0 #e8e4dc; }
+      .hero h1 { font-size: clamp(28px,5vw,42px); }
+      .platform-inner { grid-template-columns: 1fr; }
+      .platform-nav a { border-right: 0; border-bottom: 1px solid var(--line); padding: 15px 10px; min-height: 50px; }
+      .platform-nav a:first-child { border-left: 0; }
+      .platform-nav a:last-child { border-bottom: 0; }
+      .platform-nav a[aria-current="page"] { box-shadow: inset 4px 0 0 var(--red); }
+      .content-layout { grid-template-columns: 1fr; gap: 38px; padding-top: 48px; }
+      .toc { position: static; }
+      .toc-details summary { display: block; cursor: pointer; border: 1px solid var(--line); background: #eeebe5; padding: 14px 17px; font-weight: 780; font-size: 13px; }
+      .toc-details ol { padding-top: 14px; }
+      .toc ol { columns: 2; column-gap: 20px; }
+      .toc-note { display: none; }
+      .toc li { break-inside: avoid; }
+      .toc-note { margin-top: 16px; padding-top: 16px; }
+    }
+    @media (max-width: 480px) {
+      .shell { width: calc(100% - 36px); }
+      .header-home { padding: 10px 13px; }
+      .header-nav a { font-size: 12px; }
+      .hero-grid { grid-template-columns: 1fr; padding: 35px 0 43px; gap: 20px; }
+      .hero-logo { display: none; }
+      .hero h1 { font-size: clamp(30px,8vw,41px); }
+      .hero-desc { font-size: 14px; }
+      .language-switch { width: 100%; }
+      .language-switch button { flex: 1; }
+      .toc ol { columns: 1; }
+      .content-layout { padding-bottom: 85px; }
+      .guide-pane { font-size: 14.5px; line-height: 1.9; }
+      .guide-pane h2 { font-size: 24px; }
+      .guide-pane th, .guide-pane td { padding: 10px; font-size: 12px; min-width: 105px; }
+      .guide-pane blockquote { padding: 16px; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span></a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="../" data-lang-link>KUMIHAN</a>
+      <nav class="header-nav" aria-label="導入ページ" id="site-menu">
+        <a href="install-chatgpt.html" data-guide="chatgpt" data-lang-link>ChatGPT / Codex</a>
+        <a href="install-claude.html" data-guide="claude" data-lang-link>Claude</a>
+        <a href="install-gemini.html" data-guide="gemini" data-lang-link>Gemini</a>
+      </nav>
+      <a class="header-home" href="../" data-lang-link><span data-ui-ja>LPへ戻る ↗</span><span data-ui-en hidden>Back to LP ↗</span></a>
+    </div>
+  </header>
+  <section class="hero" aria-labelledby="page-title">
+    <div class="shell">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../" data-lang-link>KUMIHAN</a><span aria-hidden="true">/</span>
+        <span><span data-ui-ja>導入ガイド</span><span data-ui-en hidden>Installation guide</span></span>
+      </nav>
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">INSTALL GUIDE / {{ page.guide_number }} OF 03</div>
+          <h1 id="page-title"><span data-ui-ja>{{ page.title_ja }}</span><span data-ui-en hidden>{{ page.title_en }}</span></h1>
+          <p class="hero-desc"><span data-ui-ja>{{ page.description_ja }}</span><span data-ui-en hidden>{{ page.description_en }}</span></p>
+          <div class="language-switch" role="group" aria-label="Language / 言語">
+            <button type="button" data-switch="ja" aria-pressed="true" aria-controls="pane-ja">日本語</button>
+            <button type="button" data-switch="en" aria-pressed="false" aria-controls="pane-en">English</button>
+          </div>
+        </div>
+        <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+      </div>
+    </div>
+  </section>
+  <nav class="platform-nav" aria-label="Select an AI platform">
+    <div class="shell platform-inner">
+      <a href="install-chatgpt.html" data-guide="chatgpt" data-lang-link><span>01 / ChatGPT &amp; Codex</span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a href="install-claude.html" data-guide="claude" data-lang-link><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a>
+      <a href="install-gemini.html" data-guide="gemini" data-lang-link><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+  <div class="shell content-layout">
+    <aside class="toc" aria-label="Page sections">
+      <details class="toc-details" id="toc-details" open>
+        <summary><span data-ui-ja>このページの目次を表示</span><span data-ui-en hidden>Show page contents</span></summary>
+        <h2 class="toc-title"><span data-ui-ja>このページの目次</span><span data-ui-en hidden>On this page</span></h2>
+        <ol id="guide-toc"></ol>
+      </details>
+      <div class="toc-note">
+        <strong>PREVIEW / プレビュー版</strong>
+        <p><span data-ui-ja>正式版ではありません。利用環境によっては、掲載した操作が利用できない場合があります。</span><span data-ui-en hidden>This is a preview, not a stable release. Some steps may be unavailable in your environment.</span></p>
+      </div>
+      <a id="source-doc-link" class="source-link" href="https://github.com/landco-llc/kumihan/blob/main/docs/{{ page.source_ja }}" target="_blank" rel="noopener noreferrer"><span data-ui-ja>元のMarkdownを開く ↗</span><span data-ui-en hidden>View source Markdown ↗</span></a>
+    </aside>
+    <main class="guide" id="guide-content">
+      <div class="guide-head"><span>DOCUMENTATION / {{ page.platform }}</span><span class="step-label"><span data-ui-ja>手順と注意事項</span><span data-ui-en hidden>Steps &amp; guidance</span></span></div>
+      {{ content }}
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="shell footer-inner">
+      <div><strong>KUMIHAN</strong><p>Japanese typography for thoughtful AI-assisted design.<br>Developed by L&amp;Co.LLC.</p></div>
+      <div><a href="../" data-lang-link><span data-ui-ja>LPに戻る</span><span data-ui-en hidden>Back to LP</span></a> · <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      'use strict';
+      const guide = '{{ page.guide_id }}';
+      const panels = { ja: document.getElementById('pane-ja'), en: document.getElementById('pane-en') };
+      const buttons = [...document.querySelectorAll('[data-switch]')];
+      const headings = {};
+      const title = { ja: '{{ page.title_ja }}', en: '{{ page.title_en }}' };
+      const sourceNames = { ja: '{{ page.source_ja }}', en: '{{ page.source_en }}' };
+      const guideFiles = new Map([
+        ['installation.ja.md', 'install-chatgpt.html'], ['installation.md', 'install-chatgpt.html'],
+        ['installation.claude.ja.md', 'install-claude.html'], ['installation.claude.md', 'install-claude.html'],
+        ['installation.gemini.ja.md', 'install-gemini.html'], ['installation.gemini.md', 'install-gemini.html']
+      ]);
+      const cleanHash = value => { try { return decodeURIComponent(value); } catch { return value; } };
+      const headingName = text => text.replace(/\s+/g, ' ').trim();
+      function assignHeadings(lang) {
+        const panel = panels[lang];
+        const list = [...panel.querySelectorAll('h2, h3')];
+        const oldMap = new Map();
+        list.forEach((node, i) => {
+          const oldId = node.id;
+          node.id = 'section-' + lang + '-' + (i + 1);
+          if (oldId) oldMap.set(oldId, node.id);
+        });
+        panel.querySelectorAll('a[href^="#"]').forEach(a => {
+          const oldHash = cleanHash(a.getAttribute('href').slice(1));
+          let dest = oldMap.get(oldHash);
+          if (!dest) {
+            const key = headingName(a.textContent).match(/^([ABC123])\./i)?.[1];
+            const node = key && list.find(h => headingName(h.textContent).startsWith(key + '.'));
+            if (node) dest = node.id;
+          }
+          if (dest) a.setAttribute('href', '#' + dest);
+        });
+        headings[lang] = list;
+      }
+      function updateToc(lang) {
+        const toc = document.getElementById('guide-toc');
+        toc.replaceChildren();
+        for (const h of headings[lang]) {
+          if (h.tagName === 'H3' && headings[lang].length > 12) continue;
+          const li = document.createElement('li');
+          if (h.tagName === 'H3') li.className = 'secondary';
+          const link = document.createElement('a');
+          link.href = '#' + h.id;
+          link.textContent = headingName(h.textContent);
+          li.appendChild(link); toc.appendChild(li);
+        }
+      }
+      function rewriteLinks(lang) {
+        for (const [key, panel] of Object.entries(panels)) {
+          panel.querySelectorAll('a[href]').forEach(a => {
+            const original = a.getAttribute('href');
+            if (!original || original.startsWith('#')) return;
+            const pathname = original.split('#')[0].split('?')[0];
+            const file = pathname.substring(pathname.lastIndexOf('/') + 1);
+            if (guideFiles.has(file)) {
+              const chosen = file.endsWith('.ja.md') ? 'ja' : 'en';
+              a.href = guideFiles.get(file) + (chosen === 'en' ? '?lang=en' : '');
+            } else if (file === 'updates.md') {
+              a.href = 'https://github.com/landco-llc/kumihan/blob/main/docs/updates.md';
+            } else if (file === 'README.md') {
+              a.href = '../' + (lang === 'en' ? '?lang=en' : '');
+            }
+          });
+        }
+        document.querySelectorAll('a[data-lang-link]').forEach(a => {
+          const path = a.getAttribute('href').split('?')[0];
+          a.href = path + (lang === 'en' ? '?lang=en' : '');
+        });
+      }
+      async function copyText(text) {
+        if (navigator.clipboard && window.isSecureContext) {
+          try { await navigator.clipboard.writeText(text); return true; } catch { /* fallback */ }
+        }
+        const box = document.createElement('textarea');
+        box.value = text; box.setAttribute('readonly', '');
+        box.style.cssText = 'position:fixed;left:-9999px;top:0;';
+        document.body.appendChild(box); box.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch { ok = false; }
+        box.remove(); return ok;
+      }
+      function prepareCodeBlocks(panel) {
+        panel.querySelectorAll('pre').forEach(pre => {
+          const outer = pre.closest('.highlighter-rouge') || pre;
+          const shell = document.createElement('div'); shell.className = 'code-shell';
+          outer.before(shell); shell.appendChild(outer);
+          const copy = document.createElement('button');
+          copy.type = 'button'; copy.className = 'copy-code';
+          copy.dataset.copy = '1';
+          copy.addEventListener('click', async () => {
+            const ok = await copyText(pre.textContent);
+            copy.textContent = ok ? (document.documentElement.lang === 'en' ? 'Copied' : 'コピーしました') : (document.documentElement.lang === 'en' ? 'Copy failed' : 'コピーできませんでした');
+            copy.setAttribute('aria-label', copy.textContent);
+          });
+          shell.appendChild(copy);
+        });
+      }
+      function setLanguage(lang, modifyUrl = false) {
+        lang = lang === 'en' ? 'en' : 'ja';
+        document.documentElement.lang = lang;
+        document.title = title[lang] + ' | KUMIHAN';
+        for (const [key, panel] of Object.entries(panels)) panel.hidden = key !== lang;
+        for (const button of buttons) button.setAttribute('aria-pressed', String(button.dataset.switch === lang));
+        document.querySelectorAll('[data-ui-ja], [data-ui-en]').forEach(el => { el.hidden = el.hasAttribute('data-ui-' + (lang === 'en' ? 'ja' : 'en')); });
+        document.querySelectorAll('[data-copy]').forEach(b => { b.textContent = lang === 'en' ? 'Copy' : 'コピー'; b.setAttribute('aria-label', b.textContent); });
+        document.querySelectorAll('a[data-guide]').forEach(a => { if (a.dataset.guide === guide) a.setAttribute('aria-current', 'page'); });
+        document.getElementById('source-doc-link').href = 'https://github.com/landco-llc/kumihan/blob/main/docs/' + sourceNames[lang];
+        rewriteLinks(lang); updateToc(lang);
+        if (modifyUrl && window.history.replaceState) {
+          const u = new URL(window.location.href);
+          if (lang === 'en') u.searchParams.set('lang', 'en'); else u.searchParams.delete('lang');
+          u.hash = '';
+          window.history.replaceState(null, '', u.pathname + u.search);
+        }
+      }
+      for (const lang of Object.keys(panels)) { assignHeadings(lang); prepareCodeBlocks(panels[lang]); }
+      for (const button of buttons) button.addEventListener('click', () => setLanguage(button.dataset.switch, true));
+      if (window.matchMedia('(max-width: 710px)').matches) document.getElementById('toc-details').open = false;
+      const initial = new URLSearchParams(window.location.search).get('lang');
+      setLanguage(initial === 'en' ? 'en' : 'ja');
+    })();
+  </script>
+</body>
+</html>

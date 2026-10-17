@@ -1,0 +1,20 @@
+---
+layout: installation
+guide_id: "gemini"
+guide_number: "03"
+platform: "Gemini"
+title_ja: "Geminiへの導入"
+title_en: "Install for Gemini"
+description_ja: "Gemini CLIとGeminiアプリ向けの導入方法を確認できます"
+description_en: "Learn how to install for Gemini CLI or the Gemini app"
+source_ja: "installation.gemini.ja.md"
+source_en: "installation.gemini.md"
+---
+{% capture kumihan_ja_md %}{% include_relative installation.gemini.ja.md %}{% endcapture %}
+{% capture kumihan_en_md %}{% include_relative installation.gemini.md %}{% endcapture %}
+<section class="guide-pane" id="pane-ja" lang="ja" aria-label="日本語の導入手順">
+{{ kumihan_ja_md | markdownify }}
+</section>
+<section class="guide-pane" id="pane-en" lang="en" aria-label="Installation instructions in English" hidden>
+{{ kumihan_en_md | markdownify }}
+</section>
