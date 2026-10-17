@@ -7,7 +7,7 @@
 這份指南說明如何在 Gemini CLI 或 Gemini 應用程式中使用 KUMIHAN。
 
 > **關於預覽版（v0.1.4 preview）**  
-> 此版本提供您在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
+> 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
 
@@ -91,7 +91,7 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 
 - 依原始指南所述，此功能目前僅提供給年滿 18 歲的個人 Google 帳號；工作或學校帳號尚不支援。
 - 需啟用「Keep Activity」（保留活動紀錄）。
-- 功能分階段開放，您可能尚未看到相關選項。請參閱 [Gemini 官方說明](https://support.google.com/gemini/answer/17094296?hl=ja)。
+- 功能分階段開放，你可能尚未看到相關選項。請參閱 [Gemini 官方說明](https://support.google.com/gemini/answer/17094296?hl=ja)。
 - 此處不能使用 Gemini CLI 的擴充功能 ZIP。
 - 上傳的技能不會自動更新。新版本推出時需重新上傳。
 

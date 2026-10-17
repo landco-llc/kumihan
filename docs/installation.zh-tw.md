@@ -7,7 +7,7 @@
 這份指南說明如何在 ChatGPT 或 Codex 中使用 KUMIHAN。
 
 > **關於預覽版（v0.1.4 preview）**  
-> 此版本提供您在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
+> 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
 
@@ -54,7 +54,7 @@
 
 - 這種方式不能使用外掛套件 ZIP，請選用個別技能的 ZIP。
 - 只把檔案附加到聊天對話中，不代表已安裝為技能。
-- 若找不到相關功能，可能是您的方案或應用程式尚未開放使用。請參考 [OpenAI 官方說明](https://learn.chatgpt.com/docs/build-skills)。
+- 若找不到相關功能，可能是你的方案或應用程式尚未開放使用。請參考 [OpenAI 官方說明](https://learn.chatgpt.com/docs/build-skills)。
 
 <br>
 
@@ -75,7 +75,7 @@
 
 - 依設定不同，外掛可能建立於團隊工作區。若要只供自己使用，請先確認註冊位置。
 - 此功能可能因方案或工作區設定而無法使用。詳見 [Build plugins](https://learn.chatgpt.com/docs/build-plugins) 與 [Plugins](https://learn.chatgpt.com/docs/plugins)。
-- 以此方式建立的外掛僅供您的帳號使用，不會出現在公開外掛目錄。
+- 以此方式建立的外掛僅供你的帳號使用，不會出現在公開外掛目錄。
 
 <br>
 
