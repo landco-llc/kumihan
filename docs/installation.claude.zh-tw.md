@@ -4,10 +4,10 @@
 
 <br>
 
-這份指南說明如何在 Claude Code 與 Claude 聊天中使用 KUMIHAN。
+這份指南說明如何在 Claude Code 與 Claude 應用程式中使用 KUMIHAN。
 
 > **關於預覽版（v0.1.4 preview）**  
-> 此版本提供您在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
+> 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
 
@@ -17,9 +17,9 @@
 | --- | --- |
 | Claude Code | [A. 從 GitHub 安裝](#a-claude-code從-github-安裝)（方便後續更新） |
 | Claude Code（想使用 ZIP 檔案時） | [B. 從 ZIP 安裝](#b-claude-code從-zip-安裝) |
-| Claude 聊天（claude.ai 或應用程式） | [C. 上傳技能](#c-claude-聊天上傳技能) |
+| Claude（claude.ai 網頁版或應用程式） | [C. 上傳技能](#c-claude-應用程式上傳技能) |
 
-Claude Code 和 Claude 聊天的安裝方式不同。
+Claude Code 和 Claude 應用程式的安裝方式不同。
 
 <br>
 
@@ -67,7 +67,7 @@ Claude Code 和 Claude 聊天的安裝方式不同。
 
 <br>
 
-## C. Claude 聊天：上傳技能
+## C. Claude 應用程式：上傳技能
 
 適用於 claude.ai 或 Claude 應用程式。
 
