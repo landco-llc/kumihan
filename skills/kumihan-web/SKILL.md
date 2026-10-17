@@ -37,7 +37,7 @@ Read [web recipes](references/web-recipes.md) and apply its settings by text rol
 
 - Set `lang="ja"` on the page.
 - Body text: `line-break: strict`, comfortable line height and line length, no letter-spacing tricks.
-- Headings and short display text: phrase-aware wrapping, balanced lines, optional `palt` only where the font supports it.
+- Headings and short display text: use JA-TYPE-011 to compare semantic/prosodic candidates. Prefer `いつものAIツールから／はじめよう` to smaller bunsetsu chunks when it fits, adjusting the local layout. `auto-phrase` and balanced lines are aids, not proof. Use optional `palt` only where supported.
 - Long URLs, IDs and labels: wrap locally; never clip or hide them.
 - Mixed Japanese and Latin: adjust with CSS, never by editing the text.
 

@@ -1,7 +1,7 @@
 {
   "format": "kumihan-standalone-inventory-2",
   "skill": "kumihan-web",
-  "version": "0.1.4-preview",
+  "version": "0.1.5-preview",
   "path_base": "skill-folder-root",
   "self_digest": "inventory.json lists every other file; its own hash is in the distribution SHA256SUMS.",
   "files": [
@@ -12,38 +12,38 @@
     },
     {
       "path": "SKILL.md",
-      "bytes": 3555,
-      "sha256": "943a25df90aba637f0528a4ce2e4867d6f36abb729d7533e2b5068844b8195a8"
+      "bytes": 3746,
+      "sha256": "ed0c1694f22ffba68ea174c328ab0cdf1d719c38e6380acd6ec56c37fb0c1b85"
     },
     {
       "path": "profiles/display-copy.json",
-      "bytes": 1421,
-      "sha256": "94a5a98587250edd7792affbb77f44dfa800dd3ffe912fe974f605064e0d0e99"
+      "bytes": 1440,
+      "sha256": "dd2af219e47fa3addce9aa28b881a902f37a40a421e5d175e39235d9322e78ff"
     },
     {
       "path": "profiles/presentation.json",
-      "bytes": 1418,
-      "sha256": "ce31f414feb978baafd8a9919f78537b2097741c8888068d30010e4753307a98"
+      "bytes": 1437,
+      "sha256": "ac916b002da11c5af560505370d831037c43f1f0b446814e680417bba0cbe526"
     },
     {
       "path": "profiles/report-document.json",
-      "bytes": 1412,
-      "sha256": "a528df1f6d6ddd69fa869dcf87bbd040a3f296cb4ecb3cd8042638e39a348b79"
+      "bytes": 1431,
+      "sha256": "b73e9aa86e03697859693ab587c1b44b5ab8f95264ed890685b68c12a7560417"
     },
     {
       "path": "profiles/web-editorial.json",
-      "bytes": 1494,
-      "sha256": "bba146cd656ef044c26903f449422fa89f8c56b1ebd79367e3ebec92e6dcae61"
+      "bytes": 1513,
+      "sha256": "158e20d8c88b69c87d3fac934665904127641c66064d6d134b87d803da812841"
     },
     {
       "path": "profiles/web-marketing.json",
-      "bytes": 1526,
-      "sha256": "684157756e79a6b9b14ce568a42331c4d3eb587b37e3af6d4354e94246526e9e"
+      "bytes": 1545,
+      "sha256": "746d037ab6b3e8ab81d2d748f7a9eb59e3aad9aabdd99688e46899d59a0109d2"
     },
     {
       "path": "profiles/web-ui.json",
-      "bytes": 1491,
-      "sha256": "8789e0abbac2d71ed1e61310ac6ed7e7ef0dbb7be6e7d8df77d2161b165e2737"
+      "bytes": 1510,
+      "sha256": "21f8b28708117a9d0ab5a1f38d95094fcd4c573c4747f55e1e919e8f7c9d1e2f"
     },
     {
       "path": "references/architecture.md",
@@ -57,8 +57,8 @@
     },
     {
       "path": "references/document-recipes.md",
-      "bytes": 4971,
-      "sha256": "32a7710a513c5ab397a4f86905812bbbaafac0274bedc66443072cdd81c5585e"
+      "bytes": 5661,
+      "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
     },
     {
       "path": "references/review-protocol.md",
@@ -67,13 +67,13 @@
     },
     {
       "path": "references/web-recipes.md",
-      "bytes": 7593,
-      "sha256": "19f58d8f0b686af9397922da74e1af2f009314dc00d1438636c19acb63183f29"
+      "bytes": 8789,
+      "sha256": "ef4f97e8bc80b97ac368d179494ffcb4cc468b0a146428d7e2255077673952ef"
     },
     {
       "path": "rules/catalog.json",
-      "bytes": 70146,
-      "sha256": "7169019e8d4864e4bc993282d327c5d4e83ebb66e66ada1d5475e53cb6d7992b"
+      "bytes": 72846,
+      "sha256": "008a2f2d1d8e88377d62fde32b8797a49c466b6edbf07b6c46021632979bb76d"
     },
     {
       "path": "rules/content.json",
@@ -97,8 +97,8 @@
     },
     {
       "path": "rules/japanese-type.json",
-      "bytes": 18036,
-      "sha256": "f82524937df122d27f4cebcac158d971bd3de196947ac30ff80bc638c00a1803"
+      "bytes": 20736,
+      "sha256": "1ec91b0ad7564212fb669951633204ad6f1004a940b287df72519c11ec533d85"
     },
     {
       "path": "rules/web.json",

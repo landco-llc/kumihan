@@ -32,6 +32,7 @@ Read [document recipes](references/document-recipes.md) for Word, PowerPoint and
 
 - Set the Japanese (East Asian) font separately from the Latin font.
 - Turn on kinsoku (line-breaking rules) in the application.
+- For short Japanese titles, apply JA-TYPE-011: compare natural speech groups, keep modifier and particle relationships together when feasible, adjust the text box/layout first, and check actual rendered/exported lines.
 - Reports: keep headings with the content that follows; avoid splitting table rows, captions and footnotes across pages.
 - Slides: when content overflows, split the slide or regroup it. Do not shrink all text to fit.
 

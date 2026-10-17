@@ -6,7 +6,7 @@
 
 This guide explains how to use KUMIHAN with Claude Code and Claude chat.
 
-> **About this preview (v0.1.4 preview)**  
+> **About this preview (v0.1.5 preview)**  
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -52,7 +52,7 @@ For updates, see the [update guide](updates.md#claude-code).
 
 ## B. Claude Code: install from a ZIP
 
-1. Download the [Claude Code plugin ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.4-preview.zip).
+1. Download the [Claude Code plugin ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.5-preview.zip).
 2. Extract it to get a `kumihan` folder.
 3. Start Claude Code with that folder:
 
@@ -72,10 +72,10 @@ For updates, see the [update guide](updates.md#claude-code).
 Use this method for claude.ai and the Claude apps.
 
 1. Download the skill ZIPs you want to use.
-   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.4-preview.zip) — starting point
-   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.4-preview.zip) — web pages
-   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.4-preview.zip) — reports and slides
-   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.4-preview.zip) — review
+   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.5-preview.zip) — starting point
+   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.5-preview.zip) — web pages
+   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.5-preview.zip) — reports and slides
+   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.5-preview.zip) — review
 2. In Claude, open **Customize → Skills**, then choose **Upload a skill** from the add button.
 3. Upload the ZIPs one at a time and enable each skill.
 
