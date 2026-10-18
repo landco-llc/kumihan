@@ -1,0 +1,1637 @@
+[
+  {
+    "id": "ES-T01",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "S02",
+      "S03"
+    ],
+    "explanation": "Conservar tildes, eñe y diéresis; comprobar el glifo real, incluidas secuencias combinadas.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "ñ ü á",
+    "negative_example": "n u a",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T02",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S04"
+    ],
+    "explanation": "Las mayúsculas conservan las tildes y diéresis necesarias; no acentuar siglas por analogía.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "TÉ · DISEÑO · BILINGÜE",
+    "negative_example": "TE · DISENO · BILINGUE",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T03",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S06"
+    ],
+    "explanation": "Revisar solo y los demostrativos con el contexto y la elección del autor; no imponer sustituciones.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "solo / sólo según contexto",
+    "negative_example": "borrar todas las tildes sin leer",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T04",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S04"
+    ],
+    "explanation": "Elegir mayúsculas según el título y los nombres propios; respetar marcas y títulos oficiales.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "Una visita a Lima",
+    "negative_example": "Una Visita A Lima sin criterio editorial",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T05",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S05"
+    ],
+    "explanation": "Delimitar el tramo interrogativo o exclamativo; considerar títulos y usos especiales.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "María, ¿vienes mañana?",
+    "negative_example": "¿María, vienes mañana? si cambia el alcance",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T06",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-static-candidate",
+    "source_refs": [
+      "S05",
+      "S08"
+    ],
+    "explanation": "Examinar el punto tras el cierre de pregunta o exclamación y el alcance de las citas.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "¿Vienes?",
+    "negative_example": "¿Vienes?.",
+    "status": "bounded-static-candidate"
+  },
+  {
+    "id": "ES-T07",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-static-candidate",
+    "source_refs": [
+      "S07"
+    ],
+    "explanation": "Elegir comillas según el medio; revisar el espacio interior y conservar citas literales.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "«Té»",
+    "negative_example": "« Té » sin motivo",
+    "status": "bounded-static-candidate"
+  },
+  {
+    "id": "ES-T08",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S07"
+    ],
+    "explanation": "Relacionar los signos con el alcance de la cita y la oración exterior.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "«¿Vienes?».",
+    "negative_example": "mover signos sin comprobar el alcance",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T09",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S08",
+      "S09",
+      "S28",
+      "S29"
+    ],
+    "explanation": "Revisar espacios alrededor de puntuación en prosa, excluyendo URLs, códigos y horas.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "Hola, Ana.",
+    "negative_example": "Hola ,Ana. en prosa",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T10",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S08"
+    ],
+    "explanation": "Distinguir títulos, celdas y prosa al revisar el punto final.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "Un título breve",
+    "negative_example": "añadir puntos a todas las etiquetas",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T11",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S10",
+      "S21"
+    ],
+    "explanation": "Distinguir raya, guion y signo menos por su función.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "—inciso— / −5 / teórico-práctico",
+    "negative_example": "unificar todos los trazos",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T12",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S10",
+      "S22"
+    ],
+    "explanation": "Diferenciar raya de diálogo y marca de lista antes de proponer cambios de espacio.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "—Hola. / — Producto",
+    "negative_example": "tratar diálogo y lista como idénticos",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T13",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S11",
+      "S20"
+    ],
+    "explanation": "Conservar compuestos y rangos autorizados; revisar la función antes de sustituir guiones.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "2024-2026 en el estilo elegido",
+    "negative_example": "sustituir todos los guiones por rayas",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T14",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "S11",
+      "S17"
+    ],
+    "explanation": "La división de palabras depende del idioma, diccionario y variante; verificar la salida.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "lang=\"es\" y diccionario observado",
+    "negative_example": "hyphens:auto como prueba suficiente",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T15",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "S11"
+    ],
+    "explanation": "Observar guiones repetidos y finales breves según el papel del texto, sin límites universales.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "titular sin división cuando cabe",
+    "negative_example": "trocear un título para forzarlo",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T16",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "S12",
+      "S13",
+      "S11"
+    ],
+    "explanation": "Comprobar unidades mínimas inseparables y evitar grandes bloques nowrap que desborden.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "250 g",
+    "negative_example": "hacer nowrap de un nombre largo entero sin medir",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T17",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-static-candidate",
+    "source_refs": [
+      "S13",
+      "S18"
+    ],
+    "explanation": "En prosa editorial considerar espacio entre valor y unidad o porcentaje; Intl requiere otra política.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "35 % / 24 °C / 24°",
+    "negative_example": "forzar espacio en toda salida Intl",
+    "status": "bounded-static-candidate"
+  },
+  {
+    "id": "ES-T18",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S13"
+    ],
+    "explanation": "Conservar caja y forma de los símbolos; no añadir plurales ni puntos de abreviatura.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "kg / kW",
+    "negative_example": "kgs. como símbolo",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T19",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S12"
+    ],
+    "explanation": "Conservar tildes, puntos y espacios de abreviaturas según su función.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "p. m.",
+    "negative_example": "eliminar todos los puntos",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T20",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S14",
+      "S12"
+    ],
+    "explanation": "Distinguir ordinal, temperatura y ángulo; primer abreviado lleva er volado tras el punto.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "1.º / 2.ª / 1.er con er volado",
+    "negative_example": "1° como sustitución indiscriminada",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T21",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S15"
+    ],
+    "explanation": "Distinguir fecha editorial, dato de intercambio e identificador; conservar el significado.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "18 de octubre de 2026",
+    "negative_example": "cambiar una fecha por ajustar el ancho",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T22",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S16"
+    ],
+    "explanation": "Respetar el sistema horario y los signos de las abreviaturas; no inferir zona horaria.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "13:20 / 1:20 p. m.",
+    "negative_example": "convertir la hora sin zona declarada",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T23",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S19"
+    ],
+    "explanation": "Revisar puntos suspensivos y abreviaturas en contexto, sin normalización global.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "Espera…",
+    "negative_example": "añadir otro punto por rutina",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T24",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S23",
+      "S24",
+      "S04"
+    ],
+    "explanation": "Separar extranjerismos comunes y nombres propios antes de proponer cursiva.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "nombre de empresa conservado",
+    "negative_example": "poner todo nombre extranjero en cursiva",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-T25",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S17",
+      "S25",
+      "S26"
+    ],
+    "explanation": "Declarar el idioma real y conservar secuencias Unicode completas en lectura y salida.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "lang=\"es\"; ñ intacta",
+    "negative_example": "NFKC global sin autorización",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L01",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW01",
+      "LW07",
+      "LW09",
+      "LW18"
+    ],
+    "explanation": "Configurar por separado idioma, mercado, tratamiento, locale, moneda, zona y SEO.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "locale es; moneda no especificada",
+    "negative_example": "es implica EUR",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L02",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW01",
+      "LW02",
+      "LW03"
+    ],
+    "explanation": "Comprobar tratamiento y paradigma verbal con la intención del autor, nunca solo con el país.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "Vos tenés / tú tienes según el proyecto",
+    "negative_example": "Argentina implica reescritura automática",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L03",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S27",
+      "LW17",
+      "LW18"
+    ],
+    "explanation": "Conservar valores y precisión; separar cantidad, identificador, fecha e instante.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "valor original 1234.56",
+    "negative_example": "redondear el dato al mostrarlo",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L04",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "S27",
+      "LW11",
+      "LW12"
+    ],
+    "explanation": "Distinguir política editorial y nodos formateados con Intl.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "dato Intl identificado",
+    "negative_example": "reemplazar separadores de Intl con regex",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L05",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW15",
+      "LW16",
+      "LW17"
+    ],
+    "explanation": "Exigir moneda explícita y registrar precisión y opciones resueltas cuando se formatea dinero.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "currency: MXN declarada",
+    "negative_example": "$ implica USD",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L06",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW18"
+    ],
+    "explanation": "Distinguir date-only de instante; pedir zona explícita cuando corresponda.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "fecha civil conservada",
+    "negative_example": "convertir cumpleaños a UTC automáticamente",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L07",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW43"
+    ],
+    "explanation": "Usar glosario de marca y mercado revisado, manteniendo variantes legítimas.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "computador según glosario",
+    "negative_example": "corregir computador por país sin contexto",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L08",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW10",
+      "LW16"
+    ],
+    "explanation": "Observar supportedLocalesOf, resolvedOptions y formatToParts en el entorno real.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "registrar ICU y opciones",
+    "negative_example": "suponer idéntica salida en todos los runtimes",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-L09",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "locale-variant",
+    "severity": "review",
+    "automation_scope": "bounded-static-candidate",
+    "source_refs": [
+      "LW07",
+      "LW09"
+    ],
+    "explanation": "Separar lang válido y alternantes hreflang admitidos con URLs reales.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "lang es-419; hreflang es para alternante real",
+    "negative_example": "hreflang es-419 sin aceptación del buscador",
+    "status": "bounded-static-candidate"
+  },
+  {
+    "id": "ES-X01",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW25"
+    ],
+    "explanation": "Inspeccionar cmap y rango CSS efectivo de cada archivo de fuente suministrado.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "cmap y unicode-range contrastados",
+    "negative_example": "nombre Latin como prueba de cobertura",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X02",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW25"
+    ],
+    "explanation": "Observar tildes, recorte y fallback en pesos, cursivas y ejes utilizados.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "captura del peso usado",
+    "negative_example": "metadatos como prueba visual",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X03",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "bounded-static-candidate",
+    "source_refs": [
+      "S17",
+      "LW19",
+      "LW20",
+      "LW21",
+      "LW22"
+    ],
+    "explanation": "Asignar estrategia de salto por texto: título, prosa, etiqueta, cifra y URL.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "URL intacta con ajuste local",
+    "negative_example": "word-break:break-all global",
+    "status": "bounded-static-candidate"
+  },
+  {
+    "id": "ES-X04",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW27"
+    ],
+    "explanation": "Medir reflujo estrecho y ampliación sin perder contenido ni acciones.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "320 CSS px y texto ampliado",
+    "negative_example": "ocultar desbordamiento para aprobar",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X05",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW28"
+    ],
+    "explanation": "Probar espaciado de texto aumentado sin pérdida de contenido o función.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "sobrescrituras observadas",
+    "negative_example": "alturas fijas que cortan texto",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X06",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW29",
+      "LW30",
+      "LW31"
+    ],
+    "explanation": "Ofrecer alternativas para información gráfica y declarar idiomas de fragmentos.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "texto alternativo significativo",
+    "negative_example": "información esencial solo en imagen",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X07",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "S17",
+      "S18",
+      "S26"
+    ],
+    "explanation": "Comprobar documento exportado: lectura, extracción, tildes, espacios y orden.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "PDF visto y texto extraído",
+    "negative_example": "DOCX válido implica render correcto",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-X08",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered-only",
+    "severity": "review",
+    "automation_scope": "rendered-observation-required",
+    "source_refs": [
+      "LW42"
+    ],
+    "explanation": "Elegir cifras tabulares si sirven a la tabla y comprobar alineación sin cambiar valores.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "tabla con precisión conservada",
+    "negative_example": "redondear para alinear",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ01",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "ES-D01",
+      "ES-D07"
+    ],
+    "explanation": "Explicar qué estructura comparte la marca y qué cambia con cada contenido.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "componentes con razón editorial",
+    "negative_example": "repetición sin atender al contenido",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ02",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "ES-D03",
+      "ES-D08",
+      "ES-D11"
+    ],
+    "explanation": "Separar roles de texto expresivo, lectura prolongada e información de transacción.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "cartel y formulario con roles distintos",
+    "negative_example": "mismo tratamiento para cada papel",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ03",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "LW04",
+      "LW05",
+      "LW06",
+      "ES-D13",
+      "ES-D14"
+    ],
+    "explanation": "Evaluar especificidad y claridad de título, cuerpo y acción para el lector real.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "CTA que describe el siguiente paso",
+    "negative_example": "frase vacía que oculta la acción",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ04",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "GRAFIA-POLICY",
+      "GRAFIA-POLICY"
+    ],
+    "explanation": "Contrastar afirmaciones con hechos autorizados; señalar evidencia ausente sin inventarla.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "origen y cantidad documentados",
+    "negative_example": "añadir propiedades terapéuticas sin evidencia",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ05",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "ES-D02",
+      "ES-D06",
+      "ES-D09",
+      "ES-D15"
+    ],
+    "explanation": "Registrar idioma mostrado, mercado, autoría, fecha y alcance observado por separado.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "sitio inglés de estudio español identificado",
+    "negative_example": "país del estudio implica idioma del caso",
+    "status": "needs-review"
+  },
+  {
+    "id": "ES-DQ06",
+    "locale": "es",
+    "region_scope": [
+      "es-ES",
+      "es-MX",
+      "es-AR",
+      "es-CO",
+      "es-CL",
+      "es-PE",
+      "es-419"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "guidance",
+    "severity": "review",
+    "automation_scope": "editorial-review-only",
+    "source_refs": [
+      "GRAFIA-POLICY",
+      "GRAFIA-POLICY",
+      "GRAFIA-POLICY"
+    ],
+    "explanation": "Justificar tipografía, color y ornamento por proyecto; no imponer paletas ni puntuar origen AI.",
+    "exceptions": [
+      "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+    ],
+    "positive_example": "elección vinculada al encargo",
+    "negative_example": "colección universal de fuentes recomendadas",
+    "status": "needs-review"
+  }
+]

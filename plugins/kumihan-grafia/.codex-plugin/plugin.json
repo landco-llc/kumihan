@@ -1,0 +1,25 @@
+{
+  "name": "kumihan-grafia",
+  "version": "0.1.0",
+  "description": "Guía tipográfica en español con conservación del original y revisión basada en evidencias. | Spanish typography guidance with source preservation and evidence-based review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Grafía",
+    "shortDescription": "Tipografía española | Spanish typography",
+    "longDescription": "Guía tipográfica en español con conservación del original y revisión basada en evidencias. | Spanish typography guidance with source preservation and evidence-based review.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-es.html",
+    "defaultPrompt": [
+      "Revisa este contenido en español sin cambiar el original.",
+      "Review this Spanish content without changing its source."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

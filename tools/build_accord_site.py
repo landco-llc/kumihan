@@ -19,8 +19,9 @@ BASE = "https://landco-llc.github.io/kumihan/"
 LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 REPO = "https://github.com/landco-llc/kumihan"
 SOURCE = REPO + "/tree/main/plugins/kumihan-accord"
-RELEASE = REPO + "/releases/tag/kumihan-fr-v0.1.0"
-DOWNLOAD = REPO + "/releases/download/kumihan-fr-v0.1.0/"
+VERSION = "0.1.1"
+RELEASE = REPO + f"/releases/tag/kumihan-fr-v{VERSION}"
+DOWNLOAD = REPO + f"/releases/download/kumihan-fr-v{VERSION}/"
 BRAND = 'KUMIHAN<span class="brand-sub">｜Accord</span>'
 LANGS = {"fr": "", "en": ".en", "ja": ".ja"}
 LABELS = {"fr": "FR", "en": "EN", "ja": "日本語"}
@@ -135,14 +136,14 @@ def guide(host, lang, c):
             f'<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">')
     assets = [PLUGIN[host]] + [f"{name}-{host}-skill" for name in SKILLS]
     downloads = "".join(
-        f'<li><a href="{DOWNLOAD}{name}-v0.1.0.zip">{x(g["plugin"] if i == 0 else g["skill"])}: {name}-v0.1.0.zip</a></li>'
+        f'<li><a href="{DOWNLOAD}{name}-v{VERSION}.zip">{x(g["plugin"] if i == 0 else g["skill"])}: {name}-v{VERSION}.zip</a></li>'
         for i, name in enumerate(assets))
     commands = "".join(f"<pre><code>{x(cmd)}</code></pre>" for cmd in COMMANDS[host])
     ids = ("format", "download", "steps", "test", "updates", "limits")
     bodies = (
         f'<p>{x(g["format"])}</p>',
         f'<p>{x(g["download"])}</p><ul class="download-list">{downloads}</ul>'
-        f'<p><a href="{DOWNLOAD}SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="{DOWNLOAD}MANIFEST.json">MANIFEST.json</a> · <a href="{RELEASE}">GitHub Release v0.1.0</a></p>',
+        f'<p><a href="{DOWNLOAD}SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="{DOWNLOAD}MANIFEST.json">MANIFEST.json</a> · <a href="{RELEASE}">GitHub Release v{VERSION}</a></p>',
         f'<p>{x(g[host])}</p>{commands}<p><a href="{SOURCE}/INSTALL.md">INSTALL.md</a></p>',
         f'<p>{x(g["test"])}</p><blockquote><p>{x(g["prompt"])}</p></blockquote><p>{x(g["check"])}</p><pre><code>{x(CHECK)}</code></pre>',
         f'<p>{x(g["update"])}</p>',
@@ -159,7 +160,7 @@ def guide(host, lang, c):
         languages=[(k, LABELS[k] if k != "fr" else "Français", guide_path(host, k).removeprefix("docs/"), k == lang) for k in LANGS],
         number=f"0{list(HOSTS).index(host) + 1}", title=x(title), description=x(g["lead"]),
         toc=list(zip(ids, g["sections"])), content=content, platform=HOSTS[host], ui=ui,
-        footer_sub=x(c["footer_sub"]) + "<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC",
+        footer_sub=x(c["footer_sub"]) + f"<br>v{VERSION} · Apache-2.0 · Developed by L&amp;Co. LLC",
         footer_links=[("GitHub", SOURCE, True), ("Apache-2.0", REPO + "/blob/main/LICENSE", True)],
         gateway=("../" + GATEWAY[lang], c["gateway_label"]))
     return FRAME.render(frame)

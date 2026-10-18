@@ -1,4 +1,4 @@
-name: Accord French v0.1.0
+name: Accord French v0.1.1
 on:
   pull_request:
     branches: [main]
@@ -58,14 +58,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh release view kumihan-fr-v0.1.0 >/dev/null 2>&1; then
+          if gh release view kumihan-fr-v0.1.1 >/dev/null 2>&1; then
             echo "Existing immutable tag; new version required."
             exit 0
           fi
-          gh release create kumihan-fr-v0.1.0 \
+          gh release create kumihan-fr-v0.1.1 \
             /tmp/accord-dist/*.zip \
             /tmp/accord-dist/SHA256SUMS.txt \
             /tmp/accord-dist/MANIFEST.json \
-            --title 'KUMIHAN｜Accord v0.1.0' \
+            --title 'KUMIHAN｜Accord v0.1.1' \
             --notes-file plugins/kumihan-accord/RELEASE_NOTES.md \
             --latest=false
