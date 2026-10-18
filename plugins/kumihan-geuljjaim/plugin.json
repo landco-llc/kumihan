@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kumihan-geuljjaim",
   "version": "0.1.0",
-  "description": "Korean typography and copy guidance with exact source preservation and read-only review.",
+  "description": "한국어 웹·문서·프레젠테이션의 글짜임과 카피를 다루며 원문 보존과 읽기 전용 검토를 지원합니다. / Guidance for Korean typography and copy across web, documents and presentations, preserving source text and supporting read-only review.",
   "author": {
     "name": "L&Co. LLC"
   },
@@ -12,8 +12,8 @@
     "com.openai": {
       "interface": {
         "displayName": "KUMIHAN｜글짜임",
-        "shortDescription": "한국어 타이포그래피와 카피 가이드",
-        "longDescription": "Four independent Korean typography skills. Static candidates are not automatic correction or rendered quality certification.",
+        "shortDescription": "한국어 글짜임·카피 가이드 / Korean typography and copy guidance",
+        "longDescription": "한국어 웹·문서·프레젠테이션에서 줄바꿈, 띄어쓰기, 정보 구조와 카피를 검토하도록 돕는 네 가지 독립 스킬입니다. 원문, 숫자, 고유명사를 임의로 변경하지 않습니다. 정적 경고는 자동 수정이나 실제 화면 품질 보증을 뜻하지 않습니다.\n\nFour standalone Skills for reviewing Korean typography and copy across web pages, documents and presentations. They preserve source text, numbers and proper nouns. Static warnings are review candidates, not automatic edits or certification of rendered quality.",
         "developerName": "L&Co. LLC",
         "category": "Productivity",
         "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-ko.html",

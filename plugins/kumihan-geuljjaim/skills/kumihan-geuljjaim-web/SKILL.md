@@ -1,6 +1,6 @@
 ---
 name: kumihan-geuljjaim-web
-description: Create and review Korean Web, landing page and UI typography.
+description: "한국어 웹·랜딩페이지·UI 글짜임의 제작과 검토를 돕습니다. / Guide creation and review of Korean web, landing page and UI typography."
 ---
 
 # KUMIHAN｜글짜임

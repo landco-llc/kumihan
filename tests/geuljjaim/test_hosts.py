@@ -14,7 +14,7 @@ class HostPackages(unittest.TestCase):
    self.assertEqual(sum(x['host']==host for x in m['archives']),5)
  def test_native_bundle_layouts(self):
   for host,manifest in [('claude','.claude-plugin/plugin.json'),('gemini','gemini-extension.json')]:
-   archive=BASE/f'downloads/{host}/kumihan-geuljjaim-{host}-bundle-0.1.0.zip'
+   archive=BASE/f'downloads/{host}/kumihan-geuljjaim-{host}-bundle-v0.1.0.zip'
    self.assertTrue(archive.is_file())
    with zipfile.ZipFile(archive) as z:
     prefix='kumihan-geuljjaim/'
@@ -27,6 +27,6 @@ class HostPackages(unittest.TestCase):
   for host in ['claude','gemini']:
    for suffix in ['', '.en','.ja']:
     body=(ROOT/f'docs/install-ko-{host}{suffix}.html').read_text()
-    self.assertIn(f'/downloads/{host}/kumihan-geuljjaim-{host}-bundle-0.1.0.zip',body)
+    self.assertIn(f'/downloads/{host}/kumihan-geuljjaim-{host}-bundle-v0.1.0.zip',body)
     self.assertNotIn('/downloads/plugins/',body)
     self.assertNotIn('/downloads/skills/',body)

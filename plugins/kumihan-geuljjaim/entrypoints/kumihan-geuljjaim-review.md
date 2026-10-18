@@ -1,6 +1,6 @@
 ---
 name: kumihan-geuljjaim-review
-description: Read-only Korean typography and copy audit with explicit evidence limits.
+description: "한국어 글짜임과 카피를 읽기 전용으로 검토하고 검증 범위를 명시합니다. / Read-only review of Korean typography and copy with explicit evidence limits."
 ---
 
 # KUMIHAN｜글짜임

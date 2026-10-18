@@ -4,9 +4,9 @@ KUMIHAN｜글짜임 0.1.0 is independent of Japanese KUMIHAN and 字衡. Choose 
 
 | Host | Bundle | Standalone Skills |
 |---|---|---|
-| ChatGPT / Codex | `downloads/plugins/kumihan-geuljjaim-plugin-0.1.0.zip` | `downloads/skills/<skill>-0.1.0.zip` |
-| Claude / Claude Code | `downloads/claude/kumihan-geuljjaim-claude-bundle-0.1.0.zip` | `downloads/claude/<skill>-claude-skill-0.1.0.zip` |
-| Gemini CLI | `downloads/gemini/kumihan-geuljjaim-gemini-bundle-0.1.0.zip` | `downloads/gemini/<skill>-gemini-skill-0.1.0.zip` |
+| ChatGPT / Codex | `downloads/plugins/kumihan-geuljjaim-plugin-v0.1.0.zip` | `downloads/skills/<skill>-v0.1.0.zip` |
+| Claude / Claude Code | `downloads/claude/kumihan-geuljjaim-claude-bundle-v0.1.0.zip` | `downloads/claude/<skill>-claude-skill-v0.1.0.zip` |
+| Gemini CLI | `downloads/gemini/kumihan-geuljjaim-gemini-bundle-v0.1.0.zip` | `downloads/gemini/<skill>-gemini-skill-v0.1.0.zip` |
 
 Skill names: `kumihan-geuljjaim`, `kumihan-geuljjaim-web`, `kumihan-geuljjaim-documents`, `kumihan-geuljjaim-review`. Copy the complete folder, not SKILL.md alone.
 

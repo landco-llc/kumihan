@@ -72,15 +72,15 @@ def plan_outputs(root=ROOT):
         for p,b in files.items():
             outputs[f'{PRODUCT}/skills/{name}/{p}']=b;plugin_files[f'skills/{name}/{p}']=b
         standalone[name]=archive({f'{name}/{p}':b for p,b in files.items()})
-        archives[f'skills/{name}-0.1.0.zip']=standalone[name]
-    archives['plugins/kumihan-geuljjaim-plugin-0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in plugin_files.items()})
+        archives[f'skills/{name}-v0.1.0.zip']=standalone[name]
+    archives['plugins/kumihan-geuljjaim-plugin-v0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in plugin_files.items()})
     for host in ('claude','gemini'):
         host_files={p:b for p,b in plugin_files.items() if p not in ('plugin.json','.codex-plugin/plugin.json')}
         for path in (['.claude-plugin/plugin.json'] if host=='claude' else ['gemini-extension.json','GEMINI.md']):
             host_files[path]=(base/path).read_bytes()
-        archives[f'{host}/kumihan-geuljjaim-{host}-bundle-0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in host_files.items()})
+        archives[f'{host}/kumihan-geuljjaim-{host}-bundle-v0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in host_files.items()})
         for name,data in standalone.items():
-            archives[f'{host}/{name}-{host}-skill-0.1.0.zip']=data
+            archives[f'{host}/{name}-{host}-skill-v0.1.0.zip']=data
     archives['MANIFEST.json']=encode(dict(product='KUMIHAN｜글짜임',name='kumihan-geuljjaim',version='0.1.0',locale='ko-KR',host_status='ChatGPT/Codex plugin, Claude Code plugin and Gemini CLI extension with four standalone Skills per host. Native model invocation not-checked.',archives=[dict(file=p,host=p.split('/')[0] if p.startswith(('claude/','gemini/')) else 'chatgpt-codex',bytes=len(b),sha256=digest(b)) for p,b in sorted(archives.items())]))
     archives['SHA256SUMS.txt']=''.join(f'{digest(b)}  {p}\n' for p,b in sorted(archives.items())).encode()
     for p,b in archives.items():outputs[f'{PRODUCT}/downloads/{p}']=b
