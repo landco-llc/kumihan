@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://landco-llc.github.io/kumihan/schemas/ziheng-v1/rule.schema.json",
+  "title": "字衡 versioned rule adapter",
+  "description": "One rule definition. Source resolution, catalog uniqueness and implemented coverage claims require semantic validation.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/rule_id"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "title_ja": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "requirement_en": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "standard-reference",
+        "implementation-reference",
+        "expert-practice",
+        "project-policy"
+      ]
+    },
+    "strength": {
+      "type": "string",
+      "enum": [
+        "must",
+        "should",
+        "may"
+      ]
+    },
+    "impact": {
+      "type": "string",
+      "enum": [
+        "blocker",
+        "error",
+        "warning",
+        "advisory"
+      ]
+    },
+    "media": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/media_profile"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "when": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "impact": {
+            "type": "string",
+            "enum": [
+              "blocker",
+              "error",
+              "warning",
+              "advisory"
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "when",
+          "impact",
+          "scope"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "verification": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "$ref": "#/$defs/method"
+        },
+        "coverage": {
+          "type": "string",
+          "enum": [
+            "implemented",
+            "guidance-only",
+            "planned",
+            "unsupported"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "method",
+        "coverage"
+      ],
+      "additionalProperties": false
+    },
+    "fix_policy": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "review-only",
+            "explicit-refine"
+          ]
+        },
+        "protected_content": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "guidance": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "mode",
+        "protected_content",
+        "guidance"
+      ],
+      "additionalProperties": false
+    },
+    "exception_policy": {
+      "type": "object",
+      "properties": {
+        "allowed": {
+          "type": "boolean"
+        },
+        "bounds": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "approval_required": {
+          "const": true
+        }
+      },
+      "required": [
+        "allowed",
+        "bounds",
+        "approval_required"
+      ],
+      "additionalProperties": false
+    },
+    "case_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      },
+      "minItems": 0,
+      "uniqueItems": true
+    },
+    "title_zh_hant": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locales": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "zh-Hant-TW",
+          "zh-Hant-HK"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_sections": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "id",
+    "revision",
+    "requirement_en",
+    "kind",
+    "strength",
+    "impact",
+    "media",
+    "source_refs",
+    "conditions",
+    "verification",
+    "fix_policy",
+    "exception_policy",
+    "case_ids"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "rule_id": {
+      "type": "string",
+      "enum": [
+        "CONTENT-001",
+        "CONTENT-002",
+        "CONTENT-003",
+        "CONTENT-004",
+        "CONTENT-005",
+        "DESIGN-001",
+        "DESIGN-002",
+        "DESIGN-003",
+        "DESIGN-004",
+        "DESIGN-005",
+        "DESIGN-006",
+        "EVIDENCE-001",
+        "EVIDENCE-002",
+        "EVIDENCE-003",
+        "EVIDENCE-004",
+        "EVIDENCE-005",
+        "ZH-HANT-001",
+        "ZH-HANT-002",
+        "ZH-HANT-003",
+        "ZH-HANT-004",
+        "ZH-HANT-005",
+        "ZH-HANT-006",
+        "ZH-HANT-007",
+        "ZH-HANT-008",
+        "ZH-HANT-009",
+        "ZH-HANT-010",
+        "ZH-HANT-011",
+        "ZH-HANT-012",
+        "ZH-HANT-013",
+        "ZH-HANT-014",
+        "ZH-HANT-015"
+      ]
+    },
+    "media_profile": {
+      "type": "string",
+      "enum": [
+        "web-editorial",
+        "web-marketing",
+        "web-ui",
+        "report-document",
+        "presentation",
+        "display-copy"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "static",
+        "rendered",
+        "assisted",
+        "manual"
+      ]
+    }
+  },
+  "anyOf": [
+    {
+      "required": [
+        "title_ja"
+      ]
+    },
+    {
+      "required": [
+        "title_zh_hant"
+      ]
+    }
+  ]
+}

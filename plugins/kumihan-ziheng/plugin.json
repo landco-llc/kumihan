@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-ziheng",
+  "version": "0.1.0-preview",
+  "description": "繁體中文（臺灣／香港）文字組版、原稿保護與唯讀檢視指引。",
+  "author": {
+    "name": "L&Co.LLC"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/landco-llc/kumihan",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜字衡",
+        "shortDescription": "臺灣／香港繁體中文組版指引",
+        "longDescription": "四個可獨立安裝的 Skills；依地區與媒體選擇指引，保留原稿並區分靜態候選、實際描畫及未檢查項目。沒有自動排版引擎；原生主機驗收尚未完成。",
+        "developerName": "L&Co.LLC",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/landco-llc/kumihan",
+        "defaultPrompt": [
+          "以 zh-Hant-TW 規劃文章版面，保留所有原稿。",
+          "以 zh-Hant-HK 唯讀檢視文件，先確認編輯體例。"
+        ]
+      }
+    }
+  }
+}
