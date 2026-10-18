@@ -15,6 +15,8 @@ on:
       - 'assets/ziheng-site-copy.json'
       - 'index.html'
       - 'top-*.html'
+      - 'tools/build_gateways.py'
+      - 'assets/gateway*'
       - 'tools/locale_resolver.py'
       - 'skills/kumihan/**'
       - '.claude-plugin/marketplace.json'
@@ -41,6 +43,7 @@ jobs:
       - run: python -m unittest discover -s tests/ziheng -v
       - run: python tools/build_ziheng.py --check
       - run: python tools/build_ziheng_site.py --check
+      - run: python tools/build_gateways.py --check
       - run: python tools/build_ziheng_hosts.py --check
       - run: python tools/build_dist.py --check
       - run: python tools/check_ja_type_011_cases.py
