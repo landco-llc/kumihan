@@ -71,7 +71,7 @@ def check(out):
                 digests = [sha]
             else:
                 assert len(skills) == 4
-                assert set(skills) == {ROOT + s for s in SKILLS}
+                assert set(skills) == {ROOT + "skills/" + s for s in SKILLS}
                 root_logo = ROOT + "assets/" + LOGO
                 assert root_logo in members and png_ok(zipfile.read(root_logo))
                 digests = [hashlib.sha256(zipfile.read(root_logo)).hexdigest()]
