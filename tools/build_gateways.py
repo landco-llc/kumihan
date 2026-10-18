@@ -16,9 +16,13 @@ VISIBLE, STEP = 9, 6
 
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
+    "ar": ("top-ar.html", "ar", "AR", "العربية"),
     "en": ("top-en.html", "en", "EN", "English"),
+    "es": ("top-es.html", "es", "ES", "Español"),
+    "fr": ("top-fr.html", "fr", "FR", "Français"),
     "ja": ("index.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
+    "pt": ("top-pt.html", "pt", "PT", "Português"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "zh-hans": ("top-zh-cn.html", "zh-Hans-CN", "ZH-HANS", "简体中文"),
     "zh-hant": ("top-zh-han.html", "zh-Hant-TW", "ZH-HANT", "繁體中文"),
@@ -47,8 +51,55 @@ PRODUCTS = {
                     pages={"zh-hant": "kumihan-zh-han.html", "en": "kumihan-zh-han.en.html", "ja": "kumihan-zh-han.ja.html"}),
 }
 
+# Right-to-left gateway languages.
+RTL = {"ar"}
+
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
+    "ar": {
+        "ar": ("تنضيد عربي يراعي الكتابة من اليمين إلى اليسار وتداخل اللغات، ويحافظ على النص الأصلي.", "عرض النسخة العربية"),
+        "es": ("تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.", "عرض النسخة الإسبانية"),
+        "fr": ("تنضيد فرنسي يميّز المسافات غير القابلة للكسر وعلامات الاقتباس وأدلة الأسلوب الإقليمية والمؤسسية.", "عرض النسخة الفرنسية"),
+        "ja": ("من قواعد كسر الأسطر اليابانية (كينسوكو) والفواصل الطبيعية إلى بنية المعلومات والمسافات ومسار القراءة.", "عرض النسخة اليابانية"),
+        "ko": ("كسر الأسطر بين وحدات الكلام الكورية (أوجول)، مع العناية بإيقاع النص ووضوح بنية المعلومات.", "عرض النسخة الكورية"),
+        "pt": ("تنضيد برتغالي وتصميم يقوده المعنى، يحترم أعراف البرازيل والبرتغال وقصد الكاتب.", "عرض النسخة البرتغالية"),
+        "th": ("يحترم حدود الكلمات التايلاندية والحروف المركّبة، لتصميم تايلاندي سهل القراءة.", "عرض النسخة التايلاندية"),
+        "zh-hans": ("علامات الترقيم وكسر الأسطر والمزج بين الصينية واللاتينية للصينية المبسطة، دون إعادة كتابة الأصل.", "عرض نسخة الصينية المبسطة"),
+        "zh-hant": ("يراعي أعراف الترقيم والتنضيد المختلفة في تايوان وهونغ كونغ.", "عرض نسخة الصينية التقليدية"),
+    },
+    "es": {
+        "ar": ("Tipografía árabe que gestiona la escritura de derecha a izquierda y la mezcla de alfabetos, sin alterar el original.", "Ver la edición en árabe"),
+        "es": ("Tipografía en español que respeta el uso regional, conserva el original y separa la evidencia comprobada del criterio editorial.", "Ver la edición en español"),
+        "fr": ("Tipografía francesa que distingue los espacios de no separación, las comillas y los libros de estilo regionales o institucionales.", "Ver la edición en francés"),
+        "ja": ("De las reglas japonesas de división de líneas (kinsoku) y los saltos naturales a la estructura de la información, los espacios y el recorrido de lectura.", "Ver la edición en japonés"),
+        "ko": ("Saltos de línea entre eojeol (unidades de espaciado coreanas), ritmo del texto y una estructura de información clara.", "Ver la edición en coreano"),
+        "pt": ("Tipografía portuguesa y diseño guiado por el sentido, que respeta las convenciones de Brasil y Portugal y la intención del autor.", "Ver la edición en portugués"),
+        "th": ("Respeta los límites de palabra y los caracteres combinados del tailandés, para un diseño que se lee con naturalidad.", "Ver la edición en tailandés"),
+        "zh-hans": ("Puntuación, saltos de línea y mezcla de chino y alfabeto latino para el chino simplificado, sin reescribir el original.", "Ver la edición en chino simplificado"),
+        "zh-hant": ("Atiende las convenciones de puntuación y composición propias de Taiwán y Hong Kong.", "Ver la edición en chino tradicional"),
+    },
+    "fr": {
+        "ar": ("Typographie arabe qui gère l’écriture de droite à gauche et le mélange des écritures, sans toucher au texte d’origine.", "Voir l’édition arabe"),
+        "es": ("Typographie espagnole qui respecte les usages régionaux, préserve la source et distingue les preuves vérifiées du jugement éditorial.", "Voir l’édition espagnole"),
+        "fr": ("Typographie française qui distingue espaces insécables, guillemets et styles maison régionaux ou institutionnels.", "Voir l’édition française"),
+        "ja": ("Des règles japonaises de coupure (kinsoku) et des retours à la ligne naturels à la structure de l’information, aux blancs et au parcours de lecture.", "Voir l’édition japonaise"),
+        "ko": ("Coupures entre eojeol (unités d’espacement coréennes), rythme du texte et structure de l’information lisible.", "Voir l’édition coréenne"),
+        "pt": ("Typographie portugaise et design guidé par le sens, qui respectent les usages du Brésil et du Portugal et l’intention de l’auteur.", "Voir l’édition portugaise"),
+        "th": ("Respect des limites de mots et des caractères combinatoires du thaï, pour un design thaï qui se lit naturellement.", "Voir l’édition thaïe"),
+        "zh-hans": ("Ponctuation, coupures et mélange chinois–latin pour le chinois simplifié, sans réécrire la source.", "Voir l’édition en chinois simplifié"),
+        "zh-hant": ("Prend en compte les usages de ponctuation et de composition propres à Taïwan et à Hong Kong.", "Voir l’édition en chinois traditionnel"),
+    },
+    "pt": {
+        "ar": ("Tipografia árabe que trata a escrita da direita para a esquerda e a mistura de alfabetos, sem alterar o original.", "Ver a edição em árabe"),
+        "es": ("Tipografia espanhola que respeita o uso regional, preserva o original e separa a evidência verificada do critério editorial.", "Ver a edição em espanhol"),
+        "fr": ("Tipografia francesa que distingue espaços inseparáveis, aspas e normas editoriais regionais ou institucionais.", "Ver a edição em francês"),
+        "ja": ("Das regras japonesas de quebra de linha (kinsoku) e das quebras naturais à estrutura da informação, aos espaços e ao percurso de leitura.", "Ver a edição em japonês"),
+        "ko": ("Quebras de linha entre eojeol (unidades de espaçamento coreanas), ritmo do texto e uma estrutura de informação clara.", "Ver a edição em coreano"),
+        "pt": ("Tipografia portuguesa e design orientado pelo sentido, que respeita as convenções do Brasil e de Portugal e a intenção do autor.", "Ver a edição em português"),
+        "th": ("Respeita os limites de palavra e os caracteres combinados do tailandês, para um design que se lê com naturalidade.", "Ver a edição em tailandês"),
+        "zh-hans": ("Pontuação, quebras de linha e mistura de chinês e alfabeto latino para o chinês simplificado, sem reescrever o original.", "Ver a edição em chinês simplificado"),
+        "zh-hant": ("Atende às convenções de pontuação e composição próprias de Taiwan e Hong Kong.", "Ver a edição em chinês tradicional"),
+    },
     "ja": {
         "ar": ("RTLと多言語混植を扱い、原文を守るアラビア語の文字組。", "アラビア語版を見る"),
         "es": ("スペイン語の文字組と原稿保全。地域の表現を尊重し、確認できた根拠と編集判断を分けて伝えます。", "スペイン語版を見る"),
@@ -118,6 +169,10 @@ CARDS = {
 }
 
 UI = {
+    "ar": dict(heading="نسخ KUMIHAN اللغوية", more="عرض {n} أخرى", menu="اللغة"),
+    "es": dict(heading="Ediciones de KUMIHAN por idioma", more="Mostrar {n} más", menu="Idioma"),
+    "fr": dict(heading="Les éditions de KUMIHAN", more="Afficher les {n} suivantes", menu="Langue"),
+    "pt": dict(heading="Edições do KUMIHAN por língua", more="Mostrar mais {n}", menu="Língua"),
     "ja": dict(heading="KUMIHANの各言語版", more="次の{n}つを表示", menu="表示言語"),
     "en": dict(heading="KUMIHAN language editions", more="Show the next {n}", menu="Language"),
     "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
@@ -166,7 +221,7 @@ def cards(key):
     for i, code in enumerate(order):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
-        href = p["pages"].get(key) or next(iter(p["pages"].values()))
+        href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
         direction = ' dir="rtl"' if code == "ar" else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
@@ -216,7 +271,7 @@ def page(key, c):
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
     return f"""<!doctype html>
-<html lang="{html_lang}">
+<html lang="{html_lang}"{' dir="rtl"' if key in RTL else ""}>
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>

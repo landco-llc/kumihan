@@ -20,6 +20,10 @@ GATEWAYS = {
     "zh-Hans-CN": ("top-zh-cn.html", "KUMIHAN 首页"),
     "ko-KR": ("top-ko.html", "KUMIHAN 홈"),
     "th": ("top-th.html", "หน้าแรก KUMIHAN"),
+    "ar": ("top-ar.html", "الصفحة الرئيسية لـ KUMIHAN"),
+    "es": ("top-es.html", "Inicio de KUMIHAN"),
+    "fr": ("top-fr.html", "Accueil KUMIHAN"),
+    "pt": ("top-pt.html", "Página inicial do KUMIHAN"),
 }
 
 

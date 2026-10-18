@@ -50,9 +50,9 @@ class LandingParity(unittest.TestCase):
 
 
 GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
-           "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html"}
-# Pages whose language has no gateway of its own yet return to the Japanese index.
-PAGE_GATEWAY = dict(GATEWAY, fr="index.html", ar="index.html", es="index.html", pt="index.html")
+           "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
+           "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html"}
+PAGE_GATEWAY = GATEWAY
 
 
 class GatewayLinks(unittest.TestCase):
