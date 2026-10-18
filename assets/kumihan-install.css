@@ -33,7 +33,7 @@
     .header-nav a { text-decoration: none; font-size: 13px; color: var(--ink-2); font-weight: 680; text-underline-offset: 5px; }
     .header-nav a:hover, .header-nav a[aria-current="page"] { color: var(--red); text-decoration: underline; }
     .hero { border-bottom: 1px solid var(--line); }
-    .breadcrumb { display: flex; align-items: center; gap: 9px; color: var(--muted); padding-top: 31px; font-size: 12px; }
+    .breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; color: var(--muted); padding-top: 31px; font-size: 12px; }
     .breadcrumb a { text-underline-offset: 4px; }
     .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 170px; align-items: center; gap: 40px; padding: 54px 0 66px; }
     .eyebrow { font: 760 11px/1.6 Arial, Helvetica, sans-serif; letter-spacing: .14em; color: var(--red); text-transform: uppercase; }
@@ -171,6 +171,8 @@
     .platform-nav a span:first-child { min-width: 0; overflow-wrap: anywhere; }
     .guide:focus { outline: none; }
     .guide-head { flex-wrap: wrap; }
+    .breadcrumb { flex-wrap: wrap; row-gap: 4px; }
+    .breadcrumb > * { min-width: 0; overflow-wrap: anywhere; }
     .guide-head span { min-width: 0; overflow-wrap: anywhere; }
     .header-inner > *, .hero-grid > * { min-width: 0; }
     .guide-pane > section { scroll-margin-top: 26px; }

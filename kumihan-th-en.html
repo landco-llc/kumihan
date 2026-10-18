@@ -182,19 +182,21 @@
       .header-nav { order: 3; width: 100%; margin: 0; justify-content: space-between; padding-top: 15px; border-top: 1px solid var(--line); }
       .header-controls { margin-left: auto; }
       .hero { padding: 70px 0 78px; }
-      .hero-layout { grid-template-columns: 1fr; gap: 58px; }
+      .hero-layout { grid-template-columns: minmax(0,1fr); gap: 58px; }
+      .hero-copy, .hero-stage { min-width: 0; }
+      html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3, html[lang="en"] .button, html[lang="en"] .feature p { overflow-wrap: anywhere; }
       .hero h1 { max-width: 710px; }
       .hero-stage { width: min(100%, 575px); aspect-ratio: 1.12; justify-self: center; }
       .hero-stage::after { right: 10px; top: -22px; writing-mode: horizontal-tb; }
       .hero-foot { margin-top: 37px; }
-      .intro-layout { grid-template-columns: 1fr; gap: 20px; padding-block: 77px; }
+      .intro-layout { grid-template-columns: minmax(0,1fr); gap: 20px; padding-block: 77px; }
       .section-heading { align-items: flex-start; }
-      .feature-grid { grid-template-columns: repeat(2,1fr); }
+      .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .feature { min-height: 260px; border-bottom: 1px solid var(--line); }
       .feature:nth-child(3) { border-left: 0; padding-left: 0; }
       .feature:nth-child(3), .feature:nth-child(4) { border-bottom: 0; }
       .idea-layout { grid-template-columns: 1fr 160px; gap: 28px; }
-      .install-layout { grid-template-columns: 1fr; gap: 45px; }
+      .install-layout { grid-template-columns: minmax(0,1fr); gap: 45px; }
     }
     @media (max-width: 560px) {
       :root { --shell: calc(100% - 36px); }
@@ -231,14 +233,16 @@
       .idea-art { width: 160px; }
       .idea-art span { height: 7px; }
       .skills-section { padding: 78px 0 88px; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .skill-card { min-height: 246px; padding: 26px; }
+      .skills-grid { grid-template-columns: minmax(0,1fr); }
+      .skill-card { min-height: 246px; padding: 26px; min-width: 0; }
+      .platform-info, .feature { min-width: 0; }
       .skill-name { font-size: 28px; }
       .install-section { padding: 77px 0 88px; }
       .platform-row { min-height: 99px; }
       .platform-name { font-size: 18px; }
       .status-section { padding-bottom: 74px; }
-      .status-box { grid-template-columns: 1fr; gap: 12px; padding: 27px 24px; }
+      .status-box { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 27px 24px; }
+      .status-title, .status-meta { overflow-wrap: anywhere; white-space: normal; }
       .status-meta { text-align: left; }
       .cta-section { padding: 70px 0; }
       .cta-layout { align-items: stretch; flex-direction: column; }
@@ -510,7 +514,8 @@
       <div class="footer-sub">Thai typography skills for AI-assisted design<br>
       Developed by L&amp;Co. LLC</div></div>
     <div class="footer-links">
-      <a href="kumihan.html">KUMIHAN 日本語</a>
+      <a href="top-en.html">KUMIHAN home</a>
+      <a href="en.html">KUMIHAN Japanese</a>
       <a href="kumihan-th.html" lang="th">ไทย</a>
       <a href="kumihan-th-ja.html">日本語</a>
       <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th" target="_blank" rel="noopener noreferrer">GitHub</a>

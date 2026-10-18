@@ -358,6 +358,7 @@ def render(root: Path, copy: dict) -> str:
       <div class="footer-sub">Thai typography skills for AI-assisted design<br>
         Developed by L&amp;Co. LLC</div></div>
     <div class="footer-links">
+      {anchor("index.html", "KUMIHAN トップ")}
       {anchor("kumihan.html", "KUMIHAN 日本語版")}
       {anchor("kumihan-th.html", "ภาษาไทย")}
       {anchor("kumihan-th-en.html", "English")}

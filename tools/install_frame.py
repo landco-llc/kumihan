@@ -11,6 +11,17 @@ from html import escape
 
 LOGO = "KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 
+# Language gateway (the KUMIHAN index) for each page language, with the label
+# used for the "back to index" link. Paths are relative to the site root.
+GATEWAYS = {
+    "ja": ("index.html", "KUMIHAN トップ"),
+    "en": ("top-en.html", "KUMIHAN home"),
+    "zh-Hant-TW": ("top-zh-han.html", "KUMIHAN 首頁"),
+    "zh-Hans-CN": ("top-zh-cn.html", "KUMIHAN 首页"),
+    "ko-KR": ("top-ko.html", "KUMIHAN 홈"),
+    "th": ("top-th.html", "หน้าแรก KUMIHAN"),
+}
+
 
 def e(value: str) -> str:
     return escape(str(value), quote=True)
@@ -37,6 +48,7 @@ class Frame:
     footer_links: list = field(default_factory=list)  # [(label, href, external)]
     scripts: str = ""
     language_class: str = ""  # extra class for the language switch nav
+    gateway: tuple = ()       # (href, label) of the language-matched KUMIHAN index
 
 # UI keys: skip, nav, language, breadcrumb, toc_title, toc_summary,
 # platforms, note_title, note, source, source_href, steps, top
@@ -56,9 +68,12 @@ def render(f: Frame) -> str:
         + (' aria-current="page"' if current else "") + f'>{e(label)}</a>'
         for code, label, href, current in f.languages)
     toc = "".join(f'<li><a href="#{e(anchor)}">{e(label)}</a></li>' for anchor, label in f.toc)
+    crumb = (f'<a href="{e(f.gateway[0])}">{e(f.gateway[1])}</a><span aria-hidden="true">/</span>'
+             if f.gateway else "")
+    footer_links = ([(f.gateway[1], f.gateway[0], False)] if f.gateway else []) + list(f.footer_links)
     links = " · ".join(
         f'<a href="{e(href)}"' + (' target="_blank" rel="noopener noreferrer"' if external else "")
-        + f'>{e(label)}</a>' for label, href, external in f.footer_links)
+        + f'>{e(label)}</a>' for label, href, external in footer_links)
     return f"""<!doctype html>
 <html lang="{e(f.lang)}">
 <head>
@@ -79,7 +94,7 @@ def render(f: Frame) -> str:
 </header>
 <section class="hero" aria-labelledby="page-title">
   <div class="shell">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{e(f.home)}">{f.brand}</a><span aria-hidden="true">/</span><span>{e(u['breadcrumb'])}</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">{crumb}<a href="{e(f.home)}">{f.brand}</a><span aria-hidden="true">/</span><span>{e(u['breadcrumb'])}</span></nav>
     <div class="hero-grid">
       <div>
         <div class="eyebrow">INSTALL GUIDE / {e(f.number)} OF 03</div>

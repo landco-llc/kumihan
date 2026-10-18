@@ -164,8 +164,20 @@
       .primary-action { transition: none; }
     }
 
-.edition-switch{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end;align-items:center;}.edition-switch a{color:var(--sub);font:700 11px/1.4 var(--sans);text-decoration:none;padding:8px 10px;border-bottom:2px solid transparent;}.edition-switch a[aria-current=page]{color:var(--red-dark);border-bottom-color:var(--red);font-weight:800;}.edition-switch a:hover{text-decoration:underline;}@media(max-width:950px){.header-inner{flex-wrap:wrap;padding:14px 0;gap:10px}.edition-switch{order:3;flex:1 0 100%;justify-content:center;border-top:1px solid var(--rule);padding-top:9px}.header-side{display:none}}@media(max-width:390px){.edition-switch a{padding:7px 6px;font-size:10px}}</style>
-<link href="index.html" hreflang="ja" rel="alternate"/><link href="top-zh-han.html" hreflang="zh-Hant-TW" rel="alternate"/><link href="top-ko.html" hreflang="ko-KR" rel="alternate"/><link href="top-th.html" hreflang="th-TH" rel="alternate"/><link href="top-en.html" hreflang="en" rel="alternate"/><link href="https://landco-llc.github.io/kumihan/index.html" rel="canonical"/></head>
+.edition-switch{display:flex;gap:3px;flex-wrap:wrap;justify-content:flex-end;align-items:center;}.edition-switch a{color:var(--sub);font:700 11px/1.4 var(--sans);text-decoration:none;padding:8px 10px;border-bottom:2px solid transparent;}.edition-switch a[aria-current=page]{color:var(--red-dark);border-bottom-color:var(--red);font-weight:800;}.edition-switch a:hover{text-decoration:underline;}@media(max-width:950px){.header-inner{flex-wrap:wrap;padding:14px 0;gap:10px}.edition-switch{order:3;flex:1 0 100%;justify-content:center;border-top:1px solid var(--rule);padding-top:9px}.header-side{display:none}}@media(max-width:390px){.edition-switch a{padding:7px 6px;font-size:10px}}
+/* Enlarged text: captions wrap instead of widening the page. */
+.type-art-top,.art-bottom{flex-wrap:wrap;gap:4px 12px;}.type-art,.glyph,.intro-grid>*{min-width:0;}.glyph-label{overflow-wrap:anywhere;}html[lang="en"] h1,html[lang="en"] h2,html[lang="en"] h3{overflow-wrap:anywhere;}
+/* Script-appropriate glyphs per page language (fallback stacks, not a palette). */
+html[lang="zh-Hant-TW"]{--sans:"PingFang TC","Noto Sans TC","Microsoft JhengHei","Noto Sans CJK TC",system-ui,sans-serif;--serif:"Songti TC","Noto Serif TC","PMingLiU","Noto Serif CJK TC",serif;}
+html[lang="zh-Hans-CN"]{--sans:"PingFang SC","Noto Sans SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;--serif:"Songti SC","Noto Serif SC","SimSun","Noto Serif CJK SC",serif;}
+html[lang="ko-KR"]{--sans:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;}
+html[lang="ko-KR"] body{word-break:keep-all;overflow-wrap:break-word;}
+html[lang="th-TH"]{--sans:"Noto Sans Thai",Thonburi,"Leelawadee UI",Tahoma,system-ui,sans-serif;}
+html[lang="th-TH"] body,html[lang="en"] body{line-break:auto;}
+[lang="zh-Hant-TW"].character,.lang-title[lang="zh-Hant-TW"]{font-family:"Songti TC","Noto Serif TC","PMingLiU",serif;}
+[lang="zh-Hans-CN"].character,.lang-title[lang="zh-Hans-CN"]{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+</style>
+<link href="index.html" hreflang="ja" rel="alternate"/><link href="top-zh-han.html" hreflang="zh-Hant-TW" rel="alternate"/><link href="top-zh-cn.html" hreflang="zh-Hans-CN" rel="alternate"/><link href="top-ko.html" hreflang="ko-KR" rel="alternate"/><link href="top-th.html" hreflang="th-TH" rel="alternate"/><link href="top-en.html" hreflang="en" rel="alternate"/><link href="https://landco-llc.github.io/kumihan/index.html" rel="canonical"/></head>
 <body>
 <a class="skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
@@ -175,7 +187,7 @@
 <span><span class="brand-word">KUMIHAN</span><span class="brand-caption">LANGUAGE &amp; DESIGN</span></span>
 </a>
 <div class="header-side"><span aria-hidden="true" class="red-line"></span><span>LANGUAGE GATEWAY<br/>CONCEPT / 01</span></div>
-<nav aria-label="ページの表示言語" class="edition-switch"><a aria-current="page" href="index.html" lang="ja">日本語</a><a href="top-en.html" lang="en">English</a><a href="top-zh-han.html" lang="zh-Hant-TW">繁體中文</a><a href="top-ko.html" lang="ko-KR">한국어</a><a href="top-th.html" lang="th-TH">ไทย</a></nav></div>
+<nav aria-label="ページの表示言語" class="edition-switch"><a aria-current="page" href="index.html" lang="ja">日本語</a><a href="top-en.html" lang="en">English</a><a href="top-zh-han.html" lang="zh-Hant-TW">繁體中文</a><a href="top-zh-cn.html" lang="zh-Hans-CN">简体中文</a><a href="top-ko.html" lang="ko-KR">한국어</a><a href="top-th.html" lang="th-TH">ไทย</a></nav></div>
 </header>
 <main id="main">
 <section aria-labelledby="page-title" class="intro">
@@ -239,11 +251,11 @@
 <a class="lang-action" href="kumihan-th.html"><span>タイ語版を見る</span><span aria-hidden="true" class="action-arrow">↗</span></a>
 </article>
 <article aria-labelledby="language-zh-hans" class="lang-card">
-<div class="lang-card-head"><span class="lang-index">05 / ZH-HANS</span><span class="state">準備中</span></div>
+<div class="lang-card-head"><span class="lang-index">05 / ZH-HANS</span><span class="state">開発中</span></div>
 <h3 class="lang-title" id="language-zh-hans" lang="zh-Hans-CN">简体中文</h3>
-<p class="lang-sub">KUMIHAN / SIMPLIFIED CHINESE</p>
-<p class="lang-desc">簡体中国語版を準備しています。</p>
-<a aria-label="簡体中国語版を見る（準備中）" class="lang-action" href="kumihan-zh-cn.html"><span>簡体中国語版を見る（準備中）</span><span aria-hidden="true" class="action-arrow">↗</span></a>
+<p class="lang-sub">KUMIHAN｜字律 / SIMPLIFIED CHINESE</p>
+<p class="lang-desc">標点・禁則と中英混植、原稿の保全を大切にするKUMIHAN｜字律。</p>
+<a class="lang-action" href="kumihan-zh-cn.html"><span>簡体中国語版を見る</span><span aria-hidden="true" class="action-arrow">↗</span></a>
 </article>
 </div>
 </div>

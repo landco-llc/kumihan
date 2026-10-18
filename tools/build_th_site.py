@@ -83,7 +83,8 @@ def installation(host,lang):
   toc=list(zip(ids,u['sections'])),content=content,platform=HOSTS[host],ui=g,
   footer_sub=esc(g['footer'])+'<br>'+esc(u['status'])+' · Developed by L&amp;Co. LLC',
   footer_links=[('GitHub',SOURCE,True),('Apache-2.0','https://github.com/landco-llc/kumihan/blob/main/LICENSE',True)],
-  scripts='\n<script src="../assets/thai-site.js" defer></script>')
+  scripts='\n<script src="../assets/thai-site.js" defer></script>',
+  gateway=('../'+FRAME.GATEWAYS[lang][0],FRAME.GATEWAYS[lang][1]))
  return FRAME.render(frame)
 
 def main():
