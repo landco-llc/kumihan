@@ -1,6 +1,6 @@
 ---
 name: kumihan-geuljjaim-documents
-description: Guide Korean reports and presentations; native Office/PDF rendering is not checked.
+description: "한국어 보고서·프레젠테이션의 글짜임을 안내합니다. Office/PDF 실환경 렌더링은 미검증입니다. / Guide Korean reports and presentations; native Office/PDF rendering remains unverified."
 ---
 
 # KUMIHAN｜글짜임

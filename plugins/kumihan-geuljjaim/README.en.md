@@ -1,4 +1,6 @@
-# KUMIHAN｜글짜임 v0.1.0
+# KUMIHAN｜글짜임
+
+v0.1.0
 
 ## Korean typography and copy guidance
 

@@ -1,6 +1,6 @@
 ---
 name: kumihan-geuljjaim
-description: Route Korean typography and copy work to a medium and mode.
+description: "한국어 글짜임과 카피 작업의 매체와 모드를 선택합니다. / Route Korean typography and copy tasks to a medium and mode."
 ---
 
 # KUMIHAN｜글짜임
