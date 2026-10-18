@@ -2,7 +2,7 @@
   "schema_revision": 1,
   "rule_proposal": "JA-TYPE-011",
   "state": "active-source-candidate-guidance-only",
-  "description": "Human-approved prosodic/multi-bunsetsu preference where preferred lines fit; deterministic detector not claimed.",
+  "description": "Layout-first whole-line balance; optional prosodic grouping only when it fits and improves composition. No automatic detector or universal threshold.",
   "cases": [
     {
       "id": "JA-TYPE-011-P01",
@@ -135,19 +135,20 @@
       "kind": "constraint",
       "role": "responsive-heading",
       "text": "いつものAIツールからはじめよう",
-      "context": "320 CSS px or 200 percent text zoom makes preferred first line impossible within accessible layout",
+      "context": "Measured content width and effective type make preferred groups infeasible; includes 320px + CSS-simulated 200%, separately from native text zoom",
       "preferred_lines": [
         "いつものAIツールから",
         "はじめよう"
       ],
-      "fallback_lines": [
-        [
-          "いつもの",
-          "AIツールから",
-          "はじめよう"
-        ]
+      "reason": "Fit and whole-line balance precede phrase grouping; no bunsetsu-by-bunsetsu fallback mandate",
+      "preferred_lines_condition": "Only if the group fits and improves the whole composition; not a fixed-line requirement",
+      "comparison_policies": [
+        "normal",
+        "balance",
+        "auto-phrase",
+        "auto-phrase+balance"
       ],
-      "reason": "Keep full content and reflow rather than clip or overflow; flag compromise for review"
+      "acceptance": "Prioritize removing unnecessary author-controlled phrase breaks and compare normal reflow. Preserve text, kinsoku, reading order and access; evaluate every line and surrounding whitespace. No mandatory fallback line map; unresolved aesthetics are needs-review."
     },
     {
       "id": "JA-TYPE-011-E02",
@@ -171,6 +172,33 @@
         "はじめよう"
       ],
       "reason": "Do not silently overwrite approved copy/design breaks"
+    },
+    {
+      "id": "JA-TYPE-011-E04",
+      "kind": "constraint",
+      "role": "responsive-heading",
+      "text": "いつものAIツールからはじめよう",
+      "context": "Natural single-line fit at ordinary width",
+      "acceptance": "Do not introduce a phrase break solely for symmetry; approved local intent remains conditional.",
+      "reason": "Conditional layout-first review; actual rendering required"
+    },
+    {
+      "id": "JA-TYPE-011-E05",
+      "kind": "constraint",
+      "role": "responsive-heading",
+      "text": "いつものAIツールからはじめよう",
+      "context": "320px + CSS 200% + spacing; compare normal with phrase enhancements",
+      "acceptance": "Render and measure every line. Prefer a complete accessible normal fallback when phrase enhancement creates short intermediate lines or final one-character line; no universal ideal claim.",
+      "reason": "Conditional layout-first review; actual rendering required"
+    },
+    {
+      "id": "JA-TYPE-011-E06",
+      "kind": "constraint",
+      "role": "responsive-heading",
+      "text": "いつものAIツールからはじめよう",
+      "context": "Optional wbr vs explicitly forced br/block vs ordinary wrapping",
+      "acceptance": "wbr is optional, br/block is forced; never prescribe forced phrase lines where ordinary wrapping is better. Preserve DOM characters and check selection/copy and read order.",
+      "reason": "Conditional layout-first review; actual rendering required"
     }
   ]
 }

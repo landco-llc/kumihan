@@ -486,9 +486,9 @@
   },
   {
     "id": "JA-TYPE-011",
-    "revision": 1,
-    "title_ja": "意味・係り受け・発話の自然なまとまりを優先して改行位置を設計する",
-    "requirement_en": "For Japanese headings, short display copy and UI labels, compare candidate line breaks by semantic cohesion, modifier–head and noun–particle attachment, natural speech pauses and actual rendered width. Prefer a larger prosodic group where it fits (いつものAIツールから／はじめよう rather than いつもの／AIツールから／はじめよう). First adapt the local layout to support the better grouping, never clip or rewrite supplied characters; readable fallback is allowed under genuine constraints.",
+    "revision": 2,
+    "title_ja": "表示幅と実効文字サイズから改行の必要性と行全体のバランスを判断する",
+    "requirement_en": "Preserve supplied text, kinsoku, reading order and accessible reflow. Measure actual inline content width, effective type, used fonts, zoom and spacing before deciding whether intentional breaks are necessary. Use ordinary wrapping as the comparison baseline. Prefer meaningful multi-bunsetsu groups only when they fit and improve the entire composition; do not require breaks at every bunsetsu or fixed two-line headings. At narrow width/large type, prioritize removing unnecessary author-controlled phrase breaks and compare normal, balance, auto-phrase and their combination by rendered line count, widths, ragging, intermediate and final short lines, reading flow and surrounding whitespace. No universal ratio threshold or perfect segmentation is guaranteed.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -507,7 +507,7 @@
     ],
     "conditions": [
       {
-        "when": "Prioritize Japanese short headings/display labels; consider actual purpose, approved emphasis, final font, line measure, zoom and device constraints. Long body paragraphs do not require unbreakable speech units.",
+        "when": "Named short Japanese copy; measured width/type relationship and approved intent determine whether phrase control is useful. Naturally fitting copy needs no added break absent approved intent. Long body text retains ordinary wrapping. Record native zoom separately from CSS simulation.",
         "impact": "warning",
         "scope": "named short Japanese copy region"
       }
@@ -515,14 +515,14 @@
     "verification": {
       "method": "assisted",
       "coverage": "guidance-only",
-      "notes": "Review semantic and prosodic grouping with assisted judgment, then separately inspect actual rendered line edges and reflow. Neither a deterministic bunsetsu parser nor an automatic prosody detector is provided. Unrendered states are not checked."
+      "notes": "Assisted guidance only; record actual DOM text, measured line maps/widths, used fonts, clipping/overflow and qualitative composition review separately. CSS support is not proof of quality, accessibility or host coverage. Unrendered states are not-checked; unresolved composition is needs-review."
     },
     "fix_policy": {
       "mode": "explicit-refine",
       "protected_content": [
         "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
       ],
-      "guidance": "Try text container width, grid ratio, gap and padding before sacrificing natural grouping. Do not inject visible spaces, mandate two lines, globally nowrap, obscure content or shrink every label. In 320px and 200% zoom states, allow complete readable reflow and record the compromise."
+      "guidance": "Compare normal reflow first. Use layout changes or optional phrase aids only when they improve the whole heading under actual conditions. Remove unnecessary author-controlled breaks where groups cannot fit; do not force every phrase, fixed lines, nowrap/max-content, clipping, visible or zero-width characters, uniform shrinking or a universal font preset. Preserve approved copy and local emphasis; request reconsideration if access conflicts remain."
     },
     "exception_policy": {
       "allowed": true,
@@ -537,7 +537,10 @@
       "JA-TYPE-011-P05",
       "JA-TYPE-011-E01",
       "JA-TYPE-011-E02",
-      "JA-TYPE-011-E03"
+      "JA-TYPE-011-E03",
+      "JA-TYPE-011-E04",
+      "JA-TYPE-011-E05",
+      "JA-TYPE-011-E06"
     ]
   }
 ]

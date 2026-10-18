@@ -33,8 +33,8 @@ font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", YuMincho, ser
 | Role | Starting settings | Notes |
 | --- | --- | --- |
 | Body text | `font-size: 16px`; `line-height: 1.7–2.0`; `line-break: strict`; `letter-spacing: 0` | Aim for roughly 30–40 characters per line on desktop; narrower on phones is fine. |
-| Headings | `line-height: 1.3–1.5`; `word-break: auto-phrase`; `text-wrap: balance` | `palt` and slight negative tracking only if the font supports it and you check the result. |
-| Display copy (hero, banners) | Same as headings; tighter spacing allowed | Keep the tightening on this element only. |
+| Headings | `line-height: 1.3–1.5`; ordinary wrapping baseline; phrase/balance aids conditional | `palt` and slight negative tracking only if the font supports it and you check the result. |
+| Display copy (hero, banners) | Same conditional comparison as headings; tighter spacing only after rendering | Keep the tightening on this element only. |
 | Captions, notes | `font-size: 0.875em` or larger; `line-height: 1.6–1.8` | Must stay readable; do not shrink to hide overlap. |
 | UI labels, buttons | `line-height: 1.4–1.5`; allow wrapping | Two-line labels are fine. Do not force `white-space: nowrap` on long labels. |
 | Tables and numbers | `font-variant-numeric: tabular-nums` | Aligns digits in columns. |
@@ -51,8 +51,8 @@ body {
 
 h1, h2, h3 {
   line-height: 1.4;
-  word-break: auto-phrase;
-  text-wrap: balance;
+  word-break: normal;
+  text-wrap: wrap; /* Baseline; compare optional aids on the named element. */
 }
 
 .display {
@@ -70,32 +70,27 @@ h1, h2, h3 {
 | Goal | Property | Support | Use |
 | --- | --- | --- | --- |
 | Strict kinsoku (no small kana `ゃゅょっ` or `ー` at a line start) | `line-break: strict` | Chrome, Firefox 69+, Safari | Body text and articles |
-| Break headings at phrase boundaries | `word-break: auto-phrase` | Chrome 119+ only (Safari in preview); requires `lang="ja"` | Headings, short display text. Not needed for long body text. |
-| Even line lengths in headings | `text-wrap: balance` | Chrome 114+, Firefox 121+, Safari 17.5+ | Headings up to a few lines |
+| Optionally alter heading break opportunities | `word-break: auto-phrase` | Chrome 119+ only (Safari in preview); requires `lang="ja"` | Conditional aid for short text; compare actual outcome with normal. Support does not guarantee balance. |
+| Optionally rebalance heading lines | `text-wrap: balance` | Chrome 114+, Firefox 121+, Safari 17.5+ | Headings up to a few lines |
 | Avoid a single short last line | `text-wrap: pretty` | Chrome 117+, Safari 26+; not Firefox | Body paragraphs, as an enhancement |
 | Break long URLs and IDs | `overflow-wrap: anywhere` | All major browsers | Only on the element that holds them |
 
 - Rendering check (Chromium 141, IPAGothic, 16px): across ten column widths, `line-break: normal` put a small kana or `ー` at a line start at nine widths; `line-break: strict` at none. `word-break: auto-phrase` broke a heading as 日本語の／文字組みからAIの／デザインをもっと／自然に.
-- For phrase breaks in browsers without `auto-phrase`, insert `<wbr>` at phrase boundaries in headings, or use a phrase-splitting library such as BudouX at build time. Do not insert visible spaces.
+- Do not automatically substitute `<wbr>` or a phrase-splitting library when `auto-phrase` is unavailable. Keep normal wrapping unless a local optional break improves measured composition. `<wbr>` is optional; `<br>` and block spans force breaks. Do not inject visible or zero-width characters.
 - Avoid `word-break: keep-all` on Japanese body text; it removes normal break opportunities.
 - Avoid `word-break: break-all` and page-wide `overflow-wrap: anywhere`; they break Latin words and numbers badly.
 - Do not set `white-space: nowrap` on headings, paragraphs or long buttons.
 
 ### Natural Japanese speech-group breaks (JA-TYPE-011)
 
-For a short heading, compare the meaning and natural speech pause **before** splitting at every bunsetsu boundary. Where it fits, prefer:
+Measure the actual content width, effective type and used font before deciding whether any intentional break is needed. If the whole heading fits naturally, do not add a break absent approved intent. At ordinary widths, `いつものAIツールから／はじめよう` remains a conditional meaningful preference when it fits and improves composition.
 
-```text
-いつものAIツールから
-はじめよう
-```
+1. Use `word-break: normal; text-wrap: wrap` as the comparison baseline, not a mandatory universal preset. Evaluate the complete heading and surrounding space before optional phrase control.
+2. Compare normal, balance, auto-phrase and combined rendering. At narrow width/large effective type (including 320px + CSS-simulated 200%), prioritize removing unnecessary author-controlled phrase breaks. Do not force a break at every bunsetsu.
+3. `auto-phrase`, `balance` and local `<wbr>` are conditional aids. CSS feature support does not prove better lines. When an aid produces worse overall composition, use a better rendered fallback; ordinary reflow may still need semantic review.
+4. Record line count, actual line widths, severe ragging, short intermediate/final lines, exact DOM text, used fonts, overflow/clipping, reading/selection order and qualitative review. Do not invent an automatic typography score or width/type threshold.
+5. Preserve content, kinsoku and access. Never prescribe fixed lines, phrase block spans, whole-heading nowrap/max-content, clipping, uniform shrinking or a fixed font. Distinguish native text zoom from CSS simulation; untested hosts remain not-checked. Browser versions listed above are historical recipe information, not W06B compatibility certification.
 
-over `いつもの／AIツールから／はじめよう` and especially over the orphan `いつものAIツールか／ら／はじめよう`.
-
-1. First seek a fitting layout: adjust heading width, grid-column distribution, gap and local padding. Only then consider alternative complete, accessible wraps.
-2. `word-break: auto-phrase` and `text-wrap: balance` are progressive browser-dependent aids, **not** guarantees of natural prosodic grouping. A carefully chosen `<wbr>` offers a break opportunity but does not suppress all other breaks.
-3. Never edit a protected original, insert visible spaces just for a line break, globally force `nowrap`, clip, or shrink all type. Reflow at 320 CSS px, 200% text enlargement and user-spacing settings must remain usable.
-4. Record AI-assisted semantic judgment separately from **rendered** line evidence. See the canonical specification and cases in `docs/ja-type-011-*` in the source repository.
 
 ## 4. Punctuation and spacing
 
