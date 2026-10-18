@@ -66,7 +66,7 @@ GUIDE_UI={
  'ja':dict(nav='導入ページ',language='表示言語',breadcrumb='導入ガイド',toc_title='このページの目次',toc_summary='このページの目次を表示',platforms='AIプラットフォームを選ぶ',note_title='v0.1.1 / GitHub Release',note='各ホストでの導入・呼び出しは未検証（not-checked）です。利用環境によっては掲載した操作が利用できない場合があります。',source='元のINSTALL.mdを開く',steps='手順と注意事項',top='ホームへ戻る',footer='Thai typography skills for AI-assisted design')}
 
 def installation(host,lang):
- u=UI[lang]; g=dict(GUIDE_UI[lang]); title={'th':f'ติดตั้ง {NAME} สำหรับ {HOSTS[host]}','en':f'Install {NAME} for {HOSTS[host]}','ja':f'{NAME}を{HOSTS[host]}へ導入'}[lang]
+ u=UI[lang]; g=dict(GUIDE_UI[lang]); title={'th':f'ติดตั้ง {NAME} สำหรับ {HOSTS[host]}','en':f'Install {NAME} in {HOSTS[host]}','ja':f'{HOSTS[host]}に{NAME}を導入'}[lang]
  path=guide(host,lang); pathfn=lambda l:guide(host,l)
  alternates=''.join(f'<link rel="alternate" hreflang="{code}" href="{BASE+pathfn(l)}">' for l,code in [('th','th-TH'),('en','en'),('ja','ja'),('th','x-default')])
  head=(f'<title>{esc(title)}</title>\n<meta name="description" content="{esc(u["intro"])}">\n<link rel="canonical" href="{BASE+path}">{alternates}\n'

@@ -8,8 +8,13 @@ guides retain their own language-specific sources and layouts.
 from __future__ import annotations
 
 from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 import re
+
+_base_spec = spec_from_file_location("kumihan_base_copy", Path(__file__).with_name("base_copy.py"))
+base_copy = module_from_spec(_base_spec)
+_base_spec.loader.exec_module(base_copy)
 
 
 SECTIONS = (
@@ -28,16 +33,28 @@ SOURCE = "https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th"
 BASE = "https://landco-llc.github.io/kumihan/"
 LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 
-# Localized display copy is deliberately free of Japanese comma/period.
+# Shared copy of the canonical Japanese KUMIHAN page (tools/base_copy.py) with
+# only the product and language names swapped. Thai-specific text (feature 01,
+# the fidelity detail, the entry skill and release status) stays in
+# assets/thai-site-copy.json.
+SHARED = base_copy.shared("ja", "th")
+SHORT = base_copy.EDITIONS["th"][1]
+
+# Display headings are free of Japanese comma/period.
 DISPLAY = {
-    "hero": "タイ語の文字組みをもっと自然に",
-    "concept": "見た目をそろえるより伝わる形を考える",
-    "features": "伝えるための4つの視点",
-    "idea": "文字を並べるだけでなく読む体験を組み立てる",
-    "skills": "4つのスキル ひとつの考え方",
-    "install": "いつものAIツールからはじめよう",
-    "cta": "タイ語のデザインにもうひとつの選択肢を",
+    "hero": "".join(SHARED["h1"]),
+    "concept": "".join(SHARED["concept_h2"]),
+    "features": SHARED["features_h2"],
+    "idea": "".join(SHARED["idea_h2"]),
+    "skills": "".join(SHARED["skills_h2"]),
+    "install": "".join(SHARED["install_h2"]),
+    "cta": "".join(SHARED["cta_h2"]),
 }
+
+
+def thai_name(text: str) -> str:
+    """Escape text and mark the Thai product name for Thai font and line breaking."""
+    return x(text).replace(SHORT, '<span lang="th">' + SHORT + '</span>')
 
 
 def x(value: str) -> str:
@@ -149,9 +166,10 @@ OVERRIDES = r"""
 
 def render(root: Path, copy: dict) -> str:
     c = copy
+    s = SHARED
     styles = canonical_css(root)
-    title = "KUMIHAN｜ดุลอักษร — " + DISPLAY["hero"]
-    description = c["meta description"]
+    title = s["title"]
+    description = s["description"]
     head = f"""<!doctype html>
 <html lang="ja">
 <head>
@@ -199,10 +217,10 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell header-content">
     {anchor("#top", "KUMIHAN", "brand", 'aria-label="ページ上部へ戻る"')}
     <nav class="header-nav" aria-label="メインナビゲーション">
-      {anchor("#concept", "コンセプト")}
-      {anchor("#features", "できること")}
-      {anchor("#skills", "4つのスキル")}
-      {anchor("#install", "導入方法")}
+      {anchor("#concept", thai_name(s["nav"][0]))}
+      {anchor("#features", x(s["nav"][1]))}
+      {anchor("#skills", x(s["nav"][2]))}
+      {anchor("#install", x(s["nav"][3]))}
     </nav>
     {lang_nav}
   </div>
@@ -211,18 +229,18 @@ def render(root: Path, copy: dict) -> str:
 <section class="hero" aria-labelledby="hero-title">
   <div class="shell hero-layout">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / THAI TYPOGRAPHY</p>
-      <div class="edition" lang="th">KUMIHAN｜ดุลอักษร</div>
-      <h1 id="hero-title">タイ語の文字組みを<span class="accent">もっと自然に</span></h1>
-      <p class="hero-desc">{x(c["hero lead"])}</p>
+      <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(s["eyebrow"])}</p>
+      <div class="edition" lang="th">{BRAND}</div>
+      <h1 id="hero-title">{x(s["h1"][0])}<br><span class="accent">{x(s["h1"][1])}</span></h1>
+      <p class="hero-desc">{thai_name(s["lead"])}</p>
       <div class="hero-cta">
-        {anchor("#install", '使いはじめる<span class="arrow" aria-hidden="true">↗</span>', "button button-primary")}
-        {anchor("#concept", 'KUMIHAN｜ดุลอักษรについて<span class="arrow" aria-hidden="true">↘</span>', "button")}
+        {anchor("#install", x(s["cta"][0]) + '<span class="arrow" aria-hidden="true">↗</span>', "button button-primary")}
+        {anchor("#concept", thai_name(s["cta"][1]) + '<span class="arrow" aria-hidden="true">↘</span>', "button")}
       </div>
       <div class="hero-foot" aria-label="オープンソース タイ語版 4つのスキル">
-        <span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span>
-        <span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span>
-        <span>THAI FIRST</span>
+        <span>{x(s["hero_foot"][0])}</span><span class="rule" aria-hidden="true"></span>
+        <span>{x(s["hero_foot"][1])}</span><span class="rule" aria-hidden="true"></span>
+        <span>{x(s["hero_foot"][2])}</span>
       </div>
     </div>
     <div class="hero-stage" aria-label="KUMIHAN公式ビジュアル">
@@ -236,8 +254,8 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell intro-layout">
     <div><span class="section-number">01 / THE IDEA</span></div>
     <div class="intro-text">
-      <h2 id="concept-title">見た目をそろえるより<br><em>伝わる形を考える</em></h2>
-      <p>{x(c["concept body"])}</p>
+      <h2 id="concept-title">{x(s["concept_h2"][0])}<br><em>{x(s["concept_h2"][1])}</em></h2>
+      <p>{thai_name(s["concept_body"])}</p>
     </div>
   </div>
 </section>
@@ -245,21 +263,30 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell">
     <div class="section-heading">
       <div><div class="section-number">02 / WHAT MATTERS</div>
-        <h2 id="features-title">{DISPLAY["features"]}</h2></div>
-      <p>制作から見直しまで<br>タイ語の文字組みで大切にしたいこと</p>
+        <h2 id="features-title">{x(s["features_h2"])}</h2></div>
+      <p>{thai_name(s["features_deck"])}</p>
     </div>
     <div class="feature-grid">
 """
-    features = [
-        ("01 / BREAKS", "ก", c["feature 1"]),
-        ("02 / SHAPING", "◌", c["feature 2"]),
-        ("03 / FIDELITY", "Aa/ก", c["feature 3"]),
-        ("04 / REVIEW", "◎", c["feature 4"]),
-    ]
-    for index, motif, copy_item in features:
-        label, sep, detail = copy_item.partition(" — ")
+    def split(item: str) -> tuple[str, str]:
+        label, sep, detail = item.partition(" — ")
         if not sep:
             raise ValueError("Expected a Japanese feature title and description")
+        return label, detail
+
+    # Feature 01 is Thai-specific; it also carries the vowel and tone mark
+    # rendering point, since feature 02 is the shared STRUCTURE principle.
+    breaks, breaks_detail = split(c["feature 1"])
+    _, shaping_detail = split(c["feature 2"])
+    shaping_detail = shaping_detail.replace("記号の重なり、欠け、", "母音・声調記号の重なりや欠け、")
+    shared = s["features"]
+    features = [
+        ("01 / BREAKS", "ก", breaks, breaks_detail + shaping_detail),
+        (shared[1]["idx"], shared[1]["mark"], shared[1]["h3"], shared[1]["p"]),
+        (shared[2]["idx"], "Aa/ก", shared[2]["h3"], split(c["feature 3"])[1]),
+        (shared[3]["idx"], shared[3]["mark"], shared[3]["h3"], shared[3]["p"]),
+    ]
+    for index, motif, label, detail in features:
         out += f"""<article class="feature">
   <div class="feature-index">{x(index)}</div>
   <div class="feature-motif" aria-hidden="true">{x(motif)}</div>
@@ -270,8 +297,8 @@ def render(root: Path, copy: dict) -> str:
 <section class="idea-band" aria-labelledby="idea-title">
   <div class="shell idea-layout">
     <div><p class="eyebrow"><span class="line" aria-hidden="true"></span> DESIGNED FOR THE MESSAGE</p>
-      <h2 id="idea-title">文字を並べるだけでなく<br><strong>読む体験を組み立てる</strong></h2>
-      <p>{x(c["idea body"])}</p>
+      <h2 id="idea-title">{x(s["idea_h2"][0])}<br><strong>{x(s["idea_h2"][1])}</strong></h2>
+      <p>{thai_name(s["idea_body"])}</p>
     </div>
     <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span>
       <small>FORM FOLLOWS MEANING</small></div>
@@ -281,8 +308,8 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell">
     <div class="section-heading">
       <div><div class="section-number">03 / THE SKILLS</div>
-        <h2 id="skills-title">4つのスキル ひとつの考え方</h2></div>
-      <p>企画の入口から制作とレビューまで<br>それぞれ単独で導入できます</p>
+        <h2 id="skills-title">{x(s["skills_h2"][0])}<br>{x(s["skills_h2"][1])}</h2></div>
+      <p>{x(s["skills_deck"])}</p>
     </div>
     <div class="skills-grid">
 """
@@ -296,13 +323,15 @@ def render(root: Path, copy: dict) -> str:
         label, sep, text = c[f"skill {i}"].partition(" — ")
         if not sep or label != slug:
             raise ValueError("Unexpected skill name in Japanese copy")
+        if s["skills"][i - 1] is not None:
+            text = s["skills"][i - 1][1]  # shared; only the entry skill is Thai-specific
         url = SOURCE + "/skills/" + slug
         out += f"""<a class="skill-card" href="{x(url)}" target="_blank" rel="noopener noreferrer">
   <div class="card-top"><span class="skill-type">{x(typ)}</span>
     <span class="skill-symbol" aria-hidden="true">{x(motif)}</span></div>
   <div><h3 class="skill-name">{slug}</h3>
     <p class="skill-desc">{x(text)}</p>
-    <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
+    <div class="skill-end"><span>{x(s["skill_view"])}</span><span aria-hidden="true">↗</span></div>
   </div></a>
 """
     out += f"""</div></div></section>
@@ -310,15 +339,15 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell install-layout">
     <div class="install-intro">
       <div class="section-number">04 / GET STARTED</div>
-      <h2 id="install-title">いつものAIツールから<br>はじめよう</h2>
-      <p>{x(c["install lead"])}</p>
+      <h2 id="install-title">{x(s["install_h2"][0])}<br>{x(s["install_h2"][1])}</h2>
+      <p>{x(s["install_body"])}</p>
     </div>
     <div><div class="install-links">
 """
     installations = [
-        ("01", "ChatGPT / Codex", "docs/install-kumihan-th-chatgpt.ja.html", "Skillの追加と独立プラグインの導入"),
-        ("02", "Claude / Claude Code", "docs/install-kumihan-th-claude.ja.html", "Claude Codeプラグインと単独Skillの導入"),
-        ("03", "Gemini", "docs/install-kumihan-th-gemini.ja.html", "Gemini CLI拡張とSkillの利用方法"),
+        ("01", "ChatGPT / Codex", "docs/install-kumihan-th-chatgpt.ja.html", s["install_notes"][0]),
+        ("02", "Claude / Claude Code", "docs/install-kumihan-th-claude.ja.html", s["install_notes"][1]),
+        ("03", "Gemini", "docs/install-kumihan-th-gemini.ja.html", s["install_notes"][2]),
     ]
     for num, name, href, note in installations:
         out += f"""<a class="platform-row" href="{href}">
@@ -336,26 +365,26 @@ def render(root: Path, copy: dict) -> str:
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
     <div>
-      <div class="status-title" id="status-title">KUMIHAN / THAI v0.1.1</div>
+      <div class="status-title" id="status-title">{x(s["status_title"])}</div>
       <p>{x(c["status body"])}</p>
       <p>ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です</p>
     </div>
-    <div class="status-meta">{anchor(RELEASE, "配布物を確認する ↗", extra='target="_blank" rel="noopener noreferrer"')}
+    <div class="status-meta">{anchor(RELEASE, x(s["status_link"]), extra='target="_blank" rel="noopener noreferrer"')}
       <br>OPEN SOURCE · APACHE 2.0</div>
   </div>
 </section>
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="shell cta-layout">
-    <div><h2 id="cta-title">タイ語のデザインに<br>もうひとつの選択肢を</h2>
-      <p>文字の形も読みやすさも大切に<br>ソースコードと配布物をオープンに公開しています</p></div>
-    {anchor(SOURCE, 'GitHubで見る<span class="arrow" aria-hidden="true">↗</span>', "button", 'target="_blank" rel="noopener noreferrer"')}
+    <div><h2 id="cta-title">{x(s["cta_h2"][0])}<br>{x(s["cta_h2"][1])}</h2>
+      <p>{thai_name(s["cta_body"])}</p></div>
+    {anchor(SOURCE, x(s["cta_button"]) + '<span class="arrow" aria-hidden="true">↗</span>', "button", 'target="_blank" rel="noopener noreferrer"')}
   </div>
 </section>
 </main>
 <footer class="footer">
   <div class="shell footer-layout">
     <div><div class="footer-mark">KUMIHAN｜ดุลอักษร</div>
-      <div class="footer-sub">Thai typography skills for AI-assisted design<br>
+      <div class="footer-sub">{x(s["footer_sub"])}<br>
         Developed by L&amp;Co. LLC</div></div>
     <div class="footer-links">
       {anchor("index.html", "KUMIHAN トップ")}
@@ -377,6 +406,9 @@ def render(root: Path, copy: dict) -> str:
     for phrase in DISPLAY.values():
         if any(mark in phrase for mark in "、。！？"):
             raise ValueError("Display headline contains prohibited Japanese punctuation")
+    for heading in re.findall(r"<h([123])\b[^>]*>(.*?)</h\1>", out, re.S):
+        if any(mark in re.sub("<[^>]*>", "", heading[1]) for mark in "、。"):
+            raise ValueError("Heading contains Japanese comma or period")
     if any(section not in out for section in (
         'id="hero-title"', 'id="concept-title"', 'id="features-title"',
         'id="skills-title"', 'id="install-title"', 'id="status-title"', 'id="cta-title"',
