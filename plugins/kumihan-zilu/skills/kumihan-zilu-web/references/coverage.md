@@ -6,4 +6,3 @@ Do not promote drafts, organization styles or product policies into universal ma
 
 36个目录项分别记录 implemented、advisory-only、deferred。implemented表示指令工作流或有界静态能力；所有排版和导出仍要求目标环境证据。研究受入44项的执行状态见产品 TEST_REPORT.md 和 tests/zilu/acceptance-results.json，不把研究的未执行状态作为成功。
 The catalog is not an automatic validator. Acceptance status and narrower preservation subchecks are reported separately.
-

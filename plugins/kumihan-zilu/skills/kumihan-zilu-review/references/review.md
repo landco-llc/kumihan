@@ -12,4 +12,3 @@ Advertising language requires contextual legal/editorial review, never an automa
 
 helper 只提供完整文本字节比较与两种上下文候选；它不覆盖全部36规则、不计算行框、不检测全部字素、不证明WCAG/GB符合性。
 The helper compares complete UTF-8 text and flags two contextual patterns only. It does not certify all 36 rules, grapheme segmentation, line boxes or accessibility.
-

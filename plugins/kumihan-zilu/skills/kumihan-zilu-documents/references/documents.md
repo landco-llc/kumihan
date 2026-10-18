@@ -9,4 +9,3 @@ Inspect each exported format in its target renderer. Availability, embedding and
 
 纵排、拼音、ruby 在 v0.1.0 为 deferred/unsupported；不自动生成或改写人名读音、不用逐字换行模拟纵排。
 Vertical composition and ruby are deferred. Keep supplied readings; state unsupported environments rather than substituting an unverified layout.
-

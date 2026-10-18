@@ -12,4 +12,3 @@ Read the catalog, public sources and selected profile. Implemented workflow guid
 
 如要比较内容，使用 `python scripts/checks.py original.txt --candidate candidate.txt`。可选 helper 只读、离线、仅输出 JSON；不写文件。字节比较保留换行、BOM、Unicode与数字。退出码 1 表示差异。没有 candidate 时不报告原稿保全通过。
 Optional offline helper returns JSON to stdout. Exact UTF-8 comparison detects changes, including line endings. It does not inspect glyphs or edit files.
-
