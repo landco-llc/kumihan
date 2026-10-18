@@ -1,5 +1,5 @@
 ---
-layout: geuljjaim
+layout: geuljjaim-index
 lang: en
 locale_key: en
 title: Give Korean typography room to breathe
@@ -13,6 +13,85 @@ ko_path: /kumihan-ko.html
 en_path: /kumihan-ko.en.html
 ja_path: /kumihan-ko.ja.html
 ---
-<section class="hero reveal"><div><p class="eyebrow" lang="en">KOREAN TYPOGRAPHY × OPEN SOURCE</p><h1>Give Korean typography room to breathe</h1><p class="lead">KUMIHAN｜글짜임 is an open-source collection of guidance skills for creating and reviewing Korean-language web pages, documents, and interfaces. It helps examine line breaks, spacing and information hierarchy while preserving your source text.</p><div class="actions"><a href="#install" class="button primary">Installation guides</a><a href="https://github.com/landco-llc/kumihan" class="button">View on GitHub</a></div></div><figure class="hero-mark"><img src="{{ '/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png' | relative_url }}" width="1254" height="1254" alt="KUMIHAN"><figcaption class="mark-caption"><span lang="ko-KR">글짜임</span><span>ko-KR / v0.1.0</span></figcaption></figure></section>
-<div class="ribbon"><span>KUMIHAN｜글짜임 v0.1.0</span><span>4 SKILLS / 6 MEDIA PROFILES</span><span>Apache-2.0</span></div>
-<section id="concept" class="section"><div class="section-heading"><p class="eyebrow" lang="en">01 / PRINCIPLES</p><div><h2>Design begins with the content</h2><p>Respect Korean reading rhythm and the meaning of your source. Let the available width, audience and purpose shape the structure.</p></div></div><div class="principles"><article><span class="number">01</span><h3>Line breaks with context</h3><p>Distinguish eojeol, syllables and grapheme clusters. Compare normal and keep-all at real widths before adding forced breaks.</p></article><article><span class="number">02</span><h3>Preserve the source</h3><p>Keep names, prices, quantities, origin, legal statements and Unicode unchanged without permission. Check facts before decoration.</p></article><article><span class="number">03</span><h3>Structure for the task</h3><p>Separate the needs of web, UI and documents, and respect brand voice. No fixed font palette or mandatory visual template.</p></article></div></section><section id="example" class="section"><div class="section-heading"><p class="eyebrow" lang="en">02 / IN CONTEXT</p><h2>Small details need context</h2></div><div class="example"><blockquote lang="ko-KR">3개 / 3 개<p>결제 대기 중</p></blockquote><p class="annotation">Neither 3개 nor 3 개 is automatically an error. Consider spelling guidance, brand practice and context. A pending payment must never become a completed payment in the copy.</p></div></section><section id="skills" class="section"><div class="section-heading"><p class="eyebrow" lang="en">03 / SKILLS</p><h2>Four skills chosen for your task</h2></div><article class="skill-row"><span class="number">01</span><div><h3>Scope and route the work</h3><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim" class="skill-name">kumihan-geuljjaim</a></div><p>Choose study, build, audit or refine, a medium and protected content.</p></article><article class="skill-row"><span class="number">02</span><div><h3>Web pages and interfaces</h3><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-web" class="skill-name">kumihan-geuljjaim-web</a></div><p>Review width, mixed text, hierarchy and CTA behavior in the actual browser.</p></article><article class="skill-row"><span class="number">03</span><div><h3>Documents and presentations</h3><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-documents" class="skill-name">kumihan-geuljjaim-documents</a></div><p>Guidance for reports, slides and display copy. Native Office/PDF testing is separate.</p></article><article class="skill-row"><span class="number">04</span><div><h3>Review without changing the source</h3><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-review" class="skill-name">kumihan-geuljjaim-review</a></div><p>Return findings and evidence in read-only mode. No automatic file edits.</p></article></section><section id="install" class="section"><div class="section-heading"><p class="eyebrow" lang="en">04 / INSTALLATION</p><div><h2>Start with the tool you use</h2><p>The Korean product is separate from Japanese KUMIHAN and 字衡. Neither is required to use these skills.</p></div></div><article class="install-row"><h3 lang="en">ChatGPT / Codex</h3><p>ChatGPT/Codex plugin and four standalone Skills.</p><a href="{{ '/docs/install-ko-chatgpt.en.html' | relative_url }}" class="button">Installation guide ↗</a></article><article class="install-row"><h3 lang="en">Claude / Claude Code</h3><p>Dedicated Claude Code plugin and four standalone Claude Skills.</p><a href="{{ '/docs/install-ko-claude.en.html' | relative_url }}" class="button">Installation guide ↗</a></article><article class="install-row"><h3 lang="en">Gemini</h3><p>Gemini CLI extension and four standalone Skills. Consumer app upload is unverified.</p><a href="{{ '/docs/install-ko-gemini.en.html' | relative_url }}" class="button">Installation guide ↗</a></article></section><section id="release" class="section release-block"><div><p class="eyebrow" lang="en">05 / v0.1.0</p><h2>Open guidance and clear boundaries</h2><p>v0.1.0 includes 36 rule candidates and six media profiles. Four limited static candidate detectors return warnings only; they do not provide automatic correction or complete language validation.</p><div class="actions"><a href="{{ '/plugins/kumihan-geuljjaim/downloads/plugins/kumihan-geuljjaim-plugin-v0.1.0.zip' | relative_url }}" class="button primary">Plugin ZIP</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/downloads" class="button">GitHub Downloads ↗</a></div></div><div><ul><li>Horizontal Web guidance comes first. Visual conclusions need actual rendering.</li><li>Native Korean editing, vertical text, Office/PDF and native installation remain unverified.</li><li>No public marketplace listing. Use the GitHub packages and these guides.</li></ul><p><a href="{{ '/plugins/kumihan-geuljjaim/downloads/SHA256SUMS.txt' | relative_url }}">Checksums</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim">Source and usage</a></p></div></section>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-layout"><div class="hero-copy">
+    <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / KOREAN TYPOGRAPHY</p>
+    <h1 id="hero-title">Give Korean typography <span class="accent">room to breathe</span></h1>
+    <p class="hero-desc">KUMIHAN｜글짜임 is an independent open-source set of skills for creating and reviewing Korean websites, documents and presentations. It considers eojeol, syllables, line breaks, spacing and information hierarchy while keeping the original content intact.</p>
+    <div class="hero-cta">
+      <a class="button button-primary" href="#install">Get started<span class="arrow" aria-hidden="true">↗</span></a>
+      <a class="button" href="#concept">Learn about Geuljjaim<span class="arrow" aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-foot"><span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span><span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span><span>ko-KR</span></div>
+  </div>
+  <div class="hero-stage" aria-label="KUMIHAN｜글짜임 identity">
+    <div class="logo-card"><img src="{{ '/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png' | relative_url }}" width="1254" height="1254" alt="Official KUMIHAN logo" fetchpriority="high"></div>
+    <div class="stage-label">WORDS · SPACE · PURPOSE / ko-KR</div>
+  </div></div>
+</section>
+<section class="intro-strip" id="concept" aria-labelledby="concept-title">
+ <div class="shell intro-layout"><div><span class="section-number">01 / THE IDEA</span></div>
+ <div class="intro-text"><h2 id="concept-title">Not the same template for every page <em>Let Korean content lead</em></h2><p>Korean typography should respond to the reader, the width of the page and the voice of the brand. Even forms such as 3개 and 3 개 require contextual consideration rather than a blanket rule.</p></div></div>
+</section>
+<section class="features" id="features" aria-labelledby="features-title">
+ <div class="shell"><div class="section-heading"><div><div class="section-number">02 / WHAT MATTERS</div><h2 id="features-title">Four principles for thoughtful design</h2></div><p>Practical priorities for both production and review</p></div>
+ <div class="feature-grid">
+      <article class="feature"><div class="feature-index">01 / TYPE</div><div class="feature-motif" aria-hidden="true">가</div><h3>Korean typography</h3><p>Distinguish eojeol, syllables and grapheme clusters. Compare normal and keep-all against actual line widths.</p></article>
+      <article class="feature"><div class="feature-index">02 / STRUCTURE</div><div class="feature-motif" aria-hidden="true">▮▮▯</div><h3>Purposeful structure</h3><p>Set priorities for information and action, then shape spacing and layout around them.</p></article>
+      <article class="feature"><div class="feature-index">03 / FIDELITY</div><div class="feature-motif" aria-hidden="true">Aa/글</div><h3>Source integrity</h3><p>Preserve names, prices, quantities, origin, Unicode and actual payment states.</p></article>
+      <article class="feature"><div class="feature-index">04 / REVIEW</div><div class="feature-motif" aria-hidden="true">◎</div><h3>Read-only review</h3><p>Identify issues without editing the files, and distinguish evidence from what remains untested.</p></article></div></div>
+</section>
+<section class="idea-band" aria-labelledby="idea-title">
+ <div class="shell idea-layout"><div><p class="eyebrow"><span class="line" aria-hidden="true"></span> DESIGNED FOR THE MESSAGE</p>
+ <h2 id="idea-title">Beyond placing letters <strong>Design the reading experience</strong></h2><p>KUMIHAN｜글짜임 does not impose a fixed font or template. It protects what words mean, too: a payment that is pending must not become a completed payment in the copy.</p></div>
+ <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><small>FORM FOLLOWS MEANING</small></div></div>
+</section>
+<section class="skills-section" id="skills" aria-labelledby="skills-title">
+ <div class="shell"><div class="section-heading"><div><div class="section-number">03 / THE SKILLS</div><h2 id="skills-title">Four skills one approach</h2></div><p>From scoping a task to web, document and read-only review work</p></div>
+ <div class="skills-grid">
+      <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim" target="_blank" rel="noopener noreferrer">
+        <div class="card-top"><span class="skill-type">01 / ENTRY</span><span class="skill-symbol" aria-hidden="true">글</span></div>
+        <div><h3 class="skill-name">kumihan-geuljjaim</h3><p class="skill-desc">Define the purpose, medium, mode and protected content before starting.</p>
+        <div class="skill-end"><span>Explore skill</span><span aria-hidden="true">↗</span></div></div>
+      </a>
+      <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-web" target="_blank" rel="noopener noreferrer">
+        <div class="card-top"><span class="skill-type">02 / WEB</span><span class="skill-symbol" aria-hidden="true">↗</span></div>
+        <div><h3 class="skill-name">kumihan-geuljjaim-web</h3><p class="skill-desc">Review Korean line breaks, typography and hierarchy for websites, landing pages and interfaces.</p>
+        <div class="skill-end"><span>Explore skill</span><span aria-hidden="true">↗</span></div></div>
+      </a>
+      <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-documents" target="_blank" rel="noopener noreferrer">
+        <div class="card-top"><span class="skill-type">03 / DOCUMENTS</span><span class="skill-symbol" aria-hidden="true">文</span></div>
+        <div><h3 class="skill-name">kumihan-geuljjaim-documents</h3><p class="skill-desc">Help structure reports and presentations. Native Office and PDF rendering are separate checks.</p>
+        <div class="skill-end"><span>Explore skill</span><span aria-hidden="true">↗</span></div></div>
+      </a>
+      <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim-review" target="_blank" rel="noopener noreferrer">
+        <div class="card-top"><span class="skill-type">04 / REVIEW</span><span class="skill-symbol" aria-hidden="true">◎</span></div>
+        <div><h3 class="skill-name">kumihan-geuljjaim-review</h3><p class="skill-desc">Return findings and evidence in read-only mode, without altering the source.</p>
+        <div class="skill-end"><span>Explore skill</span><span aria-hidden="true">↗</span></div></div>
+      </a></div></div>
+</section>
+<section class="install-section" id="install" aria-labelledby="install-title">
+ <div class="shell install-layout"><div class="install-intro">
+ <div class="section-number">04 / GET STARTED</div><h2 id="install-title">Start with your AI tools</h2><p>Installation differs by host. Choose the bundle or individual Skills that fit your environment. Japanese KUMIHAN and ZiHeng are not prerequisites.</p>
+ </div><div><div class="install-links">
+      <a class="platform-row" href="{{ '/docs/install-ko-chatgpt.en.html' | relative_url }}"><span class="platform-index">01</span>
+        <div class="platform-info"><div class="platform-name">ChatGPT / Codex</div><div class="platform-note">ChatGPT/Codex plugin and four standalone Skills</div></div>
+        <span class="platform-arrow" aria-hidden="true">↗</span></a>
+      <a class="platform-row" href="{{ '/docs/install-ko-claude.en.html' | relative_url }}"><span class="platform-index">02</span>
+        <div class="platform-info"><div class="platform-name">Claude / Claude Code</div><div class="platform-note">Dedicated Claude Code plugin and four standalone Skills</div></div>
+        <span class="platform-arrow" aria-hidden="true">↗</span></a>
+      <a class="platform-row" href="{{ '/docs/install-ko-gemini.en.html' | relative_url }}"><span class="platform-index">03</span>
+        <div class="platform-info"><div class="platform-name">Gemini</div><div class="platform-note">Gemini CLI extension and four standalone Skills</div></div>
+        <span class="platform-arrow" aria-hidden="true">↗</span></a></div>
+ <div class="install-extra">After downloading, verify the archive against its SHA-256 checksum · <a href="{{ '/plugins/kumihan-geuljjaim/downloads/SHA256SUMS.txt' | relative_url }}">SHA256SUMS.txt</a></div>
+ </div></div>
+</section>
+<section class="status-section" aria-labelledby="status-title">
+ <div class="shell status-box"><div><div class="status-title" id="status-title">RELEASED / v0.1.0</div>
+ <p>Korean v0.1.0 is available as a GitHub Release. There are 15 ZIP archives across three host families—one bundle and four standalone Skills each. Native model invocation and automatic correction have not been verified.</p></div>
+ <div class="status-meta"><a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0" target="_blank" rel="noopener noreferrer">Get the release ↗</a><div>OPEN SOURCE · APACHE 2.0</div></div></div>
+</section>
+<section class="cta-section" aria-labelledby="cta-title">
+ <div class="shell cta-layout"><div><h2 id="cta-title">Another way to work with Korean</h2><p>The open-source code, four skills, release files and license are available on GitHub.</p></div>
+ <a class="button" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim" target="_blank" rel="noopener noreferrer">View on GitHub<span class="arrow" aria-hidden="true">↗</span></a></div>
+</section>
