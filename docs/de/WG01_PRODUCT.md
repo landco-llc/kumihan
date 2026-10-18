@@ -28,7 +28,7 @@ Execution order: W00 → W01 → W02 → W03。W03完了後は自律的にWG02�
 ## W02 — 四つの自己完結 Skills
 
 - skills/kumihan-satzbild/SKILL.md — 入口。文脈/権限/locale/媒体/保護原文を設定。
-- skills/kumihan-satzbild-web/SKILL.md — Web・LP・UIのリフロー、長語、ハイフネーション、アクセシビリティ。32?等の固定文字数は定めない。
+- skills/kumihan-satzbild-web/SKILL.md — Web・LP・UIのリフロー、長語、ハイフネーション、アクセシビリティ。固定文字数を全媒体へ強制しない。
 - skills/kumihan-satzbild-documents/SKILL.md — Word/PDF/スライド、ページ・表の見切れ、文字保持。
 - skills/kumihan-satzbild-review/SKILL.md — 変更しないレビュー。static/render/editorialと根拠・未検査の区別。
 
