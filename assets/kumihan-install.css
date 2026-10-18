@@ -175,6 +175,8 @@
     .breadcrumb > * { min-width: 0; overflow-wrap: anywhere; }
     .guide-head span { min-width: 0; overflow-wrap: anywhere; }
     .header-inner > *, .hero-grid > * { min-width: 0; }
+    .header-nav { flex-wrap: wrap; row-gap: 6px; min-width: 0; }
+    .header-nav a { overflow-wrap: anywhere; }
     .guide-pane > section { scroll-margin-top: 26px; }
     .guide-pane > section > h2:first-child, .guide-pane > section:first-child > .section-kicker + h2 { margin-top: 15px; }
     .guide-pane > section + section > h2:first-child { margin-top: 58px; }
