@@ -43,7 +43,8 @@ jobs:
               raise SystemExit('Requires empty draft; refuse to overwrite immutable assets')
           PY
           gh release upload kumihan-grafia-v0.1.0 plugins/kumihan-grafia/downloads/*.zip plugins/kumihan-grafia/downloads/MANIFEST.json plugins/kumihan-grafia/downloads/SHA256SUMS.txt
-          gh api repos/landco-llc/kumihan/releases/tags/kumihan-grafia-v0.1.0 > /tmp/grafia-assets.json
+          # The by-tag endpoint omits drafts; use the authenticated release list.
+          gh api --paginate repos/landco-llc/kumihan/releases --jq '.[] | select(.tag_name == "kumihan-grafia-v0.1.0")' > /tmp/grafia-assets.json
           python - <<'PY'
           import hashlib,json
           from pathlib import Path
