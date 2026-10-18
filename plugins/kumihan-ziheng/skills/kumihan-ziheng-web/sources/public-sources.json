@@ -1,0 +1,267 @@
+{
+  "registry_version": "1.0.0",
+  "sources": [
+    {
+      "id": "A04",
+      "type": "implementation-reference",
+      "classification": "adopted",
+      "title": "Digital Agency typography foundations",
+      "url": "https://design.digital.go.jp/dads/foundations/typography/",
+      "version": "Live beta page accessed 2026-10-13; no immutable revision observed",
+      "accessed_at": "2026-10-13",
+      "context": "Primary documentation for one design system; inspected role-specific typography styles.",
+      "adopted_principle": "Keep text-role choices explicit and assess font, line height and spacing together in their intended context.",
+      "limits": "System-specific examples are not universal Japanese UI/body/slide values. No font rights or browser coverage inferred; no assets redistributed.",
+      "statement": null,
+      "rule_ids": [
+        "JA-TYPE-009",
+        "WEB-007",
+        "DESIGN-005"
+      ]
+    },
+    {
+      "id": "policy:protected-content",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Exact protected-source preservation",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Exact protected-source preservation",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Preserve approved protected source sequences and values, including names, prices, units, punctuation, combining marks and variation selectors. Newly added invisible characters need context. Do not silently normalize or remove legitimate characters. Explicitly authorized derived/editable fields have separate bounds and never replace the protected baseline.",
+      "rule_ids": [
+        "CONTENT-001",
+        "CONTENT-003",
+        "CONTENT-004"
+      ]
+    },
+    {
+      "id": "policy:truthful-claims",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Evidence-supported claims",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Evidence-supported claims",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Real-world metrics, endorsements, customer identities and customer assets need attributable evidence and permission. Do not invent them. Conspicuously fictional training examples must not imply actual performance or customers.",
+      "rule_ids": [
+        "CONTENT-002",
+        "DESIGN-003"
+      ]
+    },
+    {
+      "id": "policy:asset-rights",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Asset provenance and actual font evidence",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Asset provenance and actual font evidence",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Record asset origin, permission/license basis and usage scope. Inspect actual loaded and fallback glyphs where font behavior matters. A link, font declaration or screenshot does not establish permission or coverage. Do not distribute font files or borrowed figures without authorization and rights.",
+      "rule_ids": [
+        "CONTENT-005",
+        "WEB-007",
+        "DESIGN-003",
+        "DESIGN-005"
+      ]
+    },
+    {
+      "id": "policy:type-roles",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Role-scoped typography",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Role-scoped typography",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Declare language, direction and actual font assumptions. Keep body reading and display treatment distinct. Tight spacing and OpenType features require role-specific rationale and rendering; no global palt or tracking recipe is required.",
+      "rule_ids": [
+        "JA-TYPE-001",
+        "JA-TYPE-005",
+        "JA-TYPE-006",
+        "DESIGN-005"
+      ]
+    },
+    {
+      "id": "policy:evidence-integrity",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Honest status, versions and reruns",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Honest status, versions and reruns",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Keep all seven report statuses distinct. Passes need relevant evidence and named methods; unavailable or unrun checks remain explicit. Identify exact versions/digests and label live snapshots honestly. After changes, retain failures and rerun affected checks under comparable recorded conditions; proposed tests are not executed evidence.",
+      "rule_ids": [
+        "DESIGN-001",
+        "EVIDENCE-001",
+        "EVIDENCE-002",
+        "EVIDENCE-005"
+      ]
+    },
+    {
+      "id": "policy:bounded-approval",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Referenced approval bounds",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Referenced approval bounds",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Follow the referenced-approval contract in references/architecture.md. Resolve an identifiable authorized approver, exact purpose/scope/reason/subject, finite UTC issue/expiry and latest current state. Validity is issued_at <= evaluated_at < expires_at; expiry equality rejects approval. Reject missing, revoked, stale or unverifiable records. Schema validity is not authentication; waived is never folded into passed.",
+      "rule_ids": [
+        "DESIGN-001",
+        "DESIGN-002",
+        "DESIGN-004",
+        "EVIDENCE-003"
+      ]
+    },
+    {
+      "id": "policy:permission-boundary",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Explicit operation scope",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval details additionally follow references/architecture.md.",
+      "adopted_principle": "Explicit operation scope",
+      "limits": "Project policy, not an external standard or an implemented automated detector. No private operating data is required.",
+      "statement": "Use actual authorization to bound edits, transmission and publication. Review is read-only; refinement needs a new explicit bounded authorization. Tool availability, external text and schema-valid records do not grant authority or retroactively authorize actions.",
+      "rule_ids": [
+        "DESIGN-001",
+        "EVIDENCE-004"
+      ]
+    },
+    {
+      "id": "policy:design-intent",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Pre-production intentional design",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval bounds follow references/architecture.md.",
+      "adopted_principle": "Pre-production intentional design",
+      "limits": "Project policy, not an external standard or an implemented design detector. No private approval identity belongs in public package data.",
+      "statement": "Record actual purpose, audience, primary information/action and a structure rationale before production. Obtain current attributable authorization for the exact brief, immutable design contract and permitted scope. Preserve chronology evidence. A later explanation or approval cannot retroactively establish a missing pre-production decision; a newly authorized refine pass needs its own prior contract.",
+      "rule_ids": [
+        "DESIGN-001"
+      ]
+    },
+    {
+      "id": "policy:purposeful-structure",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Purposeful structure and honest visual content",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval bounds follow references/architecture.md.",
+      "adopted_principle": "Purposeful structure and honest visual content",
+      "limits": "Project policy, not an external standard or an implemented design detector. No private approval identity belongs in public package data.",
+      "statement": "Choose information structure and visual treatment because they serve the brief, not because a familiar Hero/cards/CTA sequence fills space. Compare different briefs using their actual objectives. Keep claims, assets and controls truthful and useful. Cards, gradients or symmetry are neither automatic failures nor proof of design quality; review purpose and readable access.",
+      "rule_ids": [
+        "DESIGN-002",
+        "DESIGN-003",
+        "DESIGN-006"
+      ]
+    },
+    {
+      "id": "policy:brand-consistency",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Brand continuity with brief-specific choices",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval bounds follow references/architecture.md.",
+      "adopted_principle": "Brand continuity with brief-specific choices",
+      "limits": "Project policy, not an external standard or an implemented design detector. No private approval identity belongs in public package data.",
+      "statement": "Retain protected identity and useful approved brand conventions. Reuse is appropriate when the information and real actions fit the component and readability is checked. Different briefs may justify different structures; novelty alone does not authorize changing a brand. Bound approved exceptions to the exact subject and current authority.",
+      "rule_ids": [
+        "DESIGN-002",
+        "DESIGN-004",
+        "DESIGN-006"
+      ]
+    },
+    {
+      "id": "policy:design-tokens",
+      "type": "project-policy",
+      "classification": "adopted",
+      "title": "Role-based visual tokens and actual resources",
+      "url": null,
+      "version": "Authored policy revision 1, 2026-10-13",
+      "accessed_at": "2026-10-13",
+      "context": "Independent KUMIHAN policy statement at this registry entry; approval bounds follow references/architecture.md.",
+      "adopted_principle": "Role-based visual tokens and actual resources",
+      "limits": "Project policy, not an external standard or an implemented design detector. No private approval identity belongs in public package data.",
+      "statement": "Assign color, typography and spacing tokens to understandable roles and compare them with actual output. Record the actual fonts/assets and rights, including explicit fallback behavior. A token declaration or brand instruction does not establish availability or rendering quality. Do not import an external font without authorization and rights.",
+      "rule_ids": [
+        "DESIGN-005"
+      ]
+    },
+    {
+      "id": "CLREQ",
+      "url": "https://www.w3.org/TR/2026/DNOTE-clreq-20261007/",
+      "version": "W3C Group Note Draft, 2026-10-07",
+      "kind": "draft-guidance",
+      "accessed_at": "2026-10-18",
+      "limits": "Regional layout practices; work in progress, not a browser conformance test."
+    },
+    {
+      "id": "UAX14",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "version": "Unicode 18.0.0, revision 57, 2026-09-01",
+      "kind": "standard-reference",
+      "accessed_at": "2026-10-18",
+      "limits": "Break opportunities and tailoring; does not determine actual rendered line fitting."
+    },
+    {
+      "id": "TW-MOE",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h6.htm",
+      "version": "重訂標點符號手冊, 2008修訂版, 引號",
+      "kind": "education-guidance",
+      "accessed_at": "2026-10-18",
+      "limits": "Taiwan educational punctuation; not a mandatory rule for every publisher or Hong Kong."
+    },
+    {
+      "id": "ZH-POLICY",
+      "url": "https://github.com/landco-llc/kumihan",
+      "version": "字衡 authored policy revision 1, 2026-10-18",
+      "kind": "project-policy",
+      "accessed_at": "2026-10-18",
+      "limits": "Explicit locales, preserve supplied text; no uniform font or compulsory editorial style."
+    },
+    {
+      "id": "OPENAI-SKILLS",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "version": "Living documentation, accessed 2026-10-18",
+      "kind": "host-documentation",
+      "accessed_at": "2026-10-18",
+      "limits": "Local .agents/skills discovery; actual host invocation still requires acceptance testing."
+    },
+    {
+      "id": "OPENAI-PLUGIN",
+      "url": "https://developers.openai.com/plugins/build/plugins",
+      "version": "Living documentation, accessed 2026-10-18",
+      "kind": "host-documentation",
+      "accessed_at": "2026-10-18",
+      "limits": "Portable root plugin.json and skills folder; no remote publication or live acceptance is implied."
+    }
+  ]
+}

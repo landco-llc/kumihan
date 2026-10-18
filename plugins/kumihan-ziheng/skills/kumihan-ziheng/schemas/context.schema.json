@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://landco-llc.github.io/kumihan/schemas/ziheng-v1/context.schema.json",
+  "type": "object",
+  "required": [
+    "locale",
+    "language",
+    "script",
+    "region",
+    "medium"
+  ],
+  "properties": {
+    "locale": {
+      "enum": [
+        "zh-Hant-TW",
+        "zh-Hant-HK"
+      ]
+    },
+    "language": {
+      "const": "zh"
+    },
+    "script": {
+      "const": "Hant"
+    },
+    "region": {
+      "enum": [
+        "TW",
+        "HK"
+      ]
+    },
+    "medium": {
+      "enum": [
+        "web-editorial",
+        "web-marketing",
+        "web-ui",
+        "report-document",
+        "presentation",
+        "display-copy"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "locale": {
+            "const": "zh-Hant-TW"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "region": {
+            "const": "TW"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "region": {
+            "const": "HK"
+          }
+        }
+      }
+    }
+  ]
+}

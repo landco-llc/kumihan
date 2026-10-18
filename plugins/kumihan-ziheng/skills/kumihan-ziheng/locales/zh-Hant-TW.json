@@ -1,0 +1,29 @@
+{
+  "locale": "zh-Hant-TW",
+  "language": "zh",
+  "script": "Hant",
+  "region": "TW",
+  "revision": 1,
+  "quotation": {
+    "default": "corner",
+    "status": "project-recommendation",
+    "choices": [
+      "corner",
+      "curly",
+      "preserve"
+    ],
+    "guidance": "保留原稿；新寫正文才套用選定體例。香港須先確認出版機構或文件的編輯要求。"
+  },
+  "punctuation_squeezing": {
+    "default": null,
+    "tendency": "often retained fullwidth",
+    "status": "needs-review",
+    "guidance": "地區慣例不等於必須設定；以作品需求及實際字型／瀏覽器驗證。"
+  },
+  "glyph_policy": "Preserve supplied code points; inspect regional glyph selection under actual lang/font conditions.",
+  "source_refs": [
+    "CLREQ",
+    "ZH-POLICY",
+    "TW-MOE"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "registry_version": "1.0.0",
+  "sources": [
+    {
+      "id": "CLREQ",
+      "url": "https://www.w3.org/TR/2026/DNOTE-clreq-20261007/",
+      "version": "W3C Group Note Draft, 2026-10-07",
+      "kind": "draft-guidance",
+      "accessed_at": "2026-10-18",
+      "limits": "Regional layout practices; work in progress, not a browser conformance test."
+    },
+    {
+      "id": "UAX14",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "version": "Unicode 18.0.0, revision 57, 2026-09-01",
+      "kind": "standard-reference",
+      "accessed_at": "2026-10-18",
+      "limits": "Break opportunities and tailoring; does not determine actual rendered line fitting."
+    },
+    {
+      "id": "TW-MOE",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h6.htm",
+      "version": "重訂標點符號手冊, 2008修訂版, 引號",
+      "kind": "education-guidance",
+      "accessed_at": "2026-10-18",
+      "limits": "Taiwan educational punctuation; not a mandatory rule for every publisher or Hong Kong."
+    },
+    {
+      "id": "ZH-POLICY",
+      "url": "https://github.com/landco-llc/kumihan",
+      "version": "字衡 authored policy revision 1, 2026-10-18",
+      "kind": "project-policy",
+      "accessed_at": "2026-10-18",
+      "limits": "Explicit locales, preserve supplied text; no uniform font or compulsory editorial style."
+    },
+    {
+      "id": "OPENAI-SKILLS",
+      "url": "https://learn.chatgpt.com/docs/build-skills",
+      "version": "Living documentation, accessed 2026-10-18",
+      "kind": "host-documentation",
+      "accessed_at": "2026-10-18",
+      "limits": "Local .agents/skills discovery; actual host invocation still requires acceptance testing."
+    },
+    {
+      "id": "OPENAI-PLUGIN",
+      "url": "https://developers.openai.com/plugins/build/plugins",
+      "version": "Living documentation, accessed 2026-10-18",
+      "kind": "host-documentation",
+      "accessed_at": "2026-10-18",
+      "limits": "Portable root plugin.json and skills folder; no remote publication or live acceptance is implied."
+    }
+  ]
+}

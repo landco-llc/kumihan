@@ -1,0 +1,803 @@
+[
+  {
+    "id": "ZH-HANT-001",
+    "revision": 1,
+    "title_zh_hant": "明示語言、字體系統與地區",
+    "requirement_en": "Resolve only explicit zh-Hant-TW or zh-Hant-HK plus a supported medium; never infer region from Han characters.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY",
+      "CLREQ"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1",
+      "CLREQ": "1.2"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Selection only; tools/locale_resolver.py rejects unknown contexts."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-002",
+    "revision": 1,
+    "title_zh_hant": "保留地區字形與異體字",
+    "requirement_en": "Keep supplied character identities and variation sequences. Inspect glyphs with the actual regional language tag and available licensed font; do not replace 臺/台 or 裏/裡 automatically.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "4.1; 3.1",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Glyph appearance is separate from source identity; no glyph detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-003",
+    "revision": 1,
+    "title_zh_hant": "臺灣引號體例",
+    "requirement_en": "For newly authored Taiwan prose, recommend 「」 outside and 『』 inside when no house style is specified. Original quotes, proper names and agreed alternate styles stay unchanged.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW"
+    ],
+    "source_refs": [
+      "TW-MOE",
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "TW-MOE": "引號",
+      "CLREQ": "5.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "runtime/checks.py flags curly quotes only in explicitly classified prose under corner style; no nesting or completeness detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-004",
+    "revision": 1,
+    "title_zh_hant": "香港引號體例另行確認",
+    "requirement_en": "For Hong Kong, record the publisher or document-specific quote style. Do not import Taiwan educational conventions as a universal Hong Kong rule; preserve original corner or curly quotation until a style is chosen.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.1 regional note; 5.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Checker emits a quote candidate only when caller explicitly chooses corner; no default Hong Kong style and no compliance claim."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-005",
+    "revision": 1,
+    "title_zh_hant": "區分中文正文與受保護片段",
+    "requirement_en": "Consider fullwidth punctuation for newly authored Chinese prose. ASCII marks in names, URLs, code, English quotations and protected spans are not a prose-punctuation fault.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.1",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Only ASCII ,;:!? candidates in a caller-classified prose segment. Not an HTML parser or grammar checker; candidates remain needs-review."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-006",
+    "revision": 1,
+    "title_zh_hant": "實際行首行尾檢視",
+    "requirement_en": "Inspect observed lines for closing punctuation at a line start and opening brackets at a line end using the chosen editorial strictness. DOM punctuation alone is not a rendered violation.",
+    "kind": "standard-reference",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "UAX14"
+    ],
+    "source_sections": {
+      "CLREQ": "6.1.1–6.1.2",
+      "UAX14": "1; 6; 8"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "No line-layout engine. Strictness varies by publication; source scanning cannot pass line-edge quality."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-007",
+    "revision": 1,
+    "title_zh_hant": "標點壓縮不是必要條件",
+    "requirement_en": "Taiwan publications often retain full punctuation width; Hong Kong publications often use squeezing. Choose and record the project treatment, inspect available shaping support, and keep exceptions; neither region mandates a universal setting.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "6.3.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Do not implement squeezing by replacing characters or inserting invisible characters."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-008",
+    "revision": 1,
+    "title_zh_hant": "中西文與數字混排",
+    "requirement_en": "Preserve original Latin case, digits, currencies, units and fullwidth forms. Adjust layout only within permission; do not NFKC-normalize to make mixed text fit.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "6.3.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Optical spacing and baseline judgment needs actual fonts; no automatic spacing repair."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-009",
+    "revision": 1,
+    "title_zh_hant": "網址與程式碼的換行",
+    "requirement_en": "Keep URL targets and displayed source bytes. Try scoped overflow-wrap on long tokens and test copy/paste and navigation; avoid global break-all or generic nowrap.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "UAX14",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "UAX14": "1; 6; 8",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "A code or URL exemption is not a pass for rendered overflow."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-010",
+    "revision": 1,
+    "title_zh_hant": "窄螢幕與文字放大",
+    "requirement_en": "Check 320 CSS px reflow and actual 200% text enlargement separately; retain labels, notes and controls. Do not hide lost content with clipping.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Project accessibility check, not an automated WCAG certification. Renderer absent means not-checked."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-011",
+    "revision": 1,
+    "title_zh_hant": "不插入無意義不可見字元",
+    "requirement_en": "Do not add spaces, ZWSP, ZWJ or joiners to force a pleasing line. Preserve meaningful supplied combining marks and emoji/variation sequences.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "UAX14",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "UAX14": "1; 6; 8",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Use exact source/output byte helper where extraction is exact; do not blanket-strip invisibles."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-012",
+    "revision": 1,
+    "title_zh_hant": "直排與標點方向",
+    "requirement_en": "Use writing-mode and actual font/renderer support for vertical composition. Do not replace ordinary punctuation with presentation forms solely to rotate it.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "2.1.2–2.1.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Vertical rendering and compatibility not checked; inspect each output."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-013",
+    "revision": 1,
+    "title_zh_hant": "注音與行間注",
+    "requirement_en": "Keep Bopomofo and ruby text with its base and tone marks. Plan the annotation layout and inspect clipping and reading order.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.5.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Advanced ruby/Bopomofo rendering unsupported by the supplied helper."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-014",
+    "revision": 1,
+    "title_zh_hant": "文件與匯出分開檢驗",
+    "requirement_en": "Check each page/slide for overflow, headings, captions and notes; compare extractable text before/after export and inspect the exported PDF in its actual reader.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "No DOCX/PPTX/PDF renderer or exact extractor is supplied; extraction loss remains not-checked."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-015",
+    "revision": 1,
+    "title_zh_hant": "保護字元序列與原稿",
+    "requirement_en": "Preserve original source sequences, names, quotation, numbers and punctuation without normalization or traditional/simplified conversion.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "runtime/checks.py check_preservation compares supplied bytes only; visual integrity and extraction completeness remain separate."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]

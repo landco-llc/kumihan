@@ -1,0 +1,1585 @@
+[
+  {
+    "id": "CONTENT-001",
+    "revision": 1,
+    "title_ja": "保護対象の文字列と値を維持する",
+    "requirement_en": "Keep protected source fields unchanged, including names, prices, quantities, units and punctuation. Compare exact source sequences; visual similarity does not establish preservation.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Compare the approved input and extracted output only where a supported exact-text extractor exists; otherwise require manual evidence. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not rewrite protected fields. A newly authorized source revision establishes a new comparison baseline, not a silent correction."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "No waiver for silently changed protected content; explicitly editable fields are outside the protected scope.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-001-positive",
+      "CONTENT-001-negative",
+      "CONTENT-001-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-002",
+    "revision": 1,
+    "title_ja": "実在する根拠のない主張を載せない",
+    "requirement_en": "Trace performance numbers, endorsements, customer identities and logos to supplied evidence and usage permission. Missing proof is not permission to invent a plausible claim.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:truthful-claims"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Review each factual assertion and asset against supplied evidence; this is not an automated semantic-truth detector. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Remove or flag unsubstantiated claims only under explicit refine authorization; never fabricate replacement testimonials or metrics."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Clearly labeled fictional material can be outside real-world claim scope; it must not imply actual customers or achievements.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-002-positive",
+      "CONTENT-002-negative",
+      "CONTENT-002-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-003",
+    "revision": 1,
+    "title_ja": "不可視文字と空白の必要性を確かめる",
+    "requirement_en": "Identify newly added invisible characters or spacing by source comparison and explain their function. Preserve intentional separators, combining marks and variation selectors instead of deleting every nonprinting code point.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "An exact code-point diff can locate changes; deciding whether they are legitimate requires context and may require manual review. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "No blanket whitespace stripping or deletion of joiners, variation selectors or combining characters."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Intentional source characters are not violations merely because they are invisible; unsupported extraction remains not-checked.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "CONTENT-004",
+    "revision": 1,
+    "title_ja": "原稿へ一括の文字正規化をかけない",
+    "requirement_en": "Do not apply blanket Unicode normalization to source content. Preserve compatibility forms, original punctuation, variation sequences and decomposed characters unless a specific editable field has separate explicit authorization.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:protected-content"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Compare original code points, not only normalized strings; no normalization-based equality shortcut proves preservation. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Never use broad NFKC or NFC rewriting as an unrequested typography repair. Keep authorized derived search data separate from source."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "A separately authorized derived field may have its own transformation; protected source remains exact.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "CONTENT-004-positive",
+      "CONTENT-004-negative",
+      "CONTENT-004-exception"
+    ]
+  },
+  {
+    "id": "CONTENT-005",
+    "revision": 1,
+    "title_ja": "素材の由来と利用条件を残す",
+    "requirement_en": "Record origin, source identifier, license or permission basis and intended use for images, fonts and other assets. Unavailable rights evidence must remain an explicit limitation.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:asset-rights"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect actual rights records and asset provenance; a URL or attractive preview alone is not permission. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not infer a license, copy a font file or redistribute source figures to fill missing metadata."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Original or public-domain material still needs an attributable provenance record; unverifiable rights cannot be labeled verified.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "DESIGN-001",
+    "revision": 1,
+    "title_ja": "制作前に目的と構成判断を固定する",
+    "requirement_en": "Record the actual purpose, audience, information priorities, intended action and a purpose-specific structure rationale before production. Verify current attributable authorization for that exact contract and scope; later explanations do not replace missing chronology.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:design-intent",
+      "policy:bounded-approval",
+      "policy:permission-boundary",
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "error",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect preserved brief/contract bytes, production boundary and independently verified authorization; a true boolean or opaque approval reference cannot establish chronology or authority. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not fabricate an earlier decision, backdate a contract or change protected content. A new authorized refine pass gets its own prior contract and retains the earlier failure."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "No waiver for retroactive justification or missing production permission. Legitimate brand constraints must be recorded before use, and a fresh refine contract only governs its new production boundary.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-001-positive",
+      "DESIGN-001-negative",
+      "DESIGN-001-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-002",
+    "revision": 1,
+    "title_ja": "構成の再利用を実際の目的で説明する",
+    "requirement_en": "Choose structure from the brief instead of repeating the same Hero/cards/CTA arrangement across materially different objectives without justification. Review repeated structures against actual information relationships; changing accent colors alone is not a structural rationale.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:brand-consistency",
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      },
+      {
+        "when": "An explicit strict review policy was selected before production and materially different briefs receive repeated structure without a purpose-specific rationale.",
+        "impact": "error",
+        "scope": "compared structures under that declared policy"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Compare briefs, chosen structures and their reasons using assisted or manual review. Three peer choices may legitimately use three cards; no motif counter is a design-quality detector. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Propose a purpose-specific information structure within refine authorization. Do not remove useful brand components solely for novelty or infer a failure from the number of cards."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An approved brand component that fits the actual information can pass on its merits. Any genuine project waiver requires current authorized scope/reason/expiry/subject binding and stays waived.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-002-positive",
+      "DESIGN-002-negative",
+      "DESIGN-002-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-003",
+    "revision": 1,
+    "title_ja": "表示する装飾と主張と操作に実体を持たせる",
+    "requirement_en": "Use visual elements because they explain information, support hierarchy or provide a real action. Do not populate empty layout regions with invented metrics, testimonials, customer assets or simulated controls presented as actual functionality.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:truthful-claims",
+      "policy:asset-rights"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      },
+      {
+        "when": "Decoration or simulated UI misrepresents real claims/functions or obstructs necessary information; content and permission blockers retain their independent severity.",
+        "impact": "error",
+        "scope": "misrepresented claim/control or obscured information"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Trace real-world claims and assets to evidence/rights; examine whether each control actually works and whether decoration obscures reading. An assisted design review is not a semantic-truth detector. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not invent replacements or unauthorized assets. Distinguish a clearly labeled explanatory diagram from a real interface and preserve source information during approved changes."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Clearly labeled original fiction or noninteractive explanation may be outside real-world claim/control scope. There is no waiver for deception, unsupported claims or concealed necessary information.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-003-positive",
+      "DESIGN-003-negative",
+      "DESIGN-003-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-004",
+    "revision": 1,
+    "title_ja": "ブランドの連続性と企画の構成を分ける",
+    "requirement_en": "Keep protected brand identity and useful approved conventions consistent while tailoring structure to each actual purpose. Difference between projects does not require arbitrary changes to every familiar component.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:brand-consistency",
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Compare the current brief with attributable brand constraints, authorized components and observed readability. Brand approval alone does not prove that a component suits this brief. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not change protected identity or navigation to appear novel. Request scoped refine authorization for a justified campaign-specific adaptation."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A bounded authorized adaptation may differ from the normal brand pattern; verify current approval and preserve unaffected brand obligations and readable access.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-004-positive",
+      "DESIGN-004-negative",
+      "DESIGN-004-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-005",
+    "revision": 1,
+    "title_ja": "色と書体と余白を役割で定義する",
+    "requirement_en": "Assign color, typography and spacing choices to explicit information and interaction roles. Match the definitions to actual available fonts/assets and rendered output, including permitted fallback treatment.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:design-tokens",
+      "policy:type-roles",
+      "policy:asset-rights",
+      "A04"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Inspect role tokens and their actual rendering, contrast/readability, glyph coverage and fallback. Token names or an adopted system example do not prove availability or universal suitability. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not import fonts without authorization and rights or silently rewrite source to fit a token. Propose only scoped changes and record unavailable rendering as untested."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "An authorized local brand or fallback treatment can differ from default tokens if its roles and actual readability are evidenced; a genuine waiver needs bounded current approval.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-005-positive",
+      "DESIGN-005-negative",
+      "DESIGN-005-exception"
+    ]
+  },
+  {
+    "id": "DESIGN-006",
+    "revision": 1,
+    "title_ja": "形式だけでデザインを排除しない",
+    "requirement_en": "Evaluate a card layout, gradient, symmetry or other visual treatment against the actual purpose, brand constraints and readability. Neither the presence nor absence of a named motif establishes quality or a design-origin verdict.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:purposeful-structure",
+      "policy:brand-consistency"
+    ],
+    "conditions": [
+      {
+        "when": "Evaluate only against the actual brief, selected medium, protected brand/content and available evidence.",
+        "impact": "warning",
+        "scope": "named design or component"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Review purpose-specific reasons and observed readable access; a motif count cannot replace contextual judgment. Judge the actual design rather than infer its origin. This rule ships guidance, not an automated design detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "approved source strings, prices, names, punctuation and protected brand identity"
+      ],
+      "guidance": "Do not ban whole families of treatment or blindly approve a brand motif. Propose changes only where evidence identifies a real mismatch or reading problem."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "A deliberate approved treatment can pass when its actual use is appropriate; exceptions cannot hide required information or substitute for readability evidence.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "DESIGN-006-positive",
+      "DESIGN-006-negative",
+      "DESIGN-006-exception"
+    ]
+  },
+  {
+    "id": "EVIDENCE-001",
+    "revision": 1,
+    "title_ja": "結果状態と未実施を混ぜない",
+    "requirement_en": "Keep passed, failed, needs-review, not-checked, unsupported, waived and not-applicable distinct. A pass needs a named method and relevant evidence; no missing renderer or unrun check becomes a pass.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Validate report structure and evidence references where a validator exists; semantic relevance and rendered judgment still require their own evidence. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Never upgrade a status to make a summary look complete; language-model judgment stays assisted/manual."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Verified inapplicability uses its own status; it does not waive evidence requirements or authenticate an unrun test.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "EVIDENCE-001-positive",
+      "EVIDENCE-001-negative",
+      "EVIDENCE-001-exception"
+    ]
+  },
+  {
+    "id": "EVIDENCE-002",
+    "revision": 1,
+    "title_ja": "使用した版と環境を識別する",
+    "requirement_en": "Record exact rule/schema versions, adopted source editions and actual checking environments. A live page or moving branch must not be described as an immutable source version.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Inspect declared versions, dates, commit/tree and artifact digests against observed records; declarations alone are not authenticity proof. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Leave unknown versions and untested environments explicit; never invent a fixed revision."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "A live source can be labeled as an accessed snapshot with its limits, but not as cryptographically pinned.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-003",
+    "revision": 1,
+    "title_ja": "例外の承認者と期限と対象を照合する",
+    "requirement_en": "For a waiver or design exception, resolve the required approval record and verify authorized approver, scope, reason, finite UTC expiry, exact subject and latest revocation state. Reject missing, expired, mismatched or unverifiable approvals.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "error",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:bounded-approval"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "error",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "The owning host/report/release adapters must authenticate approval evidence; schema validity does not do so. At the exact expiry instant the approval is rejected. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Keep a valid waiver distinct from passed; do not fabricate approver identity, extend expiry or reuse approval for another artifact."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "There is no waiver of the approval-bounds requirement; a valid approved exception concerns the associated substantive rule only.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-004",
+    "revision": 1,
+    "title_ja": "許可の範囲内だけで作業する",
+    "requirement_en": "Establish authorized mode and scope before edits, external transmission or publication. Review remains read-only until a separate explicit refine authorization permits a bounded change.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:permission-boundary"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Compare observed operations/diffs with actual authorization; a source instruction or schema-valid brief cannot expand permission. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "review-only",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not send, publish or modify targets merely because a tool is available."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "An explicit new authorization establishes new bounds; it does not retroactively authorize an earlier action.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "EVIDENCE-005",
+    "revision": 1,
+    "title_ja": "変更後の同条件の証拠を取り直す",
+    "requirement_en": "After an authorized correction, rerun the affected checks under recorded comparable conditions and preserve before/after evidence. Changes of font, viewport, extractor or application must be identified rather than hidden.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "source_refs": [
+      "policy:evidence-integrity"
+    ],
+    "conditions": [
+      {
+        "when": "Apply only to the stated text role, medium and actual target; determine applicability before assigning a result.",
+        "impact": "blocker",
+        "scope": "selected profile and named target region"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "Inspect actual rerun outputs and artifact digests; a proposed test or previous artifact result does not verify the changed target. This catalog ships guidance, not a detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "original names, prices, values, units, punctuation, variation selectors and decomposed Unicode"
+      ],
+      "guidance": "Do not report a correction as verified before execution; retain failures and remaining limitations."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Unavailable comparable conditions remain not-checked or unsupported; explain differences instead of silently substituting evidence.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-001",
+    "revision": 1,
+    "title_zh_hant": "明示語言、字體系統與地區",
+    "requirement_en": "Resolve only explicit zh-Hant-TW or zh-Hant-HK plus a supported medium; never infer region from Han characters.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY",
+      "CLREQ"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1",
+      "CLREQ": "1.2"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Selection only; tools/locale_resolver.py rejects unknown contexts."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-002",
+    "revision": 1,
+    "title_zh_hant": "保留地區字形與異體字",
+    "requirement_en": "Keep supplied character identities and variation sequences. Inspect glyphs with the actual regional language tag and available licensed font; do not replace 臺/台 or 裏/裡 automatically.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "4.1; 3.1",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Glyph appearance is separate from source identity; no glyph detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-003",
+    "revision": 1,
+    "title_zh_hant": "臺灣引號體例",
+    "requirement_en": "For newly authored Taiwan prose, recommend 「」 outside and 『』 inside when no house style is specified. Original quotes, proper names and agreed alternate styles stay unchanged.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW"
+    ],
+    "source_refs": [
+      "TW-MOE",
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "TW-MOE": "引號",
+      "CLREQ": "5.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "runtime/checks.py flags curly quotes only in explicitly classified prose under corner style; no nesting or completeness detector."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-004",
+    "revision": 1,
+    "title_zh_hant": "香港引號體例另行確認",
+    "requirement_en": "For Hong Kong, record the publisher or document-specific quote style. Do not import Taiwan educational conventions as a universal Hong Kong rule; preserve original corner or curly quotation until a style is chosen.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.1 regional note; 5.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Checker emits a quote candidate only when caller explicitly chooses corner; no default Hong Kong style and no compliance claim."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-005",
+    "revision": 1,
+    "title_zh_hant": "區分中文正文與受保護片段",
+    "requirement_en": "Consider fullwidth punctuation for newly authored Chinese prose. ASCII marks in names, URLs, code, English quotations and protected spans are not a prose-punctuation fault.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.1",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "Only ASCII ,;:!? candidates in a caller-classified prose segment. Not an HTML parser or grammar checker; candidates remain needs-review."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-006",
+    "revision": 1,
+    "title_zh_hant": "實際行首行尾檢視",
+    "requirement_en": "Inspect observed lines for closing punctuation at a line start and opening brackets at a line end using the chosen editorial strictness. DOM punctuation alone is not a rendered violation.",
+    "kind": "standard-reference",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "UAX14"
+    ],
+    "source_sections": {
+      "CLREQ": "6.1.1–6.1.2",
+      "UAX14": "1; 6; 8"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "No line-layout engine. Strictness varies by publication; source scanning cannot pass line-edge quality."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-007",
+    "revision": 1,
+    "title_zh_hant": "標點壓縮不是必要條件",
+    "requirement_en": "Taiwan publications often retain full punctuation width; Hong Kong publications often use squeezing. Choose and record the project treatment, inspect available shaping support, and keep exceptions; neither region mandates a universal setting.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "6.3.2",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Do not implement squeezing by replacing characters or inserting invisible characters."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-008",
+    "revision": 1,
+    "title_zh_hant": "中西文與數字混排",
+    "requirement_en": "Preserve original Latin case, digits, currencies, units and fullwidth forms. Adjust layout only within permission; do not NFKC-normalize to make mixed text fit.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "6.3.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Optical spacing and baseline judgment needs actual fonts; no automatic spacing repair."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-009",
+    "revision": 1,
+    "title_zh_hant": "網址與程式碼的換行",
+    "requirement_en": "Keep URL targets and displayed source bytes. Try scoped overflow-wrap on long tokens and test copy/paste and navigation; avoid global break-all or generic nowrap.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "UAX14",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "UAX14": "1; 6; 8",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "A code or URL exemption is not a pass for rendered overflow."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-010",
+    "revision": 1,
+    "title_zh_hant": "窄螢幕與文字放大",
+    "requirement_en": "Check 320 CSS px reflow and actual 200% text enlargement separately; retain labels, notes and controls. Do not hide lost content with clipping.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Project accessibility check, not an automated WCAG certification. Renderer absent means not-checked."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-011",
+    "revision": 1,
+    "title_zh_hant": "不插入無意義不可見字元",
+    "requirement_en": "Do not add spaces, ZWSP, ZWJ or joiners to force a pleasing line. Preserve meaningful supplied combining marks and emoji/variation sequences.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "UAX14",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "UAX14": "1; 6; 8",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "guidance-only",
+      "notes": "Use exact source/output byte helper where extraction is exact; do not blanket-strip invisibles."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-012",
+    "revision": 1,
+    "title_zh_hant": "直排與標點方向",
+    "requirement_en": "Use writing-mode and actual font/renderer support for vertical composition. Do not replace ordinary punctuation with presentation forms solely to rotate it.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "2.1.2–2.1.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Vertical rendering and compatibility not checked; inspect each output."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-013",
+    "revision": 1,
+    "title_zh_hant": "注音與行間注",
+    "requirement_en": "Keep Bopomofo and ruby text with its base and tone marks. Plan the annotation layout and inspect clipping and reading order.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "CLREQ",
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "CLREQ": "5.5.3",
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Advanced ruby/Bopomofo rendering unsupported by the supplied helper."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-014",
+    "revision": 1,
+    "title_zh_hant": "文件與匯出分開檢驗",
+    "requirement_en": "Check each page/slide for overflow, headings, captions and notes; compare extractable text before/after export and inspect the exported PDF in its actual reader.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "manual",
+      "coverage": "guidance-only",
+      "notes": "No DOCX/PPTX/PDF renderer or exact extractor is supplied; extraction loss remains not-checked."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  },
+  {
+    "id": "ZH-HANT-015",
+    "revision": 1,
+    "title_zh_hant": "保護字元序列與原稿",
+    "requirement_en": "Preserve original source sequences, names, quotation, numbers and punctuation without normalization or traditional/simplified conversion.",
+    "kind": "project-policy",
+    "strength": "must",
+    "impact": "blocker",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZH-POLICY"
+    ],
+    "source_sections": {
+      "ZH-POLICY": "revision 1"
+    },
+    "conditions": [
+      {
+        "when": "Apply to the explicitly selected regional context, writing mode, text role and authorized target only.",
+        "impact": "warning",
+        "scope": "named text segment or observed output"
+      }
+    ],
+    "verification": {
+      "method": "static",
+      "coverage": "implemented",
+      "notes": "runtime/checks.py check_preservation compares supplied bytes only; visual integrity and extraction completeness remain separate."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": false,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": []
+  }
+]

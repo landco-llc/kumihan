@@ -1,0 +1,166 @@
+[
+  {
+    "id": "TW-positive",
+    "text": "陳𠮷說：「價格為ＨＫ＄１２３，請保留原稿。」",
+    "locale": "zh-Hant-TW",
+    "role": "prose",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-negative",
+    "text": "價格:123,請確認!",
+    "locale": "zh-Hant-TW",
+    "role": "prose",
+    "expected_rule_ids": [
+      "ZH-HANT-005"
+    ]
+  },
+  {
+    "id": "TW-exception-name",
+    "text": "ACME, Inc.",
+    "locale": "zh-Hant-TW",
+    "role": "name",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-exception-url",
+    "text": "https://example.invalid/a?q=1,2",
+    "locale": "zh-Hant-TW",
+    "role": "url",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-exception-code",
+    "text": "const x = \"a,b\";",
+    "locale": "zh-Hant-TW",
+    "role": "code",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-exception-english-quote",
+    "text": "“Hello, world!”",
+    "locale": "zh-Hant-TW",
+    "role": "english-quote",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-exception-protected",
+    "text": "原稿: ＡＢＣ!",
+    "locale": "zh-Hant-TW",
+    "role": "protected",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-line-edge-unobserved",
+    "text": "（正文），不能只看DOM判定禁則。",
+    "locale": "zh-Hant-TW",
+    "role": "prose",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-unicode",
+    "text": "禰󠄀 é 👩‍💻 臺裏",
+    "locale": "zh-Hant-TW",
+    "role": "protected",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-positive",
+    "text": "陳𠮷說：「價格為ＨＫ＄１２３，請保留原稿。」",
+    "locale": "zh-Hant-HK",
+    "role": "prose",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-negative",
+    "text": "價格:123,請確認!",
+    "locale": "zh-Hant-HK",
+    "role": "prose",
+    "expected_rule_ids": [
+      "ZH-HANT-005"
+    ]
+  },
+  {
+    "id": "HK-exception-name",
+    "text": "ACME, Inc.",
+    "locale": "zh-Hant-HK",
+    "role": "name",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-exception-url",
+    "text": "https://example.invalid/a?q=1,2",
+    "locale": "zh-Hant-HK",
+    "role": "url",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-exception-code",
+    "text": "const x = \"a,b\";",
+    "locale": "zh-Hant-HK",
+    "role": "code",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-exception-english-quote",
+    "text": "“Hello, world!”",
+    "locale": "zh-Hant-HK",
+    "role": "english-quote",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-exception-protected",
+    "text": "原稿: ＡＢＣ!",
+    "locale": "zh-Hant-HK",
+    "role": "protected",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-line-edge-unobserved",
+    "text": "（正文），不能只看DOM判定禁則。",
+    "locale": "zh-Hant-HK",
+    "role": "prose",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "HK-unicode",
+    "text": "禰󠄀 é 👩‍💻 臺裏",
+    "locale": "zh-Hant-HK",
+    "role": "protected",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-quotes-candidate",
+    "text": "“原話”",
+    "locale": "zh-Hant-TW",
+    "role": "prose",
+    "expected_rule_ids": [
+      "ZH-HANT-003"
+    ]
+  },
+  {
+    "id": "HK-quotes-no-default",
+    "text": "“原話”",
+    "locale": "zh-Hant-HK",
+    "role": "prose",
+    "expected_rule_ids": []
+  },
+  {
+    "id": "TW-house-style-exception",
+    "text": "“原話”",
+    "locale": "zh-Hant-TW",
+    "role": "prose",
+    "expected_rule_ids": [],
+    "quote_style": "curly"
+  },
+  {
+    "id": "HK-explicit-corner",
+    "text": "“原話”",
+    "locale": "zh-Hant-HK",
+    "role": "prose",
+    "expected_rule_ids": [
+      "ZH-HANT-004"
+    ],
+    "quote_style": "corner"
+  }
+]
