@@ -24,14 +24,20 @@ class LandingParity(unittest.TestCase):
         pages = ["kumihan-th.html", "kumihan-th-en.html", "kumihan-th-ja.html",
                  "kumihan-zh-cn.html", "kumihan-zh-cn.en.html", "kumihan-zh-cn.ja.html",
                  "kumihan-ko.html", "kumihan-ko.en.html", "kumihan-ko.ja.html",
-                 "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html"]
+                 "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
+                 "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
 
     def test_landing_install_lists_one_row_per_host(self):
-        pages = ["kumihan-th-en.html", "kumihan-zh-cn.html", "kumihan-zh-cn.en.html",
-                 "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html"]
+        pages = ["kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
+                 "kumihan-th-en.html", "kumihan-zh-cn.html", "kumihan-zh-cn.en.html",
+                 "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
+                 "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 text = (ROOT / page).read_text(encoding="utf-8")
@@ -81,6 +87,8 @@ class InstallGuideParity(unittest.TestCase):
         pages = [f"docs/install-kumihan-th-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-zilu-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-ziheng{h}{s}.html" for h in ("", "-claude", "-gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-accord-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-kumihan-ar-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += ["_layouts/geuljjaim.html"]
         for page in pages:
             with self.subTest(page=page):

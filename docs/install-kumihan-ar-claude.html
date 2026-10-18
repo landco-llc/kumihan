@@ -1,13 +1,61 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KUMIHAN｜نضيد دليل التثبيت</title>
-<meta name="description" content="مهارات مفتوحة المصدر لتنسيق النص العربي في الويب والمستندات والعروض. نبدأ بالمحتوى والسياق، ونحافظ على النص الأصلي، ونفصل الفحص النصي عن العرض الفعلي."><meta name="theme-color" content="#f5f3ee">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<title>KUMIHAN｜نضيد — دليل التثبيت · Claude</title>
+<meta name="description" content="اختر حزمة أداتك أو مهارة مستقلة بحسب ما تدعمه أداتك.">
 <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-ar-claude.html"><link rel="alternate" hreflang="ar" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-ar-claude.html"><link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-ar-claude.en.html"><link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-ar-claude.ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-ar-claude.html">
-<link rel="icon" href="/kumihan/favicon.ico"><link rel="stylesheet" href="/kumihan/assets/kumihan-install.css"><link rel="stylesheet" href="/kumihan/assets/kumihan-ar.css">
-</head><body><a class="skip-link" href="#main">انتقل إلى المحتوى</a>
-<header class="site-header"><div class="shell header-content"><a class="brand" href="/kumihan/kumihan-ar.html"><bdi dir="ltr">KUMIHAN｜نضيد</bdi></a>
-<nav class="header-nav" aria-label="التنقل الرئيسي"><a href="/kumihan/" >مجاني ومفتوح المصدر</a><a href="/kumihan/kumihan-ar.html#skills" >أربع مهارات مستقلة</a><a href="/kumihan/kumihan-ar.html#install" >ابدأ الاستخدام</a></nav>
-<nav class="language-switch" aria-label="اللغة"><a href="/kumihan/docs/install-kumihan-ar-claude.html" lang="ar" hreflang="ar" aria-current="page">العربية</a><a href="/kumihan/docs/install-kumihan-ar-claude.en.html" lang="en" hreflang="en">English</a><a href="/kumihan/docs/install-kumihan-ar-claude.ja.html" lang="ja" hreflang="ja">日本語</a></nav></div></header>
-<main id="main"><div class="guide-hero"><div class="shell"><p class="eyebrow"><bdi dir="ltr">Claude · v0.1.0</bdi></p><h1>دليل التثبيت</h1><p><bdi dir="ltr">KUMIHAN｜نضيد</bdi></p><nav class="host-nav" aria-label="Host"><a href="/kumihan/docs/install-kumihan-ar-chatgpt.html" >ChatGPT / Codex</a><a href="/kumihan/docs/install-kumihan-ar-claude.html" aria-current="page">Claude</a><a href="/kumihan/docs/install-kumihan-ar-gemini.html" >Gemini</a></nav></div></div><div class="shell"><div class="guide-body"><section><h2>التثبيت حسب المنصة</h2><ol><li>للاستخدام في Claude Code، فك أرشيف الإضافة في مجلد مستقل.</li><li>ابدأ جلسة محلية باستخدام الأمر أدناه. أما Claude chat فيستخدم أرشيف مهارة مستقلة عبر واجهة Skills إن كانت متاحة.</li><li>التحميل المحلي لا يعني الإدراج في متجر رسمي. اكتشاف المهارات واستدعاؤها على الحساب الفعلي غير مفحوصين.</li></ol><pre><code>claude --plugin-dir /absolute/path/kumihan-ar</code></pre><p><a href="https://code.claude.com/docs/en/plugins" >Claude Code plugins</a> · <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" >Claude Skills</a></p></section><section><h2>التنزيل والتحقق</h2><p>حزم الإصدار</p><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-Claude-Code-plugin-v0.1.0.zip" class="download-row">kumihan-ar-Claude-Code-plugin-v0.1.0.zip</a><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-Claude-skill-v0.1.0.zip" class="download-row">kumihan-ar-Claude-skill-v0.1.0.zip</a><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-web-Claude-skill-v0.1.0.zip" class="download-row">kumihan-ar-web-Claude-skill-v0.1.0.zip</a><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-documents-Claude-skill-v0.1.0.zip" class="download-row">kumihan-ar-documents-Claude-skill-v0.1.0.zip</a><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-review-Claude-skill-v0.1.0.zip" class="download-row">kumihan-ar-review-Claude-skill-v0.1.0.zip</a><p>قارن بصمة SHA-256 بالملف المنشور. ضع الحزم الخمس المختارة في مجلد واحد ونفّذ أمر GNU التالي، وتحقق من ظهور OK لكل الملفات الخمسة. لملف واحد أو macOS قارن ناتج shasum -a 256 مع MANIFEST.json.</p><pre><code>sha256sum --ignore-missing -c SHA256SUMS.txt</code></pre><p><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/SHA256SUMS.txt" >SHA256SUMS.txt</a> · <a href="/kumihan/plugins/kumihan-ar/downloads/MANIFEST.json" >MANIFEST.json</a></p></section><section><h2>الاستخدام والتحديث</h2><blockquote>استخدم kumihan-ar-review لمراجعة هذه الصفحة دون تغيير النص الأصلي أو الأسماء أو الأرقام. افصل الملاحظات الثابتة عن العرض الذي شاهدته.</blockquote><p>احتفظ بنسخة من تخصيصاتك، وتحقق من الإصدار الجديد قبل إعادة التثبيت. إرفاق ملف بالمحادثة لا يثبت تثبيت المهارة.</p><p>هذه إرشادات مساعدة، وليست شهادة لجودة التنضيد. التثبيت والاستدعاء في التطبيقات الأصلية غير مفحوصين. الصياغة العربية تحتاج مراجعة متحدث أصلي.</p></section><p><a href="/kumihan/kumihan-ar.html" >العودة إلى صفحة المنتج</a></p></div></div></main>
-<footer class="footer"><div class="shell footer-layout"><div><p class="footer-mark"><bdi dir="ltr">KUMIHAN｜نضيد</bdi></p><p class="footer-sub">مجاني ومفتوح المصدر · Apache-2.0<br>© 2026 <a href="https://www.landco.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div><nav class="footer-links" aria-label="Footer"><a href="/kumihan/index.html" >KUMIHAN</a><a href="https://github.com/landco-llc/kumihan" >استعرض المصدر</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" >Apache-2.0</a><a href="/kumihan/kumihan-ar.html" >العودة إلى صفحة المنتج</a></nav></div></footer></body></html>
+<link rel="icon" href="/kumihan/favicon.ico">
+<link rel="stylesheet" href="/kumihan/assets/kumihan-install.css">
+</head>
+<body>
+<a class="skip skip-link" href="#main">انتقل إلى المحتوى</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/kumihan/kumihan-ar.html"><bdi dir="ltr">KUMIHAN｜نضيد</bdi></a>
+    <nav class="header-nav" aria-label="أدلة التثبيت"><a href="/kumihan/docs/install-kumihan-ar-chatgpt.html">ChatGPT / Codex</a><a href="/kumihan/docs/install-kumihan-ar-claude.html" aria-current="page">Claude</a><a href="/kumihan/docs/install-kumihan-ar-gemini.html">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/kumihan/index.html">الصفحة الرئيسية لـ KUMIHAN</a><span aria-hidden="true">/</span><a href="/kumihan/kumihan-ar.html"><bdi dir="ltr">KUMIHAN｜نضيد</bdi></a><span aria-hidden="true">/</span><span>دليل التثبيت</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 02 OF 03</div>
+        <h1 id="page-title">دليل التثبيت · Claude</h1>
+        <p class="hero-desc">اختر حزمة أداتك أو مهارة مستقلة بحسب ما تدعمه أداتك.</p>
+        <nav class="language-switch" aria-label="اللغة"><a href="/kumihan/docs/install-kumihan-ar-claude.html" lang="ar" hreflang="ar" data-language aria-current="page">العربية</a><a href="/kumihan/docs/install-kumihan-ar-claude.en.html" lang="en" hreflang="en" data-language>English</a><a href="/kumihan/docs/install-kumihan-ar-claude.ja.html" lang="ja" hreflang="ja" data-language>日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="اختر منصة الذكاء الاصطناعي">
+  <div class="shell platform-inner"><a href="/kumihan/docs/install-kumihan-ar-chatgpt.html"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="/kumihan/docs/install-kumihan-ar-claude.html" aria-current="page"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="/kumihan/docs/install-kumihan-ar-gemini.html"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="في هذه الصفحة">
+    <details class="toc-details" open>
+      <summary>عرض محتويات الصفحة</summary>
+      <h2 class="toc-title">في هذه الصفحة</h2>
+      <ol><li><a href="#steps">التثبيت حسب المنصة</a></li><li><a href="#download">التنزيل والتحقق</a></li><li><a href="#use">الاستخدام والتحديث</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>v0.1.0 / GitHub Release</strong><p>التثبيت والاستدعاء في كل أداة غير مفحوصين بعد. قد لا تتوفر بعض الخطوات في بيئتك.</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ar/INSTALL.md" target="_blank" rel="noopener noreferrer">عرض ملف INSTALL.md الأصلي ↗</a>
+  </aside>
+  <main class="guide" id="main" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / Claude</span><span class="step-label">الخطوات والتنبيهات</span></div>
+    <div class="guide-pane"><section id="steps"><h2>01 / التثبيت حسب المنصة</h2><ol><li>للاستخدام في Claude Code، فك أرشيف الإضافة في مجلد مستقل.</li><li>ابدأ جلسة محلية باستخدام الأمر أدناه. أما Claude chat فيستخدم أرشيف مهارة مستقلة عبر واجهة Skills إن كانت متاحة.</li><li>التحميل المحلي لا يعني الإدراج في متجر رسمي. اكتشاف المهارات واستدعاؤها على الحساب الفعلي غير مفحوصين.</li></ol><pre><code>claude --plugin-dir /absolute/path/kumihan-ar</code></pre><p><a href="https://code.claude.com/docs/en/plugins" >Claude Code plugins</a> · <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude" >Claude Skills</a></p></section><section id="download"><h2>02 / التنزيل والتحقق</h2><p>حزم الإصدار</p><ul class="download-list"><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-Claude-Code-plugin-v0.1.0.zip" >kumihan-ar-Claude-Code-plugin-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-Claude-skill-v0.1.0.zip" >kumihan-ar-Claude-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-web-Claude-skill-v0.1.0.zip" >kumihan-ar-web-Claude-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-documents-Claude-skill-v0.1.0.zip" >kumihan-ar-documents-Claude-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/kumihan-ar-review-Claude-skill-v0.1.0.zip" >kumihan-ar-review-Claude-skill-v0.1.0.zip</a></li></ul><p>قارن بصمة SHA-256 بالملف المنشور. ضع الحزم الخمس المختارة في مجلد واحد ونفّذ أمر GNU التالي، وتحقق من ظهور OK لكل الملفات الخمسة. لملف واحد أو macOS قارن ناتج shasum -a 256 مع MANIFEST.json.</p><pre><code>sha256sum --ignore-missing -c SHA256SUMS.txt</code></pre><p><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ar-v0.1.0/SHA256SUMS.txt" >SHA256SUMS.txt</a> · <a href="/kumihan/plugins/kumihan-ar/downloads/MANIFEST.json" >MANIFEST.json</a></p></section><section id="use"><h2>03 / الاستخدام والتحديث</h2><blockquote><p>استخدم kumihan-ar-review لمراجعة هذه الصفحة دون تغيير النص الأصلي أو الأسماء أو الأرقام. افصل الملاحظات الثابتة عن العرض الذي شاهدته.</p></blockquote><p>احتفظ بنسخة من تخصيصاتك، وتحقق من الإصدار الجديد قبل إعادة التثبيت. إرفاق ملف بالمحادثة لا يثبت تثبيت المهارة.</p><p class="note">هذه إرشادات مساعدة، وليست شهادة لجودة التنضيد. التثبيت والاستدعاء في التطبيقات الأصلية غير مفحوصين. الصياغة العربية تحتاج مراجعة متحدث أصلي.</p></section></div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong><bdi dir="ltr">KUMIHAN｜نضيد</bdi></strong><p>Arabic typography skills for AI-assisted design.<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC</p></div>
+    <div><a href="/kumihan/kumihan-ar.html">العودة إلى KUMIHAN｜نضيد</a> · <a href="/kumihan/index.html">الصفحة الرئيسية لـ KUMIHAN</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ar" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+  </div>
+</footer>
+</body>
+</html>

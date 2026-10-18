@@ -49,6 +49,7 @@ class Frame:
     scripts: str = ""
     language_class: str = ""  # extra class for the language switch nav
     gateway: tuple = ()       # (href, label) of the language-matched KUMIHAN index
+    dir: str = ""             # "rtl" for right-to-left page languages
 
 # UI keys: skip, nav, language, breadcrumb, toc_title, toc_summary,
 # platforms, note_title, note, source, source_href, steps, top
@@ -75,7 +76,7 @@ def render(f: Frame) -> str:
         f'<a href="{e(href)}"' + (' target="_blank" rel="noopener noreferrer"' if external else "")
         + f'>{e(label)}</a>' for label, href, external in footer_links)
     return f"""<!doctype html>
-<html lang="{e(f.lang)}">
+<html lang="{e(f.lang)}"{(' dir="' + e(f.dir) + '"') if f.dir else ""}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">

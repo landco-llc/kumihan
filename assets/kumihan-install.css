@@ -222,3 +222,27 @@
       .language-switch a { padding-inline: 8px; }
       .brand { white-space: normal; overflow-wrap: anywhere; }
     }
+    /* Right-to-left pages (e.g. Arabic): mirror the physical edges of the
+       canonical layout; code and commands stay left-to-right. */
+    html[dir="rtl"] .toc ol { border-left: 0; border-right: 1px solid var(--line); }
+    html[dir="rtl"] .toc li a { margin-left: 0; margin-right: -1px; border-left: 0; border-right: 2px solid transparent; padding: 9px 15px 9px 10px; }
+    html[dir="rtl"] .toc li a:hover, html[dir="rtl"] .toc li a[aria-current="location"] { border-right-color: var(--red); }
+    html[dir="rtl"] .platform-nav a { border-right: 0; border-left: 1px solid var(--line); }
+    html[dir="rtl"] .platform-nav a:first-child { border-left: 1px solid var(--line); border-right: 1px solid var(--line); }
+    html[dir="rtl"] .platform-nav .arrow, html[dir="rtl"] .guide-pane .external-mark { transform: scaleX(-1); }
+    html[dir="rtl"] .guide-pane ul, html[dir="rtl"] .guide-pane ol { padding-left: 0; padding-right: 1.55em; }
+    html[dir="rtl"] .guide-pane blockquote, html[dir="rtl"] .guide-pane .note, html[dir="rtl"] .guide-pane .host-status,
+    html[dir="rtl"] .guide-pane .limit-note, html[dir="rtl"] .guide-pane .status, html[dir="rtl"] .guide-pane .checksum { border-left: 0; border-right: 4px solid var(--red); }
+    html[dir="rtl"] .guide-pane pre, html[dir="rtl"] .guide-pane code { direction: ltr; text-align: left; }
+    html[dir="rtl"] .copy-code { right: auto; left: 11px; }
+    html[dir="rtl"] :is(.platform-nav a span:first-child, .eyebrow, .guide-head span:first-child) { direction: ltr; unicode-bidi: isolate; }
+    html[dir="rtl"] :is(.footer a, .breadcrumb a, .toc-note strong) { unicode-bidi: isolate; }
+    html[dir="rtl"] .footer p { unicode-bidi: plaintext; text-align: right; }
+    html[lang="ar"] body { font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, system-ui, sans-serif; }
+    html[lang="ar"] :is(.hero h1, .guide-pane h2, .guide-pane h3, .brand, .eyebrow) { letter-spacing: 0; }
+    html[lang="ar"] .hero h1 { line-height: 1.6; }
+    html[lang="ar"] .guide-pane { line-height: 2.05; }
+    @media (max-width: 710px) {
+      html[dir="rtl"] .platform-nav a { border-left: 0; }
+      html[dir="rtl"] .platform-nav a[aria-current="page"] { box-shadow: inset -4px 0 0 var(--red); }
+    }

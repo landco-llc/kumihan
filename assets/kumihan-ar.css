@@ -1,6 +1,4 @@
-/* Landing styles from _layouts/landing.html at a0f5433; scoped by use on Arabic product pages only.
-   Common foundation: recovered kumihan-install.css at 6783d130. */
-
+/* KUMIHAN｜نضيد index: canonical KUMIHAN index CSS + Arabic RTL settings. */
     :root {
       color-scheme: light;
       --paper: #f5f3ee;
@@ -162,19 +160,21 @@
       .header-nav { order: 3; width: 100%; margin: 0; justify-content: space-between; padding-top: 15px; border-top: 1px solid var(--line); }
       .header-controls { margin-left: auto; }
       .hero { padding: 70px 0 78px; }
-      .hero-layout { grid-template-columns: 1fr; gap: 58px; }
+      .hero-layout { grid-template-columns: minmax(0,1fr); gap: 58px; }
+      .hero-copy, .hero-stage { min-width: 0; }
+      html[lang="en"] h1, html[lang="en"] h2, html[lang="en"] h3, html[lang="en"] .button, html[lang="en"] .feature p { overflow-wrap: anywhere; }
       .hero h1 { max-width: 710px; }
       .hero-stage { width: min(100%, 575px); aspect-ratio: 1.12; justify-self: center; }
       .hero-stage::after { right: 10px; top: -22px; writing-mode: horizontal-tb; }
       .hero-foot { margin-top: 37px; }
-      .intro-layout { grid-template-columns: 1fr; gap: 20px; padding-block: 77px; }
+      .intro-layout { grid-template-columns: minmax(0,1fr); gap: 20px; padding-block: 77px; }
       .section-heading { align-items: flex-start; }
-      .feature-grid { grid-template-columns: repeat(2,1fr); }
+      .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .feature { min-height: 260px; border-bottom: 1px solid var(--line); }
       .feature:nth-child(3) { border-left: 0; padding-left: 0; }
       .feature:nth-child(3), .feature:nth-child(4) { border-bottom: 0; }
       .idea-layout { grid-template-columns: 1fr 160px; gap: 28px; }
-      .install-layout { grid-template-columns: 1fr; gap: 45px; }
+      .install-layout { grid-template-columns: minmax(0,1fr); gap: 45px; }
     }
     @media (max-width: 560px) {
       :root { --shell: calc(100% - 36px); }
@@ -211,14 +211,16 @@
       .idea-art { width: 160px; }
       .idea-art span { height: 7px; }
       .skills-section { padding: 78px 0 88px; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .skill-card { min-height: 246px; padding: 26px; }
+      .skills-grid { grid-template-columns: minmax(0,1fr); }
+      .skill-card { min-height: 246px; padding: 26px; min-width: 0; }
+      .platform-info, .feature { min-width: 0; }
       .skill-name { font-size: 28px; }
       .install-section { padding: 77px 0 88px; }
       .platform-row { min-height: 99px; }
       .platform-name { font-size: 18px; }
       .status-section { padding-bottom: 74px; }
-      .status-box { grid-template-columns: 1fr; gap: 12px; padding: 27px 24px; }
+      .status-box { grid-template-columns: minmax(0,1fr); gap: 12px; padding: 27px 24px; }
+      .status-title, .status-meta { overflow-wrap: anywhere; white-space: normal; }
       .status-meta { text-align: left; }
       .cta-section { padding: 70px 0; }
       .cta-layout { align-items: stretch; flex-direction: column; }
@@ -232,65 +234,72 @@
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   
-/* Locale and reflow adaptations: keep logical source order and complete labels. */
-body { font-size:1rem; line-height:1.85; }
-.brand { letter-spacing:normal; white-space:normal; line-height:1.5; min-width:0; }
-.brand::before { display:none; }
-.header-content { flex-wrap:wrap; padding-block:1rem; }
-.header-nav { margin-inline-start:auto; margin-left:0; flex-wrap:wrap; }
-.header-nav a { white-space:normal; }
-.language-switch { margin:0; flex-wrap:wrap; border-radius:0; }
-.language-switch a { display:block; padding:.45rem .65rem; min-height:44px; text-decoration:none; }
-.language-switch a[aria-current="page"] { background:var(--ink); color:white; }
-.hero, .idea-band { overflow:visible; }
-.hero-stage::after { display:none; }
-.hero h1, h2, h3 { word-break:normal; text-wrap:wrap; }
-.hero h1 { letter-spacing:normal; }
-.hero-desc { line-height:1.95; }
-.feature:not(:first-child) { padding-inline-start:25px; border-inline-start:1px solid var(--line); border-left:0; }
-.feature { padding-inline-end:24px; }
-.skill-name, .download-row, code, .code-id { overflow-wrap:anywhere; }
-.skill-name { direction:ltr; text-align:start; }
-.status-meta { white-space:normal; text-align:start; }
-.footer-layout, .cta-layout { flex-wrap:wrap; }
-.footer-mark { font:inherit; letter-spacing:normal; }
-[lang="ar"] body { font-family:system-ui,sans-serif; }
-html[lang="ar"] :is(h1,h2,h3,p,.eyebrow,.brand,.footer-mark,.skill-desc,.button) { letter-spacing:normal; text-transform:none; }
-html[lang="ar"] .hero h1 { line-height:1.65; }
-html[lang="ar"] .feature { border-left:0; padding-left:0; }
-html[lang="ar"] .platform-arrow { transform:scaleX(-1); }
-html[lang="ja"] body { line-break:strict; }
-html[lang="ja"] :is(h1,h2,h3) { letter-spacing:normal; line-break:strict; }
-html[lang="en"] body { font-family:system-ui,sans-serif; }
-html[lang="en"] :is(h1,h2,h3) { letter-spacing:normal; hyphens:none; }
-.guide-hero { padding-block:4rem; border-bottom:1px solid var(--line); }
-.guide-hero h1 { font-size:clamp(2rem,4vw,3.5rem); line-height:1.5; margin-block:1rem; }
-.guide-body { max-width:76ch; padding-block:3rem 6rem; margin-inline:auto; }
-.guide-body section { padding-block:1.5rem; border-bottom:1px solid var(--line); }
-.guide-body h2 { font-size:1.7rem; }
-.guide-body li { margin-block:1rem; }
-.guide-body a { text-underline-offset:.25em; }
-.download-row { display:block; padding-block:1rem; border-bottom:1px solid var(--line); direction:ltr; text-align:start; }
-pre { padding:1rem; background:var(--paper-2); white-space:pre-wrap; direction:ltr; text-align:start; }
-.host-nav { display:flex; flex-wrap:wrap; gap:1rem; margin-block:1.5rem; }
-bdi { unicode-bidi:isolate; }
-@media(max-width:790px) { .feature-grid { grid-template-columns:1fr 1fr; } .header-nav { margin:0; } }
-@media(max-width:560px) {
- .brand { width:100%; font-size:1.1rem; }
- .header-nav { overflow:visible; flex-wrap:wrap; gap:1rem; }
- .feature-grid { grid-template-columns:1fr; }
- .feature:not(:first-child) { border-inline-start:0; padding-inline-start:0; }
- .feature { min-height:0; padding-block:1.5rem; }
- .guide-body { padding-inline:0; }
- .hero h1 { font-size:2.4rem; }
- .status-box { padding:1.25rem; }
- .language-switch a { flex:initial; }
-}
-@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
-/* Long English headings may exceed a narrow column at enlarged text sizes. */
-.guide-hero h1, .guide-body h2 { overflow-wrap:break-word; }
-/* JA-TYPE-011: compare ordinary reflow with balanced heading lines; no forced phrase spans. */
-html[lang="ja"] :is(.hero h1,.install-intro h2,.idea-band h2) { text-wrap:balance; }
-/* Enlarged text at phone widths: shrinkable grid tracks and wrapping English words. */
-@media (max-width:790px) { .intro-layout, .hero-layout, .install-layout { grid-template-columns:minmax(0,1fr); } .intro-layout > *, .hero-copy, .hero-stage { min-width:0; } }
-html[lang="en"] :is(h1,h2,h3,.section-number,.button) { overflow-wrap:anywhere; }
+    html[lang="ar"] body { font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, system-ui, sans-serif; line-height: 1.9; }
+    html[lang="ar"] :is(h1, h2, h3, p, .eyebrow, .brand, .footer-mark, .skill-desc, .button, .feature-index, .section-number) { letter-spacing: 0; text-transform: none; }
+    html[lang="ar"] .hero h1 { font-size: clamp(40px,4.8vw,68px); line-height: 1.55; }
+    html[lang="ar"] :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { line-height: 1.7; }
+    html[lang="ja"] body { line-break: strict; }
+    html:is([lang="en"]) .hero h1 { font-size: clamp(40px,4.6vw,66px); letter-spacing: -.05em; line-height: 1.12; text-wrap: balance; }
+    html[lang="en"] :is(h1, h2, h3, .eyebrow, .button, .feature p) { overflow-wrap: break-word; }
+    .brand { min-width: 0; flex: 0 1 auto; }
+    .brand > bdi { white-space: normal; }
+    .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 38px; border-radius: 40px; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .02em; }
+    .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
+    .language-switch a:hover:not([aria-current="page"]) { color: var(--red-dark); background: #ebe7df; }
+    .hero-stage::after { content: "KUMIHAN / AR"; }
+    .hero-foot, .header-content, .header-nav { flex-wrap: wrap; }
+    .header-nav { min-width: 0; row-gap: 8px; }
+    .hero-cta .button, .cta-layout .button { max-width: 100%; }
+    .feature-motif { letter-spacing: 0 !important; }
+    .skill-name, .platform-name { direction: ltr; text-align: start; }
+    .status-meta { white-space: normal; }
+    .status-meta a { color: var(--red-dark); }
+    .skill-card, .platform-info, .status-box > *, .hero-copy, .hero-stage, .feature, .install-layout > *, .idea-layout > *, .card-top > *, .cta-layout > * { min-width: 0; }
+    .feature-index, .skill-type { overflow-wrap: anywhere; }
+    bdi { unicode-bidi: isolate; }
+    /* Latin index labels such as "01 / TYPE" keep their reading order in RTL. */
+    html[dir="rtl"] :is(.feature-index, .skill-type, .platform-index, .status-title) { direction: ltr; unicode-bidi: isolate; text-align: right; }
+    html[dir="rtl"] .footer-links a { unicode-bidi: isolate; }
+    html[dir="rtl"] .footer-sub { unicode-bidi: plaintext; text-align: right; }
+    /* Right-to-left: mirror the canonical physical edges. */
+    html[dir="rtl"] .header-nav { margin-left: 0; margin-right: auto; }
+    html[dir="rtl"] .header-controls { margin-left: 0; margin-right: 16px; }
+    html[dir="rtl"] .eyebrow .line { margin-right: 0; margin-left: 9px; }
+    html[dir="rtl"] .arrow { margin-left: 0; margin-right: 12px; }
+    html[dir="rtl"] :is(.arrow, .platform-arrow, .skill-end > span:last-child) { display: inline-block; transform: scaleX(-1); }
+    html[dir="rtl"] .feature { padding: 32px 0 36px 24px; }
+    html[dir="rtl"] .feature:not(:first-child) { padding-left: 24px; padding-right: 25px; border-left: 0; border-right: 1px solid var(--line); }
+    html[dir="rtl"] .platform-row { padding: 20px 4px 20px 12px; }
+    html[dir="rtl"] .platform-row:hover { padding-left: 12px; padding-right: 15px; }
+    html[dir="rtl"] .status-meta { text-align: left; }
+    html[dir="rtl"] .hero-stage::after { right: auto; left: -18px; }
+    html[dir="rtl"] .stage-label { left: auto; right: 27px; }
+    @media (max-width: 1080px) {
+      html[dir="rtl"] .header-controls { margin-right: 0; }
+      html[dir="rtl"] .feature { padding-left: 18px; }
+      html[dir="rtl"] .feature:not(:first-child) { padding-right: 18px; }
+    }
+    @media (max-width: 790px) {
+      .hero-layout, .intro-layout, .install-layout { grid-template-columns: minmax(0,1fr); }
+      html[dir="rtl"] .header-nav { margin: 0; }
+      html[dir="rtl"] .header-controls { margin-right: auto; margin-left: 0; }
+      html[dir="rtl"] .feature:nth-child(3) { border-right: 0; padding-right: 0; }
+      html[dir="rtl"] .hero-stage::after { left: 10px; right: auto; }
+    }
+    @media (max-width: 560px) {
+      html[lang="ar"] .hero h1 { font-size: clamp(32px,8.6vw,44px); line-height: 1.6; }
+      html[lang="en"] .hero h1 { font-size: clamp(33px,8.5vw,45px); }
+      .header-nav { overflow: visible; gap: 12px 18px; }
+      .header-nav a { white-space: normal; }
+      .idea-layout { grid-template-columns: minmax(0,1fr); }
+      html[dir="rtl"] .feature:not(:first-child) { padding-right: 14px; }
+      html[dir="rtl"] .feature:nth-child(3) { padding-right: 0; }
+      html[dir="rtl"] .status-meta { text-align: right; }
+      html[dir="rtl"] .stage-label { right: 15px; }
+    }
+    /* Narrow phones: one principle per row instead of splitting Arabic words. */
+    @media (max-width: 420px) {
+      html[lang="ar"] .feature-grid { grid-template-columns: minmax(0,1fr); }
+      html[lang="ar"] .feature, html[lang="ar"] .feature:not(:first-child), html[lang="ar"] .feature:nth-child(3) { padding: 22px 0; min-height: 0; border-right: 0; border-left: 0; border-bottom: 1px solid var(--line); }
+      html[lang="ar"] .feature:last-child { border-bottom: 0; }
+    }
