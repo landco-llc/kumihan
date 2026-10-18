@@ -1,0 +1,51 @@
+{
+  "version": "0.1.0",
+  "research_date": "2026-10-18",
+  "sources": [
+    {
+      "id": "FR01",
+      "url": "https://jacques-andre.fr/faqtypo/lessons.pdf",
+      "scope": "French editorial example; not a binding nationwide norm"
+    },
+    {
+      "id": "FR02",
+      "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles",
+      "scope": "Québec guidance; zero space before ! ? ; is allowed"
+    },
+    {
+      "id": "FR03",
+      "url": "https://style-guide.europa.eu/fr/content/-/isg/topic?identifier=6.4-word-processor-punctuation-marks-spacing",
+      "scope": "EU interinstitutional only when explicitly selected"
+    },
+    {
+      "id": "FR04",
+      "url": "https://www.unicode.org/reports/tr14/",
+      "scope": "Line breaking and nonbreaking character properties"
+    },
+    {
+      "id": "FR05",
+      "url": "https://www.academie-francaise.fr/questions-de-langue",
+      "scope": "Accents on uppercase letters; do not guess lexical changes"
+    },
+    {
+      "id": "FR06",
+      "url": "https://www.w3.org/TR/css-text-3/",
+      "scope": "CSS wrapping and hyphenation; actual render requires host verification"
+    },
+    {
+      "id": "FR07",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "scope": "Accessibility assessment; static text checks do not certify conformance"
+    },
+    {
+      "id": "FR08",
+      "url": "https://402.ecma-international.org/13.0/",
+      "scope": "Locale-aware formatting: runtime dependent"
+    },
+    {
+      "id": "FR09",
+      "url": "https://openfontlicense.org/open-font-license-official-text/",
+      "scope": "Font licensing"
+    }
+  ]
+}

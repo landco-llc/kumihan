@@ -1,0 +1,165 @@
+{
+  "version": "0.1.0",
+  "rules": [
+    {
+      "id": "FR-CTX-01",
+      "title": "Separate locale, house style, medium, role, origin, protected spans and mode",
+      "verification": "policy",
+      "source_ref": "FR01",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-SOURCE-01",
+      "title": "Preserve exact supplied text, spaces and line breaks",
+      "verification": "policy",
+      "source_ref": "FR04",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-SOURCE-02",
+      "title": "Do not rewrite proper names, figures, URLs, email, code or placeholders",
+      "verification": "policy",
+      "source_ref": "FR04",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-STYLE-01",
+      "title": "Do not infer national rules from organization style guides",
+      "verification": "policy",
+      "source_ref": "FR03",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-FR-01",
+      "title": "Editorial fr-FR before ! ? ; U+202F as an explicit proposal",
+      "verification": "static-candidate",
+      "source_ref": "FR01",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-FR-02",
+      "title": "Editorial fr-FR before colon U+00A0 as an explicit proposal",
+      "verification": "static-candidate",
+      "source_ref": "FR01",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-CA-01",
+      "title": "OQLF ! ? ; zero space must not be misdiagnosed",
+      "verification": "policy",
+      "source_ref": "FR02",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-CA-02",
+      "title": "Québec colon NBSP candidate when house style selected",
+      "verification": "static-candidate",
+      "source_ref": "FR02",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-EU-01",
+      "title": "EU interinstitutional no-space punctuation only for that style",
+      "verification": "static-candidate",
+      "source_ref": "FR03",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-GUIL-01",
+      "title": "Guillemet inner spacing depends on explicit style",
+      "verification": "static-candidate",
+      "source_ref": "FR01",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-ACC-01",
+      "title": "Preserve accents in uppercase and original Unicode",
+      "verification": "editorial",
+      "source_ref": "FR05",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-LIG-01",
+      "title": "Do not replace every oe with œ or normalize text without authorization",
+      "verification": "policy",
+      "source_ref": "FR04",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-VALUE-01",
+      "title": "Format numerals only with locale plus explicit options; preserve source values",
+      "verification": "host-needed",
+      "source_ref": "FR08",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-FONT-01",
+      "title": "Check glyph coverage, fallbacks and individual licenses before embedding",
+      "verification": "host-needed",
+      "source_ref": "FR09",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-WEB-01",
+      "title": "Use lang and mixed-language spans with tested hyphens/wrapping",
+      "verification": "host-needed",
+      "source_ref": "FR06",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-WEB-02",
+      "title": "Test reflow, narrow screens, text zoom and user spacing",
+      "verification": "host-needed",
+      "source_ref": "FR07",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-DOC-01",
+      "title": "Test Office, PDF and text extraction independently",
+      "verification": "host-needed",
+      "source_ref": "FR07",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-VISUAL-01",
+      "title": "Review visual hierarchy against content; avoid unmotivated repetitive AI layouts",
+      "verification": "editorial",
+      "source_ref": "FR07",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-REVIEW-01",
+      "title": "Audit never writes files; report evidence, uncertainty and limits",
+      "verification": "policy",
+      "source_ref": "FR07",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    },
+    {
+      "id": "FR-REGION-01",
+      "title": "fr-BE and fr-CH need named institutional guidance, not inherited fr-FR rules",
+      "verification": "policy",
+      "source_ref": "FR03",
+      "autofix": false,
+      "limitations": "Only candidates, no automatic edit or rendered proof."
+    }
+  ]
+}

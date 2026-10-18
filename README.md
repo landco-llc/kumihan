@@ -96,3 +96,7 @@ Developed by L&Co. LLC.
 ## Korean edition / 한국어판
 
 [KUMIHAN｜글짜임 v0.1.0](https://landco-llc.github.io/kumihan/kumihan-ko.html) is an independently packaged Korean guidance product. [Source and four standalone Skills](plugins/kumihan-geuljjaim/README.md) · [Korean release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0). Japanese KUMIHAN and 字衡 are not prerequisites.
+
+## French edition / Édition française
+
+**[KUMIHAN｜Accord v0.1.0](kumihan-fr.html)** — French typography using selected editorial conventions with source preservation and read-only review. [Source and install packages](plugins/kumihan-accord/README.md) · [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.0). Skill and plugin descriptions: Español / English.
