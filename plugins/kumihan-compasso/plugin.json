@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-compasso",
+  "version": "0.1.0",
+  "description": "Orientação de tipografia e design editorial em português (PT/BR), sem alterar o texto original. | Portuguese typography and editorial design guidance with source preservation.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Compasso",
+        "shortDescription": "Tipografia portuguesa | Portuguese typography",
+        "longDescription": "Orientação de tipografia e design editorial em português (PT/BR), sem alterar o texto original. | Portuguese typography and editorial design guidance with source preservation.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-pt.html",
+        "defaultPrompt": [
+          "Revê este conteúdo em português sem alterar o original.",
+          "Review this Portuguese copy without changing the source."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

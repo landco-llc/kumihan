@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "PT-01",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Preservar á, à, â, ã, é, ê, í, ó, ô, õ, ú, ü quando pertencem à origem.",
+    "explanation_en": "preserve diacritics",
+    "positive_example": "AÇÃO · INFORMAÇÃO",
+    "negative_example": "ACAO · INFORMACAO",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-02",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Não remover acentos nem cedilha nas maiúsculas.",
+    "explanation_en": "uppercase accents",
+    "positive_example": "PORTUGUÊS",
+    "negative_example": "PORTUGUES",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-03",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Comparar bytes UTF-8 de entrada e saída; não normalizar o original.",
+    "explanation_en": "unicode",
+    "positive_example": "ação",
+    "negative_example": "acao",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-04",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Preservar marcas, nomes próprios, siglas e URLs.",
+    "explanation_en": "brand identity",
+    "positive_example": "Claus Porto",
+    "negative_example": "Claus porto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-05",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "house-style",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Aspas são uma decisão editorial; CLDR não substitui guia institucional.",
+    "explanation_en": "quotation",
+    "positive_example": "«texto» / “texto”",
+    "negative_example": "alterar todas as aspas",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-06",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "house-style",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Validar hierarquia e pares de aspas na paginação efetiva.",
+    "explanation_en": "nested quotation",
+    "positive_example": "«Ela disse “sim”.»",
+    "negative_example": "aspas sem fecho",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-07",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "house-style",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Distinguir vírgula decimal e separador de milhar segundo estilo escolhido.",
+    "explanation_en": "decimal",
+    "positive_example": "1.234,56",
+    "negative_example": "1,234.56 sem contexto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-08",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Preservar símbolo, valor e tipo de moeda; não presumir BRL ou EUR.",
+    "explanation_en": "currencies",
+    "positive_example": "R$ 120 / 120 €",
+    "negative_example": "moeda inferida",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-09",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Verificar significado de bilhão/bilião/mil milhões contra a quantidade real.",
+    "explanation_en": "large numbers",
+    "positive_example": "1 000 000 000",
+    "negative_example": "bilião = 10^9 sem contexto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-10",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "house-style",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "O espaçamento de percentagens varia com norma e meio; solicitar guia.",
+    "explanation_en": "percent",
+    "positive_example": "7% / 7 %",
+    "negative_example": "conversão automática",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-11",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Separar número e unidade de medida com espaço apropriado sem quebra indesejada.",
+    "explanation_en": "measurement",
+    "positive_example": "20 km",
+    "negative_example": "20km quando norma requer espaço",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-12",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "house-style",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Confirmar convenção de ordinais 1º/1.ª/1.º por mercado e guia.",
+    "explanation_en": "ordinal",
+    "positive_example": "1.º / 1º",
+    "negative_example": "padronizar sem contexto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-13",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Não reinterpretar datas ambíguas nem mudar fuso horário.",
+    "explanation_en": "dates",
+    "positive_example": "10/11/2026",
+    "negative_example": "data reinterpretada",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-14",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Distinguir português europeu e brasileiro sem corrigir variantes válidas.",
+    "explanation_en": "region lexicon",
+    "positive_example": "facto / fato",
+    "negative_example": "troca global",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-15",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Não inferir tu/você/vocês ou conjugação da localização.",
+    "explanation_en": "address",
+    "positive_example": "tratamento definido pelo projeto",
+    "negative_example": "tratamento imposto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-16",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Não impor reforma ortográfica a nomes, citações ou legados sem decisão.",
+    "explanation_en": "ao1990",
+    "positive_example": "citação preservada",
+    "negative_example": "citação reescrita",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-17",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Hifenização deve respeitar a língua e requer dicionário do motor de paginação.",
+    "explanation_en": "syllable",
+    "positive_example": "palavra sem corte arbitrário",
+    "negative_example": "word-break:break-all",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-18",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Quando a quebra coincide com hífen original, rever o hífen repetido no início da linha seguinte sem modificar a origem.",
+    "explanation_en": "existing hyphen",
+    "positive_example": "vice- / -almirante",
+    "negative_example": "mutar texto fonte",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-19",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Preservar URLs, endereços, código e números de identificação.",
+    "explanation_en": "protected spans",
+    "positive_example": "id-2026-01",
+    "negative_example": "id dividido",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-20",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Não aplicar hifenização indiscriminada a títulos, botões ou marcas.",
+    "explanation_en": "headings",
+    "positive_example": "Título legível",
+    "negative_example": "Título com corte arbitrário",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-21",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Verificar acentos, cedilha, ordinais e aspas em fonte real, peso e tamanho.",
+    "explanation_en": "font glyphs",
+    "positive_example": "AÇÃO ç 1.º",
+    "negative_example": "glifo ausente",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-22",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Inspecionar substituição de fonte e largura resultante.",
+    "explanation_en": "font fallback",
+    "positive_example": "fallback testado",
+    "negative_example": "layout assumido",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-23",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Evitar cortes em diacríticos por overflow/line-height.",
+    "explanation_en": "line height",
+    "positive_example": "AÇÃO sem recorte",
+    "negative_example": "acentos cortados",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-24",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Verificar scroll horizontal em 320 CSS px equivalentes.",
+    "explanation_en": "narrow layout",
+    "positive_example": "sem perda de conteúdo",
+    "negative_example": "overflow horizontal",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-25",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Testar 200% e espaçamento sobrescrito sem perda de informação.",
+    "explanation_en": "text resize",
+    "positive_example": "conteúdo preservado",
+    "negative_example": "texto oculto",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-26",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Definir hierarquia de nome, mensagem, prova e CTA antes do visual.",
+    "explanation_en": "content priority",
+    "positive_example": "hierarquia semanticamente clara",
+    "negative_example": "visual genérico",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-27",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Evitar gradientes genéricos, cartões repetidos e ornamentos sem função.",
+    "explanation_en": "anti ai design",
+    "positive_example": "identidade do projeto",
+    "negative_example": "interface IA padronizada",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-28",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Preservar intenção, ritmo, tom e afirmações verificáveis.",
+    "explanation_en": "brand voice",
+    "positive_example": "voz reconhecível",
+    "negative_example": "homogeneização",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-29",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Manter título, estrutura de heading, listas e links compreensíveis.",
+    "explanation_en": "semantic html",
+    "positive_example": "h1 > h2",
+    "negative_example": "div sem significado",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-30",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Validar zoom, contraste, navegação por teclado e ordem de leitura.",
+    "explanation_en": "accessibility",
+    "positive_example": "navegável",
+    "negative_example": "apenas captura estática",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-31",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Distinguir evidência normativa, recomendação e observação.",
+    "explanation_en": "source provenance",
+    "positive_example": "fonte e teste informados",
+    "negative_example": "PASS inventado",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-32",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "editorial",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Rever CTA no contexto da ação real e da região.",
+    "explanation_en": "web copy",
+    "positive_example": "ação inequívoca",
+    "negative_example": "rótulo literal de tradução",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-33",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Validar extração, ligaturas, fonte embutida e quebra de página.",
+    "explanation_en": "print pdf",
+    "positive_example": "texto extraível",
+    "negative_example": "glifos como imagem",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-34",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Evitar quebra semântica de número, unidade e referência em tabelas.",
+    "explanation_en": "tables",
+    "positive_example": "valor íntegro",
+    "negative_example": "unidade órfã",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-35",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "rendered",
+    "severity": "review",
+    "automation_scope": "rendered-or-human-review",
+    "source_refs": [
+      "PT-RESEARCH",
+      "UNICODE",
+      "W3C"
+    ],
+    "explanation_pt": "Verificar português com inglês e japonês sem perder a hierarquia.",
+    "explanation_en": "mixed script",
+    "positive_example": "PT / EN / JA",
+    "negative_example": "espaço incoerente",
+    "status": "needs-review"
+  },
+  {
+    "id": "PT-36",
+    "locale": "pt",
+    "region_scope": [
+      "pt-BR",
+      "pt-PT",
+      "pt-AO",
+      "pt-MZ"
+    ],
+    "medium": [
+      "web",
+      "documents",
+      "presentation",
+      "display-copy"
+    ],
+    "classification": "normative",
+    "severity": "review",
+    "automation_scope": "bounded-advisory",
+    "source_refs": [
+      "PT-RESEARCH"
+    ],
+    "explanation_pt": "Não declarar testes de host/Office/PDF feitos sem execução real.",
+    "explanation_en": "review boundaries",
+    "positive_example": "não verificado",
+    "negative_example": "aprovado sem teste",
+    "status": "needs-review"
+  }
+]

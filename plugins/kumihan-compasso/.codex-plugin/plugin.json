@@ -1,0 +1,26 @@
+{
+  "name": "kumihan-compasso",
+  "version": "0.1.0",
+  "description": "Independent Skills for Portuguese design, with explicit locale and house-style selection. | Skills independentes para português; selecione região, meio e estilo editorial antes de usar.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Compasso",
+    "shortDescription": "Tipografía francesa y conservación | Portuguese typography and integrity",
+    "longDescription": "Guía de tipografía francesa para web, documentos y presentaciones; conserva el texto original y permite revisiones de solo lectura.\n\nPortuguese typography guidance for web, documents and presentations; preserves original text and supports read-only reviews.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-pt.html",
+    "defaultPrompt": [
+      "Revisa esta página francesa sin modificarla.",
+      "Review Portuguese document typography without editing the source."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/",
+  "displayName": "KUMIHAN｜Compasso"
+}

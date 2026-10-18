@@ -1,0 +1,455 @@
+{
+  "en": {
+    "house_style": null,
+    "title": "KUMIHAN｜Compasso — Portuguese typography and content-led design",
+    "description": "Open-source Portuguese typography and content-design skills. Preserve source copy, honor pt-BR/pt-PT distinctions, and resist generic AI visual patterns.",
+    "skip": "Skip to content",
+    "nav_label": "Primary navigation",
+    "lang_label": "Language",
+    "nav": [
+      "About",
+      "Principles",
+      "Skills",
+      "Get started"
+    ],
+    "eyebrow": "OPEN-SOURCE SKILLS / FRENCH TYPOGRAPHY",
+    "h1": [
+      "Give words structure.",
+      "Give design rhythm."
+    ],
+    "lead": "KUMIHAN｜Compasso helps design and review Portuguese websites, documents, and presentations with content-led typographic judgment. It preserves the source while discouraging formulaic AI-generated visual styles.",
+    "cta": [
+      "Get started",
+      "Learn more"
+    ],
+    "hero_foot": [
+      "OPEN SOURCE",
+      "FOUR SKILLS",
+      "FRENCH FIRST"
+    ],
+    "concept_h2": [
+      "Lead with meaning.",
+      "Then give it form."
+    ],
+    "concept_body": "Typography is not decoration. Structure, spacing, tone and hierarchy should reflect purpose and audience.",
+    "features_h2": "Care beyond the characters",
+    "features_deck": "Region and editorial preferences are independent; no unrequested rewrites.",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "ã",
+        "h3": "Preserve the source",
+        "p": "Accents, names, quotations, numbers and identifiers remain intact."
+      },
+      {
+        "idx": "02",
+        "mark": "«»",
+        "h3": "Choose local conventions",
+        "p": "Separate pt-BR/pt-PT from institutional and brand-specific styles."
+      },
+      {
+        "idx": "03",
+        "mark": "Aa",
+        "h3": "Avoid generic AI visuals",
+        "p": "Favor a brand-specific hierarchy over decorative gradients and repeated cards."
+      },
+      {
+        "idx": "04",
+        "mark": "↗",
+        "h3": "Show what was checked",
+        "p": "Static candidates are not proof of actual rendering or native-host behavior."
+      }
+    ],
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
+      "Less AI uniformity.",
+      "More identity."
+    ],
+    "idea_body": "Make composition accountable to meaning and evidence.",
+    "skills_h2": [
+      "Four independent Skills.",
+      "One design philosophy."
+    ],
+    "skills_deck": "Start, web, documents and review: install only what you need.",
+    "skills": [
+      [
+        "Compasso",
+        "Set the intended locale, medium and house style."
+      ],
+      [
+        "Web",
+        "Responsive editorial web typography and semantic hierarchy."
+      ],
+      [
+        "Documents",
+        "Legible, verifiable presentations and reports."
+      ],
+      [
+        "Review",
+        "Non-destructive review with clearly scoped evidence."
+      ]
+    ],
+    "skill_view": "View skill",
+    "install_h2": [
+      "Choose your host.",
+      "Install the right package."
+    ],
+    "install_body": "ChatGPT/Codex, Claude Code and Gemini CLI distributions. Version numbers appear in ZIP filenames.",
+    "install_notes": [
+      "Guides for adding skills, registering plugins, and local installation",
+      "Setup guide for Claude Code and Claude chat",
+      "Setup guide for Gemini CLI and the Gemini app"
+    ],
+    "install_extra": "All 15 ZIP files and SHA-256 ↗",
+    "status_title": "RELEASED / v0.1.1",
+    "status_body": "Public OSS source availability is distinct from third-party marketplace approval. Native-host functionality must be tested separately.",
+    "status_link": "Download latest ↗",
+    "cta_h2": [
+      "Make every word",
+      "serve its purpose."
+    ],
+    "cta_body": "Explore the sources, rules, and implementation limitations.",
+    "cta_button": "View on GitHub",
+    "footer_sub": "Portuguese typography and content-led design.",
+    "gateway_label": "KUMIHAN home",
+    "family": [
+      "KUMIHAN Japanese",
+      "en.html"
+    ],
+    "top": "Back to top",
+    "guide": {
+      "breadcrumb": "Installation",
+      "nav": "Platforms",
+      "toc_title": "On this page",
+      "toc_summary": "Show sections",
+      "platforms": "Choose a platform",
+      "note_title": "Before installation",
+      "note": "A supported host interface is required. Attaching a ZIP to a chat does not register a plugin.",
+      "source": "Source and references",
+      "steps": "3 steps",
+      "top": "Back to top",
+      "title": "Install on {host}",
+      "lead": "Independent Skills for Portuguese design, with explicit locale and house-style selection.",
+      "sections": [
+        "Choose package",
+        "Download and verify",
+        "Install",
+        "Test and update"
+      ],
+      "format": "The plugin contains four standalone Skills. Each Skill can also be installed separately when supported by the host.",
+      "plugin": "Plugin package",
+      "skill": "Standalone Skill",
+      "download": "Download v0.1.0 ZIPs from GitHub Release, then check SHA256SUMS.txt.",
+      "chatgpt": "For Codex, extract a standalone Skill into your project .agents/skills/ directory. Import plugins only via a supported interface. ChatGPT installation features depend on your account; a conversation attachment is not an installation.",
+      "claude": "Use claude --plugin-dir /absolute/path/kumihan-compasso or your supported marketplace. Install standalone Skills via your host documentation.",
+      "gemini": "Use gemini extensions install /absolute/path/kumihan-compasso for the CLI extension. Skill support depends on your Gemini environment.",
+      "test": "Verify discovery and native invocation. JSON validation alone does not demonstrate functioning installation.",
+      "prompt": "Review Portuguese typography without changing any supplied source text.",
+      "check": "python runtime/checks.py original.txt --locale pt-BR",
+      "update": "Preserve custom settings, verify new checksums and reinstall by the official host procedure.",
+      "limits": "Static advisory checks do not certify visual output, native Portuguese editing or host installation."
+    }
+  },
+  "ja": {
+    "house_style": null,
+    "title": "KUMIHAN｜Compasso — ポルトガル語の文字組とデザイン",
+    "description": "ポルトガル語のWeb・文書・プレゼンを内容から設計するオープンソースSkills。原稿を守り、AIらしい画一的なデザインを抑制します。",
+    "skip": "本文へ移動",
+    "nav_label": "メインナビゲーション",
+    "lang_label": "表示言語",
+    "nav": [
+      "Compassoとは",
+      "できること",
+      "4つのスキル",
+      "導入方法"
+    ],
+    "eyebrow": "OPEN-SOURCE SKILLS / FRENCH TYPOGRAPHY",
+    "h1": [
+      "文字を整える。",
+      "デザインにリズムを。"
+    ],
+    "lead": "KUMIHAN｜Compassoはポルトガル語の文字組・情報設計・表現を支援するオープンソースのSkillsです。ブラジルとポルトガルの表記差を尊重し、原稿とブランドの意図を保ちながら画一的な「AIらしいデザイン」を抑制します。",
+    "cta": [
+      "使いはじめる",
+      "Compassoについて"
+    ],
+    "hero_foot": [
+      "OPEN SOURCE",
+      "FOUR SKILLS",
+      "FRENCH FIRST"
+    ],
+    "concept_h2": [
+      "文字のかたちから、",
+      "意味を伝える設計へ。"
+    ],
+    "concept_body": "文字は飾りではありません。情報の順序、改行、余白、書体と文章の声を、読み手と目的から組み立てます。",
+    "features_h2": "ポルトガル語に必要な配慮",
+    "features_deck": "地域ごとの表記ルールと媒体の編集方針を分け、実際のデザイン品質につなげます。",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "ã",
+        "h3": "原稿と字形を守る",
+        "p": "アクセント、ç、固有名、数字、引用を保全します。"
+      },
+      {
+        "idx": "02",
+        "mark": "«»",
+        "h3": "地域差を決めつけない",
+        "p": "pt-BR・pt-PTと各媒体の編集方針を切り分けます。"
+      },
+      {
+        "idx": "03",
+        "mark": "Aa",
+        "h3": "画一的なAIデザインを抑える",
+        "p": "意味のない装飾よりも文章の文脈とブランドの個性を優先します。"
+      },
+      {
+        "idx": "04",
+        "mark": "↗",
+        "h3": "実測を明示する",
+        "p": "静的な指摘とブラウザ・PDFなどの実測を区別します。"
+      }
+    ],
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
+      "AIっぽさではなく、",
+      "伝わるデザインを。"
+    ],
+    "idea_body": "文章、図版、余白、情報の役割を見極め、目的に沿った文字を使うデザインを組み立てます。",
+    "skills_h2": [
+      "4つの独立Skillを、",
+      "用途から選ぶ。"
+    ],
+    "skills_deck": "Web・文書・レビューを、必要な範囲だけ。",
+    "skills": [
+      [
+        "Compasso",
+        "地域・媒体・原稿保全を先に定義する。"
+      ],
+      [
+        "Web",
+        "レスポンシブ、可読性、見出しの情報設計。"
+      ],
+      [
+        "Documents",
+        "文書・プレゼン・PDFの文章と構成を整える。"
+      ],
+      [
+        "Review",
+        "原稿を変更せずに問題と証拠を整理する。"
+      ]
+    ],
+    "skill_view": "スキルを見る",
+    "install_h2": [
+      "使う環境に合わせて、",
+      "導入する。"
+    ],
+    "install_body": "ChatGPT/Codex、Claude Code、Gemini CLI向けのSkillと配布パッケージを用意しました。",
+    "install_notes": [
+      "スキルの追加・プラグイン登録・ローカル導入のガイド",
+      "Claude Code・チャット向けの導入ガイド",
+      "Gemini CLI・Geminiアプリ向けの導入ガイド"
+    ],
+    "install_extra": "15個のZIPとSHA-256をすべて見る ↗",
+    "status_title": "RELEASED / v0.1.1",
+    "status_body": "GitHubでのOSS公開と各サービスの公式ストア掲載は別です。ネイティブホスト・ブラウザ・母語話者確認は未実施なら未実施と明記します。",
+    "status_link": "最新版のダウンロード ↗",
+    "cta_h2": [
+      "文字から、",
+      "意図を届ける。"
+    ],
+    "cta_body": "使い方、規則、ソース、実装上の制約を公開します。",
+    "cta_button": "GitHubで見る",
+    "footer_sub": "ポルトガル語の文字組と文字を使うデザイン。",
+    "gateway_label": "KUMIHAN トップ",
+    "family": [
+      "日本語版 KUMIHAN",
+      "kumihan.html"
+    ],
+    "top": "ページ上部へ",
+    "guide": {
+      "breadcrumb": "導入",
+      "nav": "導入先",
+      "toc_title": "このページの内容",
+      "toc_summary": "目次を見る",
+      "platforms": "導入する環境",
+      "note_title": "導入前の確認",
+      "note": "対応するプラグインまたはSkillsの導入口が必要です。ZIPを会話に添付するだけでは登録されません。",
+      "source": "ソースと参考資料",
+      "steps": "3ステップ",
+      "top": "トップへ戻る",
+      "title": "{host} への導入",
+      "lead": "ポルトガル語の文字組とデザインを支援する独立Skill。地域と媒体規約を指定して利用します。",
+      "sections": [
+        "形式を選ぶ",
+        "ダウンロードと照合",
+        "インストール",
+        "動作確認と更新"
+      ],
+      "format": "4つの独立Skillを単体で導入できます。プラグインは4つをまとめて提供します。対応するホスト機能が必要です。",
+      "plugin": "プラグイン",
+      "skill": "独立Skill",
+      "download": "GitHub Releaseからv0.1.0付きZIPを取得し、SHA256SUMS.txtで内容を照合してください。",
+      "chatgpt": "CodexではSkillをプロジェクトの.agents/skills/へ展開します。プラグインの登録には対応する導入口が必要です。ChatGPTはアカウント機能に依存し、会話へのZIP添付だけでは登録されません。",
+      "claude": "claude --plugin-dir /absolute/path/kumihan-compasso でローカルプラグインとして読み込みます。ストア導入や単体Skillの登録は利用環境の公式手順に従ってください。",
+      "gemini": "Gemini CLIでは gemini extensions install /absolute/path/kumihan-compasso から拡張機能を導入します。Skills対応はホスト側のバージョンによります。",
+      "test": "実際の一覧表示とSkillの呼び出しを確認してください。JSONの正常性だけでは動作保証になりません。",
+      "prompt": "ポルトガル語の文章を原稿を変えずに文字組とデザイン面からレビューして。",
+      "check": "python runtime/checks.py original.txt --locale pt-BR",
+      "update": "設定を退避し、更新版のSHAを確認したうえで再導入します。",
+      "limits": "静的な候補検査はブラウザ表示・PDFの実測・母語話者校正・実ホスト検証を代替しません。"
+    }
+  },
+  "pt": {
+    "house_style": "pt-pt-editorial",
+    "title": "KUMIHAN｜Compasso — Tipografia portuguesa com intenção",
+    "description": "Skills livres de tipografia e design de conteúdos em português: texto original preservado, regras regionais configuráveis e revisão transparente.",
+    "skip": "Ir para o conteúdo",
+    "nav_label": "Navegação principal",
+    "lang_label": "Idioma",
+    "nav": [
+      "Conceito",
+      "Princípios",
+      "Skills",
+      "Instalar"
+    ],
+    "eyebrow": "PORTUGUESE TYPOGRAPHY / OPEN SOURCE",
+    "h1": [
+      "Cada palavra tem forma.",
+      "Cada projeto tem ritmo."
+    ],
+    "lead": "KUMIHAN｜Compasso ajuda a criar e rever sites, documentos e apresentações em português com tipografia cuidada e design orientado pelo conteúdo. Evita fórmulas visuais genéricas de IA e preserva sempre a intenção original.",
+    "cta": [
+      "Escolher ferramenta",
+      "Conhecer o método"
+    ],
+    "hero_foot": [
+      "PORTUGUÊS",
+      "PT-BR / PT-PT",
+      "OPEN SOURCE"
+    ],
+    "concept_h2": [
+      "A forma deve seguir",
+      "o sentido."
+    ],
+    "concept_body": "O texto não é decoração. Composição, ritmo, hierarquia e legibilidade devem responder ao contexto. Compasso identifica problemas sem alterar nomes, cifras, citações ou voz da marca.",
+    "features_h2": "Cuidados que fazem diferença",
+    "features_deck": "Decisões editoriais antes de efeitos visuais. Regras claras, exceções explícitas e resultados verificáveis.",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "ã",
+        "h3": "Integridade do texto",
+        "p": "Acentos, cedilha, nomes próprios, números e citações são preservados."
+      },
+      {
+        "idx": "02",
+        "mark": "«»",
+        "h3": "Região e estilo editorial",
+        "p": "pt-BR e pt-PT são separados dos manuais de estilo. Aspas e separadores não são alterados à força."
+      },
+      {
+        "idx": "03",
+        "mark": "Aa",
+        "h3": "Design com propósito",
+        "p": "Evita cartões e gradientes genéricos de IA; valoriza a identidade e a hierarquia do conteúdo."
+      },
+      {
+        "idx": "04",
+        "mark": "↗",
+        "h3": "Verificação honesta",
+        "p": "Distingue sugestões estáticas de testes efetivos de fontes, quebras e acessibilidade."
+      }
+    ],
+    "idea_eyebrow": "THE IDEA",
+    "idea_h2": [
+      "Menos aparência de IA.",
+      "Mais identidade."
+    ],
+    "idea_body": "Um bom desenho tipográfico tem uma razão. Compasso organiza o espaço, preserva a voz e deixa cada decisão explicável.",
+    "skills_h2": [
+      "Quatro Skills independentes.",
+      "Um mesmo cuidado."
+    ],
+    "skills_deck": "Instale apenas o que precisa: orientação inicial, web, documentos ou revisão.",
+    "skills": [
+      [
+        "Compasso",
+        "Defina mercado, meio e estilo editorial antes de compor."
+      ],
+      [
+        "Web",
+        "Hierarquia semântica, quebra de linha e legibilidade responsiva."
+      ],
+      [
+        "Documents",
+        "Relatórios, apresentações e PDF com atenção ao texto."
+      ],
+      [
+        "Review",
+        "Avalie riscos e evidências sem reescrever o original."
+      ]
+    ],
+    "skill_view": "Ver Skill",
+    "install_h2": [
+      "Escolha a ferramenta.",
+      "Instale com clareza."
+    ],
+    "install_body": "Skills autónomas e pacotes para ChatGPT/Codex, Claude Code e Gemini CLI. Os ficheiros ZIP incluem v0.1.0.",
+    "install_notes": [
+      "Plugin e Skills para ChatGPT/Codex",
+      "Plugin e Skills para Claude Code",
+      "Extensão e Skills para Gemini CLI"
+    ],
+    "install_extra": "Pacotes e somas SHA-256 no GitHub Release",
+    "status_title": "OPEN SOURCE · V0.1.0",
+    "status_body": "Publicação do código não significa aprovação em lojas de terceiros. Os testes de host e a revisão por falantes nativos são separados da validação estática.",
+    "status_link": "Ver estado de publicação",
+    "cta_h2": [
+      "A tipografia começa",
+      "com o conteúdo."
+    ],
+    "cta_body": "Consulte o código, as regras, os limites e as fontes de pesquisa.",
+    "cta_button": "Explorar no GitHub",
+    "footer_sub": "Tipografia e design editorial para português.",
+    "gateway_label": "Todas as línguas",
+    "family": [
+      "KUMIHAN original",
+      "kumihan.html"
+    ],
+    "top": "Voltar ao topo",
+    "guide": {
+      "breadcrumb": "Instalação",
+      "nav": "Ferramentas",
+      "toc_title": "Nesta página",
+      "toc_summary": "Ver secções",
+      "platforms": "Escolha a plataforma",
+      "note_title": "Antes de instalar",
+      "note": "Use uma interface real de Skills ou plugins no seu host. Um ZIP numa conversa não instala o plugin.",
+      "source": "Código e fontes",
+      "steps": "3 passos",
+      "top": "Voltar ao início",
+      "title": "Instalar no {host}",
+      "lead": "Skills independentes para português; selecione região, meio e estilo editorial antes de usar.",
+      "sections": [
+        "Escolher pacote",
+        "Transferir e verificar",
+        "Instalar",
+        "Testar e atualizar"
+      ],
+      "format": "O plugin reúne quatro Skills; cada Skill também funciona de forma independente. A instalação só funciona nas interfaces suportadas pelo fornecedor.",
+      "plugin": "Pacote de plugin",
+      "skill": "Skill independente",
+      "download": "Descarregue os ZIP v0.1.0 do GitHub Release e verifique SHA256SUMS.txt.",
+      "chatgpt": "Em Codex, extraia cada Skill para .agents/skills/ no projeto. Para plugins, utilize a interface suportada. No ChatGPT, os recursos de instalação dependem da conta; anexar o ZIP não regista o plugin.",
+      "claude": "Instale o plugin através do comando claude --plugin-dir /caminho/absoluto/kumihan-compasso ou do marketplace quando disponível. As Skills podem ser extraídas conforme a documentação oficial.",
+      "gemini": "Instale a extensão via gemini extensions install /caminho/absoluto/kumihan-compasso; a descoberta de Skills depende da versão do host.",
+      "test": "Confirme descoberta real e execução nativa; não deduza sucesso apenas de uma validação JSON.",
+      "prompt": "Revê a tipografia deste texto em português sem alterar o original.",
+      "check": "python runtime/checks.py original.txt --locale pt-PT",
+      "update": "Faça cópia das suas personalizações, verifique hashes da nova versão e reinstale através do procedimento do host.",
+      "limits": "A avaliação estática não substitui a renderização real, revisão editorial nativa nem validação da instalação."
+    }
+  }
+}

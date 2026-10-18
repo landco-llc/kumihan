@@ -26,6 +26,7 @@ class LandingParity(unittest.TestCase):
                  "kumihan-ko.html", "kumihan-ko.en.html", "kumihan-ko.ja.html",
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
                  "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
         for page in pages:
             with self.subTest(page=page):
@@ -33,10 +34,12 @@ class LandingParity(unittest.TestCase):
 
     def test_landing_install_lists_one_row_per_host(self):
         pages = ["kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-th-en.html", "kumihan-zh-cn.html", "kumihan-zh-cn.en.html",
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
                  "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+                 "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
         for page in pages:
             with self.subTest(page=page):
@@ -47,7 +50,7 @@ class LandingParity(unittest.TestCase):
 GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html"}
 # Pages whose language has no gateway of its own yet return to the Japanese index.
-PAGE_GATEWAY = dict(GATEWAY, fr="index.html", ar="index.html", es="index.html")
+PAGE_GATEWAY = dict(GATEWAY, fr="index.html", ar="index.html", es="index.html", pt="index.html")
 
 
 class GatewayLinks(unittest.TestCase):
