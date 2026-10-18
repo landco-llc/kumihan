@@ -1,0 +1,963 @@
+[
+  {
+    "id": "KO-TYPE-001",
+    "family": "TYPE",
+    "title": "書記素クラスタ保護",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "ハングルの結合字母をコードポイント境界で分割しない。",
+    "expected_evidence": "codepointとgraphemeの差を検査",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "static-candidate",
+    "source_refs": [
+      "KO-S04",
+      "KO-S05"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Declared unprotected prose with leading Jamo U+1100–115F followed by CR/LF and vowel Jamo U+1160–11A7. Narrow candidate only, not complete grapheme segmentation.",
+    "verification_scope": "Four-pattern optional runtime only; needs-review and no replacement"
+  },
+  {
+    "id": "KO-TYPE-002",
+    "family": "TYPE",
+    "title": "NFC/NFD原字形保護",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "整形目的で原文字列を無断正規化しない。表示比較では等価性を併記。",
+    "expected_evidence": "原文bytesと提案差分",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S05",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-003",
+    "family": "TYPE",
+    "title": "行頭禁則",
+    "priority": "P1",
+    "check": "render",
+    "summary": "閉じ括弧・句読点等の孤立を確認する。",
+    "expected_evidence": "実描画の行頭文字",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-S07"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-004",
+    "family": "TYPE",
+    "title": "行末禁則",
+    "priority": "P1",
+    "check": "render",
+    "summary": "開き括弧等が行末に孤立しないか確認する。",
+    "expected_evidence": "実描画の行末文字",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-005",
+    "family": "TYPE",
+    "title": "語節改行選択",
+    "priority": "P1",
+    "check": "render",
+    "summary": "normal/keep-allの双方を条件付き比較し、一律強制しない。",
+    "expected_evidence": "可用幅別の折返しスクリーンショット",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-S03"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-006",
+    "family": "TYPE",
+    "title": "見出し全体バランス",
+    "priority": "P1",
+    "check": "human",
+    "summary": "行数だけでなく最後の行長と意味のまとまりを評価する。",
+    "expected_evidence": "実描画＋編集者判定",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-007",
+    "family": "TYPE",
+    "title": "狭幅退避",
+    "priority": "P0",
+    "check": "render",
+    "summary": "長い語節と英数字が狭幅で欠落しないか確認。",
+    "expected_evidence": "320px/拡大試験",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S03",
+      "KO-S04"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-008",
+    "family": "TYPE",
+    "title": "約物との結合",
+    "priority": "P1",
+    "check": "render",
+    "summary": "括弧・引用符・中点等の前後で不自然な孤立を発生させない。",
+    "expected_evidence": "引用符や単位を含む試験文",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-S07"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-009",
+    "family": "TYPE",
+    "title": "韓英混植",
+    "priority": "P1",
+    "check": "render",
+    "summary": "英語は語内分割を避け、数字や大文字との視覚バランスも評価。",
+    "expected_evidence": "混植カード実測",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-S03"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-010",
+    "family": "TYPE",
+    "title": "数値列保護",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "数字の途中および単位接尾記号との不適切な分割を検知する。",
+    "expected_evidence": "価格・数量・日付fixture",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "static-candidate",
+    "source_refs": [
+      "KO-S02",
+      "KO-S04"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Declared unprotected prose with digit followed by CR/LF and 원/개/명/kg/g/% ending at whitespace/end. Explicit source newline only; not rendered line wrapping.",
+    "verification_scope": "Four-pattern optional runtime only; needs-review and no replacement"
+  },
+  {
+    "id": "KO-TYPE-011",
+    "family": "TYPE",
+    "title": "両端揃えの伸縮制限",
+    "priority": "P2",
+    "check": "render",
+    "summary": "語間・字間を一律拡張せず、約物周辺の不自然な伸びを確認。",
+    "expected_evidence": "複数幅の比較",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-TYPE-012",
+    "family": "TYPE",
+    "title": "縦組の明示的範囲外",
+    "priority": "P1",
+    "check": "human",
+    "summary": "縦組と横組で約物が異なることを記録し、未検査の縦組を対応済みとしない。",
+    "expected_evidence": "capability宣言",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-001",
+    "family": "ORTH",
+    "title": "助詞の続け書き",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "助詞の前を機械的に分離しない。",
+    "expected_evidence": "規範参照＋文脈レビュー",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "static-candidate",
+    "source_refs": [
+      "KO-S01",
+      "KO-S08"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Declared unprotected Korean prose with Hangul followed by ASCII space and one of 에서/에게/으로/까지/부터, then whitespace/end. Context review only.",
+    "verification_scope": "Four-pattern optional runtime only; needs-review and no replacement"
+  },
+  {
+    "id": "KO-ORTH-002",
+    "family": "ORTH",
+    "title": "依存名詞の分かち書き",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "依存名詞と助詞を同じ空白規則で置換しない。",
+    "expected_evidence": "文脈と語彙判定",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "static-candidate",
+    "source_refs": [
+      "KO-S01"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Declared unprotected Korean prose containing 할수/될수/알수 followed by whitespace/end. Candidate only; names and intentional voice excluded.",
+    "verification_scope": "Four-pattern optional runtime only; needs-review and no replacement"
+  },
+  {
+    "id": "KO-ORTH-003",
+    "family": "ORTH",
+    "title": "補助用言の許容形",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "補助用言の分かち書きと許容される続け書きの差を確認。",
+    "expected_evidence": "複数候補を提示",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S01"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-004",
+    "family": "ORTH",
+    "title": "数量＋単位名詞",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "「3개」等の許容表記を単純に誤り扱いしない。",
+    "expected_evidence": "対象文脈の確認",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S01",
+      "KO-S09"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-005",
+    "family": "ORTH",
+    "title": "句読点方針",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "句読点の削除・置換をブランド表現と混同しない。",
+    "expected_evidence": "文章種別の判定",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S07"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-006",
+    "family": "ORTH",
+    "title": "商品名・固有名の不変性",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "商標・商品名・SKU・規格を自動綴り直ししない。",
+    "expected_evidence": "protected spansの比較",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S19",
+      "KO-S20",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-007",
+    "family": "ORTH",
+    "title": "年・日付・時間",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "数値と期間の意味を変更せず、スタイルだけを提案。",
+    "expected_evidence": "semantic tokenの比較",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S11",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-008",
+    "family": "ORTH",
+    "title": "入力値と原稿の区別",
+    "priority": "P0",
+    "check": "machine",
+    "summary": "ユーザー入力・コード・引用内の表記を無断変更しない。",
+    "expected_evidence": "literal/locked段落検査",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-ORTH-009",
+    "family": "ORTH",
+    "title": "外来語表記と既存名称",
+    "priority": "P1",
+    "check": "language-review",
+    "summary": "外来語規範の提案とブランド固有綴りを分離。",
+    "expected_evidence": "辞書・原稿意図レビュー",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S01",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-001",
+    "family": "WEB",
+    "title": "lang=ko指定",
+    "priority": "P1",
+    "check": "machine",
+    "summary": "適用言語・混在箇所を明示して表示エンジンに伝える。",
+    "expected_evidence": "DOM属性確認",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S03"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-002",
+    "family": "WEB",
+    "title": "word-break比較",
+    "priority": "P1",
+    "check": "render",
+    "summary": "normal/keep-all/overflow-wrapの適用条件を見比べる。",
+    "expected_evidence": "実ブラウザ比較",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S03"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-003",
+    "family": "WEB",
+    "title": "可用幅先行",
+    "priority": "P1",
+    "check": "render",
+    "summary": "強制改行追加前にコンテナ幅・字サイズ・font metricsを計測する。",
+    "expected_evidence": "狭幅/標準幅の比較",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-004",
+    "family": "WEB",
+    "title": "拡大・テキストズーム",
+    "priority": "P0",
+    "check": "render",
+    "summary": "200%相当拡大で消失、重なり、横スクロールがないか確認。",
+    "expected_evidence": "browserで観測",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S12"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-005",
+    "family": "WEB",
+    "title": "画像内文字の代替",
+    "priority": "P0",
+    "check": "human",
+    "summary": "意味のある画像文字に代替テキストを提供。",
+    "expected_evidence": "DOM＋意味レビュー",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S12"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-006",
+    "family": "WEB",
+    "title": "フォールバック表示",
+    "priority": "P1",
+    "check": "render",
+    "summary": "代替フォントでも欠字・約物位置・段落崩れがないか試験。",
+    "expected_evidence": "複数環境描画",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S02",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-007",
+    "family": "WEB",
+    "title": "CTA意味と状態一致",
+    "priority": "P0",
+    "check": "human",
+    "summary": "ボタンが起こす行為と文面を一致させる。",
+    "expected_evidence": "UIフロー確認",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S10",
+      "KO-S11"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-WEB-008",
+    "family": "WEB",
+    "title": "価格・容量の視認性",
+    "priority": "P0",
+    "check": "human",
+    "summary": "商品情報の価額・容量・条件を装飾より優先し、誤認を避ける。",
+    "expected_evidence": "EC利用タスク検査",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S20",
+      "KO-S21"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-001",
+    "family": "COPY",
+    "title": "受け手とタスク",
+    "priority": "P1",
+    "check": "human",
+    "summary": "読者（客/スタッフ）・利用状況・目的を明示。",
+    "expected_evidence": "copy contract",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S10"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-002",
+    "family": "COPY",
+    "title": "敬語/語尾はブランド依存",
+    "priority": "P1",
+    "check": "human",
+    "summary": "해요体や名詞形を全国共通の既定値として強制しない。",
+    "expected_evidence": "brand contract",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S10",
+      "KO-S11"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-003",
+    "family": "COPY",
+    "title": "操作結果の真偽",
+    "priority": "P0",
+    "check": "machine+human",
+    "summary": "pendingをcompletedへ書き換えない。",
+    "expected_evidence": "state mapping",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S10",
+      "KO-S23"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-004",
+    "family": "COPY",
+    "title": "事実非創作",
+    "priority": "P0",
+    "check": "machine+human",
+    "summary": "産地・原材料・認証・価格・人物等を追加創作しない。",
+    "expected_evidence": "locked facts diff",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S23",
+      "KO-POLICY-001"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-005",
+    "family": "COPY",
+    "title": "情緒と商品事実を分離",
+    "priority": "P1",
+    "check": "human",
+    "summary": "情緒コピーは許すが規格・原材料情報と混同しない。",
+    "expected_evidence": "ecommerce fields",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S19",
+      "KO-S20"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-006",
+    "family": "COPY",
+    "title": "プレースホルダー単独依存禁止",
+    "priority": "P1",
+    "check": "human",
+    "summary": "入力条件説明は常時読めるラベル/ヘルプへ。",
+    "expected_evidence": "form ux check",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S11",
+      "KO-S12"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  },
+  {
+    "id": "KO-COPY-007",
+    "family": "COPY",
+    "title": "文化的実験の例外",
+    "priority": "P2",
+    "check": "human",
+    "summary": "実験的タイポグラフィは可読性・目的・同意で評価。",
+    "expected_evidence": "Design Contract",
+    "exceptions": "保護原稿と明示ブランド仕様、実描画の条件により要審査",
+    "status": "guidance-only",
+    "source_refs": [
+      "KO-S14",
+      "KO-S16"
+    ],
+    "locale": "ko-KR",
+    "scope": "Read-only candidate recognition only; renderer and native Korean editor review required for visual or language conclusions.",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "condition": "Apply when the selected medium includes the described content or layout. Confirm protected spans and required renderer/language context before judgment.",
+    "verification_scope": "Guidance only; no automated detector. Byte comparator supports source preservation but does not prove this rule."
+  }
+]

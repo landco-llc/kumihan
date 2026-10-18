@@ -1,0 +1,237 @@
+{
+  "registry_version": "1.0.0",
+  "sources": [
+    {
+      "id": "KO-S01",
+      "title": "韓国語語文規範：한글 맞춤법",
+      "publisher": "国立国語院",
+      "url": "https://www.korean.go.kr/kornorms/regltn/regltnView.do",
+      "type": "normative",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "表記法・分かち書き・調査・依存名詞などの原典。Web側の表記と規範を区別。"
+    },
+    {
+      "id": "KO-S02",
+      "title": "Requirements for Hangul Text Layout and Typography (Group Note Draft 2026-03-21)",
+      "publisher": "W3C",
+      "url": "https://www.w3.org/TR/klreq/",
+      "type": "technical-draft",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "ハングルの行頭行末禁則、行分割、混植、縦横組みなど。草案であり規範的な適合認証ではない。"
+    },
+    {
+      "id": "KO-S03",
+      "title": "CSS Text Module Level 3",
+      "publisher": "W3C",
+      "url": "https://www.w3.org/TR/css-text-3/",
+      "type": "technical-spec",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "word-break: normal / keep-all等と韓国語の2種の改行スタイル。"
+    },
+    {
+      "id": "KO-S04",
+      "title": "Unicode Standard Annex #14: Line Breaking Algorithm",
+      "publisher": "Unicode",
+      "url": "https://www.unicode.org/reports/tr14/",
+      "type": "technical-spec",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "Hangul syllable blocksと行分割の基礎。"
+    },
+    {
+      "id": "KO-S05",
+      "title": "Unicode Standard Annex #29: Text Segmentation",
+      "publisher": "Unicode",
+      "url": "https://www.unicode.org/reports/tr29/",
+      "type": "technical-spec",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "書記素クラスタ・単語・文境界を定義。"
+    },
+    {
+      "id": "KO-S06",
+      "title": "Korean Script Resources (2026-03-21)",
+      "publisher": "W3C",
+      "url": "https://www.w3.org/TR/kore-lreq/",
+      "type": "technical-draft",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "韓国語のWeb文字組関連資料・テストへのポータル。"
+    },
+    {
+      "id": "KO-S07",
+      "title": "문장 부호 해설",
+      "publisher": "国立国語院",
+      "url": "https://www.korean.go.kr/front/etcData/etcDataView.do?etc_seq=431&mn_id=208&pageIndex=1",
+      "type": "official-explanation",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "句読点の用法と解説。"
+    },
+    {
+      "id": "KO-S08",
+      "title": "助詞の続け書き（第41項）に関する回答",
+      "publisher": "国立国語院",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=216&qna_seq=321432",
+      "type": "official-qna",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "助詞は前語に続けて書くとの公式回答。"
+    },
+    {
+      "id": "KO-S09",
+      "title": "数字と単位名詞の表記（例: 3개）",
+      "publisher": "国立国語院",
+      "url": "https://www.korean.go.kr/front/onlineQna/onlineQnaView.do?mn_id=97&pageIndex=1&qna_seq=335208",
+      "type": "official-qna",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "前回調査から継承する参照URL。今回直接本文の再取得ができていないため、詳細判断の一次根拠には使用しない。"
+    },
+    {
+      "id": "KO-S10",
+      "title": "UX 라이팅",
+      "publisher": "Toss Place",
+      "url": "https://docs.tossplace.com/guide/front-integration/plugin/design/ux-writing.html",
+      "type": "official-guide",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "POSと客向け端末、読者の違い、해요体の方針。"
+    },
+    {
+      "id": "KO-S11",
+      "title": "UX라이팅：온라인 가이드",
+      "publisher": "POSTECH",
+      "url": "https://sites.postech.ac.kr/guide/gui/GUI0403.do",
+      "type": "official-guide",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "ボタン名詞形・プレースホルダー・日付・助動詞の組織固有ルール。"
+    },
+    {
+      "id": "KO-S12",
+      "title": "이미지：온라인 가이드",
+      "publisher": "POSTECH",
+      "url": "https://sites.postech.ac.kr/guide/gui/GUI0404.do",
+      "type": "official-guide",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "代替文、コントラスト、レスポンシブの考え方。"
+    },
+    {
+      "id": "KO-S13",
+      "title": "space time scenarios",
+      "publisher": "Ordinary People",
+      "url": "https://ordinarypeople.info/work/space-time-scenarios",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "ソウル市立美術館の展示グラフィック。グリッド/記号/色の設計コンセプトを制作側が明示。"
+    },
+    {
+      "id": "KO-S14",
+      "title": "OLIVE YOUNG BI Concept Proposal",
+      "publisher": "Ordinary People",
+      "url": "https://ordinarypeople.info/work/oliveyoung-rnxep",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "既存BIの継承、サブIPロゴの傾斜・厚み。コンセプト提案であり実運用成果物と断定しない。"
+    },
+    {
+      "id": "KO-S15",
+      "title": "Fitamin Pop-up / Package",
+      "publisher": "Ordinary People",
+      "url": "https://ordinarypeople.info/work/fitamin",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "Habit Tracker gridと文字・円モチーフ。"
+    },
+    {
+      "id": "KO-S16",
+      "title": "안체 프로젝트 2024-2025",
+      "publisher": "Ahn Graphics",
+      "url": "https://agbook.co.kr/books/a-project-2024-2025",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "ハングル書体の造形実験、26人の参加作品を含む書籍紹介。"
+    },
+    {
+      "id": "KO-S17",
+      "title": "Projects",
+      "publisher": "studio fnt",
+      "url": "https://studiofnt.com/Projects",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "Baeksang Awards、Osulloc Teafood & Bakery等の掲載作品を確認。詳細各作品ページは取得エラー。"
+    },
+    {
+      "id": "KO-S18",
+      "title": "About",
+      "publisher": "studio fnt",
+      "url": "https://studiofnt.com/About",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "スタジオの対象分野・活動について公式記載。"
+    },
+    {
+      "id": "KO-S19",
+      "title": "オソルロック ブランドストーリー",
+      "publisher": "OSULLOC",
+      "url": "https://www.osulloc.com/kr/ko/about/osulloc",
+      "type": "official-brand",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "歴史・産地・文化・暮らしの長文説明と見出し階層。"
+    },
+    {
+      "id": "KO-S20",
+      "title": "商品一覧（ティー）",
+      "publisher": "OSULLOC",
+      "url": "https://www.osulloc.com/kr/ko/shop/item/list?cate=kom_tea_milk&category=teashop&pack=tealeaf",
+      "type": "official-commerce",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "品名、容量、価格、カート導線の商品情報階層。"
+    },
+    {
+      "id": "KO-S21",
+      "title": "商品ページ（ギフト）",
+      "publisher": "OSULLOC",
+      "url": "https://www.osulloc.com/kr/ko/shop/item/teashop/22045",
+      "type": "official-commerce",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "商品背景と内容物・サイズの情報の分離。"
+    },
+    {
+      "id": "KO-S22",
+      "title": "Works",
+      "publisher": "Sodiumpartners",
+      "url": "https://www.sodiumpartners.com/",
+      "type": "official-portfolio",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "Realbarrier等複数ブランドのポートフォリオへのリンク。個別作品の詳細造形は未評価。"
+    },
+    {
+      "id": "KO-S23",
+      "title": "GPT 서비스 ‘뚝딱’ 런칭될 줄 알았지",
+      "publisher": "Baemin Engineering",
+      "url": "https://bcut.baemin.com/6487/",
+      "type": "primary-account",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "生成文の事実混入・校正実務上の注意事例。個別プロジェクト報告であり一般化しない。"
+    },
+    {
+      "id": "KO-S24",
+      "title": "Sub Content Guide",
+      "publisher": "POSTECH",
+      "url": "https://sites.postech.ac.kr/guide/gui/GUI0402.do",
+      "type": "official-guide",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "モバイルテーブル、ボタン、リンク等UI部品の案内。"
+    },
+    {
+      "id": "KO-S25",
+      "title": "Portfolio index",
+      "publisher": "Ordinary People",
+      "url": "https://ordinarypeople.info/work",
+      "type": "official-design",
+      "retrieval_status": "not-checked-in-this-build",
+      "limitation": "視覚的表現領域の幅、個別作品への入口。"
+    },
+    {
+      "id": "KO-POLICY-001",
+      "title": "KUMIHAN Korean public preservation and evidence policy",
+      "publisher": "L&Co. LLC",
+      "type": "project-policy",
+      "path": "references/preservation-policy.md"
+    }
+  ]
+}

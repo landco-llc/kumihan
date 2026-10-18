@@ -1,0 +1,128 @@
+{
+  "skill": "kumihan-geuljjaim",
+  "version": "0.1.0",
+  "path_base": "skill-folder-root",
+  "self_digest": "Inventory excludes itself; archive checksum covers all bytes.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 2292,
+      "sha256": "ecc3d4be4dd5886375a9f72c819bfede5d8187c8acf8a8ade1d874e126cf1356"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 412,
+      "sha256": "9da7d53d6a99c0d67a5c99ec3fe7dbdb423def10af2d0e7e86a3283deb58ae31"
+    },
+    {
+      "path": "locales/ko-KR.json",
+      "bytes": 205,
+      "sha256": "7d30b7420b0800988f2f903826e9cf367769b775eee857f0f81eec362ae47e71"
+    },
+    {
+      "path": "locales/profiles/display-copy.json",
+      "bytes": 891,
+      "sha256": "8d064ccf02380baf88400163c85107da5a475eb2a57cd15dbea3ffe01ac9b929"
+    },
+    {
+      "path": "locales/profiles/presentation.json",
+      "bytes": 891,
+      "sha256": "9fd583e5743c45ef8fc50b7d56ed67b2d2b55e1b3c58d1c43b4e51267eba76d2"
+    },
+    {
+      "path": "locales/profiles/report-document.json",
+      "bytes": 894,
+      "sha256": "c101901c9817329f6ac74d5e24b7db8689489d704010eb23309ebbe1d2b20a8a"
+    },
+    {
+      "path": "locales/profiles/web-editorial.json",
+      "bytes": 892,
+      "sha256": "b4dbb9c9abd6f05fc4ce460554e083750b0dd1c32766ac583b8c408c1ff60cdf"
+    },
+    {
+      "path": "locales/profiles/web-marketing.json",
+      "bytes": 892,
+      "sha256": "966ea06393705d3deb765207c0d42ef7feabfcdc6b12713e61a543a6aacbda32"
+    },
+    {
+      "path": "locales/profiles/web-ui.json",
+      "bytes": 885,
+      "sha256": "e3051c44c116f3028f0412b45625607403ce8abcb6bc6b77a593ac518ba504c9"
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 891,
+      "sha256": "8d064ccf02380baf88400163c85107da5a475eb2a57cd15dbea3ffe01ac9b929"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 891,
+      "sha256": "9fd583e5743c45ef8fc50b7d56ed67b2d2b55e1b3c58d1c43b4e51267eba76d2"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 894,
+      "sha256": "c101901c9817329f6ac74d5e24b7db8689489d704010eb23309ebbe1d2b20a8a"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 892,
+      "sha256": "b4dbb9c9abd6f05fc4ce460554e083750b0dd1c32766ac583b8c408c1ff60cdf"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 892,
+      "sha256": "966ea06393705d3deb765207c0d42ef7feabfcdc6b12713e61a543a6aacbda32"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 885,
+      "sha256": "e3051c44c116f3028f0412b45625607403ce8abcb6bc6b77a593ac518ba504c9"
+    },
+    {
+      "path": "references/detector-examples.md",
+      "bytes": 932,
+      "sha256": "11c697edb7229136541c1b10c2ed5cea6097a11dd68446777a2a1bcbdd48a40b"
+    },
+    {
+      "path": "references/fixture-ledger.json",
+      "bytes": 28725,
+      "sha256": "034de1664c5dfcd1e60a58d403aa2408405266e686fe0ce2dccf0fdfddecea4d"
+    },
+    {
+      "path": "references/preservation-policy.md",
+      "bytes": 991,
+      "sha256": "6d4bac36fdfc6e8ad968471b4c0fd0e52891b70a547635364b829632de28fe7b"
+    },
+    {
+      "path": "references/web-recipe.md",
+      "bytes": 1056,
+      "sha256": "c75a381be12bbbe09b464c1bba4dd1124eacf554a8361732fa5d9f1b4cfbb330"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 39475,
+      "sha256": "ee7d3b03dd8ea3a834f8e263dfa56952136a4303648495460d73e79eea99e457"
+    },
+    {
+      "path": "schemas/finding.schema.json",
+      "bytes": 458,
+      "sha256": "9385a5f9d4573f18b11139656a77f20069914bb7fc61e155dced888aafb15bb2"
+    },
+    {
+      "path": "scripts/checks.py",
+      "bytes": 2068,
+      "sha256": "5f822624f8d33ca9c3a1690f64e625e4671d2a7a9b79a3b261dbb2006e21f530"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 9722,
+      "sha256": "690fff9c24dc4716056d8e4e074c887a3983970d85e987f872ff721450db1140"
+    }
+  ]
+}

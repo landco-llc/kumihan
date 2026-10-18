@@ -1,0 +1,24 @@
+{
+  "name": "kumihan-geuljjaim",
+  "version": "0.1.0",
+  "description": "Korean typography and copy guidance with exact source preservation and read-only review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/landco-llc/kumihan",
+  "interface": {
+    "displayName": "KUMIHAN｜글짜임",
+    "shortDescription": "한국어 타이포그래피와 카피 가이드",
+    "longDescription": "Four independent Korean typography skills. Static candidates are not automatic correction or rendered quality certification.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-ko.html",
+    "defaultPrompt": [
+      "한국어 웹 페이지를 원문을 보존하며 검토해 주세요."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}
