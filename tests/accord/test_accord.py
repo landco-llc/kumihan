@@ -61,4 +61,50 @@ class TestAccord(unittest.TestCase):
         s="Été!"
         mod.inspect(s,"fr-FR","fr-fr-editorial")
         self.assertEqual(s,"Été!")
+class TestAccordIcons(unittest.TestCase):
+    def test_logo_dimensions(self):
+        import struct
+        logo = ROOT / "plugins/kumihan-accord/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+        data = logo.read_bytes()
+        self.assertTrue(data.startswith(bytes.fromhex("89504e470d0a1a0a")))
+        self.assertLess(len(data), 5 * 1024 * 1024)
+        self.assertEqual(data[12:16], b"IHDR")
+        width, height = struct.unpack(">II", data[16:24])
+        self.assertEqual(width, height)
+        self.assertGreaterEqual(width, 48)
+        self.assertLessEqual(width, 4096)
+
+    def test_icon_paths_and_skill_assets(self):
+        import hashlib
+        import json
+        plugin = ROOT / "plugins/kumihan-accord"
+        logo = "KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+        master = (plugin / "assets" / logo).read_bytes()
+        for sid in ("kumihan-accord", "kumihan-accord-web", "kumihan-accord-documents", "kumihan-accord-review"):
+            with self.subTest(skill=sid):
+                path = plugin / "skills" / sid
+                meta = (path / "agents" / "openai.yaml").read_text(encoding="utf-8")
+                self.assertIn("display_name:", meta)
+                self.assertIn('icon_small: "./assets/' + logo + '"', meta)
+                self.assertIn('icon_large: "./assets/' + logo + '"', meta)
+                self.assertEqual(hashlib.sha256((path / "assets" / logo).read_bytes()).digest(), hashlib.sha256(master).digest())
+        openai = json.loads((plugin / "plugin.json").read_text(encoding="utf-8"))
+        overlay = json.loads((plugin / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
+        for ui in (openai["extensions"]["com.openai"]["interface"], overlay["interface"]):
+            self.assertEqual(ui["displayName"], "KUMIHAN｜Accord")
+            self.assertEqual(ui["logo"], "./assets/" + logo)
+            self.assertEqual(ui["composerIcon"], "./assets/" + logo)
+
+    def test_host_manifest_versions(self):
+        import json
+        plugin = ROOT / "plugins/kumihan-accord"
+        for name in ("plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", "gemini-extension.json"):
+            with self.subTest(manifest=name):
+                d = json.loads((plugin / name).read_text(encoding="utf-8"))
+                self.assertEqual(d["version"], "0.1.1")
+                self.assertEqual(d["name"], "kumihan-accord")
+        claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
+        self.assertEqual(claude["icon"], "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png")
+
+
 if __name__=="__main__":unittest.main()
