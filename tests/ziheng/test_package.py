@@ -159,7 +159,7 @@ class DistributionContractTests(unittest.TestCase):
         import shutil
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
-            for rel in ['plugins/kumihan-ziheng','skills/kumihan','tools']:
+            for rel in ['plugins/kumihan-ziheng','skills/kumihan','tools','assets']:
                 shutil.copytree(ROOT/rel,root/rel,ignore=shutil.ignore_patterns('__pycache__'))
             shutil.copy2(ROOT/'LICENSE',root/'LICENSE')
             before={p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()}
