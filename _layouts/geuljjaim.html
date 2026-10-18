@@ -34,7 +34,7 @@
 <a href="{{ page.home_path | relative_url }}#skills">{{ t.skills }}</a>
 <a href="{{ page.home_path | relative_url }}#install">{{ t.install }}</a>
 </nav>
-<nav class="languages" aria-label="Language">
+<nav class="languages" aria-label="{{ t.language }}">
 <a lang="ko-KR" hreflang="ko-KR" href="{{ page.ko_path | relative_url }}"{% if page.locale_key == 'ko' %} aria-current="page"{% endif %}>KO</a>
 <a lang="en" hreflang="en" href="{{ page.en_path | relative_url }}"{% if page.locale_key == 'en' %} aria-current="page"{% endif %}>EN</a>
 <a lang="ja" hreflang="ja" href="{{ page.ja_path | relative_url }}"{% if page.locale_key == 'ja' %} aria-current="page"{% endif %}>日本語</a>

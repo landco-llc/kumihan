@@ -79,7 +79,7 @@ def check(base, output, executable):
             for mode in ('normal','keep-all'):
                 wrap_comparisons.append(dict(width=width,word_break=mode,**page.evaluate('''(mode)=>{
                     const el=document.querySelector('h1');el.style.wordBreak=mode;
-                    return {height:el.getBoundingClientRect().height,width:el.getBoundingClientRect().width,
+                    return {height:el.getBoundingClientRect().height,element_width:el.getBoundingClientRect().width,
                             text:el.textContent,font:getComputedStyle(el).fontFamily,
                             font_size:getComputedStyle(el).fontSize,overflow:el.scrollWidth>el.clientWidth};
                 }''',mode)))
