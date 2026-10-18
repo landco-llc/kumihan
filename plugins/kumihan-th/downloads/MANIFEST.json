@@ -5,34 +5,109 @@
   "logo_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
   "archives": [
     {
-      "file": "plugins/kumihan-th-plugin-0.1.0.zip",
-      "release_asset": "kumihan-th-plugin-0.1.0.zip",
-      "bytes": 921603,
-      "sha256": "6abedf7ad3f1e6c017ba66de9dc29f1fcae180ccf5937dc61eec16173bf30cb3"
+      "file": "claude/plugins/kumihan-th-Claude-Code-plugin-v0.1.0.zip",
+      "release_asset": "kumihan-th-Claude-Code-plugin-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/claude/plugins/kumihan-th-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 921674,
+      "sha256": "283af5374e967107a5efc1807c12c3786a7c75881824eb1269a8c000827037dc"
     },
     {
-      "file": "skills/kumihan-th-0.1.0.zip",
-      "release_asset": "kumihan-th-0.1.0.zip",
-      "bytes": 28800,
-      "sha256": "502df0c7cc3b2831965b9adaeb112f8549f39558719678930c4abeca60c8c674"
+      "file": "claude/skills/kumihan-th-Claude-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-Claude-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/claude/skills/kumihan-th-Claude-skill-v0.1.0.zip",
+      "bytes": 28819,
+      "sha256": "4a405756ca9ff79778f096c2af6d707f169563c83bcea1b74ed6f3c5268969df"
     },
     {
-      "file": "skills/kumihan-th-documents-0.1.0.zip",
-      "release_asset": "kumihan-th-documents-0.1.0.zip",
-      "bytes": 29190,
-      "sha256": "96c1c49e5a86700110b00ca1ad6f3eb9169e8b39de971fbdd0536452eeed3213"
+      "file": "claude/skills/kumihan-th-documents-Claude-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-documents-Claude-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/claude/skills/kumihan-th-documents-Claude-skill-v0.1.0.zip",
+      "bytes": 29236,
+      "sha256": "a97b6b8313dd49c16c76761f3da0570262174a3c2229091b0a8749f3068333fa"
     },
     {
-      "file": "skills/kumihan-th-review-0.1.0.zip",
-      "release_asset": "kumihan-th-review-0.1.0.zip",
-      "bytes": 29074,
-      "sha256": "214acb3e71167769205d960d375991a32d5bfb7ca4a6c94306de7450dd511c2b"
+      "file": "claude/skills/kumihan-th-review-Claude-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-review-Claude-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/claude/skills/kumihan-th-review-Claude-skill-v0.1.0.zip",
+      "bytes": 29120,
+      "sha256": "07425585511b71ebdb0708f10f57c58230fc23c4e9a73fea9bc58297f301baa2"
     },
     {
-      "file": "skills/kumihan-th-web-0.1.0.zip",
-      "release_asset": "kumihan-th-web-0.1.0.zip",
-      "bytes": 28969,
-      "sha256": "3d5c89dd25b1993f467d7978f67df83c37b4fd494b12023980740a344ee68cbc"
+      "file": "claude/skills/kumihan-th-web-Claude-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-web-Claude-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/claude/skills/kumihan-th-web-Claude-skill-v0.1.0.zip",
+      "bytes": 29005,
+      "sha256": "8cd7e7cd05f0906e5d6d16d9c082206709187c8759a8b244331247175e21e972"
+    },
+    {
+      "file": "gemini/plugins/kumihan-th-Gemini-CLI-extension-v0.1.0.zip",
+      "release_asset": "kumihan-th-Gemini-CLI-extension-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/gemini/plugins/kumihan-th-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 922148,
+      "sha256": "4ad5223cdd580b17274618252c204d546ec85fd7a2587799959633df3ba0fd5a"
+    },
+    {
+      "file": "gemini/skills/kumihan-th-Gemini-Apps-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-Gemini-Apps-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/gemini/skills/kumihan-th-Gemini-Apps-skill-v0.1.0.zip",
+      "bytes": 28819,
+      "sha256": "4a405756ca9ff79778f096c2af6d707f169563c83bcea1b74ed6f3c5268969df"
+    },
+    {
+      "file": "gemini/skills/kumihan-th-documents-Gemini-Apps-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-documents-Gemini-Apps-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/gemini/skills/kumihan-th-documents-Gemini-Apps-skill-v0.1.0.zip",
+      "bytes": 29236,
+      "sha256": "a97b6b8313dd49c16c76761f3da0570262174a3c2229091b0a8749f3068333fa"
+    },
+    {
+      "file": "gemini/skills/kumihan-th-review-Gemini-Apps-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-review-Gemini-Apps-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/gemini/skills/kumihan-th-review-Gemini-Apps-skill-v0.1.0.zip",
+      "bytes": 29120,
+      "sha256": "07425585511b71ebdb0708f10f57c58230fc23c4e9a73fea9bc58297f301baa2"
+    },
+    {
+      "file": "gemini/skills/kumihan-th-web-Gemini-Apps-skill-v0.1.0.zip",
+      "release_asset": "kumihan-th-web-Gemini-Apps-skill-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/gemini/skills/kumihan-th-web-Gemini-Apps-skill-v0.1.0.zip",
+      "bytes": 29005,
+      "sha256": "8cd7e7cd05f0906e5d6d16d9c082206709187c8759a8b244331247175e21e972"
+    },
+    {
+      "file": "plugins/kumihan-th-plugin-v0.1.0.zip",
+      "release_asset": "kumihan-th-plugin-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/plugins/kumihan-th-plugin-v0.1.0.zip",
+      "bytes": 923908,
+      "sha256": "8e73fcbb5d67db210dab8250e32ea53ff3bc80133fd4c4f1ae49f9ad26e349e5"
+    },
+    {
+      "file": "skills/kumihan-th-documents-v0.1.0.zip",
+      "release_asset": "kumihan-th-documents-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/skills/kumihan-th-documents-v0.1.0.zip",
+      "bytes": 29236,
+      "sha256": "a97b6b8313dd49c16c76761f3da0570262174a3c2229091b0a8749f3068333fa"
+    },
+    {
+      "file": "skills/kumihan-th-review-v0.1.0.zip",
+      "release_asset": "kumihan-th-review-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/skills/kumihan-th-review-v0.1.0.zip",
+      "bytes": 29120,
+      "sha256": "07425585511b71ebdb0708f10f57c58230fc23c4e9a73fea9bc58297f301baa2"
+    },
+    {
+      "file": "skills/kumihan-th-v0.1.0.zip",
+      "release_asset": "kumihan-th-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/skills/kumihan-th-v0.1.0.zip",
+      "bytes": 28819,
+      "sha256": "4a405756ca9ff79778f096c2af6d707f169563c83bcea1b74ed6f3c5268969df"
+    },
+    {
+      "file": "skills/kumihan-th-web-v0.1.0.zip",
+      "release_asset": "kumihan-th-web-v0.1.0.zip",
+      "source_path": "plugins/kumihan-th/downloads/skills/kumihan-th-web-v0.1.0.zip",
+      "bytes": 29005,
+      "sha256": "8cd7e7cd05f0906e5d6d16d9c082206709187c8759a8b244331247175e21e972"
     }
   ]
 }

@@ -1,6 +1,6 @@
 ---
 name: kumihan-th-review
-description: Use when auditing Thai typography or copy with read-only evidence and honest verification status.
+description: "ใช้ตรวจทานภาษาไทยแบบอ่านอย่างเดียวและระบุหลักฐานที่ยังไม่ได้ตรวจ | Audit Thai typography read-only and report missing evidence; native hosts remain unverified."
 ---
 
 # ตรวจทานดุลอักษร · KUMIHAN｜ดุลอักษร

@@ -7,3 +7,6 @@ html[lang=en] h1{overflow-wrap:break-word;hyphens:auto}
 html[lang=en] h2,html[lang=en] .card p{hyphens:auto;overflow-wrap:break-word}
 .status,.host-status,.lead{overflow-wrap:break-word}
 @media(max-width:760px){.section-title{grid-template-columns:minmax(0,1fr);gap:8px}}
+
+/* Reflow command paths in installation prose when text is enlarged. */
+.guide p{overflow-wrap:anywhere}

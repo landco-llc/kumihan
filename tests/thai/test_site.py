@@ -43,11 +43,14 @@ class ThaiSiteContract(unittest.TestCase):
       self.assertIn(url.fragment,{a.get('id') for _,a in targetdoc.elements})
     self.assertIn('not-checked',text)
  def test_exact_assets_and_host_scope(self):
-  expected=['kumihan-th-plugin-0.1.0.zip']+[s+'-0.1.0.zip' for s in SITE.SKILLS]+['SHA256SUMS.txt']
   for host in SITE.HOSTS:
    for lang in SITE.COPY:
     text=(ROOT/SITE.guide(host,lang)).read_text()
-    for asset in expected:self.assertIn(SITE.DOWNLOAD+asset,text)
+    suffix={'chatgpt':'','claude':'-Claude-skill','gemini':'-Gemini-Apps-skill'}[host]
+    package={'chatgpt':'kumihan-th-plugin','claude':'kumihan-th-Claude-Code-plugin','gemini':'kumihan-th-Gemini-CLI-extension'}[host]
+    for asset in [package+'-v0.1.0.zip']+[s+suffix+'-v0.1.0.zip' for s in SITE.SKILLS]:
+     self.assertIn(asset,text)
+    self.assertIn('SHA256SUMS.txt',text)
     self.assertIn('น้ำชา เก่ง ภาษาไทย',text)
     self.assertIn('data-copy="sample"',text)
     self.assertNotIn('v0.1.7',text)

@@ -26,11 +26,12 @@ class ThaiDistributionTests(unittest.TestCase):
         for path,data in self.outputs.items():
             self.assertEqual((ROOT/path).read_bytes(), data, path)
 
-    def test_five_safe_archives_and_inventories(self):
+    def test_fifteen_safe_archives_and_inventories(self):
         archives = {p:b for p,b in self.outputs.items() if p.endswith('.zip')}
-        self.assertEqual(len(archives), 5)
-        self.assertEqual(len({Path(p).name for p in archives}), 5)
+        self.assertEqual(len(archives), 15)
+        self.assertEqual(len({Path(p).name for p in archives}), 15)
         for path,data in archives.items():
+            self.assertTrue(path.endswith('-v0.1.0.zip'), path)
             with zipfile.ZipFile(io.BytesIO(data)) as z:
                 names = z.namelist()
                 self.assertEqual(len(names),len(set(names)))
@@ -53,7 +54,7 @@ class ThaiDistributionTests(unittest.TestCase):
     def test_standalone_runtime_without_repository(self):
         source = '😀น้ำ กำลัง\u200bทดสอบ\r\n'
         for path,data in self.outputs.items():
-            if not path.endswith('.zip') or '/downloads/skills/' not in path:
+            if not path.endswith('.zip') or '/skills/' not in path:
                 continue
             with tempfile.TemporaryDirectory() as temporary:
                 folder = Path(temporary)
@@ -83,8 +84,8 @@ class ThaiDistributionTests(unittest.TestCase):
             data = self.outputs[base+entry['file']]
             self.assertEqual(hashlib.sha256(data).hexdigest(),entry['sha256'])
         sums = self.outputs[base+'SHA256SUMS.txt'].decode().splitlines()
-        self.assertEqual(len(sums),6)
-        by_name = {Path(p).name:data for p,data in self.outputs.items() if p.startswith(base)}
+        self.assertEqual(len(sums),16)
+        by_name = {Path(p).name:data for p,data in self.outputs.items() if p.startswith(base) and (p.endswith('.zip') or p == base+'MANIFEST.json')}
         for line in sums:
             sha,name=line.split('  ')
             self.assertEqual(hashlib.sha256(by_name[name]).hexdigest(),sha)
