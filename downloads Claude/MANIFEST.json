@@ -1,20 +1,20 @@
 {
   "format": 2,
   "product": "KUMIHAN for Claude",
-  "publisher": "L&Co.LLC",
+  "publisher": "L&Co. LLC",
   "version": "0.1.5-preview",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
       "file": "plugins/kumihan-Claude-Code-plugin-0.1.5-preview.zip",
-      "sha256": "5094ba0ec164ce4d08ccd7775a3ac4626d2b58fc723d6072622f6a75e3925005",
+      "sha256": "52e4290fc31034d3f616391794ed8f98f314972b13bc422888b8d797ca677fce",
       "bytes": 320049,
       "members": [
         {
           "path": "kumihan/.claude-plugin/plugin.json",
-          "bytes": 282,
-          "sha256": "e19d9d0c8e8bc233a8e4c03665c0accdddde492292ca913408f8a9fb7fe40a7f"
+          "bytes": 283,
+          "sha256": "34ef518b4bdae4010cbd4ac09ed8f2f4aa10980eeabf4edd3229c5609b600676"
         },
         {
           "path": "kumihan/LICENSE",
