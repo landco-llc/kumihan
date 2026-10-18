@@ -54,6 +54,27 @@ class ThaiSiteContract(unittest.TestCase):
     self.assertIn('น้ำชา เก่ง ภาษาไทย',text)
     self.assertIn('data-copy="sample"',text)
     self.assertNotIn('v0.1.7',text)
+ def test_release_download_links_use_flat_asset_names(self):
+  # GitHub Release assets are a flat namespace, unlike the repo source tree.
+  # An extra plugins/, skills/, claude/, or gemini/ segment yields HTTP 404.
+  import json
+  manifest=json.loads((ROOT/'plugins/kumihan-th/downloads/MANIFEST.json').read_text())
+  asset_names={item['release_asset'] for item in manifest['archives']}
+  self.assertEqual(len(asset_names),15)
+  self.assertTrue(SITE.DOWNLOAD.endswith('/kumihan-th-v0.1.1/'))
+  for host in SITE.HOSTS:
+   host_names={Path(path).name for path in SITE.host_assets(host)}
+   self.assertEqual(len(host_names),5)
+   self.assertTrue(host_names <= asset_names)
+   for lang in SITE.COPY:
+    with self.subTest(host=host,lang=lang):
+     page=Document((ROOT/SITE.guide(host,lang)).read_text())
+     links=[a['href'] for tag,a in page.elements
+            if tag=='a' and a.get('href','').endswith('.zip')]
+     self.assertEqual(len(links),5)
+     self.assertEqual(set(links),{SITE.DOWNLOAD+name for name in host_names})
+     self.assertTrue(all(urlparse(url).path.rsplit('/',1)[-1] in asset_names
+                         for url in links))
  def test_no_destructive_typography_hacks(self):
   css=(ROOT/'assets/thai-site.css').read_text().replace(' ','')
   for rule in ['word-break:break-all','overflow:hidden','white-space:nowrap']:
