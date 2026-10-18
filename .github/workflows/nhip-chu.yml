@@ -1,0 +1,75 @@
+name: KUMIHAN Nhịp Chữ v0.1.0
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'plugins/kumihan-nhip-chu/**'
+      - 'tools/build_nhip_chu*'
+      - 'tests/nhip_chu/**'
+      - 'kumihan-vi*.html'
+      - 'docs/install-nhip-chu-*.html'
+      - 'assets/nhip-chu-*'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - '.claude-plugin/marketplace.json'
+      - '.github/workflows/nhip-chu.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/kumihan-nhip-chu/**'
+      - 'tools/build_nhip_chu*'
+      - 'tests/nhip_chu/**'
+      - 'kumihan-vi*.html'
+      - 'docs/install-nhip-chu-*.html'
+      - 'assets/nhip-chu-*'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - '.claude-plugin/marketplace.json'
+      - '.github/workflows/nhip-chu.yml'
+permissions:
+  contents: write
+jobs:
+  verify-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python tools/build_gateways.py --check
+      - run: python -m unittest discover -s tests/nhip_chu -v
+      - run: node tools/build_nhip_chu_site.mjs --check
+      - run: python tools/build_nhip_chu.py --out /tmp/nhip-chu-v0.1.0
+      - name: Verify ZIP count and metadata
+        run: |
+          test "$(find /tmp/nhip-chu-v0.1.0 -name '*.zip' | wc -l)" = 15
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          out=Path('/tmp/nhip-chu-v0.1.0')
+          data=json.loads((out/'MANIFEST.json').read_text())
+          assert data['product']=='KUMIHAN｜Nhịp Chữ'
+          assert data['version']=='0.1.0'
+          assert len(data['packages'])==15
+          PY
+      - name: Publish public GitHub Release
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view kumihan-vi-v0.1.0 >/dev/null 2>&1; then
+            echo "Tag already exists; release is immutable."
+            exit 0
+          fi
+          gh release create kumihan-vi-v0.1.0 \
+            /tmp/nhip-chu-v0.1.0/*.zip \
+            /tmp/nhip-chu-v0.1.0/SHA256SUMS.txt \
+            /tmp/nhip-chu-v0.1.0/MANIFEST.json \
+            --title 'KUMIHAN｜Nhịp Chữ v0.1.0' \
+            --notes-file plugins/kumihan-nhip-chu/RELEASE_NOTES.md \
+            --latest=false

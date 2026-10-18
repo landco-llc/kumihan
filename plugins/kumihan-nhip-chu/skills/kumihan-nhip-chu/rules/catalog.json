@@ -1,0 +1,439 @@
+{
+  "version": "0.1.0",
+  "locale": "vi-VN",
+  "scope": "Vietnamese typography & purpose-fit content design",
+  "rules": [
+    {
+      "id": "VI-01",
+      "level": "mandatory",
+      "title": "Maintain Vietnamese alphabet distinctions and all tone marks",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-T01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-02",
+      "level": "mandatory",
+      "title": "Preserve source wording, numbers, prices, brand names and punctuation",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-03",
+      "level": "mandatory",
+      "title": "Compare with NFC derived values but preserve exact original bytes; do not auto-NFKC",
+      "verification": "static-candidate",
+      "source_refs": [
+        "VI-U01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-04",
+      "level": "mandatory",
+      "title": "Keep extended grapheme clusters intact in animation, ellipsis and slicing",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-U01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-05",
+      "level": "mandatory",
+      "title": "Do not strip accents or transliterate display text to ASCII",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-T01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-06",
+      "level": "mandatory",
+      "title": "Do not silently correct regional spelling or uncertain vocabulary",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-07",
+      "level": "mandatory",
+      "title": "Verify character coverage of each font file, not just family name",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-F01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-08",
+      "level": "mandatory",
+      "title": "Test uppercase, bold and italic marks as independent glyph renderings",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-F01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-09",
+      "level": "mandatory",
+      "title": "Do not hide missing glyphs with arbitrary pasted symbols or imagery",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-F01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-10",
+      "level": "mandatory",
+      "title": "Inspect diacritics at actual render sizes; static checks are not visual certification",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-F01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-11",
+      "level": "advisory",
+      "title": "Start letter spacing at normal; avoid universal negative tracking",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-12",
+      "level": "advisory",
+      "title": "Choose display and body type according to content rather than one fixed aesthetic",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-D01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-13",
+      "level": "advisory",
+      "title": "Use ordinary whitespace-based line wrapping for Vietnamese body text",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-14",
+      "level": "advisory",
+      "title": "Review semantic and rhythmic grouping in headings; do not prohibit all syllable breaks",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-T02"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-15",
+      "level": "advisory",
+      "title": "Do not apply word-break:break-all broadly to Vietnamese running text",
+      "verification": "static-candidate",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-16",
+      "level": "advisory",
+      "title": "Scope emergency overflow handling to URLs, identifiers and similar tokens",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-17",
+      "level": "advisory",
+      "title": "Avoid manual padding spaces and gratuitous forced line breaks",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-18",
+      "level": "mandatory",
+      "title": "Do not split combining marks when truncating; expose complete accessible content",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-U01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-19",
+      "level": "advisory",
+      "title": "Select and keep quotation and dash house style consistently in newly authored copy",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-L01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-20",
+      "level": "advisory",
+      "title": "Do not inherit French or Japanese punctuation spacing globally",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-21",
+      "level": "mandatory",
+      "title": "Preserve Vietnamese tone marks when uppercasing; never enforce English title case",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-T01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-22",
+      "level": "mandatory",
+      "title": "For structured values select locale/currency explicitly; preserve quoted prices",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-L01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-23",
+      "level": "advisory",
+      "title": "Treat numeric-unit no-break groups as presentation decisions, not source edits",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-L01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-24",
+      "level": "mandatory",
+      "title": "Mark mixed-language spans and scope formatting per language",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-W01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-25",
+      "level": "advisory",
+      "title": "Explain palette, layout and typographic hierarchy with reader/content purpose",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-D01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-26",
+      "level": "mandatory",
+      "title": "Avoid cultural stereotypes, copying case-study artwork or repackaging unlicensed fonts",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-D01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-27",
+      "level": "advisory",
+      "title": "Make CTAs specific to the action rather than generic generated copy",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-D01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-28",
+      "level": "mandatory",
+      "title": "Do not invent product facts, benefits, certifications or origin",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-29",
+      "level": "mandatory",
+      "title": "Separate typography design, copywriting and translation permissions",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-30",
+      "level": "mandatory",
+      "title": "Mark generated copy as unreviewed until approved by a Vietnamese editor",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-T02"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-31",
+      "level": "mandatory",
+      "title": "Check reflow, 200 percent text resize and loss of content",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-A01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-32",
+      "level": "mandatory",
+      "title": "Re-check exported Office/PDF/presentation artwork in the final medium",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-A01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-33",
+      "level": "mandatory",
+      "title": "Keep review mode read-only; any fixes need a new authorized request",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-34",
+      "level": "mandatory",
+      "title": "Separate standards, house styles, case studies and product recommendations as evidence classes",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-D01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-35",
+      "level": "mandatory",
+      "title": "Report static, visual, native-editor and host validation separately",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-A01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    },
+    {
+      "id": "VI-36",
+      "level": "mandatory",
+      "title": "Keep public name, version, icons and two-language descriptions consistent; release is not directory approval",
+      "verification": "policy-or-rendered",
+      "source_refs": [
+        "VI-P01"
+      ],
+      "autofix": false,
+      "review_status": "not-checked",
+      "notes": "Requires context; original source is immutable in audit mode."
+    }
+  ]
+}

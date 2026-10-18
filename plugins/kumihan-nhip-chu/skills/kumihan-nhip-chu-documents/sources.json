@@ -1,0 +1,65 @@
+{
+  "version": "0.1.0",
+  "source_classes": [
+    "standard",
+    "editorial-reference",
+    "case-study",
+    "product-policy"
+  ],
+  "sources": [
+    {
+      "id": "VI-T01",
+      "class": "editorial-reference",
+      "url": "https://vietnamesetypography.com/",
+      "notes": "Vietnamese diacritics, character details and type design"
+    },
+    {
+      "id": "VI-T02",
+      "class": "editorial-reference",
+      "url": "https://vietnamesetypography.com/diacritical-details/",
+      "notes": "Type anatomy and accent positioning"
+    },
+    {
+      "id": "VI-U01",
+      "class": "standard",
+      "url": "https://www.unicode.org/reports/tr15/",
+      "notes": "Normalization and canonical equivalence; keep source"
+    },
+    {
+      "id": "VI-W01",
+      "class": "standard",
+      "url": "https://www.w3.org/TR/css-text-3/",
+      "notes": "CSS wrapping, hyphenation and spacing"
+    },
+    {
+      "id": "VI-L01",
+      "class": "standard",
+      "url": "https://cldr.unicode.org/",
+      "notes": "Locale data informs generated formatting; does not rewrite source"
+    },
+    {
+      "id": "VI-F01",
+      "class": "editorial-reference",
+      "url": "https://github.com/bettergui/BeVietnamPro",
+      "notes": "Vietnamese font case and style testing; no font distribution"
+    },
+    {
+      "id": "VI-D01",
+      "class": "case-study",
+      "url": "https://m-n.associates/works/guta/",
+      "notes": "Purpose-fit identity example, not a national style guide"
+    },
+    {
+      "id": "VI-P01",
+      "class": "product-policy",
+      "url": "https://github.com/landco-llc/kumihan",
+      "notes": "KUMIHAN source preservation and read-only review commitments"
+    },
+    {
+      "id": "VI-A01",
+      "class": "standard",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "notes": "Reflow and text spacing; real media validation required"
+    }
+  ]
+}

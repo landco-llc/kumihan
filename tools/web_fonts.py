@@ -9,10 +9,12 @@ small Google Fonts subset limited to those characters.
 
 Outputs: assets/kumihan-fonts.css (loaded after each page's own stylesheet)
 and _data/web_fonts.yml (the Google Fonts links for the Jekyll layouts).
-Generators call head(lang, asset_root) to place the links in <head>.
+Generators call head(lang, asset_root) to place the links in <head>; the
+hand-maintained pages in STATIC have their links rewritten here.
 """
 import argparse
 import json
+import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -32,21 +34,29 @@ SCRIPTS = {
                 "Noto Sans SC", "Noto Serif SC"),
     "zh-hant": ('"PingFang TC", "Microsoft JhengHei"', '"Songti TC", PMingLiU', "Noto Sans TC", "Noto Serif TC"),
     "zh-hk": ('"PingFang HK", "Microsoft JhengHei"', '"Songti TC", PMingLiU', "Noto Sans HK", "Noto Serif HK"),
+    # Hindi keeps the edition's self-hosted Noto Sans Devanagari ("Kumihan Devanagari",
+    # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
+    "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
+           "Noto Sans Devanagari", "Noto Serif Devanagari"),
+    # Vietnamese: Be Vietnam Pro is drawn for Vietnamese stacked diacritics.
+    "vi": ('"Helvetica Neue", "Segoe UI", Roboto', "Georgia", "Be Vietnam Pro", "Noto Serif"),
 }
 # After the Google family, before the generic family (Latin system fallbacks
 # that exist almost everywhere; Arial/Times only for Latin text).
-LATIN_TAIL = {"latin": ("Arial", '"Times New Roman"')}
-AXES = {"Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
+LATIN_TAIL = {"latin": ("Arial", '"Times New Roman"'), "vi": ("Arial", '"Times New Roman"')}
+AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..900",
+        "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
         "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
 # Page language (html lang attribute) -> script key
 LANGS = {"ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
-         "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk"}
+         "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi"}
 # Characters of language and product names shown on pages of other languages.
-NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية 字衡 字律 글짜임 ดุลอักษร نضيد "
-         "あ 한 ก 汉 漢 ع 臺灣 香港 台灣 中文")
+NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
+         "अक्षर-संगति あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
 # Subset families for those names, in the order they are tried.
-SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic")
+SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
+          "Noto Sans Devanagari")
 
 
 def script(lang):
@@ -108,7 +118,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar"):
+    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
@@ -122,8 +132,26 @@ def data_yml():
     return "\n".join(lines) + "\n"
 
 
+# Pages without a generator of their own (ZiLu landings are copied from templates/).
+STATIC = ("docs/install-ziheng*.html", "templates/zilu-*-landing.html")
+LINKS = re.compile(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?assets/kumihan-fonts\.css">', re.S)
+
+
+def static_pages():
+    out = {}
+    for pattern in STATIC:
+        for path in sorted(ROOT.glob(pattern)):
+            text = path.read_text(encoding="utf-8")
+            lang = re.search(r'<html lang="([^"]+)"', text).group(1)
+            root = "../" if path.parent.name == "docs" else ""
+            new = head(lang, root)
+            out[str(path.relative_to(ROOT))] = (LINKS.sub(lambda _: new, text) if LINKS.search(text)
+                                                else text.replace("</head>", new + "\n</head>", 1))
+    return out
+
+
 def outputs():
-    return {"assets/kumihan-fonts.css": css(), "_data/web_fonts.yml": data_yml()}
+    return {"assets/kumihan-fonts.css": css(), "_data/web_fonts.yml": data_yml(), **static_pages()}
 
 
 def main():

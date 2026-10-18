@@ -1,0 +1,42 @@
+{
+  "baseline": "tools/base_copy.py JA/EN from Japanese canonical master",
+  "shared_keys": [
+    "title",
+    "description",
+    "nav",
+    "eyebrow",
+    "h1",
+    "lead",
+    "cta",
+    "hero_foot",
+    "concept_h2",
+    "concept_body",
+    "features_h2",
+    "features_deck",
+    "features",
+    "idea_eyebrow",
+    "idea_h2",
+    "idea_body",
+    "skills_h2",
+    "skills_deck",
+    "skills",
+    "skill_view",
+    "install_h2",
+    "install_body",
+    "install_notes",
+    "status_title",
+    "status_link",
+    "cta_h2",
+    "cta_body",
+    "cta_button",
+    "footer_sub"
+  ],
+  "exceptions": [
+    "features[0]: Hindi logical order/shaping/line boxes",
+    "features[2].p: source-preserving join controls and normalization",
+    "skills[0]: Hindi intake context",
+    "status_body: actual unverified scope",
+    "guide: host-specific installation and Hindi test examples",
+    "Hindi: newly authored draft, NOT_CHECKED by native speaker"
+  ]
+}
