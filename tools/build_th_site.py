@@ -4,6 +4,16 @@
 Copy follows packet 03; authoring context/evidence is in docs/thai-site-authoring.md.
 """
 from pathlib import Path
+from importlib.util import spec_from_file_location, module_from_spec
+
+_index_spec = spec_from_file_location("kumihan_th_japanese_index", Path(__file__).with_name("build_th_ja_index.py"))
+_index_module = module_from_spec(_index_spec)
+_index_spec.loader.exec_module(_index_module)
+render_th_japanese_index = _index_module.render
+_th_index_spec = spec_from_file_location("kumihan_th_thai_index", Path(__file__).with_name("build_th_th_index.py"))
+_th_index_module = module_from_spec(_th_index_spec)
+_th_index_spec.loader.exec_module(_th_index_module)
+render_th_thai_index = _th_index_module.render
 import argparse
 import html
 import json
@@ -88,7 +98,7 @@ def installation(host,lang):
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
- files={home(l):landing(l) for l in COPY}
+ files={home(l):render_th_japanese_index(ROOT, COPY[l]) if l=="ja" else render_th_thai_index(ROOT, COPY[l]) if l=="th" else landing(l) for l in COPY}
  files.update({guide(h,l):installation(h,l) for h in HOSTS for l in COPY})
  stale=[]
  for name,content in files.items():
