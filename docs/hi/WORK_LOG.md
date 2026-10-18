@@ -41,3 +41,8 @@ requesting-code-review skillに従い独立read-only reviewerへ新規製品とG
 ### W08 CI差分の解消
 初回CIはルートTHIRD_PARTY_NOTICESの追記が既存日本語ZIPの内容へ影響したため失敗。追記を取り消し、新規fontのOFL/READMEへ通知を集約し既存128生成物の一致を復旧。さらに作業中mainにPR #68（77595b1、日本語heroの3行化）が入り、PRのmerge試験でcopy parity不一致が発生。origin/mainを再fetch/mergeし、共通copyからHindi日本語LPを再生成。主言語本文を変更せず、影響する日本語LPの12条件を再計測。
 Gateway Hindi glyph/title/brandにも局所font-faceとnormal trackingを適用し、共通Latin trackingがIndicへ入らないようにした。ja/en×3幅の6条件でフォント読込後もカード同寸法・normal tracking・overflowなしを再確認。
+
+## W09 マージ・タグ・公開
+PR #71をmain 5b7057366621ace37fd36185450bfe0d7282846cへマージ。直前のmain dd81733（ベトナム語版）との生成HTML/test mapping競合を両言語保持で解消。統合後root11/focused8およびfocused CIを確認。両言語を含む11カードをja/en×3幅で再測定し同寸法・normal Hindi tracking・overflowなし。
+タグkumihan-hi-v0.1.0は上記main SHAを指す。gh release createのasset uploadはCloudのuploads.github.com接続先制限で拒否され公開前に失敗したため、既存publish-ar方式と同様のGitHub Actions公開経路を追加。タグ/期待SHA固定、17assetのsize/digest検証後のみpublic化、既存public/添付済release上書き禁止。
+Claude Code 2.1.302 / Gemini CLI 0.64.0の実CLI manifest validatorsがPASS（host-validation.json）。実ホストのモデル呼出し・accountへの導入とは別。
