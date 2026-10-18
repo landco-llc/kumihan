@@ -44,7 +44,7 @@
     const button = document.createElement('button');
     button.type = 'button'; button.className = 'copy-code'; button.textContent = label;
     const status = document.createElement('span');
-    status.className = 'copy-status-live'; status.setAttribute('role', 'status');
+    status.className = 'copy-status-live'; status.setAttribute('aria-live', 'polite');
     button.addEventListener('click', async () => {
       const ok = await copyText(pre.textContent.replace(/\n$/, ''));
       button.textContent = ok ? done : failed;
