@@ -38,3 +38,15 @@ python3 -m unittest discover -s tests/ziheng -v
 不承諾跨壓縮函式庫版本 byte 完全相同。依 downloads/SHA256SUMS.txt 驗證候選產物。
 
 顯示名稱固定為 **KUMIHAN｜字衡**（無版號）；ZIP 檔名含版本。官方 logo 由 repository 根目錄的 assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png 原本產生，未經重新繪製。
+
+## Claude／Gemini 的独立配布
+
+先執行一般字衡 builder（只驗證不修改也可），再重建專用 Host ZIP：
+
+```sh
+python3 tools/build_ziheng.py --check
+python3 tools/build_ziheng_hosts.py
+python3 tools/build_ziheng_hosts.py --check
+```
+
+Claude 的 `.claude-plugin/plugin.json` 與 Gemini 的 `gemini-extension.json` 由字衡 Host builder 產生；原本的日本語 KUMIHAN 配布不會改變。生成的 `downloads Claude/`、`downloads Gemini/` 各含五個 ZIP、完整 manifest 及 SHA-256。

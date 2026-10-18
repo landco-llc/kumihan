@@ -44,6 +44,19 @@ KUMIHAN｜字衡は台湾／香港の繁體中文向けの独立プラグイン�
 
 KUMIHAN｜字衡 is an independent Traditional Chinese guidance plugin with explicit Taiwan and Hong Kong contexts. It preserves source text, reuses canonical shared policies at build time, and keeps Japanese package identity and distributions unchanged. Static candidates are separate from rendered evidence. Native host acceptance and document rendering remain unverified. The GitHub source preview is available; the ChatGPT public plugin has not been released.
 
+## Claude / Gemini 配布と導入 / Claude and Gemini
+
+Claude Code、Claude chat、Gemini CLI 及 Gemini 應用程式已有字衡專用預覽套件，均沿用同一套臺灣與香港規則。正式主機驗收仍需在使用者環境中進行。
+
+ZiHeng preview bundles for Claude Code / Claude chat and Gemini CLI / Gemini app are available; native invocation is **not yet verified**. Separate skill ZIPs and SHA-256 values are provided for each host.
+
+| Host | 繁體中文 | English | 日本語 |
+| --- | --- | --- | --- |
+| Claude | [指南](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.zh-hant.md) | [Guide](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.en.md) | [ガイド](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.ja.md) |
+| Gemini | [指南](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.zh-hant.md) | [Guide](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.en.md) | [ガイド](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.ja.md) |
+
+Downloads: [Claude](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/downloads%20Claude/README.md) · [Gemini](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/downloads%20Gemini/README.md). These hosts remain independent from the Japanese KUMIHAN product.
+
 ## Display name / 顯示名稱
 
 **KUMIHAN｜字衡** is the version-free display name used for `@` mentions. Versions stay in ZIP filenames (for example `kumihan-ziheng-0.1.0-preview.zip`) and package metadata.

@@ -26,8 +26,15 @@ ChatGPT／Codex 的目錄來源與私有安裝能力依環境而異：沒有相�
 
 ## 其他主機
 
-Claude／Gemini 的字衡原生 manifest 與配布未提供；這些主機的專屬驗收為 not-checked，
-不能拿既有日本語配布宣稱字衡已支援。通用 Markdown 資料可閱讀，但不代表已註冊為原生 Skill。
+Claude Code 與 Gemini CLI 的字衡專屬套件，以及各自四個個別技能 ZIP，已提供下載。請使用對應的繁體中文／English／日本語導入指南：
+
+- [Claude 導入指南](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.zh-hant.md) / [English](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.en.md) / [日本語](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-claude.ja.md)
+- [Gemini 導入指南](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.zh-hant.md) / [English](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.en.md) / [日本語](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/docs/installation-gemini.ja.md)
+- [Claude ZIP 與 SHA-256](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/downloads%20Claude/README.md)、[Gemini ZIP 與 SHA-256](https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-ziheng/downloads%20Gemini/README.md)
+
+Claude Code 的 Marketplace 可從本 mono-repo 的 .claude-plugin/marketplace.json 安裝獨立字衡套件。
+Gemini CLI 無法將 monorepo 根目錄視作字衡延伸；請解壓 Gemini CLI 專用 ZIP 並以**本機資料夾**安裝。
+以上只確認套件檔案、路徑與靜態檢測；各主機實際載入、呼叫及描畫仍屬 not-checked，不可視為已全面支援。
 
 ## 先做的小樣本
 
