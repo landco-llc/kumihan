@@ -42,6 +42,10 @@ def frame(suffix,body,host=None):
 '''
 
 def landing(suffix):
+ if suffix == '.ja':
+  # Japanese landing is intentionally authored with the KUMIHAN index hierarchy.
+  # Keep template as source of truth so --check verifies generated output.
+  return (ROOT/'templates'/'zilu-ja-landing.html').read_text(encoding='utf-8')
  c=C[suffix]
  heading='<span>让文字有章法</span> <span>也有呼吸</span>' if suffix=='' else c['h1']
  body=f'<section class="hero"><div><p class="eyebrow" lang="en">OPEN SOURCE · SIMPLIFIED CHINESE TYPOGRAPHY</p><h1>{heading}</h1><p class="lead">{c["lead"]}</p><div class="actions">{link("#install",c["cta"],class_="button")}{link(SOURCE,c["source"])}</div></div><figure><img src="{PREFIX}assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHAN"><figcaption>KUMIHAN｜字律 · zh-Hans-CN</figcaption></figure></section>'
