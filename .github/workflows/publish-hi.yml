@@ -28,13 +28,16 @@ jobs:
             python - <<'PY'
           import json
           d=json.load(open('/tmp/hi-existing.json'))
-          assert d['isDraft'] and not d['assets'], 'Refuse to overwrite a public or populated release'
+          assert d['isDraft'] or len(d['assets']) == 17, 'Refuse to modify an incomplete public release'
           PY
           else
             gh release create kumihan-hi-v0.1.0 --verify-tag --draft --latest=false --title 'KUMIHAN｜अक्षर-संगति v0.1.0' --notes-file plugins/kumihan-hi/RELEASE_NOTES.md
           fi
-          gh release upload kumihan-hi-v0.1.0 dist/hi-v0.1.0/*.zip dist/hi-v0.1.0/SHA256SUMS.txt dist/hi-v0.1.0/MANIFEST.json
-          gh api repos/landco-llc/kumihan/releases/tags/kumihan-hi-v0.1.0 > /tmp/hi-uploaded.json
+          if test "$(gh release view kumihan-hi-v0.1.0 --json assets --jq '.assets | length')" = '0'; then
+            gh release upload kumihan-hi-v0.1.0 dist/hi-v0.1.0/*.zip dist/hi-v0.1.0/SHA256SUMS.txt dist/hi-v0.1.0/MANIFEST.json
+          fi
+          # GitHub's tag endpoint can omit a draft; the authenticated list includes it.
+          gh api repos/landco-llc/kumihan/releases --jq '.[] | select(.tag_name == "kumihan-hi-v0.1.0")' > /tmp/hi-uploaded.json
           python - <<'PY'
           import hashlib,json
           from pathlib import Path
@@ -46,4 +49,6 @@ jobs:
               assert a['size']==p.stat().st_size
               assert a['digest']=='sha256:'+hashlib.sha256(p.read_bytes()).hexdigest()
           PY
-          gh release edit kumihan-hi-v0.1.0 --draft=false --latest=false
+          if test "$(gh release view kumihan-hi-v0.1.0 --json isDraft --jq .isDraft)" = 'true'; then
+            gh release edit kumihan-hi-v0.1.0 --draft=false --latest=false
+          fi
