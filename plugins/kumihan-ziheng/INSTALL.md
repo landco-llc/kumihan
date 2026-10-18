@@ -1,6 +1,6 @@
 # 安裝與驗收
 
-這是未發布的預覽候選；來源在專用 feature branch，請固定審查過的 commit。
+這是預覽套件；GitHub 原始碼可用，ChatGPT 公開插件商店尚未發布。請固定使用經檢查的 commit 或 ZIP checksum。
 日本語版的根目錄 plugin.json 與安裝指南不適用於字衡。不要把 monorepo 根目錄當成字衡套件。
 
 ## Codex：獨立 Skill

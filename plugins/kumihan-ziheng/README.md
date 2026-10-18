@@ -1,7 +1,7 @@
 # KUMIHAN｜字衡
 
 繁體中文的文字組版指引，分別處理臺灣 `zh-Hant-TW` 與香港 `zh-Hant-HK`。
-這是尚未正式發布的獨立預覽候選。版本以 [plugin.json](plugin.json) 為準；
+這是獨立預覽套件；GitHub 原始碼已提供，ChatGPT 公開插件商店尚未發布。版本以 [plugin.json](plugin.json) 為準；
 與日本語 KUMIHAN 分開安裝、管理版本及配布，不需要先裝日本語版。
 
 ## 開始使用
@@ -42,4 +42,10 @@ KUMIHAN｜字衡は台湾／香港の繁體中文向けの独立プラグイン�
 
 ## English
 
-KUMIHAN｜字衡 is an independent Traditional Chinese guidance plugin with explicit Taiwan and Hong Kong contexts. It preserves source text, reuses canonical shared policies at build time, and keeps Japanese package identity and distributions unchanged. Static candidates are separate from rendered evidence. Native host acceptance and document rendering remain unverified. This candidate is unpublished.
+KUMIHAN｜字衡 is an independent Traditional Chinese guidance plugin with explicit Taiwan and Hong Kong contexts. It preserves source text, reuses canonical shared policies at build time, and keeps Japanese package identity and distributions unchanged. Static candidates are separate from rendered evidence. Native host acceptance and document rendering remain unverified. The GitHub source preview is available; the ChatGPT public plugin has not been released.
+
+## Display name / 顯示名稱
+
+**KUMIHAN｜字衡** is the version-free display name used for `@` mentions. Versions stay in ZIP filenames (for example `kumihan-ziheng-0.1.0-preview.zip`) and package metadata.
+
+**KUMIHAN｜字衡** 為不含版號的顯示名稱，避免影響 `@` 提及操作。版本寫在 ZIP 檔名（例如 `kumihan-ziheng-0.1.0-preview.zip`）與套件資訊中。

@@ -97,6 +97,12 @@ def plan_outputs(root=ROOT):
     outputs[f'{PRODUCT}/LICENSE'] = shared['LICENSE']
     for doc in ['README.md', 'INSTALL.md', 'UPDATES.md', 'TEST_REPORT.md', 'LIGHT_REVIEW.md']:
         plugin_files[doc] = (base/doc).read_bytes()
+    # Use the approved repository master logo as the only canonical image source.
+    # Ship an unmodified local copy so the standalone plugin can render its icon.
+    logo_rel = 'assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'
+    logo_bytes = (root / logo_rel).read_bytes()
+    outputs[f'{PRODUCT}/{logo_rel}'] = logo_bytes
+    plugin_files[logo_rel] = logo_bytes
     # Portable root identity is canonical. Overlay is generated for older Codex hosts.
     overlay = {k: v for k, v in manifest.items() if k not in ['$schema', 'extensions']}
     overlay.update(manifest['extensions']['com.openai'])
@@ -128,7 +134,7 @@ def plan_outputs(root=ROOT):
 
 def generated_files(root=ROOT):
     base = Path(root)/PRODUCT
-    return {p.relative_to(root).as_posix() for folder in ['skills', 'downloads', '.codex-plugin']
+    return {p.relative_to(root).as_posix() for folder in ['skills', 'downloads', '.codex-plugin', 'assets']
             for p in (base/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
 
 
