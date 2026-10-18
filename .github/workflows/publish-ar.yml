@@ -35,7 +35,7 @@ jobs:
               raise SystemExit('Draft has assets: reconcile instead of overwriting')
           PY
           gh release upload kumihan-ar-v0.1.0 plugins/kumihan-ar/downloads/*.zip plugins/kumihan-ar/downloads/SHA256SUMS.txt plugins/kumihan-ar/downloads/MANIFEST.json
-          gh release view kumihan-ar-v0.1.0 --json assets > /tmp/ar-assets.json
+          gh api repos/landco-llc/kumihan/releases/416549782 > /tmp/ar-assets.json
           python - <<'PY'
           import hashlib,json
           from pathlib import Path
