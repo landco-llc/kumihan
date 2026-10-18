@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-nhip-chu",
+  "version": "0.1.0",
+  "description": "Bộ kỹ năng mã nguồn mở hỗ trợ thiết kế chữ tiếng Việt cho web, tài liệu và bản trình bày; giữ nguyên nội dung gốc và rà soát mà không sửa tệp. | Open-source skills for Vietnamese typography in websites, documents and presentations; preserve source text and support read-only review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Nhịp Chữ",
+        "shortDescription": "Kiểu chữ tiếng Việt và bảo toàn bản gốc | Vietnamese typography and source fidelity",
+        "longDescription": "Bộ kỹ năng mã nguồn mở hỗ trợ thiết kế chữ tiếng Việt cho web, tài liệu và bản trình bày; giữ nguyên nội dung gốc và rà soát mà không sửa tệp.\n\nOpen-source skills for Vietnamese typography in websites, documents and presentations; preserve source text and support read-only review.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-vi.html",
+        "defaultPrompt": [
+          "Rà soát bố cục chữ tiếng Việt mà không sửa nội dung gốc.",
+          "Review this Vietnamese layout without changing the source text."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

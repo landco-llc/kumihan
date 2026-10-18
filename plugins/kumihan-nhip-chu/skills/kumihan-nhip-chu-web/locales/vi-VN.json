@@ -1,0 +1,21 @@
+{
+  "locale": "vi-VN",
+  "language": "vi",
+  "country": "VN",
+  "direction": "ltr",
+  "quotation_marks": {
+    "primary": [
+      "“",
+      "”"
+    ],
+    "secondary": [
+      "‘",
+      "’"
+    ]
+  },
+  "decimal": ",",
+  "group": ".",
+  "default_mode": "audit",
+  "notes": "Display formatting of new structured values only; never rewrite quoted values. Body wrapping at spaces; headings require semantic review.",
+  "house_style": "explicit"
+}
