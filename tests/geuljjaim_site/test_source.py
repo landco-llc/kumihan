@@ -14,7 +14,7 @@ class SourceContract(unittest.TestCase):
      fm,body=(ROOT/name).read_text().split('---',2)[1:]
      meta=yaml.safe_load(fm)
      self.assertEqual(meta['lang'],lang)
-     self.assertEqual(meta['layout'],'geuljjaim')
+     self.assertEqual(meta['layout'], 'geuljjaim-index' if platform is None else 'geuljjaim')
      self.assertEqual(meta['canonical_path'],'/'+name)
      self.assertIn('KUMIHAN｜글짜임',body)
      self.assertIn('v0.1.0',body)
@@ -34,10 +34,23 @@ class SourceContract(unittest.TestCase):
    meta=yaml.safe_load(fm)
    headings=[html.unescape(re.sub(r'<[^>]+>','',t)).strip() for t in re.findall(r'<h[12]\b[^>]*>(.*?)</h[12]>',body,re.S)]
    with self.subTest(page=name):
-    self.assertEqual(len(headings),6)
+    self.assertEqual(len(headings),7)
     self.assertEqual(meta['title'],headings[0])
     for heading in headings:
      self.assertFalse(any(mark in heading for mark in ('、','。',',','.')),heading)
+  for suffix in ('','.en','.ja'):
+   s=(ROOT/f'kumihan-ko{suffix}.html').read_text()
+   for token in ('hero-layout','intro-strip','feature-grid','idea-band','skills-grid','install-layout','status-box','cta-layout'):
+    self.assertIn(token,s)
+  design=(ROOT/'assets/geuljjaim-index.css').read_text()
+  self.assertIn('.feature-grid',design)
+  self.assertIn('.skill-card',design)
+  layout=(ROOT/'_layouts/geuljjaim-index.html').read_text()
+  self.assertIn("'/kumihan.html' | relative_url", layout)
+
+  self.assertIn('html[lang="ja"] body',design)
+  self.assertIn('html[lang="ja"] .hero h1 .phrase',design)
+  self.assertNotIn('@import',design)
   css=(ROOT/'assets/geuljjaim.css').read_text()
   self.assertIn('html[lang="ja"] body{line-break:strict}',css)
   self.assertIn('html[lang="ja"] .hero h1',css)
