@@ -1,0 +1,33 @@
+name: Hindi OSS v0.1.0
+on:
+  pull_request:
+    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','.github/workflows/hindi.yml']
+  push:
+    branches: [main]
+    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','.github/workflows/hindi.yml']
+permissions:
+  contents: read
+jobs:
+  hindi:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - name: Hindi focused tests
+        shell: bash
+        run: |
+          set -o pipefail
+          python -m unittest discover -s tests/hi -v 2>&1 | tee /tmp/hindi-tests.log || {
+            python - <<'PYCODE'
+          import pathlib
+          text=pathlib.Path('/tmp/hindi-tests.log').read_text()[-12000:]
+          text=text.replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+          print('::error::'+text)
+          PYCODE
+            exit 1
+          }
+      - run: python tools/build_hi_site.py --check
+      - run: python tools/base_copy.py --check
+      - run: python tools/build_gateways.py --check
+      - run: python tools/build_hi.py
