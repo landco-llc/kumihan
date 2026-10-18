@@ -30,3 +30,6 @@ body [lang="zh-Hant-TW"] { font-family: "PingFang TC", "Microsoft JhengHei", "No
 body [lang="zh-Hant-HK"] { font-family: "PingFang HK", "Microsoft JhengHei", "Noto Sans HK", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic", "Noto Sans Devanagari", system-ui, sans-serif; }
 body [lang="ar"] { font-family: "Geeza Pro", "Segoe UI", "Noto Naskh Arabic", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Sans Devanagari", system-ui, sans-serif; }
 body [lang="hi"] { font-family: "Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari", "Noto Sans Devanagari", "Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic", system-ui, sans-serif; }
+/* Decorative symbol motifs (▮▮▯, « », ◌) take whichever font has the glyph; when that
+   font is wide, let them wrap between symbols instead of widening the page. */
+:is(.feature-motif, .skill-symbol) { overflow-wrap: anywhere; min-width: 0; }

@@ -122,6 +122,9 @@ def css():
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
+    out.append("/* Decorative symbol motifs (▮▮▯, « », ◌) take whichever font has the glyph; when that")
+    out.append("   font is wide, let them wrap between symbols instead of widening the page. */")
+    out.append(":is(.feature-motif, .skill-symbol) { overflow-wrap: anywhere; min-width: 0; }")
     return "\n".join(out) + "\n"
 
 
