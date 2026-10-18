@@ -27,6 +27,11 @@ def canonical_css(header, overrides):
     return f"/* {header} */\n" + match.group(1).strip("\n") + "\n" + overrides.lstrip("\n")
 
 
+def lines(parts, cls="accent"):
+    """Heading lines separated by <br>; the last line carries the accent."""
+    return "<br>".join(x(p) for p in parts[:-1]) + f'<br><span class="{cls}">{x(parts[-1])}</span>'
+
+
 def two(parts, tag="span", cls="accent"):
     attr = f' class="{cls}"' if cls else ""
     return f"{x(parts[0])}<br><{tag}{attr}>{x(parts[1])}</{tag}>"
@@ -85,7 +90,7 @@ def landing(p, c):
   <div class="shell hero-layout">
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(c['eyebrow'])}</p>
-      <h1 id="hero-title">{two(c['h1'])}</h1>
+      <h1 id="hero-title">{lines(c['h1'])}</h1>
       <p class="hero-desc">{x(c['lead'])}</p>
       <div class="hero-cta">
         <a class="button button-primary" href="#install">{x(c['cta'][0])}<span class="arrow" aria-hidden="true">↗</span></a>

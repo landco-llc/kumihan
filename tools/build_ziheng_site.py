@@ -196,7 +196,7 @@ def render(lang, c):
   <div class="shell hero-layout">
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(c['eyebrow'])}</p>
-      <h1 id="hero-title">{x(c['h1'][0])}<br><span class="accent">{x(c['h1'][1])}</span></h1>
+      <h1 id="hero-title">{"<br>".join(x(p) for p in c['h1'][:-1])}<br><span class="accent">{x(c['h1'][-1])}</span></h1>
       <p class="hero-desc">{x(c['lead'])}</p>
       <div class="hero-cta">
         <a class="button button-primary" href="#install">{x(c['cta'][0])}<span class="arrow" aria-hidden="true">↗</span></a>

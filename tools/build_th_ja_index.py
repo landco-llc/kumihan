@@ -231,7 +231,7 @@ def render(root: Path, copy: dict) -> str:
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(s["eyebrow"])}</p>
       <div class="edition" lang="th">{BRAND}</div>
-      <h1 id="hero-title">{x(s["h1"][0])}<br><span class="accent">{x(s["h1"][1])}</span></h1>
+      <h1 id="hero-title">{"<br>".join(x(p) for p in s["h1"][:-1])}<br><span class="accent">{x(s["h1"][-1])}</span></h1>
       <p class="hero-desc">{thai_name(s["lead"])}</p>
       <div class="hero-cta">
         {anchor("#install", x(s["cta"][0]) + '<span class="arrow" aria-hidden="true">↗</span>', "button button-primary")}
