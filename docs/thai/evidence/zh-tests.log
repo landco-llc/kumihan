@@ -1,0 +1,17 @@
+test_exact_bytes_never_normalized (test_checks.ChecksTests.test_exact_bytes_never_normalized) ... ok
+test_original_regional_fixture_cases (test_checks.ChecksTests.test_original_regional_fixture_cases) ... ok
+test_unknown_context_rejected (test_checks.ChecksTests.test_unknown_context_rejected) ... ok
+test_historical_japanese_fixture_exact_set (test_locale.LocaleTests.test_historical_japanese_fixture_exact_set) ... ok
+test_locale_is_explicit_and_case_insensitive (test_locale.LocaleTests.test_locale_is_explicit_and_case_insensitive) ... ok
+test_bilingual_branding_and_portable_icon (test_package.DistributionContractTests.test_bilingual_branding_and_portable_icon) ... ok
+test_plugin_archive_paths_and_identity (test_package.DistributionContractTests.test_plugin_archive_paths_and_identity) ... ok
+test_report_and_profiles_resolve_offline (test_package.DistributionContractTests.test_report_and_profiles_resolve_offline) ... ok
+test_version_change_and_check_do_not_touch_japanese (test_package.DistributionContractTests.test_version_change_and_check_do_not_touch_japanese) ... ok
+test_builder_isolated_deterministic_and_self_contained (test_package.PackageTests.test_builder_isolated_deterministic_and_self_contained) ... ok
+test_new_schemas_and_rules (test_package.PackageTests.test_new_schemas_and_rules) ... ok
+test_zh_resolver_regions_are_disjoint_and_deterministic (test_package.PackageTests.test_zh_resolver_regions_are_disjoint_and_deterministic) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.923s
+
+OK

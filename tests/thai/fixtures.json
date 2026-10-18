@@ -1,0 +1,1445 @@
+[
+  {
+    "id": "TH-F001",
+    "title": "前置母音の保存順",
+    "input": {
+      "text": "เก",
+      "code_points": [
+        "U+0E40",
+        "U+0E01"
+      ],
+      "conditions": {
+        "language": "th",
+        "proposed_transform": "move_prebase_vowel_after_consonant"
+      }
+    },
+    "rule_ids": [
+      "TH-SOURCE-001",
+      "TH-ENC-001"
+    ]
+  },
+  {
+    "id": "TH-F002",
+    "title": "SARA AM の互換正規化を本文に適用しない",
+    "input": {
+      "text": "น้ำ",
+      "code_points": [
+        "U+0E19",
+        "U+0E49",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "proposed_transform": "NFKC_on_source"
+      }
+    },
+    "rule_ids": [
+      "TH-SOURCE-001",
+      "TH-ENC-001"
+    ]
+  },
+  {
+    "id": "TH-F003",
+    "title": "記号順序を一律ソートしない",
+    "input": {
+      "text": "ก่ํ",
+      "code_points": [
+        "U+0E01",
+        "U+0E48",
+        "U+0E4D"
+      ],
+      "conditions": {
+        "language": "th",
+        "comparison_text": "กํ่",
+        "proposed_transform": "custom_combining_mark_sort",
+        "role": "engineering-sample"
+      }
+    },
+    "rule_ids": [
+      "TH-ENC-001",
+      "TH-MARK-001"
+    ]
+  },
+  {
+    "id": "TH-F004",
+    "title": "เก่ง の EGC と語",
+    "input": {
+      "text": "เก่ง",
+      "code_points": [
+        "U+0E40",
+        "U+0E01",
+        "U+0E48",
+        "U+0E07"
+      ],
+      "conditions": {
+        "language": "th",
+        "selection_granularity": "grapheme"
+      }
+    },
+    "rule_ids": [
+      "TH-SEG-001",
+      "TH-SEG-002"
+    ]
+  },
+  {
+    "id": "TH-F005",
+    "title": "Lo である SARA AM の GCB 特例",
+    "input": {
+      "text": "กำ",
+      "code_points": [
+        "U+0E01",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "candidate_detector": "base_plus_Mn_only"
+      }
+    },
+    "rule_ids": [
+      "TH-SEG-001",
+      "TH-ENC-001"
+    ]
+  },
+  {
+    "id": "TH-F006",
+    "title": "emoji とタイ語の UTF-16 index",
+    "input": {
+      "text": "👩🏽‍💻ภาษาไทย",
+      "code_points": [
+        "U+1F469",
+        "U+1F3FD",
+        "U+200D",
+        "U+1F4BB",
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22"
+      ],
+      "conditions": {
+        "language_runs": [
+          "und",
+          "th"
+        ],
+        "operation": "select-and-copy",
+        "index_encoding": "UTF-16"
+      }
+    },
+    "rule_ids": [
+      "TH-SEG-001",
+      "TH-SOURCE-001"
+    ]
+  },
+  {
+    "id": "TH-F007",
+    "title": "タイ文字でも他言語・不明言語",
+    "input": {
+      "text": "ปญฺญา ก̱า",
+      "code_points": [
+        "U+0E1B",
+        "U+0E0D",
+        "U+0E3A",
+        "U+0E0D",
+        "U+0E32",
+        "U+0020",
+        "U+0E01",
+        "U+0331",
+        "U+0E32"
+      ],
+      "conditions": {
+        "language_runs": [
+          {
+            "text": "ปญฺญา",
+            "language": "pi-Thai"
+          },
+          {
+            "text": "ก̱า",
+            "language": "und-Thai"
+          }
+        ]
+      }
+    },
+    "rule_ids": [
+      "TH-LANG-001",
+      "TH-MARK-001"
+    ]
+  },
+  {
+    "id": "TH-F008",
+    "title": "孤立記号の教育標本と入力途中",
+    "input": {
+      "text": "้",
+      "code_points": [
+        "U+0E49"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "character-label",
+        "composition_state": "not-composing",
+        "alternative_scenario": "IME-composition-in-progress"
+      }
+    },
+    "rule_ids": [
+      "TH-MARK-001"
+    ]
+  },
+  {
+    "id": "TH-F009",
+    "title": "声調を別 run にした annotation",
+    "input": {
+      "text": "น้ำ",
+      "code_points": [
+        "U+0E19",
+        "U+0E49",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "annotation_utf16_ranges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "comparison": "before-and-after-generated-annotation"
+      }
+    },
+    "rule_ids": [
+      "TH-RUN-001",
+      "TH-SHAPE-001"
+    ]
+  },
+  {
+    "id": "TH-F010",
+    "title": "基字別の記号と SARA AM",
+    "input": {
+      "text": "ปี่ ปู่ ญู น้ำ เกี๊ยะ",
+      "code_points": [
+        "U+0E1B",
+        "U+0E35",
+        "U+0E48",
+        "U+0020",
+        "U+0E1B",
+        "U+0E39",
+        "U+0E48",
+        "U+0020",
+        "U+0E0D",
+        "U+0E39",
+        "U+0020",
+        "U+0E19",
+        "U+0E49",
+        "U+0E33",
+        "U+0020",
+        "U+0E40",
+        "U+0E01",
+        "U+0E35",
+        "U+0E4A",
+        "U+0E22",
+        "U+0E30"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "engineering-shaping-sample",
+        "font": "from-contract"
+      }
+    },
+    "rule_ids": [
+      "TH-SHAPE-001",
+      "TH-BOX-001"
+    ]
+  },
+  {
+    "id": "TH-F011",
+    "title": "フォント不達とファイルの権利記録",
+    "input": {
+      "text": "ชาไทย ABC ฿1,250.00",
+      "code_points": [
+        "U+0E0A",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22",
+        "U+0020",
+        "U+0041",
+        "U+0042",
+        "U+0043",
+        "U+0020",
+        "U+0E3F",
+        "U+0031",
+        "U+002C",
+        "U+0032",
+        "U+0035",
+        "U+0030",
+        "U+002E",
+        "U+0030",
+        "U+0030"
+      ],
+      "conditions": {
+        "language": "th",
+        "requested_font": "contract-font",
+        "font_request_state": "unavailable",
+        "fallback": "from-existing-contract",
+        "license_record": "missing",
+        "planned_font_operation": "render-only"
+      }
+    },
+    "rule_ids": [
+      "TH-FONT-001",
+      "TH-FONT-004",
+      "TH-RESILIENCE-001"
+    ]
+  },
+  {
+    "id": "TH-F012",
+    "title": "上限700の素材へ800指定",
+    "input": {
+      "text": "น้ำชา ABC",
+      "code_points": [
+        "U+0E19",
+        "U+0E49",
+        "U+0E33",
+        "U+0E0A",
+        "U+0E32",
+        "U+0020",
+        "U+0041",
+        "U+0042",
+        "U+0043"
+      ],
+      "conditions": {
+        "language": "th",
+        "requested_font_weight": 800,
+        "declared_asset_weight_range": [
+          100,
+          700
+        ],
+        "asset_name": "hypothetical-contract-font"
+      }
+    },
+    "rule_ids": [
+      "TH-FONT-002"
+    ]
+  },
+  {
+    "id": "TH-F013",
+    "title": "斜体のない素材で italic",
+    "input": {
+      "text": "ผู้ซื้อ",
+      "code_points": [
+        "U+0E1C",
+        "U+0E39",
+        "U+0E49",
+        "U+0E0B",
+        "U+0E37",
+        "U+0E49",
+        "U+0E2D"
+      ],
+      "conditions": {
+        "language": "th",
+        "requested_font_style": "italic",
+        "asset_styles": [
+          "normal"
+        ],
+        "asset_name": "hypothetical-contract-font"
+      }
+    },
+    "rule_ids": [
+      "TH-FONT-002",
+      "TH-SHAPE-001"
+    ]
+  },
+  {
+    "id": "TH-F014",
+    "title": "loopless の指定を理由に不合格にしない",
+    "input": {
+      "text": "ก ถ ภ ฤ ฦ ฎ ฏ บ ป ข ช",
+      "code_points": [
+        "U+0E01",
+        "U+0020",
+        "U+0E16",
+        "U+0020",
+        "U+0E20",
+        "U+0020",
+        "U+0E24",
+        "U+0020",
+        "U+0E26",
+        "U+0020",
+        "U+0E0E",
+        "U+0020",
+        "U+0E0F",
+        "U+0020",
+        "U+0E1A",
+        "U+0020",
+        "U+0E1B",
+        "U+0020",
+        "U+0E02",
+        "U+0020",
+        "U+0E0A"
+      ],
+      "conditions": {
+        "language": "th",
+        "brand_font_class": "loopless",
+        "purpose": "short-product-label",
+        "font_selection": "case-specific"
+      }
+    },
+    "rule_ids": [
+      "TH-FONT-003"
+    ]
+  },
+  {
+    "id": "TH-F015",
+    "title": "入力欄の上下クリップ候補",
+    "input": {
+      "text": "ปู่ น้ำ",
+      "code_points": [
+        "U+0E1B",
+        "U+0E39",
+        "U+0E48",
+        "U+0020",
+        "U+0E19",
+        "U+0E49",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "host": "web-input",
+        "font_size_px": 20,
+        "line_height_px": 20,
+        "box_height_px": 20,
+        "overflow": "hidden",
+        "numbers_are_test_conditions_not_recommendations": true
+      }
+    },
+    "rule_ids": [
+      "TH-BOX-001"
+    ]
+  },
+  {
+    "id": "TH-F016",
+    "title": "隣接行の記号と行間",
+    "input": {
+      "text": "ผู้ซื้อ\nปู่ น้ำ",
+      "code_points": [
+        "U+0E1C",
+        "U+0E39",
+        "U+0E49",
+        "U+0E0B",
+        "U+0E37",
+        "U+0E49",
+        "U+0E2D",
+        "U+000A",
+        "U+0E1B",
+        "U+0E39",
+        "U+0E48",
+        "U+0020",
+        "U+0E19",
+        "U+0E49",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "font_size_px": 20,
+        "line_height_px": 20,
+        "font": "from-contract",
+        "numbers_are_test_conditions_not_recommendations": true
+      }
+    },
+    "rule_ids": [
+      "TH-BOX-002",
+      "TH-LINE-001"
+    ]
+  },
+  {
+    "id": "TH-F017",
+    "title": "語候補と最終行末を分離",
+    "input": {
+      "text": "ภาษาไทย",
+      "code_points": [
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22"
+      ],
+      "conditions": {
+        "language": "th",
+        "word_engine": "Intl.Segmenter",
+        "render_widths_px": [
+          160,
+          320
+        ],
+        "widths_are_comparison_conditions": true
+      }
+    },
+    "rule_ids": [
+      "TH-SEG-002",
+      "TH-LINE-001"
+    ]
+  },
+  {
+    "id": "TH-F018",
+    "title": "複合語の文脈と保護地名",
+    "input": {
+      "text": "คนขับรถนั่งคอยอยู่ในรถ เชียงใหม่",
+      "code_points": [
+        "U+0E04",
+        "U+0E19",
+        "U+0E02",
+        "U+0E31",
+        "U+0E1A",
+        "U+0E23",
+        "U+0E16",
+        "U+0E19",
+        "U+0E31",
+        "U+0E48",
+        "U+0E07",
+        "U+0E04",
+        "U+0E2D",
+        "U+0E22",
+        "U+0E2D",
+        "U+0E22",
+        "U+0E39",
+        "U+0E48",
+        "U+0E43",
+        "U+0E19",
+        "U+0E23",
+        "U+0E16",
+        "U+0020",
+        "U+0E40",
+        "U+0E0A",
+        "U+0E35",
+        "U+0E22",
+        "U+0E07",
+        "U+0E43",
+        "U+0E2B",
+        "U+0E21",
+        "U+0E48"
+      ],
+      "conditions": {
+        "language": "th",
+        "protected_terms": [
+          "เชียงใหม่"
+        ],
+        "boundary_profile": "context-review-pending"
+      }
+    },
+    "rule_ids": [
+      "TH-SEG-003",
+      "TH-BRAND-001"
+    ]
+  },
+  {
+    "id": "TH-F019",
+    "title": "見出しは幅と行全体を先に比較",
+    "input": {
+      "text": "ชาหอมจากไต้หวัน",
+      "code_points": [
+        "U+0E0A",
+        "U+0E32",
+        "U+0E2B",
+        "U+0E2D",
+        "U+0E21",
+        "U+0E08",
+        "U+0E32",
+        "U+0E01",
+        "U+0E44",
+        "U+0E15",
+        "U+0E49",
+        "U+0E2B",
+        "U+0E27",
+        "U+0E31",
+        "U+0E19"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "original-draft-heading",
+        "container_widths_px": [
+          480,
+          160
+        ],
+        "force_two_lines": false,
+        "protected_terms": [
+          "ไต้หวัน"
+        ]
+      }
+    },
+    "rule_ids": [
+      "TH-LINE-001"
+    ]
+  },
+  {
+    "id": "TH-F020",
+    "title": "本文全体の break-all",
+    "input": {
+      "text": "ภาษาไทยอ่านได้",
+      "code_points": [
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22",
+        "U+0E2D",
+        "U+0E48",
+        "U+0E32",
+        "U+0E19",
+        "U+0E44",
+        "U+0E14",
+        "U+0E49"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "body",
+        "computed_css": {
+          "word-break": "break-all"
+        },
+        "render_widths_px": [
+          80,
+          240
+        ]
+      }
+    },
+    "rule_ids": [
+      "TH-CSS-001"
+    ]
+  },
+  {
+    "id": "TH-F021",
+    "title": "長いURLだけの緊急折返し",
+    "input": {
+      "text": "ดูข้อมูล https://example.invalid/very-long-product-reference-abcdefghijklmnopqrstuvwxyz0123456789",
+      "code_points": [
+        "U+0E14",
+        "U+0E39",
+        "U+0E02",
+        "U+0E49",
+        "U+0E2D",
+        "U+0E21",
+        "U+0E39",
+        "U+0E25",
+        "U+0020",
+        "U+0068",
+        "U+0074",
+        "U+0074",
+        "U+0070",
+        "U+0073",
+        "U+003A",
+        "U+002F",
+        "U+002F",
+        "U+0065",
+        "U+0078",
+        "U+0061",
+        "U+006D",
+        "U+0070",
+        "U+006C",
+        "U+0065",
+        "U+002E",
+        "U+0069",
+        "U+006E",
+        "U+0076",
+        "U+0061",
+        "U+006C",
+        "U+0069",
+        "U+0064",
+        "U+002F",
+        "U+0076",
+        "U+0065",
+        "U+0072",
+        "U+0079",
+        "U+002D",
+        "U+006C",
+        "U+006F",
+        "U+006E",
+        "U+0067",
+        "U+002D",
+        "U+0070",
+        "U+0072",
+        "U+006F",
+        "U+0064",
+        "U+0075",
+        "U+0063",
+        "U+0074",
+        "U+002D",
+        "U+0072",
+        "U+0065",
+        "U+0066",
+        "U+0065",
+        "U+0072",
+        "U+0065",
+        "U+006E",
+        "U+0063",
+        "U+0065",
+        "U+002D",
+        "U+0061",
+        "U+0062",
+        "U+0063",
+        "U+0064",
+        "U+0065",
+        "U+0066",
+        "U+0067",
+        "U+0068",
+        "U+0069",
+        "U+006A",
+        "U+006B",
+        "U+006C",
+        "U+006D",
+        "U+006E",
+        "U+006F",
+        "U+0070",
+        "U+0071",
+        "U+0072",
+        "U+0073",
+        "U+0074",
+        "U+0075",
+        "U+0076",
+        "U+0077",
+        "U+0078",
+        "U+0079",
+        "U+007A",
+        "U+0030",
+        "U+0031",
+        "U+0032",
+        "U+0033",
+        "U+0034",
+        "U+0035",
+        "U+0036",
+        "U+0037",
+        "U+0038",
+        "U+0039"
+      ],
+      "conditions": {
+        "language_runs": [
+          "th",
+          "en"
+        ],
+        "computed_css_for_url": {
+          "overflow-wrap": "anywhere"
+        },
+        "body_word_break": "normal",
+        "url_is_synthetic_fixture": true
+      }
+    },
+    "rule_ids": [
+      "TH-CSS-001",
+      "TH-RESILIENCE-001"
+    ]
+  },
+  {
+    "id": "TH-F022",
+    "title": "auto-phrase の構文対応と言語対応",
+    "input": {
+      "text": "ชาหอมจากไต้หวัน",
+      "code_points": [
+        "U+0E0A",
+        "U+0E32",
+        "U+0E2B",
+        "U+0E2D",
+        "U+0E21",
+        "U+0E08",
+        "U+0E32",
+        "U+0E01",
+        "U+0E44",
+        "U+0E15",
+        "U+0E49",
+        "U+0E2B",
+        "U+0E27",
+        "U+0E31",
+        "U+0E19"
+      ],
+      "conditions": {
+        "language": "th",
+        "css_supports_auto_phrase": true,
+        "host_phrase_detection_th": false,
+        "expected_css_fallback": "normal",
+        "optional_model": "BudouX Thai may be separately evaluated"
+      }
+    },
+    "rule_ids": [
+      "TH-CSS-002"
+    ]
+  },
+  {
+    "id": "TH-F023",
+    "title": "ๆ の孤立を実行時に確認する",
+    "input": {
+      "text": "เด็กเล็ก ๆ",
+      "code_points": [
+        "U+0E40",
+        "U+0E14",
+        "U+0E47",
+        "U+0E01",
+        "U+0E40",
+        "U+0E25",
+        "U+0E47",
+        "U+0E01",
+        "U+0020",
+        "U+0E46"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "ordinary-prose",
+        "hypothetical_line_ranges": [
+          "เด็กเล็ก",
+          "ๆ"
+        ],
+        "measurement_status": "proposed-input-not-observed"
+      }
+    },
+    "rule_ids": [
+      "TH-SYMBOL-001"
+    ]
+  },
+  {
+    "id": "TH-F024",
+    "title": "省略列と引用の行端",
+    "input": {
+      "text": "“กรุงเทพฯ” ฯลฯ",
+      "code_points": [
+        "U+201C",
+        "U+0E01",
+        "U+0E23",
+        "U+0E38",
+        "U+0E07",
+        "U+0E40",
+        "U+0E17",
+        "U+0E1E",
+        "U+0E2F",
+        "U+201D",
+        "U+0020",
+        "U+0E2F",
+        "U+0E25",
+        "U+0E2F"
+      ],
+      "conditions": {
+        "language": "th",
+        "proposed_breaks": "candidate-inside-abbreviation-or-after-opening-quote",
+        "protected_terms": [
+          "กรุงเทพฯ",
+          "ฯลฯ"
+        ]
+      }
+    },
+    "rule_ids": [
+      "TH-SYMBOL-002",
+      "TH-BRAND-001"
+    ]
+  },
+  {
+    "id": "TH-F025",
+    "title": "公式プロファイル付きの空白候補",
+    "input": {
+      "text": "ราคา50บาท ระบบKUMIHAN",
+      "code_points": [
+        "U+0E23",
+        "U+0E32",
+        "U+0E04",
+        "U+0E32",
+        "U+0035",
+        "U+0030",
+        "U+0E1A",
+        "U+0E32",
+        "U+0E17",
+        "U+0020",
+        "U+0E23",
+        "U+0E30",
+        "U+0E1A",
+        "U+0E1A",
+        "U+004B",
+        "U+0055",
+        "U+004D",
+        "U+0049",
+        "U+0048",
+        "U+0041",
+        "U+004E"
+      ],
+      "conditions": {
+        "language": "th",
+        "editorial_profile": "Royal-Society-guidance-with-project-exceptions",
+        "protected_terms": [
+          "KUMIHAN"
+        ]
+      }
+    },
+    "rule_ids": [
+      "TH-SPACE-001"
+    ]
+  },
+  {
+    "id": "TH-F026",
+    "title": "引用の意図した空白",
+    "input": {
+      "text": "“ภาษาไทย  KUMIHAN”",
+      "code_points": [
+        "U+201C",
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22",
+        "U+0020",
+        "U+0020",
+        "U+004B",
+        "U+0055",
+        "U+004D",
+        "U+0049",
+        "U+0048",
+        "U+0041",
+        "U+004E",
+        "U+201D"
+      ],
+      "conditions": {
+        "language_runs": [
+          "th",
+          "en"
+        ],
+        "role": "verbatim-quotation",
+        "protected_ranges": "whole-text",
+        "editorial_profile": null
+      }
+    },
+    "rule_ids": [
+      "TH-SPACE-001",
+      "TH-BRAND-001"
+    ]
+  },
+  {
+    "id": "TH-F027",
+    "title": "不可視文字4種類の保持",
+    "input": {
+      "text": "ภาษา​ไทย ภาษา⁠ไทย เด็กเล็ก ๆ เด็กเล็ก ๆ",
+      "code_points": [
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+200B",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22",
+        "U+0020",
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+2060",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22",
+        "U+0020",
+        "U+0E40",
+        "U+0E14",
+        "U+0E47",
+        "U+0E01",
+        "U+0E40",
+        "U+0E25",
+        "U+0E47",
+        "U+0E01",
+        "U+00A0",
+        "U+0E46",
+        "U+0020",
+        "U+0E40",
+        "U+0E14",
+        "U+0E47",
+        "U+0E01",
+        "U+0E40",
+        "U+0E25",
+        "U+0E47",
+        "U+0E01",
+        "U+202F",
+        "U+0E46"
+      ],
+      "conditions": {
+        "language": "th",
+        "origin": "author-supplied",
+        "diagnostic_view": "show-control-labels"
+      }
+    },
+    "rule_ids": [
+      "TH-CONTROL-001",
+      "TH-SOURCE-001",
+      "TH-SEG-001"
+    ]
+  },
+  {
+    "id": "TH-F028",
+    "title": "字間調整と SARA AM",
+    "input": {
+      "text": "คำ น้ำ",
+      "code_points": [
+        "U+0E04",
+        "U+0E33",
+        "U+0020",
+        "U+0E19",
+        "U+0E49",
+        "U+0E33"
+      ],
+      "conditions": {
+        "language": "th",
+        "computed_css": {
+          "text-align": "justify",
+          "letter-spacing": "0.05em"
+        },
+        "values_are_test_conditions_not_defaults": true
+      }
+    },
+    "rule_ids": [
+      "TH-JUST-001",
+      "TH-SOURCE-001"
+    ]
+  },
+  {
+    "id": "TH-F029",
+    "title": "商品名の表示省略",
+    "input": {
+      "text": "น้ำชาหอม",
+      "code_points": [
+        "U+0E19",
+        "U+0E49",
+        "U+0E33",
+        "U+0E0A",
+        "U+0E32",
+        "U+0E2B",
+        "U+0E2D",
+        "U+0E21"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "synthetic-product-name",
+        "display_mode": "ellipsis",
+        "full_text_access": "required-by-contract",
+        "container_width_px": 72
+      }
+    },
+    "rule_ids": [
+      "TH-TRUNC-001",
+      "TH-SEG-001"
+    ]
+  },
+  {
+    "id": "TH-F030",
+    "title": "型付き金額の表示投影",
+    "input": {
+      "text": "ราคา 1,250 บาท",
+      "code_points": [
+        "U+0E23",
+        "U+0E32",
+        "U+0E04",
+        "U+0E32",
+        "U+0020",
+        "U+0031",
+        "U+002C",
+        "U+0032",
+        "U+0035",
+        "U+0030",
+        "U+0020",
+        "U+0E1A",
+        "U+0E32",
+        "U+0E17"
+      ],
+      "conditions": {
+        "language": "th",
+        "typed_amount_decimal": "1250.00",
+        "currency": "THB",
+        "locale": "th-TH",
+        "numbering_system": "latn",
+        "target": "separate-generated-price-field"
+      }
+    },
+    "rule_ids": [
+      "TH-LOCALE-001"
+    ]
+  },
+  {
+    "id": "TH-F031",
+    "title": "識別子とタイ数字の混在",
+    "input": {
+      "text": "TH2026-A01 0812345678 SAVE50 ๑๒๓",
+      "code_points": [
+        "U+0054",
+        "U+0048",
+        "U+0032",
+        "U+0030",
+        "U+0032",
+        "U+0036",
+        "U+002D",
+        "U+0041",
+        "U+0030",
+        "U+0031",
+        "U+0020",
+        "U+0030",
+        "U+0038",
+        "U+0031",
+        "U+0032",
+        "U+0033",
+        "U+0034",
+        "U+0035",
+        "U+0036",
+        "U+0037",
+        "U+0038",
+        "U+0020",
+        "U+0053",
+        "U+0041",
+        "U+0056",
+        "U+0045",
+        "U+0035",
+        "U+0030",
+        "U+0020",
+        "U+0E51",
+        "U+0E52",
+        "U+0E53"
+      ],
+      "conditions": {
+        "language": "th",
+        "field_roles": [
+          "product-id",
+          "phone-like-identifier",
+          "coupon-id",
+          "source-numeral"
+        ],
+        "protected_ranges": "all-identifiers"
+      }
+    },
+    "rule_ids": [
+      "TH-LOCALE-001",
+      "TH-BRAND-001"
+    ]
+  },
+  {
+    "id": "TH-F032",
+    "title": "同じ瞬間を暦別に表示",
+    "input": {
+      "text": "2026-10-18T12:00:00Z",
+      "code_points": [
+        "U+0032",
+        "U+0030",
+        "U+0032",
+        "U+0036",
+        "U+002D",
+        "U+0031",
+        "U+0030",
+        "U+002D",
+        "U+0031",
+        "U+0038",
+        "U+0054",
+        "U+0031",
+        "U+0032",
+        "U+003A",
+        "U+0030",
+        "U+0030",
+        "U+003A",
+        "U+0030",
+        "U+0030",
+        "U+005A"
+      ],
+      "conditions": {
+        "typed_instant": "2026-10-18T12:00:00Z",
+        "time_zone": "Asia/Bangkok",
+        "date_style": "long",
+        "locale_variants": [
+          "th-TH",
+          "th-TH-u-ca-gregory",
+          "th-TH-u-ca-buddhist-nu-thai"
+        ],
+        "target": "separate-generated-date-fields"
+      }
+    },
+    "rule_ids": [
+      "TH-LOCALE-002"
+    ]
+  },
+  {
+    "id": "TH-F033",
+    "title": "暦未確定の短い日付",
+    "input": {
+      "text": "18/10/69",
+      "code_points": [
+        "U+0031",
+        "U+0038",
+        "U+002F",
+        "U+0031",
+        "U+0030",
+        "U+002F",
+        "U+0036",
+        "U+0039"
+      ],
+      "conditions": {
+        "language": "th",
+        "input_calendar": null,
+        "year_interpretation": null,
+        "time_zone": null,
+        "field_type": "unparsed-source-text"
+      }
+    },
+    "rule_ids": [
+      "TH-LOCALE-002"
+    ]
+  },
+  {
+    "id": "TH-F034",
+    "title": "200%文字拡大と320CSSpxの独立ケース",
+    "input": {
+      "text": "ดูเมนูชา ราคา 50 บาท",
+      "code_points": [
+        "U+0E14",
+        "U+0E39",
+        "U+0E40",
+        "U+0E21",
+        "U+0E19",
+        "U+0E39",
+        "U+0E0A",
+        "U+0E32",
+        "U+0020",
+        "U+0E23",
+        "U+0E32",
+        "U+0E04",
+        "U+0E32",
+        "U+0020",
+        "U+0035",
+        "U+0030",
+        "U+0020",
+        "U+0E1A",
+        "U+0E32",
+        "U+0E17"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "button-and-price",
+        "scenarios": [
+          {
+            "kind": "text-resize",
+            "scale_percent": 200
+          },
+          {
+            "kind": "reflow",
+            "viewport_inline_size_css_px": 320
+          }
+        ],
+        "applicability": "record-per-scenario"
+      }
+    },
+    "rule_ids": [
+      "TH-RESILIENCE-001",
+      "TH-BOX-001"
+    ]
+  },
+  {
+    "id": "TH-F035",
+    "title": "日本語縦組み中の Thai run",
+    "input": {
+      "text": "日本語 ภาษาไทย",
+      "code_points": [
+        "U+65E5",
+        "U+672C",
+        "U+8A9E",
+        "U+0020",
+        "U+0E20",
+        "U+0E32",
+        "U+0E29",
+        "U+0E32",
+        "U+0E44",
+        "U+0E17",
+        "U+0E22"
+      ],
+      "conditions": {
+        "language_runs": [
+          "ja",
+          "th"
+        ],
+        "writing_mode": "vertical-rl",
+        "text_orientation": "mixed",
+        "host_vertical_run_inspection": false
+      }
+    },
+    "rule_ids": [
+      "TH-VERTICAL-001",
+      "TH-LANG-001"
+    ]
+  },
+  {
+    "id": "TH-F036",
+    "title": "丁寧粒子のない短いCTA",
+    "input": {
+      "text": "ดูเมนูชา",
+      "code_points": [
+        "U+0E14",
+        "U+0E39",
+        "U+0E40",
+        "U+0E21",
+        "U+0E19",
+        "U+0E39",
+        "U+0E0A",
+        "U+0E32"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "original-draft-CTA",
+        "voice": "neutral-short-label",
+        "declared_intent": "view-tea-menu",
+        "actual_action": "open-tea-menu",
+        "native_review": "pending"
+      }
+    },
+    "rule_ids": [
+      "TH-COPY-001",
+      "TH-COPY-002"
+    ]
+  },
+  {
+    "id": "TH-F037",
+    "title": "引用内の丁寧粒子候補",
+    "input": {
+      "text": "เขียนว่า “นะค่ะ”",
+      "code_points": [
+        "U+0E40",
+        "U+0E02",
+        "U+0E35",
+        "U+0E22",
+        "U+0E19",
+        "U+0E27",
+        "U+0E48",
+        "U+0E32",
+        "U+0020",
+        "U+201C",
+        "U+0E19",
+        "U+0E30",
+        "U+0E04",
+        "U+0E48",
+        "U+0E30",
+        "U+201D"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "quoted-utterance",
+        "protected_terms": [
+          "นะค่ะ"
+        ],
+        "native_review": "pending"
+      }
+    },
+    "rule_ids": [
+      "TH-COPY-001",
+      "TH-BRAND-001"
+    ]
+  },
+  {
+    "id": "TH-F038",
+    "title": "詳細を見る契約が購入確定へ進む",
+    "input": {
+      "text": "ดูรายละเอียด",
+      "code_points": [
+        "U+0E14",
+        "U+0E39",
+        "U+0E23",
+        "U+0E32",
+        "U+0E22",
+        "U+0E25",
+        "U+0E30",
+        "U+0E40",
+        "U+0E2D",
+        "U+0E35",
+        "U+0E22",
+        "U+0E14"
+      ],
+      "conditions": {
+        "language": "th",
+        "approved_label_intent": "view-details",
+        "actual_action": "commit-order",
+        "scenario_is_synthetic": true
+      }
+    },
+    "rule_ids": [
+      "TH-COPY-002"
+    ]
+  },
+  {
+    "id": "TH-F039",
+    "title": "pending 状態で成功文を表示",
+    "input": {
+      "text": "เพิ่มสินค้าในตะกร้าแล้ว",
+      "code_points": [
+        "U+0E40",
+        "U+0E1E",
+        "U+0E34",
+        "U+0E48",
+        "U+0E21",
+        "U+0E2A",
+        "U+0E34",
+        "U+0E19",
+        "U+0E04",
+        "U+0E49",
+        "U+0E32",
+        "U+0E43",
+        "U+0E19",
+        "U+0E15",
+        "U+0E30",
+        "U+0E01",
+        "U+0E23",
+        "U+0E49",
+        "U+0E32",
+        "U+0E41",
+        "U+0E25",
+        "U+0E49",
+        "U+0E27"
+      ],
+      "conditions": {
+        "language": "th",
+        "message_template_role": "success",
+        "actual_state": "pending",
+        "approved_state_templates": {
+          "pending": "pending-template",
+          "success": "success-template"
+        },
+        "scenario_is_synthetic": true
+      }
+    },
+    "rule_ids": [
+      "TH-COPY-002"
+    ]
+  },
+  {
+    "id": "TH-F040",
+    "title": "条件付き価格コピーの注記欠落候補",
+    "input": {
+      "text": "ลด 50 บาท*",
+      "code_points": [
+        "U+0E25",
+        "U+0E14",
+        "U+0020",
+        "U+0035",
+        "U+0030",
+        "U+0020",
+        "U+0E1A",
+        "U+0E32",
+        "U+0E17",
+        "U+002A"
+      ],
+      "conditions": {
+        "language": "th",
+        "role": "original-draft-promotion",
+        "qualifier_marker": "*",
+        "qualifier_target": null,
+        "protected_amount": "50",
+        "claim_truth": "not-assessed"
+      }
+    },
+    "rule_ids": [
+      "TH-COPY-003",
+      "TH-LOCALE-001"
+    ]
+  }
+]

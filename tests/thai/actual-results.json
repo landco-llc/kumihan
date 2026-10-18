@@ -1,0 +1,361 @@
+{
+  "scope": "40 individually classified proposal cases; five bounded static subchecks only. A passed subcheck is not full proposed scenario acceptance.",
+  "results": [
+    {
+      "id": "TH-F001",
+      "rule_ids": [
+        "TH-SOURCE-001",
+        "TH-ENC-001"
+      ],
+      "status": "passed",
+      "evidence": "Exact source identity passed and deliberate source mutation was detected. Scope: byte preservation only; proposed linguistic/rendering scenario not-checked.",
+      "negative_observation": "failed"
+    },
+    {
+      "id": "TH-F002",
+      "rule_ids": [
+        "TH-SOURCE-001",
+        "TH-ENC-001"
+      ],
+      "status": "passed",
+      "evidence": "Exact source identity passed and deliberate source mutation was detected. Scope: byte preservation only; proposed linguistic/rendering scenario not-checked.",
+      "negative_observation": "failed"
+    },
+    {
+      "id": "TH-F003",
+      "rule_ids": [
+        "TH-ENC-001",
+        "TH-MARK-001"
+      ],
+      "status": "passed",
+      "evidence": "Exact source identity passed and deliberate source mutation was detected. Scope: byte preservation only; proposed linguistic/rendering scenario not-checked.",
+      "negative_observation": "failed"
+    },
+    {
+      "id": "TH-F004",
+      "rule_ids": [
+        "TH-SEG-001",
+        "TH-SEG-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F005",
+      "rule_ids": [
+        "TH-SEG-001",
+        "TH-ENC-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F006",
+      "rule_ids": [
+        "TH-SEG-001",
+        "TH-SOURCE-001"
+      ],
+      "status": "passed",
+      "evidence": "Bounded emoji+Thai offset probe: 😀ไทย = 5 UTF-16 units, 4 code points. Grapheme mapping and full proposed scenario not-checked."
+    },
+    {
+      "id": "TH-F007",
+      "rule_ids": [
+        "TH-LANG-001",
+        "TH-MARK-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F008",
+      "rule_ids": [
+        "TH-MARK-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F009",
+      "rule_ids": [
+        "TH-RUN-001",
+        "TH-SHAPE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F010",
+      "rule_ids": [
+        "TH-SHAPE-001",
+        "TH-BOX-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F011",
+      "rule_ids": [
+        "TH-FONT-001",
+        "TH-FONT-004",
+        "TH-RESILIENCE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F012",
+      "rule_ids": [
+        "TH-FONT-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F013",
+      "rule_ids": [
+        "TH-FONT-002",
+        "TH-SHAPE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F014",
+      "rule_ids": [
+        "TH-FONT-003"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F015",
+      "rule_ids": [
+        "TH-BOX-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F016",
+      "rule_ids": [
+        "TH-BOX-002",
+        "TH-LINE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F017",
+      "rule_ids": [
+        "TH-SEG-002",
+        "TH-LINE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F018",
+      "rule_ids": [
+        "TH-SEG-003",
+        "TH-BRAND-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F019",
+      "rule_ids": [
+        "TH-LINE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F020",
+      "rule_ids": [
+        "TH-CSS-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F021",
+      "rule_ids": [
+        "TH-CSS-001",
+        "TH-RESILIENCE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F022",
+      "rule_ids": [
+        "TH-CSS-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F023",
+      "rule_ids": [
+        "TH-SYMBOL-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F024",
+      "rule_ids": [
+        "TH-SYMBOL-002",
+        "TH-BRAND-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F025",
+      "rule_ids": [
+        "TH-SPACE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F026",
+      "rule_ids": [
+        "TH-SPACE-001",
+        "TH-BRAND-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F027",
+      "rule_ids": [
+        "TH-CONTROL-001",
+        "TH-SOURCE-001",
+        "TH-SEG-001"
+      ],
+      "status": "passed",
+      "evidence": "Four explicit controls preserved and positions reported: U+200B U+2060 U+00A0 U+FEFF. Intent and visual effects not-checked."
+    },
+    {
+      "id": "TH-F028",
+      "rule_ids": [
+        "TH-JUST-001",
+        "TH-SOURCE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F029",
+      "rule_ids": [
+        "TH-TRUNC-001",
+        "TH-SEG-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F030",
+      "rule_ids": [
+        "TH-LOCALE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F031",
+      "rule_ids": [
+        "TH-LOCALE-001",
+        "TH-BRAND-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F032",
+      "rule_ids": [
+        "TH-LOCALE-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F033",
+      "rule_ids": [
+        "TH-LOCALE-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F034",
+      "rule_ids": [
+        "TH-RESILIENCE-001",
+        "TH-BOX-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F035",
+      "rule_ids": [
+        "TH-VERTICAL-001",
+        "TH-LANG-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F036",
+      "rule_ids": [
+        "TH-COPY-001",
+        "TH-COPY-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F037",
+      "rule_ids": [
+        "TH-COPY-001",
+        "TH-BRAND-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F038",
+      "rule_ids": [
+        "TH-COPY-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F039",
+      "rule_ids": [
+        "TH-COPY-002"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    },
+    {
+      "id": "TH-F040",
+      "rule_ids": [
+        "TH-COPY-003",
+        "TH-LOCALE-001"
+      ],
+      "status": "not-checked",
+      "evidence": "Proposed scenario requires host, rendering, segmentation or semantic evidence not run by this source-integrity suite."
+    }
+  ],
+  "counts": {
+    "passed": 5,
+    "failed": 0,
+    "not-checked": 35
+  }
+}
