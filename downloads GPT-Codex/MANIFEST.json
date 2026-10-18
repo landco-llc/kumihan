@@ -1,20 +1,20 @@
 {
   "format": 2,
   "product": "KUMIHAN for ChatGPT and Codex",
-  "publisher": "L&Co.LLC",
+  "publisher": "L&Co. LLC",
   "version": "0.1.5-preview",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
       "file": "plugins/kumihan-GPT-Codex-plugin-0.1.5-preview.zip",
-      "sha256": "8f19c3145e6178aa3bad938cad1661c0e04e5a60bdb3c3a39cd070c046f3145b",
-      "bytes": 1117486,
+      "sha256": "693ce3b212575f1fe2e3d1c0b8da3f36297c9c12955afbf27a4720b785f466f9",
+      "bytes": 1117488,
       "members": [
         {
           "path": "kumihan-private-install-preview/.codex-plugin/plugin.json",
-          "bytes": 2148,
-          "sha256": "902a42e80caff8476d3e5961053513557329aa6b466d875af7f3216ec17ea581"
+          "bytes": 2150,
+          "sha256": "236a5e493635a5b8381eee2121ca9724cb129c386d3b407b06197a893ec4aef2"
         },
         {
           "path": "kumihan-private-install-preview/LICENSE",
@@ -38,8 +38,8 @@
         },
         {
           "path": "kumihan-private-install-preview/plugin.json",
-          "bytes": 2322,
-          "sha256": "bbe3291867cfa5cdb272935c7f675929207a6d4c860c37d2f4a73723609b3182"
+          "bytes": 2324,
+          "sha256": "9e342783d08d2454845a3bc5b3ebda47fa0d32d54b43e8cf76d09dbed650409c"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/LICENSE",
