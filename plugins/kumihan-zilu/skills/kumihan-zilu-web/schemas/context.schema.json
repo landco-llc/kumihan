@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "context",
+  "type": "object",
+  "required": [
+    "mode",
+    "locale",
+    "medium",
+    "protected_text"
+  ],
+  "properties": {
+    "mode": {
+      "enum": [
+        "study",
+        "build",
+        "audit",
+        "refine"
+      ]
+    },
+    "locale": {
+      "type": "string"
+    },
+    "medium": {
+      "type": "string"
+    },
+    "protected_text": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

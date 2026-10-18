@@ -1,0 +1,1088 @@
+[
+  {
+    "id": "KH-CN-R001",
+    "title": "作业模式与范围 | Mode and scope",
+    "status": "implemented",
+    "scope": "all / 入稿",
+    "source_ids": [
+      "CU06",
+      "CU01"
+    ],
+    "sections": {
+      "CU06": "ブランド固有表記の掲載例",
+      "CU01": "用途別の文案指針"
+    },
+    "authority_class": "product-policy",
+    "severity": "blocker",
+    "criterion": "确定作业模式、媒体和修改范围，排版请求不自动授权翻译或改写。 | Define mode, medium and scope; typography is not permission to rewrite.",
+    "exceptions": [
+      "利用者が今回の作業として明示した翻訳・校閲・新規コピーは各専用モードへ振り分ける"
+    ],
+    "verification_kind": [
+      "instruction-review",
+      "before-after-text"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R002",
+    "title": "保护原稿 | Preserve source",
+    "status": "implemented",
+    "scope": "all / ブランド・数値・引用・識別子",
+    "source_ids": [
+      "CU06",
+      "CU09",
+      "S13"
+    ],
+    "sections": {
+      "CU06": "ブランド名と本文の共存",
+      "CU09": "通貨・日付・数値のデータ",
+      "S13": "§1.1–1.3"
+    },
+    "authority_class": "product-policy",
+    "severity": "blocker",
+    "criterion": "保护姓名、品牌、价格、容量、引用、URL与代码，修改须另外获得授权。 | Preserve names, brands, values, quotations and technical syntax; edits need explicit scope.",
+    "exceptions": [
+      "修正が明示承認された箇所のみ別案・差分として扱う"
+    ],
+    "verification_kind": [
+      "before-after-text",
+      "semantic-data-compare"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R003",
+    "title": "区分语言文字与地区 | Separate language script and region",
+    "status": "implemented",
+    "scope": "all / locale",
+    "source_ids": [
+      "WEB04",
+      "S11",
+      "S17"
+    ],
+    "sections": {
+      "WEB04": "Script and region subtags",
+      "S11": "§1.2",
+      "S17": "zh-Hans / zh-Hant"
+    },
+    "authority_class": "informative",
+    "severity": "required",
+    "criterion": "分别记录语言、文字体系与地区，未知地区保持unknown。 | Record language, script and region separately; unknown region stays unknown.",
+    "exceptions": [
+      "地域不明はunknownとして残し、CNを推定で強制しない"
+    ],
+    "verification_kind": [
+      "metadata-inspection",
+      "scope-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R004",
+    "title": "禁止隐式正规化 | No implicit normalization",
+    "status": "implemented",
+    "scope": "all / Unicode",
+    "source_ids": [
+      "S13"
+    ],
+    "sections": {
+      "S13": "§1.1–1.3"
+    },
+    "authority_class": "informative",
+    "severity": "blocker",
+    "criterion": "不得为排版而隐式执行NFKC/NFKD；NFC也须符合原稿字节保护要求。 | Do not silently normalize source; even NFC must respect byte preservation.",
+    "exceptions": [
+      "検索用の派生キー等は原文と分離し、明示した処理として記録"
+    ],
+    "verification_kind": [
+      "codepoint-diff",
+      "round-trip-text"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R005",
+    "title": "保护字素边界 | Protect graphemes",
+    "status": "implemented",
+    "scope": "all / 切り詰め・文字数・読み補助",
+    "source_ids": [
+      "S14",
+      "S13"
+    ],
+    "sections": {
+      "S14": "§3–4",
+      "S13": "§1.1–1.2"
+    },
+    "authority_class": "informative",
+    "severity": "blocker",
+    "criterion": "不得截断组合符号、emoji序列或辅助汉字；截断须有独立边界算法与全文入口。 | Protect combining sequences, emoji and supplementary characters; truncation needs a tested boundary algorithm.",
+    "exceptions": [
+      "既存UIの明示的な字数制限には数え方を定義し、原文の取得手段を残す"
+    ],
+    "verification_kind": [
+      "grapheme-boundary-check",
+      "render-inspection",
+      "copy-round-trip"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R006",
+    "title": "保留表外字 | Preserve uncommon characters",
+    "status": "implemented",
+    "scope": "all / 字種・変換",
+    "source_ids": [
+      "S08",
+      "S09",
+      "S10"
+    ],
+    "sections": {
+      "S08": "字表構成",
+      "S09": "字表の用途",
+      "S10": "字表外の字頭の追加"
+    },
+    "authority_class": "product-policy",
+    "severity": "blocker",
+    "criterion": "不把规范汉字表作为输入白名单，不因表外而删除或替换原文。 | Never delete or replace text solely because it is outside a character table.",
+    "exceptions": [
+      "表外字、人名、方言、古文、引用、意図的異体字は用途確認の対象"
+    ],
+    "verification_kind": [
+      "text-preservation",
+      "exception-review"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R007",
+    "title": "核对地区字形 | Check regional glyphs",
+    "status": "advisory-only",
+    "scope": "all / フォント描画",
+    "source_ids": [
+      "FONT01",
+      "FONT02",
+      "S18"
+    ],
+    "sections": {
+      "FONT01": "Language-specific fonts / Region-specific subsets",
+      "FONT02": "Configurations",
+      "S18": "地域別字形とフォント"
+    },
+    "authority_class": "informative",
+    "severity": "required",
+    "criterion": "记录实际加载字体、地区字形、fallback和缺字；lang声明不足以证明正确。 | Inspect resolved fonts and glyphs; a language declaration is not proof.",
+    "exceptions": [
+      "承認済みのブランド字形は一般本文と別に評価"
+    ],
+    "verification_kind": [
+      "resolved-font-inspection",
+      "glyph-render-inspection",
+      "font-load-state"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R008",
+    "title": "记录字体许可 | Record font rights",
+    "status": "advisory-only",
+    "scope": "all / 書体選択・埋込み",
+    "source_ids": [
+      "FONT03",
+      "FONT05",
+      "FONT06",
+      "FONT07"
+    ],
+    "sections": {
+      "FONT03": "OFL 1.1 conditions",
+      "FONT05": "Licensing and redistribution",
+      "FONT06": "指定OSの収録書体",
+      "FONT07": "OFL 1.1"
+    },
+    "authority_class": "product-policy",
+    "severity": "review",
+    "criterion": "分别核对字体使用、嵌入、再分发权限，不强制统一字体集。 | Distinguish use, embedding and redistribution rights; no fixed font palette.",
+    "exceptions": [
+      "利用条件を確認した既存指定を優先",
+      "OS搭載という事実を再配布権限とみなさない"
+    ],
+    "verification_kind": [
+      "asset-inventory",
+      "license-record-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R009",
+    "title": "区分标点适用范围 | Scope punctuation",
+    "status": "implemented",
+    "scope": "all / 本文・コード・数式",
+    "source_ids": [
+      "S04",
+      "S05",
+      "WEB05"
+    ],
+    "sections": {
+      "S04": "§1、§2.1",
+      "S05": "§4–5",
+      "WEB05": "空白文字と約物内の余白"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "中文标点规则不扩展到英文原文、代码、URL、数学式或批准表记。 | Scope Chinese punctuation rules; preserve English, code, URLs and approved forms.",
+    "exceptions": [
+      "URL、メール、パス、コード、数式、原文引用、承認されたブランド記号"
+    ],
+    "verification_kind": [
+      "syntax-scope-check",
+      "codepoint-diff"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R010",
+    "title": "核对引号语境 | Review quotation context",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 本文・引用",
+    "source_ids": [
+      "S05"
+    ],
+    "sections": {
+      "S05": "§4.8、§5.1.3"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "引号须按用途、嵌套与整段引用判断；多段引用不要求每段数量相等。 | Review quotation context and nesting; multi-paragraph quotes need not balance in each paragraph.",
+    "exceptions": [
+      "複数段落引用",
+      "承認された意図的なブランド表現",
+      "引用原文"
+    ],
+    "verification_kind": [
+      "contextual-text-review",
+      "render-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R011",
+    "title": "按语义判断书名号 | Review title brackets",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 作品・ブランド・活動",
+    "source_ids": [
+      "S05"
+    ],
+    "sections": {
+      "S05": "§4.15、A.13"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "review",
+    "criterion": "按语义区别作品、商标、组织和活动，不统一增删书名号。 | Distinguish works, brands and organizations; no mechanical title-bracket edits.",
+    "exceptions": [
+      "展示・番組等を作品として指す文脈",
+      "名称の引用原文"
+    ],
+    "verification_kind": [
+      "semantic-editorial-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R012",
+    "title": "实测行首行末 | Inspect rendered line boundaries",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 横組・縦組",
+    "source_ids": [
+      "S04",
+      "S11",
+      "S12"
+    ],
+    "sections": {
+      "S04": "§5.1.1–3、§5.1.6–9、§5.2.6",
+      "S11": "§6.1.1",
+      "S12": "§4、§6、§8（適合条件・tailoring）"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "在目标输出中核对选定条款的实际行首行末；声明不等于结果。 | Inspect actual line boundaries under selected source clauses.",
+    "exceptions": [
+      "URL等の別構文",
+      "狭い領域の救済は個別記録"
+    ],
+    "verification_kind": [
+      "line-box-inspection",
+      "render-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R013",
+    "title": "保护双字符号 | Keep double marks together",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 破折号・省略号",
+    "source_ids": [
+      "S04",
+      "S11"
+    ],
+    "sections": {
+      "S04": "§5.1.4–5",
+      "S11": "§6.1.1–6.1.2"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "保护——与……的内部连续性，整体行首位置属于另一个策略。 | Keep double marks internally contiguous; whole-mark line placement is separate.",
+    "exceptions": [
+      "行頭禁止は追加strict方針として別設定",
+      "特殊な複数連用は文脈確認"
+    ],
+    "verification_kind": [
+      "line-box-inspection",
+      "glyph-render-inspection",
+      "copy-round-trip"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R014",
+    "title": "调整空白而非字符 | Adjust space not characters",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 行末・連続約物",
+    "source_ids": [
+      "S04",
+      "WEB01",
+      "WEB05"
+    ],
+    "sections": {
+      "S04": "§5.1.10–11",
+      "WEB01": "§8.5",
+      "WEB05": "約物の空白"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "约物空白调整不得用ASCII替换、横向缩放或全篇负字距代替。 | Adjust punctuation space without replacing characters or distorting glyphs.",
+    "exceptions": [
+      "承認された特殊レタリング",
+      "未対応媒体は未達を記録"
+    ],
+    "verification_kind": [
+      "glyph-metrics-inspection",
+      "render-inspection",
+      "text-diff"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R015",
+    "title": "区分省略与界面状态 | Distinguish ellipsis and UI state",
+    "status": "implemented",
+    "scope": "cn-editorial / 本文とUI",
+    "source_ids": [
+      "S05",
+      "CU01"
+    ],
+    "sections": {
+      "S05": "§4.11、A.9",
+      "CU01": "大小写和标点符号"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "review",
+    "criterion": "区分文章省略、目录引导点和UI状态；重复省略仅作编辑候选。 | Separate prose ellipsis, leaders and UI states; redundancy is an editorial candidate.",
+    "exceptions": [
+      "目次リーダー",
+      "入力状態・メニュー記号",
+      "原文引用",
+      "既存UI文体"
+    ],
+    "verification_kind": [
+      "contextual-text-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R016",
+    "title": "保留连接与范围含义 | Preserve range semantics",
+    "status": "implemented",
+    "scope": "cn-editorial / ダッシュ・範囲・分隔",
+    "source_ids": [
+      "S04",
+      "S07"
+    ],
+    "sections": {
+      "S04": "§4.13、§4.17、§5.1.6–9",
+      "S07": "§5.1.3"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "不统一替换相似连接符，保持数值范围两端的单位、符号与意义。 | Preserve range values, units and the meanings of similar dashes.",
+    "exceptions": [
+      "型番・パス・数式等の別構文",
+      "表示仕様で定義した別表記"
+    ],
+    "verification_kind": [
+      "semantic-token-review",
+      "before-after-text"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R017",
+    "title": "按角色判断数字形式 | Review number roles",
+    "status": "advisory-only",
+    "scope": "cn-editorial / 数字・概数・見出し番号",
+    "source_ids": [
+      "S07"
+    ],
+    "sections": {
+      "S07": "§4.1–4.3、§5.2.1、§5.3"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "review",
+    "criterion": "依据数字的角色与语义判断体例，不统一汉字化或阿拉伯数字化。 | Review numeric notation by semantic role, without blanket conversion.",
+    "exceptions": [
+      "文芸・古籍等の規格適用外",
+      "既成語・商品名・承認コピー"
+    ],
+    "verification_kind": [
+      "semantic-editorial-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R018",
+    "title": "保留数值符号与单位 | Keep values signs and units",
+    "status": "implemented",
+    "scope": "all / 価格・数量・単位",
+    "source_ids": [
+      "S07",
+      "S11",
+      "CU09"
+    ],
+    "sections": {
+      "S07": "§5.1.3、§5.1.7.2",
+      "S11": "§6.1.2.2",
+      "CU09": "数値・通貨データ"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "blocker",
+    "criterion": "保留数值、货币、符号和单位，实际检查分行是否产生误读。 | Preserve numeric tokens and inspect misleading rendered separation.",
+    "exceptions": [
+      "長大なIDは数値とは別の表示仕様",
+      "必要な丸め・換算は別承認"
+    ],
+    "verification_kind": [
+      "numeric-data-compare",
+      "line-box-inspection",
+      "copy-round-trip"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R019",
+    "title": "分离日期货币与数据 | Separate dates currencies and data",
+    "status": "implemented",
+    "scope": "all / ローカライズ",
+    "source_ids": [
+      "CU09",
+      "S07"
+    ],
+    "sections": {
+      "CU09": "Gregorian / Currencies / compact numbers",
+      "S07": "§5.1.4–5"
+    },
+    "authority_class": "product-policy",
+    "severity": "required",
+    "criterion": "从明确数据获取日期、时区和货币，不凭符号猜测币种或补全日期。 | Use explicit date, timezone and currency metadata; do not infer from symbols.",
+    "exceptions": [
+      "ISO/API値と編集本文は別領域",
+      "複数通貨・時差がある場合は明示情報を要求"
+    ],
+    "verification_kind": [
+      "metadata-inspection",
+      "semantic-data-compare"
+    ],
+    "evidence_grade": "byte-comparison",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R020",
+    "title": "在显示层调整中英间距 | Adjust mixed-script spacing in rendering",
+    "status": "advisory-only",
+    "scope": "all / 漢字・Latin・数字",
+    "source_ids": [
+      "S11",
+      "WEB01",
+      "WEB05"
+    ],
+    "sections": {
+      "S11": "§6.3.3",
+      "WEB01": "§8.4",
+      "WEB05": "inline spacing"
+    },
+    "authority_class": "informative",
+    "severity": "suggestion",
+    "criterion": "优先在显示层讨论中英间距，保留已有空白与复制结果，避免重复间距。 | Adjust mixed-script display spacing while preserving source spaces and copy text.",
+    "exceptions": [
+      "コード・URL・型番",
+      "既存の承認されたスペース方針"
+    ],
+    "verification_kind": [
+      "render-inspection",
+      "copy-round-trip",
+      "space-character-diff"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R021",
+    "title": "CSS声明不等于合格 | CSS is not conformance evidence",
+    "status": "implemented",
+    "scope": "web / CSS",
+    "source_ids": [
+      "WEB01",
+      "WEB02",
+      "S11"
+    ],
+    "sections": {
+      "WEB01": "§8.4–8.5",
+      "WEB02": "§5.1–5.2",
+      "S11": "§6.1.1"
+    },
+    "authority_class": "informative",
+    "severity": "required",
+    "criterion": "区分CSS各属性的含义，@supports和strict值本身不构成GB合格证据。 | Distinguish CSS semantics; support detection and strict are not conformance evidence.",
+    "exceptions": [
+      "長い識別子等への緊急折り返しは局所仕様として記録"
+    ],
+    "verification_kind": [
+      "css-inspection",
+      "line-box-inspection",
+      "render-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R022",
+    "title": "核对操作与文案 | Check actions and copy",
+    "status": "advisory-only",
+    "scope": "ui / 行動・エラー",
+    "source_ids": [
+      "CU01",
+      "CU05"
+    ],
+    "sections": {
+      "CU01": "清晰・准确・重要情報と行動",
+      "CU05": "購買／案内CTA"
+    },
+    "authority_class": "informative",
+    "severity": "review",
+    "criterion": "CTA与错误恢复须符合真实操作；未知行为保持未检查，不虚构处理结果。 | Match copy to real actions and recovery; unknown behavior stays unchecked.",
+    "exceptions": [
+      "承認済みブランドトーン",
+      "法的・安全上の通知は意味を優先"
+    ],
+    "verification_kind": [
+      "interaction-spec-review",
+      "content-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R023",
+    "title": "核对批准术语 | Check approved terminology",
+    "status": "advisory-only",
+    "scope": "all / glossary",
+    "source_ids": [
+      "CU01",
+      "CU03"
+    ],
+    "sections": {
+      "CU01": "一致性",
+      "CU03": "意味役割と体系"
+    },
+    "authority_class": "product-policy",
+    "severity": "review",
+    "criterion": "仅依据已批准术语表核对功能名称，不覆盖固有名词。 | Compare with approved terminology without overwriting proper names.",
+    "exceptions": [
+      "固有名詞・異なる機能・原文引用",
+      "未承認語は候補扱い"
+    ],
+    "verification_kind": [
+      "glossary-match",
+      "semantic-editorial-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R024",
+    "title": "保持品牌语气 | Preserve brand voice",
+    "status": "advisory-only",
+    "scope": "brand / headline / ui / body",
+    "source_ids": [
+      "CU01",
+      "CU05",
+      "CU06",
+      "CU07",
+      "CU08"
+    ],
+    "sections": {
+      "CU01": "文体推奨",
+      "CU05": "CTA",
+      "CU06": "理念文",
+      "CU07": "ブランド使命",
+      "CU08": "検索索引の限定事例"
+    },
+    "authority_class": "product-policy",
+    "severity": "suggestion",
+    "criterion": "按用途保持品牌语气和长度，不统一四字化、删标点或短文化。 | Preserve contextual brand voice; no universal four-character or shortening rule.",
+    "exceptions": [
+      "媒体の実仕様による長さ制限は測定方法を明示",
+      "コピー再作成は別モード"
+    ],
+    "verification_kind": [
+      "content-role-review",
+      "brand-exception-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R025",
+    "title": "法律与编辑确认 | Legal and editorial review",
+    "status": "advisory-only",
+    "scope": "public-copy / 公開前確認",
+    "source_ids": [
+      "CU11",
+      "CU12"
+    ],
+    "sections": {
+      "CU11": "第8条・第9条第3号",
+      "CU12": "正式指南の対象・文脈・例外"
+    },
+    "authority_class": "product-policy",
+    "severity": "review",
+    "criterion": "广告表达只能提出法律或编辑确认，不能凭关键词自动判断违法。 | Flag advertising language for legal/editorial review, never automatic legality judgment.",
+    "exceptions": [
+      "商品名・引用・比較対象・事実根拠等の文脈を確認",
+      "個別適法性は本カタログの判定対象外"
+    ],
+    "verification_kind": [
+      "contextual-risk-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R026",
+    "title": "纵排单独验证 | Validate vertical layout separately",
+    "status": "deferred",
+    "scope": "vertical / オプション",
+    "source_ids": [
+      "S04",
+      "S07",
+      "WEB03"
+    ],
+    "sections": {
+      "S04": "§5.2",
+      "S07": "§5.1.7.3",
+      "WEB03": "writing-mode / text-orientation"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "纵排为后续范围；单独核对方向、数字和约物，不逐字换行模拟。 | Vertical layout is deferred; do not simulate it with per-character newlines.",
+    "exceptions": [
+      "承認された縦中横等は局所方針として記録"
+    ],
+    "verification_kind": [
+      "vertical-render-inspection",
+      "copy-round-trip"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "unsupported in v0.1.0; preserve input",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R027",
+    "title": "保留拼音与注音对应 | Preserve ruby and readings",
+    "status": "deferred",
+    "scope": "annotation / 教材・辞書等",
+    "source_ids": [
+      "S11",
+      "S14"
+    ],
+    "sections": {
+      "S11": "§5.5",
+      "S14": "§3–4"
+    },
+    "authority_class": "informative",
+    "severity": "required",
+    "criterion": "拼音与ruby为后续范围；保护所给基字、读音和声调，不猜测人名读音。 | Ruby is deferred; preserve supplied readings and tones without guessing names.",
+    "exceptions": [
+      "人名・多音字・語単位注記",
+      "拼音書体の特定a/gを国家必須と断定しない"
+    ],
+    "verification_kind": [
+      "annotation-mapping-check",
+      "grapheme-boundary-check",
+      "render-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "unsupported in v0.1.0; preserve input",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R028",
+    "title": "按输出格式重新检验 | Recheck each export format",
+    "status": "advisory-only",
+    "scope": "web / slides / document / pdf",
+    "source_ids": [
+      "WEB03",
+      "FONT01",
+      "CU10"
+    ],
+    "sections": {
+      "WEB03": "文字方向の処理",
+      "FONT01": "地域別書体",
+      "CU10": "情報・読み順・表示の基準"
+    },
+    "authority_class": "product-policy",
+    "severity": "required",
+    "criterion": "在每个输出格式重新核对字体、字形、裁切、原文与阅读顺序。 | Recheck fonts, clipping, text and reading order in every exported format.",
+    "exceptions": [
+      "画像だけの出力でも元原稿と代替説明を管理",
+      "対象外媒体の未検査を明記"
+    ],
+    "verification_kind": [
+      "export-render-inspection",
+      "text-extraction-compare",
+      "font-embedding-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R029",
+    "title": "缩放与重排 | Zoom and reflow",
+    "status": "advisory-only",
+    "scope": "web / A・AAを採用する範囲",
+    "source_ids": [
+      "CU10",
+      "CU10a"
+    ],
+    "sections": {
+      "CU10": "SC 1.4.4、1.4.10",
+      "CU10a": "Reflowと例外"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "在目标宽度与放大条件检查内容和功能，不用缩小或裁切隐藏失败。 | Check content and function under resize/reflow without hiding failures.",
+    "exceptions": [
+      "各SCに定める字幕・文字画像・二次元表示等の例外を個別適用"
+    ],
+    "verification_kind": [
+      "zoom-test",
+      "viewport-reflow-test"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R030",
+    "title": "测试用户间距覆盖 | Test user spacing overrides",
+    "status": "advisory-only",
+    "scope": "web / WCAG SC 1.4.12の対象",
+    "source_ids": [
+      "CU10",
+      "CU10b"
+    ],
+    "sections": {
+      "CU10": "SC 1.4.12",
+      "CU10b": "Author Responsibility・例外"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "测试用户间距覆盖的内容与功能保持，测试值不是初始设计模板。 | Test user spacing overrides; test values are not mandatory default styling.",
+    "exceptions": [
+      "対象言語・文字体系に存在しない属性は基準の例外に従う"
+    ],
+    "verification_kind": [
+      "user-spacing-override-test"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R031",
+    "title": "测量文字对比度 | Measure text contrast",
+    "status": "advisory-only",
+    "scope": "web / WCAG SC 1.4.3の対象",
+    "source_ids": [
+      "CU10"
+    ],
+    "sections": {
+      "CU10": "SC 1.4.3"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "按WCAG适用条件与例外测量对比度，不凭目视印象判定。 | Measure contrast under applicable WCAG conditions and exceptions.",
+    "exceptions": [
+      "ロゴ・装飾・非アクティブ等の基準上の例外を記録"
+    ],
+    "verification_kind": [
+      "contrast-measurement"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R032",
+    "title": "核对语言结构与标签 | Check language structure and labels",
+    "status": "advisory-only",
+    "scope": "web / 読み上げ・構造",
+    "source_ids": [
+      "CU10",
+      "CU10c",
+      "WEB04"
+    ],
+    "sections": {
+      "CU10": "SC 1.3.2、3.1.1、3.1.2、4.1.2",
+      "CU10c": "Language of Partsの例外",
+      "WEB04": "Language tags"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "核对结构、阅读顺序、语言与标签；固有名词例外按实际语境判断。 | Check structure, reading order, language and labels with contextual exceptions.",
+    "exceptions": [
+      "固有名詞・言語未確定語等のSC例外",
+      "言語タグを語ごとに機械的追加しない"
+    ],
+    "verification_kind": [
+      "accessibility-tree-inspection",
+      "reading-order-test",
+      "screen-reader-test"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R033",
+    "title": "核对键盘与状态 | Check keyboard and status",
+    "status": "advisory-only",
+    "scope": "web / 機能UI",
+    "source_ids": [
+      "CU10"
+    ],
+    "sections": {
+      "CU10": "A/AA：キーボード・フォーカス・名前役割値・状態"
+    },
+    "authority_class": "normative-in-selected-scope",
+    "severity": "required",
+    "criterion": "键盘、焦点、名称角色值与状态通知需独立实测。 | Test keyboard, focus, name/role/value and status announcements separately.",
+    "exceptions": [
+      "文字組スキルの変更対象外でも未検査の状態を残す"
+    ],
+    "verification_kind": [
+      "keyboard-test",
+      "focus-test",
+      "status-announcement-test"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R034",
+    "title": "按目的判断视觉层级 | Review hierarchy for purpose",
+    "status": "advisory-only",
+    "scope": "all / 見出し・本文・注記・表",
+    "source_ids": [
+      "CU02",
+      "CU03",
+      "CU04",
+      "FONT01",
+      "C01",
+      "C03",
+      "C05",
+      "C07",
+      "C09"
+    ],
+    "sections": {
+      "CU02": "字階の個別UI例",
+      "CU03": "意味別font token",
+      "CU04": "CSS実装例",
+      "FONT01": "実字形・形式",
+      "C01": "本調査で目視した用途別の文字の役割・階層。市場全体の標準ではない。",
+      "C03": "本調査で目視した用途別の文字の役割・階層。市場全体の標準ではない。",
+      "C05": "本調査で目視した用途別の文字の役割・階層。市場全体の標準ではない。",
+      "C07": "本調査で目視した用途別の文字の役割・階層。市場全体の標準ではない。",
+      "C09": "本調査で目視した用途別の文字の役割・階層。市場全体の標準ではない。"
+    },
+    "authority_class": "product-policy",
+    "severity": "suggestion",
+    "criterion": "依据目的、角色与实际环境判断层级，不把组织设计系统的值当通用规则。 | Review hierarchy by purpose; organization tokens are not universal rules.",
+    "exceptions": [
+      "ブランド指定・既存媒体規程を尊重",
+      "展示・グラフィックの意図的な表現は別評価"
+    ],
+    "verification_kind": [
+      "visual-role-review",
+      "render-inspection"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "manual target-environment review",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R035",
+    "title": "报告证据与未检验项 | Report evidence and untested scope",
+    "status": "implemented",
+    "scope": "all / レビュー・受入",
+    "source_ids": [
+      "WEB01",
+      "WEB02",
+      "FONT01",
+      "CU10"
+    ],
+    "sections": {
+      "WEB01": "仕様と描画結果",
+      "WEB02": "改行処理",
+      "FONT01": "実際の地域字形",
+      "CU10": "適合範囲"
+    },
+    "authority_class": "product-policy",
+    "severity": "blocker",
+    "criterion": "区分静态、实测与人工判断；未执行项目不能报告通过。 | Separate static, rendered and editorial evidence; unperformed checks never pass.",
+    "exceptions": [
+      "対象外は理由付きnot-applicable",
+      "一部だけの確認はpartialであり総合passにしない"
+    ],
+    "verification_kind": [
+      "evidence-completeness-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  },
+  {
+    "id": "KH-CN-R036",
+    "title": "保留依据版本与例外 | Keep source versions and exceptions",
+    "status": "implemented",
+    "scope": "all / 規則・提案の説明",
+    "source_ids": [
+      "S01",
+      "S02",
+      "S11",
+      "S22",
+      "CU01",
+      "WEB01"
+    ],
+    "sections": {
+      "S01": "推奨性・現行",
+      "S02": "推奨性・現行",
+      "S11": "Status",
+      "S22": "附録A/B",
+      "CU01": "組織内推奨",
+      "WEB01": "Working Draft"
+    },
+    "authority_class": "product-policy",
+    "severity": "required",
+    "criterion": "保留来源版次、条款、规范性与例外，不把草案或建议升级为国家义务。 | Retain source versions, authority and exceptions without promoting drafts into obligations.",
+    "exceptions": [
+      "地域・媒体・既存承認で個別プロファイルを採用した場合は明示"
+    ],
+    "verification_kind": [
+      "source-trace-review",
+      "authority-label-review"
+    ],
+    "evidence_grade": "instruction-and-manual-evidence",
+    "implementation": "read-only byte comparison / workflow guidance; no automatic renderer",
+    "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
+    "autofix_allowed": false
+  }
+]

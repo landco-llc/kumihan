@@ -1,0 +1,723 @@
+{
+  "version": "0.1.0",
+  "reviewed_on": "2026-10-18",
+  "note": "Public references only; no articles, images or font binaries redistributed. Research retrieval status is historical evidence, not a new fetch.",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "国家标准 GB/T 15834-2011 标点符号用法",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=22EA6D162E4110E752259661E1A0D0A8",
+      "issuer": "国家市场监督管理总局 / 国家标准化管理委员会",
+      "version": "GB/T 15834-2011",
+      "date": "2011-12-30",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "标准状态",
+        "发布日期",
+        "实施日期"
+      ],
+      "classification": "primary_official_standard_metadata",
+      "normative_status": "推荐性国家标准；现行",
+      "retrieval": "HTML取得成功；标准全文は別URL"
+    },
+    {
+      "id": "S02",
+      "title": "国家标准 GB/T 15835-2011 出版物上数字用法",
+      "url": "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=F5DAC3377DA99C8D78AE66735B6359C7",
+      "issuer": "国家市场监督管理总局 / 国家标准化管理委员会",
+      "version": "GB/T 15835-2011",
+      "date": "2011-07-29",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "标准状态",
+        "发布日期",
+        "实施日期"
+      ],
+      "classification": "primary_official_standard_metadata",
+      "normative_status": "推荐性国家标准；现行",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S03",
+      "title": "标点符号用法（教育部公開PDF）",
+      "url": "https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf",
+      "issuer": "教育部（国家標準PDFの公開者）",
+      "version": "GB/T 15834-2011",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "表紙・標準番号（検索確認）"
+      ],
+      "classification": "primary_issuing_authority_document",
+      "normative_status": "正文＋附録A：規範的；附録B：資料的",
+      "retrieval": "検索インデックス取得。直接openはInternal Error。本文はS04/S05/S22と照合"
+    },
+    {
+      "id": "S04",
+      "title": "国家标准（GB/T 15834-2011）《标点符号用法》",
+      "url": "https://www.zhangye.gov.cn/szb/dzdt/zsbx/201811/t20181129_138125_ghb.html",
+      "issuer": "张掖市人民政府 / 史志办（公的転載）",
+      "date": "2018-11-29",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "1",
+        "4.1–4.17",
+        "5.1.1–5.1.11",
+        "5.2"
+      ],
+      "classification": "official_reproduction_of_primary_standard",
+      "normative_status": "標準本文の転載。Web転記自体は国標原本ではない",
+      "retrieval": "HTML取得成功。転記誤字を含むため符号位置の根拠にしない"
+    },
+    {
+      "id": "S05",
+      "title": "标点符号用法（中华人民共和国国家标准GB/T 15834-2011）",
+      "url": "https://www.lpssy.edu.cn/_upload/article/files/cb/b2/fe0574884b5f8c2413ff999d90b1/e3ccd2e6-2146-4c3a-a972-437143791019.pdf",
+      "issuer": "六盘水师范学院（標準転載PDF）",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "4.8",
+        "4.10",
+        "4.11",
+        "A.9",
+        "A.10",
+        "A.13"
+      ],
+      "classification": "public_university_reproduction_of_primary_standard",
+      "normative_status": "標準本文・規範性附録Aの転載",
+      "retrieval": "19ページPDFを全文テキスト取得。転記・OCR誤字あり。国家標準原本の画像一致は未確認"
+    },
+    {
+      "id": "S06",
+      "title": "出版物上数字用法（教育部公開PDF）",
+      "url": "https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091154536.pdf",
+      "issuer": "教育部（国家標準PDFの公開者）",
+      "version": "GB/T 15835-2011",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "表紙・標準番号（検索確認）"
+      ],
+      "classification": "primary_issuing_authority_document",
+      "normative_status": "推荐性国家标准",
+      "retrieval": "検索インデックス取得。直接openはInternal Error。本文はS07を使用"
+    },
+    {
+      "id": "S07",
+      "title": "GB/T 15835—2011 出版物上数字用法",
+      "url": "https://xbbjb.sxdtdx.edu.cn/uploadfile/48/Attachment/fc367b0335.pdf",
+      "issuer": "山西大同大学学术期刊中心（標準転載PDF）",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "1",
+        "4.1–4.3",
+        "5.1.1–5.1.7",
+        "5.2",
+        "5.3"
+      ],
+      "classification": "public_university_reproduction_of_primary_standard",
+      "normative_status": "国家標準のOCR転載。規則意味の確認用",
+      "retrieval": "8ページPDFのテキスト取得。末尾にOCR版である旨の記載。〇/○/O等は画像原本で未照合"
+    },
+    {
+      "id": "S08",
+      "title": "《通用规范汉字表》的基本内容和特点（王立军）",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/xw_fbh/moe_2069/s7135/s7562/s7569/201308/t20130827_156353.html",
+      "issuer": "中华人民共和国教育部",
+      "date": "2013-08-27",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "字表の字数・構成・従前規範との関係"
+      ],
+      "classification": "primary_ministry_explanation",
+      "normative_status": "政府公表資料の説明・informative",
+      "retrieval": "検索結果で本文抜粋取得。直接HTMLはInternal Error"
+    },
+    {
+      "id": "S09",
+      "title": "就《通用规范汉字表》答记者问",
+      "url": "https://www.moe.gov.cn/jyb_xwfb/s271/202009/t20200915_488073.html",
+      "issuer": "中华人民共和国教育部",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "主表8105字・一級3500字・字表の用途"
+      ],
+      "classification": "primary_ministry_explanation",
+      "normative_status": "政府のQ&A・informative",
+      "retrieval": "検索結果で本文抜粋取得。直接HTMLはInternal Error"
+    },
+    {
+      "id": "S10",
+      "title": "2026“典读新华”全国读书行动启动《新华字典》（第13版）校园阅读交流会在山东举行",
+      "url": "https://www.cp.com.cn/Content/2026/06-12/1009115302.html",
+      "issuer": "商务印书馆（辞書発行元）",
+      "date": "2026-06-12",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "二是：字表之外的字头30多个"
+      ],
+      "classification": "primary_publisher_statement",
+      "normative_status": "現行辞書の公表事実・informative",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S11",
+      "title": "Requirements for Chinese Text Layout / 中文排版需求",
+      "url": "https://www.w3.org/TR/2026/DNOTE-clreq-20261007/",
+      "issuer": "W3C Internationalization Working Group / Chinese Layout Task Force",
+      "date": "2026-10-07",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "Status",
+        "1.2",
+        "2",
+        "5.5",
+        "6.1.1–6.1.3",
+        "6.3.2–6.3.3"
+      ],
+      "classification": "primary_technical_requirements_draft",
+      "normative_status": "W3C Group Note Draft。Recommendationではない。informative/work in progress",
+      "retrieval": "最新公開版のHTML全文取得成功"
+    },
+    {
+      "id": "S12",
+      "title": "Unicode Standard Annex #14: Unicode Line Breaking Algorithm",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "issuer": "Unicode Consortium",
+      "version": "Unicode 18.0.0 / Revision 57",
+      "date": "2026-09-01",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "1",
+        "3.1",
+        "4",
+        "6",
+        "8"
+      ],
+      "classification": "primary_unicode_standard_annex",
+      "normative_status": "安定版UAX。適合条件・non-tailorableとtailorableを区別",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S13",
+      "title": "Unicode Standard Annex #15: Unicode Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/tr15-58.html",
+      "issuer": "Unicode Consortium",
+      "version": "Unicode 18.0.0 / Revision 58",
+      "date": "2026-08-12",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "1.1",
+        "1.2",
+        "1.3"
+      ],
+      "classification": "primary_unicode_standard_annex",
+      "normative_status": "安定版UAX。正規化の適合処理仕様",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S14",
+      "title": "Unicode Standard Annex #29: Unicode Text Segmentation",
+      "url": "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "issuer": "Unicode Consortium",
+      "version": "Unicode 18.0.0 / Revision 49",
+      "date": "2026-09-01",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "1",
+        "3",
+        "4"
+      ],
+      "classification": "primary_unicode_standard_annex",
+      "normative_status": "安定版UAX。default境界とlocale tailoringを区別",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S15",
+      "title": "CSS Text Module Level 3",
+      "url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "issuer": "W3C CSS Working Group",
+      "date": "2026-08-14",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "5.1 word-break",
+        "5.2 line-break",
+        "5.4 overflow-wrap",
+        "5.5 Line Breaking Details"
+      ],
+      "classification": "primary_css_specification_draft",
+      "normative_status": "Candidate Recommendation Draft。仕様と実装サポートを区別",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S16",
+      "title": "CSS Text Module Level 4",
+      "url": "https://www.w3.org/TR/2026/WD-css-text-4-20260814/",
+      "issuer": "W3C CSS Working Group",
+      "date": "2026-08-14",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "8.4 text-autospace",
+        "8.4.1 Inter-script Spacing",
+        "8.5 text-spacing-trim"
+      ],
+      "classification": "primary_css_specification_draft",
+      "normative_status": "Working Draft。実装サポートは本調査未確認",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S17",
+      "title": "Styling using language attributes",
+      "url": "https://www.w3.org/International/questions/qa-css-lang",
+      "issuer": "W3C Internationalization",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        ":lang selector",
+        "By the way / zh-Hans zh-Hant"
+      ],
+      "classification": "primary_technical_guidance",
+      "normative_status": "Informative authoring guidance",
+      "retrieval": "HTML取得成功。古いフォント例を推奨リストとしては採用しない"
+    },
+    {
+      "id": "S18",
+      "title": "FAQ — Chinese and Japanese",
+      "url": "https://www.unicode.org/faq/han_cjk.html",
+      "issuer": "Unicode Consortium",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "Do the different CJK fonts styles ... require multiple fonts?"
+      ],
+      "classification": "primary_technical_explanation",
+      "normative_status": "Informative FAQ",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S19",
+      "title": "CSS Writing Modes Level 4",
+      "url": "https://www.w3.org/TR/css-writing-modes-4/",
+      "issuer": "W3C CSS Working Group",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "3.2 writing-mode",
+        "5.1 text-orientation"
+      ],
+      "classification": "primary_css_specification",
+      "normative_status": "CSS specification。今回の本文では成熟度を断定せず処理定義を参照",
+      "retrieval": "HTML取得成功"
+    },
+    {
+      "id": "S20",
+      "title": "GB/T 15834-2011 Part 5: Positioning of Punctuation Mark",
+      "url": "https://www.w3.org/zh-hans/news/2013/translation-of-gb-t-15834-2011-part-5/",
+      "issuer": "W3C（部分英訳記事）",
+      "date": "2013-12-02",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "5.1",
+        "5.2"
+      ],
+      "classification": "primary_w3c_translation_article_not_original_standard",
+      "normative_status": "Informative partial translation",
+      "retrieval": "HTML取得成功。冒頭の規格名称とダッシュ等コードポイントに不整合。Unicode実装表の根拠にしない"
+    },
+    {
+      "id": "S21",
+      "title": "通用规范汉字表（教育部正本案内）",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/ziliao/A19/201306/t20130601_186002.html",
+      "issuer": "中华人民共和国教育部",
+      "accessed_on": "2026-10-18",
+      "sections": [],
+      "classification": "primary_official_document_landing",
+      "normative_status": "国家の漢字規範資料",
+      "retrieval": "直接openはTimeout。本文未取得。S08/S09の公式説明を使用"
+    },
+    {
+      "id": "S22",
+      "title": "标点符号用法（GB/T 15834-2011）",
+      "url": "https://ztw.nepu.edu.cn/yw/info/1156/2021.htm",
+      "issuer": "东北石油大学 语言文字工作专题网（標準転載）",
+      "accessed_on": "2026-10-18",
+      "sections": [
+        "前言（附录A规范性／附录B资料性）"
+      ],
+      "classification": "public_university_reproduction_of_primary_standard",
+      "normative_status": "国標前言・附録A/Bの区別の確認用",
+      "retrieval": "検索インデックス本文取得。原本そのものの発行主体ではない"
+    },
+    {
+      "id": "CU01",
+      "title": "文案 - Ant Design",
+      "url": "https://ant.design/docs/spec/copywriting-cn/",
+      "retrieved_on": "2026-10-18",
+      "section": "语言; 语气; 大小写和标点符号; 基本标点规范",
+      "authority_class": "organization_recommendation",
+      "document_status": "Living official design guidance; footer cites a 1995 punctuation publication",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "国家標準の代替ではない",
+        "全業界のコピーに一般化不可"
+      ]
+    },
+    {
+      "id": "CU02",
+      "title": "字体 - Ant Design",
+      "url": "https://ant.design/docs/spec/font-cn/",
+      "retrieved_on": "2026-10-18",
+      "section": "字体家族; 主字体; 字阶与行高",
+      "authority_class": "organization_recommendation",
+      "document_status": "Living official design guidance for enterprise interfaces",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "KUMIHANの標準書体・字号・行高への採用を提案しない",
+        "CSS宣言と実際の描画は異なる"
+      ]
+    },
+    {
+      "id": "CU03",
+      "title": "Tencent TDesign README and official common font tokens",
+      "url": "https://github.com/Tencent/tdesign/blob/main/README_zh-CN.md",
+      "retrieved_on": "2026-10-18",
+      "section": "产品特性; 字体指南; Design Token対応font token",
+      "authority_class": "organization_recommendation_and_implementation",
+      "document_status": "Official source, main/develop as retrieved; not pinned release",
+      "retrieval": "official_repository_body_and_code",
+      "limitations": [
+        "fontsページは直接取得本文0行",
+        "特定フォント・数値を新規推測しない"
+      ]
+    },
+    {
+      "id": "CU04",
+      "title": "Arco Design components/style/theme/default.less",
+      "url": "https://github.com/arco-design/arco-design/blob/main/components/style/theme/default.less",
+      "retrieved_on": "2026-10-18",
+      "section": "@font-family; @font-size-body; @line-height-base",
+      "authority_class": "implementation_observation",
+      "document_status": "Official source, main as retrieved; not pinned release",
+      "retrieval": "official_repository_code",
+      "limitations": [
+        "当該コード宣言の観察のみ",
+        "実際に使われた字形・フォントは未測定",
+        "KUMIHAN標準への採用を提案しない"
+      ]
+    },
+    {
+      "id": "CU05",
+      "title": "iPhone - Apple (中国大陆)",
+      "url": "https://www.apple.com.cn/iphone/",
+      "retrieved_on": "2026-10-18",
+      "section": "購買CTA; 个人设置辅导; 送货和取货; 导购",
+      "authority_class": "published_brand_example",
+      "document_status": "Living official mainland-China product page",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "画面・フォント・CSS未測定",
+        "購買成果や中国全体の嗜好は推定不可"
+      ]
+    },
+    {
+      "id": "CU06",
+      "title": "What is MUJI? / 何谓无印良品",
+      "url": "https://www.muji.com.cn/cn/about/",
+      "retrieved_on": "2026-10-18",
+      "section": "理念本文の抽出L16–40: ブランド表記; footer L51: 上海法人名",
+      "authority_class": "published_brand_example",
+      "document_status": "Living official mainland-China brand page",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "ブランド名と法人名の原表記を意味に応じて保護する実例",
+        "商標登録の法的状態を調査したものではない",
+        "全部の中国語文に繁体字混在を推奨するものではない",
+        "視覚構成未測定; ロゴ画像だけでなく本文テキストとして観察"
+      ]
+    },
+    {
+      "id": "CU07",
+      "title": "霸王茶姬官网-首页",
+      "url": "https://www.chagee.com/zh-cn",
+      "retrieved_on": "2026-10-18",
+      "section": "关于我们; 关于产品; 主要導線",
+      "authority_class": "published_brand_example",
+      "document_status": "Living official simplified-Chinese brand page",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "4字統一ルールの根拠にはならない",
+        "広告内容の適法性判定を行っていない",
+        "フォント・改行は未測定"
+      ]
+    },
+    {
+      "id": "CU08",
+      "title": "观夏 tosummer",
+      "url": "https://tosummer.cn/cn",
+      "retrieved_on": "2026-10-18",
+      "section": "中国甜; ブランド説明; シリーズ名",
+      "authority_class": "published_brand_example_limited",
+      "document_status": "Living official brand page; only indexed body text successfully observed",
+      "retrieval": "official_url_search_index",
+      "limitations": [
+        "直接openの本文0行",
+        "画面、画像、改行、書体の証拠に使わない",
+        "原画面の視覚レビューは未実施"
+      ]
+    },
+    {
+      "id": "CU09",
+      "title": "Unicode CLDR 49 Locale Data Summary for Chinese and Compact Decimal Formatting",
+      "url": "https://unicode.org/cldr/charts/49/summary/zh.html",
+      "retrieved_on": "2026-10-18",
+      "section": "Gregorian standard date formats; Currencies CNY; compact decimal 5/9 digits",
+      "authority_class": "technical_locale_data",
+      "document_status": "Versioned locale data, CLDR chart version 49",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "法令やブランド文体の規範ではない",
+        "運用対象localeとライブラリ版を指定する必要"
+      ]
+    },
+    {
+      "id": "CU10",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "retrieved_on": "2026-10-18",
+      "section": "SC 1.3.2; 1.4.3; 1.4.4; 1.4.10; 1.4.12; 3.1.1; 3.1.2; 4.1.2 and A/AA conformance",
+      "authority_class": "normative_web_recommendation",
+      "document_status": "W3C Recommendation, 12 December 2024 edition",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "中国語禁則の代用ではない",
+        "文字組スキル単独でサイト全体のWCAG適合を保証しない"
+      ]
+    },
+    {
+      "id": "CU10a",
+      "title": "Understanding SC 1.4.10 Reflow",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "retrieved_on": "2026-10-18",
+      "section": "Success Criterion; Intent; exceptions; table cells; overlap with Resize Text",
+      "authority_class": "informative_supporting_document",
+      "document_status": "W3C Understanding document; informative, not normative",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "初期CSS値の指定ではない"
+      ]
+    },
+    {
+      "id": "CU10b",
+      "title": "Understanding SC 1.4.12 Text Spacing",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+      "retrieved_on": "2026-10-18",
+      "section": "Success Criterion; exception; Notes 1/2; Author Responsibility",
+      "authority_class": "informative_supporting_document",
+      "document_status": "W3C Understanding document; informative, not normative",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "漢字間への一律word-spacing適用と混同しない"
+      ]
+    },
+    {
+      "id": "CU10c",
+      "title": "Understanding SC 3.1.2 Language of Parts",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html",
+      "retrieved_on": "2026-10-18",
+      "section": "Success Criterion; Intent; exceptions",
+      "authority_class": "informative_supporting_document",
+      "document_status": "W3C Understanding document; informative, not normative",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "Latin製品名へ機械的にlang指定を強制しない",
+        "支援技術とuser agentの実テストが必要"
+      ]
+    },
+    {
+      "id": "CU11",
+      "title": "中华人民共和国广告法",
+      "url": "https://www.samr.gov.cn/zw/zfxxgk/fdzdgknr/fgs/art/2023/art_5474cf75173c45d6a0379730fb4e8d97.html",
+      "retrieved_on": "2026-10-18",
+      "section": "第8条; 第9条第3号",
+      "authority_class": "statute",
+      "document_status": "SAMR official published law text, second amendment of 29 April 2021",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "個別広告の法的結論を出していない",
+        "すべての『最』を違法と判断しない"
+      ]
+    },
+    {
+      "id": "CU12",
+      "title": "广告绝对化用语执法指南",
+      "url": "https://www.samr.gov.cn/ggjgs/tzgg/art/2023/art_183b5cb48d9e4f0dba67f9f912a913ba.html",
+      "retrieved_on": "2026-10-18",
+      "section": "一、二、四、五、六、七、八",
+      "authority_class": "official_enforcement_guidance",
+      "document_status": "Final SAMR Announcement 2023 No. 6, dated 25 February 2023; distinct from consultation draft",
+      "retrieval": "official_page_body",
+      "limitations": [
+        "最終の法的判断・保証をしない",
+        "公開前確認候補として使う"
+      ]
+    },
+    {
+      "id": "C01",
+      "title": "三联人文风土季2024",
+      "url": "https://www.another-lab.com/projects/detail-105.html",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C02",
+      "title": "T2O",
+      "url": "https://www.another-lab.com/projects/detail-86.html",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C03",
+      "title": "来回 Living",
+      "url": "https://www.another-lab.com/projects/detail-94.html",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C04",
+      "title": "今天吃什么？去逛菜市场吧",
+      "url": "https://www.another-lab.com/projects/detail-104.html",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C05",
+      "title": "Meta Media／超媒体",
+      "url": "https://www.hesign.com/works/meta-media",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C06",
+      "title": "Afternoon Tea／下午茶",
+      "url": "https://www.hesign.com/works/afternoon-tea/",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C07",
+      "title": "UCCA 马蒂斯的马蒂斯 電子版導覧",
+      "url": "https://ucca.org.cn/exhibition/matisse-by-matisse/",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C08",
+      "title": "方正兰亭黑 公式紹介と書籍応用",
+      "url": "https://www.foundertype.com/index.php/FontInfo/index/id/216.html",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "C09",
+      "title": "汉仪瑞意宋35W 公式文字見本",
+      "url": "https://www.hanyi.com.cn/productdetail.php?id=8892&type=0",
+      "limitations": "本文design_cases.mdの各事例・共通制約を参照"
+    },
+    {
+      "id": "WEB01",
+      "title": "CSS Text Module Level 4",
+      "url": "https://www.w3.org/TR/css-text-4/",
+      "publisher": "W3C",
+      "version": "2026-08-14 Working Draft（取得時の公開版）",
+      "accessed": "2026-10-18",
+      "sections": "8.4 text-autospace / 8.5 text-spacing-trim",
+      "evidence_type": "technical-spec-draft"
+    },
+    {
+      "id": "WEB02",
+      "title": "CSS Text Module Level 3",
+      "url": "https://www.w3.org/TR/css-text-3/",
+      "publisher": "W3C",
+      "accessed": "2026-10-18",
+      "sections": "5.1 word-break / 5.2 line-break / 6.2 text-justify",
+      "evidence_type": "technical-spec"
+    },
+    {
+      "id": "WEB03",
+      "title": "CSS Writing Modes Level 4",
+      "url": "https://www.w3.org/TR/css-writing-modes-4/",
+      "publisher": "W3C",
+      "accessed": "2026-10-18",
+      "sections": "writing-mode / text-orientation",
+      "evidence_type": "technical-spec"
+    },
+    {
+      "id": "WEB04",
+      "title": "Language tags in HTML and XML",
+      "url": "https://www.w3.org/International/articles/language-tags/",
+      "publisher": "W3C Internationalization",
+      "accessed": "2026-10-18",
+      "sections": "Script and region subtags",
+      "evidence_type": "official-guidance"
+    },
+    {
+      "id": "WEB05",
+      "title": "管理中文和日文中的行内空白",
+      "url": "https://www.w3.org/International/articles/styling/inline-space.zh-hans.html",
+      "publisher": "W3C Internationalization",
+      "accessed": "2026-10-18",
+      "sections": "文本中的标点空白、换行与 text-spacing-trim",
+      "evidence_type": "official-guidance"
+    },
+    {
+      "id": "FONT01",
+      "title": "Noto CJK Sans README",
+      "url": "https://github.com/notofonts/noto-cjk/blob/main/Sans/README.md",
+      "publisher": "Noto Fonts",
+      "accessed": "2026-10-18",
+      "sections": "Language-specific fonts / Region-specific subsets",
+      "evidence_type": "font-author-documentation"
+    },
+    {
+      "id": "FONT02",
+      "title": "Source Han Sans",
+      "url": "https://github.com/adobe-fonts/source-han-sans",
+      "publisher": "Adobe",
+      "accessed": "2026-10-18",
+      "sections": "Downloads and configurations",
+      "evidence_type": "font-author-documentation"
+    },
+    {
+      "id": "FONT03",
+      "title": "Source Han Sans LICENSE",
+      "url": "https://github.com/adobe-fonts/source-han-sans/blob/master/LICENSE.txt",
+      "publisher": "Adobe",
+      "accessed": "2026-10-18",
+      "sections": "OFL 1.1 permission and conditions",
+      "evidence_type": "license-primary"
+    },
+    {
+      "id": "FONT04",
+      "title": "Source Han Serif",
+      "url": "https://github.com/adobe-fonts/source-han-serif",
+      "publisher": "Adobe",
+      "accessed": "2026-10-18",
+      "sections": "Overview / configurations",
+      "evidence_type": "font-author-documentation"
+    },
+    {
+      "id": "FONT05",
+      "title": "Microsoft YaHei and Microsoft YaHei UI font family",
+      "url": "https://learn.microsoft.com/en-us/typography/font-list/microsoft-yahei",
+      "publisher": "Microsoft",
+      "accessed": "2026-10-18",
+      "sections": "Overview / licensing and redistribution / products",
+      "evidence_type": "platform-documentation"
+    },
+    {
+      "id": "FONT06",
+      "title": "Fonts included with macOS Sequoia",
+      "url": "https://support.apple.com/en-us/120414",
+      "publisher": "Apple",
+      "accessed": "2026-10-18",
+      "sections": "PingFang SC / PingFang TC",
+      "evidence_type": "platform-documentation"
+    },
+    {
+      "id": "FONT07",
+      "title": "Noto Sans CJK LICENSE",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/LICENSE",
+      "publisher": "Noto Fonts",
+      "accessed": "2026-10-18",
+      "sections": "SIL Open Font License 1.1",
+      "evidence_type": "license-primary"
+    }
+  ]
+}

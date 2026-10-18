@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "profile",
+  "type": "object",
+  "required": [
+    "id",
+    "locale",
+    "rules"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "locale": {
+      "const": "zh-Hans-CN"
+    },
+    "rules": {
+      "type": "array"
+    }
+  }
+}
