@@ -62,7 +62,7 @@ ${altLinks(false)}
 <section class="status-section" aria-label="${e(c.statusTitle)}"><div class="shell status-box"><span class="status-title">${e(c.statusTitle)}</span><p>${e(c.statusBody)}</p><div class="status-meta"><a href="${META.release}">${e(c.statusLink)}</a></div></div></section>
 <section class="cta-section" aria-labelledby="final-title"><div class="shell cta-layout"><div><span class="section-number">05 / OPEN SOURCE</span><h2 id="final-title">${e(c.finalH2[0])}<br>${e(c.finalH2[1])}</h2><p>${e(c.finalBody)}</p></div><a class="button button-primary" href="${META.repo}">${e(c.finalCta)}<span class="arrow" aria-hidden="true">↗</span></a></div></section>
 </main>
-<footer class="footer"><div class="shell footer-layout"><div class="footer-mark"><strong>${e(META.display)}</strong><p class="footer-sub">${e(c.footerSub)}</p></div><nav class="footer-links" aria-label="Footer"><a href="index.html">${e(c.family)}</a><a href="${META.repo}">GitHub</a><a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC ↗</a><a href="#top">${e(c.backTop)} ↑</a></nav></div></footer>
+<footer class="footer"><div class="shell footer-layout"><div class="footer-mark"><strong>${e(META.display)}</strong><p class="footer-sub">${e(c.footerSub)}</p></div><nav class="footer-links" aria-label="Footer"><a href="${lang==="en"?"top-en.html":"index.html"}">${e(c.family)}</a><a href="${META.repo}">GitHub</a><a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC ↗</a><a href="#top">${e(c.backTop)} ↑</a></nav></div></footer>
 </body></html>
 `;
 }
@@ -91,7 +91,7 @@ function renderGuide(host,lang){
 <a class="skip skip-link" href="#main">${e(c.skip)}</a>
 <header class="site-header"><div class="shell header-inner"><a class="brand" href="../${pageName(lang)}">KUMIHAN<span class="brand-sub">｜Nhịp Chữ</span></a>
 <nav class="header-nav" aria-label="${e(g.nav)}"><a href="${guideName("chatgpt",lang)}"${host==="chatgpt"?' aria-current="page"':""}>ChatGPT / Codex</a><a href="${guideName("claude",lang)}"${host==="claude"?' aria-current="page"':""}>Claude</a><a href="${guideName("gemini",lang)}"${host==="gemini"?' aria-current="page"':""}>Gemini</a></nav></div></header>
-<section class="hero" aria-labelledby="page-title"><div class="shell"><nav class="breadcrumb" aria-label="${e(g.crumb)}"><a href="../index.html">${e(c.family)}</a><span aria-hidden="true">/</span><a href="../${pageName(lang)}">${e(META.display)}</a><span aria-hidden="true">/</span>${e(g.crumb)}</nav>
+<section class="hero" aria-labelledby="page-title"><div class="shell"><nav class="breadcrumb" aria-label="${e(g.crumb)}"><a href="${lang==="en"?"../top-en.html":"../index.html"}">${e(c.family)}</a><span aria-hidden="true">/</span><a href="../${pageName(lang)}">${e(META.display)}</a><span aria-hidden="true">/</span>${e(g.crumb)}</nav>
 <div class="hero-grid"><div><p class="eyebrow">INSTALL GUIDE / ${host==="chatgpt"?"01":host==="claude"?"02":"03"} OF 03</p><h1 id="page-title">${e(labelHead)}</h1><p class="hero-desc">${e(g.lead)}</p><nav class="language-switch" aria-label="${e(c.language)}">${langs}</nav></div>
 <div class="hero-logo"><img src="../assets/${META.logo}" width="1254" height="1254" alt="KUMIHAN official logo"></div></div></div></section>
 <nav class="platform-nav" aria-label="${e(g.nav)}"><div class="shell platform-inner">${nav}</div></nav>

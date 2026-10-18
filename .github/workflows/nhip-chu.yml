@@ -37,6 +37,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: python tools/build_gateways.py --check
       - run: python -m unittest discover -s tests/nhip_chu -v
       - run: node tools/build_nhip_chu_site.mjs --check
       - run: python tools/build_nhip_chu.py --out /tmp/nhip-chu-v0.1.0
