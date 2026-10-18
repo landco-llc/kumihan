@@ -2,19 +2,19 @@
   "format": 2,
   "product": "KUMIHAN for Claude",
   "publisher": "L&Co. LLC",
-  "version": "0.1.5-preview",
+  "version": "0.1.6-preview",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "plugins/kumihan-Claude-Code-plugin-0.1.5-preview.zip",
-      "sha256": "52e4290fc31034d3f616391794ed8f98f314972b13bc422888b8d797ca677fce",
-      "bytes": 320049,
+      "file": "plugins/kumihan-Claude-Code-plugin-0.1.6-preview.zip",
+      "sha256": "cae6a6515bd7844339d7a19c370cf411e2e1f960876172786c1118eb4b27c572",
+      "bytes": 320048,
       "members": [
         {
           "path": "kumihan/.claude-plugin/plugin.json",
           "bytes": 283,
-          "sha256": "34ef518b4bdae4010cbd4ac09ed8f2f4aa10980eeabf4edd3229c5609b600676"
+          "sha256": "3c97fd9deebd7d62c4a592e81f4c3ad5d2003f53657ac32a2b7df23bd5fe0408"
         },
         {
           "path": "kumihan/LICENSE",
@@ -29,7 +29,7 @@
         {
           "path": "kumihan/docs/development.md",
           "bytes": 1284,
-          "sha256": "4099ab44bc06a10b8e284c4e956272def76462b0a8d18e9acaa38a56ab2ca766"
+          "sha256": "12b7514934386bf06bcc92b1906031cccf4b10b35c2032a69a417ca5f7ccd6d4"
         },
         {
           "path": "kumihan/skills/kumihan-documents/LICENSE",
@@ -44,7 +44,7 @@
         {
           "path": "kumihan/skills/kumihan-documents/inventory.json",
           "bytes": 4232,
-          "sha256": "ae4e7164f5dfca555b15e82b313d4e4a37181810ca8ef6e05ff1045a3e22df12"
+          "sha256": "834b6db8d2fec73fcbf890646379eb74735584a04300cb205b7e566459c2101e"
         },
         {
           "path": "kumihan/skills/kumihan-documents/profiles/display-copy.json",
@@ -174,7 +174,7 @@
         {
           "path": "kumihan/skills/kumihan-review/inventory.json",
           "bytes": 4229,
-          "sha256": "6ccfdd3093e701f77450c7714449164fef4449592f1da25f21a75f54b6875811"
+          "sha256": "8b2486033521ae80a14116ddeabeb0c6b818a279c92ee23e23adcb0b43716b71"
         },
         {
           "path": "kumihan/skills/kumihan-review/profiles/display-copy.json",
@@ -304,7 +304,7 @@
         {
           "path": "kumihan/skills/kumihan-web/inventory.json",
           "bytes": 4226,
-          "sha256": "4223c00b7ea42391e67ef5a44371b2de30495382b7155f921f858a7830ba5946"
+          "sha256": "a1ec174fbc880ede79bfc6ccde7f74e292025d43265842e302d29482d631480b"
         },
         {
           "path": "kumihan/skills/kumihan-web/profiles/display-copy.json",
@@ -434,7 +434,7 @@
         {
           "path": "kumihan/skills/kumihan/inventory.json",
           "bytes": 4222,
-          "sha256": "2fd933d0c5d0e8e4436e8a25d7181f36be65789182c358c34902ad20f62bf03c"
+          "sha256": "08e89d70d338ef9eb24919e268bfec888d70454e9ca26d8406d5750aa8651dc6"
         },
         {
           "path": "kumihan/skills/kumihan/profiles/display-copy.json",
@@ -554,8 +554,8 @@
       ]
     },
     {
-      "file": "skills/kumihan-Claude-skill-0.1.5-preview.zip",
-      "sha256": "af7a41c32be8b9152b8573272ee1eb1ad300eecc597d36aafad02c8703aec1d1",
+      "file": "skills/kumihan-Claude-skill-0.1.6-preview.zip",
+      "sha256": "c94cb4601df1897373be8b42de20d1a7ef14d52f2414d6651024518ad1b5a309",
       "bytes": 77452,
       "members": [
         {
@@ -571,7 +571,7 @@
         {
           "path": "kumihan/inventory.json",
           "bytes": 4222,
-          "sha256": "2fd933d0c5d0e8e4436e8a25d7181f36be65789182c358c34902ad20f62bf03c"
+          "sha256": "08e89d70d338ef9eb24919e268bfec888d70454e9ca26d8406d5750aa8651dc6"
         },
         {
           "path": "kumihan/profiles/display-copy.json",
@@ -691,8 +691,8 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-Claude-skill-0.1.5-preview.zip",
-      "sha256": "965026f7a45eb406df96017f16f3b70d3e58216a1a6599745b036e046c942661",
+      "file": "skills/kumihan-web-Claude-skill-0.1.6-preview.zip",
+      "sha256": "aa040a881ce5406b1f84047e8173d69752c61e99f8e96b665e35bfd0c2a8c4c4",
       "bytes": 77825,
       "members": [
         {
@@ -708,7 +708,7 @@
         {
           "path": "kumihan-web/inventory.json",
           "bytes": 4226,
-          "sha256": "4223c00b7ea42391e67ef5a44371b2de30495382b7155f921f858a7830ba5946"
+          "sha256": "a1ec174fbc880ede79bfc6ccde7f74e292025d43265842e302d29482d631480b"
         },
         {
           "path": "kumihan-web/profiles/display-copy.json",
@@ -828,9 +828,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-Claude-skill-0.1.5-preview.zip",
-      "sha256": "5aa047dbee50ec547c772099055e2850ad302f0d36008c92ed9df7b89fe57b2b",
-      "bytes": 77700,
+      "file": "skills/kumihan-documents-Claude-skill-0.1.6-preview.zip",
+      "sha256": "9d5499042e0706b766bf9b24f2979af3f154f786c9a2bbd1c85cfb4d5763df42",
+      "bytes": 77699,
       "members": [
         {
           "path": "kumihan-documents/LICENSE",
@@ -845,7 +845,7 @@
         {
           "path": "kumihan-documents/inventory.json",
           "bytes": 4232,
-          "sha256": "ae4e7164f5dfca555b15e82b313d4e4a37181810ca8ef6e05ff1045a3e22df12"
+          "sha256": "834b6db8d2fec73fcbf890646379eb74735584a04300cb205b7e566459c2101e"
         },
         {
           "path": "kumihan-documents/profiles/display-copy.json",
@@ -965,8 +965,8 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-Claude-skill-0.1.5-preview.zip",
-      "sha256": "f6353b6029f81bc61852c2f25d784562387c892f2483bf6d870a4e1e6ed63bed",
+      "file": "skills/kumihan-review-Claude-skill-0.1.6-preview.zip",
+      "sha256": "a5f4d720c507150b1258a362e9f4af1caa3122cc8b8b8a596a2691eb1dde6369",
       "bytes": 77749,
       "members": [
         {
@@ -982,7 +982,7 @@
         {
           "path": "kumihan-review/inventory.json",
           "bytes": 4229,
-          "sha256": "6ccfdd3093e701f77450c7714449164fef4449592f1da25f21a75f54b6875811"
+          "sha256": "8b2486033521ae80a14116ddeabeb0c6b818a279c92ee23e23adcb0b43716b71"
         },
         {
           "path": "kumihan-review/profiles/display-copy.json",

@@ -6,7 +6,7 @@
 
 This guide explains how to use KUMIHAN with ChatGPT and Codex.
 
-> **About this preview (v0.1.5 preview)**  
+> **About this preview (v0.1.6 preview)**
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -29,14 +29,14 @@ All files are on the [downloads page](../downloads%20GPT-Codex/).
 
 **Plugin (all four skills)**
 
-- [kumihan-GPT-Codex-plugin-0.1.5-preview.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.5-preview.zip)
+- [kumihan-GPT-Codex-plugin-0.1.6-preview.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.6-preview.zip)
 
 **Individual skills**
 
-- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.5-preview.zip) — starting point
-- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.5-preview.zip) — web pages
-- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.5-preview.zip) — reports and slides
-- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.5-preview.zip) — review
+- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.6-preview.zip) — starting point
+- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.6-preview.zip) — web pages
+- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.6-preview.zip) — reports and slides
+- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.6-preview.zip) — review
 
 On GitHub, open a file and use the download button at the top right.
 
@@ -68,7 +68,7 @@ This method registers all four skills as your own private plugin.
 
    > Please register this package as my private plugin. Do not submit it to the public directory.
 
-4. Once registered, **KUMIHAN Private Install Preview** appears under Plugins, in "Personal" or "Created by me".
+4. Once registered, **KUMIHAN v0.1.6** appears under Plugins, in "Personal" or "Created by me".
 5. Install it if needed, then enable it in a new conversation.
 
 **Notes**
