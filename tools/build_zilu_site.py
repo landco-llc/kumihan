@@ -26,54 +26,47 @@ def e(s):return html.escape(s,quote=True)
 def link(path,label,**attrs):
     return '<a href="'+e(path)+'"'+''.join(' '+k.rstrip('_').replace('_','-')+'="'+e(v)+'"' for k,v in attrs.items())+'>'+e(label)+'</a>'
 def name(suffix,host=None):return f'docs/install-zilu-{host}{suffix}.html' if host else f'kumihan-zh-cn{suffix}.html'
-def frame(suffix,body,host=None):
-    c=C[suffix];path=name(suffix,host);title='KUMIHAN｜字律 — '+(c['guide']+' · '+HOSTS[host] if host else c['title'])
-    head=''.join(f'<link rel="alternate" hreflang="{v["lang"]}" href="https://landco-llc.github.io/kumihan/{name(s,host)}">' for s,v in C.items())
-    langs=''.join(link(PREFIX+name(s,host),label,lang=C[s]['lang'],hreflang=C[s]['lang'],**({'aria_current':'page'} if s==suffix else {})) for s,label in [('','简体中文'),('.en','English'),('.ja','日本語')])
-    nav=''.join(link(PREFIX+name(suffix)+'#'+anchor,c[key]) for anchor,key in [('concept','concept'),('skills','skills'),('install','cta')])
-    return f'''<!doctype html>
-<html lang="{c['lang']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>{e(title)}</title><meta name="description" content="{e(c['lead'])}">
-<link rel="canonical" href="https://landco-llc.github.io/kumihan/{path}">{head}<link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/{name('',host)}">
-<meta property="og:locale" content="{c['og']}"><meta property="og:title" content="{e(title)}"><meta property="og:type" content="website"><meta property="og:url" content="https://landco-llc.github.io/kumihan/{path}"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
-<link rel="icon" href="{PREFIX}favicon.ico"><link rel="stylesheet" href="{PREFIX}assets/zilu-site.css"></head><body>
-<a class="skip" href="#main">{c['skip']}</a><header class="shell"><a class="brand" href="{PREFIX+name(suffix)}">KUMIHAN｜字律</a><nav aria-label="{c['nav']}">{nav}</nav><nav class="languages" aria-label="{c['language']}">{langs}</nav></header>
-<main id="main" class="shell" tabindex="-1">{body}</main><footer class="shell"><p>{e(c['limits'])}</p><p>v0.1.0 · Apache-2.0 · L&amp;Co. LLC</p><p>{link(PREFIX+'index.html','KUMIHAN')} · {link(SOURCE,c['source'])} · {link(SOURCE+'/downloads/SHA256SUMS.txt','SHA256')}</p></footer></body></html>
-'''
-
 def landing(suffix):
- if suffix == '.ja':
-  # Japanese landing is intentionally authored with the KUMIHAN index hierarchy.
-  # Keep template as source of truth so --check verifies generated output.
-  return (ROOT/'templates'/'zilu-ja-landing.html').read_text(encoding='utf-8')
- c=C[suffix]
- heading='<span>让文字有章法</span> <span>也有呼吸</span>' if suffix=='' else c['h1']
- body=f'<section class="hero"><div><p class="eyebrow" lang="en">OPEN SOURCE · SIMPLIFIED CHINESE TYPOGRAPHY</p><h1>{heading}</h1><p class="lead">{c["lead"]}</p><div class="actions">{link("#install",c["cta"],class_="button")}{link(SOURCE,c["source"])}</div></div><figure><img src="{PREFIX}assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHAN"><figcaption>KUMIHAN｜字律 · zh-Hans-CN</figcaption></figure></section>'
- body+=f'<section id="concept"><p class="eyebrow">01 / PRINCIPLES</p><h2>{c["concept"]}</h2><dl class="principles">'+''.join(f'<div><dt>{t}</dt><dd>{p}</dd></div>' for t,p in c['principles'])+'</dl><p class="example">'+c['example']+'</p></section>'
- body+=f'<section id="skills"><p class="eyebrow">02 / SKILLS</p><h2>{c["skills"]}</h2>'
- for i,role in enumerate(ROLES):
-  skill='kumihan-zilu'+('' if role=='entry' else '-'+role)
-  body+=f'<article class="row"><h3>{link(SOURCE+"/skills/"+skill,skill)}</h3><p>{c["roles"][i]}</p></article>'
- body+=f'</section><section id="install"><p class="eyebrow">03 / INSTALLATION</p><h2>{c["install"]}</h2>'
- for h,title in HOSTS.items():body+=f'<article class="row"><h3>{title}</h3>{link(PREFIX+name(suffix,h),c["cta"])}</article>'
- body+=f'</section><aside><p>{c["status"]}</p></aside>'
- return frame(suffix,body)
+ # Every landing is authored with the KUMIHAN index hierarchy (see templates/).
+ # Templates are the source of truth so --check verifies generated output.
+ name={'':'zh','.en':'en','.ja':'ja'}[suffix]
+ return (ROOT/'templates'/f'zilu-{name}-landing.html').read_text(encoding='utf-8')
+
+from importlib.util import spec_from_file_location, module_from_spec
+_frame_spec=spec_from_file_location('kumihan_install_frame',Path(__file__).with_name('install_frame.py'))
+FRAME=module_from_spec(_frame_spec);_frame_spec.loader.exec_module(FRAME)
+GUIDE_UI={
+'':dict(breadcrumb='安装指南',toc_title='本页目录',toc_summary='展开本页目录',platforms='选择 AI 平台',note_title='SOURCE & WEBSITE / v0.1.0',note='各 AI 工具中的原生安装与调用尚未验证。部分操作可能无法在你的使用环境中执行。',source='查看安装说明原文',lead='选择适合你的安装方式：完整插件或四个独立 Skills。',top='返回字律首页',footer='面向 AI 辅助设计的简体中文排版 Skills'),
+'.en':dict(breadcrumb='Installation guide',toc_title='On this page',toc_summary='Show page contents',platforms='Select an AI platform',note_title='SOURCE & WEBSITE / v0.1.0',note='Native installation and invocation in each AI tool remain unverified. Some steps may be unavailable in your environment.',source='View source README',lead='Choose the full plugin or the four individual skills, depending on what your host supports.',top='Back to ZiLu home',footer='Simplified Chinese typography skills for AI-assisted design'),
+'.ja':dict(breadcrumb='導入ガイド',toc_title='このページの目次',toc_summary='このページの目次を表示',platforms='AIプラットフォームを選ぶ',note_title='SOURCE & WEBSITE / v0.1.0',note='各AIツールでのネイティブな導入・呼出は未検証です。利用環境によっては掲載した操作が利用できない場合があります。',source='元の導入資料を開く',lead='完全プラグインか4つの独立Skillsか、ホストの対応に合わせて選べます。',top='字律のトップへ',footer='Simplified Chinese typography skills for AI-assisted design')}
 
 def guide(suffix,host):
- c=C[suffix]
- body=f'<section class="guide-hero"><p class="eyebrow">INSTALLATION / {HOSTS[host]}</p><h1>{c["guide"]} · {HOSTS[host]}</h1><p class="lead">KUMIHAN｜字律 · v0.1.0</p><nav class="hosts" aria-label="Host">'+''.join(link(PREFIX+name(suffix,h),t,**({'aria_current':'page'} if host==h else {})) for h,t in HOSTS.items())+'</nav></section>'
- body+=f'<section class="guide"><h2>{c["steps"]}</h2><ol>'+''.join('<li>'+e(p)+'</li>' for p in c['hostnotes'][host])+'</ol>'
+ c=C[suffix];g=dict(GUIDE_UI[suffix]);path=name(suffix,host)
+ title='KUMIHAN｜字律 — '+c['guide']+' · '+HOSTS[host]
+ alternates=''.join(f'<link rel="alternate" hreflang="{v["lang"]}" href="https://landco-llc.github.io/kumihan/{name(s,host)}">' for s,v in C.items())
+ head=(f'<title>{e(title)}</title>\n<meta name="description" content="{e(g["lead"])}">\n<link rel="canonical" href="https://landco-llc.github.io/kumihan/{path}">{alternates}<link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/{name("",host)}">\n'
+       f'<meta property="og:type" content="website"><meta property="og:locale" content="{c["og"]}"><meta property="og:title" content="{e(title)}"><meta property="og:url" content="https://landco-llc.github.io/kumihan/{path}"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">\n<link rel="icon" href="{PREFIX}favicon.ico">')
+ body=f'<section id="steps"><h2>01 / {c["steps"]}</h2><ol>'+''.join('<li>'+e(p)+'</li>' for p in c['hostnotes'][host])+'</ol>'
  official={'chatgpt':[('https://developers.openai.com/codex/skills/','Codex Skills'),('https://developers.openai.com/codex/plugins/','Codex Plugins')],'claude':[('https://code.claude.com/docs/en/plugins-reference','Claude Code plugins'),('https://support.claude.com/en/articles/12512180-using-skills-in-claude','Claude Skills')],'gemini':[('https://geminicli.com/docs/extensions/','Gemini CLI extensions'),('https://geminicli.com/docs/cli/skills/','Gemini CLI Skills')]}[host]
  body+='<p>'+ ' · '.join(link(u,t) for u,t in official)+'</p></section>'
- body+=f'<section class="guide"><h2>{c["download"]}</h2><p>{c["verify"]}</p><ul class="downloads">'
+ body+=f'<section id="download"><h2>02 / {c["download"]}</h2><p>{c["verify"]}</p><ul class="downloads">'
  folder=host if host!='chatgpt' else 'plugins';kind={'chatgpt':'plugin','claude':'claude-plugin','gemini':'gemini-extension'}[host]
  files=[folder+'/kumihan-zilu-'+kind+'-v0.1.0.zip']
  for role in ROLES:files.append(('skills' if host=='chatgpt' else host)+'/kumihan-zilu-'+role+('' if host=='chatgpt' else '-'+host)+'-skill-v0.1.0.zip')
  for f in files:body+='<li>'+link(PREFIX+'plugins/kumihan-zilu/downloads/'+f,f.split('/')[-1])+'</li>'
  body+='</ul><p>'+link(PREFIX+'plugins/kumihan-zilu/downloads/MANIFEST.json','MANIFEST.json')+' · '+link(PREFIX+'plugins/kumihan-zilu/downloads/SHA256SUMS.txt','SHA256SUMS.txt')+'</p></section>'
- body+=f'<section class="guide"><h2>{c["invoke"]}</h2><blockquote>{c["prompt"]}</blockquote><p lang="zh-Hans-CN">请保留原文与数字，使用 kumihan-zilu-web 检查页面。</p><p lang="en">Use kumihan-zilu-documents to review a report while preserving its source text.</p><p>{c["update"]}</p><p>{c["status"]}</p></section>'
- body+='<aside><p lang="zh-Hans-CN">四个独立Skills：入口与范围、网页与界面、文档与演示、只读审查。</p><p lang="en">Four independent skills: start and scope, web and interfaces, documents and slides, read-only review.</p></aside>'
- return frame(suffix,body,host)
+ body+=f'<section id="invoke"><h2>03 / {c["invoke"]}</h2><blockquote><p>{c["prompt"]}</p></blockquote><p lang="zh-Hans-CN">请保留原文与数字，使用 kumihan-zilu-web 检查页面。</p><p lang="en">Use kumihan-zilu-documents to review a report while preserving its source text.</p><p>{c["update"]}</p><p class="note">{c["status"]}</p></section>'
+ body+='<aside class="note"><p lang="zh-Hans-CN">四个独立Skills：入口与范围、网页与界面、文档与演示、只读审查。</p><p lang="en">Four independent skills: start and scope, web and interfaces, documents and slides, read-only review.</p></aside>'
+ g.update(skip=c['skip'],nav=c['nav'],language=c['language'],source_href=SOURCE,steps=c['steps'])
+ frame=FRAME.Frame(lang=c['lang'],head=head,css=PREFIX+'assets/kumihan-install.css',asset_root=PREFIX,
+  brand='KUMIHAN<span class="brand-sub" lang="zh-Hans-CN">｜字律</span>',home=PREFIX+name(suffix),
+  hosts=[(t,PREFIX+name(suffix,h),h==host) for h,t in HOSTS.items()],
+  languages=[(C[s]['lang'],label,PREFIX+name(s,host),s==suffix) for s,label in [('','简体中文'),('.en','English'),('.ja','日本語')]],
+  number=f'{list(HOSTS).index(host)+1:02d}',title=e(c['guide']+' · '+HOSTS[host]),description=e(g['lead']),
+  toc=[('steps',c['steps']),('download',c['download']),('invoke',c['invoke'])],content=body,platform=HOSTS[host],ui=g,
+  footer_sub=e(g['footer'])+'<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC',
+  footer_links=[('GitHub',SOURCE,True),('SHA256',SOURCE+'/downloads/SHA256SUMS.txt',True),('KUMIHAN',PREFIX+'index.html',False)])
+ return FRAME.render(frame)
 
 def outputs():return {name(s,h):guide(s,h) if h else landing(s) for s in C for h in (None,*HOSTS)}
 def main():

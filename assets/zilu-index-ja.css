@@ -274,3 +274,28 @@
       .skill-card { min-width:0; max-width:100%; overflow-wrap:anywhere; }
       .skill-name { max-width:100%; word-break:normal; overflow-wrap:anywhere; }
     }
+
+    /* Simplified Chinese and English editions share this index stylesheet.
+       Chinese text must use Simplified Chinese glyph forms, not Japanese ones. */
+    html[lang="zh-Hans-CN"] {
+      --display: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", system-ui, sans-serif;
+      --serif: "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    }
+    html[lang="zh-Hans-CN"] .hero h1 { font-size: clamp(40px,4.9vw,72px); letter-spacing: -.05em; line-height: 1.3; }
+    html[lang="zh-Hans-CN"] .intro-text h2,
+    html[lang="zh-Hans-CN"] .section-heading h2,
+    html[lang="zh-Hans-CN"] .idea-band h2,
+    html[lang="zh-Hans-CN"] .install-intro h2,
+    html[lang="zh-Hans-CN"] .cta-layout h2 { letter-spacing: -.045em; }
+    html[lang="en"] body { line-break: auto; }
+    html[lang="en"] .hero h1 { text-wrap: balance; }
+    html[lang="en"] .intro-text h2,
+    html[lang="en"] .section-heading h2,
+    html[lang="en"] .idea-band h2,
+    html[lang="en"] .install-intro h2,
+    html[lang="en"] .cta-layout h2 { letter-spacing: -.045em; line-height: 1.3; }
+    html[lang="en"] .feature h3 { letter-spacing: -.02em; }
+    @media (max-width:560px) {
+      html[lang="zh-Hans-CN"] .hero h1 { font-size: clamp(34px,9vw,50px); line-height: 1.38; }
+    }
+    html[lang="en"] .hero h1 { font-size: clamp(38px,4.3vw,62px); line-height: 1.2; }
