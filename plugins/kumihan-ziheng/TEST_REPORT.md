@@ -26,3 +26,6 @@
 香港機構別標點體例 needs-review。來源與版次見 sources.json，各規則的 source_sections 描述採用範圍。
 
 目前單元測試：11項；日本語 JA-TYPE-011 的8件既有 specification fixture 靜態一致性檢查通過，不代表啟用該規則或完成描畫驗證。
+
+最終檢查亦包含整包插件 ZIP 的所有本地文件連結、離線 report/profile/context schema、獨立版號更新、非法版號拒絕和 check 的非覆寫行為。報告 schema 曾有一處遺留日本語 method 參照，已由失敗案例定位並改為字衡本地參照，完整11項重新通過。
+獨立一次審查無 blocking finding，詳見 LIGHT_REVIEW.md。CI 結果以 Draft PR 的當前 HEAD checks 為準；本檔的本地 passed 不代表未觀察的遠端執行已通過。
