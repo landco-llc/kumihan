@@ -54,6 +54,7 @@ class DistributionTests(unittest.TestCase):
         import zipfile
         manifest=json.loads((BASE/'downloads/MANIFEST.json').read_text())
         self.assertEqual(len(manifest['archives']),5)
+        self.assertEqual(len({Path(a['file']).name for a in manifest['archives']}),5, 'Release assets need unique basenames')
         for item in manifest['archives']:
             p=BASE/'downloads'/item['file'];raw=p.read_bytes()
             self.assertEqual(hashlib.sha256(raw).hexdigest(),item['sha256'])

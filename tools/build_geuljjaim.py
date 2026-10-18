@@ -71,7 +71,7 @@ def plan_outputs(root=ROOT):
         for p,b in files.items():
             outputs[f'{PRODUCT}/skills/{name}/{p}']=b;plugin_files[f'skills/{name}/{p}']=b
         archives[f'skills/{name}-0.1.0.zip']=archive({f'{name}/{p}':b for p,b in files.items()})
-    archives['plugins/kumihan-geuljjaim-0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in plugin_files.items()})
+    archives['plugins/kumihan-geuljjaim-plugin-0.1.0.zip']=archive({f'kumihan-geuljjaim/{p}':b for p,b in plugin_files.items()})
     archives['MANIFEST.json']=encode(dict(product='KUMIHAN｜글짜임',name='kumihan-geuljjaim',version='0.1.0',locale='ko-KR',host_status='Portable/Codex-format archives; native invocation not-checked. Claude/Gemini host-specific archives unsupported.',archives=[dict(file=p,bytes=len(b),sha256=digest(b)) for p,b in sorted(archives.items())]))
     archives['SHA256SUMS.txt']=''.join(f'{digest(b)}  {p}\n' for p,b in sorted(archives.items())).encode()
     for p,b in archives.items():outputs[f'{PRODUCT}/downloads/{p}']=b
