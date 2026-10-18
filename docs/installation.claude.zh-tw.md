@@ -6,7 +6,7 @@
 
 這份指南說明如何在 Claude Code 與 Claude 應用程式中使用 KUMIHAN。
 
-> **關於預覽版（v0.1.4 preview）**  
+> **關於預覽版（v0.1.5 preview）**  
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -52,7 +52,7 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 
 ## B. Claude Code：從 ZIP 安裝
 
-1. 下載 [Claude Code 外掛 ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.4-preview.zip)。
+1. 下載 [Claude Code 外掛 ZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.5-preview.zip)。
 2. 解壓縮後會得到 `kumihan` 資料夾。
 3. 指定該資料夾並啟動 Claude Code。
 
@@ -72,10 +72,10 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 適用於 claude.ai 或 Claude 應用程式。
 
 1. 下載想使用的技能 ZIP。
-   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.4-preview.zip) — 開始使用前的規劃入口
-   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.4-preview.zip) — 網頁製作
-   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.4-preview.zip) — 報告與簡報
-   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.4-preview.zip) — 成果檢視
+   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.5-preview.zip) — 開始使用前的規劃入口
+   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.5-preview.zip) — 網頁製作
+   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.5-preview.zip) — 報告與簡報
+   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.5-preview.zip) — 成果檢視
 2. 在 Claude 開啟 **Customize → Skills**，使用新增按鈕選擇 **Upload a skill**。
 3. 逐一上傳 ZIP 並啟用技能。
 

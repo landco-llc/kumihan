@@ -32,6 +32,10 @@ If you create files with a library, set the East Asian font explicitly:
 
 Check actual line starts and ends after the final font is applied. Do not insert manual line breaks or spaces into supplied text to fix a break, unless the user asks.
 
+### Natural prosodic groups in Japanese titles (JA-TYPE-011)
+
+For short Word, PDF and PowerPoint headings, choose meaningful multi-bunsetsu groups based on modifier attachment and the natural spoken pause, not just valid kinsoku or equal-looking line widths. Prefer `いつものAIツールから／はじめよう` where its first line fits. Adjust a text box, column width, spacing or surrounding layout before accepting a weaker split. Check actual exported line ends and smaller/zoomed states. Preserve every original source character; never assume font or Office kinsoku alone proves a natural break. Document semantic judgments (assisted) and actual rendering (observed) separately.
+
 ## 3. Reports
 
 | Element | Starting point |

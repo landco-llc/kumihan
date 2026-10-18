@@ -55,7 +55,7 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 現在、正式版に向けて開発中です。
 
-いまお試しいただけるのは、ご自身の環境で導入を試すための **プレビュー版（v0.1.4 preview）** です。各ツールでの動作は、まだ十分に確認できていません。
+いまお試しいただけるのは、ご自身の環境で導入を試すための **プレビュー版（v0.1.5 preview）** です。各ツールでの動作は、まだ十分に確認できていません。
 
 <br>
 
@@ -83,7 +83,7 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 
 ### Status
 
-KUMIHAN is in development toward a stable release. A preview (**v0.1.4 preview**) is available for trying in your own environment. Behavior in each AI tool has not yet been fully verified.
+KUMIHAN is in development toward a stable release. A preview (**v0.1.5 preview**) is available for trying in your own environment. Behavior in each AI tool has not yet been fully verified.
 
 <br>
 
