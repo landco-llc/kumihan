@@ -6,7 +6,7 @@
 
 KUMIHANをClaude CodeやClaudeチャットで使うための手順です。
 
-> **プレビュー版（v0.1.6 preview）について**
+> **プレビュー版（v0.1.7 preview）について**
 > ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
 <br>
@@ -52,7 +52,7 @@ Claude CodeとClaudeチャットは、導入方法が異なります。
 
 ## B. Claude Code：ZIPから導入する
 
-1. [Claude Code用プラグインのZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.6-preview.zip) をダウンロードします。
+1. [Claude Code用プラグインのZIP](../downloads%20Claude/plugins/kumihan-Claude-Code-plugin-0.1.7-preview.zip) をダウンロードします。
 2. ZIPを展開すると、`kumihan` フォルダーができます。
 3. そのフォルダーを指定して、Claude Codeを起動します。
 
@@ -72,10 +72,10 @@ Claude CodeとClaudeチャットは、導入方法が異なります。
 claude.aiやClaudeアプリで使う方法です。
 
 1. 使いたいスキルのZIPをダウンロードします。
-   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.6-preview.zip) — 最初の入口
-   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.6-preview.zip) — Webページ
-   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.6-preview.zip) — 報告書・スライド
-   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.6-preview.zip) — レビュー
+   - [kumihan](../downloads%20Claude/skills/kumihan-Claude-skill-0.1.7-preview.zip) — 最初の入口
+   - [kumihan-web](../downloads%20Claude/skills/kumihan-web-Claude-skill-0.1.7-preview.zip) — Webページ
+   - [kumihan-documents](../downloads%20Claude/skills/kumihan-documents-Claude-skill-0.1.7-preview.zip) — 報告書・スライド
+   - [kumihan-review](../downloads%20Claude/skills/kumihan-review-Claude-skill-0.1.7-preview.zip) — レビュー
 2. Claudeの **Customize → Skills** を開き、追加ボタンから **Upload a skill** を選びます。
 3. ZIPを1つずつアップロードし、スキルを有効にします。
 

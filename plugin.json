@@ -3,13 +3,13 @@
   "author": {
     "name": "L&Co. LLC"
   },
-  "description": "Guidance for creating and reviewing Japanese web pages, documents, presentations, and display copy.",
+  "description": "日本語の文字組・デザイン制作とレビューを支援。 / Guidance for Japanese typography, design, and read-only review.",
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "KUMIHAN v0.1.6",
-        "shortDescription": "Japanese guidance preview",
-        "longDescription": "KUMIHAN provides four bundled guidance skills for people creating and reviewing Japanese web pages, documents, reports, presentations, and display copy. Select a medium and scope with kumihan; use kumihan-web for web work, kumihan-documents for reports and slides, and kumihan-review for a read-only review.\n\nEach skill includes local guidance rules, six medium profiles, references, schemas, an inventory, and an Apache-2.0 license. The workflows guide Japanese line breaking, punctuation, mixed Japanese and Latin text, information hierarchy, preservation of supplied wording and data, and evidence-based review. They distinguish study, authorized build or refine work, and read-only audit.\n\nThese are guidance workflows used with the tools available in the host. They are not automatic detectors or a rendering service. Findings distinguish static checks from observed rendering and manual judgment; unavailable checks stay explicit. Actual discovery and invocation in ChatGPT Chat/Work and Codex, native Office compatibility, and behavioral acceptance have not been verified.",
+        "displayName": "KUMIHAN",
+        "shortDescription": "日本語の文字組・デザイン制作とレビューを支援。 / Guidance for Japanese typography, design, and read-only review.",
+        "longDescription": "KUMIHANは、日本語のWebサイト・文書・プレゼンテーション制作とレビューを支援する、オープンソースの文字組・デザインガイダンスです。原稿を保持し、改行・禁則・余白・情報構造を媒体に合わせて検討します。\n\nKUMIHAN is an open-source typography and design guidance toolkit for creating and reviewing Japanese websites, documents, and presentations. It preserves source content and helps evaluate line breaks, punctuation, spacing, and information hierarchy.\n\nKUMIHAN provides four bundled guidance skills for people creating and reviewing Japanese web pages, documents, reports, presentations, and display copy. Select a medium and scope with kumihan; use kumihan-web for web work, kumihan-documents for reports and slides, and kumihan-review for a read-only review.\n\nEach skill includes local guidance rules, six medium profiles, references, schemas, an inventory, and an Apache-2.0 license. The workflows guide Japanese line breaking, punctuation, mixed Japanese and Latin text, information hierarchy, preservation of supplied wording and data, and evidence-based review. They distinguish study, authorized build or refine work, and read-only audit.\n\nThese are guidance workflows used with the tools available in the host. They are not automatic detectors or a rendering service. Findings distinguish static checks from observed rendering and manual judgment; unavailable checks stay explicit. Actual discovery and invocation in ChatGPT Chat/Work and Codex, native Office compatibility, and behavioral acceptance have not been verified.",
         "developerName": "L&Co. LLC",
         "category": "Productivity",
         "defaultPrompt": [
@@ -25,6 +25,6 @@
   },
   "license": "Apache-2.0",
   "name": "kumihan-private-install-preview",
-  "version": "0.1.6-preview",
+  "version": "0.1.7-preview",
   "repository": "https://github.com/landco-llc/kumihan"
 }
