@@ -45,5 +45,7 @@ def main():
     report=dict(renderer='Chromium '+version,scope='Local source static HTML; 200% computed text resize is not native browser zoom; overflow geometry and keyboard skip only, no full accessibility or glyph certification.',results=results,local_links_checked=len(checked),failures=failures)
     (out/'report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
     print(f'Chromium {version}: {len(results)} layout checks, {len(checked)} links, {len(failures)} failures')
+    for failure in failures:
+        print(json.dumps(failure, ensure_ascii=False))
     return int(bool(failures))
 if __name__=='__main__':raise SystemExit(main())
