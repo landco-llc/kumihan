@@ -70,7 +70,7 @@ class ZiHengWebsiteTests(unittest.TestCase):
             self.assertIn('zh-Hant-HK',content)
         for path in ('docs/install-ziheng.html','docs/install-ziheng.en.html','docs/install-ziheng.ja.html'):
             content=(ROOT/path).read_text(encoding='utf-8')
-            self.assertIn('85356593ab7c885ca619ebdef43a3d0edf1286dab5caa2c9cf5c223801629e43',content)
+            self.assertIn('9b3bd1edbb0458a3d06c2d3d7c9d246dd32766a44b4d7a3dcbb0634029351503',content)
             self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
 
     def test_logo_styles_and_japanese_site_footer(self):
