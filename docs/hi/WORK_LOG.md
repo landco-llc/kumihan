@@ -46,3 +46,9 @@ Gateway Hindi glyph/title/brandにも局所font-faceとnormal trackingを適用�
 PR #71をmain 5b7057366621ace37fd36185450bfe0d7282846cへマージ。直前のmain dd81733（ベトナム語版）との生成HTML/test mapping競合を両言語保持で解消。統合後root11/focused8およびfocused CIを確認。両言語を含む11カードをja/en×3幅で再測定し同寸法・normal Hindi tracking・overflowなし。
 タグkumihan-hi-v0.1.0は上記main SHAを指す。gh release createのasset uploadはCloudのuploads.github.com接続先制限で拒否され公開前に失敗したため、既存publish-ar方式と同様のGitHub Actions公開経路を追加。タグ/期待SHA固定、17assetのsize/digest検証後のみpublic化、既存public/添付済release上書き禁止。
 Claude Code 2.1.302 / Gemini CLI 0.64.0の実CLI manifest validatorsがPASS（host-validation.json）。実ホストのモデル呼出し・accountへの導入とは別。
+
+### W09 公開検証完了
+Actionsで全17assetをdraftへupload後、draftのtag endpointが404になったためID 416693411で全size/digestを検証し公開APIを実行。公開Releaseと全12 Pages、内部24resource、全17asset URLを実確認しHTTP 200。workflowはauthenticated release list利用へ修正、既存assetは上書きせず全一致のみ検証する再実行経路にした。
+
+## W10 Handover — PUBLISHED
+PUBLICATION.mdに実装main SHA/PR/tag/Release/全12 URL/15ZIPとchecksums/manifestを記録。publication-results.jsonはremote API size/hashと全HTTP確認の実測。自動テストは統合後のnhip-chu6を加え合計92件。新規24QAの実測と未検証を分離し、native host invocation/mobile/native speaker/Office/IME/screen reader等のNOT_CHECKEDとPDF抽出2差分を残した。研究原資料は私有Driveを保持、更新対象の公開正本はplugins/kumihan-hiのrules/sources/fixtures、docs/hiのQA/公開台帳。第三者directoryへの申請なし。
