@@ -5,6 +5,7 @@ import io
 import json
 from pathlib import Path
 import re
+import posixpath
 import shutil
 import tempfile
 import unittest
@@ -61,7 +62,7 @@ class HostParity(unittest.TestCase):
      if name.endswith('.md'):
       for link in re.findall(r'\]\(([^)]+)\)',z.read(name).decode()):
        if '://' not in link:
-        self.assertIn((Path(name).parent/link).as_posix(),names)
+        self.assertIn(posixpath.normpath((Path(name).parent/link).as_posix()),names)
     for name in names:
      if name.endswith(('.md','.json','.py')):
       text=z.read(name).decode()
