@@ -9,8 +9,8 @@ import sys
 import unicodedata
 
 VERSION = "0.1.0"
-CSS_BREAK = re.compile(r"\\bword-break\\s*:\\s*break-all\\b", re.I)
-CSS_HYPHENS = re.compile(r"\\bhyphens\\s*:\\s*auto\\b", re.I)
+CSS_BREAK = re.compile(r"\bword-break\s*:\s*break-all\b", re.I)
+CSS_HYPHENS = re.compile(r"\bhyphens\s*:\s*auto\b", re.I)
 def inspect(raw, locale="vi-VN", candidate=None, style_text=None):
     if locale not in ("vi", "vi-VN"):
         raise ValueError("Unsupported locale")
