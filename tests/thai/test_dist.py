@@ -31,7 +31,7 @@ class ThaiDistributionTests(unittest.TestCase):
         self.assertEqual(len(archives), 15)
         self.assertEqual(len({Path(p).name for p in archives}), 15)
         for path,data in archives.items():
-            self.assertTrue(path.endswith('-v0.1.0.zip'), path)
+            self.assertTrue(path.endswith('-v0.1.1.zip'), path)
             with zipfile.ZipFile(io.BytesIO(data)) as z:
                 names = z.namelist()
                 self.assertEqual(len(names),len(set(names)))
@@ -79,7 +79,7 @@ class ThaiDistributionTests(unittest.TestCase):
     def test_manifest_checksums_and_logo(self):
         base = 'plugins/kumihan-th/downloads/'
         manifest = json.loads(self.outputs[base+'MANIFEST.json'])
-        self.assertEqual(manifest['version'],'0.1.0')
+        self.assertEqual(manifest['version'],'0.1.1')
         for entry in manifest['archives']:
             data = self.outputs[base+entry['file']]
             self.assertEqual(hashlib.sha256(data).hexdigest(),entry['sha256'])

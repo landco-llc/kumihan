@@ -55,7 +55,7 @@ def plan_outputs(root=ROOT):
     root = Path(root)
     base = root/PRODUCT
     manifest = json.loads((base/'plugin.json').read_text())
-    if (manifest['name'], manifest['version'], manifest['locale']) != ('kumihan-th', '0.1.0', 'th-TH'):
+    if (manifest['name'], manifest['version'], manifest['locale']) != ('kumihan-th', '0.1.1', 'th-TH'):
         raise ValueError('Unexpected Thai identity/version/locale')
     interface = manifest['extensions']['com.openai']['interface']
     if interface['displayName'] != 'KUMIHAN｜ดุลอักษร':
@@ -105,16 +105,16 @@ def plan_outputs(root=ROOT):
     for name in NAMES:
         files = dict(shared)
         files['SKILL.md'] = (base/'entrypoints'/f'{name}.md').read_bytes()
-        files['inventory.json'] = inventory(files, skill=name, version='0.1.0')
+        files['inventory.json'] = inventory(files, skill=name, version='0.1.1')
         for p,b in files.items():
             outputs[f'{PRODUCT}/skills/{name}/{p}'] = b
             plugin[f'skills/{name}/{p}'] = b
         standalone[name] = files
         for host, suffix in (('', ''), ('claude/', '-Claude-skill'), ('gemini/', '-Gemini-Apps-skill')):
-            archives[f'{host}skills/{name}{suffix}-v0.1.0.zip'] = archive({f'{name}/{p}':b for p,b in files.items()})
-    plugin['inventory.json'] = inventory(plugin, plugin='kumihan-th', version='0.1.0')
+            archives[f'{host}skills/{name}{suffix}-v0.1.1.zip'] = archive({f'{name}/{p}':b for p,b in files.items()})
+    plugin['inventory.json'] = inventory(plugin, plugin='kumihan-th', version='0.1.1')
     outputs[f'{PRODUCT}/inventory.json'] = plugin['inventory.json']
-    archives['plugins/kumihan-th-plugin-v0.1.0.zip'] = archive({f'kumihan-th/{p}':b for p,b in plugin.items()})
+    archives['plugins/kumihan-th-plugin-v0.1.1.zip'] = archive({f'kumihan-th/{p}':b for p,b in plugin.items()})
     for host, metadata, filename in (
         ('claude', '.claude-plugin/plugin.json', 'kumihan-th-Claude-Code-plugin'),
         ('gemini', 'gemini-extension.json', 'kumihan-th-Gemini-CLI-extension')):
@@ -124,9 +124,9 @@ def plan_outputs(root=ROOT):
             package['GEMINI.md'] = (base/'GEMINI.md').read_bytes()
         for name, files in standalone.items():
             package.update({f'skills/{name}/{p}':b for p,b in files.items()})
-        package['inventory.json'] = inventory(package, plugin='kumihan-th', host=host, version='0.1.0')
-        archives[f'{host}/plugins/{filename}-v0.1.0.zip'] = archive({f'kumihan-th/{p}':b for p,b in package.items()})
-    archives['MANIFEST.json'] = encode(dict(product='KUMIHAN｜ดุลอักษร', version='0.1.0', locale='th-TH',
+        package['inventory.json'] = inventory(package, plugin='kumihan-th', host=host, version='0.1.1')
+        archives[f'{host}/plugins/{filename}-v0.1.1.zip'] = archive({f'kumihan-th/{p}':b for p,b in package.items()})
+    archives['MANIFEST.json'] = encode(dict(product='KUMIHAN｜ดุลอักษร', version='0.1.1', locale='th-TH',
         logo_sha256=LOGO_SHA, archives=[dict(file=p, release_asset=Path(p).name, source_path=f'{PRODUCT}/downloads/{p}', bytes=len(b), sha256=digest(b)) for p,b in sorted(archives.items())]))
     # Flattened release names match GitHub assets; nested paths remain available locally.
     archives['SHA256SUMS.txt'] = ''.join(f'{digest(b)}  {Path(p).name}\n' for p,b in sorted(archives.items())).encode()

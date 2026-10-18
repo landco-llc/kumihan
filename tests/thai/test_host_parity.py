@@ -46,7 +46,7 @@ class HostParity(unittest.TestCase):
      meta=json.loads(z.read(root+'.claude-plugin/plugin.json'))
      self.assertEqual(meta['displayName'],'KUMIHAN｜ดุลอักษร')
      self.assertEqual(meta['name'],'kumihan-th')
-     self.assertEqual(meta['version'],'0.1.0')
+     self.assertEqual(meta['version'],'0.1.1')
     if '-Gemini-CLI-extension-' in path:
      meta=json.loads(z.read(root+'gemini-extension.json'))
      self.assertEqual(meta['name'],'kumihan-th');self.assertEqual(meta['contextFileName'],'GEMINI.md')

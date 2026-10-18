@@ -1,6 +1,6 @@
 # KUMIHAN｜ดุลอักษร
 
-เวอร์ชัน 0.1.0 · th-TH · L&Co. LLC · Apache-2.0
+เวอร์ชัน 0.1.1 · th-TH · L&Co. LLC · Apache-2.0
 
 แนวทางจัดวางอักษรไทยสำหรับเว็บ เอกสาร งานนำเสนอ และการตรวจทานแบบอ่านอย่างเดียว รักษาข้อความต้นฉบับโดยไม่ปรับ Unicode หรือเปลี่ยนอักขระที่มองไม่เห็นโดยพลการ เริ่มจาก `kumihan-th` เพื่อเลือกสื่อ หรือเลือก `kumihan-th-web`, `kumihan-th-documents`, `kumihan-th-review` โดยตรง
 
@@ -15,6 +15,6 @@ GitHub OSS publication, Pages deployment and provider marketplace listing are di
 ## Host parity correction candidate
 
 ไฟล์ซอร์ส 15 ชุดสำหรับ ChatGPT/Codex, Claude และ Gemini ยังไม่เผยแพร่ การติดตั้งจริง: not-checked
-Fifteen independent candidate archives (five per host) include dedicated Claude Code and Gemini CLI layouts plus four standalone Skills per host. All descriptions are Thai first plus English; ZIP names end in `-v0.1.0.zip`. The original five ZIP bytes change because descriptions/docs and inventories change. No Japanese or ZiHeng distribution is required or replaced.
+Fifteen independent candidate archives (five per host) include dedicated Claude Code and Gemini CLI layouts plus four standalone Skills per host. All descriptions are Thai first plus English; ZIP names end in `-v0.1.1.zip`. The original five ZIP bytes change because descriptions/docs and inventories change. No Japanese or ZiHeng distribution is required or replaced.
 
-The previous five-ZIP omission followed the narrow original distribution contract. This correction expands packaging, not the 32-rule/40-case acceptance status. Existing v0.1.0 tag provenance remains unchanged. Publication is blocked pending the Owner's exact candidate and version/tag decision; see [installation](INSTALL.md).
+The previous five-ZIP omission followed the narrow original distribution contract. This correction expands packaging, not the 32-rule/40-case acceptance status. Historical v0.1.0 tag provenance remains unchanged. Publication is blocked pending the Owner's exact candidate and version/tag decision; see [installation](INSTALL.md).

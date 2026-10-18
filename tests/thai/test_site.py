@@ -48,7 +48,7 @@ class ThaiSiteContract(unittest.TestCase):
     text=(ROOT/SITE.guide(host,lang)).read_text()
     suffix={'chatgpt':'','claude':'-Claude-skill','gemini':'-Gemini-Apps-skill'}[host]
     package={'chatgpt':'kumihan-th-plugin','claude':'kumihan-th-Claude-Code-plugin','gemini':'kumihan-th-Gemini-CLI-extension'}[host]
-    for asset in [package+'-v0.1.0.zip']+[s+suffix+'-v0.1.0.zip' for s in SITE.SKILLS]:
+    for asset in [package+'-v0.1.1.zip']+[s+suffix+'-v0.1.1.zip' for s in SITE.SKILLS]:
      self.assertIn(asset,text)
     self.assertIn('SHA256SUMS.txt',text)
     self.assertIn('น้ำชา เก่ง ภาษาไทย',text)
