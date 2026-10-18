@@ -119,56 +119,64 @@
   "lang_label": "Language / 語言 / 言語"
  },
  "en": {
-  "description": "KUMIHAN｜字衡 is an open-source set of AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations. It provides guidance grounded in Taiwan and Hong Kong conventions without rewriting your source text.",
-  "og_title": "KUMIHAN｜字衡 for Traditional Chinese",
-  "title": "KUMIHAN｜字衡 for Traditional Chinese",
+  "description": "KUMIHAN｜字衡 is a set of open-source AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "og_title": "KUMIHAN｜字衡 Natural Traditional Chinese typography made with AI",
+  "title": "KUMIHAN｜字衡 Natural Traditional Chinese typography made with AI",
   "skip": "Skip to main content",
   "nav_label": "Main navigation",
   "nav": [
    "About",
    "Principles",
-   "Four skills",
-   "Installation"
+   "Skills",
+   "Get started"
   ],
-  "eyebrow": "OPEN SOURCE / TRADITIONAL CHINESE TYPOGRAPHY",
+  "eyebrow": "OPEN-SOURCE SKILLS / TRADITIONAL CHINESE TYPOGRAPHY",
   "h1": [
-   "Thoughtful typography",
-   "for Traditional Chinese"
+   "Natural Traditional Chinese typography",
+   "made with AI"
   ],
-  "lead": "KUMIHAN｜字衡 is an open-source set of AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations. It provides guidance grounded in Taiwan and Hong Kong conventions without rewriting your source text.",
+  "lead": "KUMIHAN｜字衡 is a set of open-source AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
   "cta": [
    "Get started",
-   "Explore ZiHeng"
+   "Learn more"
   ],
-  "hero_foot": "Taiwan zh-Hant-TW / Hong Kong zh-Hant-HK",
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "TRADITIONAL CHINESE FIRST"
+  ],
   "stage_text": "<span lang=\"zh-Hant-TW\">閱讀</span><small>HK: confirm the house style first</small>",
   "concept_h2": [
-   "Not another rigid template",
-   "Typography that follows your content"
+   "Not a uniform look",
+   "the right form for each message"
   ],
-  "concept_body": "ZiHeng treats typography as part of information design. Decide who will read it, on what medium, and in which region before addressing punctuation, wrapping, type, rhythm and hierarchy. It does not impose a universal font pair or layout recipe.",
-  "features_h2": "Readability is built in the details",
-  "features_deck": "Guidance should be explainable, with room for editorial judgment.",
+  "concept_body": "Every brief, audience, and message is different. KUMIHAN｜字衡 helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+  "features_h2": "Four things worth getting right",
+  "features_deck": "Practical priorities for creating and reviewing Traditional Chinese content.",
   "features": [
    {
+    "idx": "01 / REGION",
     "mark": "「」",
     "h3": "Taiwan and Hong Kong in context",
     "p": "Quotation, punctuation, glyphs and spacing are interpreted in regional and editorial context. Taiwan conventions are not silently imposed on Hong Kong."
    },
    {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Purposeful structure",
+    "p": "Shape the layout around the information, its priority, and the reader’s goal."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "h3": "Source fidelity",
     "mark": "臺 / 港",
-    "h3": "Preserve every supplied character",
     "p": "Names, brands, prices, URLs, regional variants and Unicode sequences are never normalized merely to fit a layout."
    },
    {
-    "mark": "Aa 字",
-    "h3": "Design for the content",
-    "p": "Adjust hierarchy, line lengths, spacing and fallback to the reader and actual medium—not to a pre-selected font palette."
-   },
-   {
-    "mark": "✓",
-    "h3": "Evidence-based read-only review",
-    "p": "Report static candidates, observed rendering and unchecked conditions separately. Reviews do not change the original file."
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Read-only review",
+    "p": "Check finished work and organize issues—without touching the files."
    }
   ],
   "locale_h2": "One writing system different editorial contexts",
@@ -187,48 +195,55 @@
     "p": "First identify the publisher, institution or project house style for quotations, glyphs and punctuation. Taiwanese educational conventions are not the default."
    }
   ],
-  "skills_h2": "Four independent skills built for specific roles",
-  "skills_deck": "Each includes local rules, sources and references, with no need to install the Japanese KUMIHAN product.",
+  "skills_h2": [
+   "Four skills",
+   "One approach"
+  ],
+  "skills_deck": "From scoping the work to web, documents, and review.",
   "skills": [
    {
-    "role": "01 / Choose context and scope",
     "motif": "◆",
     "name": "kumihan-ziheng",
-    "p": "Set the locale, medium and permitted change scope before design begins."
+    "p": "Start here. Set the locale, medium and permitted change scope before design begins."
    },
    {
-    "role": "02 / Web pages and interfaces",
     "motif": "文",
     "name": "kumihan-ziheng-web",
-    "p": "Review information structure, language tags, wrapping and responsive behavior."
+    "p": "Typography and design for Traditional Chinese websites, articles, landing pages, and UI."
    },
    {
-    "role": "03 / Reports and presentations",
     "motif": "版",
     "name": "kumihan-ziheng-documents",
-    "p": "Plan legible documents and slides, then verify export separately."
+    "p": "Structure and readability for reports, business documents, and slide decks."
    },
    {
-    "role": "04 / Read-only quality review",
     "motif": "✓",
     "name": "kumihan-ziheng-review",
-    "p": "Record findings with supporting evidence, without editing the original artifact."
+    "p": "Review typography, information, and layout without editing source files."
    }
   ],
-  "install_h2": "Start with the tools you already use",
-  "install_body": "Use a standalone ZIP for the full plugin or an individual skill. Actual installation depends on the capabilities of your ChatGPT or Codex host.",
+  "install_h2": [
+   "Start with the AI tools",
+   "you already use"
+  ],
+  "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need.",
   "install_notes": [
-   "Guide to the full plugin ZIP and individual skills",
-   "Claude Code plugin and Claude app skills",
-   "Gemini CLI extension and skills"
+   "Guides for adding skills, registering plugins, and local installation",
+   "Setup guide for Claude Code and Claude chat",
+   "Setup guide for Gemini CLI and the Gemini app"
   ],
   "install_extra": "You can also <a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0-preview.zip\" download>download the ZIP</a> or view the source on <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
+  "status_title": "PREVIEW / v0.1.0",
   "status_h": "A preview with explicit boundaries",
   "status_body": "ZiHeng includes 15 regional rules, 16 shared policies and four skills. Only limited static checks are automated; browser layout, Office/PDF rendering and host behavior are not universally verified.",
-  "cta_h2": "Treat every line with intention",
-  "cta_body": "Open source, independently installable, and designed for traceable editorial decisions.",
-  "cta_button": "Explore on GitHub",
-  "footer_sub": "Traditional Chinese typography guidance for Taiwan and Hong Kong.<br>v0.1.0-preview · Apache-2.0 · Developed by L&amp;Co. LLC",
+  "status_link": "Download latest ↗",
+  "cta_h2": [
+   "Another way to design",
+   "in Traditional Chinese"
+  ],
+  "cta_body": "KUMIHAN｜字衡 is open source. The skills, releases, and full change history are on GitHub.",
+  "cta_button": "View on GitHub",
+  "footer_sub": "Traditional Chinese typography skills for AI-assisted design.",
   "footer_nav": [
    "About",
    "GitHub",
@@ -238,56 +253,64 @@
   "lang_label": "Language / 語言 / 言語"
  },
  "ja": {
-  "description": "KUMIHAN｜字衡は、繁体中国語のWebサイト、記事、報告書、プレゼン資料の制作・レビューを支援するオープンソースのAIスキル集です。台湾・香港それぞれの文字組慣行を考慮し、原稿を守りながら適切な判断を促します。",
-  "og_title": "KUMIHAN｜字衡 もっと自然に",
-  "title": "KUMIHAN｜字衡 もっと自然に",
+  "description": "KUMIHAN｜字衡は、AIによる繁体中国語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
+  "og_title": "KUMIHAN｜字衡 繁体中国語のデザインをもっと自然に",
+  "title": "KUMIHAN｜字衡 繁体中国語のデザインをもっと自然に",
   "skip": "本文へ移動",
   "nav_label": "Main navigation",
   "nav": [
-   "字衡について",
-   "設計原則",
+   "字衡とは",
+   "できること",
    "4つのスキル",
    "導入方法"
   ],
-  "eyebrow": "OPEN SOURCE / TRADITIONAL CHINESE TYPOGRAPHY",
+  "eyebrow": "OPEN-SOURCE SKILLS / TRADITIONAL CHINESE TYPOGRAPHY",
   "h1": [
-   "繁体中国語を",
+   "繁体中国語のデザインを",
    "もっと自然に"
   ],
-  "lead": "KUMIHAN｜字衡は、繁体中国語のWebサイト、記事、報告書、プレゼン資料の制作・レビューを支援するオープンソースのAIスキル集です。台湾・香港それぞれの文字組慣行を考慮し、原稿を守りながら適切な判断を促します。",
+  "lead": "AIとつくる繁体中国語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜字衡は、繁体中国語のための制作・レビュースキル集です。",
   "cta": [
-   "導入方法を見る",
-   "字衡を知る"
+   "使いはじめる",
+   "字衡について"
   ],
-  "hero_foot": "台湾 zh-Hant-TW ／ 香港 zh-Hant-HK",
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "TRADITIONAL CHINESE FIRST"
+  ],
   "stage_text": "<span lang=\"zh-Hant-TW\">閱讀</span><small>香港：編集スタイルを先に確認</small>",
   "concept_h2": [
-   "文字をテンプレートに押し込まず",
-   "内容に合う組版を考える"
+   "見た目をそろえるより",
+   "伝わる形を考える"
   ],
-  "concept_body": "字衡は文字組を情報設計の一部と考えます。読者、媒体、地域を明確にし、句読点・改行・書体・余白・情報階層を検討します。あらゆるデザインを同じフォントやレイアウトへ誘導しません。",
-  "features_h2": "読みやすさは細部から",
-  "features_deck": "根拠を示せる判断と、編集上の柔軟さを両立。",
+  "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜字衡は、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+  "features_h2": "伝えるための4つの視点",
+  "features_deck": "制作と見直しに共通する、KUMIHAN｜字衡が大切にする考え方。",
   "features": [
    {
+    "idx": "01 / REGION",
     "mark": "「」",
     "h3": "台湾と香港を区別",
     "p": "引用符、約物、字形、詰め方を地域・媒体・編集方針に応じて扱い、台湾式の規則を香港へ自動適用しません。"
    },
    {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "内容に合う構成",
+    "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "h3": "原稿を大切に",
     "mark": "臺 / 港",
-    "h3": "原稿を正確に保持",
     "p": "名前、ブランド名、価格、URL、異体字やUnicode配列を、見栄えのために無断で書き換えません。"
    },
    {
-    "mark": "Aa 字",
-    "h3": "内容に合わせたデザイン",
-    "p": "情報の優先順位、可読性、表示環境に合わせて調整。特定の書体セットや固定テンプレートを強制しません。"
-   },
-   {
-    "mark": "✓",
-    "h3": "証拠付きの読み取り専用レビュー",
-    "p": "静的な注意候補、実描画の証拠、未検証事項を分けて記録。レビュー時は対象を変更しません。"
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "制作後の見直し",
+    "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
    }
   ],
   "locale_h2": "同じ繁体中国語でも地域の習慣は異なる",
@@ -306,48 +329,55 @@
     "p": "引用符、字形、約物の慣行は出版社・機関・プロジェクトごとに確認。台湾の教育指針を香港の標準扱いしません。"
    }
   ],
-  "skills_h2": "独立して使える4つのスキル",
-  "skills_deck": "スキルごとにルール・参照資料を同梱。日本語版KUMIHANのインストールは不要です。",
+  "skills_h2": [
+   "4つのスキル",
+   "ひとつの考え方"
+  ],
+  "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
   "skills": [
    {
-    "role": "01 / 入口と作業範囲",
     "motif": "◆",
     "name": "kumihan-ziheng",
-    "p": "地域、媒体、作業モードと変更を認める対象を整理します。"
+    "p": "最初の入口。地域、媒体、作業モードと変更を認める対象を整理するためのスキル。"
    },
    {
-    "role": "02 / Webページ・記事・UI",
     "motif": "文",
     "name": "kumihan-ziheng-web",
-    "p": "情報設計、lang属性、改行、レスポンシブな表示を確認します。"
+    "p": "繁体中国語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
    },
    {
-    "role": "03 / 文書・報告書・スライド",
     "motif": "版",
     "name": "kumihan-ziheng-documents",
-    "p": "読みやすい階層と資料構成を検討し、実ファイルの書き出しは別途確認します。"
+    "p": "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
    },
    {
-    "role": "04 / 読み取り専用レビュー",
     "motif": "✓",
     "name": "kumihan-ziheng-review",
-    "p": "原本を変更せず、問題と証拠、未検証事項を報告します。"
+    "p": "制作物を変更せず、組版・情報・デザインの見直しを支援。"
    }
   ],
-  "install_h2": "いつものAIツールから始めよう",
-  "install_body": "フルプラグインZIPまたは個別スキルZIPで配布しています。ChatGPT/Codexの環境によって導入手順は異なります。",
+  "install_h2": [
+   "いつものAIツールから",
+   "はじめよう"
+  ],
+  "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。",
   "install_notes": [
-   "フルプラグインZIPと個別スキルの導入ガイド",
-   "Claude Codeプラグインと Claudeアプリのスキル",
-   "Gemini CLI拡張とスキル"
+   "スキルの追加・プラグイン登録・ローカル導入のガイド",
+   "Claude Code・チャット向けの導入ガイド",
+   "Gemini CLI・Geminiアプリ向けの導入ガイド"
   ],
   "install_extra": "<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0-preview.zip\" download>ZIPを入手</a>、または <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> でソースを確認できます。",
+  "status_title": "PREVIEW / v0.1.0",
   "status_h": "プレビュー版としてできることと未検証を明確に",
   "status_body": "繁体中国語固有の15規則と共通16ポリシー、4スキルを収録。一部の静的チェック以外はガイドラインであり、ブラウザやOffice/PDFの描画、ホストでの実動作を一律に保証しません。",
-  "cta_h2": "文字の一行一行を丁寧に",
-  "cta_body": "オープンソースで独立導入可能。根拠のある組版判断を共有・改善できます。",
-  "cta_button": "GitHubを見る",
-  "footer_sub": "台湾・香港向けの繁体中国語文字組支援スキル。<br>v0.1.0-preview · Apache-2.0 · 開発：L&amp;Co. LLC",
+  "status_link": "最新版のダウンロード ↗",
+  "cta_h2": [
+   "繁体中国語のデザインに",
+   "もうひとつの選択肢を"
+  ],
+  "cta_body": "KUMIHAN｜字衡はオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+  "cta_button": "GitHubで見る",
+  "footer_sub": "Traditional Chinese typography skills for AI-assisted design.",
   "footer_nav": [
    "字衡について",
    "GitHub",
