@@ -12,9 +12,10 @@ English: Four independent Thai typography skills with bounded, read-only checks.
 
 GitHub OSS publication, Pages deployment and provider marketplace listing are distinct events. Consult the actual tagged release and its checksums for publication evidence; host discovery/invocation requires separate verification.
 
-## Host parity correction candidate
+## v0.1.1 — การแจกจ่าย / Distribution
 
-ไฟล์ซอร์ส 15 ชุดสำหรับ ChatGPT/Codex, Claude และ Gemini ยังไม่เผยแพร่ การติดตั้งจริง: not-checked
-Fifteen independent candidate archives (five per host) include dedicated Claude Code and Gemini CLI layouts plus four standalone Skills per host. All descriptions are Thai first plus English; ZIP names end in `-v0.1.1.zip`. The original five ZIP bytes change because descriptions/docs and inventories change. No Japanese or ZiHeng distribution is required or replaced.
+แพ็กเกจเวอร์ชัน v0.1.1 สำหรับ ChatGPT/Codex, Claude และ Gemini มี ZIP 15 ไฟล์ (แต่ละโฮสต์ 5 ไฟล์) ดูที่ [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) พร้อม SHA256SUMS และ MANIFEST.json ก่อนติดตั้ง การติดตั้งและเรียกใช้ในโฮสต์จริงยังไม่ผ่านการทดสอบ
 
-The previous five-ZIP omission followed the narrow original distribution contract. This correction expands packaging, not the 32-rule/40-case acceptance status. Historical v0.1.0 tag provenance remains unchanged. Publication is blocked pending the Owner's exact candidate and version/tag decision; see [installation](INSTALL.md).
+The v0.1.1 release supplies 15 host-specific ZIPs: an independent plugin or extension and four standalone Skills each for ChatGPT/Codex, Claude and Gemini. Thai-first/English descriptions and the versionless display name are preserved. Verify checksums and consult the [installation guide](INSTALL.md). Native host import/invocation is not verified; public OSS release is not a provider marketplace listing.
+
+The historical v0.1.0 tag remains unchanged. Existing Japanese and ZiHeng distributions and their identities are independent.

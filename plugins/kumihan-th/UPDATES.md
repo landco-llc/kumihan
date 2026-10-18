@@ -8,16 +8,10 @@ Initial independent Thai distribution. Source preservation and bounded static ch
 
 タイ語版初版。描画・タイ語編集・ホスト導入の検証状態を静的チェックと分けて報告します。
 
-## 0.1.1 — three-host distribution parity (source candidate, not released)
+## 0.1.1 — three-host distribution parity
 
-ขยายแพ็กเกจสำหรับ ChatGPT/Codex, Claude และ Gemini รวม 15 ไฟล์ ZIP; ชื่อผลิตภัณฑ์คงเป็น KUMIHAN｜ดุลอักษร และคำอธิบายมีภาษาไทยกับภาษาอังกฤษ
+รองรับแพ็กเกจแยกสำหรับ ChatGPT/Codex, Claude และ Gemini รวม 15 ZIP คำอธิบายสกิลใช้ภาษาไทยและอังกฤษ คงชื่อผลิตภัณฑ์ KUMIHAN｜ดุลอักษร และมีไฟล์ตรวจสอบ SHA256SUMS/MANIFEST
 
-Adds 15 reproducible host-specific ZIPs (5 each), Thai-first / English metadata, and aligned links for all 12 pages. No source-language or native-host acceptance is implied. The historical v0.1.0 tag and draft Release are unchanged. This v0.1.1 candidate is not merged, tagged, or published.
+Fifteen reproducible host-specific archives (five per host), Thai-first plus English metadata, a versionless plugin display name, and aligned Thai/English/Japanese links across twelve pages. Refer to the [GitHub v0.1.1 release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) and verify archive checksums before importing. Native host installation, invocation and Thai editorial acceptance remain unverified.
 
-### Distribution notes
-
-
-ไฟล์ซอร์ส 15 ชุดสำหรับ ChatGPT/Codex, Claude และ Gemini ยังไม่เผยแพร่ การติดตั้งจริง: not-checked
-Fifteen independent candidate archives (five per host) include dedicated Claude Code and Gemini CLI layouts plus four standalone Skills per host. All descriptions are Thai first plus English; ZIP names end in `-v0.1.1.zip`. The original five ZIP bytes change because descriptions/docs and inventories change. No Japanese or ZiHeng distribution is required or replaced.
-
-The previous five-ZIP omission followed the narrow original distribution contract. This correction expands packaging, not the 32-rule/40-case acceptance status. Historical v0.1.0 tag provenance remains unchanged. Publication is blocked pending the Owner's exact candidate and version/tag decision; see [installation](INSTALL.md).
+Earlier v0.1.0 source and tag provenance are unchanged. Release availability must be checked through GitHub rather than inferred from build CI or Pages deployment.

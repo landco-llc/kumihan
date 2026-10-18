@@ -1,6 +1,6 @@
 # การติดตั้ง / Installation / 導入
 
-ไฟล์ซอร์สสำหรับตรวจสอบยังไม่เผยแพร่ ลิงก์ [Thai v0.1.1 release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) เมื่อเผยแพร่แล้ว ตรวจ SHA256SUMS.txt และ MANIFEST.json ก่อนแตกไฟล์ ใช้ ZIP ของ Skill เดียวหรือปลั๊กอินรวมตามรูปแบบที่โฮสต์รองรับ
+ตรวจสอบไฟล์ที่ [GitHub Release v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) แล้วเปรียบเทียบ SHA256SUMS.txt และ MANIFEST.json ก่อนแตกไฟล์ ใช้ ZIP ของ Skill เดียวหรือปลั๊กอินรวมตามรูปแบบที่โฮสต์รองรับ
 
 ## ChatGPT / Codex
 
@@ -12,7 +12,7 @@ Codex: Full plugin ZIP contains portable plugin.json and .codex-plugin/plugin.js
 
 Claude Code: แตกไฟล์ `kumihan-th-Claude-Code-plugin-v0.1.1.zip` แล้วใช้ `claude --plugin-dir /absolute/path/kumihan-th` โดยต้องเห็นชื่อเทคนิค `kumihan-th` ไม่ใช่ `kumihan` หรือ `kumihan-ziheng`
 
-Claude Code: extract the dedicated plugin ZIP; `.claude-plugin/plugin.json` and four `skills/*/SKILL.md` trees sit beneath its `kumihan-th` root. Local loading uses the command above. For a marketplace, register this product separately; this candidate does not modify the Japanese marketplace. Verify with your installed version's `claude plugin validate` before use. Native validation/invocation here: not-checked.
+Claude Code: extract the dedicated plugin ZIP; `.claude-plugin/plugin.json` and four `skills/*/SKILL.md` trees sit beneath its `kumihan-th` root. Local loading uses the command above. For a marketplace, register this product separately; this release does not modify the Japanese marketplace. Verify with your installed version's `claude plugin validate` before use. Native validation/invocation here: not-checked.
 
 Claude Apps: use the four `*-Claude-skill-v0.1.1.zip` files, one skill per ZIP.
 
@@ -24,7 +24,7 @@ Gemini CLI: แตกไฟล์ `kumihan-th-Gemini-CLI-extension-v0.1.1.zip` �
 
 The dedicated CLI archive contains `gemini-extension.json`, `GEMINI.md` and four `skills/*/SKILL.md` trees. The documented Gemini manifest has no dedicated displayName field: the technical CLI identifier remains `kumihan-th`; the product heading is exactly KUMIHAN｜ดุลอักษร. Do not treat this as verified native UI naming or invocation.
 
-Gemini Apps: four `*-Gemini-Apps-skill-v0.1.1.zip` archives are self-contained candidate skills. No Apps upload acceptance was tested. Use an import flow only if supported by your account/client; otherwise use the files as task context.
+Gemini Apps: four `*-Gemini-Apps-skill-v0.1.1.zip` archives are self-contained standalone skills. No Apps upload acceptance was tested. Use an import flow only if supported by your account/client; otherwise use the files as task context.
 
 ใช้โฟลเดอร์ Skill ผ่านกลไกที่ไคลเอนต์ปัจจุบันรองรับเท่านั้น หากไม่มีตัวนำเข้า ให้ใช้ SKILL.md เป็นคำแนะนำและแนบไฟล์อ้างอิงที่จำเป็นด้วยตนเอง นี่เป็นวิธีใช้อ้างอิงแบบจำกัด ไม่ใช่การติดตั้งปลั๊กอินที่ทดสอบแล้ว
 
@@ -34,11 +34,10 @@ Ask for a read-only review of a small Thai paragraph, confirm th-TH and the chos
 
 日本語: 各ホストの現行UIが対応する導入方法だけを使用してください。ZIP添付はインストールではありません。Geminiの手動参照は限定的な利用方法です。解凍後のルート、参照ファイル、バージョンとチェックサムを確認し、小さな原文保持テストで動作を検証します。
 
-## Candidate source and provenance
+## v0.1.1 Release and provenance
 
-ไฟล์ซอร์สสำหรับตรวจสอบ 15 ชุด ยังไม่เผยแพร่ ต้องอนุมัติรุ่นและแท็กก่อนเผยแพร่
-15 source candidate archives: [downloads](https://github.com/landco-llc/kumihan/raw/refs/heads/feat/kumihan-th-host-parity-20261018/plugins/kumihan-th/downloads/MANIFEST.json), [SHA256SUMS](https://github.com/landco-llc/kumihan/raw/refs/heads/feat/kumihan-th-host-parity-20261018/plugins/kumihan-th/downloads/SHA256SUMS.txt). All ZIP names use literal `-v0.1.1.zip`. There are five archives for each host family. No Release assets have been uploaded by this correction.
+ไฟล์ ZIP ทั้ง 15 ชุดมีให้ผ่าน [GitHub Release v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) พร้อม [MANIFEST.json](https://github.com/landco-llc/kumihan/releases/download/kumihan-th-v0.1.1/MANIFEST.json) และ [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/releases/download/kumihan-th-v0.1.1/SHA256SUMS.txt)
 
-The historical `kumihan-th-v0.1.0` tag remains unchanged and identifies the original five-archive source. This v0.1.1 candidate is not tagged, merged or published. Confirm the exact approved commit after the verification gate; never retag v0.1.0 or label older v0.1.0 ZIPs as v0.1.1.
+All 15 ZIP asset names use literal `-v0.1.1.zip`. Consult the tagged Release and verify checksums; a source branch or Pages build alone does not confirm public publication. The historical `kumihan-th-v0.1.0` tag and old draft Release remain unchanged. Native host import/invocation, including Gemini Apps, is not yet verified.
 
-Host contracts checked 2026-10-18: [Claude manifest](https://code.claude.com/docs/en/plugins-reference), [Gemini extension](https://geminicli.com/docs/extensions/reference/). These establish structural guidance, not installation evidence. Static checks, actual rendering, and native invocation are separate.
+Host references: [Claude manifest](https://code.claude.com/docs/en/plugins-reference), [Gemini extension](https://geminicli.com/docs/extensions/reference/). These establish structural guidance, not tested host behavior.
