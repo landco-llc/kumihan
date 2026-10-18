@@ -23,6 +23,24 @@ class SourceContract(unittest.TestCase):
      group[loc]=(meta,body)
    for meta,body in group.values():
     for loc,(other,_) in group.items(): self.assertEqual(meta[f'{loc}_path'],other['canonical_path'])
+ def test_landing_display_copy_avoids_sentence_punctuation(self):
+  """KUMIHAN web-marketing display role; excludes regular body content."""
+  import re
+  import html
+  for suffix in ('','.en','.ja'):
+   name=f'kumihan-ko{suffix}.html'
+   src=(ROOT/name).read_text()
+   fm,body=src.split('---',2)[1:]
+   meta=yaml.safe_load(fm)
+   headings=[html.unescape(re.sub(r'<[^>]+>','',t)).strip() for t in re.findall(r'<h[12]\b[^>]*>(.*?)</h[12]>',body,re.S)]
+   with self.subTest(page=name):
+    self.assertEqual(len(headings),6)
+    self.assertEqual(meta['title'],headings[0])
+    for heading in headings:
+     self.assertFalse(any(mark in heading for mark in ('、','。',',','.')),heading)
+  css=(ROOT/'assets/geuljjaim.css').read_text()
+  self.assertIn('html[lang="ja"] body{line-break:strict}',css)
+  self.assertIn('html[lang="ja"] .hero h1',css)
  def test_assets_are_local_and_no_font_palette(self):
   css=(ROOT/'assets/geuljjaim.css').read_text()
   self.assertIn('prefers-reduced-motion',css)
