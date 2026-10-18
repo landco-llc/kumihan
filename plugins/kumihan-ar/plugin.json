@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-ar",
+  "version": "0.1.0",
+  "description": "مهارات لتنسيق النص العربي وتصميمه ومراجعته مع الحفاظ على الأصل وفصل الفحص النصي عن العرض الفعلي. | Skills for composing and reviewing Arabic typography while preserving source text and separating static checks from rendered evidence.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/landco-llc/kumihan",
+  "locale": "ar",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜نضيد",
+        "shortDescription": "تنضيد عربي يحفظ الأصل | Arabic typography preserving source",
+        "longDescription": "مهارات لتنسيق النص العربي وتصميمه ومراجعته مع الحفاظ على الأصل وفصل الفحص النصي عن العرض الفعلي. | Skills for composing and reviewing Arabic typography while preserving source text and separating static checks from rendered evidence.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-ar.html",
+        "defaultPrompt": [
+          "راجع تنضيد هذه الصفحة دون تعديل الأصل.",
+          "Review Arabic typography without modifying source."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

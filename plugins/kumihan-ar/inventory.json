@@ -1,0 +1,408 @@
+{
+  "plugin": "kumihan-ar",
+  "version": "0.1.0",
+  "path_base": "package-root",
+  "self_digest": "Inventory excludes itself.",
+  "files": [
+    {
+      "path": ".codex-plugin/plugin.json",
+      "bytes": 1508,
+      "sha256": "e26c83684a6d889007a9f2d197be16797eb1c9560961d51a49a5c1501b0727d1"
+    },
+    {
+      "path": "INSTALL.md",
+      "bytes": 2884,
+      "sha256": "8b9046f021ea72cd6fff691982a967be034ef5daac83faf37f1cf62518147d24"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1917,
+      "sha256": "36b336da05e44ee65bc890dfb6987785916ed3ec66b35db152ddaa31633b81ae"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 500,
+      "sha256": "6b786fefb5724e7bc8dae741bd0d66e08ef934946e99b7a6467b72950047fc91"
+    },
+    {
+      "path": "UPDATES.md",
+      "bytes": 733,
+      "sha256": "e6117b95e9bd6fb9cd4379a4150037e805969c3947e5ab794247dae6d77811af"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "bytes": 1045725,
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "plugin.json",
+      "bytes": 1662,
+      "sha256": "77a6ee2af1ea3ef70b1465ba2050928c51a77c25a465af6a9a04fe217fcab998"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/SKILL.md",
+      "bytes": 1681,
+      "sha256": "efbf6e84635fffcaf4499ed0e839605b3ca5fb3cc452e01149c8933ef4480be8"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/THIRD_PARTY_NOTICES.md",
+      "bytes": 500,
+      "sha256": "6b786fefb5724e7bc8dae741bd0d66e08ef934946e99b7a6467b72950047fc91"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/inventory.json",
+      "bytes": 2750,
+      "sha256": "32cc2da497b1453201c106dfb4c974c4398dca0143baad98f1e7503d9204b1a0"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/locales/ar-AE.json",
+      "bytes": 400,
+      "sha256": "74a9b0236ca4f8bccb575525f22b0a521024938f6759d5d73ee4e79afd660a64"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/locales/ar-EG.json",
+      "bytes": 407,
+      "sha256": "ad6cd8c67159c63dafcb3e5ef8df99faa3cc1b9d2ca6b6c6b4d92a40fdfab78e"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/locales/ar-MA.json",
+      "bytes": 407,
+      "sha256": "3a2760e52aab72c0d412509bbc77712e37f29013a70cbd95c1febff07564dba5"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/locales/ar-SA.json",
+      "bytes": 400,
+      "sha256": "0d60beb9c5c18270be28ffdaabe825d1d25780d1da2f0813546c76096141a2d0"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/locales/ar.json",
+      "bytes": 391,
+      "sha256": "954651f37f1e77cd573d814679e316d89224296e826adaa54db0a9fc2313e0dc"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/references/contract.md",
+      "bytes": 1487,
+      "sha256": "6ff2ecf1b632343073afb53cbd595e27c3e546f7303fe25f6a22e546ca4dae51"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/references/coverage.md",
+      "bytes": 2854,
+      "sha256": "62312c9d46215c3309e1135e14eb4f80dc847b780f99f9ecaa23c97227ddba1f"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/references/documents.md",
+      "bytes": 789,
+      "sha256": "3f35eee82fa42b1bf0a0865ff4a85a1c3728f06d3afcbdb69ec9a243f7634818"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/references/review.md",
+      "bytes": 830,
+      "sha256": "355e6c42393e4e1aaeaf8c99814811af460fd31ce4af36d90b40796a8234f2c8"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/references/web.md",
+      "bytes": 1997,
+      "sha256": "b6b73f2868909a7322c61bfe57336cc8b5e3c9d75cce4652c601049b30eff5a7"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/rules/catalog.json",
+      "bytes": 17709,
+      "sha256": "912a0744428653fe2e658c161bea3a581bde04dccc1fec0badb4e28d77fb6b23"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/runtime/check_source.py",
+      "bytes": 5806,
+      "sha256": "c712738fa1a8aa3b41d1139f9a2385376545cbdf1001e3f3e9bf7a20a4776e97"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/schemas/report.schema.json",
+      "bytes": 816,
+      "sha256": "ce9715c3aaf214e8b6649f19eebe7b96d8d1d4e470fc87b6dce7f07a58563702"
+    },
+    {
+      "path": "skills/kumihan-ar-documents/sources.json",
+      "bytes": 9460,
+      "sha256": "c8c7e22f6d864c90218f7573430ce96d87f3a764b826b9b3e0307d365167ee1f"
+    },
+    {
+      "path": "skills/kumihan-ar-review/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ar-review/SKILL.md",
+      "bytes": 1735,
+      "sha256": "94b37d30188bb015f3079c59b01a461da4b4e30c0e00d6ed9ce2658f89d4112e"
+    },
+    {
+      "path": "skills/kumihan-ar-review/THIRD_PARTY_NOTICES.md",
+      "bytes": 500,
+      "sha256": "6b786fefb5724e7bc8dae741bd0d66e08ef934946e99b7a6467b72950047fc91"
+    },
+    {
+      "path": "skills/kumihan-ar-review/inventory.json",
+      "bytes": 2747,
+      "sha256": "7ec3e1efff0bd591ab5f222ee861e5c0c5c6e731f4f5a9d19e0469a9a049e78c"
+    },
+    {
+      "path": "skills/kumihan-ar-review/locales/ar-AE.json",
+      "bytes": 400,
+      "sha256": "74a9b0236ca4f8bccb575525f22b0a521024938f6759d5d73ee4e79afd660a64"
+    },
+    {
+      "path": "skills/kumihan-ar-review/locales/ar-EG.json",
+      "bytes": 407,
+      "sha256": "ad6cd8c67159c63dafcb3e5ef8df99faa3cc1b9d2ca6b6c6b4d92a40fdfab78e"
+    },
+    {
+      "path": "skills/kumihan-ar-review/locales/ar-MA.json",
+      "bytes": 407,
+      "sha256": "3a2760e52aab72c0d412509bbc77712e37f29013a70cbd95c1febff07564dba5"
+    },
+    {
+      "path": "skills/kumihan-ar-review/locales/ar-SA.json",
+      "bytes": 400,
+      "sha256": "0d60beb9c5c18270be28ffdaabe825d1d25780d1da2f0813546c76096141a2d0"
+    },
+    {
+      "path": "skills/kumihan-ar-review/locales/ar.json",
+      "bytes": 391,
+      "sha256": "954651f37f1e77cd573d814679e316d89224296e826adaa54db0a9fc2313e0dc"
+    },
+    {
+      "path": "skills/kumihan-ar-review/references/contract.md",
+      "bytes": 1487,
+      "sha256": "6ff2ecf1b632343073afb53cbd595e27c3e546f7303fe25f6a22e546ca4dae51"
+    },
+    {
+      "path": "skills/kumihan-ar-review/references/coverage.md",
+      "bytes": 2854,
+      "sha256": "62312c9d46215c3309e1135e14eb4f80dc847b780f99f9ecaa23c97227ddba1f"
+    },
+    {
+      "path": "skills/kumihan-ar-review/references/documents.md",
+      "bytes": 789,
+      "sha256": "3f35eee82fa42b1bf0a0865ff4a85a1c3728f06d3afcbdb69ec9a243f7634818"
+    },
+    {
+      "path": "skills/kumihan-ar-review/references/review.md",
+      "bytes": 830,
+      "sha256": "355e6c42393e4e1aaeaf8c99814811af460fd31ce4af36d90b40796a8234f2c8"
+    },
+    {
+      "path": "skills/kumihan-ar-review/references/web.md",
+      "bytes": 1997,
+      "sha256": "b6b73f2868909a7322c61bfe57336cc8b5e3c9d75cce4652c601049b30eff5a7"
+    },
+    {
+      "path": "skills/kumihan-ar-review/rules/catalog.json",
+      "bytes": 17709,
+      "sha256": "912a0744428653fe2e658c161bea3a581bde04dccc1fec0badb4e28d77fb6b23"
+    },
+    {
+      "path": "skills/kumihan-ar-review/runtime/check_source.py",
+      "bytes": 5806,
+      "sha256": "c712738fa1a8aa3b41d1139f9a2385376545cbdf1001e3f3e9bf7a20a4776e97"
+    },
+    {
+      "path": "skills/kumihan-ar-review/schemas/report.schema.json",
+      "bytes": 816,
+      "sha256": "ce9715c3aaf214e8b6649f19eebe7b96d8d1d4e470fc87b6dce7f07a58563702"
+    },
+    {
+      "path": "skills/kumihan-ar-review/sources.json",
+      "bytes": 9460,
+      "sha256": "c8c7e22f6d864c90218f7573430ce96d87f3a764b826b9b3e0307d365167ee1f"
+    },
+    {
+      "path": "skills/kumihan-ar-web/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ar-web/SKILL.md",
+      "bytes": 1829,
+      "sha256": "1ac33b3374909fc4fc68f9672f340d42726ab9ece7e3200d143329ed8464c7d5"
+    },
+    {
+      "path": "skills/kumihan-ar-web/THIRD_PARTY_NOTICES.md",
+      "bytes": 500,
+      "sha256": "6b786fefb5724e7bc8dae741bd0d66e08ef934946e99b7a6467b72950047fc91"
+    },
+    {
+      "path": "skills/kumihan-ar-web/inventory.json",
+      "bytes": 2744,
+      "sha256": "f6a4692656c0cb062239a99e506e971188de1e78828cbd058da386178a4f737b"
+    },
+    {
+      "path": "skills/kumihan-ar-web/locales/ar-AE.json",
+      "bytes": 400,
+      "sha256": "74a9b0236ca4f8bccb575525f22b0a521024938f6759d5d73ee4e79afd660a64"
+    },
+    {
+      "path": "skills/kumihan-ar-web/locales/ar-EG.json",
+      "bytes": 407,
+      "sha256": "ad6cd8c67159c63dafcb3e5ef8df99faa3cc1b9d2ca6b6c6b4d92a40fdfab78e"
+    },
+    {
+      "path": "skills/kumihan-ar-web/locales/ar-MA.json",
+      "bytes": 407,
+      "sha256": "3a2760e52aab72c0d412509bbc77712e37f29013a70cbd95c1febff07564dba5"
+    },
+    {
+      "path": "skills/kumihan-ar-web/locales/ar-SA.json",
+      "bytes": 400,
+      "sha256": "0d60beb9c5c18270be28ffdaabe825d1d25780d1da2f0813546c76096141a2d0"
+    },
+    {
+      "path": "skills/kumihan-ar-web/locales/ar.json",
+      "bytes": 391,
+      "sha256": "954651f37f1e77cd573d814679e316d89224296e826adaa54db0a9fc2313e0dc"
+    },
+    {
+      "path": "skills/kumihan-ar-web/references/contract.md",
+      "bytes": 1487,
+      "sha256": "6ff2ecf1b632343073afb53cbd595e27c3e546f7303fe25f6a22e546ca4dae51"
+    },
+    {
+      "path": "skills/kumihan-ar-web/references/coverage.md",
+      "bytes": 2854,
+      "sha256": "62312c9d46215c3309e1135e14eb4f80dc847b780f99f9ecaa23c97227ddba1f"
+    },
+    {
+      "path": "skills/kumihan-ar-web/references/documents.md",
+      "bytes": 789,
+      "sha256": "3f35eee82fa42b1bf0a0865ff4a85a1c3728f06d3afcbdb69ec9a243f7634818"
+    },
+    {
+      "path": "skills/kumihan-ar-web/references/review.md",
+      "bytes": 830,
+      "sha256": "355e6c42393e4e1aaeaf8c99814811af460fd31ce4af36d90b40796a8234f2c8"
+    },
+    {
+      "path": "skills/kumihan-ar-web/references/web.md",
+      "bytes": 1997,
+      "sha256": "b6b73f2868909a7322c61bfe57336cc8b5e3c9d75cce4652c601049b30eff5a7"
+    },
+    {
+      "path": "skills/kumihan-ar-web/rules/catalog.json",
+      "bytes": 17709,
+      "sha256": "912a0744428653fe2e658c161bea3a581bde04dccc1fec0badb4e28d77fb6b23"
+    },
+    {
+      "path": "skills/kumihan-ar-web/runtime/check_source.py",
+      "bytes": 5806,
+      "sha256": "c712738fa1a8aa3b41d1139f9a2385376545cbdf1001e3f3e9bf7a20a4776e97"
+    },
+    {
+      "path": "skills/kumihan-ar-web/schemas/report.schema.json",
+      "bytes": 816,
+      "sha256": "ce9715c3aaf214e8b6649f19eebe7b96d8d1d4e470fc87b6dce7f07a58563702"
+    },
+    {
+      "path": "skills/kumihan-ar-web/sources.json",
+      "bytes": 9460,
+      "sha256": "c8c7e22f6d864c90218f7573430ce96d87f3a764b826b9b3e0307d365167ee1f"
+    },
+    {
+      "path": "skills/kumihan-ar/LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ar/SKILL.md",
+      "bytes": 1734,
+      "sha256": "1c1cc9a7e9e34ca2d69385b893a1fc4b3fcaa5b3bc97a339c811bd4c2d4cd305"
+    },
+    {
+      "path": "skills/kumihan-ar/THIRD_PARTY_NOTICES.md",
+      "bytes": 500,
+      "sha256": "6b786fefb5724e7bc8dae741bd0d66e08ef934946e99b7a6467b72950047fc91"
+    },
+    {
+      "path": "skills/kumihan-ar/inventory.json",
+      "bytes": 2740,
+      "sha256": "3cc56735bdfafb0f9f7801d6601e8d6d2145238c639046cd44cd56c902174c0b"
+    },
+    {
+      "path": "skills/kumihan-ar/locales/ar-AE.json",
+      "bytes": 400,
+      "sha256": "74a9b0236ca4f8bccb575525f22b0a521024938f6759d5d73ee4e79afd660a64"
+    },
+    {
+      "path": "skills/kumihan-ar/locales/ar-EG.json",
+      "bytes": 407,
+      "sha256": "ad6cd8c67159c63dafcb3e5ef8df99faa3cc1b9d2ca6b6c6b4d92a40fdfab78e"
+    },
+    {
+      "path": "skills/kumihan-ar/locales/ar-MA.json",
+      "bytes": 407,
+      "sha256": "3a2760e52aab72c0d412509bbc77712e37f29013a70cbd95c1febff07564dba5"
+    },
+    {
+      "path": "skills/kumihan-ar/locales/ar-SA.json",
+      "bytes": 400,
+      "sha256": "0d60beb9c5c18270be28ffdaabe825d1d25780d1da2f0813546c76096141a2d0"
+    },
+    {
+      "path": "skills/kumihan-ar/locales/ar.json",
+      "bytes": 391,
+      "sha256": "954651f37f1e77cd573d814679e316d89224296e826adaa54db0a9fc2313e0dc"
+    },
+    {
+      "path": "skills/kumihan-ar/references/contract.md",
+      "bytes": 1487,
+      "sha256": "6ff2ecf1b632343073afb53cbd595e27c3e546f7303fe25f6a22e546ca4dae51"
+    },
+    {
+      "path": "skills/kumihan-ar/references/coverage.md",
+      "bytes": 2854,
+      "sha256": "62312c9d46215c3309e1135e14eb4f80dc847b780f99f9ecaa23c97227ddba1f"
+    },
+    {
+      "path": "skills/kumihan-ar/references/documents.md",
+      "bytes": 789,
+      "sha256": "3f35eee82fa42b1bf0a0865ff4a85a1c3728f06d3afcbdb69ec9a243f7634818"
+    },
+    {
+      "path": "skills/kumihan-ar/references/review.md",
+      "bytes": 830,
+      "sha256": "355e6c42393e4e1aaeaf8c99814811af460fd31ce4af36d90b40796a8234f2c8"
+    },
+    {
+      "path": "skills/kumihan-ar/references/web.md",
+      "bytes": 1997,
+      "sha256": "b6b73f2868909a7322c61bfe57336cc8b5e3c9d75cce4652c601049b30eff5a7"
+    },
+    {
+      "path": "skills/kumihan-ar/rules/catalog.json",
+      "bytes": 17709,
+      "sha256": "912a0744428653fe2e658c161bea3a581bde04dccc1fec0badb4e28d77fb6b23"
+    },
+    {
+      "path": "skills/kumihan-ar/runtime/check_source.py",
+      "bytes": 5806,
+      "sha256": "c712738fa1a8aa3b41d1139f9a2385376545cbdf1001e3f3e9bf7a20a4776e97"
+    },
+    {
+      "path": "skills/kumihan-ar/schemas/report.schema.json",
+      "bytes": 816,
+      "sha256": "ce9715c3aaf214e8b6649f19eebe7b96d8d1d4e470fc87b6dce7f07a58563702"
+    },
+    {
+      "path": "skills/kumihan-ar/sources.json",
+      "bytes": 9460,
+      "sha256": "c8c7e22f6d864c90218f7573430ce96d87f3a764b826b9b3e0307d365167ee1f"
+    }
+  ]
+}
