@@ -1,9 +1,10 @@
-# Workflow / Flujo de trabajo
-1. Set locale, house_style, medium, text_role, source_origin, protected_spans, mode and authorized_change_scope.
-2. Modes: study, build, audit (read-only), refine (only authorized changes).
-3. House style is NEVER inferred from region alone. fr-BE/fr-CH stay unresolved without editorial authority.
-4. Do not rewrite supplied or quoted text, character spacing, URLs, figures, claims, codes or brand names.
-5. Run only advisory static checks and compare against original bytes when requested.
-6. A new generated one-line plain-text candidate may be previewed with --propose --source-origin generated, never committed silently.
-7. Review content-specific information hierarchy and meaningful design; do not equate all cards or gradients with bad AI design.
-8. Verify actual host rendering and state untested areas.
+# Fluxo editorial / Editorial workflow
+
+1. Identify the exact deliverable and source provenance: supplied, quoted, generated or translated proposal.
+2. Choose explicit locale (pt, pt-BR, pt-PT, pt-AO, pt-MZ), audience, content role and medium (web, document, presentation, display).
+3. Select explicit house style from locales/house-styles.json or inherit a verified project standard. Geography alone MUST NOT impose quotation marks, thousand separators, currency, timezone, address, or editorial tone.
+4. Preserve UTF-8 bytes of supplied copy, accents and cedilla, brand names, quotes, dates, numerals, measurements, URLs, identifiers and original semantics.
+5. Define the reading order, hierarchy, whitespace, type scale and responsive intent from the content; reject arbitrary AI-looking patterns, repetitive cards and decorative gradients when no editorial purpose exists.
+6. Review mode is strictly non-destructive. In authorized production mode, return a clear diff; never silently modify source.
+7. Run bounded offline checks with python runtime/checks.py original.txt --locale pt-PT. Findings are review candidates, not automatic corrections.
+8. Report static observation separately from rendered browser/Office/PDF verification, native host execution and native Portuguese editorial review.
