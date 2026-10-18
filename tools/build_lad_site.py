@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the KUMIHAN｜Лад site (fr / en / ja); --check verifies committed output.
+"""Build the KUMIHAN｜Лад site (ru / en / ja); --check verifies committed output.
 
 Landings follow the canonical KUMIHAN index (_layouts/landing.html) and install
 guides use the shared install-guide frame (tools/install_frame.py). Copy lives
@@ -49,6 +49,8 @@ _spec.loader.exec_module(FRAME)
 OVERRIDES = r"""
     /* KUMIHAN｜Лад (kumihan-lad-web): lang="ru" with dictionary hyphenation
        for running text only; headings, names and URLs are never hyphenated. */
+    html[lang="ru"] { --display: "Golos Text", "PT Sans", "Arial", system-ui, sans-serif; --serif: "PT Serif", Georgia, serif; }
+    html[lang="en"] { --display: Arial, system-ui, sans-serif; --serif: Georgia, serif; }
     html[lang="ru"] body { line-break: auto; }
     html[lang="ru"] :is(.hero-desc, .intro-text p, .feature p, .idea-band p, .skill-desc, .install-intro p, .status-box p, .cta-layout p) { hyphens: auto; }
     html[lang="ru"] :is(h1, h2, h3, .brand, .skill-name, .platform-name, a) { hyphens: manual; }
@@ -157,7 +159,7 @@ def guide(host, lang, c):
         home="../" + landing_path(lang),
         hosts=[(name.split(" / ")[0] if h == "claude" else name, guide_path(h, lang).removeprefix("docs/"), h == host)
                for h, name in HOSTS.items()],
-        languages=[(k, LABELS[k] if k != "ru" else "Português", guide_path(host, k).removeprefix("docs/"), k == lang) for k in LANGS],
+        languages=[(k, LABELS[k] if k != "ru" else "Русский", guide_path(host, k).removeprefix("docs/"), k == lang) for k in LANGS],
         number=f"0{list(HOSTS).index(host) + 1}", title=x(title), description=x(g["lead"]),
         toc=list(zip(ids, g["sections"])), content=content, platform=HOSTS[host], ui=ui,
         footer_sub=x(c["footer_sub"]) + f"<br>v{VERSION} · Apache-2.0 · Developed by L&amp;Co. LLC",
