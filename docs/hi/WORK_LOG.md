@@ -40,3 +40,4 @@ requesting-code-review skillに従い独立read-only reviewerへ新規製品とG
 
 ### W08 CI差分の解消
 初回CIはルートTHIRD_PARTY_NOTICESの追記が既存日本語ZIPの内容へ影響したため失敗。追記を取り消し、新規fontのOFL/READMEへ通知を集約し既存128生成物の一致を復旧。さらに作業中mainにPR #68（77595b1、日本語heroの3行化）が入り、PRのmerge試験でcopy parity不一致が発生。origin/mainを再fetch/mergeし、共通copyからHindi日本語LPを再生成。主言語本文を変更せず、影響する日本語LPの12条件を再計測。
+Gateway Hindi glyph/title/brandにも局所font-faceとnormal trackingを適用し、共通Latin trackingがIndicへ入らないようにした。ja/en×3幅の6条件でフォント読込後もカード同寸法・normal tracking・overflowなしを再確認。

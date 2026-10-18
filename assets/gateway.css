@@ -220,3 +220,10 @@ html[lang="th-TH"] body,html[lang="en"] body{line-break:auto;}
 .header-inner .lang-menu { flex: 0 0 auto; }
 @media (max-width: 950px) { .header-inner { flex-wrap: nowrap; } .header-side { display: none; } }
 @media (max-width: 440px) { .lang-menu summary { padding: 8px 10px; font-size: 11px; } .lang-menu ul { min-width: 210px; } }
+
+/* Hindi edition: preserve Indic shaping and normal tracking in the existing card. */
+@font-face { font-family: "Kumihan Devanagari"; src: url("fonts/NotoSansDevanagari.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+.glyph .character[lang="hi"], .lang-title[lang="hi"], .lang-title[lang="hi"] + .lang-sub {
+  font-family: "Kumihan Devanagari", "Noto Sans Devanagari", sans-serif;
+  letter-spacing: normal;
+}
