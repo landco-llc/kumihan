@@ -1,0 +1,312 @@
+#!/usr/bin/env python3
+"""Build the KUMIHAN language gateway (index.html, top-*.html); --check verifies.
+
+Page copy that already existed lives in assets/gateway-copy.json; shared styles
+in assets/gateway.css. Language order everywhere is by language code, with
+the page's own language first (and English second in the language menu).
+"""
+import argparse
+import json
+from html import escape
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = "https://landco-llc.github.io/kumihan/"
+VISIBLE, STEP = 9, 6
+
+# Gateway pages: key -> (file, html lang, menu label, native name)
+GATEWAYS = {
+    "en": ("top-en.html", "en", "EN", "English"),
+    "ja": ("index.html", "ja", "JA", "日本語"),
+    "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
+    "th": ("top-th.html", "th-TH", "TH", "ไทย"),
+    "zh-hans": ("top-zh-cn.html", "zh-Hans-CN", "ZH-HANS", "简体中文"),
+    "zh-hant": ("top-zh-han.html", "zh-Hant-TW", "ZH-HANT", "繁體中文"),
+}
+
+# Language editions: code -> data. "pages" maps a reader language to the
+# edition page in that language; the first entry is the edition's own page.
+PRODUCTS = {
+    "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
+               pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
+    "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.0",
+               pages={"es": "kumihan-es.html", "en": "kumihan-es.en.html", "ja": "kumihan-es.ja.html"}),
+    "fr": dict(name="Français", lang="fr", brand="KUMIHAN｜Accord", glyph="Ç", label="FR · FRENCH", version="v0.1.1",
+               pages={"fr": "kumihan-fr.html", "en": "kumihan-fr.en.html", "ja": "kumihan-fr.ja.html"}),
+    "ja": dict(name="日本語", lang="ja", brand="KUMIHAN", glyph="あ", label="JA · JAPANESE", version="v0.1.6 preview",
+               pages={"ja": "kumihan.html", "en": "en.html", "zh-hant": "zh-tw.html"}),
+    "ko": dict(name="한국어", lang="ko", brand="KUMIHAN｜글짜임", glyph="한", label="KO · KOREAN", version="v0.1.0",
+               pages={"ko": "kumihan-ko.html", "en": "kumihan-ko.en.html", "ja": "kumihan-ko.ja.html"}),
+    "pt": dict(name="Português", lang="pt", brand="KUMIHAN｜Compasso", glyph="Ã", label="PT · PORTUGUESE", version="v0.1.0",
+               pages={"pt": "kumihan-pt.html", "en": "kumihan-pt.en.html", "ja": "kumihan-pt.ja.html"}),
+    "th": dict(name="ไทย", lang="th", brand="KUMIHAN｜ดุลอักษร", glyph="ก", label="TH · THAI", version="v0.1.1",
+               pages={"th": "kumihan-th.html", "en": "kumihan-th-en.html", "ja": "kumihan-th-ja.html"}),
+    "vi": dict(name="Tiếng Việt", lang="vi", brand="KUMIHAN｜Nhịp Chữ", glyph="Ắ", label="VI · VIETNAMESE", version="v0.1.0",
+               pages={"vi": "kumihan-vi.html", "en": "kumihan-vi.en.html", "ja": "kumihan-vi.ja.html"}),
+    "zh-hans": dict(name="简体中文", lang="zh-Hans-CN", brand="KUMIHAN｜字律", glyph="汉", label="ZH-HANS · SIMP.", version="v0.1.0",
+                    pages={"zh-hans": "kumihan-zh-cn.html", "en": "kumihan-zh-cn.en.html", "ja": "kumihan-zh-cn.ja.html"}),
+    "zh-hant": dict(name="繁體中文", lang="zh-Hant-TW", brand="KUMIHAN｜字衡", glyph="漢", label="ZH-HANT · TRAD.", version="v0.1.0 preview",
+                    pages={"zh-hant": "kumihan-zh-han.html", "en": "kumihan-zh-han.en.html", "ja": "kumihan-zh-han.ja.html"}),
+}
+
+# Card text per gateway language: code -> (description, action label)
+CARDS = {
+    "ja": {
+        "ar": ("RTLと多言語混植を扱い、原文を守るアラビア語の文字組。", "アラビア語版を見る"),
+        "es": ("スペイン語の文字組と原稿保全。地域の表現を尊重し、確認できた根拠と編集判断を分けて伝えます。", "スペイン語版を見る"),
+        "fr": ("不改行空白、引用符、地域と組織の編集規約を区別するフランス語文字組。", "フランス語版を見る"),
+        "ja": ("日本語の禁則・自然な改行、情報構造、余白や視線の流れまで考えます。", "日本語版を見る"),
+        "ko": ("어절単位の改行や文字のリズム、伝わる情報構造に配慮します。", "韓国語版を見る"),
+        "pt": ("ポルトガル語の文字組と意味に沿ったデザイン。ブラジルとポルトガルの表記差を尊重し、原稿の意図を守ります。", "ポルトガル語版を見る"),
+        "th": ("単語境界・結合文字を尊重し、読みやすいタイ語デザインへ。", "タイ語版を見る"),
+        "vi": ("声調記号と自然な改行を守り、情報と余白を整えるベトナム語の文字組とデザイン。", "ベトナム語版を見る"),
+        "zh-hans": ("標点・禁則と中英混植、原稿の保全を大切にするKUMIHAN｜字律。", "簡体中国語版を見る"),
+        "zh-hant": ("臺灣・香港それぞれの約物と文字組に向き合うKUMIHAN｜字衡。", "繁体中国語版を見る"),
+    },
+    "en": {
+        "ar": ("Arabic typography that handles right-to-left text and mixed scripts while keeping the original intact.", "View the Arabic edition"),
+        "es": ("Spanish typography that respects regional usage, preserves the source and separates verified evidence from editorial judgment.", "View the Spanish edition"),
+        "fr": ("French typography that distinguishes no-break spaces, quotation marks and regional or institutional house styles.", "View the French edition"),
+        "ja": ("From Japanese line-breaking rules (kinsoku) and natural line breaks to information structure, whitespace and reading flow.", "View the Japanese edition"),
+        "ko": ("Line breaks between eojeol (Korean spacing units), textual rhythm and information structure that communicates clearly.", "View the Korean edition"),
+        "pt": ("Portuguese typography and meaning-led design that respects Brazilian and European conventions and the author’s intent.", "View the Portuguese edition"),
+        "th": ("Respecting Thai word boundaries and combining characters, for Thai design that reads naturally.", "View the Thai edition"),
+        "vi": ("Vietnamese typography that respects tone marks, meaningful line breaks and original content.", "View the Vietnamese edition"),
+        "zh-hans": ("Punctuation, line breaks and mixed Chinese–Latin text for mainland China, without rewriting your source.", "View the Simplified Chinese edition"),
+        "zh-hant": ("Addresses the distinct punctuation and typesetting conventions of Taiwan and Hong Kong.", "View the Traditional Chinese edition"),
+    },
+    "zh-hant": {
+        "ar": ("處理由右至左書寫與多語混排，並保留原文的阿拉伯文排版。", "前往阿拉伯文版"),
+        "es": ("尊重各地區用法、保留原稿，並區分已確認依據與編輯判斷的西班牙文排版。", "前往西班牙文版"),
+        "fr": ("區分不斷行空格、引號，以及地區與機構編輯規範的法文排版。", "前往法文版"),
+        "ja": ("從日文的禁則處理與自然換行，到資訊架構、留白與閱讀動線。", "前往日文版"),
+        "ko": ("以韓文的語節（어절）為單位換行，兼顧文字節奏與清楚的資訊架構。", "前往韓文版"),
+        "pt": ("尊重巴西與葡萄牙的書寫差異，依意義設計並守護原稿意圖的葡萄牙文排版。", "前往葡萄牙文版"),
+        "th": ("尊重泰文的斷詞與組合字元，打造易讀的泰文設計。", "前往泰文版"),
+        "vi": ("保護越南文聲調符號，兼顧自然換行、資訊層次與原稿完整性。", "前往越南文版"),
+        "zh-hans": ("面向中國大陸簡體中文，重視標點、換行與中英混排，並保留原稿。", "前往簡體中文版"),
+        "zh-hant": ("分別對應臺灣與香港的標點符號與排版習慣。", "前往繁體中文版"),
+    },
+    "zh-hans": {
+        "ar": ("处理从右到左书写与多语混排，并保留原文的阿拉伯文排版。", "前往阿拉伯文版"),
+        "es": ("尊重各地区用法、保留原稿，并区分已确认依据与编辑判断的西班牙文排版。", "前往西班牙文版"),
+        "fr": ("区分不换行空格、引号，以及地区与机构编辑规范的法文排版。", "前往法文版"),
+        "ja": ("从日文的避头尾处理与自然换行，到信息结构、留白与阅读动线。", "前往日文版"),
+        "ko": ("以韩文的语节（어절）为单位换行，兼顾文字节奏与清晰的信息结构。", "前往韩文版"),
+        "pt": ("尊重巴西与葡萄牙的书写差异，按意义设计并守护原稿意图的葡萄牙文排版。", "前往葡萄牙文版"),
+        "th": ("尊重泰文的分词与组合字符，打造易读的泰文设计。", "前往泰文版"),
+        "vi": ("保护越南语声调符号，兼顾自然换行、信息层次和原文完整性。", "前往越南语版"),
+        "zh-hans": ("面向中国大陆简体中文，重视标点、换行与中英混排，并保留原稿。", "前往简体中文版"),
+        "zh-hant": ("分别对应台湾与香港的标点符号与排版习惯。", "前往繁体中文版"),
+    },
+    "ko": {
+        "ar": ("오른쪽에서 왼쪽으로 쓰는 글과 다국어 혼용을 다루며 원문을 지키는 아랍어 글짜임.", "아랍어 버전 보기"),
+        "es": ("지역별 표현을 존중하고 원고를 지키며, 확인한 근거와 편집 판단을 구분하는 스페인어 글짜임.", "스페인어 버전 보기"),
+        "fr": ("줄바꿈하지 않는 공백, 인용 부호, 지역과 기관의 편집 규정을 구분하는 프랑스어 글짜임.", "프랑스어 버전 보기"),
+        "ja": ("일본어의 금칙 처리와 자연스러운 줄바꿈, 정보 구조, 여백과 시선의 흐름까지 고려합니다.", "일본어 버전 보기"),
+        "ko": ("어절 단위 줄바꿈과 글의 리듬, 잘 전달되는 정보 구조를 고려한 KUMIHAN｜글짜임.", "한국어 버전 보기"),
+        "pt": ("브라질과 포르투갈의 표기 차이를 존중하고 원고의 의도를 지키는 포르투갈어 글짜임.", "포르투갈어 버전 보기"),
+        "th": ("단어 경계와 결합 문자를 존중해, 읽기 쉬운 태국어 디자인으로.", "태국어 버전 보기"),
+        "vi": ("성조 부호와 자연스러운 줄바꿈을 지키고 원고를 보존하는 베트남어 글짜임.", "베트남어 버전 보기"),
+        "zh-hans": ("중국 본토 간체 중국어의 문장 부호와 줄바꿈, 중영 혼용 조판을 다룹니다.", "간체 중국어 버전 보기"),
+        "zh-hant": ("대만과 홍콩, 각 지역의 문장 부호와 조판에 맞춥니다.", "번체 중국어 버전 보기"),
+    },
+    "th": {
+        "ar": ("การจัดวางตัวอักษรอาหรับที่รองรับการเขียนจากขวาไปซ้ายและการผสมหลายภาษา โดยรักษาต้นฉบับไว้", "ดูเวอร์ชันภาษาอาหรับ"),
+        "es": ("การจัดวางตัวอักษรสเปนที่เคารพการใช้ภาษาตามภูมิภาค รักษาต้นฉบับ และแยกหลักฐานที่ตรวจแล้วออกจากการตัดสินใจทางบรรณาธิการ", "ดูเวอร์ชันภาษาสเปน"),
+        "fr": ("การจัดวางตัวอักษรฝรั่งเศสที่แยกแยะช่องว่างไม่ตัดบรรทัด เครื่องหมายอัญประกาศ และแนวทางบรรณาธิการของแต่ละภูมิภาคและองค์กร", "ดูเวอร์ชันภาษาฝรั่งเศส"),
+        "ja": ("คำนึงถึงกฎการตัดบรรทัดของภาษาญี่ปุ่น โครงสร้างข้อมูล พื้นที่ว่าง และลำดับสายตา", "ดูเวอร์ชันภาษาญี่ปุ่น"),
+        "ko": ("ตัดบรรทัดตามหน่วยคำของภาษาเกาหลี พร้อมใส่ใจจังหวะของตัวอักษรและโครงสร้างข้อมูลที่สื่อสารได้ชัด", "ดูเวอร์ชันภาษาเกาหลี"),
+        "pt": ("การจัดวางตัวอักษรโปรตุเกสที่เคารพความต่างของบราซิลและโปรตุเกส และรักษาเจตนาของต้นฉบับ", "ดูเวอร์ชันภาษาโปรตุเกส"),
+        "th": ("เคารพการแบ่งคำและตำแหน่งสระ–วรรณยุกต์ เพื่องานออกแบบภาษาไทยที่อ่านง่าย", "ดูเวอร์ชันภาษาไทย"),
+        "vi": ("การจัดวางตัวอักษรเวียดนามที่รักษาเครื่องหมายวรรณยุกต์ การตัดบรรทัดที่เป็นธรรมชาติ และเนื้อหาต้นฉบับ", "ดูเวอร์ชันภาษาเวียดนาม"),
+        "zh-hans": ("ใส่ใจเครื่องหมายวรรคตอน การตัดบรรทัด และการผสมอักษรจีนกับละตินของภาษาจีนตัวย่อ", "ดูเวอร์ชันภาษาจีนตัวย่อ"),
+        "zh-hant": ("ใส่ใจเครื่องหมายวรรคตอนและการจัดวางตัวอักษรของไต้หวันและฮ่องกง", "ดูเวอร์ชันภาษาจีนตัวเต็ม"),
+    },
+}
+
+UI = {
+    "ja": dict(heading="KUMIHANの各言語版", more="次の{n}つを表示", menu="表示言語"),
+    "en": dict(heading="KUMIHAN language editions", more="Show the next {n}", menu="Language"),
+    "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
+    "zh-hans": dict(heading="KUMIHAN 各语言版本", more="显示接下来的 {n} 个", menu="语言"),
+    "ko": dict(heading="KUMIHAN 언어별 버전", more="다음 {n}개 보기", menu="언어"),
+    "th": dict(heading="KUMIHAN ในแต่ละภาษา", more="แสดงอีก {n} รายการ", menu="ภาษา"),
+}
+
+
+def x(value):
+    return escape(str(value), quote=True)
+
+
+def menu(key):
+    others = sorted(k for k in GATEWAYS if k not in (key, "en"))
+    order = [key] + (["en"] if key != "en" else []) + others
+    file, _, code, name = GATEWAYS[key]
+    lang_attr = lambda k: GATEWAYS[k][1].split("-")[0] if GATEWAYS[k][1] in ("ko-KR", "th-TH") else GATEWAYS[k][1]
+    items = "".join(
+        f'<li><a href="{GATEWAYS[k][0]}" hreflang="{GATEWAYS[k][1]}"' + (' aria-current="page"' if k == key else "")
+        + f'><span class="code">{GATEWAYS[k][2]}</span> - <span lang="{lang_attr(k)}">{x(GATEWAYS[k][3])}</span></a></li>'
+        for k in order)
+    return (f'<details class="lang-menu"><summary aria-label="{x(UI[key]["menu"])}: {code} - {x(name)}">'
+            f'<span>{code} - <span lang="{lang_attr(key)}">{x(name)}</span></span></summary><ul>{items}</ul></details>')
+
+
+def marquee():
+    codes = sorted(PRODUCTS)
+    half = (len(codes) + 1) // 2
+    rows = [codes[:half], codes[half:]]
+
+    def glyph(code):
+        p = PRODUCTS[code]
+        return (f'<div class="glyph"><span class="character" lang="{p["lang"]}">{p["glyph"]}</span>'
+                f'<span class="glyph-label">{p["label"]}</span></div>')
+    out = ""
+    for i, row in enumerate(rows):
+        cells = "".join(glyph(c) for c in row)
+        out += f'<div class="glyph-row{" reverse" if i else ""}" style="--duration:{30 + 6 * i}s">{cells}{cells}</div>'
+    return f'<div aria-hidden="true" class="glyph-marquee">{out}</div>'
+
+
+def cards(key):
+    order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
+    out = ""
+    for i, code in enumerate(order):
+        p = PRODUCTS[code]
+        desc, action = CARDS[key][code]
+        href = p["pages"].get(key) or next(iter(p["pages"].values()))
+        direction = ' dir="rtl"' if code == "ar" else ""
+        current = code == key
+        out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
+                + (" data-extra" if i >= VISIBLE else "") + ">"
+                f'<div class="lang-card-head"><span class="lang-index">{code.upper()}</span><span class="state">{x(p["version"])}</span></div>'
+                f'<h3 class="lang-title" id="language-{code}" lang="{p["lang"]}"{direction}>{x(p["name"])}</h3>'
+                f'<p class="lang-sub"><bdi dir="ltr">{x(p["brand"])}</bdi></p>'
+                f'<p class="lang-desc">{x(desc)}</p>'
+                f'<a class="lang-action" href="{href}"><span>{x(action)}</span><span aria-hidden="true" class="action-arrow">↗</span></a>'
+                "</article>\n")
+    return out, len(order)
+
+
+SCRIPT = """<script>
+(() => {
+  'use strict';
+  const grid = document.querySelector('.language-grid');
+  const button = document.querySelector('.more-languages');
+  if (!grid || !button) return;
+  const step = %d;
+  const extra = () => [...grid.querySelectorAll('[data-extra][hidden]')];
+  grid.querySelectorAll('[data-extra]').forEach(card => { card.hidden = true; });
+  const update = () => {
+    const rest = extra().length;
+    button.parentElement.hidden = rest === 0;
+    button.textContent = button.dataset.label.replace('{n}', Math.min(step, rest));
+  };
+  button.addEventListener('click', () => {
+    const shown = extra().slice(0, step);
+    shown.forEach(card => { card.hidden = false; });
+    update();
+    if (shown[0]) shown[0].querySelector('a').focus();
+  });
+  update();
+  document.querySelectorAll('.lang-menu').forEach(menu => {
+    document.addEventListener('click', event => { if (!menu.contains(event.target)) menu.open = false; });
+    menu.addEventListener('keydown', event => { if (event.key === 'Escape') { menu.open = false; menu.querySelector('summary').focus(); } });
+  });
+})();
+</script>""" % STEP
+
+
+def page(key, c):
+    file, html_lang, _, _ = GATEWAYS[key]
+    alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
+    card_html, count = cards(key)
+    more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
+            f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
+    return f"""<!doctype html>
+<html lang="{html_lang}">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f4f1e9" name="theme-color"/>
+<meta content="{x(c['description'])}" name="description"/>
+<title>{c['title']}</title>
+<link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/gateway.css" rel="stylesheet"/>
+{alternates}<link href="{BASE}{file}" rel="canonical"/>
+</head>
+<body>
+<a class="skip-link" href="#main">{c['skip']}</a>
+<header class="site-header">
+<div class="shell header-inner">
+<a aria-label="KUMIHAN" class="brand" href="{file}">
+<img alt="" height="56" src="assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="56"/>
+<span><span class="brand-word">KUMIHAN</span><span class="brand-caption">LANGUAGE &amp; DESIGN</span></span>
+</a>
+<div class="header-side"><span aria-hidden="true" class="red-line"></span><span>LANGUAGE GATEWAY<br/>CONCEPT / 01</span></div>
+<nav aria-label="{x(c['nav_label'])}">{menu(key)}</nav>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="page-title" class="intro">
+<div class="shell intro-grid">
+<div>
+<p class="eyebrow">{c['eyebrow']}</p>
+<h1 id="page-title">{c['h1']}</h1>
+<p class="intro-lead">{c['lead']}</p>
+<div class="intro-actions">
+<a class="primary-action" href="#languages"><span>{c['primary']}</span><span aria-hidden="true">↘</span></a>
+<a class="minor-action" href="#about">{c['minor']}</a>
+</div>
+</div>
+<div aria-label="{x(c['art_label'])}" class="type-art">
+<div class="type-art-top"><span>SCRIPT STUDIES / EDITIONS</span><strong>KUMIHAN / TYPE</strong></div>
+{marquee()}
+<div class="art-bottom"><span>KUMIHAN / TYPE STUDIES</span><span>LANGUAGE BY LANGUAGE</span></div>
+</div>
+</div>
+</section>
+<section aria-labelledby="language-title" class="language-section" id="languages">
+<div class="shell">
+<div class="section-heading">
+<div><p class="eyebrow">CHOOSE YOUR LANGUAGE</p><h2 id="language-title">{x(UI[key]['heading'])}</h2></div>
+<p class="section-note">{c['section_note']}</p>
+</div>
+<div class="language-grid">
+{card_html}</div>
+{more}
+</div>
+</section>
+{c['about']}
+</main>
+{c['footer']}
+{SCRIPT}
+</body>
+</html>
+"""
+
+
+def outputs():
+    copy = json.loads((ROOT / "assets" / "gateway-copy.json").read_text(encoding="utf-8"))
+    return {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+    stale = []
+    for name, content in outputs().items():
+        path = ROOT / name
+        if args.check:
+            if not path.exists() or path.read_text(encoding="utf-8") != content:
+                stale.append(name)
+        else:
+            path.write_text(content, encoding="utf-8")
+    if stale:
+        raise SystemExit("Stale gateway pages: " + ", ".join(stale))
+    print(f"Gateway: {len(GATEWAYS)} pages " + ("verified" if args.check else "built"))
+
+
+if __name__ == "__main__":
+    main()

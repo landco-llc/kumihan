@@ -41,7 +41,8 @@ UI = {
 }
 # Display-only line breaks at phrase boundaries (the copy text is unchanged):
 # a heading longer than its column otherwise splits inside a word such as 脈絡.
-PHRASE_BREAKS = {"zh-Hant-TW": {"locale_h2": "同是繁體中文"}, "ja": {"locale_h2": "同じ繁体中国語でも", "install_h2": "いつものAIツールから"}, "en": {}}
+# Headings stored as a list (the shared KUMIHAN copy) break between its items instead.
+PHRASE_BREAKS = {"zh-Hant-TW": {"locale_h2": "同是繁體中文"}, "ja": {"locale_h2": "同じ繁体中国語でも"}, "en": {}}
 FEATURE_INDEX = ("01 / REGION", "02 / SOURCE", "03 / LAYOUT", "04 / REVIEW")
 SKILL_TYPES = ("01 / ENTRY", "02 / WEB", "03 / DOCUMENTS", "04 / REVIEW")
 HOSTS = (("ChatGPT / Codex", "docs/install-ziheng{}.html"),
@@ -132,7 +133,7 @@ def render(lang, c):
         + f'>{label}</a>' for (k, v), label in zip(LANGS.items(), ("繁體中文", "English", "日本語")))
     nav = "".join(f'<a href="#{a}">{x(t)}</a>' for a, t in zip(("concept", "features", "skills", "install"), c["nav"]))
     features = "".join(
-        f'<article class="feature"><div class="feature-index">{FEATURE_INDEX[i]}</div>'
+        f'<article class="feature"><div class="feature-index">{x(f.get("idx", FEATURE_INDEX[i]))}</div>'
         f'<div class="feature-motif" aria-hidden="true">{x(f["mark"])}</div><h3>{x(f["h3"])}</h3><p>{x(f["p"])}</p></article>'
         for i, f in enumerate(c["features"]))
     locales = "".join(
@@ -142,7 +143,7 @@ def render(lang, c):
     skills = "".join(
         f'<a class="skill-card" href="{SOURCE}/skills/{x(s["name"])}" target="_blank" rel="noopener noreferrer">'
         f'<div class="card-top"><span class="skill-type">{SKILL_TYPES[i]}</span><span class="skill-symbol" aria-hidden="true">{x(s["motif"])}</span></div>'
-        f'<div><h3 class="skill-name">{x(s["name"])}</h3><p class="skill-desc">{x(s["role"].split(" / ", 1)[1])} — {x(s["p"])}</p>'
+        f'<div><h3 class="skill-name">{x(s["name"])}</h3><p class="skill-desc">{(x(s["role"].split(" / ", 1)[1]) + " — ") if "role" in s else ""}{x(s["p"])}</p>'
         f'<div class="skill-end"><span>{x(u["view"])}</span><span aria-hidden="true">↗</span></div></div></a>'
         for i, s in enumerate(c["skills"]))
     rows = "".join(
@@ -152,9 +153,13 @@ def render(lang, c):
         for i, (name, href) in enumerate(HOSTS))
     def display(key):
         text, cut = c[key], PHRASE_BREAKS[lang].get(key)
+        if isinstance(text, list):
+            return "<br>".join(x(t) for t in text)
         if cut and text.startswith(cut) and len(text) > len(cut):
             return x(cut) + "<br>" + x(text[len(cut):])
         return x(text)
+    feet = c["hero_foot"] if isinstance(c["hero_foot"], list) else ["OPEN SOURCE", "FOUR SKILLS", c["hero_foot"]]
+    foot = '<span class="rule" aria-hidden="true"></span>'.join(f"<span>{x(t)}</span>" for t in feet)
     stage = c["stage_text"].replace("<small>", " — <span>").replace("</small>", "</span>")
     out = f"""<!doctype html>
 <html lang="{lang}" data-product="zh-han">
@@ -191,13 +196,13 @@ def render(lang, c):
   <div class="shell hero-layout">
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(c['eyebrow'])}</p>
-      <h1 id="hero-title">{x(c['h1'][0])}<br><span class="accent">{x(c['h1'][1])}</span></h1>
+      <h1 id="hero-title">{"<br>".join(x(p) for p in c['h1'][:-1])}<br><span class="accent">{x(c['h1'][-1])}</span></h1>
       <p class="hero-desc">{x(c['lead'])}</p>
       <div class="hero-cta">
         <a class="button button-primary" href="#install">{x(c['cta'][0])}<span class="arrow" aria-hidden="true">↗</span></a>
         <a class="button" href="#concept">{x(c['cta'][1])}<span class="arrow" aria-hidden="true">↘</span></a>
       </div>
-      <div class="hero-foot"><span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span><span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span><span>{x(c['hero_foot'])}</span></div>
+      <div class="hero-foot">{foot}</div>
     </div>
     <div class="hero-stage" aria-label="KUMIHAN official logo">
       <div class="logo-card"><img src="{LOGO}" width="1254" height="1254" alt="KUMIHAN official logo" fetchpriority="high"></div>
@@ -225,7 +230,7 @@ def render(lang, c):
 </section>
 <section class="skills-section" id="skills" aria-labelledby="skills-title">
   <div class="shell">
-    <div class="section-heading"><div><div class="section-number">03 / THE SKILLS</div><h2 id="skills-title">{x(c['skills_h2'])}</h2></div><p>{x(c['skills_deck'])}</p></div>
+    <div class="section-heading"><div><div class="section-number">03 / THE SKILLS</div><h2 id="skills-title">{display('skills_h2')}</h2></div><p>{x(c['skills_deck'])}</p></div>
     <div class="skills-grid">{skills}</div>
   </div>
 </section>
@@ -237,13 +242,13 @@ def render(lang, c):
 </section>
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
-    <div><div class="status-title" id="status-title">PREVIEW / 0.1.0</div><p><strong>{x(c['status_h'])}</strong></p><p>{x(c['status_body'])}</p></div>
-    <div class="status-meta"><a href="{ZIP}" download>{x(u['zip'])} ↗</a><br>OPEN SOURCE · APACHE 2.0</div>
+    <div><div class="status-title" id="status-title">{x(c.get('status_title', 'PREVIEW / 0.1.0'))}</div><p><strong>{x(c['status_h'])}</strong></p><p>{x(c['status_body'])}</p></div>
+    <div class="status-meta"><a href="{ZIP}" download>{x(c.get('status_link', u['zip'] + ' ↗'))}</a><br>OPEN SOURCE · APACHE 2.0</div>
   </div>
 </section>
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="shell cta-layout">
-    <div><h2 id="cta-title">{x(c['cta_h2'])}</h2><p>{x(c['cta_body'])}</p></div>
+    <div><h2 id="cta-title">{display('cta_h2')}</h2><p>{x(c['cta_body'])}</p></div>
     <a class="button" href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">{x(c['cta_button'])}<span class="arrow" aria-hidden="true">↗</span></a>
   </div>
 </section>

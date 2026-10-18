@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """English landing for the Thai product in the canonical KUMIHAN index structure.
 
-Uses shared layout CSS from _layouts/landing.html and the approved English copy
-in assets/thai-site-copy.json. Headline end punctuation is omitted at display
-time only, matching the canonical English index; the copy file is not changed.
+Uses shared layout CSS from _layouts/landing.html, the shared KUMIHAN copy in
+tools/base_copy.py, and the Thai-specific English copy in
+assets/thai-site-copy.json. The copy file is not changed.
 """
 from __future__ import annotations
 
@@ -17,7 +17,13 @@ _ja_spec.loader.exec_module(_ja)
 BASE, BRAND, LOGO, RELEASE, SECTIONS, SOURCE = (
     _ja.BASE, _ja.BRAND, _ja.LOGO, _ja.RELEASE, _ja.SECTIONS, _ja.SOURCE
 )
-anchor, canonical_css, x = _ja.anchor, _ja.canonical_css, _ja.x
+anchor, canonical_css, thai_name, x = _ja.anchor, _ja.canonical_css, _ja.thai_name, _ja.x
+
+# Shared copy of the canonical KUMIHAN page (tools/base_copy.py) with only the
+# product and language names swapped. Thai-specific text (feature 01, the
+# fidelity detail, the entry skill and release status) stays in
+# assets/thai-site-copy.json.
+SHARED = _ja.base_copy.shared("en", "th")
 
 ENGLISH_OVERRIDES = r"""
     html[lang="en"] body { line-height: 1.7; }
@@ -91,22 +97,9 @@ ENGLISH_OVERRIDES = r"""
 """
 
 
-def display(value: str) -> str:
-    """Headline display text without a trailing period (copy stays unchanged)."""
-    return value.rstrip().removesuffix(".")
-
-
-def two_lines(value: str) -> str:
-    """Split a two-sentence headline into canonical line + accent markup."""
-    first, sep, second = value.partition(". ")
-    if not sep:
-        return x(display(value))
-    return x(first) + '<br><span class="accent">' + x(display(second)) + '</span>'
-
-
 def render(root: Path, copy: dict) -> str:
     c = copy
-    # Metadata is not rewritten; labels and links are derived from the canonical copy.
+    s = SHARED
     css = canonical_css(root)
     head = f"""<!doctype html>
 <html lang="en">
@@ -115,11 +108,11 @@ def render(root: Path, copy: dict) -> str:
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f5f3ee">
-  <title>{x(c["meta title"])}</title>
-  <meta name="description" content="{x(c["meta description"])}">
+  <title>{x(s["title"])}</title>
+  <meta name="description" content="{x(s["description"])}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{x(c["meta title"])}">
-  <meta property="og:description" content="{x(c["meta description"])}">
+  <meta property="og:title" content="{x(s["title"])}">
+  <meta property="og:description" content="{x(s["description"])}">
   <meta property="og:url" content="{BASE}kumihan-th-en.html">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="{BASE}{LOGO}">
@@ -149,16 +142,16 @@ def render(root: Path, copy: dict) -> str:
         language_nav += anchor(dest, label, extra='data-language lang="' + code +
                                '" hreflang="' + code + '"' + current)
     language_nav += "</nav></div>"
-    hero_markup = two_lines(c["hero H1"])
+    hero_markup = x(s["h1"][0]) + '<br><span class="accent">' + x(s["h1"][1]) + '</span>'
     out = head + f"""
 <header class="site-header">
   <div class="shell header-content">
     {anchor("#top", "KUMIHAN", "brand", 'aria-label="Back to top"')}
     <nav class="header-nav" aria-label="Primary navigation">
-      {anchor("#concept", "About")}
-      {anchor("#features", "Principles")}
-      {anchor("#skills", "Skills")}
-      {anchor("#install", "Get started")}
+      {anchor("#concept", x(s["nav"][0]))}
+      {anchor("#features", x(s["nav"][1]))}
+      {anchor("#skills", x(s["nav"][2]))}
+      {anchor("#install", x(s["nav"][3]))}
     </nav>
     {language_nav}
   </div>
@@ -167,18 +160,18 @@ def render(root: Path, copy: dict) -> str:
 <section class="hero" aria-labelledby="hero-title">
   <div class="shell hero-layout">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / THAI TYPOGRAPHY</p>
+      <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(s["eyebrow"])}</p>
       <h1 id="hero-title">{hero_markup}</h1>
       <p class="edition" lang="th">{BRAND}</p>
-      <p class="hero-desc">{x(c["hero lead"])}</p>
+      <p class="hero-desc">{thai_name(s["lead"])}</p>
       <div class="hero-cta">
-        {anchor("#install", x(c["CTA 1"])+'<span class="arrow" aria-hidden="true">↗</span>', "button button-primary")}
-        {anchor("#concept", 'Learn more<span class="arrow" aria-hidden="true">↘</span>', "button")}
+        {anchor("#install", x(s["cta"][0])+'<span class="arrow" aria-hidden="true">↗</span>', "button button-primary")}
+        {anchor("#concept", x(s["cta"][1])+'<span class="arrow" aria-hidden="true">↘</span>', "button")}
       </div>
       <div class="hero-foot" aria-label="Open-source, four skills, Thai-first">
-        <span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span>
-        <span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span>
-        <span>THAI FIRST</span>
+        <span>{x(s["hero_foot"][0])}</span><span class="rule" aria-hidden="true"></span>
+        <span>{x(s["hero_foot"][1])}</span><span class="rule" aria-hidden="true"></span>
+        <span>{x(s["hero_foot"][2])}</span>
       </div>
     </div>
     <div class="hero-stage" aria-label="KUMIHAN identity">
@@ -192,8 +185,8 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell intro-layout">
     <div><span class="section-number">01 / THE IDEA</span></div>
     <div class="intro-text">
-      <h2 id="concept-title">{x(display(c["concept H2"]))}</h2>
-      <p>{x(c["concept body"])}</p>
+      <h2 id="concept-title">{x(s["concept_h2"][0])}<br><em>{x(s["concept_h2"][1])}</em></h2>
+      <p>{thai_name(s["concept_body"])}</p>
     </div>
   </div>
 </section>
@@ -201,21 +194,31 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell">
     <div class="section-heading">
       <div><div class="section-number">02 / WHAT MATTERS</div>
-        <h2 id="features-title">{x(display(c["feature title"]))}</h2></div>
-      <p>Practical priorities for creating and reviewing Thai content.</p>
+        <h2 id="features-title">{x(s["features_h2"])}</h2></div>
+      <p>{x(s["features_deck"])}</p>
     </div>
     <div class="feature-grid">
 """
-    features = [
-        ("01 / BREAKS", "ก", c["feature 1"]),
-        ("02 / SHAPING", "◌", c["feature 2"]),
-        ("03 / FIDELITY", "Aa/ก", c["feature 3"]),
-        ("04 / REVIEW", "◎", c["feature 4"]),
-    ]
-    for num, motif, copy_item in features:
-        title, sep, detail = copy_item.partition(" — ")
+    def split(item: str) -> tuple[str, str]:
+        title, sep, detail = item.partition(" — ")
         if not sep:
             raise ValueError("English feature text is missing title separator")
+        return title, detail
+
+    # Feature 01 is Thai-specific; it also carries the vowel and tone mark
+    # rendering point, since feature 02 is the shared STRUCTURE principle.
+    breaks, breaks_detail = split(c["feature 1"])
+    _, shaping_detail = split(c["feature 2"])
+    breaks_detail = (breaks_detail.removesuffix(".") + ", and "
+                     + shaping_detail.replace("stacked signs", "stacked vowels and tone marks"))
+    shared = s["features"]
+    features = [
+        ("01 / BREAKS", "ก", breaks, breaks_detail),
+        (shared[1]["idx"], shared[1]["mark"], shared[1]["h3"], shared[1]["p"]),
+        (shared[2]["idx"], "Aa/ก", shared[2]["h3"], split(c["feature 3"])[1]),
+        (shared[3]["idx"], shared[3]["mark"], shared[3]["h3"], shared[3]["p"]),
+    ]
+    for num, motif, title, detail in features:
         out += f"""<article class="feature">
   <div class="feature-index">{x(num)}</div>
   <div class="feature-motif" aria-hidden="true">{x(motif)}</div>
@@ -226,8 +229,8 @@ def render(root: Path, copy: dict) -> str:
 <section class="idea-band" aria-labelledby="idea-title">
   <div class="shell idea-layout">
     <div><p class="eyebrow"><span class="line" aria-hidden="true"></span> DESIGNED FOR THE MESSAGE</p>
-      <h2 id="idea-title">{x(display(c["idea H2"]))}</h2>
-      <p>{x(c["idea body"])}</p>
+      <h2 id="idea-title">{x(s["idea_h2"][0])}<br><strong>{x(s["idea_h2"][1])}</strong></h2>
+      <p>{thai_name(s["idea_body"])}</p>
     </div>
     <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span>
       <small>FORM FOLLOWS MEANING</small></div>
@@ -237,8 +240,8 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell">
     <div class="section-heading">
       <div><div class="section-number">03 / THE SKILLS</div>
-        <h2 id="skills-title">{x(display(c["skills heading"]))}</h2></div>
-      <p>From scoping the work to web, documents, and review.</p>
+        <h2 id="skills-title">{x(s["skills_h2"][0])}<br>{x(s["skills_h2"][1])}</h2></div>
+      <p>{x(s["skills_deck"])}</p>
     </div>
     <div class="skills-grid">
 """
@@ -252,13 +255,15 @@ def render(root: Path, copy: dict) -> str:
         label, sep, description = c[f"skill {i}"].partition(" — ")
         if label != slug or not sep:
             raise ValueError("Unexpected English skill naming")
+        if s["skills"][i - 1] is not None:
+            description = s["skills"][i - 1][1]  # shared; only the entry skill is Thai-specific
         out += f"""<a class="skill-card" href="{SOURCE}/skills/{slug}"
     target="_blank" rel="noopener noreferrer">
   <div class="card-top"><span class="skill-type">{category}</span>
     <span class="skill-symbol" aria-hidden="true">{x(motif)}</span></div>
   <div><h3 class="skill-name">{slug}</h3>
     <p class="skill-desc">{x(description[:1].upper() + description[1:])}</p>
-    <div class="skill-end"><span>View skill</span><span aria-hidden="true">↗</span></div>
+    <div class="skill-end"><span>{x(s["skill_view"])}</span><span aria-hidden="true">↗</span></div>
   </div></a>
 """
     out += f"""</div></div></section>
@@ -266,18 +271,15 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell install-layout">
     <div class="install-intro">
       <div class="section-number">04 / GET STARTED</div>
-      <h2 id="install-title">{x(display(c["install heading"]))}</h2>
-      <p>{x(c["install lead"])}</p>
+      <h2 id="install-title">{x(s["install_h2"][0])}<br>{x(s["install_h2"][1])}</h2>
+      <p>{x(s["install_body"])}</p>
     </div>
     <div><div class="install-links">
 """
     hosts = [
-        ("01", "ChatGPT / Codex", "docs/install-kumihan-th-chatgpt.en.html",
-         "Independent plugin and individual skills for ChatGPT / Codex"),
-        ("02", "Claude / Claude Code", "docs/install-kumihan-th-claude.en.html",
-         "Claude Code plugin and individual skills"),
-        ("03", "Gemini", "docs/install-kumihan-th-gemini.en.html",
-         "Gemini CLI extension and skill use"),
+        ("01", "ChatGPT / Codex", "docs/install-kumihan-th-chatgpt.en.html", s["install_notes"][0]),
+        ("02", "Claude / Claude Code", "docs/install-kumihan-th-claude.en.html", s["install_notes"][1]),
+        ("03", "Gemini", "docs/install-kumihan-th-gemini.en.html", s["install_notes"][2]),
     ]
     for number, name, href, note in hosts:
         out += f"""<a class="platform-row" href="{href}">
@@ -295,19 +297,19 @@ def render(root: Path, copy: dict) -> str:
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
     <div>
-      <div class="status-title" id="status-title">KUMIHAN / THAI v0.1.1</div>
+      <div class="status-title" id="status-title">{x(s["status_title"])}</div>
       <p>{x(c["status body"])}</p>
       <p>Native installation and invocation on ChatGPT / Codex / Claude / Gemini: not-checked.</p>
     </div>
-    <div class="status-meta">{anchor(RELEASE, "Download latest ↗", extra='target="_blank" rel="noopener noreferrer"')}
+    <div class="status-meta">{anchor(RELEASE, x(s["status_link"]), extra='target="_blank" rel="noopener noreferrer"')}
       <br>OPEN SOURCE · APACHE 2.0</div>
   </div>
 </section>
 <section class="cta-section" aria-labelledby="cta-title">
   <div class="shell cta-layout">
-    <div><h2 id="cta-title">{x(display(c["final CTA"]))}</h2>
-      <p>KUMIHAN｜ดุลอักษร is open source. The skills, release packages, and change history are on GitHub.</p></div>
-    {anchor(SOURCE, 'View on GitHub<span class="arrow" aria-hidden="true">↗</span>',
+    <div><h2 id="cta-title">{x(s["cta_h2"][0])}<br>{x(s["cta_h2"][1])}</h2>
+      <p>{thai_name(s["cta_body"])}</p></div>
+    {anchor(SOURCE, x(s["cta_button"]) + '<span class="arrow" aria-hidden="true">↗</span>',
             "button", 'target="_blank" rel="noopener noreferrer"')}
   </div>
 </section>
@@ -315,7 +317,7 @@ def render(root: Path, copy: dict) -> str:
 <footer class="footer">
   <div class="shell footer-layout">
     <div><div class="footer-mark" lang="th">{BRAND}</div>
-      <div class="footer-sub">Thai typography skills for AI-assisted design<br>
+      <div class="footer-sub">{x(s["footer_sub"])}<br>
       Developed by L&amp;Co. LLC</div></div>
     <div class="footer-links">
       {anchor("top-en.html", "KUMIHAN home")}
