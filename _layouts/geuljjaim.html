@@ -1,8 +1,9 @@
-{% assign t = site.data.geuljjaim[page.locale_key] %}<!doctype html>
+{% assign t = site.data.geuljjaim[page.locale_key] %}{% if page.locale_key == 'en' %}{% assign sfx = '.en' %}{% elsif page.locale_key == 'ja' %}{% assign sfx = '.ja' %}{% else %}{% assign sfx = '' %}{% endif %}{% if page.canonical_path contains 'chatgpt' %}{% assign host = 'ChatGPT / Codex' %}{% assign host_number = '01' %}{% elsif page.canonical_path contains 'claude' %}{% assign host = 'Claude / Claude Code' %}{% assign host_number = '02' %}{% else %}{% assign host = 'Gemini' %}{% assign host_number = '03' %}{% endif %}<!doctype html>
 <html lang="{{ page.lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f5f3ee">
 <title>{{ page.title | escape }} | KUMIHAN｜글짜임</title>
 <meta name="description" content="{{ page.description | escape }}">
@@ -22,29 +23,71 @@
 <meta name="twitter:description" content="{{ page.description | escape }}">
 <meta name="twitter:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
-<link rel="stylesheet" href="{{ '/assets/geuljjaim.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
 </head>
 <body>
-<a class="skip" href="#main">{{ t.skip }}</a>
-<header class="shell site-header">
-<a class="brand" href="{{ page.home_path | relative_url }}">KUMIHAN<span lang="ko-KR">｜글짜임</span></a>
-<nav aria-label="{{ t.nav }}" class="main-nav">
-<a href="{{ page.home_path | relative_url }}#concept">{{ t.concept }}</a>
-<a href="{{ page.home_path | relative_url }}#skills">{{ t.skills }}</a>
-<a href="{{ page.home_path | relative_url }}#install">{{ t.install }}</a>
-</nav>
-<nav class="languages" aria-label="{{ t.language }}">
-<a lang="ko-KR" hreflang="ko-KR" href="{{ page.ko_path | relative_url }}"{% if page.locale_key == 'ko' %} aria-current="page"{% endif %}>KO</a>
-<a lang="en" hreflang="en" href="{{ page.en_path | relative_url }}"{% if page.locale_key == 'en' %} aria-current="page"{% endif %}>EN</a>
-<a lang="ja" hreflang="ja" href="{{ page.ja_path | relative_url }}"{% if page.locale_key == 'ja' %} aria-current="page"{% endif %}>日本語</a>
-</nav>
+<a class="skip-link" href="#guide-content">{{ t.skip }}</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="{{ page.home_path | relative_url }}">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a>
+    <nav class="header-nav" aria-label="{{ t.guide_nav }}">
+      <a href="{{ '/docs/install-ko-chatgpt' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '01' %} aria-current="page"{% endif %}>ChatGPT / Codex</a>
+      <a href="{{ '/docs/install-ko-claude' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '02' %} aria-current="page"{% endif %}>Claude</a>
+      <a href="{{ '/docs/install-ko-gemini' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '03' %} aria-current="page"{% endif %}>Gemini</a>
+    </nav>
+  </div>
 </header>
-<main id="main" class="shell" tabindex="-1">{{ content }}</main>
-<footer class="shell site-footer">
-<div><strong>KUMIHAN<span lang="ko-KR">｜글짜임</span></strong><p>{{ t.footer }}</p></div>
-<p class="limitations">{{ t.limits }}</p>
-<div class="footer-links"><a href="{{ '/kumihan-ko.html' | relative_url }}">{{ t.home }}</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/downloads">{{ t.release }} v0.1.0</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE">Apache-2.0</a><span>L&amp;Co. LLC</span></div>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{{ page.home_path | relative_url }}">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a><span aria-hidden="true">/</span><span>{{ t.guide }}</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / {{ host_number }} OF 03</div>
+        <h1 id="page-title">{{ page.title | escape }}</h1>
+        <p class="hero-desc">{{ page.description | escape }}</p>
+        <nav class="language-switch languages" aria-label="{{ t.language }}">
+          <a lang="ko-KR" hreflang="ko-KR" href="{{ page.ko_path | relative_url }}"{% if page.locale_key == 'ko' %} aria-current="page"{% endif %}>한국어</a>
+          <a lang="en" hreflang="en" href="{{ page.en_path | relative_url }}"{% if page.locale_key == 'en' %} aria-current="page"{% endif %}>English</a>
+          <a lang="ja" hreflang="ja" href="{{ page.ja_path | relative_url }}"{% if page.locale_key == 'ja' %} aria-current="page"{% endif %}>日本語</a>
+        </nav>
+      </div>
+      <div class="hero-logo"><img src="{{ '/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png' | relative_url }}" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="{{ t.platforms }}">
+  <div class="shell platform-inner">
+    <a href="{{ '/docs/install-ko-chatgpt' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '01' %} aria-current="page"{% endif %}><span>01 / ChatGPT &amp; Codex</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="{{ '/docs/install-ko-claude' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '02' %} aria-current="page"{% endif %}><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a>
+    <a href="{{ '/docs/install-ko-gemini' | append: sfx | append: '.html' | relative_url }}"{% if host_number == '03' %} aria-current="page"{% endif %}><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="{{ t.toc_title }}">
+    <details class="toc-details" open>
+      <summary>{{ t.toc_summary }}</summary>
+      <h2 class="toc-title">{{ t.toc_title }}</h2>
+      <ol>
+        <li><a href="#download">{{ t.toc_download }}</a></li>
+        <li><a href="#steps">{{ t.toc_steps }}</a></li>
+        <li><a href="#smoke">{{ t.toc_smoke }}</a></li>
+        <li><a href="#updates">{{ t.toc_updates }}</a></li>
+      </ol>
+    </details>
+    <div class="toc-note"><strong>v0.1.0 / ko-KR</strong><p>{{ t.guide_note }}</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim" target="_blank" rel="noopener noreferrer">{{ t.guide_source }} ↗</a>
+  </aside>
+  <main class="guide" id="guide-content" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / {{ host }}</span><span class="step-label">{{ t.guide_steps }}</span></div>
+    <div class="guide-pane">{{ content }}</div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong>KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></strong><p>{{ t.footer }}<br>{{ t.limits }}<br>Developed by <a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div>
+    <div><a href="{{ page.home_path | relative_url }}">{{ t.home }}</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/downloads" target="_blank" rel="noopener noreferrer">{{ t.release }} v0.1.0</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+  </div>
 </footer>
 </body>
 </html>
