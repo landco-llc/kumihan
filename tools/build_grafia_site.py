@@ -1,62 +1,204 @@
 #!/usr/bin/env python3
-"""Generate the twelve Grafía pages from original localized copy. --check never writes."""
-import argparse
-import html
-from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1]
-BASE='/kumihan/'
-PUBLIC='https://landco-llc.github.io'+BASE
-SOURCE='https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-grafia'
-HOSTS={'chatgpt':'ChatGPT / Codex','claude':'Claude Code','gemini':'Gemini CLI'}
-COPY={
-'es':dict(title='Las palabras tienen forma.',accent='El diseño les da sentido.',lead='Cuatro Skills independientes para componer, revisar y presentar contenidos en español. Con atención al ritmo y a la legibilidad, sin perder la intención ni el original.',skip='Ir al contenido',language='Idioma',home='Todos los idiomas',principle='Primero, el contenido.',principle_text='Una tilde cambia una palabra. Una cifra cambia una decisión. Grafía ayuda a cuidar ambos detalles: propone una composición y distingue lo que se ha comprobado de lo que necesita una mirada editorial.',principles=[('La voz de cada proyecto','Tú, vos o usted: el tratamiento se hereda del encargo. La región no decide por quien escribe.'),('El original se conserva','Nombres, citas, precios, fechas y Unicode no se reescriben para encajar en una caja.'),('Cada observación, con alcance','Un candidato estático, una captura y una decisión editorial son evidencias distintas.')],scope='Una tarea, un Skill.',roles=['Definir idioma, medio, audiencia y cambios permitidos.','Componer páginas e interfaces; observar saltos, etiquetas y reflujo.','Estructurar informes y presentaciones; revisar también la exportación.','Examinar sin escribir en el original; devolver hallazgos y dudas.'],choose='Elegir mi herramienta',download='Descargar y verificar',guide='Guía de instalación',steps='Instalar en tu herramienta',update='Usar y actualizar',source='Código y fuentes',limits='48 reglas de orientación y 5 patrones estáticos limitados. No es un corrector completo ni una certificación visual. Los 60 casos originales de investigación siguen sin comprobarse; las pruebas sintéticas y mediciones del sitio se registran aparte.',status='La publicación OSS, la web y los directorios de proveedores se verifican por separado. Consulta el Release para su estado real. La importación e invocación nativas y las tiendas no están verificadas.',verify='Compara SHA256 y tamaño con MANIFEST.json antes de instalar. Con los 17 archivos del Release en una carpeta: sha256sum -c SHA256SUMS.txt (macOS: shasum -a 256 -c SHA256SUMS.txt). Para un ZIP, verifica su entrada individual.',prompt='Usa kumihan-grafia-review. Conserva el original, las cifras y los nombres; separa observaciones y propuestas.',updates='Guarda tus ajustes, verifica la nueva versión y usa el flujo de actualización o reinstalación del proveedor. Comprueba descubrimiento e invocación en tu cuenta.',hosts={'chatgpt':['Necesitas una interfaz real de plugins o Skills compatible. En Codex, también puedes usar carpetas Skills del proyecto.','El plugin se extrae como kumihan-grafia/, con plugin.json y .codex-plugin/plugin.json. Impórtalo solo mediante la función que tu cliente ofrezca. Para Skills de Codex, extrae la carpeta individual en .agents/skills/ del proyecto.','En ChatGPT, la carga de Skills depende de tu cuenta. Adjuntar un ZIP a una conversación no registra un plugin. Sin interfaz de instalación, consulta el código como guía manual.'],'claude':['Necesitas Claude Code para el plugin. Los Skills de Claude chat dependen de las funciones de tu cuenta.','Extrae el plugin y comprueba la carpeta kumihan-grafia/. Si la versión lo permite: claude plugin validate /ruta/absoluta/kumihan-grafia. Inicia con claude --plugin-dir /ruta/absoluta/kumihan-grafia.','En Claude chat, usa cada ZIP de Skill solo en una interfaz real de Skills. La carga local y el listado en un marketplace son estados distintos.'],'gemini':['Necesitas Gemini CLI con Extensions. No se ha comprobado la importación de Skills en Gemini Apps.','Extrae el ZIP de extensión en una carpeta vacía: gemini-extension.json debe estar directamente en su raíz. Ejecuta gemini extensions install /ruta/absoluta/carpeta y lee la solicitud de consentimiento.','No instales la raíz de este monorepo como Grafía. Los Skills independientes siguen el flujo Skills de tu versión del CLI; la disponibilidad en Apps requiere comprobar la cuenta.']}),
-'en':dict(title='Words have a shape.',accent='Design gives them meaning.',lead='Four independent Skills for creating and reviewing Spanish websites, documents and presentations. Care for reading rhythm and clarity while preserving the author’s intent and source.',skip='Skip to content',language='Language',home='All languages',principle='Start with the content.',principle_text='An accent changes a word. A figure changes a decision. Grafía helps attend to both: propose a composition and distinguish checked facts from questions for an editor.',principles=[('The project’s own voice','Tú, vos or usted comes from the brief. A region does not choose on the writer’s behalf.'),('Keep the original','Names, quotations, prices, dates and Unicode are preserved instead of rewritten to fit.'),('Evidence with a scope','A static candidate, a screenshot and an editorial decision establish different things.')],scope='One task, one Skill.',roles=['Set language, medium, audience and permitted edits.','Compose web pages and interfaces; inspect wrapping, labels and reflow.','Structure reports and presentations; inspect the actual export.','Review without writing to the source; report issues and uncertainty.'],choose='Choose my tool',download='Download and verify',guide='Installation guide',steps='Install in your tool',update='Use and update',source='Code and sources',limits='48 guidance records and 5 bounded static patterns. This is not a complete proofreader or visual certification. The 60 original research scenarios remain not-checked; synthetic tests and site measurements are separate.',status='OSS publication, the website and provider directories are separately verified. Consult the actual Release for publication state. Native import/invocation and marketplaces are unverified.',verify='Compare SHA256 and byte length with MANIFEST.json before installation. With all 17 Release files in one directory: sha256sum -c SHA256SUMS.txt (macOS: shasum -a 256 -c SHA256SUMS.txt). For a single ZIP verify its individual entry.',prompt='Use kumihan-grafia-review. Preserve source text, figures and names; separate observations and proposals.',updates='Save customizations, verify the new version, then use the provider’s update or reinstall flow. Check actual discovery and invocation in your account.',hosts={'chatgpt':['Requires an actual compatible plugin or Skills interface. Codex also supports project Skills directories.','The full plugin extracts to kumihan-grafia/ with plugin.json and .codex-plugin/plugin.json. Import only through the feature your client exposes. For Codex Skills, extract the individual folder into the project’s .agents/skills/ directory.','ChatGPT Skills upload depends on account capabilities. Attaching a ZIP to a conversation does not register a plugin. Without an install interface, use the source as manual guidance.'],'claude':['Requires Claude Code for the plugin. Claude chat Skills depend on your account’s capabilities.','Extract the plugin to kumihan-grafia/. Where supported run: claude plugin validate /absolute/path/kumihan-grafia. Launch with claude --plugin-dir /absolute/path/kumihan-grafia.','In Claude chat use each Skill ZIP only through an actual Skills interface. Local loading and marketplace listing are separate states.'],'gemini':['Requires Gemini CLI with Extensions. Gemini Apps Skills import is not verified.','Extract the extension ZIP into an empty directory; gemini-extension.json must be directly at its root. Run gemini extensions install /absolute/path/folder and read installer consent.','Do not install this monorepo root as Grafía. Independent Skills follow the installed CLI version’s Skills flow; Apps availability needs account-specific verification.']}),
-'ja':dict(title='言葉のかたちに、',accent='意図が伝わるデザインを。',lead='スペイン語のWeb・文書・プレゼンテーションをつくり、見直す4つの独立したSkills。読みやすさと表現を考えながら、原稿と書き手の意図を大切にします。',skip='本文へ移動',language='言語',home='全言語の一覧',principle='内容から、組み立てる。',principle_text='アクセントひとつで言葉が変わり、数字ひとつで判断が変わる。Grafíaは、その両方を守りながら構成を考えます。確認できたことと、編集者の判断が必要なことを分けて伝えます。',principles=[('案件ごとの声を尊重','tú・vos・ustedは原稿と依頼の文脈を継承。国や地域だけから決めません。'),('原稿を保持','名前・引用・価格・日付・Unicodeを、枠に収めるために書き換えません。'),('根拠の範囲を明示','静的な候補、実画面、編集判断。それぞれが確認できる範囲を分けます。')],scope='目的に合わせて選ぶ、4つのSkills。',roles=['言語・媒体・読者・変更できる範囲を整理します。','WebとUIを構成し、改行・ラベル・リフローを確認します。','報告書やスライドを構成し、書き出し後も確認します。','原稿を変更せず、指摘と判断が必要な項目を返します。'],choose='使うツールを選ぶ',download='ダウンロードと照合',guide='導入ガイド',steps='ツールへの導入',update='利用と更新',source='コードと出典',limits='48件の指針と5種類の限定的な静的候補検査です。完全な校正や見た目の品質を保証しません。研究の原案60ケースは未検証で、合成テストとサイト実測は別に記録します。',status='OSS公開・Web・各社のディレクトリは別の確認対象です。実際の公開状態はReleaseを参照してください。実ホストの導入・呼出しと商店掲載は未検証です。',verify='導入前にMANIFEST.jsonのSHA256とバイト数を照合します。Releaseの17ファイルを同じフォルダに置き、sha256sum -c SHA256SUMS.txt（macOSはshasum -a 256 -c SHA256SUMS.txt）を実行。単体ZIPは該当項目を照合してください。',prompt='kumihan-grafia-reviewで、原稿・数字・名前を保持して確認し、観察結果と提案を分けてください。',updates='独自設定を保存し、新版のハッシュを照合してから、各社の更新・再導入手順を使います。実際の発見・呼出しは利用アカウントで確認してください。',hosts={'chatgpt':['対応するプラグインまたはSkillsの導入口が必要です。CodexはプロジェクトのSkillsフォルダも利用できます。','完全プラグインはkumihan-grafia/に展開され、plugin.jsonと.codex-plugin/plugin.jsonを含みます。クライアントが提供する導入口から読み込みます。Codex単体Skillはプロジェクトの.agents/skills/へフォルダを展開してください。','ChatGPTのSkillsアップロードはアカウント機能に依存します。会話へのZIP添付はプラグイン登録ではありません。導入口がなければコードを手動の指針として参照します。'],'claude':['プラグインはClaude Codeが必要です。Claude chatのSkillsはアカウント機能に依存します。','kumihan-grafia/へ展開し、対応版ではclaude plugin validate /絶対パス/kumihan-grafiaで検査します。claude --plugin-dir /絶対パス/kumihan-grafiaで起動してください。','Claude chatでは実際のSkills導入口で単体ZIPを使用します。ローカル読込みと商店掲載は別の状態です。'],'gemini':['Extensions対応のGemini CLIが必要です。Gemini AppsのSkills導入は未検証です。','拡張ZIPを空フォルダに展開し、gemini-extension.jsonが直下にあることを確認します。gemini extensions install /絶対パス/フォルダを実行し、権限確認を読んでください。','このモノレポのルートをGrafíaとして導入しないでください。独立Skillsは使用中CLIの導入手順に従います。Appsの利用可否はアカウントで別途確認します。']})}
+"""Build the KUMIHAN｜Grafía site (es / en / ja); --check verifies committed output.
 
-def esc(value):return html.escape(value,quote=True)
-def link(url,label,**attrs):return '<a href="'+esc(url)+'"'+''.join(' '+k.rstrip('_').replace('_','-')+'="'+esc(v)+'"' for k,v in attrs.items())+'>'+esc(label)+'</a>'
-def name(locale,host=None):
- suffix='' if locale=='es' else '.'+locale
- return f'docs/install-grafia-{host}{suffix}.html' if host else f'kumihan-es{suffix}.html'
-# KUMIHAN index in the page language; Spanish has no gateway yet, so it uses the Japanese index.
-GATEWAY={'es':'index.html','en':'top-en.html','ja':'index.html'}
-def frame(locale,body,host=None):
- c=COPY[locale];path=name(locale,host);title='KUMIHAN｜Grafía · '+(c['guide']+' · '+HOSTS[host] if host else c['title'])
- alternates=''.join(f'<link rel="alternate" hreflang="{loc}" href="{PUBLIC+name(loc,host)}">' for loc in COPY)
- langs=''.join(link(BASE+name(loc,host),label,lang=loc,**({'aria_current':'page'} if loc==locale else {})) for loc,label in [('es','Español'),('en','English'),('ja','日本語')])
- return f'''<!doctype html>
-<html lang="{locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(c['lead'])}"><meta name="theme-color" content="#f4f1e9"><link rel="canonical" href="{PUBLIC+path}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+name('es',host)}"><link rel="icon" href="{BASE}favicon.ico"><link rel="stylesheet" href="{BASE}assets/grafia-site.css"></head><body>
-<a class="skip" href="#main">{c['skip']}</a><header><div class="shell header"><a class="brand" href="{BASE+name(locale)}"><img src="{BASE}assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="52" height="52" alt=""><span>KUMIHAN｜Grafía</span></a><nav aria-label="{c['language']}">{langs}</nav></div></header>
-<main id="main" class="shell" tabindex="-1">{body}</main><footer class="shell"><p>{c['limits']}</p><p>{c['status']}</p><nav aria-label="{c['source']}">{link(BASE+GATEWAY[locale],c['home'])}{link(SOURCE,c['source'])}{link('https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0','GitHub Release')}</nav><p>v0.1.0 · Apache-2.0 · L&amp;Co. LLC</p></footer></body></html>
-'''
-def landing(locale):
- c=COPY[locale]
- body=f'''<section class="hero"><div><p class="eyebrow" lang="en">SPANISH TYPOGRAPHY / OPEN SOURCE</p><h1>{c['title']} <em>{c['accent']}</em></h1><p class="lead">{c['lead']}</p>{link('#install',c['choose'],class_='button')}</div><figure class="specimen" lang="es"><div class="specimen-top">ES / 01 <span>GRAFÍA</span></div><p class="display">¿Qué<br>nos une?</p><figcaption>á é í ó ú · ñ · ü · ¡!<br>La voz. El ritmo. La intención.</figcaption></figure></section>'''
- body+=f'<section id="principles"><p class="eyebrow">01 / GRAFÍA</p><h2>{c["principle"]}</h2><p class="intro">{c["principle_text"]}</p><dl>'+''.join(f'<div class="row"><dt>{esc(t)}</dt><dd>{esc(p)}</dd></div>' for t,p in c['principles'])+'</dl></section>'
- body+=f'<section id="skills"><p class="eyebrow">02 / SKILLS</p><h2>{c["scope"]}</h2>'
- for suffix,description in zip(('','-web','-documents','-review'),c['roles']):
-  skill='kumihan-grafia'+suffix;body+=f'<article class="row"><h3>{link(SOURCE+"/skills/"+skill,skill)}</h3><p>{description}</p></article>'
- body+=f'</section><section id="install"><p class="eyebrow">03 / INSTALL</p><h2>{c["choose"]}</h2>'
- for host,title in HOSTS.items():
-  body+=f'<article class="row"><h3>{title}</h3><div><p>{c["hosts"][host][0]}</p>{link(BASE+name(locale,host),c["guide"]+" · "+title)}</div></article>'
- return frame(locale,body+'</section>')
-def guide(locale,host):
- c=COPY[locale]
- body=f'<section class="guide-hero"><p class="eyebrow">INSTALL / {HOSTS[host]}</p><h1>{c["guide"]}</h1><p class="lead">KUMIHAN｜Grafía · {HOSTS[host]} · v0.1.0</p><nav aria-label="Host">'+''.join(link(BASE+name(locale,h),title,**({'aria_current':'page'} if host==h else {})) for h,title in HOSTS.items())+'</nav></section>'
- body+=f'<section><h2>{c["steps"]}</h2><ol>'+''.join('<li>'+esc(p)+'</li>' for p in c['hosts'][host])+'</ol></section>'
- h={'chatgpt':('GPT-Codex-plugin','GPT-Codex-skill'),'claude':('Claude-Code-plugin','Claude-skill'),'gemini':('Gemini-CLI-extension','Gemini-Apps-skill')}[host]
- files=['kumihan-grafia-'+h[0]+'-v0.1.0.zip']+['kumihan-grafia'+s+'-'+h[1]+'-v0.1.0.zip' for s in ('','-web','-documents','-review')]
- body+=f'<section><h2>{c["download"]}</h2><p>{c["verify"]}</p><ul class="downloads">'+''.join('<li>'+link(BASE+'plugins/kumihan-grafia/downloads/'+f,f)+'</li>' for f in files)+'</ul><p>'+link(BASE+'plugins/kumihan-grafia/downloads/MANIFEST.json','MANIFEST.json')+' · '+link(BASE+'plugins/kumihan-grafia/downloads/SHA256SUMS.txt','SHA256SUMS.txt')+'</p></section>'
- official={'chatgpt':[('https://developers.openai.com/codex/skills/','Codex Skills'),('https://developers.openai.com/codex/plugins/','Codex Plugins')],'claude':[('https://code.claude.com/docs/en/plugins-reference','Claude Code plugins')],'gemini':[('https://geminicli.com/docs/extensions/','Gemini CLI extensions'),('https://geminicli.com/docs/cli/skills/','Gemini CLI Skills')]}[host]
- body+=f'<section><h2>{c["update"]}</h2><blockquote>{c["prompt"]}</blockquote><p>{c["updates"]}</p><p>'+ ' · '.join(link(u,t) for u,t in official)+'</p></section>'
- return frame(locale,body,host)
-def outputs():return {name(locale,host):guide(locale,host) if host else landing(locale) for locale in COPY for host in (None,*HOSTS)}
+Landings follow the canonical KUMIHAN index (_layouts/landing.html) and install
+guides use the shared install-guide frame (tools/install_frame.py). Copy lives
+in assets/grafia-site-copy.json; its ja/en copy is the shared KUMIHAN copy
+(tools/base_copy.py). Following kumihan-grafia-web, Spanish pages declare
+lang="es", emit only es/en/ja alternates (no es-419), never hide overflow, and
+do not rely on hyphens:auto or break-all; supplied text is reproduced byte for
+byte. Japanese copy follows kumihan-web.
+"""
+import argparse
+import json
+from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = "https://landco-llc.github.io/kumihan/"
+LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+REPO = "https://github.com/landco-llc/kumihan"
+SOURCE = REPO + "/tree/main/plugins/kumihan-grafia"
+VERSION = "0.1.0"
+RELEASE = REPO + f"/releases/tag/kumihan-grafia-v{VERSION}"
+# The release files are also committed with the plugin; guides link to those copies.
+DOWNLOAD = "../plugins/kumihan-grafia/downloads/"
+BRAND = 'KUMIHAN<span class="brand-sub">｜Grafía</span>'
+LANGS = {"es": "", "en": ".en", "ja": ".ja"}
+LABELS = {"es": "ES", "en": "EN", "ja": "日本語"}
+OG = {"es": "es_ES", "en": "en_US", "ja": "ja_JP"}
+SKILLS = ("kumihan-grafia", "kumihan-grafia-web", "kumihan-grafia-documents", "kumihan-grafia-review")
+SKILL_TYPES = ("01 / ENTRY", "02 / WEB", "03 / DOCUMENTS", "04 / REVIEW")
+SKILL_SYMBOLS = ("¿?", "↗", "¶", "◎")
+HOSTS = {"chatgpt": "ChatGPT / Codex", "claude": "Claude / Claude Code", "gemini": "Gemini"}
+# (plugin, skill) asset names per host; skill ZIPs are kumihan-grafia{-web,...}-{skill}-v0.1.0.zip.
+ASSETS = {"chatgpt": ("GPT-Codex-plugin", "GPT-Codex-skill"), "claude": ("Claude-Code-plugin", "Claude-skill"),
+          "gemini": ("Gemini-CLI-extension", "Gemini-Apps-skill")}
+COMMANDS = {
+    "chatgpt": ["mkdir -p .agents/skills"],
+    "claude": ["claude plugin validate /absolute/path/kumihan-grafia",
+               "claude --plugin-dir /absolute/path/kumihan-grafia"],
+    "gemini": ["gemini extensions install /absolute/path/to/folder\ngemini extensions list"],
+}
+VERIFY = "sha256sum -c SHA256SUMS.txt"
+CHECK = "python runtime/checks.py original.txt --locale es --candidate candidate.txt"
+# Spanish has no KUMIHAN index of its own yet, so it returns to the Japanese index.
+GATEWAY = {"es": "index.html", "en": "top-en.html", "ja": "index.html"}
+
+_spec = spec_from_file_location("kumihan_install_frame", Path(__file__).with_name("install_frame.py"))
+FRAME = module_from_spec(_spec)
+_spec.loader.exec_module(FRAME)
+
+OVERRIDES = r"""
+    /* KUMIHAN｜Grafía (kumihan-grafia-web): lang="es"; no break-all, no reliance on
+       hyphens:auto, no hidden overflow. Long words wrap only where they must. */
+    html[lang="es"] body { line-break: auto; }
+    html:is([lang="es"], [lang="en"]) .hero h1 { font-size: clamp(42px,4.9vw,72px); letter-spacing: -.05em; line-height: 1.12; text-wrap: balance; }
+    html:is([lang="es"], [lang="en"]) :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { letter-spacing: -.045em; line-height: 1.25; }
+    html:is([lang="es"], [lang="en"]) :is(h1, h2, h3, .eyebrow, .button, .feature p) { overflow-wrap: break-word; }
+    html[lang="ja"] body { line-break: strict; }
+    @supports (word-break: auto-phrase) {
+      html[lang="ja"] :is(h2, h3) { word-break: auto-phrase; }
+    }
+    .brand .brand-sub { margin-inline-start: 2px; font-weight: 700; letter-spacing: -.02em; }
+    .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 38px; border-radius: 40px; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .05em; }
+    .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
+    .language-switch a:hover:not([aria-current="page"]) { color: var(--red-dark); background: #ebe7df; }
+    .hero-stage::after { content: "KUMIHAN / ES"; }
+    .hero-foot { flex-wrap: wrap; }
+    .hero-cta .button { max-width: 100%; }
+    .feature-motif { font-family: Georgia, "Times New Roman", serif !important; letter-spacing: 0 !important; font-weight: 400 !important; }
+    .skill-symbol { font-family: Georgia, "Times New Roman", serif; letter-spacing: 0; }
+    .status-meta { white-space: normal; }
+    /* Enlarged text: header items, brand and the band heading wrap instead of widening the page. */
+    .header-content { flex-wrap: wrap; row-gap: 10px; }
+    .header-nav { flex-wrap: wrap; min-width: 0; row-gap: 8px; }
+    .brand { min-width: 0; flex: 0 1 auto; }
+    .brand > span { white-space: normal; overflow-wrap: anywhere; }
+    .idea-layout > * { min-width: 0; }
+    .card-top > * { min-width: 0; }
+    .feature-index { overflow-wrap: anywhere; }
+    .skill-type { overflow-wrap: anywhere; }
+    .cta-layout > * { min-width: 0; }
+    .cta-layout .button { flex: 0 1 auto; max-width: 100%; }
+    .status-meta a { color: var(--red-dark); }
+    .skill-card, .platform-info, .status-box > *, .hero-copy, .hero-stage, .feature, .install-layout > * { min-width: 0; }
+    @media (max-width: 560px) {
+      html:is([lang="es"], [lang="en"]) .hero h1 { font-size: clamp(34px,9.6vw,46px); line-height: 1.16; }
+      .header-nav { flex-wrap: wrap; overflow: visible; gap: 12px 18px; }
+      .header-nav a { white-space: normal; }
+      .idea-layout { grid-template-columns: minmax(0,1fr); }
+    }
+"""
+
+
+_ps_spec = spec_from_file_location("kumihan_product_site", Path(__file__).with_name("product_site.py"))
+SITE = module_from_spec(_ps_spec)
+_ps_spec.loader.exec_module(SITE)
+x = SITE.x
+
+
+def landing_path(lang):
+    return f"kumihan-es{LANGS[lang]}.html"
+
+
+def guide_path(host, lang):
+    return f"docs/install-grafia-{host}{LANGS[lang]}.html"
+
+
+def landing(lang, c):
+    page = landing_path(lang)
+    alternates = "".join(f'<link rel="alternate" hreflang="{k}" href="{BASE}{landing_path(k)}">' for k in LANGS)
+    head = (f"<title>{x(c['title'])}</title>\n<meta name=\"description\" content=\"{x(c['description'])}\">\n"
+            f'<meta property="og:type" content="website">\n<meta property="og:locale" content="{OG[lang]}">\n'
+            f"<meta property=\"og:title\" content=\"{x(c['title'])}\">\n<meta property=\"og:description\" content=\"{x(c['description'])}\">\n"
+            f'<meta property="og:url" content="{BASE}{page}">\n<meta property="og:image" content="{BASE}{LOGO}">\n'
+            f'<link rel="canonical" href="{BASE}{page}">\n{alternates}\n'
+            f'<link rel="alternate" hreflang="x-default" href="{BASE}{landing_path("es")}">\n'
+            f'<link rel="icon" href="assets/favicon-32x32.png" type="image/png">\n<link rel="stylesheet" href="assets/grafia-site.css">')
+    return SITE.landing(dict(
+        lang=lang, head=head, brand=f"<span>{BRAND}</span>", home_label="KUMIHAN｜Grafía",
+        languages=[(k, LABELS[k], landing_path(k), k == lang) for k in LANGS],
+        logo=LOGO, repo=REPO, release=RELEASE, license=REPO + "/blob/main/LICENSE",
+        skills=[(name, f"{SOURCE}/skills/{name}", SKILL_SYMBOLS[i]) for i, name in enumerate(SKILLS)],
+        hosts=[(name, guide_path(host, lang)) for host, name in HOSTS.items()],
+        gateway=(GATEWAY[lang], c["gateway_label"]), family=c["family"]), c)
+
+
+def guide(host, lang, c):
+    g = c["guide"]
+    path = guide_path(host, lang)
+    title = g["title"].format(host=HOSTS[host])
+    alternates = "".join(f'<link rel="alternate" hreflang="{k}" href="{BASE}{guide_path(host, k)}">' for k in LANGS)
+    head = (f'<title>{x(title)}</title>\n<meta name="description" content="{x(g["lead"])}">\n'
+            f'<link rel="canonical" href="{BASE}{path}">{alternates}<link rel="alternate" hreflang="x-default" href="{BASE}{guide_path(host, "es")}">\n'
+            f'<meta property="og:type" content="website"><meta property="og:locale" content="{OG[lang]}"><meta property="og:title" content="{x(title)}">'
+            f'<meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}{LOGO}">\n'
+            f'<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">')
+    plugin, skill = ASSETS[host]
+    assets = [f"kumihan-grafia-{plugin}"] + [f"{name}-{skill}" for name in SKILLS]
+    downloads = "".join(
+        f'<li><a href="{DOWNLOAD}{name}-v{VERSION}.zip">{x(g["plugin"] if i == 0 else g["skill"])}: {name}-v{VERSION}.zip</a></li>'
+        for i, name in enumerate(assets))
+    commands = "".join(f"<pre><code>{x(cmd)}</code></pre>" for cmd in COMMANDS[host])
+    ids = ("format", "download", "steps", "test", "updates", "limits")
+    bodies = (
+        f'<p>{x(g["format"])}</p>',
+        f'<p>{x(g["download"])}</p><pre><code>{x(VERIFY)}</code></pre><ul class="download-list">{downloads}</ul>'
+        f'<p><a href="{DOWNLOAD}SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="{DOWNLOAD}MANIFEST.json">MANIFEST.json</a> · <a href="{RELEASE}">GitHub Release v{VERSION}</a></p>',
+        f'<p>{x(g[host])}</p>{commands}<p><a href="{SOURCE}/INSTALL.md">INSTALL.md</a></p>',
+        f'<p>{x(g["test"])}</p><blockquote><p>{x(g["prompt"])}</p></blockquote><p>{x(g["check"])}</p><pre><code>{x(CHECK)}</code></pre>',
+        f'<p>{x(g["update"])}</p>',
+        f'<p class="note">{x(g["limits"])}</p>',
+    )
+    content = "".join(f'<section id="{i}"><h2>{n + 1:02d} / {x(s)}</h2>{b}</section>'
+                      for n, (i, s, b) in enumerate(zip(ids, g["sections"], bodies)))
+    ui = dict(g, skip=c["skip"], language=c["lang_label"], source_href=SOURCE + "/INSTALL.md")
+    frame = FRAME.Frame(
+        lang=lang, head=head, css="../assets/kumihan-install.css", asset_root="../", brand=BRAND,
+        home="../" + landing_path(lang),
+        hosts=[(name.split(" / ")[0] if h == "claude" else name, guide_path(h, lang).removeprefix("docs/"), h == host)
+               for h, name in HOSTS.items()],
+        languages=[(k, LABELS[k] if k != "es" else "Español", guide_path(host, k).removeprefix("docs/"), k == lang) for k in LANGS],
+        number=f"0{list(HOSTS).index(host) + 1}", title=x(title), description=x(g["lead"]),
+        toc=list(zip(ids, g["sections"])), content=content, platform=HOSTS[host], ui=ui,
+        footer_sub=x(c["footer_sub"]) + f"<br>v{VERSION} · Apache-2.0 · Developed by L&amp;Co. LLC",
+        footer_links=[("GitHub", SOURCE, True), ("Apache-2.0", REPO + "/blob/main/LICENSE", True)],
+        gateway=("../" + GATEWAY[lang], c["gateway_label"]))
+    return FRAME.render(frame)
+
+
+def outputs():
+    """The twelve pages (three landings, nine guides)."""
+    copy = json.loads((ROOT / "assets" / "grafia-site-copy.json").read_text(encoding="utf-8"))
+    files = {landing_path(lang): landing(lang, copy[lang]) for lang in LANGS}
+    files.update({guide_path(host, lang): guide(host, lang, copy[lang]) for host in HOSTS for lang in LANGS})
+    return files
+
+
+def all_outputs():
+    files = outputs()
+    files["assets/grafia-site.css"] = SITE.canonical_css("KUMIHAN｜Grafía index: canonical KUMIHAN index CSS + Grafía settings.", OVERRIDES)
+    return files
+
+
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--check',action='store_true');args=p.parse_args();out=outputs()
- changed=[path for path,text in out.items() if not (ROOT/path).is_file() or (ROOT/path).read_bytes()!=text.encode()]
- if args.check:
-  for path in changed:print('out of date: '+path)
-  return int(bool(changed))
- for path in changed:(ROOT/path).write_text(out[path],encoding='utf-8')
- print('Generated 12 Grafía pages');return 0
-if __name__=='__main__':raise SystemExit(main())
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+    stale = []
+    for name, content in all_outputs().items():
+        path = ROOT / name
+        if args.check:
+            if not path.exists() or path.read_text(encoding="utf-8") != content:
+                stale.append(name)
+        else:
+            path.write_text(content, encoding="utf-8")
+    if stale:
+        raise SystemExit("Stale Grafía site files: " + ", ".join(stale))
+    print(f"Grafía site: {len(all_outputs())} files " + ("verified" if args.check else "built"))
+
+
+if __name__ == "__main__":
+    main()
