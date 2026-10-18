@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "locale",
+    "house_style",
+    "medium",
+    "mode",
+    "source_origin",
+    "protected_spans",
+    "authorized_change_scope"
+  ],
+  "properties": {
+    "locale": {
+      "enum": [
+        "fr-FR",
+        "fr-CA",
+        "fr-BE",
+        "fr-CH"
+      ]
+    },
+    "house_style": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "study",
+        "build",
+        "audit",
+        "refine"
+      ]
+    },
+    "source_origin": {
+      "enum": [
+        "supplied",
+        "quoted",
+        "generated",
+        "translation-proposal"
+      ]
+    },
+    "medium": {
+      "type": "string"
+    },
+    "protected_spans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authorized_change_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

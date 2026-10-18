@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "selection": "explicit",
+  "on_missing": "unresolved; review only",
+  "styles": [
+    {
+      "id": "fr-fr-editorial",
+      "locale": "fr-FR",
+      "source_ref": "FR01",
+      "before": {
+        "!": " ",
+        "?": " ",
+        ";": " ",
+        ":": " "
+      },
+      "quotes": " ",
+      "note": "explicit editorial convention, not French national law"
+    },
+    {
+      "id": "fr-ca-oqlf",
+      "locale": "fr-CA",
+      "source_ref": "FR02",
+      "before": {
+        "!": null,
+        "?": null,
+        ";": null,
+        ":": " "
+      },
+      "quotes": " ",
+      "note": "zero or fine space before ! ? ; are admissible; do not flag either"
+    },
+    {
+      "id": "eu-interinstitutional",
+      "locale": "institutional",
+      "source_ref": "FR03",
+      "before": {
+        "!": "",
+        "?": "",
+        ";": "",
+        ":": ""
+      },
+      "quotes": "",
+      "note": "only selected EU institutional house style"
+    }
+  ]
+}
