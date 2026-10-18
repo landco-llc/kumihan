@@ -4,7 +4,7 @@
 
 <br>
 
-**公開中の最新版は [v0.1.5 preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview)（2026年10月18日公開）です。**
+**公開中の最新版は [v0.1.6 preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview)（2026年10月18日公開）です。**
 
 KUMIHANを新しい版に更新する方法です。導入した方法によって、更新のしかたが異なります。
 
@@ -47,7 +47,7 @@ GitHubからKUMIHANを導入・更新できます。
 codex plugin marketplace add landco-llc/kumihan --ref main
 ```
 
-登録したら、Pluginsの画面で **KUMIHAN Git Preview** を選び、**KUMIHAN Private Install Preview** をインストールします。
+登録したら、Pluginsの画面で **KUMIHAN Git Preview** を選び、**KUMIHAN v0.1.6** をインストールします。
 
 **更新するとき**
 
@@ -94,7 +94,7 @@ npx skills update kumihan kumihan-web kumihan-documents kumihan-review
 
 ## English
 
-**Current release: [v0.1.5 preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview) (October 18, 2026).**
+**Current release: [v0.1.6 preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview) (October 18, 2026).**
 
 KUMIHAN does not update itself. When a new version is published on GitHub, update your copy using the method that matches how you installed it.
 
@@ -112,7 +112,7 @@ KUMIHAN does not update itself. When a new version is published on GitHub, updat
 codex plugin marketplace add landco-llc/kumihan --ref main
 ```
 
-Then open Plugins, choose **KUMIHAN Git Preview**, and install **KUMIHAN Private Install Preview**.
+Then open Plugins, choose **KUMIHAN Git Preview**, and install **KUMIHAN v0.1.6**.
 
 **skills CLI: first-time setup** (example for Codex)
 

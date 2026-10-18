@@ -55,7 +55,7 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 現在、正式版に向けて開発中です。
 
-**v0.1.5 preview は2026年10月18日に公開済みです。** [最新Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview)。ご自身の環境で導入を試すためのプレビュー版です。各ツールでの動作は、まだ十分に確認できていません。
+**v0.1.6 preview は2026年10月18日に公開済みです。** [最新Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview)。ご自身の環境で導入を試すためのプレビュー版です。各ツールでの動作は、まだ十分に確認できていません。
 
 <br>
 
@@ -83,7 +83,7 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 
 ### Status
 
-KUMIHAN is in development toward a stable release. **v0.1.5 preview was released on October 18, 2026.** [Download the release and 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview). This is a preview for trying KUMIHAN in your own environment. Behavior in each AI tool has not yet been fully verified.
+KUMIHAN is in development toward a stable release. **v0.1.6 preview was released on October 18, 2026.** [Download the release and 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview). This is a preview for trying KUMIHAN in your own environment. Behavior in each AI tool has not yet been fully verified.
 
 <br>
 

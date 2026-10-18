@@ -9,6 +9,16 @@
 
 <br>
 
+## v0.1.6 preview — 2026年10月18日公開
+
+[GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview)
+
+- **開発者・配布元の表示を統一**：日本語版KUMIHANのプラグイン／拡張設定と、Claude・ChatGPT/Codex・Gemini向け15 ZIPの公開者表記を **L&Co. LLC** に統一しました。
+- JA-TYPE-011（レイアウト優先）、4 Skills・39ルール、およびプレビュー版の検証範囲は前版を継承します。自動組版の保証はありません。
+- 既存のv0.1.5 previewタグ・配布物は履歴として残し、修正版を別タグで配布します。
+
+<br>
+
 ## v0.1.5 preview — 2026年10月18日公開
 
 [GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview)
@@ -80,6 +90,14 @@
 ---
 
 ## English
+
+### v0.1.6 preview — October 18, 2026
+
+[GitHub Release and 15 ZIP downloads](https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview)
+
+- Standardized publisher/developer metadata as **L&Co. LLC** in Japanese KUMIHAN manifests and Claude, ChatGPT/Codex, and Gemini distributions.
+- Carries forward layout-first JA-TYPE-011 guidance, four Skills and 39 rules; the preview still does not guarantee automatic typography or broad host compatibility.
+- The v0.1.5 preview tag and its original release assets remain unchanged.
 
 ### v0.1.5 preview — October 18, 2026
 

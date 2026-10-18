@@ -1,6 +1,6 @@
 {
   "interface": {
-    "displayName": "KUMIHAN Private Install Preview",
+    "displayName": "KUMIHAN v0.1.6",
     "shortDescription": "Japanese guidance preview",
     "longDescription": "KUMIHAN provides four bundled guidance skills for people creating and reviewing Japanese web pages, documents, reports, presentations, and display copy. Select a medium and scope with kumihan; use kumihan-web for web work, kumihan-documents for reports and slides, and kumihan-review for a read-only review.\n\nEach skill includes local guidance rules, six medium profiles, references, schemas, an inventory, and an Apache-2.0 license. The workflows guide Japanese line breaking, punctuation, mixed Japanese and Latin text, information hierarchy, preservation of supplied wording and data, and evidence-based review. They distinguish study, authorized build or refine work, and read-only audit.\n\nThese are guidance workflows used with the tools available in the host. They are not automatic detectors or a rendering service. Findings distinguish static checks from observed rendering and manual judgment; unavailable checks stay explicit. Actual discovery and invocation in ChatGPT Chat/Work and Codex, native Office compatibility, and behavioral acceptance have not been verified.",
     "developerName": "L&Co. LLC",
@@ -16,7 +16,7 @@
     "capabilities": []
   },
   "name": "kumihan-private-install-preview",
-  "version": "0.1.5-preview",
+  "version": "0.1.6-preview",
   "description": "Guidance for creating and reviewing Japanese web pages, documents, presentations, and display copy.",
   "author": {
     "name": "L&Co. LLC"

@@ -63,7 +63,7 @@ class RuleContractTests(unittest.TestCase):
         self.assertEqual(len(folders), 3)
         for folder in folders:
             manifest = json.loads((folder / 'MANIFEST.json').read_bytes())
-            self.assertEqual(manifest['version'], '0.1.5-preview')
+            self.assertEqual(manifest['version'], json.loads((ROOT / 'plugin.json').read_text(encoding='utf-8'))['version'])
             self.assertEqual(len(manifest['archives']), 5)
             for entry in manifest['archives']:
                 path = folder / entry['file']
