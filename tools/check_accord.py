@@ -8,7 +8,7 @@ from zipfile import ZipFile
 
 def check(out):
     manifest=json.loads((out/"MANIFEST.json").read_text(encoding="utf-8"))
-    assert manifest["product"]=="KUMIHAN｜Accord" and manifest["version"]=="0.1.0"
+    assert manifest["product"]=="KUMIHAN｜Accord" and manifest["version"]=="0.1.1"
     entries=manifest["packages"]
     assert len(entries)==15 and len({a["name"] for a in entries})==15
     lines=(out/"SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
@@ -16,7 +16,7 @@ def check(out):
     assert {line.split("  ",1)[1]:line.split("  ",1)[0] for line in lines}=={a["name"]:a["sha256"] for a in entries}
     for item in entries:
         name=item["name"]
-        assert name.endswith("-v0.1.0.zip")
+        assert name.endswith("-v0.1.1.zip")
         assert hashlib.sha256((out/name).read_bytes()).hexdigest()==item["sha256"]
         with ZipFile(out/name) as arc:
             assert arc.testzip() is None
@@ -33,7 +33,7 @@ def check(out):
                 want="plugin.json" if "chatgpt-codex" in name else ".claude-plugin/plugin.json" if "claude-code" in name else "gemini-extension.json"
                 assert "kumihan-accord/"+want in paths
                 m=json.loads(arc.read("kumihan-accord/"+want))
-                assert m["name"]=="kumihan-accord" and m["version"]=="0.1.0" and " | " in m["description"]
+                assert m["name"]=="kumihan-accord" and m["version"]=="0.1.1" and " | " in m["description"]
                 if "chatgpt-codex" in name:
                     assert m["extensions"]["com.openai"]["interface"]["displayName"]=="KUMIHAN｜Accord"
     print("PASS: 15 valid packages, ES+EN descriptions, metadata and SHA256")

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Accord v0.1.0: non-destructive French typography candidates, not a renderer."""
+"""Accord v0.1.1: non-destructive French typography candidates, not a renderer."""
 import argparse
 import hashlib
 import json
@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 STYLES = {
   "fr-fr-editorial": {"!":"\u202f","?":"\u202f",";":"\u202f",":":"\u00a0","quotes":"\u202f"},
   "fr-ca-oqlf": {"!":None,"?":None,";":None,":":"\u00a0","quotes":"\u00a0"},
