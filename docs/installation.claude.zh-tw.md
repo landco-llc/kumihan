@@ -101,7 +101,7 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 
 若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt)。
 
-將檔案放在與下載目錄相同的結構（`plugins/` 和 `skills/`），並在 macOS 的終端機執行：
+將檔案放在與下載目錄相同的結構（`plugins/` 和 `skills/`），並在終端機執行以下命令。若無 `shasum`，可使用 Windows PowerShell 的 `Get-FileHash` 等工具檢查 SHA-256：
 
 ```sh
 cd "downloads Claude"

@@ -123,7 +123,7 @@ GitHubから直接導入したい場合や、Codexのマーケットプレイス
 
 ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](../downloads%20GPT-Codex/SHA256SUMS.txt) を使います。
 
-ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行します。
+ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 
 ```sh
 cd "downloads GPT-Codex"

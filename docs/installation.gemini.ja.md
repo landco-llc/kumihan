@@ -109,7 +109,7 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 
 ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](../downloads%20Gemini/SHA256SUMS.txt) を使います。
 
-ダウンロードページと同じフォルダー構成（`extensions/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行します。
+ダウンロードページと同じフォルダー構成（`extensions/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 
 ```sh
 cd "downloads Gemini"

@@ -101,7 +101,7 @@ claude.aiやClaudeアプリで使う方法です。
 
 ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt) を使います。
 
-ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行します。
+ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 
 ```sh
 cd "downloads Claude"
