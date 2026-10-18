@@ -5,3 +5,5 @@ Guía de tipografía francesa para web, documentos y presentaciones; conserva el
 French typography guidance for web, documents and presentations; preserves original text and supports read-only reviews.
 
 Four standalone skills in skills/. Activate the matching skill. Select locale and editorial house style explicitly, preserve source, use audit read-only and mark unverified host or rendered behavior not-checked.
+
+The approved KUMIHAN image is included at `assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png`. Gemini CLI's documented extension manifest does not expose an icon display field; do not assert it appears in the CLI UI.

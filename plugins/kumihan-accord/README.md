@@ -1,6 +1,6 @@
 # KUMIHAN｜Accord
 
-Version 0.1.0 · Open source · Apache-2.0 · L&Co. LLC
+Version 0.1.1 · Open source · Apache-2.0 · L&Co. LLC
 
 ## Español
 
@@ -19,10 +19,15 @@ French typography guidance for web, documents and presentations; preserves origi
 
 ## Distribution / Distribución
 
-[GitHub Release v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.0) · 15 ZIP files · SHA256SUMS.txt · MANIFEST.json
+[GitHub Release v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) · 15 ZIP files · SHA256SUMS.txt · MANIFEST.json
 
 The public display name is KUMIHAN｜Accord; versions occur only in ZIP filenames and technical manifests. Machine identifier kumihan-accord is ASCII for Claude and Gemini compatibility. The package is free. Each skill includes its full independent rules and references.
 
 [Installation / Instalación](INSTALL.md) · [Rules](rules/catalog.json) · [Sources](sources.json) · [Review limitations](LIGHT_REVIEW.md).
 
 GitHub releases do not imply ChatGPT, Claude or Gemini official directory approval. Native host and rendering tests need real execution.
+
+
+## 0.1.1 icon correction / Corrección de iconos
+
+Official KUMIHAN artwork is bundled in the plugin and every standalone skill. ChatGPT/Codex manifests now reference `logo` and `composerIcon`; skill UI metadata lives in `agents/openai.yaml`. Claude includes an icon path, subject to its host UI support. Gemini CLI includes the image but does not document an icon-display field. Update to v0.1.1; v0.1.0 files remain unchanged.
