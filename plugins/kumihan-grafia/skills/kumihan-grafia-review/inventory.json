@@ -1,0 +1,142 @@
+{
+  "skill": "kumihan-grafia-review",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1921,
+      "sha256": "1e2bb062b329e476eaa528392a2349c507ca195600893c219169183813bce8dc"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 442,
+      "sha256": "da7bc73ea927699466fac98ca66595bae14ae97630e4d55717d0e2399792ed25"
+    },
+    {
+      "path": "fixtures/acceptance-ledger.json",
+      "bytes": 15018,
+      "sha256": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1"
+    },
+    {
+      "path": "locales/es-419.json",
+      "bytes": 329,
+      "sha256": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458"
+    },
+    {
+      "path": "locales/es-AR.json",
+      "bytes": 327,
+      "sha256": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc"
+    },
+    {
+      "path": "locales/es-CL.json",
+      "bytes": 327,
+      "sha256": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46"
+    },
+    {
+      "path": "locales/es-CO.json",
+      "bytes": 327,
+      "sha256": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e"
+    },
+    {
+      "path": "locales/es-ES.json",
+      "bytes": 327,
+      "sha256": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3"
+    },
+    {
+      "path": "locales/es-MX.json",
+      "bytes": 327,
+      "sha256": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258"
+    },
+    {
+      "path": "locales/es-PE.json",
+      "bytes": 327,
+      "sha256": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf"
+    },
+    {
+      "path": "locales/es.json",
+      "bytes": 324,
+      "sha256": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e"
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 906,
+      "sha256": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 906,
+      "sha256": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 909,
+      "sha256": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 907,
+      "sha256": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 907,
+      "sha256": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 900,
+      "sha256": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04"
+    },
+    {
+      "path": "references/coverage.md",
+      "bytes": 700,
+      "sha256": "a5488bedd63a32c64a2442e8ee7f83f4f023d971fbdacd979918ab8e65b62a98"
+    },
+    {
+      "path": "references/documents.md",
+      "bytes": 890,
+      "sha256": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 1143,
+      "sha256": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65"
+    },
+    {
+      "path": "references/web.md",
+      "bytes": 1171,
+      "sha256": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d"
+    },
+    {
+      "path": "references/workflow.md",
+      "bytes": 1190,
+      "sha256": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 43480,
+      "sha256": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc"
+    },
+    {
+      "path": "runtime/checks.py",
+      "bytes": 2653,
+      "sha256": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 1599,
+      "sha256": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 14109,
+      "sha256": "1cfc82df0ba706e993c01b20567ce19d8dfc8833e4a6d78ce0160c7b1f0db4f0"
+    }
+  ],
+  "self_digest": "Inventory excludes itself; archive digest covers all bytes."
+}
