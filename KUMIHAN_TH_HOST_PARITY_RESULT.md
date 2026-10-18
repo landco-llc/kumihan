@@ -1,7 +1,7 @@
 # KUMIHAN｜ดุลอักษร — host parity correction result
 
 Document: KUMI-TH-HOST-PARITY-CORRECTION-20261018-R2 · 2026-10-18 JST
-Status: IMPLEMENTED SOURCE CANDIDATE / DRAFT PR preparation. **NOT Release READY; NOT PUBLISHED.**
+Status: IMPLEMENTED SOURCE CANDIDATE / DRAFT PR #48. **NOT Release READY; NOT PUBLISHED.**
 
 ## Source identity and scope
 
@@ -9,7 +9,8 @@ Status: IMPLEMENTED SOURCE CANDIDATE / DRAFT PR preparation. **NOT Release READY
 - Implementation: `e030f42193bb51def6bc587b3b632f3f2d6b6a34`.
 - Verified code candidate before this receipt: `ae9f81586e611813e7476ae36bce0f322297514c`. Receipt/evidence-only commits and browser locale configuration follow; the final PR HEAD is recorded in the PR description.
 - Branch: `feat/kumihan-th-host-parity-20261018`; isolated worktree; one writer.
-- PR: pending creation; merge candidate: not merged. No merge or release authorization inferred.
+- PR: https://github.com/landco-llc/kumihan/pull/48 (`isDraft=true`). No merge or release authorization inferred.
+- Receipt/evidence snapshot HEAD: `21d514d680a85c649c63b5e4e038f56578dcef7b`; GitHub potential merge commit at that HEAD: `6dae6ee3e23788b615dd1521d2cc9419f793b9ac` (ephemeral preview, not an actual merge). This final receipt update follows; exact final HEAD/merge-preview and CI are recorded in the PR description.
 - PR #42 remains merged at `51a31418fadcd3713875b1805cb15dbc332b2600`.
 - Existing `kumihan-th-v0.1.0` tag still points to that older SHA. Never moved, deleted or recreated.
 - Existing Release ID `416435873`: `draft=true`, `assets=[]`, `published_at=null` at fresh read.
@@ -54,7 +55,7 @@ All metadata versions remain 0.1.0 **only as an unapproved source candidate**, w
 ## Browser evidence and limits
 
 Initial Chromium matrix: 84/96 passed, 12 enlarged Claude/Gemini installation cases overflowed. Root cause: long literal command paths in ordinary paragraphs with normal wrapping. Added `.guide p{{overflow-wrap:anywhere}}`; DOM text unchanged, no clipping hacks.
-Second Chromium run: 96/96 passed across 12 pages × 320/375/768/1280px × 100/200% CSS text enlargement. Explicit th-TH browser locale final run: pending receipt update. This is CSS text enlargement, not browser-native text zoom or WCAG certification. Existing static keyboard/language anchor checks passed; inherited interactive keyboard/clipboard claims were not rerun and are not promoted. Mobile Thai screenshot and enlarged English Claude guide visually inspected; no missing glyphs or clipped marks observed in that bounded scope. CDP confirms Noto Sans Thai Bold on inspected Thai h1, with fallback fonts for Latin/fullwidth bar; no universal font prescription. Browser report includes actual fonts; no fonts redistributed.
+Second Chromium run: 96/96 passed across 12 pages × 320/375/768/1280px × 100/200% CSS text enlargement. Final explicit th-TH browser locale run: **96/96 passed**, with navigator.language=th-TH recorded for every case in browser-final.json. This is CSS text enlargement, not browser-native text zoom or WCAG certification. Existing static keyboard/language anchor checks passed; inherited interactive keyboard/clipboard claims were not rerun and are not promoted. Mobile Thai screenshot and enlarged English Claude guide visually inspected; no missing glyphs or clipped marks observed in that bounded scope. CDP confirms Noto Sans Thai Bold on inspected Thai h1, with fallback fonts for Latin/fullwidth bar; no universal font prescription. Browser report includes actual fonts; no fonts redistributed.
 
 32 rule statuses remain 4 bounded implemented / 23 assisted / 5 guidance-only. Forty fixture proposals remain 5 bounded static subchecks passed / 35 not-checked, not forty full acceptances. Native Thai editorial review: needs-review. Native Office/PDF and vertical Thai: not-checked.
 
@@ -98,6 +99,6 @@ Existing Pages URLs were fetched from one managed executor; status per URL below
 
 Alternative: explicit Owner approval for a controlled unpublished-v0.1.0 retag, recording old SHA `51a31418fadcd3713875b1805cb15dbc332b2600`, exact new approved SHA, rollback to old SHA and draft state, and fresh complete artifact checks. No such approval was supplied here.
 
-Observed provider permissions: GitHub reads and feature-branch push succeeded; Draft PR creation result is recorded below. Upload/publication permissions were not exercised. No API upload or publish attempted, so no upload 403 is claimed. If a later authorized upload returns 403, preserve Draft/assets and stop that operation without credential bypass.
+Observed provider permissions: GitHub reads and feature-branch push succeeded; Draft PR #48 creation succeeded. CI state for the exact final HEAD is recorded in the PR description; it was still running at this receipt snapshot. Upload/publication permissions were not exercised. No API upload or publish attempted, so no upload 403 is claimed. If a later authorized upload returns 403, preserve Draft/assets and stop that operation without credential bypass.
 
 At the gate, obtain Owner selection between v0.1.1 and controlled v0.1.0 retag; then approve the exact resulting source/label. No release-ready or publication statement is warranted by merge/CI/Pages alone.
