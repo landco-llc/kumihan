@@ -4,6 +4,11 @@ on:
     paths:
       - 'plugins/kumihan-ziheng/**'
       - 'tests/ziheng/**'
+      - 'kumihan-zh-han*.html'
+      - 'docs/install-ziheng*.html'
+      - 'docs/ziheng-routing.md'
+      - 'assets/ziheng-site.css'
+      - '_layouts/landing.html'
       - 'tools/build_ziheng.py'
       - 'tools/locale_resolver.py'
       - 'skills/kumihan/**'
