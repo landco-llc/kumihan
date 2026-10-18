@@ -1,0 +1,650 @@
+{
+  "product": "KUMIHAN｜字律",
+  "version": "0.1.0",
+  "environment": "Python stdlib offline helper; no renderer",
+  "full_case_pass": 3,
+  "full_case_not_run": 41,
+  "preservation_subchecks_pass": 44,
+  "cases": [
+    {
+      "case_id": "KH-CN-T001",
+      "rule_ids": [
+        "KH-CN-R001",
+        "KH-CN-R002",
+        "KH-CN-R006",
+        "KH-CN-R024"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "c6589199f4e996c6ae2cc4531e43ff36fa0fa617151b26f6665bb30f9a52d2ef"
+    },
+    {
+      "case_id": "KH-CN-T002",
+      "rule_ids": [
+        "KH-CN-R001",
+        "KH-CN-R002",
+        "KH-CN-R018",
+        "KH-CN-R034"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "b7069a7189439eb52c129920a156ed7eb6bcc9459dfd9cac261466d6fbe5ba0e"
+    },
+    {
+      "case_id": "KH-CN-T003",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R004",
+        "KH-CN-R009",
+        "KH-CN-R016"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "faa32f7730517bbdba11e12aada111bdca2103c5b86d02869e1d94abc9f84722"
+    },
+    {
+      "case_id": "KH-CN-T004",
+      "rule_ids": [
+        "KH-CN-R003",
+        "KH-CN-R019",
+        "KH-CN-R036"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "554f2ab2c510d1ae9efcc122f1cfa51b03f2fe098a66a4eb90ee75319ee5c8e0"
+    },
+    {
+      "case_id": "KH-CN-T005",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R004"
+      ],
+      "status": "pass",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance.",
+        "Codepoint sequence and original compatibility characters retained; no derived key or normalization exists."
+      ],
+      "remaining_issue": null,
+      "source_sha256": "0a7172f3cb481d5ef0680a4bedb2d2b83fc4c228c30934bdd50ebe595abb85e8"
+    },
+    {
+      "case_id": "KH-CN-T006",
+      "rule_ids": [
+        "KH-CN-R005",
+        "KH-CN-R027"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "b8b0b2b1287200c9414385488b35bccff281312d1d76b7925a9826f2956c3111"
+    },
+    {
+      "case_id": "KH-CN-T007",
+      "rule_ids": [
+        "KH-CN-R006",
+        "KH-CN-R007"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "448c9d5283e828968cca489a65c73082781b689ec1dd6ad2a04b9e9752f8e081"
+    },
+    {
+      "case_id": "KH-CN-T008",
+      "rule_ids": [
+        "KH-CN-R003",
+        "KH-CN-R007",
+        "KH-CN-R035"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "b2c139c6990b5b03ba2afc9a158308a775cebc802874ac0bb3424c12d59be323"
+    },
+    {
+      "case_id": "KH-CN-T009",
+      "rule_ids": [
+        "KH-CN-R008",
+        "KH-CN-R028",
+        "KH-CN-R034"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "13adb6d83c18a3b56f431ad6a915a97e269416e961e300acb8f783956908870b"
+    },
+    {
+      "case_id": "KH-CN-T010",
+      "rule_ids": [
+        "KH-CN-R009",
+        "KH-CN-R016",
+        "KH-CN-R023"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "a635c3993e5383f2ddef33996ba3593d3de79ece80f2fe72d9c607071a3f37d0"
+    },
+    {
+      "case_id": "KH-CN-T011",
+      "rule_ids": [
+        "KH-CN-R010",
+        "KH-CN-R012"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "257a974d56ce8f906ff0ec0ff289843fba095135d901081b4c87ddb346fee525"
+    },
+    {
+      "case_id": "KH-CN-T012",
+      "rule_ids": [
+        "KH-CN-R010"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "63cf44e1ace2e9369b8875b6fbaa117f72dab0a554e3668017665bdb3cf1fcfd"
+    },
+    {
+      "case_id": "KH-CN-T013",
+      "rule_ids": [
+        "KH-CN-R011",
+        "KH-CN-R002"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "72491b0d0fc7f092be5683437e1295193a196d74f1c67edc34a62e8b7d458d62"
+    },
+    {
+      "case_id": "KH-CN-T014",
+      "rule_ids": [
+        "KH-CN-R012"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "0f68426670bc332f61eea061799f07032bb27467cccb90e2fd01f871d056db3b"
+    },
+    {
+      "case_id": "KH-CN-T015",
+      "rule_ids": [
+        "KH-CN-R010",
+        "KH-CN-R012",
+        "KH-CN-R014"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "2cd79e75d0837bf1b0aff261aab77a2ba29a648bd16787293dd3b29fc399c326"
+    },
+    {
+      "case_id": "KH-CN-T016",
+      "rule_ids": [
+        "KH-CN-R013"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "16ca2af1f65fca071d949a6efd5b708c085b52e237c33d4698386ce0fc8e10d3"
+    },
+    {
+      "case_id": "KH-CN-T017",
+      "rule_ids": [
+        "KH-CN-R013",
+        "KH-CN-R021",
+        "KH-CN-R036"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "6845be2c78deeabd129ea46d9c4dd1ab0cab6dec592757b436711f893e4fbf42"
+    },
+    {
+      "case_id": "KH-CN-T018",
+      "rule_ids": [
+        "KH-CN-R009",
+        "KH-CN-R015",
+        "KH-CN-R024"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "a326484a57fde86da48a1b60eafb78f6444a4575d4546b813849047ab476981f"
+    },
+    {
+      "case_id": "KH-CN-T019",
+      "rule_ids": [
+        "KH-CN-R001",
+        "KH-CN-R015"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "61bbb4002f91f1e8b71bcd74843c8e770d7dbd0d59affdc069722de3deda9402"
+    },
+    {
+      "case_id": "KH-CN-T020",
+      "rule_ids": [
+        "KH-CN-R016",
+        "KH-CN-R018"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "2e1ea134959ec7d74a570aa27e86a33d907253b18313678d81e64397f8bcb90f"
+    },
+    {
+      "case_id": "KH-CN-T021",
+      "rule_ids": [
+        "KH-CN-R018",
+        "KH-CN-R020"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "eafc2e6280da026219617da3ac662246ae6c4890be644d7f6539d7709ce647db"
+    },
+    {
+      "case_id": "KH-CN-T022",
+      "rule_ids": [
+        "KH-CN-R017"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "5a26df1b3a8f12ecb15fe84d2ae424f829afa14de2b7e3f3c5e2b583947468ee"
+    },
+    {
+      "case_id": "KH-CN-T023",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R009",
+        "KH-CN-R019"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "822537539248a63dca2eb2ae62e77dc97954f83b4a02f0a4f6fc7e4c016e402d"
+    },
+    {
+      "case_id": "KH-CN-T024",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R019"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "c87d201d7957c37c175f9ce61420bda353cb4aebfb2a80119d5c58e02d88bb14"
+    },
+    {
+      "case_id": "KH-CN-T025",
+      "rule_ids": [
+        "KH-CN-R020",
+        "KH-CN-R021"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "3518ee716896505f3c941b3d8d70523deebf62df36f24097350cbc56b5952d34"
+    },
+    {
+      "case_id": "KH-CN-T026",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R018",
+        "KH-CN-R020"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "4cab4b4557f682187d2b7a19ad78d465f486b234201af386893ab595ac6d56b8"
+    },
+    {
+      "case_id": "KH-CN-T027",
+      "rule_ids": [
+        "KH-CN-R018",
+        "KH-CN-R021"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "78ef584a3373faecf0ec481ba186cee576553c39e7d6226fa8d409b85d6d810a"
+    },
+    {
+      "case_id": "KH-CN-T028",
+      "rule_ids": [
+        "KH-CN-R012",
+        "KH-CN-R014",
+        "KH-CN-R021",
+        "KH-CN-R035"
+      ],
+      "status": "pass",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance.",
+        "CSS-only input leaves all rendered rules not-checked, requests target evidence."
+      ],
+      "remaining_issue": null,
+      "source_sha256": "2c27ae78ef9da999e59018eb4105a58575c380b437d78f391a499e703c94e5a7"
+    },
+    {
+      "case_id": "KH-CN-T029",
+      "rule_ids": [
+        "KH-CN-R001",
+        "KH-CN-R022"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "fa108599dfb3fcd885112da425831eedf50606cae00a386ae6c45104e4174c3f"
+    },
+    {
+      "case_id": "KH-CN-T030",
+      "rule_ids": [
+        "KH-CN-R022",
+        "KH-CN-R002"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "57323e18ca3fbea0ac7a9fe21ca0dc6e17a4c2c5c8707207231dae82db92b30d"
+    },
+    {
+      "case_id": "KH-CN-T031",
+      "rule_ids": [
+        "KH-CN-R002",
+        "KH-CN-R023"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "1b9af6c35fbc35d0c529dc338a7141a45fdc4f0549bb6bc5085fc80048e6274b"
+    },
+    {
+      "case_id": "KH-CN-T032",
+      "rule_ids": [
+        "KH-CN-R001",
+        "KH-CN-R024",
+        "KH-CN-R034"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "d4e6bec64f1e05f87792aaa3781d8477dff58d2eaad839d4a6c25cbfbeb6508f"
+    },
+    {
+      "case_id": "KH-CN-T033",
+      "rule_ids": [
+        "KH-CN-R025",
+        "KH-CN-R002"
+      ],
+      "status": "pass",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance.",
+        "Contextual legal/editorial review candidate returned without legality claim or source edit."
+      ],
+      "remaining_issue": null,
+      "source_sha256": "6dd0282ee503a2b0cdb3df0e64e752b84f0006460a94c34dd0f51a0ae94e51d6"
+    },
+    {
+      "case_id": "KH-CN-T034",
+      "rule_ids": [
+        "KH-CN-R026",
+        "KH-CN-R013",
+        "KH-CN-R018"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "5377d76212b5de8d3e2b8297d93e541569b06ed2c1c19c4d29acca13b3f42053"
+    },
+    {
+      "case_id": "KH-CN-T035",
+      "rule_ids": [
+        "KH-CN-R027",
+        "KH-CN-R005",
+        "KH-CN-R002"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "c67da01f24bde7532a4d585d3f21ceb41c2fd230da1d81e383fe11ed3b2509e3"
+    },
+    {
+      "case_id": "KH-CN-T036",
+      "rule_ids": [
+        "KH-CN-R028",
+        "KH-CN-R007",
+        "KH-CN-R008",
+        "KH-CN-R035"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "5e5805c92e01441df46737b88d3bc8b6ddd87c758d56ce4484399eb4f42fe71b"
+    },
+    {
+      "case_id": "KH-CN-T037",
+      "rule_ids": [
+        "KH-CN-R029"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "f68961330d83d2ac2e6c49ff78e3f73e0c2b355a51b417a7216d074b38cd102b"
+    },
+    {
+      "case_id": "KH-CN-T038",
+      "rule_ids": [
+        "KH-CN-R029",
+        "KH-CN-R012",
+        "KH-CN-R018"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "fb1c5882597e0ebd99aaf0b144f646324e9b01f8ed28a5617084dbbc106326f0"
+    },
+    {
+      "case_id": "KH-CN-T039",
+      "rule_ids": [
+        "KH-CN-R030",
+        "KH-CN-R034"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "b6b879a62d8e0b89721141d47bde069104494707a394b482fec513a92f27979a"
+    },
+    {
+      "case_id": "KH-CN-T040",
+      "rule_ids": [
+        "KH-CN-R031",
+        "KH-CN-R035"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "3fa641912e892f1ae42046a2fde73f52610edd2378918f7b2d98f74a4bd78b3e"
+    },
+    {
+      "case_id": "KH-CN-T041",
+      "rule_ids": [
+        "KH-CN-R032",
+        "KH-CN-R028"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "a1fe6c01467bcae0f7555cfab4b6227af331f765713791736da58bd584076372"
+    },
+    {
+      "case_id": "KH-CN-T042",
+      "rule_ids": [
+        "KH-CN-R033",
+        "KH-CN-R022",
+        "KH-CN-R035"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "98711aab50339c8304dcc8d0336b60a1956356f26e15a6c28b3ad374e0c32888"
+    },
+    {
+      "case_id": "KH-CN-T043",
+      "rule_ids": [
+        "KH-CN-R007",
+        "KH-CN-R024",
+        "KH-CN-R034",
+        "KH-CN-R036"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "61fbb62a1b58f6c1608adcdbca9d78bdeb887350674e0f560fcfae67e1ab7e54"
+    },
+    {
+      "case_id": "KH-CN-T044",
+      "rule_ids": [
+        "KH-CN-R035",
+        "KH-CN-R036"
+      ],
+      "status": "not-run",
+      "source_preservation_subcheck": "pass",
+      "evidence": [
+        "Exact source/candidate UTF-8 comparison passed; appended-space negative detected. This is a preservation subcheck, not full case acceptance."
+      ],
+      "remaining_issue": "Full scenario requires target renderer, business/editorial context, native export or manual evidence; not executed.",
+      "source_sha256": "8538da7004e362d99d75db3c20c3ead6620e9d0290f4eac5a2e5b19236117cce"
+    }
+  ]
+}

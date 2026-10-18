@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "report",
+  "type": "object",
+  "required": [
+    "mode",
+    "source_sha256",
+    "preservation",
+    "rendering",
+    "findings"
+  ],
+  "properties": {
+    "mode": {
+      "const": "audit"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "preservation": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed",
+            "not-checked"
+          ]
+        }
+      }
+    },
+    "rendering": {
+      "type": "array"
+    },
+    "findings": {
+      "type": "array"
+    }
+  }
+}
