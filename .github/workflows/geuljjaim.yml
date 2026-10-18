@@ -39,6 +39,11 @@ jobs:
       - run: python tools/build_ziheng.py --check
       - run: python tools/build_dist.py --check
       - run: python tools/check_ja_type_011_cases.py
+      - name: Validate Claude and Gemini host manifests
+        run: |
+          npm install --prefix /tmp/ko-host-tools --ignore-scripts @anthropic-ai/claude-code@2.1.302 @google/gemini-cli@0.64.0
+          CLAUDE_CONFIG_DIR=/tmp/ko-claude-validation /tmp/ko-host-tools/node_modules/@anthropic-ai/claude-code-linux-x64/claude plugin validate plugins/kumihan-geuljjaim
+          GEMINI_CLI_HOME=/tmp/ko-gemini-validation /tmp/ko-host-tools/node_modules/.bin/gemini extensions validate plugins/kumihan-geuljjaim
       - name: Build the actual Jekyll site
         run: |
           sudo apt-get update -qq

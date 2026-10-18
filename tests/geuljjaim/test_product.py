@@ -53,8 +53,8 @@ class DistributionTests(unittest.TestCase):
         import hashlib
         import zipfile
         manifest=json.loads((BASE/'downloads/MANIFEST.json').read_text())
-        self.assertEqual(len(manifest['archives']),5)
-        self.assertEqual(len({Path(a['file']).name for a in manifest['archives']}),5, 'Release assets need unique basenames')
+        self.assertEqual(len(manifest['archives']),15)
+        self.assertEqual(len({Path(a['file']).name for a in manifest['archives']}),15, 'Release assets need unique basenames')
         for item in manifest['archives']:
             p=BASE/'downloads'/item['file'];raw=p.read_bytes()
             self.assertEqual(hashlib.sha256(raw).hexdigest(),item['sha256'])
@@ -65,7 +65,7 @@ class DistributionTests(unittest.TestCase):
                 self.assertTrue(all(not n.startswith('/') and '..' not in Path(n).parts for n in names))
                 self.assertFalse(any('ziheng' in n for n in names))
                 entries=[n for n in names if n.endswith('/SKILL.md')]
-                self.assertEqual(len(entries),4 if item['file'].startswith('plugins/') else 1)
+                self.assertEqual(len(entries),4 if item['file'].startswith('plugins/') or '-bundle-' in item['file'] else 1)
                 for entry in entries:
                     root=entry[:-len('SKILL.md')]
                     for required in ['rules/catalog.json','sources/public-sources.json','scripts/checks.py','references/preservation-policy.md','profiles/web-ui.json']:
