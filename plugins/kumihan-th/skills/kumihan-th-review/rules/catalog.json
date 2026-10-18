@@ -1,0 +1,1096 @@
+[
+  {
+    "id": "TH-SOURCE-001",
+    "title": "原文と元オフセットの不変条件",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "implemented",
+    "scope": "all-content",
+    "method": "runtime/check_source.py: compare exact UTF-8 and supplied UTF-16 protected spans; inspect control positions. No linguistic judgment.",
+    "evidence": [
+      "source.text",
+      "source.protected_ranges",
+      "analysis.original_offset_map",
+      "candidate.source_text"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr15/tr15-58.html",
+      "https://www.unicode.org/reports/tr29/tr29-49.html"
+    ],
+    "fixture_ids": [
+      "TH-F001",
+      "TH-F002",
+      "TH-F006",
+      "TH-F027",
+      "TH-F028"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-ENC-001",
+    "title": "前置母音・SARA AM・記号順序の書換防止",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "implemented",
+    "scope": "modern-standard-thai",
+    "method": "runtime/check_source.py: compare exact UTF-8 and supplied UTF-16 protected spans; inspect control positions. No linguistic judgment.",
+    "evidence": [
+      "source.text",
+      "transform_proposals"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/",
+      "https://www.unicode.org/reports/tr15/tr15-58.html",
+      "https://www.unicode.org/Public/18.0.0/ucd/UnicodeData.txt"
+    ],
+    "fixture_ids": [
+      "TH-F001",
+      "TH-F002",
+      "TH-F003",
+      "TH-F005"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SEG-001",
+    "title": "EGC と UTF-16 の範囲対応",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "segmentation.engine_version",
+      "ranges.utf16",
+      "ranges.egc"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "https://www.unicode.org/Public/18.0.0/ucd/auxiliary/GraphemeBreakProperty.txt",
+      "https://tc39.es/ecma402/#sec-intl.segmenter"
+    ],
+    "fixture_ids": [
+      "TH-F004",
+      "TH-F005",
+      "TH-F006",
+      "TH-F027",
+      "TH-F029"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-LANG-001",
+    "title": "文字種と内容言語の分離",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "all-content",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.language_runs",
+      "source.text",
+      "scope.supported_languages"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/",
+      "https://www.w3.org/International/questions/qa-lang-why.en"
+    ],
+    "fixture_ids": [
+      "TH-F007",
+      "TH-F035"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-MARK-001",
+    "title": "孤立・重複に見える記号の文脈確認",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "source.role",
+      "source.composition_state",
+      "source.language_runs"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/",
+      "https://www.unicode.org/reports/tr29/tr29-49.html"
+    ],
+    "fixture_ids": [
+      "TH-F003",
+      "TH-F007",
+      "TH-F008"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-RUN-001",
+    "title": "診断用ハイライトで shaping を壊さない",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "style_runs",
+      "render.baseline",
+      "render.with_annotations"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "https://learn.microsoft.com/en-us/typography/script-development/thai"
+    ],
+    "fixture_ids": [
+      "TH-F009"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SHAPE-001",
+    "title": "母音と声調記号の実ラン描画",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "effective_font.identity",
+      "render.shaped_runs",
+      "render.image_or_bounds"
+    ],
+    "source_refs": [
+      "https://learn.microsoft.com/en-us/typography/script-development/thai",
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/"
+    ],
+    "fixture_ids": [
+      "TH-F009",
+      "TH-F010",
+      "TH-F013"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-FONT-001",
+    "title": "glyph coverage と部分 fallback",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "requested_font",
+      "effective_font.runs",
+      "font_loading_state",
+      "source.text"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/2026/WD-css-fonts-4-20261016/",
+      "https://learn.microsoft.com/en-us/typography/script-development/thai"
+    ],
+    "fixture_ids": [
+      "TH-F011"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-FONT-002",
+    "title": "ウェイト・幅・斜体と実ファイルの対応",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "requested_font.axes_and_style",
+      "font_asset_metadata",
+      "effective_font.runs"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/2026/WD-css-fonts-4-20261016/",
+      "https://learn.microsoft.com/en-us/typography/script-development/thai"
+    ],
+    "fixture_ids": [
+      "TH-F012",
+      "TH-F013"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-FONT-003",
+    "title": "用途別の書体比較と固定パレットの排除",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "guidance-only",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "contract.audience",
+      "contract.medium",
+      "contract.brand_fonts",
+      "font_comparison_evidence"
+    ],
+    "source_refs": [
+      "https://www.typotheque.com/research/effects-of-loops-in-thai",
+      "https://www.typotheque.com/articles/typeface-design-beyond-a-single-script"
+    ],
+    "fixture_ids": [
+      "TH-F014"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-BOX-001",
+    "title": "上下記号のクリップ検出",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "render.ink_bounds",
+      "render.clip_bounds",
+      "render.transforms",
+      "effective_font.identity"
+    ],
+    "source_refs": [
+      "https://learn.microsoft.com/en-us/typography/script-development/thai",
+      "https://www.w3.org/TR/2026/WD-css-fonts-4-20261016/"
+    ],
+    "fixture_ids": [
+      "TH-F010",
+      "TH-F015",
+      "TH-F034"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-BOX-002",
+    "title": "行間とタイ英の基線の実測",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "render.lines",
+      "render.shaped_runs",
+      "contract.layout_constraints"
+    ],
+    "source_refs": [
+      "https://learn.microsoft.com/en-us/typography/script-development/thai",
+      "https://www.typotheque.com/articles/typeface-design-beyond-a-single-script"
+    ],
+    "fixture_ids": [
+      "TH-F016"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SEG-002",
+    "title": "タイ語の語境界処理の利用可能性",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.language_runs",
+      "segmenter.capabilities",
+      "segmenter.version",
+      "word_candidates"
+    ],
+    "source_refs": [
+      "https://unicode-org.github.io/icu/userguide/boundaryanalysis/",
+      "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "https://tc39.es/ecma402/#sec-intl.segmenter"
+    ],
+    "fixture_ids": [
+      "TH-F004",
+      "TH-F017"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SEG-003",
+    "title": "固有名詞・複合語の候補と確定を分ける",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "guidance-only",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "word_candidates",
+      "contract.protected_terms",
+      "source.context",
+      "reviewed_boundaries"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "https://unicode-org.github.io/icu/userguide/boundaryanalysis/",
+      "https://tc39.es/ecma402/#sec-intl.segmenter"
+    ],
+    "fixture_ids": [
+      "TH-F018"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-LINE-001",
+    "title": "候補境界から実幅に基づく行配置へ",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "break_candidates",
+      "render.available_inline_size",
+      "render.effective_fonts",
+      "render.lines",
+      "contract.layout_constraints"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/"
+    ],
+    "fixture_ids": [
+      "TH-F016",
+      "TH-F017",
+      "TH-F019"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-CSS-001",
+    "title": "折返し CSS の役割と適用範囲",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "computed_css",
+      "element_role",
+      "render.width_scenarios",
+      "render.lines"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "https://www.w3.org/TR/2026/WD-css-text-4-20260814/"
+    ],
+    "fixture_ids": [
+      "TH-F020",
+      "TH-F021"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-CSS-002",
+    "title": "句推定器の能力と fallback の記録",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "phrase_engine.name_and_version",
+      "phrase_engine.language_support",
+      "phrase_candidates",
+      "computed_css",
+      "source.text"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/2026/WD-css-text-4-20260814/",
+      "https://github.com/google/budoux"
+    ],
+    "fixture_ids": [
+      "TH-F022"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SYMBOL-001",
+    "title": "ๆ の行頭孤立と先行表現",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "render.line_ranges",
+      "contract.editorial_profile"
+    ],
+    "source_refs": [
+      "https://github.com/w3c/sealreq/issues/45",
+      "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0317031",
+      "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0249069%24%400013"
+    ],
+    "fixture_ids": [
+      "TH-F023"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SYMBOL-002",
+    "title": "省略表現と行端約物を文脈付きで保持",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "render.line_ranges",
+      "source.protected_ranges"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/",
+      "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0317031"
+    ],
+    "fixture_ids": [
+      "TH-F024"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-SPACE-001",
+    "title": "空白の文脈と編集プロファイル",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "guidance-only",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "contract.editorial_profile",
+      "source.protected_ranges",
+      "typed_field_roles"
+    ],
+    "source_refs": [
+      "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0317031",
+      "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/"
+    ],
+    "fixture_ids": [
+      "TH-F025",
+      "TH-F026"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-CONTROL-001",
+    "title": "不可視文字の機能と位置を可視化",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "implemented",
+    "scope": "modern-standard-thai",
+    "method": "runtime/check_source.py: compare exact UTF-8 and supplied UTF-16 protected spans; inspect control positions. No linguistic judgment.",
+    "evidence": [
+      "source.text",
+      "analysis.original_offset_map",
+      "controls.origin"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr14/tr14-57.html"
+    ],
+    "fixture_ids": [
+      "TH-F027"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-JUST-001",
+    "title": "SARA AM を含む字間・両端揃え",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "computed_css.letter_spacing",
+      "computed_css.text_align",
+      "render.shaped_runs",
+      "source.text"
+    ],
+    "source_refs": [
+      "https://www.w3.org/International/questions/qa-indic-graphemes.en.html",
+      "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "https://learn.microsoft.com/en-us/typography/script-development/thai"
+    ],
+    "fixture_ids": [
+      "TH-F028"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-TRUNC-001",
+    "title": "省略表示と完全な原文の分離",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "truncation.display_range",
+      "render.available_inline_size",
+      "selection.copy_source"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/css-overflow-3/",
+      "https://www.unicode.org/reports/tr29/tr29-49.html"
+    ],
+    "fixture_ids": [
+      "TH-F029"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-LOCALE-001",
+    "title": "数値・通貨・識別子の分離",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "typed_fields.number_or_amount",
+      "format.locale",
+      "format.numbering_system",
+      "format.currency",
+      "source.protected_ranges"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/cldr/charts/48/summary/th.html",
+      "https://tc39.es/ecma402/#numberformat-objects"
+    ],
+    "fixture_ids": [
+      "TH-F030",
+      "TH-F031",
+      "TH-F040"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-LOCALE-002",
+    "title": "暦・時区・元日付の分離",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "typed_fields.date_or_instant",
+      "format.calendar",
+      "format.time_zone",
+      "format.locale",
+      "format.numbering_system"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr35/tr35-dates.html",
+      "https://www.unicode.org/cldr/charts/48/summary/th.html",
+      "https://tc39.es/ecma402/#datetimeformat-objects"
+    ],
+    "fixture_ids": [
+      "TH-F032",
+      "TH-F033"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-RESILIENCE-001",
+    "title": "拡大・狭幅・fallback 後の情報保持",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "render.scenarios",
+      "element_role",
+      "accessibility.applicable_criteria",
+      "font_loading_state"
+    ],
+    "source_refs": [
+      "https://www.w3.org/TR/WCAG22/",
+      "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "https://www.w3.org/TR/2026/WD-css-fonts-4-20261016/"
+    ],
+    "fixture_ids": [
+      "TH-F011",
+      "TH-F021",
+      "TH-F034"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-VERTICAL-001",
+    "title": "縦組みの sideways Thai run",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "guidance-only",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "computed_css.writing_mode",
+      "computed_css.text_orientation",
+      "host.vertical_capabilities",
+      "render.shaped_runs"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/Public/18.0.0/ucd/VerticalOrientation.txt",
+      "https://www.w3.org/TR/2019/CR-css-writing-modes-4-20190730/"
+    ],
+    "fixture_ids": [
+      "TH-F035"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-COPY-001",
+    "title": "丁寧粒子・代名詞を自動補完しない",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "guidance-only",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "contract.voice",
+      "source.speaker_role",
+      "source.protected_ranges"
+    ],
+    "source_refs": [
+      "https://www.arts.chula.ac.th/thai/thaiarchives/index.php/2022/07/27/1832/",
+      "https://www.kasikornbank.com/th/personal",
+      "https://www.scb.co.th/th/personal-banking.html"
+    ],
+    "fixture_ids": [
+      "TH-F036",
+      "TH-F037"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-COPY-002",
+    "title": "CTA と成功・待機・失敗の契約照合",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "contract.action_intent",
+      "contract.action_transition",
+      "contract.message_state",
+      "contract.approved_templates"
+    ],
+    "source_refs": [
+      "https://www.kasikornbank.com/th/personal",
+      "https://panpuri.com/th/"
+    ],
+    "fixture_ids": [
+      "TH-F036",
+      "TH-F038",
+      "TH-F039"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-BRAND-001",
+    "title": "固有名詞・引用・意図した口語の保護",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "implemented",
+    "scope": "modern-standard-thai",
+    "method": "runtime/check_source.py: compare exact UTF-8 and supplied UTF-16 protected spans; inspect control positions. No linguistic judgment.",
+    "evidence": [
+      "source.text",
+      "source.protected_ranges",
+      "contract.protected_terms",
+      "candidate.source_text"
+    ],
+    "source_refs": [
+      "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "https://www.arts.chula.ac.th/thai/thaiarchives/index.php/2022/07/27/1832/"
+    ],
+    "fixture_ids": [
+      "TH-F018",
+      "TH-F024",
+      "TH-F026",
+      "TH-F031",
+      "TH-F037"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-COPY-003",
+    "title": "価格主張の条件・注記との結び付き",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "source.text",
+      "contract.claim_qualifiers",
+      "render.qualifier_links",
+      "typed_fields.amounts"
+    ],
+    "source_refs": [
+      "https://lmwn.com/lineman/"
+    ],
+    "fixture_ids": [
+      "TH-F040"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  },
+  {
+    "id": "TH-FONT-004",
+    "title": "実ファイルとライセンス記録の対応",
+    "locales": [
+      "th-TH"
+    ],
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "coverage": "assisted",
+    "scope": "modern-standard-thai",
+    "method": "Host evidence plus human review; no bundled detector. See references/review.md.",
+    "evidence": [
+      "font_asset.identity_and_hash",
+      "font_asset.license_text",
+      "contract.font_operations"
+    ],
+    "source_refs": [
+      "https://openfontlicense.org/open-font-license-official-text/"
+    ],
+    "fixture_ids": [
+      "TH-F011"
+    ],
+    "limitations": "Implemented integrity scope only; no orthographic correctness, visual rendering or semantic PASS inferred.",
+    "autofix": false
+  }
+]

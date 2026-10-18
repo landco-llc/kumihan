@@ -1,0 +1,903 @@
+{
+  "provenance": "Research register supplied 2026-10-18; URLs are references, not claims of fresh verification. Research does not authorize changes. No images/fonts redistributed.",
+  "entries": [
+    {
+      "id": "T01",
+      "title": "W3C — Thai Script Resources",
+      "url": "https://www.w3.org/TR/2026/DNOTE-thai-lreq-20260320/",
+      "status": "2026-03-20 Group Note Draft",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": "旧称Thai Layout Requirementsとの区別。勧告ではない。"
+    },
+    {
+      "id": "T02",
+      "title": "Unicode 18.0 — Chapter 16, Thai",
+      "url": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-16/",
+      "status": "Unicode 18.0.0",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T03",
+      "title": "UAX #14 — Unicode Line Breaking Algorithm",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "status": "18.0.0 / rev.57 / 2026-09-01",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T04",
+      "title": "UAX #29 — Unicode Text Segmentation",
+      "url": "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "status": "18.0.0 / rev.49 / 2026-09-01",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T05",
+      "title": "UAX #15 — Unicode Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/tr15-58.html",
+      "status": "18.0.0 / rev.58 / 2026-08-12",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T06",
+      "title": "Microsoft — Developing OpenType Fonts for Thai Script",
+      "url": "https://learn.microsoft.com/en-us/typography/script-development/thai",
+      "status": "2022-06-16 / 公式開発資料",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": "Uniscribe等の説明を全ホストの現行挙動へ一般化しない。"
+    },
+    {
+      "id": "T07",
+      "title": "タイ王立学士院事務局 — 空白の使い方",
+      "url": "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0317031",
+      "status": "2020-05-18 / 公的編集指針",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": "第6版の指針を掲載。Unicode規格や法的義務ではない。"
+    },
+    {
+      "id": "T08",
+      "title": "ICU User Guide — Boundary Analysis",
+      "url": "https://unicode-org.github.io/icu/userguide/boundaryanalysis/",
+      "status": "公式開発資料 / 継続更新",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T09",
+      "title": "Unicode CLDR — Locale Data Summary for Thai",
+      "url": "https://www.unicode.org/cldr/charts/48/summary/th.html",
+      "status": "CLDR 48",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T10",
+      "title": "W3C sealreq — Repetition mark at line start, issue #45",
+      "url": "https://github.com/w3c/sealreq/issues/45",
+      "status": "課題記録 / 全現行ホストの再現証明ではない",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T11",
+      "title": "タイ王立学士院事務局 — Maiyamokの使い方",
+      "url": "https://www.orst.go.th/iwfm_list.asp?i=0040002104011001/63ERK0249069%24%400013",
+      "status": "公的編集指針",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "T12",
+      "title": "W3C — Thai Gap Analysis",
+      "url": "https://www.w3.org/TR/2025/DNOTE-thai-gap-20250601/",
+      "status": "2025-06-01 Group Draft Note",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": "補助資料。問題報告と現行の実測を分ける。"
+    },
+    {
+      "id": "T13",
+      "title": "UTS #35 — Unicode Locale Data Markup Language: Dates",
+      "url": "https://www.unicode.org/reports/tr35/tr35-dates.html",
+      "status": "調査時48.2 / 継続更新",
+      "group": "文字体系・規格",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "M01",
+      "title": "Adobe InDesign — World-Ready Composer overview",
+      "url": "https://helpx.adobe.com/indesign/desktop/language-and-proofing/language-settings/adobe-world-ready-composer-overview.html",
+      "status": "2026-08-18更新 / 公式資料",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "M02",
+      "title": "Adobe Illustrator — Asian scripts",
+      "url": "https://helpx.adobe.com/sg/illustrator/using/asian-scripts.html",
+      "status": "公式資料 / タイ語等のComposer",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "M03",
+      "title": "Microsoft — Benefits of embedding custom fonts",
+      "url": "https://support.microsoft.com/en-us/office/fonts/benefits-of-embedding-custom-fonts",
+      "status": "公式サポート資料",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "M04",
+      "title": "Microsoft PowerPoint — Alignment, indentation and spacing",
+      "url": "https://support.microsoft.com/en-gb/powerpoint/change-text-alignment-indentation-and-spacing-in-powerpoint",
+      "status": "公式サポート資料 / AutoFit",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "W01",
+      "title": "W3C — CSS Text Module Level 3",
+      "url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "status": "2026-08-14 Candidate Recommendation Draft",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "W02",
+      "title": "W3C — CSS Text Module Level 4",
+      "url": "https://www.w3.org/TR/2026/WD-css-text-4-20260814/",
+      "status": "2026-08-14 Working Draft",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "W03",
+      "title": "W3C — Web Content Accessibility Guidelines 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "status": "W3C Recommendation / 1.4.4・1.4.10・1.4.12",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "W04",
+      "title": "ECMA-402 — ECMAScript Internationalization API",
+      "url": "https://tc39.es/ecma402/",
+      "status": "Living draft / 調査時の表題2027",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": "Intl.Segmenter、DateTimeFormat、NumberFormat。表題年を確定済み標準の年と扱わない。"
+    },
+    {
+      "id": "W05",
+      "title": "Google — BudouX repository",
+      "url": "https://github.com/google/budoux",
+      "status": "調査時の公式README",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": "ThaiモデルとHTML変換のU+200Bを確認。"
+    },
+    {
+      "id": "W06",
+      "title": "W3C Internationalization — Why use the language attribute?",
+      "url": "https://www.w3.org/International/questions/qa-lang-why.en",
+      "status": "W3C解説資料",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": ""
+    },
+    {
+      "id": "W07",
+      "title": "W3C — CSS Overflow Module Level 3",
+      "url": "https://www.w3.org/TR/css-overflow-3/",
+      "status": "調査時2025-10-07 Working Draft",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": "text-overflowの表示単位と原文の切断を区別する。"
+    },
+    {
+      "id": "W08",
+      "title": "W3C — CSS Writing Modes Level 4",
+      "url": "https://www.w3.org/TR/2019/CR-css-writing-modes-4-20190730/",
+      "status": "2019-07-30 Candidate Recommendation",
+      "group": "Web・制作環境",
+      "accessed": "2026-10-18",
+      "notes": "縦方向配置の補助資料。"
+    },
+    {
+      "id": "F01",
+      "title": "Noto Sans Thai — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/OFL.txt",
+      "upstream_url": "https://github.com/notofonts/thai",
+      "catalog_url": "https://fonts.google.com/specimen/Noto+Sans+Thai",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/notofonts/thai"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Noto+Sans+Thai"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "Google Fonts official description",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthai/DESCRIPTION.en_us.html"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F02",
+      "title": "Noto Sans Thai Looped — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://github.com/google/fonts/blob/main/ofl/notosansthailooped/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthailooped/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthailooped/OFL.txt",
+      "upstream_url": "https://github.com/notofonts/thai",
+      "catalog_url": "https://fonts.google.com/specimen/Noto+Sans+Thai+Looped",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthailooped/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosansthailooped/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/notofonts/thai"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Noto+Sans+Thai+Looped"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F03",
+      "title": "Noto Serif Thai — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifthai/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。 METADATA.pb は親エージェントが取得した公式原本を確認。本章では書体バイナリの字形実測なし。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifthai/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifthai/OFL.txt",
+      "upstream_url": "https://github.com/notofonts/thai",
+      "catalog_url": "https://fonts.google.com/noto/specimen/Noto+Serif+Thai",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifthai/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserifthai/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/notofonts/thai"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/noto/specimen/Noto+Serif+Thai"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F04",
+      "title": "Sarabun — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/OFL.txt",
+      "upstream_url": "https://github.com/cadsondemak/Sarabun",
+      "catalog_url": "https://fonts.google.com/specimen/Sarabun",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/sarabun/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/cadsondemak/Sarabun"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Sarabun"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "Creator README",
+          "url": "https://github.com/cadsondemak/Sarabun/blob/master/README.md"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F05",
+      "title": "IBM Plex Sans Thai — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://github.com/google/fonts/blob/main/ofl/ibmplexsansthai/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthai/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthai/OFL.txt",
+      "upstream_url": "https://github.com/IBM/plex",
+      "catalog_url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Thai",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": "Plex",
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthai/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthai/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/IBM/plex"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Thai"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "IBM Plex languages",
+          "url": "https://www.ibm.com/plex/languages/"
+        },
+        {
+          "label": "Repository named in Google Fonts source metadata",
+          "url": "https://github.com/googlefonts/plex"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F06",
+      "title": "IBM Plex Sans Thai Looped — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthailooped/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthailooped/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthailooped/OFL.txt",
+      "upstream_url": "https://github.com/IBM/plex",
+      "catalog_url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Thai+Looped",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": "Plex",
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthailooped/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansthailooped/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/IBM/plex"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/IBM+Plex+Sans+Thai+Looped"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "IBM Plex languages",
+          "url": "https://www.ibm.com/plex/languages/"
+        },
+        {
+          "label": "Repository named in Google Fonts source metadata",
+          "url": "https://github.com/googlefonts/plex"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F07",
+      "title": "Anuphan — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://github.com/google/fonts/blob/main/ofl/anuphan/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/anuphan/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/anuphan/OFL.txt",
+      "upstream_url": "https://github.com/cadsondemak/Anuphan",
+      "catalog_url": "https://fonts.google.com/specimen/Anuphan",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/anuphan/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/anuphan/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/cadsondemak/Anuphan"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Anuphan"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "Creator README",
+          "url": "https://github.com/cadsondemak/Anuphan/blob/master/README.md"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F08",
+      "title": "Prompt — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://github.com/google/fonts/blob/main/ofl/prompt/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/prompt/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/prompt/OFL.txt",
+      "upstream_url": "https://github.com/cadsondemak/prompt",
+      "catalog_url": "https://fonts.google.com/specimen/Prompt",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/prompt/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/prompt/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/cadsondemak/prompt"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Prompt"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "Creator README",
+          "url": "https://github.com/cadsondemak/prompt/blob/master/README.md"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "F09",
+      "title": "Kanit — Google Fonts distribution metadata and SIL OFL 1.1",
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/METADATA.pb",
+      "status": "公式配布 METADATA.pb と個別 OFL.txt を確認済み。収録分類はカタログの subset 表記。用途は研究上の仮説であり固定推奨ではない。",
+      "checked_at": "2026-10-18",
+      "metadata_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/METADATA.pb",
+      "license_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/OFL.txt",
+      "upstream_url": "https://github.com/cadsondemak/kanit",
+      "catalog_url": "https://fonts.google.com/specimen/Kanit",
+      "license": "SIL OFL 1.1",
+      "reserved_font_name_in_header": null,
+      "secondary_urls": [
+        {
+          "label": "Raw METADATA.pb",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/METADATA.pb"
+        },
+        {
+          "label": "Individual OFL.txt",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kanit/OFL.txt"
+        },
+        {
+          "label": "Project or foundry repository",
+          "url": "https://github.com/cadsondemak/kanit"
+        },
+        {
+          "label": "Google Fonts catalog",
+          "url": "https://fonts.google.com/specimen/Kanit"
+        },
+        {
+          "label": "Official SIL OFL 1.1 text",
+          "url": "https://openfontlicense.org/open-font-license-official-text/"
+        },
+        {
+          "label": "Creator README",
+          "url": "https://github.com/cadsondemak/kanit/blob/master/README.md"
+        }
+      ],
+      "group": "書体配布",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "R01",
+      "title": "The Contemporary Effects of Loops: Studying the implications of this unique feature of the Thai script",
+      "url": "https://www.typotheque.com/research/effects-of-loops-in-thai",
+      "status": "制作者による一次研究報告の本文を確認済み。2024年バンコク実験、2025年2月15日公開。査読論文との断定はしない。研究の書体・課題・参加者の範囲を超えた一般化はしない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "読字研究・書体指針",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "R02",
+      "title": "Effectiveness of predominant letterforms in different small type sizes: Thai universal design font versus familiar Thai text fonts",
+      "url": "https://www.jacces.org/index.php/jacces/article/view/467",
+      "status": "出版社の公開要旨と書誌を確認済み。2024年5月11日公開、32人・36子音・15サイズの識別課題。比較対象 TH Sarabun New を Google Fonts Sarabun と混同しない。",
+      "secondary_urls": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.17411/jacces.v14i1.467"
+        }
+      ],
+      "checked_at": "2026-10-18",
+      "group": "読字研究・書体指針",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "R03",
+      "title": "Effectiveness of homologous Thai letterforms presented in parafoveal vision",
+      "url": "https://benjamins.com/catalog/idj.00002.pun",
+      "status": "出版社の公開要旨・書誌を確認済み。Information Design Journal 24:2 (2018)、オンライン公開2019年4月18日。全文は未確認。周辺視の短時間文字提示を連続読書へ一般化しない。",
+      "secondary_urls": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1075/idj.00002.pun"
+        }
+      ],
+      "checked_at": "2026-10-18",
+      "group": "読字研究・書体指針",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "R04",
+      "title": "IBM Design Language — Type scale",
+      "url": "https://www.ibm.com/design/language/typography/type-scale/",
+      "status": "IBM公式ブランド指針の本文を確認済み。Thai 等の95%指定は IBM の type scale におけるルールであり、タイ語全体のサイズ換算規則ではない。",
+      "secondary_urls": [
+        {
+          "label": "IBM Plex languages",
+          "url": "https://www.ibm.com/plex/languages/"
+        }
+      ],
+      "checked_at": "2026-10-18",
+      "group": "読字研究・書体指針",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D01",
+      "title": "The City of Bangkok / Bangkok Metropolitan Administration identity system",
+      "url": "https://farmgroup.co.th/work/bangkok/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D02",
+      "title": "FRIEND FRIEND",
+      "url": "https://farmgroup.co.th/work/friend-friend/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D03",
+      "title": "Srichand United Dispensary identity",
+      "url": "https://farmgroup.co.th/work/srichand/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D04",
+      "title": "Auntie Mam’s brand identity and packaging",
+      "url": "https://farmgroup.co.th/work/auntie-mams/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D05",
+      "title": "Santa Fe identity refresh",
+      "url": "https://farmgroup.co.th/work/santa-fe/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D06",
+      "title": "Bangkok Design Week 2025 key visual",
+      "url": "https://www.bangkokdesignweek.com/en/bkkdw2025/content/124886",
+      "status": "公式本文を確認。画像は未確認。",
+      "year": 2025,
+      "evidence_level": "primary_text_only",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D07",
+      "title": "47th National Book Fair & 17th Bangkok International Book Fair",
+      "url": "https://www.pinkblueblack.com/47th-national-book-fair.html",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": 2019,
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D08",
+      "title": "UT South East Asia Creators 2015 — Thai alphabet T-shirt",
+      "url": "https://practicalstudio.wordpress.com/2015/06/25/ut-south-east-asia-creators-2015/",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": 2015,
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D09",
+      "title": "Bangkok Art Book Fair 2025 (BKKABF2025)",
+      "url": "https://studio150.info/bkkabf2025",
+      "status": "公式本文を確認。画像は未確認。",
+      "year": 2025,
+      "evidence_level": "primary_text_only",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D10",
+      "title": "Isan Flavour Library",
+      "url": "https://studio150.info/isan-flavour-library",
+      "status": "公式本文を確認。画像は未確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_only",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D11",
+      "title": "Butterbear website",
+      "url": "https://plaimanas.com/butterbear/",
+      "status": "制作側の公式本文と公表画面画像を確認。画像は英語ビューで、ライブ操作とタイ語UIは未検証。",
+      "year": 2025,
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D12",
+      "title": "Than / ฐาน",
+      "url": "https://fonts.cadsondemak.com/retail-fonts/than",
+      "status": "公式サイトの検索取得本文を確認。通常の再取得では動的本文が欠落。",
+      "year": 2018,
+      "evidence_level": "primary_text_only",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D13",
+      "title": "LINE Seed TH",
+      "url": "https://seed.line.me/index_th.html",
+      "status": "公式本文と公式の公表画像を確認。",
+      "year": "unknown",
+      "evidence_level": "primary_text_and_official_image",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "D14",
+      "title": "Little Chiang mai guidebook — English edition",
+      "url": "https://www.tatnews.org/2018/04/tat-launches-little-chiang-mai-guidebook-in-english/",
+      "status": "発注者TATの英語版発表を確認。原タイ語版と冊子画像は未確認。",
+      "year": 2018,
+      "evidence_level": "primary_text_only",
+      "group": "デザイン事例",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C01",
+      "title": "LINE MAN ถูกสุดทุกวัน* — home",
+      "url": "https://lmwn.com/lineman/",
+      "status": "公式公開ページの本文確認済み。元URLからの転送先。引用は見出しの用法を観察するためで、最安等の広告主張を検証したものではない。",
+      "secondary_urls": [
+        {
+          "label": "Original URL, redirects to lmwn.com",
+          "url": "https://lineman.line.me/"
+        }
+      ],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C02",
+      "title": "LINE MAN VIP — สมัคร LINE MAN VIP ลดชัวร์ทุกร้าน!",
+      "url": "https://lmwn.com/lineman/linemanvip/",
+      "status": "公式公開ページの本文確認済み。元URLからの転送先。CTA文字列を観察。認証済みアプリ画面や申込後の導線は確認していない。",
+      "secondary_urls": [
+        {
+          "label": "Original URL, redirects to lmwn.com",
+          "url": "https://lineman.line.me/linemanvip/"
+        }
+      ],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C03",
+      "title": "Grab TH — ทำทุกวันให้ดีกว่าเดิม",
+      "url": "https://www.grab.com/th/",
+      "status": "タイ向け公式公開ページの見出しとダウンロードCTAを確認済み。アプリ内の文言・全言語運用を確認したものではない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C04",
+      "title": "หน้าหลัก KASIKORNBANK — ธนาคารกสิกรไทย",
+      "url": "https://www.kasikornbank.com/th/personal",
+      "status": "銀行公式の個人向け公開ページで、選択を促す文と詳細CTAを確認済み。金融条件の推奨・現行比較を目的としていない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C05",
+      "title": "ลูกค้าบุคคล — ธนาคารไทยพาณิชย์ (SCB)",
+      "url": "https://www.scb.co.th/th/personal-banking.html",
+      "status": "銀行公式の個人向け公開ページで、利用者視点の一人称ラベルを確認済み。これを同行の全文章に適用される人称規則と断定しない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C06",
+      "title": "ชาตรามือ | ต้นตำรับชาไทย เข้มข้น หอม อร่อย",
+      "url": "https://www.cha-thai.com/",
+      "status": "ブランド公式公開サイトで、感覚表現・オンライン注文CTA・在庫状態の短句を確認済み。在庫の恒久性や商品の販売条件は推定しない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C07",
+      "title": "PAÑPURI — Thai storefront",
+      "url": "https://panpuri.com/th/",
+      "status": "ブランド公式のタイ語ストアで、探索・カート追加・予約注文の短句を確認済み。取得ページに2027年キャンペーン表記も混在するため、販売時期・現時点の提供条件の根拠には用いない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "C08",
+      "title": "พินิจภาษา: คะ–ค่ะ — นววรรณ พันธุเมธา（チュラロンコン大学公開）",
+      "url": "https://www.arts.chula.ac.th/thai/thaiarchives/index.php/2022/07/27/1832/",
+      "status": "大学公式サイトに掲載された著者の解説本文を確認済み。原著1996年、大学公開2022年7月27日。語用と文脈を説明する資料であり、現代のすべての会話・ブランドUIの絶対規範として扱わない。",
+      "secondary_urls": [],
+      "checked_at": "2026-10-18",
+      "group": "コピー・編集",
+      "accessed": "2026-10-18"
+    },
+    {
+      "id": "E01",
+      "title": "本調査 — JavaScript分割・正規化・ロケールの観測",
+      "url": "KUMIHAN_Thai_Runtime_Observation_20261018.json",
+      "status": "Node v24.19.0 / ICU 78.3 / Unicode 17.0",
+      "group": "独自観測",
+      "accessed": "2026-10-18",
+      "notes": "製品・ブラウザの合格証明ではない。"
+    },
+    {
+      "id": "E02",
+      "title": "本調査 — フォント内部メトリクスの観測",
+      "url": "KUMIHAN_Thai_Research_Data_20261018.json",
+      "status": "Noto Sans Thai 2.002 / IBM Plex Thai 1.1",
+      "group": "独自観測",
+      "accessed": "2026-10-18",
+      "notes": "字形境界とフォントテーブル。実際の行高・可読性の測定ではない。"
+    }
+  ],
+  "omitted": "Private research document URLs excluded from public source register."
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-th",
+  "version": "0.1.0",
+  "description": "แนวทางจัดวางอักษรไทยที่รักษาต้นฉบับ พร้อมตรวจทานแบบอ่านอย่างเดียว | Thai typography guidance with source preservation and read-only review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/landco-llc/kumihan",
+  "locale": "th-TH",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜ดุลอักษร",
+        "shortDescription": "จัดวางอักษรไทย | Thai typography guidance",
+        "longDescription": "ทักษะอิสระ 4 ชุดสำหรับเว็บ เอกสาร และการตรวจทาน โดยคงข้อความต้นฉบับและระบุข้อจำกัดของหลักฐาน\nFour independent skills for Thai web, documents and read-only review. Preserve source text; rendered and native-host behavior require actual evidence.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-th.html",
+        "defaultPrompt": [
+          "ช่วยตรวจทานหน้าเว็บภาษาไทยโดยไม่เปลี่ยนข้อความต้นฉบับ",
+          "Review Thai document typography while preserving the supplied source."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

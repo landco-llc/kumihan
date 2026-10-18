@@ -11,14 +11,15 @@ MEDIA = ('web-editorial', 'web-marketing', 'web-ui', 'report-document',
 LOCALES = {'ja-jp': ('ja-JP', 'ja', 'Jpan', 'JP'),
            'zh-hant-tw': ('zh-Hant-TW', 'zh', 'Hant', 'TW'),
            'zh-hant-hk': ('zh-Hant-HK', 'zh', 'Hant', 'HK'),
-           'ko-kr': ('ko-KR', 'ko', 'Hang', 'KR')}
+           'ko-kr': ('ko-KR', 'ko', 'Hang', 'KR'),
+           'th-th': ('th-TH', 'th', 'Thai', 'TH')}
 COMMON = ('content', 'design', 'evidence')
 
 
 def resolve_context(locale, medium):
     """Return explicit language/script/region/media; reject missing/unknown parts."""
     if not isinstance(locale, str) or locale.lower() not in LOCALES:
-        raise ValueError('Supported explicit locales: ja-JP, zh-Hant-TW, zh-Hant-HK, ko-KR')
+        raise ValueError('Supported explicit locales: ja-JP, zh-Hant-TW, zh-Hant-HK, ko-KR, th-TH')
     if medium not in MEDIA:
         raise ValueError('Unknown medium')
     tag, language, script, region = LOCALES[locale.lower()]
@@ -41,6 +42,9 @@ def resolve_rules(context, root=None):
         records = json.loads((ja/'rules/catalog.json').read_text(encoding='utf-8'))
         by_id = {r['id']: r for r in records}
         return [by_id[rid] for rid in profile['rule_ids']]
+    if valid['language'] == 'th':
+        records = json.loads((root/'plugins/kumihan-th/rules/catalog.json').read_text(encoding='utf-8'))
+        return [r for r in records if valid['medium'] in r['media']]
     zh = root / 'plugins/kumihan-ziheng'
     records = []
     for name in COMMON:

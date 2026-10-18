@@ -1,0 +1,18 @@
+{
+  "locale": "th-TH",
+  "language": "th",
+  "script": "Thai",
+  "region": "TH",
+  "profiles": [
+    "web-editorial",
+    "web-marketing",
+    "web-ui",
+    "report-document",
+    "presentation",
+    "display-copy"
+  ],
+  "inference": false,
+  "source_policy": "exact Unicode preservation; projection kept separate",
+  "word_engine": "host Thai-capable engine only; unavailable = unsupported",
+  "font_policy": "purpose-specific comparison, no mandated family or pairing"
+}

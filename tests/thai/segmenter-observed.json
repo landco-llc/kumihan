@@ -1,0 +1,61 @@
+{
+  "engine": "v24.19.0",
+  "icu": "78.3",
+  "status": "passed",
+  "scope": "Bounded engine availability and observed candidate offsets; not semantic correctness or rendering.",
+  "word": {
+    "locale": "th",
+    "text": "ภาษาไทยยินดีต้อนรับ",
+    "segments": [
+      {
+        "segment": "ภาษา",
+        "index": 0,
+        "input": "ภาษาไทยยินดีต้อนรับ",
+        "isWordLike": true
+      },
+      {
+        "segment": "ไทย",
+        "index": 4,
+        "input": "ภาษาไทยยินดีต้อนรับ",
+        "isWordLike": true
+      },
+      {
+        "segment": "ยินดี",
+        "index": 7,
+        "input": "ภาษาไทยยินดีต้อนรับ",
+        "isWordLike": true
+      },
+      {
+        "segment": "ต้อนรับ",
+        "index": 12,
+        "input": "ภาษาไทยยินดีต้อนรับ",
+        "isWordLike": true
+      }
+    ]
+  },
+  "grapheme": {
+    "text": "😀เก่ง",
+    "segments": [
+      {
+        "segment": "😀",
+        "index": 0,
+        "input": "😀เก่ง"
+      },
+      {
+        "segment": "เ",
+        "index": 2,
+        "input": "😀เก่ง"
+      },
+      {
+        "segment": "ก่",
+        "index": 3,
+        "input": "😀เก่ง"
+      },
+      {
+        "segment": "ง",
+        "index": 5,
+        "input": "😀เก่ง"
+      }
+    ]
+  }
+}
