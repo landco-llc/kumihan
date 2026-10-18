@@ -32,12 +32,12 @@
   <meta property="og:description" content="日本語の文字組み、情報設計、原稿の保持を大切にするオープンソースのスキル集。">
   <meta property="og:locale" content="ja_JP">
   <title>KUMIHAN — 日本語のデザインをもっと自然に</title>
-  <link rel="canonical" href="https://landco-llc.github.io/kumihan/">
+  <link rel="canonical" href="https://landco-llc.github.io/kumihan/kumihan.html">
 {% endif %}
-  <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/">
+  <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/kumihan.html">
   <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/en.html">
   <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/zh-tw.html">
-  <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/">
+  <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/kumihan.html">
   <style>
     :root {
       color-scheme: light;
@@ -444,7 +444,7 @@
       buttons.forEach(button => button.addEventListener('click', () => {
         const lang = button.dataset.setLang;
         if (document.documentElement.lang === lang) return;
-        const target = new URL(lang === 'en' ? 'en.html' : (lang === 'zh-Hant-TW' ? 'zh-tw.html' : './'), window.location.href);
+        const target = new URL(lang === 'en' ? 'en.html' : (lang === 'zh-Hant-TW' ? 'zh-tw.html' : 'kumihan.html'), window.location.href);
         target.hash = window.location.hash;
         window.location.assign(target.href);
       }));
