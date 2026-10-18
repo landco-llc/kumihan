@@ -27,6 +27,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
     "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
                pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
     "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.0",
@@ -125,6 +126,10 @@ UI = {
     "ko": dict(heading="KUMIHAN 언어별 버전", more="다음 {n}개 보기", menu="언어"),
     "th": dict(heading="KUMIHAN ในแต่ละภาษา", more="แสดงอีก {n} รายการ", menu="ภาษา"),
 }
+
+# Hindi edition: same card dimensions and navigation behavior as existing editions.
+for _lang, _cards in CARDS.items():
+    _cards["hi"] = (("結合文字・母音記号・原稿を守るヒンディー語の文字組とデザイン。", "ヒンディー語版を見る") if _lang == "ja" else ("Hindi typography and design with source fidelity, conjuncts and matras.", "View the Hindi edition"))
 
 
 def x(value):

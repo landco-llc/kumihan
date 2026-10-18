@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<title>GeminiにKUMIHAN｜अक्षर-संगतिを導入</title>
+<meta name="description" content="ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。">
+<link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.ja.html"><link rel="alternate" hreflang="hi" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.html"><link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.en.html"><link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.html">
+<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="GeminiにKUMIHAN｜अक्षर-संगतिを導入"><meta property="og:url" content="https://landco-llc.github.io/kumihan/docs/install-kumihan-hi-gemini.ja.html"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><link rel="stylesheet" href="../assets/hi-install.css">
+<link rel="stylesheet" href="../assets/kumihan-install.css">
+<script src="../assets/kumihan-install.js" defer></script>
+</head>
+<body>
+<a class="skip skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../kumihan-hi.ja.html">KUMIHAN<span class="brand-sub">｜अक्षर-संगति</span></a>
+    <nav class="header-nav" aria-label="導入ページ"><a href="install-kumihan-hi-chatgpt.ja.html">ChatGPT / Codex</a><a href="install-kumihan-hi-claude.ja.html">Claude</a><a href="install-kumihan-hi-gemini.ja.html" aria-current="page">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">KUMIHAN トップ</a><span aria-hidden="true">/</span><a href="../kumihan-hi.ja.html">KUMIHAN<span class="brand-sub">｜अक्षर-संगति</span></a><span aria-hidden="true">/</span><span>導入ガイド</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 03 OF 03</div>
+        <h1 id="page-title">GeminiにKUMIHAN｜अक्षर-संगतिを導入</h1>
+        <p class="hero-desc">ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。</p>
+        <nav class="language-switch" aria-label="表示言語"><a href="install-kumihan-hi-gemini.html" lang="hi" hreflang="hi" data-language>हिंदी</a><a href="install-kumihan-hi-gemini.en.html" lang="en" hreflang="en" data-language>EN</a><a href="install-kumihan-hi-gemini.ja.html" lang="ja" hreflang="ja" data-language aria-current="page">日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="AIプラットフォームを選ぶ">
+  <div class="shell platform-inner"><a href="install-kumihan-hi-chatgpt.ja.html"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-kumihan-hi-claude.ja.html"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-kumihan-hi-gemini.ja.html" aria-current="page"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="このページの目次">
+    <details class="toc-details" open>
+      <summary>このページの目次を表示</summary>
+      <h2 class="toc-title">このページの目次</h2>
+      <ol><li><a href="#format">導入形式を選ぶ</a></li><li><a href="#download">ダウンロードと照合</a></li><li><a href="#steps">導入する</a></li><li><a href="#test">原稿を変えずに試す</a></li><li><a href="#updates">更新</a></li><li><a href="#limits">対応範囲と限界</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>v0.1.0 / GitHub Release</strong><p>各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-hi/INSTALL.md" target="_blank" rel="noopener noreferrer">元のINSTALL.mdを開く ↗</a>
+  </aside>
+  <main class="guide" id="main" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / Gemini</span><span class="step-label">手順と注意事項</span></div>
+    <div class="guide-pane"><section id="format"><h2>01 / 導入形式を選ぶ</h2><p>プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。</p></section><section id="download"><h2>02 / ダウンロードと照合</h2><p>GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。</p><ul class="download-list"><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/kumihan-hi-gemini-cli-extension-v0.1.0.zip">プラグイン: kumihan-hi-gemini-cli-extension-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/kumihan-hi-gemini-skill-v0.1.0.zip">個別スキル: kumihan-hi-gemini-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/kumihan-hi-web-gemini-skill-v0.1.0.zip">個別スキル: kumihan-hi-web-gemini-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/kumihan-hi-documents-gemini-skill-v0.1.0.zip">個別スキル: kumihan-hi-documents-gemini-skill-v0.1.0.zip</a></li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/kumihan-hi-review-gemini-skill-v0.1.0.zip">個別スキル: kumihan-hi-review-gemini-skill-v0.1.0.zip</a></li></ul><p><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-hi-v0.1.0/MANIFEST.json">MANIFEST.json</a> · <a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-hi-v0.1.0">GitHub Release v0.1.0</a></p></section><section id="steps"><h2>03 / 導入する</h2><p>拡張を空のフォルダに展開し、kumihan-hiフォルダ内にgemini-extension.jsonがあることを確認してから、そのパスを指定して導入します。リポジトリのルートは日本語版の製品のため、この拡張として導入しないでください。Geminiアプリへの取り込みは確認していません。</p><pre><code>gemini extensions install /absolute/path/kumihan-hi
+gemini extensions list</code></pre><p><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-hi/INSTALL.md">INSTALL.md</a></p></section><section id="test"><h2>04 / 原稿を変えずに試す</h2><p>Hindi/Devanagari、locale、読者、媒体、作業モード、原稿の変更権限を指定します。例：</p><blockquote><p>kumihan-hi-reviewでक्षि क्षी त्रि ज्ञ श्र स्त्रीを原稿を変えずにレビューしてください。静的確認、実表示、未検証を分けてください。</p></blockquote><p>任意の静的チェック（読み取り専用）：</p><pre><code>python runtime/checks.py original.txt --candidate candidate.txt</code></pre></section><section id="updates"><h2>05 / 更新</h2><p>カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。</p></section><section id="limits"><h2>06 / 対応範囲と限界</h2><p class="note">GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。静的チェックは、ヒンディー語の母語話者による確認の代わりにはなりません。</p></section></div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong>KUMIHAN<span class="brand-sub">｜अक्षर-संगति</span></strong><p>Hindi typography skills for AI-assisted design.<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC</p></div>
+    <div><a href="../kumihan-hi.ja.html">KUMIHAN｜अक्षर-संगतिへ戻る</a> · <a href="../index.html">KUMIHAN トップ</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-hi" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
+  </div>
+</footer>
+</body>
+</html>

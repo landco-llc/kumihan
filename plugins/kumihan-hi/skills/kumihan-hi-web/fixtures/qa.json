@@ -1,0 +1,242 @@
+[
+  {
+    "id": "Q01",
+    "input": "कि की कु कू कृ के कै को कौ",
+    "expected": "母音記号を保持し、対応する位置へ描画。上下を欠かさない",
+    "research_scope": "部分観測：表示見本",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q02",
+    "input": "क्षि क्षी त्रि ज्ञ श्र स्त्री",
+    "expected": "結合と母音を破損させない。文字列を安全に切り出す",
+    "research_scope": "部分観測：一部の表示と境界",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q03",
+    "input": "प्रार्थना संस्कृति दृष्टि राष्ट्र",
+    "expected": "子音群、上下の記号、原稿が保持される",
+    "research_scope": "部分観測：संस्कृतिのみ",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q04",
+    "input": "र्क / क्र",
+    "expected": "RAの論理順を保持し、異なる形を勝手に統一しない",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q05",
+    "input": "क़ / क़",
+    "expected": "原文は別々に保持。NFC派生値は同値となる",
+    "research_scope": "最小観測：NFC出力",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q06",
+    "input": "ज़ फ़ ड़ ढ़",
+    "expected": "ヌクターが脱落せず、意図したフォントで描画",
+    "research_scope": "部分観測：表示と収録",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q07",
+    "input": "हंस हँस माँ यहाँ नहीं लड़कियाँ",
+    "expected": "鼻音記号を区別し、上部の欠け・自動置換を防ぐ",
+    "research_scope": "関連例のみ。提示列は未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q08",
+    "input": "क्‍ष：KA HALANT ZWJ SSA",
+    "expected": "U+200Dを保持。対象エンジンの結合結果を記録",
+    "research_scope": "最小観測：保持・境界",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q09",
+    "input": "क्‌ष：KA HALANT ZWNJ SSA",
+    "expected": "U+200Cを保持。結合抑止を消さない",
+    "research_scope": "最小観測：保持・境界",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q10",
+    "input": "र्‍यをhi・mr・neで比較",
+    "expected": "言語設定と字形の差を記録。他言語をHindiの正例にしない",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q11",
+    "input": "हिंदी / हिन्दी",
+    "expected": "NFCと校正を分け、原稿の綴りを保持",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q12",
+    "input": "निःशुल्क / समय: 10:30",
+    "expected": "visargaとcolon、時刻の区切りを保持",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q13",
+    "input": "नमस्ते। “स्वागत है!” (नई जानकारी)",
+    "expected": "句点・括弧等の孤立を確認。原稿を勝手に置換しない",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q14",
+    "input": "माता-पिता",
+    "expected": "ハイフンと語の関係を保持し、実際の改行を確認",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q15",
+    "input": "₹1,23,456.78 / ₹१,२३,४५६.७८",
+    "expected": "値、桁区切り、記号、数字字形が意図通り",
+    "research_scope": "部分観測：関連表示のみ",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q16",
+    "input": "250 ग्राम / 250 g / 12.5%",
+    "expected": "数量を変えず、単位と混植の位置・折返しを確認",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q17",
+    "input": "KUMIHAN के साथ हिंदी में लिखें",
+    "expected": "ブランド名と本文を保持し、混植を調整",
+    "research_scope": "未実施。未校正の試験文",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q18",
+    "input": "विश्वविद्यालयを狭幅へ配置",
+    "expected": "結合を壊さず、省略時は全文へ到達できる",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q19",
+    "input": "क्षिの同書式・異書式・inline-block",
+    "expected": "同書式境界を一律違反にせず、破損する境界を特定",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q20",
+    "input": "WebからPDFへ出力してコピー",
+    "expected": "見た目に加え、文字列・検索・抽出順を確認",
+    "research_scope": "本QAとして未実施。報告PDFの代表コピーはPopplerで照合",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q21",
+    "input": "webfont読込前・読込失敗",
+    "expected": "fallbackで欠けや機能消失を起こさない",
+    "research_scope": "失敗条件は未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q22",
+    "input": "文字200%と320 CSS px相当",
+    "expected": "内容と機能を失わず、対象画面のreflowを確認",
+    "research_scope": "320px見本のみ。200%は未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q23",
+    "input": "行高1.5、段落2em、字間.12em、語間.16em",
+    "expected": "4項目を同時に上書きし、ほかのスタイルは変えずに確認。内容・機能を失わない",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  },
+  {
+    "id": "Q24",
+    "input": "IME、選択、削除、読み上げ",
+    "expected": "意図しない破損と操作の不整合がなく、操作可能",
+    "research_scope": "未実施",
+    "static_status": "NOT_RUN",
+    "render_status": "NOT_CHECKED",
+    "operation_status": "NOT_CHECKED",
+    "native_speaker_status": "NOT_CHECKED"
+  }
+]

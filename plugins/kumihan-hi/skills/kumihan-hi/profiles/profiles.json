@@ -1,0 +1,147 @@
+{
+  "ui": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "source bytes",
+      "actual font and fallback",
+      "320px and text200",
+      "focus/error states",
+      "token preservation",
+      "respectful concise wording"
+    ],
+    "type_roles": "labels, actions, help and state messages",
+    "trial_size": "16px; line-height 1.5–1.7; verify signs and full labels"
+  },
+  "editorial": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "source bytes",
+      "paragraph edges and compounds",
+      "mixed-script weight",
+      "punctuation by house style",
+      "reader-oriented hierarchy"
+    ],
+    "type_roles": "headline, deck, long-form body, caption and source notes",
+    "trial_size": "body around 18px, line-height 1.6–1.8; adapt reading measure"
+  },
+  "marketing": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "source bytes",
+      "specific claims and real evidence",
+      "purposeful references",
+      "320px and text200",
+      "native-copy status"
+    ],
+    "type_roles": "message, evidence, explanation and real action",
+    "trial_size": "headings 28–48px as trial; line-height 1.3–1.5 with measured matra clearance"
+  },
+  "report": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "editable master",
+      "complex-script settings",
+      "tables and page breaks",
+      "font embedding rights",
+      "visual PDF and extraction separately"
+    ],
+    "type_roles": "document headings, body, tables, figures and notes",
+    "trial_size": "A4 body 11–12pt, line-height 1.5–1.7 as trial"
+  },
+  "slides": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "source bytes",
+      "meaning-led hierarchy",
+      "actual slide render",
+      "glyph clearance",
+      "editable master and exported copy"
+    ],
+    "type_roles": "slide message, evidence, figure labels and presenter notes",
+    "trial_size": "choose by venue, slide dimensions and viewing distance; avoid fixed body recipe"
+  },
+  "display": {
+    "audience": "record explicitly",
+    "content_policy": "preserve",
+    "font_candidates": [
+      "Noto Sans Devanagari",
+      "Noto Serif Devanagari",
+      "Mukta",
+      "IBM Plex Sans Devanagari",
+      "Anek Devanagari"
+    ],
+    "tracking": "normal",
+    "word_break": "normal",
+    "line_height": "start 1.6; visually adjust for role",
+    "copy": "new copy must be labelled unreviewed unless native review performed",
+    "checks": [
+      "source bytes",
+      "reference rationale",
+      "no mechanical scaleX",
+      "render boundaries",
+      "editable text correspondence"
+    ],
+    "type_roles": "short title, logotype, poster or graphic message",
+    "trial_size": "font-specific weight/width axes and optical judgment; body tracking defaults are not universal display bans"
+  }
+}

@@ -1,0 +1,515 @@
+[
+  {
+    "id": "HI-T01",
+    "title": "Logical order",
+    "application_condition": "All stored or transformed text",
+    "requirement": "Retain logical code-point order; never reorder storage to match visible matra position.",
+    "research_requirement": "論理順を保持。見える母音位置に合わせて保存順を並べ替えない",
+    "kind": "normative",
+    "source_refs": [
+      "S01",
+      "S09"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Retain logical code-point order; never reorder storage to match visible matra position.",
+    "qa_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T02",
+    "title": "Joining boundaries",
+    "application_condition": "Clipping, highlighting or animation",
+    "requirement": "Use grapheme and orthographic-syllable precautions; inspect the target operation. Intl.Segmenter is not a universal editing or shaping solution.",
+    "research_requirement": "結合単位を保護。文字列長やコードポイント列だけで切らない",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S02",
+      "S08"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Use grapheme and orthographic-syllable precautions; inspect the target operation. Intl.Segmenter is not a universal editing or shaping solution.",
+    "qa_ids": [
+      "Q02",
+      "Q18",
+      "Q19",
+      "Q24"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T03",
+    "title": "Derived normalization",
+    "application_condition": "Search or comparison",
+    "requirement": "Keep original bytes; NFC is derived only. क़ and क़ may compare equal without identical source.",
+    "research_requirement": "原稿とNFC等の派生値を別に持つ。綴りの変更と混同しない",
+    "kind": "normative",
+    "source_refs": [
+      "S04"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Keep original bytes; NFC is derived only. क़ and क़ may compare equal without identical source.",
+    "qa_ids": [
+      "Q05",
+      "Q11"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T04",
+    "title": "Join controls",
+    "application_condition": "All source text",
+    "requirement": "Preserve ZWJ U+200D and ZWNJ U+200C; never strip as whitespace.",
+    "research_requirement": "ZWJ/ZWNJを不要な空白扱いで削除しない",
+    "kind": "normative",
+    "source_refs": [
+      "S01",
+      "S09"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Preserve ZWJ U+200D and ZWNJ U+200C; never strip as whitespace.",
+    "qa_ids": [
+      "Q08",
+      "Q09",
+      "Q10"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T05",
+    "title": "Nukta and nasal marks",
+    "application_condition": "Editing and formatting",
+    "requirement": "Preserve nukta, anusvara and chandrabindu; no blanket spelling correction.",
+    "research_requirement": "ヌクター、鼻音記号を原稿通り保持。補う・削る一律規則を避ける",
+    "kind": "normative",
+    "source_refs": [
+      "S10",
+      "S11"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Preserve nukta, anusvara and chandrabindu; no blanket spelling correction.",
+    "qa_ids": [
+      "Q06",
+      "Q07",
+      "Q11"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T06",
+    "title": "Distinct symbols",
+    "application_condition": "Punctuation handling",
+    "requirement": "Do not substitute danda with vertical bar or visarga with colon.",
+    "research_requirement": "dandaと縦棒、visargaとcolonを区別し代用しない",
+    "kind": "normative",
+    "source_refs": [
+      "S01",
+      "S10"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Do not substitute danda with vertical bar or visarga with colon.",
+    "qa_ids": [
+      "Q12",
+      "Q13"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T07",
+    "title": "Word-based wrapping",
+    "application_condition": "Running text and narrow widths",
+    "requirement": "Use normal word-break and wrapping; emergency URL/ID breaks are local only.",
+    "research_requirement": "語境界を基本に改行。長いID等の緊急処理は局所化する",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S03",
+      "S05",
+      "S08"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Use normal word-break and wrapping; emergency URL/ID breaks are local only.",
+    "qa_ids": [
+      "Q13",
+      "Q14",
+      "Q18"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T08",
+    "title": "Tracking",
+    "application_condition": "Body text and display adjustments",
+    "requirement": "Start with normal tracking; evaluate changes in the rendered text.",
+    "research_requirement": "本文はnormalを初期値。trackingを全面禁止せず実表示で判断",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S08"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Start with normal tracking; evaluate changes in the rendered text.",
+    "qa_ids": [
+      "Q19",
+      "Q23"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T09",
+    "title": "Indic shaping",
+    "application_condition": "Font feature selection",
+    "requirement": "Keep required shaping enabled; liga alone cannot prove shaping correctness.",
+    "research_requirement": "必須シェーピングを無効化しない。ligaだけで合否判定しない",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S09"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Keep required shaping enabled; liga alone cannot prove shaping correctness.",
+    "qa_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q08",
+      "Q09",
+      "Q10"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T10",
+    "title": "Line boxes",
+    "application_condition": "Headings, paragraphs and fixed controls",
+    "requirement": "Provide room above and below signs; inspect actual glyphs, padding and clipping.",
+    "research_requirement": "上下の記号に行高とpaddingを確保。固定高による欠けを直す",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S06",
+      "S15"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Provide room above and below signs; inspect actual glyphs, padding and clipping.",
+    "qa_ids": [
+      "Q01",
+      "Q07",
+      "Q22",
+      "Q23"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T11",
+    "title": "Actual font files",
+    "application_condition": "Font and fallback selection",
+    "requirement": "Check file/version/weight, Latin and native digits, license, fallback and output; cmap alone does not prove glyph appearance.",
+    "research_requirement": "実ファイル、数字字形、ウェイト、fallbackを確認",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S19",
+      "S25"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Check file/version/weight, Latin and native digits, license, fallback and output; cmap alone does not prove glyph appearance.",
+    "qa_ids": [
+      "Q06",
+      "Q15",
+      "Q21"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T12",
+    "title": "Mixed scripts and display",
+    "application_condition": "Latin/Devanagari combinations",
+    "requirement": "Compare optical size, weight and width axes; do not mechanically scale or make scripts monospaced.",
+    "research_requirement": "書体ごとの骨格と幅軸を使う。機械的な同幅化を避ける",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S20",
+      "S24",
+      "S27"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Compare optical size, weight and width axes; do not mechanically scale or make scripts monospaced.",
+    "qa_ids": [
+      "Q16",
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T13",
+    "title": "Language and editable text",
+    "application_condition": "Web and electronic documents",
+    "requirement": "Declare actual language and retain accessible, selectable text with source correspondence for image alternatives.",
+    "research_requirement": "言語情報と操作できる本文を残す。画像化時も原文対応を保持",
+    "kind": "normative",
+    "source_refs": [
+      "S14",
+      "S16"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Declare actual language and retain accessible, selectable text with source correspondence for image alternatives.",
+    "qa_ids": [
+      "Q20",
+      "Q24"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-T14",
+    "title": "PDF extraction",
+    "application_condition": "Final document output",
+    "requirement": "Inspect visual output separately from embedding, search, copy and text extraction.",
+    "research_requirement": "見た目と検索・コピー・抽出を別々に確認",
+    "kind": "implementation guidance",
+    "source_refs": [
+      "S14"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Inspect visual output separately from embedding, search, copy and text extraction.",
+    "qa_ids": [
+      "Q20"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C01",
+    "title": "Content authority",
+    "application_condition": "Existing copy",
+    "requirement": "Default preserve. Separate study/build/audit/refine from preserve/propose/rewrite; audit never directly rewrites.",
+    "research_requirement": "保持が既定。校正・リライト候補を分け、依頼範囲で反映",
+    "kind": "normative",
+    "source_refs": [
+      "S10",
+      "S51"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Default preserve. Separate study/build/audit/refine from preserve/propose/rewrite; audit never directly rewrites.",
+    "qa_ids": [
+      "Q05",
+      "Q11",
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C02",
+    "title": "Plain respectful UI",
+    "application_condition": "UI copy",
+    "requirement": "Choose vocabulary and respect level for the reader; avoid automatic dictionary substitutions.",
+    "research_requirement": "読者に合う語彙と敬意を維持。難語への一括置換をしない",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S39",
+      "S40",
+      "S52"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Choose vocabulary and respect level for the reader; avoid automatic dictionary substitutions.",
+    "qa_ids": [
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C03",
+    "title": "Grammatical agreement",
+    "application_condition": "Sentences and state messages",
+    "requirement": "Review gender/number/possessive agreement without guessing the user’s gender.",
+    "research_requirement": "性・数・所有表現の一致を確認。利用者の性別を推測しない",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S51"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Review gender/number/possessive agreement without guessing the user’s gender.",
+    "qa_ids": [
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C04",
+    "title": "Names and tokens",
+    "application_condition": "Names, numbers, variables, UI labels",
+    "requirement": "Preserve exact product names, identifiers and real UI labels; do not translate tokens.",
+    "research_requirement": "固有名、数値、トークンと実UIラベルの対応を保持",
+    "kind": "normative",
+    "source_refs": [
+      "S52"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Preserve exact product names, identifiers and real UI labels; do not translate tokens.",
+    "qa_ids": [
+      "Q15",
+      "Q16",
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C05",
+    "title": "Punctuation and code switching",
+    "application_condition": "Media-specific editorial style",
+    "requirement": "Preserve supplied punctuation and language mix; no automatic Hinglish or danda conversion.",
+    "research_requirement": "媒体別に設定。無指定の句点統一やHinglish化をしない",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S39",
+      "S52",
+      "S53"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Preserve supplied punctuation and language mix; no automatic Hinglish or danda conversion.",
+    "qa_ids": [
+      "Q11",
+      "Q13",
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-C06",
+    "title": "Locale quantities and IDs",
+    "application_condition": "Numbers, currency and dates",
+    "requirement": "Separate values, formatting, currency, timezone and identifiers. latn default; explicit deva option. Do not group OTP, phone, PIN or version identifiers.",
+    "research_requirement": "数量、ID、通貨、時刻を分離。基数の複数形カテゴリを使う",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S11",
+      "S12",
+      "S13"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Separate values, formatting, currency, timezone and identifiers. latn default; explicit deva option. Do not group OTP, phone, PIN or version identifiers.",
+    "qa_ids": [
+      "Q15",
+      "Q16"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-D01",
+    "title": "Language is not script",
+    "application_condition": "Intake and comparisons",
+    "requirement": "Record Hindi language, Devanagari script and market independently; Marathi, Nepali and Sanskrit are not Hindi.",
+    "research_requirement": "実際の言語と文字体系を別に判定し、比較例を明示",
+    "kind": "normative",
+    "source_refs": [
+      "S01",
+      "S36",
+      "S37"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Record Hindi language, Devanagari script and market independently; Marathi, Nepali and Sanskrit are not Hindi.",
+    "qa_ids": [
+      "Q10"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-D02",
+    "title": "Meaning-led hierarchy",
+    "application_condition": "Composition",
+    "requirement": "Set type/image roles and hierarchy from the purpose, audience and information priority.",
+    "research_requirement": "読者と目的から文字・画像の役割と階層を決める",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S30",
+      "S32"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Set type/image roles and hierarchy from the purpose, audience and information priority.",
+    "qa_ids": [
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-D03",
+    "title": "Traceable design",
+    "application_condition": "Decorations and references",
+    "requirement": "Explain reference and typographic choices; no stereotypical India palette or religious motifs inferred from script; no AI-detector claim.",
+    "research_requirement": "装飾の参照理由を記録。色やカードの有無だけで判定しない",
+    "kind": "editorial choice",
+    "source_refs": [
+      "S29",
+      "S31"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Explain reference and typographic choices; no stereotypical India palette or religious motifs inferred from script; no AI-detector claim.",
+    "qa_ids": [
+      "Q17"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  },
+  {
+    "id": "HI-D04",
+    "title": "Evidence transparency",
+    "application_condition": "Every result",
+    "requirement": "Separate static checks, rendering, operation, research, editorial judgment and NOT_CHECKED; never manufacture PASS.",
+    "research_requirement": "実見、静的確認、資料、判断、未検証を分ける",
+    "kind": "normative",
+    "source_refs": [
+      "S14"
+    ],
+    "exception": "Apply only when the stated operation is present. Preserve author intent; contextual editorial choices are proposals, not automatic fixes.",
+    "recommended_action": "Separate static checks, rendering, operation, research, editorial judgment and NOT_CHECKED; never manufacture PASS.",
+    "qa_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "Q17",
+      "Q18",
+      "Q19",
+      "Q20",
+      "Q21",
+      "Q22",
+      "Q23",
+      "Q24"
+    ],
+    "implementation_status": "Bundled guidance; bounded source comparison only",
+    "evidence_status": "NOT_CHECKED until operation-specific observation"
+  }
+]

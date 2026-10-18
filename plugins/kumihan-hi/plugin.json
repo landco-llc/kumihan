@@ -1,0 +1,29 @@
+{
+  "name": "kumihan-hi",
+  "version": "0.1.0",
+  "description": "हिंदी अक्षर-विन्यास और डिज़ाइन में सहायता; मूल पाठ सुरक्षित रखें। | Hindi typography and design guidance with source preservation.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜अक्षर-संगति",
+        "shortDescription": "हिंदी अक्षर-विन्यास। | Hindi typography.",
+        "longDescription": "हिंदी अक्षर-विन्यास और डिज़ाइन में सहायता; मूल पाठ सुरक्षित रखें। | Hindi typography and design guidance with source preservation.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-hi.html",
+        "defaultPrompt": [
+          "मूल पाठ बदले बिना हिंदी डिज़ाइन की समीक्षा करें।",
+          "Review Hindi design without changing the original."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
