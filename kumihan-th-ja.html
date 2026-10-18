@@ -1,2 +1,530 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5f3ee"><title>KUMIHAN｜ดุลอักษร — タイ語の文字組みをAIと丁寧に設計する</title><meta name="description" content="タイ語のWebサイト・文書・スライドの制作とレビューを支援するオープンソースSkills。改行、結合記号、原稿の保持、実表示の確認を大切にします。"><link rel="canonical" href="https://landco-llc.github.io/kumihan/kumihan-th-ja.html"><link rel="alternate" hreflang="th-TH" href="https://landco-llc.github.io/kumihan/kumihan-th.html"><link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/kumihan-th-en.html"><link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/kumihan-th-ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/kumihan-th.html"><meta property="og:type" content="website"><meta property="og:title" content="KUMIHAN｜ดุลอักษร — タイ語の文字組みをAIと丁寧に設計する"><meta property="og:description" content="タイ語のWebサイト・文書・スライドの制作とレビューを支援するオープンソースSkills。改行、結合記号、原稿の保持、実表示の確認を大切にします。"><meta property="og:url" content="https://landco-llc.github.io/kumihan/kumihan-th-ja.html"><meta property="og:locale" content="ja_JP"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"><meta property="og:image:alt" content="KUMIHAN｜ดุลอักษร"><link rel="icon" href="favicon.ico"><link rel="stylesheet" href="assets/thai-site.css"><script src="assets/thai-site.js" defer></script></head><body><a class="skip" href="#main">本文へスキップ</a><header><div class="shell header"><a href="kumihan-th-ja.html" class="brand">KUMIHAN</a><nav><a href="#concept" >枠に収めるだけでなく、意味が伝わる文字組みへ。</a><a href="#skills" >4つのSkill。ひとつの設計思想。</a><a href="#install" >導入ガイドを見る</a></nav><nav class="languages" aria-label="Language"><a href="kumihan-th.html" data-language lang="th" hreflang="th">ไทย</a><a href="kumihan-th-en.html" data-language lang="en" hreflang="en">EN</a><a href="kumihan-th-ja.html" data-language lang="ja" hreflang="ja" aria-current="page">日本語</a></nav></div></header><main id="main"><section class="hero"><div class="shell hero-grid"><div><p class="eyebrow">OPEN SOURCE · THAI TYPOGRAPHY</p><h1><small>KUMIHAN｜ดุลอักษร</small>タイ語を自然に読める形へ。目的のあるデザインへ。</h1><p class="lead">KUMIHAN｜ดุลอักษร はタイ語のWebサイト、文書、プレゼン資料の制作とレビューを支援するオープンソースSkillsです。原文を守りながら、タイ文字の表示と行全体のバランスを考えます。</p><div class="actions"><a href="#install" class="button primary">導入ガイドを見る</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th" class="button">ソースコードを見る</a></div><p class="note">文脈から設計 · 原稿を守る · 根拠を明示する</p></div><div class="hero-art"><img src="assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="600" height="600" alt="KUMIHAN｜ดุลอักษร"><p>v0.1.1 · GitHub Release<br>th-TH · Apache-2.0</p></div></div></section><section class="section" id="concept"><div class="shell"><div class="section-title"><span class="index">01</span><div><h2>枠に収めるだけでなく、意味が伝わる文字組みへ。</h2><p class="lead">タイ語には前置母音や声調記号があり、改行位置を空白や文字数だけで決められません。内容、表示幅、書体の実際の形、読み手の状況を起点に組版を考えます。</p></div></div></div></section><section class="section" id="features"><div class="shell"><div class="section-title"><span class="index">02</span><div><h2>タイ語制作の4つの視点</h2><div class="grid"><article class="card"><p class="eyebrow">01</p><h3>改行と行全体のバランス</h3><p>語分割候補と実表示幅を分けて検討し、文節単位の改行を強制しない。</p></article><article class="card"><p class="eyebrow">02</p><h3>母音・声調記号の表示</h3><p>記号の重なり、欠け、フォントフォールバック、行間を実描画で確認する。</p></article><article class="card"><p class="eyebrow">03</p><h3>原稿の保護</h3><p>固有名詞、価格、引用、Unicodeの並びを無断で書き換えない。</p></article><article class="card"><p class="eyebrow">04</p><h3>読み取り専用のレビュー</h3><p>実測、制作指針、未検証の項目を分けて報告する。</p></article></div></div></div></div></section><section class="band"><div class="shell"><p class="eyebrow">KUMIHAN / THAI</p><h2>文字を置くのではなく、読む体験を組み立てる。</h2><p>どのブランドにも同じテンプレートや書体セットを押し付けず、目的、読者、情報の優先順位から考えます。</p></div></section><section class="section" id="skills"><div class="shell"><div class="section-title"><span class="index">03</span><div><h2>4つのSkill。ひとつの設計思想。</h2><div class="grid"><article class="card"><h3>kumihan-th</h3><p>目的・媒体・言語・作業範囲の整理</p><a href="docs/install-kumihan-th-chatgpt.ja.html#download" >ダウンロード ↗</a></article><article class="card"><h3>kumihan-th-web</h3><p>Web、記事、LP、UIの制作指針</p><a href="docs/install-kumihan-th-chatgpt.ja.html#download" >ダウンロード ↗</a></article><article class="card"><h3>kumihan-th-documents</h3><p>報告書、文書、スライドの制作指針</p><a href="docs/install-kumihan-th-chatgpt.ja.html#download" >ダウンロード ↗</a></article><article class="card"><h3>kumihan-th-review</h3><p>元ファイルを変更しないレビュー</p><a href="docs/install-kumihan-th-chatgpt.ja.html#download" >ダウンロード ↗</a></article></div></div></div></div></section><section class="section" id="install"><div class="shell"><div class="section-title"><span class="index">04</span><div><h2>いつものAIツールから始める。</h2><p class="lead">ChatGPT/Codex、Claude、Geminiの利用形態に合う導入ページを用意します。各ホストの対応範囲と実測結果は異なります。</p><a href="docs/install-kumihan-th-chatgpt.ja.html" class="host"><strong>ChatGPT / Codex</strong><span>導入ガイド ↗</span></a><a href="docs/install-kumihan-th-claude.ja.html" class="host"><strong>Claude</strong><span>導入ガイド ↗</span></a><a href="docs/install-kumihan-th-gemini.ja.html" class="host"><strong>Gemini</strong><span>導入ガイド ↗</span></a></div></div></div></section><section class="section" id="status"><div class="shell"><div class="section-title"><span class="index">05</span><div><h2>公開版の能力と限界</h2><div class="status"><strong>v0.1.1 · GitHub Release</strong><p>v0.1.1は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。</p><p>15本のZIPはGitHub Release v0.1.1から取得できます。導入前にSHA256SUMS・MANIFESTを照合してください。実ホストでの導入・呼び出しは未検証です。</p><p class="host-status">ChatGPT / Codex · Claude · Gemini: not-checked</p><p>タイ語母語話者による校閲：needs-review</p><a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1" >Release Notes ↗</a></div></div></div></div></section><section class="final"><div class="shell"><h2>大切な内容から始め、伝わるデザインへ。</h2><a href="#install" class="button primary">導入ガイドを見る</a></div></section></main><footer><div class="shell"><a href="kumihan-th-ja.html" >KUMIHAN｜ดุลอักษร</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th" >ソースを見る</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" >Apache-2.0</a><span>L&amp;Co. LLC</span></div></footer></body></html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>KUMIHAN｜ดุลอักษร — タイ語の文字組みをもっと自然に</title>
+  <meta name="description" content="タイ語のWebサイト・文書・スライドの制作とレビューを支援するオープンソースSkills。改行、結合記号、原稿の保持、実表示の確認を大切にします。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KUMIHAN｜ดุลอักษร — タイ語の文字組みをもっと自然に">
+  <meta property="og:description" content="タイ語のWebサイト・文書・スライドの制作とレビューを支援するオープンソースSkills。改行、結合記号、原稿の保持、実表示の確認を大切にします。">
+  <meta property="og:url" content="https://landco-llc.github.io/kumihan/kumihan-th-ja.html">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+  <meta property="og:image:alt" content="KUMIHAN｜ดุลอักษร">
+  <link rel="canonical" href="https://landco-llc.github.io/kumihan/kumihan-th-ja.html">
+  <link rel="alternate" hreflang="th-TH" href="https://landco-llc.github.io/kumihan/kumihan-th.html">
+  <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/kumihan-th-en.html">
+  <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/kumihan-th-ja.html">
+  <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/kumihan-th.html">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f5f3ee;
+      --paper-2: #edeae3;
+      --white: #fff;
+      --ink: #252521;
+      --ink-2: #494842;
+      --muted: #6c6a63;
+      --line: #d9d5cc;
+      --red: #c83334;
+      --red-dark: #982327;
+      --display: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
+      --serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", serif;
+      --shell: min(1184px, calc(100% - 88px));
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 116px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--display); -webkit-font-smoothing: antialiased; }
+    body, button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-offset: 5px; border-radius: 3px; }
+    img { max-width: 100%; display: block; }
+    button { font: inherit; }
+    ::selection { background: #d7a6a0; color: #211c1c; }
+    .lang-en, .lang-zh { display: none; }
+    html[lang="en"] .lang-ja, html[lang="zh-Hant-TW"] .lang-ja { display: none !important; }
+    html[lang="en"] .lang-en, html[lang="zh-Hant-TW"] .lang-zh { display: inline; }
+    html[lang="zh-Hant-TW"] body { font-family: "PingFang TC", "Microsoft JhengHei", "Noto Sans CJK TC", system-ui, sans-serif; }
+    .shell { width: var(--shell); margin-inline: auto; }
+    .skip-link { position: absolute; z-index: 100; inset: -120px auto auto 12px; padding: 13px 18px; background: var(--ink); color: white; }
+    .skip-link:focus { inset-block-start: 12px; }
+    .site-header { position: sticky; top: 0; z-index: 30; background: rgba(245,243,238,.96); border-bottom: 1px solid var(--line); backdrop-filter: blur(18px); }
+    .header-content { display: flex; align-items: center; min-height: 88px; gap: 28px; }
+    .brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: 850; font-size: 21px; letter-spacing: -.045em; line-height: 1; }
+    .header-nav { display: flex; align-items: center; gap: 29px; margin-left: auto; }
+    .header-nav a { color: var(--ink-2); font-size: 13px; font-weight: 720; white-space: nowrap; transition: color .2s ease; }
+    .header-nav a:hover { color: var(--red); }
+    .header-controls { display: flex; align-items: center; gap: 16px; margin-left: 16px; }
+    .language-switch { display: flex; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 40px; }
+    .language-switch button { min-height: 38px; min-width: 38px; cursor: pointer; border: 0; border-radius: 40px; background: transparent; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .05em; }
+    .language-switch button[aria-pressed="true"] { background: var(--ink); color: white; }
+    .arrow { display: inline-block; margin-left: 12px; font-family: Arial, sans-serif; font-weight: 400; }
+    .eyebrow { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: .19em; line-height: 1.8; text-transform: uppercase; }
+    .eyebrow .line { display: inline-block; vertical-align: middle; width: 25px; height: 2px; background: var(--red); margin-right: 9px; }
+    .hero { padding: 104px 0 100px; overflow: hidden; }
+    .hero-layout { display: grid; grid-template-columns: minmax(0,1.08fr) minmax(0,.92fr); align-items: center; gap: clamp(48px,7vw,120px); }
+    .hero-copy { position: relative; z-index: 1; }
+    .hero h1 { margin: 29px 0 31px; font-weight: 820; letter-spacing: -.07em; line-height: 1.32; font-size: clamp(44px, 5.2vw, 77px); }
+    .hero h1 .accent { color: var(--red); }
+    html[lang="en"] .hero h1 { font-size: clamp(40px, 4.6vw, 68px); line-height: 1.24; letter-spacing: -.055em; }
+    html[lang="zh-Hant-TW"] .hero h1 { font-size: clamp(37px,4.3vw,62px); line-height: 1.3; letter-spacing: -.045em; }
+    .hero-desc { margin: 0; font-size: clamp(15px,1.36vw,17px); line-height: 2.14; color: var(--ink-2); max-width: 540px; font-weight: 500; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 43px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; min-height: 58px; padding: 15px 24px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 13px; font-weight: 780; transition: background .2s ease, color .2s ease, transform .2s ease; }
+    .button:hover { transform: translateY(-3px); background: #e8e3da; }
+    .button-primary { border-color: var(--red-dark); background: var(--red-dark); color: white; }
+    .button-primary:hover { background: #751b20; color: white; }
+    .hero-foot { display: flex; align-items: center; gap: 19px; margin-top: 54px; color: var(--muted); font: 700 10px/1.6 Arial, sans-serif; letter-spacing: .10em; text-transform: uppercase; }
+    .hero-foot .rule { width: 33px; height: 1px; background: var(--muted); opacity: .65; }
+    .hero-stage { position: relative; min-width: 0; padding: 16px; aspect-ratio: 1 / 1.07; display: grid; align-items: center; background: #e9e7e0; border: 1px solid #d8d4cb; isolation: isolate; }
+    .hero-stage::before { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .48; background-image: linear-gradient(to right, rgba(76,70,63,.13) 1px, transparent 1px), linear-gradient(to bottom, rgba(76,70,63,.13) 1px, transparent 1px); background-size: 16.666% 16.666%; }
+    .hero-stage::after { content: "KUMIHAN / 01"; position: absolute; right: -18px; top: -24px; font: 750 10px/1 Arial, sans-serif; letter-spacing: .18em; writing-mode: vertical-rl; color: var(--muted); }
+    .logo-card { align-self: center; justify-self: center; width: min(92%,470px); padding: 9px; background: white; box-shadow: 0 28px 70px rgba(44,39,33,.10); }
+    .logo-card img { width: 100%; height: auto; }
+    .stage-label { position: absolute; left: 27px; bottom: 23px; color: #56534c; font-size: 10px; font-weight: 750; letter-spacing: .15em; }
+    .section-number { font: 700 11px/1.4 Arial, sans-serif; letter-spacing: .12em; color: var(--red-dark); }
+    .intro-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .intro-layout { display: grid; grid-template-columns: 200px 1fr; padding-top: 90px; padding-bottom: 94px; gap: 35px; }
+    .intro-text h2 { margin: -7px 0 26px; font-weight: 720; font-size: clamp(27px,3.0vw,43px); line-height: 1.62; letter-spacing: -.065em; }
+    .intro-text h2 em { color: var(--red-dark); font-style: normal; border-bottom: 3px solid var(--red); padding-bottom: 4px; }
+    .intro-text p { max-width: 735px; color: var(--muted); font-size: 15px; line-height: 2.07; margin: 0; }
+    .features { padding: 118px 0 124px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 48px; }
+    .section-heading h2 { font-size: clamp(30px,3.8vw,48px); font-weight: 770; letter-spacing: -.065em; line-height: 1.35; margin: 11px 0 0; }
+    .section-heading p { color: var(--muted); font-size: 14px; line-height: 1.9; max-width: 250px; margin: 0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+    .feature { position: relative; padding: 32px 24px 36px 0; min-height: 274px; }
+    .feature:not(:first-child) { padding-left: 25px; border-left: 1px solid var(--line); }
+    .feature-index { font: 780 11px/1 Arial, sans-serif; color: var(--red-dark); }
+    .feature-motif { height: 63px; display: flex; align-items: center; font: 680 38px/1 var(--serif); color: var(--ink); }
+    .feature:nth-child(2) .feature-motif { font-family: var(--display); font-weight: 800; letter-spacing: -.18em; }
+    .feature:nth-child(3) .feature-motif { font-family: Arial, sans-serif; letter-spacing: -.12em; font-size: 31px; }
+    .feature:nth-child(4) .feature-motif { font-family: Arial, sans-serif; font-size: 45px; font-weight: 400; }
+    .feature h3 { font-size: 18px; margin: 2px 0 12px; font-weight: 790; letter-spacing: -.04em; }
+    .feature p { font-size: 14px; line-height: 1.95; color: var(--muted); margin: 0; }
+    .idea-band { background: var(--ink); color: #fcfaf4; overflow: hidden; }
+    .idea-layout { display: grid; grid-template-columns: 1fr 275px; align-items: stretch; gap: 70px; padding: 78px 0 82px; }
+    .idea-band h2 { font-size: clamp(29px,4.35vw,58px); font-weight: 760; line-height: 1.6; letter-spacing: -.07em; margin: 21px 0 17px; }
+    .idea-band h2 strong { color: #ff8b85; font-weight: inherit; }
+    .idea-band p:not(.eyebrow) { font-size: 13px; line-height: 2.1; color: #c4c0b9; max-width: 600px; }
+    .idea-art { align-self: center; display: grid; gap: 12px; padding: 20px 0; }
+    .idea-art span { display: block; height: 12px; background: rgba(250,246,238,.82); }
+    .idea-art span:nth-child(1) { width: 72%; }
+    .idea-art span:nth-child(2) { width: 94%; background: var(--red); }
+    .idea-art span:nth-child(3) { width: 82%; }
+    .idea-art span:nth-child(4) { width: 100%; }
+    .idea-art span:nth-child(5) { width: 60%; background: rgba(250,246,238,.25); }
+    .idea-art small { display: block; font-size: 11px; letter-spacing: .2em; margin-top: 19px; color: #9e9b95; }
+    .skills-section { padding: 119px 0 129px; }
+    .skills-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .skill-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 296px; padding: 34px 36px 32px; background: #eeebe5; border: 1px solid #e1ddd4; transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
+    .skill-card:hover { transform: translateY(-5px); border-color: #bdaba7; box-shadow: 0 12px 35px rgba(40,32,25,.06); }
+    .skill-card:first-child { background: var(--ink); color: white; border-color: var(--ink); }
+    .skill-card:first-child .skill-desc, .skill-card:first-child .skill-type { color: #c9c4bd; }
+    .skill-card .card-top { display: flex; justify-content: space-between; align-items: start; gap: 20px; }
+    .skill-type { font-size: 10px; font-weight: 800; color: var(--muted); letter-spacing: .16em; }
+    .skill-symbol { font: 390 45px/1 var(--serif); color: var(--red); letter-spacing: -.15em; }
+    .skill-card:first-child .skill-symbol { color: #f59088; }
+    .skill-name { font: 750 clamp(24px,2.1vw,30px)/1.2 Arial, Helvetica, sans-serif; letter-spacing: -.06em; margin: 22px 0 13px; overflow-wrap: anywhere; }
+    .skill-desc { font-size: 14px; color: var(--ink-2); line-height: 1.9; max-width: 440px; margin: 0 0 28px; }
+    .skill-end { display: flex; align-items: center; justify-content: space-between; padding-top: 18px; border-top: 1px solid currentColor; font: 800 10px Arial, sans-serif; letter-spacing: .12em; }
+    .skill-card:not(:first-child) .skill-end { border-color: #cfc9be; }
+    .skill-card:first-child .skill-end { border-color: rgba(255,255,255,.33); }
+    .install-section { border-top: 1px solid var(--line); padding: 108px 0 123px; }
+    .install-layout { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); gap: clamp(32px,5vw,75px); }
+    .install-intro h2 { font-size: clamp(29px,3.7vw,48px); line-height: 1.45; letter-spacing: -.065em; margin: 14px 0 19px; }
+    .install-intro p { font-size: 14px; line-height: 2.1; color: var(--muted); margin: 0; }
+    .install-links { border-top: 1px solid var(--ink); }
+    .platform-row { display: flex; gap: 20px; align-items: center; min-height: 104px; padding: 20px 12px 20px 4px; border-bottom: 1px solid var(--line); transition: padding .2s ease, background .2s ease; }
+    .platform-row:hover { padding-left: 15px; background: #ece8e0; }
+    .platform-index { flex: 0 0 34px; align-self: flex-start; padding-top: 5px; font: 800 11px Arial, sans-serif; color: var(--red-dark); }
+    .platform-info { flex: 1 1 auto; min-width: 0; }
+    .platform-name { font: 760 clamp(17px,2vw,22px)/1.3 Arial, Helvetica, sans-serif; letter-spacing: -.025em; }
+    .platform-note { font-size: 14px; line-height: 1.8; color: var(--muted); margin-top: 7px; }
+    .platform-arrow { flex: 0 0 auto; font: 400 25px Arial, sans-serif; color: var(--ink); }
+    .install-extra { margin-top: 24px; font-size: 12px; color: var(--muted); line-height: 1.8; }
+    .install-extra a { font-weight: 800; color: var(--ink); border-bottom: 1px solid var(--red); padding-bottom: 2px; }
+    .status-section { padding-bottom: 118px; }
+    .status-box { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding: 32px 38px; border: 1px solid #dfd4c5; background: #ece6db; }
+    .status-title { font: 780 13px/1.6 Arial, sans-serif; color: var(--red-dark); letter-spacing: .07em; }
+    .status-box p { margin: 9px 0 0; color: var(--ink-2); font-size: 14px; line-height: 1.85; }
+    .status-meta { text-align: right; font: 700 11px Arial, sans-serif; color: var(--muted); white-space: nowrap; }
+    .cta-section { padding: 84px 0 92px; background: var(--red-dark); color: white; }
+    .cta-layout { display: flex; justify-content: space-between; align-items: center; gap: 35px; }
+    .cta-layout h2 { font-size: clamp(27px,4vw,50px); line-height: 1.5; letter-spacing: -.06em; font-weight: 740; margin: 0 0 14px; }
+    .cta-layout p { max-width: 640px; margin: 0; color: #f2d5d3; font-size: 13px; line-height: 1.9; }
+    .cta-layout .button { color: var(--ink); background: white; border-color: white; flex: 0 0 auto; }
+    .cta-layout .button:hover { color: white; background: transparent; }
+    .footer { padding: 40px 0 47px; background: #1e1e1c; color: #e3dfd7; }
+    .footer-layout { display: flex; align-items: center; justify-content: space-between; gap: 35px; }
+    .footer-mark { font: 810 22px/1 Arial, sans-serif; letter-spacing: -.04em; margin-bottom: 13px; }
+    .footer-sub { font-size: 12px; color: #aaa69e; line-height: 1.8; }
+    .footer-sub a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 15px 24px; font-size: 11px; font-weight: 650; }
+    .footer-links a:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
+    @media (max-width: 1080px) {
+      :root { --shell: min(100% - 52px, 1184px); }
+      .header-content { gap: 20px; }
+      .header-nav { gap: 20px; }
+      .header-controls { gap: 10px; margin-left: 0; }
+      .hero-layout { gap: 43px; }
+      .feature { padding-right: 18px; }
+      .feature:not(:first-child) { padding-left: 18px; }
+      .feature h3 { font-size: 16px; }
+    }
+    @media (max-width: 790px) {
+      .site-header { position: relative; }
+      .header-content { min-height: 0; padding-block: 20px 14px; flex-wrap: wrap; justify-content: space-between; gap: 17px; }
+      .header-nav { order: 3; width: 100%; margin: 0; justify-content: space-between; padding-top: 15px; border-top: 1px solid var(--line); }
+      .header-controls { margin-left: auto; }
+      .hero { padding: 70px 0 78px; }
+      .hero-layout { grid-template-columns: 1fr; gap: 58px; }
+      .hero h1 { max-width: 710px; }
+      .hero-stage { width: min(100%, 575px); aspect-ratio: 1.12; justify-self: center; }
+      .hero-stage::after { right: 10px; top: -22px; writing-mode: horizontal-tb; }
+      .hero-foot { margin-top: 37px; }
+      .intro-layout { grid-template-columns: 1fr; gap: 20px; padding-block: 77px; }
+      .section-heading { align-items: flex-start; }
+      .feature-grid { grid-template-columns: repeat(2,1fr); }
+      .feature { min-height: 260px; border-bottom: 1px solid var(--line); }
+      .feature:nth-child(3) { border-left: 0; padding-left: 0; }
+      .feature:nth-child(3), .feature:nth-child(4) { border-bottom: 0; }
+      .idea-layout { grid-template-columns: 1fr 160px; gap: 28px; }
+      .install-layout { grid-template-columns: 1fr; gap: 45px; }
+    }
+    @media (max-width: 560px) {
+      :root { --shell: calc(100% - 36px); }
+      html { scroll-padding-top: 20px; }
+      .brand { font-size: 19px; }
+      .language-switch button { padding: 6px 8px; }
+      .header-controls { gap: 8px; }
+      .header-nav { gap: 16px; overflow-x: auto; justify-content: flex-start; padding-bottom: 8px; }
+      .header-nav a { font-size: 12px; }
+      .hero { padding: 60px 0 66px; }
+      .hero h1 { font-size: clamp(38px,9.7vw,56px); line-height: 1.4; margin: 20px 0 22px; }
+      html[lang="en"] .hero h1 { font-size: clamp(33px, 8.5vw, 45px); line-height: 1.28; }
+      html[lang="zh-Hant-TW"] .hero h1 { font-size: clamp(30px,8vw,42px); line-height: 1.36; }
+      .hero-desc { font-size: 15px; line-height: 1.95; }
+      .hero-cta { margin-top: 28px; flex-direction: column; }
+      .hero-cta .button { width: 100%; }
+      .hero-foot { margin-top: 31px; flex-wrap: wrap; gap: 12px; }
+      .hero-stage { padding: 9px; }
+      .stage-label { left: 15px; bottom: 14px; font-size: 9px; }
+      .intro-layout { padding-block: 62px; }
+      .intro-text h2 { font-size: 28px; }
+      .intro-text p { font-size: 14px; }
+      .features { padding-block: 78px; }
+      .section-heading { display: block; margin-bottom: 30px; }
+      .section-heading p { margin-top: 20px; }
+      .feature { min-height: 239px; padding-top: 25px; padding-right: 14px; }
+      .feature:not(:first-child) { padding-left: 14px; }
+      .feature:nth-child(3) { padding-left: 0; }
+      .feature h3 { font-size: 16px; }
+      .feature p { font-size: 13px; }
+      .feature-motif { font-size: 33px; }
+      .idea-layout { grid-template-columns: 1fr; padding-block: 64px; gap: 8px; }
+      .idea-band h2 { font-size: 28px; }
+      .idea-art { width: 160px; }
+      .idea-art span { height: 7px; }
+      .skills-section { padding: 78px 0 88px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-card { min-height: 246px; padding: 26px; }
+      .skill-name { font-size: 28px; }
+      .install-section { padding: 77px 0 88px; }
+      .platform-row { min-height: 99px; }
+      .platform-name { font-size: 18px; }
+      .status-section { padding-bottom: 74px; }
+      .status-box { grid-template-columns: 1fr; gap: 12px; padding: 27px 24px; }
+      .status-meta { text-align: left; }
+      .cta-section { padding: 70px 0; }
+      .cta-layout { align-items: stretch; flex-direction: column; }
+      .cta-layout .button { align-self: flex-start; }
+      .footer { padding: 42px 0; }
+      .footer-layout { flex-direction: column; align-items: flex-start; gap: 27px; }
+      .footer-links { justify-content: flex-start; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+
+
+    html[lang="ja"] { line-break: strict; }
+    html[lang="ja"] body {
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+                   "Noto Sans JP", Meiryo, sans-serif;
+      line-height: 1.8;
+    }
+    .hero-layout {
+      grid-template-columns: minmax(0,1.18fr) minmax(0,.82fr);
+      gap: clamp(42px,5vw,86px);
+    }
+    .header-nav { min-width: 0; }
+    .header-nav a { white-space: normal; text-wrap: balance; }
+    .language-switch a {
+      display: inline-flex; min-height: 38px; min-width: 40px;
+      align-items: center; justify-content: center;
+      padding: 8px 10px; border-radius: 40px;
+      font: 800 11px/1.35 Arial, sans-serif; letter-spacing: .04em;
+      color: var(--muted); text-decoration: none;
+    }
+    .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
+    .language-switch a:hover:not([aria-current="page"]) { background: var(--paper-2); }
+    .hero h1 {
+      letter-spacing: -.045em; text-wrap: wrap;
+      word-break: normal; overflow-wrap: normal;
+    }
+    @supports (word-break: auto-phrase) {
+      /* Real Chrome 155 / 1280 + 320 measurement preferred larger speech groups. */
+      .hero h1 { word-break: auto-phrase; text-wrap: balance; }
+    }
+    .intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2 {
+      text-wrap: balance; word-break: normal;
+    }
+    .hero .edition {
+      display: inline-block; margin-top: 10px;
+      color: var(--red-dark); font: 750 16px/1.65 "Noto Sans Thai", Thonburi,
+            "Hiragino Sans", sans-serif;
+      letter-spacing: 0; overflow-wrap: anywhere;
+    }
+    .feature-motif { font-family: "Noto Sans Thai", Thonburi, "Hiragino Sans", sans-serif; }
+    .feature:nth-child(2) .feature-motif { letter-spacing: -.12em; }
+    .feature:nth-child(3) .feature-motif { font-size: 31px; }
+    .hero-stage::after { content: "KUMIHAN / TH"; }
+    .skill-name { font-size: clamp(23px,2.0vw,29px); overflow-wrap: anywhere; }
+    .skill-desc { overflow-wrap: break-word; }
+    .skill-card { min-width: 0; }
+    .platform-info { min-width: 0; }
+    .platform-name, .platform-note { overflow-wrap: break-word; }
+    .status-meta { white-space: normal; overflow-wrap: break-word; }
+    .status-box > * { min-width: 0; }
+    .card-top > * { min-width: 0; }
+    .skill-type { overflow-wrap: anywhere; }
+    .status-meta a { display: inline-block; padding-block: 5px; color: var(--red-dark); }
+    .status-meta a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .footer-links a { overflow-wrap: break-word; }
+    @media (max-width: 790px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 46px; }
+      .header-nav { gap: 12px; }
+      .language-switch a { min-height: 40px; }
+      .hero-stage { max-width: min(100%, 575px); }
+    }
+    @media (max-width: 560px) {
+      .hero h1 { font-size: clamp(36px, 9vw, 50px); letter-spacing: -.04em; }
+      .language-switch a { padding: 7px 9px; }
+      .hero .edition { font-size: 15px; }
+      .hero-stage::after { right: 8px; }
+      .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .skill-name { font-size: 25px; }
+      .platform-row { gap: 13px; }
+      .footer-links { justify-content: flex-start; }
+    }
+    @media (max-width: 365px) {
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature,.feature:not(:first-child),.feature:nth-child(3) {
+        padding: 23px 0; min-height: 0; border-left: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .feature:last-child { border-bottom: 0; }
+    }
+    /* These selectors target actual external URLs, not Japanese reading copy. */
+    .external-id { overflow-wrap: anywhere; }
+
+  </style>
+  <script src="assets/thai-site.js" defer></script>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">本文へ移動</a>
+
+<header class="site-header">
+  <div class="shell header-content">
+    <a href="#top" class="brand" aria-label="ページ上部へ戻る">KUMIHAN</a>
+    <nav class="header-nav" aria-label="メインナビゲーション">
+      <a href="#concept">コンセプト</a>
+      <a href="#features">できること</a>
+      <a href="#skills">4つのスキル</a>
+      <a href="#install">導入方法</a>
+    </nav>
+    <div class="header-controls"><nav class="language-switch" aria-label="表示言語を選ぶ"><a href="kumihan-th.html" data-language lang="th" hreflang="th">ไทย</a><a href="kumihan-th-en.html" data-language lang="en" hreflang="en">EN</a><a href="kumihan-th-ja.html" data-language lang="ja" hreflang="ja" aria-current="page">日本語</a></nav></div>
+  </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell hero-layout">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / THAI TYPOGRAPHY</p>
+      <div class="edition" lang="th">KUMIHAN｜ดุลอักษร</div>
+      <h1 id="hero-title">タイ語の文字組みを<span class="accent">もっと自然に</span></h1>
+      <p class="hero-desc">KUMIHAN｜ดุลอักษร はタイ語のWebサイト、文書、プレゼン資料の制作とレビューを支援するオープンソースSkillsです。原文を守りながら、タイ文字の表示と行全体のバランスを考えます。</p>
+      <div class="hero-cta">
+        <a href="#install" class="button button-primary">使いはじめる<span class="arrow" aria-hidden="true">↗</span></a>
+        <a href="#concept" class="button">KUMIHAN｜ดุลอักษรについて<span class="arrow" aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-foot" aria-label="オープンソース タイ語版 4つのスキル">
+        <span>OPEN SOURCE</span><span class="rule" aria-hidden="true"></span>
+        <span>FOUR SKILLS</span><span class="rule" aria-hidden="true"></span>
+        <span>THAI FIRST</span>
+      </div>
+    </div>
+    <div class="hero-stage" aria-label="KUMIHAN公式ビジュアル">
+      <div class="logo-card"><img src="assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254"
+        alt="KUMIHANの公式ロゴ" fetchpriority="high"></div>
+      <div class="stage-label">WORDS · SPACE · PURPOSE</div>
+    </div>
+  </div>
+</section>
+<section class="intro-strip" id="concept" aria-labelledby="concept-title">
+  <div class="shell intro-layout">
+    <div><span class="section-number">01 / THE IDEA</span></div>
+    <div class="intro-text">
+      <h2 id="concept-title">見た目をそろえるより<br><em>伝わる形を考える</em></h2>
+      <p>タイ語には前置母音や声調記号があり、改行位置を空白や文字数だけで決められません。内容、表示幅、書体の実際の形、読み手の状況を起点に組版を考えます。</p>
+    </div>
+  </div>
+</section>
+<section class="features" id="features" aria-labelledby="features-title">
+  <div class="shell">
+    <div class="section-heading">
+      <div><div class="section-number">02 / WHAT MATTERS</div>
+        <h2 id="features-title">伝えるための4つの視点</h2></div>
+      <p>制作から見直しまで<br>タイ語の文字組みで大切にしたいこと</p>
+    </div>
+    <div class="feature-grid">
+<article class="feature">
+  <div class="feature-index">01 / BREAKS</div>
+  <div class="feature-motif" aria-hidden="true">ก</div>
+  <h3>改行と行全体のバランス</h3><p>語分割候補と実表示幅を分けて検討し、文節単位の改行を強制しない。</p>
+</article>
+<article class="feature">
+  <div class="feature-index">02 / SHAPING</div>
+  <div class="feature-motif" aria-hidden="true">◌</div>
+  <h3>母音・声調記号の表示</h3><p>記号の重なり、欠け、フォントフォールバック、行間を実描画で確認する。</p>
+</article>
+<article class="feature">
+  <div class="feature-index">03 / FIDELITY</div>
+  <div class="feature-motif" aria-hidden="true">Aa/ก</div>
+  <h3>原稿の保護</h3><p>固有名詞、価格、引用、Unicodeの並びを無断で書き換えない。</p>
+</article>
+<article class="feature">
+  <div class="feature-index">04 / REVIEW</div>
+  <div class="feature-motif" aria-hidden="true">◎</div>
+  <h3>読み取り専用のレビュー</h3><p>実測、制作指針、未検証の項目を分けて報告する。</p>
+</article>
+</div></div></section>
+<section class="idea-band" aria-labelledby="idea-title">
+  <div class="shell idea-layout">
+    <div><p class="eyebrow"><span class="line" aria-hidden="true"></span> DESIGNED FOR THE MESSAGE</p>
+      <h2 id="idea-title">文字を並べるだけでなく<br><strong>読む体験を組み立てる</strong></h2>
+      <p>どのブランドにも同じテンプレートや書体セットを押し付けず、目的、読者、情報の優先順位から考えます。</p>
+    </div>
+    <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span>
+      <small>FORM FOLLOWS MEANING</small></div>
+  </div>
+</section>
+<section class="skills-section" id="skills" aria-labelledby="skills-title">
+  <div class="shell">
+    <div class="section-heading">
+      <div><div class="section-number">03 / THE SKILLS</div>
+        <h2 id="skills-title">4つのスキル ひとつの考え方</h2></div>
+      <p>企画の入口から制作とレビューまで<br>それぞれ単独で導入できます</p>
+    </div>
+    <div class="skills-grid">
+<a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th/skills/kumihan-th" target="_blank" rel="noopener noreferrer">
+  <div class="card-top"><span class="skill-type">01 / ENTRY</span>
+    <span class="skill-symbol" aria-hidden="true">組</span></div>
+  <div><h3 class="skill-name">kumihan-th</h3>
+    <p class="skill-desc">目的・媒体・言語・作業範囲の整理</p>
+    <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
+  </div></a>
+<a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th/skills/kumihan-th-web" target="_blank" rel="noopener noreferrer">
+  <div class="card-top"><span class="skill-type">02 / WEB</span>
+    <span class="skill-symbol" aria-hidden="true">↗</span></div>
+  <div><h3 class="skill-name">kumihan-th-web</h3>
+    <p class="skill-desc">Web、記事、LP、UIの制作指針</p>
+    <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
+  </div></a>
+<a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th/skills/kumihan-th-documents" target="_blank" rel="noopener noreferrer">
+  <div class="card-top"><span class="skill-type">03 / DOCUMENTS</span>
+    <span class="skill-symbol" aria-hidden="true">文</span></div>
+  <div><h3 class="skill-name">kumihan-th-documents</h3>
+    <p class="skill-desc">報告書、文書、スライドの制作指針</p>
+    <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
+  </div></a>
+<a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th/skills/kumihan-th-review" target="_blank" rel="noopener noreferrer">
+  <div class="card-top"><span class="skill-type">04 / REVIEW</span>
+    <span class="skill-symbol" aria-hidden="true">◎</span></div>
+  <div><h3 class="skill-name">kumihan-th-review</h3>
+    <p class="skill-desc">元ファイルを変更しないレビュー</p>
+    <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
+  </div></a>
+</div></div></section>
+<section class="install-section" id="install" aria-labelledby="install-title">
+  <div class="shell install-layout">
+    <div class="install-intro">
+      <div class="section-number">04 / GET STARTED</div>
+      <h2 id="install-title">いつものAIツールから<br>はじめよう</h2>
+      <p>ChatGPT/Codex、Claude、Geminiの利用形態に合う導入ページを用意します。各ホストの対応範囲と実測結果は異なります。</p>
+    </div>
+    <div><div class="install-links">
+<a class="platform-row" href="docs/install-kumihan-th-chatgpt.ja.html">
+  <span class="platform-index">01</span>
+  <div class="platform-info"><div class="platform-name">ChatGPT / Codex</div>
+    <div class="platform-note">Skillの追加と独立プラグインの導入</div></div>
+  <span class="platform-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="platform-row" href="docs/install-kumihan-th-claude.ja.html">
+  <span class="platform-index">02</span>
+  <div class="platform-info"><div class="platform-name">Claude / Claude Code</div>
+    <div class="platform-note">Claude Codeプラグインと単独Skillの導入</div></div>
+  <span class="platform-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="platform-row" href="docs/install-kumihan-th-gemini.ja.html">
+  <span class="platform-index">03</span>
+  <div class="platform-info"><div class="platform-name">Gemini</div>
+    <div class="platform-note">Gemini CLI拡張とSkillの利用方法</div></div>
+  <span class="platform-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+      <div class="install-extra">配布ファイルは <a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1" target="_blank" rel="noopener noreferrer">GitHub Release</a> で確認できます</div>
+    </div>
+  </div>
+</section>
+<section class="status-section" aria-labelledby="status-title">
+  <div class="shell status-box">
+    <div>
+      <div class="status-title" id="status-title">KUMIHAN / THAI v0.1.1</div>
+      <p>v0.1.1は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。</p>
+      <p>ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です</p>
+    </div>
+    <div class="status-meta"><a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1" target="_blank" rel="noopener noreferrer">配布物を確認する ↗</a>
+      <br>OPEN SOURCE · APACHE 2.0</div>
+  </div>
+</section>
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="shell cta-layout">
+    <div><h2 id="cta-title">タイ語のデザインに<br>もうひとつの選択肢を</h2>
+      <p>文字の形も読みやすさも大切に<br>ソースコードと配布物をオープンに公開しています</p></div>
+    <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th" class="button" target="_blank" rel="noopener noreferrer">GitHubで見る<span class="arrow" aria-hidden="true">↗</span></a>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="shell footer-layout">
+    <div><div class="footer-mark">KUMIHAN｜ดุลอักษร</div>
+      <div class="footer-sub">Thai typography skills for AI-assisted design<br>
+        Developed by L&amp;Co. LLC</div></div>
+    <div class="footer-links">
+      <a href="kumihan.html">KUMIHAN 日本語版</a>
+      <a href="kumihan-th.html">ภาษาไทย</a>
+      <a href="kumihan-th-en.html">English</a>
+      <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="LICENSE">Apache License 2.0</a>
+      <a href="#top">ページ上部へ ↑</a>
+    </div>
+  </div>
+</footer>
+</body></html>

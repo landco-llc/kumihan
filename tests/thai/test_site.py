@@ -62,6 +62,42 @@ class ThaiSiteContract(unittest.TestCase):
    text=(ROOT/SITE.home(lang)).read_text()
    self.assertNotIn('\u200b',text);self.assertNotIn('\u2060',text)
    for host in SITE.HOSTS:self.assertIn('href="'+SITE.guide(host,lang)+'"',text)
+ def test_japanese_landing_uses_canonical_index_structure(self):
+  import re
+  from html import unescape
+  canonical=(ROOT/'_layouts/landing.html').read_text()
+  japanese=(ROOT/'kumihan-th-ja.html').read_text()
+  sections=lambda text: re.findall(r'<section class="([^"]+)"',text)
+  self.assertEqual(sections(japanese),sections(canonical))
+  for css_class in ('hero-layout','intro-layout','feature-grid','idea-layout',
+                    'skills-grid','install-layout','status-box','cta-layout','footer-layout'):
+   pattern=r'class="[^"]*\b'+re.escape(css_class)+r'\b[^"]*"'
+   self.assertRegex(japanese,pattern)
+   self.assertRegex(canonical,pattern)
+  self.assertIn('KUMIHAN｜ดุลอักษร',japanese)
+  self.assertIn('lang="ja"',japanese)
+  self.assertIn('line-break: strict',japanese)
+  self.assertIn('releases/tag/kumihan-th-v0.1.1',japanese)
+  for match in re.finditer(r'<h([123])\b[^>]*>(.*?)</h\1>',japanese,re.S):
+   visible=unescape(re.sub('<[^>]*>','',match.group(2)))
+   self.assertNotRegex(visible,r'[、。]',msg=visible)
+ def test_thai_landing_uses_canonical_index_without_forced_thai_breaks(self):
+  import re
+  canonical=(ROOT/'_layouts/landing.html').read_text()
+  thai=(ROOT/'kumihan-th.html').read_text()
+  sections=lambda text: re.findall(r'<section class="([^"]+)"',text)
+  self.assertEqual(sections(thai),sections(canonical))
+  for css_class in ('hero-layout','intro-layout','feature-grid','idea-layout',
+                    'skills-grid','install-layout','status-box','cta-layout','footer-layout'):
+   pattern=r'class="[^"]*\b'+re.escape(css_class)+r'\b[^"]*"'
+   self.assertRegex(thai,pattern)
+  self.assertIn('lang="th"',thai)
+  self.assertIn('"Noto Sans Thai"',thai)
+  self.assertIn('word-break: normal',thai)
+  self.assertIn('.header-nav a { white-space: normal',thai)
+  self.assertNotIn('word-break: break-all',thai)
+  self.assertIn('href="docs/install-kumihan-th-claude.html"',thai)
+  self.assertIn('href="docs/install-kumihan-th-gemini.html"',thai)
  def test_hash_switch_uses_real_anchors(self):
   for lang in SITE.COPY:
    doc=Document((ROOT/SITE.home(lang)).read_text())
