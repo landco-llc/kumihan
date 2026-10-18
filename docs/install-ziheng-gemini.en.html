@@ -1,25 +1,67 @@
 <!doctype html>
 <html lang="en" data-product="zh-han">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="kumihan-product-route" content="zh-han">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<meta name="kumihan-product-route" content="zh-han">
 <meta name="description" content="One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.">
 <meta property="og:title" content="Install KUMIHAN｜字衡 for Gemini"><meta property="og:description" content="One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.">
 <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.en.html">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.html">
 <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.en.html">
 <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.html">
-<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><link rel="stylesheet" href="../assets/ziheng-site.css"><title>Install KUMIHAN｜字衡 for Gemini</title>
+<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><title>Install KUMIHAN｜字衡 for Gemini</title>
+<link rel="stylesheet" href="../assets/kumihan-install.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Install ZiHeng</a>
-<header id="top" class="site-header"><div class="shell header-row"><a class="brand" href="../kumihan-zh-han.en.html"><span>KUMIHAN<span class="brand-rule">｜</span>字衡</span></a>
-<nav class="header-nav" aria-label="Navigation"><a href="../kumihan-zh-han.en.html">Back to ZiHeng</a><a href="install-ziheng.en.html">All installation methods</a><a href="#steps">Installation steps</a><a href="#download">Downloads and checksums</a></nav>
-<nav class="lang-picker" aria-label="Language / 語言 / 言語"><a href="install-ziheng-gemini.html" lang="zh-Hant-TW" hreflang="zh-Hant-TW">繁體中文</a><a href="install-ziheng-gemini.en.html" lang="en" hreflang="en" aria-current="page">English</a><a href="install-ziheng-gemini.ja.html" lang="ja" hreflang="ja">日本語</a></nav></div></header>
-<main id="main" class="install-page"><div class="shell"><nav class="breadcrumb"><a href="../kumihan-zh-han.en.html">KUMIHAN｜字衡</a><span aria-hidden="true">/</span>Gemini CLI</nav>
-<div class="install-hero"><div><p class="eyebrow"><span class="accent-line" aria-hidden="true"></span>PREVIEW 0.1.0 / Gemini CLI</p><h1>Install ZiHeng for Gemini</h1><p>One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.</p></div><div class="install-hero-art"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHAN official logo"></div></div></div>
-<section class="shell install-section" id="steps"><p class="section-kicker">01 / SETUP</p><h2>Installation steps</h2><div class="steps"><article class="step"><span class="step-index">01</span><div><h3>Download and extract the Gemini CLI extension</h3><p class="step-detail">Download the dedicated Gemini CLI extension ZIP and extract it into a new empty folder.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>unzip kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip -d /absolute/path/kumihan-ziheng</code></pre></div></article><article class="step"><span class="step-index">02</span><div><h3>Install the local extension</h3><p class="step-detail">Install that local directory using Gemini CLI, restart, then verify the skills appear.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>gemini extensions install &quot;/absolute/path/kumihan-ziheng&quot;</code></pre></div></article><article class="step"><span class="step-index">03</span><div><h3>Verify the ZiHeng extension</h3><p class="step-detail">The GitHub monorepo root contains the Japanese KUMIHAN extension; installing the root URL is not a ZiHeng install.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>gemini extensions list</code></pre></div></article><article class="step"><span class="step-index">04</span><div><h3>Import Gemini app skills</h3><p class="step-detail">Gemini app: if your account supports Skills upload, import individual skill ZIPs and run host-specific acceptance tests.</p></div></article></div></section>
-<section class="download-panel" id="download"><div class="shell download-grid"><div><p class="section-kicker">02 / DOWNLOADS</p><h2>Downloads and checksums</h2><p>Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve the original characters.</p><div class="checksum"><span>Full package SHA-256</span><code>9d0820df5206da8d44057fdc68639c14177cf556f0be67aeb0b831b4192d30c0</code></div></div><div class="downloads"><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip" download><span>Download full package: kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-web</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-documents</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-review</span><span class="external-mark" aria-hidden="true">↗</span></a></div></div></section>
-<section class="shell install-section"><p class="section-kicker">03 / VERIFY</p><h2>Preview limitations</h2><aside class="limit-note"><p>This package offers typography guidance, not an automatic renderer. Native host installation and invocation have not yet passed live host acceptance. Test both Taiwan and Hong Kong samples first.</p></aside><p class="back-line"><a class="btn btn-outline" href="install-ziheng.en.html">All installation methods ↗</a></p></section>
-</main>
-<footer class="footer"><div class="shell footer-layout"><div><p class="footer-brand">KUMIHAN<span class="brand-rule">｜</span>字衡</p><p class="footer-sub">v0.1.0-preview · Apache-2.0 · L&amp;Co. LLC</p></div><nav class="footer-nav"><a href="../kumihan-zh-han.en.html">Back to ZiHeng</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng">GitHub</a><a href="../index.html">KUMIHAN</a></nav></div></footer>
-</body></html>
+<a class="skip-link" href="#guide-content">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../kumihan-zh-han.en.html">KUMIHAN<span class="brand-rule">｜</span>字衡</a>
+    <nav class="header-nav" aria-label="Installation guides"><a href="install-ziheng.en.html">ChatGPT / Codex</a><a href="install-ziheng-claude.en.html">Claude</a><a href="install-ziheng-gemini.en.html" aria-current="page">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../kumihan-zh-han.en.html">KUMIHAN<span class="brand-rule">｜</span>字衡</a><span aria-hidden="true">/</span><span>Installation guide</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 03 OF 03</div>
+        <h1 id="page-title">Install ZiHeng for Gemini</h1>
+        <p class="hero-desc">One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.</p>
+        <nav class="language-switch lang-picker" aria-label="Language"><a href="install-ziheng-gemini.html" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language>繁體中文</a><a href="install-ziheng-gemini.en.html" lang="en" hreflang="en" data-language aria-current="page">English</a><a href="install-ziheng-gemini.ja.html" lang="ja" hreflang="ja" data-language>日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="Select an AI platform">
+  <div class="shell platform-inner"><a href="install-ziheng.en.html"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ziheng-claude.en.html"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ziheng-gemini.en.html" aria-current="page"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="On this page">
+    <details class="toc-details" open>
+      <summary>Show page contents</summary>
+      <h2 class="toc-title">On this page</h2>
+      <ol><li><a href="#steps">Installation steps</a></li><li><a href="#download">Downloads and checksums</a></li><li><a href="#notes">Preview limitations</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>PREVIEW / 0.1.0</strong><p>This is a preview. Native host installation and skill invocation have not been accepted yet. Some steps may be unavailable in your environment.</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng" target="_blank" rel="noopener noreferrer">View source installation docs ↗</a>
+  </aside>
+  <main class="guide" id="guide-content" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / Gemini</span><span class="step-label">Steps &amp; guidance</span></div>
+    <div class="guide-pane"><section class="install-section" id="steps"><p class="section-kicker">01 / SETUP</p><h2>Installation steps</h2><div class="steps"><article class="step"><span class="step-index">01</span><div><h3>Download and extract the Gemini CLI extension</h3><p class="step-detail">Download the dedicated Gemini CLI extension ZIP and extract it into a new empty folder.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>unzip kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip -d /absolute/path/kumihan-ziheng</code></pre></div></article><article class="step"><span class="step-index">02</span><div><h3>Install the local extension</h3><p class="step-detail">Install that local directory using Gemini CLI, restart, then verify the skills appear.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>gemini extensions install &quot;/absolute/path/kumihan-ziheng&quot;</code></pre></div></article><article class="step"><span class="step-index">03</span><div><h3>Verify the ZiHeng extension</h3><p class="step-detail">The GitHub monorepo root contains the Japanese KUMIHAN extension; installing the root URL is not a ZiHeng install.</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>gemini extensions list</code></pre></div></article><article class="step"><span class="step-index">04</span><div><h3>Import Gemini app skills</h3><p class="step-detail">Gemini app: if your account supports Skills upload, import individual skill ZIPs and run host-specific acceptance tests.</p></div></article></div></section>
+<section class="download-panel" id="download"><div class="download-grid"><div><p class="section-kicker">02 / DOWNLOADS</p><h2>Downloads and checksums</h2><p>Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve the original characters.</p><div class="checksum"><span>Full package SHA-256</span><code>9d0820df5206da8d44057fdc68639c14177cf556f0be67aeb0b831b4192d30c0</code></div></div><div class="downloads"><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip" download><span>Download full package: kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-web</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-documents</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0-preview.zip"><span>kumihan-ziheng-review</span><span class="external-mark" aria-hidden="true">↗</span></a></div></div></section>
+<section class="install-section" id="notes"><p class="section-kicker">03 / VERIFY</p><h2>Preview limitations</h2><aside class="limit-note"><p>This package offers typography guidance, not an automatic renderer. Native host installation and invocation have not yet passed live host acceptance. Test both Taiwan and Hong Kong samples first.</p></aside><p class="back-line"><a class="btn btn-outline" href="install-ziheng.en.html">All installation methods ↗</a></p></section></div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong>KUMIHAN<span class="brand-rule">｜</span>字衡</strong><p>Traditional Chinese typography skills for Taiwan and Hong Kong<br>v0.1.0-preview · Apache-2.0 · Developed by L&amp;Co. LLC</p></div>
+    <div><a href="../kumihan-zh-han.en.html">Back to ZiHeng home</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="../index.html">KUMIHAN</a></div>
+  </div>
+</footer>
+</body>
+</html>

@@ -195,6 +195,9 @@
     .guide-pane .downloads:not(ul) { border-top: 1px solid var(--ink); margin: 0 0 22px; }
     .guide-pane .download-row { display: flex; justify-content: space-between; gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--line); font-weight: 700; text-decoration: none; }
     .guide-pane .download-row:hover { background: #ece8e0; }
+    .guide-pane .install-options { border-top: 1px solid var(--ink); margin: 0 0 22px; }
+    .guide-pane .install-row { display: flex; justify-content: space-between; gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--line); font-weight: 700; text-decoration: none; }
+    .guide-pane .install-row:hover { background: #ece8e0; }
     .guide-pane .external-mark { color: var(--red); flex: 0 0 auto; }
     .guide-pane .checksum { margin: 22px 0; padding: 16px 20px; border-left: 4px solid var(--red); background: #efe8e1; }
     .guide-pane .checksum span { display: block; font-size: 12px; color: var(--muted); }

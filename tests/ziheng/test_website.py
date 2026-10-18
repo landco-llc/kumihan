@@ -78,7 +78,9 @@ class ZiHengWebsiteTests(unittest.TestCase):
         for path in CASE:
             content=(ROOT/path).read_text(encoding='utf-8')
             self.assertIn('KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png',content)
-            self.assertIn('ziheng-site.css',content)
+            # Landing pages use the ZiHeng index stylesheet; install guides share the
+            # canonical KUMIHAN install-guide layout.
+            self.assertIn('kumihan-install.css' if path.startswith('docs/') else 'ziheng-site.css',content)
         landing=(ROOT/'_layouts/landing.html').read_text(encoding='utf-8')
         self.assertIn("'/kumihan-zh-han.html' | relative_url",landing)
 

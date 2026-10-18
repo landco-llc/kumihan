@@ -36,6 +36,7 @@ class Frame:
     footer_sub: str = ""      # footer text HTML
     footer_links: list = field(default_factory=list)  # [(label, href, external)]
     scripts: str = ""
+    language_class: str = ""  # extra class for the language switch nav
 
 # UI keys: skip, nav, language, breadcrumb, toc_title, toc_summary,
 # platforms, note_title, note, source, source_href, steps, top
@@ -84,7 +85,7 @@ def render(f: Frame) -> str:
         <div class="eyebrow">INSTALL GUIDE / {e(f.number)} OF 03</div>
         <h1 id="page-title">{f.title}</h1>
         <p class="hero-desc">{f.description}</p>
-        <nav class="language-switch" aria-label="{e(u['language'])}">{langs}</nav>
+        <nav class="language-switch{(" " + f.language_class) if f.language_class else ""}" aria-label="{e(u['language'])}">{langs}</nav>
       </div>
       <div class="hero-logo"><img src="{e(f.asset_root)}assets/{LOGO}" alt="KUMIHAN official logo" width="1254" height="1254"></div>
     </div>
