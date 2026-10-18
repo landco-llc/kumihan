@@ -10,6 +10,11 @@ on:
       - 'tests/thai/**'
       - 'kumihan-th*.html'
       - 'docs/install-kumihan-th-*.html'
+      - 'tools/build_th_*_index.py'
+      - 'tools/install_frame.py'
+      - 'assets/kumihan-install.css'
+      - '_layouts/installation.html'
+      - 'tests/test_site_layout_parity.py'
       - '.github/workflows/thai.yml'
   push:
     branches: [main, feat/kumihan-th-v010-goal-20261018]

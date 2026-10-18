@@ -10,6 +10,13 @@ on:
       - 'docs/install-zilu-*.html'
       - 'assets/zilu-site.css'
       - '_layouts/landing.html'
+      - 'templates/zilu-*'
+      - 'assets/zilu-index-ja.css'
+      - 'top-zh-cn.html'
+      - 'tools/install_frame.py'
+      - 'assets/kumihan-install.css'
+      - '_layouts/installation.html'
+      - 'tests/test_site_layout_parity.py'
       - '.github/workflows/zilu.yml'
 permissions:
   contents: read

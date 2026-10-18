@@ -1,8 +1,62 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KUMIHAN｜字律 — 導入ガイド · Gemini</title><meta name="description" content="KUMIHAN｜字律は、AIが簡体中国語のWebサイト・文書・プレゼンテーションを制作・レビューするためのオープンソースSkills／プラグインです。標点、改行、中英混植、原稿の保全、検証できる品質を大切にします。">
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<title>KUMIHAN｜字律 — 導入ガイド · Gemini</title>
+<meta name="description" content="完全プラグインか4つの独立Skillsか、ホストの対応に合わせて選べます。">
 <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.ja.html"><link rel="alternate" hreflang="zh-Hans-CN" href="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.html"><link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.en.html"><link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.html">
-<meta property="og:locale" content="ja_JP"><meta property="og:title" content="KUMIHAN｜字律 — 導入ガイド · Gemini"><meta property="og:type" content="website"><meta property="og:url" content="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.ja.html"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
-<link rel="icon" href="/kumihan/favicon.ico"><link rel="stylesheet" href="/kumihan/assets/zilu-site.css"></head><body>
-<a class="skip" href="#main">本文へ移動</a><header class="shell"><a class="brand" href="/kumihan/kumihan-zh-cn.ja.html">KUMIHAN｜字律</a><nav aria-label="メインナビゲーション"><a href="/kumihan/kumihan-zh-cn.ja.html#concept">内容から文字組を考える</a><a href="/kumihan/kumihan-zh-cn.ja.html#skills">作業に合わせて選ぶ4つの独立Skills</a><a href="/kumihan/kumihan-zh-cn.ja.html#install">導入方法を見る</a></nav><nav class="languages" aria-label="言語"><a href="/kumihan/docs/install-zilu-gemini.html" lang="zh-Hans-CN" hreflang="zh-Hans-CN">简体中文</a><a href="/kumihan/docs/install-zilu-gemini.en.html" lang="en" hreflang="en">English</a><a href="/kumihan/docs/install-zilu-gemini.ja.html" lang="ja" hreflang="ja" aria-current="page">日本語</a></nav></header>
-<main id="main" class="shell" tabindex="-1"><section class="guide-hero"><p class="eyebrow">INSTALLATION / Gemini</p><h1>導入ガイド · Gemini</h1><p class="lead">KUMIHAN｜字律 · v0.1.0</p><nav class="hosts" aria-label="Host"><a href="/kumihan/docs/install-zilu-chatgpt.ja.html">ChatGPT / Codex</a><a href="/kumihan/docs/install-zilu-claude.ja.html">Claude</a><a href="/kumihan/docs/install-zilu-gemini.ja.html" aria-current="page">Gemini</a></nav></section><section class="guide"><h2>導入手順</h2><ol><li>前提：Extensions対応のGemini CLI。Gemini AppのSkillsアップロードは未検証です。</li><li>Extension ZIPを空フォルダへ展開し、直下のgemini-extension.jsonを確認します。gemini extensions install /absolute/path/to/folderを実行し、権限確認を読んでください。</li><li>単体Skill ZIPは独立フォルダへ展開し、使用中CLIのSkills導入手順で利用します。リポジトリroot URLは別製品を選ぶため使いません。App導入は実際のアカウントに入口がある場合のみです。</li></ol><p><a href="https://geminicli.com/docs/extensions/">Gemini CLI extensions</a> · <a href="https://geminicli.com/docs/cli/skills/">Gemini CLI Skills</a></p></section><section class="guide"><h2>ダウンロードと検証</h2><p>downloads内で sha256sum -c SHA256SUMS.txt（macOSは shasum -a 256 -c）を実行します。単体ZIPのみならMANIFEST.jsonの該当SHA256と照合します。</p><ul class="downloads"><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-gemini-extension-v0.1.0.zip">kumihan-zilu-gemini-extension-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-entry-gemini-skill-v0.1.0.zip">kumihan-zilu-entry-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-web-gemini-skill-v0.1.0.zip">kumihan-zilu-web-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-documents-gemini-skill-v0.1.0.zip">kumihan-zilu-documents-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-review-gemini-skill-v0.1.0.zip">kumihan-zilu-review-gemini-skill-v0.1.0.zip</a></li></ul><p><a href="/kumihan/plugins/kumihan-zilu/downloads/MANIFEST.json">MANIFEST.json</a> · <a href="/kumihan/plugins/kumihan-zilu/downloads/SHA256SUMS.txt">SHA256SUMS.txt</a></p></section><section class="guide"><h2>起動と更新</h2><blockquote>kumihan-zilu-reviewで、原文・数字・商標を保持して簡体中国語ページをレビューしてください。</blockquote><p lang="zh-Hans-CN">请保留原文与数字，使用 kumihan-zilu-web 检查页面。</p><p lang="en">Use kumihan-zilu-documents to review a report while preserving its source text.</p><p>更新前に独自設定を保存し、新版のハッシュを照合してHostの更新・再インストール手順を使います。導入口がない場合はGitHubのSKILL.mdを手動の指針として参照できます。プラグインの導入済みとは扱いません。</p><p>最終公開承認待ちの候補版です。GitHub Release・Pages・各Hostの商店掲載・実呼出は別に検証します。このページは商店掲載を示しません。</p></section><aside><p lang="zh-Hans-CN">四个独立Skills：入口与范围、网页与界面、文档与演示、只读审查。</p><p lang="en">Four independent skills: start and scope, web and interfaces, documents and slides, read-only review.</p></aside></main><footer class="shell"><p>KUMIHAN｜字律は自動組版の品質保証システムではありません。実際の描画と出力先の確認を必要とします。</p><p>v0.1.0 · Apache-2.0 · L&amp;Co. LLC</p><p><a href="/kumihan/index.html">KUMIHAN</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu">GitHubでソースを見る</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu/downloads/SHA256SUMS.txt">SHA256</a></p></footer></body></html>
+<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:title" content="KUMIHAN｜字律 — 導入ガイド · Gemini"><meta property="og:url" content="https://landco-llc.github.io/kumihan/docs/install-zilu-gemini.ja.html"><meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+<link rel="icon" href="/kumihan/favicon.ico">
+<link rel="stylesheet" href="/kumihan/assets/kumihan-install.css">
+</head>
+<body>
+<a class="skip skip-link" href="#main">本文へ移動</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/kumihan/kumihan-zh-cn.ja.html">KUMIHAN<span class="brand-sub" lang="zh-Hans-CN">｜字律</span></a>
+    <nav class="header-nav" aria-label="メインナビゲーション"><a href="/kumihan/docs/install-zilu-chatgpt.ja.html">ChatGPT / Codex</a><a href="/kumihan/docs/install-zilu-claude.ja.html">Claude</a><a href="/kumihan/docs/install-zilu-gemini.ja.html" aria-current="page">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/kumihan/index.html">KUMIHAN トップ</a><span aria-hidden="true">/</span><a href="/kumihan/kumihan-zh-cn.ja.html">KUMIHAN<span class="brand-sub" lang="zh-Hans-CN">｜字律</span></a><span aria-hidden="true">/</span><span>導入ガイド</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 03 OF 03</div>
+        <h1 id="page-title">導入ガイド · Gemini</h1>
+        <p class="hero-desc">完全プラグインか4つの独立Skillsか、ホストの対応に合わせて選べます。</p>
+        <nav class="language-switch" aria-label="言語"><a href="/kumihan/docs/install-zilu-gemini.html" lang="zh-Hans-CN" hreflang="zh-Hans-CN" data-language>简体中文</a><a href="/kumihan/docs/install-zilu-gemini.en.html" lang="en" hreflang="en" data-language>English</a><a href="/kumihan/docs/install-zilu-gemini.ja.html" lang="ja" hreflang="ja" data-language aria-current="page">日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="AIプラットフォームを選ぶ">
+  <div class="shell platform-inner"><a href="/kumihan/docs/install-zilu-chatgpt.ja.html"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="/kumihan/docs/install-zilu-claude.ja.html"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="/kumihan/docs/install-zilu-gemini.ja.html" aria-current="page"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="このページの目次">
+    <details class="toc-details" open>
+      <summary>このページの目次を表示</summary>
+      <h2 class="toc-title">このページの目次</h2>
+      <ol><li><a href="#steps">導入手順</a></li><li><a href="#download">ダウンロードと検証</a></li><li><a href="#invoke">起動と更新</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>SOURCE &amp; WEBSITE / v0.1.0</strong><p>各AIツールでのネイティブな導入・呼出は未検証です。利用環境によっては掲載した操作が利用できない場合があります。</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu" target="_blank" rel="noopener noreferrer">元の導入資料を開く ↗</a>
+  </aside>
+  <main class="guide" id="main" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / Gemini</span><span class="step-label">導入手順</span></div>
+    <div class="guide-pane"><section id="steps"><h2>01 / 導入手順</h2><ol><li>前提：Extensions対応のGemini CLI。Gemini AppのSkillsアップロードは未検証です。</li><li>Extension ZIPを空フォルダへ展開し、直下のgemini-extension.jsonを確認します。gemini extensions install /absolute/path/to/folderを実行し、権限確認を読んでください。</li><li>単体Skill ZIPは独立フォルダへ展開し、使用中CLIのSkills導入手順で利用します。リポジトリroot URLは別製品を選ぶため使いません。App導入は実際のアカウントに入口がある場合のみです。</li></ol><p><a href="https://geminicli.com/docs/extensions/">Gemini CLI extensions</a> · <a href="https://geminicli.com/docs/cli/skills/">Gemini CLI Skills</a></p></section><section id="download"><h2>02 / ダウンロードと検証</h2><p>downloads内で sha256sum -c SHA256SUMS.txt（macOSは shasum -a 256 -c）を実行します。単体ZIPのみならMANIFEST.jsonの該当SHA256と照合します。</p><ul class="downloads"><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-gemini-extension-v0.1.0.zip">kumihan-zilu-gemini-extension-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-entry-gemini-skill-v0.1.0.zip">kumihan-zilu-entry-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-web-gemini-skill-v0.1.0.zip">kumihan-zilu-web-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-documents-gemini-skill-v0.1.0.zip">kumihan-zilu-documents-gemini-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/gemini/kumihan-zilu-review-gemini-skill-v0.1.0.zip">kumihan-zilu-review-gemini-skill-v0.1.0.zip</a></li></ul><p><a href="/kumihan/plugins/kumihan-zilu/downloads/MANIFEST.json">MANIFEST.json</a> · <a href="/kumihan/plugins/kumihan-zilu/downloads/SHA256SUMS.txt">SHA256SUMS.txt</a></p></section><section id="invoke"><h2>03 / 起動と更新</h2><blockquote><p>kumihan-zilu-reviewで、原文・数字・商標を保持して簡体中国語ページをレビューしてください。</p></blockquote><p lang="zh-Hans-CN">请保留原文与数字，使用 kumihan-zilu-web 检查页面。</p><p lang="en">Use kumihan-zilu-documents to review a report while preserving its source text.</p><p>更新前に独自設定を保存し、新版のハッシュを照合してHostの更新・再インストール手順を使います。導入口がない場合はGitHubのSKILL.mdを手動の指針として参照できます。プラグインの導入済みとは扱いません。</p><p class="note">ソースとWebページを公開しています。各AIツールでのネイティブなプラグイン呼出、アプリストア掲載、Office・PDFの表示品質は別の検証事項です。</p></section><aside class="note"><p lang="zh-Hans-CN">四个独立Skills：入口与范围、网页与界面、文档与演示、只读审查。</p><p lang="en">Four independent skills: start and scope, web and interfaces, documents and slides, read-only review.</p></aside></div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong>KUMIHAN<span class="brand-sub" lang="zh-Hans-CN">｜字律</span></strong><p>Simplified Chinese typography skills for AI-assisted design<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC</p></div>
+    <div><a href="/kumihan/kumihan-zh-cn.ja.html">字律のトップへ</a> · <a href="/kumihan/index.html">KUMIHAN トップ</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu/downloads/SHA256SUMS.txt" target="_blank" rel="noopener noreferrer">SHA256</a></div>
+  </div>
+</footer>
+</body>
+</html>

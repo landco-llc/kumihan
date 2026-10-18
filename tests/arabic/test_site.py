@@ -13,7 +13,8 @@ class Site(unittest.TestCase):
         spec=importlib.util.spec_from_file_location('ar_site',ROOT/'tools/build_ar_site.py')
         self.assertTrue(spec and spec.loader and Path(spec.origin).exists(),'Arabic site generator is missing')
         m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-        out=m.outputs();self.assertEqual(len(out),12)
+        out={n:b for n,b in m.outputs().items() if n.endswith('.html')};self.assertEqual(len(out),12)
+        self.assertEqual((ROOT/'assets/kumihan-ar.css').read_text(),m.outputs()['assets/kumihan-ar.css'])
         sections=['hero','intro-strip','features','idea-band','skills-section','install-section','status-section','cta-section']
         for name,body in out.items():
             with self.subTest(page=name):
@@ -21,7 +22,9 @@ class Site(unittest.TestCase):
                 t=Tags(body);html=next(a for tag,a in t.tags if tag=='html')
                 self.assertEqual(html['dir'],'rtl' if html['lang']=='ar' else 'ltr')
                 self.assertEqual({a['hreflang'] for tag,a in t.tags if tag=='link' and a.get('rel')=='alternate'},{'ar','en','ja','x-default'})
-                self.assertTrue(any('kumihan-install.css' in a.get('href','') for tag,a in t.tags))
+                # Landings use the canonical index CSS; install guides the canonical guide CSS.
+                css='kumihan-install.css' if name.startswith('docs/') else 'kumihan-ar.css'
+                self.assertTrue(any(css in a.get('href','') for tag,a in t.tags))
                 if not name.startswith('docs/'):
                     classes=[a.get('class','').split()[0] for tag,a in t.tags if tag=='section']
                     self.assertEqual(classes,sections)

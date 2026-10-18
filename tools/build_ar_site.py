@@ -5,6 +5,8 @@ from html import escape as e
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='/kumihan/'
+# KUMIHAN index in the page language; Arabic has no gateway yet, so it uses the Japanese index.
+GATEWAY={'ar':'index.html','en':'top-en.html','ja':'index.html'}
 PUBLIC='https://landco-llc.github.io'+BASE
 REPO='https://github.com/landco-llc/kumihan'
 RELEASE=REPO+'/releases/download/kumihan-ar-v0.1.0/'
@@ -36,56 +38,135 @@ def files(host):
     return ['kumihan-ar-Gemini-CLI-extension-v0.1.0.zip']+[r+'-Gemini-Apps-skill-v0.1.0.zip' for r in ROLES]
 def published():
     return (ROOT/'_data/ar-release-published').exists()
-def frame(lang,body,host=None):
-    c=COPY[lang];name=path(lang,host)
+# Landing copy follows the KUMIHAN index (kumihan.html) with Arabic-specific
+# content kept (direction, mixed scripts, diacritics, Tatweel); see
+# assets/ar-site-copy.json. Install-guide steps above stay product-specific.
+import json
+from importlib.util import module_from_spec, spec_from_file_location
+def _load(name,file):
+    spec=spec_from_file_location(name,Path(__file__).with_name(file));mod=module_from_spec(spec);spec.loader.exec_module(mod);return mod
+SITE=_load('kumihan_product_site','product_site.py')
+FRAME=_load('kumihan_install_frame','install_frame.py')
+SITE_COPY=json.loads((ROOT/'assets/ar-site-copy.json').read_text(encoding='utf-8'))
+LOGO='assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'
+LABELS=[('ar','العربية'),('en','English'),('ja','日本語')]
+SYMBOLS=('ع','↗','¶','◎')
+# kumihan-ar-web: semantic direction first; the canonical index CSS uses physical
+# edges, so they are mirrored for dir="rtl". No letter-spacing on Arabic (it
+# breaks cursive joining); fallback stacks only make Arabic glyphs available.
+OVERRIDES=r"""
+    html[lang="ar"] body { font-family: "Noto Naskh Arabic", "Noto Sans Arabic", "Geeza Pro", "Segoe UI", Tahoma, system-ui, sans-serif; line-height: 1.9; }
+    html[lang="ar"] :is(h1, h2, h3, p, .eyebrow, .brand, .footer-mark, .skill-desc, .button, .feature-index, .section-number) { letter-spacing: 0; text-transform: none; }
+    html[lang="ar"] .hero h1 { font-size: clamp(40px,4.8vw,68px); line-height: 1.55; }
+    html[lang="ar"] :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { line-height: 1.7; }
+    html[lang="ja"] body { line-break: strict; }
+    html:is([lang="en"]) .hero h1 { font-size: clamp(40px,4.6vw,66px); letter-spacing: -.05em; line-height: 1.12; text-wrap: balance; }
+    html[lang="en"] :is(h1, h2, h3, .eyebrow, .button, .feature p) { overflow-wrap: break-word; }
+    .brand { min-width: 0; flex: 0 1 auto; }
+    .brand > bdi { white-space: normal; }
+    .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 38px; border-radius: 40px; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .02em; }
+    .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
+    .language-switch a:hover:not([aria-current="page"]) { color: var(--red-dark); background: #ebe7df; }
+    .hero-stage::after { content: "KUMIHAN / AR"; }
+    .hero-foot, .header-content, .header-nav { flex-wrap: wrap; }
+    .header-nav { min-width: 0; row-gap: 8px; }
+    .hero-cta .button, .cta-layout .button { max-width: 100%; }
+    .feature-motif { letter-spacing: 0 !important; }
+    .skill-name, .platform-name { direction: ltr; text-align: start; }
+    .status-meta { white-space: normal; }
+    .status-meta a { color: var(--red-dark); }
+    .skill-card, .platform-info, .status-box > *, .hero-copy, .hero-stage, .feature, .install-layout > *, .idea-layout > *, .card-top > *, .cta-layout > * { min-width: 0; }
+    .feature-index, .skill-type { overflow-wrap: anywhere; }
+    bdi { unicode-bidi: isolate; }
+    /* Latin index labels such as "01 / TYPE" keep their reading order in RTL. */
+    html[dir="rtl"] :is(.feature-index, .skill-type, .platform-index, .status-title) { direction: ltr; unicode-bidi: isolate; text-align: right; }
+    html[dir="rtl"] .footer-links a { unicode-bidi: isolate; }
+    html[dir="rtl"] .footer-sub { unicode-bidi: plaintext; text-align: right; }
+    /* Right-to-left: mirror the canonical physical edges. */
+    html[dir="rtl"] .header-nav { margin-left: 0; margin-right: auto; }
+    html[dir="rtl"] .header-controls { margin-left: 0; margin-right: 16px; }
+    html[dir="rtl"] .eyebrow .line { margin-right: 0; margin-left: 9px; }
+    html[dir="rtl"] .arrow { margin-left: 0; margin-right: 12px; }
+    html[dir="rtl"] :is(.arrow, .platform-arrow, .skill-end > span:last-child) { display: inline-block; transform: scaleX(-1); }
+    html[dir="rtl"] .feature { padding: 32px 0 36px 24px; }
+    html[dir="rtl"] .feature:not(:first-child) { padding-left: 24px; padding-right: 25px; border-left: 0; border-right: 1px solid var(--line); }
+    html[dir="rtl"] .platform-row { padding: 20px 4px 20px 12px; }
+    html[dir="rtl"] .platform-row:hover { padding-left: 12px; padding-right: 15px; }
+    html[dir="rtl"] .status-meta { text-align: left; }
+    html[dir="rtl"] .hero-stage::after { right: auto; left: -18px; }
+    html[dir="rtl"] .stage-label { left: auto; right: 27px; }
+    @media (max-width: 1080px) {
+      html[dir="rtl"] .header-controls { margin-right: 0; }
+      html[dir="rtl"] .feature { padding-left: 18px; }
+      html[dir="rtl"] .feature:not(:first-child) { padding-right: 18px; }
+    }
+    @media (max-width: 790px) {
+      .hero-layout, .intro-layout, .install-layout { grid-template-columns: minmax(0,1fr); }
+      html[dir="rtl"] .header-nav { margin: 0; }
+      html[dir="rtl"] .header-controls { margin-right: auto; margin-left: 0; }
+      html[dir="rtl"] .feature:nth-child(3) { border-right: 0; padding-right: 0; }
+      html[dir="rtl"] .hero-stage::after { left: 10px; right: auto; }
+    }
+    @media (max-width: 560px) {
+      html[lang="ar"] .hero h1 { font-size: clamp(32px,8.6vw,44px); line-height: 1.6; }
+      html[lang="en"] .hero h1 { font-size: clamp(33px,8.5vw,45px); }
+      .header-nav { overflow: visible; gap: 12px 18px; }
+      .header-nav a { white-space: normal; }
+      .idea-layout { grid-template-columns: minmax(0,1fr); }
+      html[dir="rtl"] .feature:not(:first-child) { padding-right: 14px; }
+      html[dir="rtl"] .feature:nth-child(3) { padding-right: 0; }
+      html[dir="rtl"] .status-meta { text-align: right; }
+      html[dir="rtl"] .stage-label { right: 15px; }
+    }
+    /* Narrow phones: one principle per row instead of splitting Arabic words. */
+    @media (max-width: 420px) {
+      html[lang="ar"] .feature-grid { grid-template-columns: minmax(0,1fr); }
+      html[lang="ar"] .feature, html[lang="ar"] .feature:not(:first-child), html[lang="ar"] .feature:nth-child(3) { padding: 22px 0; min-height: 0; border-right: 0; border-left: 0; border-bottom: 1px solid var(--line); }
+      html[lang="ar"] .feature:last-child { border-bottom: 0; }
+    }
+"""
+def head_links(lang,host=None):
+    name=path(lang,host)
     alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{PUBLIC+path(l,host)}">' for l in COPY)
-    languages=''.join(link(BASE+path(l,host),label,f'lang="{l}" hreflang="{l}"'+(' aria-current="page"' if l==lang else '')) for l,label in [('ar','العربية'),('en','English'),('ja','日本語')])
-    return f'''<!doctype html>
-<html lang="{lang}" dir="{'rtl' if lang=='ar' else 'ltr'}">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KUMIHAN｜نضيد {e(c['guide'] if host else c['title'])}</title>
-<meta name="description" content="{e(c['lead'],quote=True)}"><meta name="theme-color" content="#f5f3ee">
-<link rel="canonical" href="{PUBLIC+name}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+path('ar',host)}">
-<link rel="icon" href="{BASE}favicon.ico"><link rel="stylesheet" href="{BASE}assets/kumihan-install.css"><link rel="stylesheet" href="{BASE}assets/kumihan-ar.css">
-</head><body><a class="skip-link" href="#main">{c['skip']}</a>
-<header class="site-header"><div class="shell header-content"><a class="brand" href="{BASE+path(lang)}">{brand()}</a>
-<nav class="header-nav" aria-label="{c['nav']}">{link(BASE,c['free'])}{link(BASE+path(lang)+'#skills',c['skills'])}{link(BASE+path(lang)+'#install',c['cta'])}</nav>
-<nav class="language-switch" aria-label="{c['language']}">{languages}</nav></div></header>
-<main id="main">{body}</main>
-<footer class="footer"><div class="shell footer-layout"><div><p class="footer-mark">{brand()}</p><p class="footer-sub">{c['free']} · Apache-2.0<br>© 2026 <a href="https://www.landco.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div><nav class="footer-links" aria-label="Footer">{link(BASE,'KUMIHAN')}{link(REPO,c['source'])}{link(REPO+'/blob/main/LICENSE','Apache-2.0')}{link(BASE+path(lang),c['back'])}</nav></div></footer></body></html>
-'''
+    return f'<link rel="canonical" href="{PUBLIC+name}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+path("ar",host)}">\n<link rel="icon" href="{BASE}favicon.ico">'
 def landing(lang):
-    c=COPY[lang]
-    b=f'<section class="hero"><div class="shell hero-layout"><div class="hero-copy"><p class="eyebrow">{brand()} · <bdi dir="ltr">v0.1.0</bdi></p><h1>{c["title"]}</h1><p class="hero-desc">{c["lead"]}</p><div class="hero-cta">{link("#install",c["cta"],"class=\"button button-primary\"")}{link(REPO+"/tree/main/plugins/kumihan-ar",c["source"],"class=\"button\"")}</div><p class="hero-foot">Apache-2.0 · L&amp;Co. LLC</p></div><div class="hero-stage"><div class="logo-card"><img src="{BASE}assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN" width="1024" height="1024"></div></div></div></section>'
-    b+=f'<section class="intro-strip"><div class="shell intro-layout"><p class="section-number">01 / CONTEXT</p><div class="intro-text"><h2>{c["intro"]}</h2><p>{c["introtext"]}</p></div></div></section>'
-    b+=f'<section class="features"><div class="shell"><div class="section-heading"><div><p class="section-number">02 / PRINCIPLES</p><h2>{c["features"]}</h2></div></div><div class="feature-grid">'
-    for i,(title,text) in enumerate(c['principles'],1):b+=f'<article class="feature"><span class="feature-index">0{i}</span><h3>{title}</h3><p>{text}</p></article>'
-    b+='</div></div></section>'
-    b+=f'<section class="idea-band"><div class="shell idea-layout"><div><p class="eyebrow">KUMIHAN / DESIGN</p><h2>{c["idea"]}</h2><p>{c["ideatext"]}</p></div><div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span></div></div></section>'
-    b+=f'<section class="skills-section" id="skills"><div class="shell"><div class="section-heading"><div><p class="section-number">03 / SKILLS</p><h2>{c["skills"]}</h2></div></div><div class="skills-grid">'
-    for i,r in enumerate(ROLES):b+=f'<article class="skill-card"><p class="skill-type">0{i+1}</p><h3 class="skill-name"><bdi dir="ltr">{r}</bdi></h3><p class="skill-desc">{c["roles"][i]}</p>{link(REPO+"/tree/main/plugins/kumihan-ar/skills/"+r,c["source"],"class=\"skill-end\"")}</article>'
-    b+='</div></div></section>'
-    b+=f'<section class="install-section" id="install"><div class="shell install-layout"><div class="install-intro"><p class="section-number">04 / INSTALLATION</p><h2>{c["install"]}</h2><p>{c["installtext"]}</p></div><div class="install-links">'
-    for i,(h,t) in enumerate(HOSTS.items(),1):b+=f'<a class="platform-row" href="{BASE+path(lang,h)}"><span class="platform-index">0{i}</span><span class="platform-info"><bdi dir="ltr" class="platform-name">{t}</bdi><span class="platform-note"> · {c["cta"]}</span></span><span class="platform-arrow" aria-hidden="true">→</span></a>'
-    b+='</div></div></section>'
-    b+=f'<section class="status-section"><div class="shell status-box"><div><h2 class="status-title">{c["status"]}</h2><p>{c["limit"]}</p></div><p class="status-meta">{c["available"] if published() else c["pending"]}<br><bdi dir="ltr">v0.1.0</bdi></p></div></section>'
-    b+=f'<section class="cta-section"><div class="shell cta-layout"><div><h2>{c["cta"]}</h2><p>{c["installtext"]}</p></div>{link("#install",c["cta"],"class=\"button\"")}</div></section>'
-    return frame(lang,b)
+    c=dict(SITE_COPY[lang]);c['skills']=[[r,d] for r,(_,d) in zip(ROLES,c['skills'])]
+    head=(f"<title>{e(c['title'])}</title>\n<meta name=\"description\" content=\"{e(c['description'],quote=True)}\">\n"
+          f'<meta property="og:type" content="website"><meta property="og:title" content="{e(c["title"],quote=True)}"><meta property="og:url" content="{PUBLIC+path(lang)}"><meta property="og:image" content="{PUBLIC+LOGO}">\n'
+          +head_links(lang)+f'\n<link rel="stylesheet" href="{BASE}assets/kumihan-ar.css">')
+    return SITE.landing(dict(
+        lang=lang,dir='rtl' if lang=='ar' else 'ltr',head=head,brand=brand(),home_label='KUMIHAN｜نضيد',
+        languages=[(l,label,BASE+path(l),l==lang) for l,label in LABELS],
+        logo=BASE+LOGO,repo=REPO,release=REPO+'/releases/tag/kumihan-ar-v0.1.0',license=REPO+'/blob/main/LICENSE',
+        skills=[(r,REPO+'/tree/main/plugins/kumihan-ar/skills/'+r,SYMBOLS[i]) for i,r in enumerate(ROLES)],
+        hosts=[('Claude / Claude Code' if h=='claude' else t,BASE+path(lang,h)) for h,t in HOSTS.items()],
+        gateway=(BASE+GATEWAY[lang],c['gateway_label']),family=(c['family'][0],BASE+c['family'][1])),c)
 def guide(lang,host):
-    c=COPY[lang]
-    b=f'<div class="guide-hero"><div class="shell"><p class="eyebrow"><bdi dir="ltr">{HOSTS[host]} · v0.1.0</bdi></p><h1>{c["guide"]}</h1><p>{brand()}</p><nav class="host-nav" aria-label="Host">'+''.join(link(BASE+path(lang,h),t,'aria-current="page"' if h==host else '') for h,t in HOSTS.items())+'</nav></div></div>'
-    b+=f'<div class="shell"><div class="guide-body"><section><h2>{c["steps"]}</h2><ol>'+''.join('<li>'+e(s)+'</li>' for s in c['notes'][host])+'</ol>'
+    c=COPY[lang];s=SITE_COPY[lang];g=dict(s['guide'])
+    title=f"{c['guide']} · {HOSTS[host]}"
+    head=(f"<title>KUMIHAN｜نضيد — {e(title)}</title>\n<meta name=\"description\" content=\"{e(g['lead'],quote=True)}\">\n"+head_links(lang,host))
+    b=f'<section id="steps"><h2>01 / {e(c["steps"])}</h2><ol>'+''.join('<li>'+e(x)+'</li>' for x in c['notes'][host])+'</ol>'
     if host=='claude':b+='<pre><code>claude --plugin-dir /absolute/path/kumihan-ar</code></pre>'
     if host=='gemini':b+='<pre><code>gemini extensions install /absolute/path/kumihan-ar</code></pre>'
     docs={'chatgpt':[('https://developers.openai.com/codex/skills/','Codex Skills'),('https://developers.openai.com/codex/plugins/','Codex Plugins')],'claude':[('https://code.claude.com/docs/en/plugins','Claude Code plugins'),('https://support.claude.com/en/articles/12512180-using-skills-in-claude','Claude Skills')],'gemini':[('https://geminicli.com/docs/extensions/','Gemini CLI Extensions'),('https://geminicli.com/docs/cli/skills/','Gemini CLI Skills')]}[host]
-    b+='<p>'+ ' · '.join(link(u,t) for u,t in docs)+'</p></section>'
-    b+=f'<section><h2>{c["downloads"]}</h2><p>{c["available"] if published() else c["pending"]}</p>'
+    b+='<p>'+' · '.join(link(u,t) for u,t in docs)+'</p></section>'
+    b+=f'<section id="download"><h2>02 / {e(c["downloads"])}</h2><p>{e(c["available"] if published() else c["pending"])}</p><ul class="download-list">'
     for f in files(host):
-        b+=link(RELEASE+f,f,'class="download-row"') if published() else '<p class="download-row">'+e(f)+'</p>'
-    b+=f'<p>{c["verify"]}</p><pre><code>sha256sum --ignore-missing -c SHA256SUMS.txt</code></pre><p>'+(link(RELEASE+'SHA256SUMS.txt','SHA256SUMS.txt') if published() else 'SHA256SUMS.txt')+' · '+link(BASE+'plugins/kumihan-ar/downloads/MANIFEST.json','MANIFEST.json')+'</p></section>'
-    b+=f'<section><h2>{c["invoke"]}</h2><blockquote>{c["prompt"]}</blockquote><p>{c["update"]}</p><p>{c["limit"]}</p></section><p>'+link(BASE+path(lang),c['back'])+'</p></div></div>'
-    return frame(lang,b,host)
-def outputs():return {path(l,h):guide(l,h) if h else landing(l) for l in COPY for h in (None,*HOSTS)}
+        b+='<li>'+(link(RELEASE+f,f) if published() else e(f))+'</li>'
+    b+=f'</ul><p>{e(c["verify"])}</p><pre><code>sha256sum --ignore-missing -c SHA256SUMS.txt</code></pre><p>'+(link(RELEASE+'SHA256SUMS.txt','SHA256SUMS.txt') if published() else 'SHA256SUMS.txt')+' · '+link(BASE+'plugins/kumihan-ar/downloads/MANIFEST.json','MANIFEST.json')+'</p></section>'
+    b+=f'<section id="use"><h2>03 / {e(c["invoke"])}</h2><blockquote><p>{e(c["prompt"])}</p></blockquote><p>{e(c["update"])}</p><p class="note">{e(c["limit"])}</p></section>'
+    g.update(skip=s['skip'],language=s['lang_label'],source_href=REPO+'/tree/main/plugins/kumihan-ar/INSTALL.md')
+    return FRAME.render(FRAME.Frame(lang=lang,dir='rtl' if lang=='ar' else 'ltr',head=head,css=BASE+'assets/kumihan-install.css',asset_root=BASE,
+        brand=brand(),home=BASE+path(lang),hosts=[(t,BASE+path(lang,h),h==host) for h,t in HOSTS.items()],
+        languages=[(l,label,BASE+path(l,host),l==lang) for l,label in LABELS],number=f'0{list(HOSTS).index(host)+1}',
+        title=e(title),description=e(g['lead']),toc=[('steps',c['steps']),('download',c['downloads']),('use',c['invoke'])],
+        content=b,platform=HOSTS[host],ui=g,footer_sub=e(s['footer_sub'])+'<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC',
+        footer_links=[('GitHub',REPO+'/tree/main/plugins/kumihan-ar',True),('Apache-2.0',REPO+'/blob/main/LICENSE',True)],
+        gateway=(BASE+GATEWAY[lang],s['gateway_label'])))
+def outputs():
+    out={path(l,h):guide(l,h) if h else landing(l) for l in COPY for h in (None,*HOSTS)}
+    out['assets/kumihan-ar.css']=SITE.canonical_css('KUMIHAN｜نضيد index: canonical KUMIHAN index CSS + Arabic RTL settings.',OVERRIDES)
+    return out
 def main():
     p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();out=outputs()
     changed=[n for n,s in out.items() if not (ROOT/n).exists() or (ROOT/n).read_text()!=s]
@@ -93,5 +174,5 @@ def main():
         for n in changed:print('out of date: '+n)
         return int(bool(changed))
     for n in changed:(ROOT/n).write_text(out[n])
-    print('Generated 12 Arabic product pages');return 0
+    print('Generated 12 Arabic product pages and kumihan-ar.css');return 0
 if __name__=='__main__':raise SystemExit(main())

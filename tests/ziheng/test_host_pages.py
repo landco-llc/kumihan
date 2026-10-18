@@ -32,7 +32,7 @@ class HostDocsTests(unittest.TestCase):
                     self.assertIn('zh-Hant-TW',s)
                     self.assertIn('zh-Hant-HK',s)
                     self.assertIn('0.1.0-preview.zip',s)
-                    self.assertIn('ziheng-site.css',s)
+                    self.assertIn('kumihan-install.css',s)  # canonical KUMIHAN install-guide layout
                     self.assertTrue(any(n=='link' and d.get('rel')=='canonical' and path.name in d.get('href','') for n,d in parsed.all))
                     self.assertEqual({d['hreflang'] for n,d in parsed.all if n=='link' and d.get('rel')=='alternate'}, {'zh-Hant-TW','en','ja','x-default'})
                     for n,attr in parsed.all:

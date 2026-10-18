@@ -1,25 +1,67 @@
 <!doctype html>
 <html lang="zh-Hant-TW" data-product="zh-han">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="kumihan-product-route" content="zh-han">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<meta name="kumihan-product-route" content="zh-han">
 <meta name="description" content="提供 Claude Code 插件，以及 Claude 應用程式可個別匯入的四個技能 ZIP。">
 <meta property="og:title" content="在 Claude 中安裝 KUMIHAN｜字衡"><meta property="og:description" content="提供 Claude Code 插件，以及 Claude 應用程式可個別匯入的四個技能 ZIP。">
 <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.html">
 <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.html">
 <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.en.html">
 <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.ja.html"><link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.html">
-<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><link rel="stylesheet" href="../assets/ziheng-site.css"><title>在 Claude 中安裝 KUMIHAN｜字衡</title>
+<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><title>在 Claude 中安裝 KUMIHAN｜字衡</title>
+<link rel="stylesheet" href="../assets/kumihan-install.css">
 </head>
 <body>
-<a class="skip-link" href="#main">字衡安裝</a>
-<header id="top" class="site-header"><div class="shell header-row"><a class="brand" href="../kumihan-zh-han.html"><span>KUMIHAN<span class="brand-rule">｜</span>字衡</span></a>
-<nav class="header-nav" aria-label="Navigation"><a href="../kumihan-zh-han.html">返回字衡首頁</a><a href="install-ziheng.html">安裝方式總覽</a><a href="#steps">安裝步驟</a><a href="#download">下載與校驗</a></nav>
-<nav class="lang-picker" aria-label="Language / 語言 / 言語"><a href="install-ziheng-claude.html" lang="zh-Hant-TW" hreflang="zh-Hant-TW" aria-current="page">繁體中文</a><a href="install-ziheng-claude.en.html" lang="en" hreflang="en">English</a><a href="install-ziheng-claude.ja.html" lang="ja" hreflang="ja">日本語</a></nav></div></header>
-<main id="main" class="install-page"><div class="shell"><nav class="breadcrumb"><a href="../kumihan-zh-han.html">KUMIHAN｜字衡</a><span aria-hidden="true">/</span>Claude Code</nav>
-<div class="install-hero"><div><p class="eyebrow"><span class="accent-line" aria-hidden="true"></span>PREVIEW 0.1.0 / Claude Code</p><h1>在 Claude 中安裝字衡</h1><p>提供 Claude Code 插件，以及 Claude 應用程式可個別匯入的四個技能 ZIP。</p></div><div class="install-hero-art"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="1254" height="1254" alt="KUMIHAN official logo"></div></div></div>
-<section class="shell install-section" id="steps"><p class="section-kicker">01 / SETUP</p><h2>安裝步驟</h2><div class="steps"><article class="step"><span class="step-index">01</span><div><h3>註冊 KUMIHAN Marketplace</h3><p class="step-detail">Claude Code：從 GitHub 註冊 KUMIHAN marketplace（這不會修改現有日文插件）。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>claude plugin marketplace add &quot;https://github.com/landco-llc/kumihan.git#main&quot;</code></pre></div></article><article class="step"><span class="step-index">02</span><div><h3>安裝字衡插件</h3><p class="step-detail">在 Claude Code 對話中安裝字衡插件，與日文版的名稱不同。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>/plugin install kumihan-ziheng@kumihan-marketplace</code></pre></div></article><article class="step"><span class="step-index">03</span><div><h3>從本機 ZIP 啟動</h3><p class="step-detail">也可以下載 ZIP、解壓縮後以本機插件資料夾啟動。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>claude --plugin-dir &quot;/absolute/path/kumihan-ziheng&quot;</code></pre></div></article><article class="step"><span class="step-index">04</span><div><h3>匯入 Claude 應用程式技能</h3><p class="step-detail">Claude 應用程式：若帳戶有技能匯入功能，請逐一匯入下方的單一技能 ZIP。完整插件 ZIP 不適用於此步驟。</p></div></article></div></section>
-<section class="download-panel" id="download"><div class="shell download-grid"><div><p class="section-kicker">02 / DOWNLOADS</p><h2>下載與校驗</h2><p>臺灣與香港的規則分別對應 zh-Hant-TW、zh-Hant-HK。請明確指定地區並保留原稿。</p><div class="checksum"><span>SHA-256（完整套件）</span><code>a4d7e1d49c1a84545cc8fe8d207f3ea706032a18b80518c162ec27f3a1566c3b</code></div></div><div class="downloads"><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/plugins/kumihan-ziheng-Claude-Code-plugin-0.1.0-preview.zip" download><span>下載完整套件: kumihan-ziheng-Claude-Code-plugin-0.1.0-preview.zip</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-web-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-web</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-documents-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-documents</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-review-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-review</span><span class="external-mark" aria-hidden="true">↗</span></a></div></div></section>
-<section class="shell install-section"><p class="section-kicker">03 / VERIFY</p><h2>預覽版注意事項</h2><aside class="limit-note"><p>此套件只提供組版指引；原生主機的安裝／技能呼叫未於本次測試驗收。請先用臺灣與香港小樣本核對。</p></aside><p class="back-line"><a class="btn btn-outline" href="install-ziheng.html">安裝方式總覽 ↗</a></p></section>
-</main>
-<footer class="footer"><div class="shell footer-layout"><div><p class="footer-brand">KUMIHAN<span class="brand-rule">｜</span>字衡</p><p class="footer-sub">v0.1.0-preview · Apache-2.0 · L&amp;Co. LLC</p></div><nav class="footer-nav"><a href="../kumihan-zh-han.html">返回字衡首頁</a><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng">GitHub</a><a href="../index.html">KUMIHAN</a></nav></div></footer>
-</body></html>
+<a class="skip skip-link" href="#main">跳至主要內容</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../kumihan-zh-han.html">KUMIHAN<span class="brand-rule">｜</span>字衡</a>
+    <nav class="header-nav" aria-label="安裝指南"><a href="install-ziheng.html">ChatGPT / Codex</a><a href="install-ziheng-claude.html" aria-current="page">Claude</a><a href="install-ziheng-gemini.html">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../top-zh-han.html">KUMIHAN 首頁</a><span aria-hidden="true">/</span><a href="../kumihan-zh-han.html">KUMIHAN<span class="brand-rule">｜</span>字衡</a><span aria-hidden="true">/</span><span>安裝指南</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 02 OF 03</div>
+        <h1 id="page-title">在 Claude 中安裝字衡</h1>
+        <p class="hero-desc">提供 Claude Code 插件，以及 Claude 應用程式可個別匯入的四個技能 ZIP。</p>
+        <nav class="language-switch lang-picker" aria-label="語言"><a href="install-ziheng-claude.html" lang="zh-Hant-TW" hreflang="zh-Hant-TW" data-language aria-current="page">繁體中文</a><a href="install-ziheng-claude.en.html" lang="en" hreflang="en" data-language>English</a><a href="install-ziheng-claude.ja.html" lang="ja" hreflang="ja" data-language>日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="選擇 AI 平台">
+  <div class="shell platform-inner"><a href="install-ziheng.html"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ziheng-claude.html" aria-current="page"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ziheng-gemini.html"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="本頁目錄">
+    <details class="toc-details" open>
+      <summary>展開本頁目錄</summary>
+      <h2 class="toc-title">本頁目錄</h2>
+      <ol><li><a href="#steps">安裝步驟</a></li><li><a href="#download">下載與校驗</a></li><li><a href="#notes">預覽版注意事項</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>PREVIEW / 0.1.0</strong><p>這是預覽版本，原生主機的安裝與技能呼叫尚未驗收。部分操作可能無法在你的使用環境中執行。</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng" target="_blank" rel="noopener noreferrer">查看原始安裝說明 ↗</a>
+  </aside>
+  <main class="guide" id="main" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / Claude</span><span class="step-label">安裝步驟與注意事項</span></div>
+    <div class="guide-pane"><section class="install-section" id="steps"><p class="section-kicker">01 / SETUP</p><h2>安裝步驟</h2><div class="steps"><article class="step"><span class="step-index">01</span><div><h3>註冊 KUMIHAN Marketplace</h3><p class="step-detail">Claude Code：從 GitHub 註冊 KUMIHAN marketplace（這不會修改現有日文插件）。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>claude plugin marketplace add &quot;https://github.com/landco-llc/kumihan.git#main&quot;</code></pre></div></article><article class="step"><span class="step-index">02</span><div><h3>安裝字衡插件</h3><p class="step-detail">在 Claude Code 對話中安裝字衡插件，與日文版的名稱不同。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>/plugin install kumihan-ziheng@kumihan-marketplace</code></pre></div></article><article class="step"><span class="step-index">03</span><div><h3>從本機 ZIP 啟動</h3><p class="step-detail">也可以下載 ZIP、解壓縮後以本機插件資料夾啟動。</p><pre style="white-space:pre-wrap;overflow-wrap:anywhere;border:1px solid #d9d5cc;background:white;padding:16px"><code>claude --plugin-dir &quot;/absolute/path/kumihan-ziheng&quot;</code></pre></div></article><article class="step"><span class="step-index">04</span><div><h3>匯入 Claude 應用程式技能</h3><p class="step-detail">Claude 應用程式：若帳戶有技能匯入功能，請逐一匯入下方的單一技能 ZIP。完整插件 ZIP 不適用於此步驟。</p></div></article></div></section>
+<section class="download-panel" id="download"><div class="download-grid"><div><p class="section-kicker">02 / DOWNLOADS</p><h2>下載與校驗</h2><p>臺灣與香港的規則分別對應 zh-Hant-TW、zh-Hant-HK。請明確指定地區並保留原稿。</p><div class="checksum"><span>SHA-256（完整套件）</span><code>a4d7e1d49c1a84545cc8fe8d207f3ea706032a18b80518c162ec27f3a1566c3b</code></div></div><div class="downloads"><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/plugins/kumihan-ziheng-Claude-Code-plugin-0.1.0-preview.zip" download><span>下載完整套件: kumihan-ziheng-Claude-Code-plugin-0.1.0-preview.zip</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-web-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-web</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-documents-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-documents</span><span class="external-mark" aria-hidden="true">↗</span></a><a class="download-row" href="https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-review-Claude-skill-0.1.0-preview.zip"><span>kumihan-ziheng-review</span><span class="external-mark" aria-hidden="true">↗</span></a></div></div></section>
+<section class="install-section" id="notes"><p class="section-kicker">03 / VERIFY</p><h2>預覽版注意事項</h2><aside class="limit-note"><p>此套件只提供組版指引；原生主機的安裝／技能呼叫未於本次測試驗收。請先用臺灣與香港小樣本核對。</p></aside><p class="back-line"><a class="btn btn-outline" href="install-ziheng.html">安裝方式總覽 ↗</a></p></section></div>
+  </main>
+</div>
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div><strong>KUMIHAN<span class="brand-rule">｜</span>字衡</strong><p>臺灣／香港繁體中文排版 AI 技能<br>v0.1.0-preview · Apache-2.0 · Developed by L&amp;Co. LLC</p></div>
+    <div><a href="../kumihan-zh-han.html">返回字衡首頁</a> · <a href="../top-zh-han.html">KUMIHAN 首頁</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+  </div>
+</footer>
+</body>
+</html>

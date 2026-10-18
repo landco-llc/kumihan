@@ -18,6 +18,8 @@ def link(url,label,**attrs):return '<a href="'+esc(url)+'"'+''.join(' '+k.rstrip
 def name(locale,host=None):
  suffix='' if locale=='es' else '.'+locale
  return f'docs/install-grafia-{host}{suffix}.html' if host else f'kumihan-es{suffix}.html'
+# KUMIHAN index in the page language; Spanish has no gateway yet, so it uses the Japanese index.
+GATEWAY={'es':'index.html','en':'top-en.html','ja':'index.html'}
 def frame(locale,body,host=None):
  c=COPY[locale];path=name(locale,host);title='KUMIHAN｜Grafía · '+(c['guide']+' · '+HOSTS[host] if host else c['title'])
  alternates=''.join(f'<link rel="alternate" hreflang="{loc}" href="{PUBLIC+name(loc,host)}">' for loc in COPY)
@@ -25,7 +27,7 @@ def frame(locale,body,host=None):
  return f'''<!doctype html>
 <html lang="{locale}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{esc(title)}</title><meta name="description" content="{esc(c['lead'])}"><meta name="theme-color" content="#f4f1e9"><link rel="canonical" href="{PUBLIC+path}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+name('es',host)}"><link rel="icon" href="{BASE}favicon.ico"><link rel="stylesheet" href="{BASE}assets/grafia-site.css"></head><body>
 <a class="skip" href="#main">{c['skip']}</a><header><div class="shell header"><a class="brand" href="{BASE+name(locale)}"><img src="{BASE}assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" width="52" height="52" alt=""><span>KUMIHAN｜Grafía</span></a><nav aria-label="{c['language']}">{langs}</nav></div></header>
-<main id="main" class="shell" tabindex="-1">{body}</main><footer class="shell"><p>{c['limits']}</p><p>{c['status']}</p><nav aria-label="{c['source']}">{link(BASE+'index.html',c['home'])}{link(SOURCE,c['source'])}{link('https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0','GitHub Release')}</nav><p>v0.1.0 · Apache-2.0 · L&amp;Co. LLC</p></footer></body></html>
+<main id="main" class="shell" tabindex="-1">{body}</main><footer class="shell"><p>{c['limits']}</p><p>{c['status']}</p><nav aria-label="{c['source']}">{link(BASE+GATEWAY[locale],c['home'])}{link(SOURCE,c['source'])}{link('https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0','GitHub Release')}</nav><p>v0.1.0 · Apache-2.0 · L&amp;Co. LLC</p></footer></body></html>
 '''
 def landing(locale):
  c=COPY[locale]

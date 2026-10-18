@@ -7,7 +7,14 @@ on:
       - 'tools/*accord*'
       - 'tests/accord/**'
       - 'docs/accord/**'
-      - 'kumihan-fr.html'
+      - 'kumihan-fr*.html'
+      - 'docs/install-accord-*.html'
+      - 'assets/accord-site*'
+      - 'assets/kumihan-install.css'
+      - 'tools/install_frame.py'
+      - 'tools/product_site.py'
+      - '_layouts/landing.html'
+      - 'tests/test_site_layout_parity.py'
       - 'index.html'
       - '.claude-plugin/marketplace.json'
       - '.github/workflows/accord.yml'
@@ -18,7 +25,14 @@ on:
       - 'tools/*accord*'
       - 'tests/accord/**'
       - 'docs/accord/**'
-      - 'kumihan-fr.html'
+      - 'kumihan-fr*.html'
+      - 'docs/install-accord-*.html'
+      - 'assets/accord-site*'
+      - 'assets/kumihan-install.css'
+      - 'tools/install_frame.py'
+      - 'tools/product_site.py'
+      - '_layouts/landing.html'
+      - 'tests/test_site_layout_parity.py'
       - 'index.html'
       - '.claude-plugin/marketplace.json'
       - '.github/workflows/accord.yml'
@@ -35,6 +49,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m unittest discover -s tests/accord -v
+      - run: python tools/build_accord_site.py --check
+      - run: python -m unittest tests/test_site_layout_parity.py -v
       - run: python tools/build_accord.py --out /tmp/accord-dist
       - run: python tools/check_accord.py /tmp/accord-dist
       - name: Publish public GitHub Release
