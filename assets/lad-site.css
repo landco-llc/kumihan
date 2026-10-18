@@ -236,6 +236,8 @@
   
     /* KUMIHAN｜Лад (kumihan-lad-web): lang="ru" with dictionary hyphenation
        for running text only; headings, names and URLs are never hyphenated. */
+    html[lang="ru"] { --display: "Golos Text", "PT Sans", "Arial", system-ui, sans-serif; --serif: "PT Serif", Georgia, serif; }
+    html[lang="en"] { --display: Arial, system-ui, sans-serif; --serif: Georgia, serif; }
     html[lang="ru"] body { line-break: auto; }
     html[lang="ru"] :is(.hero-desc, .intro-text p, .feature p, .idea-band p, .skill-desc, .install-intro p, .status-box p, .cta-layout p) { hyphens: auto; }
     html[lang="ru"] :is(h1, h2, h3, .brand, .skill-name, .platform-name, a) { hyphens: manual; }
