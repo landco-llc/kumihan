@@ -1,12 +1,10 @@
-# KUMIHAN｜Accord v0.1.0
+# KUMIHAN｜Accord v0.1.1 — Icon packaging fix
 
-Español: skills y plugins de código abierto para la tipografía francesa, con preservación del texto de origen y revisión no destructiva.
+Español: se incluye el logotipo oficial de KUMIHAN en cada skill y plugin. ChatGPT/Codex utiliza `logo` y `composerIcon`; los skills llevan `agents/openai.yaml`. Claude incluye `displayName` e `icon`; Gemini lleva el recurso gráfico, aunque Gemini CLI no documenta un campo estándar para mostrar iconos.
 
-English: open-source French typography guidance with explicit editorial conventions, source integrity and bounded static review.
+English: the approved KUMIHAN logo now ships inside all 15 ZIPs. ChatGPT/Codex plugin and skills use documented icon metadata. Claude plugin includes its directory icon metadata. Gemini CLI package includes the logo, but its published extension manifest does not define an icon UI field.
 
-- Four independent skills x three hosts = 12 skill ZIPs.
-- Three full host plugins/extensions: ChatGPT/Codex, Claude Code and Gemini CLI.
-- Explicit French editorial, Québec and EU institutional style options.
-- Name KUMIHAN｜Accord; internal machine ID kumihan-accord.
-- Separate from Japanese and other language packages. Apache-2.0.
-- Native host integration, French editorial signoff, 48-case research acceptance and real rendering are not claimed by static tests.
+- 4 independently installable skills across ChatGPT, Claude and Gemini.
+- 3 host plugin/extension ZIPs, all with packaged image assets.
+- Original v0.1.0 remains immutable and available. v0.1.1 fixes missing icons without modifying typography rules.
+- Host UI render/display requires actual installed-client verification and must not be claimed from ZIP tests.
