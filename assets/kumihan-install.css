@@ -246,3 +246,8 @@
       html[dir="rtl"] .platform-nav a { border-left: 0; }
       html[dir="rtl"] .platform-nav a[aria-current="page"] { box-shadow: inset -4px 0 0 var(--red); }
     }
+    /* Copy buttons added by assets/kumihan-install.js. */
+    .guide-pane .code-shell { margin: 22px 0 26px; }
+    .guide-pane .code-shell pre { margin: 0; padding-top: 58px !important; }
+    .copy-code:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+    .copy-status-live { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
