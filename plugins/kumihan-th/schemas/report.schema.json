@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "locale",
+    "medium",
+    "source_sha256",
+    "findings"
+  ],
+  "properties": {
+    "locale": {
+      "const": "th-TH"
+    },
+    "medium": {
+      "enum": [
+        "web-editorial",
+        "web-marketing",
+        "web-ui",
+        "report-document",
+        "presentation",
+        "display-copy"
+      ]
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rule_id",
+          "status",
+          "evidence",
+          "scope"
+        ],
+        "properties": {
+          "rule_id": {
+            "type": "string",
+            "pattern": "^TH-"
+          },
+          "status": {
+            "enum": [
+              "passed",
+              "failed",
+              "needs-review",
+              "not-checked",
+              "unsupported",
+              "waived",
+              "not-applicable"
+            ]
+          },
+          "evidence": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
