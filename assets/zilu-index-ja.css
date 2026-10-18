@@ -258,3 +258,19 @@
       .skill-name { font-size:clamp(20px,6vw,27px); }
       .hero-foot .rule { width:18px; }
     }
+
+    /* ZiLu Japanese index parity: keep the original information fully reachable
+       at narrow widths and 200% text size rather than scrolling nav labels away. */
+    @media (max-width:560px) {
+      .header-nav {
+        display:flex;
+        flex-wrap:wrap;
+        gap:12px 20px;
+        overflow:visible;
+        padding-bottom:0;
+      }
+      .header-nav a { min-width:0; white-space:normal; overflow-wrap:anywhere; }
+      .skills-grid { grid-template-columns:minmax(0,1fr); }
+      .skill-card { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+      .skill-name { max-width:100%; word-break:normal; overflow-wrap:anywhere; }
+    }
