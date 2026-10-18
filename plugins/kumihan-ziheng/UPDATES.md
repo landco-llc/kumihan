@@ -12,7 +12,7 @@ python3 tools/build_ziheng.py --check
 python3 tools/build_dist.py --check
 ```
 
-字衡 build 只改 `plugins/kumihan-ziheng/skills/`、`downloads/`、相容 `.codex-plugin/`。
+字衡 build 只改 `plugins/kumihan-ziheng/skills/`、`downloads/`、相容 `.codex-plugin/` 與由 GitHub 正本官方 KUMIHAN logo 生成的 `assets/`。
 不會呼叫日本語 builder 或重新包裝日本語 ZIP。修改版號可用：
 
 ```sh
@@ -36,3 +36,5 @@ python3 -m unittest discover -s tests/ziheng -v
 測試用 JSON Schema 驗證需要 `jsonschema`；產品與 builder 本身不需要此套件。
 生成的 ZIP 固定成員順序、時間與權限；同一 Python/zlib 環境會檢查重建一致，
 不承諾跨壓縮函式庫版本 byte 完全相同。依 downloads/SHA256SUMS.txt 驗證候選產物。
+
+顯示名稱固定為 **KUMIHAN｜字衡**（無版號）；ZIP 檔名含版本。官方 logo 由 repository 根目錄的 assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png 原本產生，未經重新繪製。

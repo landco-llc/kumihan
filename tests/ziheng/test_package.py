@@ -84,6 +84,31 @@ class PackageTests(unittest.TestCase):
 if __name__=='__main__':unittest.main()
 
 class DistributionContractTests(unittest.TestCase):
+    def test_bilingual_branding_and_portable_icon(self):
+        import io
+        import build_ziheng
+        m = json.loads((PRODUCT/'plugin.json').read_text(encoding='utf-8'))
+        ui = m['extensions']['com.openai']['interface']
+        self.assertEqual(ui['displayName'], 'KUMIHAN｜字衡')
+        self.assertEqual(m['name'], 'kumihan-ziheng')
+        for text in [m['description'], ui['shortDescription'], ui['longDescription']]:
+            self.assertIn('Traditional Chinese', text)
+            self.assertIn('繁體中文', text)
+        asset = 'assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'
+        self.assertEqual(ui['logo'], './'+asset)
+        self.assertEqual(ui['composerIcon'], './'+asset)
+        original = (ROOT/asset).read_bytes()
+        outputs = build_ziheng.plan_outputs(ROOT)
+        self.assertEqual(outputs['plugins/kumihan-ziheng/'+asset], original)
+        version = m['version']
+        zip_rel = 'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-'+version+'.zip'
+        with zipfile.ZipFile(io.BytesIO(outputs[zip_rel])) as z:
+            self.assertEqual(z.read('kumihan-ziheng/'+asset), original)
+            overlay = json.loads(z.read('kumihan-ziheng/.codex-plugin/plugin.json'))
+            self.assertEqual(overlay['interface']['displayName'], ui['displayName'])
+            self.assertEqual(overlay['interface']['logo'], ui['logo'])
+            self.assertEqual(overlay['interface']['composerIcon'], ui['composerIcon'])
+
     def test_plugin_archive_paths_and_identity(self):
         import build_ziheng
         version=json.loads((PRODUCT/'plugin.json').read_text())['version']
@@ -134,7 +159,7 @@ class DistributionContractTests(unittest.TestCase):
         import shutil
         with tempfile.TemporaryDirectory() as td:
             root=Path(td)
-            for rel in ['plugins/kumihan-ziheng','skills/kumihan','tools']:
+            for rel in ['plugins/kumihan-ziheng','skills/kumihan','tools','assets']:
                 shutil.copytree(ROOT/rel,root/rel,ignore=shutil.ignore_patterns('__pycache__'))
             shutil.copy2(ROOT/'LICENSE',root/'LICENSE')
             before={p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()}
