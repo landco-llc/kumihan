@@ -7,6 +7,9 @@ on:
       - 'tests/lad/**'
       - 'tools/*lad*'
       - 'assets/lad-*'
+      - 'tools/build_gateways.py'
+      - 'index.html'
+      - 'top-*.html'
       - 'kumihan-ru*.html'
       - 'docs/install-lad-*.html'
       - 'docs/lad/**'
@@ -43,6 +46,8 @@ jobs:
         run: |
           python tools/build_lad_site.py
           python tools/build_lad_site.py --check
+          python tools/build_gateways.py
+          python tools/build_gateways.py --check
           python -m unittest discover -s tests/lad -p test_site.py -v
       - name: W06 commit generated pages to feature branch
         if: github.event_name == 'push' && github.ref_name == 'feat/kumihan-lad-v0.1.0'
@@ -50,7 +55,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- 'assets/lad-site.css' 'kumihan-ru.html' 'kumihan-ru.en.html' 'kumihan-ru.ja.html' docs/install-lad-*.html
+          git add -- 'assets/lad-site.css' 'kumihan-ru.html' 'kumihan-ru.en.html' 'kumihan-ru.ja.html' docs/install-lad-*.html index.html top-*.html
           if ! git diff --cached --quiet; then
             git commit -m "site(lad): generated RU EN JA pages from KUMIHAN canonical layout"
             git push origin HEAD:feat/kumihan-lad-v0.1.0
@@ -58,7 +63,7 @@ jobs:
       - name: W07 fail if main has uncommitted site output
         if: github.event_name == 'push' && github.ref_name == 'main'
         run: |
-          git diff --exit-code -- assets/lad-site.css kumihan-ru.html kumihan-ru.en.html kumihan-ru.ja.html docs/install-lad-*.html
+          git diff --exit-code -- assets/lad-site.css kumihan-ru.html kumihan-ru.en.html kumihan-ru.ja.html docs/install-lad-*.html index.html top-*.html
       - name: W07 publish immutable public GitHub Release
         if: github.event_name == 'push' && github.ref_name == 'main'
         env:
