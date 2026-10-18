@@ -1,6 +1,6 @@
 ---
 name: kumihan-th-web
-description: Use when building or reviewing Thai websites, interfaces and responsive typography with actual host evidence.
+description: "ใช้สร้างหรือตรวจเว็บภาษาไทยโดยแยกผลตรวจซอร์สจากการแสดงผลจริง | Build or review Thai websites; distinguish static checks from actual rendering."
 ---
 
 # ดุลอักษรสำหรับเว็บ · KUMIHAN｜ดุลอักษร

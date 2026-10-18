@@ -32,7 +32,7 @@
     "host 2": "Claude — คู่มือการติดตั้ง",
     "host 3": "Gemini — คู่มือการติดตั้ง",
     "release status heading": "สถานะและขอบเขตการตรวจสอบ",
-    "release status body": "รุ่น v0.1.0 ประกอบด้วยแนวทางและเครื่องมือตรวจสอบบางส่วน ไม่ใช่ระบบจัดหน้าอัตโนมัติเต็มรูปแบบ การตรวจสอบภาพที่แสดงจริงและการใช้งานบนแต่ละโฮสต์อาจมีขอบเขตต่างกัน โปรดดูผลทดสอบของรุ่นที่เผยแพร่",
+    "release status body": "รุ่น v0.1.1 ประกอบด้วยแนวทางและเครื่องมือตรวจสอบบางส่วน ไม่ใช่ระบบจัดหน้าอัตโนมัติเต็มรูปแบบ การตรวจสอบภาพที่แสดงจริงและการใช้งานบนแต่ละโฮสต์อาจมีขอบเขตต่างกัน โปรดดูผลทดสอบของรุ่นที่เผยแพร่",
     "final CTA": "เริ่มจากข้อความที่สำคัญ แล้วออกแบบให้คนอ่านเข้าใจ",
     "footer": "ซอร์สโค้ด · คู่มือติดตั้ง · ใบอนุญาต Apache-2.0 · L&Co. LLC"
   },
@@ -62,7 +62,7 @@
     "install heading": "Start with the AI tools you already use.",
     "install lead": "Select a host-specific installation guide. Availability, import steps and integration tests vary by host.",
     "status heading": "Release status and limits",
-    "status body": "v0.1.0 offers guidance and bounded checks, not a universal automatic Thai typesetting engine. See the release notes for which tests were actually run and which environments remain unverified.",
+    "status body": "v0.1.1 offers guidance and bounded checks, not a universal automatic Thai typesetting engine. See the release notes for which tests were actually run and which environments remain unverified.",
     "final CTA": "Start with what matters. Design for understanding.",
     "footer": "Source · Installation · Apache-2.0 · L&Co. LLC"
   },
@@ -92,7 +92,7 @@
     "install heading": "いつものAIツールから始める。",
     "install lead": "ChatGPT/Codex、Claude、Geminiの利用形態に合う導入ページを用意します。各ホストの対応範囲と実測結果は異なります。",
     "status heading": "公開版の能力と限界",
-    "status body": "v0.1.0は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。",
+    "status body": "v0.1.1は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。",
     "final CTA": "大切な内容から始め、伝わるデザインへ。",
     "footer": "ソース · 導入ガイド · Apache-2.0 · L&Co. LLC"
   }

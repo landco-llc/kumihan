@@ -1,18 +1,18 @@
 {
   "plugin": "kumihan-th",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "path_base": "package-root",
   "self_digest": "Inventory excludes itself.",
   "files": [
     {
       "path": ".codex-plugin/plugin.json",
       "bytes": 1685,
-      "sha256": "17bb6ce61f621757a6c3cda8baa6fdaf2780faa42b27554863d3fc31da565a1b"
+      "sha256": "b1bfa7e6ae97786a0f8997ff74bdb0d5b4507e550f3c6931155f19e8a7072671"
     },
     {
       "path": "INSTALL.md",
-      "bytes": 3077,
-      "sha256": "c79eaee6c27f0a8a0f10273456185d884bb0507d0d61765bfbded57cd52c4944"
+      "bytes": 6082,
+      "sha256": "ec5db078710f167ca28b1ba147bb71d54ce4f7ea9f41e52dea125963cf6156af"
     },
     {
       "path": "LICENSE",
@@ -21,8 +21,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 1966,
-      "sha256": "6db6b349ffc69755afe6e55ac92f56e07e87661b2b441f65b2303743fb89285b"
+      "bytes": 2898,
+      "sha256": "338b2e07e620f3b46d56fe1a2b9fc0582e1afa3fbae9877dc8921c467c36dae9"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "UPDATES.md",
-      "bytes": 651,
-      "sha256": "2f02cfa074da4e6862d74bc2566de6788641b4d022deb1bc7fb5151eafecb16d"
+      "bytes": 2258,
+      "sha256": "784eb551207fb12f134ed40d61831e6a771ac16469bca622a4de1a2b59d47a1a"
     },
     {
       "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -42,7 +42,7 @@
     {
       "path": "plugin.json",
       "bytes": 1839,
-      "sha256": "83facc3b160887f1c886dea687370268123dd0919ccca23fd8afeac4bb43cc02"
+      "sha256": "b1a910afd7626a21fb86f27c1329d4df26e54a11d9e4305bf7475c5588c4e364"
     },
     {
       "path": "skills/kumihan-th-documents/LICENSE",
@@ -51,8 +51,8 @@
     },
     {
       "path": "skills/kumihan-th-documents/SKILL.md",
-      "bytes": 1805,
-      "sha256": "b3c78f1206fc50369a958de16ee34455e9f13d8ba31280687b808b73f855de59"
+      "bytes": 1959,
+      "sha256": "5e0ead3cc53885efde916249349454518aa70c9170f2e0a86e2334f0f3d5a671"
     },
     {
       "path": "skills/kumihan-th-documents/THIRD_PARTY_NOTICES.md",
@@ -62,7 +62,7 @@
     {
       "path": "skills/kumihan-th-documents/inventory.json",
       "bytes": 3156,
-      "sha256": "847fa1541138643f61e869f8870d2a7821e992ca65047960afa447e39823e2d8"
+      "sha256": "a0d30df4b93e44bf796711d2ec2fcad9dc4823c657c6d3c018aceebceb94fd13"
     },
     {
       "path": "skills/kumihan-th-documents/locales/profiles/display-copy.json",
@@ -151,8 +151,8 @@
     },
     {
       "path": "skills/kumihan-th-review/SKILL.md",
-      "bytes": 1795,
-      "sha256": "9b9b0b81f9f68aed119071a9d2d39e97911b515364fa375d4988af9684468fc1"
+      "bytes": 1987,
+      "sha256": "5e84e11206e51b76d7fe3a1a41ed85c732c2257a558a93de7da20bafca5d3478"
     },
     {
       "path": "skills/kumihan-th-review/THIRD_PARTY_NOTICES.md",
@@ -162,7 +162,7 @@
     {
       "path": "skills/kumihan-th-review/inventory.json",
       "bytes": 3153,
-      "sha256": "1e2a3e5a3f847a12feb6dd0d73cafc6121ed235465e364a7de7b3c42f477425d"
+      "sha256": "6aff4b990efb326d8038aadb285777d4b8cf32a7d859e4863c69b178e74eecf4"
     },
     {
       "path": "skills/kumihan-th-review/locales/profiles/display-copy.json",
@@ -251,8 +251,8 @@
     },
     {
       "path": "skills/kumihan-th-web/SKILL.md",
-      "bytes": 1810,
-      "sha256": "ed405eb35f7396b8c128f0ca9e5ba813ac25c5dac771823aafe08c503a63da08"
+      "bytes": 1965,
+      "sha256": "33df429164723f7ec6b52cf24eea23b6a980af28ad848840eba081249511c691"
     },
     {
       "path": "skills/kumihan-th-web/THIRD_PARTY_NOTICES.md",
@@ -262,7 +262,7 @@
     {
       "path": "skills/kumihan-th-web/inventory.json",
       "bytes": 3150,
-      "sha256": "6c8c265428a5731cfb13f5b5d5c9982c1eda7c6adddf388394612c61f7b9f676"
+      "sha256": "ad0c2660fa8d599792284246017378612326d563d3bb2d38b7b60ba38f2432ef"
     },
     {
       "path": "skills/kumihan-th-web/locales/profiles/display-copy.json",
@@ -351,8 +351,8 @@
     },
     {
       "path": "skills/kumihan-th/SKILL.md",
-      "bytes": 1809,
-      "sha256": "5b2eb5260c4c272e7e47000d6935be1d7587f3e04570844c593e6dce3d37f373"
+      "bytes": 1948,
+      "sha256": "59d7ec600c75fa6921483bcd21b692062aac2778025b1414ab46fe471509f6b2"
     },
     {
       "path": "skills/kumihan-th/THIRD_PARTY_NOTICES.md",
@@ -362,7 +362,7 @@
     {
       "path": "skills/kumihan-th/inventory.json",
       "bytes": 3146,
-      "sha256": "f8001206ea356c0ee8d4b320a4b0fe2e934b277f8ed4cff0da88c9f96a7ed543"
+      "sha256": "6ed560c4312a8bfa8eb546fb0248ed1916d9c2ed1fffa617eed0e1018bb7c983"
     },
     {
       "path": "skills/kumihan-th/locales/profiles/display-copy.json",

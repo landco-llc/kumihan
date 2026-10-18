@@ -1,6 +1,6 @@
 ---
 name: kumihan-th-documents
-description: Use when creating or reviewing Thai reports, documents, presentations and PDF exports.
+description: "ใช้จัดทำหรือตรวจเอกสารและสไลด์ภาษาไทยโดยรักษาต้นฉบับ | Create or review Thai documents and presentations while preserving source text."
 ---
 
 # ดุลอักษรสำหรับเอกสาร · KUMIHAN｜ดุลอักษร

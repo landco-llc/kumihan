@@ -1,6 +1,6 @@
 ---
 name: kumihan-th
-description: Use when starting Thai work to select explicit th-TH, medium, immutable source and study/build/audit/refine mode.
+description: "ใช้เริ่มงานภาษาไทยเพื่อเลือก th-TH สื่อ และขอบเขตที่รักษาต้นฉบับ | Start Thai work by selecting th-TH, medium and source-preserving scope."
 ---
 
 # เริ่มงานดุลอักษร · KUMIHAN｜ดุลอักษร
