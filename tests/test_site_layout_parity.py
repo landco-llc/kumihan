@@ -40,6 +40,8 @@ class LandingParity(unittest.TestCase):
 
 GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html"}
+# Pages whose language has no gateway of its own yet return to the Japanese index.
+PAGE_GATEWAY = dict(GATEWAY, fr="index.html")
 
 
 class GatewayLinks(unittest.TestCase):
@@ -54,7 +56,7 @@ class GatewayLinks(unittest.TestCase):
                 continue  # Jekyll sources: covered by the layout checks below.
             lang = re.search(r'<html lang="([^"]+)"', text).group(1)
             with self.subTest(page=path.name):
-                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(GATEWAY[lang]) + '"')
+                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(PAGE_GATEWAY[lang]) + '"')
 
     def test_jekyll_layouts_and_gateways(self):
         for layout in ("landing.html", "installation.html", "geuljjaim.html", "geuljjaim-index.html"):
