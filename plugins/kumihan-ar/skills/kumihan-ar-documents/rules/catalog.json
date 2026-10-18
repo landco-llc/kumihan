@@ -1,0 +1,563 @@
+{
+  "product": "KUMIHAN｜نضيد",
+  "version": "0.1.0",
+  "rule_count": 36,
+  "research_status": "36 research proposals mapped; the 48 research fixture proposals were not executed and are not product tests.",
+  "rules": [
+    {
+      "id": "AR-SRC-01",
+      "title": "Exact original preservation",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S07"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr15/"
+      ]
+    },
+    {
+      "id": "AR-SRC-02",
+      "title": "Normalization is derived only",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S07"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr15/"
+      ]
+    },
+    {
+      "id": "AR-LANG-01",
+      "title": "Explicit language and locale contract",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S09",
+        "S16"
+      ],
+      "source_urls": [
+        "https://www.w3.org/International/questions/qa-html-dir",
+        "https://cldr.unicode.org/translation/number-currency-formats/number-and-currency-patterns"
+      ]
+    },
+    {
+      "id": "AR-LANG-02",
+      "title": "Do not infer language from script",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S01",
+        "S03"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/alreq/",
+        "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-9/"
+      ]
+    },
+    {
+      "id": "AR-BIDI-01",
+      "title": "Paragraph base direction",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S02",
+        "S09"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr9/",
+        "https://www.w3.org/International/questions/qa-html-dir"
+      ]
+    },
+    {
+      "id": "AR-BIDI-02",
+      "title": "Isolate mixed-direction values",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S08",
+        "S21"
+      ],
+      "source_urls": [
+        "https://www.w3.org/International/articles/inline-bidi-markup/",
+        "https://developer.android.com/training/basics/supporting-devices/languages"
+      ]
+    },
+    {
+      "id": "AR-BIDI-03",
+      "title": "Maintain logical source order",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S02",
+        "S03"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr9/",
+        "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-9/"
+      ]
+    },
+    {
+      "id": "AR-BIDI-04",
+      "title": "Numeric and punctuation grouping",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr9/",
+        "https://www.w3.org/International/articles/inline-bidi-markup/"
+      ]
+    },
+    {
+      "id": "AR-BIDI-05",
+      "title": "Review directional controls",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S02",
+        "S08"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr9/",
+        "https://www.w3.org/International/articles/inline-bidi-markup/"
+      ]
+    },
+    {
+      "id": "AR-SHAPE-01",
+      "title": "Host Arabic shaping",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S12",
+        "S42"
+      ],
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/typography/script-development/arabic",
+        "https://aliftype.com/amiri/documentation/Documentation-Arabic.html"
+      ]
+    },
+    {
+      "id": "AR-SHAPE-02",
+      "title": "Do not split joining text",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S10",
+        "S12"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://learn.microsoft.com/en-us/typography/script-development/arabic"
+      ]
+    },
+    {
+      "id": "AR-SHAPE-03",
+      "title": "Diacritic and dot visibility",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S06",
+        "S12"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr53/",
+        "https://learn.microsoft.com/en-us/typography/script-development/arabic"
+      ]
+    },
+    {
+      "id": "AR-SHAPE-04",
+      "title": "Verify font fallback",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S40",
+        "S42"
+      ],
+      "source_urls": [
+        "https://notofonts.github.io/arabic/",
+        "https://aliftype.com/amiri/documentation/Documentation-Arabic.html"
+      ]
+    },
+    {
+      "id": "AR-TYPE-01",
+      "title": "Review tracking on joining text",
+      "priority": "P1",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S10",
+        "S19"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html"
+      ]
+    },
+    {
+      "id": "AR-TYPE-02",
+      "title": "Semantic and available-width line breaks",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S04",
+        "S14"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/reports/tr14/",
+        "https://r12a.github.io/scripts/arab/arb.html"
+      ]
+    },
+    {
+      "id": "AR-TYPE-03",
+      "title": "Bound forced wrapping and nowrap",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S10",
+        "S20"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ]
+    },
+    {
+      "id": "AR-TYPE-04",
+      "title": "Distinguish Kashida from inserting characters",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S01",
+        "S15"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/alreq/",
+        "https://www.w3.org/International/articles/typography/justification"
+      ]
+    },
+    {
+      "id": "AR-TYPE-05",
+      "title": "Protect intentional Tatweel",
+      "priority": "P1",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [
+        "S33",
+        "S35"
+      ],
+      "source_urls": [
+        "https://www.morcoskey.com/projects/and-all-that-is-in-between",
+        "https://qm.org.qa/ar/"
+      ]
+    },
+    {
+      "id": "AR-TYPE-06",
+      "title": "Verify justification in host",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S13",
+        "S24"
+      ],
+      "source_urls": [
+        "https://www.w3.org/TR/alreq-gap/",
+        "https://helpx.adobe.com/indesign/desktop/language-and-proofing/arabic-and-hebrew/justify-arabic-text.html"
+      ]
+    },
+    {
+      "id": "AR-TYPE-07",
+      "title": "Select fonts for actual use",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S25",
+        "S38",
+        "S39"
+      ],
+      "source_urls": [
+        "https://designsystem.gov.ae/guidelines/typography",
+        "https://www.29lt.com/",
+        "https://tptq-arabic.com/fonts"
+      ]
+    },
+    {
+      "id": "AR-TYPE-08",
+      "title": "Optical bilingual comparison",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S27",
+        "S43",
+        "O01"
+      ],
+      "source_urls": [
+        "https://blog.29lt.com/2025/09/12/tamara-bilingual-wordmark/",
+        "https://www.29lt.com/product/29lt-idris-flat/"
+      ]
+    },
+    {
+      "id": "AR-NUM-01",
+      "title": "Explicit number formatting contract",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S16",
+        "O01"
+      ],
+      "source_urls": [
+        "https://cldr.unicode.org/translation/number-currency-formats/number-and-currency-patterns"
+      ]
+    },
+    {
+      "id": "AR-NUM-02",
+      "title": "Preserve identifiers",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S21"
+      ],
+      "source_urls": [
+        "https://developer.android.com/training/basics/supporting-devices/languages"
+      ]
+    },
+    {
+      "id": "AR-NUM-03",
+      "title": "Independent calendar and timezone",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S16",
+        "S18",
+        "O01"
+      ],
+      "source_urls": [
+        "https://cldr.unicode.org/translation/number-currency-formats/number-and-currency-patterns",
+        "https://cldr.unicode.org/index/downloads"
+      ]
+    },
+    {
+      "id": "AR-NUM-04",
+      "title": "Verify new currency glyphs",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S50",
+        "O01"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/charts/PDF/U20A0.pdf"
+      ]
+    },
+    {
+      "id": "AR-COPY-01",
+      "title": "Intentional register and dialect",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S26",
+        "S36"
+      ],
+      "source_urls": [
+        "https://designsystem.gov.ae/guidelines/content",
+        "https://zid.sa/ar/"
+      ]
+    },
+    {
+      "id": "AR-COPY-02",
+      "title": "Plural branches",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S17",
+        "O01"
+      ],
+      "source_urls": [
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ]
+    },
+    {
+      "id": "AR-COPY-03",
+      "title": "CTA matches actual action",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S26",
+        "S37"
+      ],
+      "source_urls": [
+        "https://designsystem.gov.ae/guidelines/content",
+        "https://salla.com/"
+      ]
+    },
+    {
+      "id": "AR-COPY-04",
+      "title": "No unmeasured quality claims",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [],
+      "source_urls": []
+    },
+    {
+      "id": "AR-WEB-01",
+      "title": "Logical properties and component direction",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S09",
+        "S11"
+      ],
+      "source_urls": [
+        "https://www.w3.org/International/questions/qa-html-dir",
+        "https://www.w3.org/TR/css-logical-1/"
+      ]
+    },
+    {
+      "id": "AR-WEB-02",
+      "title": "Reading and focus order",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S51",
+        "S52"
+      ],
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html"
+      ]
+    },
+    {
+      "id": "AR-WEB-03",
+      "title": "Decide icon mirroring individually",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S21"
+      ],
+      "source_urls": [
+        "https://developer.android.com/training/basics/supporting-devices/languages"
+      ]
+    },
+    {
+      "id": "AR-WEB-04",
+      "title": "Reflow and spacing",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S19",
+        "S20"
+      ],
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ]
+    },
+    {
+      "id": "AR-DOC-01",
+      "title": "Export source order and editability",
+      "priority": "P0",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S22",
+        "S23"
+      ],
+      "source_urls": [
+        "https://support.microsoft.com/en-us/office/languages/using-right-to-left-languages-in-office",
+        "https://helpx.adobe.com/indesign/desktop/language-and-proofing/arabic-and-hebrew/set-up-arabic-and-hebrew.html"
+      ]
+    },
+    {
+      "id": "AR-DOC-02",
+      "title": "RTL paragraphs and page composition",
+      "priority": "P1",
+      "status": "guidance-only",
+      "implementation_scope": "Requires human, native reviewer or rendered/export evidence; no automatic pass.",
+      "test": null,
+      "source_ids": [
+        "S22"
+      ],
+      "source_urls": [
+        "https://support.microsoft.com/en-us/office/languages/using-right-to-left-languages-in-office"
+      ]
+    },
+    {
+      "id": "AR-EVID-01",
+      "title": "Disclose evidence boundaries",
+      "priority": "P0",
+      "status": "implemented-and-tested",
+      "implementation_scope": "Bounded exact-byte or static candidate diagnostic; rendering is never inferred.",
+      "test": "tests/arabic/test_runtime.py",
+      "source_ids": [],
+      "source_urls": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KUMIHAN Arabic evidence check",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "status",
+    "scope",
+    "evidence",
+    "host",
+    "remediation",
+    "dependencies",
+    "notes"
+  ],
+  "properties": {
+    "rule_id": {
+      "type": "string",
+      "pattern": "^AR-"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "needs-review",
+        "not-checked",
+        "unsupported",
+        "waived",
+        "not-applicable"
+      ]
+    },
+    "scope": {
+      "type": "string"
+    },
+    "host": {
+      "type": "string"
+    },
+    "remediation": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "evidence": {},
+    "dependencies": {
+      "type": "array"
+    }
+  }
+}
