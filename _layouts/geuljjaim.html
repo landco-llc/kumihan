@@ -27,7 +27,7 @@
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
 </head>
 <body>
-<a class="skip-link" href="#guide-content">{{ t.skip }}</a>
+<a class="skip skip-link" href="#main">{{ t.skip }}</a>
 <header class="site-header">
   <div class="shell header-inner">
     <a class="brand" href="{{ page.home_path | relative_url }}">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a>
@@ -78,7 +78,7 @@
     <div class="toc-note"><strong>v0.1.0 / ko-KR</strong><p>{{ t.guide_note }}</p></div>
     <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim" target="_blank" rel="noopener noreferrer">{{ t.guide_source }} ↗</a>
   </aside>
-  <main class="guide" id="guide-content" tabindex="-1">
+  <main class="guide" id="main" tabindex="-1">
     <div class="guide-head"><span>DOCUMENTATION / {{ host }}</span><span class="step-label">{{ t.guide_steps }}</span></div>
     <div class="guide-pane">{{ content }}</div>
   </main>

@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="/kumihan/assets/kumihan-install.css">
 </head>
 <body>
-<a class="skip-link" href="#guide-content">本文へ移動</a>
+<a class="skip skip-link" href="#main">本文へ移動</a>
 <header class="site-header">
   <div class="shell header-inner">
     <a class="brand" href="/kumihan/kumihan-zh-cn.ja.html">KUMIHAN<span class="brand-sub" lang="zh-Hans-CN">｜字律</span></a>
@@ -47,7 +47,7 @@
     <div class="toc-note"><strong>SOURCE &amp; WEBSITE / v0.1.0</strong><p>各AIツールでのネイティブな導入・呼出は未検証です。利用環境によっては掲載した操作が利用できない場合があります。</p></div>
     <a class="source-link" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-zilu" target="_blank" rel="noopener noreferrer">元の導入資料を開く ↗</a>
   </aside>
-  <main class="guide" id="guide-content" tabindex="-1">
+  <main class="guide" id="main" tabindex="-1">
     <div class="guide-head"><span>DOCUMENTATION / ChatGPT / Codex</span><span class="step-label">導入手順</span></div>
     <div class="guide-pane"><section id="steps"><h2>01 / 導入手順</h2><ol><li>前提：プラグインまたはSkillsの導入口があるアカウントとクライアント。完全プラグインと単体Skillは別の配布物です。</li><li>完全ZIPを展開し、クライアントが提供するプラグイン導入口でkumihan-ziluフォルダを選びます。Skillsのみ対応する場合は、下の独立Skill ZIPをSkills導入口でインストールします。</li><li>会話への添付だけではインストールになりません。実Hostの発見・アイコン表示・呼出は未検証です。導入口がなければソースを手動参照してください。</li></ol><p><a href="https://developers.openai.com/codex/skills/">Codex Skills</a> · <a href="https://developers.openai.com/codex/plugins/">Codex Plugins</a></p></section><section id="download"><h2>02 / ダウンロードと検証</h2><p>downloads内で sha256sum -c SHA256SUMS.txt（macOSは shasum -a 256 -c）を実行します。単体ZIPのみならMANIFEST.jsonの該当SHA256と照合します。</p><ul class="downloads"><li><a href="/kumihan/plugins/kumihan-zilu/downloads/plugins/kumihan-zilu-plugin-v0.1.0.zip">kumihan-zilu-plugin-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/skills/kumihan-zilu-entry-skill-v0.1.0.zip">kumihan-zilu-entry-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/skills/kumihan-zilu-web-skill-v0.1.0.zip">kumihan-zilu-web-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/skills/kumihan-zilu-documents-skill-v0.1.0.zip">kumihan-zilu-documents-skill-v0.1.0.zip</a></li><li><a href="/kumihan/plugins/kumihan-zilu/downloads/skills/kumihan-zilu-review-skill-v0.1.0.zip">kumihan-zilu-review-skill-v0.1.0.zip</a></li></ul><p><a href="/kumihan/plugins/kumihan-zilu/downloads/MANIFEST.json">MANIFEST.json</a> · <a href="/kumihan/plugins/kumihan-zilu/downloads/SHA256SUMS.txt">SHA256SUMS.txt</a></p></section><section id="invoke"><h2>03 / 起動と更新</h2><blockquote><p>kumihan-zilu-reviewで、原文・数字・商標を保持して簡体中国語ページをレビューしてください。</p></blockquote><p lang="zh-Hans-CN">请保留原文与数字，使用 kumihan-zilu-web 检查页面。</p><p lang="en">Use kumihan-zilu-documents to review a report while preserving its source text.</p><p>更新前に独自設定を保存し、新版のハッシュを照合してHostの更新・再インストール手順を使います。導入口がない場合はGitHubのSKILL.mdを手動の指針として参照できます。プラグインの導入済みとは扱いません。</p><p class="note">最終公開承認待ちの候補版です。GitHub Release・Pages・各Hostの商店掲載・実呼出は別に検証します。このページは商店掲載を示しません。</p></section><aside class="note"><p lang="zh-Hans-CN">四个独立Skills：入口与范围、网页与界面、文档与演示、只读审查。</p><p lang="en">Four independent skills: start and scope, web and interfaces, documents and slides, read-only review.</p></aside></div>
   </main>

@@ -170,6 +170,9 @@
     .language-switch a:hover:not([aria-current="page"]) { background: #e2ddd3; }
     .platform-nav a span:first-child { min-width: 0; overflow-wrap: anywhere; }
     .guide:focus { outline: none; }
+    .guide-head { flex-wrap: wrap; }
+    .guide-head span { min-width: 0; overflow-wrap: anywhere; }
+    .header-inner > *, .hero-grid > * { min-width: 0; }
     .guide-pane > section { scroll-margin-top: 26px; }
     .guide-pane > section > h2:first-child, .guide-pane > section:first-child > .section-kicker + h2 { margin-top: 15px; }
     .guide-pane > section + section > h2:first-child { margin-top: 58px; }
@@ -187,6 +190,8 @@
     .guide-pane .button:hover, .guide-pane .copy:hover, .guide-pane .btn:hover { background: #e8e3da; }
     .guide-pane .copy-status:empty { display: none; }
     .guide-pane .steps { border-top: 1px solid var(--ink); }
+    .guide-pane .step > * { min-width: 0; }
+    .guide-pane pre.sample code, .guide-pane .step pre code { overflow-wrap: anywhere; }
     .guide-pane .step { display: grid; grid-template-columns: 52px minmax(0,1fr); gap: 12px; padding: 22px 0 6px; border-bottom: 1px solid var(--line); }
     .guide-pane .step h3 { margin-top: 0; }
     .guide-pane .step-index { font: 800 11px/2.6 Arial, sans-serif; color: var(--red); }
@@ -207,8 +212,9 @@
     .guide-pane .back-line { margin-top: 36px; }
     @media (max-width: 710px) {
       .language-switch a { min-width: 0; flex: 1; }
-      .guide-pane .step { grid-template-columns: 1fr; gap: 0; }
+      .guide-pane .step { grid-template-columns: minmax(0,1fr); gap: 0; }
     }
     @media (max-width: 480px) {
       .language-switch a { padding-inline: 8px; }
+      .brand { white-space: normal; overflow-wrap: anywhere; }
     }

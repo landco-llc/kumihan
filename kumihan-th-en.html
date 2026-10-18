@@ -293,8 +293,16 @@
     .status-meta { white-space:normal; }
     .status-meta a { display:inline-block; line-height:1.7; color:var(--red-dark); }
     .status-meta a:hover { text-decoration:underline; text-underline-offset:5px; }
+    /* Enlarged text at phone widths: wrap long English words rather than
+       widening grid tracks past the viewport. */
+    html[lang="en"] .hero h1, html[lang="en"] h2, html[lang="en"] h3,
+    html[lang="en"] .eyebrow, html[lang="en"] .button, html[lang="en"] .feature-index,
+    html[lang="en"] .hero-desc, html[lang="en"] .brand { overflow-wrap: anywhere; }
+    .hero-foot { flex-wrap: wrap; }
+    .hero-cta .button { max-width: 100%; }
+    .hero-copy, .hero-stage, .feature, .install-layout > *, .header-content > * { min-width: 0; }
     @media (max-width:790px) {
-      .hero-layout { grid-template-columns: 1fr; gap: 46px; }
+      .hero-layout { grid-template-columns: minmax(0,1fr); gap: 46px; }
       .hero-stage { max-width:min(100%,575px); }
     }
     @media (max-width:560px) {

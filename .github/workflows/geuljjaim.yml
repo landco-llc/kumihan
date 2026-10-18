@@ -12,6 +12,10 @@ on:
       - '_layouts/geuljjaim.html'
       - '_data/geuljjaim.yml'
       - 'assets/geuljjaim.*'
+      - 'tools/install_frame.py'
+      - 'assets/kumihan-install.css'
+      - '_layouts/installation.html'
+      - 'tests/test_site_layout_parity.py'
       - '.github/workflows/geuljjaim.yml'
   push:
     branches: [feat/ko-geuljjaim-v010-public]

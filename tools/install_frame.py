@@ -70,7 +70,7 @@ def render(f: Frame) -> str:
 <link rel="stylesheet" href="{e(f.css)}">{f.scripts}
 </head>
 <body>
-<a class="skip-link" href="#guide-content">{e(u['skip'])}</a>
+<a class="skip skip-link" href="#main">{e(u['skip'])}</a>
 <header class="site-header">
   <div class="shell header-inner">
     <a class="brand" href="{e(f.home)}">{f.brand}</a>
@@ -104,7 +104,7 @@ def render(f: Frame) -> str:
     <div class="toc-note"><strong>{e(u['note_title'])}</strong><p>{e(u['note'])}</p></div>
     <a class="source-link" href="{e(u['source_href'])}" target="_blank" rel="noopener noreferrer">{e(u['source'])} ↗</a>
   </aside>
-  <main class="guide" id="guide-content" tabindex="-1">
+  <main class="guide" id="main" tabindex="-1">
     <div class="guide-head"><span>DOCUMENTATION / {e(f.platform)}</span><span class="step-label">{e(u['steps'])}</span></div>
     <div class="guide-pane">{f.content}</div>
   </main>
