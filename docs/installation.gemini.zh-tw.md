@@ -6,7 +6,7 @@
 
 這份指南說明如何在 Gemini CLI 或 Gemini 應用程式中使用 KUMIHAN。
 
-> **關於預覽版（v0.1.6 preview）**
+> **關於預覽版（v0.1.7 preview）**
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -41,7 +41,7 @@ gemini extensions update kumihan
 
 **從 ZIP 安裝時**
 
-1. 下載[擴充功能 ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.6-preview.zip)。
+1. 下載[擴充功能 ZIP](../downloads%20Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.7-preview.zip)。
 2. 建立空的 `kumihan` 資料夾，並將 ZIP 內容解壓縮到其中。
 3. 指定資料夾並安裝。
 
@@ -80,10 +80,10 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 ## C. Gemini 應用程式：上傳技能
 
 1. 下載想使用的技能 ZIP。
-   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.6-preview.zip) — 開始使用前的規劃入口
-   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.6-preview.zip) — 網頁製作
-   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.6-preview.zip) — 報告與簡報
-   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.6-preview.zip) — 成果檢視
+   - [kumihan](../downloads%20Gemini/skills/kumihan-Gemini-Apps-skill-0.1.7-preview.zip) — 開始使用前的規劃入口
+   - [kumihan-web](../downloads%20Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.7-preview.zip) — 網頁製作
+   - [kumihan-documents](../downloads%20Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.7-preview.zip) — 報告與簡報
+   - [kumihan-review](../downloads%20Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.7-preview.zip) — 成果檢視
 2. 在 Gemini 開啟 **Customize**（若未看到，可先點選 **More**）→ **Skills** → **Upload**。
 3. 逐一選擇 ZIP、確認內容後按下 **Create**。
 
