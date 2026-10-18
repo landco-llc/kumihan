@@ -274,9 +274,8 @@ html[lang="ko-KR"] .feature-motif { font-family: system-ui, sans-serif; }
 }
 
 
-/* Phrase-level grouping only for this short Japanese hero, never entire paragraphs. */
-html[lang="ja"] .hero h1 .phrase { display:inline-block; white-space:nowrap; margin-inline-end:.16em; vertical-align:top; }
-html[lang="ja"] .hero h1 .phrase:last-child { margin-inline-end:0; }
+/* Japanese hero: one phrase per line, as on the Japanese KUMIHAN index; never entire paragraphs. */
+html[lang="ja"] .hero h1 .phrase { display:block; white-space:nowrap; }
 
 /* Group short English emphasis without dictating a fixed line break. */
 html[lang="en"] .hero h1 .accent,html[lang="en"] .intro-text h2 em { display:inline-block; }
