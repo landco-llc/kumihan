@@ -8,9 +8,14 @@ the page's own language first (and English second in the language menu).
 import argparse
 import json
 from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 BASE = "https://landco-llc.github.io/kumihan/"
 VISIBLE, STEP = 9, 6
 
@@ -281,6 +286,7 @@ def page(key, c):
 <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/gateway.css" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
+{WEB_FONTS.head(html_lang)}
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>

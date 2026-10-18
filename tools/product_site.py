@@ -7,9 +7,14 @@ already-resolved paths and copy; this module only lays them out.
 """
 import re
 from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 SECTIONS = ("hero", "intro-strip", "features", "idea-band", "skills-section",
             "install-section", "status-section", "cta-section")
 
@@ -75,6 +80,7 @@ def landing(p, c):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f3ee">
 {p['head']}
+{WEB_FONTS.head(p['lang'], p.get('asset_root', ''))}
 </head>
 <body id="top">
 <a class="skip-link" href="#main">{x(c['skip'])}</a>

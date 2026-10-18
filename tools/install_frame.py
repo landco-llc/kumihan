@@ -8,8 +8,14 @@ translation. Styling lives in assets/kumihan-install.css.
 
 from dataclasses import dataclass, field
 from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
 
 LOGO = "KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 
 # Language gateway (the KUMIHAN index) for each page language, with the label
 # used for the "back to index" link. Paths are relative to the site root.
@@ -89,6 +95,7 @@ def render(f: Frame) -> str:
 {f.head}
 <link rel="stylesheet" href="{e(f.css)}">
 <script src="{e(f.asset_root)}assets/kumihan-install.js" defer></script>{f.scripts}
+{WEB_FONTS.head(f.lang, f.asset_root)}
 </head>
 <body>
 <a class="skip skip-link" href="#main">{e(u['skip'])}</a>
