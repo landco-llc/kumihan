@@ -2,3 +2,5 @@
 /* Long English words and literal CLI paths need an emergency wrap at text resize. */
 html[lang="en"] h1,html[lang="en"] h2,.guide li{overflow-wrap:anywhere}
 .hero h1 span{display:block}
+/* Host names can exceed narrow Chinese/Japanese guide columns in other system fonts. */
+.guide-hero h1{overflow-wrap:anywhere}
