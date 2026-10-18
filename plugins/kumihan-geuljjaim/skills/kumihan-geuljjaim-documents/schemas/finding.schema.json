@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "status",
+    "method"
+  ],
+  "properties": {
+    "rule_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "needs-review",
+        "not-checked",
+        "unsupported",
+        "waived",
+        "not-applicable"
+      ]
+    },
+    "method": {
+      "type": "string"
+    }
+  }
+}

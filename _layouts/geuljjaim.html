@@ -1,0 +1,50 @@
+{% assign t = site.data.geuljjaim[page.locale_key] %}<!doctype html>
+<html lang="{{ page.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f3ee">
+<title>{{ page.title | escape }} | KUMIHAN｜글짜임</title>
+<meta name="description" content="{{ page.description | escape }}">
+<link rel="canonical" href="https://landco-llc.github.io/kumihan{{ page.canonical_path }}">
+<link rel="alternate" hreflang="ko-KR" href="https://landco-llc.github.io/kumihan{{ page.ko_path }}">
+<link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan{{ page.en_path }}">
+<link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan{{ page.ja_path }}">
+<link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan{{ page.ko_path }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | escape }} | KUMIHAN｜글짜임">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:locale" content="{{ page.og_locale }}">
+<meta property="og:url" content="https://landco-llc.github.io/kumihan{{ page.canonical_path }}">
+<meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ page.title | escape }} | KUMIHAN｜글짜임">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="twitter:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/geuljjaim.css' | relative_url }}">
+<script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
+</head>
+<body>
+<a class="skip" href="#main">{{ t.skip }}</a>
+<header class="shell site-header">
+<a class="brand" href="{{ page.home_path | relative_url }}">KUMIHAN<span lang="ko-KR">｜글짜임</span></a>
+<nav aria-label="{{ t.nav }}" class="main-nav">
+<a href="{{ page.home_path | relative_url }}#concept">{{ t.concept }}</a>
+<a href="{{ page.home_path | relative_url }}#skills">{{ t.skills }}</a>
+<a href="{{ page.home_path | relative_url }}#install">{{ t.install }}</a>
+</nav>
+<nav class="languages" aria-label="Language">
+<a lang="ko-KR" hreflang="ko-KR" href="{{ page.ko_path | relative_url }}"{% if page.locale_key == 'ko' %} aria-current="page"{% endif %}>KO</a>
+<a lang="en" hreflang="en" href="{{ page.en_path | relative_url }}"{% if page.locale_key == 'en' %} aria-current="page"{% endif %}>EN</a>
+<a lang="ja" hreflang="ja" href="{{ page.ja_path | relative_url }}"{% if page.locale_key == 'ja' %} aria-current="page"{% endif %}>日本語</a>
+</nav>
+</header>
+<main id="main" class="shell" tabindex="-1">{{ content }}</main>
+<footer class="shell site-footer">
+<div><strong>KUMIHAN<span lang="ko-KR">｜글짜임</span></strong><p>{{ t.footer }}</p></div>
+<p class="limitations">{{ t.limits }}</p>
+<div class="footer-links"><a href="{{ '/kumihan-ko.html' | relative_url }}">{{ t.home }}</a><a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0">{{ t.release }} v0.1.0</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE">Apache-2.0</a><span>L&amp;Co. LLC</span></div>
+</footer>
+</body>
+</html>

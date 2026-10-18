@@ -92,3 +92,7 @@ KUMIHAN is in development toward a stable release. **v0.1.7 preview was released
 [Apache License 2.0](LICENSE)
 
 Developed by L&Co. LLC.
+
+## Korean edition / 한국어판
+
+[KUMIHAN｜글짜임 v0.1.0](https://landco-llc.github.io/kumihan/kumihan-ko.html) is an independently packaged Korean guidance product. [Source and four standalone Skills](plugins/kumihan-geuljjaim/README.md) · [Korean release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0). Japanese KUMIHAN and 字衡 are not prerequisites.
