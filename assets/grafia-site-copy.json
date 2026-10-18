@@ -1,0 +1,462 @@
+{
+ "es": {
+  "house_style": null,
+  "title": "KUMIHAN｜Grafía — Un diseño más natural en español",
+  "description": "KUMIHAN｜Grafía es un conjunto de skills de IA de código abierto para crear y revisar sitios web, artículos, informes y presentaciones en español, con atención a la legibilidad, la composición y la integridad del texto original.",
+  "skip": "Ir al contenido",
+  "nav_label": "Navegación principal",
+  "lang_label": "Idioma",
+  "nav": [
+   "Grafía",
+   "Principios",
+   "Skills",
+   "Empezar"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / SPANISH TYPOGRAPHY",
+  "h1": [
+   "Un diseño en español",
+   "más natural"
+  ],
+  "lead": "Sitios web, artículos, informes y presentaciones creados con IA. Legibilidad, claridad y respeto por el contenido original. KUMIHAN｜Grafía es un conjunto de skills de creación y revisión para el español.",
+  "cta": [
+   "Empezar",
+   "Conocer Grafía"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "SPANISH FIRST"
+  ],
+  "concept_h2": [
+   "No una apariencia uniforme",
+   "la forma justa para cada mensaje"
+  ],
+  "concept_body": "Cada encargo, cada lector y cada mensaje son distintos. KUMIHAN｜Grafía ayuda a la IA a ajustar la tipografía, los espacios y la jerarquía al sentido y a las prioridades de cada contenido, en lugar de aplicar la misma plantilla a todo.",
+  "features_h2": "Cuatro claves para comunicar bien",
+  "features_deck": "Los principios que KUMIHAN｜Grafía aplica tanto al crear como al revisar.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "¿Ñ?",
+    "h3": "Tipografía en español",
+    "p": "Tildes, eñe, signos de apertura ¿ y ¡, y formatos de cifras. El tratamiento (tú, vos o usted) y la región vienen del encargo, nunca se deducen del país."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Una estructura a medida",
+    "p": "Ordenar la información y su importancia para que la composición responda al objetivo del lector."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/Ñ",
+    "h3": "Respeto por el original",
+    "p": "Nombres, precios, cifras, tildes y redacción original se mantienen exactamente como se entregaron."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Revisión sin cambios",
+    "p": "Comprobar el trabajo terminado y ordenar las observaciones, sin modificar los archivos."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Más allá de componer texto",
+   "diseñar la experiencia de lectura"
+  ],
+  "idea_body": "KUMIHAN｜Grafía no impone un resultado final único. Da a la IA el conocimiento para adaptarse a cada medio y a cada encargo.",
+  "skills_h2": [
+   "Cuatro skills.",
+   "Un mismo principio."
+  ],
+  "skills_deck": "De definir el encargo a la web, los documentos y la revisión.",
+  "skills": [
+   [
+    "Grafía",
+    "El punto de partida. Definir qué se crea, con qué objetivo, hasta dónde llega el trabajo, y qué región y tratamiento se aplican."
+   ],
+   [
+    "Web",
+    "Tipografía y diseño para sitios, artículos, landing pages e interfaces en español."
+   ],
+   [
+    "Documents",
+    "Estructura y legibilidad para informes, documentos y presentaciones."
+   ],
+   [
+    "Review",
+    "Revisar la tipografía, la información y la composición sin modificar los archivos de origen."
+   ]
+  ],
+  "skill_view": "Ver la skill",
+  "install_h2": [
+   "Empieza con las herramientas de IA",
+   "que ya utilizas"
+  ],
+  "install_body": "La instalación cambia según la herramienta. Elige la guía correspondiente y luego las skills que necesitas.",
+  "install_notes": [
+   "Guía para añadir skills, registrar el plugin o instalar en local",
+   "Guía de instalación para Claude Code y Claude",
+   "Guía de instalación para Gemini CLI y la app de Gemini"
+  ],
+  "install_extra": "Ver los 15 ZIP, MANIFEST.json y SHA256SUMS.txt ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "La versión 0.1.0 está publicada en GitHub Release. Aún no se ha verificado del todo su funcionamiento en cada herramienta de IA, y queda pendiente la revisión por hablantes nativos de español.",
+  "status_link": "Descargar la última versión ↗",
+  "cta_h2": [
+   "Otra forma de diseñar",
+   "en español"
+  ],
+  "cta_body": "KUMIHAN｜Grafía es de código abierto. El código, los archivos de distribución y el historial de cambios están publicados en GitHub.",
+  "cta_button": "Ver en GitHub",
+  "footer_sub": "Skills de tipografía en español para el diseño asistido por IA.",
+  "gateway_label": "Otros idiomas / Other languages",
+  "family": [
+   "KUMIHAN · japonés",
+   "kumihan.html"
+  ],
+  "top": "Volver arriba",
+  "guide": {
+   "breadcrumb": "Guía de instalación",
+   "nav": "Guías de instalación",
+   "toc_title": "En esta página",
+   "toc_summary": "Mostrar el índice",
+   "platforms": "Elegir una herramienta de IA",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "La instalación y la invocación en cada herramienta aún no se han verificado. Algunos pasos pueden no estar disponibles en tu entorno.",
+   "source": "Abrir el INSTALL.md original",
+   "steps": "Pasos y precauciones",
+   "top": "Volver a KUMIHAN｜Grafía",
+   "title": "Instalar KUMIHAN｜Grafía en {host}",
+   "lead": "Según lo que admita tu herramienta, elige el plugin completo o skills individuales.",
+   "sections": [
+    "Elegir el formato",
+    "Descargar y verificar",
+    "Instalar",
+    "Probar sin cambiar el original",
+    "Actualizar",
+    "Alcance y límites"
+   ],
+   "format": "El plugin incluye las cuatro skills. Cada skill también se distribuye por separado, con sus reglas y referencias. Adjuntar un ZIP a una conversación no instala nada.",
+   "plugin": "Plugin",
+   "skill": "Skill individual",
+   "download": "Descarga los ZIP de esta versión y compara SHA-256 y tamaño con MANIFEST.json antes de instalar. Con los 17 archivos en una misma carpeta, ejecuta (en macOS, shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Usa el plugin de ChatGPT / Codex solo mediante la función de importación de plugins que ofrezca tu cliente; se extrae como kumihan-grafia/ con plugin.json y .codex-plugin/plugin.json. Para Skills de Codex, extrae cada carpeta en .agents/skills/ del proyecto. La subida de Skills en ChatGPT depende de tu cuenta.",
+   "claude": "Extrae el plugin de Claude Code manteniendo la carpeta kumihan-grafia/. Si tu versión lo admite, valídalo y luego inicia Claude Code con esa carpeta. En Claude, sube cada ZIP de skill solo desde una interfaz real de Skills.",
+   "gemini": "Extrae el ZIP de la extensión en una carpeta vacía: gemini-extension.json debe quedar en su raíz. Instálala indicando esa ruta y lee la solicitud de consentimiento. No instales la raíz de este repositorio como Grafía. La importación en la app de Gemini no está verificada.",
+   "test": "Indica el idioma, la región, el tratamiento y el modo de trabajo. Ejemplo de petición:",
+   "prompt": "Usa kumihan-grafia-review. Conserva el original, las cifras y los nombres; separa las observaciones de las propuestas.",
+   "check": "Comprobación estática opcional (solo lectura):",
+   "update": "Guarda tus ajustes, verifica la nueva versión y su suma de control, y actualiza con el método que admita tu herramienta. Un nuevo commit no actualiza una instalación existente. No sobrescribas los plugins de otros idiomas.",
+   "limits": "48 pautas y 5 patrones estáticos acotados: no es un corrector completo ni una certificación visual. Publicar en GitHub no equivale a figurar en los directorios oficiales de ChatGPT, Claude o Gemini. El funcionamiento y la visualización reales deben comprobarse en cada herramienta."
+  }
+ },
+ "en": {
+  "house_style": null,
+  "title": "KUMIHAN｜Grafía — Natural Spanish typography, made with AI",
+  "description": "KUMIHAN｜Grafía is a set of open-source AI skills for creating and reviewing Spanish websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "skip": "Skip to content",
+  "nav_label": "Primary navigation",
+  "lang_label": "Language",
+  "nav": [
+   "About",
+   "Principles",
+   "Skills",
+   "Get started"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / SPANISH TYPOGRAPHY",
+  "h1": [
+   "Natural Spanish typography,",
+   "made with AI"
+  ],
+  "lead": "KUMIHAN｜Grafía is a set of open-source AI skills for creating and reviewing Spanish websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "cta": [
+   "Get started",
+   "Learn more"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "SPANISH FIRST"
+  ],
+  "concept_h2": [
+   "Not a uniform look—",
+   "the right form for each message"
+  ],
+  "concept_body": "Every brief, audience, and message is different. KUMIHAN｜Grafía helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+  "features_h2": "Four things worth getting right",
+  "features_deck": "Practical priorities for creating and reviewing Spanish content.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "¿Ñ?",
+    "h3": "Spanish typography",
+    "p": "Accents, ñ, opening ¿ and ¡, and number formats. Form of address (tú, vos, or usted) and region come from the brief—never inferred from a country."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Purposeful structure",
+    "p": "Shape the layout around the information, its priority, and the reader’s goal."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/Ñ",
+    "h3": "Source fidelity",
+    "p": "Names, prices, figures, accents, and original wording stay exactly as supplied."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Read-only review",
+    "p": "Check finished work and organize issues—without touching the files."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Beyond arranging type",
+   "Design the reading experience"
+  ],
+  "idea_body": "KUMIHAN｜Grafía doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
+  "skills_h2": [
+   "Four skills",
+   "One approach"
+  ],
+  "skills_deck": "From scoping the work to web, documents, and review.",
+  "skills": [
+   [
+    "Grafía",
+    "Start here. Define what you're making, why, how far the work should go, and which region and form of address apply."
+   ],
+   [
+    "Web",
+    "Typography and design for Spanish websites, articles, landing pages, and UI."
+   ],
+   [
+    "Documents",
+    "Structure and readability for reports, business documents, and slide decks."
+   ],
+   [
+    "Review",
+    "Review typography, information, and layout without editing source files."
+   ]
+  ],
+  "skill_view": "View skill",
+  "install_h2": [
+   "Start with the AI tools",
+   "you already use"
+  ],
+  "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need.",
+  "install_notes": [
+   "Guides for adding skills, registering plugins, and local installation",
+   "Setup guide for Claude Code and Claude chat",
+   "Setup guide for Gemini CLI and the Gemini app"
+  ],
+  "install_extra": "All 15 ZIP files, MANIFEST.json, and SHA256SUMS.txt ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "Version 0.1.0 is published on GitHub Release. Behavior across AI tools has not yet been fully verified, and review by native Spanish speakers is still to come.",
+  "status_link": "Download latest ↗",
+  "cta_h2": [
+   "Another way to design",
+   "in Spanish"
+  ],
+  "cta_body": "KUMIHAN｜Grafía is open source. The skills, releases, and full change history are on GitHub.",
+  "cta_button": "View on GitHub",
+  "footer_sub": "Spanish typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN home",
+  "family": [
+   "KUMIHAN Japanese",
+   "en.html"
+  ],
+  "top": "Back to top",
+  "guide": {
+   "breadcrumb": "Installation guide",
+   "nav": "Installation guides",
+   "toc_title": "On this page",
+   "toc_summary": "Show contents",
+   "platforms": "Choose an AI platform",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
+   "source": "Open the original INSTALL.md",
+   "steps": "Steps and notes",
+   "top": "Back to KUMIHAN｜Grafía",
+   "title": "Install KUMIHAN｜Grafía in {host}",
+   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
+   "sections": [
+    "Choose a format",
+    "Download and verify",
+    "Install",
+    "Try it without changing the source",
+    "Update",
+    "Scope and limits"
+   ],
+   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
+   "plugin": "Plugin",
+   "skill": "Individual skill",
+   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-grafia/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
+   "claude": "Extract the Claude Code plugin, keeping the kumihan-grafia/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
+   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Grafía. Import into the Gemini app has not been verified.",
+   "test": "State the language, region, form of address, and working mode. Example request:",
+   "prompt": "Use kumihan-grafia-review. Preserve the source, figures, and names; keep observations separate from proposals.",
+   "check": "Optional static check (read-only):",
+   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
+   "limits": "48 guidance records and 5 bounded static patterns: not a complete proofreader or a visual certification. Publishing on GitHub is not a listing in the official ChatGPT, Claude, or Gemini directories. Actual behavior and rendering must be checked in each tool."
+  }
+ },
+ "ja": {
+  "house_style": null,
+  "title": "KUMIHAN｜Grafía — スペイン語のデザインをもっと自然に",
+  "description": "KUMIHAN｜Grafíaは、AIによるスペイン語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
+  "skip": "本文へ移動",
+  "nav_label": "メインナビゲーション",
+  "lang_label": "表示言語",
+  "nav": [
+   "Grafíaとは",
+   "できること",
+   "4つのスキル",
+   "導入方法"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / SPANISH TYPOGRAPHY",
+  "h1": [
+   "スペイン語の",
+   "デザインを",
+   "もっと自然に"
+  ],
+  "lead": "AIとつくるスペイン語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜Grafíaは、スペイン語のための制作・レビュースキル集です。",
+  "cta": [
+   "使いはじめる",
+   "Grafíaについて"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "SPANISH FIRST"
+  ],
+  "concept_h2": [
+   "「見た目をそろえる」より",
+   "「伝わる形を考える」"
+  ],
+  "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Grafíaは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+  "features_h2": "伝えるための4つの視点",
+  "features_deck": "制作と見直しに共通する、KUMIHAN｜Grafíaが大切にする考え方。",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "¿Ñ?",
+    "h3": "自然なスペイン語組版",
+    "p": "アクセント、ñ、文頭の¿と¡、数字の書き方。呼びかけ（tú・vos・usted）と地域は依頼から受け継ぎ、国だけから決めつけません。"
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "内容に合う構成",
+    "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/Ñ",
+    "h3": "原稿を大切に",
+    "p": "名前・価格・数値・アクセント・原文を勝手に変えず、意味と情報の正確さを守ります。"
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "制作後の見直し",
+    "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "文字を並べるだけでなく",
+   "読む体験を組み立てる"
+  ],
+  "idea_body": "KUMIHAN｜Grafíaは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
+  "skills_h2": [
+   "4つのスキル",
+   "ひとつの考え方"
+  ],
+  "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
+  "skills": [
+   [
+    "Grafía",
+    "最初の入口。何をつくるか、目的や作業範囲、地域と呼びかけの形を整理するためのスキル。"
+   ],
+   [
+    "Web",
+    "スペイン語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
+   ],
+   [
+    "Documents",
+    "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
+   ],
+   [
+    "Review",
+    "制作物を変更せず、組版・情報・デザインの見直しを支援。"
+   ]
+  ],
+  "skill_view": "スキルを見る",
+  "install_h2": [
+   "いつものAIツールから",
+   "はじめよう"
+  ],
+  "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。",
+  "install_notes": [
+   "スキルの追加・プラグイン登録・ローカル導入のガイド",
+   "Claude Code・チャット向けの導入ガイド",
+   "Gemini CLI・Geminiアプリ向けの導入ガイド"
+  ],
+  "install_extra": "15個のZIP・MANIFEST.json・SHA256SUMS.txtを見る ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "v0.1.0をGitHub Releaseで公開しています。各AIツールでの動作はまだ十分に確認できていません。スペイン語の母語話者による確認も今後の課題です。",
+  "status_link": "最新版のダウンロード ↗",
+  "cta_h2": [
+   "スペイン語のデザインに",
+   "もうひとつの選択肢を"
+  ],
+  "cta_body": "KUMIHAN｜Grafíaはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+  "cta_button": "GitHubで見る",
+  "footer_sub": "Spanish typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN トップ",
+  "family": [
+   "日本語版 KUMIHAN",
+   "kumihan.html"
+  ],
+  "top": "ページ上部へ",
+  "guide": {
+   "breadcrumb": "導入ガイド",
+   "nav": "導入ページ",
+   "toc_title": "このページの目次",
+   "toc_summary": "このページの目次を表示",
+   "platforms": "AIプラットフォームを選ぶ",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
+   "source": "元のINSTALL.mdを開く",
+   "steps": "手順と注意事項",
+   "top": "KUMIHAN｜Grafíaへ戻る",
+   "title": "{host}にKUMIHAN｜Grafíaを導入",
+   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
+   "sections": [
+    "導入形式を選ぶ",
+    "ダウンロードと照合",
+    "導入する",
+    "原稿を変えずに試す",
+    "更新",
+    "対応範囲と限界"
+   ],
+   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
+   "plugin": "プラグイン",
+   "skill": "個別スキル",
+   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
+   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-grafia/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
+   "claude": "Claude Codeプラグインを、kumihan-grafia/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
+   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをGrafíaとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
+   "test": "言語・地域・呼びかけ（tú・vos・usted）・作業モードを明示します。依頼の例：",
+   "prompt": "kumihan-grafia-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
+   "check": "任意の静的チェック（読み取り専用）：",
+   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
+   "limits": "48件の指針と5種類の限定的な静的検査です。完全な校正や見た目の品質を保証するものではありません。GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。"
+  }
+ }
+}

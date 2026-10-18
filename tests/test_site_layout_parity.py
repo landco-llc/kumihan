@@ -27,7 +27,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
                  "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
-                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
+                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
+                 "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
@@ -40,7 +41,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
                  "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
-                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html"]
+                 "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
+                 "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 text = (ROOT / page).read_text(encoding="utf-8")
@@ -50,7 +52,7 @@ class LandingParity(unittest.TestCase):
 GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html"}
 # Pages whose language has no gateway of its own yet return to the Japanese index.
-PAGE_GATEWAY = dict(GATEWAY, fr="index.html", ar="index.html", es="index.html", pt="index.html")
+PAGE_GATEWAY = dict(GATEWAY, fr="index.html", ar="index.html", es="index.html", pt="index.html", ru="index.html")
 
 
 class GatewayLinks(unittest.TestCase):
@@ -92,6 +94,8 @@ class InstallGuideParity(unittest.TestCase):
         pages += [f"docs/install-ziheng{h}{s}.html" for h in ("", "-claude", "-gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-accord-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-kumihan-ar-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-compasso-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-grafia-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += ["_layouts/geuljjaim.html"]
         for page in pages:
             with self.subTest(page=page):

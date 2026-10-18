@@ -83,7 +83,8 @@ def render(f: Frame) -> str:
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f5f3ee">
 {f.head}
-<link rel="stylesheet" href="{e(f.css)}">{f.scripts}
+<link rel="stylesheet" href="{e(f.css)}">
+<script src="{e(f.asset_root)}assets/kumihan-install.js" defer></script>{f.scripts}
 </head>
 <body>
 <a class="skip skip-link" href="#main">{e(u['skip'])}</a>

@@ -100,3 +100,8 @@ Developed by L&Co. LLC.
 ## French edition / Édition française
 
 **[KUMIHAN｜Accord v0.1.1](kumihan-fr.html)** — French typography using selected editorial conventions with source preservation and read-only review. [Source and install packages](plugins/kumihan-accord/README.md) · [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1). Skill and plugin descriptions: Español / English.
+
+
+## Russian edition / Русская версия
+
+**[KUMIHAN｜Лад v0.1.0](kumihan-ru.html)** — contextual Russian/Cyrillic typography, source integrity and content-led design. [Skills & sources](plugins/kumihan-lad/README.md) · [Public release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0). Russian/English host descriptions; no native-host or marketplace approval implied.
