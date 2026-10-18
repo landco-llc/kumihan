@@ -46,11 +46,12 @@ def check(base, output, executable):
                     brokenImages:[...document.images].filter(x=>!x.complete||!x.naturalWidth).length,
                     canonical:document.querySelector('link[rel=canonical]').href,
                     alternates:[...document.querySelectorAll('link[rel=alternate]')].map(x=>[x.hreflang,x.href]),
+                    overflowElements:[...document.querySelectorAll('body *')].filter(x=>x.getBoundingClientRect().right>innerWidth+1).map(x=>({tag:x.tagName,class:x.className,right:x.getBoundingClientRect().right})),
                     clip:[...document.querySelectorAll('main *')].filter(x=>['hidden','clip'].includes(getComputedStyle(x).overflowY)&&x.scrollHeight>x.clientHeight+1).map(x=>x.tagName),
                     links:[...document.querySelectorAll('a[href],link[rel=stylesheet],script[src],img[src]')].map(x=>x.href||x.src)
                 })''')
                 observations.append(dict(page=rel,viewport=width,text_scale=zoom,method='Chromium; CSS root-font-size simulation' if zoom==2 else 'Chromium',**{k:v for k,v in result.items() if k!='links'}))
-                if result['documentWidth']>width: failures.append(f'{rel} {width}/{zoom}: horizontal overflow {result["documentWidth"]}')
+                if result['documentWidth']>width: failures.append(f'{rel} {width}/{zoom}: horizontal overflow {result["documentWidth"]}: {result["overflowElements"]}')
                 if result['clip'] or result['missingAlt'] or result['brokenImages'] or result['h1']!=1: failures.append(f'{rel}: structure/images/clip {result}')
                 expected='ko-KR' if not any(s in rel for s in ['.en.','.ja.']) else ('en' if '.en.' in rel else 'ja')
                 if result['lang']!=expected: failures.append(f'{rel}: wrong lang')
