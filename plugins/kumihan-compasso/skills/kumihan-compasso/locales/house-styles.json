@@ -1,0 +1,29 @@
+{
+  "profiles": {
+    "pt-br-editorial": {
+      "locale": "pt-BR",
+      "quotes": "“…”",
+      "numbers": "editorial",
+      "percent": "house-style"
+    },
+    "pt-pt-editorial": {
+      "locale": "pt-PT",
+      "quotes": "«…»",
+      "numbers": "editorial",
+      "percent": "house-style"
+    },
+    "eu-pt-institutional": {
+      "locale": "pt-PT",
+      "quotes": "configured",
+      "numbers": "eu-institutional",
+      "percent": "SI"
+    },
+    "brand-custom": {
+      "locale": "inherit",
+      "quotes": "inherit",
+      "numbers": "inherit",
+      "percent": "inherit"
+    }
+  },
+  "rule": "Locale is not a mandatory house style. No automatic punctuation conversion of existing copy."
+}
