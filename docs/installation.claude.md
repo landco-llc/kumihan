@@ -101,7 +101,7 @@ We recommend starting with a request that doesn't change any files:
 
 To check that your downloads are intact, use [SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt).
 
-Keep the same folder layout as the downloads page (`plugins/` and `skills/`), then run this in the macOS Terminal:
+Keep the same folder layout as the downloads page (`plugins/` and `skills/`), then run this in a terminal. If `shasum` is unavailable, use an equivalent SHA-256 command such as PowerShell `Get-FileHash` on Windows:
 
 ```sh
 cd "downloads Claude"

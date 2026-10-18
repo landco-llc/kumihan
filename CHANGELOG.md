@@ -5,7 +5,18 @@
 <br>
 
 > **バージョン表記の変更について**  
-> v0.1.4 preview から、バージョンの表記を変えました。以前の「0.1.0-preview.1〜4」は、それぞれ「v0.1.1 preview〜v0.1.4 preview」と読み替えてください。次の更新は v0.1.5 preview です。
+> v0.1.4 preview から、バージョンの表記を変えました。以前の「0.1.0-preview.1〜4」は、それぞれ「v0.1.1 preview〜v0.1.4 preview」と読み替えてください。v0.1.5 preview は2026年10月18日に公開しました。
+
+<br>
+
+## v0.1.5 preview — 2026年10月18日公開
+
+[GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview)
+
+- **JA-TYPE-011 revision 2：レイアウト優先の改行設計**。有効横幅・実効文字サイズ・実フォント・行全体の構成を先に確認し、文節や発話のまとまりによる改行は、読みやすさと視覚的バランスを改善する場合にだけ検討します。
+- **4 Skills / 39ルール**を整合させ、Claude、ChatGPT/Codex、Gemini向けの15 ZIPを公開しました。
+- 29条件の限定描画試験では狭幅で通常折り返しが行構成を改善しました。ただし意味分断は `needs-review`、native Text Zoom・他エンジン・Officeなどの未検証環境は `not-checked` です。自動改行判定・WCAG全面適合を保証するものではありません。
+- 導入済みの場合は[更新ガイド](docs/updates.md)をご参照ください。
 
 <br>
 
@@ -70,9 +81,17 @@
 
 ## English
 
+### v0.1.5 preview — October 18, 2026
+
+[GitHub Release and 15 ZIP downloads](https://github.com/landco-llc/kumihan/releases/tag/v0.1.5-preview)
+
+- JA-TYPE-011 revision 2 prioritizes available width, effective text size, actual fonts and whole-line balance before optional phrase-level breaks.
+- Four Skills, 39 rule IDs and 15 preview ZIP archives for Claude, ChatGPT/Codex and Gemini.
+- Limited rendering comparisons improved line composition with normal wrapping in a narrow layout; semantic splitting remains `needs-review`, and native Text Zoom, other engines, Office and other environments remain `not-checked`. This is assisted guidance, not an automatic layout guarantee.
+
 ### v0.1.4 preview
 
-- Version naming changed. Former 0.1.0-preview.1 to 0.1.0-preview.4 correspond to v0.1.1 preview to v0.1.4 preview. The next release is v0.1.5 preview.
+- Version naming changed. Former 0.1.0-preview.1 to 0.1.0-preview.4 correspond to v0.1.1 preview to v0.1.4 preview. v0.1.5 preview was released on October 18, 2026.
 - Reviews now always record the target's hash before and after, so the report alone shows the file was not changed.
 - The document recipes now warn against character-level wrapping on the whole body in HTML-to-PDF output.
 - Comparison test against v0.1.1 preview, using the same inputs in five scenarios (landing page, article, A4 report, slides, review): total turns 70 → 37, cost $1.90 → $1.10, time 430 → 219 seconds. Both versions kept all supplied text, numbers, table values and speaker notes intact, and both found all seven planted issues in the review test. Each scenario was run once, so treat these numbers as indicative.

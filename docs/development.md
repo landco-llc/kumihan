@@ -12,10 +12,10 @@ This syncs the shared files, regenerates each `inventory.json`, rebuilds every Z
 
 ## Release a new version
 
-Versions are written as `0.1.4-preview` in manifests and file names, and as **v0.1.4 preview** in text. Each release raises the last number: the release after `0.1.4-preview` is `0.1.5-preview`.
+The latest published preview is `0.1.5-preview` (tag `v0.1.5-preview`). Release tags and their downloaded assets are immutable release snapshots. For a subsequent release, choose a new version rather than rebuilding or moving the published tag.
 
 ```sh
-python3 tools/build_dist.py --set-version 0.1.5-preview
+python3 tools/build_dist.py --set-version 0.1.6-preview
 ```
 
 This updates the version in all plugin and extension manifests, in `README.md` and `docs/*.md`, then rebuilds. Old-version ZIPs are removed from the `downloads` folders; Git history keeps them.

@@ -35,9 +35,9 @@ Upload one at a time to claude.ai or the Claude apps.
 
 ## ファイルの確認（任意） / Verify downloads (optional)
 
-ダウンロードしたファイルが壊れていないかを確認できます。このページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、macOSのターミナルで次を実行してください。すべての行に `OK` と表示されれば問題ありません。
+ダウンロードしたファイルが壊れていないかを確認できます。このページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、ターミナルで次を実行してください。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` 等でSHA-256を確認してください。すべての行に `OK` と表示されれば問題ありません。
 
-To check your downloads, keep the same folder layout as this page and run the following in the macOS Terminal. Every line should show `OK`.
+To check your downloads, keep the same folder layout as this page and run the following in a terminal. If `shasum` is unavailable, use an equivalent SHA-256 command such as Windows PowerShell `Get-FileHash`. Every line should show `OK`.
 
 ```sh
 cd "downloads Claude"
