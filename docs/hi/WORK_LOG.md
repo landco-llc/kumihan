@@ -37,3 +37,6 @@ requesting-code-review skillに従い独立read-only reviewerへ新規製品とG
 
 ### W06/W07 最終確認
 修正後Chromium 144/144のgeometry観測でoverflow 0。これはfont-sizeの実測2倍でありブラウザUI zoomそのものはNOT_CHECKED。通常描画の320/1280 screenshotとfixture screenshotを保存し限定視認。ソースhashは読取前後一致。ja/en gateway×3幅の6観測で全10カード同一寸法・overflowなし・もっと見る展開・会社URL target=_blankを確認。最終focused suiteは8件PASS（文字破損変換の拒否を追加）。root11/compasso8/accord26/arabic20/grafia13と合わせ86件PASS。再現可能なbrowser_qa.py/fixture_qa.pyを保存。browser-results.json、qa-results.json、gateway-results.jsonを根拠とする。
+
+### W08 CI差分の解消
+初回CIはルートTHIRD_PARTY_NOTICESの追記が既存日本語ZIPの内容へ影響したため失敗。追記を取り消し、新規fontのOFL/READMEへ通知を集約し既存128生成物の一致を復旧。さらに作業中mainにPR #68（77595b1、日本語heroの3行化）が入り、PRのmerge試験でcopy parity不一致が発生。origin/mainを再fetch/mergeし、共通copyからHindi日本語LPを再生成。主言語本文を変更せず、影響する日本語LPの12条件を再計測。
