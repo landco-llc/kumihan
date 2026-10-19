@@ -160,4 +160,4 @@ def landing(p, c):
     kinds = tuple(re.findall(r'<section class="([^"]+)"', out))
     if kinds != SECTIONS:
         raise ValueError(f"Landing index structure mismatch: {kinds}")
-    return out
+    return WEB_FONTS.SHARE.apply(out)

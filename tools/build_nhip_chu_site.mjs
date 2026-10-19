@@ -13,6 +13,30 @@ const META={"id":"kumihan-nhip-chu","display":"KUMIHAN｜Nhịp Chữ","version"
 // The footer every KUMIHAN page shares (tools/site_footer.py, written by tools/web_fonts.py).
 const FOOTERS=JSON.parse(readFileSync(new URL("../_data/site_footer.json", import.meta.url),"utf8"));
 const footer=(lang,root)=>FOOTERS[lang].replaceAll("@ROOT@",root);
+// Link-preview tags every KUMIHAN page shares: the same as apply() in tools/site_share.py
+// (data written by tools/web_fonts.py; tests/test_site_share.py checks the pages).
+const SHARE=JSON.parse(readFileSync(new URL("../_data/site_share.json", import.meta.url),"utf8"));
+const SHARE_IMAGE=META.base+"assets/kumihan-share.png";
+const unescapeHtml=s=>s.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos);/gi,(m,c)=>c[0]==="#"
+ ?String.fromCodePoint(c[1].toLowerCase()==="x"?parseInt(c.slice(2),16):Number(c.slice(1)))
+ :{amp:"&",lt:"<",gt:">",quot:'"',apos:"'"}[c.toLowerCase()]);
+const escapeHtml=s=>s.replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#x27;");
+function share(html){
+ const lang=html.match(/<html\b[^>]*\slang="([^"]+)"/)[1],{about,separator,locale}=SHARE[lang];
+ const title=escapeHtml(unescapeHtml(html.match(/<title>([\s\S]*?)<\/title>/)[1].trim()));
+ const meta=html.match(/<meta\b(?=[^>]*\sname="description")[^>]*\scontent="([^"]*)"/),page=meta?unescapeHtml(meta[1]):"";
+ const desc=escapeHtml(page.includes(about)?page:(about+separator+page).trim());
+ const url=escapeHtml(unescapeHtml(html.match(/<link\b(?=[^>]*\srel="canonical")[^>]*\shref="([^"]*)"/)[1]));
+ const tags=['<meta property="og:type" content="website">','<meta property="og:site_name" content="KUMIHAN">',
+  `<meta property="og:title" content="${title}">`,`<meta property="og:description" content="${desc}">`,
+  `<meta property="og:url" content="${url}">`,`<meta property="og:locale" content="${locale}">`,
+  `<meta property="og:image" content="${SHARE_IMAGE}">`,'<meta property="og:image:width" content="1200">',
+  '<meta property="og:image:height" content="630">','<meta property="og:image:alt" content="KUMIHAN">',
+  '<meta name="twitter:card" content="summary_large_image">',`<meta name="twitter:title" content="${title}">`,
+  `<meta name="twitter:description" content="${desc}">`,`<meta name="twitter:image" content="${SHARE_IMAGE}">`];
+ html=html.replace(/[ \t]*<meta\b(?:\s+[\w:-]+="[^"]*")*\s*\/?>\n?/g,t=>/\s(?:property="og:|name="twitter:)/.test(t)?"":t);
+ return html.replace("</head>",tags.join("\n")+"\n</head>");
+}
 const DATA=JSON.parse(readFileSync(new URL("../assets/nhip-chu-site-copy.json", import.meta.url),"utf8"));
 function e(s){return String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;")}
 function pageName(lang){return "kumihan-vi"+(lang==="vi"?"":"."+lang)+".html";}
@@ -22,7 +46,7 @@ function skillZip(host,suffix){return META.id+suffix+"-"+host+"-skill-v"+META.ve
 function hostLabel(host){return {chatgpt:"ChatGPT / Codex",claude:"Claude / Claude Code",gemini:"Gemini"}[host];}
 function altLinks(guide,host){return ["vi","en","ja"].map(lang=>'<link rel="alternate" hreflang="'+lang+'" href="'+e(META.base+(guide?"docs/"+guideName(host,lang):pageName(lang)))+'">').join("\n");}
 function renderLanding(lang){
- const c=DATA[lang],file=pageName(lang), rel=lang==="vi"?"vi_VN":lang==="ja"?"ja_JP":"en_US",ls={vi:"VI",en:"EN",ja:"日本語"};
+ const c=DATA[lang],file=pageName(lang),ls={vi:"VI",en:"EN",ja:"日本語"};
  const links=["vi","en","ja"].map(l=>`<a href="${pageName(l)}" lang="${l}" hreflang="${l}"${l===lang?' aria-current="page"':""}>${ls[l]}</a>`).join("");
  const feature=c.features.map(f=>`<article class="feature"><span class="feature-index">${e(f[0])}</span><div class="feature-motif" aria-hidden="true">${e(f[1])}</div><h3>${e(f[2])}</h3><p>${e(f[3])}</p></article>`).join("\n");
  const skills=["","-web","-documents","-review"].map((s,i)=>`<article class="skill-card"><div class="card-top"><span class="skill-type">0${i+1} / ${["ENTRY","WEB","DOCUMENTS","REVIEW"][i]}</span><span class="skill-symbol" aria-hidden="true">${["◎","↗","¶","◌"][i]}</span></div><h3 class="skill-name">${e(c.skills[i][0])}</h3><p class="skill-desc">${e(c.skills[i][1])}</p><a class="skill-end" href="${META.repo}/blob/main/plugins/${META.id}/skills/${META.id}${s}/SKILL.md">${e(c.view)} ↗</a></article>`).join("\n");
@@ -35,9 +59,6 @@ function renderLanding(lang){
 <meta name="theme-color" content="#f5f3ee">
 <meta name="description" content="${e(c.description)}">
 <title>${e(c.title)}</title>
-<meta property="og:type" content="website"><meta property="og:locale" content="${rel}">
-<meta property="og:title" content="${e(c.title)}"><meta property="og:description" content="${e(c.description)}">
-<meta property="og:url" content="${META.base+file}"><meta property="og:image" content="${META.base}assets/${META.logo}">
 <link rel="canonical" href="${META.base+file}">
 ${altLinks(false)}
 <link rel="alternate" hreflang="x-default" href="${META.base}kumihan-vi.html">
@@ -77,7 +98,7 @@ ${footer(lang,"")}
 `;
 }
 function renderGuide(host,lang){
- const c=DATA[lang],g=c.guide,label=hostLabel(host),file=guideName(host,lang),loc=lang==="vi"?"vi_VN":lang==="ja"?"ja_JP":"en_US";
+ const c=DATA[lang],g=c.guide,label=hostLabel(host),file=guideName(host,lang);
  const labelHead=(lang==="vi"?"Cài đặt cho ":lang==="ja"?"導入方法：":"Install for ")+label;
  const langs=["vi","en","ja"].map(l=>`<a href="${guideName(host,l)}" lang="${l}" hreflang="${l}"${l===lang?' aria-current="page"':""}>${{vi:"Tiếng Việt",en:"EN",ja:"日本語"}[l]}</a>`).join("");
  const nav=["chatgpt","claude","gemini"].map((h,i)=>`<a href="${guideName(h,lang)}"${h===host?' aria-current="page"':""}>${"0"+(i+1)} / ${e(hostLabel(h))}<span class="arrow" aria-hidden="true">↗</span></a>`).join("");
@@ -94,7 +115,6 @@ function renderGuide(host,lang){
 <title>${e(labelHead)} | ${e(META.display)}</title><meta name="description" content="${e(g.lead)}">
 <link rel="canonical" href="${META.base}docs/${file}">${altLinks(true,host)}
 <link rel="alternate" hreflang="x-default" href="${META.base}docs/${guideName(host,"vi")}">
-<meta property="og:type" content="website"><meta property="og:locale" content="${loc}"><meta property="og:title" content="${e(labelHead)}"><meta property="og:image" content="${META.base}assets/${META.logo}">
 <link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><link rel="stylesheet" href="../assets/kumihan-install.css">
 <style>html[lang="vi"] body{font-family:"Be Vietnam Pro","Noto Sans",system-ui,Arial,sans-serif}html[lang="vi"] :is(h1,h2,h3){letter-spacing:-.02em;line-height:1.45}html[lang="vi"] .guide-pane{line-height:1.95} .hero .language-switch{flex-wrap:wrap} .guide-pane section{scroll-margin-top:28px} .guide-pane li{overflow-wrap:anywhere}</style>
 ${fonts(lang,"../")}
@@ -123,8 +143,8 @@ ${footer(lang,"../")}
 }
 const out={};
 for(const lang of ["vi","en","ja"]){
- out[pageName(lang)]=renderLanding(lang);
- for(const host of ["chatgpt","claude","gemini"])out["docs/"+guideName(host,lang)]=renderGuide(host,lang);
+ out[pageName(lang)]=share(renderLanding(lang));
+ for(const host of ["chatgpt","claude","gemini"])out["docs/"+guideName(host,lang)]=share(renderGuide(host,lang));
 }
 const base=resolve(new URL("..",import.meta.url).pathname);
 let invalid=[];

@@ -12,16 +12,7 @@
 <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan{{ page.en_path }}">
 <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan{{ page.ja_path }}">
 <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan{{ page.ko_path }}">
-<meta property="og:type" content="website">
-<meta property="og:title" content="{{ page.title | escape }} | KUMIHAN｜글짜임">
-<meta property="og:description" content="{{ page.description | escape }}">
-<meta property="og:locale" content="{{ page.og_locale }}">
-<meta property="og:url" content="https://landco-llc.github.io/kumihan{{ page.canonical_path }}">
-<meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="{{ page.title | escape }} | KUMIHAN｜글짜임">
-<meta name="twitter:description" content="{{ page.description | escape }}">
-<meta name="twitter:image" content="https://landco-llc.github.io/kumihan/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png">
+{% capture share_title %}{{ page.title }} | KUMIHAN｜글짜임{% endcapture %}{% include share.html title=share_title description=page.description %}
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
