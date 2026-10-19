@@ -39,6 +39,7 @@ GATEWAYS = {
     "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
     "sw": ("top-sw.html", "sw", "SW", "Kiswahili"),
+    "zu": ("top-zu.html", "zu", "ZU", "isiZulu"),
     "ru": ("top-ru.html", "ru", "RU", "Русский"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
@@ -302,6 +303,7 @@ UI = {
     "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
     "zh-hans": dict(heading="KUMIHAN 各语言版本", more="显示接下来的 {n} 个", menu="语言"),
     "ko": dict(heading="KUMIHAN 언어별 버전", more="다음 {n}개 보기", menu="언어"),
+    "zu": dict(heading="Izinguqulo zezilimi ze-KUMIHAN", more="Bonisa ezilandelayo ezi-{n}", menu="Ulimi"),
     "sw": dict(heading="Matoleo ya lugha ya KUMIHAN", more="Onyesha {n} zinazofuata", menu="Lugha"),
     "th": dict(heading="KUMIHAN ในแต่ละภาษา", more="แสดงอีก {n} รายการ", menu="ภาษา"),
 }
@@ -607,8 +609,30 @@ ZU_CARD_COPY = {
     "ru": ("Типографика зулу: слитные слова и заглавные буквы внутри слова (isiZulu) без изменения оригинала.", "Открыть версию на зулу"),
     "sw": ("Uchapaji wa Kizulu unaolinda maneno yaliyounganishwa na herufi kubwa ndani ya neno (kama isiZulu) bila kubadilisha maandishi asilia.", "Tazama toleo la Kizulu"),
 }
+CARDS["zu"] = {
+    "ar": ("Ukuhlelwa kombhalo kwesi-Arabic osuka kwesokudla uye kwesobunxele nokuxutshwa kwemibhalo, ngaphandle kokushintsha umbhalo wokuqala.", "Buka isi-Arabic"),
+    "bn": ("Ukuhlelwa kombhalo nedizayini yesi-Bengali evikela izimpawu zonkamisa, izinhlamvu ezihlanganisiwe nombhalo wokuqala, ihlukanise i-bn-BD ne-bn-IN.", "Buka isi-Bengali"),
+    "de": ("Ukuhlelwa kombhalo kwesi-German okuhlonipha amagama amade ahlanganisiwe, izimpawu zokucaphuna nemithetho ye-DE/AT/CH, kugcine umbhalo wokuqala.", "Buka isi-German"),
+    "es": ("Ukuhlelwa kombhalo kwesi-Spanish okuhlonipha ukusetshenziswa kwezifunda, kugcine umbhalo wokuqala futhi kuhlukanise ubufakazi obuqinisekisiwe nezinqumo zokuhlela.", "Buka isi-Spanish"),
+    "fr": ("Ukuhlelwa kombhalo kwesi-French okuhlukanisa izikhala ezingahlukani, izimpawu zokucaphuna nezitayela zokuhlela zezifunda noma zezikhungo.", "Buka isi-French"),
+    "hi": ("Ukuhlelwa kombhalo nedizayini yesi-Hindi evikela umbhalo wokuqala, ongwaqa abahlanganisiwe nezimpawu zonkamisa (matra).", "Buka isi-Hindi"),
+    "id": ("Ukuhlelwa kombhalo kwesi-Indonesian okunaka izandiso, iziqalo, amagama aphindwayo, izimpawu zokubhala nezimali ze-rupiah ngokomongo, kugcine umbhalo wokuqala.", "Buka isi-Indonesian"),
+    "it": ("Ukuhlelwa kombhalo kwesi-Italian okunaka izimpawu zokuphimisa, izingcaphuno nokwehluka kwezifunda, kugcine umbhalo wokuqala.", "Buka isi-Italian"),
+    "ja": ("Kusukela emithethweni yesi-Japanese yokwehlukanisa imigqa (kinsoku) nokwehlukaniswa kwemigqa okungokwemvelo kuya esakhiweni solwazi, isikhala esingenalutho nokugeleza kokufunda.", "Buka isi-Japanese"),
+    "ko": ("Ukwehlukaniswa kwemigqa phakathi kwama-eojeol (amayunithi esikhala esi-Korean), isigqi sombhalo nesakhiwo solwazi esicacile.", "Buka isi-Korean"),
+    "pl": ("Ukuhlelwa kombhalo kwesi-Polish okunezimpawu ezinembile, ukwehlukaniswa kwemigqa okunomqondo nedizayini egcina umbhalo wokuqala.", "Buka isi-Polish"),
+    "pt": ("Ukuhlelwa kombhalo kwesi-Portuguese nedizayini eqondiswa yincazelo, kuhlonipha imithetho yaseBrazil neYurophu kanye nenhloso yombhali.", "Buka isi-Portuguese"),
+    "ru": ("Ukuhlelwa kombhalo kwesi-Russian okuphatha u-ё no-й, izimpawu zokucaphuna, amadeshi nokwehlukaniswa kwemigqa ngokomongo, kugcine umbhalo wokuqala.", "Buka isi-Russian"),
+    "sw": ("Ukuhlelwa kombhalo kwesiSwahili okuvikela u-ng’ nama-apostrophe, kuhlonipha amagama amade futhi kukhethe ngokucacile amafomethi e-sw-TZ, sw-KE noma sw-CD.", "Buka isiSwahili"),
+    "th": ("Ukuhlonipha imingcele yamagama yesi-Thai nezinhlamvu ezihlanganayo, ukuze idizayini yesi-Thai ifundeke kalula.", "Buka isi-Thai"),
+    "vi": ("Ukuhlelwa kombhalo kwesi-Vietnamese okuhlonipha izimpawu zethoni, ukwehlukaniswa kwemigqa okunomqondo nokuqukethwe kwangempela.", "Buka isi-Vietnamese"),
+    "zh-hans": ("Izimpawu zokubhala, ukwehlukaniswa kwemigqa nombhalo oxubile wesi-Chinese nesiLatini wase-China, ngaphandle kokubhala kabusha umbhalo wokuqala.", "Buka isi-Chinese (esenziwe-lula)"),
+    "zh-hant": ("Kuphatha imithetho ehlukile yezimpawu zokubhala nokuhlelwa kombhalo yase-Taiwan nase-Hong Kong.", "Buka isi-Chinese (Sasendulo)"),
+    "zu": ("Ukuhlelwa kombhalo kwesiZulu okuvikela amagama ahlanganisiwe nezinhlamvu ezinkulu ngaphakathi kwegama, kugcine umbhalo wokuqala.", "Buka isiZulu"),
+}
 for _lang, _cards in CARDS.items():
-    _cards["zu"] = ZU_CARD_COPY[_lang]
+    if _lang != "zu":
+        _cards["zu"] = ZU_CARD_COPY[_lang]
 
 # Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
 _PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
@@ -640,7 +664,7 @@ EDITION_NAMES = {
     "zh-hant": {"ar": "阿拉伯文", "bn": "孟加拉文", "de": "德文", "es": "西班牙文", "fr": "法文", "hi": "印地文", "id": "印尼文", "it": "義大利文", "ja": "日文", "ko": "韓文", "pl": "波蘭文", "pt": "葡萄牙文", "ru": "俄文", "th": "泰文", "vi": "越南文", "zh-hans": "簡體中文", "zh-hant": "繁體中文"},
 }
 # Placeholder of the edition menu, in each page language.
-PICK = {"sw": "Chagua lugha", "ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
+PICK = {"zu": "Khetha ulimi", "sw": "Chagua lugha", "ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
 
 def css_version():
     """Short content hash of the stylesheet, so a new page never meets a cached old stylesheet."""
@@ -671,7 +695,8 @@ for _lang, _names in EDITION_NAMES.items():
     _names["sw"] = _SW_EDITION_NAMES[_lang]
 
 
-_ZU_EDITION_NAMES = {"sw":"Kizulu","ar":"الزولو","bn":"জুলু","de":"Zulu","en":"isiZulu","es":"Zulú","fr":"Zoulou","hi":"ज़ुलू","id":"Zulu","it":"Zulu","ja":"ズールー語","ko":"줄루어","pl":"Zuluski","pt":"Zulu","ru":"Зулу","th":"ภาษาซูลู","vi":"Tiếng Zulu","zh-hans":"祖鲁语","zh-hant":"祖魯語"}
+EDITION_NAMES["zu"] = {"ar": "isi-Arabic", "bn": "isi-Bengali", "de": "isi-German", "es": "isi-Spanish", "fr": "isi-French", "hi": "isi-Hindi", "id": "isi-Indonesian", "it": "isi-Italian", "ja": "isi-Japanese", "ko": "isi-Korean", "pl": "isi-Polish", "pt": "isi-Portuguese", "ru": "isi-Russian", "sw": "isiSwahili", "th": "isi-Thai", "vi": "isi-Vietnamese", "zh-hans": "isi-Chinese (esenziwe-lula)", "zh-hant": "isi-Chinese (Sasendulo)"}
+_ZU_EDITION_NAMES = {"zu":"isiZulu","sw":"Kizulu","ar":"الزولو","bn":"জুলু","de":"Zulu","en":"isiZulu","es":"Zulú","fr":"Zoulou","hi":"ज़ुलू","id":"Zulu","it":"Zulu","ja":"ズールー語","ko":"줄루어","pl":"Zuluski","pt":"Zulu","ru":"Зулу","th":"ภาษาซูลู","vi":"Tiếng Zulu","zh-hans":"祖鲁语","zh-hant":"祖魯語"}
 for _lang, _names in EDITION_NAMES.items():
     _names["zu"] = _ZU_EDITION_NAMES[_lang]
 
