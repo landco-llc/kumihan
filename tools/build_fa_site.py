@@ -126,7 +126,7 @@ OVERRIDES=r"""
 def head_links(lang,host=None):
     name=path(lang,host)
     alternates=''.join(f'<link rel="alternate" hreflang="{l}" href="{PUBLIC+path(l,host)}">' for l in COPY)
-    return f'<link rel="canonical" href="{PUBLIC+name}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+path("ar",host)}">\n<link rel="icon" href="{BASE}favicon.ico">'
+    return f'<link rel="canonical" href="{PUBLIC+name}">{alternates}<link rel="alternate" hreflang="x-default" href="{PUBLIC+path("fa",host)}">\n<link rel="icon" href="{BASE}favicon.ico">'
 def landing(lang):
     c=dict(SITE_COPY[lang]);c['skills']=[[r,d] for r,(_,d) in zip(ROLES,c['skills'])]
     head=(f"<title>{e(c['title'])}</title>\n<meta name=\"description\" content=\"{e(c['description'],quote=True)}\">\n"
@@ -143,6 +143,13 @@ def guide(lang,host):
     c=COPY[lang];s=SITE_COPY[lang];g=dict(s['guide'])
     title=f"{c['guide']} · {HOSTS[host]}"
     head=(f"<title>KUMIHAN｜تراز — {e(title)}</title>\n<meta name=\"description\" content=\"{e(g['lead'],quote=True)}\">\n"+head_links(lang,host))
+    if lang=='fa':
+        head += ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap">'
+          '<style>html[lang="fa"] { --sans:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;'
+          ' --display:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;'
+          ' --font-jp:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif; }'
+          'html[lang="fa"] body { font-family:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;line-height:1.85; }'
+          'html[lang="fa"] :is(h1,h2,h3,p,li,.nav-item,.button){letter-spacing:normal;}</style>')
     b=f'<section id="steps"><h2>01 / {e(c["steps"])}</h2><ol>'+''.join('<li>'+e(x)+'</li>' for x in c['notes'][host])+'</ol>'
     if host=='claude':b+='<pre><code>claude --plugin-dir /absolute/path/kumihan-fa</code></pre>'
     if host=='gemini':b+='<pre><code>gemini extensions install /absolute/path/kumihan-fa</code></pre>'
