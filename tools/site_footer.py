@@ -36,6 +36,7 @@ CSS = """/* Shared footer (tools/site_footer.py): the same on every page. */
 .kumihan-footer .kf-menu summary::after { content: ""; width: 6px; height: 6px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(2px) rotate(225deg); transition: transform .15s ease; }
 .kumihan-footer .kf-menu[open] summary::after { transform: translateY(-2px) rotate(45deg); }
 .kumihan-footer .kf-menu summary:focus-visible { outline: 3px solid #c84b4b; outline-offset: 3px; }
+.kumihan-footer .kf-menu:not([open]) ul { display: none; }
 .kumihan-footer .kf-menu ul { position: absolute; inset-inline-start: 0; bottom: calc(100% + 6px); z-index: 30; box-sizing: border-box; min-width: 100%; width: max-content; max-width: min(320px, calc(100vw - 32px)); max-height: min(50vh, 360px); overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 6px 0; list-style: none; background: #fbf9f4; border: 1px solid #d8d2c6; border-radius: 12px; box-shadow: 0 18px 40px rgba(0,0,0,.25); }
 .kumihan-footer .kf-menu li a { display: block; padding: 9px 16px; color: #3b3935; text-decoration: none; font-size: 13px; font-weight: 700; line-height: 1.5; }
 .kumihan-footer .kf-menu li a .code { color: #726d65; font: 800 12px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .04em; }

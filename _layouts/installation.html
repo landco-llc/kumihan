@@ -190,7 +190,7 @@
   <section class="hero" aria-labelledby="page-title">
     <div class="shell">
       <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="../index.html" data-gateway-link><span data-ui-ja>KUMIHAN トップ</span><span data-ui-en hidden>KUMIHAN home</span><span data-ui-zh hidden>KUMIHAN 首頁</span></a><span aria-hidden="true">/</span>
+        <a href="../top-ja.html" data-gateway-link><span data-ui-ja>KUMIHAN トップ</span><span data-ui-en hidden>KUMIHAN home</span><span data-ui-zh hidden>KUMIHAN 首頁</span></a><span aria-hidden="true">/</span>
         <a href="../kumihan.html" data-lang-link>KUMIHAN</a><span aria-hidden="true">/</span>
         <span><span data-ui-ja>導入ガイド</span><span data-ui-en hidden>Installation guide</span><span data-ui-zh hidden>安裝指南</span></span>
       </nav>
@@ -318,7 +318,7 @@
           }
         });
         document.querySelectorAll('a[data-gateway-link]').forEach(a => {
-          a.href = lang === 'en' ? '../top-en.html' : (lang === 'zh' ? '../top-zh-han.html' : '../index.html');
+          a.href = lang === 'en' ? '../index.html' : (lang === 'zh' ? '../top-zh-han.html' : '../top-ja.html');
         });
       }
       async function copyText(text) {

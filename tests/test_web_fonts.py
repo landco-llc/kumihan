@@ -15,7 +15,7 @@ import web_fonts  # noqa: E402
 
 class WebFonts(unittest.TestCase):
     def test_every_static_page_links_its_language_fonts(self):
-        pages = [ROOT / "index.html", *ROOT.glob("top-*.html"), *ROOT.glob("kumihan*.html"),
+        pages = [ROOT / "index.html", *(p for p in ROOT.glob("top-*.html") if "http-equiv=\"refresh\"" not in p.read_text(encoding="utf-8")), *ROOT.glob("kumihan*.html"),
                  *(ROOT / "docs").glob("install-*.html")]
         checked = 0
         for path in pages:

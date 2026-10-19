@@ -29,7 +29,7 @@ class EditionMenu(unittest.TestCase):
 
     def test_six_cards_before_show_more(self):
         self.assertEqual(gateways.VISIBLE, 6)
-        text = (ROOT / "index.html").read_text(encoding="utf-8")
+        text = (ROOT / "top-ja.html").read_text(encoding="utf-8")
         cards = re.findall(r'<article class="lang-card[^"]*"[^>]*>', text)
         self.assertEqual(sum("data-extra" not in c for c in cards), 6)
 

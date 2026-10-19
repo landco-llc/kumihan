@@ -20,8 +20,8 @@ _wf_spec.loader.exec_module(WEB_FONTS)
 # Language gateway (the KUMIHAN index) for each page language, with the label
 # used for the "back to index" link. Paths are relative to the site root.
 GATEWAYS = {
-    "ja": ("index.html", "KUMIHAN トップ"),
-    "en": ("top-en.html", "KUMIHAN home"),
+    "ja": ("top-ja.html", "KUMIHAN トップ"),
+    "en": ("index.html", "KUMIHAN home"),
     "zh-Hant-TW": ("top-zh-han.html", "KUMIHAN 首頁"),
     "zh-Hans-CN": ("top-zh-cn.html", "KUMIHAN 首页"),
     "ko-KR": ("top-ko.html", "KUMIHAN 홈"),

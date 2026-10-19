@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the KUMIHAN language gateway (index.html, top-*.html); --check verifies.
+"""Build the KUMIHAN language gateway (index.html in English, top-*.html); --check verifies.
 
 Page copy that already existed lives in assets/gateway-copy.json; shared styles
 in assets/gateway.css. Language order everywhere is by language code, with
@@ -28,13 +28,13 @@ GATEWAYS = {
     "ar": ("top-ar.html", "ar", "AR", "العربية"),
     "bn": ("top-bn.html", "bn", "BN", "বাংলা"),
     "de": ("top-de.html", "de", "DE", "Deutsch"),
-    "en": ("top-en.html", "en", "EN", "English"),
+    "en": ("index.html", "en", "EN", "English"),
     "es": ("top-es.html", "es", "ES", "Español"),
     "fr": ("top-fr.html", "fr", "FR", "Français"),
     "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
     "id": ("top-id.html", "id", "ID", "Bahasa Indonesia"),
     "it": ("top-it.html", "it", "IT", "Italiano"),
-    "ja": ("index.html", "ja", "JA", "日本語"),
+    "ja": ("top-ja.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
     "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
@@ -724,6 +724,7 @@ SCRIPT = """<script>
 def page(key, c):
     file, html_lang, _, _ = GATEWAYS[key]
     alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
+    alternates += '<link href="index.html" hreflang="x-default" rel="alternate"/>'
     card_html, count = cards(key)
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
@@ -791,9 +792,30 @@ def page(key, c):
 """
 
 
+# Former gateway addresses, kept so existing links still arrive: old file -> current page.
+REDIRECTS = {"top-en.html": "index.html"}
+
+
+def redirect(target):
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>KUMIHAN</title>
+<meta content="noindex" name="robots"/>
+<link href="{BASE}{target}" rel="canonical"/>
+<meta content="0; url={target}" http-equiv="refresh"/>
+</head>
+<body><p><a href="{target}">KUMIHAN</a></p></body>
+</html>
+"""
+
+
 def outputs():
     copy = json.loads((ROOT / "assets" / "gateway-copy.json").read_text(encoding="utf-8"))
-    return {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}
+    files = {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}
+    files.update({old: redirect(new) for old, new in REDIRECTS.items()})
+    return files
 
 
 def main():

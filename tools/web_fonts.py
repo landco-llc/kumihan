@@ -143,6 +143,10 @@ def css():
     out.append("/* Decorative symbol motifs (▮▮▯, « », ◌) take whichever font has the glyph; when that")
     out.append("   font is wide, let them wrap between symbols instead of widening the page. */")
     out.append(":is(.feature-motif, .skill-symbol) { overflow-wrap: anywhere; min-width: 0; }")
+    out.append("/* Long German compounds (and brand names such as KUMIHAN｜Satzbild) at enlarged text on")
+    out.append("   narrow screens: break inside a word only when it cannot fit, where no hyphenation")
+    out.append("   dictionary is available. */")
+    out.append('html[lang="de"] :is(.cta-layout p, .toc-details summary) { overflow-wrap: anywhere; }')
     return "\n".join(out) + "\n" + FOOTER.CSS
 
 
