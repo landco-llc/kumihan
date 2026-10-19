@@ -17,3 +17,7 @@ Reviewer independently ran 22 SEO tests, all generator checks, web-font checks, 
 Parent fix pass: `d395e14` removed residual landing alternates. Two new regression tests were observed FAIL then PASS. Hosted Jekyll logs also identified nil page.lang on the 3 legacy Japanese install pages after removing implicit fallback: generator now captures effective lang and explicitly passes it to share.html. No frontmatter/body changes. Suite: SEO24/24 and root59/59 PASS; preservation PASS. Exact new-head Hosted CI is the gate for actual rendering. No second author-only review is represented as independent sign-off.
 
 Historical independent W00–W08 review and old 231-page results remain in Git history and are not acceptance evidence for this integration.
+
+## Fix-pass acceptance
+
+After merging upstream release-documentation main a08fd66, integrated code6c4ecbf passed Hosted CI23/23. Both exact push and PR synthetic-merge jobs ran actual Jekyll3.10 and audited272 built pages successfully; preservation and271 Sitemap also PASS. This closes the review's important hreflang finding and the default-language handoff defect identified by Hosted CI. Parent regression verification, not a second independent reviewer sign-off. Evidence: `evidence/20261019-integrated-checks.json`, `evidence/20261019-integrated-jekyll-hosted.json`. Owner Gate remains; no main merge.

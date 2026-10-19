@@ -1,6 +1,6 @@
 # W09–W15 current execution status — 2026-10-19 JST
 
-**W09–W14 implemented; W15 exact-final-head Hosted CI pending. Draft retained / Owner Gate / DO NOT MERGE.**
+**W09–W15 implementation/review gates complete: integrated HEAD 6c4ecbf Hosted CI23/23 PASS. Draft retained / Owner Gate / DO NOT MERGE. Final evidence-only HEAD checks are recorded on PR #93.**
 
 - Initial Fresh Read main b7a8c83 and PR accbf83; safely merged at fa9451a. During validation main advanced to `a08fd66fcb58d70dd448dfcb51745c0c91d03d4f` (PR #104 release docs), refreshed/read/merged and baseline protections updated.
 - PR #100 and #102 are merged. #101 remains independent Draft/unmerged. Main now announces the already-published v0.1.8-preview; all upstream release/docs and 2609 protected distribution/skill/manifest files retained.
@@ -8,7 +8,7 @@
 - Actual inventory: **272 HTML / 271 indexable URLs**. Alias excluded; root once; no guessed pages. Static/layout body hashes255 and Jekyll source hashes21 unchanged against latest main.
 - Independent review at fa9451a found one important duplicate Jekyll hreflang issue. Parent fixed it and a Hosted-CI-discovered default-language handoff at `d395e14`. SEO24/root59 PASS; push Hosted Jekyll3.10 actual output audit PASS. Initial failures remain recorded. PR CI then caught upstream README/CHANGELOG freshness; merge of a08fd66 resolves the baseline mismatch.
 - Current evidence: [validation log](VALIDATION_LOG.md), [review resolution](REVIEW_REFRESH_20261019_MAIN_73D2B01.md), [independent review](INDEPENDENT_REVIEW.md), [conflict/ruling ledger](RECONCILIATION_LEDGER_20261019.md), [current inventory](BASELINE_INVENTORY.md).
-- No SEO production deployment, main merge, release mutation, SNS posting/cache reset or Search Console submission. Owner Gate remains after exact-head CI.
+- No SEO production deployment, main merge, release mutation, SNS posting/cache reset or Search Console submission. Integrated code CI23/23 PASS; final evidence-only HEAD checks must also be green on PR #93 before Owner action.
 
 The original handoff below is preserved as historical instructions. Its NOT EXECUTED statuses, old SHA/counts and PR #102 Draft claim are superseded by this execution status and linked evidence.
 
