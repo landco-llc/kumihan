@@ -192,6 +192,14 @@ Its security checks reject private paths within FTP root, invalid absolute paths
 
 When private runtime is already prepared, upload ONLY generated kmhn/index.php and kmhn/.htaccess into the **existing FTP-root/kmhn directory**. Do not upload the whole repository, vendor/ or archive into kmhn.
 
+## W03 update: 2026-10-19 private archive transfer
+
+The Owner's Mac already verified the local ZIP + nested runtime tarball and completed SCP upload (`100%`, 779KB) to the existing private server candidate. SSH checks confirmed the tar file exists and `vendor`, `src`, `public` are not yet extracted. The remote verification script stopped at `HASH_TOOL_UNAVAILABLE` because neither `sha256sum` nor `openssl` was available in the Lolipop SSH environment. This is **NOT** a verified checksum mismatch.
+
+**Next gate:** From the **Mac terminal**, SCP the server-held `runtime.tar.gz` back to a different local filename and use Mac `shasum -a 256` plus `cmp` against the local verified archive. See [STAGE_PRIVATE_20261019.md](deployment/STAGE_PRIVATE_20261019.md), Stage B2 for copy-safe, no-overwrite commands. Do not extract on the host until both checks PASS. Do not try to install server utilities just for this step.
+
+SSH warnings: the Mac OpenSSH client reported missing post-quantum key exchange and an RSA host-key-update signature warning. Maintain strict host-key verification; validate the server identity against the provider information rather than bypassing SSH trust controls. The cryptographic archive readback is a separate content-integrity check.
+
 ## 3. Private server artifact
 
 The GitHub Actions workflow Universal MCP PHP 8.5 produces a private staging bundle containing:
