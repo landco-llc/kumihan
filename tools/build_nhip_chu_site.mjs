@@ -151,7 +151,8 @@ for(const lang of ["vi","en","ja"]){
 const base=resolve(new URL("..",import.meta.url).pathname);
 let invalid=[];
 for(const [p,source] of Object.entries(out)){
- const content=execFileSync(process.env.PYTHON || "python3",[resolve(base,"tools/seo_metadata.py"),p],{input:source,encoding:"utf8"});
+ const enriched=execFileSync(process.env.PYTHON || "python3",[resolve(base,"tools/seo_metadata.py"),p],{input:source,encoding:"utf8"});
+ const content=execFileSync(process.env.PYTHON || "python3",[resolve(base,"tools/version_display.py"),p],{input:enriched,encoding:"utf8"});
  const filepath=resolve(base,p);
  if(process.argv.includes("--check")){
   if(readFileSync(filepath,"utf8")!==content)invalid.push(p);

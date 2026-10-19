@@ -91,6 +91,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_metadata import enrich_html
+from version_display import apply_html
 
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
@@ -99,7 +100,7 @@ def main():
  files.update({guide(h,l):installation(h,l) for h in HOSTS for l in COPY})
  stale=[]
  for name,content in files.items():
-  content=enrich_html(content,name)
+  content=apply_html(enrich_html(content,name),name)
   path=ROOT/name
   if args.check:
    if not path.exists() or path.read_text()!=content:stale.append(name)

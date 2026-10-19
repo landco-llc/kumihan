@@ -37,8 +37,9 @@ class JapaneseLanding(unittest.TestCase):
     def test_source_template_and_sections(self):
         page = PAGE.read_text(encoding="utf-8")
         source = TEMPLATE.read_text(encoding="utf-8")
-        self.assertEqual(page, enrich_html(source, PAGE.name))
-        self.assertEqual(page.split("<body", 1)[1], source.split("<body", 1)[1])
+        from version_display import apply_html
+        self.assertEqual(page, apply_html(enrich_html(source, PAGE.name), PAGE.name))
+        self.assertEqual(page.split("<body", 1)[1], apply_html(source, PAGE.name).split("<body", 1)[1])
         p = Parse()
         p.feed(page)
         self.assertEqual([v["lang"] for t, v in p.tags if t=="html"], ["ja"])

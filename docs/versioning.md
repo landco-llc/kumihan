@@ -25,3 +25,7 @@
 | Other language modules | Their existing `vX.Y.Z` | Their existing `X.Y.Z` | Keep their product-specific tag slug |
 
 Current active manifests are protected by `tests/test_version_naming.py`. This test distinguishes canonical active package metadata from archived historical versions; it does not relabel past evidence.
+
+## Verified publication metadata
+
+[Edition version automation](version-automation/README.md) separates source versions from verified stable GitHub Releases. Shared renderers and README consume `assets/edition-versions.json`; no source file addition or common naming change publishes an edition. The release/manual workflow produces a reviewed patch proposal with read-only permissions. Owner approval remains necessary to merge or publish it.

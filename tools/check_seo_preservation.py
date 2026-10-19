@@ -9,6 +9,14 @@ ROOT = Path(__file__).resolve().parents[1]
 def audit(root=ROOT):
     root = Path(root)
     snapshot = json.loads((ROOT / 'docs/seo/evidence/20261019-main-preservation.json').read_text())
+    # Version work explicitly changes display bodies and README. Admit only the
+    # exact reviewed hash pair; never rewrite the historical SEO snapshot.
+    overlay_path = ROOT / 'docs/version-automation/preservation.json'
+    overlay = json.loads(overlay_path.read_text()) if overlay_path.exists() else {}
+    if overlay and (overlay.get('baseline') != snapshot['baseline'] or
+                    overlay.get('authority') != 'KUMI-VERSION-AUTO-WG00-WG04-20261019-01'):
+        return ['Invalid edition-version preservation overlay']
+    from build_version_site import preservation_allowed
     errors = []
     for family in ('protected', 'bodies', 'jekyll_sources'):
         for path, expected in snapshot[family].items():
@@ -19,7 +27,11 @@ def audit(root=ROOT):
             if family == 'bodies':
                 body = re.search(rb'<body\b[\s\S]*', content, re.I)
                 content = body[0] if body else b''
-            if hashlib.sha256(content).hexdigest() != expected:
+            update = overlay.get('updates', {}).get(family, {}).get(path, {})
+            actual = hashlib.sha256(content).hexdigest()
+            admitted = (update.get('before') == expected and update.get('after') == actual
+                        and preservation_allowed(path, family))
+            if actual != expected and not admitted:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors
 

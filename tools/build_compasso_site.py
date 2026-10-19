@@ -13,6 +13,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_adapter import seo_outputs
+from version_display import version_outputs
 import argparse
 import json
 from html import escape
@@ -171,6 +172,7 @@ def guide(host, lang, c):
     return FRAME.render(frame)
 
 
+@version_outputs
 @seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "compasso-site-copy.json").read_text(encoding="utf-8"))
