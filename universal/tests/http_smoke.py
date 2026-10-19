@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Real HTTP MCP invocation smoke (CI only, after Composer and PHP server startup)."""
 import json
+import os
 import sys
 import urllib.request
 
-ENDPOINT = "http://127.0.0.1:8989/index.php"
+ENDPOINT = os.environ.get("KUMIHAN_MCP_LOCAL_URL", "http://127.0.0.1:8989/index.php")
 
 
 def post(payload: dict, headers: dict | None = None):
