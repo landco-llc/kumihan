@@ -1,0 +1,75 @@
+name: Release KUMIHAN Taraz v0.1.0
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fa-release.yml'
+      - 'plugins/kumihan-fa/downloads/MANIFEST.json'
+      - 'plugins/kumihan-fa/plugin.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Validate packages, localized site and tests
+        run: |
+          python -m unittest discover -s tests/fa -v
+          python tools/build_fa.py --check
+          python tools/build_fa_site.py --check
+      - name: Create public GitHub Release with versioned ZIP and checksums
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG=kumihan-fa-v0.1.0
+          if ! gh release view "$TAG" >/dev/null 2>&1; then
+            gh release create "$TAG" plugins/kumihan-fa/downloads/*.zip plugins/kumihan-fa/downloads/SHA256SUMS.txt plugins/kumihan-fa/downloads/MANIFEST.json --target "$GITHUB_SHA" --title "KUMIHAN｜تراز v0.1.0" --notes "Free open-source Persian typography and design. Persian-English descriptions, official KUMIHAN logo, four independent skills, Claude Code plugin, Gemini CLI extension and checksum-verified release assets. Native host installation and Persian editorial proofreading are not yet certified." --latest=false
+          fi
+      - name: Download and independently compare release assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/fa-release-assets
+          gh release download kumihan-fa-v0.1.0 --dir /tmp/fa-release-assets
+          python - <<'PY'
+          import hashlib
+          from pathlib import Path
+          root=Path('plugins/kumihan-fa/downloads')
+          remote=Path('/tmp/fa-release-assets')
+          expected={p.name:p for p in root.iterdir() if p.is_file()}
+          observed={p.name:p for p in remote.iterdir() if p.is_file()}
+          if expected.keys()!=observed.keys():
+              raise SystemExit('Release asset inventory mismatch')
+          for name,original in expected.items():
+              if hashlib.sha256(original.read_bytes()).digest()!=hashlib.sha256(observed[name].read_bytes()).digest():
+                  raise SystemExit('Release digest mismatch '+name)
+          print('Verified',len(expected),'public release assets.')
+          PY
+      - name: Mark the published state and refresh download links
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _data
+          printf 'version: 0.1.0\nrelease: kumihan-fa-v0.1.0\n' > _data/fa-release-published
+          python tools/build_fa_site.py
+          python tools/build_fa_site.py --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add _data/fa-release-published assets/kumihan-fa.css kumihan-fa.html kumihan-fa.en.html kumihan-fa.ja.html docs/install-kumihan-fa-*.html
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(fa): confirm public v0.1.0 release and activate download links"
+            git push origin HEAD:main
+          fi

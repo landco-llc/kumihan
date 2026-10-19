@@ -35,9 +35,11 @@ jobs:
       - name: W04 Build Persian skills and archives before website
         run: python tools/build_fa.py
       - name: W04 Test skills and generated packages
-        run: python -m unittest discover -s tests/fa -v
+        run: python -m unittest discover -s tests/fa -p test_fa.py -v
       - name: W05 Only after the skills pass, produce pages using FA rules
         run: if test -f tools/build_fa_site.py; then python tools/build_fa_site.py; fi
+      - name: W06 Run complete package and website acceptance tests
+        run: python -m unittest discover -s tests/fa -v
       - name: W06 Verify deterministic artifacts
         run: |
           python tools/build_fa.py --check
