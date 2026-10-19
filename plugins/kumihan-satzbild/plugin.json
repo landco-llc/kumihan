@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-satzbild",
+  "version": "0.1.0",
+  "description": "Offene KI-Skills für deutsche Typografie und durchdachte Gestaltung, mit Schutz des Originaltexts und nachvollziehbarer Prüfung. | Open-source AI skills for German typography and purposeful design, preserving original content and providing evidence-based review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Satzbild",
+        "shortDescription": "Deutsche Typografie | German typography",
+        "longDescription": "Offene KI-Skills für deutsche Typografie und durchdachte Gestaltung, mit Schutz des Originaltexts und nachvollziehbarer Prüfung. | Open-source AI skills for German typography and purposeful design, preserving original content and providing evidence-based review.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-de.html",
+        "defaultPrompt": [
+          "Prüfe diesen deutschen Inhalt, ohne das Original zu ändern.",
+          "Review this German content without changing the original."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,465 @@
+{
+ "de": {
+  "house_style": null,
+  "title": "KUMIHAN｜Satzbild — Deutsche Typografie, natürlich gestaltet",
+  "description": "KUMIHAN｜Satzbild ist eine Sammlung quelloffener KI-Skills für deutsche Typografie und durchdachte Gestaltung, mit Schutz des Originaltexts und nachvollziehbarer Prüfung.",
+  "skip": "Zum Inhalt",
+  "nav_label": "Hauptnavigation",
+  "lang_label": "Sprache",
+  "nav": [
+   "Über Satzbild",
+   "Grundsätze",
+   "Skills",
+   "Einrichtung"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / GERMAN TYPOGRAPHY",
+  "h1": [
+   "Deutsche Typografie,",
+   "natürlich gestaltet"
+  ],
+  "lead": "KUMIHAN｜Satzbild ist eine Sammlung quelloffener KI-Skills für die Gestaltung und Prüfung deutscher Websites, Artikel, Berichte und Präsentationen. Sie achtet auf Lesbarkeit, passende Typografie und den unveränderten Originaltext.",
+  "cta": [
+   "Jetzt beginnen",
+   "Über Satzbild"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "GERMAN FIRST"
+  ],
+  "concept_h2": [
+   "Die passende Form",
+   "für jede Botschaft"
+  ],
+  "concept_body": "Jeder Auftrag, jedes Publikum und jeder Inhalt ist anders. KUMIHAN｜Satzbild hilft der KI, Typografie, Abstände und Hierarchie nach Bedeutung und Prioritäten zu gestalten, statt überall dieselbe Vorlage einzusetzen.",
+  "features_h2": "Vier Perspektiven für klare Gestaltung",
+  "features_deck": "Grundsätze für Gestaltung und Prüfung deutscher Inhalte.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Äß",
+    "h3": "Deutsche Typografie",
+    "p": "Lange Komposita, Worttrennung, ß/ẞ/SS, verschachtelte Anführungszeichen und Zahlenformate. de-DE, de-AT und de-CH bleiben eigenständig; Währung, Zeitzone, du/Sie und Hausstil werden gesondert festgelegt."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Inhalt bestimmt Struktur",
+    "p": "Reihenfolge und Gewicht der Informationen richten sich nach dem Ziel der Lesenden."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/ß",
+    "h3": "Originaltext bewahren",
+    "p": "Namen, Preise, Zahlen, Umlaute und freigegebene Formulierungen bleiben unverändert."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Prüfung ohne Eingriff",
+    "p": "Das fertige Ergebnis prüfen und Beobachtungen ordnen, ohne die Originaldateien zu verändern."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Mehr als Schrift anordnen",
+   "Das Lesen gestalten"
+  ],
+  "idea_body": "KUMIHAN｜Satzbild schreibt kein fertiges Erscheinungsbild vor. Die Skills geben der KI Wissen, um sich an Medium und Aufgabe anzupassen.",
+  "skills_h2": [
+   "Vier Skills",
+   "Ein gemeinsamer Ansatz"
+  ],
+  "skills_deck": "Vom Projektkontext über Web und Dokumente bis zur Prüfung.",
+  "skills": [
+   [
+    "Satzbild",
+    "Ziel, Medium, Sprachvariante und erlaubte Änderungen festlegen."
+   ],
+   [
+    "Web",
+    "Typografie und Gestaltung für deutsche Websites, Artikel, Landingpages und Oberflächen."
+   ],
+   [
+    "Documents",
+    "Struktur und Lesbarkeit für Berichte, Dokumente und Präsentationen."
+   ],
+   [
+    "Review",
+    "Typografie, Informationen und Layout prüfen, ohne Quelldateien zu verändern."
+   ]
+  ],
+  "skill_view": "Skill ansehen",
+  "install_h2": [
+   "Mit den vertrauten",
+   "KI-Werkzeugen beginnen"
+  ],
+  "install_body": "Die Einrichtung hängt vom Werkzeug ab. Wählen Sie die passende Anleitung und die benötigten Skills.",
+  "install_notes": [
+   "Anleitung für Skills, Plugin-Registrierung und lokale Einrichtung",
+   "Einrichtung für Claude Code und Claude",
+   "Einrichtung für Gemini CLI und Gemini Apps"
+  ],
+  "install_extra": "15 ZIP-Dateien, MANIFEST.json und SHA256SUMS.txt ansehen ↗",
+  "status_title": "RELEASE CANDIDATE / v0.1.0",
+  "status_body": "Die ZIP-Dateien stehen im Repository bereit. Der öffentliche Release wird noch geprüft. Der Aufruf in den KI-Werkzeugen und ein Lektorat durch deutsche Muttersprachler sind noch nicht geprüft.",
+  "status_link": "Distributionsdateien ansehen ↗",
+  "cta_h2": [
+   "Eine weitere Möglichkeit",
+   "für deutsche Gestaltung"
+  ],
+  "cta_body": "KUMIHAN｜Satzbild ist kostenlos und quelloffen. Quellcode, Distributionsdateien und Änderungshistorie sind auf GitHub zugänglich.",
+  "cta_button": "Auf GitHub ansehen",
+  "footer_sub": "Deutsche Typografie-Skills für KI-gestützte Gestaltung.",
+  "gateway_label": "KUMIHAN Startseite",
+  "family": [
+   "KUMIHAN · Japanisch",
+   "kumihan.html"
+  ],
+  "top": "Nach oben",
+  "guide": {
+   "breadcrumb": "Einrichtungsanleitung",
+   "nav": "Einrichtungsanleitungen",
+   "toc_title": "Auf dieser Seite",
+   "toc_summary": "Inhaltsverzeichnis anzeigen",
+   "platforms": "KI-Werkzeug wählen",
+   "note_title": "v0.1.0 / Release candidate",
+   "note": "Installation und Aufruf wurden in den einzelnen Werkzeugen noch nicht geprüft. Je nach Umgebung sind nicht alle Schritte verfügbar.",
+   "source": "Original INSTALL.md öffnen",
+   "steps": "Schritte und Hinweise",
+   "top": "Zurück zu KUMIHAN｜Satzbild",
+   "title": "KUMIHAN｜Satzbild in {host} einrichten",
+   "lead": "Wählen Sie je nach Unterstützung Ihres Werkzeugs das vollständige Plugin oder einzelne Skills.",
+   "sections": [
+    "Format wählen",
+    "Herunterladen und prüfen",
+    "Einrichten",
+    "Ohne Änderung am Original testen",
+    "Aktualisieren",
+    "Umfang und Grenzen"
+   ],
+   "format": "Das Plugin enthält alle vier Skills. Jeder Skill ist auch einzeln mit eigenen Regeln und Referenzen verfügbar. Das Anhängen einer ZIP-Datei an einen Chat installiert nichts.",
+   "plugin": "Plugin",
+   "skill": "Einzelner Skill",
+   "download": "Laden Sie die Dateien dieser Version herunter. Prüfen Sie vor der Einrichtung SHA-256 und Dateigröße anhand von MANIFEST.json. Mit allen 17 Dateien im selben Ordner ausführen (unter macOS: shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Verwenden Sie das ChatGPT/Codex-Plugin nur über eine tatsächlich unterstützte Plugin-Importfunktion. Das Archiv enthält kumihan-satzbild/ mit plugin.json und .codex-plugin/plugin.json. Einzelne Codex-Skills werden in .agents/skills/ des Projekts entpackt. Die Skills-Funktion in ChatGPT hängt vom Konto ab.",
+   "claude": "Entpacken Sie das Claude-Code-Plugin unter Beibehaltung des Ordners kumihan-satzbild/. Wenn Ihre Version dies unterstützt, validieren Sie das Plugin und starten Claude Code mit diesem Ordner. Einzelne Skills können lokal in .claude/skills/ liegen. In Claude nur eine tatsächlich verfügbare Skills-Oberfläche verwenden.",
+   "gemini": "Entpacken Sie die Erweiterung in einen leeren Ordner mit gemini-extension.json direkt im Wurzelverzeichnis. Installieren Sie sie über diesen Pfad und lesen Sie die Berechtigungsabfrage. Installieren Sie nicht das gesamte Repository als Satzbild. Der Import in Gemini Apps ist nicht geprüft.",
+   "test": "Geben Sie Sprachvariante (de-DE/de-AT/de-CH), Anrede (du/Sie), Medium und Arbeitsmodus an. Beispiel:",
+   "prompt": "Nutze kumihan-satzbild-review. Bewahre Originaltext, Zahlen und Namen; trenne Beobachtungen von Vorschlägen.",
+   "check": "Optionaler statischer Test (nur lesend):",
+   "update": "Sichern Sie eigene Einstellungen und prüfen Sie neue Version und Prüfsumme. Aktualisieren Sie über die unterstützte Methode Ihres Werkzeugs. Ein neuer Commit aktualisiert eine bestehende Installation nicht. Andere Sprachplugins bleiben erhalten.",
+   "limits": "44 Regelkandidaten und eine begrenzte CSS-Kandidatenregel; 48 vorgeschlagene Forschungsfälle werden getrennt geführt. Kein vollständiges Korrektorat und keine visuelle Zertifizierung. Nativer Import, Symboldarstellung und Aufnahme in Anbieter-Verzeichnisse sind nicht verifiziert."
+  },
+  "publication_state": "candidate"
+ },
+ "en": {
+  "house_style": null,
+  "title": "KUMIHAN｜Satzbild — Natural German typography, made with AI",
+  "description": "KUMIHAN｜Satzbild is a set of open-source AI skills for creating and reviewing German websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "skip": "Skip to content",
+  "nav_label": "Primary navigation",
+  "lang_label": "Language",
+  "nav": [
+   "About",
+   "Principles",
+   "Skills",
+   "Get started"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / GERMAN TYPOGRAPHY",
+  "h1": [
+   "Natural German typography,",
+   "made with AI"
+  ],
+  "lead": "KUMIHAN｜Satzbild is a set of open-source AI skills for creating and reviewing German websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "cta": [
+   "Get started",
+   "Learn more"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "GERMAN FIRST"
+  ],
+  "concept_h2": [
+   "Not a uniform look—",
+   "the right form for each message"
+  ],
+  "concept_body": "Every brief, audience, and message is different. KUMIHAN｜Satzbild helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+  "features_h2": "Four things worth getting right",
+  "features_deck": "Practical priorities for creating and reviewing German content.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Äß",
+    "h3": "German typography",
+    "p": "Long compounds, hyphenation, ß/ẞ/SS, nested quotes and number formats. de-DE, de-AT and de-CH remain distinct; currency, timezone, du/Sie and house style are explicit."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Purposeful structure",
+    "p": "Shape the layout around the information, its priority, and the reader’s goal."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/ß",
+    "h3": "Source fidelity",
+    "p": "Names, prices, figures, umlauts and original wording stay exactly as supplied."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Read-only review",
+    "p": "Check finished work and organize issues—without touching the files."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Beyond arranging type",
+   "Design the reading experience"
+  ],
+  "idea_body": "KUMIHAN｜Satzbild doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
+  "skills_h2": [
+   "Four skills",
+   "One approach"
+  ],
+  "skills_deck": "From scoping the work to web, documents, and review.",
+  "skills": [
+   [
+    "Satzbild",
+    "Start here. Define what you're making, why, how far the work should go, and which region and form of address apply."
+   ],
+   [
+    "Web",
+    "Typography and design for German websites, articles, landing pages, and UI."
+   ],
+   [
+    "Documents",
+    "Structure and readability for reports, business documents, and slide decks."
+   ],
+   [
+    "Review",
+    "Review typography, information, and layout without editing source files."
+   ]
+  ],
+  "skill_view": "View skill",
+  "install_h2": [
+   "Start with the AI tools",
+   "you already use"
+  ],
+  "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need.",
+  "install_notes": [
+   "Guides for adding skills, registering plugins, and local installation",
+   "Setup guide for Claude Code and Claude chat",
+   "Setup guide for Gemini CLI and the Gemini app"
+  ],
+  "install_extra": "All 15 ZIP files, MANIFEST.json, and SHA256SUMS.txt ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "Version 0.1.0 distribution files are available in the source repository. Public Release verification is pending. Native AI tool behavior and native German editorial review are not yet checked.",
+  "status_link": "Download latest ↗",
+  "cta_h2": [
+   "Another way to design",
+   "in German"
+  ],
+  "cta_body": "KUMIHAN｜Satzbild is open source. The skills, releases, and full change history are on GitHub.",
+  "cta_button": "View on GitHub",
+  "footer_sub": "German typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN home",
+  "family": [
+   "KUMIHAN Japanese",
+   "en.html"
+  ],
+  "top": "Back to top",
+  "guide": {
+   "breadcrumb": "Installation guide",
+   "nav": "Installation guides",
+   "toc_title": "On this page",
+   "toc_summary": "Show contents",
+   "platforms": "Choose an AI platform",
+   "note_title": "v0.1.0 / Release candidate",
+   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
+   "source": "Open the original INSTALL.md",
+   "steps": "Steps and notes",
+   "top": "Back to KUMIHAN｜Satzbild",
+   "title": "Install KUMIHAN｜Satzbild in {host}",
+   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
+   "sections": [
+    "Choose a format",
+    "Download and verify",
+    "Install",
+    "Try it without changing the source",
+    "Update",
+    "Scope and limits"
+   ],
+   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
+   "plugin": "Plugin",
+   "skill": "Individual skill",
+   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-satzbild/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
+   "claude": "Extract the Claude Code plugin, keeping the kumihan-satzbild/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
+   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Satzbild. Import into the Gemini app has not been verified.",
+   "test": "State the locale (de-DE/de-AT/de-CH), form of address (du/Sie), medium and working mode. Example request:",
+   "prompt": "Use kumihan-satzbild-review. Preserve the source, figures, and names; keep observations separate from proposals.",
+   "check": "Optional static check (read-only):",
+   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
+   "limits": "44 guidance candidates and one bounded CSS candidate rule; 48 proposed research cases remain separately tracked. This is not a complete proofreader or visual certification. Native import, icon display and provider marketplace listing are not verified."
+  },
+  "publication_state": "candidate"
+ },
+ "ja": {
+  "house_style": null,
+  "title": "KUMIHAN｜Satzbild — ドイツ語のデザインをもっと自然に",
+  "description": "KUMIHAN｜Satzbildは、AIによるドイツ語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
+  "skip": "本文へ移動",
+  "nav_label": "メインナビゲーション",
+  "lang_label": "表示言語",
+  "nav": [
+   "Satzbildとは",
+   "できること",
+   "4つのスキル",
+   "導入方法"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / GERMAN TYPOGRAPHY",
+  "h1": [
+   "ドイツ語の",
+   "デザインを",
+   "もっと自然に"
+  ],
+  "lead": "AIとつくるドイツ語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜Satzbildは、ドイツ語のための制作・レビュースキル集です。",
+  "cta": [
+   "使いはじめる",
+   "Satzbildについて"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "GERMAN FIRST"
+  ],
+  "concept_h2": [
+   "「見た目をそろえる」より",
+   "「伝わる形を考える」"
+  ],
+  "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Satzbildは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+  "features_h2": "伝えるための4つの視点",
+  "features_deck": "制作と見直しに共通する、KUMIHAN｜Satzbildが大切にする考え方。",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Äß",
+    "h3": "自然なドイツ語組版",
+    "p": "長い複合語、分綴、ß・ẞ・SS、入れ子の引用符、数値表記。de-DE・de-AT・de-CHを区別し、通貨・タイムゾーン・du/Sie・ハウススタイルは個別に扱います。"
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "内容に合う構成",
+    "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/ß",
+    "h3": "原稿を大切に",
+    "p": "名前・価格・数値・ウムラウト・原文を勝手に変えず、意味と情報の正確さを守ります。"
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "制作後の見直し",
+    "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "文字を並べるだけでなく",
+   "読む体験を組み立てる"
+  ],
+  "idea_body": "KUMIHAN｜Satzbildは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
+  "skills_h2": [
+   "4つのスキル",
+   "ひとつの考え方"
+  ],
+  "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
+  "skills": [
+   [
+    "Satzbild",
+    "最初の入口。何をつくるか、目的や作業範囲、地域と呼びかけの形を整理するためのスキル。"
+   ],
+   [
+    "Web",
+    "ドイツ語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
+   ],
+   [
+    "Documents",
+    "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
+   ],
+   [
+    "Review",
+    "制作物を変更せず、組版・情報・デザインの見直しを支援。"
+   ]
+  ],
+  "skill_view": "スキルを見る",
+  "install_h2": [
+   "いつものAIツールから",
+   "はじめよう"
+  ],
+  "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。",
+  "install_notes": [
+   "スキルの追加・プラグイン登録・ローカル導入のガイド",
+   "Claude Code・チャット向けの導入ガイド",
+   "Gemini CLI・Geminiアプリ向けの導入ガイド"
+  ],
+  "install_extra": "15個のZIP・MANIFEST.json・SHA256SUMS.txtを見る ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "v0.1.0の配布ファイルをソースリポジトリで提供しています。正式Releaseの公開照合は準備中です。各AIツールでの動作とドイツ語母語話者による確認は未実施です。",
+  "status_link": "最新版のダウンロード ↗",
+  "cta_h2": [
+   "ドイツ語のデザインに",
+   "もうひとつの選択肢を"
+  ],
+  "cta_body": "KUMIHAN｜Satzbildはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+  "cta_button": "GitHubで見る",
+  "footer_sub": "German typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN トップ",
+  "family": [
+   "日本語版 KUMIHAN",
+   "kumihan.html"
+  ],
+  "top": "ページ上部へ",
+  "guide": {
+   "breadcrumb": "導入ガイド",
+   "nav": "導入ページ",
+   "toc_title": "このページの目次",
+   "toc_summary": "このページの目次を表示",
+   "platforms": "AIプラットフォームを選ぶ",
+   "note_title": "v0.1.0 / Release candidate",
+   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
+   "source": "元のINSTALL.mdを開く",
+   "steps": "手順と注意事項",
+   "top": "KUMIHAN｜Satzbildへ戻る",
+   "title": "{host}にKUMIHAN｜Satzbildを導入",
+   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
+   "sections": [
+    "導入形式を選ぶ",
+    "ダウンロードと照合",
+    "導入する",
+    "原稿を変えずに試す",
+    "更新",
+    "対応範囲と限界"
+   ],
+   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
+   "plugin": "プラグイン",
+   "skill": "個別スキル",
+   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
+   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-satzbild/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
+   "claude": "Claude Codeプラグインを、kumihan-satzbild/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
+   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをSatzbildとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
+   "test": "言語地域（de-DE・de-AT・de-CH）・呼びかけ（du/Sie）・媒体・作業モードを明示します。依頼の例：",
+   "prompt": "kumihan-satzbild-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
+   "check": "任意の静的チェック（読み取り専用）：",
+   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
+   "limits": "44件の指針候補と1種類の限定的なCSS注意候補です。48件の研究ケースは別途管理し、全件合格とは扱いません。完全な校正や表示品質の保証ではなく、実ホストでの導入・アイコン表示・公式ストア掲載は未検証です。"
+  },
+  "publication_state": "candidate"
+ }
+}

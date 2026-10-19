@@ -38,6 +38,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
     "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
                pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
@@ -240,6 +241,21 @@ UI = {
 # Hindi edition: same card dimensions and navigation behavior as existing editions.
 for _lang, _cards in CARDS.items():
     _cards.setdefault("hi", ("結合文字・母音記号・原稿を守るヒンディー語の文字組とデザイン。", "ヒンディー語版を見る") if _lang == "ja" else ("Hindi typography and design with source fidelity, conjuncts and matras.", "View the Hindi edition"))
+
+
+# Satzbild card copy; preserve every existing edition and gateway.
+CARDS['ja']["de"] = ('長い複合語、引用符、ß・ẞとDE・AT・CHの違いを尊重し、原稿を守るドイツ語組版。', 'ドイツ語版を見る')
+CARDS['en']["de"] = ('German typography with long compounds, quotation marks and distinct DE/AT/CH conventions, preserving the original.', 'View the German edition')
+CARDS['ko']["de"] = ('긴 합성어, 인용 부호, DE·AT·CH의 차이를 존중하고 원고를 지키는 독일어 글짜임.', '독일어 버전 보기')
+CARDS['zh-hans']["de"] = ('尊重长复合词、引号及德国、奥地利、瑞士差异，保护原稿的德语排版。', '查看德语版')
+CARDS['zh-hant']["de"] = ('尊重長複合詞、引號及德國、奧地利、瑞士差異，保護原稿的德語排版。', '查看德語版')
+CARDS['es']["de"] = ('Tipografía alemana que respeta los compuestos largos, las comillas y las variantes DE/AT/CH, sin alterar el original.', 'Ver la edición en alemán')
+CARDS['fr']["de"] = ('Typographie allemande respectant les mots composés, les guillemets et les variantes DE/AT/CH, sans modifier l’original.', 'Voir l’édition allemande')
+CARDS['pt']["de"] = ('Tipografia alemã que respeita palavras compostas, aspas e variantes DE/AT/CH, preservando o original.', 'Ver a edição em alemão')
+CARDS['ar']["de"] = ('تنضيد ألماني يحترم الكلمات المركبة وعلامات الاقتباس والاختلافات الإقليمية ويحافظ على الأصل.', 'عرض النسخة الألمانية')
+CARDS['hi']["de"] = ('मूल पाठ को सुरक्षित रखते हुए जर्मन संयुक्त शब्दों, उद्धरण चिह्नों और क्षेत्रीय भिन्नताओं का ध्यान रखने वाली टाइपोग्राफी।', 'जर्मन संस्करण देखें')
+CARDS['vi']["de"] = ('Kiểu chữ tiếng Đức tôn trọng từ ghép dài, dấu ngoặc kép và khác biệt DE/AT/CH, giữ nguyên bản gốc.', 'Xem phiên bản tiếng Đức')
+CARDS['th']["de"] = ('การจัดวางตัวอักษรเยอรมันที่เคารพคำประสม เครื่องหมายอัญประกาศ และความต่างระหว่างภูมิภาค โดยรักษาต้นฉบับ', 'ดูเวอร์ชันภาษาเยอรมัน')
 
 
 def x(value):
