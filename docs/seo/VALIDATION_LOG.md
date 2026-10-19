@@ -83,3 +83,15 @@ Do not overwrite prior entries. Publish only observed outcomes; do not infer ind
 - Exact hosted check names, URLs and completion timestamps: [evidence/20261019-hosted-checks.json](evidence/20261019-hosted-checks.json). Local regression commands and official28-gem dependency audit are retained beside it.
 - This final documentation/evidence-only commit follows the verified implementation above. Resolve final submission HEAD at [PR #93](https://github.com/landco-llc/kumihan/pull/93) (`head.sha` / `git rev-parse feature/seo-foundation-20261019`); its code and generated public files are identical to the verified implementation. PR checks rerun for that log-only HEAD.
 - W00–W08 implementation, independent review, tests, runbooks and Draft PR delivered. Branch preserved for review; `draft=true`, `merged=false`, target=`main`. Owner merge and subsequent production verification/Search Console submission remain unperformed. External Rich Results/Schema Validator submission and SNS cache refresh remain unperformed as stated above.
+
+## 2026-10-19 JST — Current main re-evaluation (reconciliation pending)
+
+- Mode: GitHub connector read-only fresh inspection; **not a code reconciliation, test rerun or production deployment**.
+- Latest observed main: `db14de27b4b7e8ffd298bd3ab4a940ba2a623bca`.
+- Old PR #93 HEAD before this documentation update: `0cfadad8dba7aff4ca0c97c31cbdf5fa9846c8ce`, draft/open, mergeable=false; old Hosted checks 20/20 PASS **only on prior code**.
+- Current main root HTML: 86 candidates = 22 true top gateways, 60 trilingual additional product pages, Japanese landing 3, and one legacy noindex `top-en.html`; docs HTML 186. Total candidate HTML 272. Expected indexable URL count 271 **subject to an audit** (one noindex alias, other exclusions not yet audited).
+- English gateway now `index.html`; Japanese `top-ja.html`; legacy English `top-en.html` redirects and has `noindex`. New top languages: Swahili/sw, isiZulu/zu, Khmer/km, Persian/fa.
+- Main PR #99 currently owns share OGP/Twitter metadata, 1200×630 preview and language-matched combined description; old SEO PR's 1254×1254 and equality checks conflict with it.
+- Main already merged #94/#95/#96/#97/#98/#99; PR #100 open Draft (not part of observed main).
+- Production/branch output HTTP and Search Console changes: **NOT EXECUTED/NOT VERIFIED**. Web fetch could not verify live Pages in this inspection. Do not submit old 231-URL sitemap.
+- Next required work: [W09–W15 reconciliation](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md), final SHA hosted CI, independent review, owner merge gate.
