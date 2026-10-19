@@ -94,3 +94,12 @@
 - Observation: Merged PR #99 introduced `tools/site_share.py`, `assets/kumihan-share.png` (1200×630), and Jekyll `_includes/share.html`. These now own localized OG/Twitter previews. Old SEO PR assumed square 1254×1254 image and meta-description equality.
 - Decision: **Do not overwrite** main #99's localized combined share description/OGP image; SEO owns canonical/hreflang/JSON-LD/sitemap, share component owns social previews; audit their alignment after integration.
 - Outcome: Existing PR #93 has `mergeable=false`; do not merge before reconciliation and new Hosted CI. Implementation instructions: [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md).
+
+## ADR-SEO-015 — 2026-10-19 v2 refresh after design/skills merge
+
+- Baseline: latest main `73d2b01d2f604608360beabe364f59af72b8b66c`. PR #100 is merged. PR #101 (Universal MCP PHP) and PR #102 (Rendered QA documentation) remain Draft/unmerged at this observation.
+- Decision: treat all `v0.1.8-preview` candidate skills, plugin manifests, packages/ZIPs and content that PR #100 merged into main as protected. SEO work must not restore older candidate versions or alter them.
+- Decision: noindex/meta-refresh `top-en.html` is an explicit alias. SEO enrichment must skip such allowlisted aliases while preserving a hard failure for malformed ordinary pages.
+- Decision: social preview text, landscape image and Twitter card remain under main's `tools/site_share.py`; SEO only supplies canonical/alternate/JSON-LD contract. Jekyll `page.url` must not reintroduce a mismatched OG URL.
+- Decision: CI must flag future Jekyll languages missing `site_share` locale data rather than silently falling back to Japanese.
+- Evidence: [2026-10-19 second review](REVIEW_REFRESH_20261019_MAIN_73D2B01.md). W09–W15 code integration and new hosted CI have not run; decisions are guidance, not verified fixes.
