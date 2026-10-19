@@ -14,7 +14,9 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "tls_verified_pending_mcp_deployment")
+        self.assertEqual(d["status"], "tls_verified_public_folder_confirmed_pending_mcp_deployment")
+        self.assertEqual(d["production_upload_directory"], "kmhn")
+        self.assertEqual(d["provisioning"]["public_upload_folder"], "kmhn")
         self.assertEqual(d["provisioning"]["verification_type"], "owner_report_plus_independent_github_tls_probe")
         self.assertTrue(d["provisioning"]["subdomain_created"])
         self.assertTrue(d["provisioning"]["ssl_configured"])
@@ -25,7 +27,8 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(gates["dns_verified"])
         self.assertFalse(gates["php85_verified_on_target"])
         self.assertFalse(gates["host_end_to_end_verified"])
-        self.assertFalse(gates["host_end_to_end_verified"])
+        self.assertTrue(gates["public_upload_folder_owner_confirmed"])
+        self.assertFalse(gates["private_runtime_path_verified"])
         self.assertFalse(gates["public_release_authorized"])
 
     def test_production_template_matches_target_and_local_example_is_local(self):
@@ -33,7 +36,7 @@ class DeploymentTargetTests(unittest.TestCase):
         p = ROOT / d["runtime_config_template"]
         template = p.read_text(encoding="utf-8")
         self.assertIn("'host' => '" + d["hostname"] + "'", template)
-        self.assertIn("NOT yet provisioned", template)
+        self.assertIn("NOT DEPLOYED", template)
         local = (ROOT / "universal" / "server" / "runtime" / "config.example.php").read_text(encoding="utf-8")
         self.assertIn("'host' => '127.0.0.1'", local)
         self.assertNotIn(d["hostname"], local)
@@ -42,7 +45,8 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("PUBLIC DNS+TLS VERIFIED", guide)
+        self.assertIn("PUBLIC FOLDER CONFIRMED", guide)
+        self.assertIn("FTP-root/kmhn", guide)
 
 if __name__ == "__main__":
     unittest.main()
