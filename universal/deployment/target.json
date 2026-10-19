@@ -225,7 +225,7 @@
   "public_preflight": {
     "observed_at": "2026-10-19",
     "source": "Owner authenticated Lolipop SSH run of revision dd6d932c5a1491f23912eb7d2f8d752a3ee8e4a0",
-    "status": "OWNER_MAPPING_REVIEWED_SCOPED_RECHECK_PENDING",
+    "status": "SCOPED_G1_PASS_OWNER_MAPPING_CONFIRMED",
     "markers": [
       "PRIVATE_PATH_OUTSIDE_WEB_OK",
       "PUBLIC_KMHN_EMPTY_OK",
@@ -234,9 +234,9 @@
     ],
     "success_before_failure": true,
     "failure_scope": "Whole FTP-root symlink traversal cannot finish due to permission denial; the designated kmhn directory has no symlinks by separate complete read-only scan.",
-    "safety_conclusion": "kmhn-specific symlink scope clear. Full web traversal was permission limited and may contain undisclosed symlink results. All-vhost private-path nonexposure NOT VERIFIED; manual Owner mapping review outstanding.",
+    "safety_conclusion": "Scoped kmhn empty and no symlinks, private runtime files present; owner reviewed vhost mappings and reported none exposes private runtime. Wide FTP scan remains NOT_CHECKED_PERMISSION_LIMIT.",
     "writes_performed": false,
-    "next_step": "Run fresh scoped, read-only kmhn/public + private runtime preflight with no full web recursion; if PASS, limited two-file /mcp bootstrap deployment and immediate synthetic live protocol smoke may be prepared.",
+    "next_step": "Stage the exact two SHA256-pinned public bootstrap files OUTSIDE web, Mac SCP-readback validate, then explicitly execute guarded G2 two-file trial installer; immediately test MCP HTTPS and roll back if needed.",
     "scoped_diagnostic": {
       "observed_at": "2026-10-19",
       "source": "Owner's authenticated Lolipop SSH session; read-only diagnostic command",
