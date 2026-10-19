@@ -55,3 +55,11 @@ Do not overwrite prior entries. Publish only observed outcomes; do not infer ind
 - Noindex/external canonical/duplicate/drift checks exercised with nonpublished fixtures. No current231 pages excluded; source/package/template paths are outside the indexable inventory.
 - NOT EXECUTED: production deployment of branch, Google Rich Results Test/Schema Markup Validator service submission, Search Console ownership/submission/indexing, authenticated SNS cache refresh. Generic WebPage/Organization syntax PASS is not a rich-result or indexing guarantee.
 - Pending Owner actions: review Draft PR; authorize merge separately; after publication verify production Sitemap and submit `https://landco-llc.github.io/kumihan/sitemap.xml` in an owned Search Console property.
+
+### Final main reconciliation and code HEAD
+
+- Verified implementation HEAD: `a38a237` (merge of latest main `64a842585b9a19fbdfa90bffb06b1c7aa8d43d3e`). PR #92 merged while SEO work was running. Resolved all18 generated gateway conflicts by rerunning the merged generator, preserving versioned stylesheet and menu changes.
+- Post-merge `python tools/build_seo.py --check`: PASS,231 pages/URLs, no writes; `python -m unittest discover -s tests -v`:18 PASS (includes new main stylesheet regression).
+- Post-merge Bundler Jekyll3.10 build: PASS; actual231-page output audit: PASS. SEO15 tests and Zilu10 tests PASS after independent-review fixes.
+- Protected plugins/skills/download directories and every ZIP: zero differences versus final `origin/main 64a8425`. Existing static HTML bodies: zero differences.
+- Raw-checkout ID/SW archive tests require workflow package-build prerequisites (their existing CI creates packages before tests). Isolated workflow verification is recorded separately; no generated archives will be copied into this branch.
