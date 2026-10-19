@@ -31,6 +31,23 @@ Expected local output if no conflicts:
 
 These results are not permission to bypass the all-vhost review or to publish the final client adapters. Errors must stop publication, without removing/overwriting unrelated live files.
 
+## G1 observed result — full FTP-root scan INCOMPLETE
+
+Owner's authenticated Lolipop SSH run of public bootstrap preflight returned:
+
+    PRIVATE_PATH_OUTSIDE_WEB_OK
+    PUBLIC_KMHN_EMPTY_OK
+    PRIVATE_RUNTIME_FILES_PRESENT_OK
+    PUBLIC_SYMLINK_SCAN_INCOMPLETE
+
+The script stopped because its whole-web `find ... -type l` returned nonzero. **Its stderr was intentionally discarded**, so this result does not prove a dangerous symlink is present. It does **not** clear the entire tree either. Existing PHP/SDK/session PASS remains valid and public files remain NOT INSTALLED.
+
+A new read-only source diagnostic is available at [tools/diagnose_public_symlink_scan.sh](../tools/diagnose_public_symlink_scan.sh). It independently checks whether the **specific kmhn subdomain folder** contains any symlinks and classifies the wider web-tree scan outcome without printing individual paths, host IDs or file contents. It does not write to the server or change the existing safety gate.
+
+Run it over authorized SSH with privately provided FTP_ROOT and a pinned/reviewed source; expected status types include `KMHN_SYMLINK_SCOPE_CLEAR`, `WEB_WIDE_SCAN_PERMISSION_LIMIT` or `WEB_WIDE_SCAN_CHANGED_OR_MISSING_ENTRY`, `WEB_WIDE_SYMLINK_SCAN_INCOMPLETE`, `OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW` and `NO_FILES_CHANGED`. A full-tree error is a diagnostic result, **not a global clean/pass**.
+
+Follow up based on the sanitized categories. If a permission barrier is in a separate site's directory, review that site's actual document-root mapping and symlink routing via the Lolipop control panel instead of broadly changing permissions or deleting symlinks. If the kmhn-specific scan is incomplete or finds a link, do not install anything until it is resolved.
+
 ## Owner gate G2 — approved two-file public bootstrap (only AFTER G1)
 
 Prepared local deployment ZIP in Owner's ChatGPT conversation: `KUMIHAN_MCP_Lolipop_DeployKit_v0.1.0-preview_20261019.zip`. Verified ZIP SHA256 `0f876361ba593441a90428a4b8919b4f10e84b00988e1d7f21a38f8382c703ca`.
