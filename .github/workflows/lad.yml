@@ -44,6 +44,8 @@ jobs:
           python tools/build_lad.py --out /tmp/kumihan-lad-v0.1.0
       - name: W05 build site with KUMIHAN canonical Japanese design
         run: |
+          python tools/web_fonts.py
+          python tools/web_fonts.py --check
           python tools/base_copy.py
           python tools/base_copy.py --check
           python tools/build_lad_site.py
@@ -57,7 +59,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- 'assets/lad-site-copy.json' 'assets/lad-site.css' 'kumihan-ru.html' 'kumihan-ru.en.html' 'kumihan-ru.ja.html' docs/install-lad-*.html index.html top-*.html
+          git add -- 'assets/kumihan-fonts.css' '_data/web_fonts.yml' 'assets/lad-site-copy.json' 'assets/lad-site.css' 'kumihan-ru.html' 'kumihan-ru.en.html' 'kumihan-ru.ja.html' docs/install-lad-*.html index.html top-*.html
           if ! git diff --cached --quiet; then
             git commit -m "site(lad): generated RU EN JA pages from KUMIHAN canonical layout"
             git push origin HEAD:feat/kumihan-lad-v0.1.0
@@ -65,7 +67,7 @@ jobs:
       - name: W07 fail if main has uncommitted site output
         if: github.event_name == 'push' && github.ref_name == 'main'
         run: |
-          git diff --exit-code -- assets/lad-site-copy.json assets/lad-site.css kumihan-ru.html kumihan-ru.en.html kumihan-ru.ja.html docs/install-lad-*.html index.html top-*.html
+          git diff --exit-code -- assets/kumihan-fonts.css _data/web_fonts.yml assets/lad-site-copy.json assets/lad-site.css kumihan-ru.html kumihan-ru.en.html kumihan-ru.ja.html docs/install-lad-*.html index.html top-*.html
       - name: W07 publish immutable public GitHub Release
         if: github.event_name == 'push' && github.ref_name == 'main'
         env:
