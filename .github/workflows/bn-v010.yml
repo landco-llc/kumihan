@@ -61,3 +61,23 @@ jobs:
             git commit -m 'build(bn): add v0.1.0 distribution archives [skip ci]'
             git push origin HEAD:feat/bn-okkhor-shojja-v0.1.0
           fi
+
+      - name: Verify checked-in archives match rebuild
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: git diff --exit-code -- plugins/kumihan-bn/downloads
+      - name: Publish GitHub Release v0.1.0
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          tag="kumihan-bn-v0.1.0"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Existing release retained (no overwrite): $tag"
+            exit 0
+          fi
+          gh release create "$tag" plugins/kumihan-bn/downloads/*.zip plugins/kumihan-bn/downloads/MANIFEST.json plugins/kumihan-bn/downloads/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "KUMIHAN｜অক্ষরসজ্জা v0.1.0" \
+            --notes-file plugins/kumihan-bn/RELEASE_NOTES.md
