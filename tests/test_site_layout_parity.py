@@ -58,6 +58,12 @@ GATEWAY = {"it": "top-en.html", "de": "top-en.html", "ja": "index.html", "en": "
 PAGE_GATEWAY = dict(GATEWAY, pl="index.html", id="index.html")
 
 
+# Independently merged Bangla renderer has its own font sheet and index route.
+# Exact 12-file contract; do not exempt other editions or arbitrary future files.
+BANGLA_PAGES = {f"kumihan-bn{s}.html" for s in ("", ".en", ".ja")} | {
+    f"install-kumihan-bn-{host}{s}.html" for host in ("chatgpt", "claude", "gemini")
+    for s in ("", ".en", ".ja")}
+
 class GatewayLinks(unittest.TestCase):
     def test_every_static_page_links_to_its_language_gateway(self):
         pages = [p for p in ROOT.glob("kumihan-*.html")]
@@ -70,7 +76,8 @@ class GatewayLinks(unittest.TestCase):
                 continue  # Jekyll sources: covered by the layout checks below.
             lang = re.search(r'<html lang="([^"]+)"', text).group(1)
             with self.subTest(page=path.name):
-                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(PAGE_GATEWAY[lang]) + '"')
+                expected = "index.html" if path.name in BANGLA_PAGES else PAGE_GATEWAY[lang]
+                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(expected) + '"')
 
     def test_jekyll_layouts_and_gateways(self):
         for layout in ("landing.html", "installation.html", "geuljjaim.html", "geuljjaim-index.html"):
