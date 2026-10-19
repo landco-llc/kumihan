@@ -26,3 +26,7 @@ Verification pending W09: 12 pages × 320/375/768/1280; ordinary/doubled compute
 
 
 Final font integration: explicitly register it in the shared Latin selector group (tools/web_fonts.py); preserve every other stack. Earlier rendered evidence predates that selector registration. The final local and CI browser runs below/at publication validate the registered stack separately. Native font loading/zoom/hosts remain outside the measured scope.
+
+
+## Final state and public readback
+The completed Skill/source state is bound by immutable tag kumihan-it-v0.1.0 / e7e21628d444a2c0b4016570a1426bc6afa37c79. The explicit Latin-stack run is evidence/browser-final-latin.json: 192 observations, zero failures; latest mobile screenshot it-mobile-keyboard-final.png visually inspected. Twelve keyboard skip/focus and nine Italian guide-language navigation checks are in evidence/keyboard.json. Release assets and all twelve public Pages were independently fetched and matched. The candidate display is updated only after draft=false and public bytes were observed. All native/assistive/editorial limits above remain unchanged.
