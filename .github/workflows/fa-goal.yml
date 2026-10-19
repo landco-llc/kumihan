@@ -1,0 +1,62 @@
+name: Persian /goal build skills first and site second
+on:
+  push:
+    branches: [feat/kumihan-taraz-v0.1.0]
+    paths:
+      - 'plugins/kumihan-fa/entrypoints/**'
+      - 'plugins/kumihan-fa/rules/**'
+      - 'plugins/kumihan-fa/runtime/**'
+      - 'plugins/kumihan-fa/fixtures/**'
+      - 'plugins/kumihan-fa/references/**'
+      - 'plugins/kumihan-fa/locales/**'
+      - 'plugins/kumihan-fa/schemas/**'
+      - 'plugins/kumihan-fa/plugin.json'
+      - 'plugins/kumihan-fa/.claude-plugin/**'
+      - 'plugins/kumihan-fa/gemini-extension.json'
+      - 'plugins/kumihan-fa/README.md'
+      - 'plugins/kumihan-fa/INSTALL.md'
+      - 'tools/build_fa.py'
+      - 'tools/build_fa_site.py'
+      - 'assets/fa-site-copy.json'
+      - '.github/workflows/fa-goal.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  goal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: W04 Build Persian skills and archives before website
+        run: python tools/build_fa.py
+      - name: W04 Test skills and generated packages
+        run: python -m unittest discover -s tests/fa -p test_fa.py -v
+      - name: W05 Only after the skills pass, produce pages using FA rules
+        run: if test -f tools/build_fa_site.py; then python tools/build_fa_site.py; fi
+      - name: W06 Run complete package and website acceptance tests
+        run: python -m unittest discover -s tests/fa -v
+      - name: W06 Install shared test dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: W06 Run shared product and canonical-site regression tests
+        run: python -m unittest discover -s tests -v
+      - name: W06 Verify deterministic artifacts
+        run: |
+          python tools/build_fa.py --check
+          if test -f tools/build_fa_site.py; then python tools/build_fa_site.py --check; fi
+      - name: Persist outputs on feature branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add plugins/kumihan-fa
+          if test -f tools/build_fa_site.py; then
+            git add assets/kumihan-fa.css kumihan-fa.html kumihan-fa.en.html kumihan-fa.ja.html docs/install-kumihan-fa-*.html
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "build(fa): deterministic v0.1.0 distributions and site"
+            git push origin HEAD:feat/kumihan-taraz-v0.1.0
+          fi

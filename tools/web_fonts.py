@@ -46,6 +46,8 @@ SCRIPTS = {
     # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
     "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
            "Noto Sans Devanagari", "Noto Serif Devanagari"),
+    # Persian: Vazirmatn is drawn for Persian (Arabic script, Persian letters and digits).
+    "fa": ('"Geeza Pro", "Segoe UI", Tahoma', '"Geeza Pro", "Segoe UI"', "Vazirmatn", "Noto Naskh Arabic"),
     # Bangla: Kohinoor Bangla (macOS/iOS), Nirmala UI and Vrinda (Windows), then Noto Bengali.
     "bn": ('"Kohinoor Bangla", "Bangla Sangam MN", "Nirmala UI", Vrinda', '"Bangla Sangam MN", "Nirmala UI", Vrinda',
            "Noto Sans Bengali", "Noto Serif Bengali"),
@@ -59,12 +61,13 @@ SCRIPTS = {
 LATIN_TAIL = {"latin": ("Arial", '"Times New Roman"'), "vi": ("Arial", '"Times New Roman"')}
 AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..900",
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
-        "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
+        "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900",
+        "Vazirmatn": "wght@100..900"}
 # Page language (html lang attribute) -> script key
 LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
-         "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin"}
+         "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
          "अक्षर-संगति বাংলা অক্ষরসজ্জা あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
@@ -137,7 +140,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
+    for key in ("fa", "km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")

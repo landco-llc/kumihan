@@ -805,6 +805,62 @@ for _reader, _cards in CARDS.items():
         _cards["km"] = KM_CARD_COPY[_reader]
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
+
+# Persian edition (KUMIHAN｜تراز): its card and name for every reader language.
+PRODUCTS["fa"] = dict(name="فارسی", lang="fa", brand="KUMIHAN｜تراز", glyph="ژ", label="FA · PERSIAN", version="v0.1.0",
+                      pages={"fa": "kumihan-fa.html", "en": "kumihan-fa.en.html", "ja": "kumihan-fa.ja.html"})
+_FA_EDITION_NAMES = {
+    'ar': 'الفارسية',
+    'bn': 'ফার্সি',
+    'de': 'Persisch',
+    'en': 'Persian',
+    'es': 'Persa',
+    'fr': 'Persan',
+    'hi': 'फ़ारसी',
+    'id': 'Persia',
+    'it': 'Persiano',
+    'ja': 'ペルシア語',
+    'ko': '페르시아어',
+    'pl': 'Perski',
+    'pt': 'Persa',
+    'ru': 'Персидский',
+    'sw': 'Kiajemi',
+    'th': 'เปอร์เซีย',
+    'vi': 'Tiếng Ba Tư',
+    'zh-hans': '波斯语',
+    'zh-hant': '波斯文',
+    'zu': 'isi-Persian',
+    'km': 'ភឺសៀន',
+}
+for _reader, _names in EDITION_NAMES.items():
+    _names["fa"] = _FA_EDITION_NAMES[_reader]
+FA_CARD_COPY = {
+    'ja': ('右から左の方向とZWNJ（ゼロ幅非接合子）を守り、ラテン文字のURLや版番号を正しく分離するペルシア語の文字組みとデザイン。', 'ペルシア語版を見る'),
+    'en': ('Persian typography that keeps right-to-left direction clear, preserves ZWNJ and isolates Latin URLs and version labels.', 'View the Persian edition'),
+    'zh-hant': ('保持由右至左的方向、保留 ZWNJ，並正確隔離拉丁網址與版本號的波斯文排版與設計。', '前往波斯文版'),
+    'zh-hans': ('保持从右到左的方向、保留 ZWNJ，并正确隔离拉丁网址与版本号的波斯语排版与设计。', '前往波斯语版'),
+    'ko': ('오른쪽에서 왼쪽 방향과 ZWNJ를 지키고 라틴 URL과 버전 표기를 바르게 분리하는 페르시아어 글짜임.', '페르시아어 버전 보기'),
+    'th': ('การจัดวางตัวอักษรเปอร์เซียที่รักษาทิศทางจากขวาไปซ้ายและ ZWNJ พร้อมแยก URL ภาษาละตินและเลขเวอร์ชันอย่างถูกต้อง', 'ดูเวอร์ชันภาษาเปอร์เซีย'),
+    'fr': ('Typographie persane qui garde clair le sens de droite à gauche, préserve le ZWNJ et isole les URL et numéros de version latins.', 'Voir l’édition persane'),
+    'es': ('Tipografía persa que mantiene clara la dirección de derecha a izquierda, conserva el ZWNJ y aísla URL y versiones latinas.', 'Ver la edición en persa'),
+    'pt': ('Tipografia persa que mantém clara a direção da direita para a esquerda, preserva o ZWNJ e isola URLs e versões latinas.', 'Ver a edição em persa'),
+    'ar': ('تنضيد فارسي يحافظ على اتجاه الكتابة من اليمين إلى اليسار وعلى ZWNJ، ويعزل الروابط وأرقام الإصدارات اللاتينية.', 'عرض النسخة الفارسية'),
+    'hi': ('दाएँ से बाएँ दिशा और ZWNJ को सुरक्षित रखने वाली, लैटिन URL और संस्करण संख्याओं को सही ढंग से अलग करने वाली फ़ारसी टाइपोग्राफ़ी।', 'फ़ारसी संस्करण देखें'),
+    'vi': ('Typography tiếng Ba Tư giữ rõ hướng phải sang trái, bảo toàn ZWNJ và tách riêng URL, số phiên bản Latinh.', 'Xem phiên bản tiếng Ba Tư'),
+    'de': ('Persische Typografie, die die Schreibrichtung von rechts nach links klar hält, ZWNJ bewahrt und lateinische URLs und Versionsangaben isoliert.', 'Persische Version ansehen'),
+    'pl': ('Typografia perska zachowująca kierunek od prawej do lewej i ZWNJ oraz poprawnie wydzielająca łacińskie adresy URL i numery wersji.', 'Zobacz wersję perską'),
+    'id': ('Tipografi Persia yang menjaga arah kanan ke kiri, mempertahankan ZWNJ, serta memisahkan URL dan nomor versi Latin dengan tepat.', 'Lihat edisi bahasa Persia'),
+    'bn': ('ডান থেকে বাঁ দিক ও ZWNJ রক্ষা করে এবং লাতিন URL ও সংস্করণ নম্বর ঠিকভাবে আলাদা রাখা ফারসি টাইপোগ্রাফি।', 'ফারসি সংস্করণ দেখুন'),
+    'it': ('Tipografia persiana che mantiene chiara la direzione da destra a sinistra, preserva lo ZWNJ e isola URL e numeri di versione latini.', 'Vai all’edizione persiana'),
+    'ru': ('Персидская типографика: направление справа налево, сохранение ZWNJ и изоляция латинских URL и номеров версий.', 'Открыть персидскую версию'),
+    'sw': ('Uchapaji wa Kiajemi unaodumisha mwelekeo wa kulia kwenda kushoto, kuhifadhi ZWNJ na kutenganisha URL na nambari za matoleo za Kilatini.', 'Tazama toleo la Kiajemi'),
+    'zu': ('Ukuhlelwa kombhalo kwesi-Persian okugcina isiqondiso sokusuka kwesokudla kuya kwesobunxele, kugcine i-ZWNJ futhi kuhlukanise ama-URL nezinombolo zezinguqulo zesiLatini.', 'Buka isi-Persian'),
+    'km': ('ការរៀបចំអក្សរពែរ្ស ដែលរក្សាទិសដៅពីស្ដាំទៅឆ្វេង និង ZWNJ ហើយញែក URL និងលេខកំណែឡាតាំងឲ្យត្រឹមត្រូវ។', 'មើលកំណែភឺសៀន'),
+}
+for _reader, _cards in CARDS.items():
+    _cards["fa"] = FA_CARD_COPY[_reader]
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
@@ -840,7 +896,7 @@ def cards(key):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
         href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
-        direction = ' dir="rtl"' if code == "ar" else ""
+        direction = ' dir="rtl"' if code in ("ar", "fa") else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
                 + (" data-extra" if i >= VISIBLE else "") + ">"

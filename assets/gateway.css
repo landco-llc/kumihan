@@ -265,6 +265,7 @@ html[lang="ar"] .section-heading > * { min-width: 0; max-width: 100%; }
 :is(.lang-menu, .lang-title) [lang="zh-Hans-CN"] { font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif; }
 :is(.lang-menu, .lang-title) [lang="ar"], .lang-title[lang="ar"] { font-family: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, serif; letter-spacing: 0; }
 .lang-menu [lang="ar"] { font-size: 1.08em; }
+.lang-title[lang="fa"] { font-family: "Vazirmatn", "Geeza Pro", "Segoe UI", Tahoma, sans-serif; letter-spacing: 0; }
 :is(.lang-menu) :is([lang="es"], [lang="fr"], [lang="pt"], [lang="en"]), .lang-title:is([lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"], [lang="it"], [lang="ru"], [lang="sw"], [lang="zu"], [lang="vi"]) { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Roboto, Arial, sans-serif; }
 /* Hindi edition: preserve Indic shaping and normal tracking in the existing card. */
 @font-face { font-family: "Kumihan Devanagari"; src: url("fonts/NotoSansDevanagari.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
