@@ -127,6 +127,36 @@ If HTTP/WAF/DNS fails from the SSH server, the result remains NOT_VERIFIED (not 
 This test does NOT prove the candidate lies outside every other domain document root or that Composer/vendor can be read under that PHP configuration. Check that separately before any real runtime upload. Do not grant 777 permissions as a workaround.
 
 
+### Running the one-shot check without mktemp
+
+The Lolipop shared SSH environment may not include `mktemp`. The operator's first attempt stopped before downloading the checker with `-bash: mktemp: コマンドが見つかりません`. This is a **local tool availability** issue, not proof of failure of the private runtime. Do not install extra command-line tools to solve it.
+
+Run the checker after an authenticated SSH login, using a temporary **HOME** file (outside the public FTP root) created with umask 077. Supply the already-known FTP full path privately; this public document intentionally uses a placeholder. The script URL is a raw HTTPS URL and must **not** be pasted in Markdown `[label](url)` format:
+
+```sh
+(
+  set -eu
+  FTP_ROOT='<OWNER_SUPPLIED_ABSOLUTE_WEB_ROOT>'
+  cd "$FTP_ROOT" || exit 1
+  SCRIPT="$HOME/.kmhn-check-$.sh"
+  if [ -e "$SCRIPT" ]; then echo 'TEMP_FILE_ALREADY_EXISTS'; exit 1; fi
+  umask 077
+  trap 'rm -f "$SCRIPT"' EXIT
+  URL='https://raw.githubusercontent.com/landco-llc/kumihan/bbed55a9e5021e56f57fb0ba9c173dfdf3f6c3bf/universal/tools/check_private_php_web.sh'
+  if command -v curl >/dev/null 2>&1; then
+    curl -fsSL --connect-timeout 10 --max-time 30 -o "$SCRIPT" "$URL"
+  elif command -v wget >/dev/null 2>&1; then
+    wget -qO "$SCRIPT" "$URL"
+  else
+    echo 'NO_CURL_OR_WGET'; exit 1
+  fi
+  test -s "$SCRIPT" && sh -n "$SCRIPT"
+  FTP_ROOT="$(pwd -P)" sh "$SCRIPT"
+)
+```
+
+The temporary downloaded checker is removed by EXIT cleanup. The checker may create a private candidate folder and a short-lived PHP canary/probe in kmhn; those test files are removed at exit. If the server has neither curl nor wget or blocks outbound access to GitHub, stop and provide the tool-error output; do not pipe unverified network content directly into sh. PHP-read, PHP 8.5 and public path isolation remain separate go/no-go conditions.
+
 ## 2. Build safe two-file public loader OFFLINE
 
 Only after actual SSH filesystem paths have been verified, run from a KUMIHAN source checkout (example argument names, NOT literal paths):
