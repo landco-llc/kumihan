@@ -1,0 +1,127 @@
+{
+  "skill": "kumihan-equilibrio-web",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1765,
+      "sha256": "15a79bae1d44a9684f799dd3d893e10987af71cac387f9fcb20901aa7283e2d7"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 343,
+      "sha256": "779e88adc0bfc64515d5739ba546fc90b49852c97c3fed409f0515f0e244a45b"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 248,
+      "sha256": "b521bcfbf7578657428e0b1ef50e4c8720cca8a548bcd0f393f8e070b5167da6"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "bytes": 1045725,
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance-ledger.json",
+      "bytes": 26814,
+      "sha256": "822845bca97c20091323249e2c8683190c282f9504d5698392efcf54405b53da"
+    },
+    {
+      "path": "locales/it-CH.json",
+      "bytes": 250,
+      "sha256": "8f60af23633ed8a4a5a4c98d525676adfd491dc4a6e918a0f432fc04ea89fe62"
+    },
+    {
+      "path": "locales/it-IT.json",
+      "bytes": 250,
+      "sha256": "810e17c13a32da11bbe498d423a828127118304bb0dd976199f71cfbcec6dae0"
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 152,
+      "sha256": "b54ac33fb0bdff428abfb33f71886e09b076a8297f810e6a1c24fd75f9936735"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 152,
+      "sha256": "c4cede1d679537f20060e5d1ded4621b20863ee9e75f3a51bdc739c55afb53af"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 155,
+      "sha256": "f1a8ee58f3fa0d0e2f1fcf7eb627677ed2474ab1d827d0dcaada7a8339948fe4"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 153,
+      "sha256": "31c935fc246cbcd8e6451ce644a5fb7f8246a710e36e268478762c16723ff6fe"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 153,
+      "sha256": "55e819f7f7e78ad7f6e3bea1e04b6e6ce6329470fd6013f3223c0b1ccf0ebb32"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 146,
+      "sha256": "a203d405193261bd9641b71394a6f6097d4ff791645ea418968c8596c40079e9"
+    },
+    {
+      "path": "references/coverage.md",
+      "bytes": 838,
+      "sha256": "fb8c77cf00739961cf9bb53cced5a0b1fe8ef55c36ed4fad5ade7d86ae9bc01a"
+    },
+    {
+      "path": "references/documents.md",
+      "bytes": 1082,
+      "sha256": "44ab6fcc79d8cb426f1575a32b8fcee016fb93886f03885e8ac44d22bf45cb71"
+    },
+    {
+      "path": "references/research.md",
+      "bytes": 45810,
+      "sha256": "8ccde8562bbc2a4dbd5cb7711408b7f0aef239d65d6e6697429a257be1c7cdfb"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 985,
+      "sha256": "5f739fd93cf7ccb55ae60ee237bff3a6f9c3811eff09da550818ff657dc98f65"
+    },
+    {
+      "path": "references/web.md",
+      "bytes": 1805,
+      "sha256": "918e13fe4d1000b72e386cafa58e2a71546218acfac43453c5e4a32e4da80888"
+    },
+    {
+      "path": "references/workflow.md",
+      "bytes": 1880,
+      "sha256": "e06e3ebf13dd5e010e4aae621f54c70f34358935167a8c2c08b142e656abc451"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 19793,
+      "sha256": "5ef51fc2c952625ca4b63dec45964be7f2dd66bfee45ce9140d77dc95c58343a"
+    },
+    {
+      "path": "runtime/checks.py",
+      "bytes": 2878,
+      "sha256": "8d93781383ad3b79d2a5d622688eedb22b9699802b8bad15ec420da8437635fa"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 1513,
+      "sha256": "07ef1ebca38969e1880d309b3461f207c5d8b289f2f5187c6b886de016e53dd4"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 33930,
+      "sha256": "2504b8cbd72f511377588dd62ee02b488c4679253010f49abedcf9a9145bc6a4"
+    }
+  ],
+  "self_digest": "Inventory excludes itself; archive digest covers all bytes."
+}

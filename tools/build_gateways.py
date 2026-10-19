@@ -282,6 +282,14 @@ for _lang, _cards in CARDS.items():
     _cards["pl"] = PL_CARD_COPY[_lang]
 
 
+
+# Equilibrio: append one edition, preserve all existing gateway cards.
+PRODUCTS["it"] = dict(name="Italiano", lang="it", brand="KUMIHAN｜Equilibrio", glyph="È",
+    label="IT · ITALIAN", version="v0.1.0", pages={"it":"kumihan-it.html", "en":"kumihan-it.en.html", "ja":"kumihan-it.ja.html"})
+for _lang, _copy in json.loads((ROOT / "assets/gateway-copy.json").read_text(encoding="utf-8")).items():
+    CARDS[_lang]["it"] = tuple(_copy["equilibrio_card"])
+
+
 def x(value):
     return escape(str(value), quote=True)
 

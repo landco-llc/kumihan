@@ -1,0 +1,79 @@
+{
+  "node": "v24.19.0",
+  "icu": "78.3",
+  "cldr": "48.0",
+  "options": "default number; explicit EUR/CHF; percent maxFractionDigits=1; dateStyle long, Europe/Rome",
+  "observations": [
+    {
+      "locale": "it-IT",
+      "numbers": [
+        {
+          "value": 0,
+          "display": "0"
+        },
+        {
+          "value": -1234.56,
+          "display": "-1234,56"
+        },
+        {
+          "value": 1234.56,
+          "display": "1234,56"
+        },
+        {
+          "value": 12345.67,
+          "display": "12.345,67"
+        }
+      ],
+      "currencies": [
+        {
+          "currency": "EUR",
+          "value": 12345.67,
+          "display": "12.345,67 €"
+        },
+        {
+          "currency": "CHF",
+          "value": 12345.67,
+          "display": "12.345,67 CHF"
+        }
+      ],
+      "percent": "12,5%",
+      "date": "19 ottobre 2026"
+    },
+    {
+      "locale": "it-CH",
+      "numbers": [
+        {
+          "value": 0,
+          "display": "0"
+        },
+        {
+          "value": -1234.56,
+          "display": "-1234.56"
+        },
+        {
+          "value": 1234.56,
+          "display": "1234.56"
+        },
+        {
+          "value": 12345.67,
+          "display": "12'345.67"
+        }
+      ],
+      "currencies": [
+        {
+          "currency": "EUR",
+          "value": 12345.67,
+          "display": "€ 12'345.67"
+        },
+        {
+          "currency": "CHF",
+          "value": 12345.67,
+          "display": "CHF 12'345.67"
+        }
+      ],
+      "percent": "12.5%",
+      "date": "19 ottobre 2026"
+    }
+  ],
+  "scope": "Runtime observations only; no source parsing, no institutional house-style validation"
+}

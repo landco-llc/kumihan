@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # key: (brand, short name, Japanese language name, English language name, version)
 EDITIONS = {
+    "it": ("KUMIHAN｜Equilibrio", "Equilibrio", "イタリア語", "Italian", "0.1.0"),
     "de": ("KUMIHAN｜Satzbild", "Satzbild", "ドイツ語", "German", "0.1.0"),
     "hi": ("KUMIHAN｜अक्षर-संगति", "अक्षर-संगति", "ヒンディー語", "Hindi", "0.1.0"),
     "fr": ("KUMIHAN｜Accord", "Accord", "フランス語", "French", "0.1.1"),
@@ -34,7 +35,7 @@ EDITIONS = {
     "vi": ("KUMIHAN｜Nhịp Chữ", "Nhịp Chữ", "ベトナム語", "Vietnamese", "0.1.0"),
 }
 
-COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia"}
+COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",

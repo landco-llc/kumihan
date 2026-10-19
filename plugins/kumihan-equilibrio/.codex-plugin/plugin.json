@@ -1,0 +1,25 @@
+{
+  "name": "kumihan-equilibrio",
+  "version": "0.1.0",
+  "description": "Skill di IA open source per la tipografia italiana e un design consapevole, con tutela del testo originale e revisione basata su evidenze. | Open-source AI skills for Italian typography and purposeful design, preserving original content and providing evidence-based review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Equilibrio",
+    "shortDescription": "Tipografia italiana | Italian typography",
+    "longDescription": "Skill di IA open source per la tipografia italiana e un design consapevole, con tutela del testo originale e revisione basata su evidenze. | Open-source AI skills for Italian typography and purposeful design, preserving original content and providing evidence-based review.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-it.html",
+    "defaultPrompt": [
+      "Esamina questo contenuto italiano senza modificare l’originale.",
+      "Review this Italian content without changing the original."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}
