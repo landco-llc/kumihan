@@ -1,0 +1,68 @@
+{
+  "name": "KUMIHAN｜অক্ষরসজ্জা",
+  "package_slug": "kumihan-bn",
+  "version": "v0.1.0",
+  "license": "Apache-2.0",
+  "developer": "L&Co. LLC",
+  "host_installation": "NOT_CHECKED",
+  "native_proofreading": "NOT_CHECKED",
+  "browser_render": "NOT_CHECKED",
+  "files": [
+    {
+      "name": "kumihan-bn-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4034782,
+      "sha256": "f3e935f2283324ebcf0c09bf0e194aa9f0b8628bdcab02bbb64990911d4256e1",
+      "files": 83,
+      "type": "plugin",
+      "host": "Claude-Code"
+    },
+    {
+      "name": "kumihan-bn-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4034782,
+      "sha256": "f3e935f2283324ebcf0c09bf0e194aa9f0b8628bdcab02bbb64990911d4256e1",
+      "files": 83,
+      "type": "plugin",
+      "host": "GPT-Codex"
+    },
+    {
+      "name": "kumihan-bn-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4034782,
+      "sha256": "f3e935f2283324ebcf0c09bf0e194aa9f0b8628bdcab02bbb64990911d4256e1",
+      "files": 83,
+      "type": "extension",
+      "host": "Gemini-CLI"
+    },
+    {
+      "name": "kumihan-bn-documents-skill-v0.1.0.zip",
+      "bytes": 805689,
+      "sha256": "68a1bbf10cc4135a98d0cb0abd3cda74898158966a8475fa1aa6c048c630a8b3",
+      "files": 15,
+      "type": "skill",
+      "host": "portable"
+    },
+    {
+      "name": "kumihan-bn-review-skill-v0.1.0.zip",
+      "bytes": 805587,
+      "sha256": "b6c32f429d572751a7b564da0497dbc8227784658bffdebe48da2be8b5f5c5ab",
+      "files": 15,
+      "type": "skill",
+      "host": "portable"
+    },
+    {
+      "name": "kumihan-bn-skill-v0.1.0.zip",
+      "bytes": 805384,
+      "sha256": "8ef48e50839a694f54c42d7bb657a0fdffb4633e6f812ace69d4ef6c09f52d00",
+      "files": 15,
+      "type": "skill",
+      "host": "portable"
+    },
+    {
+      "name": "kumihan-bn-web-skill-v0.1.0.zip",
+      "bytes": 805514,
+      "sha256": "f027d148a3f255ebff5af21fac6755c10064e47249f35a65e14518cb754ae025",
+      "files": 15,
+      "type": "skill",
+      "host": "portable"
+    }
+  ]
+}

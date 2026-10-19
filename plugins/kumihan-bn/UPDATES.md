@@ -1,0 +1,1 @@
+Version 0.1.0. See https://github.com/landco-llc/kumihan/releases for published distributions. Check manifest hashes before using any ZIP. Read NEWS/RELEASE_NOTES.md or this repository's CHANGELOG for changes; not every version updates all language editions.

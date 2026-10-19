@@ -1,0 +1,29 @@
+{
+  "name": "kumihan-bn",
+  "version": "0.1.0",
+  "description": "বাংলা অক্ষরবিন্যাস ও উদ্দেশ্যভিত্তিক ডিজাইনের জন্য উন্মুক্ত AI দক্ষতা; মূল লেখা অক্ষত রাখুন এবং প্রমাণসহ যাচাই করুন। | Open-source AI skills for Bangla typography and purposeful design; preserve source text and review with evidence.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜অক্ষরসজ্জা",
+        "shortDescription": "বাংলা অক্ষরসজ্জা। | Bangla typography.",
+        "longDescription": "বাংলা অক্ষরবিন্যাস ও উদ্দেশ্যভিত্তিক ডিজাইনের জন্য উন্মুক্ত AI দক্ষতা; মূল লেখা অক্ষত রাখুন এবং প্রমাণসহ যাচাই করুন। | Open-source AI skills for Bangla typography and purposeful design; preserve source text and review with evidence.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-bn.html",
+        "defaultPrompt": [
+          "মূল লেখা না বদলে বাংলা নকশা পর্যালোচনা করুন।",
+          "Review this Bangla design without changing the original text."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

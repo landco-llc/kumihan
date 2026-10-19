@@ -1,0 +1,15 @@
+/* KUMIHAN | অক্ষরসজ্জা — Bengali type on the canonical KUMIHAN layout. */
+:root { --display: "Noto Sans Bengali","Hind Siliguri","Vrinda",system-ui,sans-serif; --serif:"Noto Serif Bengali","Tiro Bangla",serif; }
+html[lang="bn"] body { font-family: var(--display); }
+html[lang="bn"] .hero h1 { font-family:var(--display); font-size:clamp(38px,4.6vw,69px); line-height:1.43; font-weight:760; letter-spacing:normal; }
+html[lang="bn"] :is(.intro-text h2,.section-heading h2,.idea-band h2,.install-intro h2,.cta-layout h2) { line-height:1.48; letter-spacing:normal; font-family:var(--display); }
+html[lang="bn"] :is(p,nav,.button,.platform-info,.skill-desc,.footer-sub) { line-height:1.85; letter-spacing:normal; }
+:lang(bn) { word-break:normal; letter-spacing:normal; hyphens:manual; }
+.brand-sub,.footer-mark { font-family:"Noto Sans Bengali","Noto Sans JP",system-ui,sans-serif; letter-spacing:normal; }
+.brand { white-space:normal; line-height:1.55; }
+.feature-motif,.skill-symbol { font-family:"Noto Serif Bengali","Noto Sans Bengali",serif; letter-spacing:normal; }
+.feature-grid,.skills-grid { align-items:stretch; }
+.feature,.skill-card { min-width:0; }
+.platform-row,.button,.header-nav a { overflow-wrap:normal; }
+@media(max-width:800px){.header-content{flex-wrap:wrap;gap:12px}.header-nav{order:3;width:100%;justify-content:flex-start;margin:0;flex-wrap:wrap}.header-controls{margin-left:auto}.hero h1{overflow-wrap:normal}}
+@media(max-width:480px){ html[lang="bn"] .hero h1{font-size:clamp(31px,9vw,44px);line-height:1.47} .brand{font-size:18px}.brand-sub{font-size:.88em}.language-switch{flex-wrap:wrap}}

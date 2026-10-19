@@ -1,0 +1,20 @@
+{
+  "id": "bn-IN",
+  "script": "Beng",
+  "language": "bn",
+  "name": "India (Bangla)",
+  "direction": "ltr",
+  "digits": [
+    "latn",
+    "beng"
+  ],
+  "default_digit_system": "explicit-in-context",
+  "currency": "explicit-in-context",
+  "currency_examples": [
+    "INR"
+  ],
+  "punctuation": "preserve-source-house-style",
+  "copy_editing": "editor-approved-only",
+  "typographic_core": "shared Bangla",
+  "native_review": "not_checked"
+}

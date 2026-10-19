@@ -1,0 +1,59 @@
+{
+  "version": "0.1.0",
+  "language": "bn",
+  "script": "Beng",
+  "regional_profiles": [
+    "bn-BD",
+    "bn-IN"
+  ],
+  "media": [
+    {
+      "id": "web-editorial",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    },
+    {
+      "id": "web-marketing",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    },
+    {
+      "id": "web-ui",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    },
+    {
+      "id": "report-document",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    },
+    {
+      "id": "presentation",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    },
+    {
+      "id": "display-copy",
+      "text_integrity": "required",
+      "rendering": "check in actual environment",
+      "generic_design": "require brief-specific rationale",
+      "copy_policy": "preserve_by_default"
+    }
+  ],
+  "strictness": [
+    "advisory",
+    "normal",
+    "strict"
+  ],
+  "note": "Severity is conditional; never turn a CSS property alone into a hard failure."
+}

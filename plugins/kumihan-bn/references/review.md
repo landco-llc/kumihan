@@ -1,0 +1,3 @@
+# Review / audit (no edits)
+
+Compare protected raw input and produced output bytes (and optionally a separate normalized equality view). Run `python runtime/checks.py source.txt --candidate candidate.txt` to check source integrity only. Inspect the actual host result separately: conjuncts, matras, joining controls, glyph marks, clipping, 320px/200% reflow, labels and the visual rationale. Report evidence kind, platform/font/viewport, exact phrase, rule ID, severity, content impact, recommendation and unresolved scope. Do not change the source or generated artifacts in review mode. Do not turn untested into passed.
