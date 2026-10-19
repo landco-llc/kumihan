@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "g2_rolled_back_remote_ssh_probe_wrong_environment_mac_http404",
+  "status": "g3_live_mcp_https_e2e_verified_client_adapters_pending",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -20,7 +20,7 @@
     "php85_verified_on_target": true,
     "dns_verified": true,
     "github_staging_ci_verified": true,
-    "host_end_to_end_verified": false,
+    "host_end_to_end_verified": true,
     "client_connection_verified": false,
     "public_release_authorized": false,
     "ssl_configured_owner_reported": true,
@@ -34,7 +34,7 @@
     "ftp_parent_ssh_writable_verified": true,
     "private_candidate_ssh_write_verified": true,
     "private_candidate_exists_verified": true,
-    "public_bootstrap_absent_verified": true,
+    "public_bootstrap_absent_verified": false,
     "ephemeral_probe_files_absent_verified": true,
     "private_archive_owner_transfer_completed": true,
     "private_archive_present_ssh_verified": true,
@@ -42,10 +42,10 @@
     "private_archive_integrity_verified": true,
     "private_archive_extracted": true,
     "private_runtime_ready": true,
-    "public_bootstrap_installed": false,
+    "public_bootstrap_installed": true,
     "private_required_files_verified": true,
     "private_config_absent_verified": false,
-    "public_bootstrap_still_absent_verified": true,
+    "public_bootstrap_still_absent_verified": false,
     "private_config_created_verified": true,
     "web_php_sdk_autoload_verified": true,
     "web_php_registry_21_verified": true,
@@ -69,8 +69,8 @@
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "G2 installer succeeded and guarded rollback succeeded. Owner performed Mac protocol probe after rollback; TLS failure due missing Python CA file, independently diagnosed on connected Mac; curl verify 0 and Python with system CA both return expected HTTP 404 in rolled-back state.",
-  "deployment_blocker": "G2 rollback succeeded, Mac verified TLS but HTTP 404. Owner retest was mistakenly run inside Lolipop SSH and failed remote Python CA. Need (1) deliberate G2 reinstall through SSH, (2) true Mac MCP POST while deployed, (3) rollback only after outcome. Never use -k or disable validation.",
+  "notes": "Owner's Mac and independent connected Mac confirmed HTTPS MCP initialize, tools/list, tools/call languages; four tools and 21 modules. Five private path probes returned 404/403. Endpoint remains public without authentication or per-user quotas; not general-release approved.",
+  "deployment_blocker": "Live HTTPS MCP protocol PASS and public bootstrap installed. Next validate actual ChatGPT/Codex, Claude and Gemini client connections, remaining protocol/security behavior, authentication and quotas for general use, and obtain explicit Owner release approval. Preserve full FTP traversal NOT_CHECKED.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -351,5 +351,38 @@
       "mac_hostname": "withheld",
       "interpretation": "Mac TLS validates successfully but endpoint HTTP 404 after confirmed G2 rollback; bootstrap absent inferred, not freshly confirmed through SSH"
     }
+  },
+  "g3_live_mcp": {
+    "verified_on": "2026-10-19",
+    "owner_mac_markers": [
+      "G2_PUBLIC_PRECHECK_PASS",
+      "G2_TWO_FILE_BOOTSTRAP_INSTALLED",
+      "TLS_VALID",
+      "MCP_PASS",
+      "MCP_TRIAL_PASS",
+      "PUBLIC_BOOTSTRAP_REMAINS_INSTALLED"
+    ],
+    "independent_mac_validation": {
+      "tls_version": "TLSv1.3",
+      "issuer_valid": true,
+      "certificate_expiry": "2027-01-17",
+      "protocol_initialize": "PASS",
+      "tools_list": "PASS",
+      "tools_call_list_languages": "PASS",
+      "tools_count": 4,
+      "modules_count": 21,
+      "private_route_http_codes": {
+        "vendor/autoload.php": 404,
+        "runtime/config.php": 404,
+        "runtime/registry.json": 404,
+        "src/Registry.php": 404,
+        ".env": 403
+      },
+      "access_checks_note": "Exact tested routes only; other virtual hosts or all possible paths not proven safe."
+    },
+    "public_bootstrap_live": true,
+    "authentication_or_quotas_configured": false,
+    "client_adapters_tested": false,
+    "scope": "Bounded public HTTPS trial. No main merge/general plugin release authorization."
   }
 }
