@@ -1,0 +1,199 @@
+{
+  "product": "KUMIHAN｜تراز",
+  "version": "0.1.0",
+  "research_cases_not_executed": true,
+  "fixtures": [
+    {
+      "id": "FA-FX-01",
+      "category_ja": "文字同定",
+      "source_text": "ک ك ی ي ى",
+      "expected_ja": "類似字を異なるコードポイントとして検出する。対象言語・引用範囲を確認せず一括置換しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-02",
+      "category_ja": "字種網羅",
+      "source_text": "پ چ ژ گ ک ی",
+      "expected_ja": "採用書体とfallbackで必要な字種・点・各字の基本形を表示する。字種確認だけで接続形確認を完了としない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-03",
+      "category_ja": "ZWNJ動詞",
+      "source_text": "می‌روم",
+      "expected_ja": "U+200Cを保持し、該当箇所で接続を抑制する。コピー・保存・再表示で元の論理文字列を保持する。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-04",
+      "category_ja": "ZWNJ否定形",
+      "source_text": "نمی‌شود",
+      "expected_ja": "ZWNJの接続制御を保持する。語形とZWNJ位置の正書法上の判断は母語校閲で確定する。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-05",
+      "category_ja": "ZWNJ複数語尾",
+      "source_text": "کتاب‌ها",
+      "expected_ja": "語尾前のZWNJを通常スペースやZWSPに変えない。通常の語内でZWNJを改行機会にしない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-06",
+      "category_ja": "空白比較",
+      "source_text": "می‌روم | می روم | میروم",
+      "expected_ja": "3文字列の違いを識別し原稿を保持する。見た目の近さを理由に同じ正書法と判定しない。どの表記を採用するかは文脈校閲する。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-07",
+      "category_ja": "ZWSP混入",
+      "source_text": "می​روم",
+      "expected_ja": "U+200BをZWNJと区別して検出する。修正候補にはできるが、用途を確認せずU+200Cへ自動置換しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-08",
+      "category_ja": "ZWJ接続形",
+      "source_text": "ک‍",
+      "expected_ja": "U+200Dが存在することを保持する。適切な書体で接続形を要求する教育用例として評価し、通常単語の正書法とは扱わない。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-09",
+      "category_ja": "Ezafe",
+      "source_text": "خانهٔ من",
+      "expected_ja": "U+0647とU+0654を保持しhamzaを基底文字から分離・欠落させない。文法と採用表記は母語校閲する。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-10",
+      "category_ja": "Heh派生字比較",
+      "source_text": "هٔ | ۀ | ۂ",
+      "expected_ja": "3表現を別のコード列として識別する。ペルシア語用と他言語用の表現を見た目だけで統合しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-11",
+      "category_ja": "正規化",
+      "source_text": "آ | آ",
+      "expected_ja": "合成済み文字と基底文字+結合記号の原稿表現を保持する。正規化を行う場合は派生データとし、結果を原稿校正の成功とみなさない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-12",
+      "category_ja": "Presentation Forms",
+      "source_text": "ﻻ | لا",
+      "expected_ja": "互換用Presentation Formと通常の基底文字列を区別する。新規生成は基底文字を採用し、既存原稿の変換は個別に判断する。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-13",
+      "category_ja": "数字集合",
+      "source_text": "۰۱۲۳۴۵۶۷۸۹ | ٠١٢٣٤٥٦٧٨٩ | 0123456789",
+      "expected_ja": "arabext、arab、latnを区別する。特に۴۵۶۷を採用言語・書体で確認し、全数字を対象不明の一括置換にかけない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-14",
+      "category_ja": "数値区切り",
+      "source_text": "۱۲۳٬۴۵۶٫۷۸",
+      "expected_ja": "桁区切りU+066Cと小数点U+066Bを区別する。元数値123456.78と表示の対応を採用formatterで確認する。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-15",
+      "category_ja": "符号と百分率",
+      "source_text": "−۱۲٫۵٪",
+      "expected_ja": "負号と百分率を含む数値が周辺RTL/LTR文脈へ漏れないことを確認する。採用localeのformatter結果とコピー文字列を照合し、手動反転しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-16",
+      "category_ja": "金額と単位",
+      "source_text": "۱۲۳٬۴۵۶ ریال",
+      "expected_ja": "与えられた数値と単位を保持する。字形変更によって通貨・単位・数量を変換しない。単位語と文法は母語校閲する。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-17",
+      "category_ja": "バージョン混植",
+      "source_text": "نسخهٔ v0.1.0",
+      "expected_ja": "v0.1.0をLTRのまとまりとして表示し、その中の数字・ドットを変更しない。原稿の読む順序とコピー順序を保つ。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-18",
+      "category_ja": "ラテン字始まり見出し",
+      "source_text": "KUMIHAN برای فارسی",
+      "expected_ja": "既知のペルシア語見出しの基本方向を明示して確認する。先頭KUMIHANだけで見出し全体をLTRと推定しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-19",
+      "category_ja": "括弧混植",
+      "source_text": "طراحی (Design) برای فارسی",
+      "expected_ja": "Designと括弧のまとまりを適切に扱い、手動で括弧コードを入れ替えず正しい文脈表示を確認する。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-20",
+      "category_ja": "引用符",
+      "source_text": "«طراحی برای فارسی»",
+      "expected_ja": "引用範囲と引用符の論理順序を保持する。ブランドコピーとしての自然さと引用符採用基準を母語校閲する。",
+      "status": "not-run",
+      "native_review_required": true
+    },
+    {
+      "id": "FA-FX-21",
+      "category_ja": "URL混植",
+      "source_text": "نشانی: https://example.invalid/a?x=1&y=2",
+      "expected_ja": "URLのコード列を変更せずLTR句として扱う。周辺のコロン、折返し、選択、コピーを確認する。URLはテスト用の無効ドメイン。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-22",
+      "category_ja": "電話とメール",
+      "source_text": "+98 21 0000 0000 | hello@example.invalid",
+      "expected_ja": "例示用の電話文字列とメール文字列をLTRのまとまりとして扱う。空白・+・@・ドット・数字の順序を保持する。外部への連絡は実行しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-23",
+      "category_ja": "地域別月名",
+      "source_text": "فروردین | حمل",
+      "expected_ja": "CLDR49のfa/fa_AFで区別される月名として扱う。地域指定とcalendarを確認し、片方を誤字として自動修正しない。",
+      "status": "not-run",
+      "native_review_required": false
+    },
+    {
+      "id": "FA-FX-24",
+      "category_ja": "長文と媒体変換",
+      "source_text": "طراحی خوانا با KUMIHAN برای متن‌های فارسی. نسخهٔ v0.1.0 را بررسی کنید و نمونه‌ها را در اندازه‌های مختلف ببینید.",
+      "expected_ja": "新規コピー案につき文法・意味・語調は母語校閲を必要とする。狭幅・拡大・ウェイト変更・fallback・PDF出力で接続、点、結合記号、語間、読み順、選択とコピーを確認する。",
+      "status": "not-run",
+      "native_review_required": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KUMIHAN Persian evidence check",
+  "type": "object",
+  "required": [
+    "rule_id",
+    "status",
+    "scope",
+    "evidence",
+    "host",
+    "remediation",
+    "dependencies",
+    "notes"
+  ],
+  "properties": {
+    "rule_id": {
+      "type": "string",
+      "pattern": "^FA-"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "needs-review",
+        "not-checked",
+        "unsupported",
+        "waived",
+        "not-applicable"
+      ]
+    },
+    "scope": {
+      "type": "string"
+    },
+    "evidence": {},
+    "host": {
+      "type": "string"
+    },
+    "remediation": {
+      "type": "string"
+    },
+    "dependencies": {
+      "type": "array"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "language": "fa",
+  "script": "Arab",
+  "default_locale": "fa-IR",
+  "content": "Persian (Farsi)",
+  "direction": "rtl",
+  "scope": "new Iranian Persian copy defaults to fa-IR as explicit proposal",
+  "numbers": "preserve source; format arabext only on request with explicit locale",
+  "calendar": "explicit",
+  "exclude": [
+    "ar",
+    "ur",
+    "tg-Cyrl"
+  ],
+  "native_review": "needs-native-review"
+}
