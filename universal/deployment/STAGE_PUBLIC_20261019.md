@@ -72,6 +72,29 @@ The scoped checks make progress possible without weakening the stated uncertaint
 
 The final same-day, no-write recheck uses [tools/preflight_public_bootstrap_scoped.sh](../tools/preflight_public_bootstrap_scoped.sh), **not the original strict full-FTP-tree checker that cannot complete with the current SSH permissions**. This new script checks the empty `kmhn` document root, the absence of symlinks inside that folder, and presence of private runtime files. It deliberately prints `WEB_WIDE_SYMLINK_SCAN_NOT_ATTESTED` and `OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW`; `SCOPED_PREBOOTSTRAP_CHECKS_PASS` alone is not release authorization. The script never changes any host files.
 
+## G1 Owner mapping review — CONFIRMED
+
+On 2026-10-19 Owner explicitly reported: **all configured domain upload destinations were checked; none references the non-Web MCP private runtime folder**. This is a manual-control-panel confirmation, not an independent crawl of every inaccessible directory.
+
+Therefore the Owner mapping review is satisfied for a **bounded `/mcp` testing rollout**, subject to running a fresh nonmutating scoped G1 preflight. The full `/web` symlink scan remains `NOT_CHECKED_PERMISSION_LIMIT`, not PASS; inaccessible unrelated website folders must not be modified or re-scanned indefinitely.
+
+### G1 final read-only recheck
+
+Use [tools/preflight_public_bootstrap_scoped.sh](../tools/preflight_public_bootstrap_scoped.sh) on an authenticated Lolipop SSH session with the existing FTP_ROOT value. It checks that `kmhn` is empty and symlink-free, private PHP source/config/registry/autoload/sessions exist and are readable, and private path remains outside FTP root. No writes or public changes. Expected markers:
+
+    PRIVATE_PATH_OUTSIDE_WEB_OK
+    PUBLIC_KMHN_EMPTY_OK
+    KMHN_SYMLINK_SCOPE_CLEAR
+    PRIVATE_RUNTIME_FILES_PRESENT_OK
+    SCOPED_PREBOOTSTRAP_CHECKS_PASS
+    WEB_WIDE_SYMLINK_SCAN_NOT_ATTESTED
+    OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW
+    MCP_NOT_PUBLIC
+
+The `OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW` line remains in generic tool output even though the Owner **has now confirmed** the mapping review; this avoids a static script incorrectly inferring account-specific approval. Use the separate owner attestation in `deployment/target.json` for that fact.
+
+Upon PASS, move to G2 **only if deliberately authorizing the public trial**. Do not claim host E2E, runtime exposure safety under every virtual host, main merge or public plugin release at this stage.
+
 ## Owner gate G2 — approved two-file public bootstrap (only AFTER G1)
 
 Prepared local deployment ZIP in Owner's ChatGPT conversation: `KUMIHAN_MCP_Lolipop_DeployKit_v0.1.0-preview_20261019.zip`. Verified ZIP SHA256 `0f876361ba593441a90428a4b8919b4f10e84b00988e1d7f21a38f8382c703ca`.
