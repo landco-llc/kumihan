@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "private_archive_transferred_integrity_not_yet_verified",
+  "status": "private_archive_verified_pending_private_extract",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -39,14 +39,16 @@
     "private_archive_owner_transfer_completed": true,
     "private_archive_present_ssh_verified": true,
     "private_runtime_target_clean_verified": true,
-    "private_archive_integrity_verified": false,
-    "private_archive_extracted": false
+    "private_archive_integrity_verified": true,
+    "private_archive_extracted": false,
+    "private_runtime_ready": false,
+    "public_bootstrap_installed": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner's Mac reported LOCAL_ARCHIVE_SHA_OK and scp runtime.tar.gz 100% 779KB. Remote script progressed past test -f and clean target checks then stopped at HASH_TOOL_UNAVAILABLE. No checksum comparison completed remotely; no archive extraction or public bootstrap installation.",
-  "deployment_blocker": "Transfer complete; SSH confirms archive exists and intended runtime targets are clean, but server-held file SHA-256 remains UNVERIFIED because sha256sum/openssl are not on the SSH PATH. Read back archive to Mac for full hash+byte comparison before extraction.",
+  "notes": "Owner's 2026-10-19 Mac SCP readback produced REMOTE_ARCHIVE_SHA_OK and REMOTE_ARCHIVE_BYTES_OK. Remote SSH archive is intact. MCP runtime still NOT EXTRACTED, NOT CONFIGURED and NOT DEPLOYED.",
+  "deployment_blocker": "Integrity gate PASS. Next: verify tar utility and expected clean private target, extract only inside the SSH-verified private runtime directory, check required files; no public bootstrap or config until subsequent gate. Other virtual host exposure and session-write behavior remain NOT_VERIFIED.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -137,9 +139,28 @@
     "scp_progress_reported": "100% (779KB)",
     "remote_archive_present": true,
     "private_target_vendor_src_public_absent": true,
-    "remote_sha256_check": "NOT_CHECKED_TOOL_UNAVAILABLE",
+    "remote_sha256_check": "PASS_VIA_MAC_FULL_READBACK",
     "remote_tool_detection": "Neither sha256sum nor openssl was available on the SSH PATH",
     "secure_fallback": "SCP server archive back to the Owner Mac and verify with shasum -a 256 and cmp against the locally authenticated archive. No need for server-side hash tools.",
-    "remote_transfer_warning": "The SCP client printed SSH post-quantum KEX and RSA host-key update proof warnings. Confirm server identity via official host-key guidance; do not disable host-key verification."
+    "remote_transfer_warning": "The SCP client printed SSH post-quantum KEX and RSA host-key update proof warnings. Confirm server identity via official host-key guidance; do not disable host-key verification.",
+    "mac_readback_digest": "5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1",
+    "mac_readback_byte_comparison": "PASS",
+    "mac_readback_verified": true,
+    "remote_tools_unavailable": true,
+    "readback_note": "Owner SCP-downloaded the remote archive to a different Mac filename; shasum -a 256 matched immutable expected SHA, cmp -s with prevalidated local source PASS. This verifies the exact bytes stored on the remote host at test time.",
+    "public_host_ssh_identity_independently_verified": false,
+    "archive_source_github_run": "https://github.com/landco-llc/kumihan/actions/runs/39255977471",
+    "source_archive_inventory": {
+      "tar_sha256": "5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1",
+      "tar_bytes": 798016,
+      "entries": 1227,
+      "regular_files": 1067,
+      "directories": 160,
+      "symlinks": 0,
+      "hardlinks": 0,
+      "path_traversal_or_absolute_entries": 0,
+      "contains_runtime_config_php": false,
+      "inspected_from": "Original pinned GitHub Actions staging artifact, compared to Owner's remote archive via matching SHA256"
+    }
   }
 }
