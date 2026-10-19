@@ -81,6 +81,18 @@ class PublicTrialTests(unittest.TestCase):
             self.assertEqual(existing.read_text(), "preserve me")
             self.assertFalse((public / "index.php").exists())
 
+    def test_modified_trailing_newline_blocks_rollback(self):
+        with tempfile.TemporaryDirectory() as td:
+            web, public, app, _ = fixture(Path(td))
+            self.assertEqual(run(INSTALL, web).returncode, 0)
+            with (public / "index.php").open("a", encoding="utf-8") as out:
+                out.write("\\n")
+            result = run(ROLLBACK, web)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("PUBLIC_FILE_CONTENT_MISMATCH_STOP", result.stdout)
+            self.assertTrue((public / "index.php").exists())
+            self.assertTrue((public / ".htaccess").exists())
+
     def test_wrong_private_entrypoint_blocks(self):
         with tempfile.TemporaryDirectory() as td:
             web, public, _, stage = fixture(Path(td))
