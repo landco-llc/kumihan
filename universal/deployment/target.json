@@ -10,7 +10,7 @@
     "php_version": "8.5",
     "deployment_mode": "PHP request lifecycle (no daemon)"
   },
-  "status": "tls_verified_public_folder_confirmed_pending_mcp_deployment",
+  "status": "tls_verified_ftp_root_owner_confirmed_pending_private_runtime_validation",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -24,13 +24,16 @@
     "ssl_configured_owner_reported": true,
     "public_upload_folder_owner_confirmed": true,
     "private_runtime_path_verified": false,
-    "ssh_access_verified": false
+    "ssh_access_verified": false,
+    "ftp_root_path_owner_confirmed": true,
+    "ftp_root_ssh_verified": false,
+    "web_php_can_read_private_runtime_verified": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner confirmed kmhn as the Lolipop subdomain public upload directory. Root page resolves there. No change to domain mapping. Do not place src, vendor, runtime or config in FTP root because the account default host may serve that root. TLS PASS, MCP not deployed.",
-  "deployment_blocker": "Public folder kmhn confirmed. Need to verify FTP root full path, SSH-accessible non-Web directory and PHP 8.5 for the domain; then upload runtime. No credentials supplied/required in GitHub.",
+  "notes": "Account-specific FTP absolute path supplied in conversation; intentionally omitted from this public GitHub file. Public-relative path web/kmhn confirmed. TLS verified. No real PHP hosting or MCP end-to-end deployment.",
+  "deployment_blocker": "Owner confirmed FTP absolute root (web) and kmhn docroot. Need SSH to verify web-root realpath and non-Web private path writable and PHP-readable. Do not deploy to a guessed path or FTP-root sibling.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -40,7 +43,10 @@
     "network_tls_probe": "PASS",
     "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint.",
     "public_upload_folder": "kmhn",
-    "public_upload_folder_confirmation": "Owner report 2026-10-19"
+    "public_upload_folder_confirmation": "Owner report 2026-10-19",
+    "ftp_full_path_received_from_owner": true,
+    "full_path_confidentiality": "Exact absolute account path is kept out of this public repository; use local SSH/private deployment variable.",
+    "full_path_verified_on_server": false
   },
   "tls_verification": {
     "verification_type": "public_github_actions_runner",
@@ -53,7 +59,27 @@
     "limitation": "This validates TLS hostname and chain from one runner, NOT deployed PHP runtime or MCP protocol."
   },
   "production_public_folder": "kmhn",
-  "public_root_type": "Lolipop FTP root relative (actual full filesystem path is not yet verified)",
+  "public_root_type": "FTP account full path is the web document root; owner-confirmed, not independently inspected over SSH",
   "private_runtime_layout": "An SSH-accessible directory OUTSIDE the FTP root and any other HTTP document root; do not assume an FTP-root sibling is private",
-  "layout_strategy": "Only bootstrap index.php and .htaccess under FTP root/kmhn. Place original universal/server tree outside HTTP roots and require its absolute entrypoint from bootstrap."
+  "layout_strategy": "Only bootstrap index.php and .htaccess under FTP root/kmhn. Place original universal/server tree outside HTTP roots and require its absolute entrypoint from bootstrap.",
+  "deployment_paths": {
+    "ftp_root": {
+      "scope": "account-local only; never commit absolute full path",
+      "basename": "web",
+      "owner_confirmed": true,
+      "ssh_realpath_verified": false
+    },
+    "public_root": {
+      "relative_to_ftp_root": "kmhn",
+      "owner_confirmed": true,
+      "ssh_realpath_verified": false
+    },
+    "private_server_candidate": {
+      "relative_to_ftp_root": "../kmhn-mcp-private/server",
+      "approved": false,
+      "ssh_write_verified": false,
+      "web_php_read_verified": false,
+      "outside_all_http_roots_verified": false
+    }
+  }
 }
