@@ -61,7 +61,7 @@ html:is([lang="km"], [lang="zu"]) :is(h1, h2, h3, p, li, summary) { overflow-wra
 .kumihan-footer a { color: #e6e1d7; text-underline-offset: 4px; }
 .kumihan-footer .kf-note a { color: inherit; }
 .kumihan-footer .kf-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; min-width: 0; }
-.kumihan-footer .kf-links > a { font-size: 12px; font-weight: 700; }
+.kumihan-footer .kf-links > a { font-size: 12px; font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
 .kumihan-footer .kf-menu { position: relative; }
 .kumihan-footer .kf-menu summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: min(220px, 100%); min-height: 40px; box-sizing: border-box; padding: 8px 16px; border: 1px solid #5d5953; border-radius: 12px; background: #2d2b28; color: #aaa69f; cursor: pointer; font-size: 12px; font-weight: 600; }
 .kumihan-footer .kf-menu summary::-webkit-details-marker { display: none; }
