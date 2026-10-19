@@ -70,6 +70,8 @@ The remaining publication review can be **scoped** rather than treating inaccess
 
 The scoped checks make progress possible without weakening the stated uncertainty. A private config with no credentials currently exists, but private source/vendor/registry must still not be copied to `web` under any circumstances.
 
+The final same-day, no-write recheck uses [tools/preflight_public_bootstrap_scoped.sh](../tools/preflight_public_bootstrap_scoped.sh), **not the original strict full-FTP-tree checker that cannot complete with the current SSH permissions**. This new script checks the empty `kmhn` document root, the absence of symlinks inside that folder, and presence of private runtime files. It deliberately prints `WEB_WIDE_SYMLINK_SCAN_NOT_ATTESTED` and `OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW`; `SCOPED_PREBOOTSTRAP_CHECKS_PASS` alone is not release authorization. The script never changes any host files.
+
 ## Owner gate G2 — approved two-file public bootstrap (only AFTER G1)
 
 Prepared local deployment ZIP in Owner's ChatGPT conversation: `KUMIHAN_MCP_Lolipop_DeployKit_v0.1.0-preview_20261019.zip`. Verified ZIP SHA256 `0f876361ba593441a90428a4b8919b4f10e84b00988e1d7f21a38f8382c703ca`.
