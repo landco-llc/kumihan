@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "g2_trial_installed_then_rolled_back_before_mcp_probe_python_ca_fixed",
+  "status": "g2_rolled_back_remote_ssh_probe_wrong_environment_mac_http404",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -70,7 +70,7 @@
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
   "notes": "G2 installer succeeded and guarded rollback succeeded. Owner performed Mac protocol probe after rollback; TLS failure due missing Python CA file, independently diagnosed on connected Mac; curl verify 0 and Python with system CA both return expected HTTP 404 in rolled-back state.",
-  "deployment_blocker": "MCP protocol was not tested while public files were installed. Python on Mac lacked its default CA file (not server TLS defect); TLS verification now confirmed using system CA /etc/ssl/cert.pem. Next guarded reinstall then BEFORE rollback, Mac SSL_CERT_FILE=/etc/ssl/cert.pem protocol smoke; roll back only if needed.",
+  "deployment_blocker": "G2 rollback succeeded, Mac verified TLS but HTTP 404. Owner retest was mistakenly run inside Lolipop SSH and failed remote Python CA. Need (1) deliberate G2 reinstall through SSH, (2) true Mac MCP POST while deployed, (3) rollback only after outcome. Never use -k or disable validation.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -336,6 +336,20 @@
     "python_ca_issue": "Mac Python 3.12 default openssl_cafile did not exist; macOS /etc/ssl/cert.pem exists and supports verified Python TLS. Confirmed with SSL_CERT_FILE=/etc/ssl/cert.pem and HTTP 404.",
     "mac_curl_tls": "CERTIFICATE_VALID_HTTP_404 after rollback",
     "private_runtime_retained": true,
-    "live_mcp_verified": false
+    "live_mcp_verified": false,
+    "second_probe": {
+      "source": "Owner transcript from Lolipop remote SSH prompt",
+      "outcome": "SSL_CERT_VERIFY_FAILED_ON_REMOTE_SSH_PYTHON",
+      "host_probe_environment": "Lolipop spd163 SSH, not Mac",
+      "live_mcp_verified": false
+    },
+    "mac_current_check": {
+      "source": "Authorized connected Mac local terminal",
+      "curl_http_head": 404,
+      "curl_tls_verify_result": 0,
+      "python_system_ca_get_status": 404,
+      "mac_hostname": "withheld",
+      "interpretation": "Mac TLS validates successfully but endpoint HTTP 404 after confirmed G2 rollback; bootstrap absent inferred, not freshly confirmed through SSH"
+    }
   }
 }
