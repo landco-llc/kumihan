@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-mizani",
+  "version": "0.1.0",
+  "description": "Mwongozo wa wazi wa upangaji wa maandishi na usanifu wa Kiswahili unaolinda matini asilia na kutenganisha yaliyojaribiwa na yanayohitaji ukaguzi. | Open-source Swahili typography and purposeful design guidance that preserves source text and distinguishes tested findings from editorial review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Mizani",
+        "shortDescription": "Kiswahili typography | Swahili design",
+        "longDescription": "Mwongozo wa wazi wa upangaji wa maandishi na usanifu wa Kiswahili unaolinda matini asilia na kutenganisha yaliyojaribiwa na yanayohitaji ukaguzi. | Open-source Swahili typography and purposeful design guidance that preserves source text and distinguishes tested findings from editorial review.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-sw.html",
+        "defaultPrompt": [
+          "Kagua upangaji wa Kiswahili bila kubadili matini.",
+          "Review Swahili typography without altering the original text."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
