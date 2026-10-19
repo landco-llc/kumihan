@@ -49,6 +49,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "zu": dict(name="isiZulu", lang="zu", brand="KUMIHAN｜Hlela", glyph="Aa", label="ZU · ISIZULU", version="v0.1.0", pages={"zu":"kumihan-zu.html","en":"kumihan-zu.en.html","ja":"kumihan-zu.ja.html"}),
     "sw": dict(name="Kiswahili", lang="sw", brand="KUMIHAN｜Mizani", glyph="ng’", label="SW · SWAHILI", version="v0.1.0", pages={"sw":"kumihan-sw.html","en":"kumihan-sw.en.html","ja":"kumihan-sw.ja.html"}),
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
@@ -584,6 +585,31 @@ for _lang, _cards in CARDS.items():
     if "sw" not in _cards:
         _cards["sw"] = SW_CARD_COPY[_lang]
 
+# isiZulu edition (KUMIHAN｜Hlela): its card for every reader language.
+ZU_CARD_COPY = {
+    "ja": ("接合語と語中の大文字（isiZulu など）を守り、原稿を変えずに組むズールー語の文字組みとデザイン。", "ズールー語版を見る"),
+    "en": ("isiZulu typography that protects conjunctive words and internal capitals, keeping the source intact.", "View the isiZulu edition"),
+    "zh-hant": ("保護黏著詞與詞中大寫（如 isiZulu），不改動原稿的祖魯文排版與設計。", "前往祖魯文版"),
+    "zh-hans": ("保护黏着词与词中大写（如 isiZulu），不改动原稿的祖鲁语排版与设计。", "前往祖鲁语版"),
+    "ko": ("결합어와 단어 안의 대문자(isiZulu 등)를 지키고 원고를 바꾸지 않는 줄루어 글짜임.", "줄루어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรภาษาซูลูที่รักษาคำเชื่อมและตัวพิมพ์ใหญ่กลางคำ (เช่น isiZulu) โดยไม่เปลี่ยนต้นฉบับ", "ดูเวอร์ชันภาษาซูลู"),
+    "fr": ("Typographie zouloue qui protège les mots agglutinés et les majuscules internes (isiZulu), sans modifier la source.", "Voir l’édition zouloue"),
+    "es": ("Tipografía zulú que protege las palabras aglutinadas y las mayúsculas internas (isiZulu) sin alterar el original.", "Ver la edición en zulú"),
+    "pt": ("Tipografia zulu que protege palavras aglutinadas e maiúsculas internas (isiZulu), preservando o original.", "Ver a edição em zulu"),
+    "ar": ("تنضيد زولو يحمي الكلمات الملتصقة والأحرف الكبيرة داخل الكلمة (مثل isiZulu) دون تغيير النص الأصلي.", "عرض نسخة الزولو"),
+    "hi": ("संयोजी शब्दों और शब्द के भीतर बड़े अक्षरों (जैसे isiZulu) को सुरक्षित रखने वाली, मूल पाठ न बदलने वाली ज़ुलु टाइपोग्राफ़ी।", "ज़ुलु संस्करण देखें"),
+    "vi": ("Typography tiếng Zulu giữ nguyên từ ghép dính liền và chữ hoa giữa từ (như isiZulu), không thay đổi bản gốc.", "Xem phiên bản tiếng Zulu"),
+    "de": ("Zulu-Typografie, die zusammengeschriebene Wörter und Großbuchstaben im Wortinneren (isiZulu) schützt und das Original bewahrt.", "Zulu-Version ansehen"),
+    "pl": ("Typografia zulu chroniąca wyrazy łączne i wielkie litery wewnątrz słów (isiZulu), bez zmiany oryginału.", "Zobacz wersję zulu"),
+    "id": ("Tipografi Zulu yang menjaga kata gabung dan huruf kapital di tengah kata (seperti isiZulu) tanpa mengubah naskah asli.", "Lihat edisi bahasa Zulu"),
+    "bn": ("সংযুক্ত শব্দ ও শব্দের মাঝের বড় হাতের অক্ষর (যেমন isiZulu) রক্ষা করে, মূল লেখা না বদলানো জুলু টাইপোগ্রাফি।", "জুলু সংস্করণ দেখুন"),
+    "it": ("Tipografia zulu che protegge le parole agglutinate e le maiuscole interne (isiZulu), nel rispetto dell’originale.", "Vai all’edizione zulu"),
+    "ru": ("Типографика зулу: слитные слова и заглавные буквы внутри слова (isiZulu) без изменения оригинала.", "Открыть версию на зулу"),
+    "sw": ("Uchapaji wa Kizulu unaolinda maneno yaliyounganishwa na herufi kubwa ndani ya neno (kama isiZulu) bila kubadilisha maandishi asilia.", "Tazama toleo la Kizulu"),
+}
+for _lang, _cards in CARDS.items():
+    _cards["zu"] = ZU_CARD_COPY[_lang]
+
 # Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
 _PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
@@ -643,6 +669,11 @@ EDITION_NAMES["sw"] = {"ar": "Kiarabu", "bn": "Kibengali", "de": "Kijerumani", "
 _SW_EDITION_NAMES = {"sw":"Kiswahili","ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
 for _lang, _names in EDITION_NAMES.items():
     _names["sw"] = _SW_EDITION_NAMES[_lang]
+
+
+_ZU_EDITION_NAMES = {"sw":"Kizulu","ar":"الزولو","bn":"জুলু","de":"Zulu","en":"isiZulu","es":"Zulú","fr":"Zoulou","hi":"ज़ुलू","id":"Zulu","it":"Zulu","ja":"ズールー語","ko":"줄루어","pl":"Zuluski","pt":"Zulu","ru":"Зулу","th":"ภาษาซูลู","vi":"Tiếng Zulu","zh-hans":"祖鲁语","zh-hant":"祖魯語"}
+for _lang, _names in EDITION_NAMES.items():
+    _names["zu"] = _ZU_EDITION_NAMES[_lang]
 
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""

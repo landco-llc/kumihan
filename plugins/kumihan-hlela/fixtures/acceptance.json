@@ -1,0 +1,162 @@
+[
+  {
+    "id": "T01",
+    "input": "zu / zu-ZA / zh-Hans / zilu",
+    "expected": "Resolve only correct explicit locale.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T02",
+    "input": "zu/xh/ss/nr/nd/en mixed, short snippets",
+    "expected": "No silent language guessing or rewriting.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T03",
+    "input": "html lang=zu and embedded lang=en",
+    "expected": "Preserve source markup and segment context.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T04",
+    "input": "isiZulu, names, internal capitals",
+    "expected": "Preserve bytes and casing.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T05",
+    "input": "U+00AD, NBSP, quotes and copy",
+    "expected": "Preserve source; note invisible characters.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T06",
+    "input": "Combining accents, emoji and IPA",
+    "expected": "Respect grapheme boundaries.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T07",
+    "input": "Long article at 320/375/768/1280px",
+    "expected": "No clipped content or inserted word spaces.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T08",
+    "input": "Long single word and URL in error box",
+    "expected": "Scope emergency wrapping; record evidence.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T09",
+    "input": "hyphens:auto across browser/OS",
+    "expected": "Check real dictionary and actual break points.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T10",
+    "input": "Editor-approved manual breaks and printing",
+    "expected": "Keep reviewed points, test copy/search.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T11",
+    "input": "Very long CTA / two or three lines",
+    "expected": "Allow variable button/card height.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T12",
+    "input": "320px reflow and form fields",
+    "expected": "No accidental horizontal loss.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T13",
+    "input": "Native 200% font size zoom",
+    "expected": "No overlap or missing controls.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T14",
+    "input": "WCAG text spacing overrides",
+    "expected": "No clipped content.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T15",
+    "input": "Blocked font and system fallback",
+    "expected": "Readability and no missing glyphs.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T16",
+    "input": "Intl zu-ZA currency/date + timezone",
+    "expected": "Record runtime, formatter and formatToParts.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T17",
+    "input": "0, 1, many in full translated sentence",
+    "expected": "Review full grammatical agreement.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T18",
+    "input": "isiZulu + English side-by-side",
+    "expected": "Preserve content hierarchy and independent wrapping.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T19",
+    "input": "Folded pamphlet, PDF, slide, social crop",
+    "expected": "Check medium, reading order, text extraction.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  },
+  {
+    "id": "T20",
+    "input": "Review only: evidence status and no editing",
+    "expected": "Return rule IDs, needs-review/not-checked.",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_isiZulu_Research_Report_2026-10-19"
+  }
+]

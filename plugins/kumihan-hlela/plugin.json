@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-hlela",
+  "version": "0.1.0",
+  "description": "I-KUMIHAN｜Hlela ihlinzeka ngemihlahlandlela evulekile yokuhlela nokubuyekeza umbhalo wesiZulu, ivikele umbhalo wangempela futhi ihlukanise okuhloliwe nalokho okusadinga ukuqinisekiswa. | Open-source isiZulu typography and purposeful design guidance that protects original text and distinguishes tested observations from editorial or rendering checks.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Hlela",
+        "shortDescription": "isiZulu typography | isiZulu design",
+        "longDescription": "I-KUMIHAN｜Hlela ihlinzeka ngemihlahlandlela evulekile yokuhlela nokubuyekeza umbhalo wesiZulu, ivikele umbhalo wangempela futhi ihlukanise okuhloliwe nalokho okusadinga ukuqinisekiswa. | Open-source isiZulu typography and purposeful design guidance that protects original text and distinguishes tested observations from editorial or rendering checks.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-zu.html",
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
