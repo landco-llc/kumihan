@@ -23,6 +23,7 @@ GOOGLE = "https://fonts.googleapis.com/css2?"
 
 # script key -> (system sans stack, system serif stack, Google sans family, Google serif family)
 SCRIPTS = {
+    "km": ('"Khmer Sangam MN", "DaunPenh", "Khmer OS"', '"Khmer Sangam MN", "Khmer OS"', "Noto Sans Khmer", "Noto Serif Khmer"),
     "ja": ('"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo',
            '"Hiragino Mincho ProN", "Yu Mincho"', "Noto Sans JP", "Noto Serif JP"),
     "latin": ('"Helvetica Neue", Helvetica, "Segoe UI", Roboto',
@@ -53,7 +54,7 @@ AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..9
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
         "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
 # Page language (html lang attribute) -> script key
-LANGS = {"it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
+LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
          "pl": "latin", "id": "latin", "bn": "bn"}
@@ -124,7 +125,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
+    for key in ("km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
