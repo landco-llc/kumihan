@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "product": "KUMIHAN Universal",
+  "hostname": "mcp-kmhn.landco.co.jp",
+  "endpoint": "https://mcp-kmhn.landco.co.jp/mcp",
+  "hosting": {
+    "provider": "Lolipop",
+    "plan": "High-Speed",
+    "web_server": "LiteSpeed",
+    "php_version": "8.5",
+    "deployment_mode": "PHP request lifecycle (no daemon)"
+  },
+  "status": "planned_not_provisioned",
+  "configuration_blocker": "Lolipop emergency maintenance on 2026-10-19: user-control-panel functions stopped; do not infer a restoration time",
+  "flags": {
+    "subdomain_created": false,
+    "ssl_verified": false,
+    "php85_verified_on_target": false,
+    "dns_verified": false,
+    "github_staging_ci_verified": true,
+    "host_end_to_end_verified": false,
+    "client_connection_verified": false,
+    "public_release_authorized": false
+  },
+  "runtime_config_template": "universal/server/runtime/config.production.example.php",
+  "production_upload_directory": "mcp-service/public",
+  "operations_doc": "universal/LOLLIPOP_SETUP.md",
+  "notes": "Domain designated by owner on 2026-10-19. Do not distribute endpoint-based plugin artifacts or claim service is available until host and MCP end-to-end tests pass."
+}
