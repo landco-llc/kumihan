@@ -31,7 +31,7 @@ class HostDocsTests(unittest.TestCase):
                     self.assertIn('KUMIHAN｜字衡',s)
                     self.assertIn('zh-Hant-TW',s)
                     self.assertIn('zh-Hant-HK',s)
-                    self.assertIn('0.1.0-preview.zip',s)
+                    self.assertIn('0.1.0.zip',s)
                     self.assertIn('kumihan-install.css',s)  # canonical KUMIHAN install-guide layout
                     self.assertTrue(any(n=='link' and d.get('rel')=='canonical' and path.name in d.get('href','') for n,d in parsed.all))
                     self.assertEqual({d['hreflang'] for n,d in parsed.all if n=='link' and d.get('rel')=='alternate'}, {'zh-Hant-TW','en','ja','x-default'})
@@ -70,8 +70,8 @@ class HostDocsTests(unittest.TestCase):
                     guide=(PRODUCT/f'docs/installation-{host}.{locale}.md').read_text(encoding='utf-8')
                     self.assertIn(bundle['sha256'],page)
                     self.assertIn(bundle['sha256'],guide)
-                    self.assertIn('0.1.0-preview',page)
-                    self.assertIn('0.1.0-preview',guide)
+                    self.assertIn('0.1.0',page)
+                    self.assertIn('0.1.0',guide)
                     for skill in ('kumihan-ziheng','kumihan-ziheng-web','kumihan-ziheng-documents','kumihan-ziheng-review'):
                         self.assertIn(skill,guide)
                     if host=='gemini':

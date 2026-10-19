@@ -9,6 +9,14 @@
 
 <br>
 
+## v0.1.8 — 現行パッケージ（2026年10月19日）
+
+- 現行manifest・配布ZIP・サイトの版名からpreview接尾辞を廃止。各言語版の番号は独立して維持します。
+- 新しい `v0.1.8` タグ・GitHub Releaseは承認待ちです。過去の公開済みタグ・Release・SHA256は変更しません。
+- 日本語15 ZIPと字衡15 ZIPの名前・メタデータ・チェックサムを更新。詳細は[版名規約](docs/versioning.md)をご覧ください。
+
+<br>
+
 ## v0.1.8 preview — 2026年10月19日公開
 
 [GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview)

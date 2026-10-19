@@ -4,7 +4,7 @@
 Usage:
   python3 tools/build_dist.py                      # sync, rebuild everything
   python3 tools/build_dist.py --check              # verify the tree is up to date
-  python3 tools/build_dist.py --set-version 0.1.5-preview  # bump, then rebuild
+  python3 tools/build_dist.py --set-version 0.1.9  # bump, then rebuild
 
 `skills/kumihan` is the canonical copy of every shared file. The other skill
 folders differ only in SKILL.md and inventory.json. Standard library only.
@@ -14,6 +14,7 @@ import argparse
 import hashlib
 import io
 import json
+import re
 import sys
 import zipfile
 from pathlib import Path
@@ -55,10 +56,15 @@ def read_version():
     versions = {f: json.loads((ROOT / f).read_text())["version"] for f in VERSION_FILES}
     if len(set(versions.values())) != 1:
         sys.exit(f"Version mismatch across manifests: {versions}")
-    return next(iter(versions.values()))
+    version = next(iter(versions.values()))
+    if re.fullmatch(r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", version) is None:
+        sys.exit(f"Version must be MAJOR.MINOR.PATCH without a suffix: {version}")
+    return version
 
 
 def set_version(new):
+    if re.fullmatch(r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", new) is None:
+        sys.exit("Version must be MAJOR.MINOR.PATCH without a suffix")
     old = read_version()
     for f in VERSION_FILES:
         p = ROOT / f
@@ -153,9 +159,9 @@ def downloads_readme(folder, title, guide_ja, guide_en, bundle_heading, bundle_d
         "",
         "<br>",
         "",
-        f"プレビュー版 **{display_version(VERSION)}** です。導入の手順は、上の導入ガイドをご覧ください。",
+        f"現行パッケージ **{display_version(VERSION)}** です。導入の手順は、上の導入ガイドをご覧ください。",
         "",
-        f"Preview version **{display_version(VERSION)}**. See the installation guide above for setup steps.",
+        f"Current package **{display_version(VERSION)}**. See the installation guide above for setup steps.",
         "",
         "<br>",
         "",
@@ -255,7 +261,7 @@ def planned_downloads(tree):
             "publisher": PUBLISHER,
             "version": v,
             "source_repository": REPOSITORY,
-            "status": "Preview. Behavior in each host has not been fully verified.",
+            "status": "Source distribution. Behavior in each host has not been fully verified.",
             "archives": [],
         }
         sums = []

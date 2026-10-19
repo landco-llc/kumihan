@@ -21,7 +21,7 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 
 | コード | 言語版 | 版 | サイト | ソース | リリース |
 | --- | --- | --- | --- | --- | --- |
-| JA | KUMIHAN（日本語） | v0.1.8 preview | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | [v0.1.8-preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview) |
+| JA | KUMIHAN（日本語） | v0.1.8 | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | 新版Release未作成・[過去版 v0.1.8-preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview) |
 | AR | KUMIHAN｜نضيد（アラビア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ar.html) | [plugins/kumihan-ar](plugins/kumihan-ar/README.md) | [kumihan-ar-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ar-v0.1.0) |
 | BN | KUMIHAN｜অক্ষরসজ্জা（ベンガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-bn.html) | [plugins/kumihan-bn](plugins/kumihan-bn/README.md) | [kumihan-bn-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-bn-v0.1.0) |
 | DE | KUMIHAN｜Satzbild（ドイツ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-de.html) | [plugins/kumihan-satzbild](plugins/kumihan-satzbild/README.md) | [kumihan-de-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-de-v0.1.0) |
@@ -40,7 +40,7 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 | TH | KUMIHAN｜ดุลอักษร（タイ語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-th.html) | [plugins/kumihan-th](plugins/kumihan-th/README.md) | [kumihan-th-v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) |
 | VI | KUMIHAN｜Nhịp Chữ（ベトナム語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-vi.html) | [plugins/kumihan-nhip-chu](plugins/kumihan-nhip-chu/README.md) | [kumihan-vi-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-vi-v0.1.0) |
 | ZH-HANS | KUMIHAN｜字律（簡体中国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-cn.html) | [plugins/kumihan-zilu](plugins/kumihan-zilu/README.md) | ソースとサイトのみ（Release未作成） |
-| ZH-HANT | KUMIHAN｜字衡（繁体中国語・台湾／香港） | v0.1.0 preview | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-han.html) | [plugins/kumihan-ziheng](plugins/kumihan-ziheng/README.md) | プレビュー（Release未作成） |
+| ZH-HANT | KUMIHAN｜字衡（繁体中国語・台湾／香港） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-han.html) | [plugins/kumihan-ziheng](plugins/kumihan-ziheng/README.md) | Release未作成 |
 | ZU | KUMIHAN｜Hlela（ズールー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zu.html) | [plugins/kumihan-hlela](plugins/kumihan-hlela/README.md) | [kumihan-zu-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-zu-v0.1.0) |
 
 <br>
@@ -57,7 +57,7 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 | ChatGPT / Codex | [導入ガイド](docs/installation.ja.md) | [Guide](docs/installation.md) |
 | Gemini（Gemini CLI / Geminiアプリ） | [導入ガイド](docs/installation.gemini.ja.md) | [Guide](docs/installation.gemini.md) |
 
-更新の方法は [更新ガイド](docs/updates.md)、日本語版の変更内容は [更新履歴](CHANGELOG.md) にまとめています。
+更新の方法は [更新ガイド](docs/updates.md)、日本語版の変更内容は [更新履歴](CHANGELOG.md)、版名は [バージョン表記規約](docs/versioning.md) にまとめています。
 
 <br>
 
@@ -70,7 +70,7 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 | `kumihan-documents` | 報告書やプレゼンテーション資料の制作・調整。 |
 | `kumihan-review` | できあがったものを、変更せずにレビューします。 |
 
-v0.1.8 preview では、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援する用途別アダプターと、Standard／Strictのデザインレビューを追加しました。詳細は[用途ルーティング](skills/kumihan/references/use-case-selection.md)と[レビュー方式](skills/kumihan/references/design-review-modes.md)をご参照ください。画像生成エンジンや自動デザイン品質判定器ではありません。
+v0.1.8 では、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援する用途別アダプターと、Standard／Strictのデザインレビューを追加しました。詳細は[用途ルーティング](skills/kumihan/references/use-case-selection.md)と[レビュー方式](skills/kumihan/references/design-review-modes.md)をご参照ください。画像生成エンジンや自動デザイン品質判定器ではありません。
 
 <br>
 
@@ -87,7 +87,7 @@ v0.1.8 preview では、目的に応じた情報階層、文字と図像の関�
 
 ## 開発状況
 
-正式版に向けて開発中です。各AIホストでのネイティブ動作や、実際の表示・Officeでの検証には範囲の制限があります。多くの言語版のサイト文面とプライバシーポリシーの参考訳は、母語話者による確認が未了です。
+継続して開発中です。日本語の現行パッケージは v0.1.8 です。新しいタグとReleaseは承認待ちで、公開済みの v0.1.8-preview は過去版として保持します。各AIホストでのネイティブ動作や、実際の表示・Officeでの検証には範囲の制限があります。多くの言語版のサイト文面とプライバシーポリシーの参考訳は、母語話者による確認が未了です。
 
 ページは生成スクリプトから作ります。HTMLを手で書き換えず、`tools/` のスクリプトを更新して再生成し、`--check` とテストを通してください。
 
@@ -113,7 +113,7 @@ KUMIHAN is an open-source project for language-aware typography and thoughtful d
 
 ### Language editions
 
-Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; Simplified Chinese (字律) is published as source and website only, and Traditional Chinese (字衡) is a preview, both without a GitHub Release.
+Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; Simplified Chinese (字律) is published as source and website only, and Traditional Chinese (字衡) has source packages, both without a GitHub Release.
 
 ### Installation
 
@@ -125,7 +125,7 @@ Choose the guide for your AI tool (ChatGPT / Codex, Claude / Claude Code, Gemini
 
 ### Status
 
-KUMIHAN is in development toward a stable release. The latest Japanese release is v0.1.8 preview (October 19, 2026). Native AI-host behavior and real rendering across tools are only partially verified, and many editions' site copy and the privacy policy's reference translations still await native-speaker review. Pages are generated by the scripts in `tools/`; edit those, regenerate, and run the `--check` options and `python -m unittest discover -s tests`. See [development](docs/development.md).
+KUMIHAN is in development toward a stable release. The current Japanese package version is v0.1.8; its new tag and Release await approval. The older v0.1.8-preview release (October 19, 2026) remains available as history. Native AI-host behavior and real rendering across tools are only partially verified, and many editions' site copy and the privacy policy's reference translations still await native-speaker review. Pages are generated by the scripts in `tools/`; edit those, regenerate, and run the `--check` options and `python -m unittest discover -s tests`. See [development](docs/development.md).
 
 <br>
 

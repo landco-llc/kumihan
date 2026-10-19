@@ -89,7 +89,7 @@ class HostPackagingTests(unittest.TestCase):
 
     def test_host_package_locale_and_region_protection(self):
         output=host.plan_outputs(ROOT)
-        bundle=output[f"{PRODUCT}/downloads Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip"]
+        bundle=output[f"{PRODUCT}/downloads Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip"]
         with zipfile.ZipFile(io.BytesIO(bundle)) as z:
             tw=json.loads(z.read("skills/kumihan-ziheng/locales/zh-Hant-TW.json"))
             hk=json.loads(z.read("skills/kumihan-ziheng/locales/zh-Hant-HK.json"))

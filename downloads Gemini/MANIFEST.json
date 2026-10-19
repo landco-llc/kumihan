@@ -2,14 +2,14 @@
   "format": 2,
   "product": "KUMIHAN for Gemini",
   "publisher": "L&Co. LLC",
-  "version": "0.1.8-preview",
+  "version": "0.1.8",
   "source_repository": "landco-llc/kumihan",
-  "status": "Preview. Behavior in each host has not been fully verified.",
+  "status": "Source distribution. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "extensions/kumihan-Gemini-CLI-extension-0.1.8-preview.zip",
-      "sha256": "ed6a39477fbf55d3bafb2f69e9da720c9ab7a9579b1994e2d10c577631c7b989",
-      "bytes": 378151,
+      "file": "extensions/kumihan-Gemini-CLI-extension-0.1.8.zip",
+      "sha256": "f56613f51c8e3e71ec44d6f82d2514d131474358490db41fe0de704434b05223",
+      "bytes": 378203,
       "members": [
         {
           "path": "LICENSE",
@@ -23,13 +23,13 @@
         },
         {
           "path": "docs/development.md",
-          "bytes": 1284,
-          "sha256": "12b7514934386bf06bcc92b1906031cccf4b10b35c2032a69a417ca5f7ccd6d4"
+          "bytes": 1403,
+          "sha256": "11f860fe885d0f3ec7f23d1131ca7c15574082d57b6d4683364c49955bc99c8b"
         },
         {
           "path": "gemini-extension.json",
-          "bytes": 210,
-          "sha256": "5ebbcd6be1bc6cf7281a5e3b41f87bcb044b1df8fc5fc172276ea9c14d9f8c04"
+          "bytes": 202,
+          "sha256": "33888e3f49663f0f1040722c532d4ea0ea825b490739f2dc66c05186716b9a01"
         },
         {
           "path": "skills/kumihan-documents/LICENSE",
@@ -43,8 +43,8 @@
         },
         {
           "path": "skills/kumihan-documents/inventory.json",
-          "bytes": 5076,
-          "sha256": "cb6d608982e554d990350173b2a6db73cbb0433ff873cd0ba8866373a5310ec4"
+          "bytes": 5068,
+          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
         },
         {
           "path": "skills/kumihan-documents/profiles/display-copy.json",
@@ -198,8 +198,8 @@
         },
         {
           "path": "skills/kumihan-review/inventory.json",
-          "bytes": 5073,
-          "sha256": "9682c0cec64e42a3a307cfd46b676331de53db605c569ddd91592ed2bc36d06d"
+          "bytes": 5065,
+          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
         },
         {
           "path": "skills/kumihan-review/profiles/display-copy.json",
@@ -353,8 +353,8 @@
         },
         {
           "path": "skills/kumihan-web/inventory.json",
-          "bytes": 5070,
-          "sha256": "7c1c5ce6faa628d5c480efd7439f9d76607588ce92531d34ec408c768621f071"
+          "bytes": 5062,
+          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
         },
         {
           "path": "skills/kumihan-web/profiles/display-copy.json",
@@ -508,8 +508,8 @@
         },
         {
           "path": "skills/kumihan/inventory.json",
-          "bytes": 5066,
-          "sha256": "6f5b33ccbe607ea92a132d894fef0d33e601e1ff68a3c338f000fda625cf481a"
+          "bytes": 5058,
+          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
         },
         {
           "path": "skills/kumihan/profiles/display-copy.json",
@@ -654,9 +654,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-Gemini-Apps-skill-0.1.8-preview.zip",
-      "sha256": "77c674abcb38649d9652ed6b6e0472b39228f4ddfa362c46f7617cae95f3e76d",
-      "bytes": 91937,
+      "file": "skills/kumihan-Gemini-Apps-skill-0.1.8.zip",
+      "sha256": "3c8c99f4bcd997e38d2873b9cda1df0805682684bb7b1d672990afa3414e9482",
+      "bytes": 91933,
       "members": [
         {
           "path": "LICENSE",
@@ -670,8 +670,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 5066,
-          "sha256": "6f5b33ccbe607ea92a132d894fef0d33e601e1ff68a3c338f000fda625cf481a"
+          "bytes": 5058,
+          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
         },
         {
           "path": "profiles/display-copy.json",
@@ -816,9 +816,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-Gemini-Apps-skill-0.1.8-preview.zip",
-      "sha256": "677d10b598c3e4bde25f9945bb183fe30053136305f2d8fae2476189699024a9",
-      "bytes": 91944,
+      "file": "skills/kumihan-web-Gemini-Apps-skill-0.1.8.zip",
+      "sha256": "42093f0e38f6adc0f0679df7f53599c43d9bb647d4e979c78898c2632ab438f6",
+      "bytes": 91940,
       "members": [
         {
           "path": "LICENSE",
@@ -832,8 +832,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 5070,
-          "sha256": "7c1c5ce6faa628d5c480efd7439f9d76607588ce92531d34ec408c768621f071"
+          "bytes": 5062,
+          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
         },
         {
           "path": "profiles/display-copy.json",
@@ -978,9 +978,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.1.8-preview.zip",
-      "sha256": "0fd1e8c9277136ef0f4a1353edc5c277492ad33c66497efdaa83b4e7aab607aa",
-      "bytes": 91451,
+      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.1.8.zip",
+      "sha256": "df241dfbc71435e0390beceb9ab951d60c480dd7b35f8c081ade1dfe2f4f5d96",
+      "bytes": 91447,
       "members": [
         {
           "path": "LICENSE",
@@ -994,8 +994,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 5076,
-          "sha256": "cb6d608982e554d990350173b2a6db73cbb0433ff873cd0ba8866373a5310ec4"
+          "bytes": 5068,
+          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
         },
         {
           "path": "profiles/display-copy.json",
@@ -1140,9 +1140,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-Gemini-Apps-skill-0.1.8-preview.zip",
-      "sha256": "7cf9de229707f01b85b7af6d5b8911abbfdbb9c253789214359917f2eec0dbcb",
-      "bytes": 91665,
+      "file": "skills/kumihan-review-Gemini-Apps-skill-0.1.8.zip",
+      "sha256": "7f39a7acb43a0f10e5bf25cab6dd831c434c8b043a5d359c4339551bb8c1c872",
+      "bytes": 91664,
       "members": [
         {
           "path": "LICENSE",
@@ -1156,8 +1156,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 5073,
-          "sha256": "9682c0cec64e42a3a307cfd46b676331de53db605c569ddd91592ed2bc36d06d"
+          "bytes": 5065,
+          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
         },
         {
           "path": "profiles/display-copy.json",
