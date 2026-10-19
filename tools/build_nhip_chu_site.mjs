@@ -51,7 +51,7 @@ ${fonts(lang,"")}
 <main id="main" tabindex="-1">
 <section class="hero" aria-labelledby="hero-title"><div class="shell hero-layout">
 <div class="hero-copy"><p class="eyebrow"><span class="line" aria-hidden="true"></span> ${e(c.eyebrow)}</p>
-<h1 id="hero-title">${c.h1.slice(0,-1).map(e).join("<br>")}<br><span class="accent">${e(c.h1.at(-1))}</span></h1>
+<h1 id="hero-title">${e(c.h1[0])}<br><span class="accent">${e(c.h1[1])}</span></h1>
 <p class="hero-desc">${e(c.lead)}</p>
 <div class="hero-cta"><a class="button button-primary" href="#install">${e(c.cta[0])}<span class="arrow" aria-hidden="true">↗</span></a><a class="button" href="#concept">${e(c.cta[1])}<span class="arrow" aria-hidden="true">↘</span></a></div>
 <div class="hero-foot"><span>${e(c.heroFoot[0])}</span><span class="rule" aria-hidden="true"></span><span>${e(c.heroFoot[1])}</span><span class="rule" aria-hidden="true"></span><span>${e(c.heroFoot[2])}</span></div></div>

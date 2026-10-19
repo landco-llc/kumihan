@@ -55,7 +55,7 @@ GATEWAY = {"it": "top-en.html", "de": "top-en.html", "ja": "index.html", "en": "
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html"}
-PAGE_GATEWAY = dict(GATEWAY, pl="index.html")
+PAGE_GATEWAY = dict(GATEWAY, pl="index.html", id="index.html")
 
 
 class GatewayLinks(unittest.TestCase):
