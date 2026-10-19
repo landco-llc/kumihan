@@ -1,3 +1,15 @@
+# Current final Owner Gate — latest main05c60fd / 2026-10-19 JST
+
+W09–W15 implementation is integrated with current main `05c60fd5d519a3a6d38feb616f60fddd373b635f` (including newly merged PR #103 privacy policy/footer). Current audit is **274 HTML / 273 canonical URLs**, not the earlier272/271. 22 gateways +63 LP +186 guides +2 privacy policies, plus1 excluded alias. Privacy translation group is en/ja/x-default, separate from gateways/products. No body or policy text rewritten by SEO.
+
+Latest-main protection PASS: **257 body suffixes** (253 static +4 layouts),21 original Jekyll sources,2609 protected distribution/skill/manifest files. Root tests62/62 and SEO26/26 PASS. Shared language previews and 1200×630 image retained. Current inventory: [BASELINE_INVENTORY.md](BASELINE_INVENTORY.md).
+
+**Authoritative final SHA / Hosted CI / independent review / Owner Gate state:** [final PR #93 gate record](https://github.com/landco-llc/kumihan/pull/93#issuecomment-6265452330). This stable GitHub record is updated after exact-head CI, avoiding another evidence-only commit that would invalidate its own SHA. Earlier snapshots below remain historical evidence for their explicitly named commits.
+
+Draft remains unmerged, auto-merge disabled. Owner alone may approve merging; then deployed HTML/image/current273-URL Sitemap must be verified before Search Console. SEO does not publish or send sitemap.
+
+---
+
 # W09–W15 independent review — 2026-10-19 JST
 
 A separate reviewer agent independently read the two binding documents, source/diff and tests at `fa9451a` against main `b7a8c83`. Reviewer made no changes and did not share the implementation session context.
@@ -21,3 +33,7 @@ Historical independent W00–W08 review and old 231-page results remain in Git h
 ## Fix-pass acceptance
 
 After merging upstream release-documentation main a08fd66, integrated code6c4ecbf passed Hosted CI23/23. Both exact push and PR synthetic-merge jobs ran actual Jekyll3.10 and audited272 built pages successfully; preservation and271 Sitemap also PASS. This closes the review's important hreflang finding and the default-language handoff defect identified by Hosted CI. Parent regression verification, not a second independent reviewer sign-off. Evidence: `evidence/20261019-integrated-checks.json`, `evidence/20261019-integrated-jekyll-hosted.json`. Owner Gate remains; no main merge.
+
+## Focused independent review — privacy/footer main05c60fd
+
+The independent reviewer was separately tasked to inspect the new upstream privacy/footer scope (not repeat the prior fix pass). Review performed read-only on the final privacy integration working tree against05c60fd. **No new actionable findings.** Independently compared all274 public files:253 static HTML body byte sequences and21 complete Jekyll sources unchanged. Privacy source copy/footer implementation/data/styles/fonts match upstream. Each privacy page has one metadata set/JSON-LD, reciprocal independent en/ja/x-default group and self-canonical. Common pipeline includes privacy builder. Preservation2609/257/21, SEO26, all build checks, source274/Sitemap273 PASS. Prior layout-duplicate/effective-language fixes confirmed present; no P0/P1 source regression. Reviewer did not edit, commit, push or comment to GitHub. New exact-head Hosted Jekyll/browser acceptance is tracked in the final gate comment linked above.

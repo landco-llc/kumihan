@@ -2,7 +2,7 @@
 
 KUMIHAN, "Open-source typography & design guidance by L&Co. LLC.", and the
 links KUMIHAN (the top in the page's language), the language-edition menu,
-GitHub and Apache 2.0.
+GitHub, Apache 2.0 and the privacy policy.
 """
 import json
 import re
@@ -43,8 +43,11 @@ class SharedFooter(unittest.TestCase):
         links = re.search(r'<nav class="kf-links"[^>]*>(.*)</nav>', html).group(1)
         self.assertRegex(links, r'^<a href="top-pl\.html">KUMIHAN</a><details class="kf-menu"><summary>Wybierz język</summary>')
         self.assertTrue(links.endswith('>GitHub</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" '
-                                       'target="_blank" rel="noopener noreferrer">Apache 2.0</a>'))
+                                       'target="_blank" rel="noopener noreferrer">Apache 2.0</a>'
+                                       '<a href="privacy.html" hreflang="en">Polityka prywatności</a>'))
         self.assertIn('<span class="code">JA</span> - Japoński</a>', links)
+        self.assertIn('<a href="../privacy-ja.html">プライバシーポリシー</a>', site_footer.footer("ja", "../"))
+        self.assertIn('<a href="privacy.html">Privacy Policy</a>', site_footer.footer("en"))
 
     def test_jekyll_layouts_use_the_shared_footer(self):
         data = json.loads((ROOT / "_data/site_footer.json").read_text(encoding="utf-8"))

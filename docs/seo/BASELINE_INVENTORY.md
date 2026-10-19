@@ -1,12 +1,12 @@
 # SEO inventory — reconciled 2026-10-19 JST
 
-Main baseline: `a08fd66fcb58d70dd448dfcb51745c0c91d03d4f` (PR #100 and #102 merged; #101 Draft/unmerged).
-Integration: `fa9451a`, Jekyll review fixes: `d395e14`. Historical 231-page inventory is superseded; recover it from Git history if needed.
+Main baseline: `05c60fd5d519a3a6d38feb616f60fddd373b635f` (PR #100/#102/#103/#104 merged; #101 Draft/unmerged).
+Original integration: `fa9451a`, Jekyll review fixes: `d395e14`; current privacy/footer main05c60fd safely integrated. Historical 231-page inventory is superseded; recover it from Git history if needed.
 
-Actual source audit: **272 HTML files, 271 indexable canonical URLs**. 22 gateways + 63 product landings + 186 guides = 271; the additional `top-en.html` is an explicit noindex/meta-refresh alias. No external canonical exclusions. Jekyll supplies 21 of these contracts; source simulation is not evidence of actual rendering.
+Actual source audit: **274 HTML files, 273 indexable canonical URLs**. 22 gateways + 63 product landings + 186 guides + 2 privacy policies = 273; the additional `top-en.html` is an explicit noindex/meta-refresh alias. No external canonical exclusions. Jekyll supplies 21 of these contracts; source simulation is not evidence of actual rendering.
 English `index.html` canonical is the project root; Japanese top is `top-ja.html`. 22 gateway language alternates + x-default; product translation groups remain separate. All URL paths and indexability are in [machine inventory](evidence/20261019-current-inventory.json).
 
-255 main static/layout body suffixes, 21 Jekyll frontmatter/body sources and 2609 distribution/skill/manifest/readme files are SHA256 protected by [baseline snapshot](evidence/20261019-main-preservation.json), checked by `python tools/check_seo_preservation.py`.
+257 main static/layout body suffixes, 21 Jekyll frontmatter/body sources and 2609 distribution/skill/manifest/readme files are SHA256 protected by [baseline snapshot](evidence/20261019-main-preservation.json), checked by `python tools/check_seo_preservation.py`.
 
 | Public file | Language | Indexable | Source → output |
 | --- | --- | --- | --- |
@@ -259,6 +259,8 @@ English `index.html` canonical is the project root; Japanese top is `top-ja.html
 | `kumihan-zu.html` | zu | yes | `tools/build_hlela_site.py` |
 | `kumihan-zu.ja.html` | ja | yes | `tools/build_hlela_site.py` |
 | `kumihan.html` | ja | yes | `Jekyll frontmatter + _layouts + tools/build_jekyll_seo.py + _includes/share.html` |
+| `privacy-ja.html` | ja | yes | `tools/build_privacy.py + assets/privacy-copy.json` |
+| `privacy.html` | en | yes | `tools/build_privacy.py + assets/privacy-copy.json` |
 | `top-ar.html` | ar | yes | `tools/build_gateways.py + assets/gateway-copy.json` |
 | `top-bn.html` | bn | yes | `tools/build_gateways.py + assets/gateway-copy.json` |
 | `top-de.html` | de | yes | `tools/build_gateways.py + assets/gateway-copy.json` |

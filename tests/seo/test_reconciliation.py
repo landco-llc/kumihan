@@ -52,3 +52,18 @@ class ReconciliationTests(unittest.TestCase):
         data = site_share.data()
         for lang in ['fa', 'km', 'zu', 'fr', 'sw', 'zh-Hant-TW', 'ko-KR']:
             self.assertEqual(data[lang]['locale'], site_share.locale(lang))
+
+class PrivacyIntegrationTests(unittest.TestCase):
+    def test_privacy_pages_use_shared_seo_and_disjoint_translations(self):
+        import build_privacy
+        for path, content in build_privacy.outputs().items():
+            page = Page(path, content)
+            self.assertEqual(len(page.graphs), 1)
+            self.assertEqual(set(dict(page.alternates)), {'en', 'ja', 'x-default'})
+            self.assertNotIn('top-ja.html', dict(page.alternates).values())
+            self.assertEqual(page.meta['og:url'], [page.canonical])
+            self.assertIn('privacy', content)
+
+    def test_privacy_builder_is_checked_by_common_pipeline(self):
+        from build_seo import commands
+        self.assertTrue(any(Path(cmd[1]).name == 'build_privacy.py' for cmd in commands(True)))

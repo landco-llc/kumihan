@@ -112,3 +112,7 @@
 - Current-main `fa`, `km`, `zu` builders use the same SEO output decorator; `sw` coverage retained. Page discovery remains recursive and unknown metadata/generator/layout fails verification. Persian RTL, ZWNJ and original bodies remain byte-stable.
 - Existing authored BN/ZiHeng templates were refreshed from current main instead of overwriting newer body/footer. All four Jekyll layout bodies retain current main. Baseline hashes cover skill/plugin/package candidates including v0.1.8-preview. Package prerequisite tests run in isolated copies only.
 - Actual Hosted Jekyll audit caught residual landing alternates and missing effective-language handoff after JA fallback removal. Fixed via two regression tests; source simulation alone is not a build acceptance gate.
+
+## 2026-10-19 — upstream privacy policy pages
+
+Main05c60fd added English/Japanese privacy policy pages and localized privacy links in every shared footer. Preserve its policy text and footer/style/font updates verbatim. The privacy builder uses the same SEO output decorator and is explicitly part of the common build/check pipeline. Preserve its separate en/ja/x-default translation group. Discovery/audit now covers274 HTML,273 canonical URLs. Existing272/271 records are historical. A final exact-SHA CI record is maintained on PR93 to avoid recursive evidence commits.

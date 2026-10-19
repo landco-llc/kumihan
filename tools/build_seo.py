@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 def commands(check=False):
     tools=ROOT/'tools'
     builders=sorted(tools.glob('build_*_site.py'))
-    builders += [tools/'build_gateways.py',tools/'build_jekyll_seo.py']
+    builders += [tools/'build_gateways.py', tools/'build_privacy.py', tools/'build_jekyll_seo.py']
     result=[[sys.executable,str(p)] for p in builders]
     result.append(['node',str(tools/'build_nhip_chu_site.mjs')])
     result.append([sys.executable,str(tools/'build_sitemap.py')])

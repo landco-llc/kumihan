@@ -244,3 +244,7 @@ Independent reviewer at fa9451a found duplicate landing hreflang. Hosted Jekyll 
 ## Completion
 
 W09–W15 code/review complete at6c4ecbf; Hosted23/23 SUCCESS against a08fd66, both actual SEO Jekyll jobs successful. Final evidence-only docs commit will receive fresh triggered checks, with exact SHA/results recorded on PR93. Existing Draft retained, no main merge/auto-merge/publication/Search Console action. No deferred minor findings from independent review.
+
+## New upstream scope after original completion — privacy/footer
+
+main05c60fd PR103 arrived during final docs-head checks. Ruling: integrate it instead of returning stale footer or omitting two now-public policy pages; preserve main legal copy, footer, styles and body bytes. Cost if wrong: live privacy links/policies could regress. All253 generated HTML conflicts chose main; copied current main BN/ZiHeng templates, regenerated all metadata and273-URL Sitemap. Added privacy output boundary/pipeline command with two FAIL→PASS regressions. New protected baseline2609/body257/Jekyll21 passes. New-scope independent review requested (not a repeat review of the earlier fix pass). Final exact-head CI and gate state live in the stable PR comment linked from both binding documents.

@@ -1743,6 +1743,20 @@
     "source": "Jekyll frontmatter + _layouts + tools/build_jekyll_seo.py + _includes/share.html"
   },
   {
+    "path": "privacy-ja.html",
+    "canonical": "https://landco-llc.github.io/kumihan/privacy-ja.html",
+    "lang": "ja",
+    "indexable": true,
+    "source": "tools/build_privacy.py + assets/privacy-copy.json"
+  },
+  {
+    "path": "privacy.html",
+    "canonical": "https://landco-llc.github.io/kumihan/privacy.html",
+    "lang": "en",
+    "indexable": true,
+    "source": "tools/build_privacy.py + assets/privacy-copy.json"
+  },
+  {
     "path": "top-ar.html",
     "canonical": "https://landco-llc.github.io/kumihan/top-ar.html",
     "lang": "ar",
