@@ -10,7 +10,7 @@
     "php_version": "8.5",
     "deployment_mode": "PHP request lifecycle (no daemon)"
   },
-  "status": "tls_verified_ftp_root_owner_confirmed_pending_private_runtime_validation",
+  "status": "ssh_public_root_verified_parent_writable_pending_private_php_access",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -24,16 +24,18 @@
     "ssl_configured_owner_reported": true,
     "public_upload_folder_owner_confirmed": true,
     "private_runtime_path_verified": false,
-    "ssh_access_verified": false,
+    "ssh_access_verified": true,
     "ftp_root_path_owner_confirmed": true,
-    "ftp_root_ssh_verified": false,
-    "web_php_can_read_private_runtime_verified": false
+    "ftp_root_ssh_verified": true,
+    "web_php_can_read_private_runtime_verified": false,
+    "public_ssh_folder_verified": true,
+    "ftp_parent_ssh_writable_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Account-specific FTP absolute path supplied in conversation; intentionally omitted from this public GitHub file. Public-relative path web/kmhn confirmed. TLS verified. No real PHP hosting or MCP end-to-end deployment.",
-  "deployment_blocker": "Owner confirmed FTP absolute root (web) and kmhn docroot. Need SSH to verify web-root realpath and non-Web private path writable and PHP-readable. Do not deploy to a guessed path or FTP-root sibling.",
+  "notes": "Owner's shell returned KMHN_OK and PRIVATE_PARENT_WRITABLE after successful cd. Keep full account-specific filesystem path private (not in public repo). No writes yet; private directory creation and PHP include remain NOT CHECKED.",
+  "deployment_blocker": "SSH confirmed FTP web root/kmhn and parent writable. Need create/check private sibling outside web, verify it is PHP-readable from HTTPS under target domain and effective PHP8.5 before placing MCP runtime.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -46,7 +48,7 @@
     "public_upload_folder_confirmation": "Owner report 2026-10-19",
     "ftp_full_path_received_from_owner": true,
     "full_path_confidentiality": "Exact absolute account path is kept out of this public repository; use local SSH/private deployment variable.",
-    "full_path_verified_on_server": false
+    "full_path_verified_on_server": true
   },
   "tls_verification": {
     "verification_type": "public_github_actions_runner",
@@ -67,19 +69,27 @@
       "scope": "account-local only; never commit absolute full path",
       "basename": "web",
       "owner_confirmed": true,
-      "ssh_realpath_verified": false
+      "ssh_realpath_verified": true
     },
     "public_root": {
       "relative_to_ftp_root": "kmhn",
       "owner_confirmed": true,
-      "ssh_realpath_verified": false
+      "ssh_realpath_verified": true
     },
     "private_server_candidate": {
       "relative_to_ftp_root": "../kmhn-mcp-private/server",
       "approved": false,
       "ssh_write_verified": false,
       "web_php_read_verified": false,
-      "outside_all_http_roots_verified": false
+      "outside_all_http_roots_verified": false,
+      "parent_writable_verified": true
     }
+  },
+  "ssh_validation": {
+    "source": "Owner-supplied remote SSH shell transcript",
+    "observed": "Successful cd to previously supplied full web root; KMHN_OK; PRIVATE_PARENT_WRITABLE",
+    "verified_on": "2026-10-19",
+    "writes_performed": false,
+    "important_limit": "Test -w on parent does not imply private candidate directory exists, nor Web PHP access to files outside web, nor effective PHP 8.5."
   }
 }
