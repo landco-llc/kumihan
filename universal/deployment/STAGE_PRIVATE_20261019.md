@@ -126,6 +126,49 @@ If `TAR_UNAVAILABLE`, `ARCHIVE_CANNOT_BE_LISTED`, `PRIVATE_TARGET_NOT_EMPTY` or 
 
 Web PHP read access to the candidate private folder and its file presence have been confirmed, but actual SDK dependency execution, writable session storage, other vhost isolation and live MCP protocol remain subsequent release gates.
 
+## Stage C result — PRIVATE EXTRACTION PASS
+
+Owner ran the pinned private-only extractor via authenticated SSH and reported all six markers:
+
+    PRIVATE_TAR_PREFLIGHT_OK
+    PRIVATE_RUNTIME_EXTRACTED
+    PRIVATE_REQUIRED_FILES_OK
+    PRIVATE_CONFIG_ABSENT
+    PUBLIC_BOOTSTRAP_UNCHANGED
+    MCP_NOT_PUBLIC
+
+Meaning: required source, Composer vendor autoloader and 21-language registry artifact were extracted outside `web`; no production config or public bootstrap was deployed. Do **not** interpret this as live MCP readiness.
+
+## Stage D1 — create private config and run temporary Web PHP readiness test
+
+After the six Stage C markers, the pinned, reviewed helper `universal/tools/check_private_runtime_web.sh` performs these operations, with explicit fail-closed preconditions:
+
+1. Ensures SSH Linux and real existing FTP-root + `kmhn` path; rejects the private directory inside FTP root or symlinked private root.
+2. Confirms all extracted source/autoload/catalog/Composer files are present; only when **runtime/config.php is absent**, copies the production no-secret template there with mode 0600. Host must equal `mcp-kmhn.landco.co.jp` and origins default to empty.
+3. Creates one uniquely named short-lived PHP readiness probe under public `kmhn`; no password, credential, document content or absolute server path is emitted. The temporary file is removed by shell EXIT trap.
+4. Invokes that probe over HTTPS to check **actual Web PHP 8.5 / LiteSpeed, json and fileinfo extensions, private config read, mcp/sdk and registry autoload, registry count 21, private session directory create/write/delete**.
+5. Confirms both public bootstrap files remain absent; does **NOT** start the MCP service or modify DNS/SSL, WAF or live sites.
+
+Use the exact reviewed helper from GitHub at a pinned SHA, downloaded into an SSH-home temporary file with mode 0600 (`umask 077`). Shell syntax-check with `sh -n` then run with FTP_ROOT set privately. The automated GitHub test lints the shell and generated PHP syntax. Never run a raw network pipe into sh.
+
+Expected successful output:
+
+    PRIVATE_CONFIG_CREATED
+    PHP_VERSION=8.5.11
+    PHP_SAPI=litespeed
+    REGISTRY_MODULES=21
+    WEB_PHP85=PASS
+    WEB_SAPI_LITESPEED=PASS
+    EXTENSIONS=PASS
+    PRIVATE_CONFIG=PASS
+    SDK_AUTOLOAD=PASS
+    REGISTRY=PASS
+    SESSION_WRITE=PASS
+    PRIVATE_RUNTIME_WEB_READY
+    MCP_NOT_PUBLIC
+
+**If any check fails, STOP; do not rerun the helper blindly because private config is deliberately retained.** No public bootstrap installation until full readiness and the independent vhost exposure gate. Review the failure without printing sensitive errors or changing the FTP root.
+
 ### Stage D — after Stage C success (NOT AUTHORIZED BY PASS ALONE)
 
 Create private `runtime/config.php` from the production template (never publish it), verify PHP dependencies/session permissions and isolation; only then publish exactly two bootstrap files under `web/kmhn`. Run actual HTTPS initialize/tools/list/tools/call. Do not merge main or release clients without Owner Gate.
