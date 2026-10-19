@@ -14,4 +14,4 @@ Architecture: immutable verified published facts are separate from source versio
 
 Review focus: partial assets and changed release manifests; stale source versus published version; duplicate and out-of-order events; language-specific tag/file naming; stale copyable download commands and untranslated status labels. Offline tests and actual API/ZIP readback distinguish these from unverified live workflow delivery and native hosts.
 
-Closeout: Draft PR #115. Remote CI not run/unknown (zero checks; Actions-permissions read 403), ZiHeng flat first-Release contract pending Owner, and publication remains Owner-controlled. See result.md for complete evidence and limits.
+Closeout: Draft PR #115. PR CI execution observed (final HEAD conclusions recorded in PR; Actions-permissions inspection 403), ZiHeng flat first-Release contract pending Owner, and publication remains Owner-controlled. See result.md for complete evidence and limits.

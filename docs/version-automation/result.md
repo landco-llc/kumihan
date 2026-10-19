@@ -20,7 +20,7 @@ Review-fix implementation: `7705ad83d5cd1d647d007ef2b7ff1c4ffe76da7b`; TREE `e93
 | WG01 | W02–W03 | IMPLEMENTED WITH OWNER CONDITIONS: shared facts, strict admission and read-only release/manual patch proposal; no unattended main/site publication |
 | WG02 | W04–W05 | DONE: shared generation for all six requested display surfaces and bilingual README status |
 | WG03 | W06–W07 | VERIFIED WITH LIMITS: offline/synthetic/API/ZIP/Jekyll/Chromium checks and one independent bounded review; both P2 findings fixed |
-| WG04 | W08 | DRAFT PR / OWNER GATE: feature-only commits and push; remote CI lack of execution recorded, no merge or public deployment |
+| WG04 | W08 | DRAFT PR / OWNER GATE: feature-only commits and push; exact final HEAD CI recorded in the PR, no merge or public deployment |
 
 No native `/goal` controller was exposed in this session. The equivalent WG00–WG04 sequence ran autonomously in the selected managed cloud environment. One new independent read-only reviewer was used for W07 only.
 
@@ -70,15 +70,15 @@ The workflow has `contents: read`, no remote write, automatic merge, tag/Release
 
 ## Current HEAD GitHub CI
 
-The implementation HEAD has **zero Actions runs, zero check-runs, zero commit-status entries and an empty PR status-check rollup** in API readback. PR is Draft/Open and reports `BLOCKED`; this is **not a CI PASS**. Reading repository Actions permissions returned HTTP 403 (`Resource not accessible by integration`), so the reason for absent runs cannot be established. No workflow/settings workaround or manual release/deploy action was attempted. Final evidence HEAD is read back again and its exact CI state is recorded in the PR description.
+PR Actions execution was observed: 23 workflows / 24 check-runs, including the new `verify-renderers` job. The release/manual proposal job is intentionally skipped on PR events. Exact check conclusions for the final immutable evidence HEAD are read back after committing this document and recorded in the PR description; the snapshot here points to that external readback to avoid claiming a commit's own future CI result.
 
-Owner needs to verify Actions policy/execution and obtain actual current-HEAD CI before merge. Local checks establish the recorded local results only.
+Repository Actions-permissions inspection returned HTTP 403 (`Resource not accessible by integration`), but actual PR job execution was observed. No settings, permissions or manual release/deploy workaround was used. Actual Release-event delivery is still unverified until the workflow is adopted and a genuine approved future event occurs.
 
 ## PROTECTION / UNVERIFIED / OWNER_GATE
 
 - Original SEO preservation snapshot unchanged. Its 2,608 protected paths retain original hashes except the explicitly requested README update; the exact feature overlay separately records README, 254 body and six Jekyll-input before/after hashes. Privacy and all other protected paths cannot use that exception. Unlisted mutation negative controls pass.
 - SEO PR #93 was already merged in the fixed baseline (`41b89e6bcfe06a719c0319dadb5df603a9cb3369`). MCP PR #101 remained open at `b032c6ab179ed3acf8f1aeacbee753c8546b9c25`; neither PR branch was modified.
 - No main push/merge, actual tag/Release creation/edit/deletion, production deployment, marketplace publication, server/Secrets/settings change, paid service or simultaneous language bump.
-- Unverified: remote current-HEAD CI, actual Release-event delivery, future Owner patch application/Pages publishing, ZiHeng flat Release naming, native hosts, all environments/native screen readers, Office/PDF, marketplaces and native metadata translations.
+- Unverified: actual Release-event delivery, future Owner patch application/Pages publishing, ZiHeng flat Release naming, native hosts, all environments/native screen readers, Office/PDF, marketplaces and native metadata translations.
 
-**OWNER_GATE: レビュー完了、未merge、未公開。** Draft PR and local evidence are complete. Remote CI and the named first-publication/publishing prerequisites remain explicit Owner gates.
+**OWNER_GATE: レビュー完了、未merge、未公開。** Draft PR and local evidence are complete. Current-HEAD CI is recorded on the PR; the named first-publication/publishing prerequisites remain explicit Owner gates.
