@@ -1,3 +1,19 @@
+# W09–W15 current execution status — 2026-10-19 JST
+
+**W09–W14 implemented; W15 exact-final-head Hosted CI pending. Draft retained / Owner Gate / DO NOT MERGE.**
+
+- Initial Fresh Read main b7a8c83 and PR accbf83; safely merged at fa9451a. During validation main advanced to `a08fd66fcb58d70dd448dfcb51745c0c91d03d4f` (PR #104 release docs), refreshed/read/merged and baseline protections updated.
+- PR #100 and #102 are merged. #101 remains independent Draft/unmerged. Main now announces the already-published v0.1.8-preview; all upstream release/docs and 2609 protected distribution/skill/manifest files retained.
+- P0/P1 integration: exact noindex alias handling; English root; 22 gateways/63 LP/186 guides; shared language-matched 1200×630 previews; canonical/JSON-LD/Sitemap consistency; fail-closed Jekyll share language/data checks.
+- Actual inventory: **272 HTML / 271 indexable URLs**. Alias excluded; root once; no guessed pages. Static/layout body hashes255 and Jekyll source hashes21 unchanged against latest main.
+- Independent review at fa9451a found one important duplicate Jekyll hreflang issue. Parent fixed it and a Hosted-CI-discovered default-language handoff at `d395e14`. SEO24/root59 PASS; push Hosted Jekyll3.10 actual output audit PASS. Initial failures remain recorded. PR CI then caught upstream README/CHANGELOG freshness; merge of a08fd66 resolves the baseline mismatch.
+- Current evidence: [validation log](VALIDATION_LOG.md), [review resolution](REVIEW_REFRESH_20261019_MAIN_73D2B01.md), [independent review](INDEPENDENT_REVIEW.md), [conflict/ruling ledger](RECONCILIATION_LEDGER_20261019.md), [current inventory](BASELINE_INVENTORY.md).
+- No SEO production deployment, main merge, release mutation, SNS posting/cache reset or Search Console submission. Owner Gate remains after exact-head CI.
+
+The original handoff below is preserved as historical instructions. Its NOT EXECUTED statuses, old SHA/counts and PR #102 Draft claim are superseded by this execution status and linked evidence.
+
+---
+
 # KUMIHAN SEO v1.0 — 英語トップ切替・新言語版統合（W09–W15）
 
 > **Updated review — 2026-10-19 JST / main `73d2b01`:** This W09–W15 instruction has **NOT been executed**. Use the fresh critical review [REVIEW_REFRESH_20261019_MAIN_73D2B01.md](REVIEW_REFRESH_20261019_MAIN_73D2B01.md) before starting. Its P0/P1 fixes and newest main protections override older factual examples in this document. Review/WIP docs are not implementation evidence. Treat PR #100 as **already merged**, PR #101/#102 as independent Draft, and the old PR #93 20/20 as **stale for merge**. W09 must Fresh Read again.

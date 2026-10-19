@@ -1,3 +1,24 @@
+# W09–W15 review resolution — 2026-10-19 JST
+
+**This resolution supersedes the historical read-only status below. Draft PR #93 remains unmerged; final-head CI pending.**
+Latest refreshed main: `a08fd66fcb58d70dd448dfcb51745c0c91d03d4f` (#100/#102/#104 merged; #101 Draft/unmerged).
+
+| Finding | Resolution and real evidence |
+| --- | --- |
+| P0-01 alias exception | `seo_metadata.enrich_html` exact top-en allowlist requires noindex + expected refresh. Descriptionless normal page and invalid alias negative tests. Sitemap excludes alias. |
+| P0-02 OGP authority | Calls `site_share.tags/description/locale`; language copy and 1200×630 PNG/large card preserved. Mixed-quote duplicates and repeated hooks tested. Jekyll passes same canonical/title/description/effective lang to actual share.html. |
+| P0-03 root URLs | index canonical/OG/WebPage/en/x-default = `/kumihan/`; Japanese top-ja self; audited root once and alias excluded. |
+| P0-04 new languages | 22 gateways, 63 LP, 186 guides; source audit272/Sitemap271 PASS. All new builders covered. Local Chromium320 nine routes HTTP200, JS errors0, width320, fa RTL; font requests blocked during smoke. Body255 + Jekyll21 byte protection PASS. |
+| P0-05 current main artifacts | 2609 paths SHA256 protected; skills/plugins/ZIP/version/README/CHANGELOG match refreshed a08fd66. #104 upstream release announcement preserved. No release changes by SEO. |
+| P1-06 Jekyll share locale | All supported locale data generated from gateway authority; unknown/missing/stale data fails CI. Existing legacy default-ja explicitly passed to share.html, rather than silent unknown-locale fallback. |
+| P1-07 duplicates/CI | Independent review found duplicate landing hreflang; Hosted actual audit found nil language handoff. Both fixed at d395e14, two regressions FAIL→PASS, SEO24/root59 PASS. Push actual Jekyll3.10/audit success [39238730392](https://github.com/landco-llc/kumihan/actions/runs/39238730392). New final-head CI after upstream merge still required. |
+
+No blocker is being waived. Independent report/fix record: [INDEPENDENT_REVIEW.md](INDEPENDENT_REVIEW.md). CI evidence and limitations: [VALIDATION_LOG.md](VALIDATION_LOG.md). No production/Google indexing claim. Main merge remains Owner Gate.
+
+---
+
+## Historical mandatory review (before implementation)
+
 # SEO PR #93 / 未実行W09–W15 — 最新main再レビュー（2026-10-19 JST）
 
 **状態:** READ-ONLY REVIEW COMPLETE / RECONCILIATION NOT RUN / MERGE HOLD  

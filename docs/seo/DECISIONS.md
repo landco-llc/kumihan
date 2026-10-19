@@ -103,3 +103,12 @@
 - Decision: social preview text, landscape image and Twitter card remain under main's `tools/site_share.py`; SEO only supplies canonical/alternate/JSON-LD contract. Jekyll `page.url` must not reintroduce a mismatched OG URL.
 - Decision: CI must flag future Jekyll languages missing `site_share` locale data rather than silently falling back to Japanese.
 - Evidence: [2026-10-19 second review](REVIEW_REFRESH_20261019_MAIN_73D2B01.md). W09–W15 code integration and new hosted CI have not run; decisions are guidance, not verified fixes.
+
+## 2026-10-19 — W09–W15 current-main reconciliation
+
+- Root English route canonicalizes physical index.html to `/kumihan/` in canonical, en/x-default, OG URL, WebPage URL and Sitemap. `top-ja.html` stays Japanese; only allowlisted `top-en.html` with noindex and expected refresh skips ordinary metadata requirements.
+- `site_share.py` owns OG/Twitter presentation, combined localized descriptions, locale, 1200×630 image and large card. SEO calls its renderer after canonical/translation groups/JSON-LD. Shared cards are emitted last so applying either hook twice is stable. SEO image config mirrors the actual shared image and audit verifies bytes/dimensions.
+- Jekyll generated includes own metadata and compute title, description, canonical and effective language captures. Layouts pass those values to `share.html`, which has no implicit JA share-data fallback. Missing frontmatter language retains the established explicit JA default in the generator; unknown languages or missing/stale committed language data fail generation. All registered share languages are generated from gateway copy.
+- Current-main `fa`, `km`, `zu` builders use the same SEO output decorator; `sw` coverage retained. Page discovery remains recursive and unknown metadata/generator/layout fails verification. Persian RTL, ZWNJ and original bodies remain byte-stable.
+- Existing authored BN/ZiHeng templates were refreshed from current main instead of overwriting newer body/footer. All four Jekyll layout bodies retain current main. Baseline hashes cover skill/plugin/package candidates including v0.1.8-preview. Package prerequisite tests run in isolated copies only.
+- Actual Hosted Jekyll audit caught residual landing alternates and missing effective-language handoff after JA fallback removal. Fixed via two regression tests; source simulation alone is not a build acceptance gate.

@@ -59,7 +59,7 @@ New HTML directories (for example `guides/`) are discovered recursively by `tool
 
 ## 2026-10-19 integration notice — English first and new social preview generator
 
-This runbook currently describes the pre-switch SEO baseline. Before using it for publication, read [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md). The latest main has English `index.html`, Japanese `top-ja.html`, a `noindex` `top-en.html` alias, 22 gateway languages, and `site_share.py` as the shared localized OGP/Twitter generator with a 1200×630 preview image. All future language editions need to register their localized share description/locale and any Jekyll share data as appropriate, without duplicate OG/Twitter meta or a second share-copy registry. These changes are pending integration into Draft PR #93, not yet certified by its original 20/20 check.
+This runbook now includes the reconciled English-first baseline. Before using it for publication, read [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md). The latest main has English `index.html`, Japanese `top-ja.html`, a `noindex` `top-en.html` alias, 22 gateway languages, and `site_share.py` as the shared localized OGP/Twitter generator with a 1200×630 preview image. All future language editions need to register their localized share description/locale and any Jekyll share data as appropriate, without duplicate OG/Twitter meta or a second share-copy registry. These changes are integrated into Draft PR #93. Use the latest exact-HEAD Hosted CI and validation log; the original 20/20 check is historical.
 
 ## 2026-10-19 v2 additions — future language and new packages
 
@@ -72,3 +72,11 @@ This runbook currently describes the pre-switch SEO baseline. Before using it fo
 - [ ] OGP/Twitterは現行 `assets/kumihan-share.png` の1200×630、ローカライズ済み説明文を維持。SEOだけで上書きしない
 - [ ] ビルドに使う生成器が転送aliasを通常ページとしてSEO強制しないこと（説明文なしを正常と認めるのは明示aliasのみ）
 - [ ] ソースHTMLだけでなくJekyll最終公開HTMLでOGP、canonical、hreflang、JSON-LD、Sitemapを確認
+
+## W09–W15 current generator contract
+
+1. Register authoritative page copy in the existing product/gateway source. `site_share.ABOUT` reads `assets/gateway-copy.json`; add LOCALES and the language resolver mapping. Run `python tools/web_fonts.py` to refresh `_data/site_share.json` (all supported languages and required BCP47 aliases).
+2. Wrap every HTML generator output with `seo_outputs`; Node uses the shared Python CLI. New Jekyll layouts need `templates/seo-<layout>-head.html` and a generated include followed by `share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical`. Do not leave old canonical/hreflang/social tags in the layout.
+3. Jekyll copy/locale dictionary absence or drift fails `build_jekyll_seo.py`; no implicit Japanese share text for unknown locales. Effective default Japanese language is passed explicitly for legacy frontmatter without lang.
+4. Run `build_seo.py --check`, `web_fonts.py --check`, `check_seo_preservation.py`, SEO regressions and Hosted Jekyll3.10 actual-output audit. Confirm one canonical, one shared social set, no duplicate alternates, English root and all URL fields aligned. `guides/` and comma-delimited robots=none negatives remain covered.
+5. Preservation baseline is pinned to current-main a08fd66. A future intentional product/body/package change needs its own reviewed baseline refresh; never weaken hashes just to pass an SEO patch. Do not build distribution ZIPs in the SEO checkout.

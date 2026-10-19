@@ -232,3 +232,11 @@ PR #100 merged; #102 now merged (bounded QA docs); #101 remains Draft/unmerged. 
 - `top-vi.html`
 - `top-zh-cn.html`
 - `top-zh-han.html`
+
+## W15 concurrent main refresh
+
+After push `d395e14`, main advanced to `a08fd66` via merged PR #104 (release announcement only: README, CHANGELOG, release result and updates docs). Push SEO CI at d395e14 succeeded including actual Jekyll audit; PR synthetic merge failed preservation because README/CHANGELOG legitimately changed upstream. Fresh-read the four-file upstream diff and merged it without overriding any content. Updated only README/CHANGELOG baseline hashes to their new authoritative main bytes and pinned baseline SHA to a08fd66. No package/ZIP/version files changed. PR #104 records v0.1.8-preview as published upstream; this SEO work does not publish or alter releases. Cost if wrong: a stale baseline could silently regress release docs; read upstream diff and re-run preservation after merge.
+
+## Independent-review fix pass
+
+Independent reviewer at fa9451a found duplicate landing hreflang. Hosted Jekyll additionally found missing effective language on three legacy JA install pages. Two regression tests FAIL→PASS; fixed at d395e14, SEO24/root59 green; push Hosted Jekyll3.10/audit PASS. Await new-head CI after current main merge.
