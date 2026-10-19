@@ -1085,7 +1085,7 @@ def redirect(target):
 
 def outputs():
     copy = json.loads((ROOT / "assets" / "gateway-copy.json").read_text(encoding="utf-8"))
-    files = {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}
+    files = {GATEWAYS[k][0]: WEB_FONTS.SHARE.apply(page(k, copy[k])) for k in GATEWAYS}
     files.update({old: redirect(new) for old, new in REDIRECTS.items()})
     return files
 

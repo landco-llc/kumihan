@@ -26,6 +26,9 @@ ROOT = Path(__file__).resolve().parents[1]
 _spec = spec_from_file_location("kumihan_site_footer", Path(__file__).with_name("site_footer.py"))
 FOOTER = module_from_spec(_spec)
 _spec.loader.exec_module(FOOTER)
+_spec = spec_from_file_location("kumihan_site_share", Path(__file__).with_name("site_share.py"))
+SHARE = module_from_spec(_spec)
+_spec.loader.exec_module(SHARE)
 GOOGLE = "https://fonts.googleapis.com/css2?"
 
 # script key -> (system sans stack, system serif stack, Google sans family, Google serif family)
@@ -185,14 +188,15 @@ def static_pages():
             footer = FOOTER.footer(lang, root)
             text = (FOOTER_TAG.sub(lambda _: footer, text, count=1) if FOOTER_TAG.search(text)
                     else text.replace("</body>", footer + "\n</body>", 1))
-            out[str(path.relative_to(ROOT))] = text
+            out[str(path.relative_to(ROOT))] = SHARE.apply(text)
     return out
 
 
 def outputs():
     return {"assets/kumihan-fonts.css": css(), "_data/web_fonts.yml": data_yml(),
             "_data/kumihan_assets.json": json.dumps({"fonts_css": fonts_css_path()}) + "\n",
-            "_data/site_footer.json": json.dumps(FOOTER.data(), ensure_ascii=False, indent=1) + "\n", **static_pages()}
+            "_data/site_footer.json": json.dumps(FOOTER.data(), ensure_ascii=False, indent=1) + "\n",
+            "_data/site_share.json": json.dumps(SHARE.data(), ensure_ascii=False, indent=1) + "\n", **static_pages()}
 
 
 def main():

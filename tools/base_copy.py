@@ -39,10 +39,13 @@ EDITIONS = {
     "bn": ("KUMIHAN｜অক্ষরসজ্জা", "অক্ষরসজ্জা", "ベンガル語", "Bangla", "0.1.0"),
     "sw": ("KUMIHAN｜Mizani", "Mizani", "スワヒリ語", "Swahili", "0.1.0"),
     "zu": ("KUMIHAN｜Hlela", "Hlela", "ズールー語", "isiZulu", "0.1.0"),
+    "km": ("KUMIHAN｜លំនឹង", "លំនឹង", "クメール語", "Khmer", "0.1.0"),
+    "fa": ("KUMIHAN｜تراز", "تراز", "ペルシア語", "Persian", "0.1.0"),
 }
 
 COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
-              "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela"}
+              "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela",
+              "km": "lumnung", "fa": "fa"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",

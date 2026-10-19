@@ -268,7 +268,7 @@ def render(lang, c):
     kinds = tuple(re.findall(r'<section class="([^"]+)"', out))
     if kinds != SECTIONS:
         raise ValueError(f"ZiHeng index structure mismatch: {kinds}")
-    return out
+    return WEB_FONTS.SHARE.apply(out)
 
 
 def outputs():
