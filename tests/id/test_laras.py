@@ -70,6 +70,6 @@ class Laras(unittest.TestCase):
    for host in ("chatgpt","claude","gemini"):
     guide=(ROOT/f"docs/install-laras-{host}{suffix}.html").read_text(encoding="utf-8")
     self.assertIn("KUMIHAN",guide)
-    self.assertIn('class="content-layout"',guide)
+    self.assertIn('class="shell content-layout"',guide)
     self.assertNotIn("compasso",guide.lower())
 if __name__=="__main__":unittest.main()
