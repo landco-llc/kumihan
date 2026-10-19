@@ -1,0 +1,492 @@
+{
+  "sources": [
+    {
+      "id": "L01",
+      "title": "Accademia della Crusca — L’esatta grafia di qual è",
+      "url": "https://accademiadellacrusca.it/it/consulenza/lesatta-grafia-di-qual-%C3%A8/6",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式解説](https://accademiadellacrusca.it/it/consulenza/lesatta-grafia-di-qual-%C3%A8/6)。標準綴りとアポストロフィの判定。"
+    },
+    {
+      "id": "L02",
+      "title": "Accademia della Crusca — Vademecum sull’accento: quando indicarlo e dove pronunciarlo",
+      "url": "https://accademiadellacrusca.it/it/consulenza/vademecum-sullaccento-quando-indicarlo-e-dove-pronunciarlo/34",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式解説](https://accademiadellacrusca.it/it/consulenza/vademecum-sullaccento-quando-indicarlo-e-dove-pronunciarlo/34)。アクセントの種類、単音節語、sé stessoの扱い。"
+    },
+    {
+      "id": "L03",
+      "title": "Accademia della Crusca — Guida all’uso di accenti e apostrofi nell’italiano",
+      "url": "https://accademiadellacrusca.it/it/consulenza/uso-di-gli-per-a-loro/100",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式解説](https://accademiadellacrusca.it/it/consulenza/uso-di-gli-per-a-loro/100)。po’などの確認。URL末尾の文言と取得本文の題名が異なるため、本文題名を採用した。"
+    },
+    {
+      "id": "L04",
+      "title": "Accademia della Crusca — Apostrofo in fin di rigo",
+      "url": "https://accademiadellacrusca.it/it/consulenza/apostrofo-in-fin-di-rigo/5",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式解説](https://accademiadellacrusca.it/it/consulenza/apostrofo-in-fin-di-rigo/5)。アポストロフィ直後の改行を許容する説明。"
+    },
+    {
+      "id": "L05",
+      "title": "Treccani — d eufonicaに関する文法相談",
+      "url": "https://www.treccani.it/magazine/lingua_italiana/domande_e_risposte/grammatica/grammatica_1990.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[2024年2月28日の回答](https://www.treccani.it/magazine/lingua_italiana/domande_e_risposte/grammatica/grammatica_1990.html)。同母音の目安と例外。"
+    },
+    {
+      "id": "L06",
+      "title": "Treccani — D [eufonica]",
+      "url": "https://www.treccani.it/enciclopedia/d-eufonica_(La-grammatica-italiana)/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[La grammatica italiana](https://www.treccani.it/enciclopedia/d-eufonica_(La-grammatica-italiana)/)。ad・ed・odの扱い。"
+    },
+    {
+      "id": "L07",
+      "title": "Treccani — 引用符と句点の位置に関する相談",
+      "url": "https://www.treccani.it/magazine/lingua_italiana/domande_e_risposte/varie/varie_82.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[2020年12月9日の回答](https://www.treccani.it/magazine/lingua_italiana/domande_e_risposte/varie/varie_82.html)。文末記号と原著引用の関係。"
+    },
+    {
+      "id": "L08",
+      "title": "Treccani — Sillabe, divisione in [prontuario]",
+      "url": "https://www.treccani.it/enciclopedia/divisione-in-prontuario-sillabe_(Enciclopedia-dell%27Italiano)/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[Enciclopedia dell’Italiano](https://www.treccani.it/enciclopedia/divisione-in-prontuario-sillabe_(Enciclopedia-dell%27Italiano)/)。音節分割の詳説。"
+    },
+    {
+      "id": "L09",
+      "title": "Treccani — Sillabe, divisione in",
+      "url": "https://www.treccani.it/enciclopedia/divisione-in-sillabe_(La-grammatica-italiana)/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[La grammatica italiana](https://www.treccani.it/enciclopedia/divisione-in-sillabe_(La-grammatica-italiana)/)。分綴規則と複合語の別解。"
+    },
+    {
+      "id": "L10",
+      "title": "Treccani — Maiuscole, uso delle",
+      "url": "https://www.treccani.it/enciclopedia/uso-delle-maiuscole_(La-grammatica-italiana)/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[La grammatica italiana](https://www.treccani.it/enciclopedia/uso-delle-maiuscole_(La-grammatica-italiana)/)。一般語、固有名、敬称等の大文字。"
+    },
+    {
+      "id": "L11",
+      "title": "Treccani — Giorni e mesi, nomi dei [prontuario]",
+      "url": "https://www.treccani.it/enciclopedia/giorni-e-mesi-nomi-dei-prontuario_(Enciclopedia-dell%27Italiano)/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[Enciclopedia dell’Italiano](https://www.treccani.it/enciclopedia/giorni-e-mesi-nomi-dei-prontuario_(Enciclopedia-dell%27Italiano)/)。月と曜日の表記。"
+    },
+    {
+      "id": "L12",
+      "title": "Università di Bologna, CISUI — Norme redazionali",
+      "url": "https://centri.unibo.it/cisui/it/pubblicazioni/norme-redazionali/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式編集規定](https://centri.unibo.it/cisui/it/pubblicazioni/norme-redazionali/)。caporaliを外側に置く方式等。同機関の出版物に適用。"
+    },
+    {
+      "id": "L13",
+      "title": "Università di Bologna, Francesco Spampinato — 論文の編集・書式指示",
+      "url": "https://www.unibo.it/sitoweb/francesco.spampinato/contenuti-utili/1e6c5d5c",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[教員の公式掲載資料](https://www.unibo.it/sitoweb/francesco.spampinato/contenuti-utili/1e6c5d5c)。英式二重引用符を外側に置く方式。L12との差を確認。"
+    },
+    {
+      "id": "L14",
+      "title": "Cancelleria federale svizzera — Istruzioni per la redazione dei testi ufficiali in italiano",
+      "url": "https://www.bk.admin.ch/dam/it/sd-web/gSEkvTH4mFka/istruzioni_dellacancelleriafederaleperlaredazionedeitestiufficia.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[官房の公式PDF](https://www.bk.admin.ch/dam/it/sd-web/gSEkvTH4mFka/istruzioni_dellacancelleriafederaleperlaredazionedeitestiufficia.pdf)。2023年版、取得文書に2025年12月15日の状態表示。引用、数値、通貨、時刻等。スイス連邦の公文書向け。"
+    },
+    {
+      "id": "L15",
+      "title": "Consiglio dell’Unione europea — Norme redazionali",
+      "url": "https://www.consilium.europa.eu/media/dkogzdyg/joint_handbook_it_01-july-2025_clean_def_final.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[2025年7月1日版PDF](https://www.consilium.europa.eu/media/dkogzdyg/joint_handbook_it_01-july-2025_clean_def_final.pdf)。EU文書の引用・数字・空白等。取得して本文を確認した版を採用。"
+    },
+    {
+      "id": "U01",
+      "title": "Designers Italia — Linguaggio",
+      "url": "https://designers.italia.it/design-system/fondamenti/linguaggio/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[.italia公式](https://designers.italia.it/design-system/fondamenti/linguaggio/)。行政向けの平易な言葉、表記と可読性。"
+    },
+    {
+      "id": "U02",
+      "title": "Designers Italia — Tono di voce",
+      "url": "https://designers.italia.it/design-system/fondamenti/tono-di-voce/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[.italia公式](https://designers.italia.it/design-system/fondamenti/tono-di-voce/)。利用者との関係、tuと文脈に応じた声の調整。"
+    },
+    {
+      "id": "U03",
+      "title": "Designers Italia — Microtesti",
+      "url": "https://designers.italia.it/design-system/fondamenti/microtesti/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[.italia公式](https://designers.italia.it/design-system/fondamenti/microtesti/)。ボタン、入力補助、エラー等の操作文。"
+    },
+    {
+      "id": "U04",
+      "title": "Designers Italia — Tipografia",
+      "url": "https://designers.italia.it/design-system/fondamenti/tipografia/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[.italia公式](https://designers.italia.it/design-system/fondamenti/tipografia/)。Titillium Web、Lora、Roboto Monoと可読性。参照時点のTitillium Proは実験段階の説明。"
+    },
+    {
+      "id": "U05",
+      "title": "Unicode CLDR 49 — Locale Data Summary for Italian",
+      "url": "https://unicode.org/cldr/charts/49/summary/it.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式チャート](https://unicode.org/cldr/charts/49/summary/it.html)。itとit-CHの地域差を含む表示データ。実測環境O01のCLDR 48.0とは版が異なる。"
+    },
+    {
+      "id": "U06",
+      "title": "Ecma TC39 — ECMA-402 Internationalization API Specification",
+      "url": "https://tc39.es/ecma402/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公開仕様](https://tc39.es/ecma402/)。Intlのオプションと実装・データ依存の扱い。取得時のLiving Draftの見出し年を、確定した将来版の発行年と解釈しない。"
+    },
+    {
+      "id": "U07",
+      "title": "WHATWG — HTML Living Standard, lang / xml:lang",
+      "url": "https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[言語属性の仕様](https://html.spec.whatwg.org/multipage/dom.html#the-lang-and-xml:lang-attributes)。ページと部分の言語宣言。"
+    },
+    {
+      "id": "U08",
+      "title": "W3C WAI — Understanding 3.1.1 Language of Page",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html)。ページ言語の識別。"
+    },
+    {
+      "id": "U09",
+      "title": "W3C WAI — Understanding 3.1.2 Language of Parts",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html)。部分言語と固有名等の例外。"
+    },
+    {
+      "id": "U10",
+      "title": "W3C CSS WG — CSS Text Module Level 3",
+      "url": "https://drafts.csswg.org/css-text-3/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公開仕様](https://drafts.csswg.org/css-text-3/)。分綴、改行、空白、overflow-wrap等。"
+    },
+    {
+      "id": "U11",
+      "title": "W3C CSS WG — CSS Text Module Level 4",
+      "url": "https://www.w3.org/TR/css-text-4/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公開仕様](https://www.w3.org/TR/css-text-4/)。text-wrapのbalance・pretty等。対応状況は実機確認の対象。"
+    },
+    {
+      "id": "U12",
+      "title": "W3C CSS WG — CSS Fonts Module Level 4",
+      "url": "https://www.w3.org/TR/css-fonts-4/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公開仕様](https://www.w3.org/TR/css-fonts-4/)。数字・序数などのフォント機能と表示。"
+    },
+    {
+      "id": "U13",
+      "title": "W3C WAI — Understanding 1.4.4 Resize Text",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)。テキストを200%まで拡大する確認。"
+    },
+    {
+      "id": "U14",
+      "title": "W3C WAI — Understanding 1.4.10 Reflow",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html)。縦方向の内容で幅320 CSS px相当のリフロー等。二次元配置が必要な内容には例外がある。"
+    },
+    {
+      "id": "U15",
+      "title": "W3C WAI — Understanding 1.4.12 Text Spacing",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html)。行・段落・文字・語の間隔を利用者が変更した際の保持。本文デザインの一律指定値ではない。"
+    },
+    {
+      "id": "U16",
+      "title": "W3C WAI — Understanding 1.4.3 Contrast (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html)。通常文字4.5:1、大きな文字3:1等の区別と例外。"
+    },
+    {
+      "id": "U17",
+      "title": "W3C WAI — Understanding 1.4.5 Images of Text",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html)。文字画像と、ロゴ等の例外。"
+    },
+    {
+      "id": "U18",
+      "title": "W3C WAI — Understanding 2.5.3 Label in Name",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html)。視認ラベルとアクセシブルな名前の対応。"
+    },
+    {
+      "id": "U19",
+      "title": "W3C WAI — Understanding 3.3.1 Error Identification",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html)。エラー箇所と内容を文字で識別。"
+    },
+    {
+      "id": "U20",
+      "title": "W3C WAI — Understanding 3.3.3 Error Suggestion",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion.html)。判明している修正方法の提示。"
+    },
+    {
+      "id": "U21",
+      "title": "W3C WAI — Understanding 3.3.2 Labels or Instructions",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions.html)。入力に必要なラベルと指示。"
+    },
+    {
+      "id": "U22",
+      "title": "W3C WAI — Understanding 2.5.8 Target Size (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[WCAG 2.2解説](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)。24×24 CSS px、間隔やインライン等の例外を含む。文字サイズとは別の評価。"
+    },
+    {
+      "id": "U23",
+      "title": "Alessi — イタリア語公式サイト",
+      "url": "https://alessi.com/it",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://alessi.com/it)。取得できた価格・商品・操作の文言を観察。ログインや購入操作はしていない。"
+    },
+    {
+      "id": "U24",
+      "title": "Moleskine — イタリア向けイタリア語サイト",
+      "url": "https://www.moleskine.com/it-it/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://www.moleskine.com/it-it/)。取得できたキャンペーンとCTAの人称を観察。"
+    },
+    {
+      "id": "U25",
+      "title": "Cancelleria federale svizzera — Guida al linguaggio inclusivo di genere",
+      "url": "https://www.bk.admin.ch/it/guida-al-linguaggio-inclusivo-di-genere",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式案内ページ](https://www.bk.admin.ch/it/guida-al-linguaggio-inclusivo-di-genere)。機関ごとに言語方針があることの確認。案内ページの確認に限定し、リンク先全文の読了を意味しない。"
+    },
+    {
+      "id": "V01",
+      "title": "studio FM milano — Archive and the City",
+      "url": "https://studiofmmilano.com/works/archive-the-city/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://studiofmmilano.com/works/archive-the-city/)。2025年。展示壁・図解の公開画像を視認。図解の制作協力と書体のクレジットは公式説明を参照。"
+    },
+    {
+      "id": "V02",
+      "title": "studio FM milano — BOLD! Declinazioni tipografiche Campari: Munari, Depero e oltre",
+      "url": "https://studiofmmilano.com/works/bold-declinazioni-tipografiche-campari-munari-depero-e-oltre/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://studiofmmilano.com/works/bold-declinazioni-tipografiche-campari-munari-depero-e-oltre/)。2024年。公開ポスターモックと関連画像を構成観察に使用。モック内の日付を正確な会期や設置証拠には使用しない。"
+    },
+    {
+      "id": "V03",
+      "title": "studio FM milano — Cassina Identity System",
+      "url": "https://studiofmmilano.com/works/cassina-timeline/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://studiofmmilano.com/works/cassina-timeline/)。2014年。新旧ロゴ比較の視認と制作者の説明。"
+    },
+    {
+      "id": "V04",
+      "title": "Leftloft — The City of Lights / Euroluce 2023",
+      "url": "https://leftloft.com/case-study/the-city-of-lights/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://leftloft.com/case-study/the-city-of-lights/)。2023年。主題画像と会場案内の写真。Giò Pastoriの紙の構成とDinamo Whyte Inktrapの使用は公式説明に基づく。"
+    },
+    {
+      "id": "V05",
+      "title": "Leftloft — Artefiera Bologna 2025",
+      "url": "https://leftloft.com/case-study/artefiera-bologna-2025/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://leftloft.com/case-study/artefiera-bologna-2025/)。2025年。ロゴとタイポグラフィの継続、会場・配布物・案内写真を確認。"
+    },
+    {
+      "id": "V06",
+      "title": "TassinariVetta — Casabella: 2024–2025 special / covers series",
+      "url": "https://www.tassinarivetta.it/progetto/casabella-covers-series/)。2024〜2025年のシリーズ。953・954号の公開表紙を視認。制作説明の本文も確認した。[公式アーカイブ](https://www.tassinarivetta.it/archive/?category=publishing",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式作品紹介](https://www.tassinarivetta.it/progetto/casabella-covers-series/)。2024〜2025年のシリーズ。953・954号の公開表紙を視認。制作説明の本文も確認した。[公式アーカイブ](https://www.tassinarivetta.it/archive/?category=publishing)にも当該シリーズの掲載を確認。"
+    },
+    {
+      "id": "V07",
+      "title": "Triennale Milano — PIET / LINE / NOSE is the studio òbelo tribute to Saul Steinberg",
+      "url": "https://triennale.org/en/magazine/piet-line-nose",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式記事](https://triennale.org/en/magazine/piet-line-nose)。2022年2月3日公開。studio òbeloによる三冊のプロトタイプの公開画像を視認。画像クレジットは© studio òbelo。"
+    },
+    {
+      "id": "V08",
+      "title": "Leonardo Sonnoli — Artdust / Artissima 2015",
+      "url": "https://www.sonnoli.com/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[制作者の公式掲載](https://www.sonnoli.com/)。2015年9月7日記事。Leonardo SonnoliとIrene Bacchiによるポスター群。静止画像を視認し、アニメーションの再生評価は実施していない。"
+    },
+    {
+      "id": "V09",
+      "title": "Pirelli HangarBicocca — Nan Goldin 展覧会イタリア語ガイド",
+      "url": "https://web-assets-hangarbicocca.pirelli.com/wp-content/uploads/2023/12/Nan-Goldin-Guida-alla-mostra.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式PDF](https://web-assets-hangarbicocca.pirelli.com/wp-content/uploads/2023/12/Nan-Goldin-Guida-alla-mostra.pdf)。奥付2025年10月、グラフィックはStudio Sonnoli。先頭3ページを視認。URLの2023/12を制作年と解釈しない。"
+    },
+    {
+      "id": "V10",
+      "title": "Pirelli HangarBicocca — Museo per tutti アクセシブルガイド集",
+      "url": "https://web-assets-hangarbicocca.pirelli.com/wp-content/uploads/2025/09/GUIDE-ACCESSIBILI-TUTTE-def_web.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式PDF](https://web-assets-hangarbicocca.pirelli.com/wp-content/uploads/2025/09/GUIDE-ACCESSIBILI-TUTTE-def_web.pdf)。奥付2025年9月、Studio Sonnoli。導入ページを視認。公開目的と組版の観察であり、全ページの認証・適合判定ではない。"
+    },
+    {
+      "id": "V11",
+      "title": "CAST — Fabbrica",
+      "url": "https://www.c-a-s-t.com/typefaces/fabbrica/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[書体の公式ページ](https://www.c-a-s-t.com/typefaces/fabbrica/)。Michele Patanè、2019〜2022年。書体構成と対応言語、tabular numbers、case sensitive forms等の公開見本を確認。フォントファイルを用いた試験は未実施。"
+    },
+    {
+      "id": "V12",
+      "title": "CAST — Licence Options",
+      "url": "https://www.c-a-s-t.com/licences/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ライセンス案内](https://www.c-a-s-t.com/licences/)。Desktop・Web・Server・App等の用途別方式を確認。採用時は対象製品の契約本文を照合する。"
+    },
+    {
+      "id": "V13",
+      "title": "Collletttivo — Apfel Grotezk Family",
+      "url": "https://www.collletttivo.it/typefaces/apfel-grotezk",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[書体の公式ページ](https://www.collletttivo.it/typefaces/apfel-grotezk)。Luigi Gorlero、2019年公開、2023年10月6日更新、表示版2.000。公開文字一覧と5スタイルの説明を確認。"
+    },
+    {
+      "id": "V14",
+      "title": "Collletttivo — Licensing",
+      "url": "https://www.collletttivo.it/licensing",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ライセンス案内](https://www.collletttivo.it/licensing)。OFLと同梱LICENSE.txtの存在を確認。無料配布と契約条件を分ける。"
+    },
+    {
+      "id": "V15",
+      "title": "Triennale Milano — 公式サイト",
+      "url": "https://triennale.org/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://triennale.org/)。公開ナビゲーションの情報分類と言語入口を静的確認。全画面の描画・操作は未確認。"
+    },
+    {
+      "id": "V16",
+      "title": "MAXXI — 公式サイト",
+      "url": "https://www.maxxi.art/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://www.maxxi.art/)。公開テキスト、ナビゲーション、取得可能な画像代替情報を静的確認。代替テキストの適否や全画面の動作を断定しない。"
+    },
+    {
+      "id": "V17",
+      "title": "studio òbelo — 公式サイト",
+      "url": "https://www.obelo.it/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://www.obelo.it/)。静的抽出では本文取得が限定的だった。これはサイトの可読性やSEOに問題があることの証拠ではない。"
+    },
+    {
+      "id": "P01",
+      "title": "Salone del Mobile.Milano — Manifesti",
+      "url": "https://www.salonemilano.it/it/manifesti",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式アーカイブ](https://www.salonemilano.it/it/manifesti)。1961年以降の歴史的ポスターへの入口。"
+    },
+    {
+      "id": "P02",
+      "title": "Salone del Mobile.Milano — A Matter of Salone, 2026年の広告キャンペーン",
+      "url": "https://www.salonemilano.it/it/articoli/a-matter-of-salone-campagna-comunicazione-2026",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式記事](https://www.salonemilano.it/it/articoli/a-matter-of-salone-campagna-comunicazione-2026)。2025年12月19日公開、Motel409によるコンセプト。公開された主題画像を視認。"
+    },
+    {
+      "id": "P03",
+      "title": "Salone del Mobile.Milano — 1994年のポスター",
+      "url": "https://www.salonemilano.it/sites/default/files/2021-07-22/1994.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式PDF](https://www.salonemilano.it/sites/default/files/2021-07-22/1994.pdf)。公式アーカイブの年次から特定。色・文字の大小・配置を視認。画像だけから制作者や書体を特定しない。"
+    },
+    {
+      "id": "P04",
+      "title": "Corraini — Inventario 07",
+      "url": "https://corraini.com/products/inventario-07",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式刊行物ページ](https://corraini.com/products/inventario-07)。2013年、編集Beppe Finessi、グラフィックDesignwork、伊英。公開見開き画像を視認。"
+    },
+    {
+      "id": "P05",
+      "title": "Falcinelli & Co. — Chi siamo",
+      "url": "https://falcinelliand.co/chi-siamo/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[スタジオ公式](https://falcinelliand.co/chi-siamo/)。出版物の設計とスタジオの説明を本文確認。サイト全体の視覚・操作評価ではない。"
+    },
+    {
+      "id": "P06",
+      "title": "Cassina — イタリア語公式トップページ",
+      "url": "https://www.cassina.com/it/it.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式ページ](https://www.cassina.com/it/it.html)。取得時点の大文字見出し、英語のコレクション名、CTA等のテキストを確認。"
+    },
+    {
+      "id": "P07",
+      "title": "Riccardo Falcinelli — Fare i libri / minimum fax",
+      "url": "https://www.minimumfax.com/shop/product/fare-i-libri-1472)と[公開試し読みPDF](https://www.minimumfax.com/web/content/book/3959/preview_file/fare-i-libri-1472.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[出版社の書籍ページ](https://www.minimumfax.com/shop/product/fare-i-libri-1472)と[公開試し読みPDF](https://www.minimumfax.com/web/content/book/3959/preview_file/fare-i-libri-1472.pdf)。2011年。読者・出版社・シリーズの設計に関する本文を確認。公開範囲のみ参照。"
+    },
+    {
+      "id": "P08",
+      "title": "Cassina — Products and collections",
+      "url": "https://www.cassina.com/it/it/products-and-collections.html",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[イタリア語公式ページ](https://www.cassina.com/it/it/products-and-collections.html)。探索・相談・ダウンロード・登録等の操作名をテキスト確認。"
+    },
+    {
+      "id": "P09",
+      "title": "Salone del Mobile.Milano — 1961年のポスター",
+      "url": "https://www.salonemilano.it/sites/default/files/2021-07-21/Manifesto_1961_0.pdf",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式PDF](https://www.salonemilano.it/sites/default/files/2021-07-21/Manifesto_1961_0.pdf)。図像、配色、イベント情報の配置を視認。"
+    },
+    {
+      "id": "T01",
+      "title": "Unicode — Unicode Standard Annex #15: Unicode Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式仕様](https://www.unicode.org/reports/tr15/)。正規化の形式と等価性。署名済みデータ等の書換え許可を与える仕様ではない。"
+    },
+    {
+      "id": "T02",
+      "title": "Unicode — Unicode Standard Annex #29: Unicode Text Segmentation",
+      "url": "https://www.unicode.org/reports/tr29/",
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "[公式仕様](https://www.unicode.org/reports/tr29/)。書記素クラスタ等の境界。コードポイント数と見かけの文字数を区別する。"
+    },
+    {
+      "id": "O01",
+      "title": "Intl.NumberFormat / Intl.DateTimeFormatの実行記録",
+      "url": null,
+      "provenance": "Owner-provided 2026-10-19 research snapshot; not re-fetched for this build",
+      "scope": "実行時刻2026年10月18日21:05 UTC。Node.js v24.19.0、ICU 78.3、CLDR 48.0。it-ITとit-CH、数値1234.56・12345.67、通貨EUR・CHF、割合0.125を使用した。一般数値は既定オプション、通貨はstyleとcurrency指定、割合はstyle:percentとmaximumFractionDigits:1を指定した。日付入力2026-10-19T12:00:00Z、dateStyle:long、timeZone:Europe/Rome。結果は第06章に掲載した。\n\n再現用コードは以下のとおり。実行結果の一致には同じ環境とオプションを用いる。\n\n```js\nfor (const locale of ['it-IT', 'it-CH']) {\n  const currency = locale === 'it-IT' ? 'EUR' : 'CHF';\n  const number = new Intl.NumberFormat(locale);\n  const money = new Intl.NumberFormat(locale, {\n    style: 'currency', currency\n  });\n  const percent = new Intl.NumberFormat(locale, {\n    style: 'percent', maximumFractionDigits: 1\n  });\n  const date = new Intl.DateTimeFormat(locale, {\n    dateStyle: 'long', timeZone: 'Europe/Rome'\n  });\n  console.log(locale, number.format(1234.56),\n    number.format(12345.67), money.format(12345.67),\n    percent.format(0.125),\n    date.format(new Date('2026-10-19T12:00:00Z')));\n}\n```"
+    },
+    {
+      "id": "DESIGN",
+      "title": "KUMIHAN design proposal",
+      "scope": "Purpose-based design guidance; not a language norm"
+    }
+  ]
+}

@@ -21,7 +21,7 @@ class LandingParity(unittest.TestCase):
     def test_landings_follow_canonical_index_sections(self):
         canonical = sections((ROOT / "_layouts/landing.html").read_text(encoding="utf-8"))
         self.assertEqual(canonical, INDEX_SECTIONS)
-        pages = ["kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-th.html", "kumihan-th-en.html", "kumihan-th-ja.html",
+        pages = ["kumihan-it.html", "kumihan-it.en.html", "kumihan-it.ja.html", "kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-th.html", "kumihan-th-en.html", "kumihan-th-ja.html",
                  "kumihan-zh-cn.html", "kumihan-zh-cn.en.html", "kumihan-zh-cn.ja.html",
                  "kumihan-ko.html", "kumihan-ko.en.html", "kumihan-ko.ja.html",
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
@@ -30,13 +30,14 @@ class LandingParity(unittest.TestCase):
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
-                 "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html"]
+                 "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
 
     def test_landing_install_lists_one_row_per_host(self):
-        pages = ["kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+        pages = ["kumihan-it.html", "kumihan-it.en.html", "kumihan-it.ja.html", "kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-th-en.html", "kumihan-zh-cn.html", "kumihan-zh-cn.en.html",
@@ -46,7 +47,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
-                 "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html"]
+                 "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 text = (ROOT / page).read_text(encoding="utf-8")
@@ -57,7 +59,8 @@ GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.ht
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",
-           "id": "top-id.html", "bn": "top-bn.html"}
+           "id": "top-id.html", "bn": "top-bn.html",
+           "it": "top-it.html", "ru": "top-ru.html"}
 PAGE_GATEWAY = GATEWAY
 
 

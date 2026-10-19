@@ -21,10 +21,12 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # key: (brand, short name, Japanese language name, English language name, version)
 EDITIONS = {
+    "it": ("KUMIHAN｜Equilibrio", "Equilibrio", "イタリア語", "Italian", "0.1.0"),
     "de": ("KUMIHAN｜Satzbild", "Satzbild", "ドイツ語", "German", "0.1.0"),
     "hi": ("KUMIHAN｜अक्षर-संगति", "अक्षर-संगति", "ヒンディー語", "Hindi", "0.1.0"),
     "fr": ("KUMIHAN｜Accord", "Accord", "フランス語", "French", "0.1.1"),
     "ar": ("KUMIHAN｜نضيد", "نضيد", "アラビア語", "Arabic", "0.1.0"),
+    "ru": ("KUMIHAN｜Лад", "Лад", "ロシア語", "Russian", "0.1.0"),
     "pt": ("KUMIHAN｜Compasso", "Compasso", "ポルトガル語", "Portuguese", "0.1.0"),
     "es": ("KUMIHAN｜Grafía", "Grafía", "スペイン語", "Spanish", "0.1.0"),
     "ko": ("KUMIHAN｜글짜임", "글짜임", "韓国語", "Korean", "0.1.0"),
@@ -37,8 +39,8 @@ EDITIONS = {
     "bn": ("KUMIHAN｜অক্ষরসজ্জা", "অক্ষরসজ্জা", "ベンガル語", "Bangla", "0.1.0"),
 }
 
-COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "pl": "szyk",
-              "id": "laras"}
+COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
+              "pl": "szyk", "id": "laras", "ru": "lad"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",

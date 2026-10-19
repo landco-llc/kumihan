@@ -1,0 +1,821 @@
+{
+  "note": "Research candidate states. Focused preservation tests do not prove full linguistic/rendering fixture success.",
+  "fixtures": [
+    {
+      "id": "F01",
+      "input": "通常の質問文 `Qual’è il formato?`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R03"
+      ],
+      "source_refs": [
+        "L01"
+      ],
+      "expected": "errorとして `Qual è il formato?` を提案。修正は編集可能な原稿だけ。R03",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F02",
+      "input": "表記解説 `Nel manoscritto compare «qual’è».`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R03",
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L07"
+      ],
+      "expected": "引用内の綴りをpreserve。F01と同じ部分一致でも書き換えない。R03・R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F03",
+      "input": "通常文 `Un pò di spazio`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R04"
+      ],
+      "source_refs": [
+        "L03"
+      ],
+      "expected": "pocoの短縮と判断してpo’を提案。アクセント記号の装飾調整として処理しない。R04",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F04",
+      "input": "河川名 `Il Po attraversa la pianura.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R04",
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L03",
+        "L07"
+      ],
+      "expected": "Poをpreserve。短縮形po’へ変更しない。R04・R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F05",
+      "input": "通常語 `perchè`、`caffé`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R01"
+      ],
+      "source_refs": [
+        "L02"
+      ],
+      "expected": "語を確定したうえでperché、caffèを提案。鋭・重アクセントを区別。R01",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F06",
+      "input": "通常文 `E' disponibile.` と大見出し `PERCHÉ`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R02"
+      ],
+      "source_refs": [
+        "L02",
+        "L14"
+      ],
+      "expected": "前者にÈの修正案。後者のアクセントを保持し、大文字だから削除しない。R02",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F07",
+      "input": "`Il tè e caldo.` と `Tè e caffè.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R05"
+      ],
+      "source_refs": [
+        "L02",
+        "L03"
+      ],
+      "expected": "前者のみ文脈からèを検討。後者の接続詞eを保持。一括置換しない。R05",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F08",
+      "input": "`Pensa a sé stesso.` / `Pensa a se stesso.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R06"
+      ],
+      "source_refs": [
+        "L02",
+        "L14"
+      ],
+      "expected": "どちらも即errorにしない。必要なら選択した編集方針へのproposal。R06",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F09",
+      "input": "条件文 `Se stessi meglio, verrei.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R05",
+        "R06"
+      ],
+      "source_refs": [
+        "L02",
+        "L03",
+        "L14"
+      ],
+      "expected": "接続詞Seをpreserve。強勢代名詞séへ誤変換しない。R05・R06",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F10",
+      "input": "フランス語引用中の `café`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R01",
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L02",
+        "L07"
+      ],
+      "expected": "外国語の綴りとしてpreserve。イタリア語caffèへ修正しない。R01・R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F11",
+      "input": "固有名 `São Tomé`、`München` と外国語文章部分",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L07"
+      ],
+      "expected": "アクセント・ウムラウト・語形を保持。イタリア語の文字集合へ置換しない。R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F12",
+      "input": "`Fa caldo.` と `Fa’ attenzione.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R07"
+      ],
+      "source_refs": [
+        "L03"
+      ],
+      "expected": "叙述と命令の文脈を区別。全てのfaへアポストロフィやアクセントを付けない。R07",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F13",
+      "input": "`ad esempio`、`ad eccezione di`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R08"
+      ],
+      "source_refs": [
+        "L05",
+        "L06"
+      ],
+      "expected": "定着表現をpreserve。母音が違うことだけを理由にdを削除しない。R08",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F14",
+      "input": "`Case e edifici` と原著引用中の `od`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R08",
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L05",
+        "L06",
+        "L07"
+      ],
+      "expected": "同母音でedを強制せず、原著のodを保持。文体提案は引用外に限定。R08・R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F15",
+      "input": "caporali方式を指定した `«Una forma “aperta”»`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R09"
+      ],
+      "source_refs": [
+        "L12",
+        "L13"
+      ],
+      "expected": "指定階層として保持。内部に別の引用符があるだけで混在エラーにしない。R09",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F16",
+      "input": "英式を指定した `“Una forma ‘aperta’”`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R09"
+      ],
+      "source_refs": [
+        "L12",
+        "L13"
+      ],
+      "expected": "F15と異なる正当な指定として保持。caporaliへ強制しない。R09",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F17",
+      "input": "通常引用 `«Torna domani!».` と忠実な原著転記",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R10",
+        "R14"
+      ],
+      "source_refs": [
+        "L01",
+        "L07",
+        "L13",
+        "L15"
+      ],
+      "expected": "句読点の帰属・原著再現・編集方針を確認。全句点の内外移動はしない。R10・R14",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F18",
+      "input": "文中の `19 maggio`、祝祭名 `Primo Maggio`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R13"
+      ],
+      "source_refs": [
+        "L10",
+        "L11"
+      ],
+      "expected": "月名と固有の祝祭名を区別。全てのMaggioを小文字化しない。R13",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F19",
+      "input": "正式名の `ONU`、編集指定の `Onu`、ポスターの全大文字",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R12",
+        "R32"
+      ],
+      "source_refs": [
+        "DESIGN",
+        "L10",
+        "L12",
+        "U01"
+      ],
+      "expected": "各役割と指定を保持。Title Caseや一つの大文字方式を強制しない。R12・R32",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F20",
+      "input": "カレンダーの `gen` と本文の略記 `gen.`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R13"
+      ],
+      "source_refs": [
+        "L10",
+        "L11"
+      ],
+      "expected": "媒体差として確認。一律の句点追加・削除をしない。R13",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F21",
+      "input": "本文がアポストロフィの後で折り返す `dell’` → 次行",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R17"
+      ],
+      "source_refs": [
+        "L04"
+      ],
+      "expected": "合法な改行としてpreserve。母音を復元しない。見出しの見栄えは別途proposal。R17",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F22",
+      "input": "元語superatticoを `su-pe-rat-ti-co` / `su-per-at-ti-co` と分綴",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R11",
+        "R18"
+      ],
+      "source_refs": [
+        "L08",
+        "L09",
+        "L13",
+        "L14"
+      ],
+      "expected": "音節境界の別解を受容。分綴用の記号を元語の恒久的なハイフンと混同しない。R11・R18",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F23",
+      "input": "URL、商品ID、JavaScriptやSQLの直線引用符を含む原稿",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R15"
+      ],
+      "source_refs": [
+        "DESIGN"
+      ],
+      "expected": "保護範囲の元文字列が不変。スマート引用符・翻訳・全角化を適用しない。R15",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F24",
+      "input": "NFCのcaffèと、NFDの `caffe\\u0300`。原本は署名対象",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R16"
+      ],
+      "source_refs": [
+        "T01",
+        "T02"
+      ],
+      "expected": "元バイト列と署名を保持。表示上の正規化は別処理とし、切詰めで結合文字を分断しない。R16",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F25",
+      "input": "イタリア語ページ内に英語の一段落。言語値候補は `it`、`it-IT`、`it_CH`",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R19"
+      ],
+      "source_refs": [
+        "U07",
+        "U08",
+        "U09"
+      ],
+      "expected": "ページと文章部分の言語を確認。HTMLでは適切なBCP 47表記を使い、固有名を全て別言語指定しない。読み上げ成功は未確認。R19",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F26",
+      "input": "`à è é ì ò ù À È É Ì Ò Ù` を通常・太字・斜体で表示。Webフォントの読込失敗条件も用意",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R24"
+      ],
+      "source_refs": [
+        "U04",
+        "U12",
+        "V11",
+        "V13"
+      ],
+      "expected": "実字形、上端、欠字、fallbackの可読性を各条件で確認。指定した書体名だけでpassにしない。R24",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F27",
+      "input": "表の数字、`1º`、`1°`、`20 °C` にOpenType機能を指定",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R29"
+      ],
+      "source_refs": [
+        "U12"
+      ],
+      "expected": "字形機能の実在と意味を確認。序数・度・温度を一括変換せず、空白文字で桁揃えしない。R29",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F28",
+      "input": "試用フォントの配布候補と、ライセンス文書が同梱された別の候補",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R30"
+      ],
+      "source_refs": [
+        "V12",
+        "V14"
+      ],
+      "expected": "Web・埋込み・再配布の各条件を確認。無料取得やOSS製品であることから同梱可と推定しない。R30",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F29",
+      "input": "`internazionalizzazione` をイタリア語辞書が使える環境／使えない環境で配置",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R18",
+        "R20"
+      ],
+      "source_refs": [
+        "L08",
+        "L09",
+        "U10"
+      ],
+      "expected": "分綴または適切な再配置を確認。辞書未確認ならnot-checkedを保持し、任意の文字切断を既定にしない。R18・R20",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F30",
+      "input": "狭幅の本文と長いURL。折返し後にコピーする",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R15",
+        "R21"
+      ],
+      "source_refs": [
+        "DESIGN",
+        "U10"
+      ],
+      "expected": "URLだけに必要な溢れ対策を適用。コピー値は元と同じ。本文全体をbreak-allにしない。R15・R21",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F31",
+      "input": "`text-wrap:balance` の見出し、ページ末の見出し、短い最終行、75chの本文",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R22",
+        "R23"
+      ],
+      "source_refs": [
+        "L08",
+        "U04",
+        "U11"
+      ],
+      "expected": "実際の意味の切れ目・段落の連結を確認。75chを75文字と断定せず、収めるために語句を削らない。R22・R23",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F32",
+      "input": "型付き数値1234.56と12345.67を[O01]と同条件のit-ITで表示",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R25",
+        "R26"
+      ],
+      "source_refs": [
+        "L14",
+        "L15",
+        "O01",
+        "U05",
+        "U06"
+      ],
+      "expected": "参考値は `1234,56` と `12.345,67`。4桁区切りを強制せず、元値を保持。別環境では版・optionを確認。R25・R26",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F33",
+      "input": "同じ数値をIntlのit-CHとスイス連邦官房方式で表示",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R25"
+      ],
+      "source_refs": [
+        "L14",
+        "L15",
+        "O01",
+        "U05",
+        "U06"
+      ],
+      "expected": "[O01]の参考値は `1234.56`、`12'345.67`。連邦官房の一般数値12345.67は別方式の `12`＋NBSP＋`345,67` とし、プロファイルを区別。R25",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F34",
+      "input": "12345.67のEUR/CHF表示と、0・負数・端数の追加条件",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R26"
+      ],
+      "source_refs": [
+        "O01",
+        "U05",
+        "U06"
+      ],
+      "expected": "[O01]の参考値は `12.345,67`＋NBSP＋`€`、`CHF`＋NBSP＋`12'345.67`。追加条件は後工程で実行し、通貨・符号・精度を保持。R26",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F35",
+      "input": "0.125を割合表示。Intl方式と機関別の空白方針を選択",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R25",
+        "R27"
+      ],
+      "source_refs": [
+        "L14",
+        "L15",
+        "O01",
+        "U05",
+        "U06",
+        "U23"
+      ],
+      "expected": "[O01]の参考値はit-ITで `12,5%`、it-CHで `12.5%`。機関方式の空白との差だけでerrorにしない。値や割合の倍率を変えない。R25・R27",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F36",
+      "input": "用途不明の `1.234`、年の `2026`、数字を含む商品ID",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R15",
+        "R26"
+      ],
+      "source_refs": [
+        "DESIGN",
+        "O01",
+        "U05",
+        "U06"
+      ],
+      "expected": "元文字列をpreserve。数値・年・IDを確定せずに解析、桁区切り、ローカライズしない。R15・R26",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F37",
+      "input": "狭いカードに数値＋NBSP＋単位。通貨を含む長い説明文も配置",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R27"
+      ],
+      "source_refs": [
+        "L14",
+        "L15",
+        "U05",
+        "U23"
+      ],
+      "expected": "指定した短いまとまりを分断せず、周囲の文は折り返す。段落全体のnowrapによる横溢れを作らない。R27",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F38",
+      "input": "保存用ISO日時と表示日付。it-IT/it-CH、時刻の機関方式、タイムゾーンを指定",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R28"
+      ],
+      "source_refs": [
+        "L11",
+        "L14",
+        "L15",
+        "U05",
+        "U06"
+      ],
+      "expected": "保存値を保持し、明示した地域・option・タイムゾーンで表示。日付ずれや区切り記号を意味確認なしに修正しない。R28",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F39",
+      "input": "ラベル・エラー・固定高領域を含めて文字を200%に拡大",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R37"
+      ],
+      "source_refs": [
+        "U13"
+      ],
+      "expected": "内容・機能の欠落、重なり、クリップを確認。リフローや間隔試験とは別に記録。未実施はnot-checked。R37",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F40",
+      "input": "縦スクロール主体の内容を320 CSS px相当幅で表示",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R38"
+      ],
+      "source_refs": [
+        "U14"
+      ],
+      "expected": "情報・機能を保持し、不要な二方向スクロールを生まない。二次元配置を要する部分の例外は分けて確認。R38",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F41",
+      "input": "文字サイズに対して行高を1.5倍、段落後の間隔を2倍とし、字間0.12em、単語間0.16emを同時に上書き",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R39"
+      ],
+      "source_refs": [
+        "U15"
+      ],
+      "expected": "欠落・隠蔽・操作不能がないことを確認。これらを初期デザインの必須値として固定しない。R39",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F42",
+      "input": "可視CTAが `Scarica KUMIHAN`、アクセシブルネームが別の操作名",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R35"
+      ],
+      "source_refs": [
+        "U03",
+        "U18"
+      ],
+      "expected": "操作実体と名称の不一致を確認して修正案。可視ラベルを名前に含める。単なる短文化を優先しない。R35",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F43",
+      "input": "入力後に消えるplaceholderだけに条件を置いた欄と、エラー表示",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R36"
+      ],
+      "source_refs": [
+        "U03",
+        "U19",
+        "U20",
+        "U21"
+      ],
+      "expected": "持続するラベル・条件説明を提案。エラー対象と修正手段を文字で示し、色だけで伝えない。R36",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F44",
+      "input": "原因不明の送信失敗、保存処理中、保存完了の三状態",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R36"
+      ],
+      "source_refs": [
+        "U03",
+        "U19",
+        "U20",
+        "U21"
+      ],
+      "expected": "未確認の通信原因や成功を断言しない。実際に確認できた状態と文言を対応させる。R36",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F45",
+      "input": "個人向けtu、正式応対のLei、複数読者向けvoiを使った原稿",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R33"
+      ],
+      "source_refs": [
+        "U02",
+        "U24"
+      ],
+      "expected": "役割とブランド方針を確認。混在検出だけで一つの人称へ置換しない。必要な変更はproposal。R33",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F46",
+      "input": "著者が指定したschwa・アスタリスク・男女併記と、中立な言い換え案",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R34"
+      ],
+      "source_refs": [
+        "U01",
+        "U25"
+      ],
+      "expected": "指定表現をpreserve。代案は差分で提示。読み上げ不能・対応済みを一律に断言しない。R34",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F47",
+      "input": "低コントラスト候補、画像化された説明文、小さな操作対象",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R31",
+        "R40"
+      ],
+      "source_refs": [
+        "U16",
+        "U17",
+        "U22"
+      ],
+      "expected": "コントラスト、文字画像の必要性、対象サイズと間隔・例外を別々に確認。画像だけで一括passにしない。R31・R40",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    },
+    {
+      "id": "F48",
+      "input": "スクリーンリーダーを使わず、HTMLと画面だけを確認したレビュー",
+      "protection": "Original bytes, quotations, names, code, numbers and explicit editorial choices",
+      "rule_ids": [
+        "R19",
+        "R35"
+      ],
+      "source_refs": [
+        "U03",
+        "U07",
+        "U08",
+        "U09",
+        "U18"
+      ],
+      "expected": "読み上げはnot-checkedと明示。ブラウザ・OS・支援技術・音声設定を伴う実行記録ができるまで成功を主張しない。R19・R35の証跡確認",
+      "status": "not-checked",
+      "actual": null,
+      "evidence": null
+    }
+  ]
+}

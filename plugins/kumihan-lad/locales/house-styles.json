@@ -1,0 +1,22 @@
+{
+  "profiles": {
+    "ru-editorial": {
+      "locale": "ru-RU",
+      "yo": "selective/as supplied",
+      "quotes": "outer «…»; inner „…“",
+      "hyphenation": "requires rendered check"
+    },
+    "ru-educational": {
+      "locale": "ru-RU",
+      "yo": "explicit if authorized",
+      "stress": "preserve"
+    },
+    "brand-custom": {
+      "locale": "inherit",
+      "yo": "inherit",
+      "quotes": "inherit",
+      "currency": "inherit"
+    }
+  },
+  "rule": "Locale is not a house style and does not authorize edits."
+}

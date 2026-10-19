@@ -1,0 +1,44 @@
+name: Equilibrio product and site
+on:
+  pull_request:
+    branches: [main]
+    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml']
+  push:
+    branches: [main, feat/equilibrio-v0.1.0]
+    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml']
+permissions:
+  contents: read
+jobs:
+  product-site:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt PyYAML==6.0.3 playwright==1.62.0
+      - run: python -m unittest discover -s tests/equilibrio -v
+      - run: python tools/build_equilibrio.py --check
+      - run: python tools/build_equilibrio_site.py --check
+      - run: python tools/base_copy.py --check
+      - run: python tools/build_gateways.py --check
+      - run: node tools/equilibrio_intl_probe.mjs
+      - name: Existing product and layout regression
+        run: |
+          python -m unittest discover -s tests -v
+          python -m unittest discover -s tests/satzbild -v
+          python -m unittest discover -s tests/accord -v
+          python tools/build_dist.py --check
+          python tools/build_satzbild.py --check
+          python tools/build_satzbild_site.py --check
+      - name: Browser measurements (fallback fonts; CSS simulation)
+        run: |
+          python -m playwright install --with-deps chromium
+          mkdir -p /tmp/equilibrio-serve
+          ln -s "$GITHUB_WORKSPACE" /tmp/equilibrio-serve/kumihan
+          python -m http.server 8765 --bind 127.0.0.1 --directory /tmp/equilibrio-serve >/tmp/equilibrio-server.log 2>&1 &
+          python tools/check_equilibrio_site.py --chromium '' --output /tmp/equilibrio-browser

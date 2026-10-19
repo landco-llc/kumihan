@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-lad",
+  "version": "0.1.0",
+  "description": "Русская типографика и дизайн по смыслу текста с сохранением оригинала. | Russian typography and content-led design with source preservation.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Лад",
+        "shortDescription": "Русская типографика | Russian typography",
+        "longDescription": "Русская типографика и дизайн по смыслу текста с сохранением оригинала. | Russian typography and content-led design with source preservation.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-ru.html",
+        "defaultPrompt": [
+          "Проверьте русскую типографику, сохраняя исходник.",
+          "Review Russian typography without changing the source."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
