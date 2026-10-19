@@ -31,7 +31,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
                  "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
-                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html",
+                 "kumihan-zu.html", "kumihan-zu.en.html", "kumihan-zu.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
@@ -55,7 +56,7 @@ class LandingParity(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'class="[^"]*\bplatform-row\b', text)), 3)
 
 
-GATEWAY = {"sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
+GATEWAY = {"zu": "top-en.html", "sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",

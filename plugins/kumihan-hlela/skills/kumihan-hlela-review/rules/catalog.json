@@ -1,0 +1,581 @@
+[
+  {
+    "id": "ZU-01",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Select explicit isiZulu language",
+    "description_en": "Only zu or zu-ZA authorizes isiZulu-specific rules; unverified detection remains unknown.",
+    "description_zu": "Khetha ulimi olushiwo ngokucacile.",
+    "policy_ja": "言語指定を優先",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-02",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Reject neighboring language matches",
+    "description_en": "Never confuse xh, ss, sw, nr, nd, zh or the unrelated KUMIHAN Zilu product with isiZulu.",
+    "description_zu": "Ungaxubanisi izilimi.",
+    "policy_ja": "似た言語の誤判定防止",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-03",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Preserve mixed-language tags",
+    "description_en": "Retain exact document and segment language metadata, including real English spans.",
+    "description_zu": "Gcina ulimi lwezingxenye.",
+    "policy_ja": "混在言語のlang保持",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-04",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Preserve source spelling",
+    "description_en": "Protect isiZulu internal capitalization, names, prefixes and source spaces without silent case conversion.",
+    "description_zu": "Gcina ukubhalwa kwamagama.",
+    "policy_ja": "内部大文字と原稿保護",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-05",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Protect grapheme boundaries",
+    "description_en": "Never split combining sequences or break stored text at invalid grapheme boundaries.",
+    "description_zu": "Ungaphuli izinhlamvu.",
+    "policy_ja": "書記素境界保護",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-06",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Normal wrapping by default",
+    "description_en": "Prefer word-break:normal and flexible widths over break-all in natural-language text.",
+    "description_zu": "Phula imigqa ngendlela efanele.",
+    "policy_ja": "本文の通常折返し",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-07",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Allow variable card heights",
+    "description_en": "Do not clip long CTA, heading, form label or validation error copy.",
+    "description_zu": "Nikeza umbhalo indawo eyanele.",
+    "policy_ja": "高さ可変と欠落防止",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-08",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Scope emergency wrapping",
+    "description_en": "Use overflow-wrap:anywhere only in verified exceptional containers or machine tokens.",
+    "description_zu": "Hlola ukusonga okuphuthumayo.",
+    "policy_ja": "非常時改行を限定",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-09",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Check automatic hyphenation evidence",
+    "description_en": "Accept hyphens:auto only after real dictionary/OS/browser and break-point tests; CSS parse is insufficient.",
+    "description_zu": "Qinisekisa ukuhlukaniswa kwamagama.",
+    "policy_ja": "自動分割の環境検証",
+    "source_ids": [
+      "S03",
+      "S13"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-10",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Approve manual break points",
+    "description_en": "Allow U+00AD only with native-editor approval and copy/search/print tests.",
+    "description_zu": "Sebenzisa ukuhlukanisa okuqinisekisiwe.",
+    "policy_ja": "手動分割を承認制に",
+    "source_ids": [
+      "S03",
+      "S13"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-11",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Review numeric prefixes",
+    "description_en": "Check number, prefix, loanword and proper-name joining in the chosen orthography edition.",
+    "description_zu": "Hlola izinombolo nezakhi zamagama.",
+    "policy_ja": "数字と接辞の校閲",
+    "source_ids": [
+      "S03",
+      "S13"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-12",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Translate complete UI strings",
+    "description_en": "Review entire messages and placeholders for 0,1,multiple; avoid English suffix assembly.",
+    "description_zu": "Buyekeza imisho ephelele.",
+    "policy_ja": "動的文言は全文確認",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-13",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Separate media policies",
+    "description_en": "Do not treat subtitles, newspaper convention or product style as national orthography.",
+    "description_zu": "Hlukanisa imithetho nesitayela.",
+    "policy_ja": "媒体規則と正書法を分離",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-14",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Separate displayed case from stored copy",
+    "description_en": "CSS text-transform must not silently rewrite text source.",
+    "description_zu": "Hlukanisa umbhalo nobukeka bawo.",
+    "policy_ja": "CSS表示と原稿を分離",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-15",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Verify fonts and subsets",
+    "description_en": "Record the actual deployed font, fallback, glyph coverage and display environment.",
+    "description_zu": "Hlola amafonti asetshenzisiwe.",
+    "policy_ja": "フォント実体検証",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-16",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Check figures and reading order",
+    "description_en": "Respect illustrations, numbers, labels, reading sequence and non-color-only hierarchy.",
+    "description_zu": "Gcina ukulandelana kokufunda.",
+    "policy_ja": "図番号と読順の保護",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-17",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Keep bilingual hierarchy",
+    "description_en": "Translate complete passages and allow independent line breaks without changing information priority.",
+    "description_zu": "Hlola izilimi zombili.",
+    "policy_ja": "二言語レイアウト",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-18",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Record Intl runtime and locale",
+    "description_en": "Capture API, zu-ZA, runtime, timezone and formatToParts; do not reformat fixed source text.",
+    "description_zu": "Bhala imininingwane ye-locale.",
+    "policy_ja": "Intl実測条件",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-19",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Test zoom and reflow",
+    "description_en": "Record real browser at 320px, native 200% text zoom and text spacing overrides.",
+    "description_zu": "Hlola ukuboniswa ngezimo ezahlukene.",
+    "policy_ja": "320px・200%表示",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-20",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Compare PDF extract to source",
+    "description_en": "Check output text, reading order, ligatures and OCR substitutions without assuming fidelity.",
+    "description_zu": "Qhathanisa umbhalo wangempela.",
+    "policy_ja": "PDF抽出照合",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-21",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Adapt medium-specific presentation",
+    "description_en": "Review newspaper folds, slides, posters, crop and mobile screen independently.",
+    "description_zu": "Hlela ngendlela yomsebenzi.",
+    "policy_ja": "媒体別デザイン",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-22",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Record provenance and rights",
+    "description_en": "Save original source version, publication date, designer and rights for all examples.",
+    "description_zu": "Gcina imininingwane yomthombo.",
+    "policy_ja": "出典と権利を記録",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-23",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Require diff before edits",
+    "description_en": "Only edit authorized content with readable before/after diff and review ownership.",
+    "description_zu": "Bonisa izinguquko ngaphambi kokuhlela.",
+    "policy_ja": "変更許可と差分",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ZU-24",
+    "language": "zu",
+    "locale": "context-required",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_en": "Keep evidence states distinct",
+    "description_en": "Separate observed, needs-review and not-checked; never claim native editor or browser verification without evidence.",
+    "description_zu": "Hlukanisa okuhloliwe nalokho okungakahlolwa.",
+    "policy_ja": "未検証を合格にしない",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  }
+]
