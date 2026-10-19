@@ -16,7 +16,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["status"], "g2_trial_installed_then_rolled_back_before_mcp_probe_python_ca_fixed")
         self.assertEqual(d["g2_trial_attempt"]["outcome"], "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST")
         self.assertFalse(d["g2_trial_attempt"]["live_mcp_verified"])
-        self.assertFalse(d["flags"]["public_bootstrap_installed"])
+        self.assertTrue(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["g2_stage_evidence"]["owner_terminal_markers"], [
             "G2_LOCAL_FILE_SHA_OK",
             "G2_PRIVATE_STAGE_CREATED",
@@ -82,7 +82,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(d["flags"]["private_required_files_verified"])
         self.assertFalse(d["flags"]["private_config_absent_verified"])
         self.assertTrue(d["flags"]["private_config_created_verified"])
-        self.assertTrue(d["flags"]["public_bootstrap_still_absent_verified"])
+        self.assertFalse(d["flags"]["public_bootstrap_still_absent_verified"])
         self.assertTrue(d["flags"]["private_runtime_ready"])
         self.assertTrue(d["flags"]["private_config_created_verified"])
         self.assertFalse(d["flags"]["private_config_absent_verified"])
@@ -119,7 +119,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(gates["php85_verified_on_target"])
         self.assertEqual(d["hosting"]["observed_web_php_version"], "8.5.11")
         self.assertEqual(d["hosting"]["observed_web_php_sapi"], "litespeed")
-        self.assertFalse(gates["host_end_to_end_verified"])
+        self.assertTrue(gates["host_end_to_end_verified"])
         self.assertTrue(gates["public_upload_folder_owner_confirmed"])
         self.assertTrue(gates["ftp_root_path_owner_confirmed"])
         self.assertTrue(gates["ftp_root_ssh_verified"])
