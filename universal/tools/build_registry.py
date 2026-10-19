@@ -38,7 +38,7 @@ def collect_rule_data(source: Path) -> tuple[list[dict], list[dict]]:
             rule_id = item.get("id")
             if not isinstance(rule_id, str) or not rule_id:
                 continue
-            title = next((item[k] for k in ("title", "requirement_en", "description_en", "policy_ja", "description") if isinstance(item.get(k), str)), "")
+            title = next((item[k] for k in ("title", "title_en", "title_ja", "title_zh_hant", "requirement_en", "description_en", "description_sw", "summary", "explanation_en", "requirement", "policy_ja", "description") if isinstance(item.get(k), str)), "")
             normalized.append({
                 "id": rule_id,
                 "title": title,
