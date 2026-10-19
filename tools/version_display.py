@@ -3,7 +3,10 @@
 This module owns only version/download metadata. It does not translate or rewrite
 editorial copy, SEO metadata, logos, fonts, footer or historical release notes.
 """
-from functools import wraps
+from functools import wraps, lru_cache
+import hashlib
+import json
+import zipfile
 from html import escape, unescape
 from pathlib import Path
 import re
@@ -64,6 +67,52 @@ def panel(f, lang, slot='current'):
 def role(name): return VERSION.sub('@VERSION@', unquote(Path(urlsplit(unescape(name)).path).name))
 
 
+@lru_cache(maxsize=4)
+def source_archives(code, version):
+    """Admit existing source ZIPs by full path, never by ambiguous basename.
+
+    This is an offline source-distribution contract, independent of Releases.
+    A missing/corrupt manifest or ZIP aborts generation rather than hiding links.
+    """
+    if code not in ('zh-hans', 'zh-hant'): return frozenset()
+    product = v.catalogue()[code]['product']
+    base = ROOT / 'plugins' / product
+    manifests = sorted(base.glob('downloads*/MANIFEST.json'))
+    if not manifests: raise ValueError('Missing source ZIP manifests: '+code)
+    admitted = set()
+    for manifest in manifests:
+        data = json.loads(manifest.read_bytes())
+        if data['version'].removeprefix('v') != version:
+            raise ValueError('Source ZIP manifest version mismatch: '+code)
+        for row in data['archives']:
+            path = manifest.parent / row['file']
+            if not path.resolve().is_relative_to(manifest.parent.resolve()):
+                raise ValueError('Source ZIP path escapes distribution')
+            content = path.read_bytes()
+            if len(content) != row['bytes'] or hashlib.sha256(content).hexdigest() != row['sha256']:
+                raise ValueError('Source ZIP checksum mismatch: '+str(path))
+            with zipfile.ZipFile(path) as archive:
+                if archive.testzip() is not None: raise ValueError('Source ZIP CRC mismatch: '+str(path))
+            admitted.add(path.relative_to(ROOT).as_posix())
+    return frozenset(admitted)
+
+
+def is_source_download(url, f):
+    if f['release_status'] != 'unpublished': return False
+    parsed = urlsplit(url)
+    path = unquote(parsed.path)
+    if parsed.query or parsed.fragment: return False
+    if parsed.netloc:
+        if parsed.scheme != 'https' or parsed.netloc != 'raw.githubusercontent.com': return False
+        prefix = '/landco-llc/kumihan/main/'
+        if not path.startswith(prefix): return False
+        path = path.removeprefix(prefix)
+    else:
+        if parsed.scheme: return False
+        path = path.removeprefix('../').removeprefix('/kumihan/').lstrip('/')
+    return path in source_archives(f.get('edition'), f['source_version'])
+
+
 def rewrite_downloads(text, f):
     assets = {role(a['name']):a for a in f['verified_assets']}
     def anchor(m):
@@ -86,6 +135,10 @@ def rewrite_downloads(text, f):
                 return f'<span class="download-unavailable" aria-disabled="true">{label} (Release unavailable)</span>'
             return f'<a{attrs}href="{x(f["release_url"])}"{rest}>{VERSION.sub("v"+f["published_version"],label)}</a>'
         if not urlsplit(decoded).path.lower().endswith('.zip'): return m[0]
+        if is_source_download(decoded, f):
+            marker = '<span lang="en"> (Source ZIP)</span>'
+            if marker not in label: label += marker
+            return f'<a{attrs}href="{url}"{rest}>{label}</a>'
         a = assets.get(role(decoded))
         if not a: return f'<span class="download-unavailable" data-source-zip="{x(Path(urlsplit(decoded).path).name)}" aria-disabled="true">{label} (ZIP unavailable)</span>'
         label = VERSION.sub('v'+f['published_version'], label)

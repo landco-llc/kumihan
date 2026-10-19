@@ -43,3 +43,11 @@ The 15 source ZiHeng archives are verified locally, but its source plugin ZIP an
 - [`result.md`](result.md): fixed revisions, coverage, checks, review, CI and remaining limits at closeout.
 
 Native AI-host installation/invocation, all-device rendering, native screen-reader use, Office/PDF output, marketplace acceptance and a live new Release event are not established by these checks.
+
+## WD09–WD12 delta (2026-10-20 JST)
+
+Authority: `KUMI-PR115-OWNER-GATE-DELTA-20261020-01` ([instruction](https://drive.google.com/file/d/1JE7okEGkvcigtzjSgOOFAdKzDC5HOq7f/view)). The original W00–W08 reports remain historical evidence. The delta and current limits are in [wd09-wd12.md](wd09-wd12.md).
+
+Chinese source downloads now have a separate offline admission path: the existing per-host source manifests must match source version, exact full archive path, size, SHA-256 and ZIP CRC. Admitted existing relative/raw-main URLs remain clickable and explicitly labelled `Source ZIP`; the adjacent status still says Release unpublished. No `published_version`, Release asset URL, archive name or marketplace/native-host claim is invented. Full paths distinguish ZiHeng's plugin and entry Skill with identical basenames. Untrusted remote hosts, absent files, other editions and undeclared archive versions are not admitted. Corrupt source bytes abort generation. Formal Release admission and its exact role contract are unchanged.
+
+**Automation mode: PATCH_ONLY_CONSTRAINED / 半自動. 自動公開未実装.** A patch artifact does not update the public HTML/README. Owner must download/check the base SHA, apply through a feature PR, run required CI and review, merge, then verify the legacy main Pages build. No-change events are no-ops; failed verification retains the prior snapshot. Withdrawal of the current Release aborts rather than silently downgrading. Rollback requires an Owner-reviewed revert PR and Pages verification; deleting a Release is not a rollback/deploy operation.

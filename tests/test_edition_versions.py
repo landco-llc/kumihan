@@ -160,8 +160,10 @@ class SnapshotAndCoverage(unittest.TestCase):
             with self.subTest(page=relative):
                 self.assertEqual(apply_html(html,relative),html)
                 self.assertEqual(html.count('data-edition-version='),1 if install else 2)
+                from version_display import is_source_download
                 for href in re.findall(r'href="([^"]+\.zip)"',html):
-                    self.assertIn(href,{a['url'] for a in facts['editions'][code]['verified_assets']})
+                    self.assertTrue(href in {a['url'] for a in facts['editions'][code]['verified_assets']}
+                                    or is_source_download(href, facts['editions'][code]), (relative,href))
                 for pre in re.findall(r'<pre\b.*?</pre>',html,re.S):self.assertNotIn('vX.Y.Z',pre)
         self.assertEqual(counts,{'landing':63,'install':186})
         self.assertEqual(readme(generated['README.md'],facts),generated['README.md'])
