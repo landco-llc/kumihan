@@ -31,9 +31,11 @@ EDITIONS = {
     "th": ("KUMIHAN｜ดุลอักษร", "ดุลอักษร", "タイ語", "Thai", "0.1.1"),
     "zh-hans": ("KUMIHAN｜字律", "字律", "簡体中国語", "Simplified Chinese", "0.1.0"),
     "zh-hant": ("KUMIHAN｜字衡", "字衡", "繁体中国語", "Traditional Chinese", "0.1.0"),
+    "vi": ("KUMIHAN｜Nhịp Chữ", "Nhịp Chữ", "ベトナム語", "Vietnamese", "0.1.0"),
+    "id": ("KUMIHAN｜Laras", "Laras", "インドネシア語", "Indonesian", "0.1.0"),
 }
 
-COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia"}
+COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "id": "laras"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",
