@@ -56,3 +56,7 @@ python -m unittest discover -s tests/seo -v
 ### Other public directories
 
 New HTML directories (for example `guides/`) are discovered recursively by `tools/seo_inventory.py`; Jekyll frontmatter pages there use the same include generator. Source/package directories are explicitly excluded in that scanner. A new publishing convention must update the scanner policy and `_config.yml` together. `tests/seo/test_audit.py` proves missing SEO in a new directory fails before a complete page passes and enters Sitemap.
+
+## 2026-10-19 integration notice — English first and new social preview generator
+
+This runbook currently describes the pre-switch SEO baseline. Before using it for publication, read [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md). The latest main has English `index.html`, Japanese `top-ja.html`, a `noindex` `top-en.html` alias, 22 gateway languages, and `site_share.py` as the shared localized OGP/Twitter generator with a 1200×630 preview image. All future language editions need to register their localized share description/locale and any Jekyll share data as appropriate, without duplicate OG/Twitter meta or a second share-copy registry. These changes are pending integration into Draft PR #93, not yet certified by its original 20/20 check.
