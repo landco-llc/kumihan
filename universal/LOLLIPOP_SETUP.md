@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — Lolipop / kmhn deployment runbook
 
-Status: **DNS+TLS VERIFIED; OWNER PROVIDED FTP ROOT; PRIVATE PHP PATH PENDING VALIDATION; MCP NOT DEPLOYED** (2026-10-19).
+Status: **SSH PUBLIC ROOT AND PARENT WRITE CONFIRMED; PRIVATE WEB-PHP READ PENDING; MCP NOT DEPLOYED** (2026-10-19).
 Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/101
 
 ## Locked parameters
@@ -102,6 +102,31 @@ The script does **not** print the full FTP path, create directories, or perform 
 **These tests do not prove that web PHP can include files outside web or that other hostnames cannot serve that path.** Those remain separate release gates. If SSH only permits writes under web, do NOT fall back to FTP root; stop and assess alternate deployment/security design.
 
 
+### One-shot Web PHP / private-read test (next W01 step)
+
+The Owner has already confirmed the following from an authenticated Lolipop SSH terminal:
+
+    KMHN_OK
+    PRIVATE_PARENT_WRITABLE
+
+This proves SSH access, successful cd into the web FTP root, the kmhn directory, and account-parent write permission. No private directory or PHP-read test has yet run.
+
+To verify the critical difference between SSH writes and Web-PHP file includes, a bounded helper is available at:
+
+- tools/check_private_php_web.sh
+
+It is reviewed source, not an auto-executing GitHub Action. Run ONLY from an authenticated SSH shell and after checking that kmhn has no conflicting live files. Supply the FTP root privately as FTP_ROOT. The helper:
+1. Confirms it is on Linux and in the expected web/kmhn directory.
+2. Creates only ../kmhn-mcp-private/server (outside FTP root), with umask 077.
+3. Creates a uniquely named harmless private marker and a temporary public PHP probe, obtains the probe response over HTTPS, confirms actual Web PHP is 8.5 and able to read the marker.
+4. Removes the marker and public PHP probe via EXIT cleanup, including on ordinary errors. Only the private candidate directory remains.
+5. Prints non-sensitive status lines: PHP_VERSION, PHP_SAPI, TARGET_WEB_PHP85, PRIVATE_PHP_READ, PRIVATE_WEB_PHP_PRECHECK_PASS.
+
+If HTTP/WAF/DNS fails from the SSH server, the result remains NOT_VERIFIED (not an automatic server failure). The helper never puts passwords, the account full path or customer documents in HTTP responses; however the actual PHP probe source temporarily exposes a trivial directory role. No production application file is overwritten and MCP is not deployed.
+
+This test does NOT prove the candidate lies outside every other domain document root or that Composer/vendor can be read under that PHP configuration. Check that separately before any real runtime upload. Do not grant 777 permissions as a workaround.
+
+
 ## 2. Build safe two-file public loader OFFLINE
 
 Only after actual SSH filesystem paths have been verified, run from a KUMIHAN source checkout (example argument names, NOT literal paths):
@@ -155,7 +180,8 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [x] External DNS/TLS certificate verification PASS
 - [x] Public upload folder confirmed: kmhn
 - [x] Full FTP root path supplied by Owner (kept out of public GitHub)
-- [ ] SSH realpath confirms Owner-supplied web root and existing kmhn directory
+- [x] SSH login successful; Owner's actual web root and existing kmhn directory verified by remote shell
+- [x] SSH access to web parent is writable (Owner observed PRIVATE_PARENT_WRITABLE)
 - [ ] PHP-readable non-Web private root verified
 - [ ] Effective PHP 8.5 on this domain verified
 - [ ] Composer lock and dependency audit finalized
