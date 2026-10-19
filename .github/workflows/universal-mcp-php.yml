@@ -81,6 +81,7 @@ jobs:
               > /tmp/kumihan-tools.json
           fi
           grep -q 'kumihan_detect_language' /tmp/kumihan-tools.json
+          python3 universal/tests/http_smoke.py
       - name: Prepare non-secret deploy artifact
         run: |
           mkdir -p universal/server/runtime/sessions
