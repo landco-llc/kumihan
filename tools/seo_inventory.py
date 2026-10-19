@@ -68,6 +68,7 @@ def public_paths(root):
     # Other new public directories are included automatically.
     excluded={'tools','scripts','tests','templates','plugins','skills','vendor','node_modules'}
     return sorted(p for p in root.rglob('*.html')
+                  if not (p.parent == root and p.name == 'google767fc14b71f44ff9.html')
                   if not any(part.startswith(('.', '_')) for part in p.relative_to(root).parts)
                   and p.relative_to(root).parts[0] not in excluded
                   and not p.relative_to(root).parts[0].startswith('downloads ')

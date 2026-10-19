@@ -1000,10 +1000,16 @@ def page(key, c):
     card_html, count = cards(key)
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
+    verification = (
+        '<meta name="google-site-verification" '
+        'content="7TydORMgx59wB9YToKeA0BfSawBSKEpW1Ed7OZGnxaI" />'
+        if key == "en" else ""
+    )
     return f"""<!doctype html>
 <html lang="{html_lang}"{' dir="rtl"' if key in RTL else ""}>
 <head>
 <meta charset="utf-8"/>
+{verification}
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#f4f1e9" name="theme-color"/>
 <meta content="{x(c['description'])}" name="description"/>
