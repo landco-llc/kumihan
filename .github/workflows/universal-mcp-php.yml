@@ -82,6 +82,22 @@ jobs:
           fi
           grep -q 'kumihan_detect_language' /tmp/kumihan-tools.json
           python3 universal/tests/http_smoke.py
+      - name: Simulated Lolipop kmhn public root + private runtime MCP smoke
+        run: |
+          set -eu
+          BASE="$RUNNER_TEMP/kmhn-lolipop-layout"
+          mkdir -p "$BASE/web" "$BASE/kmhn-mcp-private/server"
+          cp -a universal/server/. "$BASE/kmhn-mcp-private/server/"
+          python3 universal/tools/build_lolipop_bootstrap.py \
+            --ftp-root "$BASE/web" \
+            --private-server-root "$BASE/kmhn-mcp-private/server" \
+            --output-dir "$BASE/offline"
+          mkdir -p "$BASE/web/kmhn"
+          cp -a "$BASE/offline/kmhn/." "$BASE/web/kmhn/"
+          php -l "$BASE/web/kmhn/index.php"
+          php -S 127.0.0.1:8990 -t "$BASE/web/kmhn" >/tmp/kmhn-lolipop-test.log 2>&1 &
+          sleep 2
+          KUMIHAN_MCP_LOCAL_URL=http://127.0.0.1:8990/index.php python3 universal/tests/http_smoke.py
       - name: Public domain TLS preflight (informational, not a release gate)
         run: |
           echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
