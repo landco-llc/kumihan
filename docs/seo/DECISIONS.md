@@ -79,3 +79,9 @@
 - Finding/fix: `robots="none, max-snippet:-1"` must exclude the page just as `noindex` does. Both directives now share comma-token normalization. Regression tests failed before these fixes and passed afterward.
 - Decision: Accept compatible BCP47 granularity (existing Thai `lang="th"` and `hreflang="th-TH"`) while rejecting conflicting primary language, script, or region. Preserve existing source language markup rather than rewriting visible copy or source contracts.
 - Cost if wrong: New publishing conventions require an exclusion-policy update; regional translations must use explicit matching region/script tags when differences matter.
+
+## ADR-SEO-013 — Reproducible Ruby dependencies and existing preview jobs
+
+- Hosted CI exposed Debian-patched gem metadata in the locally generated lock: kramdown's rexml constraint and listen's macOS dependency differed from official RubyGems. Audit all28 locked versions against official exact-version metadata and retain the official dependency graph.
+- Existing Korean/ZiLu preview workflows intentionally install distro Jekyll4 and previously had no Gemfile. Their Jekyll commands now explicitly set `JEKYLL_NO_BUNDLER_REQUIRE=true` to continue using that installed preview runtime. SEO's dedicated job separately uses the pinned Bundler/Jekyll3.10 GitHub Pages-compatible runtime. Neither preview check is removed.
+- Cost: Two runtime variants remain intentional; the dedicated3.10 build is the Pages reference. Workflow/runtime version changes must rerun built-HTML and browser checks.

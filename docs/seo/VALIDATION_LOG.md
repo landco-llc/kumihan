@@ -70,3 +70,8 @@ Do not overwrite prior entries. Publish only observed outcomes; do not infer ind
 - Existing CI prerequisites faithfully reproduced in isolated current-feature copy: `python tools/build_laras.py` then ID9/9 PASS; `python tools/build_mizani.py` then SW6/6 PASS. The raw-checkout failures above are preparation-dependent, not SEO regressions. Temp-generated ZIPs remain outside the branch and are not copied back.
 - Final combined results: all251 existing tests PASS with their established preparation (root18 + language233; Zilu10 rechecked after parity-test adaptation), SEO15 PASS. Existing check29/29 PASS. No remaining local test failure.
 - First hosted SEO run: https://github.com/landco-llc/kumihan/actions/runs/39205706993 (submitted HEAD `abd6c51`; completion recorded separately). PR CI reruns on each log-only commit; inspect latest PR check SHA for the final state.
+
+### Hosted CI failure diagnosis and correction
+
+- First hosted SEO job failed in `ruby/setup-ruby`, after all15 tests and all231 source/generator checks passed. Official kramdown2.5.1 requires rexml>=3.3.9; local Debian gemspec had recorded>=3.2. Auditing all28 locked versions against official RubyGems also identified listen's missing rb-fsevent dependency. Corrected the lock to official metadata.
+- Korean/ZiLu jobs failed because their apt-installed Jekyll4 automatically activated the newly added Jekyll3.10 Gemfile without bundle install. Explicitly select their existing distro preview runtime with `JEKYLL_NO_BUNDLER_REQUIRE=true`; the dedicated SEO job retains pinned Bundler3.10 validation. Existing checks remain enabled.

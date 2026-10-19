@@ -58,7 +58,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y jekyll
-          jekyll build --destination /tmp/zilu-serve/kumihan --baseurl /kumihan --disable-disk-cache
+          JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build --destination /tmp/zilu-serve/kumihan --baseurl /kumihan --disable-disk-cache
           python -m playwright install --with-deps chromium
           python -m http.server 8765 --bind 127.0.0.1 --directory /tmp/zilu-serve >/tmp/zilu-server.log 2>&1 &
           python tools/check_zilu_site.py --chromium '' --output /tmp/zilu-browser

@@ -21,6 +21,7 @@
 リポジトリrootで実行する。Python 3とNode.jsが必要。これらはサイト生成器であり配布ZIPの再ビルドではない。
 
 ```sh
+python -m pip install -r requirements-dev.txt
 python tools/build_seo.py
 python tools/build_seo.py --check
 python tools/build_sitemap.py --check
@@ -33,6 +34,8 @@ python -m unittest discover -s tests/seo -v
 Jekyllのfrontmatter本文を完成HTMLと混同しない。ソース監査は生成済みSEO契約を照合し、GitHub Pages相当のJekyllビルド後には実HTMLも検証する。CIのビルドコマンド・依存設定を正本とし、ローカルで生成した出力パスを渡す。
 
 ```sh
+bundle install
+bundle exec jekyll build --destination _site
 python tools/check_seo.py --site-dir _site
 python tools/build_sitemap.py --check --site-dir _site
 ```
