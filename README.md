@@ -63,7 +63,7 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 現在、正式版に向けて開発中です。
 
-**最新の公開版はv0.1.7 preview（2026年10月18日公開）です。** [公開済みRelease・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview)。v0.1.8-previewの用途別アダプターとデザインレビュー強化は現在レビュー候補で、まだ公開されていません。各ツールでの動作は引き続き限定検証です。
+**最新の公開版はv0.1.7 preview（2026年10月18日公開）です。** [公開済みRelease・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview)。v0.1.8-previewの用途別アダプターとデザインレビュー強化は次期版の開発候補で、正式なGitHub Releaseはまだ公開していません。各ツールでの動作は引き続き限定検証です。
 
 <br>
 
@@ -91,7 +91,7 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 
 ### Status
 
-KUMIHAN is in development toward a stable release. **The latest published release is v0.1.7 preview (October 18, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview). The v0.1.8-preview use-case routing and design-quality enhancements are a **review candidate, not yet published**. Host behavior remains only partially verified.
+KUMIHAN is in development toward a stable release. **The latest published release is v0.1.7 preview (October 18, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview). The v0.1.8-preview use-case routing and design-quality enhancements are a **development candidate without a published GitHub Release**. Host behavior remains only partially verified.
 
 <br>
 

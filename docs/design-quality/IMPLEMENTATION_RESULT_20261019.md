@@ -24,20 +24,20 @@ python3 scripts/use_case_selector.py --brief 'バナーを作って'
 python3 scripts/use_case_selector.py --brief 'ポスターをレビュー' --mode audit --strict --stage after-production
 ```
 
-The tool returns `selected` with medium/adapter/source/reason or `needs-clarification` with one question. It does not create or change any production asset. Host and human reasoning are still needed for complex intents, permissions, mixed locale boundaries and actual visual inspection.
+The tool returns `selected` with medium/adapter/source/reason or `needs-clarification` with one question. Follow-up review added conservative handling for explicit Japanese `XではなくY` corrections and `LPの見出しコピーだけ` (copy-only), and allows compatible same-medium manual adapter overrides without an unnecessary question. It does not create or change any production asset. Host and human reasoning are still needed for complex intents, permissions, mixed locale boundaries and actual visual inspection.
 
 ## Verification (performed in local workspace)
 
 | Check | Observed result |
 |---|---|
-| UCA-01..10 and additional router/contract tests | 28 unit tests PASS |
+| UCA-01..10 and additional router/contract tests | 34 unit tests PASS |
 | Existing rule/schema/distribution contract tests | 5 tests PASS |
 | JA-TYPE-011 source fixture consistency | 11 spec fixtures PASS; no renderer invoked |
 | Four standalone Skills + distribution archives regenerated | 15 ZIPs candidate for v0.1.8-preview |
 | Deterministic pack builder | `build_dist.py --check`: 148 generated files up to date; Python caches explicitly excluded |
 | Existing six media profiles + 39 catalog IDs | unchanged; verified by unit tests |
 | Other independent language modules | no changes made under `plugins/` |
-| Complete root `unittest discover -s tests` | 49 tests PASS after rebasing on main `329cced` (all scope tests); the earlier base `051a34e` had 19 independent font CSS order failures, reproduced unchanged in a separate baseline worktree. They were resolved upstream before rebase and are not attributed to this feature |
+| Complete root `unittest discover -s tests` | 55 tests PASS after follow-up review corrections and rebasing on main `329cced` (all scope tests); the earlier base `051a34e` had 19 independent font CSS order failures, reproduced unchanged in a separate baseline worktree. They were resolved upstream before rebase and are not attributed to this feature |
 | Browser/Office/rendered visual checks | NOT CHECKED; this change adds guidance and routing, not a renderer |
 | Native ChatGPT/Claude/Gemini plugin invocation | NOT CHECKED |
 | GitHub CI, merge, Release, Pages | To be read back after PR creation; no publication authorized |

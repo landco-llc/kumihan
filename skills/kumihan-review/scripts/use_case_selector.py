@@ -54,17 +54,36 @@ def _spec() -> dict:
     if data["default_review_intensity"] != "standard":
         raise ValueError("Unsupported routing default")
     allowed = set(MEDIUMS)
-    assert set(data["primary_profiles"]) == allowed
+    if set(data["primary_profiles"]) != allowed:
+        raise ValueError("Profile catalog differs from six supported media")
     adapters = data["adapters"]
-    assert len(adapters) == len({a["id"] for a in adapters})
+    if len(adapters) != len({a["id"] for a in adapters}):
+        raise ValueError("Duplicate use-case adapter identifiers")
     for item in adapters:
-        assert item["primary_profile"] in allowed
+        if item["primary_profile"] not in allowed:
+            raise ValueError("Unsupported medium in adapter: " + item["id"])
     return data
 
 
 def _detect(brief: str) -> tuple[list[tuple[str, str | None, str]], str | None]:
     """Bounded candidates; never generate a visual/quality verdict."""
-    has = {key: bool(pattern.search(brief)) for key, pattern in SIGNALS.items()}
+    # In an explicit "X ではなく Y" contrast, evaluate the positively
+    # requested deliverable Y instead of treating rejected X as another task.
+    # Do not discard X when Y contains no deliverable (e.g. style advice).
+    positive = brief
+    if "ではなく" in brief:
+        tail = brief.rsplit("ではなく", 1)[1].lstrip(" 、，,")
+        if any(p.search(tail) for p in SIGNALS.values()):
+            positive = tail
+    has = {key: bool(pattern.search(positive)) for key, pattern in SIGNALS.items()}
+    # A headline/copy *only* for a wider website or LP is display-copy,
+    # not a request to build the entire website or landing page.
+    limited_copy = (
+        re.search(r"(?:見出しコピー|キャッチコピー|短いコピー|スローガン|見出し)\s*(?:だけ|のみ)", positive)
+        or re.search(r"\b(?:only|just)\b.{0,25}\b(?:headline|tagline|copy)\b", positive, re.I)
+    )
+    if has["copy"] and limited_copy:
+        return [("display-copy", None, "explicitly limited to copy/headline")], None
     result: list[tuple[str, str | None, str]] = []
     question = None
 
@@ -177,12 +196,12 @@ def route(
             return clarify("指定した媒体と用途アダプターのどちらを優先しますか？", "manual medium/adapter conflict")
         if suggested_mediums and medium not in suggested_mediums:
             return clarify("ご指定の用途と制作物の形式が異なります。どちらの納品形式ですか？", "manual adapter/output conflict")
-        if any(c[1] is not None and c[1] != manual_adapter for c in candidates):
-            return clarify("手動指定の用途と依頼された納品先が異なります。どちらの用途ですか？", "manual adapter/surface conflict")
         if question and not suggested_mediums:
             return clarify(question, "delivery format materially ambiguous despite manual adapter")
         context["medium"], context["adapter"] = medium, manual_adapter
         context["selection_reason"] = "compatible explicit manual adapter override"
+        if any(c[1] is not None and c[1] != manual_adapter for c in candidates):
+            context["limitations"].append("Manual adapter overrides an inferred same-medium use case; preserve the actual delivery platform and its checks.")
     elif manual_medium:
         if suggested_mediums and manual_medium not in suggested_mediums:
             return clarify("ご指定の媒体と制作物の形式が異なります。どちらの形式を制作しますか？", "manual medium/output conflict")

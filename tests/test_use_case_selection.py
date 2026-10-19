@@ -25,6 +25,45 @@ route = module.route
 
 
 class UseCaseRoutingTests(unittest.TestCase):
+    def test_negated_poster_does_not_trigger_poster_adapter(self):
+        a = route("ポスターではなく、Instagram用の画像を制作")
+        self.assertEqual((a["medium"], a["adapter"]), ("display-copy", "social-static"))
+        self.assertFalse(a["needs_confirmation"])
+
+    def test_negated_static_banner_selects_web_deliverable(self):
+        a = route("静止画のバナーではなくHTMLバナーを作る")
+        self.assertEqual((a["medium"], a["adapter"]), ("web-marketing", None))
+        self.assertFalse(a["needs_confirmation"])
+
+    def test_lp_copy_only_is_display_copy_not_web_marketing(self):
+        a = route("新商品のLPの見出しコピーだけを考えて")
+        self.assertEqual((a["medium"], a["adapter"]), ("display-copy", None))
+        self.assertFalse(a["needs_confirmation"])
+
+    def test_english_headline_only_is_display_copy(self):
+        a = route("Write only a headline for the landing page")
+        self.assertEqual((a["medium"], a["adapter"]), ("display-copy", None))
+        self.assertFalse(a["needs_confirmation"])
+
+    def test_lp_page_with_minor_headline_only_verification_is_not_copy_only(self):
+        a = route("LPを作って。見出しは確認だけでいい")
+        self.assertEqual((a["medium"], a["adapter"]), ("web-marketing", "landing-page"))
+
+    def test_route_configuration_rejects_bad_media_and_duplicates(self):
+        import unittest.mock
+        import copy
+        real_data = json.loads(SPEC_PATH.read_text())
+        invalid = copy.deepcopy(real_data)
+        invalid["primary_profiles"].append("graphic-design")
+        with unittest.mock.patch.object(module.json, "loads", return_value=invalid):
+            with self.assertRaisesRegex(ValueError, "Profile catalog"):
+                route("ポスターを作って")
+        invalid = copy.deepcopy(real_data)
+        invalid["adapters"].append(dict(invalid["adapters"][0]))
+        with unittest.mock.patch.object(module.json, "loads", return_value=invalid):
+            with self.assertRaisesRegex(ValueError, "Duplicate"):
+                route("ポスターを作って")
+
     def test_uca01_social_static_auto(self):
         a = route("Instagram用の広告画像を作って")
         self.assertEqual((a["medium"], a["adapter"]), ("display-copy", "social-static"))
@@ -46,10 +85,12 @@ class UseCaseRoutingTests(unittest.TestCase):
         self.assertEqual((a["medium"], a["adapter"]), ("display-copy", "poster"))
         self.assertEqual(a["selection_source"], "manual")
 
-    def test_manual_profile_match_but_surface_conflict_confirms(self):
+    def test_compatible_same_medium_manual_override_is_respected(self):
         a = route("Instagram用の広告画像を作って", manual_adapter="poster")
-        self.assertTrue(a["needs_confirmation"])
-        self.assertEqual(a["status"], "needs-clarification")
+        self.assertFalse(a["needs_confirmation"])
+        self.assertEqual((a["medium"], a["adapter"]), ("display-copy", "poster"))
+        self.assertEqual(a["selection_source"], "manual")
+        self.assertTrue(any("actual delivery platform" in x for x in a["limitations"]))
 
     def test_uca05_incompatible_manual_override_confirms(self):
         a = route("ランディングページを制作", manual_adapter="social-static")
