@@ -85,3 +85,12 @@
 - Hosted CI exposed Debian-patched gem metadata in the locally generated lock: kramdown's rexml constraint and listen's macOS dependency differed from official RubyGems. Audit all28 locked versions against official exact-version metadata and retain the official dependency graph.
 - Existing Korean/ZiLu preview workflows intentionally install distro Jekyll4 and previously had no Gemfile. Their Jekyll commands now explicitly set `JEKYLL_NO_BUNDLER_REQUIRE=true` to continue using that installed preview runtime. SEO's dedicated job separately uses the pinned Bundler/Jekyll3.10 GitHub Pages-compatible runtime. Neither preview check is removed.
 - Cost: Two runtime variants remain intentional; the dedicated3.10 build is the Pages reference. Workflow/runtime version changes must rerun built-HTML and browser checks.
+
+## ADR-SEO-014 — English first, legacy alias and current share-preview authority (integration pending)
+
+- Date: 2026-10-19 JST; status: **pending implementation**, following main `db14de27b4b7e8ffd298bd3ab4a940ba2a623bca`.
+- Observation: PR #94 moved English gateway to `index.html`, Japanese gateway to `top-ja.html`; `top-en.html` is a noindex redirect. New top languages include sw, zu, km and fa.
+- Decision: Homepage canonical and x-default resolve to `https://landco-llc.github.io/kumihan/`; Japanese top self-canonical is `/kumihan/top-ja.html`; legacy `top-en.html` stays out of Sitemap.
+- Observation: Merged PR #99 introduced `tools/site_share.py`, `assets/kumihan-share.png` (1200×630), and Jekyll `_includes/share.html`. These now own localized OG/Twitter previews. Old SEO PR assumed square 1254×1254 image and meta-description equality.
+- Decision: **Do not overwrite** main #99's localized combined share description/OGP image; SEO owns canonical/hreflang/JSON-LD/sitemap, share component owns social previews; audit their alignment after integration.
+- Outcome: Existing PR #93 has `mergeable=false`; do not merge before reconciliation and new Hosted CI. Implementation instructions: [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md).
