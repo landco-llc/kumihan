@@ -98,7 +98,39 @@ If the return file already exists, do not overwrite it silently; inspect or dele
 
 The SCP upload printed an OpenSSH 10.1+ warning about missing post-quantum key exchange and a `client_global_hostkeys_prove_confirm` RSA host-key-update proof warning. These do not by themselves negate the SCP 100% completion, but require accurate SSH-host identity verification using the provider's host-key guidance. Do not disable StrictHostKeyChecking, ignore fingerprint changes or treat warnings as artifact-hash evidence. Prefer a provider-side SSH algorithm update where offered.
 
-## Stage C — after Stage B passes
+## Stage B2 result — PASSED (Owner readback)
+
+Owner's Mac terminal reported **REMOTE_ARCHIVE_SHA_OK** and **REMOTE_ARCHIVE_BYTES_OK** after SCP readback of the server-held 779KB tarball. The server file matches SHA-256 `5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1` and has identical bytes to the verified local source. Server-side sha256sum/openssl are not needed.
+
+The pinned GitHub Actions artifact was additionally inspected: 1,227 tar entries (1,067 regular files, 160 directories), no absolute/parent traversal paths, no symlinks/hardlinks/devices and no `runtime/config.php`. **Do not read this as a signed publisher attestation;** these are checks against the downloaded pinned artifact matched by checksum.
+
+## Stage C — private-only extraction (no public bootstrap yet)
+
+On the authorized Lolipop SSH shell, set FTP_ROOT to the Owner-confirmed `web` root locally, then execute the reviewed script **only after** verifying its source:
+
+    FTP_ROOT='<OWNER_CONFIRMED_ABSOLUTE_WEB_ROOT>'
+    # Execute universal/tools/unpack_private_runtime.sh via verified transfer / prechecked download.
+
+The script checks FTP root, private realpath, public kmhn, no pre-existing public/index/vendor/src/runtime, archive presence, server tar availability and the tar listing before extracting with umask 077. Afterwards it checks the required runtime files, `vendor/autoload.php`, rules registry and Composer lock, and confirms `runtime/config.php` and both public bootstrap files remain ABSENT. It has no password, database, billing or public deployment.
+
+Expected successful status markers:
+
+    PRIVATE_TAR_PREFLIGHT_OK
+    PRIVATE_RUNTIME_EXTRACTED
+    PRIVATE_REQUIRED_FILES_OK
+    PRIVATE_CONFIG_ABSENT
+    PUBLIC_BOOTSTRAP_UNCHANGED
+    MCP_NOT_PUBLIC
+
+If `TAR_UNAVAILABLE`, `ARCHIVE_CANNOT_BE_LISTED`, `PRIVATE_TARGET_NOT_EMPTY` or any other error occurs, STOP without attempting workarounds under `web`. If extraction partly failed, leave the partially extracted files for careful review/rollback instead of blindly removing directories.
+
+Web PHP read access to the candidate private folder and its file presence have been confirmed, but actual SDK dependency execution, writable session storage, other vhost isolation and live MCP protocol remain subsequent release gates.
+
+### Stage D — after Stage C success (NOT AUTHORIZED BY PASS ALONE)
+
+Create private `runtime/config.php` from the production template (never publish it), verify PHP dependencies/session permissions and isolation; only then publish exactly two bootstrap files under `web/kmhn`. Run actual HTTPS initialize/tools/list/tools/call. Do not merge main or release clients without Owner Gate.
+
+
 
 - Extract only the pinned runtime tarball into the verified **private** server directory. Do not extract the ZIP itself into web.
 - Create private `runtime/config.php` from the production example (`host=mcp-kmhn.landco.co.jp`). Make the sessions folder writable to the actual Web PHP UID without mode 777.
