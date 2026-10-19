@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "g3_live_mcp_https_e2e_verified_client_adapters_pending",
+  "status": "chatgpt_live_mcp_connected_three_language_tools_smoked_router_fix_pending_deploy",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -21,7 +21,7 @@
     "dns_verified": true,
     "github_staging_ci_verified": true,
     "host_end_to_end_verified": true,
-    "client_connection_verified": false,
+    "client_connection_verified": true,
     "public_release_authorized": false,
     "ssl_configured_owner_reported": true,
     "public_upload_folder_owner_confirmed": true,
@@ -64,13 +64,15 @@
     "g2_public_stage_local_hash_verified": true,
     "g2_public_stage_ssh_transfer_verified": true,
     "g2_public_stage_readback_hash_verified": true,
-    "g2_public_stage_readback_byte_verified": true
+    "g2_public_stage_readback_byte_verified": true,
+    "chatgpt_client_connection_verified": true,
+    "chatgpt_guidance_and_review_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner's Mac and independent connected Mac confirmed HTTPS MCP initialize, tools/list, tools/call languages; four tools and 21 modules. Five private path probes returned 404/403. Endpoint remains public without authentication or per-user quotas; not general-release approved.",
-  "deployment_blocker": "Live HTTPS MCP protocol PASS and public bootstrap installed. Next validate actual ChatGPT/Codex, Claude and Gemini client connections, remaining protocol/security behavior, authentication and quotas for general use, and obtain explicit Owner release approval. Preserve full FTP traversal NOT_CHECKED.",
+  "notes": "Owner confirmed direct ChatGPT connected plugin list 21 language modules/729 rules, and assistant invoked connected plugin guidance and review ja/zh-Hant/ar successfully. Found false auto-language classification of Traditional Chinese punctuation; fix committed to branch, not installed in live private PHP runtime.",
+  "deployment_blocker": "ChatGPT integration PASS. New zh-Hant punctuation -> kana false positive fixed only in Draft PR source and needs CI + guarded private runtime rollout. Other clients and true renderer, authentication/quotas remain pending.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -384,5 +386,30 @@
     "authentication_or_quotas_configured": false,
     "client_adapters_tested": false,
     "scope": "Bounded public HTTPS trial. No main merge/general plugin release authorization."
+  },
+  "chatgpt_connection": {
+    "source": "Owner's ChatGPT direct plugin run and independently invoked connected mcp__KUMIHAN_Universal tools",
+    "observed_at": "2026-10-19",
+    "direct_list_languages": "PASS",
+    "modules": 21,
+    "rules": 729,
+    "guidance_languages": [
+      "ja",
+      "zh-Hant",
+      "ar"
+    ],
+    "guidance_status": "guidance_only",
+    "review_languages": [
+      "ja",
+      "zh-Hant",
+      "ar"
+    ],
+    "review_status": "guidance-only",
+    "review_source_unchanged": true,
+    "actual_rendering_verified": false,
+    "other_clients_verified": false,
+    "issue": "Automatic route for Han+punctuation incorrectly labels kana and selects Japanese; explicit zh-Hant still resolves correctly.",
+    "remediation": "Fixed Unicode kana categorization from Script_Extensions to Script in Draft PR, with PHP smoke regressions; production still on earlier staged runtime until separately deployed.",
+    "production_fix_deployed": false
   }
 }
