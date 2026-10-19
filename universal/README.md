@@ -1,7 +1,7 @@
 # KUMIHAN Universal MCP — phase 1 runtime
 
 Status: **implementation candidate, not deployed**. GitHub source of truth: landco-llc/kumihan.
-Production hostname **mcp-kmhn.landco.co.jp** selected on 2026-10-19; planned endpoint **https://mcp-kmhn.landco.co.jp/mcp**. GitHub Actions independently verified public DNS and TLS 1.3 for the hostname ([evidence](https://github.com/landco-llc/kumihan/actions/runs/39246702661)). The real document root, PHP 8.5 hosting runtime, SSH/SFTP and live MCP endpoint are still NOT VERIFIED. The prior maintenance blocker no longer prevents Owner configuration. See [target manifest](deployment/target.json).
+Production hostname **mcp-kmhn.landco.co.jp** selected on 2026-10-19; planned endpoint **https://mcp-kmhn.landco.co.jp/mcp**. GitHub Actions independently verified public DNS and TLS 1.3 for the hostname ([evidence](https://github.com/landco-llc/kumihan/actions/runs/39246702661)). The Lolipop subdomain's FTP-relative public folder is **kmhn** (Owner-confirmed). Effective PHP 8.5, the absolute SSH/FTP root and secure non-Web private path, SSH/SFTP and the live MCP endpoint are still NOT VERIFIED. The prior maintenance blocker no longer prevents Owner configuration. See [target manifest](deployment/target.json).
 Specification: [modular architecture proposal](https://github.com/landco-llc/kumihan/pull/87) (separate draft PR until merged).
 
 ## Purpose and supported behaviors
@@ -48,7 +48,7 @@ Send a handshake-era initialize POST to http://127.0.0.1:8989/index.php; use the
 
 ## Lolipop deployment
 
-See [LOLLIPOP_SETUP.md](LOLLIPOP_SETUP.md). Existing rental server: Lolipop High-Speed plan, LiteSpeed PHP 8.5.
+See [LOLLIPOP_SETUP.md](LOLLIPOP_SETUP.md). Existing rental server: Lolipop High-Speed plan, LiteSpeed PHP 8.5. The confirmed public folder is kmhn. The public-facing folder contains ONLY a generated two-file bootstrap; src/vendor/runtime belong OUTSIDE the account FTP root (which might be served on the default Lolipop domain). Use the tested offline generator tools/build_lolipop_bootstrap.py with verified absolute SSH paths, never assume FTP-root siblings are private.
 
 - Keep server/vendor, server/src, server/runtime (config, registry, sessions) OUTSIDE subdomain public upload folder. Only server/public is web-exposed.
 - Production config host MUST be explicitly set to the dedicated DNS name. Origin wildcard is rejected.
