@@ -58,3 +58,9 @@ class Mizani(unittest.TestCase):
     txt=path.read_text(encoding="utf-8")
     self.assertIn("kumihan-mizani",txt)
     self.assertIn("-v0.1.0.zip",txt)
+
+ def test_real_regex_matches(self):
+  payload='ng‘ombe; word-break: break-all; hyphens:auto; lang="sw_TZ"; TZS 1,500; saa moja'.encode()
+  ids={x["rule_id"] for x in m.inspect(payload,"sw-TZ")["findings"]}
+  for expected in ("SW-03","SW-05","SW-13","SW-06","SW-07","SW-08"):
+   self.assertIn(expected,ids,expected)

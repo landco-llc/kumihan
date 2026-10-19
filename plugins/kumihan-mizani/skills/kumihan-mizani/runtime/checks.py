@@ -4,12 +4,12 @@ import argparse, hashlib, json, re
 from pathlib import Path
 LOCALES=("sw","sw-TZ","sw-KE","sw-UG","sw-CD")
 RULES=(
- ("SW-03",r"ng\\u2018|ng\\u201c","Suspicious opening quote where a lexical apostrophe may belong."),
- ("SW-05",r"word-break\\s*:\\s*break-all","Arbitrary breaking can damage Swahili words."),
- ("SW-13",r"hyphens\\s*:\\s*auto","Verify actual dictionary and rendered hyphenation first."),
- ("SW-06",r"\\blang\\s*=\\s*['\\\"]sw_[A-Za-z]+['\\\"]","Use BCP 47 hyphens (e.g. sw-TZ), not underscores."),
- ("SW-07",r"\\b(?:TZS|KES|UGX|CDF)\\s*[0-9][0-9., ]*","Check currency digits, spacing and explicit locale."),
- ("SW-08",r"\\bsaa\\s+(?:moja|mbili|tatu|nne|tano|sita|saba|nane|tisa|kumi)\\b","Distinguish Swahili colloquial clock from civil clock."),
+ ("SW-03",r"ng[\u2018\u201c]","Suspicious opening quote where a lexical apostrophe may belong."),
+ ("SW-05",r"word-break\s*:\s*break-all","Arbitrary breaking can damage Swahili words."),
+ ("SW-13",r"hyphens\s*:\s*auto","Verify actual dictionary and rendered hyphenation first."),
+ ("SW-06",r"\blang\s*=\s*['\"]sw_[A-Za-z]+['\"]","Use BCP 47 hyphens (e.g. sw-TZ), not underscores."),
+ ("SW-07",r"\b(?:TZS|KES|UGX|CDF)\s*[0-9][0-9., ]*","Check currency digits, spacing and explicit locale."),
+ ("SW-08",r"\bsaa\s+(?:moja|mbili|tatu|nne|tano|sita|saba|nane|tisa|kumi)\b","Distinguish Swahili colloquial clock from civil clock."),
 )
 def inspect(raw,locale="sw-TZ",candidate=None,house_style=None):
  if locale not in LOCALES: raise ValueError("Unsupported locale")
