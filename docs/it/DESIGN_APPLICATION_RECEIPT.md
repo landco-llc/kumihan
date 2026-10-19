@@ -30,3 +30,5 @@ Final font integration: explicitly register it in the shared Latin selector grou
 
 ## Final state and public readback
 The completed Skill/source state is bound by immutable tag kumihan-it-v0.1.0 / e7e21628d444a2c0b4016570a1426bc6afa37c79. The explicit Latin-stack run is evidence/browser-final-latin.json: 192 observations, zero failures; latest mobile screenshot it-mobile-keyboard-final.png visually inspected. Twelve keyboard skip/focus and nine Italian guide-language navigation checks are in evidence/keyboard.json. Release assets and all twelve public Pages were independently fetched and matched. The candidate display is updated only after draft=false and public bytes were observed. All native/assistive/editorial limits above remain unchanged.
+
+Final publication display: PR #88 / ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee built on Pages. All three public LPs were read back with RELEASED and without RELEASE CANDIDATE; all 12 Pages, 12 gateways and five resources are source-byte equal (evidence/public-pages.json). No protected product input or published ZIP changed in this follow-up.
