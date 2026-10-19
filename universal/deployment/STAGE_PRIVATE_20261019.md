@@ -169,6 +169,32 @@ Expected successful output:
 
 **If any check fails, STOP; do not rerun the helper blindly because private config is deliberately retained.** No public bootstrap installation until full readiness and the independent vhost exposure gate. Review the failure without printing sensitive errors or changing the FTP root.
 
+## Stage D1 result — WEB PHP RUNTIME READY PASS
+
+Owner's authenticated SSH and Web PHP readiness probe reported:
+
+    PRIVATE_CONFIG_CREATED
+    PHP_VERSION=8.5.11
+    PHP_SAPI=litespeed
+    REGISTRY_MODULES=21
+    WEB_PHP85=PASS
+    WEB_SAPI_LITESPEED=PASS
+    EXTENSIONS=PASS
+    PRIVATE_CONFIG=PASS
+    SDK_AUTOLOAD=PASS
+    REGISTRY=PASS
+    SESSION_WRITE=PASS
+    PRIVATE_RUNTIME_WEB_READY
+    MCP_NOT_PUBLIC
+
+The no-secret private runtime/config.php exists and was read successfully by actual Web PHP. Composer SDK autoload, 21 language registry and private session create/write/delete are PASS. This does not mean `/mcp` is available: public index.php/.htaccess were still absent.
+
+## Stage D2 — read-only publication preflight (next)
+
+Run the **nonmutating** [preflight_public_bootstrap.sh](../tools/preflight_public_bootstrap.sh) in the authorized Lolipop SSH terminal, with FTP_ROOT locally set. Confirm no leftover temporary Web PHP probe and no existing files in kmhn, and check for any public symlinks pointing outside web. Every symlink found in the FTP root requires manual review. Independently review configured domain/subdomain upload-root mappings in the Lolipop panel: this cannot be fully inferred from the known kmhn path.
+
+Prepared next-stage instructions and exact ZIP member SHA hashes are in [STAGE_PUBLIC_20261019.md](STAGE_PUBLIC_20261019.md). No public upload or main merge is authorized merely by this PASS.
+
 ### Stage D — after Stage C success (NOT AUTHORIZED BY PASS ALONE)
 
 Create private `runtime/config.php` from the production template (never publish it), verify PHP dependencies/session permissions and isolation; only then publish exactly two bootstrap files under `web/kmhn`. Run actual HTTPS initialize/tools/list/tools/call. Do not merge main or release clients without Owner Gate.
