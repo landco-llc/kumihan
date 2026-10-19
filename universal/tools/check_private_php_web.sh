@@ -83,6 +83,15 @@ else
 fi
 printf '%s\n' "$OUT"
 case "$OUT" in
+  *"PHP_VERSION=8.5."*)
+    echo "TARGET_WEB_PHP85=PASS"
+    ;;
+  *)
+    echo "TARGET_WEB_PHP85=NOT_VERIFIED"
+    exit 1
+    ;;
+esac
+case "$OUT" in
   *"PRIVATE_PHP_READ=PASS"*)
     echo "PRIVATE_WEB_PHP_PRECHECK_PASS"
     ;;
