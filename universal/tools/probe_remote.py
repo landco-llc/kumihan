@@ -137,15 +137,16 @@ def mcp_probe(endpoint: str) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=("tls", "mcp"), default="tls")
-    parser.add_argument("--endpoint", default=target())
+    parser.add_argument("--endpoint", default=None)
     args = parser.parse_args()
     try:
-        secure_endpoint(args.endpoint)
+        endpoint = args.endpoint if args.endpoint is not None else target()
+        secure_endpoint(endpoint)
         if args.mode == "tls":
-            tls_preflight(args.endpoint)
+            tls_preflight(endpoint)
         else:
-            tls_preflight(args.endpoint)
-            mcp_probe(args.endpoint)
+            tls_preflight(endpoint)
+            mcp_probe(endpoint)
         return 0
     except (OSError, ssl.SSLError, ValueError, RuntimeError, UnicodeError) as exc:
         print(f"{args.mode.upper()}_NOT_VERIFIED: {type(exc).__name__}: {exc}", file=sys.stderr)
