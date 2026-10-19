@@ -150,7 +150,8 @@ Run the checker after an authenticated SSH login, using a temporary **HOME** fil
   else
     echo 'NO_CURL_OR_WGET'; exit 1
   fi
-  test -s "$SCRIPT" && sh -n "$SCRIPT"
+  if [ ! -s "$SCRIPT" ]; then echo 'EMPTY_OR_MISSING_SCRIPT'; exit 1; fi
+  sh -n "$SCRIPT"
   FTP_ROOT="$(pwd -P)" sh "$SCRIPT"
 )
 ```
