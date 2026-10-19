@@ -750,7 +750,7 @@ def page(key, c):
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&amp;display=swap"/><style>#language-fa {font-family:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;letter-spacing:normal;}</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&amp;display=swap"/><style>#language-fa {{font-family:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;letter-spacing:normal;}}</style>
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>
