@@ -238,6 +238,11 @@ html[lang="bn"] :is(h1, h2, h3, .lang-title, .principle-text) { letter-spacing: 
 html[lang="bn"] h1 { line-height: 1.5; }
 html[lang="bn"] :is(.section-heading h2, .about-section h2) { line-height: 1.55; }
 html[lang="bn"] :is(p, .principle-small, .lang-desc) { line-height: 1.85; }
+/* Khmer: no negative tracking, room for subscript consonants and vowel signs. */
+html[lang="km"] :is(h1, h2, h3, .lang-title, .principle-text) { letter-spacing: 0; }
+html[lang="km"] h1 { line-height: 1.55; }
+html[lang="km"] :is(.section-heading h2, .about-section h2) { line-height: 1.6; }
+html[lang="km"] :is(p, .principle-small, .lang-desc) { line-height: 1.9; }
 html:is([lang="en"], [lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"], [lang="it"], [lang="ru"], [lang="sw"], [lang="zu"]) :is(.section-heading h2, .about-section h2) { line-height: 1.22; letter-spacing: -.04em; }
 html:is([lang="en"], [lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"], [lang="it"], [lang="ru"], [lang="sw"], [lang="zu"]) .lang-title { letter-spacing: -.03em; }
 html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="bn"], [lang="de"], [lang="pl"], [lang="id"], [lang="it"], [lang="ru"], [lang="sw"], [lang="zu"]) :is(h1, h2, h3, .lang-desc, .principle-text) { overflow-wrap: break-word; }

@@ -700,6 +700,111 @@ _ZU_EDITION_NAMES = {"zu":"isiZulu","sw":"Kizulu","ar":"الزولو","bn":"জ�
 for _lang, _names in EDITION_NAMES.items():
     _names["zu"] = _ZU_EDITION_NAMES[_lang]
 
+
+# Khmer edition (KUMIHAN｜លំនឹង): registry, the Khmer top, its card for every reader
+# language and the Khmer reader's table of all editions; names from CLDR.
+GATEWAYS["km"] = ("top-km.html", "km", "KM", "ភាសាខ្មែរ")
+PRODUCTS["km"] = dict(name="ភាសាខ្មែរ", lang="km", brand="KUMIHAN｜លំនឹង",
+    glyph="ក", label="KM · KHMER", version="v0.1.0",
+    pages={"km":"kumihan-km.html","en":"kumihan-km.en.html","ja":"kumihan-km.ja.html"})
+UI["km"] = dict(heading="កំណែភាសារបស់ KUMIHAN", more="បង្ហាញ {n} បន្ថែម", menu="ភាសា")
+PICK["km"] = "ជ្រើសភាសា"
+_KM_EDITION_NAMES = {
+    'ar': 'الخميرية',
+    'bn': 'খমের',
+    'de': 'Khmer',
+    'en': 'Khmer',
+    'es': 'Jemer',
+    'fr': 'Khmer',
+    'hi': 'खमेर',
+    'id': 'Khmer',
+    'it': 'Khmer',
+    'ja': 'クメール語',
+    'ko': '크메르어',
+    'pl': 'Khmerski',
+    'pt': 'Khmer',
+    'ru': 'Кхмерский',
+    'sw': 'Kikambodia',
+    'th': 'เขมร',
+    'vi': 'Tiếng Khmer',
+    'zh-hans': '高棉语',
+    'zh-hant': '高棉文',
+    'zu': 'isi-Khmer',
+}
+for _reader, _names in EDITION_NAMES.items():
+    _names["km"] = _KM_EDITION_NAMES[_reader]
+EDITION_NAMES["km"] = {
+    'ar': 'អារ៉ាប់',
+    'bn': 'បង់ក្លាដែស',
+    'de': 'អាល្លឺម៉ង់',
+    'es': 'អេស្ប៉ាញ',
+    'fr': 'បារាំង',
+    'hi': 'ហិណ្ឌី',
+    'id': 'ឥណ្ឌូណេស៊ី',
+    'it': 'អ៊ីតាលី',
+    'ja': 'ជប៉ុន',
+    'ko': 'កូរ៉េ',
+    'pl': 'ប៉ូឡូញ',
+    'pt': 'ព័រទុយហ្គាល់',
+    'ru': 'រុស្ស៊ី',
+    'sw': 'ស្វាហ៊ីលី',
+    'th': 'ថៃ',
+    'vi': 'វៀតណាម',
+    'zh-hans': 'ចិន\u200bអក្សរ\u200bកាត់',
+    'zh-hant': 'ចិន\u200bអក្សរ\u200bពេញ',
+    'zu': 'ហ្សូលូ',
+    'km': 'ខ្មែរ',
+}
+_KM_DESC = {
+    'ar': 'ការរៀបចំអក្សរអារ៉ាប់ ដែលគ្រប់គ្រងការសរសេរពីស្ដាំទៅឆ្វេង និងការលាយអក្សរច្រើនប្រភេទ ដោយមិនកែប្រែអត្ថបទដើម។',
+    'bn': 'ការរៀបចំអក្សរ និងការរចនាបង់ក្លាដែស ដែលរក្សាសញ្ញាស្រៈ អក្សរផ្សំ និងអត្ថបទដើម ហើយបែងចែក bn-BD និង bn-IN។',
+    'de': 'ការរៀបចំអក្សរអាល្លឺម៉ង់ ដែលគោរពពាក្យផ្សំវែងៗ សញ្ញាសម្រង់ និងវិធាន DE/AT/CH ដោយរក្សាអត្ថបទដើម។',
+    'es': 'ការរៀបចំអក្សរអេស្ប៉ាញ ដែលគោរពការប្រើប្រាស់តាមតំបន់ រក្សាអត្ថបទដើម និងបែងចែកភស្តុតាងដែលបានផ្ទៀងផ្ទាត់ពីការសម្រេចចិត្តផ្នែកនិពន្ធ។',
+    'fr': 'ការរៀបចំអក្សរបារាំង ដែលបែងចែកដកឃ្លាមិនបំបែក សញ្ញាសម្រង់ និងរចនាប័ទ្មនិពន្ធតាមតំបន់ ឬស្ថាប័ន។',
+    'hi': 'ការរៀបចំអក្សរ និងការរចនាហិណ្ឌី ដែលរក្សាអត្ថបទដើម អក្សរផ្សំ និងសញ្ញាស្រៈ (matra)។',
+    'id': 'ការរៀបចំអក្សរឥណ្ឌូណេស៊ី ដែលយកចិត្តទុកដាក់លើធ្នាក់ បុព្វបទ ពាក្យស្ទួន វណ្ណយុត្តិ និងចំនួនទឹកប្រាក់រូពី តាមបរិបទ ដោយរក្សាអត្ថបទដើម។',
+    'it': 'ការរៀបចំអក្សរអ៊ីតាលី ដែលយកចិត្តទុកដាក់លើសញ្ញាសំឡេង ការដកស្រង់ និងភាពខុសគ្នាតាមតំបន់ ដោយរក្សាអត្ថបទដើម។',
+    'ja': 'ចាប់ពីវិធានបំបែកបន្ទាត់ជប៉ុន (kinsoku) និងការចុះបន្ទាត់ធម្មជាតិ រហូតដល់រចនាសម្ព័ន្ធព័ត៌មាន ចន្លោះទទេ និងលំហូរនៃការអាន។',
+    'ko': 'ការបំបែកបន្ទាត់រវាង eojeol (ឯកតាដកឃ្លាកូរ៉េ) ចង្វាក់អត្ថបទ និងរចនាសម្ព័ន្ធព័ត៌មានដែលច្បាស់លាស់។',
+    'pl': 'ការរៀបចំអក្សរប៉ូឡូញ ដែលមានសញ្ញាអក្សរត្រឹមត្រូវ ការចុះបន្ទាត់មានន័យ និងការរចនាដែលរក្សាអត្ថបទដើម។',
+    'pt': 'ការរៀបចំអក្សរ និងការរចនាព័រទុយហ្គាល់តាមអត្ថន័យ ដែលគោរពវិធានប្រេស៊ីល និងអឺរ៉ុប ព្រមទាំងបំណងរបស់អ្នកនិពន្ធ។',
+    'ru': 'ការរៀបចំអក្សររុស្ស៊ី ដែលគ្រប់គ្រង ё និង й សញ្ញាសម្រង់ សញ្ញាដាច់ និងការចុះបន្ទាត់តាមបរិបទ ដោយរក្សាអត្ថបទដើម។',
+    'sw': 'ការរៀបចំអក្សរស្វាហ៊ីលី ដែលរក្សា ng’ និងសញ្ញាអាប៉ូស្ត្រូហ្វ គោរពពាក្យវែងៗ និងជ្រើសទម្រង់ sw-TZ, sw-KE ឬ sw-CD ឲ្យច្បាស់លាស់។',
+    'th': 'គោរពព្រំដែនពាក្យថៃ និងតួអក្សរផ្សំ ដើម្បីឲ្យការរចនាថៃអានបានដោយធម្មជាតិ។',
+    'vi': 'ការរៀបចំអក្សរវៀតណាម ដែលគោរពសញ្ញាសំនៀង ការចុះបន្ទាត់មានន័យ និងខ្លឹមសារដើម។',
+    'zh-hans': 'វណ្ណយុត្តិ ការចុះបន្ទាត់ និងអត្ថបទលាយចិន-ឡាតាំងសម្រាប់ចិនដីគោក ដោយមិនសរសេរអត្ថបទដើមឡើងវិញ។',
+    'zh-hant': 'គ្រប់គ្រងវិធានវណ្ណយុត្តិ និងការរៀបចំអក្សរខុសៗគ្នារបស់តៃវ៉ាន់ និងហុងកុង។',
+    'zu': 'ការរៀបចំអក្សរហ្សូលូ ដែលរក្សាពាក្យភ្ជាប់ និងអក្សរធំនៅកណ្ដាលពាក្យ (ដូចជា isiZulu) ដោយរក្សាអត្ថបទដើម។',
+    'km': 'ការរៀបចំអក្សរខ្មែរ ដោយរក្សាអក្សរផ្សំ ការបំបែកបន្ទាត់ និងអត្ថបទដើម។',
+}
+CARDS["km"] = {code: (text, "មើលកំណែ" + EDITION_NAMES["km"][code]) for code, text in _KM_DESC.items()}
+KM_CARD_COPY = {
+    'ja': ('結合文字・語のまとまり・原稿を守るクメール語の文字組みとデザイン。', 'クメール語版を見る'),
+    'en': ('Khmer typography protecting conjuncts, source text and purposeful line breaks.', 'View the Khmer edition'),
+    'zh-hant': ('保護疊寫子音、詞的完整與原稿，並依語意換行的高棉文排版與設計。', '前往高棉文版'),
+    'zh-hans': ('保护叠写辅音、词的完整与原稿，并按语意换行的高棉语排版与设计。', '前往高棉语版'),
+    'ko': ('결합 자음과 원고를 지키고 의미에 맞게 줄을 바꾸는 크메르어 글짜임.', '크메르어 버전 보기'),
+    'th': ('การจัดวางตัวอักษรเขมรที่รักษาพยัญชนะซ้อน ต้นฉบับ และการตัดบรรทัดตามความหมาย', 'ดูเวอร์ชันภาษาเขมร'),
+    'fr': ('Typographie khmère qui protège les consonnes souscrites, le texte source et des retours à la ligne réfléchis.', 'Voir l’édition khmère'),
+    'es': ('Tipografía jemer que protege las consonantes subíndices, el original y los saltos de línea con sentido.', 'Ver la edición en jemer'),
+    'pt': ('Tipografia khmer que protege as consoantes subscritas, o original e quebras de linha com sentido.', 'Ver a edição em khmer'),
+    'ar': ('تنضيد خميري يحمي الحروف المركّبة والنص الأصلي وفواصل الأسطر ذات المعنى.', 'عرض النسخة الخميرية'),
+    'hi': ('संयुक्त व्यंजनों, मूल पाठ और अर्थपूर्ण पंक्ति-विभाजन को सुरक्षित रखने वाली ख्मेर टाइपोग्राफ़ी।', 'ख्मेर संस्करण देखें'),
+    'vi': ('Typography tiếng Khmer giữ nguyên phụ âm chồng, bản gốc và ngắt dòng có chủ đích.', 'Xem phiên bản tiếng Khmer'),
+    'de': ('Khmer-Typografie, die Konsonantenligaturen, das Original und sinnvolle Zeilenumbrüche bewahrt.', 'Khmer-Version ansehen'),
+    'pl': ('Typografia khmerska chroniąca spółgłoski podpisane, oryginał i przemyślane podziały wierszy.', 'Zobacz wersję khmerską'),
+    'id': ('Tipografi Khmer yang menjaga konsonan bertumpuk, naskah asli, dan pergantian baris yang bermakna.', 'Lihat edisi bahasa Khmer'),
+    'bn': ('যুক্তব্যঞ্জন, মূল লেখা ও অর্থপূর্ণ লাইন ভাঙা রক্ষা করা খমের টাইপোগ্রাফি।', 'খমের সংস্করণ দেখুন'),
+    'it': ('Tipografia khmer che protegge le consonanti sottoscritte, il testo originale e gli a capo ragionati.', 'Vai all’edizione khmer'),
+    'ru': ('Кхмерская типографика: подстрочные согласные, сохранность оригинала и осмысленные переносы строк.', 'Открыть кхмерскую версию'),
+    'sw': ('Uchapaji wa Kikambodia unaolinda konsonanti zilizopangwa chini, maandishi asilia na mikato ya mistari yenye maana.', 'Tazama toleo la Kikambodia'),
+    'zu': ('Ukuhlelwa kombhalo kwesi-Khmer okuvikela ongwaqa abahlanganisiwe, umbhalo wokuqala nokwehlukaniswa kwemigqa okunomqondo.', 'Buka isi-Khmer'),
+}
+for _reader, _cards in CARDS.items():
+    if _reader != "km":
+        _cards["km"] = KM_CARD_COPY[_reader]
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)

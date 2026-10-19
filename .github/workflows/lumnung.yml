@@ -1,0 +1,71 @@
+name: KUMIHAN លំនឹង v0.1.0
+on:
+  push:
+    branches: [feat/kumihan-lumnung-v0.1.0, main]
+    paths:
+      - 'plugins/kumihan-lumnung/**'
+      - 'tools/build_lumnung*.py'
+      - 'tools/base_copy.py'
+      - 'tools/build_gateways.py'
+      - 'assets/lumnung-site-*'
+      - 'tests/km/**'
+      - 'kumihan-km*.html'
+      - 'docs/install-lumnung-*.html'
+      - '.github/workflows/lumnung.yml'
+      - 'tools/web_fonts.py'
+      - 'assets/gateway-copy.json'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  package-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Skills and versioned ZIPs before website
+        run: |
+          python tools/build_lumnung.py
+          python -m py_compile plugins/kumihan-lumnung/runtime/checks.py
+      - name: Generate KUMIHAN canonical landing and installation pages
+        run: |
+          python tools/base_copy.py
+          python tools/web_fonts.py
+          python tools/build_lumnung_site.py
+          python tools/build_gateways.py
+      - name: Lightweight validation
+        run: |
+          python -m unittest discover -s tests/km -v
+          python tools/base_copy.py --check
+          python tools/web_fonts.py --check
+          python tools/build_lumnung_site.py --check
+          python tools/build_gateways.py --check
+      - name: Commit generated pages into feature branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/feat/kumihan-lumnung-v0.1.0'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/lumnung-site-copy.json assets/lumnung-site.css kumihan-km*.html docs/install-lumnung-*.html index.html top-*.html assets/kumihan-fonts.css _data/web_fonts.yml
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(lumnung): render verified site after skill packaging'
+            git push origin HEAD:feat/kumihan-lumnung-v0.1.0
+          fi
+      - name: Public GitHub Release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python tools/base_copy.py --check
+          python tools/build_lumnung_site.py --check
+          TAG='kumihan-km-v0.1.0'
+          if gh release view "$TAG" >/dev/null 2>&1; then exit 0; fi
+          gh release create "$TAG" plugins/kumihan-lumnung/downloads/*.zip plugins/kumihan-lumnung/downloads/MANIFEST.json plugins/kumihan-lumnung/downloads/SHA256SUMS.txt \
+            --target "$GITHUB_SHA" --title 'KUMIHAN｜លំនឹង v0.1.0' --notes-file plugins/kumihan-lumnung/RELEASE_NOTES.md --latest=false
+          gh release view "$TAG" --json isDraft,tagName,url

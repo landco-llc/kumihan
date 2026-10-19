@@ -1,0 +1,1 @@
+Lightweight audit: verify JSON structure, 30 KM rules, 24 scenarios, UTF-8 source fidelity, archive SHA256 and basic site links. Native Khmer editorial, cross-browser font shaping and provider installation remain separate not-checked items.
