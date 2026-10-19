@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "kmhn_symlink_scope_clear_web_wide_permission_limited_pending_owner_mapping_review",
+  "status": "owner_domain_mappings_reviewed_scoped_prebootstrap_pending",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -56,13 +56,16 @@
     "other_vhosts_isolation_verified": false,
     "public_kmhn_symlink_scope_verified": true,
     "public_web_wide_symlink_scan_complete": false,
-    "public_web_wide_scan_permission_limited": true
+    "public_web_wide_scan_permission_limited": true,
+    "owner_vhost_upload_mappings_reviewed": true,
+    "owner_reports_no_private_runtime_public_alias": true,
+    "public_scoped_prebootstrap_recheck_verified": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner SSH diagnostic: KMHN_SYMLINK_SCOPE_CLEAR, WEB_WIDE_SCAN_PERMISSION_LIMIT, WEB_WIDE_SYMLINK_SCAN_INCOMPLETE, NO_FILES_CHANGED. Do not infer global symlink exposure or global clean state. SDK, 21 languages and sessions remain PASS; MCP endpoint not public.",
-  "deployment_blocker": "KUMIHAN kmhn symlink scope PASS; site-wide web subtree cannot be fully scanned due to permission denied. Need Owner confirmation of all active domain/subdomain upload-folder mappings (and no alias/symlink to private MCP path) or explicit bounded-risk decision; no bootstrap/E2E yet.",
+  "notes": "Owner confirms all active domain upload folder mappings reviewed and no private MCP runtime reference. KUMIHAN symlink scope clear from prior diagnostics; full /web scan remains NOT_CHECKED due permissions. Private SDK/21 registry/session tests PASS. Public bootstrap and MCP E2E not yet performed.",
+  "deployment_blocker": "Owner attested no domain upload mappings to private runtime. Remaining G1: fresh scoped no-write filesystem preflight (kmhn empty/no symlinks and non-web runtime present). Do not declare full-web traversal clean; limited /mcp test only after G1 PASS.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -222,7 +225,7 @@
   "public_preflight": {
     "observed_at": "2026-10-19",
     "source": "Owner authenticated Lolipop SSH run of revision dd6d932c5a1491f23912eb7d2f8d752a3ee8e4a0",
-    "status": "SCOPED_CLEAR_FULL_WEB_PERMISSION_LIMITED",
+    "status": "OWNER_MAPPING_REVIEWED_SCOPED_RECHECK_PENDING",
     "markers": [
       "PRIVATE_PATH_OUTSIDE_WEB_OK",
       "PUBLIC_KMHN_EMPTY_OK",
@@ -233,7 +236,7 @@
     "failure_scope": "Whole FTP-root symlink traversal cannot finish due to permission denial; the designated kmhn directory has no symlinks by separate complete read-only scan.",
     "safety_conclusion": "kmhn-specific symlink scope clear. Full web traversal was permission limited and may contain undisclosed symlink results. All-vhost private-path nonexposure NOT VERIFIED; manual Owner mapping review outstanding.",
     "writes_performed": false,
-    "next_step": "Do not repeat an unprivileged full web scan or change other sites. Owner to inspect Lolipop domain/subdomain upload-directory mapping; decide on documented residual-risk handling before bootstrap.",
+    "next_step": "Run fresh scoped, read-only kmhn/public + private runtime preflight with no full web recursion; if PASS, limited two-file /mcp bootstrap deployment and immediate synthetic live protocol smoke may be prepared.",
     "scoped_diagnostic": {
       "observed_at": "2026-10-19",
       "source": "Owner's authenticated Lolipop SSH session; read-only diagnostic command",
@@ -252,5 +255,15 @@
       "next": "Review all configured domain/subdomain public upload folders and any aliases to the non-web private directory. Record whether unreadable web subtree remains a residual risk; do not claim it is globally clean.",
       "audit_limit": "Sanitized failed find may include path errors and/or symlink path output; only kmhn-specific scan establishes zero symlinks."
     }
+  },
+  "owner_domain_mapping_review": {
+    "observed_at": "2026-10-19",
+    "evidence_type": "Owner explicit confirmation based on Lolipop control panel",
+    "statement": "All domains' upload destinations reviewed; none references the non-public MCP runtime folder",
+    "configuration_mapping_checked_by_owner": true,
+    "private_runtime_alias_found": false,
+    "limited_to": "Domain/subdomain upload-folder configuration as manually inspected; not exhaustive traversal of unreadable FTP subtrees",
+    "full_ftp_root_symlink_scan": "NOT_CHECKED_PERMISSION_LIMIT",
+    "resulting_scope": "Bounded public bootstrap TEST admission, contingent on freshly passing no-write scoped preflight and only two public files; not client/public release approval"
   }
 }
