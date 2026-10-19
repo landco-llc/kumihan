@@ -73,7 +73,7 @@ def plan_outputs(root=ROOT):
     manifest = json.loads((base / "plugin.json").read_text(encoding="utf-8"))
     version = manifest["version"]
     if manifest["name"] != "kumihan-ziheng" or not re.fullmatch(
-        r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)(?:-[0-9A-Za-z.-]+)?", version
+        r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", version
     ):
         raise ValueError("Unexpected ZiHeng identity or version")
     assets = {name: skill_source_files(root, name, version) for name in NAMES}
@@ -191,7 +191,7 @@ def plan_outputs(root=ROOT):
             )
         downloads["README.md"] = (
             f"# KUMIHAN｜字衡 for {platform} / {platform} 版本\n\n"
-            f"v{version} (preview). 臺灣 / 香港繁體中文文字組版 — "
+            f"v{version}. 臺灣 / 香港繁體中文文字組版 — "
             "Traditional Chinese typography and read-only review.\n\n"
             + lead + "\n"
             + f"## Full bundle / 整包\n\n"

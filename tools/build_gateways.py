@@ -63,7 +63,7 @@ PRODUCTS = {
                pages={"es": "kumihan-es.html", "en": "kumihan-es.en.html", "ja": "kumihan-es.ja.html"}),
     "fr": dict(name="Français", lang="fr", brand="KUMIHAN｜Accord", glyph="Ç", label="FR · FRENCH", version="v0.1.1",
                pages={"fr": "kumihan-fr.html", "en": "kumihan-fr.en.html", "ja": "kumihan-fr.ja.html"}),
-    "ja": dict(name="日本語", lang="ja", brand="KUMIHAN", glyph="あ", label="JA · JAPANESE", version="v0.1.6 preview",
+    "ja": dict(name="日本語", lang="ja", brand="KUMIHAN", glyph="あ", label="JA · JAPANESE", version="v0.1.8",
                pages={"ja": "kumihan.html", "en": "en.html", "zh-hant": "zh-tw.html"}),
     "ko": dict(name="한국어", lang="ko", brand="KUMIHAN｜글짜임", glyph="한", label="KO · KOREAN", version="v0.1.0",
                pages={"ko": "kumihan-ko.html", "en": "kumihan-ko.en.html", "ja": "kumihan-ko.ja.html"}),
@@ -75,7 +75,7 @@ PRODUCTS = {
                pages={"vi": "kumihan-vi.html", "en": "kumihan-vi.en.html", "ja": "kumihan-vi.ja.html"}),
     "zh-hans": dict(name="简体中文", lang="zh-Hans-CN", brand="KUMIHAN｜字律", glyph="汉", label="ZH-HANS · SIMP.", version="v0.1.0",
                     pages={"zh-hans": "kumihan-zh-cn.html", "en": "kumihan-zh-cn.en.html", "ja": "kumihan-zh-cn.ja.html"}),
-    "zh-hant": dict(name="繁體中文", lang="zh-Hant-TW", brand="KUMIHAN｜字衡", glyph="漢", label="ZH-HANT · TRAD.", version="v0.1.0 preview",
+    "zh-hant": dict(name="繁體中文", lang="zh-Hant-TW", brand="KUMIHAN｜字衡", glyph="漢", label="ZH-HANT · TRAD.", version="v0.1.0",
                     pages={"zh-hant": "kumihan-zh-han.html", "en": "kumihan-zh-han.en.html", "ja": "kumihan-zh-han.ja.html"}),
 }
 

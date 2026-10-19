@@ -247,7 +247,7 @@
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   </style>
-{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
+{% assign kumihan_font_root = '/' | relative_url %}{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja | replace: "@ROOT@", kumihan_font_root }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
 </head>
 <body id="top">
   <a class="skip-link" href="#main"><span class="lang-ja">本文へ移動</span><span class="lang-en">Skip to content</span><span class="lang-zh">跳至主要內容</span></a>
@@ -361,15 +361,15 @@
     <section class="status-section" aria-labelledby="status-title">
       <div class="shell status-box">
         <div>
-          <div class="status-title" id="status-title">RELEASED / v0.1.6 PREVIEW</div>
-          <p><span class="lang-ja">v0.1.6 preview を2026年10月18日に公開しました。現在はプレビュー版です。正式版に向けて開発中であり、各AIツールでの動作はまだ十分に確認できていません。</span><span class="lang-en">v0.1.6 preview was released on October 18, 2026. KUMIHAN is currently in preview. A stable release is still in development, and behavior across AI tools has not yet been fully verified.</span><span class="lang-zh">v0.1.6 preview 已於 2026 年 10 月 18 日發布。KUMIHAN 目前為預覽版，正式版仍在開發中，在各 AI 工具上的運作也尚未完整驗證。</span></p>
+          <div class="status-title" id="status-title">CURRENT PACKAGE / v0.1.8</div>
+          <p><span class="lang-ja">現行パッケージは v0.1.8 です。新しいタグとReleaseは承認待ちです。日本語文字組と用途別デザイン支援を提供しますが、各AIツールでの実動作やすべての表示環境はまだ十分に確認できていません。</span><span class="lang-en">The current package is v0.1.8. Its new tag and Release await approval. It provides Japanese typography and purpose-led design guidance. Native AI host behavior and all rendering environments have not been fully verified.</span><span class="lang-zh">目前套件版本為 v0.1.8，新標籤與 Release 尚待核准，提供日文文字組版與依用途調整的設計指引。AI 主機的原生運作及各種顯示環境仍未完成全面驗證。</span></p>
         </div>
-        <div class="status-meta"><a href="https://github.com/landco-llc/kumihan/releases/tag/v0.1.6-preview" target="_blank" rel="noopener noreferrer"><span class="lang-ja">最新版のダウンロード ↗</span><span class="lang-en">Download latest ↗</span><span class="lang-zh">下載最新版本 ↗</span></a><br>OPEN SOURCE · APACHE 2.0</div>
+        <div class="status-meta"><a href="https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview" target="_blank" rel="noopener noreferrer"><span class="lang-ja">過去版 v0.1.8-preview ↗</span><span class="lang-en">Older release v0.1.8-preview ↗</span><span class="lang-zh">過去版本 v0.1.8-preview ↗</span></a><br>OPEN SOURCE · APACHE 2.0</div>
       </div>
     </section>
     <section class="cta-section" aria-labelledby="cta-title">
       <div class="shell cta-layout">
-        <div><h2 id="cta-title"><span class="lang-ja">日本語のデザインに<br>もうひとつの選択肢を</span><span class="lang-en">Another way to design<br>in Japanese</span><span class="lang-zh">讓日文設計<br>多一種選擇</span></h2><p><span class="lang-ja">KUMIHANはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。</span><span class="lang-en">KUMIHAN is open source. The skills, preview releases, and full change history are on GitHub.</span><span class="lang-zh">KUMIHAN 是開放原始碼專案。你可以在 GitHub 查看技能、預覽版與完整更新紀錄。</span></p></div>
+        <div><h2 id="cta-title"><span class="lang-ja">日本語のデザインに<br>もうひとつの選択肢を</span><span class="lang-en">Another way to design<br>in Japanese</span><span class="lang-zh">讓日文設計<br>多一種選擇</span></h2><p><span class="lang-ja">KUMIHANはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。</span><span class="lang-en">KUMIHAN is open source. The skills, releases, and full change history are on GitHub.</span><span class="lang-zh">KUMIHAN 是開放原始碼專案。你可以在 GitHub 查看技能、發行版本與完整更新紀錄。</span></p></div>
         <a class="button" href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer"><span class="lang-ja">GitHubで見る</span><span class="lang-en">View on GitHub</span><span class="lang-zh">前往 GitHub</span><span class="arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>

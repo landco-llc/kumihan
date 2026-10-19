@@ -2,14 +2,14 @@
   "format": 2,
   "product": "KUMIHAN｜字衡 for Gemini",
   "publisher": "L&Co. LLC",
-  "version": "0.1.0-preview",
+  "version": "0.1.0",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Host-native installation and invocation not yet verified.",
   "archives": [
     {
-      "file": "extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip",
-      "sha256": "9d0820df5206da8d44057fdc68639c14177cf556f0be67aeb0b831b4192d30c0",
-      "bytes": 151467,
+      "file": "extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip",
+      "sha256": "6f199799a7905d55636c28cf5598bd143cadc90b7aa2460aa4b7befb9df24e75",
+      "bytes": 151441,
       "members": [
         {
           "path": "LICENSE",
@@ -18,8 +18,8 @@
         },
         {
           "path": "README.md",
-          "bytes": 606,
-          "sha256": "5d67833a753844a211cc8e51010c3f4f78dabcaf416680e213ffae793be02f17"
+          "bytes": 598,
+          "sha256": "235364edf7fadb9ec7a913a72f1f7ecf2242be203daac56f29aff0f2a6f12491"
         },
         {
           "path": "THIRD_PARTY_NOTICES.md",
@@ -28,8 +28,8 @@
         },
         {
           "path": "gemini-extension.json",
-          "bytes": 286,
-          "sha256": "19c2b24f0700af54e342cc0683c01193034ff1b591c4dd9f39a0082d30a0691c"
+          "bytes": 278,
+          "sha256": "6dc484e91a1503d4403f4a06d36d9202191e4c90050a6fda1653e83f299dd9a5"
         },
         {
           "path": "skills/kumihan-ziheng-documents/LICENSE",
@@ -48,8 +48,8 @@
         },
         {
           "path": "skills/kumihan-ziheng-documents/inventory.json",
-          "bytes": 4042,
-          "sha256": "a5c4affe9942324661756ce914577a2079eb27bfefe2a1f8e27eeecc3b14a9da"
+          "bytes": 4034,
+          "sha256": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d"
         },
         {
           "path": "skills/kumihan-ziheng-documents/locales/zh-Hant-HK.json",
@@ -173,8 +173,8 @@
         },
         {
           "path": "skills/kumihan-ziheng-review/inventory.json",
-          "bytes": 4039,
-          "sha256": "4db345478570af9a265f7cbbb94e652405d61f4425bc275169a1eeb3aa8ae967"
+          "bytes": 4031,
+          "sha256": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313"
         },
         {
           "path": "skills/kumihan-ziheng-review/locales/zh-Hant-HK.json",
@@ -298,8 +298,8 @@
         },
         {
           "path": "skills/kumihan-ziheng-web/inventory.json",
-          "bytes": 4036,
-          "sha256": "9644b5dd9caa2f9d557f8088850cf5782deb60293b018d0e3bdddf68df9d5ded"
+          "bytes": 4028,
+          "sha256": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74"
         },
         {
           "path": "skills/kumihan-ziheng-web/locales/zh-Hant-HK.json",
@@ -423,8 +423,8 @@
         },
         {
           "path": "skills/kumihan-ziheng/inventory.json",
-          "bytes": 4032,
-          "sha256": "0e543d97854fe173ea82e91802f270601800152a6240bd8e86fab8f1ef07c5ce"
+          "bytes": 4024,
+          "sha256": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a"
         },
         {
           "path": "skills/kumihan-ziheng/locales/zh-Hant-HK.json",
@@ -534,9 +534,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0-preview.zip",
-      "sha256": "ac2d875ce5f27c444df38b38721cb5916f5cc292ce52ac7990969dc0c3935ba4",
-      "bytes": 35118,
+      "file": "skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0.zip",
+      "sha256": "aa4dfbbbfa97a89fff06b1dd78aaf8b4827f29e4157d239064120a3bcdb39ced",
+      "bytes": 35114,
       "members": [
         {
           "path": "LICENSE",
@@ -555,8 +555,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 4032,
-          "sha256": "0e543d97854fe173ea82e91802f270601800152a6240bd8e86fab8f1ef07c5ce"
+          "bytes": 4024,
+          "sha256": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a"
         },
         {
           "path": "locales/zh-Hant-HK.json",
@@ -666,9 +666,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0-preview.zip",
-      "sha256": "5023b80ca7ffe03ee0e3d3abea642574da745b1d125a760df931684191848ffa",
-      "bytes": 35062,
+      "file": "skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0.zip",
+      "sha256": "304bb3bde9c898e9714550029149c2005d89c8ae284e1a5fe1b505f891bf5442",
+      "bytes": 35057,
       "members": [
         {
           "path": "LICENSE",
@@ -687,8 +687,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 4042,
-          "sha256": "a5c4affe9942324661756ce914577a2079eb27bfefe2a1f8e27eeecc3b14a9da"
+          "bytes": 4034,
+          "sha256": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d"
         },
         {
           "path": "locales/zh-Hant-HK.json",
@@ -798,9 +798,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0-preview.zip",
-      "sha256": "fa38e852873fc63340387014bd72c2df5fc1b63c20a2bcfd5ee13ad1f66f6676",
-      "bytes": 35172,
+      "file": "skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0.zip",
+      "sha256": "f3e905ea06922faabd1b3145563bb204d8c77378391227a549b069695d0b9694",
+      "bytes": 35170,
       "members": [
         {
           "path": "LICENSE",
@@ -819,8 +819,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 4039,
-          "sha256": "4db345478570af9a265f7cbbb94e652405d61f4425bc275169a1eeb3aa8ae967"
+          "bytes": 4031,
+          "sha256": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313"
         },
         {
           "path": "locales/zh-Hant-HK.json",
@@ -930,9 +930,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0-preview.zip",
-      "sha256": "c567b09dc4ee843497227805fb890b82b7ea22157f1a13efbf9db9adc8d90a47",
-      "bytes": 35100,
+      "file": "skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0.zip",
+      "sha256": "ed69a57780369d0d0b9e475d73b9cb63d27b613976cb418c1e3c8dbeaf59f912",
+      "bytes": 35096,
       "members": [
         {
           "path": "LICENSE",
@@ -951,8 +951,8 @@
         },
         {
           "path": "inventory.json",
-          "bytes": 4036,
-          "sha256": "9644b5dd9caa2f9d557f8088850cf5782deb60293b018d0e3bdddf68df9d5ded"
+          "bytes": 4028,
+          "sha256": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74"
         },
         {
           "path": "locales/zh-Hant-HK.json",

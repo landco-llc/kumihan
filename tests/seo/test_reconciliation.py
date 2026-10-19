@@ -58,10 +58,15 @@ class PrivacyIntegrationTests(unittest.TestCase):
         import build_privacy
         for path, content in build_privacy.outputs().items():
             page = Page(path, content)
+            if path == 'privacy-ja.html':
+                self.assertTrue(page.noindex)
+                self.assertEqual(page.canonical, seo.CONFIG['site_url'] + 'privacy.html')
+                self.assertIn('privacy.html#ja', content)
+                continue
             self.assertEqual(len(page.graphs), 1)
-            self.assertEqual(set(dict(page.alternates)), {'en', 'ja', 'x-default'})
-            self.assertNotIn('top-ja.html', dict(page.alternates).values())
+            self.assertEqual(set(dict(page.alternates)), {'en'})
             self.assertEqual(page.meta['og:url'], [page.canonical])
+            self.assertEqual(content.count('class="privacy-language"'), 22)
             self.assertIn('privacy', content)
 
     def test_privacy_builder_is_checked_by_common_pipeline(self):

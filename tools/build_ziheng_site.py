@@ -28,7 +28,7 @@ _wf_spec.loader.exec_module(WEB_FONTS)
 BASE = "https://landco-llc.github.io/kumihan/"
 LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 SOURCE = "https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng"
-ZIP = "https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0-preview.zip"
+ZIP = "https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip"
 BRAND = 'KUMIHAN<span class="brand-rule">｜</span>字衡'
 SECTIONS = ("hero", "intro-strip", "features", "idea-band", "skills-section",
             "install-section", "status-section", "cta-section")
@@ -255,7 +255,7 @@ def render(lang, c):
 </section>
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
-    <div><div class="status-title" id="status-title">{x(c.get('status_title', 'PREVIEW / 0.1.0'))}</div><p><strong>{x(c['status_h'])}</strong></p><p>{x(c['status_body'])}</p></div>
+    <div><div class="status-title" id="status-title">{x(c.get('status_title', 'VERSION / v0.1.0'))}</div><p><strong>{x(c['status_h'])}</strong></p><p>{x(c['status_body'])}</p></div>
     <div class="status-meta"><a href="{ZIP}" download>{x(c.get('status_link', u['zip'] + ' ↗'))}</a><br>OPEN SOURCE · APACHE 2.0</div>
   </div>
 </section>

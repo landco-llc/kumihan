@@ -9,7 +9,7 @@
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/geuljjaim-index.css' | relative_url }}">
 
-{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
+{% assign kumihan_font_root = '/' | relative_url %}{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja | replace: "@ROOT@", kumihan_font_root }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
 </head>
 <body id="top">
 <a class="skip-link" href="#main">{{ t.skip }}</a>

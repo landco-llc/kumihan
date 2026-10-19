@@ -5,8 +5,8 @@ Open-source typography & design guidance by L&Co. LLC.
 Links: KUMIHAN (the top page in the page's language), the language-edition
 menu (rounded, "choose a language" in the page's language, the page's own
 language first and the rest by code), GitHub, Apache 2.0, and the privacy
-policy (labelled in the page's language; Japanese pages open the Japanese
-text, all others the English one).
+policy (labelled in the page's language, opening that language's section of
+privacy.html).
 
 The styles are part of assets/kumihan-fonts.css (tools/web_fonts.py), which
 every page already loads after its own stylesheet. Jekyll layouts and the
@@ -19,7 +19,7 @@ from pathlib import Path
 
 REPO = "https://github.com/landco-llc/kumihan"
 ROOT_MARK = "@ROOT@"
-# "Privacy Policy" in each gateway language (tools/build_privacy.py builds the pages).
+# "Privacy Policy" in each gateway language (tools/build_privacy.py builds privacy.html).
 PRIVACY = {"en": "Privacy Policy", "ja": "プライバシーポリシー", "ar": "سياسة الخصوصية", "bn": "গোপনীয়তা নীতি",
            "de": "Datenschutzerklärung", "es": "Política de privacidad", "fa": "سیاست حفظ حریم خصوصی",
            "fr": "Politique de confidentialité", "hi": "गोपनीयता नीति", "id": "Kebijakan Privasi",
@@ -100,8 +100,7 @@ def footer(lang, root="", g=None):
             f'<details class="kf-menu"><summary>{escape(g.PICK[k])}</summary><ul>{items}</ul></details>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub</a>'
             f'<a href="{REPO}/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a>'
-            f'<a href="{root}{"privacy-ja.html" if k == "ja" else "privacy.html"}"'
-            + ("" if k in ("en", "ja") else ' hreflang="en"') + f'>{escape(PRIVACY[k])}</a>'
+            f'<a href="{root}privacy.html#{k}">{escape(PRIVACY[k])}</a>'
             f'</nav></div></footer>')
 
 

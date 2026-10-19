@@ -1,6 +1,6 @@
 # KUMIHAN｜字衡 — Gemini / Install ZiHeng
 
-**v0.1.0-preview** — One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.
+**v0.1.0** — One Gemini CLI extension and four standalone skill ZIPs for supported Gemini app accounts.
 
 > This package offers typography guidance, not an automatic renderer. Native host installation and invocation have not yet passed live host acceptance. Test both Taiwan and Hong Kong samples first.
 
@@ -9,7 +9,7 @@
 **1.** Download the dedicated Gemini CLI extension ZIP and extract it into a new empty folder.
 
 ```sh
-unzip kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip -d /absolute/path/kumihan-ziheng
+unzip kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip -d /absolute/path/kumihan-ziheng
 ```
 
 **2.** Install that local directory using Gemini CLI, restart, then verify the skills appear.
@@ -28,15 +28,15 @@ gemini extensions list
 
 ## Downloads and checksums
 
-- [Download full package (kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip)](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0-preview.zip)
-- Full package SHA-256: `9d0820df5206da8d44057fdc68639c14177cf556f0be67aeb0b831b4192d30c0`
+- [Download full package (kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip)](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip)
+- Full package SHA-256: `6f199799a7905d55636c28cf5598bd143cadc90b7aa2460aa4b7befb9df24e75`
 
 ### Four individual skills
 
-- [kumihan-ziheng](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0-preview.zip)
-- [kumihan-ziheng-web](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0-preview.zip)
-- [kumihan-ziheng-documents](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0-preview.zip)
-- [kumihan-ziheng-review](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0-preview.zip)
+- [kumihan-ziheng](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0.zip)
+- [kumihan-ziheng-web](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0.zip)
+- [kumihan-ziheng-documents](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0.zip)
+- [kumihan-ziheng-review](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0.zip)
 
 Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve the original characters.
 

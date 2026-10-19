@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PRODUCT = 'plugins/kumihan-ziheng'
 NAMES = ('kumihan-ziheng', 'kumihan-ziheng-web', 'kumihan-ziheng-documents', 'kumihan-ziheng-review')
 DATE = (2026, 10, 18, 0, 0, 0)
-VERSION_RE = r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)(?:-[0-9A-Za-z]+(?:[.-][0-9A-Za-z]+)*)?'
+VERSION_RE = r'(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)'
 
 
 def encode(data):
@@ -123,7 +123,7 @@ def plan_outputs(root=ROOT):
         archives[f'skills/{name}-{version}.zip'] = archive({f'{name}/{p}': b for p, b in files.items()})
     archives[f'plugins/kumihan-ziheng-{version}.zip'] = archive({f'kumihan-ziheng/{p}': b for p,b in plugin_files.items()})
     dist = dict(product='KUMIHAN｜字衡', name='kumihan-ziheng', version=version,
-        status='Unpublished preview candidate; native host discovery/invocation not checked.',
+        status='Source distribution candidate; native host discovery/invocation not checked.',
         archives=[dict(file=p, bytes=len(b), sha256=digest(b)) for p,b in sorted(archives.items())])
     archives['MANIFEST.json'] = encode(dist)
     archives['SHA256SUMS.txt'] = ''.join(f'{digest(b)}  {p}\n' for p,b in sorted(archives.items())).encode()

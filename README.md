@@ -1,32 +1,67 @@
 # KUMIHAN [クミハン]
 
-**日本語の文字組みから、AIのデザインをもっと自然に。**  
-**Japanese typography for thoughtful AI-assisted design.**
+**言葉が違えば、文字組も変わる。**  
+**Language-aware typography and thoughtful design, with AI.**
+
+[Website](https://landco-llc.github.io/kumihan/) · [日本語トップ](https://landco-llc.github.io/kumihan/top-ja.html) · [Privacy Policy](https://landco-llc.github.io/kumihan/privacy.html) · [Apache 2.0](LICENSE)
 
 <br>
 
 ## KUMIHANとは
 
-KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼンテーション資料をつくるときや見直すときに使う、オープンソースのスキル集です。
+KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を支えるオープンソースプロジェクトです。AIがWebサイト・記事・報告書・プレゼンテーション資料をつくるときや見直すときに使うスキル集を、言語版ごとに提供しています。
 
-日本語の改行や禁則、句読点・括弧の扱い、和文と欧文の混ざり方、文字と余白のバランスを大切にしています。
-
-決まりきったテンプレートに当てはめるのではなく、**内容と目的にふさわしい、読みやすく伝わりやすいデザイン**を目指します。
+改行・約物・書体・余白をその言語に合わせて整え、情報の順番と重要度から構成を考えます。AIにありがちな画一的なレイアウトや意味のない装飾を見直し、名前・数値・本文などの原稿は勝手に書き換えません。
 
 <br>
 
-## できること
+## 言語版
 
-| | |
-| --- | --- |
-| **読みやすい文字組み** | 改行位置、字間・行間、書体の選び方を、日本語に合わせて整えます。 |
-| **内容に合ったデザイン** | 伝えたい情報の順番や重要度から、構成とレイアウトを考えます。 |
-| **原稿を大切に** | 名前、価格、数値、元の文章を勝手に書き換えません。 |
-| **制作後の見直し** | ファイルを変更せずにレビューし、気になる点を一覧で返します。 |
+日本語版のKUMIHANと、20の言語版があります。どの版も同じ4つのスキル（入口・Web・資料・レビュー）で構成され、単独で導入できます。各言語版のサイトは、その言語・英語・日本語の3ページで、導入ガイドへの案内もあります。
+
+| コード | 言語版 | 版 | サイト | ソース | リリース |
+| --- | --- | --- | --- | --- | --- |
+| JA | KUMIHAN（日本語） | v0.1.8 | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | 新版Release未作成・[過去版 v0.1.8-preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview) |
+| AR | KUMIHAN｜نضيد（アラビア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ar.html) | [plugins/kumihan-ar](plugins/kumihan-ar/README.md) | [kumihan-ar-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ar-v0.1.0) |
+| BN | KUMIHAN｜অক্ষরসজ্জা（ベンガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-bn.html) | [plugins/kumihan-bn](plugins/kumihan-bn/README.md) | [kumihan-bn-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-bn-v0.1.0) |
+| DE | KUMIHAN｜Satzbild（ドイツ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-de.html) | [plugins/kumihan-satzbild](plugins/kumihan-satzbild/README.md) | [kumihan-de-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-de-v0.1.0) |
+| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | [kumihan-grafia-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |
+| FA | KUMIHAN｜تراز（ペルシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fa.html) | [plugins/kumihan-fa](plugins/kumihan-fa/README.md) | [kumihan-fa-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fa-v0.1.0) |
+| FR | KUMIHAN｜Accord（フランス語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | [kumihan-fr-v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |
+| HI | KUMIHAN｜अक्षर-संगति（ヒンディー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-hi.html) | [plugins/kumihan-hi](plugins/kumihan-hi/README.md) | [kumihan-hi-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-hi-v0.1.0) |
+| ID | KUMIHAN｜Laras（インドネシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-id.html) | [plugins/kumihan-laras](plugins/kumihan-laras/README.md) | [kumihan-id-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-id-v0.1.0) |
+| IT | KUMIHAN｜Equilibrio（イタリア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-it.html) | [plugins/kumihan-equilibrio](plugins/kumihan-equilibrio/README.md) | [kumihan-it-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-it-v0.1.0) |
+| KM | KUMIHAN｜លំនឹង（クメール語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-km.html) | [plugins/kumihan-lumnung](plugins/kumihan-lumnung/README.md) | [kumihan-km-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-km-v0.1.0) |
+| KO | KUMIHAN｜글짜임（韓国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ko.html) | [plugins/kumihan-geuljjaim](plugins/kumihan-geuljjaim/README.md) | [kumihan-ko-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0) |
+| PL | KUMIHAN｜Szyk（ポーランド語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pl.html) | [plugins/kumihan-szyk](plugins/kumihan-szyk/README.md) | [kumihan-szyk-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-szyk-v0.1.0) |
+| PT | KUMIHAN｜Compasso（ポルトガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pt.html) | [plugins/kumihan-compasso](plugins/kumihan-compasso/README.md) | [kumihan-pt-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-pt-v0.1.0) |
+| RU | KUMIHAN｜Лад（ロシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ru.html) | [plugins/kumihan-lad](plugins/kumihan-lad/README.md) | [kumihan-ru-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0) |
+| SW | KUMIHAN｜Mizani（スワヒリ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-sw.html) | [plugins/kumihan-mizani](plugins/kumihan-mizani/README.md) | [kumihan-sw-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-sw-v0.1.0) |
+| TH | KUMIHAN｜ดุลอักษร（タイ語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-th.html) | [plugins/kumihan-th](plugins/kumihan-th/README.md) | [kumihan-th-v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) |
+| VI | KUMIHAN｜Nhịp Chữ（ベトナム語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-vi.html) | [plugins/kumihan-nhip-chu](plugins/kumihan-nhip-chu/README.md) | [kumihan-vi-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-vi-v0.1.0) |
+| ZH-HANS | KUMIHAN｜字律（簡体中国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-cn.html) | [plugins/kumihan-zilu](plugins/kumihan-zilu/README.md) | ソースとサイトのみ（Release未作成） |
+| ZH-HANT | KUMIHAN｜字衡（繁体中国語・台湾／香港） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-han.html) | [plugins/kumihan-ziheng](plugins/kumihan-ziheng/README.md) | Release未作成 |
+| ZU | KUMIHAN｜Hlela（ズールー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zu.html) | [plugins/kumihan-hlela](plugins/kumihan-hlela/README.md) | [kumihan-zu-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-zu-v0.1.0) |
 
 <br>
 
-## 4つのスキル
+## 導入方法
+
+お使いのAIツール（ChatGPT / Codex、Claude / Claude Code、Gemini / Gemini CLI）に合わせて、各言語版のサイトにある導入ガイドを選んでください。リリースには、プラグイン一式と各スキル単体のZIP、SHA-256の一覧があります。
+
+日本語版の導入ガイドはこのリポジトリにもあります。
+
+| 利用するツール | 日本語 | English |
+| --- | --- | --- |
+| Claude（Claude Code / Claudeチャット） | [導入ガイド](docs/installation.claude.ja.md) | [Guide](docs/installation.claude.md) |
+| ChatGPT / Codex | [導入ガイド](docs/installation.ja.md) | [Guide](docs/installation.md) |
+| Gemini（Gemini CLI / Geminiアプリ） | [導入ガイド](docs/installation.gemini.ja.md) | [Guide](docs/installation.gemini.md) |
+
+更新の方法は [更新ガイド](docs/updates.md)、日本語版の変更内容は [更新履歴](CHANGELOG.md)、版名は [バージョン表記規約](docs/versioning.md) にまとめています。
+
+<br>
+
+## 日本語版の4つのスキル
 
 | スキル | 使う場面 |
 | --- | --- |
@@ -35,35 +70,38 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 | `kumihan-documents` | 報告書やプレゼンテーション資料の制作・調整。 |
 | `kumihan-review` | できあがったものを、変更せずにレビューします。 |
 
-<br>
-
-## 導入方法
-
-お使いのAIツールに合わせてガイドを選んでください。
-
-| 利用するツール | 日本語 | English |
-| --- | --- | --- |
-| Claude（Claude Code / Claudeチャット） | [導入ガイド](docs/installation.claude.ja.md) | [Guide](docs/installation.claude.md) |
-| ChatGPT / Codex | [導入ガイド](docs/installation.ja.md) | [Guide](docs/installation.md) |
-| Gemini（Gemini CLI / Geminiアプリ） | [導入ガイド](docs/installation.gemini.ja.md) | [Guide](docs/installation.gemini.md) |
-
-更新の方法は [更新ガイド](docs/updates.md)、変更内容は [更新履歴](CHANGELOG.md) にまとめています。
+v0.1.8 では、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援する用途別アダプターと、Standard／Strictのデザインレビューを追加しました。詳細は[用途ルーティング](skills/kumihan/references/use-case-selection.md)と[レビュー方式](skills/kumihan/references/design-review-modes.md)をご参照ください。画像生成エンジンや自動デザイン品質判定器ではありません。
 
 <br>
 
-## 用途に合わせたデザイン支援（v0.1.8 preview）
+## Webサイト
 
-文字組だけでなく、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援します。**自動選択を標準・手動指定で上書き可能・重要な曖昧さだけ質問**の用途別アダプターを追加しました。媒体プロファイルは従来の6種類のまま。通常のデザインレビューはStandard、Strictはユーザーの明示指定が必要です。
+[landco-llc.github.io/kumihan](https://landco-llc.github.io/kumihan/) は GitHub Pages で公開しています。
 
-この機能は画像生成エンジンや自動デザイン品質判定器ではありません。ユーザーの原稿と権限を保護し、観察した結果と未検査を区別します。詳細は[用途ルーティング](skills/kumihan/references/use-case-selection.md)と[レビュー方式](skills/kumihan/references/design-review-modes.md)をご参照ください。
+- 22言語のトップページ（英語が `index.html`、日本語が `top-ja.html`、その他は `top-<code>.html`）
+- 全ページ共通のフッター（言語版メニュー、GitHub、ライセンス、プライバシーポリシー）と、ページの言語に合わせたシェア表示
+- 書体は言語ごとに指定し、端末の書体を優先します。補う書体（Google Fonts の書体）もこのサイトから配信し、Google への通信はありません
+- [プライバシーポリシー](https://landco-llc.github.io/kumihan/privacy.html)：日本語版と英語版が正本（相違時は日本語版が優先）、その他の言語は参考訳
 
 <br>
 
 ## 開発状況
 
-現在、正式版に向けて開発中です。
+継続して開発中です。日本語の現行パッケージは v0.1.8 です。新しいタグとReleaseは承認待ちで、公開済みの v0.1.8-preview は過去版として保持します。各AIホストでのネイティブ動作や、実際の表示・Officeでの検証には範囲の制限があります。多くの言語版のサイト文面とプライバシーポリシーの参考訳は、母語話者による確認が未了です。
 
-**最新の公開版はv0.1.8 preview（2026年10月19日公開）です。** [GitHub Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview)。用途別アダプターとStandard／Strictデザインレビューのガイドを追加しました。各AIホストでのネイティブ動作や実画像・Officeでの検証範囲には制限があります。
+ページは生成スクリプトから作ります。HTMLを手で書き換えず、`tools/` のスクリプトを更新して再生成し、`--check` とテストを通してください。
+
+| 対象 | スクリプト |
+| --- | --- |
+| トップページ | `tools/build_gateways.py` |
+| 各言語版のサイト | `tools/build_*_site.py`、`tools/build_nhip_chu_site.mjs` |
+| 日英ページの共通コピー | `tools/base_copy.py` |
+| 書体・共通フッター | `tools/web_fonts.py`、`tools/site_footer.py`（書体ファイルの取り込みは `tools/fetch_fonts.py`） |
+| シェア表示 | `tools/site_share.py` |
+| プライバシーポリシー | `tools/build_privacy.py` |
+| 日本語版の配布物 | `tools/build_dist.py` |
+
+テストは `python -m unittest discover -s tests` で実行できます。詳しくは [開発ガイド](docs/development.md) をご覧ください。
 
 <br>
 
@@ -71,45 +109,28 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 ## About KUMIHAN
 
-KUMIHAN is an open-source set of skills that helps AI create and review Japanese websites, articles, reports and presentations.
+KUMIHAN is an open-source project for language-aware typography and thoughtful design. Each language edition is a set of AI skills for creating and reviewing websites, articles, reports and presentations in that language: line breaks, punctuation, typefaces and spacing suited to the language, structure based on what needs to be communicated, a second look at repetitive AI-generated layouts, and no silent changes to names, numbers or original wording.
 
-It focuses on natural line breaks, punctuation and spacing, mixed Japanese and Latin text, and a good balance of type and white space. Rather than relying on repetitive templates, it encourages layouts that suit the content and its purpose.
+### Language editions
 
-### What it helps with
-
-- **Better Japanese typography** — line breaks, spacing and type choices suited to Japanese text.
-- **Purposeful design** — structure and layout based on what needs to be communicated.
-- **Content integrity** — names, prices, numbers and original wording stay as supplied.
-- **Practical review** — read-only reviews that list issues without changing your files.
+Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; Simplified Chinese (字律) is published as source and website only, and Traditional Chinese (字衡) has source packages, both without a GitHub Release.
 
 ### Installation
 
-- Claude: [Guide](docs/installation.claude.md)
-- ChatGPT / Codex: [Guide](docs/installation.md)
-- Gemini: [Guide](docs/installation.gemini.md)
-- Updates: [Update guide](docs/updates.md) · [Changelog](CHANGELOG.md)
+Choose the guide for your AI tool (ChatGPT / Codex, Claude / Claude Code, Gemini / Gemini CLI) on each edition's website. Releases include the plugin, each skill as its own ZIP and SHA-256 checksums. Japanese edition guides: [Claude](docs/installation.claude.md) · [ChatGPT / Codex](docs/installation.md) · [Gemini](docs/installation.gemini.md) · [Updates](docs/updates.md) · [Changelog](CHANGELOG.md).
+
+### Website
+
+[landco-llc.github.io/kumihan](https://landco-llc.github.io/kumihan/) is published with GitHub Pages: top pages in 22 languages (English at `index.html`), a shared footer and language-matched link previews on every page, typefaces per language with system fonts first and fallback web fonts served from the site itself (no requests to Google), and the [privacy policy](https://landco-llc.github.io/kumihan/privacy.html) (Japanese and English authoritative, Japanese prevails; other languages are reference translations).
 
 ### Status
 
-KUMIHAN is in development toward a stable release. **The latest published release is v0.1.8 preview (October 19, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview). This version adds conservative use-case routing and Standard/Strict design-review guidance. Native AI-host behavior and real rendering across tools remain only partially verified.
+KUMIHAN is in development toward a stable release. The current Japanese package version is v0.1.8; its new tag and Release await approval. The older v0.1.8-preview release (October 19, 2026) remains available as history. Native AI-host behavior and real rendering across tools are only partially verified, and many editions' site copy and the privacy policy's reference translations still await native-speaker review. Pages are generated by the scripts in `tools/`; edit those, regenerate, and run the `--check` options and `python -m unittest discover -s tests`. See [development](docs/development.md).
 
 <br>
 
 ## License / ライセンス
 
-[Apache License 2.0](LICENSE)
+[Apache License 2.0](LICENSE). Web fonts on the site are under the SIL Open Font License 1.1 ([assets/fonts](assets/fonts/README.md)).
 
 Developed by L&Co. LLC.
-
-## Korean edition / 한국어판
-
-[KUMIHAN｜글짜임 v0.1.0](https://landco-llc.github.io/kumihan/kumihan-ko.html) is an independently packaged Korean guidance product. [Source and four standalone Skills](plugins/kumihan-geuljjaim/README.md) · [Korean release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0). Japanese KUMIHAN and 字衡 are not prerequisites.
-
-## French edition / Édition française
-
-**[KUMIHAN｜Accord v0.1.1](kumihan-fr.html)** — French typography using selected editorial conventions with source preservation and read-only review. [Source and install packages](plugins/kumihan-accord/README.md) · [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1). Skill and plugin descriptions: Español / English.
-
-
-## Russian edition / Русская версия
-
-**[KUMIHAN｜Лад v0.1.0](kumihan-ru.html)** — natural Russian/Cyrillic typography with source protection and content-led design. [Four Skills and source](plugins/kumihan-lad/README.md) · [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0).

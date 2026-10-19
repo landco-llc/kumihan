@@ -33,11 +33,11 @@ Latest refreshed main: `a08fd66fcb58d70dd448dfcb51745c0c91d03d4f` (#100/#102/#10
 
 # SEO PR #93 / 未実行W09–W15 — 最新main再レビュー（2026-10-19 JST）
 
-**状態:** READ-ONLY REVIEW COMPLETE / RECONCILIATION NOT RUN / MERGE HOLD  
-**GitHub接続から実読したmain:** `73d2b01d2f604608360beabe364f59af72b8b66c`  
-**SEO PR #93に既存のコード変更が残るbranch:** `feature/seo-foundation-20261019`  
-**レビュー開始時のSEO branch HEAD:** `861bd3346ecd218cf45bf0b2c4cbbbfab6b3823f`  
-**Source of task:** `docs/seo/RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md`（修正版を必ず読む）  
+**状態:** READ-ONLY REVIEW COMPLETE / RECONCILIATION NOT RUN / MERGE HOLD
+**GitHub接続から実読したmain:** `73d2b01d2f604608360beabe364f59af72b8b66c`
+**SEO PR #93に既存のコード変更が残るbranch:** `feature/seo-foundation-20261019`
+**レビュー開始時のSEO branch HEAD:** `861bd3346ecd218cf45bf0b2c4cbbbfab6b3823f`
+**Source of task:** `docs/seo/RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md`（修正版を必ず読む）
 **評価対象:** SEOコードと現行公開候補のGitHubリポジトリ状態、関連PR、既存レビュー・CI証跡。ライブGoogle検索登録の確認ではない。
 
 ## 1. 判定

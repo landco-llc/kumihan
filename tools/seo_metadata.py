@@ -118,16 +118,16 @@ def enrich_html(html, path):
     if not match:
         raise ValueError(f'{path}: missing head')
     # Only this current-main redirect is exempt from ordinary content metadata.
-    if str(path) == 'top-en.html':
+    if str(path) in ('top-en.html', 'privacy-ja.html'):
         from seo_inventory import Page
         alias = Page(str(path), html)
         refresh = re.search(r'<meta\b[^>]*http-equiv\s*=\s*[\'"]refresh[\'"][^>]*>', match[1], re.I)
-        if not alias.noindex or not refresh or not re.search(r'url=index\.html', refresh[0], re.I):
+        if not alias.noindex or not refresh or not re.search(r'url=(?:index\.html|privacy\.html#ja)', refresh[0], re.I):
             raise ValueError(f'{path}: invalid allowlisted redirect')
         head = re.sub(r'<(?:meta|link)\b[^>]*>',
                       lambda m: '' if re.search(r'rel\s*=\s*[\'"]canonical', m[0], re.I) else m[0], match[1])
         head = '\n'.join(line for line in head.splitlines() if line.strip())
-        return html[:match.start(1)] + '\n' + head + '\n<link rel="canonical" href="' + CONFIG['site_url'] + '">\n' + html[match.end(1):]
+        return html[:match.start(1)] + '\n' + head + '\n<link rel="canonical" href="' + (CONFIG['site_url'] if str(path) == 'top-en.html' else CONFIG['site_url'] + 'privacy.html') + '">\n' + html[match.end(1):]
     parser = _Head()
     parser.feed(html[:match.end()])
     title_match = re.search(r'<title\b[^>]*>(.*?)</title\s*>', match[1], re.I | re.S)
@@ -136,6 +136,8 @@ def enrich_html(html, path):
         raise ValueError(f'{path}: title, description and html lang are required')
     canonical = canonical_url(parser.canonical or path)
     alternates = _groups().get(str(path), parser.alternates)
+    if str(path) == "privacy.html":
+        alternates = {"en": canonical}  # 22 language sections are anchors, not alternate URLs
     head = re.sub(r'<title\b[^>]*>.*?</title\s*>', '', match[1], flags=re.I | re.S)
     head = re.sub(r'<script\b[^>]*type\s*=\s*[\'"]application/ld\+json[\'"][^>]*>.*?</script\s*>', '', head, flags=re.I | re.S)
     head = re.sub(r'<(?:meta|link)\b[^>]*>', _seo_tag, head, flags=re.I)
