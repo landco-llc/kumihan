@@ -1,0 +1,122 @@
+[
+  {
+    "id": "AT-01",
+    "input": "Djournal / GoRide MURAAAH / SKU / URL",
+    "expected": "名称・意図的コピー・コードを変えない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-02",
+    "input": "disimpan di tempat kering",
+    "expected": "接辞と前置詞を区別する",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-03",
+    "input": "ke luar / keluarを文脈に含む",
+    "expected": "無条件の結合・分離をしない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-04",
+    "input": "apa pun / walaupun",
+    "expected": "語義を踏まえた扱いと根拠を示す",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-05",
+    "input": "harimu / 独立kauを含む文",
+    "expected": "接語と独立代名詞を区別",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-06",
+    "input": "pilihan-pilihan",
+    "expected": "元のハイフンをダッシュに変えない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-07",
+    "input": "main / desain / pandai / seudati",
+    "expected": "ai等の文字列一致だけで分綴を決めない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-08",
+    "input": "banyak / makhluk",
+    "expected": "一つの音を表す文字結合を壊さない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-09",
+    "input": "KTP",
+    "expected": "略語内部を分綴しない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-10",
+    "input": "é / ê / 引用符 / 各種ダッシュ",
+    "expected": "ASCII化や記号の一括置換をしない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-11",
+    "input": "数量1250000.5 / 年2026 / ID00124567",
+    "expected": "型を区別し、年やIDへ桁区切りを追加しない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-12",
+    "input": "IDR、表示小数桁0/2",
+    "expected": "オプションどおり表示し、丸めは業務要件に従う",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-13",
+    "input": "id/en混在のM",
+    "expected": "単位を明示するか、確認事項として示す",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-14",
+    "input": "09.30 / 09:30",
+    "expected": "形式だけで一方を誤りにしない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-15",
+    "input": "dr. / Dr. / PT / dll. / kg",
+    "expected": "点と大文字の機能を区別",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-16",
+    "input": "販促kamu / 条件説明Anda",
+    "expected": "役割を見ずに一律エラー化しない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-17",
+    "input": "支払い結果が未確定",
+    "expected": "失敗・未請求・返金済みを推測で断定しない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-18",
+    "input": "320 CSS px相当、長い見出し・CTA・条件",
+    "expected": "情報・機能を保ち、必要な例外以外で二方向スクロールを要さない",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-19",
+    "input": "200%文字拡大とtext-spacing変更を別々に試す",
+    "expected": "情報・機能を失わず、検証方式を記録",
+    "status": "not-checked"
+  },
+  {
+    "id": "AT-20",
+    "input": "DOCX→PDF→文字抽出",
+    "expected": "文字・図版・参照・ページ分割を保持",
+    "status": "not-checked"
+  }
+]

@@ -1,0 +1,1 @@
+Read-only review never edits supplied documents. For each finding report rule ID, precise passage, relevant source URL, status (needs-review/not-checked/passed/failed) and proposed action. No invented browser tests, host certifications or native language approval.
