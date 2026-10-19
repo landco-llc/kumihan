@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — Lolipop / kmhn deployment runbook
 
-Status: **PRIVATE MCP RUNTIME EXTRACTED; WEB PHP SDK/SESSION CHECK PENDING; MCP NOT PUBLIC** (2026-10-19).
+Status: **WEB PHP SDK, 21 LANGUAGES AND SESSION I/O VERIFIED; PUBLIC MCP BOOTSTRAP NOT INSTALLED** (2026-10-19).
 Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/101
 
 ## Locked parameters
@@ -15,7 +15,7 @@ Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/
 | FTP root full path | **Owner supplied; basename web confirmed**. Intentionally omitted from public source to avoid disclosing hosting account identifiers |
 | Effective public path | FTP root + /kmhn (equivalently account-relative web/kmhn) |
 | DNS/TLS | GitHub Actions TLS 1.3, hostname/certificate PASS; certificate expires 2027-01-17 |
-| PHP MCP | 21-module source, Composer vendor and registry **extracted into private directory**; no config or public bootstrap yet |
+| PHP MCP | 21-module source, Composer vendor and registry extracted; **private config created, SDK and sessions Web PHP PASS**; public MCP bootstrap not installed |
 
 TLS evidence: https://github.com/landco-llc/kumihan/actions/runs/39246702661
 Official hosting docs: https://lolipop.jp/manual/user/doku-subsett// and https://support.lolipop.jp/hc/ja/articles/360048391094 .
@@ -221,6 +221,16 @@ Next run a single bounded readiness check from the SSH shell: [tools/check_priva
 
 Treat any failure as STOP: a private config file may be left in place intentionally, so do not blindly rerun. Pass does not certify that no other virtual host maps the private directory, nor actual MCP initialize/tools/list/call; those remain separate release gates.
 
+## W03 Web PHP readiness PASS — next read-only exposure check
+
+Owner's authenticated SSH execution returned `PRIVATE_CONFIG_CREATED`, Web PHP `PHP_VERSION=8.5.11`, `PHP_SAPI=litespeed`, `REGISTRY_MODULES=21`, plus `WEB_PHP85=PASS`, `WEB_SAPI_LITESPEED=PASS`, `EXTENSIONS=PASS`, `PRIVATE_CONFIG=PASS`, `SDK_AUTOLOAD=PASS`, `REGISTRY=PASS`, `SESSION_WRITE=PASS`, `PRIVATE_RUNTIME_WEB_READY`, `MCP_NOT_PUBLIC`.
+
+These results establish actual Web PHP SDK/autoload, 21-language registry construction and create/write/delete of private session test file. The private config now exists and is web-PHP-readable. This is **not** a working public MCP endpoint; no public bootstrap has been installed.
+
+Next, run the **non-writing** `universal/tools/preflight_public_bootstrap.sh` on the authenticated SSH account before any public-file upload. It checks correct FTP-root/private realpaths, present private source/vendor/config/registry/session tree, that `kmhn` has no existing files to overwrite, and performs a conservative symlink scan of the known public FTP tree. Any discovered symlink requires human review; no symlink is automatically considered safe. It does not prove or assert the upload-folder mappings of other virtual hosts.
+
+**Additionally review the Lolipop domain/subdomain control panel for all active virtual hosts.** Confirm each published upload folder is inside the intended FTP web root and none aliases/symlinks into the non-Web MCP private directory. Treat this as Owner-reviewed, not automatically tested. Without that confirmation do not claim all-vhost isolation. The public bootstrap must still wait for explicit operator action and immediate external MCP smoke tests.
+
 ## 4. Public verification commands
 
 TLS was already verified by GitHub Actions. Optional recheck:
@@ -251,7 +261,7 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [ ] Composer lock and dependency audit finalized
 - [x] Private tarball transferred and verified by Mac SSH readback (SHA256 and cmp PASS)
 - [x] Private MCP source/vendor/registry extracted; required files PASS; public directory unchanged
-- [ ] Web PHP SDK autoload, registry 21 modules, PHP extensions, private config and session WRITE verified
+- [x] Web PHP SDK autoload, registry 21 modules, PHP extensions, private config and session WRITE verified
 - [ ] Private location isolation from all other document roots independently verified
 - [ ] Public two-file bootstrap installed in existing kmhn
 - [ ] Live HTTPS MCP initialize/tools/list/tools/call PASS
