@@ -9,8 +9,8 @@ set -eu
 
 fail() { echo "$1"; exit 1; }
 test "$(uname -s)" = "Linux" || fail "NOT_REMOTE_LINUX"
-test "$KUMIHAN_G2_TRIAL_APPROVED" = "YES" || fail "G2_EXPLICIT_APPROVAL_REQUIRED"
-test -n "$FTP_ROOT" || fail "FTP_ROOT_UNSET"
+test "${KUMIHAN_G2_TRIAL_APPROVED:-}" = "YES" || fail "G2_EXPLICIT_APPROVAL_REQUIRED"
+test -n "${FTP_ROOT:-}" || fail "FTP_ROOT_UNSET"
 cd "$FTP_ROOT" || fail "FTP_ROOT_NOT_FOUND"
 WEB="$(pwd -P)"
 test "$(basename "$WEB")" = "web" || fail "WRONG_FTP_ROOT"
