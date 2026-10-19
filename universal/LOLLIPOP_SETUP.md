@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — Lolipop / kmhn deployment runbook
 
-Status: **SSH PUBLIC ROOT AND PARENT WRITE CONFIRMED; PRIVATE WEB-PHP READ PENDING; MCP NOT DEPLOYED** (2026-10-19).
+Status: **LITESPEED PHP 8.5.11 + PRIVATE FILE READ PASS; MCP NOT DEPLOYED** (2026-10-19).
 Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/101
 
 ## Locked parameters
@@ -8,7 +8,7 @@ Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/
 | Item | Confirmed state |
 |---|---|
 | Hosting | Lolipop shared rental server, High-Speed |
-| Target runtime | LiteSpeed PHP 8.5 (effective runtime not independently checked) |
+| Target runtime | **LiteSpeed PHP 8.5.11** (actual Web PHP probe PASS, Owner terminal evidence) |
 | Hostname | mcp-kmhn.landco.co.jp |
 | MCP URL | https://mcp-kmhn.landco.co.jp/mcp |
 | Subdomain 公開（アップロード）フォルダ | **kmhn** (Owner confirmed 2026-10-19) |
@@ -109,13 +109,21 @@ The Owner has already confirmed the following from an authenticated Lolipop SSH 
     KMHN_OK
     PRIVATE_PARENT_WRITABLE
 
-This proves SSH access, successful cd into the web FTP root, the kmhn directory, and account-parent write permission. No private directory or PHP-read test has yet run.
+The Owner then ran the one-shot Web PHP preflight and reported:
 
-To verify the critical difference between SSH writes and Web-PHP file includes, a bounded helper is available at:
+    PHP_VERSION=8.5.11
+    PHP_SAPI=litespeed
+    PRIVATE_PHP_READ=PASS
+    TARGET_WEB_PHP85=PASS
+    PRIVATE_WEB_PHP_PRECHECK_PASS
+
+This proves SSH access, successful cd into the web FTP root, the kmhn directory, and account-parent write permission. The preflight has created a private candidate directory and verified read access from Web PHP. The script was designed to remove the temporary probe and marker at exit, but actual absence of the temporary files has not yet been independently checked.
+
+The critical SSH-vs-Web-PHP preflight was executed successfully using the bounded helper:
 
 - tools/check_private_php_web.sh
 
-It is reviewed source, not an auto-executing GitHub Action. Run ONLY from an authenticated SSH shell and after checking that kmhn has no conflicting live files. Supply the FTP root privately as FTP_ROOT. The helper:
+It is reviewed source, not an auto-executing GitHub Action. A future rerun is only warranted if host settings change. The helper:
 1. Confirms it is on Linux and in the expected web/kmhn directory.
 2. Creates only ../kmhn-mcp-private/server (outside FTP root), with umask 077.
 3. Creates a uniquely named harmless private marker and a temporary public PHP probe, obtains the probe response over HTTPS, confirms actual Web PHP is 8.5 and able to read the marker.
@@ -157,6 +165,14 @@ Run the checker after an authenticated SSH login, using a temporary **HOME** fil
 ```
 
 The temporary downloaded checker is removed by EXIT cleanup. The checker may create a private candidate folder and a short-lived PHP canary/probe in kmhn; those test files are removed at exit. If the server has neither curl nor wget or blocks outbound access to GitHub, stop and provide the tool-error output; do not pipe unverified network content directly into sh. PHP-read, PHP 8.5 and public path isolation remain separate go/no-go conditions.
+
+### Next: inspect private directory, public probe cleanup and vhost exposure
+
+Before staging any application files, use an authenticated SSH shell to confirm the candidate private directory exists, has expected ownership and contains no leftover temporary marker. Confirm no remaining probe files in kmhn. Do not print hosting account IDs into public issues.
+
+The PHP canary was under a directory outside the known FTP root, so the default-host static public path should not directly reach it. However this still needs verification against other configured virtual hosts and symlinks on the same account. **Do not claim global nonexposure based only on the read PASS.**
+
+Then validate the Composer lock and security advisories for the actual pinned PHP SDK (CI audit step), inspect the staging artifact file inventory and SHA-256, prepare rollback, and deploy the private runtime before installing the public bootstrap. The initial HTTP endpoint remains unserved until these gates pass.
 
 ## 2. Build safe two-file public loader OFFLINE
 
@@ -213,8 +229,9 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [x] Full FTP root path supplied by Owner (kept out of public GitHub)
 - [x] SSH login successful; Owner's actual web root and existing kmhn directory verified by remote shell
 - [x] SSH access to web parent is writable (Owner observed PRIVATE_PARENT_WRITABLE)
-- [ ] PHP-readable non-Web private root verified
-- [ ] Effective PHP 8.5 on this domain verified
+- [x] Web PHP read-access to candidate outside FTP root verified via one-shot marker (PASS)
+- [ ] Non-Web private folder's absence from every other HTTP virtual host independently verified
+- [x] Actual Web PHP SAPI=litespeed and PHP_VERSION=8.5.11 verified
 - [ ] Composer lock and dependency audit finalized
 - [ ] Private artifact installed without exposing vendor/src/runtime
 - [ ] Public two-file bootstrap installed in existing kmhn
