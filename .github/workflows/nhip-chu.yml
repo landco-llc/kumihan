@@ -9,6 +9,8 @@ on:
       - 'kumihan-vi*.html'
       - 'docs/install-nhip-chu-*.html'
       - 'assets/nhip-chu-*'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
       - '.claude-plugin/marketplace.json'
       - '.github/workflows/nhip-chu.yml'
   push:
@@ -20,6 +22,8 @@ on:
       - 'kumihan-vi*.html'
       - 'docs/install-nhip-chu-*.html'
       - 'assets/nhip-chu-*'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
       - '.claude-plugin/marketplace.json'
       - '.github/workflows/nhip-chu.yml'
 permissions:

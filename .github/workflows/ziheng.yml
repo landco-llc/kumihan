@@ -18,6 +18,10 @@ on:
       - 'top-*.html'
       - 'tools/build_gateways.py'
       - 'assets/gateway*'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - '_data/web_fonts.yml'
+      - 'tests/test_web_fonts.py'
       - 'tools/locale_resolver.py'
       - 'skills/kumihan/**'
       - '.claude-plugin/marketplace.json'
@@ -45,6 +49,7 @@ jobs:
       - run: python tools/build_ziheng.py --check
       - run: python tools/build_ziheng_site.py --check
       - run: python tools/build_gateways.py --check
+      - run: python tools/web_fonts.py --check
       - run: python tools/build_ziheng_hosts.py --check
       - run: python tools/build_dist.py --check
       - run: python tools/check_ja_type_011_cases.py

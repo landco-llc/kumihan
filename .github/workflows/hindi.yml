@@ -1,10 +1,10 @@
 name: Hindi OSS v0.1.0
 on:
   pull_request:
-    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','.github/workflows/hindi.yml']
+    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','tools/web_fonts.py','assets/kumihan-fonts.css','.github/workflows/hindi.yml']
   push:
     branches: [main]
-    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','.github/workflows/hindi.yml']
+    paths: ['plugins/kumihan-hi/**','tests/hi/**','tools/*hi*','kumihan-hi*.html','docs/install-kumihan-hi-*.html','assets/hi-*','assets/fonts/**','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','tools/build_gateways.py','tools/web_fonts.py','assets/kumihan-fonts.css','.github/workflows/hindi.yml']
 permissions:
   contents: read
 jobs:
