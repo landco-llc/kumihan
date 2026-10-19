@@ -18,7 +18,8 @@ import site_footer  # noqa: E402
 def static_pages():
     pages = [*ROOT.glob("*.html"), *(ROOT / "docs").glob("*.html")]
     # Jekyll sources render the footer from _data; redirect stubs (old addresses) have none.
-    return [p for p in pages if not p.read_text(encoding="utf-8").startswith("---")
+    return [p for p in pages if p.name != "google767fc14b71f44ff9.html"
+            and not p.read_text(encoding="utf-8").startswith("---")
             and 'http-equiv="refresh"' not in p.read_text(encoding="utf-8")]
 
 
