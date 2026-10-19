@@ -13,8 +13,15 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "kmhn_symlink_scope_clear_web_wide_permission_limited_pending_owner_mapping_review")
-        self.assertEqual(d["public_preflight"]["status"], "SCOPED_CLEAR_FULL_WEB_PERMISSION_LIMITED")
+        self.assertEqual(d["status"], "owner_domain_mappings_reviewed_scoped_prebootstrap_pending")
+        self.assertTrue(d["flags"]["owner_vhost_upload_mappings_reviewed"])
+        self.assertTrue(d["flags"]["owner_reports_no_private_runtime_public_alias"])
+        self.assertFalse(d["flags"]["other_vhosts_isolation_verified"])
+        self.assertFalse(d["flags"]["public_scoped_prebootstrap_recheck_verified"])
+        self.assertTrue(d["owner_domain_mapping_review"]["configuration_mapping_checked_by_owner"])
+        self.assertFalse(d["owner_domain_mapping_review"]["private_runtime_alias_found"])
+        self.assertEqual(d["owner_domain_mapping_review"]["full_ftp_root_symlink_scan"], "NOT_CHECKED_PERMISSION_LIMIT")
+        self.assertEqual(d["public_preflight"]["status"], "OWNER_MAPPING_REVIEWED_SCOPED_RECHECK_PENDING")
         self.assertEqual(d["public_preflight"]["scoped_diagnostic"]["markers"], [
             "KMHN_SYMLINK_SCOPE_CLEAR",
             "WEB_WIDE_SCAN_PERMISSION_LIMIT",
