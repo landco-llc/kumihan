@@ -33,7 +33,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
                  "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
                  "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html",
-                 "kumihan-zu.html", "kumihan-zu.en.html", "kumihan-zu.ja.html"]
+                 "kumihan-zu.html", "kumihan-zu.en.html", "kumihan-zu.ja.html",
+                 "kumihan-km.html", "kumihan-km.en.html", "kumihan-km.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
@@ -50,14 +51,15 @@ class LandingParity(unittest.TestCase):
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
                  "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
-                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html",
+                 "kumihan-km.html", "kumihan-km.en.html", "kumihan-km.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 text = (ROOT / page).read_text(encoding="utf-8")
                 self.assertEqual(len(re.findall(r'class="[^"]*\bplatform-row\b', text)), 3)
 
 
-GATEWAY = {"fa": "index.html", "zu": "top-en.html", "sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
+GATEWAY = {"fa": "index.html", "km": "top-km.html", "zu": "top-en.html", "sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",
@@ -110,6 +112,7 @@ class InstallGuideParity(unittest.TestCase):
         pages += [f"docs/install-grafia-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-kumihan-hi-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-szyk-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-lumnung-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += ["_layouts/geuljjaim.html"]
         for page in pages:
             with self.subTest(page=page):

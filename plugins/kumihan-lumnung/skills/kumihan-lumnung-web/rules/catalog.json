@@ -1,0 +1,752 @@
+[
+  {
+    "id": "KM-01",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "km・KH・Khmrを区別する",
+    "description_en": "Differentiate Khmer language km, Cambodia region KH, and Khmer script Khmr; do not substitute kh as a language tag.",
+    "description_km": "បែងចែកលេខកូដភាសា តំបន់ និងប្រព័ន្ធអក្សរ។",
+    "verification_ja": "言語属性と対象範囲",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-02",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "現代標準と他言語・古典を分ける",
+    "description_en": "Scope first version to modern standard Khmer in Cambodia; avoid assumptions about classical texts and other languages using Khmer script.",
+    "description_km": "កំណត់វិសាលភាពសម្រាប់ភាសាខ្មែរសម័យទំនើប។",
+    "verification_ja": "利用者指定と文書情報",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-03",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "原稿と変更差分を保存する",
+    "description_en": "Preserve exact source text and provide a visible diff for every proposed edit; never silently rewrite.",
+    "description_km": "រក្សាអត្ថបទដើម និងបង្ហាញការផ្លាស់ប្តូរ។",
+    "verification_ja": "文字列比較",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-04",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "COENGを含む結合列を分断しない",
+    "description_en": "Protect Khmer consonant stacks and COENG U+17D2; never split conjuncts into per-codepoint spans, line breaks or animation fragments.",
+    "description_km": "កុំបំបែកអក្សរផ្សំ និងសញ្ញា COENG។",
+    "verification_ja": "ソースと描画",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-05",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "正規化・綴り・旧符号変換を別工程にする",
+    "description_en": "Treat Unicode normalization, spelling edits and legacy-font conversion as separate consented processes.",
+    "description_km": "ញែកការកែស្តង់ដារ ការកែអក្ខរាវិរុទ្ធ និងការបម្លែងកូដចាស់។",
+    "verification_ja": "変換目的と結果",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-06",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "不可視制御を一括削除しない",
+    "description_en": "Preserve ZWSP, WJ, ZWNJ, ZWJ, NBSP and control characters; inspect their purpose rather than deleting them.",
+    "description_km": "កុំលុបតួអក្សរគ្រប់គ្រងដែលមើលមិនឃើញដោយស្វ័យប្រវត្តិ។",
+    "verification_ja": "コードポイント表示",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-07",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "deprecatedとdiscouragedを区別する",
+    "description_en": "Distinguish deprecated Khmer code points from discouraged characters; flag but never silently replace.",
+    "description_km": "សម្គាល់តួអក្សរដែលលែងប្រើ និងតួអក្សរដែលមិនណែនាំឱ្យប្រើ។",
+    "verification_ja": "検出と原稿確認",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-08",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "語間へ機械的に空白を追加しない",
+    "description_en": "Do not inject Latin-style inter-word spaces into Khmer; original phrase spaces and ZWSP must survive.",
+    "description_km": "កុំបន្ថែមចន្លោះរវាងពាក្យដោយស្វ័យប្រវត្តិ។",
+    "verification_ja": "元文字列との差分",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-09",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "本文の強制分割を既定にしない",
+    "description_en": "Keep natural Khmer body wrapping; reject broad word-break:break-all and line-break:anywhere defaults.",
+    "description_km": "ប្រើការបំបែកបន្ទាត់ធម្មតាសម្រាប់អត្ថបទខ្មែរ។",
+    "verification_ja": "CSSと対象部品",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-10",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "graphemeを語境界として使わない",
+    "description_en": "Never equate grapheme clusters with lexical words; dictionary segmentation and line layout need separate review.",
+    "description_km": "កុំចាត់ទុកការបែងចែកតួអក្សរជាការបែងចែកពាក្យ។",
+    "verification_ja": "APIの目的とfixture",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-11",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "長語・固有名詞を狭い幅で確認する",
+    "description_en": "Check lengthy names and compounds at narrow widths; raise possible semantic break for native review.",
+    "description_km": "ពិនិត្យឈ្មោះ និងពាក្យវែងនៅលើអេក្រង់តូច។",
+    "verification_ja": "実描画と意味の確認",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-12",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "手動の改行機会は根拠を残す",
+    "description_en": "Add manual line-break opportunities only with evidence and editorial approval; test copy and search.",
+    "description_km": "ការបន្ថែមចំណុចបំបែកបន្ទាត់ត្រូវមានហេតុផល។",
+    "verification_ja": "母語確認とコピー試験",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-13",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "上下の結合をクリップさせない",
+    "description_en": "Keep above/below glyph marks visible; do not clip conjuncts with line-height or overflow constraints.",
+    "description_km": "រក្សាសញ្ញាលើ និងក្រោមតួអក្សរឱ្យបង្ហាញពេញលេញ។",
+    "verification_ja": "字形と行ボックス",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-14",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "固定高より内容に追随する高さを使う",
+    "description_en": "Use content-responsive height instead of fixed controls or buttons; test multiline Khmer copy.",
+    "description_km": "កំណត់កម្ពស់ឱ្យសមនឹងខ្លឹមសារ។",
+    "verification_ja": "拡大と複数行",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-15",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "本文trackingはnormalを基準にする",
+    "description_en": "Use normal letter spacing for Khmer body; do not inherit Latin tracking or split combining clusters.",
+    "description_km": "កុំបន្ថែមគម្លាតអក្សរខ្មែរដោយគ្មានការត្រួតពិនិត្យ។",
+    "verification_ja": "継承スタイル",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-16",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "擬似太字・斜体・変形で階層を代用しない",
+    "description_en": "Do not use synthetic bold, italic or geometric transformations instead of real typography roles without rendering checks.",
+    "description_km": "ជៀសវាងការធ្វើអក្សរដិត ឬទ្រេតក្លែងក្លាយ។",
+    "verification_ja": "対応ウェイトと見え方",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-17",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "数字体系とformatterを明示する",
+    "description_en": "Make numbering system and formatter explicit; km-KH and km-KH-u-nu-khmr can differ in digits and separators.",
+    "description_km": "កំណត់ប្រព័ន្ធលេខ និងទម្រង់បង្ហាញឱ្យច្បាស់។",
+    "verification_ja": "resolved値と出力",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-18",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "金額・単位・暦を見た目で変更しない",
+    "description_en": "Do not alter currency, amount, unit, calendar, time zone, telephone digits or source numbers for appearance.",
+    "description_km": "កុំផ្លាស់ប្តូរតម្លៃ រូបិយប័ណ្ណ និងកាលបរិច្ឆេទដោយសាររូបរាង។",
+    "verification_ja": "元データと業務仕様",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-19",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "句読点と反復記号を保持する",
+    "description_en": "Preserve Khmer punctuation and repetition marks, including ។ ៕ ៖ ៗ, unless edited with approval.",
+    "description_km": "រក្សាវណ្ណយុត្ត និងសញ្ញាធ្វើឡើងវិញ។",
+    "verification_ja": "原文と意味",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-20",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "句読点・数値単位の孤立を確認する",
+    "description_en": "Review punctuation and numerals at line edges; avoid unproven automatic corrections to orphaning.",
+    "description_km": "ពិនិត្យវណ្ណយុត្ត និងលេខនៅដើមនិងចុងបន្ទាត់។",
+    "verification_ja": "狭い幅の行末・行頭",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-21",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "フォントの版と配布条件を記録する",
+    "description_en": "Record exact Khmer font versions, author and license; do not bundle commercial faces without permission.",
+    "description_km": "កត់ត្រាកំណែ និងអាជ្ញាបណ្ណរបស់ពុម្ពអក្សរ។",
+    "verification_ja": "ファイルと更新差分",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-22",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "本文を画像だけで提供しない",
+    "description_en": "Keep Khmer text accessible in the DOM rather than flattened into graphics; mark language explicitly.",
+    "description_km": "កុំបម្លែងអត្ថបទទាំងមូលទៅជារូបភាព។",
+    "verification_ja": "DOM、代替文、言語設定",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-23",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "入力・編集・検索・コピーを確認する",
+    "description_en": "Test input, editing, copy/paste, search and selection in target OS/app; untested contexts stay not-checked.",
+    "description_km": "សាកល្បងវាយ កែ ស្វែងរក និងចម្លងអត្ថបទ។",
+    "verification_ja": "対象OSとアプリ",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-24",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "証拠の種類を分けて結果を出す",
+    "description_en": "Separate source research, static analysis, browser observation, editorial review and other evidence types.",
+    "description_km": "បែងចែកប្រភេទភស្តុតាងនៃការត្រួតពិនិត្យ។",
+    "verification_ja": "確認方法と環境の記録",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-25",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "本文・見出し・ロゴ・UIの書体役割を分ける",
+    "description_en": "Assign fonts deliberately for body, headline, logo and UI; do not assume Mul style fits long body text.",
+    "description_km": "ជ្រើសពុម្ពអក្សរតាមតួនាទីនៃអត្ថបទ។",
+    "verification_ja": "媒体と用途",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-26",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "ラテンの製品名・コード・数値を保護する",
+    "description_en": "Protect embedded Latin product names, IDs, URLs, commands, phone numbers and units in mixed-script content.",
+    "description_km": "ការពារឈ្មោះផលិតផល URL និងលេខកូដឡាតាំង។",
+    "verification_ja": "保護語と混植",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-27",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "文化的な図像や配色に採用理由を求める",
+    "description_en": "Choose cultural motifs and palette only when supported by actual product, audience and brand context.",
+    "description_km": "ប្រើនិមិត្តសញ្ញាវប្បធម៌តាមបរិបទពិត។",
+    "verification_ja": "ブランド・商品との関係",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-28",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P1",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "CTAを操作と対象ごとに選ぶ",
+    "description_en": "Write CTA for the concrete action, object and outcome; have naturalness checked by Khmer-speaking editor.",
+    "description_km": "ពិនិត្យពាក្យនៅលើប៊ូតុងតាមសកម្មភាព។",
+    "verification_ja": "用語集と母語確認",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-29",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "運営UIと利用者投稿の改稿を分ける",
+    "description_en": "Distinguish operator-owned UI copy from user-submitted text; respect edit permission boundaries.",
+    "description_km": "បែងចែកអត្ថបទ UI និងអត្ថបទរបស់អ្នកប្រើប្រាស់។",
+    "verification_ja": "編集対象と権限",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "KM-30",
+    "language": "km",
+    "script": "Khmr",
+    "locale": "km-KH",
+    "priority": "P0",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "title_ja": "未確認の語感や改行を合格扱いしない",
+    "description_en": "Never label unverified Khmer wording or line breaks passed; use needs-review and not-checked honestly.",
+    "description_km": "កុំអះអាងថាបានផ្ទៀងផ្ទាត់បើមិនទាន់បានសាកល្បង។",
+    "verification_ja": "needs-reviewとnot-checked",
+    "source_ids": [
+      "RESEARCH"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  }
+]
