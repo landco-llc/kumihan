@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 """Generate 12 static, translated ZiLu pages; no runtime translation or JS."""
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import html
 from pathlib import Path
@@ -69,6 +74,7 @@ def guide(suffix,host):
   gateway=(PREFIX+FRAME.GATEWAYS[c['lang']][0],FRAME.GATEWAYS[c['lang']][1]))
  return FRAME.render(frame)
 
+@seo_outputs
 def outputs():return {name(s,h):guide(s,h) if h else landing(s) for s in C for h in (None,*HOSTS)}
 def main():
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();out=outputs();changed=[n for n,b in out.items() if not (ROOT/n).exists() or (ROOT/n).read_text()!=b]

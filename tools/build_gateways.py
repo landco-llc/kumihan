@@ -5,6 +5,11 @@ Page copy that already existed lives in assets/gateway-copy.json; shared styles
 in assets/gateway.css. Language order everywhere is by language code, with
 the page's own language first (and English second in the language menu).
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import json
 import re
@@ -741,6 +746,7 @@ def page(key, c):
 """
 
 
+@seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "gateway-copy.json").read_text(encoding="utf-8"))
     return {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}

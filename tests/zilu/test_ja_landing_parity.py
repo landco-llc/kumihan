@@ -1,10 +1,14 @@
 """Regression for the KUMIHAN-style ZiLu Japanese landing."""
 import re
+import sys
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / 'tools'))
+from seo_metadata import enrich_html
+
 PAGE = ROOT / "kumihan-zh-cn.ja.html"
 TEMPLATE = ROOT / "templates" / "zilu-ja-landing.html"
 STYLESHEET = ROOT / "assets" / "zilu-index-ja.css"
@@ -32,7 +36,9 @@ class Parse(HTMLParser):
 class JapaneseLanding(unittest.TestCase):
     def test_source_template_and_sections(self):
         page = PAGE.read_text(encoding="utf-8")
-        self.assertEqual(page, TEMPLATE.read_text(encoding="utf-8"))
+        source = TEMPLATE.read_text(encoding="utf-8")
+        self.assertEqual(page, enrich_html(source, PAGE.name))
+        self.assertEqual(page.split("<body", 1)[1], source.split("<body", 1)[1])
         p = Parse()
         p.feed(page)
         self.assertEqual([v["lang"] for t, v in p.tags if t=="html"], ["ja"])

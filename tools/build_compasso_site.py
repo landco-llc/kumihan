@@ -8,6 +8,11 @@ declare lang="pt" and new Portuguese copy uses the explicitly selected
 pt-pt-editorial house style; supplied text is reproduced byte for byte and
 never normalized. Japanese copy follows kumihan-web.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import json
 from html import escape
@@ -166,6 +171,7 @@ def guide(host, lang, c):
     return FRAME.render(frame)
 
 
+@seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "compasso-site-copy.json").read_text(encoding="utf-8"))
     files = {landing_path(lang): landing(lang, copy[lang]) for lang in LANGS}

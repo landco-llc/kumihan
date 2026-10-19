@@ -1,0 +1,247 @@
+[
+  {
+    "command": "python -m unittest discover -s tests -v",
+    "exit": 0,
+    "seconds": 1.57
+  },
+  {
+    "command": "python -m unittest discover -s tests/accord -v",
+    "exit": 0,
+    "seconds": 0.27
+  },
+  {
+    "command": "python -m unittest discover -s tests/arabic -v",
+    "exit": 0,
+    "seconds": 2.48
+  },
+  {
+    "command": "python -m unittest discover -s tests/bn -v",
+    "exit": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": "python -m unittest discover -s tests/compasso -v",
+    "exit": 0,
+    "seconds": 0.73
+  },
+  {
+    "command": "python -m unittest discover -s tests/equilibrio -v",
+    "exit": 0,
+    "seconds": 12.96
+  },
+  {
+    "command": "python -m unittest discover -s tests/geuljjaim -v",
+    "exit": 0,
+    "seconds": 0.92
+  },
+  {
+    "command": "python -m unittest discover -s tests/geuljjaim_adapter -v",
+    "exit": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": "python -m unittest discover -s tests/geuljjaim_site -v",
+    "exit": 0,
+    "seconds": 0.22
+  },
+  {
+    "command": "python -m unittest discover -s tests/grafia -v",
+    "exit": 0,
+    "seconds": 1.82
+  },
+  {
+    "command": "python -m unittest discover -s tests/hi -v",
+    "exit": 0,
+    "seconds": 10.76
+  },
+  {
+    "command": "python -m unittest discover -s tests/id -v",
+    "exit": 1,
+    "seconds": 0.27
+  },
+  {
+    "command": "python -m unittest discover -s tests/lad -v",
+    "exit": 0,
+    "seconds": 2.88
+  },
+  {
+    "command": "python -m unittest discover -s tests/nhip_chu -v",
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": "python -m unittest discover -s tests/satzbild -v",
+    "exit": 0,
+    "seconds": 11.66
+  },
+  {
+    "command": "python -m unittest discover -s tests/sw -v",
+    "exit": 1,
+    "seconds": 0.22
+  },
+  {
+    "command": "python -m unittest discover -s tests/szyk -v",
+    "exit": 0,
+    "seconds": 2.88
+  },
+  {
+    "command": "python -m unittest discover -s tests/thai -v",
+    "exit": 0,
+    "seconds": 4.25
+  },
+  {
+    "command": "python -m unittest discover -s tests/ziheng -v",
+    "exit": 0,
+    "seconds": 3.29
+  },
+  {
+    "command": "python -m unittest discover -s tests/zilu -v",
+    "exit": 1,
+    "seconds": 2.99
+  },
+  {
+    "command": "node tools/build_nhip_chu_site.mjs --check",
+    "exit": 0,
+    "seconds": 1.33
+  },
+  {
+    "command": "python tools/base_copy.py --check",
+    "exit": 0,
+    "seconds": 0.12
+  },
+  {
+    "command": "python tools/build_accord_site.py --check",
+    "exit": 0,
+    "seconds": 0.22
+  },
+  {
+    "command": "python tools/build_ar.py --check",
+    "exit": 0,
+    "seconds": 0.62
+  },
+  {
+    "command": "python tools/build_ar_site.py --check",
+    "exit": 0,
+    "seconds": 0.11
+  },
+  {
+    "command": "python tools/build_compasso_site.py --check",
+    "exit": 0,
+    "seconds": 0.21
+  },
+  {
+    "command": "python tools/build_dist.py --check",
+    "exit": 0,
+    "seconds": 0.67
+  },
+  {
+    "command": "python tools/build_equilibrio.py --check",
+    "exit": 0,
+    "seconds": 3.04
+  },
+  {
+    "command": "python tools/build_equilibrio_site.py --check",
+    "exit": 0,
+    "seconds": 0.22
+  },
+  {
+    "command": "python tools/build_gateways.py --check",
+    "exit": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": "python tools/build_geuljjaim.py --check",
+    "exit": 0,
+    "seconds": 0.52
+  },
+  {
+    "command": "python tools/build_grafia.py --check",
+    "exit": 0,
+    "seconds": 0.57
+  },
+  {
+    "command": "python tools/build_grafia_site.py --check",
+    "exit": 0,
+    "seconds": 0.11
+  },
+  {
+    "command": "python tools/build_hi_site.py --check",
+    "exit": 0,
+    "seconds": 0.11
+  },
+  {
+    "command": "python tools/build_lad_site.py --check",
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": "python tools/build_laras_site.py --check",
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": "python tools/build_mizani_site.py --check",
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": "python tools/build_satzbild.py --check",
+    "exit": 0,
+    "seconds": 2.32
+  },
+  {
+    "command": "python tools/build_satzbild_site.py --check",
+    "exit": 0,
+    "seconds": 0.11
+  },
+  {
+    "command": "python tools/build_szyk.py --check",
+    "exit": 0,
+    "seconds": 0.62
+  },
+  {
+    "command": "python tools/build_szyk_site.py --check",
+    "exit": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": "python tools/build_th.py --check",
+    "exit": 0,
+    "seconds": 0.52
+  },
+  {
+    "command": "python tools/build_th_site.py --check",
+    "exit": 0,
+    "seconds": 0.16
+  },
+  {
+    "command": "python tools/build_ziheng.py --check",
+    "exit": 0,
+    "seconds": 0.27
+  },
+  {
+    "command": "python tools/build_ziheng_hosts.py --check",
+    "exit": 0,
+    "seconds": 0.32
+  },
+  {
+    "command": "python tools/build_ziheng_site.py --check",
+    "exit": 0,
+    "seconds": 0.17
+  },
+  {
+    "command": "python tools/build_zilu.py --check",
+    "exit": 0,
+    "seconds": 0.52
+  },
+  {
+    "command": "python tools/build_zilu_site.py --check",
+    "exit": 0,
+    "seconds": 0.11
+  },
+  {
+    "command": "python tools/web_fonts.py --check",
+    "exit": 0,
+    "seconds": 0.12
+  }
+]

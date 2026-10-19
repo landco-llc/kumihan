@@ -1,69 +1,58 @@
-# 新しい言語・ページを追加する場合のSEO手順
+# 新しい言語・ページを追加する手順
 
-**状態: 実装完了前の運用チェックリスト。SEO基盤v1.0完成時に実コマンドと生成元を追記すること。**
+作業者が正本更新・生成・CIを担当し、独立レビュアーが翻訳群・indexability・コピー保護を確認する。Ownerは公開判断とSearch Console操作を担当する。mainへ自動mergeしない。
 
-## A. 作業開始前
+## 1. 正本を決める
 
-- [ ] 最新main/実装ブランチをFresh Read
-- [ ] 既存言語版/新しい言語版/新しい製品版のいずれかに分類
-- [ ] 正本となる生成元・言語コピー・テンプレートを特定
-- [ ] 翻訳元と翻訳先のURLの実在を確認（架空のURLを登録しない）
-- [ ] 対象ページが公開・indexableであることを確認
-- [ ] 他PRのSNSシェア/OGP/SEO変更との重複を確認
+- [ ] 最新main・対象ブランチ・関連PRをFresh Readし、[棚卸し](BASELINE_INVENTORY.md) で同種ページの生成元を探す。
+- [ ] gateway、製品LP、導入ガイド、独立ページのどれかを決め、実際の本文言語・翻訳関係を明記する。
+- [ ] 公開URLとindexable/noindex/外部canonicalの意図を決める。不存在の翻訳URLを推測しない。
+- [ ] 既存コピー正本へtitle/description/本文を登録する。`assets/seo-config.json` にページごとの翻訳レジストリを作らない。
 
-## B. SEO属性を作る
+## 2. 生成経路へ登録する
 
-- [ ] `<html lang>`（RTL言語は必要に応じ`dir`）
-- [ ] 既存コンテンツを正しく反映したtitleとdescription
-- [ ] 自己参照のcanonical（ホームの`/index.html`別名だけ既定値に正規化）
-- [ ] 同一コンテンツ群のhreflang（自己・相互、必要時x-default）
-- [ ] og:type / og:title / og:description / og:url / og:locale / og:image
-- [ ] twitter:card / twitter:title / twitter:description / twitter:image
-- [ ] 正しい`WebPage.inLanguage`/`WebPage.url`を持つJSON-LD
-- [ ] 既存ロゴ・画像の配信URL、画像寸法、ALT表記を確認
-- [ ] メタタグはビルド前後とも1つ。生成済みHTMLへの手編集のみで終わらせない
+Gatewayは `tools/build_gateways.py` の `GATEWAYS` と `assets/gateway-copy.json` を更新し、必要なら `PRODUCTS` へ製品を登録する。全gateway間のhreflang集合はその登録を再利用する。
 
-## C. 既存生成機構へ追加
+製品・導入ガイドは既存の `tools/build_*_site.py` / `tools/product_site.py` / `tools/install_frame.py` を使う。Vietnameseは `tools/build_nhip_chu_site.mjs` の共通SEOアダプタ経路を使う。独立版テンプレートはテンプレートと生成先の両方を棚卸しに記録する。新しい生成器を作る場合は `tools/build_seo.py` の実行対象へ加え、非書込 `--check` を実装する。
 
-トップ言語ゲートウェイ:
-- [ ] `tools/build_gateways.py` のGATEWAYSと必要に応じPRODUCTSを更新
-- [ ] `assets/gateway-copy.json` の対応言語を更新
-- [ ] トップ言語ページが全既存トップページのhreflang集合に入ることを確認
+Jekyllは適切な `_layouts/` とページfrontmatter・既存コピーを更新する。レイアウトのSEO include生成も全体ビルダーで再生成する。Bangla等のソースHTMLは本文・既存コピーを正本に保ち、共通SEOアダプタを使う。
 
-製品言語LP:
-- [ ] 翻訳本文に合う各言語固有の生成元を特定
-- [ ] `tools/product_site.py` または個別`build_*_site.py` / テンプレートに新言語を追加
-- [ ] 既存製品の他言語LPとのみhreflang関係を追加
-- [ ] 必要時にJekyllレイアウトも更新
-- [ ] 導入ページにもcanonicalとindexable判定を付ける
+- [ ] 同一製品の実在翻訳だけをhreflangへ登録し、自己・相互リンクを維持する。
+- [ ] `<html lang>`、必要な `dir="rtl"`、表示言語と一致するOG localeを確認する。
+- [ ] 自己canonical、OG URL、JSON-LD WebPage URLを一致させる。
+- [ ] gatewayと製品、導入ガイドを互いの翻訳として登録しない。
+- [ ] 画像変更時は共有設定と実画像を更新し、寸法・MIME・HTTPS取得を実測する。
+- [ ] root/docsへ新HTMLを置けば探索対象になる。SEO未整備のまま除外設定を足してCIを回避しない。非公開fixtureは `tests/seo/fixtures/test-fixture-new-language` 配下へ置く。
 
-独立したその他ページ:
-- [ ] 公開・非公開・noindex・duplicate URLの意図を明記
-- [ ] robots/alias/redirectをSEO登録と混同しない
-- [ ] 公開するなら共通SEO helperからhead情報を生成
+## 3. 生成し、漏れとドリフトを検証する
 
-## D. 生成・テスト
+リポジトリrootで実行する。
 
-- [ ] 最新の各ビルダーでHTMLを再生成。再生成した生成物をcommit
-- [ ] SEO共通ビルダーで`sitemap.xml`を再生成
-- [ ] 非書込`--check`を実施
-- [ ] canonicalとsitemapが一致・重複なし
-- [ ] hreflangの全相互参照が存在
-- [ ] JSON-LDのJSON解析とURL整合がPASS
-- [ ] OGP画像がHTTPS配信され、寸法メタが正しい
-- [ ] 文字組/320px/Unicode/RTLの必要な表示確認
-- [ ] 既存の言語版と配布ZIP/README/ダウンロードリンクに意図しない変更なし
-- [ ] CIがPASS
-- [ ] PRと`docs/seo/VALIDATION_LOG.md`にHEAD SHA、テスト結果、未確認を記録
+```sh
+python tools/build_seo.py
+python tools/build_seo.py --check
+python tools/build_sitemap.py --check
+python tools/check_seo.py
+python -m unittest discover -s tests/seo -v
+```
 
-## E. 公開後（Owner対応）
+- [ ] 生成済みHTML・SEO include・`sitemap.xml`を同じPRに含める。
+- [ ] 2回目の生成で追加差分がなく、`--check`実行前後にファイル変更がない。
+- [ ] 新ページがSitemapへ1回だけ追加される（indexableの場合）。ホームの `index.html` とルートを二重登録しない。
+- [ ] 不完全な新言語fixtureが監査で失敗し、共通SEO適用後はメタ・Sitemap監査を通るテストを維持する。
+- [ ] Jekyllビルド後の `_site` を `python tools/check_seo.py --site-dir _site` と `python tools/build_sitemap.py --check --site-dir _site` で検証する。
+- [ ] 変更言語のUnicode・RTL・表示幅・既存リンクを実画面で確認し、未実測ならそのまま記録する。
+- [ ] `git diff origin/main -- plugins skills '*.zip'` 等で配布物・versionに意図しない変更がない。
+- [ ] [棚卸し](BASELINE_INVENTORY.md)、必要なら [設計判断](DECISIONS.md)、[検証ログ](VALIDATION_LOG.md) を更新する。
+- [ ] `.github/workflows/seo-foundation.yml` と既存関連CIがPASSし、独立レビュー結果・対象SHA・未実施をDraft PRへ記録する。
 
-- [ ] SEO仕様反映済みのGitHub Pages公開URLを確認
-- [ ] Search Consoleで所有権確認（未設定ならOwner）
-- [ ] Search Consoleに`https://landco-llc.github.io/kumihan/sitemap.xml`を送信または再送信
-- [ ] Search ConsoleのURL検査で主要新ページの取得・indexabilityを確認
-- [ ] インデックス登録・検索表示・AI引用を保証しないことを記録
+## 4. 公開後のOwner操作
 
-## このチェックリストのアップデート
+- [ ] 承認・merge後、GitHub Pages公開HTML・画像・Sitemapを取得してブランチの検証結果と区別する。
+- [ ] Search Console所有権を確認し、`https://landco-llc.github.io/kumihan/sitemap.xml` を送信／再送信する。
+- [ ] URL検査で主要新ページの取得・indexabilityを確認する。検索登録・順位やAI引用を保証しない。
+- [ ] SNS取得検査を行う場合はキャッシュ・ログイン制約を記録する。
 
-具体的な生成/検証コマンドはW06で実コードに合わせて確定させる。ページ追加ごとに新設チェックが必要になった場合、既存手順と`DECISIONS.md`を同時更新。
+### Other public directories
+
+New HTML directories (for example `guides/`) are discovered recursively by `tools/seo_inventory.py`; Jekyll frontmatter pages there use the same include generator. Source/package directories are explicitly excluded in that scanner. A new publishing convention must update the scanner policy and `_config.yml` together. `tests/seo/test_audit.py` proves missing SEO in a new directory fails before a complete page passes and enters Sitemap.

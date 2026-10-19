@@ -8,6 +8,11 @@ pages declare an explicit zh-Hant-TW locale, keep Taiwan full-width
 punctuation (no squeezing), and never convert or normalize source text. The
 Taiwan / Hong Kong band keeps the index's dark "idea" slot.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import json
 import re
@@ -283,9 +288,14 @@ def render(lang, c):
     return out
 
 
+@seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "ziheng-site-copy.json").read_text(encoding="utf-8"))
     files = {f"kumihan-zh-han{sfx}.html": render(lang, copy[lang]) for lang, sfx in LANGS.items()}
+    # Legacy guides are authored independently; templates preserve that copy.
+    templates = ROOT / "templates/ziheng"
+    files.update({p.relative_to(templates).as_posix(): p.read_text(encoding="utf-8")
+                  for p in sorted(templates.rglob("*.html"))})
     files["assets/ziheng-site.css"] = canonical_css()
     return files
 
@@ -304,7 +314,7 @@ def main():
             path.write_text(content, encoding="utf-8")
     if stale:
         raise SystemExit("Stale ZiHeng site files: " + ", ".join(stale))
-    print("ZiHeng site: 4 files " + ("verified" if args.check else "built"))
+    print(f"ZiHeng site: {len(outputs())} files " + ("verified" if args.check else "built"))
 
 
 if __name__ == "__main__":
