@@ -12,3 +12,10 @@ Confirmed October 19, 2026 UTC, after owner-authorized /goal workflow.
 - Generated FA product is linked from the language gateway after the fa-gateway build.
 - Actual invocation in Claude/Gemini and native-speaker Persian editorial proofreading are not verified. CI is package/static validation, not host certification.
 - Browser/mobile cross-platform visual inspection remains a recommended follow-up. Do not retroactively mark unrun research fixture scenarios as passed.
+
+## Post-release site source readback
+
+- Confirmed source on main: KUMIHAN｜تراز in index.html and top-en.html, with localized FA edition links.
+- Confirmed source on main: kumihan-fa.html is RTL with fa language metadata; install-kumihan-fa-claude.html contains verified public v0.1.0 ZIP download links.
+- GitHub Release: 15 versioned ZIPs + 2 manifest/checksum files, re-downloaded and hash-checked in the release workflow.
+- GitHub Pages deploy still requires an independent successful deployment signal; external HTTP/browser visual tests were not part of this readback.
