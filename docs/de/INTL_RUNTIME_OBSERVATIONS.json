@@ -1,0 +1,29 @@
+{
+  "node": "v24.19.0",
+  "icu": "78.3",
+  "cldr": "48.0",
+  "observations": [
+    {
+      "locale": "de-DE",
+      "number": "1.234,5",
+      "euro": "1.234,50 €",
+      "chf": "1.234,50 CHF",
+      "date": "1. Januar 2026"
+    },
+    {
+      "locale": "de-AT",
+      "number": "1 234,5",
+      "euro": "€ 1.234,50",
+      "chf": "CHF 1.234,50",
+      "date": "1. Jänner 2026"
+    },
+    {
+      "locale": "de-CH",
+      "number": "1'234.5",
+      "euro": "EUR 1'234.50",
+      "chf": "CHF 1'234.50",
+      "date": "1. Januar 2026"
+    }
+  ],
+  "scope": "Observed runtime only; no parsing or source conversion"
+}

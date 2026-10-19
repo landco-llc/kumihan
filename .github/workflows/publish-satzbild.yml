@@ -1,0 +1,82 @@
+name: Publish Satzbild v0.1.0
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact tested merge commit at kumihan-de-v0.1.0
+        required: true
+        type: string
+permissions:
+  contents: write
+  actions: read
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: kumihan-de-v0.1.0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Verify fixed tested source
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          test "$(gh api repos/$GH_REPO/commits/main --jq .sha)" = "$EXPECTED_SHA"
+          gh api "repos/$GH_REPO/actions/workflows/satzbild.yml/runs?head_sha=$EXPECTED_SHA&branch=main&status=success" > /tmp/tested-main.json
+          python - <<'PYTEST'
+          import json,os
+          runs=json.load(open('/tmp/tested-main.json'))['workflow_runs']
+          assert any(r['head_sha']==os.environ['EXPECTED_SHA'] and r['event']=='push' and r['conclusion']=='success' for r in runs), 'Requires successful Satzbild CI on exact main SHA'
+          PYTEST
+          python -m pip install jsonschema==4.26.0 PyYAML==6.0.3
+          PYTHONDONTWRITEBYTECODE=1 python -m unittest discover -s tests/satzbild -v
+          python tools/build_satzbild.py --check
+          python tools/build_satzbild_site.py --check
+      - name: Upload immutable assets and publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view kumihan-de-v0.1.0 --json isDraft,assets > /tmp/satzbild-release.json
+          python - <<'PY'
+          import json
+          d=json.load(open('/tmp/satzbild-release.json'))
+          if not d['isDraft'] or d['assets']:
+              raise SystemExit('Requires empty draft; refuse to overwrite immutable assets')
+          PY
+          gh release upload kumihan-de-v0.1.0 plugins/kumihan-satzbild/downloads/*.zip plugins/kumihan-satzbild/downloads/MANIFEST.json plugins/kumihan-satzbild/downloads/SHA256SUMS.txt
+          # The by-tag endpoint omits drafts; use the authenticated release list.
+          gh api --paginate repos/landco-llc/kumihan/releases --jq '.[] | select(.tag_name == "kumihan-de-v0.1.0")' > /tmp/satzbild-assets.json
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          assets=json.load(open('/tmp/satzbild-assets.json'))['assets']
+          root=Path('plugins/kumihan-satzbild/downloads')
+          expected={p.name:p for p in root.iterdir() if p.is_file()}
+          if len(expected)!=17 or {a['name'] for a in assets}!=set(expected):
+              raise SystemExit('Expected exact 17 assets')
+          for a in assets:
+              p=expected[a['name']]
+              if a['size']!=p.stat().st_size or a.get('digest')!='sha256:'+hashlib.sha256(p.read_bytes()).hexdigest():
+                  raise SystemExit('Digest/size mismatch: '+a['name'])
+          PY
+          gh release edit kumihan-de-v0.1.0 --draft=false --latest=false
+          gh release view kumihan-de-v0.1.0 --json isDraft,tagName,url > /tmp/public-satzbild.json
+          python -c "import json; d=json.load(open('/tmp/public-satzbild.json')); assert d['isDraft'] is False and d['tagName']=='kumihan-de-v0.1.0'"
+          mkdir /tmp/satzbild-public
+          gh release download kumihan-de-v0.1.0 --dir /tmp/satzbild-public
+          python - <<'PYCHECK'
+          from pathlib import Path
+          expected=Path('plugins/kumihan-satzbild/downloads')
+          actual=Path('/tmp/satzbild-public')
+          assert {p.name for p in expected.iterdir()}=={p.name for p in actual.iterdir()}
+          for p in expected.iterdir(): assert p.read_bytes()==(actual/p.name).read_bytes(), p.name
+          PYCHECK
