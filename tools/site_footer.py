@@ -4,7 +4,7 @@ KUMIHAN
 Open-source typography & design guidance by L&Co. LLC.
 Links: KUMIHAN (the top page in the page's language), the language-edition
 menu (rounded, "choose a language" in the page's language, the page's own
-language first and the rest by code), GitHub, Apache 2.0.
+language first and the rest by code), Privacy Policy, GitHub, Apache 2.0.
 
 The styles are part of assets/kumihan-fonts.css (tools/web_fonts.py), which
 every page already loads after its own stylesheet. Jekyll layouts and the
@@ -88,6 +88,7 @@ def footer(lang, root="", g=None):
             f'<nav class="kf-links" aria-label="KUMIHAN">'
             f'<a href="{root}{g.GATEWAYS[k][0]}">KUMIHAN</a>'
             f'<details class="kf-menu"><summary>{escape(g.PICK[k])}</summary><ul>{items}</ul></details>'
+            f'<a href="{root}privacy.html#lang-{k}">{"プライバシーポリシー" if k == "ja" else "Privacy Policy"}</a>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub</a>'
             f'<a href="{REPO}/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a>'
             f'</nav></div></footer>')
