@@ -86,15 +86,19 @@ class VersionNamingPolicyTests(unittest.TestCase):
     def test_current_site_status_uses_suffix_free_version(self):
         landing=(ROOT/'_layouts/landing.html').read_text(encoding='utf-8')
         installation=(ROOT/'_layouts/installation.html').read_text(encoding='utf-8')
-        self.assertIn('CURRENT PACKAGE / v0.1.8',landing)
+        self.assertIn('SOURCE PACKAGE / {% include version/ja-source-version.html %}',landing)
         self.assertIn('releases/tag/v0.1.8-preview',landing)
         self.assertNotIn('PREVIEW /',installation)
         self.assertNotIn('preview version',installation.lower())
 
-    def test_unpublished_candidate_is_not_advertised_as_released(self):
+    def test_publication_status_comes_from_verified_facts(self):
         landing=(ROOT/"_layouts/landing.html").read_text()
-        self.assertIn("CURRENT PACKAGE / v0.1.8",landing)
-        self.assertNotIn("releases/tag/v0.1.8\"",landing)
+        self.assertIn("{% include version/ja-hero.html %}",landing)
+        import json
+        facts=json.loads((ROOT/"assets/edition-versions.json").read_text())["editions"]
+        hero=(ROOT/"_includes/version/ja-hero.html").read_text()
+        self.assertIn(facts["ja"]["release_url"],hero)
+        self.assertIn('data-release-status="published"',hero)
         self.assertIn("過去版",landing)
         for name in ("index.html", "top-ja.html"):
             text=(ROOT/name).read_text()

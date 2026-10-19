@@ -27,9 +27,11 @@ PRODUCTS = {
 
 
 def catalogue():
+    contracts=json.loads((ROOT/'assets/edition-release-contracts.json').read_text())['editions']
     return {code: dict(edition=code, product=('kumihan-'+slug if slug else 'kumihan'),
                        source_manifest=(f'plugins/kumihan-{slug}/plugin.json' if slug else 'plugin.json'),
-                       tag_prefix=(f'kumihan-{tag}-v' if tag else 'v'), zip_count=count)
+                       tag_prefix=(f'kumihan-{tag}-v' if tag else 'v'),
+                       zip_count=(count if contracts[code] is not None else None), zip_templates=contracts[code])
             for code, (slug, tag, count) in PRODUCTS.items()}
 
 
@@ -75,6 +77,7 @@ def verify_release(spec, release, fetch, read_source=git_source):
     url = REPO+'/releases/tag/'+tag
     if release['html_url'] != url or not re.fullmatch(r'\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ', release.get('published_at') or ''):
         raise ValueError('Invalid release URL/date')
+    if not spec['zip_templates']: raise ValueError('No adopted flat Release ZIP contract; Owner naming decision required: '+spec['edition'])
     assets = {a['name']: a for a in release['assets']}
     if len(assets) != len(release['assets']): raise ValueError('Duplicate asset names')
     zips = {n: a for n, a in assets.items() if n.endswith('.zip')}
@@ -82,6 +85,8 @@ def verify_release(spec, release, fetch, read_source=git_source):
     for name in zips:
         if not name.startswith(spec['product']+'-') or not re.search(r'-v?'+re.escape(version)+r'\.zip$',name):
             raise ValueError('Wrong edition/version ZIP: '+name)
+    required={template.format(version=version) for template in spec['zip_templates']}
+    if set(zips) != required: raise ValueError('Required host/skill ZIP roles missing or replaced: '+tag)
     manifests = []
     metadata = []
     checksums = {}
@@ -147,6 +152,10 @@ def fetch_asset(asset, tag, fetch):
 def select_release(spec, old, releases, fetch, read_source=git_source):
     result = copy.deepcopy(old)
     candidates = []
+    if old.get('published_version'):
+        tag=spec['tag_prefix']+old['published_version']
+        if not any(r['tag_name']==tag and not r['draft'] and not r['prerelease'] for r in releases):
+            raise ValueError('Current verified Release missing or withdrawn: '+tag)
     for r in releases:
         if r['draft'] or r['prerelease'] or not r['tag_name'].startswith(spec['tag_prefix']): continue
         suffix = r['tag_name'][len(spec['tag_prefix']):]

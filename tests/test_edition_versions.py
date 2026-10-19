@@ -13,7 +13,7 @@ import edition_versions as v
 
 class ReleaseAdmission(unittest.TestCase):
     def setUp(self):
-        self.spec = dict(product='xx', edition='xx', source_manifest='plugin.json', tag_prefix='xx-v', zip_count=1)
+        self.spec = dict(zip_templates=['xx-v{version}.zip'], product='xx', edition='xx', source_manifest='plugin.json', tag_prefix='xx-v', zip_count=1)
         buf = io.BytesIO()
         with zipfile.ZipFile(buf, 'w') as z:
             z.writestr('xx/plugin.json', json.dumps({'version': '1.2.3'}))
@@ -66,7 +66,28 @@ class ReleaseAdmission(unittest.TestCase):
     def test_old_formal_release_does_not_downgrade(self):
         old = dict(source_version='1.2.4', **self.verify())
         r = dict(self.release, tag_name='xx-v1.2.2')
-        self.assertEqual(v.select_release(self.spec, old, [r], self.fetch, self.source), old)
+        self.assertEqual(v.select_release(self.spec, old, [r,self.release], self.fetch, self.source), old)
+
+    def test_same_count_wrong_package_role_is_rejected(self):
+        r=copy.deepcopy(self.release)
+        r['assets'][1]['name']='xx-unrelated-v1.2.3.zip'
+        r['assets'][1]['browser_download_url']=v.REPO+'/releases/download/xx-v1.2.3/xx-unrelated-v1.2.3.zip'
+        manifest=self.manifest.replace(b'xx-v',b'xx-unrelated-v')
+        sums=self.sums.replace(b'xx-v',b'xx-unrelated-v')
+        r['assets'][0]['size']=len(manifest);r['assets'][2]['size']=len(sums)
+        fetch=lambda url: manifest if url.endswith('.json') else sums if url.endswith('.txt') else self.payload
+        with self.assertRaises(ValueError):self.verify(r,fetch=fetch)
+
+    def test_withdrawn_current_release_fails_without_mutation(self):
+        old=dict(source_version='1.2.3',**self.verify());before=copy.deepcopy(old)
+        for releases in ([],[dict(self.release,draft=True)],[dict(self.release,prerelease=True)],[dict(self.release,tag_name='xx-v1.2.2')]):
+            with self.subTest(releases=releases),self.assertRaises(ValueError):
+                v.select_release(self.spec,old,releases,self.fetch,self.source)
+            self.assertEqual(old,before)
+
+    def test_unadopted_flat_contract_does_not_promote(self):
+        self.spec['zip_templates']=None
+        with self.assertRaisesRegex(ValueError,'Owner naming decision required'):self.verify()
 
     def test_ignores_unrelated_and_draft_events(self):
         old = {'source_version': '1.2.3', 'published_version': None, 'release_status': 'unpublished'}
@@ -104,6 +125,7 @@ class SnapshotAndCoverage(unittest.TestCase):
                 if f['release_status']=='published':
                     self.assertEqual(f['tag'],spec['tag_prefix']+f['published_version'])
                     self.assertEqual(len(f['verified_assets']),spec['zip_count'])
+                    self.assertEqual({a['name'] for a in f['verified_assets']},{t.format(version=f['published_version']) for t in spec['zip_templates']})
                     self.assertRegex(f['source_commit'],r'^[0-9a-f]{40}$')
                     self.assertRegex(f['source_manifest_sha256'],r'^[0-9a-f]{64}$')
                     for a in f['verified_assets']:
