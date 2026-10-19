@@ -10,7 +10,7 @@ namespace Kumihan\Mcp;
 final class LanguageRouter
 {
     private const PATTERNS = [
-        'kana' => '/[\p{Hiragana}\p{Katakana}]+/u',
+        'kana' => '/[\p{sc=Hiragana}\p{sc=Katakana}]+/u',
         'hangul' => '/\p{Hangul}+/u',
         'thai' => '/\p{Thai}+/u',
         'khmer' => '/\p{Khmer}+/u',
@@ -122,7 +122,7 @@ final class LanguageRouter
         $spans = [];
         $matches = [];
         // Each run is only a script clue. Spaces/punctuation remain untouched.
-        preg_match_all('/[\p{Hiragana}\p{Katakana}]+|\p{Hangul}+|\p{Thai}+|\p{Khmer}+|\p{Bengali}+|\p{Devanagari}+|\p{Arabic}+|\p{Cyrillic}+|\p{Han}+|\p{Latin}+|\p{Hebrew}+/u', $text, $matches, PREG_OFFSET_CAPTURE);
+        preg_match_all('/[\p{sc=Hiragana}\p{sc=Katakana}]+|\p{Hangul}+|\p{Thai}+|\p{Khmer}+|\p{Bengali}+|\p{Devanagari}+|\p{Arabic}+|\p{Cyrillic}+|\p{Han}+|\p{Latin}+|\p{Hebrew}+/u', $text, $matches, PREG_OFFSET_CAPTURE);
         foreach ($matches[0] ?? [] as $match) {
             [$run, $byteOffset] = $match;
             $script = 'unknown';
