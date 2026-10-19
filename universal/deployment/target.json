@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "private_runtime_web_ready_pending_public_exposure_review",
+  "status": "public_exposure_scan_incomplete_pending_diagnosis",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -50,13 +50,16 @@
     "web_php_sdk_autoload_verified": true,
     "web_php_registry_21_verified": true,
     "web_php_session_write_verified": true,
-    "web_php_extension_checks_verified": true
+    "web_php_extension_checks_verified": true,
+    "public_symlink_scan_complete": false,
+    "public_root_preflight_passed": false,
+    "other_vhosts_isolation_verified": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner observed PHP_VERSION=8.5.11 PHP_SAPI=litespeed REGISTRY_MODULES=21 plus 7 Web PHP checks and PRIVATE_RUNTIME_WEB_READY; MCP_NOT_PUBLIC. Private config.php now exists and is readable under Web PHP. Public MCP still NOT DEPLOYED.",
-  "deployment_blocker": "Private PHP SDK+registry (21)+sessions PASS and private config present. Before public two-file bootstrap, review all configured host upload directories and web-root symlinks for alternate exposure, confirm no temporary probe remains, then deploy only index.php and .htaccess and immediately run actual HTTPS MCP initialize/tools/list/tools/call.",
+  "notes": "Owner's SSH preflight PASS for private path outside web, kmhn empty, required private files. Full web symlink scan could not complete. No exposure established and no public deployment; collect sanitized read-only diagnostics.",
+  "deployment_blocker": "Full web-tree symlink scan returned nonzero (stderr was suppressed). Determine if unrelated directory permissions, changing tree, or find incompatibility. Keep public bootstrap and MCP E2E unattempted until required exposure review is satisfied.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -212,5 +215,21 @@
     "temporary_web_probe_cleanup_expected": true,
     "temporary_web_probe_cleanup_independently_checked": false,
     "scope_limit": "SDK autoload, registry construction and private session file I/O PASS; actual HTTP MCP protocol, WAF, alternate vhosts and cross-client compatibility not tested."
+  },
+  "public_preflight": {
+    "observed_at": "2026-10-19",
+    "source": "Owner authenticated Lolipop SSH run of revision dd6d932c5a1491f23912eb7d2f8d752a3ee8e4a0",
+    "status": "INCOMPLETE_STOP",
+    "markers": [
+      "PRIVATE_PATH_OUTSIDE_WEB_OK",
+      "PUBLIC_KMHN_EMPTY_OK",
+      "PRIVATE_RUNTIME_FILES_PRESENT_OK",
+      "PUBLIC_SYMLINK_SCAN_INCOMPLETE"
+    ],
+    "success_before_failure": true,
+    "failure_scope": "Full FTP/web tree `find ... -type l` returned nonzero; prior script discarded stderr, actual cause unknown.",
+    "safety_conclusion": "No affirmative symlink exposure finding. Public bootstrap intentionally withheld; other vhost mappings not reviewed.",
+    "writes_performed": false,
+    "next_step": "Read-only check the kmhn-specific symlink scope and classify full-tree find errors without printing names, then review active domain upload mappings."
   }
 }
