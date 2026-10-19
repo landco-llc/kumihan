@@ -42,7 +42,7 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("OWNER SETUP REPORTED", guide)
+        self.assertIn("PUBLIC DNS+TLS VERIFIED", guide)
 
 if __name__ == "__main__":
     unittest.main()
