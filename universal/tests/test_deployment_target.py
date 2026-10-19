@@ -13,7 +13,19 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "g1_scoped_prebootstrap_pass_owner_mapping_confirmed_g2_trial_pending")
+        self.assertEqual(d["status"], "g2_public_two_files_privately_staged_verified_pending_limited_install")
+        self.assertEqual(d["g2_stage_evidence"]["owner_terminal_markers"], [
+            "G2_LOCAL_FILE_SHA_OK",
+            "G2_PRIVATE_STAGE_CREATED",
+            "G2_SCP_READBACK_SHA_OK",
+            "G2_SCP_READBACK_BYTES_OK",
+            "G2_ONLY_PRIVATE_STAGED",
+        ])
+        self.assertEqual(d["g2_stage_evidence"]["files"]["index.php"]["bytes"], 453)
+        self.assertEqual(d["g2_stage_evidence"]["files"][".htaccess"]["bytes"], 192)
+        self.assertTrue(d["flags"]["g2_public_stage_readback_hash_verified"])
+        self.assertTrue(d["flags"]["g2_public_stage_readback_byte_verified"])
+        self.assertFalse(d["g2_stage_evidence"]["g2_trial_install_was_run"])
         self.assertTrue(d["flags"]["public_scoped_prebootstrap_recheck_verified"])
         self.assertTrue(d["flags"]["public_root_preflight_passed"])
         self.assertEqual(d["g1_scoped_final_preflight"]["scoped_filesystem_checks"], "PASS")
