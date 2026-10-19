@@ -26,7 +26,7 @@ class RegistryTests(unittest.TestCase):
                 self.assertGreater(len(module["rules"]), 0)
                 self.assertEqual(len(module["module_sha256"]), 64)
                 self.assertEqual(module["status"], "preview_unverified")
-                self.assertIn("source-preserving", "source-preserving")
+                self.assertTrue(module["entry_skill_text"].strip())
 
     def test_add_and_update_modules_without_engine_changes(self):
         original = builder.PROJECT_ROOT
