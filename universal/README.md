@@ -1,6 +1,7 @@
 # KUMIHAN Universal MCP — phase 1 runtime
 
 Status: **implementation candidate, not deployed**. GitHub source of truth: landco-llc/kumihan.
+Production hostname **mcp-kmhn.landco.co.jp** selected on 2026-10-19; planned endpoint **https://mcp-kmhn.landco.co.jp/mcp**. DNS, SSL and real remote access are NOT VERIFIED; Lolipop host control-panel operations are blocked by the provider's emergency maintenance. See [target manifest](deployment/target.json).
 Specification: [modular architecture proposal](https://github.com/landco-llc/kumihan/pull/87) (separate draft PR until merged).
 
 ## Purpose and supported behaviors
@@ -59,4 +60,4 @@ See [LOLLIPOP_SETUP.md](LOLLIPOP_SETUP.md). Existing rental server: Lolipop High
 
 ## Deployment blocker
 
-Production endpoint/domain and hosting deployment authorization are not supplied. No credentials are stored. Do not install private config from the public repo. Do not merge or publish the integrated plugin until end-to-end evidence is available.
+Production hostname is selected but NOT provisioned; hosting deployment authorization and direct server access are not supplied. No credentials are stored. Do not install private config from the public repo. Do not merge or publish the integrated plugin until end-to-end evidence is available.
