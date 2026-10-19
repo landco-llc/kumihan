@@ -63,3 +63,10 @@ Do not overwrite prior entries. Publish only observed outcomes; do not infer ind
 - Post-merge Bundler Jekyll3.10 build: PASS; actual231-page output audit: PASS. SEO15 tests and Zilu10 tests PASS after independent-review fixes.
 - Protected plugins/skills/download directories and every ZIP: zero differences versus final `origin/main 64a8425`. Existing static HTML bodies: zero differences.
 - Raw-checkout ID/SW archive tests require workflow package-build prerequisites (their existing CI creates packages before tests). Isolated workflow verification is recorded separately; no generated archives will be copied into this branch.
+
+### W08 — Draft PR and workflow-prepared archive tests
+
+- Draft PR: https://github.com/landco-llc/kumihan/pull/93 (main未マージ)。最終コード検証HEAD `a38a237`; initial submission HEAD `abd6c51` is the same code plus validation-log update.
+- Existing CI prerequisites faithfully reproduced in isolated current-feature copy: `python tools/build_laras.py` then ID9/9 PASS; `python tools/build_mizani.py` then SW6/6 PASS. The raw-checkout failures above are preparation-dependent, not SEO regressions. Temp-generated ZIPs remain outside the branch and are not copied back.
+- Final combined results: all251 existing tests PASS with their established preparation (root18 + language233; Zilu10 rechecked after parity-test adaptation), SEO15 PASS. Existing check29/29 PASS. No remaining local test failure.
+- First hosted SEO run: https://github.com/landco-llc/kumihan/actions/runs/39205706993 (submitted HEAD `abd6c51`; completion recorded separately). PR CI reruns on each log-only commit; inspect latest PR check SHA for the final state.
