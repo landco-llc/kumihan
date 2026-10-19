@@ -274,6 +274,7 @@
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   </style>
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
 </head>
 <body id="top">
   <a class="skip-link" href="#main"><span class="lang-ja">本文へ移動</span><span class="lang-en">Skip to content</span><span class="lang-zh">跳至主要內容</span></a>

@@ -24,6 +24,7 @@
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/geuljjaim-index.css' | relative_url }}">
 
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
 </head>
 <body id="top">
 <a class="skip-link" href="#main">{{ t.skip }}</a>

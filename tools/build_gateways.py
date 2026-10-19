@@ -8,18 +8,29 @@ the page's own language first (and English second in the language menu).
 import argparse
 import json
 from html import escape
+from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 BASE = "https://landco-llc.github.io/kumihan/"
 VISIBLE, STEP = 9, 6
 
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
+    "ar": ("top-ar.html", "ar", "AR", "العربية"),
     "en": ("top-en.html", "en", "EN", "English"),
+    "es": ("top-es.html", "es", "ES", "Español"),
+    "fr": ("top-fr.html", "fr", "FR", "Français"),
+    "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
     "ja": ("index.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
+    "pt": ("top-pt.html", "pt", "PT", "Português"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
+    "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
     "zh-hans": ("top-zh-cn.html", "zh-Hans-CN", "ZH-HANS", "简体中文"),
     "zh-hant": ("top-zh-han.html", "zh-Hant-TW", "ZH-HANT", "繁體中文"),
 }
@@ -50,8 +61,89 @@ PRODUCTS = {
                     pages={"zh-hant": "kumihan-zh-han.html", "en": "kumihan-zh-han.en.html", "ja": "kumihan-zh-han.ja.html"}),
 }
 
+# Right-to-left gateway languages.
+RTL = {"ar"}
+
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
+    "ar": {
+        "ar": ("تنضيد عربي يراعي الكتابة من اليمين إلى اليسار وتداخل اللغات، ويحافظ على النص الأصلي.", "عرض النسخة العربية"),
+        "es": ("تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.", "عرض النسخة الإسبانية"),
+        "fr": ("تنضيد فرنسي يميّز المسافات غير القابلة للكسر وعلامات الاقتباس وأدلة الأسلوب الإقليمية والمؤسسية.", "عرض النسخة الفرنسية"),
+        "ja": ("من قواعد كسر الأسطر اليابانية (كينسوكو) والفواصل الطبيعية إلى بنية المعلومات والمسافات ومسار القراءة.", "عرض النسخة اليابانية"),
+        "ko": ("كسر الأسطر بين وحدات الكلام الكورية (أوجول)، مع العناية بإيقاع النص ووضوح بنية المعلومات.", "عرض النسخة الكورية"),
+        "pt": ("تنضيد برتغالي وتصميم يقوده المعنى، يحترم أعراف البرازيل والبرتغال وقصد الكاتب.", "عرض النسخة البرتغالية"),
+        "th": ("يحترم حدود الكلمات التايلاندية والحروف المركّبة، لتصميم تايلاندي سهل القراءة.", "عرض النسخة التايلاندية"),
+        "zh-hans": ("علامات الترقيم وكسر الأسطر والمزج بين الصينية واللاتينية للصينية المبسطة، دون إعادة كتابة الأصل.", "عرض نسخة الصينية المبسطة"),
+        "zh-hant": ("يراعي أعراف الترقيم والتنضيد المختلفة في تايوان وهونغ كونغ.", "عرض نسخة الصينية التقليدية"),
+        "hi": ("تنضيد وتصميم هندي يحافظ على الأصل والحروف المركّبة وعلامات الحركات.", "عرض النسخة الهندية"),
+        "vi": ("تنضيد فيتنامي يحافظ على علامات النغمة وفواصل الأسطر الطبيعية والمحتوى الأصلي.", "عرض النسخة الفيتنامية"),
+    },
+    "es": {
+        "ar": ("Tipografía árabe que gestiona la escritura de derecha a izquierda y la mezcla de alfabetos, sin alterar el original.", "Ver la edición en árabe"),
+        "es": ("Tipografía en español que respeta el uso regional, conserva el original y separa la evidencia comprobada del criterio editorial.", "Ver la edición en español"),
+        "fr": ("Tipografía francesa que distingue los espacios de no separación, las comillas y los libros de estilo regionales o institucionales.", "Ver la edición en francés"),
+        "ja": ("De las reglas japonesas de división de líneas (kinsoku) y los saltos naturales a la estructura de la información, los espacios y el recorrido de lectura.", "Ver la edición en japonés"),
+        "ko": ("Saltos de línea entre eojeol (unidades de espaciado coreanas), ritmo del texto y una estructura de información clara.", "Ver la edición en coreano"),
+        "pt": ("Tipografía portuguesa y diseño guiado por el sentido, que respeta las convenciones de Brasil y Portugal y la intención del autor.", "Ver la edición en portugués"),
+        "th": ("Respeta los límites de palabra y los caracteres combinados del tailandés, para un diseño que se lee con naturalidad.", "Ver la edición en tailandés"),
+        "zh-hans": ("Puntuación, saltos de línea y mezcla de chino y alfabeto latino para el chino simplificado, sin reescribir el original.", "Ver la edición en chino simplificado"),
+        "zh-hant": ("Atiende las convenciones de puntuación y composición propias de Taiwán y Hong Kong.", "Ver la edición en chino tradicional"),
+        "hi": ("Tipografía y diseño en hindi que conservan el original, los conjuntos consonánticos y las matras.", "Ver la edición en hindi"),
+        "vi": ("Tipografía vietnamita que respeta los signos de tono, los saltos de línea naturales y el contenido original.", "Ver la edición en vietnamita"),
+    },
+    "fr": {
+        "ar": ("Typographie arabe qui gère l’écriture de droite à gauche et le mélange des écritures, sans toucher au texte d’origine.", "Voir l’édition arabe"),
+        "es": ("Typographie espagnole qui respecte les usages régionaux, préserve la source et distingue les preuves vérifiées du jugement éditorial.", "Voir l’édition espagnole"),
+        "fr": ("Typographie française qui distingue espaces insécables, guillemets et styles maison régionaux ou institutionnels.", "Voir l’édition française"),
+        "ja": ("Des règles japonaises de coupure (kinsoku) et des retours à la ligne naturels à la structure de l’information, aux blancs et au parcours de lecture.", "Voir l’édition japonaise"),
+        "ko": ("Coupures entre eojeol (unités d’espacement coréennes), rythme du texte et structure de l’information lisible.", "Voir l’édition coréenne"),
+        "pt": ("Typographie portugaise et design guidé par le sens, qui respectent les usages du Brésil et du Portugal et l’intention de l’auteur.", "Voir l’édition portugaise"),
+        "th": ("Respect des limites de mots et des caractères combinatoires du thaï, pour un design thaï qui se lit naturellement.", "Voir l’édition thaïe"),
+        "zh-hans": ("Ponctuation, coupures et mélange chinois–latin pour le chinois simplifié, sans réécrire la source.", "Voir l’édition en chinois simplifié"),
+        "zh-hant": ("Prend en compte les usages de ponctuation et de composition propres à Taïwan et à Hong Kong.", "Voir l’édition en chinois traditionnel"),
+        "hi": ("Typographie et design en hindi qui préservent la source, les ligatures consonantiques et les matras.", "Voir l’édition hindie"),
+        "vi": ("Typographie vietnamienne qui respecte les signes de ton, les coupures naturelles et le contenu d’origine.", "Voir l’édition vietnamienne"),
+    },
+    "pt": {
+        "ar": ("Tipografia árabe que trata a escrita da direita para a esquerda e a mistura de alfabetos, sem alterar o original.", "Ver a edição em árabe"),
+        "es": ("Tipografia espanhola que respeita o uso regional, preserva o original e separa a evidência verificada do critério editorial.", "Ver a edição em espanhol"),
+        "fr": ("Tipografia francesa que distingue espaços inseparáveis, aspas e normas editoriais regionais ou institucionais.", "Ver a edição em francês"),
+        "ja": ("Das regras japonesas de quebra de linha (kinsoku) e das quebras naturais à estrutura da informação, aos espaços e ao percurso de leitura.", "Ver a edição em japonês"),
+        "ko": ("Quebras de linha entre eojeol (unidades de espaçamento coreanas), ritmo do texto e uma estrutura de informação clara.", "Ver a edição em coreano"),
+        "pt": ("Tipografia portuguesa e design orientado pelo sentido, que respeita as convenções do Brasil e de Portugal e a intenção do autor.", "Ver a edição em português"),
+        "th": ("Respeita os limites de palavra e os caracteres combinados do tailandês, para um design que se lê com naturalidade.", "Ver a edição em tailandês"),
+        "zh-hans": ("Pontuação, quebras de linha e mistura de chinês e alfabeto latino para o chinês simplificado, sem reescrever o original.", "Ver a edição em chinês simplificado"),
+        "zh-hant": ("Atende às convenções de pontuação e composição próprias de Taiwan e Hong Kong.", "Ver a edição em chinês tradicional"),
+        "hi": ("Tipografia e design em hindi que preservam o original, os conjuntos consonânticos e as matras.", "Ver a edição em hindi"),
+        "vi": ("Tipografia vietnamita que respeita os sinais de tom, as quebras de linha naturais e o conteúdo original.", "Ver a edição em vietnamita"),
+    },
+    "hi": {
+        "ar": ("दाएँ से बाएँ लिखावट और मिश्रित लिपियों को सँभालने वाली, मूल को सुरक्षित रखने वाली अरबी टाइपोग्राफ़ी।", "अरबी संस्करण देखें"),
+        "es": ("क्षेत्रीय प्रयोग का सम्मान करने वाली, मूल को सुरक्षित रखने और जाँचे गए प्रमाण को संपादकीय निर्णय से अलग रखने वाली स्पेनिश टाइपोग्राफ़ी।", "स्पेनिश संस्करण देखें"),
+        "fr": ("न टूटने वाली खाली जगह, उद्धरण चिह्न और क्षेत्रीय या संस्थागत शैली नियमों में भेद करने वाली फ़्रेंच टाइपोग्राफ़ी।", "फ़्रेंच संस्करण देखें"),
+        "hi": ("मूल पाठ, संयुक्ताक्षर और मात्राओं को सुरक्षित रखने वाली हिंदी टाइपोग्राफ़ी और डिज़ाइन।", "हिंदी संस्करण देखें"),
+        "ja": ("जापानी लाइन-ब्रेक नियमों (किनसोकु) और स्वाभाविक लाइन ब्रेक से लेकर जानकारी की संरचना, खाली जगह और पढ़ने के क्रम तक।", "जापानी संस्करण देखें"),
+        "ko": ("कोरियाई ओजोल (शब्द-इकाइयों) के बीच लाइन ब्रेक, पाठ की लय और स्पष्ट जानकारी की संरचना।", "कोरियाई संस्करण देखें"),
+        "pt": ("ब्राज़ील और पुर्तगाल की परंपराओं और लेखक के आशय का सम्मान करने वाली पुर्तगाली टाइपोग्राफ़ी और अर्थ-आधारित डिज़ाइन।", "पुर्तगाली संस्करण देखें"),
+        "th": ("थाई शब्द-सीमाओं और संयुक्त वर्णों का सम्मान करते हुए, सहज पढ़ने वाला थाई डिज़ाइन।", "थाई संस्करण देखें"),
+        "vi": ("स्वर-चिह्नों, स्वाभाविक लाइन ब्रेक और मूल सामग्री का सम्मान करने वाली वियतनामी टाइपोग्राफ़ी।", "वियतनामी संस्करण देखें"),
+        "zh-hans": ("सरलीकृत चीनी के लिए विराम चिह्न, लाइन ब्रेक और चीनी–लैटिन मिश्रित पाठ, मूल को बदले बिना।", "सरलीकृत चीनी संस्करण देखें"),
+        "zh-hant": ("ताइवान और हांगकांग की अलग-अलग विराम चिह्न और टाइपसेटिंग परंपराओं का ध्यान रखती है।", "पारंपरिक चीनी संस्करण देखें"),
+    },
+    "vi": {
+        "ar": ("Typography tiếng Ả Rập xử lý chữ viết từ phải sang trái và văn bản đa hệ chữ, giữ nguyên bản gốc.", "Xem phiên bản tiếng Ả Rập"),
+        "es": ("Typography tiếng Tây Ban Nha tôn trọng cách dùng theo vùng, giữ nguyên bản gốc và tách bằng chứng đã kiểm chứng khỏi nhận định biên tập.", "Xem phiên bản tiếng Tây Ban Nha"),
+        "fr": ("Typography tiếng Pháp phân biệt khoảng trắng không ngắt, dấu ngoặc kép và quy chuẩn biên tập theo vùng hoặc tổ chức.", "Xem phiên bản tiếng Pháp"),
+        "hi": ("Typography và thiết kế tiếng Hindi giữ nguyên bản gốc, các phụ âm ghép và dấu nguyên âm (matra).", "Xem phiên bản tiếng Hindi"),
+        "ja": ("Từ quy tắc ngắt dòng tiếng Nhật (kinsoku) và chỗ ngắt dòng tự nhiên đến cấu trúc thông tin, khoảng trắng và luồng đọc.", "Xem phiên bản tiếng Nhật"),
+        "ko": ("Ngắt dòng giữa các eojeol (đơn vị cách chữ tiếng Hàn), nhịp điệu văn bản và cấu trúc thông tin rõ ràng.", "Xem phiên bản tiếng Hàn"),
+        "pt": ("Typography tiếng Bồ Đào Nha và thiết kế dựa trên ý nghĩa, tôn trọng quy ước của Brasil và Bồ Đào Nha cùng ý định của tác giả.", "Xem phiên bản tiếng Bồ Đào Nha"),
+        "th": ("Tôn trọng ranh giới từ và ký tự kết hợp của tiếng Thái, cho thiết kế tiếng Thái dễ đọc.", "Xem phiên bản tiếng Thái"),
+        "vi": ("Giữ dấu thanh và chỗ ngắt dòng tự nhiên, sắp xếp thông tin và khoảng trắng cho typography tiếng Việt.", "Xem phiên bản tiếng Việt"),
+        "zh-hans": ("Dấu câu, ngắt dòng và văn bản pha trộn Hán–Latin cho tiếng Trung giản thể, không viết lại bản gốc.", "Xem phiên bản tiếng Trung giản thể"),
+        "zh-hant": ("Chú ý đến quy ước dấu câu và dàn chữ riêng của Đài Loan và Hồng Kông.", "Xem phiên bản tiếng Trung phồn thể"),
+    },
     "ja": {
         "ar": ("RTLと多言語混植を扱い、原文を守るアラビア語の文字組。", "アラビア語版を見る"),
         "es": ("スペイン語の文字組と原稿保全。地域の表現を尊重し、確認できた根拠と編集判断を分けて伝えます。", "スペイン語版を見る"),
@@ -87,6 +179,7 @@ CARDS = {
         "vi": ("保護越南文聲調符號，兼顧自然換行、資訊層次與原稿完整性。", "前往越南文版"),
         "zh-hans": ("面向中國大陸簡體中文，重視標點、換行與中英混排，並保留原稿。", "前往簡體中文版"),
         "zh-hant": ("分別對應臺灣與香港的標點符號與排版習慣。", "前往繁體中文版"),
+        "hi": ("保留原稿、連字與母音符號的印地文排版與設計。", "前往印地文版"),
     },
     "zh-hans": {
         "ar": ("处理从右到左书写与多语混排，并保留原文的阿拉伯文排版。", "前往阿拉伯文版"),
@@ -99,6 +192,7 @@ CARDS = {
         "vi": ("保护越南语声调符号，兼顾自然换行、信息层次和原文完整性。", "前往越南语版"),
         "zh-hans": ("面向中国大陆简体中文，重视标点、换行与中英混排，并保留原稿。", "前往简体中文版"),
         "zh-hant": ("分别对应台湾与香港的标点符号与排版习惯。", "前往繁体中文版"),
+        "hi": ("保留原稿、连字与元音符号的印地语排版与设计。", "前往印地语版"),
     },
     "ko": {
         "ar": ("오른쪽에서 왼쪽으로 쓰는 글과 다국어 혼용을 다루며 원문을 지키는 아랍어 글짜임.", "아랍어 버전 보기"),
@@ -111,6 +205,7 @@ CARDS = {
         "vi": ("성조 부호와 자연스러운 줄바꿈을 지키고 원고를 보존하는 베트남어 글짜임.", "베트남어 버전 보기"),
         "zh-hans": ("중국 본토 간체 중국어의 문장 부호와 줄바꿈, 중영 혼용 조판을 다룹니다.", "간체 중국어 버전 보기"),
         "zh-hant": ("대만과 홍콩, 각 지역의 문장 부호와 조판에 맞춥니다.", "번체 중국어 버전 보기"),
+        "hi": ("원고와 결합 자음, 모음 기호를 지키는 힌디어 글짜임과 디자인.", "힌디어 버전 보기"),
     },
     "th": {
         "ar": ("การจัดวางตัวอักษรอาหรับที่รองรับการเขียนจากขวาไปซ้ายและการผสมหลายภาษา โดยรักษาต้นฉบับไว้", "ดูเวอร์ชันภาษาอาหรับ"),
@@ -123,10 +218,17 @@ CARDS = {
         "vi": ("การจัดวางตัวอักษรเวียดนามที่รักษาเครื่องหมายวรรณยุกต์ การตัดบรรทัดที่เป็นธรรมชาติ และเนื้อหาต้นฉบับ", "ดูเวอร์ชันภาษาเวียดนาม"),
         "zh-hans": ("ใส่ใจเครื่องหมายวรรคตอน การตัดบรรทัด และการผสมอักษรจีนกับละตินของภาษาจีนตัวย่อ", "ดูเวอร์ชันภาษาจีนตัวย่อ"),
         "zh-hant": ("ใส่ใจเครื่องหมายวรรคตอนและการจัดวางตัวอักษรของไต้หวันและฮ่องกง", "ดูเวอร์ชันภาษาจีนตัวเต็ม"),
+        "hi": ("การจัดวางตัวอักษรและการออกแบบภาษาฮินดีที่รักษาต้นฉบับ พยัญชนะควบ และสระ", "ดูเวอร์ชันภาษาฮินดี"),
     },
 }
 
 UI = {
+    "ar": dict(heading="نسخ KUMIHAN اللغوية", more="عرض {n} أخرى", menu="اللغة"),
+    "es": dict(heading="Ediciones de KUMIHAN por idioma", more="Mostrar {n} más", menu="Idioma"),
+    "fr": dict(heading="Les éditions de KUMIHAN", more="Afficher les {n} suivantes", menu="Langue"),
+    "pt": dict(heading="Edições do KUMIHAN por língua", more="Mostrar mais {n}", menu="Língua"),
+    "hi": dict(heading="KUMIHAN के भाषा संस्करण", more="अगले {n} देखें", menu="भाषा"),
+    "vi": dict(heading="Các phiên bản ngôn ngữ của KUMIHAN", more="Hiển thị {n} mục tiếp theo", menu="Ngôn ngữ"),
     "ja": dict(heading="KUMIHANの各言語版", more="次の{n}つを表示", menu="表示言語"),
     "en": dict(heading="KUMIHAN language editions", more="Show the next {n}", menu="Language"),
     "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
@@ -137,7 +239,7 @@ UI = {
 
 # Hindi edition: same card dimensions and navigation behavior as existing editions.
 for _lang, _cards in CARDS.items():
-    _cards["hi"] = (("結合文字・母音記号・原稿を守るヒンディー語の文字組とデザイン。", "ヒンディー語版を見る") if _lang == "ja" else ("Hindi typography and design with source fidelity, conjuncts and matras.", "View the Hindi edition"))
+    _cards.setdefault("hi", ("結合文字・母音記号・原稿を守るヒンディー語の文字組とデザイン。", "ヒンディー語版を見る") if _lang == "ja" else ("Hindi typography and design with source fidelity, conjuncts and matras.", "View the Hindi edition"))
 
 
 def x(value):
@@ -179,7 +281,7 @@ def cards(key):
     for i, code in enumerate(order):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
-        href = p["pages"].get(key) or next(iter(p["pages"].values()))
+        href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
         direction = ' dir="rtl"' if code == "ar" else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
@@ -229,7 +331,7 @@ def page(key, c):
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
     return f"""<!doctype html>
-<html lang="{html_lang}">
+<html lang="{html_lang}"{' dir="rtl"' if key in RTL else ""}>
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
@@ -239,6 +341,7 @@ def page(key, c):
 <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/gateway.css" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
+{WEB_FONTS.head(html_lang)}
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>

@@ -11,6 +11,9 @@ from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 import re
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 
 _base_spec = spec_from_file_location("kumihan_base_copy", Path(__file__).with_name("base_copy.py"))
 base_copy = module_from_spec(_base_spec)
@@ -196,6 +199,7 @@ def render(root: Path, copy: dict) -> str:
 {OVERRIDES}
   </style>
   <script src="assets/thai-site.js" defer></script>
+  {WEB_FONTS.head("ja")}
 </head>
 <body id="top">
 <a class="skip-link" href="#main">本文へ移動</a>

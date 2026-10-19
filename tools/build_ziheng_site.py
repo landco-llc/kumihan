@@ -16,6 +16,10 @@ from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 BASE = "https://landco-llc.github.io/kumihan/"
 LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 SOURCE = "https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng"
@@ -75,6 +79,9 @@ OVERRIDES = r"""
     .brand { gap: 0; }
     .brand .brand-rule { margin-inline: 2px; color: var(--red); font-weight: 400; }
     .brand [lang="zh-Hant-TW"], .footer-mark [lang="zh-Hant-TW"] { letter-spacing: 0; }
+    /* Enlarged text on narrow screens: the brand wraps instead of widening the page. */
+    .brand { min-width: 0; flex: 0 1 auto; }
+    .brand > span { white-space: normal; overflow-wrap: anywhere; }
     .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 38px; border-radius: 40px; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .05em; }
     .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
     .language-switch a:hover:not([aria-current="page"]) { color: var(--red-dark); background: #ebe7df; }
@@ -181,6 +188,7 @@ def render(lang, c):
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="stylesheet" href="assets/ziheng-site.css">
 <title>{x(c['title'])}</title>
+{WEB_FONTS.head(lang)}
 </head>
 <body id="top">
 <a class="skip-link" href="#main">{x(c['skip'])}</a>
