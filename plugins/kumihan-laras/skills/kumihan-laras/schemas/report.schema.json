@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Laras review report",
+  "type": "object",
+  "required": [
+    "product",
+    "version",
+    "locale",
+    "source_sha256",
+    "preservation",
+    "findings"
+  ],
+  "properties": {
+    "product": {
+      "const": "KUMIHAN｜Laras"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "locale": {
+      "enum": [
+        "id",
+        "id-ID"
+      ]
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "preservation": {
+      "enum": [
+        "passed",
+        "failed",
+        "not-checked"
+      ]
+    },
+    "rendering": {
+      "enum": [
+        "passed",
+        "failed",
+        "not-checked"
+      ]
+    },
+    "findings": {
+      "type": "array"
+    }
+  }
+}

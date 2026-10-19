@@ -1,0 +1,512 @@
+{
+  "version": "0.1.0",
+  "language": "bn",
+  "script": "Beng",
+  "state": "research-derived rule candidates; not a standardized conformance claim",
+  "rules": [
+    {
+      "id": "BN-001",
+      "key": "locale-language",
+      "description": "Confirm `lang` and target locale; do not infer nationality, currency or digits from script.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-002",
+      "key": "source-fidelity",
+      "description": "Preserve protected source bytes, wording, quantities, prices and names.",
+      "strength": "must",
+      "severity": "blocker",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-003",
+      "key": "logical-order",
+      "description": "Do not reorder Unicode vowel signs to match visual glyph positions.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-004",
+      "key": "join-controls",
+      "description": "Do not remove or insert ZWJ/ZWNJ without explicit editorial authority.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-005",
+      "key": "normalization",
+      "description": "Use NFC only as a derived comparison, never mutate the protected original.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-006",
+      "key": "khanda-ta",
+      "description": "Distinguish U+09CE from legacy sequences; do not silently replace originals.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-007",
+      "key": "conjuncts",
+      "description": "Validate virama and conjunct shaping with real Bengali-supporting font.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-008",
+      "key": "nukta",
+      "description": "Preserve nukta and documented precomposed equivalents in source.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-009",
+      "key": "reph-ra",
+      "description": "Keep RA order and intended reph, ra-phala and ya-phala shaping.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-010",
+      "key": "combining-marks",
+      "description": "Do not crop top/bottom glyph marks in line boxes.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-011",
+      "key": "syllable-boundary",
+      "description": "Do not assume grapheme API boundaries equal safe orthographic syllables.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-012",
+      "key": "no-naive-slice",
+      "description": "Avoid code point, code unit or character-at-a-time splitting for typography.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-013",
+      "key": "word-wrap",
+      "description": "Prefer normal word boundaries; assess actual broken words.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-014",
+      "key": "nowrap",
+      "description": "Use nonbreaking layouts only when user interaction remains readable.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-015",
+      "key": "overflow",
+      "description": "Do not hide missing source characters with clipping/ellipsis as a fix.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-016",
+      "key": "letter-spacing",
+      "description": "Do not apply broad tracking through Bengali combining sequences.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-017",
+      "key": "font-shaping",
+      "description": "Check glyph coverage and OpenType shaping across supported platforms.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-018",
+      "key": "font-fallback",
+      "description": "Test fallback in mixed Latin/Bengali UI; preserve visual hierarchy.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-019",
+      "key": "line-height",
+      "description": "Measure glyph marks and line height in actual output and zoom.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-020",
+      "key": "font-style",
+      "description": "Evaluate true italics separately from synthetic style, no blanket prohibition.",
+      "strength": "may",
+      "severity": "advisory",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-021",
+      "key": "numbers",
+      "description": "Preserve Bengali/Latin digit choices, identifiers, phone numbers and OTPs.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-022",
+      "key": "currency",
+      "description": "Keep BDT/INR tied to actual contract, not guessed locale.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-023",
+      "key": "dates-time",
+      "description": "Do not silently localize calendars, numeric dates or time zones.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-024",
+      "key": "mixed-script",
+      "description": "Explicitly mark spans when practical, preserve product and brand names.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-025",
+      "key": "danda-punctuation",
+      "description": "Preserve punctuation and editorially approved style; inspect line edges.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-026",
+      "key": "conjunct-animation",
+      "description": "Avoid individual-letter reveal unless conjunct-safe and tested.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-027",
+      "key": "pseudo-first-letter",
+      "description": "Treat initial styling and `::first-letter` as subject to real test.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-028",
+      "key": "responsive",
+      "description": "Test 320px, 200% zoom and dynamic text/reflow without clipping.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-029",
+      "key": "accessibility",
+      "description": "Keep semantic hierarchy, focus and large-text labels operable.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-030",
+      "key": "images-copy",
+      "description": "Check image-based Bangla text for readability, not inferred editability.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-031",
+      "key": "bd-in-style",
+      "description": "Keep regional editorial variation; do not autocorrect region-specific spelling.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-032",
+      "key": "design-contract",
+      "description": "Link each layout decision to audience, message, medium and evidence.",
+      "strength": "should",
+      "severity": "warning",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-033",
+      "key": "anti-template",
+      "description": "Flag unreasoned AI hero/three cards/CTA repetition as review candidate only.",
+      "strength": "should",
+      "severity": "advisory",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-034",
+      "key": "report-evidence",
+      "description": "Distinguish static/rendering/editorial observation and unknown.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-035",
+      "key": "read-only-review",
+      "description": "Review mode must not change inspected files.",
+      "strength": "must",
+      "severity": "blocker",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    },
+    {
+      "id": "BN-036",
+      "key": "publication-gate",
+      "description": "Host installation, ZIP integrity, native proofreading and browser checks separate.",
+      "strength": "must",
+      "severity": "error",
+      "status": "candidate",
+      "verification": "not-checked",
+      "sources": [
+        "https://www.w3.org/TR/beng-lreq/",
+        "https://www.w3.org/International/ilreq/bengali/"
+      ],
+      "exception": "Document conditions, actual evidence, affected medium and approved exceptions."
+    }
+  ]
+}

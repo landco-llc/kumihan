@@ -52,8 +52,6 @@ PRODUCTS = {
                pages={"ko": "kumihan-ko.html", "en": "kumihan-ko.en.html", "ja": "kumihan-ko.ja.html"}),
     "pt": dict(name="Português", lang="pt", brand="KUMIHAN｜Compasso", glyph="Ã", label="PT · PORTUGUESE", version="v0.1.0",
                pages={"pt": "kumihan-pt.html", "en": "kumihan-pt.en.html", "ja": "kumihan-pt.ja.html"}),
-    "ru": dict(name="Русский", lang="ru", brand="KUMIHAN｜Лад", glyph="Л", label="RU · RUSSIAN", version="v0.1.0",
-               pages={"ru": "kumihan-ru.html", "en": "kumihan-ru.en.html", "ja": "kumihan-ru.ja.html"}),
     "th": dict(name="ไทย", lang="th", brand="KUMIHAN｜ดุลอักษร", glyph="ก", label="TH · THAI", version="v0.1.1",
                pages={"th": "kumihan-th.html", "en": "kumihan-th-en.html", "ja": "kumihan-th-ja.html"}),
     "vi": dict(name="Tiếng Việt", lang="vi", brand="KUMIHAN｜Nhịp Chữ", glyph="Ắ", label="VI · VIETNAMESE", version="v0.1.0",
@@ -80,8 +78,7 @@ CARDS = {
         "zh-hans": ("علامات الترقيم وكسر الأسطر والمزج بين الصينية واللاتينية للصينية المبسطة، دون إعادة كتابة الأصل.", "عرض نسخة الصينية المبسطة"),
         "zh-hant": ("يراعي أعراف الترقيم والتنضيد المختلفة في تايوان وهونغ كونغ.", "عرض نسخة الصينية التقليدية"),
         "hi": ("تنضيد وتصميم هندي يحافظ على الأصل والحروف المركّبة وعلامات الحركات.", "عرض النسخة الهندية"),
-        "vi": ("تنضيد فيتنامي يحافظ على علامات النغمة وفواصل الأسطر الطبيعية والمحتوى الأصلي.", "عرض النسخة الفيتنامية"),        "ru": ("تنضيد روسي يراعي الحروف السيريلية ويحافظ على النص الأصلي.", "عرض النسخة الروسية"),
-
+        "vi": ("تنضيد فيتنامي يحافظ على علامات النغمة وفواصل الأسطر الطبيعية والمحتوى الأصلي.", "عرض النسخة الفيتنامية"),
     },
     "es": {
         "ar": ("Tipografía árabe que gestiona la escritura de derecha a izquierda y la mezcla de alfabetos, sin alterar el original.", "Ver la edición en árabe"),
@@ -94,8 +91,7 @@ CARDS = {
         "zh-hans": ("Puntuación, saltos de línea y mezcla de chino y alfabeto latino para el chino simplificado, sin reescribir el original.", "Ver la edición en chino simplificado"),
         "zh-hant": ("Atiende las convenciones de puntuación y composición propias de Taiwán y Hong Kong.", "Ver la edición en chino tradicional"),
         "hi": ("Tipografía y diseño en hindi que conservan el original, los conjuntos consonánticos y las matras.", "Ver la edición en hindi"),
-        "vi": ("Tipografía vietnamita que respeta los signos de tono, los saltos de línea naturales y el contenido original.", "Ver la edición en vietnamita"),        "ru": ("Tipografía rusa con caracteres cirílicos, saltos naturales y conservación del original.", "Ver la edición en ruso"),
-
+        "vi": ("Tipografía vietnamita que respeta los signos de tono, los saltos de línea naturales y el contenido original.", "Ver la edición en vietnamita"),
     },
     "fr": {
         "ar": ("Typographie arabe qui gère l’écriture de droite à gauche et le mélange des écritures, sans toucher au texte d’origine.", "Voir l’édition arabe"),
@@ -108,8 +104,7 @@ CARDS = {
         "zh-hans": ("Ponctuation, coupures et mélange chinois–latin pour le chinois simplifié, sans réécrire la source.", "Voir l’édition en chinois simplifié"),
         "zh-hant": ("Prend en compte les usages de ponctuation et de composition propres à Taïwan et à Hong Kong.", "Voir l’édition en chinois traditionnel"),
         "hi": ("Typographie et design en hindi qui préservent la source, les ligatures consonantiques et les matras.", "Voir l’édition hindie"),
-        "vi": ("Typographie vietnamienne qui respecte les signes de ton, les coupures naturelles et le contenu d’origine.", "Voir l’édition vietnamienne"),        "ru": ("Typographie russe respectant le cyrillique, les coupures naturelles et le texte d’origine.", "Voir l’édition russe"),
-
+        "vi": ("Typographie vietnamienne qui respecte les signes de ton, les coupures naturelles et le contenu d’origine.", "Voir l’édition vietnamienne"),
     },
     "pt": {
         "ar": ("Tipografia árabe que trata a escrita da direita para a esquerda e a mistura de alfabetos, sem alterar o original.", "Ver a edição em árabe"),
@@ -122,8 +117,7 @@ CARDS = {
         "zh-hans": ("Pontuação, quebras de linha e mistura de chinês e alfabeto latino para o chinês simplificado, sem reescrever o original.", "Ver a edição em chinês simplificado"),
         "zh-hant": ("Atende às convenções de pontuação e composição próprias de Taiwan e Hong Kong.", "Ver a edição em chinês tradicional"),
         "hi": ("Tipografia e design em hindi que preservam o original, os conjuntos consonânticos e as matras.", "Ver a edição em hindi"),
-        "vi": ("Tipografia vietnamita que respeita os sinais de tom, as quebras de linha naturais e o conteúdo original.", "Ver a edição em vietnamita"),        "ru": ("Tipografia russa com alfabeto cirílico, que respeita as quebras de linha e o texto original.", "Ver a edição russa"),
-
+        "vi": ("Tipografia vietnamita que respeita os sinais de tom, as quebras de linha naturais e o conteúdo original.", "Ver a edição em vietnamita"),
     },
     "hi": {
         "ar": ("दाएँ से बाएँ लिखावट और मिश्रित लिपियों को सँभालने वाली, मूल को सुरक्षित रखने वाली अरबी टाइपोग्राफ़ी।", "अरबी संस्करण देखें"),
@@ -136,8 +130,7 @@ CARDS = {
         "th": ("थाई शब्द-सीमाओं और संयुक्त वर्णों का सम्मान करते हुए, सहज पढ़ने वाला थाई डिज़ाइन।", "थाई संस्करण देखें"),
         "vi": ("स्वर-चिह्नों, स्वाभाविक लाइन ब्रेक और मूल सामग्री का सम्मान करने वाली वियतनामी टाइपोग्राफ़ी।", "वियतनामी संस्करण देखें"),
         "zh-hans": ("सरलीकृत चीनी के लिए विराम चिह्न, लाइन ब्रेक और चीनी–लैटिन मिश्रित पाठ, मूल को बदले बिना।", "सरलीकृत चीनी संस्करण देखें"),
-        "zh-hant": ("ताइवान और हांगकांग की अलग-अलग विराम चिह्न और टाइपसेटिंग परंपराओं का ध्यान रखती है।", "पारंपरिक चीनी संस्करण देखें"),        "ru": ("सिरिलिक लिपि और स्वाभाविक पंक्ति विभाजन के साथ मूल रूसी पाठ का संरक्षण।", "रूसी संस्करण देखें"),
-
+        "zh-hant": ("ताइवान और हांगकांग की अलग-अलग विराम चिह्न और टाइपसेटिंग परंपराओं का ध्यान रखती है।", "पारंपरिक चीनी संस्करण देखें"),
     },
     "vi": {
         "ar": ("Typography tiếng Ả Rập xử lý chữ viết từ phải sang trái và văn bản đa hệ chữ, giữ nguyên bản gốc.", "Xem phiên bản tiếng Ả Rập"),
@@ -150,8 +143,7 @@ CARDS = {
         "th": ("Tôn trọng ranh giới từ và ký tự kết hợp của tiếng Thái, cho thiết kế tiếng Thái dễ đọc.", "Xem phiên bản tiếng Thái"),
         "vi": ("Giữ dấu thanh và chỗ ngắt dòng tự nhiên, sắp xếp thông tin và khoảng trắng cho typography tiếng Việt.", "Xem phiên bản tiếng Việt"),
         "zh-hans": ("Dấu câu, ngắt dòng và văn bản pha trộn Hán–Latin cho tiếng Trung giản thể, không viết lại bản gốc.", "Xem phiên bản tiếng Trung giản thể"),
-        "zh-hant": ("Chú ý đến quy ước dấu câu và dàn chữ riêng của Đài Loan và Hồng Kông.", "Xem phiên bản tiếng Trung phồn thể"),        "ru": ("Thiết kế chữ Nga dùng chữ Kirin, ngắt dòng tự nhiên và giữ nguyên nội dung gốc.", "Xem phiên bản tiếng Nga"),
-
+        "zh-hant": ("Chú ý đến quy ước dấu câu và dàn chữ riêng của Đài Loan và Hồng Kông.", "Xem phiên bản tiếng Trung phồn thể"),
     },
     "ja": {
         "ar": ("RTLと多言語混植を扱い、原文を守るアラビア語の文字組。", "アラビア語版を見る"),
@@ -163,8 +155,7 @@ CARDS = {
         "th": ("単語境界・結合文字を尊重し、読みやすいタイ語デザインへ。", "タイ語版を見る"),
         "vi": ("声調記号と自然な改行を守り、情報と余白を整えるベトナム語の文字組とデザイン。", "ベトナム語版を見る"),
         "zh-hans": ("標点・禁則と中英混植、原稿の保全を大切にするKUMIHAN｜字律。", "簡体中国語版を見る"),
-        "zh-hant": ("臺灣・香港それぞれの約物と文字組に向き合うKUMIHAN｜字衡。", "繁体中国語版を見る"),        "ru": ("キリル文字、自然な改行と読みやすさ。原稿を守り、内容からデザインするロシア語版。", "ロシア語版を見る"),
-
+        "zh-hant": ("臺灣・香港それぞれの約物と文字組に向き合うKUMIHAN｜字衡。", "繁体中国語版を見る"),
     },
     "en": {
         "ar": ("Arabic typography that handles right-to-left text and mixed scripts while keeping the original intact.", "View the Arabic edition"),
@@ -176,8 +167,7 @@ CARDS = {
         "th": ("Respecting Thai word boundaries and combining characters, for Thai design that reads naturally.", "View the Thai edition"),
         "vi": ("Vietnamese typography that respects tone marks, meaningful line breaks and original content.", "View the Vietnamese edition"),
         "zh-hans": ("Punctuation, line breaks and mixed Chinese–Latin text for mainland China, without rewriting your source.", "View the Simplified Chinese edition"),
-        "zh-hant": ("Addresses the distinct punctuation and typesetting conventions of Taiwan and Hong Kong.", "View the Traditional Chinese edition"),        "ru": ("Natural Cyrillic typography, thoughtful line breaks and content-led design that preserves the original.", "View the Russian edition"),
-
+        "zh-hant": ("Addresses the distinct punctuation and typesetting conventions of Taiwan and Hong Kong.", "View the Traditional Chinese edition"),
     },
     "zh-hant": {
         "ar": ("處理由右至左書寫與多語混排，並保留原文的阿拉伯文排版。", "前往阿拉伯文版"),
@@ -190,8 +180,7 @@ CARDS = {
         "vi": ("保護越南文聲調符號，兼顧自然換行、資訊層次與原稿完整性。", "前往越南文版"),
         "zh-hans": ("面向中國大陸簡體中文，重視標點、換行與中英混排，並保留原稿。", "前往簡體中文版"),
         "zh-hant": ("分別對應臺灣與香港的標點符號與排版習慣。", "前往繁體中文版"),
-        "hi": ("保留原稿、連字與母音符號的印地文排版與設計。", "前往印地文版"),        "ru": ("兼顧西里爾字形、自然換行與原稿完整性的俄語文字設計。", "前往俄文版"),
-
+        "hi": ("保留原稿、連字與母音符號的印地文排版與設計。", "前往印地文版"),
     },
     "zh-hans": {
         "ar": ("处理从右到左书写与多语混排，并保留原文的阿拉伯文排版。", "前往阿拉伯文版"),
@@ -204,8 +193,7 @@ CARDS = {
         "vi": ("保护越南语声调符号，兼顾自然换行、信息层次和原文完整性。", "前往越南语版"),
         "zh-hans": ("面向中国大陆简体中文，重视标点、换行与中英混排，并保留原稿。", "前往简体中文版"),
         "zh-hant": ("分别对应台湾与香港的标点符号与排版习惯。", "前往繁体中文版"),
-        "hi": ("保留原稿、连字与元音符号的印地语排版与设计。", "前往印地语版"),        "ru": ("兼顾西里尔字形、自然换行与原稿完整性的俄语文字设计。", "前往俄文版"),
-
+        "hi": ("保留原稿、连字与元音符号的印地语排版与设计。", "前往印地语版"),
     },
     "ko": {
         "ar": ("오른쪽에서 왼쪽으로 쓰는 글과 다국어 혼용을 다루며 원문을 지키는 아랍어 글짜임.", "아랍어 버전 보기"),
@@ -218,8 +206,7 @@ CARDS = {
         "vi": ("성조 부호와 자연스러운 줄바꿈을 지키고 원고를 보존하는 베트남어 글짜임.", "베트남어 버전 보기"),
         "zh-hans": ("중국 본토 간체 중국어의 문장 부호와 줄바꿈, 중영 혼용 조판을 다룹니다.", "간체 중국어 버전 보기"),
         "zh-hant": ("대만과 홍콩, 각 지역의 문장 부호와 조판에 맞춥니다.", "번체 중국어 버전 보기"),
-        "hi": ("원고와 결합 자음, 모음 기호를 지키는 힌디어 글짜임과 디자인.", "힌디어 버전 보기"),        "ru": ("키릴 문자와 자연스러운 줄바꿈, 원문을 지키는 러시아어 타이포그래피.", "러시아어 버전 보기"),
-
+        "hi": ("원고와 결합 자음, 모음 기호를 지키는 힌디어 글짜임과 디자인.", "힌디어 버전 보기"),
     },
     "th": {
         "ar": ("การจัดวางตัวอักษรอาหรับที่รองรับการเขียนจากขวาไปซ้ายและการผสมหลายภาษา โดยรักษาต้นฉบับไว้", "ดูเวอร์ชันภาษาอาหรับ"),
@@ -232,8 +219,7 @@ CARDS = {
         "vi": ("การจัดวางตัวอักษรเวียดนามที่รักษาเครื่องหมายวรรณยุกต์ การตัดบรรทัดที่เป็นธรรมชาติ และเนื้อหาต้นฉบับ", "ดูเวอร์ชันภาษาเวียดนาม"),
         "zh-hans": ("ใส่ใจเครื่องหมายวรรคตอน การตัดบรรทัด และการผสมอักษรจีนกับละตินของภาษาจีนตัวย่อ", "ดูเวอร์ชันภาษาจีนตัวย่อ"),
         "zh-hant": ("ใส่ใจเครื่องหมายวรรคตอนและการจัดวางตัวอักษรของไต้หวันและฮ่องกง", "ดูเวอร์ชันภาษาจีนตัวเต็ม"),
-        "hi": ("การจัดวางตัวอักษรและการออกแบบภาษาฮินดีที่รักษาต้นฉบับ พยัญชนะควบ และสระ", "ดูเวอร์ชันภาษาฮินดี"),        "ru": ("การจัดวางอักษรซีริลลิกและตัดบรรทัดภาษารัสเซีย โดยรักษาต้นฉบับไว้", "ดูเวอร์ชันภาษารัสเซีย"),
-
+        "hi": ("การจัดวางตัวอักษรและการออกแบบภาษาฮินดีที่รักษาต้นฉบับ พยัญชนะควบ และสระ", "ดูเวอร์ชันภาษาฮินดี"),
     },
 }
 

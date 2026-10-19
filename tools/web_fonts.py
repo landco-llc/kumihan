@@ -38,7 +38,7 @@ SCRIPTS = {
     # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
     "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
            "Noto Sans Devanagari", "Noto Serif Devanagari"),
-    # Russian Cyrillic: system faces first, script-capable Noto fonts as web fallback.
+    # Russian Cyrillic: system fonts first, Noto fallback for full script coverage.
     "ru": ('"PT Sans", "Segoe UI", Arial', '"PT Serif", Georgia', "Noto Sans", "Noto Serif"),
     # Vietnamese: Be Vietnam Pro is drawn for Vietnamese stacked diacritics.
     "vi": ('"Helvetica Neue", "Segoe UI", Roboto', "Georgia", "Be Vietnam Pro", "Noto Serif"),

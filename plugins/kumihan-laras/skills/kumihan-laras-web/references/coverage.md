@@ -1,0 +1,1 @@
+34 scoped editorial and technical topics, 20 acceptance scenarios. Not a dictionary-backed syllabifier, automatic proofreader, browser engine or native-language certification. Default to advisory results and preserve original bytes.

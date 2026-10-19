@@ -23,3 +23,7 @@
 - No third-party marketplace approval implied. OSS security audit is intentionally lightweight.
 
 Source research: https://drive.google.com/drive/folders/12l8XF3yMYHpfP80aAkmhUVO4LYFxXYQP
+
+## 2026-10-19 release conflict resolution
+
+The multi-language gateway is shared by many concurrently publishing editions. To preserve unrelated Bengali/Indonesian cards, the Russian product release is **decoupled from global gateway regeneration**. Localized RU/EN/JA landing pages link to the language gateway as navigation. A separately coordinated gateway registration remains a follow-up, not a blocker for releasing the independently addressable Russian product. This supersedes the earlier W05 claim of shipping gateway cards in the same commit.

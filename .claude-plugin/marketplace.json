@@ -30,9 +30,14 @@
       "description": "Bộ kỹ năng mã nguồn mở hỗ trợ thiết kế chữ tiếng Việt cho web, tài liệu và bản trình bày; giữ nguyên nội dung gốc và rà soát mà không sửa tệp. | Open-source skills for Vietnamese typography in websites, documents and presentations; preserve source text and support read-only review."
     },
     {
+      "name": "kumihan-laras",
+      "source": "./plugins/kumihan-laras",
+      "description": "Panduan tipografi Indonesia dengan perlindungan naskah. | Indonesian typography guidance with source preservation."
+    },
+    {
       "name": "kumihan-lad",
       "source": "./plugins/kumihan-lad",
-      "description": "Русская типографика и осмысленный дизайн с сохранением оригинала. | Russian typography and content-led design with source preservation."
+      "description": "Русская типографика и смысловой дизайн с сохранением текста. | Russian typography and content-led design with source preservation."
     }
   ]
 }

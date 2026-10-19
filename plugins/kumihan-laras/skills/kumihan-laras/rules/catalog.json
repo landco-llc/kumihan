@@ -1,0 +1,851 @@
+[
+  {
+    "id": "ID-01",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "標準アルファベットは26字。êは特定のe音の補助表記",
+    "policy_ja": "外国名のアクセントも含め、不要なASCII化をしない",
+    "description_id": "Pertahankan huruf dan aksen.",
+    "description_en": "Preserve characters and diacritics.",
+    "source_refs": [
+      "O03",
+      "O04"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-02",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "euは単母音、ai/au/ei/oiは二重母音を表す場合がある",
+    "policy_ja": "生の文字列一致だけで分綴候補を決めない",
+    "description_id": "Jangan asumsikan semua ai/au/ei/oi diftong; eu tidak dipecah.",
+    "description_en": "Do not assume every vowel pair is a diphthong; preserve eu.",
+    "source_refs": [
+      "O05",
+      "O07",
+      "O28"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-03",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "kh/ng/ny/syが一つの子音を表す場合",
+    "policy_ja": "語内で結合を壊す候補を避け、辞書・原稿で確認",
+    "description_id": "Perhatikan gabungan konsonan kh/ng/ny/sy.",
+    "description_en": "Respect digraphs kh/ng/ny/sy.",
+    "source_refs": [
+      "O06",
+      "O07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-04",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "接辞と基本形の結合",
+    "policy_ja": "意味が確定するまで空白を削らない",
+    "description_id": "Periksa imbuhan sebelum mengubah spasi.",
+    "description_en": "Check affixes before changing spacing.",
+    "source_refs": [
+      "O08"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-05",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "前置詞di/ke/dariと接頭辞を区別",
+    "policy_ja": "`di toko`と`dikirim`、`ke luar`と`keluar`を一括置換しない",
+    "description_id": "Bedakan di toko dari dikirim dan ke luar dari keluar.",
+    "description_en": "Distinguish prepositions and affixes by meaning.",
+    "source_refs": [
+      "O09"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-06",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "重複語の綴りにあるハイフン",
+    "policy_ja": "ハイフンを保持し、ダッシュへ変換しない",
+    "description_id": "Jaga tanda hubung dalam kata ulang.",
+    "description_en": "Keep the hyphen in reduplications.",
+    "source_refs": [
+      "O08",
+      "O12"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-07",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "複合語は分離・結合の両方がある",
+    "policy_ja": "辞書、語義、接辞の有無で候補を確認",
+    "description_id": "Kata majemuk bergantung pada makna dan bentuk.",
+    "description_en": "Compound spelling depends on sense and form.",
+    "source_refs": [
+      "O08"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-08",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "punは原則分離、接続詞の語形は結合",
+    "policy_ja": "`apa pun`と`walaupun`等を文脈で扱う。現行の14語リストを出典管理",
+    "description_id": "Bedakan apa pun dan walaupun.",
+    "description_en": "Distinguish separate pun from joined conjunctions.",
+    "source_refs": [
+      "O10"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-09",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "perの助詞と分数を作る接辞",
+    "policy_ja": "`per paket`と`seperempat`へ同じ空白処理をしない",
+    "description_id": "Bedakan per sebagai kata dan prefiks.",
+    "description_en": "Distinguish per as a word and a prefix.",
+    "source_refs": [
+      "O10",
+      "O18"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-10",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "ku-/kau-/-ku/-mu/-nyaの接語と独立kau",
+    "policy_ja": "接語は結合。独立した代名詞まで連結しない",
+    "description_id": "Jaga ku-, kau-, -ku, -mu, -nya; jangan gabungkan kau bebas.",
+    "description_en": "Preserve clitics without joining independent pronouns.",
+    "source_refs": [
+      "O24"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-11",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "文頭、固有名、言語名、Anda、題名",
+    "policy_ja": "役割ごとに判断。UI全体へ書名の大文字規則を強制しない",
+    "description_id": "Kapitalisasi menyesuaikan fungsi dan nama diri.",
+    "description_en": "Capitalize by context, function, and proper name.",
+    "source_refs": [
+      "O11"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-12",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "作品名の種類で強調規則が異なる",
+    "policy_ja": "所定の書名・映画名等は斜体、詩・歌・記事・章等の文中題名は引用符。固有名を一律斜体化しない",
+    "description_id": "Pilih miring atau petik sesuai jenis judul.",
+    "description_en": "Treat work and article titles differently.",
+    "source_refs": [
+      "O17",
+      "O19"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-13",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "praktik/sekadar/risiko/desain等の標準形",
+    "policy_ja": "固有名・引用・意図的な口語を除外して校正候補を提示",
+    "description_id": "Bentuk baku hanya disarankan bila naskah boleh disunting.",
+    "description_en": "Suggest standard spelling only for editable source.",
+    "source_refs": [
+      "O25",
+      "O26",
+      "O27",
+      "O28"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-14",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "分綴は音・語形成・接辞・略語等に依存",
+    "policy_ja": "全文自動分綴は次段階。通常は語間で折り返す",
+    "description_id": "Utamakan pemenggalan antarkata; jangan mengasumsikan kamus otomatis.",
+    "description_en": "Prefer word wrapping; do not assume automatic hyphenation.",
+    "source_refs": [
+      "O07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-15",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "語内分綴で一文字だけが残る位置",
+    "policy_ja": "候補を除外する。短い独立語一般の改行禁止へ拡大しない",
+    "description_id": "Hindari satu huruf tersisa pada baris terpisah akibat pemenggalan.",
+    "description_en": "Avoid stranding a single letter through hyphenation.",
+    "source_refs": [
+      "O07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-16",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "略語、人名、コードの内部",
+    "policy_ja": "元の文字列を保護し、幅や配置側を調整",
+    "description_id": "Lindungi nama diri, singkatan, kode dan URL.",
+    "description_en": "Protect names, acronyms, codes and URLs.",
+    "source_refs": [
+      "O07",
+      "O21"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-17",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "high",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "ハイフン、en dash、em dash、マイナス",
+    "policy_ja": "機能別に扱い、一括正規化をしない",
+    "description_id": "Bedakan tanda hubung, dash dan minus.",
+    "description_en": "Distinguish hyphen, dash and minus.",
+    "source_refs": [
+      "O12",
+      "O13",
+      "O16"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-18",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "列挙のカンマと節の区切り",
+    "policy_ja": "三要素以上の列挙と二要素の並列を区別",
+    "description_id": "Periksa koma berdasarkan struktur kalimat.",
+    "description_en": "Review commas by sentence structure.",
+    "source_refs": [
+      "O15"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-19",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "引用符と引用内引用",
+    "policy_ja": "構造と引用本文を保持。字形の選択は別処理",
+    "description_id": "Pertahankan isi dan pasangan tanda petik.",
+    "description_en": "Preserve quoted text and paired quotes.",
+    "source_refs": [
+      "O19",
+      "O20"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-20",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "略記の点と大文字",
+    "policy_ja": "PT / dll. / s.d. / kg / dr. / Dr.を区別",
+    "description_id": "Bedakan PT, dr., Dr., dll., s.d., kg.",
+    "description_en": "Distinguish abbreviation classes.",
+    "source_refs": [
+      "O21"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-21",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "見出し終止点、略語、省略点、UIの省略",
+    "policy_ja": "同じ記号の見た目だけで削除・追加しない",
+    "description_id": "Jangan hapus titik atau elipsis secara massal.",
+    "description_en": "Do not strip periods or ellipses mechanically.",
+    "source_refs": [
+      "O14",
+      "O22"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-22",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "数量と年・番号・SKU・電話番号",
+    "policy_ja": "型付きの数量だけをロケール表示。先頭ゼロも保護",
+    "description_id": "Format hanya angka bertipe kuantitas, bukan SKU atau tahun.",
+    "description_en": "Format typed quantities, not IDs or years.",
+    "source_refs": [
+      "O14",
+      "O15"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-23",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "本文の数詞表記と価格・計量・表",
+    "policy_ja": "「一語で言える数は文字」を全UIへ強制しない",
+    "description_id": "Angka prosa, tabel dan harga punya konteks berbeda.",
+    "description_en": "Treat prose, table and price numerals separately.",
+    "source_refs": [
+      "O18"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-24",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "金額は文書の表記とUIの生成値で差がある",
+    "policy_ja": "元原稿は保護。新規表示はロケール・通貨・小数桁・丸め要件を指定",
+    "description_id": "Tentukan mata uang, digit pecahan dan pembulatan; jaga nilai sumber.",
+    "description_en": "Set currency, fraction digits and rounding explicitly.",
+    "source_refs": [
+      "O18",
+      "O21",
+      "T05"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-25",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "rb/jt/M/Tの単位",
+    "policy_ja": "Mを英語のmillionとして転記しない。国際比較では単位を明示",
+    "description_id": "Jangan menyamakan rb/jt/M/T dengan singkatan Inggris.",
+    "description_en": "Do not equate rb/jt/M/T to English abbreviations.",
+    "source_refs": [
+      "T04"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-26",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "時刻の点・コロン",
+    "policy_ja": "EYD Vは両方を許容。09:30を形式だけでエラーにしない",
+    "description_id": "Bentuk jam 09.30 dan 09:30 dapat sah menurut EYD.",
+    "description_en": "Both dot and colon time separators can be valid.",
+    "source_refs": [
+      "O14",
+      "O16"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-27",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "WIB/WITA/WITの時差",
+    "policy_ja": "対象時刻帯を別データとして保持",
+    "description_id": "WIB, WITA, WIT dipilih dari lokasi acara.",
+    "description_en": "Choose WIB/WITA/WIT by real event location.",
+    "source_refs": [
+      "T11"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-28",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "kamiとkitaの聞き手の包摂差",
+    "policy_ja": "責任を持つ主体を変える自動置換をしない",
+    "description_id": "Kami dan kita berbeda dalam keterlibatan pembaca.",
+    "description_en": "Kami and kita differ in listener inclusion.",
+    "source_refs": [
+      "O30"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-29",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "ブランドの呼称・口語・強調表記",
+    "policy_ja": "販促、操作、条件説明の役割を先に読む",
+    "description_id": "Nada dan sapaan mengikuti fungsi teks dan merek.",
+    "description_en": "Voice and address depend on role and brand.",
+    "source_refs": [
+      "C02",
+      "C04",
+      "C05",
+      "C06",
+      "C07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-30",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "販売・配送・返金等の条件",
+    "policy_ja": "金額、期間、地域、例外、否定、対象を短文化で失わない",
+    "description_id": "Lindungi angka, durasi, pengecualian dalam ketentuan.",
+    "description_en": "Preserve amounts, duration and exceptions in terms.",
+    "source_refs": [
+      "C02",
+      "C06",
+      "C08",
+      "C10"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-31",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "HTMLの言語と数値ロケール",
+    "policy_ja": "lang=id、必要なロケールid-ID。旧inやmsの誤流用を検出",
+    "description_id": "Gunakan lang=id, dan id-ID untuk angka bila sesuai.",
+    "description_en": "Use lang=id; id-ID for numeric formatting when applicable.",
+    "source_refs": [
+      "T01",
+      "T02"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-32",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "CSS対応と分綴辞書の有無",
+    "policy_ja": "`CSS.supports`だけでインドネシア語分綴を合格にしない",
+    "description_id": "CSS.supports tidak membuktikan kamus pemenggalan tersedia.",
+    "description_en": "CSS.supports does not prove hyphenation dictionary support.",
+    "source_refs": [
+      "T07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-33",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "文字拡大、リフロー、文字間隔変更",
+    "policy_ja": "情報・機能の維持を条件別に実測",
+    "description_id": "Uji 320px, 200% dan perubahan jarak antarhuruf.",
+    "description_en": "Test 320px, 200% and text-spacing overrides.",
+    "source_refs": [
+      "T12",
+      "T13",
+      "T14"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  },
+  {
+    "id": "ID-34",
+    "language": "id",
+    "locale": "id-ID",
+    "priority": "review",
+    "severity": "advisory",
+    "auto_fix": false,
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "print",
+      "display-copy"
+    ],
+    "condition_ja": "グラフィックの具体性と用途",
+    "policy_ja": "色や装飾の一律禁止ではなく、内容・読者・媒体との関係をレビュー",
+    "description_id": "Desain menurut tujuan dan hierarki, bukan tampilan AI seragam.",
+    "description_en": "Design for purpose and hierarchy, not generic AI appearance.",
+    "source_refs": [
+      "D01",
+      "D02",
+      "D04",
+      "D05",
+      "D07"
+    ],
+    "status": "needs-review",
+    "rendering": "not-checked"
+  }
+]
