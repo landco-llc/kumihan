@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='/kumihan/'
 # KUMIHAN index (language gateway) for each page language.
-GATEWAY={'fa':'index.html','en':'top-en.html','ja':'index.html'}
+GATEWAY={'fa':'top-fa.html','en':'index.html','ja':'top-ja.html'}
 PUBLIC='https://landco-llc.github.io'+BASE
 REPO='https://github.com/landco-llc/kumihan'
 RELEASE=REPO+'/releases/download/kumihan-fa-v0.1.0/'

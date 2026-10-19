@@ -261,19 +261,7 @@ def render(lang, c):
   </div>
 </section>
 </main>
-<footer class="footer">
-  <div class="shell footer-layout">
-    <div><div class="footer-mark" lang="zh-Hant-TW">{BRAND}</div><div class="footer-sub">{c['footer_sub']}</div></div>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="{gateway}">{x(gateway_label)}</a>
-      <a href="#top">{x(c['footer_nav'][0])}</a>
-      <a href="{u['family'][1]}">{x(u['family'][0])}</a>
-      <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a>
-      <a href="#top">{x(u['top'])} ↑</a>
-    </nav>
-  </div>
-</footer>
+{WEB_FONTS.FOOTER.footer(lang)}
 </body>
 </html>
 """

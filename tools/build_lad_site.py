@@ -40,7 +40,7 @@ COMMANDS = {
     "gemini": ["gemini extensions install /absolute/path/kumihan-lad\ngemini extensions list"],
 }
 CHECK = "python runtime/checks.py input.txt --locale ru-RU"
-GATEWAY = {"ru": "top-ru.html", "en": "top-en.html", "ja": "index.html"}
+GATEWAY = {"ru": "top-ru.html", "en": "index.html", "ja": "top-ja.html"}
 
 _spec = spec_from_file_location("kumihan_install_frame", Path(__file__).with_name("install_frame.py"))
 FRAME = module_from_spec(_spec)

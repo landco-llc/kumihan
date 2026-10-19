@@ -59,7 +59,7 @@ class LandingParity(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'class="[^"]*\bplatform-row\b', text)), 3)
 
 
-GATEWAY = {"fa": "index.html", "km": "top-km.html", "zu": "top-en.html", "sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
+GATEWAY = {"fa": "top-fa.html", "km": "top-km.html", "zu": "top-zu.html", "sw": "top-sw.html", "ja": "top-ja.html", "en": "index.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",
@@ -86,7 +86,8 @@ class GatewayLinks(unittest.TestCase):
         for layout in ("landing.html", "installation.html", "geuljjaim.html", "geuljjaim-index.html"):
             text = (ROOT / "_layouts" / layout).read_text(encoding="utf-8")
             with self.subTest(layout=layout):
-                self.assertRegex(text, r"gateway")
+                # The shared footer (tools/site_footer.py) links each page to its language's top.
+                self.assertIn("site.data.site_footer", text)
         for gateway in GATEWAY.values():
             text = (ROOT / gateway).read_text(encoding="utf-8")
             with self.subTest(gateway=gateway):
@@ -119,6 +120,9 @@ class InstallGuideParity(unittest.TestCase):
                 text = (ROOT / page).read_text(encoding="utf-8")
                 self.assertIn("kumihan-install.css", text)
                 for token in GUIDE_SKELETON:
+                    if token == "footer" and page.startswith("_layouts/"):
+                        self.assertIn("site.data.site_footer", text)  # the shared footer
+                        continue
                     self.assertRegex(text, r'class="[^"]*\b' + re.escape(token) + r'\b')
                 self.assertEqual(text.count("<h1"), 1)
                 if not page.startswith("_layouts/"):

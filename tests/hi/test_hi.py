@@ -88,5 +88,5 @@ class Site(unittest.TestCase):
      p=Links();p.feed(build_hi_site.guide(host,lang,json.loads((ROOT/'assets/hi-site-copy.json').read_text())[lang]))
      for link in p.links:
       if '/releases/download/' in link:self.assertIn(link.rsplit('/',1)[-1],names)
-  for page in ['index.html','top-en.html']:
+  for page in ['top-ja.html','index.html']:
    p=(ROOT/page).read_text();self.assertIn('kumihan-hi',p);self.assertIn('target="_blank"',p)
