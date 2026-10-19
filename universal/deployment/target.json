@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "g2_public_two_files_privately_staged_verified_pending_limited_install",
+  "status": "g2_trial_installed_then_rolled_back_before_mcp_probe_python_ca_fixed",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -69,8 +69,8 @@
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner terminal reported all five G2 private staging PASS markers with SCP readback for both files. No public PHP controller installed. Full FTP-root symlink traversal remains permission-limited/NOT_CHECKED; scoped G1 and Owner domain mapping review already PASS.",
-  "deployment_blocker": "G2 stage and SCP readback SHA256/byte equality PASS; publicly reachable index.php/.htaccess NOT installed. Next deliberate Owner-gated two-file install and immediate real HTTPS MCP initialize/tools/list/tools/call; if failure, rollback staged-matching files only.",
+  "notes": "G2 installer succeeded and guarded rollback succeeded. Owner performed Mac protocol probe after rollback; TLS failure due missing Python CA file, independently diagnosed on connected Mac; curl verify 0 and Python with system CA both return expected HTTP 404 in rolled-back state.",
+  "deployment_blocker": "MCP protocol was not tested while public files were installed. Python on Mac lacked its default CA file (not server TLS defect); TLS verification now confirmed using system CA /etc/ssl/cert.pem. Next guarded reinstall then BEFORE rollback, Mac SSL_CERT_FILE=/etc/ssl/cert.pem protocol smoke; roll back only if needed.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -315,5 +315,27 @@
     "authentication": "SCP used preconfigured SSH session; post-quantum key exchange and RSA hostkeys proof warnings persisted.",
     "g2_trial_install_was_run": false,
     "http_mcp_tested": false
+  },
+  "g2_trial_attempt": {
+    "observed_at": "2026-10-19",
+    "source": "Owner authenticated SSH and Mac terminal logs",
+    "install_markers": [
+      "G2_PUBLIC_PRECHECK_PASS",
+      "G2_TWO_FILE_BOOTSTRAP_INSTALLED",
+      "MCP_HTTPS_E2E_NOT_CHECKED",
+      "CLIENT_ADAPTERS_NOT_RELEASED"
+    ],
+    "rollback_markers": [
+      "G2_PUBLIC_TRIAL_ROLLED_BACK",
+      "PRIVATE_RUNTIME_RETAINED",
+      "MCP_NOT_PUBLIC"
+    ],
+    "outcome": "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST",
+    "ordering": "Owner ran rollback BEFORE Mac MCP probe, so endpoint was not live for protocol verification.",
+    "mac_probe_error": "SSLCertVerificationError unable to get local issuer certificate",
+    "python_ca_issue": "Mac Python 3.12 default openssl_cafile did not exist; macOS /etc/ssl/cert.pem exists and supports verified Python TLS. Confirmed with SSL_CERT_FILE=/etc/ssl/cert.pem and HTTP 404.",
+    "mac_curl_tls": "CERTIFICATE_VALID_HTTP_404 after rollback",
+    "private_runtime_retained": true,
+    "live_mcp_verified": false
   }
 }
