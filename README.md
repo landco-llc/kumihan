@@ -51,9 +51,9 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 <br>
 
-## 用途に合わせたデザイン支援（v0.1.8-preview候補）
+## 用途に合わせたデザイン支援（v0.1.8 preview）
 
-文字組だけでなく、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援します。**自動選択を標準・手動指定で上書き可能・重要な曖昧さだけ質問**の用途別アダプターを追加する候補です。媒体プロファイルは従来の6種類のまま。通常のデザインレビューはStandard、Strictはユーザーの明示指定が必要です。
+文字組だけでなく、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援します。**自動選択を標準・手動指定で上書き可能・重要な曖昧さだけ質問**の用途別アダプターを追加しました。媒体プロファイルは従来の6種類のまま。通常のデザインレビューはStandard、Strictはユーザーの明示指定が必要です。
 
 この機能は画像生成エンジンや自動デザイン品質判定器ではありません。ユーザーの原稿と権限を保護し、観察した結果と未検査を区別します。詳細は[用途ルーティング](skills/kumihan/references/use-case-selection.md)と[レビュー方式](skills/kumihan/references/design-review-modes.md)をご参照ください。
 
@@ -63,7 +63,7 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 現在、正式版に向けて開発中です。
 
-**最新の公開版はv0.1.7 preview（2026年10月18日公開）です。** [公開済みRelease・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview)。v0.1.8-previewの用途別アダプターとデザインレビュー強化は次期版の開発候補で、正式なGitHub Releaseはまだ公開していません。各ツールでの動作は引き続き限定検証です。
+**最新の公開版はv0.1.8 preview（2026年10月19日公開）です。** [GitHub Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview)。用途別アダプターとStandard／Strictデザインレビューのガイドを追加しました。各AIホストでのネイティブ動作や実画像・Officeでの検証範囲には制限があります。
 
 <br>
 
@@ -91,7 +91,7 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 
 ### Status
 
-KUMIHAN is in development toward a stable release. **The latest published release is v0.1.7 preview (October 18, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.7-preview). The v0.1.8-preview use-case routing and design-quality enhancements are a **development candidate without a published GitHub Release**. Host behavior remains only partially verified.
+KUMIHAN is in development toward a stable release. **The latest published release is v0.1.8 preview (October 19, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview). This version adds conservative use-case routing and Standard/Strict design-review guidance. Native AI-host behavior and real rendering across tools remain only partially verified.
 
 <br>
 
