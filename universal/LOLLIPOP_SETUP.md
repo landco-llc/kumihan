@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — Lolipop / kmhn deployment runbook
 
-Status: **LITESPEED PHP 8.5.11 + PRIVATE FILE READ PASS; MCP NOT DEPLOYED** (2026-10-19).
+Status: **PRIVATE MCP RUNTIME EXTRACTED; WEB PHP SDK/SESSION CHECK PENDING; MCP NOT PUBLIC** (2026-10-19).
 Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/101
 
 ## Locked parameters
@@ -15,7 +15,7 @@ Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/
 | FTP root full path | **Owner supplied; basename web confirmed**. Intentionally omitted from public source to avoid disclosing hosting account identifiers |
 | Effective public path | FTP root + /kmhn (equivalently account-relative web/kmhn) |
 | DNS/TLS | GitHub Actions TLS 1.3, hostname/certificate PASS; certificate expires 2027-01-17 |
-| PHP MCP | 21-module CI-tested preview; NOT DEPLOYED |
+| PHP MCP | 21-module source, Composer vendor and registry **extracted into private directory**; no config or public bootstrap yet |
 
 TLS evidence: https://github.com/landco-llc/kumihan/actions/runs/39246702661
 Official hosting docs: https://lolipop.jp/manual/user/doku-subsett// and https://support.lolipop.jp/hc/ja/articles/360048391094 .
@@ -213,6 +213,14 @@ The generated public loader includes the original server/public/index.php by its
 
 PHP extensions, file readability, writable session folder, Composer dependencies, SDK protocol compatibility and default account-domain exposure are go/no-go checks. On failure, roll back only the two new public files and restore any prior versions.
 
+## W03 progression — private extraction PASS, next Web PHP readiness
+
+Authenticated SSH transcript reported all six private extraction markers: `PRIVATE_TAR_PREFLIGHT_OK`, `PRIVATE_RUNTIME_EXTRACTED`, `PRIVATE_REQUIRED_FILES_OK`, `PRIVATE_CONFIG_ABSENT`, `PUBLIC_BOOTSTRAP_UNCHANGED`, `MCP_NOT_PUBLIC`. No source/vendor/registry data is in the public FTP root.
+
+Next run a single bounded readiness check from the SSH shell: [tools/check_private_runtime_web.sh](tools/check_private_runtime_web.sh), as described in [deployment/STAGE_PRIVATE_20261019.md](deployment/STAGE_PRIVATE_20261019.md). It copies the no-secret production config into the NON-WEB private runtime **only if absent**, validates its expected host and origins, and makes a short-lived test request to Web PHP under `kmhn`. The HTTPS probe checks vendor SDK autoload, Registry constructor/21 modules, json+fileinfo PHP extensions and real PHP create/write/delete permission inside private `runtime/sessions`. Its public test PHP file is automatically removed; no permanent public MCP entrypoint is installed.
+
+Treat any failure as STOP: a private config file may be left in place intentionally, so do not blindly rerun. Pass does not certify that no other virtual host maps the private directory, nor actual MCP initialize/tools/list/call; those remain separate release gates.
+
 ## 4. Public verification commands
 
 TLS was already verified by GitHub Actions. Optional recheck:
@@ -242,7 +250,9 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [x] Actual Web PHP SAPI=litespeed and PHP_VERSION=8.5.11 verified
 - [ ] Composer lock and dependency audit finalized
 - [x] Private tarball transferred and verified by Mac SSH readback (SHA256 and cmp PASS)
-- [ ] Private artifact extracted and checked for required files outside all public document roots
+- [x] Private MCP source/vendor/registry extracted; required files PASS; public directory unchanged
+- [ ] Web PHP SDK autoload, registry 21 modules, PHP extensions, private config and session WRITE verified
+- [ ] Private location isolation from all other document roots independently verified
 - [ ] Public two-file bootstrap installed in existing kmhn
 - [ ] Live HTTPS MCP initialize/tools/list/tools/call PASS
 - [ ] ChatGPT/Codex, Claude Code and Gemini CLI verified separately
