@@ -231,7 +231,7 @@
     ],
     "success_before_failure": true,
     "failure_scope": "Whole FTP-root symlink traversal cannot finish due to permission denial; the designated kmhn directory has no symlinks by separate complete read-only scan.",
-    "safety_conclusion": "kmhn-specific symlink scope clear. No evidence of exposed private runtime, but unreadable elsewhere in web means site-wide symlink status NOT VERIFIED; other vhost mapping Owner review outstanding.",
+    "safety_conclusion": "kmhn-specific symlink scope clear. Full web traversal was permission limited and may contain undisclosed symlink results. All-vhost private-path nonexposure NOT VERIFIED; manual Owner mapping review outstanding.",
     "writes_performed": false,
     "next_step": "Do not repeat an unprivileged full web scan or change other sites. Owner to inspect Lolipop domain/subdomain upload-directory mapping; decide on documented residual-risk handling before bootstrap.",
     "scoped_diagnostic": {
@@ -246,10 +246,11 @@
       "kmhn_symlink_scope_verified": true,
       "full_web_symlink_scope_verified": false,
       "full_web_failure_cause": "Permission denial in FTP-root descendant; inaccessible entry not identified by this sanitized check.",
-      "exposed_symlink_detected": false,
+      "exposed_symlink_detected": "NOT_DETERMINED_OUTSIDE_KMHN",
       "exposure_globally_excluded": false,
       "writes_performed": false,
-      "next": "Review all configured domain/subdomain public upload folders and any aliases to the non-web private directory. Record whether unreadable web subtree remains a residual risk; do not claim it is globally clean."
+      "next": "Review all configured domain/subdomain public upload folders and any aliases to the non-web private directory. Record whether unreadable web subtree remains a residual risk; do not claim it is globally clean.",
+      "audit_limit": "Sanitized failed find may include path errors and/or symlink path output; only kmhn-specific scan establishes zero symlinks."
     }
   }
 }
