@@ -24,6 +24,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(d["public_preflight"]["scoped_diagnostic"]["kmhn_symlink_scope_verified"])
         self.assertFalse(d["public_preflight"]["scoped_diagnostic"]["full_web_symlink_scope_verified"])
         self.assertFalse(d["public_preflight"]["scoped_diagnostic"]["exposure_globally_excluded"])
+        self.assertEqual(d["public_preflight"]["scoped_diagnostic"]["exposed_symlink_detected"], "NOT_DETERMINED_OUTSIDE_KMHN")
         self.assertEqual(d["public_preflight"]["markers"][-1], "PUBLIC_SYMLINK_SCAN_INCOMPLETE")
         self.assertFalse(d["flags"]["public_symlink_scan_complete"])
         self.assertTrue(d["flags"]["public_kmhn_symlink_scope_verified"])
