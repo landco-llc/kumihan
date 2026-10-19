@@ -4,7 +4,9 @@ KUMIHAN
 Open-source typography & design guidance by L&Co. LLC.
 Links: KUMIHAN (the top page in the page's language), the language-edition
 menu (rounded, "choose a language" in the page's language, the page's own
-language first and the rest by code), GitHub, Apache 2.0.
+language first and the rest by code), GitHub, Apache 2.0, and the privacy
+policy (labelled in the page's language; Japanese pages open the Japanese
+text, all others the English one).
 
 The styles are part of assets/kumihan-fonts.css (tools/web_fonts.py), which
 every page already loads after its own stylesheet. Jekyll layouts and the
@@ -17,6 +19,14 @@ from pathlib import Path
 
 REPO = "https://github.com/landco-llc/kumihan"
 ROOT_MARK = "@ROOT@"
+# "Privacy Policy" in each gateway language (tools/build_privacy.py builds the pages).
+PRIVACY = {"en": "Privacy Policy", "ja": "プライバシーポリシー", "ar": "سياسة الخصوصية", "bn": "গোপনীয়তা নীতি",
+           "de": "Datenschutzerklärung", "es": "Política de privacidad", "fa": "سیاست حفظ حریم خصوصی",
+           "fr": "Politique de confidentialité", "hi": "गोपनीयता नीति", "id": "Kebijakan Privasi",
+           "it": "Informativa sulla privacy", "km": "គោលការណ៍ឯកជនភាព", "ko": "개인정보 처리방침",
+           "pl": "Polityka prywatności", "pt": "Política de Privacidade", "ru": "Политика конфиденциальности",
+           "sw": "Sera ya Faragha", "th": "นโยบายความเป็นส่วนตัว", "vi": "Chính sách quyền riêng tư",
+           "zh-hans": "隐私政策", "zh-hant": "隱私權政策", "zu": "Inqubomgomo Yobumfihlo"}
 # html lang values that differ from the gateway keys
 KEYS = {"ko-KR": "ko", "th-TH": "th", "zh-Hans-CN": "zh-hans", "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hant"}
 
@@ -29,7 +39,7 @@ CSS = """/* Shared footer (tools/site_footer.py): the same on every page. */
 .kumihan-footer a { color: #e6e1d7; text-underline-offset: 4px; }
 .kumihan-footer .kf-note a { color: inherit; }
 .kumihan-footer .kf-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; min-width: 0; }
-.kumihan-footer .kf-links > a { font-size: 12px; font-weight: 700; }
+.kumihan-footer .kf-links > a { font-size: 12px; font-weight: 700; min-width: 0; overflow-wrap: anywhere; }
 .kumihan-footer .kf-menu { position: relative; }
 .kumihan-footer .kf-menu summary { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: min(220px, 100%); min-height: 40px; box-sizing: border-box; padding: 8px 16px; border: 1px solid #5d5953; border-radius: 12px; background: #2d2b28; color: #aaa69f; cursor: pointer; font-size: 12px; font-weight: 600; }
 .kumihan-footer .kf-menu summary::-webkit-details-marker { display: none; }
@@ -90,6 +100,8 @@ def footer(lang, root="", g=None):
             f'<details class="kf-menu"><summary>{escape(g.PICK[k])}</summary><ul>{items}</ul></details>'
             f'<a href="{REPO}" target="_blank" rel="noopener noreferrer">GitHub</a>'
             f'<a href="{REPO}/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a>'
+            f'<a href="{root}{"privacy-ja.html" if k == "ja" else "privacy.html"}"'
+            + ("" if k in ("en", "ja") else ' hreflang="en"') + f'>{escape(PRIVACY[k])}</a>'
             f'</nav></div></footer>')
 
 
