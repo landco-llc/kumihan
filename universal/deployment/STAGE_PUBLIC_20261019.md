@@ -48,6 +48,28 @@ Run it over authorized SSH with privately provided FTP_ROOT and a pinned/reviewe
 
 Follow up based on the sanitized categories. If a permission barrier is in a separate site's directory, review that site's actual document-root mapping and symlink routing via the Lolipop control panel instead of broadly changing permissions or deleting symlinks. If the kmhn-specific scan is incomplete or finds a link, do not install anything until it is resolved.
 
+## G1 follow-up — kmhn scoped scan PASS; sitewide scan permission-limited
+
+Owner executed a second read-only SSH diagnostic and observed:
+
+    KMHN_SYMLINK_SCOPE_CLEAR
+    WEB_WIDE_SCAN_PERMISSION_LIMIT
+    WEB_WIDE_SYMLINK_SCAN_INCOMPLETE
+    NO_FILES_CHANGED
+
+**Interpretation:** the dedicated `kmhn` directory has no symlink according to its completed scan. The full FTP-root tree cannot be fully traversed by the SSH account due to an access-denied descendant, so it is **not verified** either clean or exposed. Do not re-run the same inaccessible full-root `find` in a loop. Do not modify unrelated sites' permissions, replace symlinks or attempt to escalate access.
+
+### Narrowed, Owner-reviewed admission for this free/open-source preview
+
+The remaining publication review can be **scoped** rather than treating inaccessible unrelated site folders as an automatic code or host failure. This is not a global confidentiality certification. Before installing the public bootstrap:
+
+1. Owner reviews Lolipop's configured **独自ドメイン設定 / サブドメイン設定** records for *all active domains* and their 公開（アップロード）フォルダ. Confirm none maps to the non-Web MCP private directory and no recorded alias intentionally exposes it.
+2. Owner confirms the already checked `kmhn` folder is still empty (no files or symlinks), and that the runtime is outside `web`. Do not need to recurse into inaccessible unrelated sites to re-prove that scoped fact.
+3. Record the full-`web` traversal permission limit as **NOT_CHECKED / residual unknown**, not `PASS`. If any configured domain maps outside `web`, or a known public alias leads to the private directory, stop and investigate before enabling HTTP.
+4. Seek explicit Owner go-ahead for the two-file bootstrap and immediate HTTPS MCP smoke. No main merge, ChatGPT/Claude/Gemini client distribution or general launch follows from this check alone.
+
+The scoped checks make progress possible without weakening the stated uncertainty. A private config with no credentials currently exists, but private source/vendor/registry must still not be copied to `web` under any circumstances.
+
 ## Owner gate G2 — approved two-file public bootstrap (only AFTER G1)
 
 Prepared local deployment ZIP in Owner's ChatGPT conversation: `KUMIHAN_MCP_Lolipop_DeployKit_v0.1.0-preview_20261019.zip`. Verified ZIP SHA256 `0f876361ba593441a90428a4b8919b4f10e84b00988e1d7f21a38f8382c703ca`.
