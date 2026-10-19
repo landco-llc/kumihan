@@ -28,6 +28,7 @@ class LandingParity(unittest.TestCase):
                  "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
+                 "kumihan-fa.html", "kumihan-fa.en.html", "kumihan-fa.ja.html",
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
                  "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
                  "kumihan-bn.html", "kumihan-bn.en.html", "kumihan-bn.ja.html",
@@ -104,6 +105,7 @@ class InstallGuideParity(unittest.TestCase):
         pages += [f"docs/install-ziheng{h}{s}.html" for h in ("", "-claude", "-gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-accord-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-kumihan-ar-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
+        pages += [f"docs/install-kumihan-fa-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-compasso-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-grafia-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
         pages += [f"docs/install-kumihan-hi-{h}{s}.html" for h in ("chatgpt", "claude", "gemini") for s in ("", ".en", ".ja")]
