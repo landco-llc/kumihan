@@ -28,7 +28,7 @@ class WebFonts(unittest.TestCase):
                 self.assertIn("assets/kumihan-fonts.css", text)
                 # The shared typeface sheet comes after the page's own styles.
                 head = text.split("</head>")[0]
-                others = [m.end() for m in re.finditer(r'href="[^"]*\.css"|</style>', head)
+                others = [m.end() for m in re.finditer(r'href="[^"]*\.css(?:\?[^"]*)?"|</style>', head)
                           if "kumihan-fonts.css" not in m.group(0)]
                 self.assertGreater(head.index("kumihan-fonts.css"), max(others))
             checked += 1

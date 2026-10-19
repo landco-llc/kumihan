@@ -184,7 +184,7 @@ html[lang="th-TH"] body,html[lang="en"] body{line-break:auto;}
 /* Edition menu under the CHOOSE YOUR LANGUAGE title: rounded, with a faint "choose a language" prompt. */
 .edition-menu { display: block; width: min(300px, 100%); margin-top: 22px; }
 .edition-menu summary { display: flex; justify-content: space-between; width: 100%; padding: 10px 18px; border-radius: 12px; color: var(--muted); font-weight: 600; letter-spacing: .01em; white-space: normal; }
-.edition-menu ul { inset-inline: 0 auto; min-width: 100%; max-height: min(60vh, 480px); overflow-y: auto; border-radius: 12px; }
+.edition-menu ul { inset-inline: 0 auto; min-width: 100%; max-height: min(50vh, 360px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; border-radius: 12px; }
 .edition-menu li a { white-space: normal; }
 .edition-menu li a.current, .edition-menu li a.current .code { color: var(--red-dark); }
 .lang-menu li a[aria-current="page"] .code { color: var(--red-dark); }

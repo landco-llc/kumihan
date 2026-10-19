@@ -6,6 +6,7 @@ in assets/gateway.css. Language order everywhere is by language code, with
 the page's own language first (and English second in the language menu).
 """
 import argparse
+import hashlib
 import json
 import re
 from html import escape
@@ -565,6 +566,11 @@ EDITION_NAMES = {
 # Placeholder of the edition menu, in each page language.
 PICK = {"ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
 
+def css_version():
+    """Short content hash of the stylesheet, so a new page never meets a cached old stylesheet."""
+    return hashlib.sha256((ROOT / "assets" / "gateway.css").read_bytes()).hexdigest()[:10]
+
+
 def x(value):
     return escape(str(value), quote=True)
 
@@ -686,7 +692,7 @@ def page(key, c):
 <meta content="{x(c['description'])}" name="description"/>
 <title>{c['title']}</title>
 <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="assets/gateway.css" rel="stylesheet"/>
+<link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
 </head>
