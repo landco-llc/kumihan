@@ -224,7 +224,7 @@ html[lang="th-TH"] body,html[lang="en"] body{line-break:auto;}
 /* ---- Typesetting per page language ------------------------------------------
    Typefaces come from assets/kumihan-fonts.css (tools/web_fonts.py): system fonts
    first, the script's Google Fonts family only when none is installed. */
-html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="de"], [lang="pl"], [lang="id"]) body { line-break: auto; }
+html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="bn"], [lang="de"], [lang="pl"], [lang="id"]) body { line-break: auto; }
 html:is([lang="en"], [lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"]) h1 { line-height: 1.16; letter-spacing: -.045em; }
 /* Vietnamese stacks diacritics above and below: more leading, lighter tracking. */
 html[lang="vi"] h1 { line-height: 1.32; letter-spacing: -.03em; }
@@ -233,10 +233,15 @@ html[lang="vi"] :is(.section-heading h2, .about-section h2) { line-height: 1.38;
 html[lang="hi"] :is(h1, h2, h3, .lang-title, .principle-text) { letter-spacing: 0; }
 html[lang="hi"] h1 { line-height: 1.5; }
 html[lang="hi"] :is(.section-heading h2, .about-section h2) { line-height: 1.55; }
+/* Bangla: the same, with room for vowel signs and conjuncts (kumihan-bn-web). */
+html[lang="bn"] :is(h1, h2, h3, .lang-title, .principle-text) { letter-spacing: 0; }
+html[lang="bn"] h1 { line-height: 1.5; }
+html[lang="bn"] :is(.section-heading h2, .about-section h2) { line-height: 1.55; }
+html[lang="bn"] :is(p, .principle-small, .lang-desc) { line-height: 1.85; }
 html:is([lang="en"], [lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"]) :is(.section-heading h2, .about-section h2) { line-height: 1.22; letter-spacing: -.04em; }
 html:is([lang="en"], [lang="es"], [lang="fr"], [lang="pt"], [lang="de"], [lang="pl"], [lang="id"]) .lang-title { letter-spacing: -.03em; }
-html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="de"], [lang="pl"], [lang="id"]) :is(h1, h2, h3, .lang-desc, .principle-text) { overflow-wrap: break-word; }
-html:is([lang="vi"], [lang="hi"], [lang="de"], [lang="pl"], [lang="id"]) :is(.intro-grid, .section-heading) > * { min-width: 0; max-width: 100%; }
+html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="bn"], [lang="de"], [lang="pl"], [lang="id"]) :is(h1, h2, h3, .lang-desc, .principle-text) { overflow-wrap: break-word; }
+html:is([lang="vi"], [lang="hi"], [lang="bn"], [lang="de"], [lang="pl"], [lang="id"]) :is(.intro-grid, .section-heading) > * { min-width: 0; max-width: 100%; }
 /* Arabic (kumihan-ar): Naskh for reading, no letter-spacing on Arabic text,
    generous line height; the decorative specimen strip keeps its own direction. */
 html[lang="ar"] body { line-break: auto; line-height: 1.95; }
@@ -260,6 +265,10 @@ html[lang="ar"] .section-heading > * { min-width: 0; max-width: 100%; }
 @font-face { font-family: "Kumihan Devanagari"; src: url("fonts/NotoSansDevanagari.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
 .glyph .character[lang="hi"], .lang-title[lang="hi"], .lang-title[lang="hi"] + .lang-sub {
   font-family: "Kumihan Devanagari", "Noto Sans Devanagari", sans-serif;
+  letter-spacing: normal;
+}
+.glyph .character[lang="bn"], .lang-title[lang="bn"] {
+  font-family: "Kohinoor Bangla", "Nirmala UI", Vrinda, "Noto Sans Bengali", sans-serif;
   letter-spacing: normal;
 }
 /* Long words (German compounds, Polish inflections) at large text sizes: the approach

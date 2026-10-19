@@ -38,6 +38,9 @@ SCRIPTS = {
     # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
     "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
            "Noto Sans Devanagari", "Noto Serif Devanagari"),
+    # Bangla: Kohinoor Bangla (macOS/iOS), Nirmala UI and Vrinda (Windows), then Noto Bengali.
+    "bn": ('"Kohinoor Bangla", "Bangla Sangam MN", "Nirmala UI", Vrinda', '"Bangla Sangam MN", "Nirmala UI", Vrinda',
+           "Noto Sans Bengali", "Noto Serif Bengali"),
     # Vietnamese: Be Vietnam Pro is drawn for Vietnamese stacked diacritics.
     "vi": ('"Helvetica Neue", "Segoe UI", Roboto', "Georgia", "Be Vietnam Pro", "Noto Serif"),
 }
@@ -51,10 +54,10 @@ AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..9
 LANGS = {"de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
-         "de": "latin", "pl": "latin", "id": "latin"}
+         "pl": "latin", "id": "latin", "bn": "bn"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
-         "अक्षर-संगति あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
+         "अक्षर-संगति বাংলা অক্ষরসজ্জা あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
           "Noto Sans Devanagari")
@@ -119,7 +122,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi"):
+    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
@@ -136,8 +139,10 @@ def data_yml():
     return "\n".join(lines) + "\n"
 
 
-# Pages without a generator of their own (ZiLu landings are copied from templates/).
-STATIC = ("docs/install-ziheng*.html", "templates/zilu-*-landing.html")
+# Pages without a generator of their own (ZiLu landings are copied from templates/;
+# the Bangla pages are maintained by hand).
+STATIC = ("docs/install-ziheng*.html", "templates/zilu-*-landing.html", "kumihan-bn*.html",
+          "docs/install-kumihan-bn-*.html")
 LINKS = re.compile(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?assets/kumihan-fonts\.css">', re.S)
 
 

@@ -34,6 +34,7 @@ EDITIONS = {
     "vi": ("KUMIHAN｜Nhịp Chữ", "Nhịp Chữ", "ベトナム語", "Vietnamese", "0.1.0"),
     "pl": ("KUMIHAN｜Szyk", "Szyk", "ポーランド語", "Polish", "0.1.0"),
     "id": ("KUMIHAN｜Laras", "Laras", "インドネシア語", "Indonesian", "0.1.0"),
+    "bn": ("KUMIHAN｜অক্ষরসজ্জা", "অক্ষরসজ্জা", "ベンガル語", "Bangla", "0.1.0"),
 }
 
 COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "pl": "szyk",

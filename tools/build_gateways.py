@@ -23,6 +23,7 @@ VISIBLE, STEP = 9, 6
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
     "ar": ("top-ar.html", "ar", "AR", "العربية"),
+    "bn": ("top-bn.html", "bn", "BN", "বাংলা"),
     "de": ("top-de.html", "de", "DE", "Deutsch"),
     "en": ("top-en.html", "en", "EN", "English"),
     "es": ("top-es.html", "es", "ES", "Español"),
@@ -276,6 +277,7 @@ CARDS = {
 }
 
 UI = {
+    "bn": dict(heading="KUMIHAN-এর ভাষা সংস্করণ", more="পরের {n}টি দেখুন", menu="ভাষা"),
     "id": dict(heading="Edisi bahasa KUMIHAN", more="Tampilkan {n} berikutnya", menu="Bahasa"),
     "de": dict(heading="Die Sprachversionen von KUMIHAN", more="Die nächsten {n} anzeigen", menu="Sprache"),
     "pl": dict(heading="Wersje językowe KUMIHAN", more="Pokaż kolejne {n}", menu="Język"),
@@ -399,6 +401,48 @@ ID_CARD_COPY = {
 for _lang, _cards in CARDS.items():
     if _lang in ID_CARD_COPY:
         _cards.setdefault("id", tuple(ID_CARD_COPY[_lang]))
+
+# Bangla edition (KUMIHAN｜অক্ষরসজ্জা): its card for every reader language and the
+# Bangla reader's table of all editions.
+PRODUCTS["bn"] = dict(name="বাংলা", lang="bn", brand="KUMIHAN｜অক্ষরসজ্জা", glyph="অ", label="BN · BANGLA", version="v0.1.0",
+                      pages={"bn": "kumihan-bn.html", "en": "kumihan-bn.en.html", "ja": "kumihan-bn.ja.html"})
+BN_CARD_COPY = {
+    "ja": ("母音記号・結合文字と原稿を守り、bn-BD／bn-INを区別するベンガル語の文字組みとデザイン。", "ベンガル語版を見る"),
+    "en": ("Bangla typography and design with safe vowel signs, conjuncts, source fidelity and distinct bn-BD/bn-IN guidance.", "View the Bangla edition"),
+    "zh-hant": ("保護母音符號、連字與原稿，並區分 bn-BD／bn-IN 的孟加拉文排版與設計。", "前往孟加拉文版"),
+    "zh-hans": ("保护元音符号、连字与原稿，并区分 bn-BD／bn-IN 的孟加拉语排版与设计。", "前往孟加拉语版"),
+    "ko": ("모음 기호와 결합 문자, 원고를 지키고 bn-BD·bn-IN을 구분하는 벵골어 글짜임과 디자인.", "벵골어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรและการออกแบบภาษาเบงกาลีที่รักษาสระ ตัวอักษรควบ และต้นฉบับ พร้อมแยก bn-BD กับ bn-IN", "ดูเวอร์ชันภาษาเบงกาลี"),
+    "fr": ("Typographie et design en bengali qui préservent les signes vocaliques, les ligatures et la source, en distinguant bn-BD et bn-IN.", "Voir l’édition bengalie"),
+    "es": ("Tipografía y diseño en bengalí que conservan los signos vocálicos, las ligaduras y el original, y distinguen bn-BD y bn-IN.", "Ver la edición en bengalí"),
+    "pt": ("Tipografia e design em bengali que preservam sinais vocálicos, ligaduras e o original, distinguindo bn-BD e bn-IN.", "Ver a edição em bengali"),
+    "ar": ("تنضيد وتصميم بنغالي يحافظ على علامات الحركات والحروف المركّبة والنص الأصلي، ويميّز بين bn-BD وbn-IN.", "عرض النسخة البنغالية"),
+    "hi": ("मात्राओं, संयुक्ताक्षरों और मूल पाठ को सुरक्षित रखने वाली, bn-BD और bn-IN में भेद करने वाली बांग्ला टाइपोग्राफ़ी और डिज़ाइन।", "बांग्ला संस्करण देखें"),
+    "vi": ("Typography và thiết kế tiếng Bengal giữ nguyên dấu nguyên âm, chữ ghép và bản gốc, phân biệt bn-BD và bn-IN.", "Xem phiên bản tiếng Bengal"),
+    "de": ("Bengalische Typografie und Gestaltung, die Vokalzeichen, Ligaturen und das Original bewahren und bn-BD von bn-IN unterscheiden.", "Bengalische Version ansehen"),
+    "pl": ("Typografia i projektowanie w języku bengalskim, chroniące znaki samogłoskowe, ligatury i oryginał oraz rozróżniające bn-BD i bn-IN.", "Zobacz wersję bengalską"),
+    "id": ("Tipografi dan desain bahasa Bengali yang menjaga tanda vokal, huruf gabung, dan naskah asli, serta membedakan bn-BD dan bn-IN.", "Lihat edisi bahasa Bengali"),
+}
+for _lang, _cards in CARDS.items():
+    if _lang in BN_CARD_COPY:
+        _cards.setdefault("bn", BN_CARD_COPY[_lang])
+CARDS["bn"] = {
+    "ar": ("ডান থেকে বাঁয়ে লেখা ও মিশ্র লিপি সামলে মূল লেখা অক্ষুণ্ণ রাখা আরবি টাইপোগ্রাফি।", "আরবি সংস্করণ দেখুন"),
+    "bn": ("কার-চিহ্ন, যুক্তাক্ষর ও মূল লেখা সুরক্ষিত রেখে bn-BD ও bn-IN-এর পার্থক্য মেনে চলা বাংলা টাইপোগ্রাফি ও ডিজাইন।", "বাংলা সংস্করণ দেখুন"),
+    "de": ("দীর্ঘ যৌগিক শব্দ, উদ্ধৃতিচিহ্ন এবং DE/AT/CH-এর ভিন্ন রীতি মেনে মূল লেখা রক্ষা করা জার্মান টাইপোগ্রাফি।", "জার্মান সংস্করণ দেখুন"),
+    "es": ("আঞ্চলিক ব্যবহারকে সম্মান করে, মূল লেখা রক্ষা করে এবং যাচাই-করা তথ্যকে সম্পাদকীয় বিচার থেকে আলাদা রাখা স্প্যানিশ টাইপোগ্রাফি।", "স্প্যানিশ সংস্করণ দেখুন"),
+    "fr": ("নন-ব্রেকিং স্পেস, উদ্ধৃতিচিহ্ন এবং আঞ্চলিক বা প্রাতিষ্ঠানিক রচনারীতি আলাদা করে দেখা ফরাসি টাইপোগ্রাফি।", "ফরাসি সংস্করণ দেখুন"),
+    "hi": ("মূল লেখা, যুক্তাক্ষর ও মাত্রা সুরক্ষিত রাখা হিন্দি টাইপোগ্রাফি ও ডিজাইন।", "হিন্দি সংস্করণ দেখুন"),
+    "id": ("অব্যয়, প্রত্যয়, দ্বিরুক্ত শব্দ, যতিচিহ্ন ও রুপিয়ার অঙ্ক প্রসঙ্গ বুঝে সামলানো, মূল লেখা রক্ষা করা ইন্দোনেশীয় টাইপোগ্রাফি।", "ইন্দোনেশীয় সংস্করণ দেখুন"),
+    "ja": ("জাপানি লাইন ভাঙার নিয়ম (কিনসোকু) ও স্বাভাবিক লাইন বিরতি থেকে তথ্যের কাঠামো, ফাঁকা জায়গা ও পড়ার প্রবাহ পর্যন্ত।", "জাপানি সংস্করণ দেখুন"),
+    "ko": ("এওজল (কোরীয় শব্দ-একক) অনুযায়ী লাইন ভাঙা, লেখার ছন্দ এবং স্পষ্টভাবে বোঝানোর মতো তথ্যের কাঠামো।", "কোরীয় সংস্করণ দেখুন"),
+    "pl": ("নির্ভুল বিশেষ চিহ্ন, অর্থপূর্ণ লাইন ভাঙা এবং মূল লেখা রক্ষা করা পোলিশ টাইপোগ্রাফি ও ডিজাইন।", "পোলিশ সংস্করণ দেখুন"),
+    "pt": ("ব্রাজিল ও ইউরোপের রীতি এবং লেখকের অভিপ্রায় মেনে চলা পর্তুগিজ টাইপোগ্রাফি ও অর্থনির্ভর ডিজাইন।", "পর্তুগিজ সংস্করণ দেখুন"),
+    "th": ("থাই শব্দসীমা ও সংযুক্ত চিহ্ন মেনে স্বাভাবিকভাবে পড়া যায় এমন থাই ডিজাইন।", "থাই সংস্করণ দেখুন"),
+    "vi": ("স্বরচিহ্ন, অর্থপূর্ণ লাইন ভাঙা ও মূল বিষয়বস্তু মেনে চলা ভিয়েতনামি টাইপোগ্রাফি।", "ভিয়েতনামি সংস্করণ দেখুন"),
+    "zh-hans": ("মূল লেখা না বদলে মূল ভূখণ্ড চীনের যতিচিহ্ন, লাইন ভাঙা ও চীনা-লাতিন মিশ্র লেখা সামলায়।", "সরলীকৃত চীনা সংস্করণ দেখুন"),
+    "zh-hant": ("তাইওয়ান ও হংকংয়ের ভিন্ন যতিচিহ্ন ও অক্ষরবিন্যাসের রীতি সামলায়।", "প্রথাগত চীনা সংস্করণ দেখুন"),
+}
 
 # Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
 _PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")

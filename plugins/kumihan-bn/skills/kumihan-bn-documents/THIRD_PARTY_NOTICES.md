@@ -1,0 +1,1 @@
+KUMIHAN｜অক্ষরসজ্জা does not redistribute third-party editorial samples, proprietary fonts or W3C text. Linked references are for attribution and verification. KUMIHAN official logo supplied by the repository's existing asset, licensed under its applicable rights.
