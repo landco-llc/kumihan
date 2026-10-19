@@ -77,6 +77,16 @@ OVERRIDES = r"""
     .skill-type { overflow-wrap: anywhere; }
     .cta-layout > * { min-width: 0; }
     .cta-layout .button { flex: 0 1 auto; max-width: 100%; }
+    .section-heading { flex-wrap: wrap; }
+    .section-heading > * { min-width: 0; }
+    .section-heading p { max-width: 100%; }
+    .status-box { grid-template-columns: minmax(0,1fr); }
+    .skill-symbol { flex: 0 0 auto; min-width: 1.6em; min-height: 1.6em; }
+    @media (max-width: 560px) {
+      .skill-card { padding: 16px; }
+      .platform-row { flex-wrap: wrap; }
+      .platform-info { flex: 1 0 100%; }
+    }
     .status-meta a { color: var(--red-dark); }
     .skill-card, .platform-info, .status-box > *, .hero-copy, .hero-stage, .feature, .install-layout > * { min-width: 0; }
     @media (max-width: 560px) {
