@@ -1,5 +1,8 @@
 # SEO baseline inventory — 2026-10-19 (JST)
 
+> **2026-10-19 refreshed inventory notice / historical source:** 以下の231件一覧は**旧SEO PRの履歴**です。2026-10-19 19:07 JSTのGitHub main `73d2b01` ではroot 86、docs 186、計272 HTML候補。旧 `top-en.html` のnoindex転送1件を除いた推定indexable件数は271ですが、**コード再統合・Sitemap監査は未実行**です。最新の確認内容は [再レビュー](REVIEW_REFRESH_20261019_MAIN_73D2B01.md)、実装手順は [W09–W15](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md)。W09完了後に現行版を再生成してください。
+
+
 W00 Fresh Read基点: 最新取得 `origin/main` = `ba1c50fdf2de8f920257d417e6213cd9ea0a2443`。作業ブランチ `feature/seo-foundation-20261019` は `2ea293f5db838e85817c934625d9b9cf0ab30ac4` で最新mainを安全にmerge済み。仕様書の旧基点 `fce40015abaa1f5f309cf9e977f55e41537c13aa` 以後のMizani追加を含む。
 
 ## 公開候補と正本
