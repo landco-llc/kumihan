@@ -629,6 +629,21 @@ for _reader, _cards in CARDS.items():
         ("Khmer typography protecting conjuncts, source text and purposeful line breaks.", "View Khmer edition")
     )
 
+
+# KUMIHAN｜تراز (fa-IR) v0.1.0. A product card on every existing gateway;
+# the language-specific product itself lives at kumihan-fa.html, not at a new gateway.
+PRODUCTS["fa"] = dict(name="فارسی", lang="fa", brand="KUMIHAN｜تراز",
+                      glyph="ت", label="FA · PERSIAN", version="v0.1.0",
+                      pages={"fa":"kumihan-fa.html","en":"kumihan-fa.en.html","ja":"kumihan-fa.ja.html"})
+for _reader, _names in EDITION_NAMES.items():
+    _names["fa"] = "ペルシア語" if _reader == "ja" else "Persian"
+for _reader, _cards in CARDS.items():
+    _cards["fa"] = (
+        ("ペルシア語の半スペース・文字接続・RTLを守り、媒体に合わせて文字組とデザインを整える。", "ペルシア語版を見る")
+        if _reader=="ja" else
+        ("Persian typography preserving ZWNJ, joining and logical RTL source text.", "View Persian edition")
+    )
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
@@ -675,7 +690,7 @@ def cards(key):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
         href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
-        direction = ' dir="rtl"' if code == "ar" else ""
+        direction = ' dir="rtl"' if code in ("ar", "fa") else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
                 + (" data-extra" if i >= VISIBLE else "") + ">"
@@ -735,6 +750,7 @@ def page(key, c):
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&amp;display=swap"/><style>#language-fa {font-family:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;letter-spacing:normal;}</style>
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>
