@@ -169,7 +169,7 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
-{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
+{% assign kumihan_font_root = '/' | relative_url %}{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja | replace: "@ROOT@", kumihan_font_root }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
 </head>
 <body>
   <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span><span data-ui-zh hidden>跳至主要內容</span></a>

@@ -159,9 +159,9 @@ def downloads_readme(folder, title, guide_ja, guide_en, bundle_heading, bundle_d
         "",
         "<br>",
         "",
-        f"プレビュー版 **{display_version(VERSION)}** です。導入の手順は、上の導入ガイドをご覧ください。",
+        f"現行パッケージ **{display_version(VERSION)}** です。導入の手順は、上の導入ガイドをご覧ください。",
         "",
-        f"Preview version **{display_version(VERSION)}**. See the installation guide above for setup steps.",
+        f"Current package **{display_version(VERSION)}**. See the installation guide above for setup steps.",
         "",
         "<br>",
         "",
@@ -261,7 +261,7 @@ def planned_downloads(tree):
             "publisher": PUBLISHER,
             "version": v,
             "source_repository": REPOSITORY,
-            "status": "Preview. Behavior in each host has not been fully verified.",
+            "status": "Source distribution. Behavior in each host has not been fully verified.",
             "archives": [],
         }
         sums = []

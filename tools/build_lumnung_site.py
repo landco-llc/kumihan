@@ -122,7 +122,7 @@ def landing(lang, c):
             f'<meta property="og:url" content="{BASE}{page}">\n<meta property="og:image" content="{BASE}{LOGO}">\n'
             f'<link rel="canonical" href="{BASE}{page}">\n{alternates}\n'
             f'<link rel="alternate" hreflang="x-default" href="{BASE}{landing_path("km")}">\n'
-            f'<link rel="icon" href="assets/favicon-32x32.png" type="image/png">\n<link rel="stylesheet" href="assets/lumnung-site.css">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&amp;display=swap">')
+            f'<link rel="icon" href="assets/favicon-32x32.png" type="image/png">\n<link rel="stylesheet" href="assets/lumnung-site.css">\n')
     return SITE.landing(dict(
         lang=lang, head=head, brand=f"<span>{BRAND}</span>", home_label="KUMIHAN｜លំនឹង",
         languages=[(k, LABELS[k], landing_path(k), k == lang) for k in LANGS],
@@ -141,7 +141,7 @@ def guide(host, lang, c):
             f'<link rel="canonical" href="{BASE}{path}">{alternates}<link rel="alternate" hreflang="x-default" href="{BASE}{guide_path(host, "km")}">\n'
             f'<meta property="og:type" content="website"><meta property="og:locale" content="{OG[lang]}"><meta property="og:title" content="{x(title)}">'
             f'<meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}{LOGO}">\n'
-            f'<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@100..900&amp;display=swap">')
+            f'<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">\n')
     assets = [PLUGIN[host]] + [f"{name}-{host}-skill" for name in SKILLS]
     downloads = "".join(
         f'<li><a href="{DOWNLOAD}{name}-v{VERSION}.zip">{x(g["plugin"] if i == 0 else g["skill"])}: {name}-v{VERSION}.zip</a></li>'

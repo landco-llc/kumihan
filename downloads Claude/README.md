@@ -4,9 +4,9 @@
 
 <br>
 
-プレビュー版 **v0.1.8** です。導入の手順は、上の導入ガイドをご覧ください。
+現行パッケージ **v0.1.8** です。導入の手順は、上の導入ガイドをご覧ください。
 
-Preview version **v0.1.8**. See the installation guide above for setup steps.
+Current package **v0.1.8**. See the installation guide above for setup steps.
 
 <br>
 

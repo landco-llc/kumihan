@@ -133,7 +133,7 @@ def landing(lang):
           f'<meta property="og:type" content="website"><meta property="og:title" content="{e(c["title"],quote=True)}"><meta property="og:url" content="{PUBLIC+path(lang)}"><meta property="og:image" content="{PUBLIC+LOGO}">\n'
           +head_links(lang)+f'\n<link rel="stylesheet" href="{BASE}assets/kumihan-fa.css">')
     return SITE.landing(dict(
-        lang=lang,dir='rtl' if lang=='fa' else 'ltr',head=(head + ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap">' if lang=="fa" else "")),brand=brand(),home_label='KUMIHAN｜تراز',
+        lang=lang,dir='rtl' if lang=='fa' else 'ltr',head=head,brand=brand(),home_label='KUMIHAN｜تراز',
         languages=[(l,label,BASE+path(l),l==lang) for l,label in LABELS],
         logo=BASE+LOGO,repo=REPO,release=REPO+'/releases/tag/kumihan-fa-v0.1.0',license=REPO+'/blob/main/LICENSE',
         skills=[(r,REPO+'/tree/main/plugins/kumihan-fa/skills/'+r,SYMBOLS[i]) for i,r in enumerate(ROLES)],
@@ -144,8 +144,7 @@ def guide(lang,host):
     title=f"{c['guide']} · {HOSTS[host]}"
     head=(f"<title>KUMIHAN｜تراز — {e(title)}</title>\n<meta name=\"description\" content=\"{e(g['lead'],quote=True)}\">\n"+head_links(lang,host))
     if lang=='fa':
-        head += ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&amp;display=swap">'
-          '<style>html[lang="fa"] { --sans:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;'
+        head += ('<style>html[lang="fa"] { --sans:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;'
           ' --display:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;'
           ' --font-jp:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif; }'
           'html[lang="fa"] body { font-family:"Vazirmatn","Noto Naskh Arabic",Tahoma,sans-serif;line-height:1.85; }'

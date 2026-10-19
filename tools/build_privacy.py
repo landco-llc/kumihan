@@ -24,7 +24,6 @@ PAGE = "privacy.html"
 REDIRECTS = {"privacy-ja.html": PAGE + "#ja"}
 LINKS = {"GH": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
          "GHJA": "https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement",
-         "G": "https://policies.google.com/privacy", "GJA": "https://policies.google.com/privacy?hl=ja",
          "LANDCO": "https://landco.co.jp/"}
 
 _wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
@@ -59,7 +58,7 @@ def fonts(languages):
         key = WEB_FONTS.script(l["lang"])
         if key != "latin" and key not in keys:
             keys.append(key)
-    extra = "".join(f'<link rel="stylesheet" href="{x(WEB_FONTS.own_url(k))}">' for k in keys)
+    extra = "".join(f'<link rel="stylesheet" href="{WEB_FONTS.local_css(WEB_FONTS.own_url(k))}">' for k in keys)
     return WEB_FONTS.head("en") + extra
 
 
@@ -76,8 +75,13 @@ def section(l, ids):
 
 def page(copy):
     p, languages, ids = copy["page"], copy["languages"], copy["sections"]
+    # English and Japanese (the authoritative texts) stay listed; the others are in a menu.
+    pinned = [l for l in languages if l["key"] in ("en", "ja")]
     toc = "".join(f'<li><a href="#{l["key"]}" lang="{l["lang"]}" hreflang="{l["lang"]}">{x(l["name"])}</a></li>'
-                  for l in languages)
+                  for l in pinned)
+    menu = "".join(f'<li><a href="#{l["key"]}" hreflang="{l["lang"]}"><span class="code">{l["key"].upper()}</span>'
+                   f' <span lang="{l["lang"]}">{x(l["name"])}</span></a></li>'
+                   for l in languages if l not in pinned)
     body = "".join(section(l, ids) for l in languages)
     out = f"""<!doctype html>
 <html lang="en">
@@ -92,7 +96,23 @@ def page(copy):
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/kumihan-install.css">
-<style>.privacy-language + .privacy-language {{ margin-top: 92px; }} .privacy-language > h2 {{ margin-top: 0; }}</style>
+<style>
+.privacy-language + .privacy-language {{ margin-top: 92px; }} .privacy-language > h2 {{ margin-top: 0; }}
+.lang-pick {{ position: relative; margin-top: 18px; }}
+.lang-pick summary {{ list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 42px; box-sizing: border-box; padding: 9px 16px; border: 1px solid var(--line); border-radius: 12px; background: #fffefa; color: var(--ink); cursor: pointer; font-size: 12px; font-weight: 700; }}
+.lang-pick summary::-webkit-details-marker {{ display: none; }}
+.lang-pick summary::after {{ content: ""; width: 6px; height: 6px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .15s ease; }}
+.lang-pick[open] summary::after {{ transform: translateY(2px) rotate(225deg); }}
+.lang-pick summary:focus-visible {{ outline: 3px solid var(--red); outline-offset: 3px; }}
+.lang-pick:not([open]) ul {{ display: none; }}
+.lang-pick ul {{ position: absolute; inset-inline: 0; top: calc(100% + 6px); z-index: 30; max-height: min(50vh, 360px); overflow-y: auto; overscroll-behavior: contain; margin: 0; padding: 6px 0; list-style: none; background: #fbf9f4; border: 1px solid #d8d2c6; border-radius: 12px; box-shadow: 0 18px 40px rgba(0,0,0,.14); }}
+.lang-pick li a {{ display: block; margin: 0; padding: 8px 16px; border: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; text-decoration: none; }}
+.lang-pick li a .code {{ display: inline-block; min-width: 4.6em; color: var(--muted); font: 800 11px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .04em; }}
+.lang-pick li a:hover, .lang-pick li a:focus-visible {{ background: #ede8de; color: var(--ink); }}
+.page-jump {{ display: flex; gap: 10px; margin-top: 14px; }}
+.page-jump a {{ display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 50%; background: #fffefa; color: var(--ink-2); font: 700 17px/1 Arial, Helvetica, sans-serif; text-decoration: none; }}
+.page-jump a:hover, .page-jump a:focus-visible {{ border-color: var(--ink); color: var(--ink); }}
+</style>
 {fonts(languages)}
 </head>
 <body>
@@ -123,6 +143,8 @@ def page(copy):
       <h2 class="toc-title">{x(p['languages'])}</h2>
       <ol>{toc}</ol>
     </details>
+    <details class="lang-pick"><summary>{x(p['other_languages'])}</summary><ul>{menu}</ul></details>
+    <nav class="page-jump" aria-label="{x(p['jump'])}"><a href="#top" aria-label="{x(p['to_top'])}" title="{x(p['to_top'])}"><span aria-hidden="true">↑</span></a><a href="#page-bottom" aria-label="{x(p['to_bottom'])}" title="{x(p['to_bottom'])}"><span aria-hidden="true">↓</span></a></nav>
     <div class="toc-note"><strong>{x(p['note_title'])}</strong><p>{x(p['note'])}</p><p lang="ja">{x(p['note_ja'])}</p></div>
   </aside>
   <main class="guide" id="main" tabindex="-1">
@@ -131,6 +153,8 @@ def page(copy):
   </main>
 </div>
 {WEB_FONTS.FOOTER.footer('en')}
+<div id="page-bottom"></div>
+<script>document.querySelectorAll(".lang-pick a").forEach(a => a.addEventListener("click", () => a.closest("details").removeAttribute("open")));</script>
 </body>
 </html>
 """

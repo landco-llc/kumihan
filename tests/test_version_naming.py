@@ -86,10 +86,20 @@ class VersionNamingPolicyTests(unittest.TestCase):
     def test_current_site_status_uses_suffix_free_version(self):
         landing=(ROOT/'_layouts/landing.html').read_text(encoding='utf-8')
         installation=(ROOT/'_layouts/installation.html').read_text(encoding='utf-8')
-        self.assertIn('RELEASED / v0.1.8',landing)
-        self.assertIn('releases/tag/v0.1.8',landing)
+        self.assertIn('CURRENT PACKAGE / v0.1.8',landing)
+        self.assertIn('releases/tag/v0.1.8-preview',landing)
         self.assertNotIn('PREVIEW /',installation)
         self.assertNotIn('preview version',installation.lower())
+
+    def test_unpublished_candidate_is_not_advertised_as_released(self):
+        landing=(ROOT/"_layouts/landing.html").read_text()
+        self.assertIn("CURRENT PACKAGE / v0.1.8",landing)
+        self.assertNotIn("releases/tag/v0.1.8\"",landing)
+        self.assertIn("過去版",landing)
+        for name in ("index.html", "top-ja.html"):
+            text=(ROOT/name).read_text()
+            self.assertNotIn("v0.1.8 preview",text)
+            self.assertNotIn("v0.1.0 preview",text)
 
     def test_naming_contract_has_examples(self):
         text=(ROOT/"docs/versioning.md").read_text(encoding="utf-8")
