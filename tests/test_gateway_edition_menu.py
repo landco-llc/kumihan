@@ -33,6 +33,13 @@ class EditionMenu(unittest.TestCase):
         cards = re.findall(r'<article class="lang-card[^"]*"[^>]*>', text)
         self.assertEqual(sum("data-extra" not in c for c in cards), 6)
 
+    def test_stylesheet_link_carries_its_content_version(self):
+        # A changed stylesheet gets a new URL, so a cached old copy is never used with new pages.
+        for file, *_rest in gateways.GATEWAYS.values():
+            text = (ROOT / file).read_text(encoding="utf-8")
+            with self.subTest(page=file):
+                self.assertIn(f'href="assets/gateway.css?v={gateways.css_version()}"', text)
+
     def test_polish_example(self):
         text = (ROOT / "top-pl.html").read_text(encoding="utf-8")
         self.assertIn('<span class="code">JA</span> - Japoński</a>', text)
