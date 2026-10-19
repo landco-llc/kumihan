@@ -231,6 +231,19 @@ Next, run the **non-writing** `universal/tools/preflight_public_bootstrap.sh` on
 
 **Additionally review the Lolipop domain/subdomain control panel for all active virtual hosts.** Confirm each published upload folder is inside the intended FTP web root and none aliases/symlinks into the non-Web MCP private directory. Treat this as Owner-reviewed, not automatically tested. Without that confirmation do not claim all-vhost isolation. The public bootstrap must still wait for explicit operator action and immediate external MCP smoke tests.
 
+### Latest public-root preflight: full symlink scan NOT COMPLETED
+
+Owner's authorized SSH output:
+
+    PRIVATE_PATH_OUTSIDE_WEB_OK
+    PUBLIC_KMHN_EMPTY_OK
+    PRIVATE_RUNTIME_FILES_PRESENT_OK
+    PUBLIC_SYMLINK_SCAN_INCOMPLETE
+
+Only the whole-Web `find` symlink traversal failed (exit code nonzero; its stderr was discarded by the older checker). This may be an unreadable directory, a changing tree, or another traversal error. **No exposure has been found, but full-tree safety has NOT been verified.** The MCP public bootstrap remains uninstalled.
+
+Use the read-only [tools/diagnose_public_symlink_scan.sh](tools/diagnose_public_symlink_scan.sh) to distinguish the kmhn-specific scope from the unrelated site directories and classify full-tree traversal errors **without listing filenames or account paths**. See [deployment/STAGE_PUBLIC_20261019.md](deployment/STAGE_PUBLIC_20261019.md). Do not change other sites, permissions, or symlinks based solely on an incomplete scan. Owner review of the Lolipop domain/subdomain upload mappings is still needed before public installation.
+
 ## 4. Public verification commands
 
 TLS was already verified by GitHub Actions. Optional recheck:
