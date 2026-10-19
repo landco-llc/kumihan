@@ -1,0 +1,22 @@
+name: Persian v0.1.0 reproducibility
+on:
+  pull_request:
+    paths: ['plugins/kumihan-fa/**','tools/build_fa*','tests/fa/**','assets/fa-site-copy.json','assets/kumihan-fa.css','kumihan-fa*.html','docs/install-kumihan-fa-*.html']
+  push:
+    branches: [main]
+    paths: ['plugins/kumihan-fa/**','tools/build_fa*','tests/fa/**','assets/fa-site-copy.json','assets/kumihan-fa.css','kumihan-fa*.html','docs/install-kumihan-fa-*.html']
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests/fa -v
+      - run: python tools/build_fa.py --check
+      - run: if test -f tools/build_fa_site.py; then python tools/build_fa_site.py --check; fi
