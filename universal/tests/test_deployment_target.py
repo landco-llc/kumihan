@@ -20,7 +20,6 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertFalse(d["deployment_paths"]["private_server_candidate"]["web_php_read_verified"])
         self.assertEqual(d["deployment_paths"]["ftp_root"]["basename"], "web")
         self.assertTrue(d["deployment_paths"]["ftp_root"]["owner_confirmed"])
-        self.assertFalse(d["deployment_paths"]["ftp_root"]["ssh_realpath_verified"])
         self.assertEqual(d["deployment_paths"]["public_root"]["relative_to_ftp_root"], "kmhn")
         self.assertFalse(d["deployment_paths"]["private_server_candidate"]["ssh_write_verified"])
         self.assertNotIn("sub.jp-", json.dumps(d))
@@ -60,7 +59,8 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("OWNER PROVIDED FTP ROOT", guide)
+        self.assertIn("SSH PUBLIC ROOT AND PARENT WRITE CONFIRMED", guide)
+        self.assertIn("check_private_php_web.sh", guide)
         self.assertIn("check_lolipop_layout.py", guide)
         self.assertIn("FTP-root/kmhn", guide)
 
