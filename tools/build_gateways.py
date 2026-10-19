@@ -46,6 +46,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "zu": dict(name="isiZulu", lang="zu", brand="KUMIHAN｜Hlela", glyph="Aa", label="ZU · ISIZULU", version="v0.1.0", pages={"zu":"kumihan-zu.html","en":"kumihan-zu.en.html","ja":"kumihan-zu.ja.html"}),
     "sw": dict(name="Kiswahili", lang="sw", brand="KUMIHAN｜Mizani", glyph="ng’", label="SW · SWAHILI", version="v0.1.0", pages={"sw":"kumihan-sw.html","en":"kumihan-sw.en.html","ja":"kumihan-sw.ja.html"}),
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
@@ -593,6 +594,11 @@ _SW_EDITION_NAMES = {"ar":"السواحيلية","bn":"সোয়াহিল�
 for _lang, _names in EDITION_NAMES.items():
     _names["sw"] = _SW_EDITION_NAMES[_lang]
 
+
+_ZU_EDITION_NAMES = {"ar":"الزولو","bn":"জুলু","de":"Zulu","en":"isiZulu","es":"Zulú","fr":"Zoulou","hi":"ज़ुलू","id":"Zulu","it":"Zulu","ja":"ズールー語","ko":"줄루어","pl":"zuluski","pt":"Zulu","ru":"зулу","th":"ภาษาซูลู","vi":"Tiếng Zulu","zh-hans":"祖鲁语","zh-hant":"祖魯語"}
+for _lang, _names in EDITION_NAMES.items():
+    _names["zu"] = _ZU_EDITION_NAMES[_lang]
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
@@ -627,6 +633,10 @@ for _lang, _cards in CARDS.items():
         ("スワヒリ語の語形・アポストロフィを保護し、地域ごとの数値と文字組を考える設計。", "スワヒリ語版を見る") if _lang=="ja" else
         ("Swahili typography protecting apostrophes, original text, and regional formats.", "View the Swahili edition"))
 CARDS["en"]["sw"] = ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition")
+
+
+for _lang, _cards in CARDS.items():
+    _cards.setdefault("zu", ("ズールー語の語形と原稿を守り、媒体に合わせて文字組を設計する。", "ズールー語版を見る") if _lang == "ja" else ("isiZulu typography with protected source text and purposeful layout.", "View isiZulu edition"))
 
 def cards(key):
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
