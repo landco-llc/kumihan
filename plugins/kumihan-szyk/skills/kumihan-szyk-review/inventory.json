@@ -1,0 +1,112 @@
+{
+  "skill": "kumihan-szyk-review",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1768,
+      "sha256": "db9cf03096d0d0407770761f5b90230b9d8333889c4e5f16bf09a35c53dbf207"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 292,
+      "sha256": "b31edaddd2572481977637bc52d9e4000f237e9593429dadf4222cac4eeac2a0"
+    },
+    {
+      "path": "fixtures/acceptance-ledger.json",
+      "bytes": 96318,
+      "sha256": "42254e0ff0c90f5ecc552472969fdb82c1dc68b0b5a3e83fe781697cf115528e"
+    },
+    {
+      "path": "locales/pl-PL.json",
+      "bytes": 612,
+      "sha256": "5e305191146d6885830f574e1ce75f7438b6d8773921ede0eaac8480611ff09c"
+    },
+    {
+      "path": "locales/pl.json",
+      "bytes": 590,
+      "sha256": "95c20e2f94c8dab62346993092cc63fab2cdd796061a7a3e71a1189ea23f803b"
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 840,
+      "sha256": "007542c124aeb38d7c495e694c84da9a1d2385e72d8618218f548cb13aa75c17"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 896,
+      "sha256": "0105f1fe17a36b820e161374618852abb9394b2f71aca7d0331961e3fd6a2ff8"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 899,
+      "sha256": "323a8b59a128704a4a3a7090b60bdadc6848880263bd4410c27dc6b284ddddaa"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 1081,
+      "sha256": "4cacbdb78d70f45b3db04dc38683262a6ba8477afce2018e65afb44c10b36138"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 1081,
+      "sha256": "ceba61a672ff180c282fe57e4eac15285085a04f18eb63878d18b69bcb67e57c"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 1074,
+      "sha256": "26907c5ab9ea8451c14befdd634fa4b372d1315221522f27e5e802cf818a9294"
+    },
+    {
+      "path": "references/coverage.md",
+      "bytes": 550,
+      "sha256": "b3dfc7f47b993ccb971750bf9a201924df4f6b7b5afc12995b576eec80fbfe78"
+    },
+    {
+      "path": "references/documents.md",
+      "bytes": 478,
+      "sha256": "720a1bba93da016a10fb1d0db0f22a0a50a3f4a4c2729eb1357e906df52bf243"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 501,
+      "sha256": "ddff3abd12810dd99850b041c96175eb573efa06a40872d81ade0590f7c09782"
+    },
+    {
+      "path": "references/web.md",
+      "bytes": 1220,
+      "sha256": "01dfe77f43d0ad8d90a684404ea7f1b997f88c9757b87df3575ed8be93ccef35"
+    },
+    {
+      "path": "references/workflow.md",
+      "bytes": 726,
+      "sha256": "16758f1cdfe67beef65b335e15cc66ee9b31f37b9327099f4526ba6cfe91c342"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 70145,
+      "sha256": "7579f6b6bfe13486a0e13beb707fa49e4455a7697feb6ac7debdee741dccab51"
+    },
+    {
+      "path": "runtime/checks.py",
+      "bytes": 2927,
+      "sha256": "8745515ac7b7bde8917237f93bf5bf93c38e9fa549c196428be8003f215cd64d"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 2478,
+      "sha256": "689ab0cf129f57cd31153f42c86bb124a604b215023c9990190cc45f26fc1be2"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 19544,
+      "sha256": "2f9c922d5d3d00dc57fb84f587bb3ed0567dfad1959ac524d2637fa8103cfcf3"
+    }
+  ],
+  "self_digest": "Inventory excludes itself; archive digest covers all bytes."
+}

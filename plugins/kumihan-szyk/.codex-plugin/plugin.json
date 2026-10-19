@@ -1,0 +1,25 @@
+{
+  "name": "kumihan-szyk",
+  "version": "0.1.0",
+  "description": "Polska typografia, projektowanie i analiza składu z poszanowaniem oryginału. | Polish typography, content design and source-preserving review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Szyk",
+    "shortDescription": "Polska typografia | Polish typography",
+    "longDescription": "Polska typografia, projektowanie i analiza składu z poszanowaniem oryginału. | Polish typography, content design and source-preserving review.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-pl.html",
+    "defaultPrompt": [
+      "Sprawdź skład tekstu po polsku bez zmiany oryginału.",
+      "Review Polish typography without editing the original."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

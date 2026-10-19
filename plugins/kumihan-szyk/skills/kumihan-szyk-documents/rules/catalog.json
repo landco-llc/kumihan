@@ -1,0 +1,2343 @@
+[
+  {
+    "id": "PL-FONT-01",
+    "title_ja": "用途に必要なポーランド語18字の収録",
+    "description_ja": "一般本文・UIに採用する実際の配布ファイルで18字を確認する。固定ロゴだけの表示書体を本文書体と同じ条件で除外しない。",
+    "source_urls": [
+      "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+      "https://www.w3.org/TR/css-fonts-4/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "presentation"
+      ],
+      "roles": [
+        "body",
+        "ui",
+        "dynamic_heading"
+      ],
+      "exclude": [
+        "fixed_logo_only"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "font_role"
+      ],
+      "required_field_alternatives": {
+        "font_binary_or_cmap": [
+          "font_binary_or_cmap",
+          "font_binary",
+          "cmap_characters"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "一般本文・UIの採用書体に18字が収録されている。",
+      "cmap収録は字形・レンダリングの合格を意味しない。"
+    ],
+    "parameters": {
+      "required_characters": "ĄąĆćĘęŁłŃńÓóŚśŹźŻż",
+      "required_codepoints": [
+        "U+0104",
+        "U+0105",
+        "U+0106",
+        "U+0107",
+        "U+0118",
+        "U+0119",
+        "U+0141",
+        "U+0142",
+        "U+0143",
+        "U+0144",
+        "U+00D3",
+        "U+00F3",
+        "U+015A",
+        "U+015B",
+        "U+0179",
+        "U+017A",
+        "U+017B",
+        "U+017C"
+      ]
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "font_static.json",
+        "json_pointer": "/results",
+        "assertion_ja": "代表upright8ファイルで18字×8=144字を収録。全ウェイト・Italic・WOFF2は未確認。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "取得した代表8ファイルのみ。",
+          "字形・ブラウザ描画の合格ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T20",
+      "T12"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T20",
+      "T12"
+    ]
+  },
+  {
+    "id": "PL-FONT-02",
+    "title_ja": "kreska・ogonek・strokeの字形を確認",
+    "description_ja": "kreskaの光学的位置、ogonekの接続、ŹとŻ、lとłの識別性を実サイズで比較する。角度の単一閾値だけで合否を決めない。",
+    "source_urls": [
+      "https://glyphsapp.com/learn/localize-your-font-polish-kreska",
+      "https://www.twardoch.com/download/polishhowto/ogonek.html",
+      "https://www.twardoch.com/download/polishhowto/stroke.html"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "presentation"
+      ],
+      "roles": [
+        "body",
+        "heading",
+        "ui"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "rendered_specimen",
+        "font_weight"
+      ],
+      "required_field_alternatives": {
+        "font_size": [
+          "font_size",
+          "font_size_px"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "ポーランド語の18字を大小文字・反転・採用サイズで確認する。",
+      "原文のアクセントを削って表示問題を回避しない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T14",
+      "T22"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T14",
+      "T22"
+    ]
+  },
+  {
+    "id": "PL-FONT-03",
+    "title_ja": "NFDの収録と描画を分ける",
+    "description_ja": "結合記号U+0301/U+0307/U+0328の収録を確認し、基底字との位置・文字幅は実際の描画で確認する。",
+    "source_urls": [
+      "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+      "https://www.w3.org/TR/css-fonts-4/",
+      "https://www.unicode.org/reports/tr15/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "content": [
+        "nfd_or_mixed_normalization"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "nfc_text",
+        "nfd_text",
+        "render_evidence"
+      ],
+      "required_field_alternatives": {
+        "font_binary_or_cmap": [
+          "font_binary_or_cmap",
+          "font_binary",
+          "cmap_characters"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "収録情報だけでNFD描画を合格にしない。",
+      "描画証拠がない場合はnot_checkedを残す。"
+    ],
+    "parameters": {
+      "combining_marks": [
+        "U+0301",
+        "U+0307",
+        "U+0328"
+      ]
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "font_static.json",
+        "json_pointer": "/results",
+        "assertion_ja": "結合記号3種×8ファイル=24記号を収録。結合位置は未実測。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T20",
+      "T12",
+      "T10"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T20",
+      "T12",
+      "T10"
+    ]
+  },
+  {
+    "id": "PL-FONT-04",
+    "title_ja": "サブセットでÓ・óを落とさない",
+    "description_ja": "Ó/óはU+00D3/U+00F3にあり、U+0100–017Fだけでは固有18字を満たさない。配信WOFF2の字種を検査する。",
+    "source_urls": [
+      "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+      "https://www.w3.org/TR/css-fonts-4/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "assets": [
+        "subset_font",
+        "unicode_range"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "unicode_ranges",
+        "served_font_cmap"
+      ]
+    },
+    "expected_behavior_ja": [
+      "基本ラテン、Ó/ó、その他16字と必要記号が意図した書体で使える。",
+      "latin-extというサブセット名のみを収録証拠にしない。"
+    ],
+    "parameters": {
+      "must_include": [
+        "U+00D3",
+        "U+00F3"
+      ]
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "unicode_static.json",
+        "json_pointer": "/rows",
+        "assertion_ja": "Ó=U+00D3、ó=U+00F3。他の固有16字はLatin Extended-A。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T20",
+      "T12"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T20",
+      "T12"
+    ]
+  },
+  {
+    "id": "PL-FONT-05",
+    "title_ja": "PLK専用loclの不在はエラーにしない",
+    "description_ja": "共通字形でポーランド語を適切に表現する設計もある。PLK LangSysの不在から非対応・不良と断定しない。",
+    "source_urls": [
+      "https://glyphsapp.com/learn/localize-your-font-polish-kreska",
+      "https://www.w3.org/TR/css-fonts-4/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "assets": [
+        "opentype_font"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "rendered_specimen"
+      ],
+      "required_field_alternatives": {
+        "gsub_languages": [
+          "gsub_languages",
+          "gsub_has_PLK"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "PLK専用loclの不在だけではerrorを出さない。",
+      "字形の適否は別途目視・実環境で判断する。"
+    ],
+    "parameters": {
+      "missing_PLK_is_error": false
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "font_static.json",
+        "json_pointer": "/results",
+        "assertion_ja": "代表8ファイルでPLK専用GSUB LangSysを検出しなかった。非対応の証明ではない。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T14",
+      "T12"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T14",
+      "T12"
+    ]
+  },
+  {
+    "id": "PL-FONT-06",
+    "title_ja": "U+202F未収録と表示不良を区別",
+    "description_ja": "NARROW NO-BREAK SPACEのcmap未収録は、空白の合成・代替を含む実描画の不良を直接証明しない。",
+    "source_urls": [
+      "https://www.w3.org/TR/css-fonts-4/",
+      "https://raw.githubusercontent.com/google/fonts/main/ofl/alegreya/METADATA.pb"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "content": [
+        "uses_U202F"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "required_space",
+        "render_evidence"
+      ],
+      "required_field_alternatives": {
+        "font_cmap": [
+          "font_cmap",
+          "cmap_has_U202F"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "U+202F未収録を記録し、使用する媒体で幅・改行を確認する。",
+      "必要性がない本文へU+202Fを強制しない。"
+    ],
+    "parameters": {
+      "missing_space_is_render_failure": false
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "font_static.json",
+        "json_pointer": "/results/5",
+        "assertion_ja": "Alegreya VF 2.009はU+202Fをcmap未収録。U+00A0とポーランド語18字は収録。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T12",
+      "F06"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T12",
+      "F06"
+    ]
+  },
+  {
+    "id": "PL-FONT-07",
+    "title_ja": "Source Sans 3の本文ウェイトを明示",
+    "description_ja": "取得したSource Sans 3 VF 3.052のデフォルトwghtは200。通常本文の比較標本では400を明示し、デフォルト200をRegularと誤認しない。",
+    "source_urls": [
+      "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/METADATA.pb",
+      "https://www.w3.org/TR/css-fonts-4/"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "specimen"
+      ],
+      "font_family": "Source Sans 3",
+      "font_version": "3.052",
+      "roles": [
+        "body",
+        "regular_specimen"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "font_axes",
+        "requested_weight",
+        "font_role"
+      ]
+    },
+    "expected_behavior_ja": [
+      "通常本文標本のwght=400を明示する。",
+      "意図して200を使うデザインは自動修正せず方針を確認する。"
+    ],
+    "parameters": {
+      "recommended_body_weight": 400,
+      "observed_axis_default": 200
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "font_static.json",
+        "json_pointer": "/results/1/axes",
+        "assertion_ja": "Source Sans 3のwght範囲は200–900、既定200。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "F02",
+      "T12"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "F02",
+      "T12"
+    ]
+  },
+  {
+    "id": "PL-FONT-08",
+    "title_ja": "読込・代替・行箱の実観測",
+    "description_ja": "読込前後、通信失敗、採用ウェイト、200%拡大でアクセントとogonekの切れ・行の重なりを観測する。固定heightやoverflow:hiddenだけから切れを断定しない。",
+    "source_urls": [
+      "https://www.w3.org/TR/css-fonts-4/",
+      "https://www.w3.org/TR/css-text-3/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "roles": [
+        "body",
+        "heading",
+        "ui"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "font_load_state",
+        "layout_properties",
+        "viewport",
+        "zoom",
+        "render_evidence"
+      ]
+    },
+    "expected_behavior_ja": [
+      "描画証拠なしはnot_checked。",
+      "実際の切れが観測されたときに対象のCSSを調整し、原稿を変えない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T12",
+      "T09"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T12",
+      "T09"
+    ]
+  },
+  {
+    "id": "PL-I18N-01",
+    "title_ja": "内容言語と地域書式を明示",
+    "description_ja": "ポーランド語の内容にはlang=pl、ポーランド地域の書式にはpl-PLを使い、他言語の引用はその内容言語を保持する。",
+    "source_urls": [
+      "https://www.w3.org/TR/css-fonts-4/",
+      "https://www.w3.org/TR/css-text-3/",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "content": [
+        "polish_and_mixed_language"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "document_lang",
+        "locale",
+        "mixed_language_nodes"
+      ]
+    },
+    "expected_behavior_ja": [
+      "適切なlangとlocaleを設定する。",
+      "lang=plとhyphens:autoだけでハイフネーション実測済みにしない。"
+    ],
+    "parameters": {
+      "content_language": "pl",
+      "format_locale": "pl-PL"
+    },
+    "evidence": [],
+    "source_ids": [
+      "T12",
+      "T09",
+      "T21"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T12",
+      "T09",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-I18N-02",
+    "title_ja": "正規化・NBSPでも著者原文を保護",
+    "description_ja": "NFC比較やNBSP表示用の派生値が必要でも、著者原文のバイト列を暗黙に書き換えない。編集許可がある場合に提案差分または表示層で扱う。",
+    "source_urls": [
+      "https://www.unicode.org/reports/tr15/",
+      "https://www.w3.org/TR/css-text-3/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "authored_source",
+        "quotation",
+        "identifier",
+        "url",
+        "code"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "source_role",
+        "edit_authorization",
+        "proposed_transform"
+      ],
+      "required_field_alternatives": {
+        "source_bytes": [
+          "source_bytes",
+          "source_utf8_hex",
+          "source_text"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "source_bytesを保存する。",
+      "許可と対象範囲を確認し、比較用・表示用の派生値を分ける。",
+      "HTML全体の正規表現置換を行わない。"
+    ],
+    "parameters": {
+      "source_mutation_allowed_by_default": false
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "unicode_static.json",
+        "json_pointer": "/rows",
+        "assertion_ja": "18字のNFD→NFC往復を確認。往復可能性は原文を書換える許可ではない。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T10",
+      "T09"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T10",
+      "T09"
+    ]
+  },
+  {
+    "id": "PL-I18N-03",
+    "title_ja": "Ł/łの正規化を誤認しない",
+    "description_ja": "Ł/łはNFDで分解されない。lへの変換は文字情報を落とす転写であり、NFC/NFD正規化として処理しない。",
+    "source_urls": [
+      "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+      "https://www.unicode.org/reports/tr15/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "polish_text",
+        "names"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "input_text",
+        "normalization_operation"
+      ]
+    },
+    "expected_behavior_ja": [
+      "NFD(ł)=U+0142、NFD(Ł)=U+0141を維持する。",
+      "表示用原文のłをlへ変えない。"
+    ],
+    "parameters": {},
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "unicode_static.json",
+        "json_pointer": "/rows",
+        "assertion_ja": "Ł/łのNFDはそれぞれU+0141/U+0142のまま。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T20",
+      "T10"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T20",
+      "T10"
+    ]
+  },
+  {
+    "id": "PL-I18N-04",
+    "title_ja": "grapheme単位で切り出す",
+    "description_ja": "結合文字を含む表示文字の切出しにgrapheme境界を使う。Intl.Segmenterはハイフネーション辞書や意味的改行の代わりではない。",
+    "source_urls": [
+      "https://www.unicode.org/reports/tr29/",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "web",
+        "app"
+      ],
+      "operations": [
+        "truncate",
+        "count_visible_units",
+        "selection"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "segmentation_granularity",
+        "cut_index"
+      ]
+    },
+    "expected_behavior_ja": [
+      "基底字と結合記号の間で切り出さない。",
+      "grapheme/wordの境界をそのまま改行適地と断定しない。"
+    ],
+    "parameters": {
+      "segmenter_locale": "pl",
+      "granularity": "grapheme"
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_static.json",
+        "json_pointer": "/nfdGraphemes",
+        "assertion_ja": "a+ogonek、c+acute、łを3graphemeとして観測。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T11",
+      "T21"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T11",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-I18N-05",
+    "title_ja": "ポーランド語基数の4区分",
+    "description_ja": "数量に応じone/few/many/otherの全文メッセージを用意する。末尾1をすべてone、12–14をfewにしない。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "web",
+        "app",
+        "dynamic_document"
+      ],
+      "content": [
+        "cardinal_count"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "visible_fraction_options"
+      ],
+      "required_field_alternatives": {
+        "numeric_value": [
+          "numeric_value",
+          "values"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。",
+      "optional_keys": [
+        "messages"
+      ]
+    },
+    "expected_behavior_ja": [
+      "CLDR48のポーランド語基数区分を参照する。",
+      "カテゴリー選択だけで名詞の全ての格変化が解決すると扱わない。"
+    ],
+    "parameters": {
+      "categories": [
+        "one",
+        "few",
+        "many",
+        "other"
+      ],
+      "one": "i = 1 and v = 0",
+      "few": "v = 0 and i % 10 = 2..4 and i % 100 != 12..14",
+      "many": "(v = 0 and i != 1 and i % 10 = 0..1) or (v = 0 and i % 10 = 5..9) or (v = 0 and i % 100 = 12..14)",
+      "other": "remaining values"
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_static.json",
+        "json_pointer": "/plural",
+        "assertion_ja": "0/1/2/4/5/11/12/14/21/22/25/101/112/122/1.5を先行観測。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T08",
+      "T21"
+    ],
+    "rule_kind": "locale_data_application",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T08",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-I18N-06",
+    "title_ja": "表示桁数と複数形を一致させる",
+    "description_ja": "数値の見た目に使う桁数・丸めをPluralRulesにも反映する。JavaScriptの1と1.0の同一性だけでoneを選ばない。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "web",
+        "app"
+      ],
+      "content": [
+        "formatted_quantity"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "numeric_value",
+        "number_format_options",
+        "plural_rule_options"
+      ]
+    },
+    "expected_behavior_ja": [
+      "桁数・丸め設定を同じ表示方針にする。",
+      "小数1桁を保持した1.0の表示ではotherを期待する。"
+    ],
+    "parameters": {},
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_static.json",
+        "json_pointer": "/decimal",
+        "assertion_ja": "既定select(1)=one、minimumFractionDigits:1ではother。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T08",
+      "T21"
+    ],
+    "rule_kind": "locale_data_application",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T08",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-I18N-07",
+    "title_ja": "一般UIの数値・通貨書式",
+    "description_ja": "一般UIはpl-PLのロケール書式を使う。CLDR48/ICU78.3の4桁と5桁の区切り差、コンマ小数、通貨後置を保持する。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "app"
+      ],
+      "format_profile": [
+        "ui_cldr48"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "numeric_value",
+        "locale",
+        "format_options",
+        "format_profile"
+      ]
+    },
+    "expected_behavior_ja": [
+      "既定の1234は強制的に1 234へ変えない。",
+      "金額の小数とzł前のNBSPを適切に生成する。",
+      "原稿に書かれた数値文字列は無許可で変換しない。"
+    ],
+    "parameters": {
+      "locale": "pl-PL",
+      "baseline_cldr": "48.0",
+      "baseline_icu": "78.3"
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_observations.json",
+        "json_pointer": "/numbers",
+        "assertion_ja": "1234、12 NBSP 345、1234,5を観測。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      },
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_static.json",
+        "json_pointer": "/money",
+        "assertion_ja": "12345.67 PLN→12 NBSP 345,67 NBSP złを観測。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T07",
+      "T21"
+    ],
+    "rule_kind": "locale_data_application",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T07",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-I18N-08",
+    "title_ja": "一般UIとSIのパーセントを分ける",
+    "description_ja": "一般UIのCLDR standard-percentとGUMのSI表記を一つの正誤規則にしない。値が比率か百分率かを明示する。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+      "https://www.gum.gov.pl/pl/aktualnosci/komunikaty/4003,Liczbe-i-towarzyszacy-jej-symbol-zapisujemy-z-odstepem.html",
+      "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "format_profile": [
+        "ui_cldr48",
+        "si_gum",
+        "unspecified"
+      ],
+      "content": [
+        "percentage"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "proposed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "value",
+        "value_kind",
+        "format_profile",
+        "source_role"
+      ]
+    },
+    "expected_behavior_ja": [
+      "ui_cldr48の比率0.25→25%を許容する。",
+      "SIで百分率値25を示すときは25 NBSP %を候補とする。",
+      "プロファイル不明では空きを追加・削除せずreviewとする。"
+    ],
+    "parameters": {
+      "allowed_profiles": [
+        "ui_cldr48",
+        "si_gum"
+      ],
+      "value_kind_options": [
+        "ratio",
+        "percent_value"
+      ]
+    },
+    "evidence": [
+      {
+        "kind": "local_static_observation",
+        "artifact": "intl_observations.json",
+        "json_pointer": "/percent",
+        "assertion_ja": "一般UIのIntl出力0.25→25%を観測。SIの実装試験ではない。",
+        "fixture_executed": false,
+        "limits_ja": [
+          "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+        ]
+      }
+    ],
+    "source_ids": [
+      "T07",
+      "T26",
+      "T16"
+    ],
+    "rule_kind": "profile_dependent_notation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T07",
+      "T26",
+      "T16"
+    ]
+  },
+  {
+    "id": "PL-I18N-09",
+    "title_ja": "SIの数値・単位と角度例外",
+    "description_ja": "SI表示の数値と単位を空きで結ぶ。温度°Cと平面角°を同一ルールで扱わない。",
+    "source_urls": [
+      "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "document",
+        "web"
+      ],
+      "format_profile": [
+        "si_gum"
+      ],
+      "content": [
+        "measurement"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "source_role"
+      ],
+      "required_input_forms": [
+        [
+          "value",
+          "unit",
+          "quantity_kind"
+        ],
+        [
+          "measurements"
+        ]
+      ],
+      "binding_note_ja": "単一値形式またはmeasurements配列形式のどちらかを受ける。配列の各項目はvalue・unit・quantity_kindを持つ。"
+    },
+    "expected_behavior_ja": [
+      "温度80 °Cでは数値と単位の間を空け、表示上の分離を防ぐ。",
+      "平面角45°では角度記号前の空きの例外を保つ。",
+      "食品・法定表示全体への適合をこのルールだけで主張しない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T16"
+    ],
+    "rule_kind": "profile_dependent_notation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T16"
+    ]
+  },
+  {
+    "id": "PL-I18N-10",
+    "title_ja": "日時のロケールとタイムゾーン",
+    "description_ja": "ユーザー向け日時書式には対象ロケールとタイムゾーンを明示し、機械用ISO文字列を表示用データと混同しない。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+      "https://tc39.es/ecma402/"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "app",
+        "dynamic_document"
+      ],
+      "content": [
+        "date",
+        "time",
+        "timestamp"
+      ]
+    },
+    "autofix": "render_only",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "timestamp_or_date",
+        "locale",
+        "time_zone",
+        "date_semantics"
+      ]
+    },
+    "expected_behavior_ja": [
+      "瞬間を表すtimestampと日付のみのデータを区別する。",
+      "タイムゾーン未指定の予定時刻を推測して変換しない。",
+      "引用された日付・機械識別子の原文を変えない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T07",
+      "T21"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T07",
+      "T21"
+    ]
+  },
+  {
+    "id": "PL-COPY-01",
+    "title_ja": "呼称と話者を場面ごとに統一",
+    "description_ja": "Ty型、Pan/Pani/Państwo型、非人称型を媒体・相手に合わせる。命令、利用者の確定選択、サービスの報告で話者の役割を管理する。",
+    "source_urls": [
+      "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+      "https://www.mbank.pl/o-nas/mkanon/",
+      "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "app",
+        "business_document"
+      ],
+      "content": [
+        "ui_copy",
+        "instruction",
+        "customer_copy"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "register_profile",
+        "speaker_role"
+      ],
+      "required_field_alternatives": {
+        "copy_sequence": [
+          "copy_sequence",
+          "label"
+        ]
+      },
+      "binding_note_ja": "各論理フィールドについて、候補名の少なくとも一つがinputに必要。別名の値を原稿変更として書き戻さない。"
+    },
+    "expected_behavior_ja": [
+      "一つのフローで距離感を不用意に混ぜない。",
+      "すべてのボタンを命令形にしない。",
+      "MicrosoftのTy/Twój大文字方針を全国共通規則にしない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T15",
+      "C01",
+      "T25"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T15",
+      "C01",
+      "T25"
+    ]
+  },
+  {
+    "id": "PL-COPY-02",
+    "title_ja": "未知の読者の性別を推測しない",
+    "description_ja": "性別を含む過去形や形容詞を未知の利用者へ自動適用しない。現在形・命令形・行為主体の変更で意味を保った候補を出す。",
+    "source_urls": [
+      "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+      "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "app",
+        "customer_copy"
+      ],
+      "audience": [
+        "unknown_gender"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "copy_text",
+        "audience_context",
+        "speaker_role"
+      ]
+    },
+    "expected_behavior_ja": [
+      "性別の推測を検出して候補を提示する。",
+      "本人が選んだ表記や実在人物の呼称は保持する。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T15",
+      "T23"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T15",
+      "T23"
+    ]
+  },
+  {
+    "id": "PL-COPY-03",
+    "title_ja": "変数を含む全文を翻訳単位にする",
+    "description_ja": "英語式の語句連結でポーランド語の語尾・語順・格変化を生成しない。個数メッセージと文中の活用を分けて管理する。",
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html",
+      "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "app",
+        "dynamic_document"
+      ],
+      "content": [
+        "parameterized_messages"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "message_template",
+        "placeholder_contract",
+        "plural_messages"
+      ]
+    },
+    "expected_behavior_ja": [
+      "数量区分に応じた全文テンプレートを用意する。",
+      "変数の値・金額・商品名を編集しない。",
+      "複数形選択と文法的活用は別の検査として扱う。",
+      "文字列連結だけで誤文と断定しない。欠けた複数形や誤った語形が確認できたときは該当規則で指摘する。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T08",
+      "T15"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T08",
+      "T15"
+    ]
+  },
+  {
+    "id": "PL-COPY-04",
+    "title_ja": "操作の結果を文言で伝える",
+    "description_ja": "ボタン・リンクが対象、移動先または操作結果を伝えるか確認する。ダウンロードと導入説明、カート追加と購入確定を混同しない。",
+    "source_urls": [
+      "https://www.gov.pl/web/dostepnosc-cyfrowa/linki-i-przyciski",
+      "https://allegro.pl/pomoc/dla-kupujacych/podstawy-kupowania/czym-jest-i-jak-dziala-koszyk-4GDdXb8KBSD",
+      "https://www.gov.pl/web/dostepnosc-cyfrowa/prosty-jezyk"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "app"
+      ],
+      "content": [
+        "button",
+        "link",
+        "error_message"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "label",
+        "actual_action",
+        "adjacent_context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "文言と実際の動作を一致させる。",
+      "重大な確定操作を文脈のない汎用ラベルだけで表さない。",
+      "法律上の購入ボタン適合は別の確認事項とする。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "C02",
+      "C04",
+      "C07"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "C02",
+      "C04",
+      "C07"
+    ]
+  },
+  {
+    "id": "PL-COPY-05",
+    "title_ja": "引用・旧稿・名称へ更新ルールを自動適用しない",
+    "description_ja": "2026の正書法を参照する新規稿と、引用された旧稿・作品名・登録名称を区別する。正書法更新やNBSP挿入を原文書換え許可に読み替えない。",
+    "source_urls": [
+      "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+      "https://www.unicode.org/reports/tr15/",
+      "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf"
+    ],
+    "severity": "error",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "quotation",
+        "historical_source",
+        "proper_name",
+        "authored_source"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "source_role",
+        "authored_year",
+        "edit_authorization",
+        "proposed_spelling_update"
+      ]
+    },
+    "expected_behavior_ja": [
+      "保護された原文を保持し、必要なら編集注または対照案を出す。",
+      "原稿への変更は既存の編集許可と対象範囲に従う。",
+      "現行正書法の適用内容はRJPを別途確認する。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T15",
+      "T10",
+      "T25"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T15",
+      "T10",
+      "T25"
+    ]
+  },
+  {
+    "id": "PL-COPY-06",
+    "title_ja": "固有名詞・女性形・未知の活用を機械矯正しない",
+    "description_ja": "人名、都市名、商標、職業名の女性形を語尾規則だけで変更しない。本人の表記と文脈を確認し、完全形または言換えを提案する。",
+    "source_urls": [
+      "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/",
+      "https://poradniajezykowa.uw.edu.pl/porady/mowa-inkluzywna/",
+      "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "proper_names",
+        "occupations",
+        "unknown_inflection"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "noneは提案のみ。render_onlyでも著者原文は不変で、既存の表示調整許可を前提とする。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "entity_type",
+        "preferred_form",
+        "grammatical_context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "未知の固有名詞へ自動的に語尾を追加しない。",
+      "女性職業名を自動で男性形へ戻さない。",
+      "アンダースコアによる語形生成を万能規則にしない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "source_ids": [
+      "T23",
+      "T24",
+      "T15"
+    ],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T23",
+      "T24",
+      "T15"
+    ]
+  },
+  {
+    "id": "PL-TYPE-01",
+    "title_ja": "一文字語を行末の文脈で評価",
+    "description_ja": "a i o u w zの行末は編集上の助言と媒体幅を考慮する。40字の目安を全画面の絶対禁止にしない。",
+    "source_ids": [
+      "T03",
+      "T04"
+    ],
+    "source_urls": [
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/sieroty-na-koncu-wiersza"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "presentation"
+      ],
+      "content": [
+        "pl_prose",
+        "heading"
+      ],
+      "exclude": [
+        "code",
+        "url",
+        "letter_name",
+        "foreign_text"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "言語と語の役割を確認して後続語との結合を検討する。",
+      "実際の行末と狭幅でのはみ出しを観測する。",
+      "NBSPがあるだけで合格しない。"
+    ],
+    "parameters": {
+      "one_letter_words": [
+        "a",
+        "i",
+        "o",
+        "u",
+        "w",
+        "z"
+      ],
+      "uppercase_requires_context": true,
+      "universal_40_character_ban": false
+    },
+    "evidence": [],
+    "rule_kind": "editorial_recommendation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T03",
+      "T04"
+    ]
+  },
+  {
+    "id": "PL-TYPE-02",
+    "title_ja": "見出しを意味のまとまりで折り返す",
+    "description_ja": "単語長の均等化より、前置詞と名詞句、修飾関係、固有名のまとまりを確認する。",
+    "source_ids": [
+      "T03",
+      "D08",
+      "D10"
+    ],
+    "source_urls": [
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+      "https://otwarte.studio/portfolio/element-talks",
+      "https://www.transparent.agency/projects/msn"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "presentation"
+      ],
+      "roles": [
+        "heading",
+        "display"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "幅ごとに意味と情報階層を確認する。",
+      "大見出しの固定改行をすべての画面幅に強制しない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T03",
+      "D08",
+      "D10"
+    ]
+  },
+  {
+    "id": "PL-TYPE-03",
+    "title_ja": "新規PL文章の外側引用符",
+    "description_ja": "開始U+201Eと終了U+201Dを新規文章の基本案にする。原文やコードは保持する。",
+    "source_ids": [
+      "T07",
+      "T05"
+    ],
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+      "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "new_pl_prose"
+      ],
+      "exclude": [
+        "code",
+        "verbatim_quote",
+        "approved_source"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "新規の引用符ペアは„…”を基本にする。",
+      "ASCII引用符や既存英語引用を一括置換しない。"
+    ],
+    "parameters": {
+      "open": "„",
+      "close": "”"
+    },
+    "evidence": [],
+    "rule_kind": "editorial_recommendation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T07",
+      "T05"
+    ]
+  },
+  {
+    "id": "PL-TYPE-04",
+    "title_ja": "入れ子の引用符にハウススタイルを持つ",
+    "description_ja": "CLDRの«…»と専門家回答の»…«を区別し、選んだ案件内の一貫性を確認する。",
+    "source_ids": [
+      "T07",
+      "T05",
+      "T17"
+    ],
+    "source_urls": [
+      "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+      "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/",
+      "https://journals.akademicka.pl/rocznikkrakowski/about/submissions"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "nested_quotation"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "内側引用符の方向を案件の方針として明示する。",
+      "»…«だけを理由に一般的な綴りエラーにしない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "editorial_recommendation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T07",
+      "T05",
+      "T17"
+    ]
+  },
+  {
+    "id": "PL-TYPE-05",
+    "title_ja": "ハイフンとダッシュとマイナスを機能で分ける",
+    "description_ja": "接続、範囲、挿入、負号を記号の長さだけで統一しない。",
+    "source_ids": [
+      "T02",
+      "T17"
+    ],
+    "source_urls": [
+      "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf",
+      "https://journals.akademicka.pl/rocznikkrakowski/about/submissions"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "punctuation"
+      ],
+      "exclude": [
+        "code",
+        "url",
+        "identifier"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "en/emの選択をハウススタイルに従わせる。",
+      "短い数値範囲と文章中の挿入句の空きを分ける。",
+      "全ハイフン一括変換を提案しない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "editorial_recommendation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T02",
+      "T17"
+    ]
+  },
+  {
+    "id": "PL-TYPE-06",
+    "title_ja": "自動分綴は言語と辞書を前提にする",
+    "description_ja": "lang指定だけで辞書の利用可能性や正しい分綴を保証しない。",
+    "source_ids": [
+      "T09",
+      "T06"
+    ],
+    "source_urls": [
+      "https://www.w3.org/TR/css-text-3/",
+      "https://rjp.pan.pl/dzielenie-wyrazow-przy-przenoszeniu/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "roles": [
+        "body"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "実装環境・辞書・言語の組み合わせを記録する。",
+      "未知語と固有名詞はレビューする。",
+      "Intl.Segmenterを音節辞書として扱わない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T09",
+      "T06"
+    ]
+  },
+  {
+    "id": "PL-TYPE-07",
+    "title_ja": "原語のハイフンの再掲を表示処理と分ける",
+    "description_ja": "元からハイフンを含む語の改行時には次行頭再掲の編集慣行がある。原文へ二つのハイフンを永続挿入しない。",
+    "source_ids": [
+      "T18",
+      "T19"
+    ],
+    "source_urls": [
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow",
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow-zlozonych"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "content": [
+        "lexically_hyphenated_word"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "表示エンジンとハウススタイルの能力を確認する。",
+      "再レイアウトやコピーで余分なハイフンが残らない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "editorial_recommendation",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T18",
+      "T19"
+    ]
+  },
+  {
+    "id": "PL-TYPE-08",
+    "title_ja": "見出しとラベルの語中分割を抑制",
+    "description_ja": "長いタイトルやUIの語をbreak-allで割る前に領域と折返しを見直す。",
+    "source_ids": [
+      "T09",
+      "D08"
+    ],
+    "source_urls": [
+      "https://www.w3.org/TR/css-text-3/",
+      "https://otwarte.studio/portfolio/element-talks"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web",
+        "document",
+        "presentation"
+      ],
+      "roles": [
+        "heading",
+        "label",
+        "navigation"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "通常の見出しとUIでは語句の折返しを先に使う。",
+      "ラベルの高さを固定して内容を切らない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T09",
+      "D08"
+    ]
+  },
+  {
+    "id": "PL-TYPE-09",
+    "title_ja": "改行不可領域と緊急折返しを限定",
+    "description_ja": "語句を結合する処理は本文の最小領域、緊急折返しはURL等の局所領域に限定する。",
+    "source_ids": [
+      "T03",
+      "T09",
+      "A01"
+    ],
+    "source_urls": [
+      "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+      "https://www.w3.org/TR/css-text-3/",
+      "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "content": [
+        "mixed_dom"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "HTML文字列全体への正規表現置換を避ける。",
+      "コード、属性、他言語の原文を保護する。",
+      "nowrapを連結して段落全体を固定しない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T03",
+      "T09",
+      "A01"
+    ]
+  },
+  {
+    "id": "PL-TYPE-10",
+    "title_ja": "両端揃えは語間と分綴を一緒に確認",
+    "description_ja": "本文とディスプレイ文字の字間設定を分ける。CJK向けの均等字間拡張をPL本文へ移さない。",
+    "source_ids": [
+      "T09"
+    ],
+    "source_urls": [
+      "https://www.w3.org/TR/css-text-3/"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web",
+        "document"
+      ],
+      "roles": [
+        "body"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "語間の川、連続するハイフン、極端な追込みを観測する。",
+      "左揃えを含む代替を比較し、原文の意味を保持する。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "implementation_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T09"
+    ]
+  },
+  {
+    "id": "PL-TYPE-11",
+    "title_ja": "2026年正書法の版を固定",
+    "description_ja": "2025年11月修正を含む最終統合版と、原稿の時点を区別する。",
+    "source_ids": [
+      "T01",
+      "T02"
+    ],
+    "source_urls": [
+      "https://rjp.pan.pl/komunikat-rady-jezyka-polskiego-przy-prezydium-pan-z-dnia-7-listopada-2025-r/",
+      "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf"
+    ],
+    "severity": "warning",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "new_pl_copy",
+        "spelling_advice"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "static",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "旧い変更案の撤回事項を推奨しない。",
+      "歴史資料・固有名・承認稿は保持する。",
+      "正書法の例外を単純置換で確定しない。"
+    ],
+    "parameters": {
+      "effective_date": "2026-01-01",
+      "correction_notice_date": "2025-11-07",
+      "full_spelling_engine": false
+    },
+    "evidence": [],
+    "rule_kind": "orthography_version_policy",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "T01",
+      "T02"
+    ]
+  },
+  {
+    "id": "PL-LAYOUT-01",
+    "title_ja": "320 CSS pxでのリフロー",
+    "description_ja": "通常の縦方向文書の情報と機能を狭幅で観測する。",
+    "source_ids": [
+      "A01"
+    ],
+    "source_urls": [
+      "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "roles": [
+        "page"
+      ],
+      "exceptions": [
+        "part_requiring_two_dimensional_layout"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "320 CSS px、または該当する1280px幅の400%拡大条件で、通常の縦方向文書を二方向にスクロールせず内容・機能を保つ。",
+      "図表の例外をページ全体の免除にしない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "accessibility_test_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "A01"
+    ]
+  },
+  {
+    "id": "PL-LAYOUT-02",
+    "title_ja": "テキスト200%拡大を別に確認",
+    "description_ja": "テキスト拡大と400%時のリフローを別の観測項目にする。",
+    "source_ids": [
+      "A02"
+    ],
+    "source_urls": [
+      "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "roles": [
+        "page",
+        "ui"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "内容、状態、操作が欠けない。",
+      "未観測の環境に合格を付けない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "accessibility_test_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "A02"
+    ]
+  },
+  {
+    "id": "PL-LAYOUT-03",
+    "title_ja": "読者による文字間隔変更に耐える",
+    "description_ja": "WCAGの上書き条件で内容を失わない。数値を著者の既定値と誤認しない。",
+    "source_ids": [
+      "A03"
+    ],
+    "source_urls": [
+      "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "web"
+      ],
+      "roles": [
+        "body",
+        "ui"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "line-height=1.5、段落後2em、字間0.12em、語間0.16emを同時変更し、内容と機能を確認する。",
+      "固定高さとoverflowによる欠落を確認する。"
+    ],
+    "parameters": {
+      "author_default_requirement": false,
+      "test_override": {
+        "line_height": 1.5,
+        "paragraph_spacing_em": 2,
+        "letter_spacing_em": 0.12,
+        "word_spacing_em": 0.16
+      }
+    },
+    "evidence": [],
+    "rule_kind": "accessibility_test_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "A03"
+    ]
+  },
+  {
+    "id": "PL-LAYOUT-04",
+    "title_ja": "文書の見出しと行と表をページで確認",
+    "description_ja": "見出しの孤立、段落の孤立行、表行の分断、脚注とPDFの文字を確認する。",
+    "source_ids": [],
+    "source_urls": [],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "document",
+        "pdf"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "observed",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "見出しと次段落を保持する。",
+      "表の見出しを繰返し、行の不用意な分割を防ぐ。",
+      "PDFの字形・抽出・書体を確認する。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "kumihan_document_review_proposal",
+    "provenance_note_ja": "KUMIHANの文書・レビューの考え方に基づく本調査の設計提案。外部資料が見出し・表・PDFの検査一式を定めているという主張ではない。",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": []
+  },
+  {
+    "id": "PL-DESIGN-01",
+    "title_ja": "装飾を題材と情報機能に結び付ける",
+    "description_ja": "色、書体、図像、効果は国名や流行だけで選ばず目的との関係を説明する。",
+    "source_ids": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D13",
+      "H01"
+    ],
+    "source_urls": [
+      "https://www.podpunkt.pl/projects/krakow-national-museum-brand-identity",
+      "https://www.podpunkt.pl/projects/the-city-of-warsaw-logo",
+      "https://capitalics.wtf/en/case/warszawa",
+      "https://www.podpunkt.pl/projects/kotlina-natury",
+      "https://www.podpunkt.pl/projects/instytut-adama-mickiewicza-brand-identity",
+      "https://iam.pl/en/press/adam-mickiewicz-institute-refreshes-its-visual-language-new-visual-identity-iam-and-culturepl",
+      "https://mamastudio.pl/works/good-mood/",
+      "https://www.zabka.pl/zabka-wprowadza-nowa-marke-wlasna-good-mood/",
+      "https://www.uniforma.pl/projects/european-design-festival-2019",
+      "https://www.transparent.agency/projects/msn",
+      "https://zacheta.art.pl/pl/mediateka-i-publikacje/prawda-piekno-dobro-z-kolekcji-zachety-45",
+      "https://projektroku.pl/nominacje/2022-2023/proj-dla-inst-publicznych/warszawa-w-budowie-15-zimno-juz-bylo.html?source=73",
+      "https://mnw.pl/en/temporary-exhibitions/current/en-polish-posters-the-collection"
+    ],
+    "severity": "review",
+    "applicability": {
+      "media": [
+        "all"
+      ],
+      "content": [
+        "visual_design"
+      ]
+    },
+    "autofix": "none",
+    "autofix_scope_ja": "原文を保持し、案件で与えられた編集範囲に従い表示の調整または差分を提案する。",
+    "check_type": "manual",
+    "status": "proposed",
+    "input_contract": {
+      "required_keys": [
+        "text",
+        "language",
+        "media",
+        "source_role",
+        "context"
+      ]
+    },
+    "expected_behavior_ja": [
+      "表現する文字と読むための実務情報の役割を分ける。",
+      "英語作品からPLの改行規則を推定しない。",
+      "3Dやグラデーションだけを理由に不適切としない。"
+    ],
+    "parameters": {},
+    "evidence": [],
+    "rule_kind": "case_derived_design_proposal",
+    "locale": "pl",
+    "format_locale": "pl-PL",
+    "source_refs": [
+      "D01",
+      "D02",
+      "D03",
+      "D04",
+      "D07",
+      "D09",
+      "D10",
+      "D11",
+      "D13",
+      "H01"
+    ]
+  }
+]
