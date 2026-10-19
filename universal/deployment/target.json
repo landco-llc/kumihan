@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "private_runtime_extracted_pending_configuration_and_web_php_checks",
+  "status": "private_runtime_web_ready_pending_public_exposure_review",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -41,17 +41,22 @@
     "private_runtime_target_clean_verified": true,
     "private_archive_integrity_verified": true,
     "private_archive_extracted": true,
-    "private_runtime_ready": false,
+    "private_runtime_ready": true,
     "public_bootstrap_installed": false,
     "private_required_files_verified": true,
-    "private_config_absent_verified": true,
-    "public_bootstrap_still_absent_verified": true
+    "private_config_absent_verified": false,
+    "public_bootstrap_still_absent_verified": true,
+    "private_config_created_verified": true,
+    "web_php_sdk_autoload_verified": true,
+    "web_php_registry_21_verified": true,
+    "web_php_session_write_verified": true,
+    "web_php_extension_checks_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner ran pinned private-only extractor and observed all six PASS markers: tar preflight, extraction, required PHP SDK+registry files, config absent, public unchanged, MCP not public. Host PHP 8.5.11 private canary passed earlier. Do not assert live MCP.",
-  "deployment_blocker": "Private MCP source/vendor/registry extracted successfully; next verify private config location, actual Web PHP ability to load autoloader+registry and write sessions, plus other virtual-host isolation before installing public two-file bootstrap. Real MCP transport still NOT CHECKED.",
+  "notes": "Owner observed PHP_VERSION=8.5.11 PHP_SAPI=litespeed REGISTRY_MODULES=21 plus 7 Web PHP checks and PRIVATE_RUNTIME_WEB_READY; MCP_NOT_PUBLIC. Private config.php now exists and is readable under Web PHP. Public MCP still NOT DEPLOYED.",
+  "deployment_blocker": "Private PHP SDK+registry (21)+sessions PASS and private config present. Before public two-file bootstrap, review all configured host upload directories and web-root symlinks for alternate exposure, confirm no temporary probe remains, then deploy only index.php and .htaccess and immediately run actual HTTPS MCP initialize/tools/list/tools/call.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -181,8 +186,31 @@
     "config_not_created": true,
     "public_bootstrap_not_created": true,
     "http_mcp_tested": false,
-    "web_php_autoload_and_registry_tested": false,
-    "web_php_session_write_tested": false,
+    "web_php_autoload_and_registry_tested": true,
+    "web_php_session_write_tested": true,
     "other_virtual_hosts_isolation_tested": false
+  },
+  "private_runtime_web_verification": {
+    "observed_at": "2026-10-19",
+    "source": "Owner's authenticated Lolipop SSH and HTTPS Web PHP temporary probe output",
+    "observed_php_version": "8.5.11",
+    "observed_php_sapi": "litespeed",
+    "registry_modules": 21,
+    "markers": {
+      "PRIVATE_CONFIG_CREATED": "PASS",
+      "WEB_PHP85": "PASS",
+      "WEB_SAPI_LITESPEED": "PASS",
+      "EXTENSIONS": "PASS",
+      "PRIVATE_CONFIG": "PASS",
+      "SDK_AUTOLOAD": "PASS",
+      "REGISTRY": "PASS",
+      "SESSION_WRITE": "PASS",
+      "PRIVATE_RUNTIME_WEB_READY": "PASS",
+      "MCP_NOT_PUBLIC": "PASS"
+    },
+    "private_config_permissions_expected": "0600 from verified helper",
+    "temporary_web_probe_cleanup_expected": true,
+    "temporary_web_probe_cleanup_independently_checked": false,
+    "scope_limit": "SDK autoload, registry construction and private session file I/O PASS; actual HTTP MCP protocol, WAF, alternate vhosts and cross-client compatibility not tested."
   }
 }
