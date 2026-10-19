@@ -50,7 +50,7 @@ AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..9
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
         "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
 # Page language (html lang attribute) -> script key
-LANGS = {"ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
+LANGS = {"it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi"}
 # Characters of language and product names shown on pages of other languages.

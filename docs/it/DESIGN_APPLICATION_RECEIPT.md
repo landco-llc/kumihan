@@ -23,3 +23,6 @@ Verification pending W09: 12 pages × 320/375/768/1280; ordinary/doubled compute
 - Review caught the inherited “Deutsch” install-language label; a failing regression was added, label corrected to “Italiano” and all nine guides regenerated. Corporate external footer link also added with a failing regression. A final CI browser matrix will cover those regenerated guides.
 - Shared JA/EN copy checks PASS. Specific exceptions are feature 01 Italian orthography/locale, feature 03 exact-byte protection, entry context and factual release/install limits. Japanese canonical title/h1 and English title/h1 exactly follow base_copy.
 - NOT-CHECKED: native browser text-only zoom, Google font loading, Safari/Windows, screen readers, dictionary hyphenation, native provider import/icon UI, native Italian editorial review and Office/PDF. CSS simulation is not native zoom; semantic line quality is manual judgment, not measured by balance support.
+
+
+Final font integration: explicitly register it in the shared Latin selector group (tools/web_fonts.py); preserve every other stack. Earlier rendered evidence predates that selector registration. The final local and CI browser runs below/at publication validate the registered stack separately. Native font loading/zoom/hosts remain outside the measured scope.

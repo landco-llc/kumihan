@@ -45,3 +45,10 @@ class SiteTests(unittest.TestCase):
   import build_equilibrio_site as m
   for path,text in m.outputs().items():
    self.assertRegex(text,r'<a href="https://landco.co.jp/"[^>]*target="_blank"[^>]*rel="noopener noreferrer"')
+ def test_italian_language_uses_latin_font_stack(self):
+  import sys
+  sys.path.insert(0,str(ROOT/'tools'))
+  import web_fonts
+  self.assertEqual(web_fonts.LANGS.get('it'),'latin')
+  self.assertIn('html[lang="it"]',web_fonts.css())
+  self.assertIn('html[lang="it"] body',(ROOT/'assets/kumihan-fonts.css').read_text())

@@ -54,3 +54,7 @@ Research canonical: https://drive.google.com/drive/folders/1EMib8ugMHyfNG2e38Mo7
 ## Russian parallel-main integration
 - main 106b0306e2b28ff2e858342d9a0a77acdecbbe42 brought Russian Lad and a workflow fix. Preserved its font/script registry and source/site assets. Resolved only shared COPY_FILES and PAGE_GATEWAY registrations, retaining Italian, Indonesian and Russian entries together; no existing product output modified.
 - Post-merge local validation: Equilibrio 15, root 14 PASS; distribution/site/shared-copy/gateway --check PASS. Italian product/ZIP sources are unchanged by this merge. Other-language product changes in history are inherited from main, not authored by this edition.
+
+## Explicit Italian Latin stack — final font integration
+- Final inspection found that web_fonts.script('it') returned Latin links but LANGS lacked it, so the shared CSS did not emit an Italian body selector. Added the explicitly allowed it→latin mapping and regenerated only assets/kumihan-fonts.css and _data/web_fonts.yml; existing language selectors/stacks are preserved.
+- Regression test failed on missing LANGS['it'], then passed after mapping and generated-selector checks. Equilibrio focused suite now 16 PASS; root 14 PASS; web_fonts/site/gateway --check PASS. Equilibrio CI now watches shared font inputs as well. A fresh local/CI browser matrix is run for this final stack; earlier JSON remains evidence of the earlier measured state, not retroactive proof of the font change.
