@@ -31,11 +31,13 @@ class WebFonts(unittest.TestCase):
             lang = re.search(r'<html lang="([^"]+)"', text).group(1)
             with self.subTest(page=path.name):
                 if path.name in BANGLA_PAGES:
-                    # Dedicated renderer: validate its per-language families, not
-                    # the shared stack/subset generator it does not use.
+                    # Dedicated renderer compatibility, not typography certification:
+                    # landings link per-language families; all nine guides link
+                    # Bengali product-name families and use the install CSS stack.
+                    family_lang = "bn" if path.name.startswith("install-") else lang
                     families = {"bn": ("Noto+Sans+Bengali", "Noto+Serif+Bengali"),
                                 "en": ("Inter", "Source+Serif+4"),
-                                "ja": ("Noto+Sans+JP", "Noto+Serif+JP")}[lang]
+                                "ja": ("Noto+Sans+JP", "Noto+Serif+JP")}[family_lang]
                     for family in families:
                         self.assertIn("family=" + family + ":wght@400..900", text)
                     self.assertIn("assets/bn-site-overrides.css", text)
