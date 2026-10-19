@@ -1,7 +1,7 @@
 # KUMIHAN Universal MCP — phase 1 runtime
 
 Status: **implementation candidate, not deployed**. GitHub source of truth: landco-llc/kumihan.
-Specification: [modular architecture proposal](../docs/universal-mcp/ARCHITECTURE.md) (on separate draft PR until merged).
+Specification: [modular architecture proposal](https://github.com/landco-llc/kumihan/pull/87) (separate draft PR until merged).
 
 ## Purpose and supported behaviors
 
