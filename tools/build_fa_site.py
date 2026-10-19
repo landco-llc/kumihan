@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='/kumihan/'
 # KUMIHAN index (language gateway) for each page language.
-GATEWAY={'fa':'index.html','en':'index.html','ja':'top-ja.html'}
+GATEWAY={'fa':'top-fa.html','en':'index.html','ja':'top-ja.html'}
 PUBLIC='https://landco-llc.github.io'+BASE
 REPO='https://github.com/landco-llc/kumihan'
 RELEASE=REPO+'/releases/download/kumihan-fa-v0.1.0/'
@@ -34,9 +34,9 @@ def files(host):
     if host=='claude':return ['kumihan-fa-Claude-Code-plugin-v0.1.0.zip']+[r+'-Claude-skill-v0.1.0.zip' for r in ROLES]
     return ['kumihan-fa-Gemini-CLI-extension-v0.1.0.zip']+[r+'-Gemini-Apps-skill-v0.1.0.zip' for r in ROLES]
 def published():
-    return (ROOT/'_data/ar-release-published').exists()
-# Landing copy follows the KUMIHAN index (kumihan.html) with Arabic-specific
-# content kept (direction, mixed scripts, diacritics, Tatweel); see
+    return (ROOT/'_data/fa-release-published').exists()
+# Landing copy follows the KUMIHAN index (kumihan.html) with Persian-specific
+# content kept (RTL direction, mixed scripts, ZWNJ, Persian Kaf and Yeh); see
 # assets/fa-site-copy.json. Install-guide steps above stay product-specific.
 import json
 from importlib.util import module_from_spec, spec_from_file_location

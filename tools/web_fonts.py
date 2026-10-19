@@ -70,10 +70,10 @@ LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "j
          "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
-         "अक्षर-संगति বাংলা অক্ষরসজ্জা あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
+         "अक्षर-संगति বাংলা অক্ষরসজ্জা فارسی تراز ភាសាខ្មែរ លំនឹង ក あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
-          "Noto Sans Devanagari")
+          "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn")
 
 
 def script(lang):

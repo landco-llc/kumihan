@@ -249,16 +249,18 @@ html:is([lang="es"], [lang="fr"], [lang="pt"], [lang="vi"], [lang="hi"], [lang="
 html:is([lang="vi"], [lang="hi"], [lang="bn"], [lang="de"], [lang="pl"], [lang="id"], [lang="it"], [lang="ru"], [lang="sw"], [lang="zu"]) :is(.intro-grid, .section-heading) > * { min-width: 0; max-width: 100%; }
 /* Arabic (kumihan-ar): Naskh for reading, no letter-spacing on Arabic text,
    generous line height; the decorative specimen strip keeps its own direction. */
-html[lang="ar"] body { line-break: auto; line-height: 1.95; }
-html[lang="ar"] :is(h1, h2, h3, p, .principle-text, .principle-small, .primary-action, .minor-action, .more-languages, .lang-action, .lang-menu summary, .lang-menu li a) { letter-spacing: 0; }
+html:is([lang="ar"], [lang="fa"]) body { line-break: auto; line-height: 1.95; }
+html:is([lang="ar"], [lang="fa"]) :is(h1, h2, h3, p, .principle-text, .principle-small, .primary-action, .minor-action, .more-languages, .lang-action, .lang-menu summary, .lang-menu li a) { letter-spacing: 0; }
 html[lang="ar"] h1 { font-family: var(--serif); font-weight: 700; line-height: 1.6; }
 html[lang="ar"] :is(.section-heading h2, .about-section h2) { font-family: var(--serif); font-weight: 700; line-height: 1.6; }
-html[lang="ar"] .header-side, html[lang="ar"] .state { text-align: end; }
-html[lang="ar"] .type-art::after { right: auto; left: -25px; }
-html[lang="ar"] .glyph-marquee { direction: ltr; }
+html:is([lang="ar"], [lang="fa"]) :is(.header-side, .state) { text-align: end; }
+html:is([lang="ar"], [lang="fa"]) .type-art::after { right: auto; left: -25px; }
+html:is([lang="ar"], [lang="fa"]) .glyph-marquee { direction: ltr; }
 /* A Latin word inside an Arabic heading (KUMIHAN) may wrap only when it cannot fit at large text sizes. */
-html[lang="ar"] :is(h1, h2, h3) { overflow-wrap: break-word; }
-html[lang="ar"] .section-heading > * { min-width: 0; max-width: 100%; }
+html[lang="fa"] h1 { font-weight: 800; line-height: 1.55; }
+html[lang="fa"] :is(.section-heading h2, .about-section h2) { font-weight: 800; line-height: 1.6; }
+html:is([lang="ar"], [lang="fa"]) :is(h1, h2, h3) { overflow-wrap: break-word; }
+html:is([lang="ar"], [lang="fa"]) .section-heading > * { min-width: 0; max-width: 100%; }
 /* Names of languages, wherever they appear, in their own script's fonts. */
 :is(.lang-menu, .lang-title, .glyph) [lang="ja"], .lang-title[lang="ja"] { font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, "Noto Sans JP", sans-serif; }
 :is(.lang-menu, .lang-title) [lang="zh-Hant-TW"] { font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif; }

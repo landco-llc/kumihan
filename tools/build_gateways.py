@@ -79,7 +79,7 @@ PRODUCTS = {
 }
 
 # Right-to-left gateway languages.
-RTL = {"ar"}
+RTL = {"ar", "fa"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
@@ -806,9 +806,59 @@ for _reader, _cards in CARDS.items():
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
 
-# Persian edition (KUMIHAN｜تراز): its card and name for every reader language.
+# Persian edition (KUMIHAN｜تراز): the Persian top, its card and name for every reader language.
 PRODUCTS["fa"] = dict(name="فارسی", lang="fa", brand="KUMIHAN｜تراز", glyph="ژ", label="FA · PERSIAN", version="v0.1.0",
                       pages={"fa": "kumihan-fa.html", "en": "kumihan-fa.en.html", "ja": "kumihan-fa.ja.html"})
+GATEWAYS["fa"] = ("top-fa.html", "fa", "FA", "فارسی")
+UI["fa"] = dict(heading="نسخه‌های زبانی KUMIHAN", more="نمایش {n} مورد بعدی", menu="زبان")
+PICK["fa"] = "انتخاب زبان"
+EDITION_NAMES["fa"] = {
+    'ar': 'عربی',
+    'bn': 'بنگالی',
+    'de': 'آلمانی',
+    'es': 'اسپانیایی',
+    'fr': 'فرانسوی',
+    'hi': 'هندی',
+    'id': 'اندونزیایی',
+    'it': 'ایتالیایی',
+    'ja': 'ژاپنی',
+    'ko': 'کره\u200cای',
+    'pl': 'لهستانی',
+    'pt': 'پرتغالی',
+    'ru': 'روسی',
+    'sw': 'سواحیلی',
+    'th': 'تایلندی',
+    'vi': 'ویتنامی',
+    'zh-hans': 'چینی ساده\u200cشده',
+    'zh-hant': 'چینی سنتی',
+    'zu': 'زولویی',
+    'km': 'خمری',
+    'fa': 'فارسی',
+}
+_FA_DESC = {
+    'ar': 'حروف\u200cچینی عربی که نوشتار راست\u200cبه\u200cچپ و آمیختگی خط\u200cها را مدیریت می\u200cکند، بی\u200cآنکه متن اصلی تغییر کند.',
+    'bn': 'حروف\u200cچینی و طراحی بنگالی که نشانه\u200cهای مصوت، حروف ترکیبی و متن اصلی را حفظ می\u200cکند و bn-BD و bn-IN را از هم جدا می\u200cداند.',
+    'de': 'حروف\u200cچینی آلمانی که واژه\u200cهای مرکب بلند، گیومه\u200cها و قواعد DE/AT/CH را رعایت می\u200cکند و متن اصلی را نگه می\u200cدارد.',
+    'es': 'حروف\u200cچینی اسپانیایی که کاربرد منطقه\u200cای را محترم می\u200cشمارد، متن اصلی را حفظ می\u200cکند و شواهد تأییدشده را از داوری ویرایشی جدا می\u200cکند.',
+    'fr': 'حروف\u200cچینی فرانسوی که فاصله\u200cهای نشکن، گیومه\u200cها و سبک\u200cهای ویرایشی منطقه\u200cای یا سازمانی را از هم تمیز می\u200cدهد.',
+    'hi': 'حروف\u200cچینی و طراحی هندی که متن اصلی، هم\u200cخوان\u200cهای ترکیبی و نشانه\u200cهای مصوت (ماترا) را حفظ می\u200cکند.',
+    'id': 'حروف\u200cچینی اندونزیایی که حروف اضافه، وندها، واژه\u200cهای تکراری، نشانه\u200cگذاری و مبالغ روپیه را بر پایهٔ بافت در نظر می\u200cگیرد و متن اصلی را حفظ می\u200cکند.',
+    'it': 'حروف\u200cچینی ایتالیایی که به نشانه\u200cهای تکیه، نقل\u200cقول\u200cها و تفاوت\u200cهای منطقه\u200cای توجه دارد و متن اصلی را حفظ می\u200cکند.',
+    'ja': 'از قواعد ژاپنی شکستن سطر (کینسوکو) و سطربندی طبیعی تا ساختار اطلاعات، فضای خالی و جریان خواندن.',
+    'ko': 'شکستن سطر میان اوجول\u200cها (واحدهای فاصله\u200cگذاری کره\u200cای)، ریتم متن و ساختار روشن اطلاعات.',
+    'pl': 'حروف\u200cچینی لهستانی با نشانه\u200cهای دقیق، شکستن سطر معنادار و طراحی\u200cای که متن اصلی را حفظ می\u200cکند.',
+    'pt': 'حروف\u200cچینی پرتغالی و طراحی معنامحور که قراردادهای برزیلی و اروپایی و نیت نویسنده را رعایت می\u200cکند.',
+    'ru': 'حروف\u200cچینی روسی که ё و й، گیومه\u200cها، خط تیره\u200cها و شکستن سطرها را بر پایهٔ بافت مدیریت می\u200cکند و متن اصلی را حفظ می\u200cکند.',
+    'sw': 'حروف\u200cچینی سواحیلی که ng’ و آپوستروف\u200cها را حفظ می\u200cکند، واژه\u200cهای بلند را رعایت می\u200cکند و قالب\u200cهای sw-TZ، sw-KE یا sw-CD را آشکارا برمی\u200cگزیند.',
+    'th': 'رعایت مرز واژه\u200cها و نویسه\u200cهای ترکیبی تایلندی، برای طراحی تایلندی\u200cای که روان خوانده شود.',
+    'vi': 'حروف\u200cچینی ویتنامی که نشانه\u200cهای آهنگ، شکستن سطر معنادار و محتوای اصلی را رعایت می\u200cکند.',
+    'zh-hans': 'نشانه\u200cگذاری، شکستن سطر و متن آمیختهٔ چینی و لاتین برای چین اصلی، بی\u200cآنکه متن اصلی بازنویسی شود.',
+    'zh-hant': 'قراردادهای متفاوت نشانه\u200cگذاری و حروف\u200cچینی تایوان و هنگ\u200cکنگ را در نظر می\u200cگیرد.',
+    'zu': 'حروف\u200cچینی زولو که واژه\u200cهای پیوسته و حروف بزرگ میان واژه (مانند isiZulu) را حفظ می\u200cکند و متن اصلی را نگه می\u200cدارد.',
+    'km': 'حروف\u200cچینی خمری که هم\u200cخوان\u200cهای زیرنویس، متن اصلی و شکستن سطر معنادار را حفظ می\u200cکند.',
+    'fa': 'حروف\u200cچینی فارسی که جهت راست\u200cبه\u200cچپ را روشن نگه می\u200cدارد، نیم\u200cفاصله (ZWNJ) را حفظ می\u200cکند و نشانی\u200cها و شمارهٔ نسخه\u200cهای لاتین را جدا می\u200cکند.',
+}
+CARDS["fa"] = {code: (text, "دیدن نسخهٔ " + EDITION_NAMES["fa"][code]) for code, text in _FA_DESC.items()}
 _FA_EDITION_NAMES = {
     'ar': 'الفارسية',
     'bn': 'ফার্সি',
@@ -833,7 +883,8 @@ _FA_EDITION_NAMES = {
     'km': 'ភឺសៀន',
 }
 for _reader, _names in EDITION_NAMES.items():
-    _names["fa"] = _FA_EDITION_NAMES[_reader]
+    if _reader != "fa":
+        _names["fa"] = _FA_EDITION_NAMES[_reader]
 FA_CARD_COPY = {
     'ja': ('右から左の方向とZWNJ（ゼロ幅非接合子）を守り、ラテン文字のURLや版番号を正しく分離するペルシア語の文字組みとデザイン。', 'ペルシア語版を見る'),
     'en': ('Persian typography that keeps right-to-left direction clear, preserves ZWNJ and isolates Latin URLs and version labels.', 'View the Persian edition'),
@@ -858,8 +909,11 @@ FA_CARD_COPY = {
     'km': ('ការរៀបចំអក្សរពែរ្ស ដែលរក្សាទិសដៅពីស្ដាំទៅឆ្វេង និង ZWNJ ហើយញែក URL និងលេខកំណែឡាតាំងឲ្យត្រឹមត្រូវ។', 'មើលកំណែភឺសៀន'),
 }
 for _reader, _cards in CARDS.items():
-    _cards["fa"] = FA_CARD_COPY[_reader]
+    if _reader != "fa":
+        _cards["fa"] = FA_CARD_COPY[_reader]
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
+
+
 
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
@@ -957,6 +1011,7 @@ def page(key, c):
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
+
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>

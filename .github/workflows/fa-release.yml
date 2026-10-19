@@ -21,6 +21,7 @@ jobs:
           python-version: '3.12'
       - name: Validate packages, localized site and tests
         run: |
+          python tools/build_fa_site.py
           python -m unittest discover -s tests/fa -v
           python tools/build_fa.py --check
           python tools/build_fa_site.py --check
