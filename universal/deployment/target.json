@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "php85_private_read_verified_staging_preparation",
+  "status": "private_preflight_clean_awaiting_staging_upload",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -32,13 +32,16 @@
     "web_php_can_read_private_runtime_verified": true,
     "public_ssh_folder_verified": true,
     "ftp_parent_ssh_writable_verified": true,
-    "private_candidate_ssh_write_verified": true
+    "private_candidate_ssh_write_verified": true,
+    "private_candidate_exists_verified": true,
+    "public_bootstrap_absent_verified": true,
+    "ephemeral_probe_files_absent_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner's remote one-shot Web PHP preflight returned PHP_VERSION=8.5.11 PHP_SAPI=litespeed PRIVATE_PHP_READ=PASS TARGET_WEB_PHP85=PASS PRIVATE_WEB_PHP_PRECHECK_PASS. No real MCP upload. Full isolation and clean canary removal require independent checks.",
-  "deployment_blocker": "PHP 8.5.11 LiteSpeed can read the canary outside web and private candidate was SSH-writable. Next: verify no unintended HTTP/vhost exposure, package dependency/lock/audit and artifact integrity, then credential-safe actual host staging upload and real MCP HTTPS E2E.",
+  "notes": "Latest SSH operator results: PRIVATE_DIR_OK PUBLIC_INDEX_EMPTY HTACCESS_EMPTY no residual probe/marker matches. PHP8.5.11 and private file read verified. Staging tarball not uploaded; MCP not deployed.",
+  "deployment_blocker": "Safe public bootstrap locations free, private candidate exists and probe files absent. Stage reviewed private tarball only, after inventory and ensuring it is not exposed by any other vhost. Do not add public files until private runtime verified.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -88,7 +91,9 @@
       "parent_writable_verified": true,
       "outside_ftp_root_verified": true,
       "created_by_preflight": true,
-      "contents_verified_post_cleanup": false
+      "contents_verified_post_cleanup": false,
+      "exists_verified": true,
+      "observed_probes_absent": true
     }
   },
   "ssh_validation": {
@@ -110,5 +115,14 @@
     "probe_files_cleanup": "Expected from EXIT trap; not separately verified on host",
     "verifies_all_http_roots_private": false,
     "mcp_not_deployed": true
+  },
+  "pre_deployment_inventory": {
+    "source": "Owner's authenticated Lolipop SSH checks 2026-10-19",
+    "private_candidate_exists": "PRIVATE_DIR_OK",
+    "public_index_file": "PUBLIC_INDEX_EMPTY",
+    "public_htaccess_file": "HTACCESS_EMPTY",
+    "public_probe_files": "none matched kmhn_private_probe_*.php at kmhn maxdepth1",
+    "private_marker_files": "none matched .kmhn-read-* in private candidate maxdepth1",
+    "scope_limit": "Only specified names/globs were checked; other files and alternate vhost exposure were not inventoried; no server artifact installed."
   }
 }
