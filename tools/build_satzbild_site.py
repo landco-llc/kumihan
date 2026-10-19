@@ -17,7 +17,7 @@ SOURCE = REPO + "/tree/main/plugins/kumihan-satzbild"
 VERSION = "0.1.0"
 RELEASE = REPO + f"/releases/tag/kumihan-de-v{VERSION}"
 # The release files are also committed with the plugin; guides link to those copies.
-DOWNLOAD = "../plugins/kumihan-satzbild/downloads/"
+DOWNLOAD = REPO + f"/releases/download/kumihan-de-v{VERSION}/"
 BRAND = 'KUMIHAN<span class="brand-sub">｜Satzbild</span>'
 LANGS = {"de": "", "en": ".en", "ja": ".ja"}
 LABELS = {"de": "DE", "en": "EN", "ja": "日本語"}
@@ -128,7 +128,7 @@ def landing(lang, c):
     return SITE.landing(dict(
         lang=lang, head=head, brand=f"<span>{BRAND}</span>", home_label="KUMIHAN｜Satzbild",
         languages=[(k, LABELS[k], landing_path(k), k == lang) for k in LANGS],
-        logo=LOGO, repo=REPO, release=SOURCE + "/downloads", license=REPO + "/blob/main/LICENSE",
+        logo=LOGO, repo=REPO, release=RELEASE, license=REPO + "/blob/main/LICENSE",
         skills=[(name, f"{SOURCE}/skills/{name}", SKILL_SYMBOLS[i]) for i, name in enumerate(SKILLS)],
         hosts=[(name, guide_path(host, lang)) for host, name in HOSTS.items()],
         gateway=(GATEWAY[lang], c["gateway_label"]), family=c["family"]), c)
