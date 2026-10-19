@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — Lolipop / kmhn deployment runbook
 
-Status: **DNS+TLS VERIFIED, PUBLIC FOLDER CONFIRMED, MCP NOT DEPLOYED** (2026-10-19).
+Status: **DNS+TLS VERIFIED; OWNER PROVIDED FTP ROOT; PRIVATE PHP PATH PENDING VALIDATION; MCP NOT DEPLOYED** (2026-10-19).
 Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/101
 
 ## Locked parameters
@@ -12,6 +12,8 @@ Owner: L&Co. LLC. Implementation PR: https://github.com/landco-llc/kumihan/pull/
 | Hostname | mcp-kmhn.landco.co.jp |
 | MCP URL | https://mcp-kmhn.landco.co.jp/mcp |
 | Subdomain 公開（アップロード）フォルダ | **kmhn** (Owner confirmed 2026-10-19) |
+| FTP root full path | **Owner supplied; basename web confirmed**. Intentionally omitted from public source to avoid disclosing hosting account identifiers |
+| Effective public path | FTP root + /kmhn (equivalently account-relative web/kmhn) |
 | DNS/TLS | GitHub Actions TLS 1.3, hostname/certificate PASS; certificate expires 2027-01-17 |
 | PHP MCP | 21-module CI-tested preview; NOT DEPLOYED |
 
@@ -26,7 +28,7 @@ Lolipop FTP root may itself be served from the default Lolipop-hosted domain, ev
 
 The original universal/server/public/index.php expects src/, vendor/ and runtime/ in its server parent directory. Uploading that file directly into FTP-root/kmhn and keeping src/vendor/runtime in FTP-root is UNSAFE. Use a small public bootstrap that includes the original entrypoint from a verified non-Web absolute path.
 
-Recommended ROLES (the actual SSH account paths are NOT yet verified):
+Recommended ROLES (the Owner supplied the absolute path for the FTP/web root; SSH realpath and private runtime access remain unverified):
 
     <SSH account home>/
       <FTP root>/                    # possibly served by the default account domain
@@ -52,9 +54,28 @@ The private path must be accessible to PHP on this specific shared hosting accou
 1. In Lolipop Subdomain Settings, confirm the existing host maps to **kmhn**. This is already Owner-confirmed; do not recreate it.
 2. Under PHP Settings, confirm this exact hostname runs LiteSpeed PHP 8.5.
 3. Under SSH, enable it if necessary. Host ssh.lolipop.jp; port 2222; account and password must stay private.
-4. From SSH, inspect pwd and real paths for the FTP root and the account's home directory. The Lolipop account info also has a フルパス field. Be sure FTP root is identified, not just the kmhn folder.
+4. The Owner has already supplied the Lolipop アカウント情報 > フルパス, which ends in /web. Use that value locally with SSH; do not request or record it again in the public repository. Run read-only validation of the actual FTP root and kmhn directory before proposing a private sibling. See verification command below.
 5. Confirm that the proposed private server root can be created and read by Web PHP OUTSIDE FTP root and any other website document roots, and that sessions can be written without permissions 777.
 6. Inspect kmhn before any upload and back up existing files. Leave WAF enabled unless an observed request issue requires targeted investigation.
+
+### Read-only SSH check: FTP root and private parent
+
+SSH access is supported on Lolipop High-Speed, but the username/password are obtained only from the private control panel. Do NOT paste secrets into ChatGPT or GitHub. Before writing files or generating a bootstrap, on an authorized SSH session:
+
+    # Set FTP_ROOT in the terminal to the exact full path from Lolipop Account Information.
+    cd "$FTP_ROOT"
+    pwd -P
+    test -d "$FTP_ROOT/kmhn" && echo "KMHN_PUBLIC_DIR_EXISTS" || echo "KMHN_DIR_NOT_FOUND"
+    test -w "$(dirname "$FTP_ROOT")" && echo "PARENT_WRITABLE_BY_SSH" || echo "PARENT_NOT_WRITABLE"
+
+Optional: on an authorized machine with a KUMIHAN repository checkout, run the non-mutating inspector:
+
+    python3 universal/tools/check_lolipop_layout.py --ftp-root "$FTP_ROOT"
+
+The script does **not** print the full FTP path, create directories, or perform network operations. It reports whether the candidate ../kmhn-mcp-private/server would be outside FTP root and whether the account parent is writable by the SSH user.
+
+**These tests do not prove that web PHP can include files outside web or that other hostnames cannot serve that path.** Those remain separate release gates. If SSH only permits writes under web, do NOT fall back to FTP root; stop and assess alternate deployment/security design.
+
 
 ## 2. Build safe two-file public loader OFFLINE
 
@@ -108,7 +129,9 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [x] Owner reports subdomain and SSL set
 - [x] External DNS/TLS certificate verification PASS
 - [x] Public upload folder confirmed: kmhn
-- [ ] Exact SSH/FTP root and PHP-readable non-Web private root verified
+- [x] Full FTP root path supplied by Owner (kept out of public GitHub)
+- [ ] SSH realpath confirms Owner-supplied web root and existing kmhn directory
+- [ ] PHP-readable non-Web private root verified
 - [ ] Effective PHP 8.5 on this domain verified
 - [ ] Composer lock and dependency audit finalized
 - [ ] Private artifact installed without exposing vendor/src/runtime
@@ -119,4 +142,4 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 
 Per-user call quotas remain deferred until identity/rate policy is approved. Do not confuse an AI platform's shared IP with an individual user.
 
-Machine-readable deployment state: universal/deployment/target.json.
+Machine-readable deployment state: universal/deployment/target.json. Account-specific absolute filesystem paths must remain only in operator-local variables or private deployment secrets, not the public GitHub repository.
