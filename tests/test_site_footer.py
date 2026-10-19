@@ -18,6 +18,8 @@ import site_footer  # noqa: E402
 def static_pages():
     pages = [*ROOT.glob("*.html"), *(ROOT / "docs").glob("*.html")]
     # Jekyll sources render the footer from _data; redirect stubs (old addresses) have none.
+    # privacy.html is a deliberately self-contained document with its own footer.
+    pages = [p for p in pages if p.name != "privacy.html"]
     return [p for p in pages if not p.read_text(encoding="utf-8").startswith("---")
             and 'http-equiv="refresh"' not in p.read_text(encoding="utf-8")]
 
