@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "notes": "Standalone modules currently in GitHub main. Add a language here (data, not core code) then regenerate the registry; explicit locale variants may be supplied per module.",
+  "modules": {
+    "ja": {
+      "source": "skills/kumihan",
+      "code": "ja",
+      "label": "KUMIHAN"
+    },
+    "ar": {
+      "source": "plugins/kumihan-ar",
+      "code": "ar"
+    },
+    "bn": {
+      "source": "plugins/kumihan-bn",
+      "code": "bn"
+    },
+    "de": {
+      "source": "plugins/kumihan-satzbild",
+      "code": "de"
+    },
+    "es": {
+      "source": "plugins/kumihan-grafia",
+      "code": "es"
+    },
+    "fa": {
+      "source": "plugins/kumihan-fa",
+      "code": "fa"
+    },
+    "fr": {
+      "source": "plugins/kumihan-accord",
+      "code": "fr"
+    },
+    "hi": {
+      "source": "plugins/kumihan-hi",
+      "code": "hi"
+    },
+    "id": {
+      "source": "plugins/kumihan-laras",
+      "code": "id"
+    },
+    "it": {
+      "source": "plugins/kumihan-equilibrio",
+      "code": "it"
+    },
+    "km": {
+      "source": "plugins/kumihan-lumnung",
+      "code": "km"
+    },
+    "ko": {
+      "source": "plugins/kumihan-geuljjaim",
+      "code": "ko"
+    },
+    "pl": {
+      "source": "plugins/kumihan-szyk",
+      "code": "pl"
+    },
+    "pt": {
+      "source": "plugins/kumihan-compasso",
+      "code": "pt"
+    },
+    "ru": {
+      "source": "plugins/kumihan-lad",
+      "code": "ru"
+    },
+    "sw": {
+      "source": "plugins/kumihan-mizani",
+      "code": "sw"
+    },
+    "th": {
+      "source": "plugins/kumihan-th",
+      "code": "th"
+    },
+    "vi": {
+      "source": "plugins/kumihan-nhip-chu",
+      "code": "vi"
+    },
+    "zh-Hans": {
+      "source": "plugins/kumihan-zilu",
+      "code": "zh-Hans"
+    },
+    "zh-Hant": {
+      "source": "plugins/kumihan-ziheng",
+      "code": "zh-Hant"
+    },
+    "zu": {
+      "source": "plugins/kumihan-hlela",
+      "code": "zu"
+    }
+  }
+}
