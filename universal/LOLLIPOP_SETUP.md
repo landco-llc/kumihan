@@ -244,6 +244,14 @@ Only the whole-Web `find` symlink traversal failed (exit code nonzero; its stder
 
 Use the read-only [tools/diagnose_public_symlink_scan.sh](tools/diagnose_public_symlink_scan.sh) to distinguish the kmhn-specific scope from the unrelated site directories and classify full-tree traversal errors **without listing filenames or account paths**. See [deployment/STAGE_PUBLIC_20261019.md](deployment/STAGE_PUBLIC_20261019.md). Do not change other sites, permissions, or symlinks based solely on an incomplete scan. Owner review of the Lolipop domain/subdomain upload mappings is still needed before public installation.
 
+### Scoped symlink result — KUMIHAN is clear, other web branches permission-limited
+
+Owner's read-only SSH diagnostic returned `KMHN_SYMLINK_SCOPE_CLEAR`, `WEB_WIDE_SCAN_PERMISSION_LIMIT`, `WEB_WIDE_SYMLINK_SCAN_INCOMPLETE`, `NO_FILES_CHANGED`.
+
+This means KUMIHAN's own upload folder has no detected symbolic links, but other website folders prevented the unprivileged full-tree scan. **No exposed path was established and no sitewide clean result can be claimed.** Do not change unrelated websites' permissions, and do not repeat identical broad scans.
+
+The remaining Owner step is to inspect the Lolipop **独自ドメイン設定** and **サブドメイン設定** upload folders for all active domains, verifying none points to the non-Web private MCP runtime or an intentional alias to it. Record other inaccessible subtrees as `NOT_CHECKED`; if any entry targets the private directory, stop. A positive Owner mapping review plus the scoped `kmhn` result may support a bounded approval to install only the two-file bootstrap for HTTPS MCP testing, **not** an assertion of exhaustive isolation. See [STAGE_PUBLIC_20261019.md](deployment/STAGE_PUBLIC_20261019.md).
+
 ## 4. Public verification commands
 
 TLS was already verified by GitHub Actions. Optional recheck:
