@@ -95,3 +95,15 @@ Do not overwrite prior entries. Publish only observed outcomes; do not infer ind
 - Main already merged #94/#95/#96/#97/#98/#99; PR #100 open Draft (not part of observed main).
 - Production/branch output HTTP and Search Console changes: **NOT EXECUTED/NOT VERIFIED**. Web fetch could not verify live Pages in this inspection. Do not submit old 231-URL sitemap.
 - Next required work: [W09–W15 reconciliation](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md), final SHA hosted CI, independent review, owner merge gate.
+
+## 2026-10-19 JST — W09–W15 second review / NOT EXECUTED
+
+- Reviewer: GitHub Fresh Read, code-path/static review; no code integration or local execution.
+- Main HEAD: `73d2b01d2f604608360beabe364f59af72b8b66c` including merged PR #100.
+- SEO PR #93: Draft/open, pre-review HEAD `861bd3346ecd218cf45bf0b2c4cbbbfab6b3823f`, mergeable=false. Later documentation commits are NOT implementation tests.
+- Current HTML discovery: 22 top gateways, 63 LP, 186 docs, 1 legacy noindex alias = 272 HTML candidates; indexable candidate ~271, not audited.
+- Confirmed critical risks: `top-en.html` lacks normal description but old `seo_metadata.enrich_html` requires it; #99 `site_share.py` OGP/Twitter copy and 1200×630 previews conflict with old SEO metadata's square image/default copy; root/index canonical/OGP path mismatch; new sw/zu/km/fa pages absent from old sitemap; #100 v0.1.8-preview candidate packages protected.
+- PR #101 (Universal MCP) and #102 (QA docs) remain open Draft, not merged.
+- Actions performed: updated W09–W15 instruction, [review file](REVIEW_REFRESH_20261019_MAIN_73D2B01.md), runbook/ADR/PR hold notes. Actual code/HTML/sitemap regeneration, Jekyll rendered validation, new Hosted CI, independent post-reconciliation review: **NOT EXECUTED**.
+- Latest web-hosted GitHub Pages HTTP/Sitemap validation: **NOT VERIFIED**; live fetch unavailable through current web tool.
+- Owner gate: merged publication and Search Console submission remain prohibited before integration is validated and explicitly approved.
