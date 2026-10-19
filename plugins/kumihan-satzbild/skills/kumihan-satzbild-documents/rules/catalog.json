@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "DE-CTX-001",
+    "summary": "言語地域を明示する。未設定原稿を自動でDE表記へ変えない [N01][N27]",
+    "source_refs": [
+      "N01",
+      "N27"
+    ],
+    "source_ref": [
+      "N01",
+      "N27"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 言語地域を明示する。未設定原稿を自動でDE表記へ変えない [N01][N27]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-002",
+    "summary": "媒体とハウススタイルを地域とは別に解決する [N20][N22]",
+    "source_refs": [
+      "N20",
+      "N22"
+    ],
+    "source_ref": [
+      "N20",
+      "N22"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 媒体とハウススタイルを地域とは別に解決する [N20][N22]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-003",
+    "summary": "通貨 タイムゾーン 値型を独立設定にする [N30][W05]",
+    "source_refs": [
+      "N30",
+      "W05"
+    ],
+    "source_ref": [
+      "N30",
+      "W05"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 通貨 タイムゾーン 値型を独立設定にする [N30][W05]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-004",
+    "summary": "名前 ブランド語彙 価格 原稿の文字列を保護する [P02]",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 名前 ブランド語彙 価格 原稿の文字列を保護する [P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-001",
+    "summary": "ウムラウト ß ẞ 約物を最終書体で確認する [N05][T01]",
+    "source_refs": [
+      "N05",
+      "T01"
+    ],
+    "source_ref": [
+      "N05",
+      "T01"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ウムラウト ß ẞ 約物を最終書体で確認する [N05][T01]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-002",
+    "summary": "ẞとSS双方の許容を守り 一律の逆変換をしない [N04]",
+    "source_refs": [
+      "N04"
+    ],
+    "source_ref": [
+      "N04"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ẞとSS双方の許容を守り 一律の逆変換をしない [N04]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-003",
+    "summary": "引用符の開閉 入れ子 方向と採用セットを確認する [N17][N18][N38]",
+    "source_refs": [
+      "N17",
+      "N18",
+      "N38"
+    ],
+    "source_ref": [
+      "N17",
+      "N18",
+      "N38"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 引用符の開閉 入れ子 方向と採用セットを確認する [N17][N18][N38]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-004",
+    "summary": "スラッシュ アポストロフィを文脈で分類する [N16][N19]",
+    "source_refs": [
+      "N16",
+      "N19"
+    ],
+    "source_ref": [
+      "N16",
+      "N19"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. スラッシュ アポストロフィを文脈で分類する [N16][N19]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-005",
+    "summary": "ダッシュ ハイフン マイナス 省略点を区別する [N14][N15]",
+    "source_refs": [
+      "N14",
+      "N15"
+    ],
+    "source_ref": [
+      "N14",
+      "N15"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ダッシュ ハイフン マイナス 省略点を区別する [N14][N15]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-006",
+    "summary": "複合語を空白で壊さず必須 任意ハイフンを区別する [N09]",
+    "source_refs": [
+      "N09"
+    ],
+    "source_ref": [
+      "N09"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 複合語を空白で壊さず必須 任意ハイフンを区別する [N09]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-007",
+    "summary": "分綴は言語と語構造に応じて実表示を確認する [N10][N11][N12][N13]",
+    "source_refs": [
+      "N10",
+      "N11",
+      "N12",
+      "N13"
+    ],
+    "source_ref": [
+      "N10",
+      "N11",
+      "N12",
+      "N13"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 分綴は言語と語構造に応じて実表示を確認する [N10][N11][N12][N13]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-008",
+    "summary": "soft hyphenや非改行の範囲を保護語と用途に限定する [T03][P02]",
+    "source_refs": [
+      "T03",
+      "P02"
+    ],
+    "source_ref": [
+      "T03",
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. soft hyphenや非改行の範囲を保護語と用途に限定する [T03][P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-009",
+    "summary": "字間 行高を本文と見出しで分け 欠けを検査する [P01]",
+    "source_refs": [
+      "P01"
+    ],
+    "source_ref": [
+      "P01"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 字間 行高を本文と見出しで分け 欠けを検査する [P01]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-010",
+    "summary": "合字の形態上の境界は専門組版の確認項目とする [N37][W06]",
+    "source_refs": [
+      "N37",
+      "W06"
+    ],
+    "source_ref": [
+      "N37",
+      "W06"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "A",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 合字の形態上の境界は専門組版の確認項目とする [N37][W06]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-011",
+    "summary": "ラグ組 両端揃え 分綴 語間を一緒に判断する [T03]",
+    "source_refs": [
+      "T03"
+    ],
+    "source_ref": [
+      "T03"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ラグ組 両端揃え 分綴 語間を一緒に判断する [T03]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-012",
+    "summary": "見出しの修飾関係と意味のまとまりを保つ [N07][P01]",
+    "source_refs": [
+      "N07",
+      "P01"
+    ],
+    "source_ref": [
+      "N07",
+      "P01"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 見出しの修飾関係と意味のまとまりを保つ [N07][P01]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-001",
+    "summary": "採用するIntlとCLDRの版及び出力を記録する [N24][N25][W05]",
+    "source_refs": [
+      "N24",
+      "N25",
+      "W05"
+    ],
+    "source_ref": [
+      "N24",
+      "N25",
+      "W05"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 採用するIntlとCLDRの版及び出力を記録する [N24][N25][W05]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-002",
+    "summary": "値と単位 短い金額ペアの分離を確認する [N23]",
+    "source_refs": [
+      "N23"
+    ],
+    "source_ref": [
+      "N23"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 値と単位 短い金額ペアの分離を確認する [N23]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-003",
+    "summary": "日付 時刻 地域月名とタイムゾーンを分ける [N22][N26]",
+    "source_refs": [
+      "N22",
+      "N26"
+    ],
+    "source_ref": [
+      "N22",
+      "N26"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 日付 時刻 地域月名とタイムゾーンを分ける [N22][N26]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-004",
+    "summary": "数値の入力解析と表示変換を分け識別子を保持する [W05][P02]",
+    "source_refs": [
+      "W05",
+      "P02"
+    ],
+    "source_ref": [
+      "W05",
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 数値の入力解析と表示変換を分け識別子を保持する [W05][P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-001",
+    "summary": "du Sie 大文字化 話者の一貫性を確認する [N08][S01][S02][S03]",
+    "source_refs": [
+      "N08",
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "source_ref": [
+      "N08",
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. du Sie 大文字化 話者の一貫性を確認する [N08][S01][S02][S03]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-002",
+    "summary": "名詞と見出しの大文字を守り英語式Title Caseを強制しない [N06][N07]",
+    "source_refs": [
+      "N06",
+      "N07"
+    ],
+    "source_ref": [
+      "N06",
+      "N07"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 名詞と見出しの大文字を守り英語式Title Caseを強制しない [N06][N07]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-003",
+    "summary": "CTAとエラーを実際の処理及び確定状態に合わせる [S01][S10][S14]",
+    "source_refs": [
+      "S01",
+      "S10",
+      "S14"
+    ],
+    "source_ref": [
+      "S01",
+      "S10",
+      "S14"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. CTAとエラーを実際の処理及び確定状態に合わせる [S01][S10][S14]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-004",
+    "summary": "具体性のない主張や無根拠の効果を追加しない [S12][P02]",
+    "source_refs": [
+      "S12",
+      "P02"
+    ],
+    "source_ref": [
+      "S12",
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 具体性のない主張や無根拠の効果を追加しない [S12][P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-005",
+    "summary": "ジェンダー表記の方針を保ち意味を変える自動変換をしない [N31][S16][S17]",
+    "source_refs": [
+      "N31",
+      "S16",
+      "S17"
+    ],
+    "source_ref": [
+      "N31",
+      "S16",
+      "S17"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ジェンダー表記の方針を保ち意味を変える自動変換をしない [N31][S16][S17]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-006",
+    "summary": "地域語 英語 固有名とplain easyの目的を区別する [S06][S11][S19][A01][A02]",
+    "source_refs": [
+      "S06",
+      "S11",
+      "S19",
+      "A01",
+      "A02"
+    ],
+    "source_ref": [
+      "S06",
+      "S11",
+      "S19",
+      "A01",
+      "A02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 地域語 英語 固有名とplain easyの目的を区別する [S06][S11][S19][A01][A02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-001",
+    "summary": "本文全体にbreak-allやanywhereを適用しない [T03]",
+    "source_refs": [
+      "T03"
+    ],
+    "source_ref": [
+      "T03"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 本文全体にbreak-allやanywhereを適用しない [T03]",
+    "machine_check": "bounded-static-candidate",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-002",
+    "summary": "長いラベルで幅と行数を調整し固定高を確認する [A05][A06]",
+    "source_refs": [
+      "A05",
+      "A06"
+    ],
+    "source_ref": [
+      "A05",
+      "A06"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 長いラベルで幅と行数を調整し固定高を確認する [A05][A06]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-003",
+    "summary": "langと必要な言語部分及び分綴リソースを確認する [A03][A08][T03]",
+    "source_refs": [
+      "A03",
+      "A08",
+      "T03"
+    ],
+    "source_ref": [
+      "A03",
+      "A08",
+      "T03"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. langと必要な言語部分及び分綴リソースを確認する [A03][A08][T03]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-004",
+    "summary": "狭幅 200%拡大 文字間隔上書きを別条件で確認する [A05][A06][W07]",
+    "source_refs": [
+      "A05",
+      "A06",
+      "W07"
+    ],
+    "source_ref": [
+      "A05",
+      "A06",
+      "W07"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 狭幅 200%拡大 文字間隔上書きを別条件で確認する [A05][A06][W07]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-005",
+    "summary": "追加CSS機能は対象環境で検証し未対応を区別する [W02]",
+    "source_refs": [
+      "W02"
+    ],
+    "source_ref": [
+      "W02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 追加CSS機能は対象環境で検証し未対応を区別する [W02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-006",
+    "summary": "エラー フォーカス状態と可視ラベル 名前を照合する [A04][P02]",
+    "source_refs": [
+      "A04",
+      "P02"
+    ],
+    "source_ref": [
+      "A04",
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. エラー フォーカス状態と可視ラベル 名前を照合する [A04][P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-007",
+    "summary": "フォント読み込み前後を確認しclipで欠落を隠さない [T01][A05]",
+    "source_refs": [
+      "T01",
+      "A05"
+    ],
+    "source_ref": [
+      "T01",
+      "A05"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. フォント読み込み前後を確認しclipで欠落を隠さない [T01][A05]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-001",
+    "summary": "文書言語 分綴辞書と出力先の設定を確認する [P02][N10]",
+    "source_refs": [
+      "P02",
+      "N10"
+    ],
+    "source_ref": [
+      "P02",
+      "N10"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 文書言語 分綴辞書と出力先の設定を確認する [P02][N10]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-002",
+    "summary": "見出し孤立 表行 図版出典 分綴の連続を確認する [P02]",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 見出し孤立 表行 図版出典 分綴の連続を確認する [P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-003",
+    "summary": "スライドは情報を分割し縮小だけで解決しない [P02]",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. スライドは情報を分割し縮小だけで解決しない [P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-004",
+    "summary": "PDFの選択 コピー 書体 編集性を別々に確認する [P02][T02]",
+    "source_refs": [
+      "P02",
+      "T02"
+    ],
+    "source_ref": [
+      "P02",
+      "T02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. PDFの選択 コピー 書体 編集性を別々に確認する [P02][T02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-001",
+    "summary": "制作前に読者 目的 情報構造とその理由を記録する [P01]",
+    "source_refs": [
+      "P01"
+    ],
+    "source_ref": [
+      "P01"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 制作前に読者 目的 情報構造とその理由を記録する [P01]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-002",
+    "summary": "表現書体 手書き 回転文字は役割から判断する [D06][D07][D09]",
+    "source_refs": [
+      "D06",
+      "D07",
+      "D09"
+    ],
+    "source_ref": [
+      "D06",
+      "D07",
+      "D09"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "A",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 表現書体 手書き 回転文字は役割から判断する [D06][D07][D09]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-003",
+    "summary": "ポスターの像とWeb本文 UIの機能を分ける [D02][D04][D08]",
+    "source_refs": [
+      "D02",
+      "D04",
+      "D08"
+    ],
+    "source_ref": [
+      "D02",
+      "D04",
+      "D08"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. ポスターの像とWeb本文 UIの機能を分ける [D02][D04][D08]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-004",
+    "summary": "図版 発言 書体の出所と使用範囲を確認する [P02][F15][F20]",
+    "source_refs": [
+      "P02",
+      "F15",
+      "F20"
+    ],
+    "source_ref": [
+      "P02",
+      "F15",
+      "F20"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 図版 発言 書体の出所と使用範囲を確認する [P02][F15][F20]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-001",
+    "summary": "規範 組織方針 観察 提案を分ける [P01][P02]",
+    "source_refs": [
+      "P01",
+      "P02"
+    ],
+    "source_ref": [
+      "P01",
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 規範 組織方針 観察 提案を分ける [P01][P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-002",
+    "summary": "実行環境 フォント 辞書 仕様の版を記録する [P02]",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 実行環境 フォント 辞書 仕様の版を記録する [P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-003",
+    "summary": "未確認 例外 不合格を区別し修正後の範囲を再確認する [P02]",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "research-candidate; consult individual sources",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Review relevant guidance and preserve the original. 未確認 例外 不合格を区別し修正後の範囲を再確認する [P02]",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  }
+]

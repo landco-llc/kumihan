@@ -1,0 +1,132 @@
+{
+  "skill": "kumihan-satzbild",
+  "version": "0.1.0",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1754,
+      "sha256": "fa01578d303c6602f75960b622e08b116aedbd291c1d35c2f10ec07e94b678bd"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2683,
+      "sha256": "5d9bf5f2f162d0e8911d1fba78be4f60997ff27ee5f4ebe7009cd3d31c12aa60"
+    },
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 245,
+      "sha256": "1e6e1e13a8ecc370090225da53b989df2d553075d3515182962116723aa95260"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "bytes": 1045725,
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance-ledger.json",
+      "bytes": 11070,
+      "sha256": "e62b925d2d581a9ab9c85553eb57497ffde340b2971ce5b5905cb16a89357bfa"
+    },
+    {
+      "path": "locales/de-AT.json",
+      "bytes": 396,
+      "sha256": "cb4a3a8a5baa2c7630190009899a18e5f30c9792e4f8b6695e0db5ec90148935"
+    },
+    {
+      "path": "locales/de-CH.json",
+      "bytes": 406,
+      "sha256": "82b734a0399572444dc0ad3cce47458a549d76b9d025da2b8dd78c6825b07461"
+    },
+    {
+      "path": "locales/de-DE.json",
+      "bytes": 396,
+      "sha256": "736ffe655289c7f52c6cede4960d9252ebc6fa3f513e79f91d7bb5aeb3a83ea7"
+    },
+    {
+      "path": "profiles/display-copy.json",
+      "bytes": 152,
+      "sha256": "b54ac33fb0bdff428abfb33f71886e09b076a8297f810e6a1c24fd75f9936735"
+    },
+    {
+      "path": "profiles/presentation.json",
+      "bytes": 152,
+      "sha256": "c4cede1d679537f20060e5d1ded4621b20863ee9e75f3a51bdc739c55afb53af"
+    },
+    {
+      "path": "profiles/report-document.json",
+      "bytes": 155,
+      "sha256": "f1a8ee58f3fa0d0e2f1fcf7eb627677ed2474ab1d827d0dcaada7a8339948fe4"
+    },
+    {
+      "path": "profiles/web-editorial.json",
+      "bytes": 153,
+      "sha256": "31c935fc246cbcd8e6451ce644a5fb7f8246a710e36e268478762c16723ff6fe"
+    },
+    {
+      "path": "profiles/web-marketing.json",
+      "bytes": 153,
+      "sha256": "55e819f7f7e78ad7f6e3bea1e04b6e6ce6329470fd6013f3223c0b1ccf0ebb32"
+    },
+    {
+      "path": "profiles/web-ui.json",
+      "bytes": 146,
+      "sha256": "a203d405193261bd9641b71394a6f6097d4ff791645ea418968c8596c40079e9"
+    },
+    {
+      "path": "references/coverage.md",
+      "bytes": 717,
+      "sha256": "dc8bfc39f1148472a4a917d4fa67245493e1dc5838d652cd1080bd0bcd3455b6"
+    },
+    {
+      "path": "references/documents.md",
+      "bytes": 651,
+      "sha256": "576aa9610ce90f889eb5a160b0b2473a3dbce4e4d96fd7d8a9570d49d0e8271b"
+    },
+    {
+      "path": "references/research-handoff.md",
+      "bytes": 17792,
+      "sha256": "aa1805adcf17b7afdf7525ee77babab88d83d7d2708e436740ee921b899b1b7d"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 725,
+      "sha256": "3e53c6d451180ca3b79ed06073bbb33fda707124191cc83772ecf157bd852ba0"
+    },
+    {
+      "path": "references/web.md",
+      "bytes": 969,
+      "sha256": "5ab17ee31fee5d49713138d6269bafab038a28b2532d2358174db7aa1bd1ab06"
+    },
+    {
+      "path": "references/workflow.md",
+      "bytes": 1102,
+      "sha256": "e20c31c4d986f3a78bc2e6939d9435f887e77c00e305e286c593b1cb1fb0040f"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 37351,
+      "sha256": "b9a39339e0601cc67994f34f127eb7f42c391a9761abeacf356510529c590da8"
+    },
+    {
+      "path": "runtime/checks.py",
+      "bytes": 2505,
+      "sha256": "4921e988dbcd37e6ecbe841c196efa643f63ba2a068848fbbad47d62523dbe87"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 1530,
+      "sha256": "bdf019a081d4be00ff9a238f203c341b8386297602353b0fe8290661070c326c"
+    },
+    {
+      "path": "sources/public-sources.json",
+      "bytes": 19198,
+      "sha256": "1559095d4d62f1e8eb150ca57a23f25d2209bb01a62dab7adc6f8d7c7d97b8e0"
+    }
+  ],
+  "self_digest": "Inventory excludes itself; archive digest covers all bytes."
+}

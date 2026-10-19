@@ -1,0 +1,389 @@
+{
+  "note": "48 research candidates; automated synthetic tests are separate evidence.",
+  "fixtures": [
+    {
+      "id": "DE-FX-01",
+      "input": "de-DEのStraßeとde-CHのStrasse",
+      "expected": "地域の違いを扱い原稿を勝手に変えない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-02",
+      "input": "de-CH本文のドイツ企業の固有名",
+      "expected": "地域置換から保護語を除く",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-03",
+      "input": "STRASSEとSTRAẞE",
+      "expected": "双方の許容を認識しSSを逆変換しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-04",
+      "input": "MüllerとMuellerという別の名前",
+      "expected": "一括変換せず文字列を維持",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-05",
+      "input": "NFCのäとa＋U+0308",
+      "expected": "表示とコピーを確認し保存方針を保つ",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-06",
+      "input": "ÄÖÜßẞと引用符を最終書体へ",
+      "expected": "欠字と代替書体を明示",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-07",
+      "input": "DEの„…“と入れ子‚…‘",
+      "expected": "選択した開閉と入れ子が一致",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-08",
+      "input": "CHの«…»と‹…›",
+      "expected": "内向きへ無断変換しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-09",
+      "input": "承認されたDE編集用»…«",
+      "expected": "正当な別セットを誤検出しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-10",
+      "input": "引用符を含むコードとURL",
+      "expected": "自然文の約物変換から除外",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-11",
+      "input": "アポストロフィを含む商号",
+      "expected": "全体が固有名の例外を検討",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-12",
+      "input": "語省略の…とUI表示のellipsis",
+      "expected": "文法上の省略と表示切詰めを区別",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-13",
+      "input": "語と語群に含まれるスラッシュ",
+      "expected": "左右と文脈を確認し一括空白化しない",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-14",
+      "input": "KI-gestützte Gestaltung",
+      "expected": "語の連結構造と略語を保持",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-15",
+      "input": "500 gと500-g-Beutel",
+      "expected": "量の表示と複合語を区別",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-16",
+      "input": "ch sch ckを含む分綴例",
+      "expected": "文字数だけで切らず辞書と規則へ照合",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-17",
+      "input": "接頭辞と複合語境界",
+      "expected": "許容される分綴を誤りにしない",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-18",
+      "input": "Stoffladenの合字",
+      "expected": "専門組版の境界と例外を確認",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-19",
+      "input": "単語にsoft hyphenを含む原稿",
+      "expected": "分綴 コピー 検索と元文字列を確認",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-20",
+      "input": "Datenschutzeinstellungenのボタン",
+      "expected": "狭幅でも全文と操作が保たれる",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-21",
+      "input": "Barrierefreiheitserklärungの見出し",
+      "expected": "縮小だけで収めず意味のある表示",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-22",
+      "input": "本文にword-break:break-all",
+      "expected": "単語の途中切断を確認し限定修正を提案",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-23",
+      "input": "長いメール URLと通常本文",
+      "expected": "識別子だけの折返しを適用",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-24",
+      "input": "フォント不達と読み込み完了",
+      "expected": "改行 欠字 レイアウト変化を区別",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-25",
+      "input": "大文字ウムラウトとタイトな行高",
+      "expected": "上部の切れと行の重なりがない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-26",
+      "input": "長い本文を狭い列の両端揃え",
+      "expected": "広すぎる語間と分綴の連続を観察",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-27",
+      "input": "価格と短い単位ペアを行末へ",
+      "expected": "値や単位が不適切に分離しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-28",
+      "input": "同じ値をDE AT CHで表示",
+      "expected": "runtimeの期待値と組織方針を区別",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-29",
+      "input": "de-ATの一般数値とEUR",
+      "expected": "千位区切りと通貨位置の違いを保持",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-30",
+      "input": "de-CH runtimeとZürich州の文書",
+      "expected": "別プロファイルとして整合",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-31",
+      "input": "1.000という入力と郵便番号",
+      "expected": "曖昧な数値を推定せず識別子を保持",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-32",
+      "input": "比率0.1と通貨小数精度",
+      "expected": "値を壊す倍率変更や丸めをしない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-33",
+      "input": "年末日時と別タイムゾーン",
+      "expected": "表示変更で日付値を誤変更しない",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-34",
+      "input": "Jänner Marille Billette",
+      "expected": "地域語をドイツの語へ自動統一しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-35",
+      "input": "同一フローにduとSieが混在",
+      "expected": "話者 引用 法的補足を分けて候補検出",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-36",
+      "input": "Du系ブランドと通常小文字du",
+      "expected": "ハウススタイルと規範を区別",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-37",
+      "input": "英語式Title Caseと独語見出し",
+      "expected": "名詞と文頭の大文字を保つ",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-38",
+      "input": "承認英語名と未承認の別言語文",
+      "expected": "固有名例外を残し混入を確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-39",
+      "input": "確認画面のCTAに購入確定語",
+      "expected": "実動作との不一致を指摘",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-40",
+      "input": "支払状態が不明 成功 失敗",
+      "expected": "不明状態を成功や未請求と断定しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-41",
+      "input": "ジェンダー方式の変更案",
+      "expected": "方針とリライト許可を確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-42",
+      "input": "普通の短文をLeichte Spracheと表示",
+      "expected": "未実施の適合 認証を宣言しない",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-43",
+      "input": "320 CSS px相当の画面",
+      "expected": "例外以外の横往復と情報欠落を確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-44",
+      "input": "文字200%と間隔4値の上書き",
+      "expected": "別条件として内容 機能の保持を検査",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-45",
+      "input": "独語可視ラベルと英語の名前",
+      "expected": "アクセシブル名との対応を確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-46",
+      "input": "表行と見出しがページ末へ",
+      "expected": "表見出し 図版出典 孤立を確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-47",
+      "input": "長いスライドをPDFへ変換",
+      "expected": "文字 単位 出典 書体 コピーを確認",
+      "group": "A",
+      "status": "not-checked",
+      "evidence": null
+    },
+    {
+      "id": "DE-FX-48",
+      "input": "ポスターと業務UIへ同一の装飾",
+      "expected": "目的に応じた差を確認し絶対採点しない",
+      "group": "B",
+      "status": "not-checked",
+      "evidence": null
+    }
+  ]
+}
