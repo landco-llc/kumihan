@@ -91,10 +91,13 @@ class ThaiSiteContract(unittest.TestCase):
   sections=lambda text: re.findall(r'<section class="([^"]+)"',text)
   self.assertEqual(sections(japanese),sections(canonical))
   for css_class in ('hero-layout','intro-layout','feature-grid','idea-layout',
-                    'skills-grid','install-layout','status-box','cta-layout','footer-layout'):
+                    'skills-grid','install-layout','status-box','cta-layout','kumihan-footer'):
    pattern=r'class="[^"]*\b'+re.escape(css_class)+r'\b[^"]*"'
    self.assertRegex(japanese,pattern)
-   self.assertRegex(canonical,pattern)
+   if css_class=='kumihan-footer':
+    self.assertIn('site.data.site_footer',canonical)  # the layout renders the shared footer
+   else:
+    self.assertRegex(canonical,pattern)
   self.assertIn('KUMIHAN｜ดุลอักษร',japanese)
   self.assertIn('lang="ja"',japanese)
   self.assertIn('line-break: strict',japanese)
@@ -109,7 +112,7 @@ class ThaiSiteContract(unittest.TestCase):
   sections=lambda text: re.findall(r'<section class="([^"]+)"',text)
   self.assertEqual(sections(thai),sections(canonical))
   for css_class in ('hero-layout','intro-layout','feature-grid','idea-layout',
-                    'skills-grid','install-layout','status-box','cta-layout','footer-layout'):
+                    'skills-grid','install-layout','status-box','cta-layout','kumihan-footer'):
    pattern=r'class="[^"]*\b'+re.escape(css_class)+r'\b[^"]*"'
    self.assertRegex(thai,pattern)
   self.assertIn('lang="th"',thai)

@@ -82,6 +82,7 @@ class SzykV010Tests(unittest.TestCase):
    parser=URIs();parser.feed(s)
    for uri in parser.urls:
     if uri.startswith(("https:","http:","mailto:","#","data:")):continue
+    uri=uri.split("?")[0]
     if uri.startswith("/kumihan/"):target=uri[len("/kumihan/"):].split("#")[0]
     elif uri.startswith("/"):continue
     else:target=(Path(path).parent/uri.split("#")[0]).as_posix()

@@ -9,6 +9,7 @@ import argparse
 import hashlib
 import json
 import re
+import sys
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -18,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 _wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
 WEB_FONTS = module_from_spec(_wf_spec)
 _wf_spec.loader.exec_module(WEB_FONTS)
+FOOTER = WEB_FONTS.FOOTER
 BASE = "https://landco-llc.github.io/kumihan/"
 VISIBLE, STEP = 6, 6
 
@@ -36,6 +38,7 @@ GATEWAYS = {
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
     "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
+    "sw": ("top-sw.html", "sw", "SW", "Kiswahili"),
     "ru": ("top-ru.html", "ru", "RU", "Русский"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
@@ -298,6 +301,7 @@ UI = {
     "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
     "zh-hans": dict(heading="KUMIHAN 各语言版本", more="显示接下来的 {n} 个", menu="语言"),
     "ko": dict(heading="KUMIHAN 언어별 버전", more="다음 {n}개 보기", menu="언어"),
+    "sw": dict(heading="Matoleo ya lugha ya KUMIHAN", more="Onyesha {n} zinazofuata", menu="Lugha"),
     "th": dict(heading="KUMIHAN ในแต่ละภาษา", more="แสดงอีก {n} รายการ", menu="ภาษา"),
 }
 
@@ -534,6 +538,52 @@ for _lang, _cards in CARDS.items():
     _cards.setdefault("it", IT_CARD_COPY[_lang])
     _cards.setdefault("ru", RU_CARD_COPY[_lang])
 
+# Swahili edition (KUMIHAN｜Mizani): its card for every reader language and the Swahili
+# reader's table of all editions.
+SW_CARD_COPY = {
+    "ja": ("ng’とアポストロフィ、長い語を守り、sw-TZ・sw-KE・sw-CDの書式を明示して選ぶスワヒリ語の文字組みとデザイン。", "スワヒリ語版を見る"),
+    "en": ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition"),
+    "zh-hant": ("保護 ng’ 與撇號、尊重長詞，並明確選擇 sw-TZ／sw-KE／sw-CD 格式的史瓦希利文排版與設計。", "前往史瓦希利文版"),
+    "zh-hans": ("保护 ng’ 与撇号、尊重长词，并明确选择 sw-TZ／sw-KE／sw-CD 格式的斯瓦希里语排版与设计。", "前往斯瓦希里语版"),
+    "ko": ("ng’와 아포스트로피, 긴 단어를 지키고 sw-TZ·sw-KE·sw-CD 서식을 명시적으로 고르는 스와힐리어 글짜임.", "스와힐리어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรสวาฮีลีที่รักษา ng’ และอะพอสทรอฟี เคารพคำยาว และเลือกรูปแบบ sw-TZ sw-KE หรือ sw-CD อย่างชัดเจน", "ดูเวอร์ชันภาษาสวาฮีลี"),
+    "fr": ("Typographie swahilie qui protège ng’ et les apostrophes, respecte les mots longs et choisit explicitement les formats sw-TZ, sw-KE ou sw-CD.", "Voir l’édition swahilie"),
+    "es": ("Tipografía suajili que protege ng’ y los apóstrofos, respeta las palabras largas y elige de forma explícita los formatos sw-TZ, sw-KE o sw-CD.", "Ver la edición en suajili"),
+    "pt": ("Tipografia suaíli que protege ng’ e os apóstrofos, respeita palavras longas e escolhe explicitamente os formatos sw-TZ, sw-KE ou sw-CD.", "Ver a edição em suaíli"),
+    "ar": ("تنضيد سواحيلي يحمي ng’ والفواصل العليا ويراعي الكلمات الطويلة ويختار صراحةً تنسيقات sw-TZ أو sw-KE أو sw-CD.", "عرض النسخة السواحيلية"),
+    "hi": ("ng’ और एपॉस्ट्रॉफ़ी को सुरक्षित रखने वाली, लंबे शब्दों का ध्यान रखने वाली और sw-TZ, sw-KE या sw-CD प्रारूप स्पष्ट रूप से चुनने वाली स्वाहिली टाइपोग्राफ़ी।", "स्वाहिली संस्करण देखें"),
+    "vi": ("Typography tiếng Swahili bảo vệ ng’ và dấu nháy, tôn trọng từ dài và chọn rõ định dạng sw-TZ, sw-KE hoặc sw-CD.", "Xem phiên bản tiếng Swahili"),
+    "de": ("Suaheli-Typografie, die ng’ und Apostrophe schützt, lange Wörter respektiert und die Formate sw-TZ, sw-KE oder sw-CD ausdrücklich wählt.", "Suaheli-Version ansehen"),
+    "pl": ("Typografia suahili chroniąca ng’ i apostrofy, szanująca długie wyrazy i wyraźnie wybierająca formaty sw-TZ, sw-KE lub sw-CD.", "Zobacz wersję suahili"),
+    "id": ("Tipografi Swahili yang menjaga ng’ dan apostrof, menghormati kata panjang, serta memilih format sw-TZ, sw-KE, atau sw-CD secara eksplisit.", "Lihat edisi bahasa Swahili"),
+    "bn": ("ng’ ও অ্যাপোস্ট্রফি রক্ষা করে, দীর্ঘ শব্দ মেনে এবং sw-TZ, sw-KE বা sw-CD বিন্যাস স্পষ্টভাবে বেছে নেওয়া সোয়াহিলি টাইপোগ্রাফি।", "সোয়াহিলি সংস্করণ দেখুন"),
+    "it": ("Tipografia swahili che protegge ng’ e gli apostrofi, rispetta le parole lunghe e sceglie esplicitamente i formati sw-TZ, sw-KE o sw-CD.", "Vai all’edizione swahili"),
+    "ru": ("Типографика суахили: защита ng’ и апострофов, внимание к длинным словам и явный выбор форматов sw-TZ, sw-KE или sw-CD.", "Открыть версию на суахили"),
+}
+CARDS["sw"] = {
+    "ar": ("Uchapaji wa Kiarabu unaoshughulikia maandishi ya kulia kwenda kushoto na mchanganyiko wa hati, bila kubadilisha maandishi asilia.", "Tazama toleo la Kiarabu"),
+    "bn": ("Uchapaji na usanifu wa Kibengali unaolinda alama za irabu, herufi ambatani na maandishi asilia, ukitofautisha bn-BD na bn-IN.", "Tazama toleo la Kibengali"),
+    "de": ("Uchapaji wa Kijerumani unaozingatia maneno marefu ambatani, alama za nukuu na tofauti za DE/AT/CH, ukihifadhi maandishi asilia.", "Tazama toleo la Kijerumani"),
+    "es": ("Uchapaji wa Kihispania unaoheshimu matumizi ya kimaeneo, kuhifadhi maandishi asilia na kutenganisha ushahidi uliothibitishwa na maamuzi ya kihariri.", "Tazama toleo la Kihispania"),
+    "fr": ("Uchapaji wa Kifaransa unaotofautisha nafasi zisizokatika, alama za nukuu na mitindo ya uhariri ya kimaeneo au ya kitaasisi.", "Tazama toleo la Kifaransa"),
+    "hi": ("Uchapaji na usanifu wa Kihindi unaolinda maandishi asilia, herufi ambatani na alama za irabu (matra).", "Tazama toleo la Kihindi"),
+    "id": ("Uchapaji wa Kiindonesia unaozingatia vihusishi, viambishi, maneno yanayorudiwa, uakifishaji na kiasi cha rupia kulingana na muktadha, ukihifadhi maandishi asilia.", "Tazama toleo la Kiindonesia"),
+    "it": ("Uchapaji wa Kiitaliano unaozingatia lafudhi, nukuu na tofauti za kimaeneo, ukihifadhi maandishi asilia.", "Tazama toleo la Kiitaliano"),
+    "ja": ("Kuanzia kanuni za Kijapani za kukata mistari (kinsoku) na mikato ya kawaida ya mistari hadi muundo wa taarifa, nafasi tupu na mtiririko wa usomaji.", "Tazama toleo la Kijapani"),
+    "ko": ("Mikato ya mistari kati ya eojeol (vipashio vya nafasi vya Kikorea), mdundo wa maandishi na muundo wa taarifa ulio wazi.", "Tazama toleo la Kikorea"),
+    "pl": ("Uchapaji wa Kipolandi wenye alama sahihi za herufi, mikato yenye maana na usanifu unaohifadhi maandishi asilia.", "Tazama toleo la Kipolandi"),
+    "pt": ("Uchapaji wa Kireno na usanifu unaoongozwa na maana, ukiheshimu desturi za Brazili na Ulaya pamoja na nia ya mwandishi.", "Tazama toleo la Kireno"),
+    "ru": ("Uchapaji wa Kirusi unaoshughulikia ё na й, alama za nukuu, vistari na mikato ya mistari kulingana na muktadha, ukihifadhi maandishi asilia.", "Tazama toleo la Kirusi"),
+    "sw": ("Uchapaji wa Kiswahili unaolinda ng’ na alama za ritifaa, unaoheshimu maneno marefu na kuchagua waziwazi miundo ya sw-TZ, sw-KE au sw-CD.", "Tazama toleo la Kiswahili"),
+    "th": ("Kuheshimu mipaka ya maneno ya Kithai na herufi ambatanishi, kwa usanifu wa Kithai unaosomeka kwa urahisi.", "Tazama toleo la Kithai"),
+    "vi": ("Uchapaji wa Kivietinamu unaoheshimu alama za toni, mikato yenye maana ya mistari na maudhui asilia.", "Tazama toleo la Kivietinamu"),
+    "zh-hans": ("Uakifishaji, mikato ya mistari na maandishi mchanganyiko ya Kichina na Kilatini kwa China Bara, bila kuandika upya maandishi asilia.", "Tazama toleo la Kichina Kilichorahisishwa"),
+    "zh-hant": ("Hushughulikia desturi tofauti za uakifishaji na upangaji wa herufi za Taiwan na Hong Kong.", "Tazama toleo la Kichina cha Jadi"),
+}
+for _lang, _cards in CARDS.items():
+    if "sw" not in _cards:
+        _cards["sw"] = SW_CARD_COPY[_lang]
+
 # Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
 _PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
@@ -564,7 +614,7 @@ EDITION_NAMES = {
     "zh-hant": {"ar": "阿拉伯文", "bn": "孟加拉文", "de": "德文", "es": "西班牙文", "fr": "法文", "hi": "印地文", "id": "印尼文", "it": "義大利文", "ja": "日文", "ko": "韓文", "pl": "波蘭文", "pt": "葡萄牙文", "ru": "俄文", "th": "泰文", "vi": "越南文", "zh-hans": "簡體中文", "zh-hant": "繁體中文"},
 }
 # Placeholder of the edition menu, in each page language.
-PICK = {"ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
+PICK = {"sw": "Chagua lugha", "ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
 
 def css_version():
     """Short content hash of the stylesheet, so a new page never meets a cached old stylesheet."""
@@ -589,7 +639,8 @@ def menu(key):
 
 
 # Mizani: append the new edition name in each existing gateway language.
-_SW_EDITION_NAMES = {"ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
+EDITION_NAMES["sw"] = {"ar": "Kiarabu", "bn": "Kibengali", "de": "Kijerumani", "es": "Kihispania", "fr": "Kifaransa", "hi": "Kihindi", "id": "Kiindonesia", "it": "Kiitaliano", "ja": "Kijapani", "ko": "Kikorea", "pl": "Kipolandi", "pt": "Kireno", "ru": "Kirusi", "th": "Kithai", "vi": "Kivietinamu", "zh-hans": "Kichina Kilichorahisishwa", "zh-hant": "Kichina cha Jadi"}
+_SW_EDITION_NAMES = {"sw":"Kiswahili","ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
 for _lang, _names in EDITION_NAMES.items():
     _names["sw"] = _SW_EDITION_NAMES[_lang]
 
@@ -620,13 +671,6 @@ def marquee():
         out += f'<div class="glyph-row{" reverse" if i else ""}" style="--duration:{30 + 6 * i}s">{cells}{cells}</div>'
     return f'<div aria-hidden="true" class="glyph-marquee">{out}</div>'
 
-
-# Mizani v0.1.0: keep existing gateway copy unchanged and add a bounded fallback.
-for _lang, _cards in CARDS.items():
-    _cards.setdefault("sw",
-        ("スワヒリ語の語形・アポストロフィを保護し、地域ごとの数値と文字組を考える設計。", "スワヒリ語版を見る") if _lang=="ja" else
-        ("Swahili typography protecting apostrophes, original text, and regional formats.", "View the Swahili edition"))
-CARDS["en"]["sw"] = ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition")
 
 def cards(key):
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
@@ -740,7 +784,7 @@ def page(key, c):
 </section>
 {c['about']}
 </main>
-{c['footer']}
+{FOOTER.footer(html_lang, '', sys.modules[__name__])}
 {SCRIPT}
 </body>
 </html>

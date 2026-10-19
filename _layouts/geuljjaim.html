@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/kumihan-install.js' | relative_url }}"></script>
-{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
 </head>
 <body>
 <a class="skip skip-link" href="#main">{{ t.skip }}</a>
@@ -85,11 +85,6 @@
     <div class="guide-pane">{{ content }}</div>
   </main>
 </div>
-<footer class="footer">
-  <div class="shell footer-inner">
-    <div><strong>KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></strong><p>{{ t.footer }}<br>{{ t.limits }}<br>Developed by <a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div>
-    <div><a href="{{ page.home_path | relative_url }}">{{ t.home }}</a> · <a href="{{ t.gateway | relative_url }}">{{ t.gateway_label }}</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/downloads" target="_blank" rel="noopener noreferrer">{{ t.release }} v0.1.0</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
-  </div>
-</footer>
+{% assign kumihan_root = site.baseurl | append: "/" %}{% assign kumihan_lang = page.lang | default: "ja" %}{{ site.data.site_footer[kumihan_lang] | default: site.data.site_footer.ja | replace: "@ROOT@", kumihan_root }}
 </body>
 </html>

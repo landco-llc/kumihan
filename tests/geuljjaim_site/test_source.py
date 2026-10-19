@@ -46,7 +46,7 @@ class SourceContract(unittest.TestCase):
   self.assertIn('.feature-grid',design)
   self.assertIn('.skill-card',design)
   layout=(ROOT/'_layouts/geuljjaim-index.html').read_text()
-  self.assertIn("'/kumihan.html' | relative_url", layout)
+  self.assertIn("site.data.site_footer", layout)  # shared footer: KUMIHAN top and every edition
 
   self.assertIn('html[lang="ja"] body',design)
   self.assertIn('html[lang="ja"] .hero h1 .phrase',design)

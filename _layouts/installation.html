@@ -173,7 +173,7 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
-{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/' | relative_url }}{{ site.data.kumihan_assets.fonts_css }}">
 </head>
 <body>
   <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span><span data-ui-zh hidden>跳至主要內容</span></a>
@@ -234,12 +234,7 @@
       {{ content }}
     </main>
   </div>
-  <footer class="footer">
-    <div class="shell footer-inner">
-      <div><strong>KUMIHAN</strong><p>Japanese typography skills for AI-assisted design.<br>Developed by <a href="http://landco.co.jp" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></p></div>
-      <div><a href="../index.html" data-gateway-link><span data-ui-ja>KUMIHAN トップ</span><span data-ui-en hidden>KUMIHAN home</span><span data-ui-zh hidden>KUMIHAN 首頁</span></a> · <a href="../kumihan.html" data-lang-link><span data-ui-ja>Topに戻る</span><span data-ui-en hidden>Back to Top</span><span data-ui-zh hidden>返回首頁</span></a> · <a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a> · <a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache-2.0</a></div>
-    </div>
-  </footer>
+{% assign kumihan_root = site.baseurl | append: "/" %}{% assign kumihan_lang = page.lang | default: "ja" %}{{ site.data.site_footer[kumihan_lang] | default: site.data.site_footer.ja | replace: "@ROOT@", kumihan_root }}
   <script>
     (() => {
       'use strict';

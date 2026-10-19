@@ -39,7 +39,7 @@ class WebFonts(unittest.TestCase):
             text = (ROOT / "_layouts" / layout).read_text(encoding="utf-8")
             with self.subTest(layout=layout):
                 self.assertIn("site.data.web_fonts[page.lang]", text)
-                self.assertIn("/assets/kumihan-fonts.css", text)
+                self.assertIn("site.data.kumihan_assets.fonts_css", text)
 
     def test_system_fonts_come_before_google_fonts(self):
         for key, (local_sans, _, sans, serif) in web_fonts.SCRIPTS.items():

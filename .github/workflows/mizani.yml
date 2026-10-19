@@ -11,6 +11,10 @@ on:
       - 'docs/install-mizani-*.html'
       - 'tools/base_copy.py'
       - 'tools/build_gateways.py'
+      - 'tools/site_footer.py'
+      - 'tools/web_fonts.py'
+      - 'assets/gateway-copy.json'
+      - '_data/site_footer.json'
       - '.github/workflows/mizani.yml'
   pull_request:
     branches: [main]
@@ -23,6 +27,10 @@ on:
       - 'docs/install-mizani-*.html'
       - 'tools/base_copy.py'
       - 'tools/build_gateways.py'
+      - 'tools/site_footer.py'
+      - 'tools/web_fonts.py'
+      - 'assets/gateway-copy.json'
+      - '_data/site_footer.json'
   workflow_dispatch:
 permissions:
   contents: write

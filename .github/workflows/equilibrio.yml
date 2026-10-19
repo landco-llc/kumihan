@@ -2,10 +2,10 @@ name: Equilibrio product and site
 on:
   pull_request:
     branches: [main]
-    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml']
+    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml', 'tools/site_footer.py', '_data/site_footer.json']
   push:
     branches: [main, feat/equilibrio-v0.1.0]
-    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml']
+    paths: ['plugins/kumihan-equilibrio/**', 'tools/*equilibrio*', 'tests/equilibrio/**', 'kumihan-it*.html', 'docs/install-equilibrio-*.html', 'assets/equilibrio-*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', '_data/web_fonts.yml', 'tools/build_gateways.py', 'assets/gateway-copy.json', 'tests/test_site_layout_parity.py', '.github/workflows/equilibrio.yml', 'tools/site_footer.py', '_data/site_footer.json']
 permissions:
   contents: read
 jobs:
