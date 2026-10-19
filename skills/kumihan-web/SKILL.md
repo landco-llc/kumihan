@@ -31,6 +31,10 @@ Purpose, audience, the most important information or action, why this structure 
 
 Choose structure from the content. A hero, cards and a CTA are fine when the content calls for them, not as default filler.
 
+## Shared design quality and selection
+
+Use [the common routing guide](references/use-case-selection.md) and [Standard/Strict design review](references/design-review-modes.md). Web pages may have a `landing-page` adapter when the actual deliverable is an LP; generic editorial and UI pages need no forced adapter. Automatically infer from the requested output, honor compatible manual overrides, ask only on material ambiguity. Standard is the default; Strict must be explicitly requested and cannot backdate a pre-production contract. Consider the [text/visual relationship guide](references/visual-relationship-guidance.md) with evidence, not AI-authorship scoring. This adds no new medium and grants no additional edit privileges.
+
 ## 3. Build with these settings
 
 Read [web recipes](references/web-recipes.md) and apply its settings by text role. In short:

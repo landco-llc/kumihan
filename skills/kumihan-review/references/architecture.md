@@ -32,13 +32,13 @@ and [jsonschema validation API](https://python-jsonschema.readthedocs.io/en/stab
 
 ### Rules and profiles
 
-The complete catalog has exactly these 38 IDs, in family order and ascending
+The complete catalog has exactly these 39 IDs, in family order and ascending
 numeric order within a family:
 
 | Family | IDs | Count |
 | --- | --- | ---: |
 | Content | `CONTENT-001` through `CONTENT-005` | 5 |
-| Japanese typography | `JA-TYPE-001` through `JA-TYPE-010` | 10 |
+| Japanese typography | `JA-TYPE-001` through `JA-TYPE-011` | 11 |
 | Web | `WEB-001` through `WEB-008` | 8 |
 | Documents | `DOC-001` through `DOC-004` | 4 |
 | Design | `DESIGN-001` through `DESIGN-006` | 6 |
@@ -228,7 +228,7 @@ against original synthetic records; prose checks alone cannot establish it.
 This complete folder is a Git-tracked standalone Agent Skill. Copy the whole
 folder, including LICENSE and inventory.json. All consumer paths in guidance
 are relative to this folder root, even inside references or JSON records.
-The local rules/catalog.json is the complete 38-rule catalog; its six family
+The local rules/catalog.json is the complete 39-rule catalog; its six family
 snapshots retain canonical bytes. All six profiles remain available for mixed
 media and rule resolution. The public registry retains 57 source records.
 Four consumer schemas resolve their versioned URNs locally; source URLs and

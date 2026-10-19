@@ -2,14 +2,14 @@
   "format": 2,
   "product": "KUMIHAN for Gemini",
   "publisher": "L&Co. LLC",
-  "version": "0.1.7-preview",
+  "version": "0.1.8-preview",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "extensions/kumihan-Gemini-CLI-extension-0.1.7-preview.zip",
-      "sha256": "5ca8d9cfa82501b0a8ea23e4614ee1ba98de4a53fe7b32d1f26e42026afe1915",
-      "bytes": 318314,
+      "file": "extensions/kumihan-Gemini-CLI-extension-0.1.8-preview.zip",
+      "sha256": "2b8427987464ad00b0e20770e24ebe656b6a239a3833f6b5403a4c3695ecd330",
+      "bytes": 376287,
       "members": [
         {
           "path": "LICENSE",
@@ -29,7 +29,7 @@
         {
           "path": "gemini-extension.json",
           "bytes": 210,
-          "sha256": "4a91bbebea36122f7913228ba8f46ae5c4e0543418799df60bd57e344324deeb"
+          "sha256": "5ebbcd6be1bc6cf7281a5e3b41f87bcb044b1df8fc5fc172276ea9c14d9f8c04"
         },
         {
           "path": "skills/kumihan-documents/LICENSE",
@@ -38,13 +38,13 @@
         },
         {
           "path": "skills/kumihan-documents/SKILL.md",
-          "bytes": 3072,
-          "sha256": "af89c7acea0320c09b41e6b8983cacc44a22be3ee7bb9fa3ff55e9e50553ca01"
+          "bytes": 3758,
+          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
         },
         {
           "path": "skills/kumihan-documents/inventory.json",
-          "bytes": 4232,
-          "sha256": "63f16707e2e9bbac2c87ab0d95c9834468382bf5705915f6f25c6111871fcceb"
+          "bytes": 5076,
+          "sha256": "20351525b5ce8c7b3152a61d18b4a8788eacc28a6b44d5ce862f7c06086cae1c"
         },
         {
           "path": "skills/kumihan-documents/profiles/display-copy.json",
@@ -79,12 +79,17 @@
         {
           "path": "skills/kumihan-documents/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "skills/kumihan-documents/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "skills/kumihan-documents/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "skills/kumihan-documents/references/document-recipes.md",
@@ -95,6 +100,21 @@
           "path": "skills/kumihan-documents/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "skills/kumihan-documents/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "skills/kumihan-documents/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "skills/kumihan-documents/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "skills/kumihan-documents/references/web-recipes.md",
@@ -157,6 +177,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "skills/kumihan-documents/scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
+        },
+        {
           "path": "skills/kumihan-documents/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -168,13 +193,13 @@
         },
         {
           "path": "skills/kumihan-review/SKILL.md",
-          "bytes": 3470,
-          "sha256": "d628a16819b2abc73e24120b83c51fb351d0769e8e8b5cbd9793c845112dd9c2"
+          "bytes": 4137,
+          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
         },
         {
           "path": "skills/kumihan-review/inventory.json",
-          "bytes": 4229,
-          "sha256": "e8000f43de15287fa13b58ec40ad429a865b22ab34f229d1a08d65efbab6724e"
+          "bytes": 5073,
+          "sha256": "f2ea9771625e45afea40f9cddddf88ddcea2f67a460a175c99358b4a37683137"
         },
         {
           "path": "skills/kumihan-review/profiles/display-copy.json",
@@ -209,12 +234,17 @@
         {
           "path": "skills/kumihan-review/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "skills/kumihan-review/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "skills/kumihan-review/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "skills/kumihan-review/references/document-recipes.md",
@@ -225,6 +255,21 @@
           "path": "skills/kumihan-review/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "skills/kumihan-review/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "skills/kumihan-review/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "skills/kumihan-review/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "skills/kumihan-review/references/web-recipes.md",
@@ -287,6 +332,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "skills/kumihan-review/scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
+        },
+        {
           "path": "skills/kumihan-review/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -298,13 +348,13 @@
         },
         {
           "path": "skills/kumihan-web/SKILL.md",
-          "bytes": 3746,
-          "sha256": "ed0c1694f22ffba68ea174c328ab0cdf1d719c38e6380acd6ec56c37fb0c1b85"
+          "bytes": 4481,
+          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
         },
         {
           "path": "skills/kumihan-web/inventory.json",
-          "bytes": 4226,
-          "sha256": "6070684075465c6e8a5d6d8d59e7807ac7ae0d99db054e4f209fe2893232d62c"
+          "bytes": 5070,
+          "sha256": "69cd26163bd1129a91115624a746178aabad7b83b53f08ed2cc2fc4b181d7d91"
         },
         {
           "path": "skills/kumihan-web/profiles/display-copy.json",
@@ -339,12 +389,17 @@
         {
           "path": "skills/kumihan-web/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "skills/kumihan-web/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "skills/kumihan-web/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "skills/kumihan-web/references/document-recipes.md",
@@ -355,6 +410,21 @@
           "path": "skills/kumihan-web/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "skills/kumihan-web/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "skills/kumihan-web/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "skills/kumihan-web/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "skills/kumihan-web/references/web-recipes.md",
@@ -417,6 +487,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "skills/kumihan-web/scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
+        },
+        {
           "path": "skills/kumihan-web/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -428,13 +503,13 @@
         },
         {
           "path": "skills/kumihan/SKILL.md",
-          "bytes": 3678,
-          "sha256": "e09e2e580e2927656ab9fe9fd01e3f09bd52763a319c84f4687e3cc4eeb0ee5b"
+          "bytes": 4840,
+          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
         },
         {
           "path": "skills/kumihan/inventory.json",
-          "bytes": 4222,
-          "sha256": "c821ec860170a0e3afec299db70ddd65912cf99e1bdae6057fde9223627fe144"
+          "bytes": 5066,
+          "sha256": "8a6c56092f9acd277dbba5035b81487d1ab4d0619878538270c40b560e4ad439"
         },
         {
           "path": "skills/kumihan/profiles/display-copy.json",
@@ -469,12 +544,17 @@
         {
           "path": "skills/kumihan/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "skills/kumihan/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "skills/kumihan/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "skills/kumihan/references/document-recipes.md",
@@ -485,6 +565,21 @@
           "path": "skills/kumihan/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "skills/kumihan/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "skills/kumihan/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "skills/kumihan/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "skills/kumihan/references/web-recipes.md",
@@ -547,6 +642,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "skills/kumihan/scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
+        },
+        {
           "path": "skills/kumihan/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -554,9 +654,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-Gemini-Apps-skill-0.1.7-preview.zip",
-      "sha256": "8cafa91bef9df6cd4287b3e81130b10e4afd624f82d45c3e141d54066e84b398",
-      "bytes": 77036,
+      "file": "skills/kumihan-Gemini-Apps-skill-0.1.8-preview.zip",
+      "sha256": "dcbf3e16a36836a56bfb1745605f8d055a7147e2f421946354c4979576b984a9",
+      "bytes": 91472,
       "members": [
         {
           "path": "LICENSE",
@@ -565,13 +665,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 3678,
-          "sha256": "e09e2e580e2927656ab9fe9fd01e3f09bd52763a319c84f4687e3cc4eeb0ee5b"
+          "bytes": 4840,
+          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
         },
         {
           "path": "inventory.json",
-          "bytes": 4222,
-          "sha256": "c821ec860170a0e3afec299db70ddd65912cf99e1bdae6057fde9223627fe144"
+          "bytes": 5066,
+          "sha256": "8a6c56092f9acd277dbba5035b81487d1ab4d0619878538270c40b560e4ad439"
         },
         {
           "path": "profiles/display-copy.json",
@@ -606,12 +706,17 @@
         {
           "path": "references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "references/document-recipes.md",
@@ -622,6 +727,21 @@
           "path": "references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "references/web-recipes.md",
@@ -682,6 +802,11 @@
           "path": "schemas/rule.schema.json",
           "bytes": 5677,
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+        },
+        {
+          "path": "scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
         },
         {
           "path": "sources/public-sources.json",
@@ -691,9 +816,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-Gemini-Apps-skill-0.1.7-preview.zip",
-      "sha256": "e6b719e107f2a05713f9304130603ba6af6e7c35e02efc6e1c300000db7c5183",
-      "bytes": 77201,
+      "file": "skills/kumihan-web-Gemini-Apps-skill-0.1.8-preview.zip",
+      "sha256": "b06a795e6d85be6704ecceb4c9d1499b418564b708fa39b18a6b09c9a5d432d2",
+      "bytes": 91478,
       "members": [
         {
           "path": "LICENSE",
@@ -702,13 +827,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 3746,
-          "sha256": "ed0c1694f22ffba68ea174c328ab0cdf1d719c38e6380acd6ec56c37fb0c1b85"
+          "bytes": 4481,
+          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
         },
         {
           "path": "inventory.json",
-          "bytes": 4226,
-          "sha256": "6070684075465c6e8a5d6d8d59e7807ac7ae0d99db054e4f209fe2893232d62c"
+          "bytes": 5070,
+          "sha256": "69cd26163bd1129a91115624a746178aabad7b83b53f08ed2cc2fc4b181d7d91"
         },
         {
           "path": "profiles/display-copy.json",
@@ -743,12 +868,17 @@
         {
           "path": "references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "references/document-recipes.md",
@@ -759,6 +889,21 @@
           "path": "references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "references/web-recipes.md",
@@ -819,6 +964,11 @@
           "path": "schemas/rule.schema.json",
           "bytes": 5677,
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+        },
+        {
+          "path": "scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
         },
         {
           "path": "sources/public-sources.json",
@@ -828,9 +978,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.1.7-preview.zip",
-      "sha256": "c958bb7291cd6d28977969de847b607d1c51fedb088d5006150efde62c9cfe7c",
-      "bytes": 76764,
+      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.1.8-preview.zip",
+      "sha256": "649e15c83a1b2516c82b7d0f773fd4f4348c03d57cec90e080d34e4a5dee4538",
+      "bytes": 90984,
       "members": [
         {
           "path": "LICENSE",
@@ -839,13 +989,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 3072,
-          "sha256": "af89c7acea0320c09b41e6b8983cacc44a22be3ee7bb9fa3ff55e9e50553ca01"
+          "bytes": 3758,
+          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
         },
         {
           "path": "inventory.json",
-          "bytes": 4232,
-          "sha256": "63f16707e2e9bbac2c87ab0d95c9834468382bf5705915f6f25c6111871fcceb"
+          "bytes": 5076,
+          "sha256": "20351525b5ce8c7b3152a61d18b4a8788eacc28a6b44d5ce862f7c06086cae1c"
         },
         {
           "path": "profiles/display-copy.json",
@@ -880,12 +1030,17 @@
         {
           "path": "references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "references/document-recipes.md",
@@ -896,6 +1051,21 @@
           "path": "references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "references/web-recipes.md",
@@ -956,6 +1126,11 @@
           "path": "schemas/rule.schema.json",
           "bytes": 5677,
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+        },
+        {
+          "path": "scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
         },
         {
           "path": "sources/public-sources.json",
@@ -965,9 +1140,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-Gemini-Apps-skill-0.1.7-preview.zip",
-      "sha256": "88c4d3d694df2f2056d80b39e97aa1c42c80891a787f4b51c851cf822d9a0d29",
-      "bytes": 76969,
+      "file": "skills/kumihan-review-Gemini-Apps-skill-0.1.8-preview.zip",
+      "sha256": "e8e7e756ae84b7e56be3ea9e0fb6b3c82874bd424a581dfca65e14301bd5bc35",
+      "bytes": 91199,
       "members": [
         {
           "path": "LICENSE",
@@ -976,13 +1151,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 3470,
-          "sha256": "d628a16819b2abc73e24120b83c51fb351d0769e8e8b5cbd9793c845112dd9c2"
+          "bytes": 4137,
+          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
         },
         {
           "path": "inventory.json",
-          "bytes": 4229,
-          "sha256": "e8000f43de15287fa13b58ec40ad429a865b22ab34f229d1a08d65efbab6724e"
+          "bytes": 5073,
+          "sha256": "f2ea9771625e45afea40f9cddddf88ddcea2f67a460a175c99358b4a37683137"
         },
         {
           "path": "profiles/display-copy.json",
@@ -1017,12 +1192,17 @@
         {
           "path": "references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "references/document-recipes.md",
@@ -1033,6 +1213,21 @@
           "path": "references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "references/web-recipes.md",
@@ -1093,6 +1288,11 @@
           "path": "schemas/rule.schema.json",
           "bytes": 5677,
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+        },
+        {
+          "path": "scripts/use_case_selector.py",
+          "bytes": 13121,
+          "sha256": "ada795d2f0a575787ed449408bcb48e844b0a5171ca1515bfc704aa0098e81e8"
         },
         {
           "path": "sources/public-sources.json",

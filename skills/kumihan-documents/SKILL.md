@@ -26,6 +26,10 @@ Look up rule details in the [catalog](rules/catalog.json) only when you need a r
 
 Purpose, audience, viewing conditions (print, screen, projection), the most important message, why this structure or slide order fits, and type roles (body, headings, captions, tables). Confirm which fonts are actually available in the target application.
 
+## Shared design quality and selection
+
+Read [the routing guide](references/use-case-selection.md), [design review modes](references/design-review-modes.md), and [visual relationship guidance](references/visual-relationship-guidance.md). A slide deck generally uses existing `presentation` plus `slide-deck`; a paginated report uses `report-document` plus `report`. A short poster or static-image headline is `display-copy`, not a seventh graphics profile. Honor compatible manual adapter overrides and clarify only important output/permission ambiguity. Standard is the default; Strict requires explicit selection. Image/PDF preview is not proof of native Office or print production.
+
 ## 3. Build with these settings
 
 Read [document recipes](references/document-recipes.md) for Word, PowerPoint and HTML-to-PDF settings. In short:

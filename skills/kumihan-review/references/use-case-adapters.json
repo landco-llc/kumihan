@@ -1,0 +1,94 @@
+{
+  "format": "kumihan-use-case-adapters-1",
+  "status": "guided-selection-not-a-quality-detector",
+  "source_decision": "KUMI-USECASE-ADAPTER-SELECTION-20261019-01",
+  "default_review_intensity": "standard",
+  "primary_profiles": [
+    "web-editorial",
+    "web-marketing",
+    "web-ui",
+    "report-document",
+    "presentation",
+    "display-copy"
+  ],
+  "adapters": [
+    {
+      "id": "poster",
+      "primary_profile": "display-copy",
+      "applicable": "Static posters and print-oriented text-led visual communication",
+      "focus": [
+        "Text/image hierarchy and balance",
+        "Viewing distance and physical output dimensions",
+        "Contrast, real font availability and print requirements"
+      ],
+      "limits": [
+        "No automatic print-ready certification, CMYK, bleed or ICC validation"
+      ]
+    },
+    {
+      "id": "social-static",
+      "primary_profile": "display-copy",
+      "applicable": "Static social-media images, not video or interactive social content",
+      "focus": [
+        "Hierarchy at actual mobile display size",
+        "Text over imagery and legibility",
+        "Audience, safe areas and source/claim integrity"
+      ],
+      "limits": [
+        "No image-generation engine or platform template guarantee"
+      ]
+    },
+    {
+      "id": "digital-banner",
+      "primary_profile": "display-copy",
+      "applicable": "Static digital banner images, not HTML or interactive banner units",
+      "focus": [
+        "Legibility at the actual banner dimensions",
+        "Copy and visual balance",
+        "Safe crop and source accuracy"
+      ],
+      "limits": [
+        "Interactive Web banners require a Web profile; do not certify click behavior from a static image"
+      ]
+    },
+    {
+      "id": "slide-deck",
+      "primary_profile": "presentation",
+      "applicable": "Slide presentations and projected decks",
+      "focus": [
+        "One main message per slide and visual reading order",
+        "Figure-label relationship and actual projection",
+        "Source/notes preservation and native application verification"
+      ],
+      "limits": [
+        "A PDF or image preview does not certify native Office rendering"
+      ]
+    },
+    {
+      "id": "landing-page",
+      "primary_profile": "web-marketing",
+      "applicable": "Landing pages and marketing campaign web pages",
+      "focus": [
+        "Real claims, hierarchy and actual CTA",
+        "Responsive rendering, links and interaction states",
+        "Source and brand consistency without default hero-card-CTA filler"
+      ],
+      "limits": [
+        "Do not assert conversions or effects without evidence"
+      ]
+    },
+    {
+      "id": "report",
+      "primary_profile": "report-document",
+      "applicable": "Paginated reports and text-heavy distributed documents",
+      "focus": [
+        "Heading and page-break integrity",
+        "Figures, captions, tables, notes and reading order",
+        "Font fallback and exact protected data"
+      ],
+      "limits": [
+        "Rendering must be checked in the actual supported document/export environment"
+      ]
+    }
+  ]
+}
