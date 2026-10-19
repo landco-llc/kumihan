@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 {% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
-{% include share.html title=seo_share_title description=seo_share_description canonical=seo_canonical %}
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
   <style>
     :root {
       color-scheme: light;

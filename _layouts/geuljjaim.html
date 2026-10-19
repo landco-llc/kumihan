@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f5f3ee">
 {% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
-{% include share.html title=seo_share_title description=seo_share_description canonical=seo_canonical %}
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>

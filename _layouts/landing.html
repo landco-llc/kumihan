@@ -10,11 +10,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 {% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
-{% include share.html title=seo_share_title description=seo_share_description canonical=seo_canonical %}
-  <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/kumihan.html">
-  <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/en.html">
-  <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/zh-tw.html">
-  <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/kumihan.html">
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
   <style>
     :root {
       color-scheme: light;

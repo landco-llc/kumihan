@@ -2,7 +2,8 @@
 Link-preview tags every KUMIHAN page shares: the same as apply() in tools/site_share.py.
 include.title and include.description are the page's own, unescaped.
 {%- endcomment -%}
-{%- assign share = site.data.site_share[page.lang] -%}
+{%- assign share_lang = include.lang | default: page.lang -%}
+{%- assign share = site.data.site_share[share_lang] -%}
 {%- if include.description contains share.about -%}{%- assign share_desc = include.description -%}
 {%- else -%}{%- assign share_desc = share.about | append: share.separator | append: include.description | strip -%}{%- endif -%}
 {%- assign share_image = "https://landco-llc.github.io/kumihan/assets/kumihan-share.png" %}

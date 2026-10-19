@@ -53,6 +53,18 @@ class AdapterTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'Unregistered Jekyll share language'):
                     build_jekyll_seo.outputs()
 
+    def test_layout_does_not_duplicate_generated_alternates(self):
+        layout = (build_jekyll_seo.ROOT / '_layouts/landing.html').read_text()
+        self.assertNotIn('hreflang=', layout.split('</head>')[0])
+
+    def test_default_jekyll_language_is_passed_to_share_renderer(self):
+        head = build_jekyll_seo.outputs()['_includes/seo-pages/docs/install-chatgpt.html']
+        self.assertIn('{% capture seo_share_lang %}ja{% endcapture %}', head)
+        layout = (build_jekyll_seo.ROOT / '_layouts/installation.html').read_text()
+        self.assertIn('lang=seo_share_lang', layout)
+        share = (build_jekyll_seo.ROOT / '_includes/share.html').read_text()
+        self.assertIn('include.lang | default: page.lang', share)
+
     def test_head_branches_and_unknown_syntax_fail_explicitly(self):
         source = "{% if page.lang == 'ja' %}日本語{% elsif page.lang == 'en' %}English{% else %}其他{% endif %}"
         for lang, expected in [('ja', '日本語'), ('en', 'English'), ('zh-Hant-TW', '其他')]:

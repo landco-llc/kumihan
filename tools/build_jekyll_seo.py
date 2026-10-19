@@ -76,7 +76,7 @@ def outputs():
         title = unescape(title)
         metadata = enriched.split('<head>', 1)[1].split('</head>', 1)[0].strip()
         metadata = re.sub(r'<meta (?:property="og:[^"]+"|name="twitter:[^"]+")[^>]*>\n?', '', metadata)
-        for name, value in [('seo_share_title', title), ('seo_share_description', parser.description), ('seo_canonical', canonical_url(relative))]:
+        for name, value in [('seo_share_lang', page['lang']), ('seo_share_title', title), ('seo_share_description', parser.description), ('seo_canonical', canonical_url(relative))]:
             if '{%' in value or '{{' in value:
                 raise ValueError('Liquid delimiters in Jekyll metadata')
             metadata += '\n{% capture ' + name + ' %}' + value + '{% endcapture %}'
