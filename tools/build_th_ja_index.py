@@ -403,7 +403,7 @@ def render(root: Path, copy: dict) -> str:
         'id="skills-title"', 'id="install-title"', 'id="status-title"', 'id="cta-title"',
     )):
         raise ValueError("Missing canonical landmark")
-    return out
+    return WEB_FONTS.SHARE.apply(out)
 
 
 if __name__ == "__main__":

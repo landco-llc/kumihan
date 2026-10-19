@@ -324,4 +324,4 @@ def render(root: Path, copy: dict) -> str:
     kinds = tuple(re.findall(r'<section class="([^"]+)"', out))
     if kinds != SECTIONS:
         raise ValueError(f"English page index structure mismatch: {kinds}")
-    return out
+    return WEB_FONTS.SHARE.apply(out)

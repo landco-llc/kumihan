@@ -11,18 +11,14 @@
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
 {% if page.lang == 'zh-Hant-TW' %}
-  <meta name="description" content="在繁體中文安裝指南中了解如何將 KUMIHAN 日文排版 AI 技能加入 {{ page.platform }}。本頁包含安裝步驟、下載連結與預覽版注意事項。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ page.title_zh }} | KUMIHAN">
-  <meta property="og:locale" content="zh_TW">
-  <title>{{ page.title_zh }} | KUMIHAN</title>
+{% capture share_title %}{{ page.title_zh }} | KUMIHAN{% endcapture %}{% capture share_description %}在繁體中文安裝指南中了解如何將 KUMIHAN 日文排版 AI 技能加入 {{ page.platform }}。本頁包含安裝步驟、下載連結與預覽版注意事項。{% endcapture %}
   <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-{{ page.guide_id }}.zh-tw.html">
 {% else %}
-  <meta name="description" content="KUMIHANの{{ page.platform }}向け導入方法。日本語・英語で手順、ダウンロード先、注意事項を確認できます。">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ page.title_ja }} | KUMIHAN">
-  <title>{{ page.title_ja }} | KUMIHAN</title>
+{% capture share_title %}{{ page.title_ja }} | KUMIHAN{% endcapture %}{% capture share_description %}KUMIHANの{{ page.platform }}向け導入方法。日本語・英語で手順、ダウンロード先、注意事項を確認できます。{% endcapture %}
 {% endif %}
+  <meta name="description" content="{{ share_description }}">
+  <title>{{ share_title }}</title>
+{% include share.html title=share_title description=share_description %}
   <style>
     :root {
       color-scheme: light;

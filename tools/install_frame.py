@@ -81,7 +81,7 @@ def render(f: Frame) -> str:
     toc = "".join(f'<li><a href="#{e(anchor)}">{e(label)}</a></li>' for anchor, label in f.toc)
     crumb = (f'<a href="{e(f.gateway[0])}">{e(f.gateway[1])}</a><span aria-hidden="true">/</span>'
              if f.gateway else "")
-    return f"""<!doctype html>
+    return WEB_FONTS.SHARE.apply(f"""<!doctype html>
 <html lang="{e(f.lang)}"{(' dir="' + e(f.dir) + '"') if f.dir else ""}>
 <head>
 <meta charset="utf-8">
@@ -136,4 +136,4 @@ def render(f: Frame) -> str:
 {WEB_FONTS.FOOTER.footer(f.lang, f.asset_root)}
 </body>
 </html>
-"""
+""")
