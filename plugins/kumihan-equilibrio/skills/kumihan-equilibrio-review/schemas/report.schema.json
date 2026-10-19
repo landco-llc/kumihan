@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "original_hash",
+    "original_bytes",
+    "locale",
+    "context",
+    "preservation",
+    "findings"
+  ],
+  "properties": {
+    "original_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "original_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "locale": {
+      "enum": [
+        null,
+        "it-IT",
+        "it-CH"
+      ]
+    },
+    "context": {
+      "type": "object"
+    },
+    "preservation": {
+      "type": "object",
+      "required": [
+        "status",
+        "candidate_hash",
+        "candidate_bytes",
+        "test_method"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rule_id",
+          "status",
+          "test_method",
+          "evidence",
+          "original_hash",
+          "proposal",
+          "edits_authorized"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "passed",
+              "failed",
+              "needs-review",
+              "not-checked",
+              "unsupported",
+              "waived",
+              "not-applicable"
+            ]
+          },
+          "edits_authorized": {
+            "const": false
+          }
+        }
+      }
+    }
+  }
+}

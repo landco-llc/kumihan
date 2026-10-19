@@ -21,7 +21,7 @@ class LandingParity(unittest.TestCase):
     def test_landings_follow_canonical_index_sections(self):
         canonical = sections((ROOT / "_layouts/landing.html").read_text(encoding="utf-8"))
         self.assertEqual(canonical, INDEX_SECTIONS)
-        pages = ["kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-th.html", "kumihan-th-en.html", "kumihan-th-ja.html",
+        pages = ["kumihan-it.html", "kumihan-it.en.html", "kumihan-it.ja.html", "kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-th.html", "kumihan-th-en.html", "kumihan-th-ja.html",
                  "kumihan-zh-cn.html", "kumihan-zh-cn.en.html", "kumihan-zh-cn.ja.html",
                  "kumihan-ko.html", "kumihan-ko.en.html", "kumihan-ko.ja.html",
                  "kumihan-zh-han.html", "kumihan-zh-han.en.html", "kumihan-zh-han.ja.html",
@@ -36,7 +36,7 @@ class LandingParity(unittest.TestCase):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
 
     def test_landing_install_lists_one_row_per_host(self):
-        pages = ["kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
+        pages = ["kumihan-it.html", "kumihan-it.en.html", "kumihan-it.ja.html", "kumihan-de.html", "kumihan-de.en.html", "kumihan-de.ja.html", "kumihan-hi.html", "kumihan-hi.en.html", "kumihan-hi.ja.html", "kumihan-fr.html", "kumihan-fr.en.html", "kumihan-fr.ja.html",
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-th-en.html", "kumihan-zh-cn.html", "kumihan-zh-cn.en.html",
@@ -53,12 +53,18 @@ class LandingParity(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'class="[^"]*\bplatform-row\b', text)), 3)
 
 
-GATEWAY = {"de": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
+GATEWAY = {"it": "top-en.html", "de": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html"}
-PAGE_GATEWAY = dict(GATEWAY, pl="index.html", ru="index.html")
+PAGE_GATEWAY = dict(GATEWAY, pl="index.html", id="index.html", ru="index.html")
 
+
+# Independently merged Bangla renderer has its own font sheet and index route.
+# Exact 12-file contract; do not exempt other editions or arbitrary future files.
+BANGLA_PAGES = {f"kumihan-bn{s}.html" for s in ("", ".en", ".ja")} | {
+    f"install-kumihan-bn-{host}{s}.html" for host in ("chatgpt", "claude", "gemini")
+    for s in ("", ".en", ".ja")}
 
 class GatewayLinks(unittest.TestCase):
     def test_every_static_page_links_to_its_language_gateway(self):
@@ -72,7 +78,8 @@ class GatewayLinks(unittest.TestCase):
                 continue  # Jekyll sources: covered by the layout checks below.
             lang = re.search(r'<html lang="([^"]+)"', text).group(1)
             with self.subTest(page=path.name):
-                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(PAGE_GATEWAY[lang]) + '"')
+                expected = "index.html" if path.name in BANGLA_PAGES else PAGE_GATEWAY[lang]
+                self.assertRegex(text, r'href="(?:\.\./|/kumihan/)?' + re.escape(expected) + '"')
 
     def test_jekyll_layouts_and_gateways(self):
         for layout in ("landing.html", "installation.html", "geuljjaim.html", "geuljjaim-index.html"):

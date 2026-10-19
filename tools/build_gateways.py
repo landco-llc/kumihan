@@ -282,6 +282,14 @@ for _lang, _cards in CARDS.items():
     _cards["pl"] = PL_CARD_COPY[_lang]
 
 
+
+# Equilibrio: append one edition, preserve all existing gateway cards.
+PRODUCTS["it"] = dict(name="Italiano", lang="it", brand="KUMIHAN｜Equilibrio", glyph="È",
+    label="IT · ITALIAN", version="v0.1.0", pages={"it":"kumihan-it.html", "en":"kumihan-it.en.html", "ja":"kumihan-it.ja.html"})
+for _lang, _copy in json.loads((ROOT / "assets/gateway-copy.json").read_text(encoding="utf-8")).items():
+    CARDS[_lang]["it"] = tuple(_copy["equilibrio_card"])
+
+
 def x(value):
     return escape(str(value), quote=True)
 
@@ -368,6 +376,12 @@ def page(key, c):
     file, html_lang, _, _ = GATEWAYS[key]
     alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
     card_html, count = cards(key)
+    # Preserve the two independently published Bangla cards verbatim. They
+    # predate registry integration and are outside this edition's rewrite scope.
+    for card in c.get("preserved_parallel_cards", []):
+        anchor = 'aria-labelledby="language-' + card["after"] + '"'
+        end = card_html.index("</article>\n", card_html.index(anchor)) + len("</article>\n")
+        card_html = card_html[:end] + card["html"] + card_html[end:]
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
     return f"""<!doctype html>

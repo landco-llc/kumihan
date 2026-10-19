@@ -1,0 +1,465 @@
+{
+ "it": {
+  "house_style": null,
+  "title": "KUMIHAN｜Equilibrio — Il design in italiano, più naturale",
+  "description": "Skill di IA open source per creare e rivedere siti, documenti e presentazioni in italiano, con cura per la leggibilità e il testo originale.",
+  "skip": "Vai al contenuto",
+  "nav_label": "Navigazione principale",
+  "lang_label": "Lingua",
+  "nav": [
+   "Il progetto",
+   "Principi",
+   "Skill",
+   "Inizia"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / ITALIAN TYPOGRAPHY",
+  "h1": [
+   "Il design in italiano,",
+   "più naturale"
+  ],
+  "lead": "KUMIHAN｜Equilibrio è una raccolta di skill di IA open source per creare e rivedere siti, articoli, documenti e presentazioni in italiano. Aiuta a curare la tipografia, la gerarchia e la leggibilità, rispettando il contenuto originale.",
+  "cta": [
+   "Inizia",
+   "Scopri il progetto"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "QUATTRO SKILL",
+   "ITALIANO"
+  ],
+  "concept_h2": [
+   "Ogni parola",
+   "al suo posto"
+  ],
+  "concept_body": "Ogni progetto ha uno scopo, un pubblico e un messaggio. KUMIHAN｜Equilibrio aiuta l’IA a scegliere struttura, spazi e gerarchie in base al contenuto, senza imporre un modello unico.",
+  "features_h2": "Quattro attenzioni per un design leggibile",
+  "features_deck": "Priorità concrete per creare e rivedere contenuti in italiano.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Èé",
+    "h3": "Tipografia italiana",
+    "p": "Gli accenti di perché, caffè ed È, le virgolette e gli a capo dopo l’apostrofo. it-IT e it-CH restano distinti dalle norme editoriali delle istituzioni europee o svizzere."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Una struttura motivata",
+    "p": "Ordine e peso delle informazioni seguono il contenuto e lo scopo di chi legge."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/è",
+    "h3": "Rispetto dell’originale",
+    "p": "Nomi, citazioni, accenti, codice, numeri, date e byte NFC/NFD rimangono come forniti. Le proposte di modifica sono separate."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Revisione in sola lettura",
+    "p": "Esamina il risultato e organizza le osservazioni senza modificare i file originali."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Oltre la disposizione delle lettere",
+   "Progettare la lettura"
+  ],
+  "idea_body": "KUMIHAN｜Equilibrio non impone un aspetto predefinito. Offre all’IA conoscenze per adattare il design al mezzo, alle informazioni e allo scopo del progetto.",
+  "skills_h2": [
+   "Quattro skill",
+   "Un approccio comune"
+  ],
+  "skills_deck": "Dal contesto del progetto alla produzione per Web e documenti, fino alla revisione.",
+  "skills": [
+   [
+    "Equilibrio",
+    "Definisci scopo, mezzo, locale, norme editoriali e modifiche consentite."
+   ],
+   [
+    "Web",
+    "Tipografia e design per siti, articoli, pagine di presentazione e interfacce in italiano."
+   ],
+   [
+    "Documents",
+    "Struttura e leggibilità per documenti, relazioni e presentazioni."
+   ],
+   [
+    "Review",
+    "Esamina tipografia, informazioni e layout senza modificare i file originali."
+   ]
+  ],
+  "skill_view": "Vedi la skill",
+  "install_h2": [
+   "Inizia dagli strumenti",
+   "di IA che già usi"
+  ],
+  "install_body": "L’installazione dipende dallo strumento. Scegli la guida e le skill adatte al tuo lavoro.",
+  "install_notes": [
+   "Guida a skill, plugin e configurazione locale",
+   "Configurazione per Claude Code e Claude",
+   "Configurazione per Gemini CLI e Gemini Apps"
+  ],
+  "install_extra": "Vedi i 15 ZIP, MANIFEST.json e SHA256SUMS.txt ↗",
+  "status_title": "RELEASE CANDIDATE / v0.1.0",
+  "status_body": "v0.1.0 comprende quattro skill indipendenti e 15 archivi. Importazione negli strumenti e revisione madrelingua non verificate. La pubblicazione su GitHub è in corso di verifica.",
+  "status_link": "Vedi i file di distribuzione ↗",
+  "cta_h2": [
+   "Un’altra possibilità",
+   "per il design in italiano"
+  ],
+  "cta_body": "KUMIHAN｜Equilibrio è gratuito e open source. Codice, file di distribuzione e cronologia sono disponibili su GitHub.",
+  "cta_button": "Vedi su GitHub",
+  "footer_sub": "Skill di tipografia italiana per il design assistito dall’IA.",
+  "gateway_label": "Home KUMIHAN",
+  "family": [
+   "KUMIHAN · Giapponese",
+   "kumihan.html"
+  ],
+  "top": "Torna su",
+  "guide": {
+   "breadcrumb": "Guida all’installazione",
+   "nav": "Guide all’installazione",
+   "toc_title": "In questa pagina",
+   "toc_summary": "Mostra l’indice",
+   "platforms": "Scegli lo strumento di IA",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "L’installazione e l’invocazione nei singoli strumenti non sono state verificate. Le funzioni disponibili dipendono dall’ambiente e dall’account.",
+   "source": "Apri INSTALL.md",
+   "steps": "Passaggi e indicazioni",
+   "top": "Torna a KUMIHAN｜Equilibrio",
+   "title": "Installare KUMIHAN｜Equilibrio in {host}",
+   "lead": "Scegli il plugin completo oppure le singole skill in base alle funzioni supportate dal tuo strumento.",
+   "sections": [
+    "Scegli il formato",
+    "Scarica e verifica",
+    "Installa",
+    "Prova senza modificare l’originale",
+    "Aggiorna",
+    "Ambito e limiti"
+   ],
+   "format": "Il plugin contiene tutte e quattro le skill. Ogni skill è disponibile anche da sola, con regole e riferimenti locali. Allegare uno ZIP a una chat non equivale a installarlo.",
+   "plugin": "Plugin",
+   "skill": "Skill indipendente",
+   "download": "Scarica i file della stessa versione. Prima di estrarli, confronta SHA-256 e dimensioni con MANIFEST.json. Con tutti i 17 file nella stessa cartella, esegui (su macOS: shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Usa il plugin ChatGPT/Codex soltanto in un client che supporta l’importazione di agent plugin. L’archivio contiene kumihan-equilibrio/ con plugin.json e .codex-plugin/plugin.json. Per Codex, estrai le skill in .agents/skills/ nel progetto. La disponibilità delle skill in ChatGPT dipende dall’account.",
+   "claude": "Estrai il plugin Claude Code mantenendo la cartella kumihan-equilibrio/. Se la versione in uso lo supporta, valida il plugin e avvia Claude Code con questa cartella. Le skill indipendenti possono essere collocate in .claude/skills/. In Claude usa soltanto un’interfaccia per skill effettivamente disponibile.",
+   "gemini": "Estrai l’estensione in una cartella vuota con gemini-extension.json alla radice. Installa da quel percorso e leggi la richiesta di autorizzazione. Non installare l’intero repository come Equilibrio. L’importazione in Gemini Apps non è verificata.",
+   "test": "Scegli separatamente it-IT o it-CH, mezzo, norme editoriali, tono e modalità di modifica. Esempio:",
+   "prompt": "Usa kumihan-equilibrio-review. Conserva testo originale, numeri e nomi; separa osservazioni e proposte.",
+   "check": "Controllo statico facoltativo, in sola lettura:",
+   "update": "Conserva le impostazioni personali e verifica versione e checksum. Aggiorna con il metodo supportato dal tuo strumento. Un nuovo commit non aggiorna automaticamente un’installazione. Mantieni gli altri plugin linguistici.",
+   "limits": "40 proposte di regole, un rilevatore limitato di candidati CSS e un confronto dei byte. I 48 casi di ricerca mantengono stati di verifica separati. Non è un correttore grammaticale completo né una certificazione visiva. Importazione nativa, icone, cataloghi dei fornitori e revisione madrelingua non verificati."
+  },
+  "publication_state": "candidate"
+ },
+ "en": {
+  "house_style": null,
+  "title": "KUMIHAN｜Equilibrio — Natural Italian typography, made with AI",
+  "description": "KUMIHAN｜Equilibrio is a set of open-source AI skills for creating and reviewing Italian websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "skip": "Skip to content",
+  "nav_label": "Primary navigation",
+  "lang_label": "Language",
+  "nav": [
+   "About",
+   "Principles",
+   "Skills",
+   "Get started"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / ITALIAN TYPOGRAPHY",
+  "h1": [
+   "Natural Italian typography,",
+   "made with AI"
+  ],
+  "lead": "KUMIHAN｜Equilibrio is a set of open-source AI skills for creating and reviewing Italian websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+  "cta": [
+   "Get started",
+   "Learn more"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "ITALIAN FIRST"
+  ],
+  "concept_h2": [
+   "Not a uniform look—",
+   "the right form for each message"
+  ],
+  "concept_body": "Every brief, audience, and message is different. KUMIHAN｜Equilibrio helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+  "features_h2": "Four things worth getting right",
+  "features_deck": "Practical priorities for creating and reviewing Italian content.",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Èé",
+    "h3": "Italian typography",
+    "p": "Accents in perché, caffè and È; quotation choices and legal apostrophe wrapping. it-IT and it-CH remain distinct from EU or Swiss institutional house styles. Numbers and dates keep their original values."
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "Purposeful structure",
+    "p": "Shape the layout around the information, its priority, and the reader’s goal."
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/è",
+    "h3": "Source fidelity",
+    "p": "Names, prices, figures, accents, quotations, code and original NFC/NFD bytes stay exactly as supplied."
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "Read-only review",
+    "p": "Check finished work and organize issues—without touching the files."
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "Beyond arranging type",
+   "Design the reading experience"
+  ],
+  "idea_body": "KUMIHAN｜Equilibrio doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
+  "skills_h2": [
+   "Four skills",
+   "One approach"
+  ],
+  "skills_deck": "From scoping the work to web, documents, and review.",
+  "skills": [
+   [
+    "Equilibrio",
+    "Start here. Define purpose, medium, Italian locale, house style and permitted edits."
+   ],
+   [
+    "Web",
+    "Typography and design for Italian websites, articles, landing pages, and UI."
+   ],
+   [
+    "Documents",
+    "Structure and readability for reports, business documents, and slide decks."
+   ],
+   [
+    "Review",
+    "Review typography, information, and layout without editing source files."
+   ]
+  ],
+  "skill_view": "View skill",
+  "install_h2": [
+   "Start with the AI tools",
+   "you already use"
+  ],
+  "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need.",
+  "install_notes": [
+   "Guides for adding skills, registering plugins, and local installation",
+   "Setup guide for Claude Code and Claude chat",
+   "Setup guide for Gemini CLI and the Gemini app"
+  ],
+  "install_extra": "All 15 ZIP files, MANIFEST.json, and SHA256SUMS.txt ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "v0.1.0 contains four independent skills and 15 archives. Native host import and native Italian editorial review remain not-checked. GitHub publication is being verified.",
+  "status_link": "Download latest ↗",
+  "cta_h2": [
+   "Another way to design",
+   "in Italian"
+  ],
+  "cta_body": "KUMIHAN｜Equilibrio is open source. The skills, releases, and full change history are on GitHub.",
+  "cta_button": "View on GitHub",
+  "footer_sub": "Italian typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN home",
+  "family": [
+   "KUMIHAN Japanese",
+   "en.html"
+  ],
+  "top": "Back to top",
+  "guide": {
+   "breadcrumb": "Installation guide",
+   "nav": "Installation guides",
+   "toc_title": "On this page",
+   "toc_summary": "Show contents",
+   "platforms": "Choose an AI platform",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
+   "source": "Open the original INSTALL.md",
+   "steps": "Steps and notes",
+   "top": "Back to KUMIHAN｜Equilibrio",
+   "title": "Install KUMIHAN｜Equilibrio in {host}",
+   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
+   "sections": [
+    "Choose a format",
+    "Download and verify",
+    "Install",
+    "Try it without changing the source",
+    "Update",
+    "Scope and limits"
+   ],
+   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
+   "plugin": "Plugin",
+   "skill": "Individual skill",
+   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
+   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-equilibrio/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
+   "claude": "Extract the Claude Code plugin, keeping the kumihan-equilibrio/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
+   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Equilibrio. Import into the Gemini app has not been verified.",
+   "test": "Choose it-IT or it-CH, medium, house style, voice and edit mode independently. Example:",
+   "prompt": "Use kumihan-equilibrio-review. Preserve the source, figures, and names; keep observations separate from proposals.",
+   "check": "Optional static check (read-only):",
+   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
+   "limits": "40 research guidance candidates; a bounded CSS candidate detector and byte comparison. 48 proposed research cases retain separate evidence states. No complete grammar checker or visual certification. Native import, icon UI, provider listings and Italian native editorial review are not verified."
+  },
+  "publication_state": "candidate"
+ },
+ "ja": {
+  "house_style": null,
+  "title": "KUMIHAN｜Equilibrio — イタリア語のデザインをもっと自然に",
+  "description": "KUMIHAN｜Equilibrioは、AIによるイタリア語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
+  "skip": "本文へ移動",
+  "nav_label": "メインナビゲーション",
+  "lang_label": "表示言語",
+  "nav": [
+   "Equilibrioとは",
+   "できること",
+   "4つのスキル",
+   "導入方法"
+  ],
+  "eyebrow": "OPEN-SOURCE SKILLS / ITALIAN TYPOGRAPHY",
+  "h1": [
+   "イタリア語の",
+   "デザインを",
+   "もっと自然に"
+  ],
+  "lead": "AIとつくるイタリア語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜Equilibrioは、イタリア語のための制作・レビュースキル集です。",
+  "cta": [
+   "使いはじめる",
+   "Equilibrioについて"
+  ],
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "ITALIAN FIRST"
+  ],
+  "concept_h2": [
+   "「見た目をそろえる」より",
+   "「伝わる形を考える」"
+  ],
+  "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Equilibrioは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+  "features_h2": "伝えるための4つの視点",
+  "features_deck": "制作と見直しに共通する、KUMIHAN｜Equilibrioが大切にする考え方。",
+  "features": [
+   {
+    "idx": "01 / TYPE",
+    "mark": "Èé",
+    "h3": "イタリア語の文字組み",
+    "p": "perché・caffè・Èのアクセント、引用符の選択、許容されるアポストロフィ直後の改行。it-IT・it-CHとEU・スイス機関の編集方針を分け、数値や日時の元値を守ります。"
+   },
+   {
+    "idx": "02 / STRUCTURE",
+    "mark": "▮▮▯",
+    "h3": "内容に合う構成",
+    "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+   },
+   {
+    "idx": "03 / FIDELITY",
+    "mark": "Aa/è",
+    "h3": "原稿を大切に",
+    "p": "名前・価格・数値・アクセント・引用・コードと、NFC/NFDの元バイト列を保持します。"
+   },
+   {
+    "idx": "04 / REVIEW",
+    "mark": "◌",
+    "h3": "制作後の見直し",
+    "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
+   }
+  ],
+  "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+  "idea_h2": [
+   "文字を並べるだけでなく",
+   "読む体験を組み立てる"
+  ],
+  "idea_body": "KUMIHAN｜Equilibrioは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
+  "skills_h2": [
+   "4つのスキル",
+   "ひとつの考え方"
+  ],
+  "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
+  "skills": [
+   [
+    "Equilibrio",
+    "目的、媒体、イタリア語のlocale、編集方針と変更可能な範囲を整理します。"
+   ],
+   [
+    "Web",
+    "イタリア語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
+   ],
+   [
+    "Documents",
+    "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
+   ],
+   [
+    "Review",
+    "制作物を変更せず、組版・情報・デザインの見直しを支援。"
+   ]
+  ],
+  "skill_view": "スキルを見る",
+  "install_h2": [
+   "いつものAIツールから",
+   "はじめよう"
+  ],
+  "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。",
+  "install_notes": [
+   "スキルの追加・プラグイン登録・ローカル導入のガイド",
+   "Claude Code・チャット向けの導入ガイド",
+   "Gemini CLI・Geminiアプリ向けの導入ガイド"
+  ],
+  "install_extra": "15個のZIP・MANIFEST.json・SHA256SUMS.txtを見る ↗",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "v0.1.0は4つの独立スキルと15 ZIPで構成します。各ホストでの導入とイタリア語母語校閲は未確認。GitHub公開を検証中です。",
+  "status_link": "最新版のダウンロード ↗",
+  "cta_h2": [
+   "イタリア語のデザインに",
+   "もうひとつの選択肢を"
+  ],
+  "cta_body": "KUMIHAN｜Equilibrioはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+  "cta_button": "GitHubで見る",
+  "footer_sub": "Italian typography skills for AI-assisted design.",
+  "gateway_label": "KUMIHAN トップ",
+  "family": [
+   "日本語版 KUMIHAN",
+   "kumihan.html"
+  ],
+  "top": "ページ上部へ",
+  "guide": {
+   "breadcrumb": "導入ガイド",
+   "nav": "導入ページ",
+   "toc_title": "このページの目次",
+   "toc_summary": "このページの目次を表示",
+   "platforms": "AIプラットフォームを選ぶ",
+   "note_title": "v0.1.0 / GitHub Release",
+   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
+   "source": "元のINSTALL.mdを開く",
+   "steps": "手順と注意事項",
+   "top": "KUMIHAN｜Equilibrioへ戻る",
+   "title": "{host}にKUMIHAN｜Equilibrioを導入",
+   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
+   "sections": [
+    "導入形式を選ぶ",
+    "ダウンロードと照合",
+    "導入する",
+    "原稿を変えずに試す",
+    "更新",
+    "対応範囲と限界"
+   ],
+   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
+   "plugin": "プラグイン",
+   "skill": "個別スキル",
+   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
+   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-equilibrio/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
+   "claude": "Claude Codeプラグインを、kumihan-equilibrio/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
+   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをEquilibrioとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
+   "test": "it-ITまたはit-CH、媒体、編集方針、人称と編集モードを別々に指定します。例：",
+   "prompt": "kumihan-equilibrio-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
+   "check": "任意の静的チェック（読み取り専用）：",
+   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
+   "limits": "40件の研究規則案と、限定したCSS候補検出・バイト比較を収録。48件の研究ケースは確認状況を別管理します。完全な文法校正器や表示認証ではありません。実ホスト導入・アイコン表示・公式ストア掲載・イタリア語母語校閲は未確認です。"
+  },
+  "publication_state": "candidate"
+ }
+}

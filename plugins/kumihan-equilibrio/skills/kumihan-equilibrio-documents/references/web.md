@@ -1,0 +1,8 @@
+# Web e interfacce / Web and interfaces
+Apply R17–R24, R31–R40 with their registered sources. Choose semantic structure and the content's purpose before decoration. Italian has no mandatory national font, color or layout. Purposeful expressive typography is allowed; arbitrary repeated cards, gradients, generic slogans and decorative emphasis need a reason. Preserve original content while establishing hierarchy, whitespace and reading order.
+
+Start body text around 16–18 CSS px, line-height 1.45–1.65 and 55–75ch as proposals, not rules. Use lang=it (or explicit it-IT/it-CH); mark genuine foreign passages without tagging every proper name. Start with natural wrapping; avoid paragraph-wide nowrap, break-all or hidden overflow. Long identifiers may wrap locally without changing copied values. Crusca L04 permits line breaks immediately after apostrophes: dell’ at line end is not a grammar error. Headline regrouping is an optional design proposal, never restore omitted vowels.
+
+Quotes may use «Una forma “aperta”», “Una forma ‘aperta’”, or source-faithful punctuation. Do not force one scheme or apply French inner spacing globally. Hyphens:auto needs an observed Italian dictionary; text-wrap:balance does not understand meaning. Report those capabilities separately from CSS presence.
+
+Inspect à è é ì ò ù À È É Ì Ò Ù in regular/bold/italic and fallback, accented-cap clipping, long internazionalizzazione, numeric labels and controls. Test 320/375/768/1280 CSS px, text 200%, spacing overrides (line-height 1.5, paragraph gap 2em, letter .12em, word .16em), keyboard/focus and source copy. CSS enlargement is simulation, not native browser zoom. Record renderer, fonts, OS and dictionary; screen-reader success needs actual assistive-technology evidence.

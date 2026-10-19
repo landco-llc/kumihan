@@ -1,0 +1,523 @@
+[
+  {
+    "id": "R01",
+    "severity": "error",
+    "context": "通常のイタリア語におけるéとèの取り違え",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "error・辞書と文脈の確定後に修正案。外国語へ一括適用不可",
+    "source_refs": [
+      "L02"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R02",
+    "severity": "error",
+    "context": "大文字化で失われたアクセント、動詞Èの代用表記",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "error・表示原稿の修正案。大文字アクセントを保持",
+    "source_refs": [
+      "L02",
+      "L14"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R03",
+    "severity": "error",
+    "context": "通常文のqual’èと標準綴りqual è",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "error・通常文は修正案。引用・表記解説は変更不可",
+    "source_refs": [
+      "L01"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R04",
+    "severity": "error",
+    "context": "pocoの短縮とpòの混同",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "error・po’を提案。Poなどの固有名は変更不可",
+    "source_refs": [
+      "L03"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R05",
+    "severity": "warn",
+    "context": "e/è、da/dà、si/sì、te/tèなどの意味・品詞",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・文脈を確認。文字列一致だけの修正不可",
+    "source_refs": [
+      "L02",
+      "L03"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R06",
+    "severity": "proposal",
+    "context": "sé stessoとse stessoの選択",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・指定方針への統一案。無条件のerror判定不可",
+    "source_refs": [
+      "L02",
+      "L14"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R07",
+    "severity": "warn",
+    "context": "da、fa、sta、vaと命令形・短縮形",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・語法を確認。アポストロフィやアクセントの自動追加不可",
+    "source_refs": [
+      "L03"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R08",
+    "severity": "proposal",
+    "context": "ed/ad/odと定着表現・後続音",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・文体として確認。同母音だけを条件に変更不可",
+    "source_refs": [
+      "L05",
+      "L06"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R09",
+    "severity": "preserve",
+    "context": "引用符の外側・内側と編集方式",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・一貫した既存方式を保持。指定時だけ統一案",
+    "source_refs": [
+      "L12",
+      "L13"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R10",
+    "severity": "warn",
+    "context": "引用内の空白と句読点の帰属",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・引用範囲と方針を確認。句点の一括移動不可",
+    "source_refs": [
+      "L07",
+      "L13",
+      "L15"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R11",
+    "severity": "warn",
+    "context": "ハイフン、挿入句、範囲、負号の役割",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・用途と編集方式を確認。外見だけで置換不可",
+    "source_refs": [
+      "L13",
+      "L14"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R12",
+    "severity": "proposal",
+    "context": "見出しの大文字、略語、正式名称",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・通常見出しの案を提示。ロゴ・正式表記は保持",
+    "source_refs": [
+      "L10",
+      "L12",
+      "U01"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R13",
+    "severity": "warn",
+    "context": "月・曜日・祝祭名とカレンダー等の省略形",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・文頭・固有名・媒体を確認。小文字化や句点追加を強制しない",
+    "source_refs": [
+      "L10",
+      "L11"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R14",
+    "severity": "preserve",
+    "context": "原著引用、商品名、人名、外国語の綴り",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・原文を保持。変更は明示された編集範囲だけ",
+    "source_refs": [
+      "L01",
+      "L07"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R15",
+    "severity": "preserve",
+    "context": "URL、コード、ID、検索キー、保存用の値",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・元文字列を保持。表示用記号変換の対象外",
+    "source_refs": [
+      "DESIGN"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R16",
+    "severity": "preserve",
+    "context": "正規化、署名・ハッシュ対象、結合文字の分割",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・元バイト列を保持。必要な表示変換は別処理とし差分を記録",
+    "source_refs": [
+      "T01",
+      "T02"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R17",
+    "severity": "preserve",
+    "context": "アポストロフィ直後の改行",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・合法な折返しを保持。母音復元による修正不可",
+    "source_refs": [
+      "L04"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R18",
+    "severity": "warn",
+    "context": "音節分割と複合語の境界",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・辞書と別解を確認。単一の正規表現による確定不可",
+    "source_refs": [
+      "L08",
+      "L09"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R19",
+    "severity": "warn",
+    "context": "ページと外国語文章部分の言語指定",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・言語を確認して修正案。固有名・定着語の機械的なタグ追加不可",
+    "source_refs": [
+      "U07",
+      "U08",
+      "U09"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R20",
+    "severity": "warn",
+    "context": "自動分綴の言語資源と実際の動作",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・対象環境で確認。CSS指定だけで適用済みと判定不可",
+    "source_refs": [
+      "U10"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R21",
+    "severity": "warn",
+    "context": "本文の単語折返しと長いURLの局所対策",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・溢れのある領域を調整。本文全体のbreak-all化は不可",
+    "source_refs": [
+      "U10"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R22",
+    "severity": "proposal",
+    "context": "見出しの意味の切れ目、孤立行、見出しと次段落",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・描画を見て配置案。語句削除や強制改行の一括挿入不可",
+    "source_refs": [
+      "L08",
+      "U11"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R23",
+    "severity": "proposal",
+    "context": "揃え方、行長、行高、段落間隔",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・媒体と書体に応じて調整。推奨値を必須規範にしない",
+    "source_refs": [
+      "U04"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R24",
+    "severity": "warn",
+    "context": "実字形、太字・斜体、大文字アクセント、fallback",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・実際の表示で確認。書体名や文字集合だけで合格判定不可",
+    "source_refs": [
+      "U04",
+      "U12",
+      "V11",
+      "V13"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R25",
+    "severity": "warn",
+    "context": "it-IT、it-CH、EU・スイス機関別の表示方式",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・localeと編集規程を分ける。Intlと機関書式を混同しない",
+    "source_refs": [
+      "L14",
+      "L15",
+      "U05",
+      "U06",
+      "O01"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R26",
+    "severity": "preserve",
+    "context": "数値・通貨・負号・桁数・丸め・4桁の区切り",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・元値と精度を保持。型と用途が確定した表示層だけ整形",
+    "source_refs": [
+      "U05",
+      "U06",
+      "O01"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R27",
+    "severity": "proposal",
+    "context": "数値と単位・通貨・割合、保護スペース",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・選択方式に沿って短いまとまりを保護。全段落のnowrap化不可",
+    "source_refs": [
+      "L14",
+      "L15",
+      "U05",
+      "U23"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R28",
+    "severity": "warn",
+    "context": "日付・時刻・先頭ゼロ・地域・タイムゾーン",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・指定条件に沿う表示案。保存値・年・日時の意味は変更不可",
+    "source_refs": [
+      "L11",
+      "L14",
+      "L15",
+      "U05",
+      "U06"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R29",
+    "severity": "proposal",
+    "context": "等幅数字、序数字形などのOpenType機能",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・書体対応と実表示を確認して採用。CSS指定だけの適用宣言不可",
+    "source_refs": [
+      "U12"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R30",
+    "severity": "warn",
+    "context": "書体のWeb利用、埋込み、再配布、試用条件",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・採用用途と同梱文書を確認。権利範囲不明のまま配布物へ追加不可",
+    "source_refs": [
+      "V12",
+      "V14"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R31",
+    "severity": "warn",
+    "context": "文字のコントラストと画像化された本文・操作名",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・基準の適用範囲と例外を確認して改善。見た目だけで適合宣言不可",
+    "source_refs": [
+      "U16",
+      "U17"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R32",
+    "severity": "proposal",
+    "context": "装飾、配色、書体の国籍、コピーの修辞",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・目的と情報階層から代替案。好みだけのerror判定や全面禁止不可",
+    "source_refs": [
+      "DESIGN"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R33",
+    "severity": "proposal",
+    "context": "tu/Lei/voiと文脈・読者・ブランド文体",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "proposal・役割を読んで整合案。引用や複数読者への呼びかけは保持",
+    "source_refs": [
+      "U02",
+      "U24"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R34",
+    "severity": "preserve",
+    "context": "包摂的な言い換えと既存の著者表現",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "preserve・指定表現を保持。任意の言い換え案のみ、無断追加・削除不可",
+    "source_refs": [
+      "U01",
+      "U25"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R35",
+    "severity": "warn",
+    "context": "CTAの操作内容と可視ラベル・アクセシブルネーム",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・操作を確認してラベル案。可視ラベルを含む名前を確認",
+    "source_refs": [
+      "U03",
+      "U18"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R36",
+    "severity": "warn",
+    "context": "入力条件、エラー特定・修正案、成功と失敗の文言",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・観測された状態に合わせて修正案。原因や成功を推測で断言不可",
+    "source_refs": [
+      "U03",
+      "U19",
+      "U20",
+      "U21"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R37",
+    "severity": "warn",
+    "context": "文字200%拡大時の内容・機能の保持",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・文字拡大を独立確認。欠落時は修正案、未実施はnot-checked",
+    "source_refs": [
+      "U13"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R38",
+    "severity": "warn",
+    "context": "320 CSS px相当幅のリフロー",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・適用例外も含め確認。不要な二方向スクロールや欠落を調整",
+    "source_refs": [
+      "U14"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R39",
+    "severity": "warn",
+    "context": "行高・段落後・字間・単語間の同時上書き",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・上書き耐性を確認。試験値を初期デザインへ強制しない",
+    "source_refs": [
+      "U15"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  },
+  {
+    "id": "R40",
+    "severity": "warn",
+    "context": "操作対象の大きさと間隔・例外",
+    "scope": "Italian; apply only after medium, content role, house style and edit permission are resolved",
+    "expected": "warn・最小条件への適合を確認。全ボタン一律24pxへの変更不可",
+    "source_refs": [
+      "U22"
+    ],
+    "status": "needs-review",
+    "implementation": "guidance; R21 also has a bounded CSS candidate detector"
+  }
+]
