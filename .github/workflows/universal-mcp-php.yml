@@ -122,6 +122,26 @@ jobs:
           php -S 127.0.0.1:8990 -t "$BASE/web/kmhn" >/tmp/kmhn-lolipop-test.log 2>&1 &
           sleep 2
           KUMIHAN_MCP_LOCAL_URL=http://127.0.0.1:8990/index.php python3 universal/tests/http_smoke.py
+      - name: Read-only public bootstrap preflight and fail-closed regression
+        run: |
+          set -eu
+          sh -n universal/tools/preflight_public_bootstrap.sh
+          BASE="$RUNNER_TEMP/kmhn-public-preflight"
+          mkdir -p "$BASE/web/kmhn" \
+            "$BASE/kmhn-mcp-private/server/public" \
+            "$BASE/kmhn-mcp-private/server/src" \
+            "$BASE/kmhn-mcp-private/server/vendor" \
+            "$BASE/kmhn-mcp-private/server/runtime/sessions"
+          for file in public/index.php src/Registry.php vendor/autoload.php runtime/config.php runtime/registry.json composer.lock; do
+            touch "$BASE/kmhn-mcp-private/server/$file"
+          done
+          FTP_ROOT="$BASE/web" sh universal/tools/preflight_public_bootstrap.sh
+          touch "$BASE/web/kmhn/unrelated-existing-file"
+          if FTP_ROOT="$BASE/web" sh universal/tools/preflight_public_bootstrap.sh >/tmp/kmhn-public-preflight-reject.log 2>&1; then
+            echo 'FAIL: public bootstrap preflight did not reject unrelated files'
+            exit 1
+          fi
+          grep -q 'PUBLIC_DIR_HAS_OTHER_FILES_REVIEW' /tmp/kmhn-public-preflight-reject.log
       - name: Public domain TLS preflight (informational, not a release gate)
         run: |
           echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
