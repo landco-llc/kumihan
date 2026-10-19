@@ -209,7 +209,8 @@ def format_static(text, relative):
             text = (FOOTER_TAG.sub(lambda _: footer, text, count=1) if FOOTER_TAG.search(text)
                     else text.replace("</body>", footer + "\n</body>", 1))
             from seo_metadata import enrich_html
-            return enrich_html(SHARE.apply(text), relative)
+            from version_display import apply_html
+            return apply_html(enrich_html(SHARE.apply(text), relative), relative)
 
 
 def static_pages():

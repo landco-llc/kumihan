@@ -1,0 +1,181 @@
+{
+  "base": "fe36ef38ba8cb03bb45d24b93649339782237113",
+  "previous_head": "1ea945a3fd3a7f581b2e87e926d2d51ee39ad53c",
+  "pages": [
+    {
+      "path": "docs/install-ziheng-claude.en.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng-claude.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng-claude.ja.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng-gemini.en.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng-gemini.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng-gemini.ja.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng.en.html",
+      "baseline_source_links": 1,
+      "candidate_source_links": 1,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng.html",
+      "baseline_source_links": 1,
+      "candidate_source_links": 1,
+      "missing": []
+    },
+    {
+      "path": "docs/install-ziheng.ja.html",
+      "baseline_source_links": 1,
+      "candidate_source_links": 1,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-chatgpt.en.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-chatgpt.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-chatgpt.ja.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-claude.en.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-claude.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-claude.ja.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-gemini.en.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-gemini.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "docs/install-zilu-gemini.ja.html",
+      "baseline_source_links": 5,
+      "candidate_source_links": 5,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-cn.en.html",
+      "baseline_source_links": 0,
+      "candidate_source_links": 0,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-cn.html",
+      "baseline_source_links": 0,
+      "candidate_source_links": 0,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-cn.ja.html",
+      "baseline_source_links": 0,
+      "candidate_source_links": 0,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-han.en.html",
+      "baseline_source_links": 2,
+      "candidate_source_links": 2,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-han.html",
+      "baseline_source_links": 2,
+      "candidate_source_links": 2,
+      "missing": []
+    },
+    {
+      "path": "kumihan-zh-han.ja.html",
+      "baseline_source_links": 2,
+      "candidate_source_links": 2,
+      "missing": []
+    }
+  ],
+  "restored_source_link_occurrences": 84,
+  "missing_source_links": 0,
+  "unchanged_tracked_zip_count": 187,
+  "unchanged_canonical_snapshot": true,
+  "changed_paths": [
+    ".github/workflows/version-automation.yml",
+    "docs/install-ziheng-claude.en.html",
+    "docs/install-ziheng-claude.html",
+    "docs/install-ziheng-claude.ja.html",
+    "docs/install-ziheng-gemini.en.html",
+    "docs/install-ziheng-gemini.html",
+    "docs/install-ziheng-gemini.ja.html",
+    "docs/install-ziheng.en.html",
+    "docs/install-ziheng.html",
+    "docs/install-ziheng.ja.html",
+    "docs/install-zilu-chatgpt.en.html",
+    "docs/install-zilu-chatgpt.html",
+    "docs/install-zilu-chatgpt.ja.html",
+    "docs/install-zilu-claude.en.html",
+    "docs/install-zilu-claude.html",
+    "docs/install-zilu-claude.ja.html",
+    "docs/install-zilu-gemini.en.html",
+    "docs/install-zilu-gemini.html",
+    "docs/install-zilu-gemini.ja.html",
+    "docs/version-automation/preservation.json",
+    "kumihan-zh-han.en.html",
+    "kumihan-zh-han.html",
+    "kumihan-zh-han.ja.html",
+    "tests/test_edition_versions.py",
+    "tools/version_display.py"
+  ]
+}

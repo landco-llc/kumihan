@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_adapter import seo_outputs
+from version_display import version_outputs
 import argparse
 import html
 from pathlib import Path
@@ -74,6 +75,7 @@ def guide(suffix,host):
   gateway=(PREFIX+FRAME.GATEWAYS[c['lang']][0],FRAME.GATEWAYS[c['lang']][1]))
  return FRAME.render(frame)
 
+@version_outputs
 @seo_outputs
 def outputs():return {name(s,h):guide(s,h) if h else landing(s) for s in C for h in (None,*HOSTS)}
 def main():

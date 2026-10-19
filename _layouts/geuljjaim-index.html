@@ -1,6 +1,6 @@
 {% assign t = site.data.geuljjaim[page.locale_key] %}<!doctype html>
 <html lang="{{ page.lang }}">
-<head>
+<head><link rel="stylesheet" href="{{ '/assets/version-info.css' | relative_url }}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f3ee">
@@ -27,7 +27,7 @@
     <a lang="ja" hreflang="ja" href="{{ page.ja_path | relative_url }}"{% if page.locale_key == 'ja' %} aria-current="page"{% endif %}>JA</a>
   </nav></div>
 </div></header>
-<main id="main" tabindex="-1">{{ content }}</main>
+<main id="main" tabindex="-1">{% capture version_content %}version/pages/{{ page.path }}{% endcapture %}{% include {{ version_content }} %}</main>
 {% assign kumihan_root = site.baseurl | append: "/" %}{% assign kumihan_lang = page.lang | default: "ja" %}{{ site.data.site_footer[kumihan_lang] | default: site.data.site_footer.ja | replace: "@ROOT@", kumihan_root }}
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
 </body>

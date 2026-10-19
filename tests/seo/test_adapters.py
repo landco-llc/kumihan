@@ -78,7 +78,9 @@ class AdapterTests(unittest.TestCase):
             authored = (templates / path).read_text(encoding='utf-8')
             body = lambda html: re.search(r'<body\b[\s\S]*', html, re.I)[0]
             with self.subTest(path=path):
-                self.assertEqual(body(output), body(authored))
+                from version_display import apply_html
+                # Version/download metadata is the explicitly authorized body delta.
+                self.assertEqual(body(output), body(apply_html(authored, path)))
                 self.assertIn('application/ld+json', output)
 
 

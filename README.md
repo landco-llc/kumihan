@@ -21,27 +21,27 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 
 | コード | 言語版 | 版 | サイト | ソース | リリース |
 | --- | --- | --- | --- | --- | --- |
-| JA | KUMIHAN（日本語） | v0.1.8 | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | 新版Release未作成・[過去版 v0.1.8-preview](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview) |
-| AR | KUMIHAN｜نضيد（アラビア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ar.html) | [plugins/kumihan-ar](plugins/kumihan-ar/README.md) | [kumihan-ar-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ar-v0.1.0) |
-| BN | KUMIHAN｜অক্ষরসজ্জা（ベンガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-bn.html) | [plugins/kumihan-bn](plugins/kumihan-bn/README.md) | [kumihan-bn-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-bn-v0.1.0) |
-| DE | KUMIHAN｜Satzbild（ドイツ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-de.html) | [plugins/kumihan-satzbild](plugins/kumihan-satzbild/README.md) | [kumihan-de-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-de-v0.1.0) |
-| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | [kumihan-grafia-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |
-| FA | KUMIHAN｜تراز（ペルシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fa.html) | [plugins/kumihan-fa](plugins/kumihan-fa/README.md) | [kumihan-fa-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fa-v0.1.0) |
-| FR | KUMIHAN｜Accord（フランス語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | [kumihan-fr-v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |
-| HI | KUMIHAN｜अक्षर-संगति（ヒンディー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-hi.html) | [plugins/kumihan-hi](plugins/kumihan-hi/README.md) | [kumihan-hi-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-hi-v0.1.0) |
-| ID | KUMIHAN｜Laras（インドネシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-id.html) | [plugins/kumihan-laras](plugins/kumihan-laras/README.md) | [kumihan-id-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-id-v0.1.0) |
-| IT | KUMIHAN｜Equilibrio（イタリア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-it.html) | [plugins/kumihan-equilibrio](plugins/kumihan-equilibrio/README.md) | [kumihan-it-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-it-v0.1.0) |
-| KM | KUMIHAN｜លំនឹង（クメール語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-km.html) | [plugins/kumihan-lumnung](plugins/kumihan-lumnung/README.md) | [kumihan-km-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-km-v0.1.0) |
-| KO | KUMIHAN｜글짜임（韓国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ko.html) | [plugins/kumihan-geuljjaim](plugins/kumihan-geuljjaim/README.md) | [kumihan-ko-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0) |
-| PL | KUMIHAN｜Szyk（ポーランド語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pl.html) | [plugins/kumihan-szyk](plugins/kumihan-szyk/README.md) | [kumihan-szyk-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-szyk-v0.1.0) |
-| PT | KUMIHAN｜Compasso（ポルトガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pt.html) | [plugins/kumihan-compasso](plugins/kumihan-compasso/README.md) | [kumihan-pt-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-pt-v0.1.0) |
-| RU | KUMIHAN｜Лад（ロシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ru.html) | [plugins/kumihan-lad](plugins/kumihan-lad/README.md) | [kumihan-ru-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0) |
-| SW | KUMIHAN｜Mizani（スワヒリ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-sw.html) | [plugins/kumihan-mizani](plugins/kumihan-mizani/README.md) | [kumihan-sw-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-sw-v0.1.0) |
-| TH | KUMIHAN｜ดุลอักษร（タイ語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-th.html) | [plugins/kumihan-th](plugins/kumihan-th/README.md) | [kumihan-th-v0.1.1](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) |
-| VI | KUMIHAN｜Nhịp Chữ（ベトナム語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-vi.html) | [plugins/kumihan-nhip-chu](plugins/kumihan-nhip-chu/README.md) | [kumihan-vi-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-vi-v0.1.0) |
-| ZH-HANS | KUMIHAN｜字律（簡体中国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-cn.html) | [plugins/kumihan-zilu](plugins/kumihan-zilu/README.md) | ソースとサイトのみ（Release未作成） |
-| ZH-HANT | KUMIHAN｜字衡（繁体中国語・台湾／香港） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-han.html) | [plugins/kumihan-ziheng](plugins/kumihan-ziheng/README.md) | Release未作成 |
-| ZU | KUMIHAN｜Hlela（ズールー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zu.html) | [plugins/kumihan-hlela](plugins/kumihan-hlela/README.md) | [kumihan-zu-v0.1.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-zu-v0.1.0) |
+| JA | KUMIHAN（日本語） | v0.1.8 | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | 公開済 / Published **v0.1.8** · 2026-10-19T12:51:29Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8) |
+| AR | KUMIHAN｜نضيد（アラビア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ar.html) | [plugins/kumihan-ar](plugins/kumihan-ar/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:02:36Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ar-v0.1.0) |
+| BN | KUMIHAN｜অক্ষরসজ্জা（ベンガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-bn.html) | [plugins/kumihan-bn](plugins/kumihan-bn/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T04:00:07Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-bn-v0.1.0) |
+| DE | KUMIHAN｜Satzbild（ドイツ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-de.html) | [plugins/kumihan-satzbild](plugins/kumihan-satzbild/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T02:39:13Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-de-v0.1.0) |
+| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:19:58Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |
+| FA | KUMIHAN｜تراز（ペルシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fa.html) | [plugins/kumihan-fa](plugins/kumihan-fa/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T07:24:32Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fa-v0.1.0) |
+| FR | KUMIHAN｜Accord（フランス語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T16:10:42Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |
+| HI | KUMIHAN｜अक्षर-संगति（ヒンディー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-hi.html) | [plugins/kumihan-hi](plugins/kumihan-hi/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T20:30:43Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-hi-v0.1.0) |
+| ID | KUMIHAN｜Laras（インドネシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-id.html) | [plugins/kumihan-laras](plugins/kumihan-laras/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T03:55:33Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-id-v0.1.0) |
+| IT | KUMIHAN｜Equilibrio（イタリア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-it.html) | [plugins/kumihan-equilibrio](plugins/kumihan-equilibrio/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T04:15:41Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-it-v0.1.0) |
+| KM | KUMIHAN｜លំនឹង（クメール語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-km.html) | [plugins/kumihan-lumnung](plugins/kumihan-lumnung/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T06:53:04Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-km-v0.1.0) |
+| KO | KUMIHAN｜글짜임（韓国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ko.html) | [plugins/kumihan-geuljjaim](plugins/kumihan-geuljjaim/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T13:50:22Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0) |
+| PL | KUMIHAN｜Szyk（ポーランド語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pl.html) | [plugins/kumihan-szyk](plugins/kumihan-szyk/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T02:55:50Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-szyk-v0.1.0) |
+| PT | KUMIHAN｜Compasso（ポルトガル語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-pt.html) | [plugins/kumihan-compasso](plugins/kumihan-compasso/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:48:31Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-pt-v0.1.0) |
+| RU | KUMIHAN｜Лад（ロシア語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ru.html) | [plugins/kumihan-lad](plugins/kumihan-lad/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T04:08:49Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0) |
+| SW | KUMIHAN｜Mizani（スワヒリ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-sw.html) | [plugins/kumihan-mizani](plugins/kumihan-mizani/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T05:27:57Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-sw-v0.1.0) |
+| TH | KUMIHAN｜ดุลอักษร（タイ語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-th.html) | [plugins/kumihan-th](plugins/kumihan-th/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T14:37:07Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1) |
+| VI | KUMIHAN｜Nhịp Chữ（ベトナム語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-vi.html) | [plugins/kumihan-nhip-chu](plugins/kumihan-nhip-chu/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T20:25:05Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-vi-v0.1.0) |
+| ZH-HANS | KUMIHAN｜字律（簡体中国語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-cn.html) | [plugins/kumihan-zilu](plugins/kumihan-zilu/README.md) | Release未公開 / Unpublished — ソース版 / source v0.1.0 |
+| ZH-HANT | KUMIHAN｜字衡（繁体中国語・台湾／香港） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zh-han.html) | [plugins/kumihan-ziheng](plugins/kumihan-ziheng/README.md) | Release未公開 / Unpublished — ソース版 / source v0.1.0 |
+| ZU | KUMIHAN｜Hlela（ズールー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-zu.html) | [plugins/kumihan-hlela](plugins/kumihan-hlela/README.md) | 公開済 / Published **v0.1.0** · 2026-10-19T06:14:43Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-zu-v0.1.0) |
 
 <br>
 
@@ -87,7 +87,7 @@ v0.1.8 では、目的に応じた情報階層、文字と図像の関係、ブ�
 
 ## 開発状況
 
-継続して開発中です。日本語の現行パッケージは v0.1.8 です。新しいタグとReleaseは承認待ちで、公開済みの v0.1.8-preview は過去版として保持します。各AIホストでのネイティブ動作や、実際の表示・Officeでの検証には範囲の制限があります。多くの言語版のサイト文面とプライバシーポリシーの参考訳は、母語話者による確認が未了です。
+継続して開発中です。<!-- version-status:ja -->日本語の現行ソース版は v0.1.8、正式公開版は [v0.1.8](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8)（2026-10-19T12:51:29Z）です。<!-- /version-status:ja -->各AIホストでのネイティブ動作や、実際の表示・Officeでの検証には範囲の制限があります。多くの言語版のサイト文面とプライバシーポリシーの参考訳は、母語話者による確認が未了です。
 
 ページは生成スクリプトから作ります。HTMLを手で書き換えず、`tools/` のスクリプトを更新して再生成し、`--check` とテストを通してください。
 
@@ -113,7 +113,7 @@ KUMIHAN is an open-source project for language-aware typography and thoughtful d
 
 ### Language editions
 
-Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; Simplified Chinese (字律) is published as source and website only, and Traditional Chinese (字衡) has source packages, both without a GitHub Release.
+Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; <!-- version-status:chinese -->Simplified Chinese (字律): source packages available; GitHub Release unpublished; Traditional Chinese (字衡): source packages available; GitHub Release unpublished.<!-- /version-status:chinese -->
 
 ### Installation
 
@@ -125,7 +125,7 @@ Choose the guide for your AI tool (ChatGPT / Codex, Claude / Claude Code, Gemini
 
 ### Status
 
-KUMIHAN is in development toward a stable release. The current Japanese package version is v0.1.8; its new tag and Release await approval. The older v0.1.8-preview release (October 19, 2026) remains available as history. Native AI-host behavior and real rendering across tools are only partially verified, and many editions' site copy and the privacy policy's reference translations still await native-speaker review. Pages are generated by the scripts in `tools/`; edit those, regenerate, and run the `--check` options and `python -m unittest discover -s tests`. See [development](docs/development.md).
+KUMIHAN is in development toward a stable release. <!-- version-status:en -->The Japanese source version is v0.1.8; the published version is [v0.1.8](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8) (2026-10-19T12:51:29Z).<!-- /version-status:en --> Native AI-host behavior and real rendering across tools are only partially verified, and many editions' site copy and the privacy policy's reference translations still await native-speaker review. Pages are generated by the scripts in `tools/`; edit those, regenerate, and run the `--check` options and `python -m unittest discover -s tests`. See [development](docs/development.md).
 
 <br>
 

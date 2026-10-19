@@ -1,0 +1,14 @@
+/* Version metadata only. Logical sizing and bidi isolation retain the page layout. */
+.edition-version { display:flex; flex-wrap:wrap; align-items:baseline; gap:.35rem .8rem; max-inline-size:100%; margin-block:1rem; font:500 13px/1.7 system-ui,sans-serif; letter-spacing:normal; text-transform:none; overflow-wrap:anywhere; }
+.edition-version strong { font-weight:700; }
+.edition-version a { display:inline-flex; align-items:center; min-block-size:44px; padding-inline:4px; text-decoration:underline; text-underline-offset:3px; }
+.edition-version span { min-inline-size:0; }
+.edition-version time { font-size:12px; }
+.edition-version[data-edition-version="install"] { width:var(--shell,90%); margin-inline:auto; }
+.toc > .edition-version { display:block; margin-block-start:0; padding-block-end:12px; border-block-end:1px solid #d9d5cc; }
+.toc > .edition-version > span { display:block; }
+.version-state { display:block; font-size:10px; line-height:1.5; white-space:normal; }
+.lang-card-head .state { max-inline-size:65%; text-align:end; }
+.download-unavailable { overflow-wrap:anywhere; }
+.version-locale { display:none; }
+html[lang="ja"] .version-ja, html[lang="en"] .version-en, html[lang="zh-Hant-TW"] .version-zh { display:block; }

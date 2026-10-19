@@ -5,12 +5,14 @@ import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_adapter import seo_outputs
+from version_display import version_outputs
 import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
+@version_outputs
 @seo_outputs
 def outputs():
     base = ROOT / 'templates/bn'

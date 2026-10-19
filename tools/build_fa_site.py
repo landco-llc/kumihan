@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the 12 localized Arabic product pages; deterministic, no runtime translation."""
 from seo_adapter import seo_outputs
+from version_display import version_outputs
 import argparse
 from html import escape as e
 from pathlib import Path
@@ -168,6 +169,7 @@ def guide(lang,host):
         content=b,platform=HOSTS[host],ui=g,footer_sub=e(s['footer_sub'])+'<br>v0.1.0 · Apache-2.0 · Developed by L&amp;Co. LLC',
         footer_links=[('GitHub',REPO+'/tree/main/plugins/kumihan-fa',True),('Apache-2.0',REPO+'/blob/main/LICENSE',True)],
         gateway=(BASE+GATEWAY[lang],s['gateway_label'])))
+@version_outputs
 @seo_outputs
 def outputs():
     out={path(l,h):guide(l,h) if h else landing(l) for l in COPY for h in (None,*HOSTS)}

@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ page.lang | default: 'ja' }}">
-<head>
+<head><link rel="stylesheet" href="{{ '/assets/version-info.css' | relative_url }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
@@ -207,6 +207,7 @@
   </nav>
   <div class="shell content-layout">
     <aside class="toc" aria-label="Page sections">
+{% include version/ja-current.html %}
       <details class="toc-details" id="toc-details" open>
         <summary><span data-ui-ja>このページの目次を表示</span><span data-ui-en hidden>Show page contents</span><span data-ui-zh hidden>展開本頁目錄</span></summary>
         <h2 class="toc-title"><span data-ui-ja>このページの目次</span><span data-ui-en hidden>On this page</span><span data-ui-zh hidden>本頁目錄</span></h2>

@@ -6,6 +6,7 @@ in assets/gateway.css. Language order everywhere is by language code, with
 the page's own language first (and English second in the language menu).
 """
 from seo_adapter import seo_outputs
+from version_display import gateway_badge
 import argparse
 import hashlib
 import json
@@ -955,7 +956,7 @@ def cards(key):
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
                 + (" data-extra" if i >= VISIBLE else "") + ">"
-                f'<div class="lang-card-head"><span class="lang-index">{code.upper()}</span><span class="state">{x(p["version"])}</span></div>'
+                f'<div class="lang-card-head"><span class="lang-index">{code.upper()}</span>{gateway_badge(code, GATEWAYS[key][1])}</div>'
                 f'<h3 class="lang-title" id="language-{code}" lang="{p["lang"]}"{direction}>{x(p["name"])}</h3>'
                 f'<p class="lang-sub"><bdi dir="ltr">{x(p["brand"])}</bdi></p>'
                 f'<p class="lang-desc">{x(desc)}</p>'
@@ -1016,6 +1017,7 @@ def page(key, c):
 <title>{c['title']}</title>
 <link href="assets/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/version-info.css">
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
 

@@ -1,6 +1,6 @@
 {% assign t = site.data.geuljjaim[page.locale_key] %}{% if page.locale_key == 'en' %}{% assign sfx = '.en' %}{% elsif page.locale_key == 'ja' %}{% assign sfx = '.ja' %}{% else %}{% assign sfx = '' %}{% endif %}{% if page.canonical_path contains 'chatgpt' %}{% assign host = 'ChatGPT / Codex' %}{% assign host_number = '01' %}{% elsif page.canonical_path contains 'claude' %}{% assign host = 'Claude / Claude Code' %}{% assign host_number = '02' %}{% else %}{% assign host = 'Gemini' %}{% assign host_number = '03' %}{% endif %}<!doctype html>
 <html lang="{{ page.lang }}">
-<head>
+<head><link rel="stylesheet" href="{{ '/assets/version-info.css' | relative_url }}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
@@ -52,6 +52,7 @@
 </nav>
 <div class="shell content-layout">
   <aside class="toc" aria-label="{{ t.toc_title }}">
+{% capture version_current %}version/ko-current-{{ page.lang }}.html{% endcapture %}{% include {{ version_current }} %}
     <details class="toc-details" open>
       <summary>{{ t.toc_summary }}</summary>
       <h2 class="toc-title">{{ t.toc_title }}</h2>
@@ -67,7 +68,7 @@
   </aside>
   <main class="guide" id="main" tabindex="-1">
     <div class="guide-head"><span>DOCUMENTATION / {{ host }}</span><span class="step-label">{{ t.guide_steps }}</span></div>
-    <div class="guide-pane">{{ content }}</div>
+    <div class="guide-pane">{% capture version_content %}version/pages/{{ page.path }}{% endcapture %}{% include {{ version_content }} %}</div>
   </main>
 </div>
 {% assign kumihan_root = site.baseurl | append: "/" %}{% assign kumihan_lang = page.lang | default: "ja" %}{{ site.data.site_footer[kumihan_lang] | default: site.data.site_footer.ja | replace: "@ROOT@", kumihan_root }}

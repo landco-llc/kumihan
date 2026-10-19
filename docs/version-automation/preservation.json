@@ -1,0 +1,1056 @@
+{
+  "authority": "KUMI-VERSION-AUTO-WG00-WG04-20261019-01",
+  "baseline": "d3d55a344ab5cfe942a640261f9a8760fceee2a2",
+  "updates": {
+    "protected": {
+      "README.md": {
+        "before": "95957f06b99ab18b65ef6f04f107de5034305097ab55401b46d621a0382906d0",
+        "after": "ee246d1980743007e982d98d0bbb39b14c70c25b8f4114a8a3b897d4c7d7dbc5"
+      }
+    },
+    "bodies": {
+      "_layouts/geuljjaim-index.html": {
+        "before": "fe454ff47c61a6e33c5395ae338b9d23f0c173bb57bd081ac505e482b576c9be",
+        "after": "afb02c6233a32f0debfbd83608638114cab7c2a679c320af19b3bcc443f11ea7"
+      },
+      "_layouts/geuljjaim.html": {
+        "before": "5d9dcd110f3cdd19cf2ba74c8cd01e47d17e19bea60e00c0ee57673ba19b1cb2",
+        "after": "af090a487a6f506bcc1d0c4d019a8a4674bd077b86a013f9b7f64fd5881a5f9e"
+      },
+      "_layouts/installation.html": {
+        "before": "b32b3da9bce3d5ffd437aaad0ea502c02568b69c7c6d05a5bd1cdae4e81f0c79",
+        "after": "b2d8865993410add9c3dee36c66f02ae6efec98e02d583dc2c8f6787afd529d2"
+      },
+      "_layouts/landing.html": {
+        "before": "fb2426344252528f64e8955081ba3344aca72f968f970f3794f31f06fe0d1f00",
+        "after": "85cf6d70b9874ac5e84f3f88cfef31fbb0f6d9aa4fe42ce6445f7e19ae9d2bc8"
+      },
+      "docs/install-accord-chatgpt.en.html": {
+        "before": "0324b242ca70dfdd7593b0916a77c2e9f0a5d5b05c562d9cc96f8e36a50707d8",
+        "after": "8be36672e363d1992704c72ca940bb1e9bc9b41b3f48b5fd4be954ad443851cb"
+      },
+      "docs/install-accord-chatgpt.html": {
+        "before": "e2e3cd8958d7c66950511a407c5019513215ba842ea39a8ed40c669bc9e4dc56",
+        "after": "7314163789747f55e3261def1d8fc11147828d4fd1ad6deadc73e0b11643acf0"
+      },
+      "docs/install-accord-chatgpt.ja.html": {
+        "before": "6ca1dac76130b75b93d0bb4c154ab4f1391706e34a8e851339ef958255b12afb",
+        "after": "611f182b5f9c5849f22debffe23f0142eee42bc14523f9b9c6ff03948f56db95"
+      },
+      "docs/install-accord-claude.en.html": {
+        "before": "c120cb3ea6c003976a9e5fdfd6772c431a838bb54c72ef4c8203909a46dcef60",
+        "after": "6bfbb674a727819179150c98bb10cf3f2c6b34c021ee7f602b6987e592ba7135"
+      },
+      "docs/install-accord-claude.html": {
+        "before": "c5bc98f5a9fd76eb4f87dc90211a7d498aac6c43a5cb3396648e9b623a0a5322",
+        "after": "88bd10157b97288bc58a008258a50d69d1f9fd354520bb4bfe081a68f903c690"
+      },
+      "docs/install-accord-claude.ja.html": {
+        "before": "87a0addcbe4a092dc012d86076b171a83223a068fff506c3b2c1d3e16671b606",
+        "after": "bf2722b44a1adf12f4661512839a3fef06c771fbec29c18479b18ce47b2ab318"
+      },
+      "docs/install-accord-gemini.en.html": {
+        "before": "3bd620e5472e6f0eb200baa97884564a98119ba0bf58039a88b0aa35a6143e23",
+        "after": "619f0927684f7146417b088d6bfd787e5df4cdec5ed346e198101bc3b0ddf4bd"
+      },
+      "docs/install-accord-gemini.html": {
+        "before": "c457dd4e1925bdb9ebd405c5b9fa885844433cb10bae9448188baa42a826ff4c",
+        "after": "80699f6c711ad3c7968ea6f80b99d0d5cf0344375ac9d7214cb6eafffb70c51e"
+      },
+      "docs/install-accord-gemini.ja.html": {
+        "before": "83b841a385f0fa5ddc676e37d24047a0a3872900d80e342eac188a620e2e2b8f",
+        "after": "1f9e6b4c21752803b575a4c000f68c79349c8d19abba1f4dcc25efea9a54a31a"
+      },
+      "docs/install-compasso-chatgpt.en.html": {
+        "before": "69f51e0f31bae008ebfbefffe4ca239c767ee028d399148263a8e2fd0230dc8d",
+        "after": "1af033a42a6cc916f11cfc38f9fe8a7dec9be40db91889581d496335b5c2f662"
+      },
+      "docs/install-compasso-chatgpt.html": {
+        "before": "04e16715447fc8ef5dea9bb0a3dc3585f81dd553c17457f6a56fe249323fb46f",
+        "after": "fabe4dc39307e486e1ee27a72f3a716dfa4b4da111897587cbec3d9e950c50ea"
+      },
+      "docs/install-compasso-chatgpt.ja.html": {
+        "before": "723db04356b8ed150d997a5cdefeaa69e25daad2c3e17a97745ab9105ebdab57",
+        "after": "1704c1da387559e00906032892818e9d05cfdd5dee5078985ef4db65f3c9d8d3"
+      },
+      "docs/install-compasso-claude.en.html": {
+        "before": "dfd7426a2a26c765778c52b67291f08c266fdf592f6d345064073ea5bd83a2c7",
+        "after": "7d8096fbd6486ffb015a0107f17be87aabdfb8934114f8a9fe9073e58d8dfbd3"
+      },
+      "docs/install-compasso-claude.html": {
+        "before": "33dafa769ae5a29feb4692ceacab57e9430ac0f09a9ad0d04f92372f46164f5d",
+        "after": "06a775780346a56d724f80cc88c2a80845671de23f970789b26327cfa20768c4"
+      },
+      "docs/install-compasso-claude.ja.html": {
+        "before": "20e199a676223a64517b40dff264d63b5e681ffeda578a5425d5dbf0b35fb4b4",
+        "after": "7f0dbd3a0d61fa4bad9ef0278bce08600cd4b1f85f12c8b409ffb2b8d7515695"
+      },
+      "docs/install-compasso-gemini.en.html": {
+        "before": "0c34fb629df8c4e35cb8a37a372a2b54456a6e2087f5d71d3a51cd4b0bdb49ee",
+        "after": "94ee337667647de3a6fbba4a14e9f69c18d66e97477b8fe9b57c33a4b799db99"
+      },
+      "docs/install-compasso-gemini.html": {
+        "before": "2d82c9c7c60c3314d455061f6e9a56b066ebb193393141c09e2563db2ebb4e83",
+        "after": "ce3a46284ad1d4768ce41148fdba16c905cc15f5b1b6589f5569eef81eb890f7"
+      },
+      "docs/install-compasso-gemini.ja.html": {
+        "before": "56ce039faae2a9ee12dd1ce3588f3dd8c0aa2d7fc71e4d1c64f65b18b41753a3",
+        "after": "a4cf653c7c4025ecd8e361f1a28cd3734a6d6847134a12972ce3896aaa6bae9c"
+      },
+      "docs/install-equilibrio-chatgpt.en.html": {
+        "before": "f9e9814dcd124b80dc62ddb0ac4c285f8445338326ed81567385b08266fa187d",
+        "after": "d7e6296b9f017e18a3ec1af1aeae6bc0970cc10e1e368bb2ca360ec44f5be2c1"
+      },
+      "docs/install-equilibrio-chatgpt.html": {
+        "before": "ac03b4d8919db850c02db6b4e0ca8cba5967dc0ef3f1d4c3508d56897f4e2ea4",
+        "after": "d32be3cf4f594d5d6d4a6c27fe86630dc7386ded50e43a8e17c31c8e9c05f403"
+      },
+      "docs/install-equilibrio-chatgpt.ja.html": {
+        "before": "b5150b60a239c489630ce3eedadcf734896f01b19553d76c96cfdb54cd3f0fad",
+        "after": "df346ab97b1d32634e54dc4f0fb844b6b4544f05a93cded014ff182ba83be921"
+      },
+      "docs/install-equilibrio-claude.en.html": {
+        "before": "7b520a4d86a26ac850cb66b39761a9630b329fbb332bc8d09029a5c492e760f3",
+        "after": "de8f66097444c65d2deaae9da4dc7598e251084382ee4f13e6e57accb80beb90"
+      },
+      "docs/install-equilibrio-claude.html": {
+        "before": "8ac69700333c46f3069e980bee44ed5766564ac00507fc36fdf49d35c14fe0da",
+        "after": "383e359833cb51a25505b3f1a11485975f831f28c6af5afbd41036d4162d7531"
+      },
+      "docs/install-equilibrio-claude.ja.html": {
+        "before": "cf90b5e8a4073a0b230eac7641ce90cb934b722dce0fb6783b6d7427e0166852",
+        "after": "1b027373ee6041d9d5349b8ad4af08fe4c26dbc298eaf7a6f3a57353c1848f7d"
+      },
+      "docs/install-equilibrio-gemini.en.html": {
+        "before": "038601e0502c57fcb26cb887587e395e8264c6fb221049bb8d4789bb3068e44d",
+        "after": "f03a3a0780256ccd1a1f9061d8ab16a85b058127fe12e8815007d83f52520869"
+      },
+      "docs/install-equilibrio-gemini.html": {
+        "before": "98b8a741dc6c5846575e42290696b078891360859a581e8f3e07547359b37258",
+        "after": "487e86bbfdfc3377b81dd03dc519dc65480c7eca30b3cab6c8cb1d5f06d46c5d"
+      },
+      "docs/install-equilibrio-gemini.ja.html": {
+        "before": "2e57d9e19cc36b0f7860b60d6fb8cd1bd7247f909f64f716b490f3365bad61a3",
+        "after": "5bc4d576a24e38643974853c8803058245258140af6aab7dc2700fe80014c98d"
+      },
+      "docs/install-grafia-chatgpt.en.html": {
+        "before": "a8e710b7b0f8a7701e4d6e4ea43d4ee5c80789d1078b924a4153d7bb284a66b2",
+        "after": "018ae73f682ae1d0a28882160685791199f3241c09b3ce353ca44a78b4b68068"
+      },
+      "docs/install-grafia-chatgpt.html": {
+        "before": "4431f682fd5c73985029e44ff567e6b3b47abe0ba5ace0d80040e455515f52fa",
+        "after": "ba2126a0f8a20a9240aab714f985e329d7c698ac38411e2b59ed6c663b61fb3c"
+      },
+      "docs/install-grafia-chatgpt.ja.html": {
+        "before": "a78cce6885f6709eef712810f53398922e8507e98bd1e5e4502406d55442f458",
+        "after": "bb1b08e5f7b2b811aa42c5e8ae7fc6dcb2490eaa1f95a38499717f7ff8832223"
+      },
+      "docs/install-grafia-claude.en.html": {
+        "before": "ab909b4172901b6813874a7b768330c695e0b3744b00450a51955f6ea079ddf8",
+        "after": "cae17d5995bef153b6260c69520e40bbb0b7ee5ec55aee3e976572069aa63461"
+      },
+      "docs/install-grafia-claude.html": {
+        "before": "3290e1a22cc8bdeea9899c0298b9055c49ab111e86841c234dea551bf6b04536",
+        "after": "c464fe55efc224a250051dd331f13701b5220e41ab2cad4a33f1d6194594fa84"
+      },
+      "docs/install-grafia-claude.ja.html": {
+        "before": "58da1a35b84964b5701c12be934a564247df344446a51b2d54ce67f437fe6e1f",
+        "after": "e561263855d3beed4728e787b2f175c207cc1492859bf7ef2e9c3dab606e9d4b"
+      },
+      "docs/install-grafia-gemini.en.html": {
+        "before": "63f1ec52f1d6ad1f025f11a5f1b448723a523b2f87badea8da8dad1e3ebca335",
+        "after": "63783b35651a7074bfc3c43a3e12da682c80f6ab65e71c720d8aca504fa41d07"
+      },
+      "docs/install-grafia-gemini.html": {
+        "before": "0da5eba1abb52b9b5d6c26bac0f2d0cbbeec10090843bc892dda556677a3d819",
+        "after": "3418d902192aacf0c2c40d12b2cf0b68cde9c50df37860a9f8a33df89384a5ba"
+      },
+      "docs/install-grafia-gemini.ja.html": {
+        "before": "f3b73b798c5bd6641b2090ab90787f9de30cee9acda251dd6481f8790d5d8acb",
+        "after": "bc7593840f2a0b6bef2c020c18a528e82ffb115035c0185ad36e7a7b17528b62"
+      },
+      "docs/install-hlela-chatgpt.en.html": {
+        "before": "5ab5e6bbb1fe5ea9a8b7db9bde13329eb2f65a1be1bcdcc6436a81abf889320e",
+        "after": "810fb057280ba0a5aab5a6d3ef72ed7c31f255c2da481e27e91b12d0d5ec0969"
+      },
+      "docs/install-hlela-chatgpt.html": {
+        "before": "1702d3d56f2b8c39a4bf9c286fa079ffa1bd64208837c8ae48e14adfc229c6b9",
+        "after": "635c66c615ff023c05aaf9e84fcb25ad8177e0fd8976be5c5c45ae88bbcb9e5f"
+      },
+      "docs/install-hlela-chatgpt.ja.html": {
+        "before": "50987cb588361d95ccc078ffdf8d33425aeb38dcc1f2dad77bf521efa942d8be",
+        "after": "edd1610ef46165114f0f720b75c64af5342e472d6d8e5253f4b4b6788a3674db"
+      },
+      "docs/install-hlela-claude.en.html": {
+        "before": "a3be4b6f33caa55095b58b8ea6061dcdf80f28dc05daba8361422b7836d06e93",
+        "after": "e428a8cff5ce9dd2a7b81b24ff18ee663d53ea673ea2aad5a44df0e2939660ed"
+      },
+      "docs/install-hlela-claude.html": {
+        "before": "23e33e4d8c60b35460b1bde28eb411246f3d86a01e8c3b6e01cb416c470145b4",
+        "after": "0af5254dc2cc5474d0f5f22fbe48aaf9c53383908f4c21050de044f9ef278a62"
+      },
+      "docs/install-hlela-claude.ja.html": {
+        "before": "089d2860b0920d9e2d5321421799b49e0e972b389283996a3b82858e1c78f925",
+        "after": "3d97aefb2b9ad54198cb46b6165139bbd974bdf3fe5a40ac55868f40921061b7"
+      },
+      "docs/install-hlela-gemini.en.html": {
+        "before": "2013146754d91e20f3cdeb3e8bbe6a70b59edae538292e065bae5619ab53a048",
+        "after": "f5db6f2b7d685dcd39db06df1d6a7a2cb48cbff4c777a0e892ab96b1ceceb710"
+      },
+      "docs/install-hlela-gemini.html": {
+        "before": "57147f786f4fea57e37faf4cca9c9a4c093a8da1b397d1aa2d27adc1eaae167c",
+        "after": "a996ad5bb69c64b9639576967328c5f7371c9ec07e29d9962a8932b84ad0c279"
+      },
+      "docs/install-hlela-gemini.ja.html": {
+        "before": "f0b8e3fe1e9d19836d4460f66ecfc2ea8af22dce78ff5fdb57b5a069cdd455f5",
+        "after": "44bc439753279ab6f27812f59d3ef103ac20762c47f4ebf1cf2af118d1cc487c"
+      },
+      "docs/install-kumihan-ar-chatgpt.en.html": {
+        "before": "8578fa9bbc1973d949fd13d3bc5aeb09d25deb9aea4c6ed9e8dd0f6ef908a897",
+        "after": "4e3ae77e55569e40cc23a8a48a0d4e17a6fa3ffc4055dfff04ed596eca0b01e6"
+      },
+      "docs/install-kumihan-ar-chatgpt.html": {
+        "before": "4c8687ab9643dc41e8a21165afae1986f9db3033efc824d18690b5d1abd32eee",
+        "after": "afb2d0440868fc4d3e992eeb2c270fe34c2a59dcf3327f12c3cd8881debafa43"
+      },
+      "docs/install-kumihan-ar-chatgpt.ja.html": {
+        "before": "68d4bf663beca407dc3f0950d34ec842085938620fffe33968e264160a273b4c",
+        "after": "51060232f914c65a8d58847cb0ea722adf1e5a43524a9069737fec2b13a8ac70"
+      },
+      "docs/install-kumihan-ar-claude.en.html": {
+        "before": "d76228a293ae642dda6220d09764952cb5676ed7f68d0e5f87cdac0b9e5068b2",
+        "after": "8fcb2c6b0956d0c3581516770a37e7ffab54458639be56377ab4f58fde5bb4a9"
+      },
+      "docs/install-kumihan-ar-claude.html": {
+        "before": "ee104bd60b1925a9a32dfac581bfac45da417dae0df4428fdedc826adaccda43",
+        "after": "9c2f6f37f089943f6677af49284d2b7d48c5b8a79e3d9e4bd5bd4cd2f1c7bcca"
+      },
+      "docs/install-kumihan-ar-claude.ja.html": {
+        "before": "8274232be9f23679bae2564ae7aafc021524469682f467ec22ea358eb7556de5",
+        "after": "733783e76d7fd4fc6d1cf7a5541df40b4c9a8339d3ec63b9a5ebff1ac30cb5a5"
+      },
+      "docs/install-kumihan-ar-gemini.en.html": {
+        "before": "58e6377a9e21cbfb93f35fa7bcd6ddd6e0e7b9144623a248f6fe5c8675ebab90",
+        "after": "691267ff4fea2aa0d72979040cea558e3aa3eced94e62c167311c1901fee419c"
+      },
+      "docs/install-kumihan-ar-gemini.html": {
+        "before": "c6855d6d92057cbc5b03cb68c0b4841c31803f7b15ad81949bf540c882d70658",
+        "after": "ed36210da319a3a1358d30b3d80cd77273377657a6453ca3f13284812029bd60"
+      },
+      "docs/install-kumihan-ar-gemini.ja.html": {
+        "before": "9c6c1ad4477d8fa924500ff2d9bde02ee7c7dcd2636d72166919508ea223f3b5",
+        "after": "994d8a238a316009c9ca31c85a223cc127ae08916e4d036def2d655217358da0"
+      },
+      "docs/install-kumihan-bn-chatgpt.en.html": {
+        "before": "fd9b7a30812af9d15e341e3331df1cae454531a6f328655bc3805f36aa8f0cd0",
+        "after": "9d88cb9781bf2f5ae669257ee7d0ea7d746ab43640455f724b8a041083b794d6"
+      },
+      "docs/install-kumihan-bn-chatgpt.html": {
+        "before": "6b19a00e8f42e6cff6f6c292a94a46ff4c1492a336c2fab86d22cd3ed372d44d",
+        "after": "720313a926377a1c26f1b78301e47bf6c9beefa730ba495aefa5ab26a85e909c"
+      },
+      "docs/install-kumihan-bn-chatgpt.ja.html": {
+        "before": "7510e7265223cdbf479c075b9dd03c93aeeda97c36e5a6203fa4fa33b05a5f24",
+        "after": "5db95232bb81ecab671c1a1b917ab2f2440a31d9f578a286961f10e24552a00b"
+      },
+      "docs/install-kumihan-bn-claude.en.html": {
+        "before": "d8cc20d3148fda86b1e2d872e2d4d9481f489915d5cd090d382a58af23645858",
+        "after": "d53713352e696ed453171795b07d4de802fe4492e5858bc85c782f9fec055eb5"
+      },
+      "docs/install-kumihan-bn-claude.html": {
+        "before": "7282d0d769c492922192783adf0390abc52ef3781f515ccb7ab219f1972899c4",
+        "after": "09cbaf08ed65f15bf4ed8915c67054bc88083d8e6db7b2c5f17342f2eaed3e60"
+      },
+      "docs/install-kumihan-bn-claude.ja.html": {
+        "before": "74cfebcc6ad2185a54043438483abdd2fea9d405e44469b6e4c453fa6c39e0c5",
+        "after": "dd6b5f39143bf7f3129b06184549875bc2d00759fbb2d30402e95f85a0cc0bd7"
+      },
+      "docs/install-kumihan-bn-gemini.en.html": {
+        "before": "8fbdb2052cfe4a2382f7eed01753ee4b2007e46eac2c1754c8b8eaba05ba5e8d",
+        "after": "82bd0f68e37fbbdfc18fa47368b6d7acacb946ca2025c841ce6cdd9f4f834eb2"
+      },
+      "docs/install-kumihan-bn-gemini.html": {
+        "before": "cabfbb0b88d6cdfdefb8267a5d66039260395d5896f1127d3456ddd75b587669",
+        "after": "505e6ac64d209c22f25db94d00110809b78bbd5a05e8406cd35ca35cb1dc92b1"
+      },
+      "docs/install-kumihan-bn-gemini.ja.html": {
+        "before": "7595d0fbde0ee64c27cca4c93272414bbff665a4653e8aa5c2a438c8f8bcd080",
+        "after": "aae1a8389d365a24672dcf8b87944e576d011d71fbb3fd526514fb47d2f438e3"
+      },
+      "docs/install-kumihan-fa-chatgpt.en.html": {
+        "before": "2fd4a5754f7a75117d1edf04cb9fc2002b4aa0fee0e24343acf57b10f62b8c01",
+        "after": "38935b695eff238fc4e1226dbf76707f6a84a4c4988817e20825cf23665c252a"
+      },
+      "docs/install-kumihan-fa-chatgpt.html": {
+        "before": "492bdec9f933d8d7afa782e84eeeda4aa0d2c4cfed6012af1a6e1d6431e684c5",
+        "after": "36181696419ef9f612656bb9a43e420e8f21d163e8f090ee4f4ab45582fed5d9"
+      },
+      "docs/install-kumihan-fa-chatgpt.ja.html": {
+        "before": "04e4d8f75326e1a7153019bb12c9f8c779bd078fcb43ca32ce60264ac879a36e",
+        "after": "d72a36b2e12b266e9ce6798b4592b7ccb6bc46f72b26553010ae00e82389a8e4"
+      },
+      "docs/install-kumihan-fa-claude.en.html": {
+        "before": "97dd28ab580901a607aa42d727b0f98ad52d0c8d5ee8a4ba9a9d61ff88a32fdc",
+        "after": "2a76a0aa4250f952845b31335ec4c7ce54b9bb133f7ad08d0e818d9b60a5aab7"
+      },
+      "docs/install-kumihan-fa-claude.html": {
+        "before": "1e699ed6e5ce684fe972dee9b4261f24f25fb4fd34d80115a2f4b76bd1e14eee",
+        "after": "d0d26219b72034b7e436e043111b1f106cf0e887f33e0e72343a92f5bd0315ec"
+      },
+      "docs/install-kumihan-fa-claude.ja.html": {
+        "before": "8b23d25d791b7cebd293099099aca0e25557e89f2bc3c195ddf948838cab3ef8",
+        "after": "09bec8b45c4b3e359232d198f2209633003ae5c0d3805d53ebd37535228ad6a8"
+      },
+      "docs/install-kumihan-fa-gemini.en.html": {
+        "before": "a39a991d1c9a173aedef0a6e81c13c973b87fc0366df426b8fb7a382096de780",
+        "after": "b35bd54f34dc5e93d153929f03542e7923bd4dbb4cca261596b1f38916825e25"
+      },
+      "docs/install-kumihan-fa-gemini.html": {
+        "before": "a73197cd2a6a9ec52de05d00fc66815d9bd829cf060489106dc9d04854b82208",
+        "after": "24b77b3ee7032623aeba8ecf20bfcf5a29b8d529bf9e3eeb9ac1f6886f3363a2"
+      },
+      "docs/install-kumihan-fa-gemini.ja.html": {
+        "before": "92902e92540922718793b2af11de8c612a54320dd7f33898a5309feb748c3e9f",
+        "after": "67ff6e7415a9b51388f447ae53ee8bbacadc82f270d107870f297ae87329b4b4"
+      },
+      "docs/install-kumihan-hi-chatgpt.en.html": {
+        "before": "de25533e849ea48ee9a71ebcd4cbb916a180a2444612d3687a3470b6063b7e67",
+        "after": "a9b8ba2557425245a3d4c3adf55bf1e81016c4f3c88ad6409bb042f819474726"
+      },
+      "docs/install-kumihan-hi-chatgpt.html": {
+        "before": "663b9b2461306fdb6d6dea6b74bb1f56b663ccae0df4d6db9c22ee6fe3e6de6c",
+        "after": "b93204a0d0926a4ca671bc1a0b9cd7f19e46469dca18f152c76f03215a76089f"
+      },
+      "docs/install-kumihan-hi-chatgpt.ja.html": {
+        "before": "413258259d0fe4968e230524df95d0e6de70eb0f337b61314e2d8e41dba3d24b",
+        "after": "5e96ec8ab46a30e89268ac174345dcda71ae6ca17206e08e6bdd2083b06c4bf6"
+      },
+      "docs/install-kumihan-hi-claude.en.html": {
+        "before": "6d7349ec5ee274e71ed14631d4ee4f73aab9822ebb4db32b6639e127602c1400",
+        "after": "f64bd36f5f3db8e4b263b80d7f608870865c31cde1236ccf0732998014e2ed65"
+      },
+      "docs/install-kumihan-hi-claude.html": {
+        "before": "c7ac46f5e25c69b4cb267f10654b962def27e9b5b6181d76ac0a7126d6743811",
+        "after": "28891a6bea9888f9bbcd1e84b2e2b6c8ef891a10cc64a40b95c99fd5b3af76fc"
+      },
+      "docs/install-kumihan-hi-claude.ja.html": {
+        "before": "ae93fd40b33d3ecbfc33aadd191fb5bddcd19c3058a424c47ea56bae07f4f487",
+        "after": "a9e471dfc71944dd5286aba6b2861c57b2fd67cbc8ad19ef3e402a9bc24e770a"
+      },
+      "docs/install-kumihan-hi-gemini.en.html": {
+        "before": "9b94f4b580960419e88647328c403e0095ecd918f85f7ddd84eac35cdbc47d96",
+        "after": "99621765a574732bdf702d2c4f36ce9182d00822cc02291b43c9fbac70cd8864"
+      },
+      "docs/install-kumihan-hi-gemini.html": {
+        "before": "68eb83f4e7c79a9ce324eac56f987e1f56ca6b34948e34cb43d12cb5e0d6ce4c",
+        "after": "b86cd543653c6f6dd1ff3a36a4c829086e9bc60746fc4ceffc339460e13136d7"
+      },
+      "docs/install-kumihan-hi-gemini.ja.html": {
+        "before": "33ccebdaf93a2f97ea53e60b45a3b7544ce2c4f4a56ee2943a58ad9c36e32d25",
+        "after": "0b9b247acb7afaf357a8913bf6a144ddd4b2de39a202e5cd31b4b5d723a63a9a"
+      },
+      "docs/install-kumihan-th-chatgpt.en.html": {
+        "before": "dc71ff37c057b3c84ea33296b76900c38558335053f9bf8cd0a6d279ca8e4729",
+        "after": "e646356772a41b4ca0f718155cc31a99e7b51e66a1f4fcfc3cc27acfa5a96133"
+      },
+      "docs/install-kumihan-th-chatgpt.html": {
+        "before": "1528ce527e8665ea366af485e791973472617005e0ce48ed497878065a2eb056",
+        "after": "952a567380727c68421bd5e53b30a1b671f0d735b9a8926952919589603f68e1"
+      },
+      "docs/install-kumihan-th-chatgpt.ja.html": {
+        "before": "35bbc50f7dd9f318ea45d3e85aeb96e2e05b9b947207899b353bd829321e8fa7",
+        "after": "d6100cb8e3c29c83e6c443afa7152584bc0799377782f018f5bb9a2e965d98f1"
+      },
+      "docs/install-kumihan-th-claude.en.html": {
+        "before": "cdbeedf30e379f1c86efbed686b737b8b3de001865c4b75acf5a529109c5998e",
+        "after": "975bad8c27a7b3c961e6a686d3ee5be01ee9f3c53112df92390f986355a3d452"
+      },
+      "docs/install-kumihan-th-claude.html": {
+        "before": "df2dbb5b6c4f3857e2f43b3532e8e3a6581dd32ebdea73a4c3dfd857e1e4fd23",
+        "after": "44877007cd2d759e6bec846dba05bf26fd07a7459c592a6008c016acd22d11ea"
+      },
+      "docs/install-kumihan-th-claude.ja.html": {
+        "before": "e3f8113e50d03ee456a694b6f659a282a63cf078c35745ad0c5c5e8fffdb465d",
+        "after": "958b2197c1f5ace1999b78a9595a4cfd1d8e5f6f818a4952d3423b99e4fb256c"
+      },
+      "docs/install-kumihan-th-gemini.en.html": {
+        "before": "67a5e730800c1340986a1886c86f3d4cae9179876d20d426d743e035f96b6488",
+        "after": "8ef2181a65e381dab5861a80e300d53c70dc6c31091bf4329afc0ffc62d065a4"
+      },
+      "docs/install-kumihan-th-gemini.html": {
+        "before": "78714705734e3527562b2072ca143c75e4398e445e18fdab64c640f1ebe2c76f",
+        "after": "b7caf7b2fb552ae48c180c005eb641e2a54626a02a391fa7feaef9c8f478a7dd"
+      },
+      "docs/install-kumihan-th-gemini.ja.html": {
+        "before": "d728dbfb4da2eb36fb8e8478c86205e623f50f9454d018d21671eedf1e63dd34",
+        "after": "0640bcd6eba1122646fa4b3d7063236c15f4cabb7a45821826af2eba8e4ae4f9"
+      },
+      "docs/install-lad-chatgpt.en.html": {
+        "before": "a75ba1575c5b2b64bc9412c8cd3a6d944e8dd2547194d99b9caffb406e92463c",
+        "after": "463ee4ddabc19d4d585d60aa8903f40036582f302d4e7bf0137b38c4c0a09017"
+      },
+      "docs/install-lad-chatgpt.html": {
+        "before": "ab0a796150f1b018712f19933098cdd6b4ce603ed3a1c5ec60d1bc648f9b01cc",
+        "after": "259c515584203f98af8d249efbf61ccf897e60b65df009cff451b30237bcaadb"
+      },
+      "docs/install-lad-chatgpt.ja.html": {
+        "before": "e55e02f3232acc8cf347906a1e49b00ce67d5c819560f7d49afc61bff3263f4a",
+        "after": "3d048249ac0a3a35ff21354b44da9a1856531be90f5f3466b3d12184ea205145"
+      },
+      "docs/install-lad-claude.en.html": {
+        "before": "ca540cbae25cfe2a6b888ed99b5d928afd4ab651e835e01e8b503fb7892f7f86",
+        "after": "e1a0c9c24a6f1bfd066b57cb59dc3d4146ca41bd8d9a63a2334a242a91520192"
+      },
+      "docs/install-lad-claude.html": {
+        "before": "833395c92e9c09317cd210d2fd6984cb9769aac731c21583796b8153414ec63f",
+        "after": "f77723da856ebd9b9101c9471d13d4ba97881d174e22d6245da318a7047c6e94"
+      },
+      "docs/install-lad-claude.ja.html": {
+        "before": "abc8af0d718b244fe8cd34c99926df47555a63a4b26136f99ab9cfb6375599aa",
+        "after": "8dac90cc2ef39679f63621deaeec1d6cce22b8cae9dd2b03088556f535128611"
+      },
+      "docs/install-lad-gemini.en.html": {
+        "before": "26a5b6257b89c36062c5bcc40546319e2fa304b768854264e648e11449dcd7a8",
+        "after": "eed65fec55c136112e4720788aba779b5a7713a4bcbb078d2a553d5d43854804"
+      },
+      "docs/install-lad-gemini.html": {
+        "before": "4102da86be34e846f741d2d724defc2386fd641f5b137e2086c6a92c66bb8410",
+        "after": "e6c7afafa50e23454f8740925c62a9b996576219ac2bfdce7ebf0eb8fc75c97f"
+      },
+      "docs/install-lad-gemini.ja.html": {
+        "before": "6f96788ccec52084b93dc0b42359147ff13d8c0f2bbeb34fe5b1ae60e2ca0f28",
+        "after": "fd244c73fc2b20bac64d878c2e6ab8e8e5a9e2deab0d8bb982c18fedcfdd8d6e"
+      },
+      "docs/install-laras-chatgpt.en.html": {
+        "before": "ee63758a684c56ce3ec510a46210ecc061ea3c3d57e14ec093d4bb081922145d",
+        "after": "862c97f84e11410da114e4ad9e729c937ae357193199dabe4a9b6fa7f197bc15"
+      },
+      "docs/install-laras-chatgpt.html": {
+        "before": "d4704cf8c9699f92fba38c314c495dc2de85d85f12f0534d6271160e241d6bf1",
+        "after": "b8a05ba8023fd52ff7db5b0c87bee618d71cf1d0e7730e4c43137b84903238fc"
+      },
+      "docs/install-laras-chatgpt.ja.html": {
+        "before": "212a570bd3dbfb9e7970a36fe1f3f8f44f41d51532e59271e2c8c049471a8680",
+        "after": "78a1ec5d4290cdb6cbc20f48f8657f4d6e17ce3a6ebda05c7fee255cbbb9e664"
+      },
+      "docs/install-laras-claude.en.html": {
+        "before": "90ec538634433528a64b55bb0a72a743aba13efbccea1726c9bdcb17a8050f0b",
+        "after": "99fae35d960ee9e84f1d4ca5e69d5ffdfdcd91b9f1f101cde8885a89cdc08e8e"
+      },
+      "docs/install-laras-claude.html": {
+        "before": "6b2a72aa29932ae5395a36715eeaed64edc7becfa5925c06855492396f2d3bd3",
+        "after": "cd763382fe3b077fd3bbf2982870fd8db956fbc0ec16e71b654976ba33d70ed4"
+      },
+      "docs/install-laras-claude.ja.html": {
+        "before": "773dde87ab3c4092319d209e346b011db9d3b980bda092c317f646d5e3f0c5f4",
+        "after": "53a7c06888c6298f48e676243463ad59474761543c5381240319e98646cf8b89"
+      },
+      "docs/install-laras-gemini.en.html": {
+        "before": "d0732dd6fb864be8d6f100a4a7dce62b6f2af78c44c76622d0bb9336411d5973",
+        "after": "6f5ff1a1afeeba228d958121b2b86047e6aea4f69247100bc3650ac4ac07a06c"
+      },
+      "docs/install-laras-gemini.html": {
+        "before": "fe677404bb729d1c0377bbdbad1b26d76833ee8ac1b7fee90e70cdca5df07b20",
+        "after": "34bc93808f8dbd2cff7d966829d468e206c6d197bf1288ddf06c5553e3de3900"
+      },
+      "docs/install-laras-gemini.ja.html": {
+        "before": "2ca96537a36165212fdab43eabe03c619cb649485608935a9a9e4e0c1868e70e",
+        "after": "7f757cbcc3b596b3dec14fb706ad52b9317fde4aa0e3b7d9b10162662e431daa"
+      },
+      "docs/install-lumnung-chatgpt.en.html": {
+        "before": "a50b5ad191d7259f891337ed52e10ed4911ba2117cdee05fcaf3c73ec6ec024c",
+        "after": "ca773dc5c4bbebc3248cb1c7f855b4f6c4131330715354f8474f3b2cd0219374"
+      },
+      "docs/install-lumnung-chatgpt.html": {
+        "before": "45da0ef0fd4ee22bf1bb6d0df7be6d0bc504ed6f1988b52581d61f3552df014b",
+        "after": "6350d8c76d90fd4934ef886aec49e4f3e187f4000801de7b7056624178c2b2b0"
+      },
+      "docs/install-lumnung-chatgpt.ja.html": {
+        "before": "4f5c0eb07193ddc420c152084496ee2c955be2da6259b5185c154037e3621315",
+        "after": "e7ab43e2575c1fbe1cb65661c478f69138e014b81fea5bf682716ce243a0cbc6"
+      },
+      "docs/install-lumnung-claude.en.html": {
+        "before": "0a6b8298f306646f9f8ad5a4d16d14451533159161762f5a6c60b4f850d99f9e",
+        "after": "d56b71380171f1b32da11caa0150e0ad177c43f58f49cf46002cfb7183dbc839"
+      },
+      "docs/install-lumnung-claude.html": {
+        "before": "31061664161654f40a964e96427a4c98c3039d7ea8810edf6828f4d4f2d4b729",
+        "after": "00efeca558d7652fe996f270fb11c4f529548bbed9e73789cdf7d5ed33718447"
+      },
+      "docs/install-lumnung-claude.ja.html": {
+        "before": "ab3939aa824bd7652de1777fdab43110ffe2b6ea6b416268e5a2a3f8cea9723b",
+        "after": "a8d176228e7dcb6b8aa452e35cfef7268f283e6bd7012f21ae94b8722e5c6a82"
+      },
+      "docs/install-lumnung-gemini.en.html": {
+        "before": "a4e64af4d3f65eb8a585eb9ba9ef3b65333d79db5c3629d934897ed0117ddb0b",
+        "after": "f56652908aa778aca7f6b91eec693726766c5595caaace3bf99dd4ce5d7c9769"
+      },
+      "docs/install-lumnung-gemini.html": {
+        "before": "1c7f4529c036290a3d8196c3e5b27ac4cd651c56e9d810d71d0624cc24c377b4",
+        "after": "95e2cdd94ce0d6e5e408484040c5a9965811a24457997799a6f27e43c7e11753"
+      },
+      "docs/install-lumnung-gemini.ja.html": {
+        "before": "7a599bbbc5f8d56835a1781d213cd3c373982acf9cb5684a1c3bc031d3d8077e",
+        "after": "2439560a744a02e23f66b77f7d1d3d055b31a39def28cf3afea0049f7a090b89"
+      },
+      "docs/install-mizani-chatgpt.en.html": {
+        "before": "37b613d94f90800e9afedd4ea75fd4fe2cb7899299de8fcd04c3cd725df90804",
+        "after": "60451ce4435a5d0042baa2f0f96238bfe990136baa0b74416400a24b1c49a503"
+      },
+      "docs/install-mizani-chatgpt.html": {
+        "before": "28d8c168c7b9ef15ed06ba02e96ca1b07d0e2ff3211de8a7cb22dc964b8f0d02",
+        "after": "d13ba9ce7c152ca11c79425880fdf5b6d68ab1a8aea2a50a1f5dc417f4064986"
+      },
+      "docs/install-mizani-chatgpt.ja.html": {
+        "before": "6dcc2be9a1ae8cb7e717d06194ad0578065ce8fae08e60955a3a0f40b7b7e523",
+        "after": "faa1edf9a6159b8c0390e132bb3fe110d94c4033ad723d8804699923836870af"
+      },
+      "docs/install-mizani-claude.en.html": {
+        "before": "3974b82dd60b409bb534caf26414869fb63f47c079cb4fc0562cd8e12e6baf6a",
+        "after": "50892079c540f6ceb2b0e88a3a9c9054a8708d105d4b914d56df020a8552e3b9"
+      },
+      "docs/install-mizani-claude.html": {
+        "before": "61e65dac0d7a21b68a98615f6ee2b6d51a0b21998fca4d5505c5adc6b0a71fe7",
+        "after": "9bca3119f806fa5f5f52bb759f99fb6eba38ef78e7355be80c88231f1cfaedcf"
+      },
+      "docs/install-mizani-claude.ja.html": {
+        "before": "1e17bbdd5836005a52f2ca456a184a79c4bb55b9e5ca180b44fd58e03cdfc39d",
+        "after": "7ba4460ca71f7119f244020431b3ebd76d30eddc735d7a090c362ad502b9a205"
+      },
+      "docs/install-mizani-gemini.en.html": {
+        "before": "c91efaea75de117aa397696d4063d6fb74dcb896df792a736b2c1a7e07235217",
+        "after": "712b5a1f80b36e3ae326db3f9de4dac6c17725547076c48b5ae131b5e997a1ce"
+      },
+      "docs/install-mizani-gemini.html": {
+        "before": "21ad6eebaaa0515d67cf5a298a0023a8a1cdaf0447fc98f025fffded9d5024e3",
+        "after": "b07a53fbabf30a61cc2f51f75308b79ca6778c75dfbee87e1509159a1593b257"
+      },
+      "docs/install-mizani-gemini.ja.html": {
+        "before": "71edd5cba46d1bc9ac6d8d7b43b1db31f5db618e99ab38c4c135bf10909d2329",
+        "after": "2d57591dd2d1172370131b86eaea76e85533299ad53f2569eda9932b504e3017"
+      },
+      "docs/install-nhip-chu-chatgpt.en.html": {
+        "before": "3f95c7ef9b89413ae60e8e02621de72944c861ae62f3d1a77aa6e8365af7e7dc",
+        "after": "fd0d6f1cd5a39a91449d37f295d85cc61bbb53af5b3e912adbed603e181ab47d"
+      },
+      "docs/install-nhip-chu-chatgpt.html": {
+        "before": "6534be2b2bdd99a2d4380c2d403f31e2138e2bb2a042f4b04a014f0c63857350",
+        "after": "2685745e59a820768a7612d08edb7e299e219a6ff23e067779489c31af4a4d4b"
+      },
+      "docs/install-nhip-chu-chatgpt.ja.html": {
+        "before": "1e07d0c9cd901f7e0de8ae26a4d57f9482b8ce460f6e5bc2340d61098c1100b3",
+        "after": "380342ea8121bb481aa412b3a18c32fbf2cd0c167d70423257052e728ae0b887"
+      },
+      "docs/install-nhip-chu-claude.en.html": {
+        "before": "ea85e963c1a2120b2659939a78f8fbd3b9e6de60c82bb394395cd9ae70ad7f2b",
+        "after": "eac5610e88fbe132ccf51391eca92525d368020947e93cc329d0d2186599757d"
+      },
+      "docs/install-nhip-chu-claude.html": {
+        "before": "c0326435cf4558129a7a69b0093aa099329c382a3dd15de0770ca795d38bbf39",
+        "after": "ea50550ad345eff34453931f5afcb6485ac64def1a9b1693544bd7b816bacad5"
+      },
+      "docs/install-nhip-chu-claude.ja.html": {
+        "before": "539b7dbe194cfe363be100ffc2ed3b13a629968f9c4fec4e4c80db8827f08f30",
+        "after": "069a5b6625f769312f7abf20a5fda35af799ffbefcbc8fd2c84b6e14a42c8eb7"
+      },
+      "docs/install-nhip-chu-gemini.en.html": {
+        "before": "139bf4644dc313ede7ba60fb29d734b7e3f97da4396d16321d8e4cfbba536402",
+        "after": "76474e7c364b4af3b0db6b94155f985357669390096187a984badab7d0974351"
+      },
+      "docs/install-nhip-chu-gemini.html": {
+        "before": "95c2c224ed2d00dc0e13fae7d829642eafac1b5fce6a21f7b98262a20cc31da8",
+        "after": "bfde06adc9c80812e115364fddd9374c956067b1a9f832f4b61afb4d54fe4ef2"
+      },
+      "docs/install-nhip-chu-gemini.ja.html": {
+        "before": "2a0ecf4e9110791a832c6c74b96956af1580f217edd687cbd144000a57c661bb",
+        "after": "6fd3aceff664d36eba4053f9b2c7c79c0af3ddc24c62aba1e8522f1c0047fc88"
+      },
+      "docs/install-satzbild-chatgpt.en.html": {
+        "before": "a0f8290c170fd8cf194a380d7c87b2a8046a4d6af67bb6b29fc6686fa731f005",
+        "after": "9b155e2df699c743ae9bd46e9a9c02f13fc8baf160ca180fb846f89f8f38f41f"
+      },
+      "docs/install-satzbild-chatgpt.html": {
+        "before": "5bf56cf115039c3f2e7eeeae934fd9c53c238bb899796bb442aad07eaa8f025c",
+        "after": "03ae563e1d45e050594063246db840138b4c14a0be9072db63b03fe7438747b6"
+      },
+      "docs/install-satzbild-chatgpt.ja.html": {
+        "before": "e6285d82f700d0db01201b292a74fb724d2deae55155eb5be62403d4f39a5a33",
+        "after": "c0c4ec1d6c81a499ad39b18bed9ff2fef8b64f5032278423f19612de0a166b73"
+      },
+      "docs/install-satzbild-claude.en.html": {
+        "before": "79927feba3130baa797fc1ad7f0de95b511cb90b5560605830a8f6a14eb7288f",
+        "after": "0bc22ea91c22455e0d91c2881bab3b224b455f0c53a306ceb348fae482f4a8c7"
+      },
+      "docs/install-satzbild-claude.html": {
+        "before": "0ed1bd824ace50ffed68ee5f874b65ae369293877e5f6de9974bd740b1ed05eb",
+        "after": "76b4e5bac944b86c647a314d649b96e0440fbe116c3c0469a89b938ea61a0c1b"
+      },
+      "docs/install-satzbild-claude.ja.html": {
+        "before": "c8822ffe337a1c198e65f93f7972ff446d70b70cf505f325e0debd94f09cd081",
+        "after": "e3f316037aab8a2773df5fc257918dcf1ff5e4cc33a56672bd5ad97fd205967e"
+      },
+      "docs/install-satzbild-gemini.en.html": {
+        "before": "622ac9f35b8d8f79fd7e8c7ee716c9d9e5327f8a49d3347d46ebfcbf10889b3e",
+        "after": "518b872586ffb402377d1880334c5b3e167252e55f2c7f5eb62cade12d27cd4e"
+      },
+      "docs/install-satzbild-gemini.html": {
+        "before": "5ac9bf6435c19d32f075e64c7c2935a3b48c2b85449c895cdf29565e013b2558",
+        "after": "4417545f8e01e94a0b746fbd8b0a80ebc88fe9dfe894b58421848cbfdbf1f791"
+      },
+      "docs/install-satzbild-gemini.ja.html": {
+        "before": "57cf1f95059aedac3c76aa0c658bc5fb730f0ce04b4233e6be92e5be9cb8258f",
+        "after": "92e63737c061c6107904838b98edc9bc40f15aab2b1a4b6b2edbddf10b0760a8"
+      },
+      "docs/install-szyk-chatgpt.en.html": {
+        "before": "011d759124fe871f9fdda7883414783b71d57c5773a2e1be58a74cd92469ff41",
+        "after": "f70aadab8826b9da10c612ed0c578118f2a1c212d9a2585be4a8903e91e8c72d"
+      },
+      "docs/install-szyk-chatgpt.html": {
+        "before": "3d83e0263532f72ee0308266208a46834e3992d1332a2a24dfa084129c8406cd",
+        "after": "78eae1b076b5e113e7e9665ccec0594672c5411c7855db9a04759469325539ed"
+      },
+      "docs/install-szyk-chatgpt.ja.html": {
+        "before": "cf9d2f7328ee8ae702a7968495d08f5ab24b95a1c43976c3d52a93033cbe00bf",
+        "after": "ce2e9d692ed63e572d72f12e31cdcc317e3267d6501ebec19b990c849722a613"
+      },
+      "docs/install-szyk-claude.en.html": {
+        "before": "d4b7b1b163ebb9b69460986872eb8aa64a2ef26aee6729c87ebb6f2b953dd7dc",
+        "after": "01111d65e6512ca6dc958a41842140dd15bdd40ba48ea4233cfc792081420768"
+      },
+      "docs/install-szyk-claude.html": {
+        "before": "aa0da311709ed6d3e0f14d2600839c86f936a172cbe3f080fc4676c655a3d89a",
+        "after": "43f65ede512b45359f7ba5a27653e552208784c07186e25a40bcab5d601af33c"
+      },
+      "docs/install-szyk-claude.ja.html": {
+        "before": "85cced03142e29bf98b68dbf86ec53a5bb10d789a99d1753a42f40b29c75e893",
+        "after": "0fd2d148eb7e03ecf17276572c0268cf94839dab2ef373af72663fdf7af100ca"
+      },
+      "docs/install-szyk-gemini.en.html": {
+        "before": "a62e30adf4e83756fccf6048fc2b119132f4c9593359bb863af81137da1e5420",
+        "after": "52b8e62aaceabf1288c0c011d1900374a809879ce9af9c614450c7288303a9ad"
+      },
+      "docs/install-szyk-gemini.html": {
+        "before": "212f120655f00d9c419ab88491acc986da25e2bd872d8fd1f03d616481c66a1d",
+        "after": "956b21669d3d8a4ca8ad2469040ec414ba01fbd066ca614ca7054f8062f26b06"
+      },
+      "docs/install-szyk-gemini.ja.html": {
+        "before": "801e9dc8932b8e11a888b89d51bf5e8f4b93dd40dbdc47bab8dbfec3acbcbb35",
+        "after": "9cad27808350b3114b6bf40fc54683230223a7a873299b7baadfb3bfebdb02f1"
+      },
+      "docs/install-ziheng-claude.en.html": {
+        "before": "53797c38ee1798afc5d99989086a427baf40f6ec10509fb8041c2a357c8273d6",
+        "after": "fc7c9b2a662b569ad7dfea62563064ac3ac33563e74dea7b380ae709b083d6dd"
+      },
+      "docs/install-ziheng-claude.html": {
+        "before": "d3f8c2ae884adc25c1e909c6ee2f0b9114fe359648160c2fa08ea74737c154e0",
+        "after": "f87e6575f4906bbabe7aefa62a8b87f9e91e6fb33bc1d8db258632d71ae5f6d4"
+      },
+      "docs/install-ziheng-claude.ja.html": {
+        "before": "d3517d634a490f5e8632d83524ae709f600ee2168e22448b781796fbc3796c67",
+        "after": "00f0ae3592759fb23bc95916781f59c1f7940cd2e00e97b0fddcb466e1a4572b"
+      },
+      "docs/install-ziheng-gemini.en.html": {
+        "before": "a30e6166b9d8e96bf7b81f07523d836015df39ce9c99c12faa6ec1f74456b2e9",
+        "after": "9db031cf95eb4f62bcfe054f3323c26e832ba230164736e741a8b2d091c4719d"
+      },
+      "docs/install-ziheng-gemini.html": {
+        "before": "3d3aaca8007b4cc6afd4d818520081ca1ee0e6c51ba407e1a44db63fb6d6a906",
+        "after": "7a8269d4250f15b32eebb9d6fe8b012475ee1cbc3936ff47b5c22072e5fc6bf0"
+      },
+      "docs/install-ziheng-gemini.ja.html": {
+        "before": "4d83c90a862a4eec1b076921cddbe9aafcbe2c1ab3a2d1e3891004466fce6429",
+        "after": "1432409dd3178007d61a9d077fbb6c098ff88562f6fb6cb3bdf7ab3b0dde248e"
+      },
+      "docs/install-ziheng.en.html": {
+        "before": "4555e135b85a48296bb58dbae05b01072c47e3ed3018ce74ba57bed18402f120",
+        "after": "f4b67002f5133b6e6c95791c3bb84826fcbce8029ecb756ed8b4df54951669af"
+      },
+      "docs/install-ziheng.html": {
+        "before": "de79a72429f1a443a12c094d49f357e15d9e6c890da3ad0e993ad6d7a505998f",
+        "after": "8f5015d563c623441e6f414b1697ff6076d0093a6b185373e4c1e55ee9708d4f"
+      },
+      "docs/install-ziheng.ja.html": {
+        "before": "cc7137d5f493079ac1ee89b1b5b2ce6b28ed0f5cf70234283a519fe45e2cba74",
+        "after": "84352bd9ce68533d5846979646defb88bba5681d382271f5b434b2b986b5c58d"
+      },
+      "docs/install-zilu-chatgpt.en.html": {
+        "before": "08ed98afb18efa66779f8bb63e117992c9c4ff0d6b78d10286008120fe17f01a",
+        "after": "64dc01a4ca2ab0232e0724c0c718625c402cd6f7d1be86bb00fa51ae391051be"
+      },
+      "docs/install-zilu-chatgpt.html": {
+        "before": "f5849a230de02f10102682dc5136eb349fff83beac40d080c69d0f62d3a1cc51",
+        "after": "478d7f7d8fbbde2adad9dadffadda5ac742ddbd82eb82669d626c8071a388feb"
+      },
+      "docs/install-zilu-chatgpt.ja.html": {
+        "before": "d6993dd2139a70ded16230a16f651e2cf6da0390542ddbf03c865c1ddf1fd221",
+        "after": "1786453d9547bc3a0b877b02c15d4c706cb954a8ba8b8ec642d76e0528f362c8"
+      },
+      "docs/install-zilu-claude.en.html": {
+        "before": "4fa83f0daaabffb40d1b5d8c118db298a057b65877729d023e3d0b3d4b6bc1b6",
+        "after": "8a5f163eeb473452eb5ff8dc555d7c244ef78a340cf39335b92c5a54186c9325"
+      },
+      "docs/install-zilu-claude.html": {
+        "before": "7d9a0ee3914b98f2a0f879aa6dfbc6a2b8a48a616c7834ca9c9f7e20e2cbc345",
+        "after": "c06afa5985b52d36b10450b45435ebaeed6f88de75da28492e9c7cc4f52ac9b9"
+      },
+      "docs/install-zilu-claude.ja.html": {
+        "before": "4fc166e212b888bc7282eaa5f096fa7964dfb0e80a2ca638b7a5444c897f09a6",
+        "after": "c47fdfc9247b19f1522a8622223a9ad38c9a89cf9c80eb003420e2ac287ca8e9"
+      },
+      "docs/install-zilu-gemini.en.html": {
+        "before": "df3d1fcbcfa4e8d1c560befaf9efb058da21cc191368e8244936a4ec9a7ea47c",
+        "after": "df1941b69f27f6d255f0f617e62c83853347eace1b0600bafc52989c20ce750d"
+      },
+      "docs/install-zilu-gemini.html": {
+        "before": "52e41a15718ddb0a5c34aa4121070d7533860c9fd1a74dc3e160364dbacf6a04",
+        "after": "f8ddc593ea51e7404358c793c5101767c79c3b3350aa9530867cabcfea5e476b"
+      },
+      "docs/install-zilu-gemini.ja.html": {
+        "before": "92c301f8e0fdcdd60951b0f9ffd5f205b92bba69a8242a7b9dd9b5a7262bc7f0",
+        "after": "e3506f25d589b08e36ad41e6ce745e60dc0b0fb59000ef2cda4a066f99421da2"
+      },
+      "index.html": {
+        "before": "b671863b4a72996f7ba325911e88b3e4b72344cab1c6d84e7bb1df8912679d72",
+        "after": "aec4111629c60c65c57d73e1492f2223a2cefdffbf4e435e8a4bc193075d41c7"
+      },
+      "kumihan-ar.en.html": {
+        "before": "48de89a81ed9a8d5d9014e85051e0dcbf9f3266cd8b37dc07381e7205cfd48e8",
+        "after": "8fc5a99755bbeda63fd0d00252b1a4ee3a77b30107175c9358d7d930323ae60b"
+      },
+      "kumihan-ar.html": {
+        "before": "9e5862479a7658e5ded7c215d33857525a57ba2e6affaadc79efb7cb7c4eed86",
+        "after": "ba905865ea308c0e3b777735da31c3269e9a8280f0ecf5b189998dd43a8fd3ae"
+      },
+      "kumihan-ar.ja.html": {
+        "before": "c70cb2c0884316b962b46851d48eed28625e56f37c056e7332b3a6843f19c485",
+        "after": "a3e40451bbf554f0e024b020bafd9d4939f8e8c155d2f1d79877a53d285e2867"
+      },
+      "kumihan-bn.en.html": {
+        "before": "2a02a6d33e9267ecfc226aa978869629142120cf089700c097e546e0dc42fe5d",
+        "after": "6eadf51f2febb72e4682306a414867263dc1ee1f4ef6fffd60a3347c2b8cb492"
+      },
+      "kumihan-bn.html": {
+        "before": "8aacc20921eb228760b0cac93df3bb4df92275022262cabdc204b5e26fb5c822",
+        "after": "3a7d3169ea0a39d601dd2d236bc4b132806cda2219de43300e4004cd2a0d4c25"
+      },
+      "kumihan-bn.ja.html": {
+        "before": "95c5ec3668fab93a47ac5d08627d638449b9193802dace9bf121e0b3b6f28af4",
+        "after": "00bd8a44f95ab41768110a67b03e799f9b76ebe7b4d5c5a88c8d8bfe2c1dd49f"
+      },
+      "kumihan-de.en.html": {
+        "before": "ae4a03ada7b2aed814a28221d2595c9d15e16afe42feec23b77f693c7b275c31",
+        "after": "d29a9082952bc3171fd44fc64ab1221e4e887e48f5069699a9b46a81cf4bdb0d"
+      },
+      "kumihan-de.html": {
+        "before": "aa066f665d7c62b6b3d8c6432db8932f3aa440cf54be62717ee1148ccf2738a6",
+        "after": "5cad0d44fd05a2101f15d25830964f4524d8f28cfe6ca39a2dd4f30fcb02e813"
+      },
+      "kumihan-de.ja.html": {
+        "before": "7c09a66e4eb11cf8cd720bd174c9ffe2a491c81d36a5c82e5f22e2958b32cc26",
+        "after": "d8dbd07852cef62aab4293ad5c680ea12bc64f41457926b126987322e0313629"
+      },
+      "kumihan-es.en.html": {
+        "before": "07d533cdf2d7d34b65837c7e2818f6c37ca430c14b4061cbb0e937f090f07a3d",
+        "after": "d12a8dd4fcb849916d709ac82431882ae32e69826beaccd9954f555033df1db0"
+      },
+      "kumihan-es.html": {
+        "before": "de7f8f8251f18caf853f788cc4949647806e4f62ea26df2d8886d520e7f2e024",
+        "after": "ad4796a44ff72ac72d9043ac16437a1391552a5fb2123f4f10e54448943c182d"
+      },
+      "kumihan-es.ja.html": {
+        "before": "d9c5f8a28a8447caa1a97912268af6dfd578ef8ab29ca15c623c696aec686db8",
+        "after": "c553b8edd66aede2f5e191ba50dba51ec941f48698dc31ea402d5590ec3b4752"
+      },
+      "kumihan-fa.en.html": {
+        "before": "f8ec0487211ea09d575a1e957f85dcb35b36c9f488a7ee4736d96cd206747221",
+        "after": "5c4805c6b08005c9a08d7ad412734cfeef9f951245c3de1ca96f6acdc6b1151b"
+      },
+      "kumihan-fa.html": {
+        "before": "85c62b1c3dc6ce8eab86ebf8a3f86cdc84d3c4dfcdf5180d191a0831ce22b709",
+        "after": "80a53ae544ef8a8e0abadde151285e19a5f19aefb1f8a07f5cae23cf9199dc66"
+      },
+      "kumihan-fa.ja.html": {
+        "before": "4e13897c7e63afa94bf1081114417218126ecae937679cc7cf6433df480539da",
+        "after": "2807086a116b08ecfa1cf268f2092d853ea7a6c2458d692425e34e18234a3814"
+      },
+      "kumihan-fr.en.html": {
+        "before": "4cbfddcef379ca277da47acd7d56953d1c56794ecf0c1aa4dbe287f22433cd3a",
+        "after": "cb23b5da3983aba2497360dc9815baa6b0fe0920c7167802459832c69dbdc7ba"
+      },
+      "kumihan-fr.html": {
+        "before": "e4a04af3832e255e553de87790b1e1db33f11a272c0f712c8309c474251d066c",
+        "after": "8d6e5e4a05b9ccbfc5a3350e9979d3bd6fe9a9f50c4cd193ed39694c3a3d9ca0"
+      },
+      "kumihan-fr.ja.html": {
+        "before": "2e90db52fed3e4116c87daef37a75fb155e2e5684d4633a09fabcc55d3fd6fc9",
+        "after": "1f5ced4d25a49a830c048cd9e3ee5ac9d54ddfd4fa55a18faed20a0136ca2e48"
+      },
+      "kumihan-hi.en.html": {
+        "before": "8b77f85673c8bb881b796cc568184c4e06dc97e9fb154da3a6a80b3a82cb5a75",
+        "after": "874b0061a4159b7dd7b6a52b4b1ab00770bc2d2ec091b446103d0032c6101bb1"
+      },
+      "kumihan-hi.html": {
+        "before": "2ce44410e979360d7b166a494ae1baaff89b480c69c2ed61a9a74646901bfc17",
+        "after": "c9db5998aa800a80f56313f8f7dc42342e63b0bb740b4a925a1444e3f0e047e9"
+      },
+      "kumihan-hi.ja.html": {
+        "before": "45cf6aa139ed1cf041546d313599b8374837654e6cb1c482783412f50c4b8198",
+        "after": "b505488a69381fa87a2767552d077c8d8d22dd1ffc3966f422c4cc834dba5f8d"
+      },
+      "kumihan-id.en.html": {
+        "before": "eb911dd893b6d3294263e641b6a655e53553bdb707e3d484458edf186dec5569",
+        "after": "aeb9622c4ec8a91b015130ebb34cd4ed103728deb88b69d760eacaaadaebc01d"
+      },
+      "kumihan-id.html": {
+        "before": "75baf023fa5f35241fa435613457581371b52b8101c13a8e1295ce7d6b3b25f8",
+        "after": "95fb84299ada7fc231a93a7ef5ed29e49c4bc7f358a3f54230c6c1b89b76cdb5"
+      },
+      "kumihan-id.ja.html": {
+        "before": "8a39ab9cfa66d7a4082a90ebae440e639cf1013e322bb15263554883a7201939",
+        "after": "e70b44d4416097c63b4bff41ca9c98b08df91ede41be3b8ab89b03ef20e21ef8"
+      },
+      "kumihan-it.en.html": {
+        "before": "4cb047196cde378f34842b2c438580b186601e831be90623dc0d7924a175ea77",
+        "after": "b5ea27f903c7c095156f2e2e07932b307ecc6ab1ef2fb2856b134115a108d86a"
+      },
+      "kumihan-it.html": {
+        "before": "7f71e4e711da4b9ef359214155936415ce8a18644f5df7ae4e09cb1adb1226bd",
+        "after": "a8cebb909fdd18f4826076e115889a1078f2b73c1ff157d989bb200b8d962d6d"
+      },
+      "kumihan-it.ja.html": {
+        "before": "a60be1e9e8a13aa15aa25b66a84d0b3ccaa895b26d0d9bd90a7554fa150a4287",
+        "after": "c91bcf237a8f16dd43413cc75919474a4e956b94519b32b66647df0477ec57f9"
+      },
+      "kumihan-km.en.html": {
+        "before": "f61ccb82e546da76bfb184ab8df5d663cf549d07f04e041b71021679602ae588",
+        "after": "64b69cf630a71eedeca1834f22aee2b66f5de0f57cd25af9bcbe6f804f767fa0"
+      },
+      "kumihan-km.html": {
+        "before": "3b105b850977333ea1d7601e9fe0900f1768809c5525ebff857289254fc4a8cf",
+        "after": "ced46d33b2919d9718e52d19f22c178ea26d3c166274bb7553f50e67c2f105b8"
+      },
+      "kumihan-km.ja.html": {
+        "before": "62f5fb6a87dde2547604db81b9dce0f54552ae8e882b5a8ac17b137458a14f44",
+        "after": "31dafd773eae777e2e1de78303e085bd2b92020d21a7b2eb92ea0b3913854b7b"
+      },
+      "kumihan-pl.en.html": {
+        "before": "aca90079f92c2faa4640297c411c76ae40527adde522650afba3e040cb7a7a84",
+        "after": "f6f1f24283c185554dcc598f2ca0cdd7f5784e783e9f840d9fd45294840bb29f"
+      },
+      "kumihan-pl.html": {
+        "before": "11b7e6ac67167e71ebfb202a3e06fe9aaf76aee1b82627b33bb203526d612f23",
+        "after": "7fb5a50c145af2d68133fc86c8c197b6020e6e06c381b7cd2a2ad67f94819273"
+      },
+      "kumihan-pl.ja.html": {
+        "before": "e41cb8889ac589eaa0079fb4ea045284135d145c824d1d17ebc497285642ac70",
+        "after": "577e8d76221a44db899c8e76a5b475b4912433ad655fa5d8a3fa569e781558e3"
+      },
+      "kumihan-pt.en.html": {
+        "before": "c1b8599b6c611a5301a05f1a57a195c9cedf0b51aa5ba7bca3109b9d673d2349",
+        "after": "3221d64cfd0de02834156789ca4decf799ec74301bea3b122c5aedafd08aaabe"
+      },
+      "kumihan-pt.html": {
+        "before": "292e046e1d07cf2015f15d4d100d1d27f5e6db7fb743c2fef3559c7d4453c172",
+        "after": "256e83334793111faadadb514145f09c9ce6ea459048f3784a6f2da490af0a10"
+      },
+      "kumihan-pt.ja.html": {
+        "before": "5e70441c1fdf5f72a3194f69f78c1aebcf33646476e89edeb8fae62a722b4249",
+        "after": "4fb8e9a8eb515cc2ce757e44d65e1b87fd7bec001d7b1ccdfb35fcceff841dee"
+      },
+      "kumihan-ru.en.html": {
+        "before": "b0de532fddfd2cb6e50d335509580df5c28440a88ceaccc02b3b9dd061591bf2",
+        "after": "9dabed1f75f36e50155af8e3736fc60b1bb69c727b20ba60f7dae045e9849d93"
+      },
+      "kumihan-ru.html": {
+        "before": "ffcc053072e81b5a1f2edda316b2584be2caa0904040a79e2edf893461ab4e58",
+        "after": "bded4bf3ea0a27ae17d581665e7a59b9ff10ab9c48252fa31f061f0617dbc1d0"
+      },
+      "kumihan-ru.ja.html": {
+        "before": "6db31cbd48231efd9e40834a5412e065f8c9a9dd9e1b9749f9c80182aa619725",
+        "after": "2b8f19a31fe733970db1f603c8ea14e5c9f0e33ff61cb985dbb8b3daebd7be20"
+      },
+      "kumihan-sw.en.html": {
+        "before": "c60e7628a9714940caec2cd0beb73af9766a1d3572b5f2bb22204a4960c67db9",
+        "after": "189ed71beb0c00b5bc422163ac9f88e2906dad5fe61dbb18826ff0741fd3c938"
+      },
+      "kumihan-sw.html": {
+        "before": "438bb812e22feef692333fa161c8b4063d453e2730d4ff165142a06f90fd6476",
+        "after": "249d1e19ef69177d1fd23b466b7172fd2abed7c918cff66f7bfbb4fec40a215d"
+      },
+      "kumihan-sw.ja.html": {
+        "before": "436a440933f2c7909ae5811c9e1ec9854960adba20b20cd7f45509e51ef3279f",
+        "after": "8effcb05addd1f6a0d28743362843763c411366c114f910bc65f29560b260106"
+      },
+      "kumihan-th-en.html": {
+        "before": "a3a5b1f908f8adf24fcbba8b60125dc39c2ece5dbee8fe78f431fe978e0f59a2",
+        "after": "fdb96a2912359c359df06a8f4a431f0e4c1a7235493790b6eb7631c1e4d29dc6"
+      },
+      "kumihan-th-ja.html": {
+        "before": "40f90ba4bdf329ce16592c32aa3089f4aa05408b5cb6095852ebcf2e6989cec8",
+        "after": "8fde765195b6f5bdf02c038fc09ae0f00326caa7b253cf4727a4b964d0134d17"
+      },
+      "kumihan-th.html": {
+        "before": "69c58bd70f5b39f25196f975cc618af3409932dafb9ce22b915c3fc593aa71ad",
+        "after": "1fbbfeb8ede836e20182e4ed14ea37c6c6432b143c13b2cb22c280ff4a8707f7"
+      },
+      "kumihan-vi.en.html": {
+        "before": "5d50c84ff2e1233d37a8d907df4b1cf1ee009206b481c9ebda9d6a23a68e6290",
+        "after": "2b7f173ed822064e8b3a061337ee98c67d6b2f3ce4b13e26a229eefa736a0485"
+      },
+      "kumihan-vi.html": {
+        "before": "61b6e18a2de7665c0097eb7384fd74e58cf02cd653365e1c7b50369fa748cdc5",
+        "after": "b89ab05187284aaf910379d68e548cbe111551d134aa14e43978760280ed85ad"
+      },
+      "kumihan-vi.ja.html": {
+        "before": "9bb19ef5383d84e94dfae7ab0aee9ba77df9b5482fde21ce4ad363d82fadaf82",
+        "after": "05937976a3189d0b2dd800b070968e95a24d3750b7ed541e64f628d70c2ee03e"
+      },
+      "kumihan-zh-cn.en.html": {
+        "before": "e5059b776f4361db1024dc1e8872d18f75ff6f340aa6da3870eb224de3ae561c",
+        "after": "4d8d6e18925355ec3894b9ff48f9cbb1bd0a44054d998268e9e2abbeca5bc9a6"
+      },
+      "kumihan-zh-cn.html": {
+        "before": "3db6440de6d1897a2e8a5e91cbef512bb4e80fcfa59a37b577d1853a32827ebb",
+        "after": "0e5d6adfaafca61aaf3e92eb640473aef567dd4149a81cad14e8ef51f183edeb"
+      },
+      "kumihan-zh-cn.ja.html": {
+        "before": "4e5a21fd5b83893063dd9d89d06156c0a29d546d11b534a506e312bea8e9abe8",
+        "after": "aa6cf1d8eeacb8b37096aa08fdaba2c3f5df775cec3f2b347c39749e8f0d9402"
+      },
+      "kumihan-zh-han.en.html": {
+        "before": "4c72e694d1aadab92df763b9c29fb8c304765866aec075b8b6502d118f68922a",
+        "after": "3915ebeeee353161f53785e1b8cff6df4cc8ce26e5b429ae83692c3be80bfc23"
+      },
+      "kumihan-zh-han.html": {
+        "before": "a0bc3ad800ce9dfbe40078874d92322a4d062312f0aca990d1cb866ef88c2aba",
+        "after": "8589be12c49cf092f53b238e64ca469ac3338403a7e70b02e72e8be3025a3a96"
+      },
+      "kumihan-zh-han.ja.html": {
+        "before": "ba7ef83a23c23d4f40bf2289a242b0eb4aad35e6c2ec8835a8838be88340fb0c",
+        "after": "59803408d0634066d22e5bc5fb98b4fc3a89d139c54b9cb999d83ffccfa83475"
+      },
+      "kumihan-zu.en.html": {
+        "before": "dfe35c2121d683d49eb94859ae97f405574ae7c84415a65713c0c56ec90d5e90",
+        "after": "46e7d0abe87c6f138c4777847c4d137893964a2adc3bdc02cd6fc7f41ffc11e5"
+      },
+      "kumihan-zu.html": {
+        "before": "58cf36f1b48f33787010c89d1f94a83998a1e8c3730973505a18d85a3d77a600",
+        "after": "4587ae6777ef636e82845ad6ec6c182a048853dcc04f342ceef97917b8d622e1"
+      },
+      "kumihan-zu.ja.html": {
+        "before": "023d0263f526b007a912b260b072b096b987e12d342ddc33e4d9e9c423d59c96",
+        "after": "35436bd9b70039fd5fbf2338dd6d6869c6f592e4cf2f491e2f7fa1d8ccaf6ac8"
+      },
+      "top-ar.html": {
+        "before": "d44fdb244af755529528b0166c611dfb129e3a9e16a4063f7ce4922aa7e6343c",
+        "after": "0ead50af1120ab03d39b0b9db7e0a3be9f4630b64484669518681f94b667d033"
+      },
+      "top-bn.html": {
+        "before": "95f46debeeca99689d5a319d9af099efa2808f6b7f2592351d068f478ae3d223",
+        "after": "f7882aaea9bb8f4466d28a7aa7440fb3bbcb1c6e82705868334e58f4eaf7440e"
+      },
+      "top-de.html": {
+        "before": "ef7e0e38916418be84165bcb9cfed354e7aaba867fe5d69f49c57d79707d1460",
+        "after": "8e9bdbfa53c420f94140e992e122dc993d652ba844c2e1e9efaaaeaa548a80a8"
+      },
+      "top-es.html": {
+        "before": "195daedd7d2e1b25af752b68d4c9f12ec19661b82f090ae0bbffa079181e50ed",
+        "after": "b9f63e67155a07447e4e5d51a299e0884bf0c44ebd98a0c0c1600c6e33eccb4c"
+      },
+      "top-fa.html": {
+        "before": "ff60ba25863ab63d477d7478f47d4195a89b68f7571afd53f4f279cb942b5d9c",
+        "after": "160270a0c2077bd276968a7940391e715e4e490461b0fcfa76170c284eafcd28"
+      },
+      "top-fr.html": {
+        "before": "ff2372ddb58035ec7f65a9dac478ec2aa7841df24bc6153bb83a4804e39294d6",
+        "after": "8a17625bbc298bdc6404b76be9b1b72e799006e272c114a4f277096536192582"
+      },
+      "top-hi.html": {
+        "before": "2a5aa9ca84afa986328422843469228d2d97cb65221dc6839f1b5c12e62423bc",
+        "after": "a32fa33cbc60216f4e5e32722f82bd40f812bb9a76cd690b2d0484d9000babe3"
+      },
+      "top-id.html": {
+        "before": "0c977d06a32137ac1c3e5a1ea1ab13463c58b211a2f9962b50ee64154d210ac7",
+        "after": "3977877c83f756d16ca8fa47a1cfda29eab4c5de6744bc171029f2583890556d"
+      },
+      "top-it.html": {
+        "before": "c7676b3e939adee8c77ce3ffb95e73a1674d4982624080a9a52adfd9a6cf59de",
+        "after": "976a44a956be5b05505f88689b2d7c15f13ccd86e0cb70e045e2b8b93fa98ecc"
+      },
+      "top-ja.html": {
+        "before": "b8fa950f085eafe0d0816f65b5d4429ecba684aeef2a4cafc528e37f639ab59e",
+        "after": "f55f97a36aa29c5653d69c7a5bb9a9aaca29dc75d97e2ff7dbb9527adeca4a76"
+      },
+      "top-km.html": {
+        "before": "3a23a184526735990d27109e366a070c98bcec618c188caabd6c206e061833b1",
+        "after": "82cc2ca5b735de438ca4f76ec5613556689197ea4ce5f56c60013e27fd9799b1"
+      },
+      "top-ko.html": {
+        "before": "67fa0c08ea79cb139fca2b3233f644b6de7289f02cc9cbac6a776998742f0115",
+        "after": "2cae2f39f8c5e93af5002e1e659517239ada558de5f7ba784f1e2f2c21ab8ea3"
+      },
+      "top-pl.html": {
+        "before": "305a289015138a1f82b5eecf0c1914d2fa7ba15f4a45d0a3deeadc9e60a9f626",
+        "after": "569f39d69732781e8edb97f6bec1931ec82cb938fee937566a98f631b0e16e6a"
+      },
+      "top-pt.html": {
+        "before": "c4737d476084ac08422b119b293a0f9e81c951ed25f24c1344f02456df8f3584",
+        "after": "620dd02f61469c08384592521a6c04ac7473cf91d83cc333bcfa59cfa47f8e64"
+      },
+      "top-ru.html": {
+        "before": "e0f71a5f223e302c3dd2aa68eaaa719986a4870a1919334b66b760883af8b8d5",
+        "after": "fe42ca08e01d67ded309c2571e2a8ed76c92f404b79708f2295608088b95b5c7"
+      },
+      "top-sw.html": {
+        "before": "96ad5cc17f8c60b1af25c6f06f1e1d49d6cab08b16a1ccbfee77c8f8d5350818",
+        "after": "a85ba1669f2f6447244733bb9885683e6249d374983260a822a386f87253473e"
+      },
+      "top-th.html": {
+        "before": "957fc702f41808f9db3942e1cceba89cbe97209d8be9631f66135131401f08d3",
+        "after": "328fbbbf474cb2066000fb035f2331e27584ff332ac7e74fe4940e491a9064d8"
+      },
+      "top-vi.html": {
+        "before": "aba7b71ceeaa4e7f7b4f3e7d8cd110675bcdc95ee1283c6b54f1e8ffaa276d7d",
+        "after": "7dfddd96e916565da97d672abcd9ece85fd6a4c16a905ef881613c81202d7373"
+      },
+      "top-zh-cn.html": {
+        "before": "4e75ee2b84a2617ebda16676042ab90a416d77656e63cb76aaaead8584dfc806",
+        "after": "96b5225db1d13b8d0e2785a1032b08f1b06f4fec49f73697018bb2af6b105179"
+      },
+      "top-zh-han.html": {
+        "before": "58373a02ef70f0e23238136a03cd9088a99d3ef2e4f15590692d4474f0b80ae0",
+        "after": "d460608fb3235389f4f6de3c2ccc18695a64060ebacbee7d555e47110097b00a"
+      },
+      "top-zu.html": {
+        "before": "62bc589c7594b5b496b467ddd307a44d9fd9f9302469af48604bff81a4a6b821",
+        "after": "1d8a62fb3877bdc4174faf7efc6318c0683e984aa7ac5d5018a8fc50ab481767"
+      }
+    },
+    "jekyll_sources": {
+      "docs/install-chatgpt.html": {
+        "before": "b3a6e35fc35e75a132633254e43c6d2451b41a5e4326db5e4d88155d352fba41",
+        "after": "f7fca11bc2e4f993399753132cfa7be4a443b42e1f21e1f19e3f00ebf7aa01c2"
+      },
+      "docs/install-chatgpt.zh-tw.html": {
+        "before": "2735df0ac273720efd11da0bfe960720b4c6e4d941db7b01845f38dca329ffed",
+        "after": "2c0946642dc3ca3706c95f5955694826cc18b8e36c74f1305989cf356fd68d0b"
+      },
+      "docs/install-claude.html": {
+        "before": "8aa85d2a516cde06dce89ae1ba9038fa9d8b35d1303a53f43fc1348c1cf453d0",
+        "after": "cf01b4bb350e70bd0f8f58a2172448016e9ec87778acf84d1c0e2b6facb7e42b"
+      },
+      "docs/install-claude.zh-tw.html": {
+        "before": "999f9057d3b47027dc5186fd25e1d2cba4ce287b4c4d01faf3347c11c3773562",
+        "after": "d95037a4b629249ffc0452c38b232db03577d8640bf717d3dee6847c9621c0f0"
+      },
+      "docs/install-gemini.html": {
+        "before": "9f5ccaf3edb2fa0eddaad096e335cad61449c3451adc768e263a438732c94a62",
+        "after": "6b45e06287c525304ec4c55d7ed5ab1fe989337d8748e9ebfa677333e649f7fd"
+      },
+      "docs/install-gemini.zh-tw.html": {
+        "before": "28399843fe6a5209f4829874d8af00f8f78a4ca26cbfb103653b0c9becc74f63",
+        "after": "4e1f7dc07871fbb223760b62a95c1788ee39826746ea1cf3959f57121ce1ef87"
+      }
+    }
+  }
+}
