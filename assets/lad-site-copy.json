@@ -1,0 +1,462 @@
+{
+  "ru": {
+    "house_style": "ru-editorial",
+    "title": "KUMIHAN｜Лад — Русская типографика и осмысленный дизайн",
+    "description": "Открытые Skills для естественной русской типографики, создания и рецензии веб-страниц, документов и презентаций.",
+    "skip": "Перейти к содержанию",
+    "nav_label": "Основная навигация",
+    "lang_label": "Язык",
+    "nav": [
+      "О проекте",
+      "Принципы",
+      "Skills",
+      "Установка"
+    ],
+    "eyebrow": "OPEN SOURCE / RUSSIAN TYPOGRAPHY",
+    "h1": [
+      "Русская типографика.",
+      "Дизайн со смыслом."
+    ],
+    "lead": "KUMIHAN｜Лад — открытый набор Skills для создания и проверки русскоязычных сайтов, статей, отчётов и презентаций. Читаемость, смысл, сохранность текста и индивидуальность дизайна — без шаблонного ИИ-оформления.",
+    "cta": [
+      "Начать",
+      "О принципах"
+    ],
+    "hero_foot": [
+      "RUSSIAN",
+      "FOUR SKILLS",
+      "OPEN SOURCE"
+    ],
+    "concept_h2": [
+      "Сначала смысл.",
+      "Потом форма."
+    ],
+    "concept_body": "Текст — не украшение. Порядок информации, переносы, интервалы и выбор шрифта должны отвечать задаче и потребностям читателя.",
+    "features_h2": "Внимание к русскому тексту",
+    "features_deck": "Контекст важнее безусловной автокоррекции. Орфография, редакционная политика и визуальная композиция — разные уровни решений.",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "Ё",
+        "h3": "Сохранить оригинал",
+        "p": "Ё, й, ударения, цитаты, имена и числа остаются неизменными без разрешения автора."
+      },
+      {
+        "idx": "02",
+        "mark": "«»",
+        "h3": "Осмысленная типографика",
+        "p": "Кавычки, тире, пробелы и переносы подбираются с учётом языка, задачи и стиля."
+      },
+      {
+        "idx": "03",
+        "mark": "Ла",
+        "h3": "Не шаблонный дизайн",
+        "p": "Никаких декоративных градиентов и одинаковых карточек ради эффекта: прежде всего смысл и голос бренда."
+      },
+      {
+        "idx": "04",
+        "mark": "↗",
+        "h3": "Проверка с доказательствами",
+        "p": "Отделяем статические замечания от реально проверенных шрифтов, браузеров и PDF."
+      }
+    ],
+    "idea_eyebrow": "ДИЗАЙН ПО СМЫСЛУ",
+    "idea_h2": [
+      "Меньше шаблонов ИИ.",
+      "Больше характера."
+    ],
+    "idea_body": "Качественная композиция опирается на содержание и назначение материала, а не на повторяемые эффекты.",
+    "skills_h2": [
+      "Четыре самостоятельных Skills.",
+      "Одна философия."
+    ],
+    "skills_deck": "Начало работы, веб, документы и проверка — только то, что нужно.",
+    "skills": [
+      [
+        "Лад",
+        "Определить задачу, аудиторию и допустимые изменения."
+      ],
+      [
+        "Web",
+        "Адаптивная структура, кириллица и переносы."
+      ],
+      [
+        "Documents",
+        "Отчёты, слайды и PDF с проверяемыми шрифтами."
+      ],
+      [
+        "Review",
+        "Рецензия без изменения исходных файлов."
+      ]
+    ],
+    "skill_view": "Посмотреть Skill",
+    "install_h2": [
+      "Выберите платформу.",
+      "Установите подходящий пакет."
+    ],
+    "install_body": "Отдельные Skills и пакеты для ChatGPT/Codex, Claude Code и Gemini CLI. Все ZIP помечены v0.1.0.",
+    "install_notes": [
+      "Плагин и Skills для ChatGPT / Codex",
+      "Плагин и Skills для Claude Code",
+      "Расширение и Skills для Gemini CLI"
+    ],
+    "install_extra": "Все 15 ZIP и SHA-256 ↗",
+    "status_title": "OPEN SOURCE / v0.1.0",
+    "status_body": "Публикация на GitHub не означает одобрения в магазинах приложений. Реальную работу в хостах и качество отображения нужно проверять отдельно.",
+    "status_link": "Смотреть выпуск ↗",
+    "cta_h2": [
+      "Каждому слову —",
+      "своё место."
+    ],
+    "cta_body": "Код, правила, источники и ограничения доступны открыто.",
+    "cta_button": "Открыть GitHub",
+    "footer_sub": "Русская типографика и дизайн по смыслу текста.",
+    "gateway_label": "Все языки",
+    "family": [
+      "KUMIHAN — японская версия",
+      "kumihan.html"
+    ],
+    "top": "Наверх",
+    "guide": {
+      "breadcrumb": "Установка",
+      "nav": "Платформы",
+      "toc_title": "На странице",
+      "toc_summary": "Показать",
+      "platforms": "Выберите платформу",
+      "note_title": "Перед установкой",
+      "note": "ZIP-файл в чате не устанавливает плагин.",
+      "source": "Код и источники",
+      "steps": "Шаги",
+      "top": "Наверх",
+      "title": "Установка для {host}",
+      "lead": "Четыре отдельных Skills для русской типографики и дизайна.",
+      "sections": [
+        "Выбрать пакет",
+        "Скачать и проверить",
+        "Установить",
+        "Протестировать",
+        "Обновить",
+        "Ограничения"
+      ],
+      "format": "Четыре самостоятельных Skills и объединяющий плагин.",
+      "plugin": "Плагин",
+      "skill": "Отдельный Skill",
+      "download": "Скачайте архивы ZIP v0.1.0 и проверьте SHA256SUMS.txt.",
+      "chatgpt": "В Codex установите Skill в .agents/skills/. Для ChatGPT требуется поддерживаемый интерфейс, а не ZIP в чате.",
+      "claude": "В Claude Code используйте claude --plugin-dir /absolute/path/kumihan-lad. Проверьте обнаружение Skill.",
+      "gemini": "В Gemini CLI используйте gemini extensions install /absolute/path/kumihan-lad и проверьте список расширений.",
+      "test": "Проверьте доступность четырёх Skills и сохранность текста; одна проверка JSON недостаточна.",
+      "prompt": "Проверьте русскую типографику без изменения оригинала.",
+      "check": "python runtime/checks.py original.txt --locale ru-RU",
+      "update": "Проверьте новые контрольные суммы, сохраните настройки и переустановите пакет.",
+      "limits": "Статический анализ не удостоверяет браузер, PDF, нативные приложения или редактуру."
+    }
+  },
+  "en": {
+    "house_style": null,
+    "title": "KUMIHAN｜Лад — Natural Russian typography, made with AI",
+    "description": "KUMIHAN｜Лад is a set of open-source AI skills for creating and reviewing Russian websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+    "skip": "Skip to content",
+    "nav_label": "Primary navigation",
+    "lang_label": "Language",
+    "nav": [
+      "About",
+      "Principles",
+      "Skills",
+      "Get started"
+    ],
+    "eyebrow": "OPEN-SOURCE SKILLS / RUSSIAN TYPOGRAPHY",
+    "h1": [
+      "Natural Russian typography,",
+      "made with AI"
+    ],
+    "lead": "KUMIHAN｜Лад is a set of open-source AI skills for creating and reviewing Russian websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
+    "cta": [
+      "Get started",
+      "Learn more"
+    ],
+    "hero_foot": [
+      "OPEN SOURCE",
+      "FOUR SKILLS",
+      "RUSSIAN FIRST"
+    ],
+    "concept_h2": [
+      "Not a uniform look—",
+      "the right form for each message"
+    ],
+    "concept_body": "Every brief, audience, and message is different. KUMIHAN｜Лад helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+    "features_h2": "Four things worth getting right",
+    "features_deck": "Practical priorities for creating and reviewing Russian content.",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "Ё",
+        "h3": "Contextual Cyrillic typography",
+        "p": "Review ё and й, quotations, dashes and line breaks without unconditional replacements."
+      },
+      {
+        "idx": "02 / STRUCTURE",
+        "mark": "▮▮▯",
+        "h3": "Purposeful structure",
+        "p": "Shape the layout around the information, its priority, and the reader’s goal."
+      },
+      {
+        "idx": "03 / FIDELITY",
+        "mark": "Aa",
+        "h3": "Source fidelity",
+        "p": "Keep names, figures, quotations and original wording intact unless the project authorizes changes."
+      },
+      {
+        "idx": "04 / REVIEW",
+        "mark": "◌",
+        "h3": "Read-only review",
+        "p": "Check finished work and organize issues—without touching the files."
+      }
+    ],
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
+      "Beyond arranging type",
+      "Design the reading experience"
+    ],
+    "idea_body": "KUMIHAN｜Лад doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
+    "skills_h2": [
+      "Four skills",
+      "One approach"
+    ],
+    "skills_deck": "From scoping the work to web, documents, and review.",
+    "skills": [
+      [
+        "Лад",
+        "Define purpose, audience and authorized changes."
+      ],
+      [
+        "Web",
+        "Typography and design for Russian websites, articles, landing pages, and UI."
+      ],
+      [
+        "Documents",
+        "Structure and readability for reports, business documents, and slide decks."
+      ],
+      [
+        "Review",
+        "Review typography, information, and layout without editing source files."
+      ]
+    ],
+    "skill_view": "View skill",
+    "install_h2": [
+      "Start with the AI tools",
+      "you already use"
+    ],
+    "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need.",
+    "install_notes": [
+      "Guides for adding skills, registering plugins, and local installation",
+      "Setup guide for Claude Code and Claude chat",
+      "Setup guide for Gemini CLI and the Gemini app"
+    ],
+    "install_extra": "All 15 ZIP files and SHA-256 ↗",
+    "status_title": "RELEASED / v0.1.0",
+    "status_body": "GitHub release does not imply official marketplace approval or actual native-host rendering tests.",
+    "status_link": "Download latest ↗",
+    "cta_h2": [
+      "Another way to design",
+      "in Russian"
+    ],
+    "cta_body": "KUMIHAN｜Лад is open source. The skills, releases, and full change history are on GitHub.",
+    "cta_button": "View on GitHub",
+    "footer_sub": "Russian typography skills for AI-assisted design.",
+    "gateway_label": "KUMIHAN home",
+    "family": [
+      "KUMIHAN Japanese",
+      "en.html"
+    ],
+    "top": "Back to top",
+    "guide": {
+      "breadcrumb": "Installation guide",
+      "nav": "Installation guides",
+      "toc_title": "On this page",
+      "toc_summary": "Show contents",
+      "platforms": "Choose an AI platform",
+      "note_title": "v0.1.0 / GitHub Release",
+      "note": "A ZIP attached to a conversation is not a plugin installation.",
+      "source": "Open the original INSTALL.md",
+      "steps": "Steps and notes",
+      "top": "Back to KUMIHAN｜Лад",
+      "title": "Install on {host}",
+      "lead": "Four independent Russian typography and content-led design Skills.",
+      "sections": [
+        "Choose package",
+        "Download and verify",
+        "Install",
+        "Test",
+        "Update",
+        "Limits"
+      ],
+      "format": "Four independent Skills and a plugin package.",
+      "plugin": "Plugin package",
+      "skill": "Standalone Skill",
+      "download": "Download v0.1.0 ZIPs and verify SHA256SUMS.txt.",
+      "chatgpt": "For Codex extract Skill to .agents/skills/. ChatGPT requires a supported plugin interface; chat attachments do not install plugins.",
+      "claude": "Use claude --plugin-dir /absolute/path/kumihan-lad in Claude Code and verify native discovery.",
+      "gemini": "Use gemini extensions install /absolute/path/kumihan-lad in Gemini CLI and list extensions.",
+      "test": "State the language, region (ru-RU or ru-RU), house style, and working mode. Example request:",
+      "prompt": "Review Russian typography without changing the source.",
+      "check": "python runtime/checks.py original.txt --locale ru-RU",
+      "update": "Verify checksums, preserve house styles and reinstall via the host.",
+      "limits": "Static checks cannot prove native host, browser, Office/PDF or human editorial quality."
+    }
+  },
+  "ja": {
+    "house_style": null,
+    "title": "KUMIHAN｜Лад — ロシア語のデザインをもっと自然に",
+    "description": "KUMIHAN｜Ладは、AIによるロシア語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
+    "skip": "本文へ移動",
+    "nav_label": "メインナビゲーション",
+    "lang_label": "表示言語",
+    "nav": [
+      "Ладとは",
+      "できること",
+      "4つのスキル",
+      "導入方法"
+    ],
+    "eyebrow": "OPEN-SOURCE SKILLS / RUSSIAN TYPOGRAPHY",
+    "h1": [
+      "ロシア語の",
+      "デザインを",
+      "もっと自然に"
+    ],
+    "lead": "AIとつくるロシア語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜Ладは、ロシア語のための制作・レビュースキル集です。",
+    "cta": [
+      "使いはじめる",
+      "Ладについて"
+    ],
+    "hero_foot": [
+      "OPEN SOURCE",
+      "FOUR SKILLS",
+      "RUSSIAN FIRST"
+    ],
+    "concept_h2": [
+      "「見た目をそろえる」より",
+      "「伝わる形を考える」"
+    ],
+    "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Ладは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+    "features_h2": "伝えるための4つの視点",
+    "features_deck": "制作と見直しに共通する、KUMIHAN｜Ладが大切にする考え方。",
+    "features": [
+      {
+        "idx": "01",
+        "mark": "Ё",
+        "h3": "自然なロシア語組版",
+        "p": "ё・й・アクセントや引用符、ダッシュ、改行をロシア語の文脈に沿って扱います。"
+      },
+      {
+        "idx": "02 / STRUCTURE",
+        "mark": "▮▮▯",
+        "h3": "内容に合う構成",
+        "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+      },
+      {
+        "idx": "03 / FIDELITY",
+        "mark": "Aa",
+        "h3": "原稿を大切に",
+        "p": "名前、数値、引用や元の文章を勝手に書き換えません。"
+      },
+      {
+        "idx": "04 / REVIEW",
+        "mark": "◌",
+        "h3": "制作後の見直し",
+        "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
+      }
+    ],
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
+      "文字を並べるだけでなく",
+      "読む体験を組み立てる"
+    ],
+    "idea_body": "KUMIHAN｜Ладは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
+    "skills_h2": [
+      "4つのスキル",
+      "ひとつの考え方"
+    ],
+    "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
+    "skills": [
+      [
+        "Лад",
+        "目的・媒体・編集範囲を整理する。"
+      ],
+      [
+        "Web",
+        "ロシア語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
+      ],
+      [
+        "Documents",
+        "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
+      ],
+      [
+        "Review",
+        "制作物を変更せず、組版・情報・デザインの見直しを支援。"
+      ]
+    ],
+    "skill_view": "スキルを見る",
+    "install_h2": [
+      "いつものAIツールから",
+      "はじめよう"
+    ],
+    "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。",
+    "install_notes": [
+      "スキルの追加・プラグイン登録・ローカル導入のガイド",
+      "Claude Code・チャット向けの導入ガイド",
+      "Gemini CLI・Geminiアプリ向けの導入ガイド"
+    ],
+    "install_extra": "15個のZIPとSHA-256をすべて見る ↗",
+    "status_title": "RELEASED / v0.1.0",
+    "status_body": "GitHubでの公開と各社ストア掲載は別です。ブラウザ・Office・母語話者・ホスト動作は実施した範囲だけ報告します。",
+    "status_link": "最新版のダウンロード ↗",
+    "cta_h2": [
+      "ロシア語のデザインに",
+      "もうひとつの選択肢を"
+    ],
+    "cta_body": "KUMIHAN｜Ладはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+    "cta_button": "GitHubで見る",
+    "footer_sub": "Russian typography skills for AI-assisted design.",
+    "gateway_label": "KUMIHAN トップ",
+    "family": [
+      "日本語版 KUMIHAN",
+      "kumihan.html"
+    ],
+    "top": "ページ上部へ",
+    "guide": {
+      "breadcrumb": "導入ガイド",
+      "nav": "導入ページ",
+      "toc_title": "このページの目次",
+      "toc_summary": "このページの目次を表示",
+      "platforms": "AIプラットフォームを選ぶ",
+      "note_title": "v0.1.0 / GitHub Release",
+      "note": "ZIPを会話に添付するだけではプラグインは登録されません。",
+      "source": "元のINSTALL.mdを開く",
+      "steps": "手順と注意事項",
+      "top": "KUMIHAN｜Ладへ戻る",
+      "title": "{host} への導入",
+      "lead": "ロシア語の自然な文字組と内容に合うデザインを支える4つのスキル。",
+      "sections": [
+        "パッケージを選ぶ",
+        "ダウンロードと照合",
+        "導入",
+        "動作確認",
+        "更新",
+        "制約"
+      ],
+      "format": "4つの独立スキルと、まとめて導入できるプラグインがあります。",
+      "plugin": "プラグイン",
+      "skill": "独立Skill",
+      "download": "v0.1.0付きZIPとSHA256SUMS.txtを確認してください。",
+      "chatgpt": "Codexでは.agents/skills/へ展開します。ChatGPTは対応するプラグイン登録UIを利用します。ZIP添付だけでは登録されません。",
+      "claude": "Claude Codeではclaude --plugin-dir /absolute/path/kumihan-ladを利用し認識を確認してください。",
+      "gemini": "Gemini CLIではgemini extensions install /absolute/path/kumihan-ladを実行し認識を確認してください。",
+      "test": "言語・地域（ru-RU・ru-RU）・編集スタイル・作業モードを明示します。依頼の例：",
+      "prompt": "原稿を変えずにロシア語の文字組をレビューして。",
+      "check": "python runtime/checks.py original.txt --locale ru-RU",
+      "update": "チェックサムを確認し、独自設定を保存して再導入します。",
+      "limits": "静的なチェックはネイティブホスト・ブラウザ・Office/PDF・母語話者確認の代わりになりません。"
+    }
+  }
+}

@@ -50,3 +50,7 @@ Research canonical: https://drive.google.com/drive/folders/1EMib8ugMHyfNG2e38Mo7
 
 ## Parallel gateway preservation
 - main aac9ac19a5181c6080bcce40f468bff577525d33 added Bangla cards manually to index.html/top-en.html while CI was running. Those two cards were merged verbatim, but gateway --check correctly detected that the generator would erase them. Moved the exact existing card HTML into the canonical gateway-copy source and added a narrow preserved-card insertion after the same existing French card. No Bangla copy, target, position, font, product or distribution output is rewritten; other gateways and all ordinary registry cards retain their existing generation path. --check RED→GREEN without changing either merged gateway output.
+
+## Russian parallel-main integration
+- main 106b0306e2b28ff2e858342d9a0a77acdecbbe42 brought Russian Lad and a workflow fix. Preserved its font/script registry and source/site assets. Resolved only shared COPY_FILES and PAGE_GATEWAY registrations, retaining Italian, Indonesian and Russian entries together; no existing product output modified.
+- Post-merge local validation: Equilibrio 15, root 14 PASS; distribution/site/shared-copy/gateway --check PASS. Italian product/ZIP sources are unchanged by this merge. Other-language product changes in history are inherited from main, not authored by this edition.

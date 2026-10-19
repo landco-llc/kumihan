@@ -1,0 +1,84 @@
+name: KUMIHAN Lad RU v0.1.0
+on:
+  push:
+    branches: [main, feat/kumihan-lad-v0.1.0]
+    paths:
+      - 'plugins/kumihan-lad/**'
+      - 'tests/lad/**'
+      - 'tools/*lad*'
+      - 'assets/lad-*'
+      - 'kumihan-ru*.html'
+      - 'docs/install-lad-*.html'
+      - 'docs/lad/**'
+      - '.claude-plugin/marketplace.json'
+      - '.github/workflows/lad.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'plugins/kumihan-lad/**'
+      - 'tests/lad/**'
+      - 'tools/*lad*'
+      - 'assets/lad-*'
+      - 'kumihan-ru*.html'
+      - 'docs/install-lad-*.html'
+      - '.claude-plugin/marketplace.json'
+      - '.github/workflows/lad.yml'
+permissions:
+  contents: write
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: W01-W04 validate product and build distributables first
+        run: |
+          python -m unittest discover -s tests/lad -p test_runtime.py -v
+          python tools/build_lad.py --out /tmp/kumihan-lad-v0.1.0
+      - name: W05 build site with KUMIHAN canonical Japanese design
+        run: |
+          python tools/web_fonts.py
+          python tools/web_fonts.py --check
+          python tools/base_copy.py
+          python tools/base_copy.py --check
+          python tools/build_lad_site.py
+          python tools/build_lad_site.py --check
+          python -m unittest discover -s tests/lad -p test_site.py -v
+      - name: W06 commit generated pages to feature branch
+        if: github.event_name == 'push' && github.ref_name == 'feat/kumihan-lad-v0.1.0'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- 'assets/kumihan-fonts.css' '_data/web_fonts.yml' 'assets/lad-site-copy.json' 'assets/lad-site.css' 'kumihan-ru.html' 'kumihan-ru.en.html' 'kumihan-ru.ja.html' docs/install-lad-*.html
+          if ! git diff --cached --quiet; then
+            git commit -m "site(lad): generated RU EN JA pages from KUMIHAN canonical layout"
+            git push origin HEAD:feat/kumihan-lad-v0.1.0
+          fi
+      - name: W07 fail if main has uncommitted site output
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        run: |
+          git diff --exit-code -- assets/kumihan-fonts.css _data/web_fonts.yml assets/lad-site-copy.json assets/lad-site.css kumihan-ru.html kumihan-ru.en.html kumihan-ru.ja.html docs/install-lad-*.html
+      - name: W07 publish immutable public GitHub Release
+        if: github.event_name == 'push' && github.ref_name == 'main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          if gh release view kumihan-ru-v0.1.0 >/dev/null 2>&1; then
+            echo "Release exists; do not overwrite immutable tag/assets"
+            exit 0
+          fi
+          gh release create kumihan-ru-v0.1.0 \
+            /tmp/kumihan-lad-v0.1.0/*.zip \
+            /tmp/kumihan-lad-v0.1.0/SHA256SUMS.txt \
+            /tmp/kumihan-lad-v0.1.0/MANIFEST.json \
+            --target "$(git rev-parse HEAD)" \
+            --title 'KUMIHAN｜Лад v0.1.0' \
+            --notes-file plugins/kumihan-lad/RELEASE_NOTES.md \
+            --latest=false
