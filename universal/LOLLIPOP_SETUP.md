@@ -194,9 +194,9 @@ When private runtime is already prepared, upload ONLY generated kmhn/index.php a
 
 ## W03 update: 2026-10-19 private archive transfer
 
-The Owner's Mac already verified the local ZIP + nested runtime tarball and completed SCP upload (`100%`, 779KB) to the existing private server candidate. SSH checks confirmed the tar file exists and `vendor`, `src`, `public` are not yet extracted. The remote verification script stopped at `HASH_TOOL_UNAVAILABLE` because neither `sha256sum` nor `openssl` was available in the Lolipop SSH environment. This is **NOT** a verified checksum mismatch.
+The Owner's Mac verified the local ZIP + nested runtime tarball, completed SCP upload (`100%`, 779KB), **then SCP-read the server archive back** and obtained `REMOTE_ARCHIVE_SHA_OK` and `REMOTE_ARCHIVE_BYTES_OK`. The private archive therefore matches the pinned SHA-256 and local original byte-for-byte. SSH checks confirmed the tar file exists and `vendor`, `src`, `public` are not yet extracted. The remote verification script stopped at `HASH_TOOL_UNAVAILABLE` because neither `sha256sum` nor `openssl` was available in the Lolipop SSH environment. This is **NOT** a verified checksum mismatch.
 
-**Next gate:** From the **Mac terminal**, SCP the server-held `runtime.tar.gz` back to a different local filename and use Mac `shasum -a 256` plus `cmp` against the local verified archive. See [STAGE_PRIVATE_20261019.md](deployment/STAGE_PRIVATE_20261019.md), Stage B2 for copy-safe, no-overwrite commands. Do not extract on the host until both checks PASS. Do not try to install server utilities just for this step.
+**Readback gate now PASS.** The Mac successfully ran `shasum -a 256` plus `cmp` against the local verified archive. Next is **private-only extraction** from the SSH session using `universal/tools/unpack_private_runtime.sh` after checking that `tar` exists and the private deployment target remains empty; see [STAGE_PRIVATE_20261019.md](deployment/STAGE_PRIVATE_20261019.md). The helper does not install the public bootstrap or create the runtime configuration. Never extract inside the FTP `web` root.
 
 SSH warnings: the Mac OpenSSH client reported missing post-quantum key exchange and an RSA host-key-update signature warning. Maintain strict host-key verification; validate the server identity against the provider information rather than bypassing SSH trust controls. The cryptographic archive readback is a separate content-integrity check.
 
@@ -241,7 +241,8 @@ Run separate compatibility checks for ChatGPT/Codex, Claude Code and Gemini CLI.
 - [ ] Non-Web private folder's absence from every other HTTP virtual host independently verified
 - [x] Actual Web PHP SAPI=litespeed and PHP_VERSION=8.5.11 verified
 - [ ] Composer lock and dependency audit finalized
-- [ ] Private artifact installed without exposing vendor/src/runtime
+- [x] Private tarball transferred and verified by Mac SSH readback (SHA256 and cmp PASS)
+- [ ] Private artifact extracted and checked for required files outside all public document roots
 - [ ] Public two-file bootstrap installed in existing kmhn
 - [ ] Live HTTPS MCP initialize/tools/list/tools/call PASS
 - [ ] ChatGPT/Codex, Claude Code and Gemini CLI verified separately
