@@ -13,10 +13,23 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "public_exposure_scan_incomplete_pending_diagnosis")
+        self.assertEqual(d["status"], "kmhn_symlink_scope_clear_web_wide_permission_limited_pending_owner_mapping_review")
+        self.assertEqual(d["public_preflight"]["status"], "SCOPED_CLEAR_FULL_WEB_PERMISSION_LIMITED")
+        self.assertEqual(d["public_preflight"]["scoped_diagnostic"]["markers"], [
+            "KMHN_SYMLINK_SCOPE_CLEAR",
+            "WEB_WIDE_SCAN_PERMISSION_LIMIT",
+            "WEB_WIDE_SYMLINK_SCAN_INCOMPLETE",
+            "NO_FILES_CHANGED",
+        ])
+        self.assertTrue(d["public_preflight"]["scoped_diagnostic"]["kmhn_symlink_scope_verified"])
+        self.assertFalse(d["public_preflight"]["scoped_diagnostic"]["full_web_symlink_scope_verified"])
+        self.assertFalse(d["public_preflight"]["scoped_diagnostic"]["exposure_globally_excluded"])
         self.assertEqual(d["public_preflight"]["status"], "INCOMPLETE_STOP")
         self.assertEqual(d["public_preflight"]["markers"][-1], "PUBLIC_SYMLINK_SCAN_INCOMPLETE")
         self.assertFalse(d["flags"]["public_symlink_scan_complete"])
+        self.assertTrue(d["flags"]["public_kmhn_symlink_scope_verified"])
+        self.assertFalse(d["flags"]["public_web_wide_symlink_scan_complete"])
+        self.assertTrue(d["flags"]["public_web_wide_scan_permission_limited"])
         self.assertFalse(d["flags"]["public_root_preflight_passed"])
         self.assertFalse(d["flags"]["other_vhosts_isolation_verified"])
         self.assertFalse(d["flags"]["public_bootstrap_installed"])
