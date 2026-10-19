@@ -45,6 +45,8 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "sw": dict(name="Kiswahili", lang="sw", brand="KUMIHAN｜Mizani", glyph="ng’", label="SW · SWAHILI", version="v0.1.0",
+               pages={"sw":"kumihan-sw.html", "en":"kumihan-sw.en.html", "ja":"kumihan-sw.ja.html"}),
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
     "id": dict(name="Bahasa Indonesia", lang="id", brand="KUMIHAN｜Laras", glyph="Ng", label="ID · INDONESIAN", version="v0.1.0",
@@ -571,6 +573,13 @@ def marquee():
         out += f'<div class="glyph-row{" reverse" if i else ""}" style="--duration:{30 + 6 * i}s">{cells}{cells}</div>'
     return f'<div aria-hidden="true" class="glyph-marquee">{out}</div>'
 
+
+# KUMIHAN｜Mizani v0.1.0 gateway links. Native copy reviews remain separate.
+for _lang, _cards in CARDS.items():
+    _cards.setdefault("sw",
+        ("スワヒリ語の語形・アポストロフィを保護し、地域ごとの数値と文字組を考える設計。", "スワヒリ語版を見る") if _lang=="ja" else
+        ("Swahili typography protecting apostrophes, original text, and regional formats.", "View the Swahili edition"))
+CARDS["en"]["sw"] = ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition")
 
 def cards(key):
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)

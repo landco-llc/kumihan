@@ -38,3 +38,23 @@ class Mizani(unittest.TestCase):
    self.assertEqual(hashlib.sha256(f.read_bytes()).hexdigest(),row["sha256"])
    with zipfile.ZipFile(f) as z:
     self.assertIsNone(z.testzip());self.assertTrue(any(x.endswith("/SKILL.md") for x in z.namelist()))
+
+ def test_landing_and_install_guides(self):
+  from pathlib import Path
+  import re
+  root=Path(__file__).resolve().parents[2]
+  for code,suffix in (("sw",""),("en",".en"),("ja",".ja")):
+   path=root/f"kumihan-sw{suffix}.html"
+   self.assertTrue(path.is_file(),path)
+   html=path.read_text(encoding="utf-8")
+   self.assertIn('KUMIHAN｜Mizani',html)
+   self.assertIn(f'<html lang="{code}">',html)
+   self.assertIn("assets/mizani-site.css",html)
+   self.assertIn('lang="',html)
+   self.assertNotIn("kumihan-laras",html)
+   for host in ("chatgpt","claude","gemini"):
+    path=root/f"docs/install-mizani-{host}{suffix}.html"
+    self.assertTrue(path.is_file(),path)
+    txt=path.read_text(encoding="utf-8")
+    self.assertIn("kumihan-mizani",txt)
+    self.assertIn("-v0.1.0.zip",txt)
