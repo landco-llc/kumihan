@@ -28,7 +28,7 @@ class Khmer(unittest.TestCase):
   raw="ខ្មែរ សួស្តី".encode()
   self.assertEqual(checker.inspect(raw,"km",raw)["preservation"],"passed")
   self.assertEqual(checker.inspect(raw,"km-KH",b"changed")["preservation"],"failed")
-  self.assertEqual(checker.inspect(raw)["coeng_count"],1)
+  self.assertEqual(checker.inspect(raw)["coeng_count"],2)
   self.assertEqual(checker.inspect(b"word-break:break-all")["findings"][0]["rule_id"],"KM-09")
   with self.assertRaises(ValueError):checker.inspect(raw,"kh")
  def test_archives(self):
