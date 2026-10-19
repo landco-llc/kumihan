@@ -37,8 +37,9 @@ The tool returns `selected` with medium/adapter/source/reason or `needs-clarific
 | Deterministic pack builder | `build_dist.py --check`: 148 generated files up to date; Python caches explicitly excluded |
 | Existing six media profiles + 39 catalog IDs | unchanged; verified by unit tests |
 | Other independent language modules | no changes made under `plugins/` |
-| Complete root `unittest discover -s tests` | 55 tests PASS after follow-up review corrections and rebasing on main `329cced` (all scope tests); the earlier base `051a34e` had 19 independent font CSS order failures, reproduced unchanged in a separate baseline worktree. They were resolved upstream before rebase and are not attributed to this feature |
+| Complete root `unittest discover -s tests` | 59 tests PASS after follow-up review fixes and integrating main `db14de2` (includes upstream share-site checks); the earlier base `051a34e` had 19 font CSS order failures, separately reproduced in an untouched baseline worktree. Upstream resolved them; no attribution to this feature |
 | Browser/Office/rendered visual checks | NOT CHECKED; this change adds guidance and routing, not a renderer |
+| Separate Codex read-only review attempt | NOT AUDITABLE: repository HEAD moved during inspection; no independent PASS or no-blockers conclusion may be inferred |
 | Native ChatGPT/Claude/Gemini plugin invocation | NOT CHECKED |
 | GitHub CI, merge, Release, Pages | To be read back after PR creation; no publication authorized |
 
