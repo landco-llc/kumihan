@@ -2,7 +2,6 @@
 """Ensure the designated production hostname is recorded without treating it as live."""
 from pathlib import Path
 import json
-import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -14,7 +13,13 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "tls_verified_public_folder_confirmed_pending_mcp_deployment")
+        self.assertEqual(d["status"], "tls_verified_ftp_root_owner_confirmed_pending_private_runtime_validation")
+        self.assertEqual(d["deployment_paths"]["ftp_root"]["basename"], "web")
+        self.assertTrue(d["deployment_paths"]["ftp_root"]["owner_confirmed"])
+        self.assertFalse(d["deployment_paths"]["ftp_root"]["ssh_realpath_verified"])
+        self.assertEqual(d["deployment_paths"]["public_root"]["relative_to_ftp_root"], "kmhn")
+        self.assertFalse(d["deployment_paths"]["private_server_candidate"]["ssh_write_verified"])
+        self.assertNotIn("sub.jp-", json.dumps(d))
         self.assertEqual(d["production_upload_directory"], "kmhn")
         self.assertEqual(d["provisioning"]["public_upload_folder"], "kmhn")
         self.assertEqual(d["provisioning"]["verification_type"], "owner_report_plus_independent_github_tls_probe")
@@ -28,6 +33,8 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertFalse(gates["php85_verified_on_target"])
         self.assertFalse(gates["host_end_to_end_verified"])
         self.assertTrue(gates["public_upload_folder_owner_confirmed"])
+        self.assertTrue(gates["ftp_root_path_owner_confirmed"])
+        self.assertFalse(gates["ftp_root_ssh_verified"])
         self.assertFalse(gates["private_runtime_path_verified"])
         self.assertFalse(gates["public_release_authorized"])
 
@@ -45,7 +52,8 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("PUBLIC FOLDER CONFIRMED", guide)
+        self.assertIn("OWNER PROVIDED FTP ROOT", guide)
+        self.assertIn("check_lolipop_layout.py", guide)
         self.assertIn("FTP-root/kmhn", guide)
 
 if __name__ == "__main__":
