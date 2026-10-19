@@ -10,7 +10,7 @@
     "php_version": "8.5",
     "deployment_mode": "PHP request lifecycle (no daemon)"
   },
-  "status": "tls_verified_pending_mcp_deployment",
+  "status": "tls_verified_public_folder_confirmed_pending_mcp_deployment",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -21,13 +21,16 @@
     "host_end_to_end_verified": false,
     "client_connection_verified": false,
     "public_release_authorized": false,
-    "ssl_configured_owner_reported": true
+    "ssl_configured_owner_reported": true,
+    "public_upload_folder_owner_confirmed": true,
+    "private_runtime_path_verified": false,
+    "ssh_access_verified": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
-  "production_upload_directory": "mcp-service/public",
+  "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner confirmed domain and SSL setup; GitHub Actions independently validated DNS+hostname TLS1.3. Await actual subdomain document-root path, PHP 8.5 setting and MCP runtime upload. Do not declare MCP ready until HTTPS MCP initialize/tools pass.",
-  "deployment_blocker": "MCP PHP runtime has not been uploaded. Exact subdomain document-root path and SSH/SFTP upload path are not confirmed. TLS now verified.",
+  "notes": "Owner confirmed kmhn as the Lolipop subdomain public upload directory. Root page resolves there. No change to domain mapping. Do not place src, vendor, runtime or config in FTP root because the account default host may serve that root. TLS PASS, MCP not deployed.",
+  "deployment_blocker": "Public folder kmhn confirmed. Need to verify FTP root full path, SSH-accessible non-Web directory and PHP 8.5 for the domain; then upload runtime. No credentials supplied/required in GitHub.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -35,7 +38,9 @@
     "ssl_configured": true,
     "verification_type": "owner_report_plus_independent_github_tls_probe",
     "network_tls_probe": "PASS",
-    "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint."
+    "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint.",
+    "public_upload_folder": "kmhn",
+    "public_upload_folder_confirmation": "Owner report 2026-10-19"
   },
   "tls_verification": {
     "verification_type": "public_github_actions_runner",
@@ -46,5 +51,9 @@
     "certificate_not_after": "2027-01-17T10:35:22Z",
     "evidence_url": "https://github.com/landco-llc/kumihan/actions/runs/39246702661",
     "limitation": "This validates TLS hostname and chain from one runner, NOT deployed PHP runtime or MCP protocol."
-  }
+  },
+  "production_public_folder": "kmhn",
+  "public_root_type": "Lolipop FTP root relative (actual full filesystem path is not yet verified)",
+  "private_runtime_layout": "An SSH-accessible directory OUTSIDE the FTP root and any other HTTP document root; do not assume an FTP-root sibling is private",
+  "layout_strategy": "Only bootstrap index.php and .htaccess under FTP root/kmhn. Place original universal/server tree outside HTTP roots and require its absolute entrypoint from bootstrap."
 }
