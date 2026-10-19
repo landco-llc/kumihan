@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "g1_scoped_prebootstrap_pass_owner_mapping_confirmed_g2_trial_pending",
+  "status": "g2_public_two_files_privately_staged_verified_pending_limited_install",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -59,13 +59,18 @@
     "public_web_wide_scan_permission_limited": true,
     "owner_vhost_upload_mappings_reviewed": true,
     "owner_reports_no_private_runtime_public_alias": true,
-    "public_scoped_prebootstrap_recheck_verified": true
+    "public_scoped_prebootstrap_recheck_verified": true,
+    "g2_public_stage_created_verified": true,
+    "g2_public_stage_local_hash_verified": true,
+    "g2_public_stage_ssh_transfer_verified": true,
+    "g2_public_stage_readback_hash_verified": true,
+    "g2_public_stage_readback_byte_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner reported all expected final scoped PASS markers incl MCP_NOT_PUBLIC. Combined with Owner domain mapping attestation, limited /mcp connection test is eligible; public bootstrap NOT INSTALLED, full web crawl restricted, release gates remain false.",
-  "deployment_blocker": "G1 scoped prepublication PASS and Owner domain upload mapping review complete. Pending deliberate G2 two-file bootstrap installation from checksum-verified ZIP and immediate real HTTPS MCP initialize/tools/list/tools/call; never claim full-web traversal PASS or general public release.",
+  "notes": "Owner terminal reported all five G2 private staging PASS markers with SCP readback for both files. No public PHP controller installed. Full FTP-root symlink traversal remains permission-limited/NOT_CHECKED; scoped G1 and Owner domain mapping review already PASS.",
+  "deployment_blocker": "G2 stage and SCP readback SHA256/byte equality PASS; publicly reachable index.php/.htaccess NOT installed. Next deliberate Owner-gated two-file install and immediate real HTTPS MCP initialize/tools/list/tools/call; if failure, rollback staged-matching files only.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -285,5 +290,30 @@
     "production_write_occurred": false,
     "g2_limited_trial_eligible": true,
     "scope_limit": "Does not certify inaccessible unrelated FTP sites or any completed MCP transport/host integration."
+  },
+  "g2_stage_evidence": {
+    "observed_at": "2026-10-19",
+    "source": "Owner Mac terminal: verified downloaded local ZIP and public index/.htaccess; created private stage via SSH; SCP upload and return readback of both; SHA256 and cmp PASS.",
+    "owner_terminal_markers": [
+      "G2_LOCAL_FILE_SHA_OK",
+      "G2_PRIVATE_STAGE_CREATED",
+      "G2_SCP_READBACK_SHA_OK",
+      "G2_SCP_READBACK_BYTES_OK",
+      "G2_ONLY_PRIVATE_STAGED"
+    ],
+    "files": {
+      "index.php": {
+        "bytes": 453,
+        "sha256": "603b6b77e87f96176e5762127384bfde95c56706db16aef53a3311119846a715"
+      },
+      ".htaccess": {
+        "bytes": 192,
+        "sha256": "c83a8917efadb548c16d37c8234f5ea9af9080891e5b60afac7b341516e1e80a"
+      }
+    },
+    "destination": "Non-Web private server subdirectory .kmhn-public-stage; public web/kmhn unchanged.",
+    "authentication": "SCP used preconfigured SSH session; post-quantum key exchange and RSA hostkeys proof warnings persisted.",
+    "g2_trial_install_was_run": false,
+    "http_mcp_tested": false
   }
 }
