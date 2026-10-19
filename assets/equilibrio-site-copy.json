@@ -101,8 +101,8 @@
    "Configurazione per Gemini CLI e Gemini Apps"
   ],
   "install_extra": "Vedi i 15 ZIP, MANIFEST.json e SHA256SUMS.txt ↗",
-  "status_title": "RELEASE CANDIDATE / v0.1.0",
-  "status_body": "v0.1.0 comprende quattro skill indipendenti e 15 archivi. Importazione negli strumenti e revisione madrelingua non verificate. La pubblicazione su GitHub è in corso di verifica.",
+  "status_title": "RELEASED / v0.1.0",
+  "status_body": "v0.1.0 è disponibile su GitHub: quattro skill indipendenti e 15 archivi. Importazione negli strumenti, icone native e revisione madrelingua non verificate.",
   "status_link": "Vedi i file di distribuzione ↗",
   "cta_h2": [
    "Un’altra possibilità",
@@ -151,7 +151,7 @@
    "update": "Conserva le impostazioni personali e verifica versione e checksum. Aggiorna con il metodo supportato dal tuo strumento. Un nuovo commit non aggiorna automaticamente un’installazione. Mantieni gli altri plugin linguistici.",
    "limits": "40 proposte di regole, un rilevatore limitato di candidati CSS e un confronto dei byte. I 48 casi di ricerca mantengono stati di verifica separati. Non è un correttore grammaticale completo né una certificazione visiva. Importazione nativa, icone, cataloghi dei fornitori e revisione madrelingua non verificati."
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  },
  "en": {
   "house_style": null,
@@ -256,7 +256,7 @@
   ],
   "install_extra": "All 15 ZIP files, MANIFEST.json, and SHA256SUMS.txt ↗",
   "status_title": "RELEASED / v0.1.0",
-  "status_body": "v0.1.0 contains four independent skills and 15 archives. Native host import and native Italian editorial review remain not-checked. GitHub publication is being verified.",
+  "status_body": "v0.1.0 is available on GitHub with four independent skills and 15 archives. Native host import, icon UI and native Italian editorial review remain not-checked.",
   "status_link": "Download latest ↗",
   "cta_h2": [
    "Another way to design",
@@ -305,7 +305,7 @@
    "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
    "limits": "40 research guidance candidates; a bounded CSS candidate detector and byte comparison. 48 proposed research cases retain separate evidence states. No complete grammar checker or visual certification. Native import, icon UI, provider listings and Italian native editorial review are not verified."
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  },
  "ja": {
   "house_style": null,
@@ -411,7 +411,7 @@
   ],
   "install_extra": "15個のZIP・MANIFEST.json・SHA256SUMS.txtを見る ↗",
   "status_title": "RELEASED / v0.1.0",
-  "status_body": "v0.1.0は4つの独立スキルと15 ZIPで構成します。各ホストでの導入とイタリア語母語校閲は未確認。GitHub公開を検証中です。",
+  "status_body": "v0.1.0をGitHubで公開しています。4つの独立スキルと15 ZIPを配布。実ホストでの導入・アイコン表示とイタリア語母語校閲は未確認です。",
   "status_link": "最新版のダウンロード ↗",
   "cta_h2": [
    "イタリア語のデザインに",
@@ -460,6 +460,6 @@
    "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
    "limits": "40件の研究規則案と、限定したCSS候補検出・バイト比較を収録。48件の研究ケースは確認状況を別管理します。完全な文法校正器や表示認証ではありません。実ホスト導入・アイコン表示・公式ストア掲載・イタリア語母語校閲は未確認です。"
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  }
 }

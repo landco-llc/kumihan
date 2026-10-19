@@ -1,0 +1,160 @@
+{
+  "observed_at_utc": "2026-10-19T04:16:07Z",
+  "pages": [
+    {
+      "path": "kumihan-it.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/kumihan-it.html",
+      "bytes": 14111,
+      "sha256": "bf24f5d000a1dcdb7fb6377902dc6d8127b66e8668a4b901142dfe989b9be432",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "kumihan-it.en.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/kumihan-it.en.html",
+      "bytes": 14142,
+      "sha256": "d634da3fdfca3520b7c9f55e6551bd955ce9dd7f7e864de2ee7cd6cb80f47d27",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "kumihan-it.ja.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/kumihan-it.ja.html",
+      "bytes": 14840,
+      "sha256": "7795c7983520bf00374dc6b55cd97de7acca194a5826547fdd04e610b76278ef",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-chatgpt.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-chatgpt.html",
+      "bytes": 10674,
+      "sha256": "792f0beddbc9e3e1b73e54dc114859f860dcd4693a4b62d2eec8a33de3503684",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-chatgpt.en.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-chatgpt.en.html",
+      "bytes": 10514,
+      "sha256": "295e5a3c52d504b038846ab56daa503663ea66ae1ab78f28f53c28a9e0936321",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-chatgpt.ja.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-chatgpt.ja.html",
+      "bytes": 11079,
+      "sha256": "35e66cfc82e8d0119f4eae8ddd2c2387edc3e03d5a87c860ece95603eb468f8c",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-claude.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-claude.html",
+      "bytes": 10777,
+      "sha256": "6e5029e3dc5454671815d0e9f422ee009cebe7ca863e7d45618a8800dce533fe",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-claude.en.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-claude.en.html",
+      "bytes": 10525,
+      "sha256": "7a41173c11425ec9b555a9d84cba0732332844ae26e8751f79d414c47759a714",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-claude.ja.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-claude.ja.html",
+      "bytes": 11088,
+      "sha256": "c1c0231df9fe1b9fbb047ec37503a15990a2a76d5b4efe3f8a8a3f853c394cda",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-gemini.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-gemini.html",
+      "bytes": 10648,
+      "sha256": "c9660c9cbbd293eac18c5f829d81c6a2f41baf73d03fbfbe50fe6ea032019422",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-gemini.en.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-gemini.en.html",
+      "bytes": 10487,
+      "sha256": "5adeee186e5068af4d964e294792fc169a7a97164a3cc02711798ae3e3d8bf62",
+      "source_equal": true,
+      "canonical_alternates": true
+    },
+    {
+      "path": "docs/install-equilibrio-gemini.ja.html",
+      "status": 200,
+      "url": "https://landco-llc.github.io/kumihan/docs/install-equilibrio-gemini.ja.html",
+      "bytes": 11051,
+      "sha256": "ce36538cd1a762a556539276e3680a756c171de6fa6eae6b4cd300bd1d27ade3",
+      "source_equal": true,
+      "canonical_alternates": true
+    }
+  ],
+  "gateways": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.ja.html"
+    },
+    {
+      "path": "top-en.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    }
+  ],
+  "resources": [
+    {
+      "path": "assets/equilibrio-site.css",
+      "status": 200,
+      "bytes": 22663,
+      "sha256": "96773c78e00207e1bbfed85c3e36b20cf6d4f166c8ab35e22bf8291921cc082c"
+    },
+    {
+      "path": "assets/kumihan-install.css",
+      "status": 200,
+      "bytes": 21647,
+      "sha256": "2196fcdf9925ae27270fa15d6e1689aa676ef896c639a5c57af380c3cd1834a0"
+    },
+    {
+      "path": "assets/kumihan-install.js",
+      "status": 200,
+      "bytes": 2692,
+      "sha256": "addd75f470ee97f0dfb23549a32544a03263a598a99b1fcf29659221a1f3b9b2"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "status": 200,
+      "bytes": 1045725,
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "assets/kumihan-fonts.css",
+      "status": 200,
+      "bytes": 14683,
+      "sha256": "c8e1aae16035a01675ae3d54bb89cb0dbe13b7c7d0ebeb2de2ea0ce7cad5e2cd"
+    }
+  ],
+  "scope": "Public HTTP bytes equal repository sources; language/canonical/alternates and gateway target links checked. External provider/Google fonts/corporate endpoint not exercised."
+}
