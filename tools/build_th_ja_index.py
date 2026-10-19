@@ -385,22 +385,7 @@ def render(root: Path, copy: dict) -> str:
   </div>
 </section>
 </main>
-<footer class="footer">
-  <div class="shell footer-layout">
-    <div><div class="footer-mark">KUMIHAN｜ดุลอักษร</div>
-      <div class="footer-sub">{x(s["footer_sub"])}<br>
-        Developed by L&amp;Co. LLC</div></div>
-    <div class="footer-links">
-      {anchor("index.html", "KUMIHAN トップ")}
-      {anchor("kumihan.html", "KUMIHAN 日本語版")}
-      {anchor("kumihan-th.html", "ภาษาไทย")}
-      {anchor("kumihan-th-en.html", "English")}
-      {anchor(SOURCE, "GitHub", extra='target="_blank" rel="noopener noreferrer"')}
-      {anchor("LICENSE", "Apache License 2.0")}
-      {anchor("#top", "ページ上部へ ↑")}
-    </div>
-  </div>
-</footer>
+{WEB_FONTS.FOOTER.footer("ja")}
 </body></html>
 """
     # Assertions are source-level guardrails, not a rendered typography claim.
@@ -418,7 +403,7 @@ def render(root: Path, copy: dict) -> str:
         'id="skills-title"', 'id="install-title"', 'id="status-title"', 'id="cta-title"',
     )):
         raise ValueError("Missing canonical landmark")
-    return out
+    return WEB_FONTS.SHARE.apply(out)
 
 
 if __name__ == "__main__":

@@ -2,19 +2,19 @@
   "format": 2,
   "product": "KUMIHAN for ChatGPT and Codex",
   "publisher": "L&Co. LLC",
-  "version": "0.1.7-preview",
+  "version": "0.1.8-preview",
   "source_repository": "landco-llc/kumihan",
   "status": "Preview. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "plugins/kumihan-GPT-Codex-plugin-0.1.7-preview.zip",
-      "sha256": "4b45eeb81504dbb617375a72fe58b4c7a5f17332716ff25f552a62b11eeda6d8",
-      "bytes": 1118226,
+      "file": "plugins/kumihan-GPT-Codex-plugin-0.1.8-preview.zip",
+      "sha256": "e6966ffa949149116d6cc7c8a650f207c777521b17bf2446c6f7c04f4d0866bd",
+      "bytes": 1179343,
       "members": [
         {
           "path": "kumihan-private-install-preview/.codex-plugin/plugin.json",
           "bytes": 2818,
-          "sha256": "8d02a178eb87c6e199e519b797868d99731aceb734827a34e4ffdd4f6dcb922f"
+          "sha256": "a9b6785a192e1f192395a4cc2ba28be205f2ef202096d65092a9635175f9667b"
         },
         {
           "path": "kumihan-private-install-preview/LICENSE",
@@ -39,7 +39,7 @@
         {
           "path": "kumihan-private-install-preview/plugin.json",
           "bytes": 2992,
-          "sha256": "88ff7e3036e4cfd29c0a7af2b47a36b4d0fb7902c15dbaefea1c54788a1cbba2"
+          "sha256": "a7b1a6749314da5941ccd1438a529aed70e9954e1a898e340f91dfb70e839754"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/LICENSE",
@@ -48,13 +48,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/SKILL.md",
-          "bytes": 3072,
-          "sha256": "af89c7acea0320c09b41e6b8983cacc44a22be3ee7bb9fa3ff55e9e50553ca01"
+          "bytes": 3758,
+          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/inventory.json",
-          "bytes": 4232,
-          "sha256": "63f16707e2e9bbac2c87ab0d95c9834468382bf5705915f6f25c6111871fcceb"
+          "bytes": 5076,
+          "sha256": "cb6d608982e554d990350173b2a6db73cbb0433ff873cd0ba8866373a5310ec4"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/profiles/display-copy.json",
@@ -89,12 +89,17 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/document-recipes.md",
@@ -105,6 +110,21 @@
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/web-recipes.md",
@@ -167,6 +187,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -178,13 +203,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/SKILL.md",
-          "bytes": 3470,
-          "sha256": "d628a16819b2abc73e24120b83c51fb351d0769e8e8b5cbd9793c845112dd9c2"
+          "bytes": 4137,
+          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/inventory.json",
-          "bytes": 4229,
-          "sha256": "e8000f43de15287fa13b58ec40ad429a865b22ab34f229d1a08d65efbab6724e"
+          "bytes": 5073,
+          "sha256": "9682c0cec64e42a3a307cfd46b676331de53db605c569ddd91592ed2bc36d06d"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/profiles/display-copy.json",
@@ -219,12 +244,17 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/document-recipes.md",
@@ -235,6 +265,21 @@
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/web-recipes.md",
@@ -297,6 +342,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-private-install-preview/skills/kumihan-review/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -308,13 +358,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/SKILL.md",
-          "bytes": 3746,
-          "sha256": "ed0c1694f22ffba68ea174c328ab0cdf1d719c38e6380acd6ec56c37fb0c1b85"
+          "bytes": 4481,
+          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/inventory.json",
-          "bytes": 4226,
-          "sha256": "6070684075465c6e8a5d6d8d59e7807ac7ae0d99db054e4f209fe2893232d62c"
+          "bytes": 5070,
+          "sha256": "7c1c5ce6faa628d5c480efd7439f9d76607588ce92531d34ec408c768621f071"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/profiles/display-copy.json",
@@ -349,12 +399,17 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/document-recipes.md",
@@ -365,6 +420,21 @@
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/web-recipes.md",
@@ -427,6 +497,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-private-install-preview/skills/kumihan-web/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -438,13 +513,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/SKILL.md",
-          "bytes": 3678,
-          "sha256": "e09e2e580e2927656ab9fe9fd01e3f09bd52763a319c84f4687e3cc4eeb0ee5b"
+          "bytes": 4840,
+          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/inventory.json",
-          "bytes": 4222,
-          "sha256": "c821ec860170a0e3afec299db70ddd65912cf99e1bdae6057fde9223627fe144"
+          "bytes": 5066,
+          "sha256": "6f5b33ccbe607ea92a132d894fef0d33e601e1ff68a3c338f000fda625cf481a"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/profiles/display-copy.json",
@@ -479,12 +554,17 @@
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/document-recipes.md",
@@ -495,6 +575,21 @@
           "path": "kumihan-private-install-preview/skills/kumihan/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/web-recipes.md",
@@ -557,6 +652,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-private-install-preview/skills/kumihan/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-private-install-preview/skills/kumihan/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -564,9 +664,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-GPT-Codex-skill-0.1.7-preview.zip",
-      "sha256": "ffe925bdce4ec6fc967aee521538ef7f3365dde6667eba85dd2128f11e4186df",
-      "bytes": 77452,
+      "file": "skills/kumihan-GPT-Codex-skill-0.1.8-preview.zip",
+      "sha256": "4b4978a8f0c75669db739bcb700d2697fecdd9135819a0f147cd3caf90f4a8de",
+      "bytes": 92433,
       "members": [
         {
           "path": "kumihan/LICENSE",
@@ -575,13 +675,13 @@
         },
         {
           "path": "kumihan/SKILL.md",
-          "bytes": 3678,
-          "sha256": "e09e2e580e2927656ab9fe9fd01e3f09bd52763a319c84f4687e3cc4eeb0ee5b"
+          "bytes": 4840,
+          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
         },
         {
           "path": "kumihan/inventory.json",
-          "bytes": 4222,
-          "sha256": "c821ec860170a0e3afec299db70ddd65912cf99e1bdae6057fde9223627fe144"
+          "bytes": 5066,
+          "sha256": "6f5b33ccbe607ea92a132d894fef0d33e601e1ff68a3c338f000fda625cf481a"
         },
         {
           "path": "kumihan/profiles/display-copy.json",
@@ -616,12 +716,17 @@
         {
           "path": "kumihan/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan/references/document-recipes.md",
@@ -632,6 +737,21 @@
           "path": "kumihan/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan/references/web-recipes.md",
@@ -694,6 +814,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -701,9 +826,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-GPT-Codex-skill-0.1.7-preview.zip",
-      "sha256": "e99dc91ed8071a3085a5596f54bc4a7cc746da8c986329a837debd1131dfbc0c",
-      "bytes": 77825,
+      "file": "skills/kumihan-web-GPT-Codex-skill-0.1.8-preview.zip",
+      "sha256": "3a98e147373c5db3e319b39988c9795454d9c6f3c073a8e34638a0dae00a5f21",
+      "bytes": 92688,
       "members": [
         {
           "path": "kumihan-web/LICENSE",
@@ -712,13 +837,13 @@
         },
         {
           "path": "kumihan-web/SKILL.md",
-          "bytes": 3746,
-          "sha256": "ed0c1694f22ffba68ea174c328ab0cdf1d719c38e6380acd6ec56c37fb0c1b85"
+          "bytes": 4481,
+          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
         },
         {
           "path": "kumihan-web/inventory.json",
-          "bytes": 4226,
-          "sha256": "6070684075465c6e8a5d6d8d59e7807ac7ae0d99db054e4f209fe2893232d62c"
+          "bytes": 5070,
+          "sha256": "7c1c5ce6faa628d5c480efd7439f9d76607588ce92531d34ec408c768621f071"
         },
         {
           "path": "kumihan-web/profiles/display-copy.json",
@@ -753,12 +878,17 @@
         {
           "path": "kumihan-web/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-web/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-web/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-web/references/document-recipes.md",
@@ -769,6 +899,21 @@
           "path": "kumihan-web/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-web/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-web/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-web/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-web/references/web-recipes.md",
@@ -831,6 +976,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-web/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-web/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -838,9 +988,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-GPT-Codex-skill-0.1.7-preview.zip",
-      "sha256": "b6ef6ea9f6ded357829e74a0f8d67930d3f3b550dae9f32cac4bc8ce1af5e0f7",
-      "bytes": 77700,
+      "file": "skills/kumihan-documents-GPT-Codex-skill-0.1.8-preview.zip",
+      "sha256": "b867b15193b2b247e951ad1d047ca4ccceebc7082aa5dd56b136067ce410e40c",
+      "bytes": 92567,
       "members": [
         {
           "path": "kumihan-documents/LICENSE",
@@ -849,13 +999,13 @@
         },
         {
           "path": "kumihan-documents/SKILL.md",
-          "bytes": 3072,
-          "sha256": "af89c7acea0320c09b41e6b8983cacc44a22be3ee7bb9fa3ff55e9e50553ca01"
+          "bytes": 3758,
+          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
         },
         {
           "path": "kumihan-documents/inventory.json",
-          "bytes": 4232,
-          "sha256": "63f16707e2e9bbac2c87ab0d95c9834468382bf5705915f6f25c6111871fcceb"
+          "bytes": 5076,
+          "sha256": "cb6d608982e554d990350173b2a6db73cbb0433ff873cd0ba8866373a5310ec4"
         },
         {
           "path": "kumihan-documents/profiles/display-copy.json",
@@ -890,12 +1040,17 @@
         {
           "path": "kumihan-documents/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-documents/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-documents/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-documents/references/document-recipes.md",
@@ -906,6 +1061,21 @@
           "path": "kumihan-documents/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-documents/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-documents/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-documents/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-documents/references/web-recipes.md",
@@ -968,6 +1138,11 @@
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
         },
         {
+          "path": "kumihan-documents/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
+        },
+        {
           "path": "kumihan-documents/sources/public-sources.json",
           "bytes": 37605,
           "sha256": "3b20998696b8fa164204347e0407755c803e3d121d99022931e7326316c17004"
@@ -975,9 +1150,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-GPT-Codex-skill-0.1.7-preview.zip",
-      "sha256": "a54a7dc84fea994f70088a6855c7bad93ec71d2780c4e42a85a9fe19853b96d5",
-      "bytes": 77749,
+      "file": "skills/kumihan-review-GPT-Codex-skill-0.1.8-preview.zip",
+      "sha256": "c91d998999bed30036c1e14228265b640e43ea31679f6a7a75a61767253a4978",
+      "bytes": 92595,
       "members": [
         {
           "path": "kumihan-review/LICENSE",
@@ -986,13 +1161,13 @@
         },
         {
           "path": "kumihan-review/SKILL.md",
-          "bytes": 3470,
-          "sha256": "d628a16819b2abc73e24120b83c51fb351d0769e8e8b5cbd9793c845112dd9c2"
+          "bytes": 4137,
+          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
         },
         {
           "path": "kumihan-review/inventory.json",
-          "bytes": 4229,
-          "sha256": "e8000f43de15287fa13b58ec40ad429a865b22ab34f229d1a08d65efbab6724e"
+          "bytes": 5073,
+          "sha256": "9682c0cec64e42a3a307cfd46b676331de53db605c569ddd91592ed2bc36d06d"
         },
         {
           "path": "kumihan-review/profiles/display-copy.json",
@@ -1027,12 +1202,17 @@
         {
           "path": "kumihan-review/references/architecture.md",
           "bytes": 15868,
-          "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+          "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
         },
         {
           "path": "kumihan-review/references/design-contract.md",
           "bytes": 7083,
           "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+        },
+        {
+          "path": "kumihan-review/references/design-review-modes.md",
+          "bytes": 5200,
+          "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
         },
         {
           "path": "kumihan-review/references/document-recipes.md",
@@ -1043,6 +1223,21 @@
           "path": "kumihan-review/references/review-protocol.md",
           "bytes": 12582,
           "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+        },
+        {
+          "path": "kumihan-review/references/use-case-adapters.json",
+          "bytes": 3121,
+          "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+        },
+        {
+          "path": "kumihan-review/references/use-case-selection.md",
+          "bytes": 6291,
+          "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+        },
+        {
+          "path": "kumihan-review/references/visual-relationship-guidance.md",
+          "bytes": 3306,
+          "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
         },
         {
           "path": "kumihan-review/references/web-recipes.md",
@@ -1103,6 +1298,11 @@
           "path": "kumihan-review/schemas/rule.schema.json",
           "bytes": 5677,
           "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+        },
+        {
+          "path": "kumihan-review/scripts/use_case_selector.py",
+          "bytes": 14288,
+          "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
         },
         {
           "path": "kumihan-review/sources/public-sources.json",

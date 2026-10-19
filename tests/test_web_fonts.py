@@ -15,7 +15,7 @@ import web_fonts  # noqa: E402
 
 class WebFonts(unittest.TestCase):
     def test_every_static_page_links_its_language_fonts(self):
-        pages = [ROOT / "index.html", *ROOT.glob("top-*.html"), *ROOT.glob("kumihan*.html"),
+        pages = [ROOT / "index.html", *(p for p in ROOT.glob("top-*.html") if "http-equiv=\"refresh\"" not in p.read_text(encoding="utf-8")), *ROOT.glob("kumihan*.html"),
                  *(ROOT / "docs").glob("install-*.html")]
         checked = 0
         for path in pages:
@@ -39,7 +39,7 @@ class WebFonts(unittest.TestCase):
             text = (ROOT / "_layouts" / layout).read_text(encoding="utf-8")
             with self.subTest(layout=layout):
                 self.assertIn("site.data.web_fonts[page.lang]", text)
-                self.assertIn("/assets/kumihan-fonts.css", text)
+                self.assertIn("site.data.kumihan_assets.fonts_css", text)
 
     def test_system_fonts_come_before_google_fonts(self):
         for key, (local_sans, _, sans, serif) in web_fonts.SCRIPTS.items():

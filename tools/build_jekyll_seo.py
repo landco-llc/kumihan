@@ -11,6 +11,8 @@ from pathlib import Path
 import re
 import yaml
 from seo_metadata import enrich_html
+import site_share
+import json
 from seo_inventory import public_paths
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -57,11 +59,28 @@ def outputs():
         if not template.is_file():
             raise ValueError(f'Unregistered Jekyll SEO layout: {layout} ({path})')
         page.setdefault('lang', 'ja')
+        share_data = site_share.data()
+        if page['lang'] not in share_data:
+            raise ValueError(f"Unregistered Jekyll share language: {page['lang']}")
+        data_path = ROOT / '_data/site_share.json'
+        if data_path.exists() and json.loads(data_path.read_text()).get(page['lang']) != share_data[page['lang']]:
+            raise ValueError(f"Stale Jekyll share data: {page['lang']}; run tools/web_fonts.py")
         head = render_head(template.read_text(encoding='utf-8'), page)
         relative = path.relative_to(ROOT).as_posix()
         document = f'<html lang="{escape(page["lang"], quote=True)}"><head>{head}</head><body></body></html>'
         enriched = enrich_html(document, relative)
-        files['_includes/seo-pages/' + relative] = enriched.split('<head>', 1)[1].split('</head>', 1)[0].strip() + '\n'
+        from seo_metadata import _Head, canonical_url
+        parser = _Head(); parser.feed(enriched)
+        title = re.search(r'<title>(.*?)</title>', enriched, re.S)[1]
+        from html import unescape
+        title = unescape(title)
+        metadata = enriched.split('<head>', 1)[1].split('</head>', 1)[0].strip()
+        metadata = re.sub(r'<meta (?:property="og:[^"]+"|name="twitter:[^"]+")[^>]*>\n?', '', metadata)
+        for name, value in [('seo_share_title', title), ('seo_share_description', parser.description), ('seo_canonical', canonical_url(relative))]:
+            if '{%' in value or '{{' in value:
+                raise ValueError('Liquid delimiters in Jekyll metadata')
+            metadata += '\n{% capture ' + name + ' %}' + value + '{% endcapture %}'
+        files['_includes/seo-pages/' + relative] = metadata + '\n'
     return files
 
 

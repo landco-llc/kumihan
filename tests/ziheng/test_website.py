@@ -2,6 +2,7 @@
 
 This does not claim a Jekyll deploy or a browser-rendering acceptance test.
 """
+import json
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
@@ -82,7 +83,10 @@ class ZiHengWebsiteTests(unittest.TestCase):
             # canonical KUMIHAN install-guide layout.
             self.assertIn('kumihan-install.css' if path.startswith('docs/') else 'ziheng-site.css',content)
         landing=(ROOT/'_layouts/landing.html').read_text(encoding='utf-8')
-        self.assertIn("'/kumihan-zh-han.html' | relative_url",landing)
+        # The shared footer lists every edition, ZiHeng included.
+        self.assertIn("site.data.site_footer",landing)
+        footer=json.loads((ROOT/'_data/site_footer.json').read_text(encoding='utf-8'))
+        self.assertIn('kumihan-zh-han.html',footer['zh-Hant-TW'])
 
 if __name__ == '__main__':
     unittest.main()

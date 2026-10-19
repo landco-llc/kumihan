@@ -1,0 +1,42 @@
+name: KUMIHAN Persian gateway discovery
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/build_gateways.py'
+      - '.github/workflows/fa-gateway.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  gateway:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Rebuild language gateway with Persian edition
+        run: |
+          python tools/build_gateways.py
+          python tools/build_gateways.py --check
+      - name: Verify FA language card and links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for filename in ('index.html','top-en.html'):
+              html=Path(filename).read_text()
+              if 'KUMIHAN｜تراز' not in html or 'kumihan-fa' not in html:
+                  raise SystemExit('FA gateway card missing from '+filename)
+          PY
+      - name: Commit refreshed language galleries
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html top-*.html
+          if ! git diff --cached --quiet; then
+            git commit -m "docs(fa): list Persian edition in existing KUMIHAN language gateways"
+            git push origin HEAD:main
+          fi

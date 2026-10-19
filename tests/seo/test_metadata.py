@@ -16,8 +16,8 @@ class MetadataTests(unittest.TestCase):
         data = json.loads(re.search(r'application/ld\+json">(.*?)</script>', result, re.S)[1])
         self.assertEqual(data['@graph'][-1]['name'], '</script><script>bad')
         self.assertNotIn('</script><script>bad', result)
-        self.assertIn('content="1254"', result)
-        self.assertIn('content="summary"', result)
+        self.assertIn('content="1200"', result)
+        self.assertIn('content="summary_large_image"', result)
         self.assertIn('content="zh_TW"', result)
 
     def test_idempotent_and_preserves_body(self):
@@ -34,7 +34,8 @@ class MetadataTests(unittest.TestCase):
         self.assertIn('kumihan-fr.en.html', product)
         self.assertNotIn('top-en.html', product)
         gateway = seo.enrich_html(html, 'top-fr.html')
-        self.assertIn('top-en.html', gateway)
+        self.assertIn('top-ja.html', gateway)
+        self.assertNotIn('top-en.html', gateway)
         self.assertNotIn('kumihan-fr.en.html', gateway)
 
     def test_unknown_pages_do_not_guess_translations(self):

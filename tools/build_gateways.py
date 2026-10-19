@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-"""Build the KUMIHAN language gateway (index.html, top-*.html); --check verifies.
+"""Build the KUMIHAN language gateway (index.html in English, top-*.html); --check verifies.
 
 Page copy that already existed lives in assets/gateway-copy.json; shared styles
 in assets/gateway.css. Language order everywhere is by language code, with
 the page's own language first (and English second in the language menu).
 """
-
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_adapter import seo_outputs
 import argparse
 import hashlib
 import json
 import re
+import sys
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -23,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 _wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
 WEB_FONTS = module_from_spec(_wf_spec)
 _wf_spec.loader.exec_module(WEB_FONTS)
+FOOTER = WEB_FONTS.FOOTER
 BASE = "https://landco-llc.github.io/kumihan/"
 VISIBLE, STEP = 6, 6
 
@@ -31,16 +29,18 @@ GATEWAYS = {
     "ar": ("top-ar.html", "ar", "AR", "العربية"),
     "bn": ("top-bn.html", "bn", "BN", "বাংলা"),
     "de": ("top-de.html", "de", "DE", "Deutsch"),
-    "en": ("top-en.html", "en", "EN", "English"),
+    "en": ("index.html", "en", "EN", "English"),
     "es": ("top-es.html", "es", "ES", "Español"),
     "fr": ("top-fr.html", "fr", "FR", "Français"),
     "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
     "id": ("top-id.html", "id", "ID", "Bahasa Indonesia"),
     "it": ("top-it.html", "it", "IT", "Italiano"),
-    "ja": ("index.html", "ja", "JA", "日本語"),
+    "ja": ("top-ja.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
     "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
+    "sw": ("top-sw.html", "sw", "SW", "Kiswahili"),
+    "zu": ("top-zu.html", "zu", "ZU", "isiZulu"),
     "ru": ("top-ru.html", "ru", "RU", "Русский"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
@@ -51,6 +51,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "zu": dict(name="isiZulu", lang="zu", brand="KUMIHAN｜Hlela", glyph="Aa", label="ZU · ISIZULU", version="v0.1.0", pages={"zu":"kumihan-zu.html","en":"kumihan-zu.en.html","ja":"kumihan-zu.ja.html"}),
     "sw": dict(name="Kiswahili", lang="sw", brand="KUMIHAN｜Mizani", glyph="ng’", label="SW · SWAHILI", version="v0.1.0", pages={"sw":"kumihan-sw.html","en":"kumihan-sw.en.html","ja":"kumihan-sw.ja.html"}),
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
@@ -79,7 +80,7 @@ PRODUCTS = {
 }
 
 # Right-to-left gateway languages.
-RTL = {"ar"}
+RTL = {"ar", "fa"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
@@ -303,6 +304,8 @@ UI = {
     "zh-hant": dict(heading="KUMIHAN 各語言版本", more="顯示接下來的 {n} 個", menu="語言"),
     "zh-hans": dict(heading="KUMIHAN 各语言版本", more="显示接下来的 {n} 个", menu="语言"),
     "ko": dict(heading="KUMIHAN 언어별 버전", more="다음 {n}개 보기", menu="언어"),
+    "zu": dict(heading="Izinguqulo zezilimi ze-KUMIHAN", more="Bonisa ezilandelayo ezi-{n}", menu="Ulimi"),
+    "sw": dict(heading="Matoleo ya lugha ya KUMIHAN", more="Onyesha {n} zinazofuata", menu="Lugha"),
     "th": dict(heading="KUMIHAN ในแต่ละภาษา", more="แสดงอีก {n} รายการ", menu="ภาษา"),
 }
 
@@ -539,6 +542,99 @@ for _lang, _cards in CARDS.items():
     _cards.setdefault("it", IT_CARD_COPY[_lang])
     _cards.setdefault("ru", RU_CARD_COPY[_lang])
 
+# Swahili edition (KUMIHAN｜Mizani): its card for every reader language and the Swahili
+# reader's table of all editions.
+SW_CARD_COPY = {
+    "ja": ("ng’とアポストロフィ、長い語を守り、sw-TZ・sw-KE・sw-CDの書式を明示して選ぶスワヒリ語の文字組みとデザイン。", "スワヒリ語版を見る"),
+    "en": ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition"),
+    "zh-hant": ("保護 ng’ 與撇號、尊重長詞，並明確選擇 sw-TZ／sw-KE／sw-CD 格式的史瓦希利文排版與設計。", "前往史瓦希利文版"),
+    "zh-hans": ("保护 ng’ 与撇号、尊重长词，并明确选择 sw-TZ／sw-KE／sw-CD 格式的斯瓦希里语排版与设计。", "前往斯瓦希里语版"),
+    "ko": ("ng’와 아포스트로피, 긴 단어를 지키고 sw-TZ·sw-KE·sw-CD 서식을 명시적으로 고르는 스와힐리어 글짜임.", "스와힐리어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรสวาฮีลีที่รักษา ng’ และอะพอสทรอฟี เคารพคำยาว และเลือกรูปแบบ sw-TZ sw-KE หรือ sw-CD อย่างชัดเจน", "ดูเวอร์ชันภาษาสวาฮีลี"),
+    "fr": ("Typographie swahilie qui protège ng’ et les apostrophes, respecte les mots longs et choisit explicitement les formats sw-TZ, sw-KE ou sw-CD.", "Voir l’édition swahilie"),
+    "es": ("Tipografía suajili que protege ng’ y los apóstrofos, respeta las palabras largas y elige de forma explícita los formatos sw-TZ, sw-KE o sw-CD.", "Ver la edición en suajili"),
+    "pt": ("Tipografia suaíli que protege ng’ e os apóstrofos, respeita palavras longas e escolhe explicitamente os formatos sw-TZ, sw-KE ou sw-CD.", "Ver a edição em suaíli"),
+    "ar": ("تنضيد سواحيلي يحمي ng’ والفواصل العليا ويراعي الكلمات الطويلة ويختار صراحةً تنسيقات sw-TZ أو sw-KE أو sw-CD.", "عرض النسخة السواحيلية"),
+    "hi": ("ng’ और एपॉस्ट्रॉफ़ी को सुरक्षित रखने वाली, लंबे शब्दों का ध्यान रखने वाली और sw-TZ, sw-KE या sw-CD प्रारूप स्पष्ट रूप से चुनने वाली स्वाहिली टाइपोग्राफ़ी।", "स्वाहिली संस्करण देखें"),
+    "vi": ("Typography tiếng Swahili bảo vệ ng’ và dấu nháy, tôn trọng từ dài và chọn rõ định dạng sw-TZ, sw-KE hoặc sw-CD.", "Xem phiên bản tiếng Swahili"),
+    "de": ("Suaheli-Typografie, die ng’ und Apostrophe schützt, lange Wörter respektiert und die Formate sw-TZ, sw-KE oder sw-CD ausdrücklich wählt.", "Suaheli-Version ansehen"),
+    "pl": ("Typografia suahili chroniąca ng’ i apostrofy, szanująca długie wyrazy i wyraźnie wybierająca formaty sw-TZ, sw-KE lub sw-CD.", "Zobacz wersję suahili"),
+    "id": ("Tipografi Swahili yang menjaga ng’ dan apostrof, menghormati kata panjang, serta memilih format sw-TZ, sw-KE, atau sw-CD secara eksplisit.", "Lihat edisi bahasa Swahili"),
+    "bn": ("ng’ ও অ্যাপোস্ট্রফি রক্ষা করে, দীর্ঘ শব্দ মেনে এবং sw-TZ, sw-KE বা sw-CD বিন্যাস স্পষ্টভাবে বেছে নেওয়া সোয়াহিলি টাইপোগ্রাফি।", "সোয়াহিলি সংস্করণ দেখুন"),
+    "it": ("Tipografia swahili che protegge ng’ e gli apostrofi, rispetta le parole lunghe e sceglie esplicitamente i formati sw-TZ, sw-KE o sw-CD.", "Vai all’edizione swahili"),
+    "ru": ("Типографика суахили: защита ng’ и апострофов, внимание к длинным словам и явный выбор форматов sw-TZ, sw-KE или sw-CD.", "Открыть версию на суахили"),
+}
+CARDS["sw"] = {
+    "ar": ("Uchapaji wa Kiarabu unaoshughulikia maandishi ya kulia kwenda kushoto na mchanganyiko wa hati, bila kubadilisha maandishi asilia.", "Tazama toleo la Kiarabu"),
+    "bn": ("Uchapaji na usanifu wa Kibengali unaolinda alama za irabu, herufi ambatani na maandishi asilia, ukitofautisha bn-BD na bn-IN.", "Tazama toleo la Kibengali"),
+    "de": ("Uchapaji wa Kijerumani unaozingatia maneno marefu ambatani, alama za nukuu na tofauti za DE/AT/CH, ukihifadhi maandishi asilia.", "Tazama toleo la Kijerumani"),
+    "es": ("Uchapaji wa Kihispania unaoheshimu matumizi ya kimaeneo, kuhifadhi maandishi asilia na kutenganisha ushahidi uliothibitishwa na maamuzi ya kihariri.", "Tazama toleo la Kihispania"),
+    "fr": ("Uchapaji wa Kifaransa unaotofautisha nafasi zisizokatika, alama za nukuu na mitindo ya uhariri ya kimaeneo au ya kitaasisi.", "Tazama toleo la Kifaransa"),
+    "hi": ("Uchapaji na usanifu wa Kihindi unaolinda maandishi asilia, herufi ambatani na alama za irabu (matra).", "Tazama toleo la Kihindi"),
+    "id": ("Uchapaji wa Kiindonesia unaozingatia vihusishi, viambishi, maneno yanayorudiwa, uakifishaji na kiasi cha rupia kulingana na muktadha, ukihifadhi maandishi asilia.", "Tazama toleo la Kiindonesia"),
+    "it": ("Uchapaji wa Kiitaliano unaozingatia lafudhi, nukuu na tofauti za kimaeneo, ukihifadhi maandishi asilia.", "Tazama toleo la Kiitaliano"),
+    "ja": ("Kuanzia kanuni za Kijapani za kukata mistari (kinsoku) na mikato ya kawaida ya mistari hadi muundo wa taarifa, nafasi tupu na mtiririko wa usomaji.", "Tazama toleo la Kijapani"),
+    "ko": ("Mikato ya mistari kati ya eojeol (vipashio vya nafasi vya Kikorea), mdundo wa maandishi na muundo wa taarifa ulio wazi.", "Tazama toleo la Kikorea"),
+    "pl": ("Uchapaji wa Kipolandi wenye alama sahihi za herufi, mikato yenye maana na usanifu unaohifadhi maandishi asilia.", "Tazama toleo la Kipolandi"),
+    "pt": ("Uchapaji wa Kireno na usanifu unaoongozwa na maana, ukiheshimu desturi za Brazili na Ulaya pamoja na nia ya mwandishi.", "Tazama toleo la Kireno"),
+    "ru": ("Uchapaji wa Kirusi unaoshughulikia ё na й, alama za nukuu, vistari na mikato ya mistari kulingana na muktadha, ukihifadhi maandishi asilia.", "Tazama toleo la Kirusi"),
+    "sw": ("Uchapaji wa Kiswahili unaolinda ng’ na alama za ritifaa, unaoheshimu maneno marefu na kuchagua waziwazi miundo ya sw-TZ, sw-KE au sw-CD.", "Tazama toleo la Kiswahili"),
+    "th": ("Kuheshimu mipaka ya maneno ya Kithai na herufi ambatanishi, kwa usanifu wa Kithai unaosomeka kwa urahisi.", "Tazama toleo la Kithai"),
+    "vi": ("Uchapaji wa Kivietinamu unaoheshimu alama za toni, mikato yenye maana ya mistari na maudhui asilia.", "Tazama toleo la Kivietinamu"),
+    "zh-hans": ("Uakifishaji, mikato ya mistari na maandishi mchanganyiko ya Kichina na Kilatini kwa China Bara, bila kuandika upya maandishi asilia.", "Tazama toleo la Kichina Kilichorahisishwa"),
+    "zh-hant": ("Hushughulikia desturi tofauti za uakifishaji na upangaji wa herufi za Taiwan na Hong Kong.", "Tazama toleo la Kichina cha Jadi"),
+}
+for _lang, _cards in CARDS.items():
+    if "sw" not in _cards:
+        _cards["sw"] = SW_CARD_COPY[_lang]
+
+# isiZulu edition (KUMIHAN｜Hlela): its card for every reader language.
+ZU_CARD_COPY = {
+    "ja": ("接合語と語中の大文字（isiZulu など）を守り、原稿を変えずに組むズールー語の文字組みとデザイン。", "ズールー語版を見る"),
+    "en": ("isiZulu typography that protects conjunctive words and internal capitals, keeping the source intact.", "View the isiZulu edition"),
+    "zh-hant": ("保護黏著詞與詞中大寫（如 isiZulu），不改動原稿的祖魯文排版與設計。", "前往祖魯文版"),
+    "zh-hans": ("保护黏着词与词中大写（如 isiZulu），不改动原稿的祖鲁语排版与设计。", "前往祖鲁语版"),
+    "ko": ("결합어와 단어 안의 대문자(isiZulu 등)를 지키고 원고를 바꾸지 않는 줄루어 글짜임.", "줄루어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรภาษาซูลูที่รักษาคำเชื่อมและตัวพิมพ์ใหญ่กลางคำ (เช่น isiZulu) โดยไม่เปลี่ยนต้นฉบับ", "ดูเวอร์ชันภาษาซูลู"),
+    "fr": ("Typographie zouloue qui protège les mots agglutinés et les majuscules internes (isiZulu), sans modifier la source.", "Voir l’édition zouloue"),
+    "es": ("Tipografía zulú que protege las palabras aglutinadas y las mayúsculas internas (isiZulu) sin alterar el original.", "Ver la edición en zulú"),
+    "pt": ("Tipografia zulu que protege palavras aglutinadas e maiúsculas internas (isiZulu), preservando o original.", "Ver a edição em zulu"),
+    "ar": ("تنضيد زولو يحمي الكلمات الملتصقة والأحرف الكبيرة داخل الكلمة (مثل isiZulu) دون تغيير النص الأصلي.", "عرض نسخة الزولو"),
+    "hi": ("संयोजी शब्दों और शब्द के भीतर बड़े अक्षरों (जैसे isiZulu) को सुरक्षित रखने वाली, मूल पाठ न बदलने वाली ज़ुलु टाइपोग्राफ़ी।", "ज़ुलु संस्करण देखें"),
+    "vi": ("Typography tiếng Zulu giữ nguyên từ ghép dính liền và chữ hoa giữa từ (như isiZulu), không thay đổi bản gốc.", "Xem phiên bản tiếng Zulu"),
+    "de": ("Zulu-Typografie, die zusammengeschriebene Wörter und Großbuchstaben im Wortinneren (isiZulu) schützt und das Original bewahrt.", "Zulu-Version ansehen"),
+    "pl": ("Typografia zulu chroniąca wyrazy łączne i wielkie litery wewnątrz słów (isiZulu), bez zmiany oryginału.", "Zobacz wersję zulu"),
+    "id": ("Tipografi Zulu yang menjaga kata gabung dan huruf kapital di tengah kata (seperti isiZulu) tanpa mengubah naskah asli.", "Lihat edisi bahasa Zulu"),
+    "bn": ("সংযুক্ত শব্দ ও শব্দের মাঝের বড় হাতের অক্ষর (যেমন isiZulu) রক্ষা করে, মূল লেখা না বদলানো জুলু টাইপোগ্রাফি।", "জুলু সংস্করণ দেখুন"),
+    "it": ("Tipografia zulu che protegge le parole agglutinate e le maiuscole interne (isiZulu), nel rispetto dell’originale.", "Vai all’edizione zulu"),
+    "ru": ("Типографика зулу: слитные слова и заглавные буквы внутри слова (isiZulu) без изменения оригинала.", "Открыть версию на зулу"),
+    "sw": ("Uchapaji wa Kizulu unaolinda maneno yaliyounganishwa na herufi kubwa ndani ya neno (kama isiZulu) bila kubadilisha maandishi asilia.", "Tazama toleo la Kizulu"),
+}
+CARDS["zu"] = {
+    "ar": ("Ukuhlelwa kombhalo kwesi-Arabic osuka kwesokudla uye kwesobunxele nokuxutshwa kwemibhalo, ngaphandle kokushintsha umbhalo wokuqala.", "Buka isi-Arabic"),
+    "bn": ("Ukuhlelwa kombhalo nedizayini yesi-Bengali evikela izimpawu zonkamisa, izinhlamvu ezihlanganisiwe nombhalo wokuqala, ihlukanise i-bn-BD ne-bn-IN.", "Buka isi-Bengali"),
+    "de": ("Ukuhlelwa kombhalo kwesi-German okuhlonipha amagama amade ahlanganisiwe, izimpawu zokucaphuna nemithetho ye-DE/AT/CH, kugcine umbhalo wokuqala.", "Buka isi-German"),
+    "es": ("Ukuhlelwa kombhalo kwesi-Spanish okuhlonipha ukusetshenziswa kwezifunda, kugcine umbhalo wokuqala futhi kuhlukanise ubufakazi obuqinisekisiwe nezinqumo zokuhlela.", "Buka isi-Spanish"),
+    "fr": ("Ukuhlelwa kombhalo kwesi-French okuhlukanisa izikhala ezingahlukani, izimpawu zokucaphuna nezitayela zokuhlela zezifunda noma zezikhungo.", "Buka isi-French"),
+    "hi": ("Ukuhlelwa kombhalo nedizayini yesi-Hindi evikela umbhalo wokuqala, ongwaqa abahlanganisiwe nezimpawu zonkamisa (matra).", "Buka isi-Hindi"),
+    "id": ("Ukuhlelwa kombhalo kwesi-Indonesian okunaka izandiso, iziqalo, amagama aphindwayo, izimpawu zokubhala nezimali ze-rupiah ngokomongo, kugcine umbhalo wokuqala.", "Buka isi-Indonesian"),
+    "it": ("Ukuhlelwa kombhalo kwesi-Italian okunaka izimpawu zokuphimisa, izingcaphuno nokwehluka kwezifunda, kugcine umbhalo wokuqala.", "Buka isi-Italian"),
+    "ja": ("Kusukela emithethweni yesi-Japanese yokwehlukanisa imigqa (kinsoku) nokwehlukaniswa kwemigqa okungokwemvelo kuya esakhiweni solwazi, isikhala esingenalutho nokugeleza kokufunda.", "Buka isi-Japanese"),
+    "ko": ("Ukwehlukaniswa kwemigqa phakathi kwama-eojeol (amayunithi esikhala esi-Korean), isigqi sombhalo nesakhiwo solwazi esicacile.", "Buka isi-Korean"),
+    "pl": ("Ukuhlelwa kombhalo kwesi-Polish okunezimpawu ezinembile, ukwehlukaniswa kwemigqa okunomqondo nedizayini egcina umbhalo wokuqala.", "Buka isi-Polish"),
+    "pt": ("Ukuhlelwa kombhalo kwesi-Portuguese nedizayini eqondiswa yincazelo, kuhlonipha imithetho yaseBrazil neYurophu kanye nenhloso yombhali.", "Buka isi-Portuguese"),
+    "ru": ("Ukuhlelwa kombhalo kwesi-Russian okuphatha u-ё no-й, izimpawu zokucaphuna, amadeshi nokwehlukaniswa kwemigqa ngokomongo, kugcine umbhalo wokuqala.", "Buka isi-Russian"),
+    "sw": ("Ukuhlelwa kombhalo kwesiSwahili okuvikela u-ng’ nama-apostrophe, kuhlonipha amagama amade futhi kukhethe ngokucacile amafomethi e-sw-TZ, sw-KE noma sw-CD.", "Buka isiSwahili"),
+    "th": ("Ukuhlonipha imingcele yamagama yesi-Thai nezinhlamvu ezihlanganayo, ukuze idizayini yesi-Thai ifundeke kalula.", "Buka isi-Thai"),
+    "vi": ("Ukuhlelwa kombhalo kwesi-Vietnamese okuhlonipha izimpawu zethoni, ukwehlukaniswa kwemigqa okunomqondo nokuqukethwe kwangempela.", "Buka isi-Vietnamese"),
+    "zh-hans": ("Izimpawu zokubhala, ukwehlukaniswa kwemigqa nombhalo oxubile wesi-Chinese nesiLatini wase-China, ngaphandle kokubhala kabusha umbhalo wokuqala.", "Buka isi-Chinese (esenziwe-lula)"),
+    "zh-hant": ("Kuphatha imithetho ehlukile yezimpawu zokubhala nokuhlelwa kombhalo yase-Taiwan nase-Hong Kong.", "Buka isi-Chinese (Sasendulo)"),
+    "zu": ("Ukuhlelwa kombhalo kwesiZulu okuvikela amagama ahlanganisiwe nezinhlamvu ezinkulu ngaphakathi kwegama, kugcine umbhalo wokuqala.", "Buka isiZulu"),
+}
+for _lang, _cards in CARDS.items():
+    if _lang != "zu":
+        _cards["zu"] = ZU_CARD_COPY[_lang]
+
 # Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
 _PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
@@ -569,7 +665,7 @@ EDITION_NAMES = {
     "zh-hant": {"ar": "阿拉伯文", "bn": "孟加拉文", "de": "德文", "es": "西班牙文", "fr": "法文", "hi": "印地文", "id": "印尼文", "it": "義大利文", "ja": "日文", "ko": "韓文", "pl": "波蘭文", "pt": "葡萄牙文", "ru": "俄文", "th": "泰文", "vi": "越南文", "zh-hans": "簡體中文", "zh-hant": "繁體中文"},
 }
 # Placeholder of the edition menu, in each page language.
-PICK = {"ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
+PICK = {"zu": "Khetha ulimi", "sw": "Chagua lugha", "ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
 
 def css_version():
     """Short content hash of the stylesheet, so a new page never meets a cached old stylesheet."""
@@ -594,9 +690,231 @@ def menu(key):
 
 
 # Mizani: append the new edition name in each existing gateway language.
-_SW_EDITION_NAMES = {"ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
+EDITION_NAMES["sw"] = {"ar": "Kiarabu", "bn": "Kibengali", "de": "Kijerumani", "es": "Kihispania", "fr": "Kifaransa", "hi": "Kihindi", "id": "Kiindonesia", "it": "Kiitaliano", "ja": "Kijapani", "ko": "Kikorea", "pl": "Kipolandi", "pt": "Kireno", "ru": "Kirusi", "th": "Kithai", "vi": "Kivietinamu", "zh-hans": "Kichina Kilichorahisishwa", "zh-hant": "Kichina cha Jadi"}
+_SW_EDITION_NAMES = {"sw":"Kiswahili","ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
 for _lang, _names in EDITION_NAMES.items():
     _names["sw"] = _SW_EDITION_NAMES[_lang]
+
+
+EDITION_NAMES["zu"] = {"ar": "isi-Arabic", "bn": "isi-Bengali", "de": "isi-German", "es": "isi-Spanish", "fr": "isi-French", "hi": "isi-Hindi", "id": "isi-Indonesian", "it": "isi-Italian", "ja": "isi-Japanese", "ko": "isi-Korean", "pl": "isi-Polish", "pt": "isi-Portuguese", "ru": "isi-Russian", "sw": "isiSwahili", "th": "isi-Thai", "vi": "isi-Vietnamese", "zh-hans": "isi-Chinese (esenziwe-lula)", "zh-hant": "isi-Chinese (Sasendulo)"}
+_ZU_EDITION_NAMES = {"zu":"isiZulu","sw":"Kizulu","ar":"الزولو","bn":"জুলু","de":"Zulu","en":"isiZulu","es":"Zulú","fr":"Zoulou","hi":"ज़ुलू","id":"Zulu","it":"Zulu","ja":"ズールー語","ko":"줄루어","pl":"Zuluski","pt":"Zulu","ru":"Зулу","th":"ภาษาซูลู","vi":"Tiếng Zulu","zh-hans":"祖鲁语","zh-hant":"祖魯語"}
+for _lang, _names in EDITION_NAMES.items():
+    _names["zu"] = _ZU_EDITION_NAMES[_lang]
+
+
+# Khmer edition (KUMIHAN｜លំនឹង): registry, the Khmer top, its card for every reader
+# language and the Khmer reader's table of all editions; names from CLDR.
+GATEWAYS["km"] = ("top-km.html", "km", "KM", "ភាសាខ្មែរ")
+PRODUCTS["km"] = dict(name="ភាសាខ្មែរ", lang="km", brand="KUMIHAN｜លំនឹង",
+    glyph="ក", label="KM · KHMER", version="v0.1.0",
+    pages={"km":"kumihan-km.html","en":"kumihan-km.en.html","ja":"kumihan-km.ja.html"})
+UI["km"] = dict(heading="កំណែភាសារបស់ KUMIHAN", more="បង្ហាញ {n} បន្ថែម", menu="ភាសា")
+PICK["km"] = "ជ្រើសភាសា"
+_KM_EDITION_NAMES = {
+    'ar': 'الخميرية',
+    'bn': 'খমের',
+    'de': 'Khmer',
+    'en': 'Khmer',
+    'es': 'Jemer',
+    'fr': 'Khmer',
+    'hi': 'खमेर',
+    'id': 'Khmer',
+    'it': 'Khmer',
+    'ja': 'クメール語',
+    'ko': '크메르어',
+    'pl': 'Khmerski',
+    'pt': 'Khmer',
+    'ru': 'Кхмерский',
+    'sw': 'Kikambodia',
+    'th': 'เขมร',
+    'vi': 'Tiếng Khmer',
+    'zh-hans': '高棉语',
+    'zh-hant': '高棉文',
+    'zu': 'isi-Khmer',
+}
+for _reader, _names in EDITION_NAMES.items():
+    _names["km"] = _KM_EDITION_NAMES[_reader]
+EDITION_NAMES["km"] = {
+    'ar': 'អារ៉ាប់',
+    'bn': 'បង់ក្លាដែស',
+    'de': 'អាល្លឺម៉ង់',
+    'es': 'អេស្ប៉ាញ',
+    'fr': 'បារាំង',
+    'hi': 'ហិណ្ឌី',
+    'id': 'ឥណ្ឌូណេស៊ី',
+    'it': 'អ៊ីតាលី',
+    'ja': 'ជប៉ុន',
+    'ko': 'កូរ៉េ',
+    'pl': 'ប៉ូឡូញ',
+    'pt': 'ព័រទុយហ្គាល់',
+    'ru': 'រុស្ស៊ី',
+    'sw': 'ស្វាហ៊ីលី',
+    'th': 'ថៃ',
+    'vi': 'វៀតណាម',
+    'zh-hans': 'ចិន\u200bអក្សរ\u200bកាត់',
+    'zh-hant': 'ចិន\u200bអក្សរ\u200bពេញ',
+    'zu': 'ហ្សូលូ',
+    'km': 'ខ្មែរ',
+}
+_KM_DESC = {
+    'ar': 'ការរៀបចំអក្សរអារ៉ាប់ ដែលគ្រប់គ្រងការសរសេរពីស្ដាំទៅឆ្វេង និងការលាយអក្សរច្រើនប្រភេទ ដោយមិនកែប្រែអត្ថបទដើម។',
+    'bn': 'ការរៀបចំអក្សរ និងការរចនាបង់ក្លាដែស ដែលរក្សាសញ្ញាស្រៈ អក្សរផ្សំ និងអត្ថបទដើម ហើយបែងចែក bn-BD និង bn-IN។',
+    'de': 'ការរៀបចំអក្សរអាល្លឺម៉ង់ ដែលគោរពពាក្យផ្សំវែងៗ សញ្ញាសម្រង់ និងវិធាន DE/AT/CH ដោយរក្សាអត្ថបទដើម។',
+    'es': 'ការរៀបចំអក្សរអេស្ប៉ាញ ដែលគោរពការប្រើប្រាស់តាមតំបន់ រក្សាអត្ថបទដើម និងបែងចែកភស្តុតាងដែលបានផ្ទៀងផ្ទាត់ពីការសម្រេចចិត្តផ្នែកនិពន្ធ។',
+    'fr': 'ការរៀបចំអក្សរបារាំង ដែលបែងចែកដកឃ្លាមិនបំបែក សញ្ញាសម្រង់ និងរចនាប័ទ្មនិពន្ធតាមតំបន់ ឬស្ថាប័ន។',
+    'hi': 'ការរៀបចំអក្សរ និងការរចនាហិណ្ឌី ដែលរក្សាអត្ថបទដើម អក្សរផ្សំ និងសញ្ញាស្រៈ (matra)។',
+    'id': 'ការរៀបចំអក្សរឥណ្ឌូណេស៊ី ដែលយកចិត្តទុកដាក់លើធ្នាក់ បុព្វបទ ពាក្យស្ទួន វណ្ណយុត្តិ និងចំនួនទឹកប្រាក់រូពី តាមបរិបទ ដោយរក្សាអត្ថបទដើម។',
+    'it': 'ការរៀបចំអក្សរអ៊ីតាលី ដែលយកចិត្តទុកដាក់លើសញ្ញាសំឡេង ការដកស្រង់ និងភាពខុសគ្នាតាមតំបន់ ដោយរក្សាអត្ថបទដើម។',
+    'ja': 'ចាប់ពីវិធានបំបែកបន្ទាត់ជប៉ុន (kinsoku) និងការចុះបន្ទាត់ធម្មជាតិ រហូតដល់រចនាសម្ព័ន្ធព័ត៌មាន ចន្លោះទទេ និងលំហូរនៃការអាន។',
+    'ko': 'ការបំបែកបន្ទាត់រវាង eojeol (ឯកតាដកឃ្លាកូរ៉េ) ចង្វាក់អត្ថបទ និងរចនាសម្ព័ន្ធព័ត៌មានដែលច្បាស់លាស់។',
+    'pl': 'ការរៀបចំអក្សរប៉ូឡូញ ដែលមានសញ្ញាអក្សរត្រឹមត្រូវ ការចុះបន្ទាត់មានន័យ និងការរចនាដែលរក្សាអត្ថបទដើម។',
+    'pt': 'ការរៀបចំអក្សរ និងការរចនាព័រទុយហ្គាល់តាមអត្ថន័យ ដែលគោរពវិធានប្រេស៊ីល និងអឺរ៉ុប ព្រមទាំងបំណងរបស់អ្នកនិពន្ធ។',
+    'ru': 'ការរៀបចំអក្សររុស្ស៊ី ដែលគ្រប់គ្រង ё និង й សញ្ញាសម្រង់ សញ្ញាដាច់ និងការចុះបន្ទាត់តាមបរិបទ ដោយរក្សាអត្ថបទដើម។',
+    'sw': 'ការរៀបចំអក្សរស្វាហ៊ីលី ដែលរក្សា ng’ និងសញ្ញាអាប៉ូស្ត្រូហ្វ គោរពពាក្យវែងៗ និងជ្រើសទម្រង់ sw-TZ, sw-KE ឬ sw-CD ឲ្យច្បាស់លាស់។',
+    'th': 'គោរពព្រំដែនពាក្យថៃ និងតួអក្សរផ្សំ ដើម្បីឲ្យការរចនាថៃអានបានដោយធម្មជាតិ។',
+    'vi': 'ការរៀបចំអក្សរវៀតណាម ដែលគោរពសញ្ញាសំនៀង ការចុះបន្ទាត់មានន័យ និងខ្លឹមសារដើម។',
+    'zh-hans': 'វណ្ណយុត្តិ ការចុះបន្ទាត់ និងអត្ថបទលាយចិន-ឡាតាំងសម្រាប់ចិនដីគោក ដោយមិនសរសេរអត្ថបទដើមឡើងវិញ។',
+    'zh-hant': 'គ្រប់គ្រងវិធានវណ្ណយុត្តិ និងការរៀបចំអក្សរខុសៗគ្នារបស់តៃវ៉ាន់ និងហុងកុង។',
+    'zu': 'ការរៀបចំអក្សរហ្សូលូ ដែលរក្សាពាក្យភ្ជាប់ និងអក្សរធំនៅកណ្ដាលពាក្យ (ដូចជា isiZulu) ដោយរក្សាអត្ថបទដើម។',
+    'km': 'ការរៀបចំអក្សរខ្មែរ ដោយរក្សាអក្សរផ្សំ ការបំបែកបន្ទាត់ និងអត្ថបទដើម។',
+}
+CARDS["km"] = {code: (text, "មើលកំណែ" + EDITION_NAMES["km"][code]) for code, text in _KM_DESC.items()}
+KM_CARD_COPY = {
+    'ja': ('結合文字・語のまとまり・原稿を守るクメール語の文字組みとデザイン。', 'クメール語版を見る'),
+    'en': ('Khmer typography protecting conjuncts, source text and purposeful line breaks.', 'View the Khmer edition'),
+    'zh-hant': ('保護疊寫子音、詞的完整與原稿，並依語意換行的高棉文排版與設計。', '前往高棉文版'),
+    'zh-hans': ('保护叠写辅音、词的完整与原稿，并按语意换行的高棉语排版与设计。', '前往高棉语版'),
+    'ko': ('결합 자음과 원고를 지키고 의미에 맞게 줄을 바꾸는 크메르어 글짜임.', '크메르어 버전 보기'),
+    'th': ('การจัดวางตัวอักษรเขมรที่รักษาพยัญชนะซ้อน ต้นฉบับ และการตัดบรรทัดตามความหมาย', 'ดูเวอร์ชันภาษาเขมร'),
+    'fr': ('Typographie khmère qui protège les consonnes souscrites, le texte source et des retours à la ligne réfléchis.', 'Voir l’édition khmère'),
+    'es': ('Tipografía jemer que protege las consonantes subíndices, el original y los saltos de línea con sentido.', 'Ver la edición en jemer'),
+    'pt': ('Tipografia khmer que protege as consoantes subscritas, o original e quebras de linha com sentido.', 'Ver a edição em khmer'),
+    'ar': ('تنضيد خميري يحمي الحروف المركّبة والنص الأصلي وفواصل الأسطر ذات المعنى.', 'عرض النسخة الخميرية'),
+    'hi': ('संयुक्त व्यंजनों, मूल पाठ और अर्थपूर्ण पंक्ति-विभाजन को सुरक्षित रखने वाली ख्मेर टाइपोग्राफ़ी।', 'ख्मेर संस्करण देखें'),
+    'vi': ('Typography tiếng Khmer giữ nguyên phụ âm chồng, bản gốc và ngắt dòng có chủ đích.', 'Xem phiên bản tiếng Khmer'),
+    'de': ('Khmer-Typografie, die Konsonantenligaturen, das Original und sinnvolle Zeilenumbrüche bewahrt.', 'Khmer-Version ansehen'),
+    'pl': ('Typografia khmerska chroniąca spółgłoski podpisane, oryginał i przemyślane podziały wierszy.', 'Zobacz wersję khmerską'),
+    'id': ('Tipografi Khmer yang menjaga konsonan bertumpuk, naskah asli, dan pergantian baris yang bermakna.', 'Lihat edisi bahasa Khmer'),
+    'bn': ('যুক্তব্যঞ্জন, মূল লেখা ও অর্থপূর্ণ লাইন ভাঙা রক্ষা করা খমের টাইপোগ্রাফি।', 'খমের সংস্করণ দেখুন'),
+    'it': ('Tipografia khmer che protegge le consonanti sottoscritte, il testo originale e gli a capo ragionati.', 'Vai all’edizione khmer'),
+    'ru': ('Кхмерская типографика: подстрочные согласные, сохранность оригинала и осмысленные переносы строк.', 'Открыть кхмерскую версию'),
+    'sw': ('Uchapaji wa Kikambodia unaolinda konsonanti zilizopangwa chini, maandishi asilia na mikato ya mistari yenye maana.', 'Tazama toleo la Kikambodia'),
+    'zu': ('Ukuhlelwa kombhalo kwesi-Khmer okuvikela ongwaqa abahlanganisiwe, umbhalo wokuqala nokwehlukaniswa kwemigqa okunomqondo.', 'Buka isi-Khmer'),
+}
+for _reader, _cards in CARDS.items():
+    if _reader != "km":
+        _cards["km"] = KM_CARD_COPY[_reader]
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
+
+
+# Persian edition (KUMIHAN｜تراز): the Persian top, its card and name for every reader language.
+PRODUCTS["fa"] = dict(name="فارسی", lang="fa", brand="KUMIHAN｜تراز", glyph="ژ", label="FA · PERSIAN", version="v0.1.0",
+                      pages={"fa": "kumihan-fa.html", "en": "kumihan-fa.en.html", "ja": "kumihan-fa.ja.html"})
+GATEWAYS["fa"] = ("top-fa.html", "fa", "FA", "فارسی")
+UI["fa"] = dict(heading="نسخه‌های زبانی KUMIHAN", more="نمایش {n} مورد بعدی", menu="زبان")
+PICK["fa"] = "انتخاب زبان"
+EDITION_NAMES["fa"] = {
+    'ar': 'عربی',
+    'bn': 'بنگالی',
+    'de': 'آلمانی',
+    'es': 'اسپانیایی',
+    'fr': 'فرانسوی',
+    'hi': 'هندی',
+    'id': 'اندونزیایی',
+    'it': 'ایتالیایی',
+    'ja': 'ژاپنی',
+    'ko': 'کره\u200cای',
+    'pl': 'لهستانی',
+    'pt': 'پرتغالی',
+    'ru': 'روسی',
+    'sw': 'سواحیلی',
+    'th': 'تایلندی',
+    'vi': 'ویتنامی',
+    'zh-hans': 'چینی ساده\u200cشده',
+    'zh-hant': 'چینی سنتی',
+    'zu': 'زولویی',
+    'km': 'خمری',
+    'fa': 'فارسی',
+}
+_FA_DESC = {
+    'ar': 'حروف\u200cچینی عربی که نوشتار راست\u200cبه\u200cچپ و آمیختگی خط\u200cها را مدیریت می\u200cکند، بی\u200cآنکه متن اصلی تغییر کند.',
+    'bn': 'حروف\u200cچینی و طراحی بنگالی که نشانه\u200cهای مصوت، حروف ترکیبی و متن اصلی را حفظ می\u200cکند و bn-BD و bn-IN را از هم جدا می\u200cداند.',
+    'de': 'حروف\u200cچینی آلمانی که واژه\u200cهای مرکب بلند، گیومه\u200cها و قواعد DE/AT/CH را رعایت می\u200cکند و متن اصلی را نگه می\u200cدارد.',
+    'es': 'حروف\u200cچینی اسپانیایی که کاربرد منطقه\u200cای را محترم می\u200cشمارد، متن اصلی را حفظ می\u200cکند و شواهد تأییدشده را از داوری ویرایشی جدا می\u200cکند.',
+    'fr': 'حروف\u200cچینی فرانسوی که فاصله\u200cهای نشکن، گیومه\u200cها و سبک\u200cهای ویرایشی منطقه\u200cای یا سازمانی را از هم تمیز می\u200cدهد.',
+    'hi': 'حروف\u200cچینی و طراحی هندی که متن اصلی، هم\u200cخوان\u200cهای ترکیبی و نشانه\u200cهای مصوت (ماترا) را حفظ می\u200cکند.',
+    'id': 'حروف\u200cچینی اندونزیایی که حروف اضافه، وندها، واژه\u200cهای تکراری، نشانه\u200cگذاری و مبالغ روپیه را بر پایهٔ بافت در نظر می\u200cگیرد و متن اصلی را حفظ می\u200cکند.',
+    'it': 'حروف\u200cچینی ایتالیایی که به نشانه\u200cهای تکیه، نقل\u200cقول\u200cها و تفاوت\u200cهای منطقه\u200cای توجه دارد و متن اصلی را حفظ می\u200cکند.',
+    'ja': 'از قواعد ژاپنی شکستن سطر (کینسوکو) و سطربندی طبیعی تا ساختار اطلاعات، فضای خالی و جریان خواندن.',
+    'ko': 'شکستن سطر میان اوجول\u200cها (واحدهای فاصله\u200cگذاری کره\u200cای)، ریتم متن و ساختار روشن اطلاعات.',
+    'pl': 'حروف\u200cچینی لهستانی با نشانه\u200cهای دقیق، شکستن سطر معنادار و طراحی\u200cای که متن اصلی را حفظ می\u200cکند.',
+    'pt': 'حروف\u200cچینی پرتغالی و طراحی معنامحور که قراردادهای برزیلی و اروپایی و نیت نویسنده را رعایت می\u200cکند.',
+    'ru': 'حروف\u200cچینی روسی که ё و й، گیومه\u200cها، خط تیره\u200cها و شکستن سطرها را بر پایهٔ بافت مدیریت می\u200cکند و متن اصلی را حفظ می\u200cکند.',
+    'sw': 'حروف\u200cچینی سواحیلی که ng’ و آپوستروف\u200cها را حفظ می\u200cکند، واژه\u200cهای بلند را رعایت می\u200cکند و قالب\u200cهای sw-TZ، sw-KE یا sw-CD را آشکارا برمی\u200cگزیند.',
+    'th': 'رعایت مرز واژه\u200cها و نویسه\u200cهای ترکیبی تایلندی، برای طراحی تایلندی\u200cای که روان خوانده شود.',
+    'vi': 'حروف\u200cچینی ویتنامی که نشانه\u200cهای آهنگ، شکستن سطر معنادار و محتوای اصلی را رعایت می\u200cکند.',
+    'zh-hans': 'نشانه\u200cگذاری، شکستن سطر و متن آمیختهٔ چینی و لاتین برای چین اصلی، بی\u200cآنکه متن اصلی بازنویسی شود.',
+    'zh-hant': 'قراردادهای متفاوت نشانه\u200cگذاری و حروف\u200cچینی تایوان و هنگ\u200cکنگ را در نظر می\u200cگیرد.',
+    'zu': 'حروف\u200cچینی زولو که واژه\u200cهای پیوسته و حروف بزرگ میان واژه (مانند isiZulu) را حفظ می\u200cکند و متن اصلی را نگه می\u200cدارد.',
+    'km': 'حروف\u200cچینی خمری که هم\u200cخوان\u200cهای زیرنویس، متن اصلی و شکستن سطر معنادار را حفظ می\u200cکند.',
+    'fa': 'حروف\u200cچینی فارسی که جهت راست\u200cبه\u200cچپ را روشن نگه می\u200cدارد، نیم\u200cفاصله (ZWNJ) را حفظ می\u200cکند و نشانی\u200cها و شمارهٔ نسخه\u200cهای لاتین را جدا می\u200cکند.',
+}
+CARDS["fa"] = {code: (text, "دیدن نسخهٔ " + EDITION_NAMES["fa"][code]) for code, text in _FA_DESC.items()}
+_FA_EDITION_NAMES = {
+    'ar': 'الفارسية',
+    'bn': 'ফার্সি',
+    'de': 'Persisch',
+    'en': 'Persian',
+    'es': 'Persa',
+    'fr': 'Persan',
+    'hi': 'फ़ारसी',
+    'id': 'Persia',
+    'it': 'Persiano',
+    'ja': 'ペルシア語',
+    'ko': '페르시아어',
+    'pl': 'Perski',
+    'pt': 'Persa',
+    'ru': 'Персидский',
+    'sw': 'Kiajemi',
+    'th': 'เปอร์เซีย',
+    'vi': 'Tiếng Ba Tư',
+    'zh-hans': '波斯语',
+    'zh-hant': '波斯文',
+    'zu': 'isi-Persian',
+    'km': 'ភឺសៀន',
+}
+for _reader, _names in EDITION_NAMES.items():
+    if _reader != "fa":
+        _names["fa"] = _FA_EDITION_NAMES[_reader]
+FA_CARD_COPY = {
+    'ja': ('右から左の方向とZWNJ（ゼロ幅非接合子）を守り、ラテン文字のURLや版番号を正しく分離するペルシア語の文字組みとデザイン。', 'ペルシア語版を見る'),
+    'en': ('Persian typography that keeps right-to-left direction clear, preserves ZWNJ and isolates Latin URLs and version labels.', 'View the Persian edition'),
+    'zh-hant': ('保持由右至左的方向、保留 ZWNJ，並正確隔離拉丁網址與版本號的波斯文排版與設計。', '前往波斯文版'),
+    'zh-hans': ('保持从右到左的方向、保留 ZWNJ，并正确隔离拉丁网址与版本号的波斯语排版与设计。', '前往波斯语版'),
+    'ko': ('오른쪽에서 왼쪽 방향과 ZWNJ를 지키고 라틴 URL과 버전 표기를 바르게 분리하는 페르시아어 글짜임.', '페르시아어 버전 보기'),
+    'th': ('การจัดวางตัวอักษรเปอร์เซียที่รักษาทิศทางจากขวาไปซ้ายและ ZWNJ พร้อมแยก URL ภาษาละตินและเลขเวอร์ชันอย่างถูกต้อง', 'ดูเวอร์ชันภาษาเปอร์เซีย'),
+    'fr': ('Typographie persane qui garde clair le sens de droite à gauche, préserve le ZWNJ et isole les URL et numéros de version latins.', 'Voir l’édition persane'),
+    'es': ('Tipografía persa que mantiene clara la dirección de derecha a izquierda, conserva el ZWNJ y aísla URL y versiones latinas.', 'Ver la edición en persa'),
+    'pt': ('Tipografia persa que mantém clara a direção da direita para a esquerda, preserva o ZWNJ e isola URLs e versões latinas.', 'Ver a edição em persa'),
+    'ar': ('تنضيد فارسي يحافظ على اتجاه الكتابة من اليمين إلى اليسار وعلى ZWNJ، ويعزل الروابط وأرقام الإصدارات اللاتينية.', 'عرض النسخة الفارسية'),
+    'hi': ('दाएँ से बाएँ दिशा और ZWNJ को सुरक्षित रखने वाली, लैटिन URL और संस्करण संख्याओं को सही ढंग से अलग करने वाली फ़ारसी टाइपोग्राफ़ी।', 'फ़ारसी संस्करण देखें'),
+    'vi': ('Typography tiếng Ba Tư giữ rõ hướng phải sang trái, bảo toàn ZWNJ và tách riêng URL, số phiên bản Latinh.', 'Xem phiên bản tiếng Ba Tư'),
+    'de': ('Persische Typografie, die die Schreibrichtung von rechts nach links klar hält, ZWNJ bewahrt und lateinische URLs und Versionsangaben isoliert.', 'Persische Version ansehen'),
+    'pl': ('Typografia perska zachowująca kierunek od prawej do lewej i ZWNJ oraz poprawnie wydzielająca łacińskie adresy URL i numery wersji.', 'Zobacz wersję perską'),
+    'id': ('Tipografi Persia yang menjaga arah kanan ke kiri, mempertahankan ZWNJ, serta memisahkan URL dan nomor versi Latin dengan tepat.', 'Lihat edisi bahasa Persia'),
+    'bn': ('ডান থেকে বাঁ দিক ও ZWNJ রক্ষা করে এবং লাতিন URL ও সংস্করণ নম্বর ঠিকভাবে আলাদা রাখা ফারসি টাইপোগ্রাফি।', 'ফারসি সংস্করণ দেখুন'),
+    'it': ('Tipografia persiana che mantiene chiara la direzione da destra a sinistra, preserva lo ZWNJ e isola URL e numeri di versione latini.', 'Vai all’edizione persiana'),
+    'ru': ('Персидская типографика: направление справа налево, сохранение ZWNJ и изоляция латинских URL и номеров версий.', 'Открыть персидскую версию'),
+    'sw': ('Uchapaji wa Kiajemi unaodumisha mwelekeo wa kulia kwenda kushoto, kuhifadhi ZWNJ na kutenganisha URL na nambari za matoleo za Kilatini.', 'Tazama toleo la Kiajemi'),
+    'zu': ('Ukuhlelwa kombhalo kwesi-Persian okugcina isiqondiso sokusuka kwesokudla kuya kwesobunxele, kugcine i-ZWNJ futhi kuhlukanise ama-URL nezinombolo zezinguqulo zesiLatini.', 'Buka isi-Persian'),
+    'km': ('ការរៀបចំអក្សរពែរ្ស ដែលរក្សាទិសដៅពីស្ដាំទៅឆ្វេង និង ZWNJ ហើយញែក URL និងលេខកំណែឡាតាំងឲ្យត្រឹមត្រូវ។', 'មើលកំណែភឺសៀន'),
+}
+for _reader, _cards in CARDS.items():
+    if _reader != "fa":
+        _cards["fa"] = FA_CARD_COPY[_reader]
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
+
+
 
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
@@ -626,13 +944,6 @@ def marquee():
     return f'<div aria-hidden="true" class="glyph-marquee">{out}</div>'
 
 
-# Mizani v0.1.0: keep existing gateway copy unchanged and add a bounded fallback.
-for _lang, _cards in CARDS.items():
-    _cards.setdefault("sw",
-        ("スワヒリ語の語形・アポストロフィを保護し、地域ごとの数値と文字組を考える設計。", "スワヒリ語版を見る") if _lang=="ja" else
-        ("Swahili typography protecting apostrophes, original text, and regional formats.", "View the Swahili edition"))
-CARDS["en"]["sw"] = ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition")
-
 def cards(key):
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
     out = ""
@@ -640,7 +951,7 @@ def cards(key):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
         href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
-        direction = ' dir="rtl"' if code == "ar" else ""
+        direction = ' dir="rtl"' if code in ("ar", "fa") else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
                 + (" data-extra" if i >= VISIBLE else "") + ">"
@@ -685,6 +996,7 @@ SCRIPT = """<script>
 def page(key, c):
     file, html_lang, _, _ = GATEWAYS[key]
     alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
+    alternates += '<link href="index.html" hreflang="x-default" rel="alternate"/>'
     card_html, count = cards(key)
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
@@ -700,6 +1012,7 @@ def page(key, c):
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
 {WEB_FONTS.head(html_lang)}
+
 </head>
 <body>
 <a class="skip-link" href="#main">{c['skip']}</a>
@@ -745,9 +1058,28 @@ def page(key, c):
 </section>
 {c['about']}
 </main>
-{c['footer']}
+{FOOTER.footer(html_lang, '', sys.modules[__name__])}
 {SCRIPT}
 </body>
+</html>
+"""
+
+
+# Former gateway addresses, kept so existing links still arrive: old file -> current page.
+REDIRECTS = {"top-en.html": "index.html"}
+
+
+def redirect(target):
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>KUMIHAN</title>
+<meta content="noindex" name="robots"/>
+<link href="{BASE}{target}" rel="canonical"/>
+<meta content="0; url={target}" http-equiv="refresh"/>
+</head>
+<body><p><a href="{target}">KUMIHAN</a></p></body>
 </html>
 """
 
@@ -755,7 +1087,9 @@ def page(key, c):
 @seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "gateway-copy.json").read_text(encoding="utf-8"))
-    return {GATEWAYS[k][0]: page(k, copy[k]) for k in GATEWAYS}
+    files = {GATEWAYS[k][0]: WEB_FONTS.SHARE.apply(page(k, copy[k])) for k in GATEWAYS}
+    files.update({old: redirect(new) for old, new in REDIRECTS.items()})
+    return files
 
 
 def main():

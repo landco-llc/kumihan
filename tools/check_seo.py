@@ -5,6 +5,7 @@ import re
 import struct
 from pathlib import Path
 from seo_metadata import CONFIG, locale
+from site_share import description as share_description
 from seo_inventory import ROOT, pages, indexable, local_path
 from build_sitemap import sitemap
 
@@ -36,14 +37,18 @@ def audit(root=ROOT,check_sitemap=True):
         for key in required:
             if len(page.meta[key])!=1 or not page.meta[key][0].strip(): fail(f'exactly one nonempty {key} required')
         if not re.fullmatch(r'[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*',page.lang): fail('invalid html lang')
-        if page.lang.split('-')[0]=='ar' and page.direction!='rtl': fail('Arabic html dir must be rtl')
+        if page.lang.split('-')[0] in ('ar', 'fa') and page.direction!='rtl': fail('Arabic html dir must be rtl')
         if '\ufffd' in page.html: fail('Unicode replacement character found')
-        for key,value in [('og:url',page.canonical),('og:locale',locale(page.lang)),('og:image',CONFIG['site_url']+CONFIG['image']['path']),('og:image:width',str(CONFIG['image']['width'])),('og:image:height',str(CONFIG['image']['height']))]:
+        try:
+            expected_locale = locale(page.lang)
+        except ValueError as error:
+            fail(str(error)); continue
+        for key,value in [('og:url',page.canonical),('og:locale',expected_locale),('og:image',CONFIG['site_url']+CONFIG['image']['path']),('og:image:width',str(CONFIG['image']['width'])),('og:image:height',str(CONFIG['image']['height']))]:
             if page.meta[key] != [value]: fail(f'{key} inconsistent with contract')
         for key in ('og:title','twitter:title'):
             if page.meta[key]!=page.titles: fail(f'{key} must match title')
         for key in ('og:description','twitter:description'):
-            if page.meta[key]!=page.meta['description']: fail(f'{key} must match description')
+            if page.meta[key] != [share_description(page.lang, page.meta['description'][0] if page.meta['description'] else '')]: fail(f'{key} must match shared description')
         if page.meta['twitter:image']!=page.meta['og:image']: fail('Twitter image mismatch')
         alt=dict(page.alternates)
         if len(alt)!=len(page.alternates): fail('duplicate hreflang')

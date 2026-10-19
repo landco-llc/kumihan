@@ -1,10 +1,10 @@
 name: Compasso OSS v0.1.0
 on:
   pull_request:
-    paths: ['plugins/kumihan-compasso/**','tests/compasso/**','tools/*compasso*','kumihan-pt*.html','docs/install-compasso-*.html','assets/compasso-*','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','assets/kumihan-install.*','.github/workflows/compasso.yml']
+    paths: ['plugins/kumihan-compasso/**','tests/compasso/**','tools/*compasso*','kumihan-pt*.html','docs/install-compasso-*.html','assets/compasso-*','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','assets/kumihan-install.*','.github/workflows/compasso.yml', 'tools/site_footer.py', 'tools/web_fonts.py', 'tools/build_gateways.py', 'assets/gateway-copy.json', '_data/site_footer.json']
   push:
     branches: [main]
-    paths: ['plugins/kumihan-compasso/**','tests/compasso/**','tools/*compasso*','kumihan-pt*.html','docs/install-compasso-*.html','assets/compasso-*','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','assets/kumihan-install.*','.github/workflows/compasso.yml']
+    paths: ['plugins/kumihan-compasso/**','tests/compasso/**','tools/*compasso*','kumihan-pt*.html','docs/install-compasso-*.html','assets/compasso-*','tools/base_copy.py','tools/product_site.py','tools/install_frame.py','assets/kumihan-install.*','.github/workflows/compasso.yml', 'tools/site_footer.py', 'tools/web_fonts.py', 'tools/build_gateways.py', 'assets/gateway-copy.json', '_data/site_footer.json']
 permissions:
   contents: read
 jobs:

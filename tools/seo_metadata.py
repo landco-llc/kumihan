@@ -22,16 +22,8 @@ def canonical_url(path):
 
 
 def locale(lang):
-    """OG uses language_TERRITORY, never BCP47 script subtags."""
-    parts = lang.replace('_', '-').split('-')
-    language = parts[0].lower()
-    territory = next((p.upper() for p in parts[1:] if len(p) == 2), None)
-    defaults = dict(ar='SA', bn='BD', de='DE', en='US', es='ES', fr='FR', hi='IN',
-                    id='ID', it='IT', ja='JP', ko='KR', pl='PL', pt='BR', ru='RU',
-                    sw='KE', th='TH', vi='VN', zh='CN')
-    if language == 'zh' and 'Hant' in parts:
-        territory = territory or 'TW'
-    return language + '_' + (territory or defaults.get(language, language.upper()))
+    from site_share import locale as share_locale
+    return share_locale(lang)
 
 
 @lru_cache(maxsize=1)
@@ -58,21 +50,12 @@ def render_metadata(title, description, lang, canonical, alternates=None):
     """Render one complete head metadata block from authoritative page values."""
     canonical = canonical_url(canonical)
     x = lambda s: escape(str(s), quote=True)
-    image = CONFIG['image']
-    image_url = canonical_url(image['path'])
+    from site_share import tags, description as share_description
     lines = [f'<title>{x(title)}</title>',
              f'<meta name="description" content="{x(description)}">',
              f'<link rel="canonical" href="{x(canonical)}">']
     lines += [f'<link rel="alternate" hreflang="{x(k)}" href="{x(canonical_url(v))}">'
               for k, v in sorted((alternates or {}).items())]
-    og = {'type': 'website', 'title': title, 'description': description, 'url': canonical,
-          'locale': locale(lang), 'image': image_url, 'image:alt': image['alt'],
-          'image:width': image['width'], 'image:height': image['height']}
-    lines += [f'<meta property="og:{k}" content="{x(v)}">' for k, v in og.items()]
-    card = 'summary_large_image' if image['width'] / image['height'] >= 1.8 else 'summary'
-    twitter = dict(card=card, title=title, description=description, image=image_url)
-    twitter['image:alt'] = image['alt']
-    lines += [f'<meta name="twitter:{k}" content="{x(v)}">' for k, v in twitter.items()]
     publisher = CONFIG['publisher']
     org_id = publisher['url'] + '#organization'
     site_id = CONFIG['site_url'] + '#website'
@@ -86,6 +69,7 @@ def render_metadata(title, description, lang, canonical, alternates=None):
     data = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False,
                       separators=(',', ':')).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
     lines.append('<script type="application/ld+json">' + data + '</script>')
+    lines.append(tags(lang, title, share_description(lang, description), canonical))
     return '\n'.join(lines)
 
 
@@ -133,6 +117,17 @@ def enrich_html(html, path):
     match = re.search(r'<head\b[^>]*>(.*?)</head\s*>', html, re.I | re.S)
     if not match:
         raise ValueError(f'{path}: missing head')
+    # Only this current-main redirect is exempt from ordinary content metadata.
+    if str(path) == 'top-en.html':
+        from seo_inventory import Page
+        alias = Page(str(path), html)
+        refresh = re.search(r'<meta\b[^>]*http-equiv\s*=\s*[\'"]refresh[\'"][^>]*>', match[1], re.I)
+        if not alias.noindex or not refresh or not re.search(r'url=index\.html', refresh[0], re.I):
+            raise ValueError(f'{path}: invalid allowlisted redirect')
+        head = re.sub(r'<(?:meta|link)\b[^>]*>',
+                      lambda m: '' if re.search(r'rel\s*=\s*[\'"]canonical', m[0], re.I) else m[0], match[1])
+        head = '\n'.join(line for line in head.splitlines() if line.strip())
+        return html[:match.start(1)] + '\n' + head + '\n<link rel="canonical" href="' + CONFIG['site_url'] + '">\n' + html[match.end(1):]
     parser = _Head()
     parser.feed(html[:match.end()])
     title_match = re.search(r'<title\b[^>]*>(.*?)</title\s*>', match[1], re.I | re.S)

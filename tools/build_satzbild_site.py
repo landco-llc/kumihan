@@ -43,7 +43,7 @@ COMMANDS = {
 VERIFY = "sha256sum -c SHA256SUMS.txt"
 CHECK = "python skills/kumihan-satzbild/runtime/checks.py original.txt --locale de-DE --candidate candidate.txt"
 # KUMIHAN index (language gateway) for each page language.
-GATEWAY = {"de": "top-de.html", "en": "top-en.html", "ja": "index.html"}
+GATEWAY = {"de": "top-de.html", "en": "index.html", "ja": "top-ja.html"}
 
 _spec = spec_from_file_location("kumihan_install_frame", Path(__file__).with_name("install_frame.py"))
 FRAME = module_from_spec(_spec)

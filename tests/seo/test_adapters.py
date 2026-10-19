@@ -37,6 +37,22 @@ class AdapterTests(unittest.TestCase):
             self.assertEqual(page['name'], 'Texte & forme')
             self.assertEqual(page['inLanguage'], 'fr')
 
+    def test_jekyll_missing_share_data_fails(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            (root / 'templates').mkdir()
+            (root / '_data').mkdir()
+            (root / '_data/site_share.json').write_text('{}')
+            (root / 'templates/seo-fixture-head.html').write_text('<title>T</title><meta name="description" content="D">')
+            (root / 'new.html').write_text('---\nlayout: fixture\nlang: fa\n---\nBody')
+            with patch.object(build_jekyll_seo, 'ROOT', root):
+                with self.assertRaisesRegex(ValueError, 'Stale Jekyll share data'):
+                    build_jekyll_seo.outputs()
+            (root / 'new.html').write_text('---\nlayout: fixture\nlang: xx\n---\nBody')
+            with patch.object(build_jekyll_seo, 'ROOT', root):
+                with self.assertRaisesRegex(ValueError, 'Unregistered Jekyll share language'):
+                    build_jekyll_seo.outputs()
+
     def test_head_branches_and_unknown_syntax_fail_explicitly(self):
         source = "{% if page.lang == 'ja' %}日本語{% elsif page.lang == 'en' %}English{% else %}其他{% endif %}"
         for lang, expected in [('ja', '日本語'), ('en', 'English'), ('zh-Hant-TW', '其他')]:

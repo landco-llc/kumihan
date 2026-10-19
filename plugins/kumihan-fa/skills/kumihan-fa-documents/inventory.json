@@ -1,0 +1,83 @@
+{
+  "skill": "kumihan-fa-documents",
+  "version": "0.1.0",
+  "path_base": "package-root",
+  "self_digest": "Inventory excludes itself.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 1758,
+      "sha256": "6198099f85f32cac8199fd394a9a9c63eb822dd80402cbb12dc0aace6e296281"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 355,
+      "sha256": "47539906b0ba61259da561dd992e6637a3dc5c3d1a5b91b7295d643e095d474e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "bytes": 9047,
+      "sha256": "f9ac35bcf4e30082e48d77470439b8bf00209d6b47c15109f424c474dcf3bac2"
+    },
+    {
+      "path": "locales/fa-AF.json",
+      "bytes": 260,
+      "sha256": "2ea7427d1f3158904dcdebde9cc1277f6deb54e38ebf342a9f16ae26a9b406e6"
+    },
+    {
+      "path": "locales/fa-IR.json",
+      "bytes": 362,
+      "sha256": "7e973bf02a4a7d47d28d398bc96b78dd30ea8e54d4122cecee5afc598866cae3"
+    },
+    {
+      "path": "locales/fa.json",
+      "bytes": 411,
+      "sha256": "30c16dd442ee7527736770082bfd1dfb3843becad71fc07d0c3a9d839697d792"
+    },
+    {
+      "path": "references/contract.md",
+      "bytes": 2054,
+      "sha256": "b302340b46546b4a91ff2352105370989816d5d85f32b3ea7d7612a6e077e073"
+    },
+    {
+      "path": "references/documents.md",
+      "bytes": 1044,
+      "sha256": "77045b9793dbac2ee02fcd8e248a176a5350ebbff1d29c7305d3039ed7e94b83"
+    },
+    {
+      "path": "references/review.md",
+      "bytes": 992,
+      "sha256": "fea492ea5edfda10f65ac28a2f834baf2875a1540fc36be9ef47e01da6e687f2"
+    },
+    {
+      "path": "references/web.md",
+      "bytes": 1574,
+      "sha256": "0a68c7430c0305be19536dbb487a7035efd864be80e6b5d81a2a7ede630ae30a"
+    },
+    {
+      "path": "rules/catalog.json",
+      "bytes": 17264,
+      "sha256": "0bc3797ff9b8091483555e07f2c9165b20115a7519752c4dee2c9ea1f828877e"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "bytes": 6305,
+      "sha256": "e31becc6f38f1fd78181e4e2eec70a06434b11bfa1868f670205b10d18a46024"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "bytes": 817,
+      "sha256": "c608bed7c490850e932ad2bf32e298f25c14675951260388be36d186b0df9d37"
+    },
+    {
+      "path": "sources.json",
+      "bytes": 2617,
+      "sha256": "ac85c3f972f151a405d759e5f8422b19ae9b58614b14e81daa400e8558fd9de0"
+    }
+  ]
+}

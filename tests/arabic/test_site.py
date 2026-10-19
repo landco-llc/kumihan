@@ -38,5 +38,5 @@ class Site(unittest.TestCase):
                 for tag,a in t.tags:
                     link=a.get('href','')
                     if link.startswith('/kumihan/') and not link.endswith('/'):
-                        path=link.removeprefix('/kumihan/').split('#')[0]
+                        path=link.removeprefix('/kumihan/').split('#')[0].split('?')[0]
                         if path:self.assertTrue((ROOT/path).is_file(),link)

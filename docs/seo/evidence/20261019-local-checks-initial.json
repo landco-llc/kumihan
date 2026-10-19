@@ -1,0 +1,710 @@
+[
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/accord",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 26 tests in 0.012s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/arabic",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 20 tests in 1.064s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/bn",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 10 tests in 0.007s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/compasso",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 8 tests in 0.194s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/equilibrio",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 16 tests in 7.133s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/fa",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 8 tests in 0.220s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/geuljjaim",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 9 tests in 0.486s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/geuljjaim_adapter",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 2 tests in 0.000s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/geuljjaim_site",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 3 tests in 0.013s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/grafia",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 13 tests in 0.962s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/hi",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 8 tests in 4.770s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/id",
+      "-v"
+    ],
+    "exit": 1,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 9 tests in 0.008s",
+      "",
+      "FAILED (failures=1)"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/km",
+      "-v"
+    ],
+    "exit": 1,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 5 tests in 0.005s",
+      "",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/lad",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 8 tests in 1.559s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/nhip_chu",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 7 tests in 0.004s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/satzbild",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 22 tests in 6.834s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/seo",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 21 tests in 0.170s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/sw",
+      "-v"
+    ],
+    "exit": 1,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 6 tests in 0.004s",
+      "",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/szyk",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 8 tests in 1.507s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/thai",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 22 tests in 2.269s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/ziheng",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 26 tests in 2.075s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/zilu",
+      "-v"
+    ],
+    "exit": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 10 tests in 1.221s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/zu",
+      "-v"
+    ],
+    "exit": 1,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 6 tests in 0.003s",
+      "",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_accord.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_accord.py [-h] [--out OUT]",
+      "build_accord.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_ar.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Arabic 96 generated files up to date"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_compasso.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_compasso.py [-h] [--out OUT]",
+      "build_compasso.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_dist.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: version 0.1.8-preview, 148 generated files up to date."
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_equilibrio.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Equilibrio outputs current; 15 ZIPs"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_fa.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Persian 88 generated files up to date"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_gateways.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "Gateway: 22 pages verified"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_geuljjaim.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Korean 120 generated files up to date"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_grafia.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Graf\u00eda outputs current; 15 ZIPs"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_hi.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_hi.py [-h] [--out OUT]",
+      "build_hi.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_hlela.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_hlela.py [-h] [--out OUT]",
+      "build_hlela.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_lad.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_lad.py [-h] [--out OUT]",
+      "build_lad.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_laras.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_laras.py [-h] [--out OUT]",
+      "build_laras.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_lumnung.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_lumnung.py [-h] [--out OUT]",
+      "build_lumnung.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_mizani.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_mizani.py [-h] [--out OUT]",
+      "build_mizani.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_nhip_chu.py",
+      "--check"
+    ],
+    "exit": 2,
+    "tail": [
+      "usage: build_nhip_chu.py [-h] [--out OUT]",
+      "build_nhip_chu.py: error: unrecognized arguments: --check"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_satzbild.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Satzbild outputs current; 15 ZIPs"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_sitemap.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "Sitemap check: PASS (271 URLs)"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_szyk.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Szyk outputs current; 15 ZIPs"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_th.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: Thai 105 generated files up to date"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_ziheng.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: \u5b57\u8861 110 generated files up to date"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_ziheng_hosts.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: ZiHeng Claude/Gemini 18 generated files current"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/build_zilu.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "OK: ZiLu 136 generated files current"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/base_copy.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "ok: "
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/web_fonts.py",
+      "--check"
+    ],
+    "exit": 0,
+    "tail": [
+      "Web fonts: verified"
+    ]
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "tools/check_ja_type_011_cases.py"
+    ],
+    "exit": 0,
+    "tail": [
+      "PASS: 11 spec fixtures are internally consistent (no rendered check)"
+    ]
+  }
+]

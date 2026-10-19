@@ -20,8 +20,8 @@ _wf_spec.loader.exec_module(WEB_FONTS)
 # Language gateway (the KUMIHAN index) for each page language, with the label
 # used for the "back to index" link. Paths are relative to the site root.
 GATEWAYS = {
-    "ja": ("index.html", "KUMIHAN トップ"),
-    "en": ("top-en.html", "KUMIHAN home"),
+    "ja": ("top-ja.html", "KUMIHAN トップ"),
+    "en": ("index.html", "KUMIHAN home"),
     "zh-Hant-TW": ("top-zh-han.html", "KUMIHAN 首頁"),
     "zh-Hans-CN": ("top-zh-cn.html", "KUMIHAN 首页"),
     "ko-KR": ("top-ko.html", "KUMIHAN 홈"),
@@ -54,8 +54,8 @@ class Frame:
     content: str              # guide-pane HTML
     platform: str             # name shown in the guide head
     ui: dict                  # see UI keys below
-    footer_sub: str = ""      # footer text HTML
-    footer_links: list = field(default_factory=list)  # [(label, href, external)]
+    footer_sub: str = ""      # unused: every page shares tools/site_footer.py
+    footer_links: list = field(default_factory=list)  # unused, as footer_sub
     scripts: str = ""
     language_class: str = ""  # extra class for the language switch nav
     gateway: tuple = ()       # (href, label) of the language-matched KUMIHAN index
@@ -81,11 +81,7 @@ def render(f: Frame) -> str:
     toc = "".join(f'<li><a href="#{e(anchor)}">{e(label)}</a></li>' for anchor, label in f.toc)
     crumb = (f'<a href="{e(f.gateway[0])}">{e(f.gateway[1])}</a><span aria-hidden="true">/</span>'
              if f.gateway else "")
-    footer_links = ([(f.gateway[1], f.gateway[0], False)] if f.gateway else []) + list(f.footer_links)
-    links = " · ".join(
-        f'<a href="{e(href)}"' + (' target="_blank" rel="noopener noreferrer"' if external else "")
-        + f'>{e(label)}</a>' for label, href, external in footer_links)
-    return f"""<!doctype html>
+    return WEB_FONTS.SHARE.apply(f"""<!doctype html>
 <html lang="{e(f.lang)}"{(' dir="' + e(f.dir) + '"') if f.dir else ""}>
 <head>
 <meta charset="utf-8">
@@ -137,12 +133,7 @@ def render(f: Frame) -> str:
     <div class="guide-pane">{f.content}</div>
   </main>
 </div>
-<footer class="footer">
-  <div class="shell footer-inner">
-    <div><strong>{f.brand}</strong><p>{f.footer_sub}</p></div>
-    <div><a href="{e(f.home)}">{e(u['top'])}</a> · {links}</div>
-  </div>
-</footer>
+{WEB_FONTS.FOOTER.footer(f.lang, f.asset_root)}
 </body>
 </html>
-"""
+""")

@@ -86,12 +86,19 @@ def pages(root=ROOT):
                 raise ValueError(f'{relative}: missing generated Jekyll contract; run tools/build_seo.py')
             head=include.read_text(encoding='utf-8')
             # Generated includes are the source-mode contract, NOT rendered Jekyll evidence.
+            # Source-mode simulation of share.html; built HTML is audited separately.
+            import re
+            from site_share import tags, description
+            captures = dict(re.findall(r'{% capture (\w+) %}(.*?){% endcapture %}', head, re.S))
+            head = re.sub(r'{% capture \w+ %}.*?{% endcapture %}', '', head, flags=re.S)
             metadata=Page(relative,'<head>'+head+'</head>')
             language=''
             for graph in metadata.graphs:
                 if isinstance(graph,dict):
                     language=next((n.get('inLanguage','') for n in graph.get('@graph',[]) if n.get('@type')=='WebPage'),'')
-            direction=' dir="rtl"' if language.split('-')[0]=='ar' else ''
+            if captures:
+                head += tags(language, captures['seo_share_title'], description(language, captures['seo_share_description']), captures['seo_canonical'])
+            direction=' dir="rtl"'  if language.split('-')[0]=='ar' else ''
             html=f'<html lang="{language}"{direction}><head>{head}</head></html>'
         result.append(Page(relative,html))
     return result

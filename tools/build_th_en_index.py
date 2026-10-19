@@ -318,25 +318,10 @@ def render(root: Path, copy: dict) -> str:
   </div>
 </section>
 </main>
-<footer class="footer">
-  <div class="shell footer-layout">
-    <div><div class="footer-mark" lang="th">{BRAND}</div>
-      <div class="footer-sub">{x(s["footer_sub"])}<br>
-      Developed by L&amp;Co. LLC</div></div>
-    <div class="footer-links">
-      {anchor("top-en.html", "KUMIHAN home")}
-      {anchor("en.html", "KUMIHAN Japanese")}
-      {anchor("kumihan-th.html", "ไทย", extra='lang="th"')}
-      {anchor("kumihan-th-ja.html", "日本語")}
-      {anchor(SOURCE, "GitHub", extra='target="_blank" rel="noopener noreferrer"')}
-      {anchor("https://github.com/landco-llc/kumihan/blob/main/LICENSE", "Apache License 2.0", extra='target="_blank" rel="noopener noreferrer"')}
-      {anchor("#top", "Back to top ↑")}
-    </div>
-  </div>
-</footer>
+{WEB_FONTS.FOOTER.footer("en")}
 </body></html>
 """
     kinds = tuple(re.findall(r'<section class="([^"]+)"', out))
     if kinds != SECTIONS:
         raise ValueError(f"English page index structure mismatch: {kinds}")
-    return out
+    return WEB_FONTS.SHARE.apply(out)

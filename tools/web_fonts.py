@@ -7,22 +7,33 @@ installed (a web font is downloaded only when a character actually needs it).
 Names of other languages and products (日本語, 한국어, 字衡, نضيد ...) use a
 small Google Fonts subset limited to those characters.
 
-Outputs: assets/kumihan-fonts.css (loaded after each page's own stylesheet)
-and _data/web_fonts.yml (the Google Fonts links for the Jekyll layouts).
+Outputs: assets/kumihan-fonts.css (loaded after each page's own stylesheet; it
+also carries the shared footer styles of tools/site_footer.py),
+_data/web_fonts.yml (the Google Fonts links for the Jekyll layouts) and
+_data/site_footer.json (the shared footer for the Jekyll layouts and Nhịp Chữ).
 Generators call head(lang, asset_root) to place the links in <head>; the
 hand-maintained pages in STATIC have their links rewritten here.
 """
 import argparse
+import hashlib
 import json
 import re
 from pathlib import Path
+from importlib.util import module_from_spec, spec_from_file_location
 from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
+_spec = spec_from_file_location("kumihan_site_footer", Path(__file__).with_name("site_footer.py"))
+FOOTER = module_from_spec(_spec)
+_spec.loader.exec_module(FOOTER)
+_spec = spec_from_file_location("kumihan_site_share", Path(__file__).with_name("site_share.py"))
+SHARE = module_from_spec(_spec)
+_spec.loader.exec_module(SHARE)
 GOOGLE = "https://fonts.googleapis.com/css2?"
 
 # script key -> (system sans stack, system serif stack, Google sans family, Google serif family)
 SCRIPTS = {
+    "km": ('"Khmer Sangam MN", "DaunPenh", "Khmer OS"', '"Khmer Sangam MN", "Khmer OS"', "Noto Sans Khmer", "Noto Serif Khmer"),
     "ja": ('"Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo',
            '"Hiragino Mincho ProN", "Yu Mincho"', "Noto Sans JP", "Noto Serif JP"),
     "latin": ('"Helvetica Neue", Helvetica, "Segoe UI", Roboto',
@@ -38,6 +49,8 @@ SCRIPTS = {
     # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
     "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
            "Noto Sans Devanagari", "Noto Serif Devanagari"),
+    # Persian: Vazirmatn is drawn for Persian (Arabic script, Persian letters and digits).
+    "fa": ('"Geeza Pro", "Segoe UI", Tahoma', '"Geeza Pro", "Segoe UI"', "Vazirmatn", "Noto Naskh Arabic"),
     # Bangla: Kohinoor Bangla (macOS/iOS), Nirmala UI and Vrinda (Windows), then Noto Bengali.
     "bn": ('"Kohinoor Bangla", "Bangla Sangam MN", "Nirmala UI", Vrinda', '"Bangla Sangam MN", "Nirmala UI", Vrinda',
            "Noto Sans Bengali", "Noto Serif Bengali"),
@@ -51,18 +64,19 @@ SCRIPTS = {
 LATIN_TAIL = {"latin": ("Arial", '"Times New Roman"'), "vi": ("Arial", '"Times New Roman"')}
 AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..900",
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
-        "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
+        "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900",
+        "Vazirmatn": "wght@100..900"}
 # Page language (html lang attribute) -> script key
-LANGS = {"it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
+LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
-         "pl": "latin", "id": "latin", "bn": "bn"}
+         "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
-         "अक्षर-संगति বাংলা অক্ষরসজ্জা あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
+         "अक्षर-संगति বাংলা অক্ষরসজ্জা فارسی تراز ភាសាខ្មែរ លំនឹង ក あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
-          "Noto Sans Devanagari")
+          "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn")
 
 
 def script(lang):
@@ -107,9 +121,14 @@ def google_links(lang):
             f'<link rel="stylesheet" href="{subset_url(key).replace("&", "&amp;")}">')
 
 
+def fonts_css_path():
+    """Shared stylesheet path with a content version, so browsers never keep a stale copy."""
+    return "assets/kumihan-fonts.css?v=" + hashlib.sha256(css().encode("utf-8")).hexdigest()[:10]
+
+
 def head(lang, asset_root=""):
     """Google Fonts links plus the shared typeface stylesheet; place after the page CSS."""
-    return google_links(lang) + f'<link rel="stylesheet" href="{asset_root}assets/kumihan-fonts.css">'
+    return google_links(lang) + f'<link rel="stylesheet" href="{asset_root}{fonts_css_path()}">'
 
 
 def css():
@@ -124,14 +143,21 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
+    for key in ("fa", "km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
     out.append("/* Decorative symbol motifs (▮▮▯, « », ◌) take whichever font has the glyph; when that")
     out.append("   font is wide, let them wrap between symbols instead of widening the page. */")
     out.append(":is(.feature-motif, .skill-symbol) { overflow-wrap: anywhere; min-width: 0; }")
-    return "\n".join(out) + "\n"
+    out.append("/* Long German compounds (and brand names such as KUMIHAN｜Satzbild) at enlarged text on")
+    out.append("   narrow screens: break inside a word only when it cannot fit, where no hyphenation")
+    out.append("   dictionary is available. */")
+    out.append('html[lang="de"] :is(.cta-layout p, .toc-details summary) { overflow-wrap: anywhere; }')
+    out.append("/* Khmer (no spaces between words) and isiZulu (long agglutinated words): the same, for")
+    out.append("   headings and paragraphs. */")
+    out.append('html:is([lang="km"], [lang="zu"]) :is(h1, h2, h3, p, li, summary) { overflow-wrap: anywhere; }')
+    return "\n".join(out) + "\n" + FOOTER.CSS
 
 
 def data_yml():
@@ -145,7 +171,8 @@ def data_yml():
 # the Bangla pages are maintained by hand).
 STATIC = ("docs/install-ziheng*.html", "templates/zilu-*-landing.html", "kumihan-bn*.html",
           "docs/install-kumihan-bn-*.html")
-LINKS = re.compile(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?assets/kumihan-fonts\.css">', re.S)
+FOOTER_TAG = re.compile(r"<footer\b.*?</footer>", re.S)
+LINKS = re.compile(r'<link rel="preconnect" href="https://fonts\.googleapis\.com">.*?assets/kumihan-fonts\.css[^"]*">', re.S)
 
 
 def static_pages():
@@ -156,13 +183,22 @@ def static_pages():
             lang = re.search(r'<html lang="([^"]+)"', text).group(1)
             root = "../" if path.parent.name == "docs" else ""
             new = head(lang, root)
-            out[str(path.relative_to(ROOT))] = (LINKS.sub(lambda _: new, text) if LINKS.search(text)
-                                                else text.replace("</head>", new + "\n</head>", 1))
+            text = (LINKS.sub(lambda _: new, text) if LINKS.search(text)
+                    else text.replace("</head>", new + "\n</head>", 1))
+            footer = FOOTER.footer(lang, root)
+            text = (FOOTER_TAG.sub(lambda _: footer, text, count=1) if FOOTER_TAG.search(text)
+                    else text.replace("</body>", footer + "\n</body>", 1))
+            from seo_metadata import enrich_html
+            relative = str(path.relative_to(ROOT))
+            out[relative] = enrich_html(SHARE.apply(text), relative)
     return out
 
 
 def outputs():
-    return {"assets/kumihan-fonts.css": css(), "_data/web_fonts.yml": data_yml(), **static_pages()}
+    return {"assets/kumihan-fonts.css": css(), "_data/web_fonts.yml": data_yml(),
+            "_data/kumihan_assets.json": json.dumps({"fonts_css": fonts_css_path()}) + "\n",
+            "_data/site_footer.json": json.dumps(FOOTER.data(), ensure_ascii=False, indent=1) + "\n",
+            "_data/site_share.json": json.dumps(SHARE.data(), ensure_ascii=False, indent=1) + "\n", **static_pages()}
 
 
 def main():

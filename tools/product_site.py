@@ -153,22 +153,11 @@ def landing(p, c):
   </div>
 </section>
 </main>
-<footer class="footer">
-  <div class="shell footer-layout">
-    <div><div class="footer-mark">{p['brand']}</div><div class="footer-sub">{x(c['footer_sub'])}<br>Developed by <a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a></div></div>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="{x(p['gateway'][0])}">{x(p['gateway'][1])}</a>
-      <a href="{x(p['family'][1])}">{x(p['family'][0])}</a>
-      <a href="{x(p['repo'])}" target="_blank" rel="noopener noreferrer">GitHub</a>
-      <a href="{x(p['license'])}" target="_blank" rel="noopener noreferrer">Apache License 2.0</a>
-      <a href="#top">{x(c['top'])} ↑</a>
-    </nav>
-  </div>
-</footer>
+{WEB_FONTS.FOOTER.footer(p['lang'], p.get('asset_root', ''))}
 </body>
 </html>
 """
     kinds = tuple(re.findall(r'<section class="([^"]+)"', out))
     if kinds != SECTIONS:
         raise ValueError(f"Landing index structure mismatch: {kinds}")
-    return out
+    return WEB_FONTS.SHARE.apply(out)

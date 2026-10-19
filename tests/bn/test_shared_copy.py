@@ -29,6 +29,8 @@ class SharedCopy(unittest.TestCase):
         for lang, page in (("ja", "kumihan-bn.ja.html"), ("en", "kumihan-bn.en.html")):
             text = html.unescape((ROOT / page).read_text(encoding="utf-8"))
             for key, value in base_copy.shared(lang, "bn").items():
+                if key == "footer_sub":
+                    continue  # every page shares tools/site_footer.py
                 if key == "skills":
                     value = [pair[1] for pair in value if pair]
                 for s in strings(value):
