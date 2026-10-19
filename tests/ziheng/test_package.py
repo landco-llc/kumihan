@@ -150,7 +150,7 @@ class DistributionContractTests(unittest.TestCase):
             c=locale_resolver.resolve_context('zh-Hant-TW','web-ui');c['region']='HK';jsonschema.validate(c,context_schema)
         report_schema=json.loads((PRODUCT/'schemas/report.schema.json').read_text())
         validator=jsonschema.Draft202012Validator(report_schema,registry=reg)
-        report=dict(report_id='fixture',artifact_ref='sample bytes',artifact_digest='sha256:'+'0'*64,ruleset_version='0.1.0-preview',profile='web-editorial',locale='zh-Hant-TW',environment={'host':'test','tools':{'Python':'3.12'},'renderers':[]},limitations=['No rendered checks'],content_change_summary=[],checks=[{'rule_id':'ZH-HANT-005','status':'not-checked','method':'static','evidence_refs':[],'scope':'fixture','reason':'Not run'}])
+        report=dict(report_id='fixture',artifact_ref='sample bytes',artifact_digest='sha256:'+'0'*64,ruleset_version='0.1.0',profile='web-editorial',locale='zh-Hant-TW',environment={'host':'test','tools':{'Python':'3.12'},'renderers':[]},limitations=['No rendered checks'],content_change_summary=[],checks=[{'rule_id':'ZH-HANT-005','status':'not-checked','method':'static','evidence_refs':[],'scope':'fixture','reason':'Not run'}])
         validator.validate(report)
         report['checks'][0]['status']='passed'
         with self.assertRaises(jsonschema.ValidationError):validator.validate(report)
@@ -164,15 +164,15 @@ class DistributionContractTests(unittest.TestCase):
             shutil.copy2(ROOT/'LICENSE',root/'LICENSE')
             before={p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()}
             script=root/'tools/build_ziheng.py'
-            subprocess.run([sys.executable,str(script),'--set-version','0.2.0-preview'],check=True,capture_output=True)
+            subprocess.run([sys.executable,str(script),'--set-version','0.2.0'],check=True,capture_output=True)
             self.assertEqual(before,{p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()})
-            self.assertTrue((root/'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.0-preview.zip').is_file())
-            self.assertFalse(list((root/'plugins/kumihan-ziheng/downloads').rglob('*-0.1.0-preview.zip')))
+            self.assertTrue((root/'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.0.zip').is_file())
+            self.assertFalse(list((root/'plugins/kumihan-ziheng/downloads').rglob('*-0.1.0.zip')))
             target=root/'plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md'
             target.write_bytes(b'changed')
             check=subprocess.run([sys.executable,str(script),'--check'],capture_output=True)
             self.assertEqual(check.returncode,1)
             self.assertEqual(target.read_bytes(),b'changed')
-            for bad in ['../escape','0.1.0/escape','1.2','-1.2.3']:
+            for bad in ['../escape','0.1.0/escape','1.2','-1.2.3','0.2.0-preview']:
                 run=subprocess.run([sys.executable,str(script),'--set-version',bad],capture_output=True)
                 self.assertNotEqual(run.returncode,0)

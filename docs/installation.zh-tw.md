@@ -6,7 +6,7 @@
 
 這份指南說明如何在 ChatGPT 或 Codex 中使用 KUMIHAN。
 
-> **關於預覽版（v0.1.8 preview）**
+> **關於 v0.1.8**
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -29,14 +29,14 @@
 
 **外掛套件（包含四項技能）**
 
-- [kumihan-GPT-Codex-plugin-0.1.8-preview.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8-preview.zip)
+- [kumihan-GPT-Codex-plugin-0.1.8.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8.zip)
 
 **個別技能**
 
-- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.8-preview.zip) — 開始使用前的規劃入口
-- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.8-preview.zip) — 網頁製作
-- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.8-preview.zip) — 報告與簡報
-- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.8-preview.zip) — 成果檢視
+- [kumihan](../downloads%20GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.8.zip) — 開始使用前的規劃入口
+- [kumihan-web](../downloads%20GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.8.zip) — 網頁製作
+- [kumihan-documents](../downloads%20GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.8.zip) — 報告與簡報
+- [kumihan-review](../downloads%20GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.8.zip) — 成果檢視
 
 在 GitHub 開啟檔案後，使用右上角的下載按鈕儲存。
 

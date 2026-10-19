@@ -9,9 +9,11 @@
 
 <br>
 
-## v0.1.8 preview — 2026年10月19日公開
+## v0.1.8 — 2026年10月19日（preview接尾辞を廃止）
 
-[GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview)
+[GitHub Release・15配布ZIP](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8)
+
+- **版名の統一**：日本語版の表示・manifest・ZIP・タグを `v0.1.8` / `0.1.8` に変更。全言語版も同じ無接尾辞規約を採用（バージョン番号は独立）。過去の `*-preview` Releaseは履歴として保持。
 
 - Owner決定 `KUMI-USECASE-ADAPTER-SELECTION-20261019-01` を反映した用途ルーティング：**自動選択が標準・適合する手動指定は優先・成果物に影響する曖昧さのみ確認**。
 - 既存6媒体プロファイル／39ルールを維持し、ポスター・SNS静止画像・静止バナー・スライド・LP・報告書に任意アダプターを追加。ルート選択は権限付与や品質PASSを意味しません。

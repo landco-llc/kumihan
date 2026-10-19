@@ -47,11 +47,11 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 | ChatGPT / Codex | [導入ガイド](docs/installation.ja.md) | [Guide](docs/installation.md) |
 | Gemini（Gemini CLI / Geminiアプリ） | [導入ガイド](docs/installation.gemini.ja.md) | [Guide](docs/installation.gemini.md) |
 
-更新の方法は [更新ガイド](docs/updates.md)、変更内容は [更新履歴](CHANGELOG.md) にまとめています。
+更新の方法は [更新ガイド](docs/updates.md)、変更内容は [更新履歴](CHANGELOG.md)、全言語で共通の版名は [バージョン表記規約](docs/versioning.md) にまとめています。
 
 <br>
 
-## 用途に合わせたデザイン支援（v0.1.8 preview）
+## 用途に合わせたデザイン支援（v0.1.8）
 
 文字組だけでなく、目的に応じた情報階層、文字と図像の関係、ブランドの一貫性、AIにありがちな定型レイアウトの見直しを支援します。**自動選択を標準・手動指定で上書き可能・重要な曖昧さだけ質問**の用途別アダプターを追加しました。媒体プロファイルは従来の6種類のまま。通常のデザインレビューはStandard、Strictはユーザーの明示指定が必要です。
 
@@ -61,9 +61,9 @@ KUMIHANは、AIが日本語のWebサイト・記事・報告書・プレゼン�
 
 ## 開発状況
 
-現在、正式版に向けて開発中です。
+現在も段階的に改善を続けています。
 
-**最新の公開版はv0.1.8 preview（2026年10月19日公開）です。** [GitHub Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview)。用途別アダプターとStandard／Strictデザインレビューのガイドを追加しました。各AIホストでのネイティブ動作や実画像・Officeでの検証範囲には制限があります。
+**最新の公開版はv0.1.8（2026年10月19日公開）です。** [GitHub Release・15 ZIPをダウンロード](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8)。用途別アダプターとStandard／Strictデザインレビューのガイドを追加しました。各AIホストでのネイティブ動作や実画像・Officeでの検証範囲には制限があります。
 
 <br>
 
@@ -87,11 +87,11 @@ It focuses on natural line breaks, punctuation and spacing, mixed Japanese and L
 - Claude: [Guide](docs/installation.claude.md)
 - ChatGPT / Codex: [Guide](docs/installation.md)
 - Gemini: [Guide](docs/installation.gemini.md)
-- Updates: [Update guide](docs/updates.md) · [Changelog](CHANGELOG.md)
+- Updates: [Update guide](docs/updates.md) · [Changelog](CHANGELOG.md) · [Version policy](docs/versioning.md)
 
 ### Status
 
-KUMIHAN is in development toward a stable release. **The latest published release is v0.1.8 preview (October 19, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview). This version adds conservative use-case routing and Standard/Strict design-review guidance. Native AI-host behavior and real rendering across tools remain only partially verified.
+KUMIHAN continues to be improved, with scope-limited verification. **The latest published release is v0.1.8 (October 19, 2026).** [Download the published release and its 15 ZIP archives](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8). This version adds conservative use-case routing and Standard/Strict design-review guidance. Native AI-host behavior and real rendering across tools remain only partially verified.
 
 <br>
 

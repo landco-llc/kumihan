@@ -63,15 +63,15 @@ class ZiHengWebsiteTests(unittest.TestCase):
                         self.assertTrue(target.is_file(), (path,key,value))
 
     def test_installation_claims_versioned_zip_and_unversioned_display(self):
-        zipfilename='kumihan-ziheng-0.1.0-preview.zip'
+        zipfilename='kumihan-ziheng-0.1.0.zip'
         for path in CASE:
             content=(ROOT/path).read_text(encoding='utf-8')
-            self.assertTrue(zipfilename in content if path.startswith('docs/') else 'kumihan-ziheng-0.1.0-preview.zip' in content, path)
+            self.assertTrue(zipfilename in content if path.startswith('docs/') else 'kumihan-ziheng-0.1.0.zip' in content, path)
             self.assertIn('zh-Hant-TW',content)
             self.assertIn('zh-Hant-HK',content)
         for path in ('docs/install-ziheng.html','docs/install-ziheng.en.html','docs/install-ziheng.ja.html'):
             content=(ROOT/path).read_text(encoding='utf-8')
-            self.assertIn('9b3bd1edbb0458a3d06c2d3d7c9d246dd32766a44b4d7a3dcbb0634029351503',content)
+            self.assertIn('6ad81765ece7d4fc37297e7ba62af767d94347c814e9432c',content)
             self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
 
     def test_logo_styles_and_japanese_site_footer(self):
