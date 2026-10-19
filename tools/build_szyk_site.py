@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
-"""Build the KUMIHAN｜Szyk site (es / en / ja); --check verifies committed output.
+"""Build the KUMIHAN｜Szyk site (pl / en / ja); --check verifies committed output.
 
 Landings follow the canonical KUMIHAN index (_layouts/landing.html) and install
 guides use the shared install-guide frame (tools/install_frame.py). Copy lives
 in assets/szyk-site-copy.json; its ja/en copy is the shared KUMIHAN copy
 (tools/base_copy.py). Following kumihan-szyk-web, Polish pages declare
-lang="pl", emit only es/en/ja alternates (no es-419), never hide overflow, and
-do not rely on hyphens:auto or break-all; supplied text is reproduced byte for
-byte. Japanese copy follows kumihan-web.
+lang="pl", emit only pl/en/ja alternates, never hide overflow, and do not rely
+on hyphens:auto or break-all. The site's own Polish copy keeps one-letter words
+(a, i, o, u, w, z) off line ends with a no-break space, added at render time so
+assets/szyk-site-copy.json stays as written. Japanese copy follows kumihan-web.
 """
 import argparse
 import json
+import re
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -43,8 +45,8 @@ COMMANDS = {
 }
 VERIFY = "sha256sum -c SHA256SUMS.txt"
 CHECK = "python runtime/checks.py original.txt --locale pl --candidate candidate.txt"
-# Polish has no KUMIHAN index of its own yet, so it returns to the Japanese index.
-GATEWAY = {"pl": "index.html", "en": "top-en.html", "ja": "index.html"}
+# KUMIHAN index (language gateway) for each page language.
+GATEWAY = {"pl": "top-pl.html", "en": "top-en.html", "ja": "index.html"}
 
 _spec = spec_from_file_location("kumihan_install_frame", Path(__file__).with_name("install_frame.py"))
 FRAME = module_from_spec(_spec)
@@ -169,9 +171,26 @@ def guide(host, lang, c):
     return FRAME.render(frame)
 
 
+# A one-letter Polish word (a, i, o, u, w, z) and the space after it; not inside a word,
+# an option flag or a path.
+ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
+
+
+def bind_one_letter_words(value):
+    """Keep one-letter Polish words with the next word (U+00A0), in every string of the copy."""
+    if isinstance(value, str):
+        return ONE_LETTER.sub("\\1\u00a0", value)
+    if isinstance(value, list):
+        return [bind_one_letter_words(v) for v in value]
+    if isinstance(value, dict):
+        return {k: bind_one_letter_words(v) for k, v in value.items()}
+    return value
+
+
 def outputs():
     """The twelve pages (three landings, nine guides)."""
     copy = json.loads((ROOT / "assets" / "szyk-site-copy.json").read_text(encoding="utf-8"))
+    copy["pl"] = bind_one_letter_words(copy["pl"])
     files = {landing_path(lang): landing(lang, copy[lang]) for lang in LANGS}
     files.update({guide_path(host, lang): guide(host, lang, copy[lang]) for host in HOSTS for lang in LANGS})
     return files

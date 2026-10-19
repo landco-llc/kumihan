@@ -13,3 +13,6 @@ html[lang="bn"] :is(p,nav,.button,.platform-info,.skill-desc,.footer-sub) { line
 .platform-row,.button,.header-nav a { overflow-wrap:normal; }
 @media(max-width:800px){.header-content{flex-wrap:wrap;gap:12px}.header-nav{order:3;width:100%;justify-content:flex-start;margin:0;flex-wrap:wrap}.header-controls{margin-left:auto}.hero h1{overflow-wrap:normal}}
 @media(max-width:480px){ html[lang="bn"] .hero h1{font-size:clamp(31px,9vw,44px);line-height:1.47} .brand{font-size:18px}.brand-sub{font-size:.88em}.language-switch{flex-wrap:wrap}}
+/* Long Bangla words at enlarged text on narrow screens: break inside a word only when it cannot fit. */
+html[lang="bn"] :is(h1, h2, h3, p, .breadcrumb, .platform-name, .brand) { overflow-wrap: anywhere; }
+html[lang="bn"] :is(.hero-grid, .hero-grid > *, .feature, .skill-card) { min-width: 0; }

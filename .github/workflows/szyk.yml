@@ -11,6 +11,9 @@ on:
       - 'docs/install-szyk-*.html'
       - 'assets/szyk-site*'
       - 'tools/build_gateways.py'
+      - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
       - 'index.html'
       - 'top-*.html'
       - '.github/workflows/szyk.yml'
@@ -25,6 +28,9 @@ on:
       - 'docs/install-szyk-*.html'
       - 'assets/szyk-site*'
       - 'tools/build_gateways.py'
+      - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
       - 'index.html'
       - 'top-*.html'
       - '.github/workflows/szyk.yml'
@@ -47,5 +53,6 @@ jobs:
       - run: python -m unittest discover -s tests/szyk -v
       - run: python tools/build_szyk.py --check
       - run: python tools/build_szyk_site.py --check
+      - run: python tools/base_copy.py --check
       - run: python tools/build_gateways.py --check
       - run: python -m unittest tests/test_site_layout_parity.py -v

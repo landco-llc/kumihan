@@ -7,6 +7,7 @@ the page's own language first (and English second in the language menu).
 """
 import argparse
 import json
+import re
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -22,13 +23,19 @@ VISIBLE, STEP = 9, 6
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
     "ar": ("top-ar.html", "ar", "AR", "العربية"),
+    "bn": ("top-bn.html", "bn", "BN", "বাংলা"),
+    "de": ("top-de.html", "de", "DE", "Deutsch"),
     "en": ("top-en.html", "en", "EN", "English"),
     "es": ("top-es.html", "es", "ES", "Español"),
     "fr": ("top-fr.html", "fr", "FR", "Français"),
     "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
+    "id": ("top-id.html", "id", "ID", "Bahasa Indonesia"),
+    "it": ("top-it.html", "it", "IT", "Italiano"),
     "ja": ("index.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
+    "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
+    "ru": ("top-ru.html", "ru", "RU", "Русский"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
     "zh-hans": ("top-zh-cn.html", "zh-Hans-CN", "ZH-HANS", "简体中文"),
@@ -40,6 +47,8 @@ GATEWAYS = {
 PRODUCTS = {
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
+    "id": dict(name="Bahasa Indonesia", lang="id", brand="KUMIHAN｜Laras", glyph="Ng", label="ID · INDONESIAN", version="v0.1.0",
+               pages={"id": "kumihan-id.html", "en": "kumihan-id.en.html", "ja": "kumihan-id.ja.html"}),
     "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
                pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
     "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.0",
@@ -67,6 +76,52 @@ RTL = {"ar"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
+    "id": {
+        "ar": ("Tipografi Arab yang menangani tulisan dari kanan ke kiri dan campuran aksara, tanpa mengubah naskah asli.", "Lihat edisi bahasa Arab"),
+        "de": ("Tipografi Jerman yang menghormati kata majemuk panjang, tanda kutip, ß dan ẞ, serta perbedaan DE, AT, dan CH sambil menjaga naskah asli.", "Lihat edisi bahasa Jerman"),
+        "es": ("Tipografi Spanyol yang menghormati penggunaan regional, menjaga naskah asli, dan memisahkan bukti terverifikasi dari pertimbangan editorial.", "Lihat edisi bahasa Spanyol"),
+        "fr": ("Tipografi Prancis yang membedakan spasi tak terputus, tanda kutip, dan gaya penulisan regional atau kelembagaan.", "Lihat edisi bahasa Prancis"),
+        "hi": ("Tipografi dan desain bahasa Hindi yang menjaga naskah asli, gugus konsonan, dan matra.", "Lihat edisi bahasa Hindi"),
+        "id": ("Tipografi bahasa Indonesia yang menimbang kata depan, imbuhan, kata ulang, tanda baca, dan nominal rupiah sesuai konteks, sambil menjaga naskah asli.", "Lihat edisi bahasa Indonesia"),
+        "ja": ("Dari aturan pemenggalan baris Jepang (kinsoku) dan pergantian baris yang alami hingga struktur informasi, ruang kosong, dan alur baca.", "Lihat edisi bahasa Jepang"),
+        "ko": ("Pergantian baris di antara eojeol (satuan spasi bahasa Korea), ritme teks, dan struktur informasi yang jelas.", "Lihat edisi bahasa Korea"),
+        "pl": ("Tipografi Polandia yang cermat pada diakritik, kata satu huruf di akhir baris, angka, dan tanda kutip, tanpa mengubah naskah asli.", "Lihat edisi bahasa Polandia"),
+        "pt": ("Tipografi Portugis dan desain berbasis makna yang menghormati konvensi Brasil dan Portugal serta maksud penulis.", "Lihat edisi bahasa Portugis"),
+        "th": ("Menghormati batas kata dan karakter gabung bahasa Thai, untuk desain bahasa Thai yang nyaman dibaca.", "Lihat edisi bahasa Thai"),
+        "vi": ("Tipografi Vietnam yang menghormati tanda nada, pergantian baris yang alami, dan konten asli.", "Lihat edisi bahasa Vietnam"),
+        "zh-hans": ("Tanda baca, pergantian baris, dan campuran teks Tionghoa–Latin untuk bahasa Tionghoa Sederhana, tanpa menulis ulang naskah asli.", "Lihat edisi bahasa Tionghoa Sederhana"),
+        "zh-hant": ("Memperhatikan kebiasaan tanda baca dan penataan huruf yang berbeda di Taiwan dan Hong Kong.", "Lihat edisi bahasa Tionghoa Tradisional"),
+    },
+    "de": {
+        "ar": ("Arabische Typografie für rechtsläufige Schrift und gemischte Schriftsysteme, die das Original unverändert lässt.", "Arabische Version ansehen"),
+        "de": ("Deutsche Typografie, die lange Komposita, Anführungszeichen, ß und ẞ sowie die Unterschiede zwischen DE, AT und CH respektiert und das Original schützt.", "Deutsche Version ansehen"),
+        "es": ("Spanische Typografie, die regionalen Sprachgebrauch respektiert, das Original bewahrt und geprüfte Belege von redaktionellem Urteil trennt.", "Spanische Version ansehen"),
+        "fr": ("Französische Typografie, die geschützte Leerzeichen, Anführungszeichen und regionale oder institutionelle Hausstile unterscheidet.", "Französische Version ansehen"),
+        "hi": ("Hindi-Typografie und -Design, die das Original, Konsonantenverbindungen und Matras bewahren.", "Hindi-Version ansehen"),
+        "ja": ("Von japanischen Umbruchregeln (Kinsoku) und natürlichen Zeilenumbrüchen bis zu Informationsstruktur, Weißraum und Lesefluss.", "Japanische Version ansehen"),
+        "ko": ("Umbrüche zwischen Eojeol (koreanischen Leerzeicheneinheiten), Textrhythmus und klare Informationsstruktur.", "Koreanische Version ansehen"),
+        "pl": ("Polnische Typografie mit korrekten diakritischen Zeichen, Einzelbuchstaben am Zeilenende, Zahlen und Anführungszeichen – ohne das Original zu verändern.", "Polnische Version ansehen"),
+        "pt": ("Portugiesische Typografie und sinnorientiertes Design, das brasilianische und europäische Konventionen sowie die Absicht des Autors respektiert.", "Portugiesische Version ansehen"),
+        "th": ("Respektiert thailändische Wortgrenzen und kombinierende Zeichen für thailändisches Design, das sich natürlich liest.", "Thailändische Version ansehen"),
+        "vi": ("Vietnamesische Typografie, die Tonzeichen, natürliche Zeilenumbrüche und den Originalinhalt respektiert.", "Vietnamesische Version ansehen"),
+        "zh-hans": ("Interpunktion, Zeilenumbrüche und gemischter chinesisch-lateinischer Text für vereinfachtes Chinesisch, ohne das Original umzuschreiben.", "Version in vereinfachtem Chinesisch ansehen"),
+        "zh-hant": ("Berücksichtigt die unterschiedlichen Interpunktions- und Satzkonventionen Taiwans und Hongkongs.", "Version in traditionellem Chinesisch ansehen"),
+    },
+    "pl": {
+        "ar": ("Typografia arabska obsługująca pismo od prawej do lewej i mieszane systemy pisma, bez zmieniania oryginału.", "Zobacz wersję arabską"),
+        "de": ("Typografia niemiecka uwzględniająca długie złożenia, cudzysłowy, ß i ẞ oraz różnice między DE, AT i CH, chroniąca oryginał.", "Zobacz wersję niemiecką"),
+        "es": ("Typografia hiszpańska szanująca regionalne zwyczaje językowe, chroniąca oryginał i oddzielająca sprawdzone dowody od oceny redakcyjnej.", "Zobacz wersję hiszpańską"),
+        "fr": ("Typografia francuska rozróżniająca spacje niełamliwe, cudzysłowy oraz regionalne i instytucjonalne zasady redakcyjne.", "Zobacz wersję francuską"),
+        "hi": ("Typografia i projektowanie w hindi, zachowujące oryginał, ligatury spółgłoskowe i matry.", "Zobacz wersję w hindi"),
+        "ja": ("Od japońskich zasad łamania wierszy (kinsoku) i naturalnego podziału wierszy po strukturę informacji, światło i rytm czytania.", "Zobacz wersję japońską"),
+        "ko": ("Podział wierszy między eojeol (koreańskimi jednostkami odstępu), rytm tekstu i przejrzysta struktura informacji.", "Zobacz wersję koreańską"),
+        "pl": ("Typografia polska dbająca o znaki diakrytyczne, jednoliterowe wyrazy na końcu wiersza, liczby i cudzysłowy, chroniąca oryginał i jego sens.", "Zobacz wersję polską"),
+        "pt": ("Typografia portugalska i projektowanie oparte na znaczeniu, szanujące konwencje Brazylii i Portugalii oraz intencję autora.", "Zobacz wersję portugalską"),
+        "th": ("Szacunek dla granic wyrazów i znaków łączących w języku tajskim, dla tajskiego projektu, który czyta się naturalnie.", "Zobacz wersję tajską"),
+        "vi": ("Typografia wietnamska szanująca znaki tonów, naturalny podział wierszy i oryginalną treść.", "Zobacz wersję wietnamską"),
+        "zh-hans": ("Interpunkcja, podział wierszy i tekst mieszany chińsko-łaciński dla chińskiego uproszczonego, bez przepisywania oryginału.", "Zobacz wersję w chińskim uproszczonym"),
+        "zh-hant": ("Uwzględnia odmienne zwyczaje interpunkcyjne i składu Tajwanu oraz Hongkongu.", "Zobacz wersję w chińskim tradycyjnym"),
+    },
     "ar": {
         "ar": ("تنضيد عربي يراعي الكتابة من اليمين إلى اليسار وتداخل اللغات، ويحافظ على النص الأصلي.", "عرض النسخة العربية"),
         "es": ("تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.", "عرض النسخة الإسبانية"),
@@ -224,6 +279,12 @@ CARDS = {
 }
 
 UI = {
+    "bn": dict(heading="KUMIHAN-এর ভাষা সংস্করণ", more="পরের {n}টি দেখুন", menu="ভাষা"),
+    "it": dict(heading="Le edizioni linguistiche di KUMIHAN", more="Mostra le prossime {n}", menu="Lingua"),
+    "ru": dict(heading="Языковые версии KUMIHAN", more="Показать ещё {n}", menu="Язык"),
+    "id": dict(heading="Edisi bahasa KUMIHAN", more="Tampilkan {n} berikutnya", menu="Bahasa"),
+    "de": dict(heading="Die Sprachversionen von KUMIHAN", more="Die nächsten {n} anzeigen", menu="Sprache"),
+    "pl": dict(heading="Wersje językowe KUMIHAN", more="Pokaż kolejne {n}", menu="Język"),
     "ar": dict(heading="نسخ KUMIHAN اللغوية", more="عرض {n} أخرى", menu="اللغة"),
     "es": dict(heading="Ediciones de KUMIHAN por idioma", more="Mostrar {n} más", menu="Idioma"),
     "fr": dict(heading="Les éditions de KUMIHAN", more="Afficher les {n} suivantes", menu="Langue"),
@@ -279,15 +340,203 @@ PL_CARD_COPY = {
     "vi": ("Thiết kế chữ tiếng Ba Lan chú trọng dấu phụ, ngắt dòng và giữ nguyên nội dung gốc.","Xem phiên bản tiếng Ba Lan"),
 }
 for _lang, _cards in CARDS.items():
-    _cards["pl"] = PL_CARD_COPY[_lang]
+    if _lang in PL_CARD_COPY:
+        _cards.setdefault("pl", PL_CARD_COPY[_lang])
+
+# Indonesian edition (KUMIHAN｜Laras) for every reader language.
+ID_CARD_COPY = {
+    "de": (
+        "Indonesische Typografie, die Präpositionen, Affixe, Reduplikationen, Satzzeichen und Rupiah-Beträge im Kontext behandelt und das Original schützt.",
+        "Indonesische Version ansehen"
+    ),
+    "pl": (
+        "Typografia indonezyjska uwzględniająca przyimki, afiksy, reduplikację, interpunkcję i kwoty w rupiach, chroniąca oryginał.",
+        "Zobacz wersję indonezyjską"
+    ),
+    "ar": (
+        "تنضيد إندونيسي يراعي حروف الجر واللواحق والتكرار وعلامات الترقيم ومبالغ الروبية، ويحافظ على النص الأصلي.",
+        "عرض النسخة الإندونيسية"
+    ),
+    "es": (
+        "Tipografía indonesia que atiende preposiciones, afijos, reduplicación, puntuación e importes en rupias, sin alterar el original.",
+        "Ver la edición en indonesio"
+    ),
+    "fr": (
+        "Typographie indonésienne attentive aux prépositions, affixes, redoublements, à la ponctuation et aux montants en roupies, sans toucher au texte d’origine.",
+        "Voir l’édition indonésienne"
+    ),
+    "pt": (
+        "Tipografia indonésia atenta a preposições, afixos, reduplicação, pontuação e valores em rupias, sem alterar o original.",
+        "Ver a edição em indonésio"
+    ),
+    "hi": (
+        "पूर्वसर्ग, प्रत्यय, पुनरुक्ति, विराम चिह्न और रुपिया राशियों का ध्यान रखने वाली, मूल को सुरक्षित रखने वाली इंडोनेशियाई टाइपोग्राफ़ी।",
+        "इंडोनेशियाई संस्करण देखें"
+    ),
+    "vi": (
+        "Typography tiếng Indonesia chú ý giới từ, phụ tố, từ láy, dấu câu và số tiền rupiah, giữ nguyên bản gốc.",
+        "Xem phiên bản tiếng Indonesia"
+    ),
+    "ja": (
+        "前置詞と接辞、重複語、句読点、ルピアの金額を文脈に合わせて扱い、原稿を守るインドネシア語の文字組とデザイン。",
+        "インドネシア語版を見る"
+    ),
+    "en": (
+        "Indonesian typography that respects prepositions, affixes, reduplication, punctuation and rupiah values while keeping the source intact.",
+        "View the Indonesian edition"
+    ),
+    "zh-hant": (
+        "依語境處理介詞、詞綴、重疊詞、標點與印尼盾金額，並保留原稿的印尼文排版與設計。",
+        "前往印尼文版"
+    ),
+    "zh-hans": (
+        "按语境处理介词、词缀、重叠词、标点与印尼盾金额，并保留原稿的印尼语排版与设计。",
+        "前往印尼语版"
+    ),
+    "ko": (
+        "전치사와 접사, 중첩어, 문장 부호, 루피아 금액을 맥락에 맞게 다루고 원고를 지키는 인도네시아어 글짜임.",
+        "인도네시아어 버전 보기"
+    ),
+    "th": (
+        "การจัดวางตัวอักษรอินโดนีเซียที่ใส่ใจคำบุพบท หน่วยคำเติม คำซ้ำ เครื่องหมายวรรคตอน และจำนวนเงินรูเปียห์ โดยรักษาต้นฉบับ",
+        "ดูเวอร์ชันภาษาอินโดนีเซีย"
+    )
+}
+for _lang, _cards in CARDS.items():
+    if _lang in ID_CARD_COPY:
+        _cards.setdefault("id", tuple(ID_CARD_COPY[_lang]))
+
+# Bangla edition (KUMIHAN｜অক্ষরসজ্জা): its card for every reader language and the
+# Bangla reader's table of all editions.
+PRODUCTS["bn"] = dict(name="বাংলা", lang="bn", brand="KUMIHAN｜অক্ষরসজ্জা", glyph="অ", label="BN · BANGLA", version="v0.1.0",
+                      pages={"bn": "kumihan-bn.html", "en": "kumihan-bn.en.html", "ja": "kumihan-bn.ja.html"})
+BN_CARD_COPY = {
+    "ja": ("母音記号・結合文字と原稿を守り、bn-BD／bn-INを区別するベンガル語の文字組みとデザイン。", "ベンガル語版を見る"),
+    "en": ("Bangla typography and design with safe vowel signs, conjuncts, source fidelity and distinct bn-BD/bn-IN guidance.", "View the Bangla edition"),
+    "zh-hant": ("保護母音符號、連字與原稿，並區分 bn-BD／bn-IN 的孟加拉文排版與設計。", "前往孟加拉文版"),
+    "zh-hans": ("保护元音符号、连字与原稿，并区分 bn-BD／bn-IN 的孟加拉语排版与设计。", "前往孟加拉语版"),
+    "ko": ("모음 기호와 결합 문자, 원고를 지키고 bn-BD·bn-IN을 구분하는 벵골어 글짜임과 디자인.", "벵골어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรและการออกแบบภาษาเบงกาลีที่รักษาสระ ตัวอักษรควบ และต้นฉบับ พร้อมแยก bn-BD กับ bn-IN", "ดูเวอร์ชันภาษาเบงกาลี"),
+    "fr": ("Typographie et design en bengali qui préservent les signes vocaliques, les ligatures et la source, en distinguant bn-BD et bn-IN.", "Voir l’édition bengalie"),
+    "es": ("Tipografía y diseño en bengalí que conservan los signos vocálicos, las ligaduras y el original, y distinguen bn-BD y bn-IN.", "Ver la edición en bengalí"),
+    "pt": ("Tipografia e design em bengali que preservam sinais vocálicos, ligaduras e o original, distinguindo bn-BD e bn-IN.", "Ver a edição em bengali"),
+    "ar": ("تنضيد وتصميم بنغالي يحافظ على علامات الحركات والحروف المركّبة والنص الأصلي، ويميّز بين bn-BD وbn-IN.", "عرض النسخة البنغالية"),
+    "hi": ("मात्राओं, संयुक्ताक्षरों और मूल पाठ को सुरक्षित रखने वाली, bn-BD और bn-IN में भेद करने वाली बांग्ला टाइपोग्राफ़ी और डिज़ाइन।", "बांग्ला संस्करण देखें"),
+    "vi": ("Typography và thiết kế tiếng Bengal giữ nguyên dấu nguyên âm, chữ ghép và bản gốc, phân biệt bn-BD và bn-IN.", "Xem phiên bản tiếng Bengal"),
+    "de": ("Bengalische Typografie und Gestaltung, die Vokalzeichen, Ligaturen und das Original bewahren und bn-BD von bn-IN unterscheiden.", "Bengalische Version ansehen"),
+    "pl": ("Typografia i projektowanie w języku bengalskim, chroniące znaki samogłoskowe, ligatury i oryginał oraz rozróżniające bn-BD i bn-IN.", "Zobacz wersję bengalską"),
+    "id": ("Tipografi dan desain bahasa Bengali yang menjaga tanda vokal, huruf gabung, dan naskah asli, serta membedakan bn-BD dan bn-IN.", "Lihat edisi bahasa Bengali"),
+}
+for _lang, _cards in CARDS.items():
+    if _lang in BN_CARD_COPY:
+        _cards.setdefault("bn", BN_CARD_COPY[_lang])
+CARDS["bn"] = {
+    "ar": ("ডান থেকে বাঁয়ে লেখা ও মিশ্র লিপি সামলে মূল লেখা অক্ষুণ্ণ রাখা আরবি টাইপোগ্রাফি।", "আরবি সংস্করণ দেখুন"),
+    "bn": ("কার-চিহ্ন, যুক্তাক্ষর ও মূল লেখা সুরক্ষিত রেখে bn-BD ও bn-IN-এর পার্থক্য মেনে চলা বাংলা টাইপোগ্রাফি ও ডিজাইন।", "বাংলা সংস্করণ দেখুন"),
+    "de": ("দীর্ঘ যৌগিক শব্দ, উদ্ধৃতিচিহ্ন এবং DE/AT/CH-এর ভিন্ন রীতি মেনে মূল লেখা রক্ষা করা জার্মান টাইপোগ্রাফি।", "জার্মান সংস্করণ দেখুন"),
+    "es": ("আঞ্চলিক ব্যবহারকে সম্মান করে, মূল লেখা রক্ষা করে এবং যাচাই-করা তথ্যকে সম্পাদকীয় বিচার থেকে আলাদা রাখা স্প্যানিশ টাইপোগ্রাফি।", "স্প্যানিশ সংস্করণ দেখুন"),
+    "fr": ("নন-ব্রেকিং স্পেস, উদ্ধৃতিচিহ্ন এবং আঞ্চলিক বা প্রাতিষ্ঠানিক রচনারীতি আলাদা করে দেখা ফরাসি টাইপোগ্রাফি।", "ফরাসি সংস্করণ দেখুন"),
+    "hi": ("মূল লেখা, যুক্তাক্ষর ও মাত্রা সুরক্ষিত রাখা হিন্দি টাইপোগ্রাফি ও ডিজাইন।", "হিন্দি সংস্করণ দেখুন"),
+    "id": ("অব্যয়, প্রত্যয়, দ্বিরুক্ত শব্দ, যতিচিহ্ন ও রুপিয়ার অঙ্ক প্রসঙ্গ বুঝে সামলানো, মূল লেখা রক্ষা করা ইন্দোনেশীয় টাইপোগ্রাফি।", "ইন্দোনেশীয় সংস্করণ দেখুন"),
+    "ja": ("জাপানি লাইন ভাঙার নিয়ম (কিনসোকু) ও স্বাভাবিক লাইন বিরতি থেকে তথ্যের কাঠামো, ফাঁকা জায়গা ও পড়ার প্রবাহ পর্যন্ত।", "জাপানি সংস্করণ দেখুন"),
+    "ko": ("এওজল (কোরীয় শব্দ-একক) অনুযায়ী লাইন ভাঙা, লেখার ছন্দ এবং স্পষ্টভাবে বোঝানোর মতো তথ্যের কাঠামো।", "কোরীয় সংস্করণ দেখুন"),
+    "pl": ("নির্ভুল বিশেষ চিহ্ন, অর্থপূর্ণ লাইন ভাঙা এবং মূল লেখা রক্ষা করা পোলিশ টাইপোগ্রাফি ও ডিজাইন।", "পোলিশ সংস্করণ দেখুন"),
+    "pt": ("ব্রাজিল ও ইউরোপের রীতি এবং লেখকের অভিপ্রায় মেনে চলা পর্তুগিজ টাইপোগ্রাফি ও অর্থনির্ভর ডিজাইন।", "পর্তুগিজ সংস্করণ দেখুন"),
+    "th": ("থাই শব্দসীমা ও সংযুক্ত চিহ্ন মেনে স্বাভাবিকভাবে পড়া যায় এমন থাই ডিজাইন।", "থাই সংস্করণ দেখুন"),
+    "vi": ("স্বরচিহ্ন, অর্থপূর্ণ লাইন ভাঙা ও মূল বিষয়বস্তু মেনে চলা ভিয়েতনামি টাইপোগ্রাফি।", "ভিয়েতনামি সংস্করণ দেখুন"),
+    "zh-hans": ("মূল লেখা না বদলে মূল ভূখণ্ড চীনের যতিচিহ্ন, লাইন ভাঙা ও চীনা-লাতিন মিশ্র লেখা সামলায়।", "সরলীকৃত চীনা সংস্করণ দেখুন"),
+    "zh-hant": ("তাইওয়ান ও হংকংয়ের ভিন্ন যতিচিহ্ন ও অক্ষরবিন্যাসের রীতি সামলায়।", "প্রথাগত চীনা সংস্করণ দেখুন"),
+}
+
+# Italian (KUMIHAN｜Equilibrio) and Russian (KUMIHAN｜Лад) editions: their card for every
+# reader language and each reader's table of all editions.
+PRODUCTS["it"] = dict(name="Italiano", lang="it", brand="KUMIHAN｜Equilibrio", glyph="È", label="IT · ITALIAN", version="v0.1.0",
+                      pages={"it": "kumihan-it.html", "en": "kumihan-it.en.html", "ja": "kumihan-it.ja.html"})
+PRODUCTS["ru"] = dict(name="Русский", lang="ru", brand="KUMIHAN｜Лад", glyph="Ж", label="RU · RUSSIAN", version="v0.1.0",
+                      pages={"ru": "kumihan-ru.html", "en": "kumihan-ru.en.html", "ja": "kumihan-ru.ja.html"})
+IT_CARD_COPY = {
+    "ja": ("アクセント・引用・地域差を尊重し、原稿と意味を守るイタリア語の文字組みとデザイン。", "イタリア語版を見る"),
+    "en": ("Italian typography respecting accents, quotations and regional choices while preserving the original.", "View the Italian edition"),
+    "zh-hant": ("尊重重音、引號與地區差異，保護原稿的義大利文排版與設計。", "查看義大利文版"),
+    "zh-hans": ("尊重重音、引号和地区差异，保护原稿的意大利语排版与设计。", "查看意大利语版"),
+    "ko": ("악센트, 인용 부호와 지역 차이를 존중하고 원문을 지키는 이탈리아어 글짜임.", "이탈리아어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรอิตาลีที่ใส่ใจเครื่องหมายกำกับ คำอ้างอิงและความต่างระหว่างภูมิภาค โดยรักษาต้นฉบับ", "ดูเวอร์ชันภาษาอิตาลี"),
+    "fr": ("Typographie italienne respectant les accents, les citations et les variantes régionales, sans modifier l’original.", "Voir la version italienne"),
+    "es": ("Tipografía italiana que respeta acentos, citas y variantes regionales, preservando el original.", "Ver la edición en italiano"),
+    "pt": ("Tipografia italiana que respeita acentos, citações e variantes regionais, preservando o original.", "Ver a edição em italiano"),
+    "ar": ("تنضيد إيطالي يراعي علامات النبر والاقتباس والاختلافات الإقليمية مع الحفاظ على الأصل.", "عرض النسخة الإيطالية"),
+    "hi": ("मूल पाठ सुरक्षित रखते हुए इतालवी उच्चारण चिह्नों, उद्धरणों और क्षेत्रीय भिन्नताओं का ध्यान रखने वाली टाइपोग्राफी।", "इतालवी संस्करण देखें"),
+    "vi": ("Thiết kế chữ tiếng Ý tôn trọng dấu, trích dẫn và khác biệt vùng miền, giữ nguyên bản gốc.", "Xem phiên bản tiếng Ý"),
+    "de": ("Italienische Typografie, die Akzente, Zitate und regionale Varianten respektiert und das Original bewahrt.", "Italienische Version ansehen"),
+    "pl": ("Typografia włoska uwzględniająca akcenty, cytaty i warianty regionalne, chroniąca oryginał.", "Zobacz wersję włoską"),
+    "id": ("Tipografi Italia yang menghormati aksen, kutipan, dan variasi regional sambil menjaga naskah asli.", "Lihat edisi bahasa Italia"),
+    "bn": ("অ্যাকসেন্ট, উদ্ধৃতি ও আঞ্চলিক ভিন্নতা মেনে মূল লেখা রক্ষা করা ইতালীয় টাইপোগ্রাফি।", "ইতালীয় সংস্করণ দেখুন"),
+    "ru": ("Итальянская типографика с вниманием к акцентам, цитатам и региональным вариантам, сохраняющая оригинал.", "Открыть итальянскую версию"),
+    "it": ("Tipografia italiana attenta ad accenti, citazioni e varianti regionali, nel rispetto del testo originale.", "Vai all’edizione italiana"),
+}
+RU_CARD_COPY = {
+    "ja": ("ё・й、引用符、ダッシュ、改行を文脈に合わせて扱い、原稿を守るロシア語の文字組みとデザイン。", "ロシア語版を見る"),
+    "en": ("Russian typography that handles ё and й, quotation marks, dashes and line breaks in context while preserving the source.", "View the Russian edition"),
+    "zh-hant": ("依語境處理 ё 與 й、引號、破折號與換行，並保留原稿的俄文排版與設計。", "前往俄文版"),
+    "zh-hans": ("按语境处理 ё 与 й、引号、破折号与换行，并保留原稿的俄语排版与设计。", "前往俄语版"),
+    "ko": ("ё와 й, 인용 부호, 대시, 줄바꿈을 맥락에 맞게 다루고 원고를 지키는 러시아어 글짜임.", "러시아어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรรัสเซียที่ใส่ใจ ё และ й เครื่องหมายอัญประกาศ ขีดยาว และการตัดบรรทัดตามบริบท โดยรักษาต้นฉบับ", "ดูเวอร์ชันภาษารัสเซีย"),
+    "fr": ("Typographie russe qui traite ё et й, les guillemets, les tirets et les retours à la ligne selon le contexte, sans modifier la source.", "Voir l’édition russe"),
+    "es": ("Tipografía rusa que trata ё y й, las comillas, las rayas y los saltos de línea según el contexto, sin alterar el original.", "Ver la edición en ruso"),
+    "pt": ("Tipografia russa que trata ё e й, aspas, travessões e quebras de linha conforme o contexto, preservando o original.", "Ver a edição em russo"),
+    "ar": ("تنضيد روسي يعالج ё وй وعلامات الاقتباس والشرطات وفواصل الأسطر حسب السياق، مع الحفاظ على النص الأصلي.", "عرض النسخة الروسية"),
+    "hi": ("ё और й, उद्धरण चिह्नों, डैश और पंक्ति-विभाजन को संदर्भ के अनुसार संभालने वाली, मूल पाठ सुरक्षित रखने वाली रूसी टाइपोग्राफ़ी।", "रूसी संस्करण देखें"),
+    "vi": ("Typography tiếng Nga xử lý ё và й, dấu ngoặc kép, gạch ngang và ngắt dòng theo ngữ cảnh, giữ nguyên bản gốc.", "Xem phiên bản tiếng Nga"),
+    "de": ("Russische Typografie, die ё und й, Anführungszeichen, Gedankenstriche und Zeilenumbrüche im Kontext behandelt und das Original bewahrt.", "Russische Version ansehen"),
+    "pl": ("Typografia rosyjska, która uwzględnia ё i й, cudzysłowy, myślniki i podziały wierszy zależnie od kontekstu, chroniąc oryginał.", "Zobacz wersję rosyjską"),
+    "id": ("Tipografi Rusia yang menangani ё dan й, tanda kutip, tanda pisah, dan pergantian baris sesuai konteks sambil menjaga naskah asli.", "Lihat edisi bahasa Rusia"),
+    "bn": ("প্রসঙ্গ বুঝে ё ও й, উদ্ধৃতিচিহ্ন, ড্যাশ ও লাইন ভাঙা সামলানো, মূল লেখা রক্ষা করা রুশ টাইপোগ্রাফি।", "রুশ সংস্করণ দেখুন"),
+    "it": ("Tipografia russa che tratta ё e й, virgolette, trattini e a capo secondo il contesto, nel rispetto dell’originale.", "Vai all’edizione russa"),
+    "ru": ("Русская типографика: ё и й, кавычки, тире и переносы строк с учётом контекста — без изменения оригинала.", "Открыть русскую версию"),
+}
+CARDS["it"] = {
+    "ar": ("Tipografia araba che gestisce la scrittura da destra a sinistra e i testi in più alfabeti, senza alterare l’originale.", "Vai all’edizione araba"),
+    "bn": ("Tipografia e design in bengalese che preservano segni vocalici, legature e testo originale, distinguendo bn-BD e bn-IN.", "Vai all’edizione bengalese"),
+    "de": ("Tipografia tedesca attenta ai composti lunghi, alle virgolette e alle convenzioni DE/AT/CH, nel rispetto dell’originale.", "Vai all’edizione tedesca"),
+    "es": ("Tipografia spagnola che rispetta l’uso regionale, preserva il testo e distingue le prove verificate dal giudizio editoriale.", "Vai all’edizione spagnola"),
+    "fr": ("Tipografia francese che distingue spazi indivisibili, virgolette e stili redazionali regionali o istituzionali.", "Vai all’edizione francese"),
+    "hi": ("Tipografia e design in hindi che preservano il testo originale, i nessi consonantici e le matra.", "Vai all’edizione hindi"),
+    "id": ("Tipografia indonesiana attenta a preposizioni, affissi, raddoppiamenti, punteggiatura e importi in rupie, nel rispetto dell’originale.", "Vai all’edizione indonesiana"),
+    "ja": ("Dalle regole giapponesi di a capo (kinsoku) agli a capo naturali, fino a struttura delle informazioni, spazi bianchi e flusso di lettura.", "Vai all’edizione giapponese"),
+    "ko": ("A capo tra gli eojeol (unità di spaziatura coreane), ritmo del testo e una struttura delle informazioni chiara.", "Vai all’edizione coreana"),
+    "pl": ("Tipografia polacca con diacritici accurati, a capo sensati e un design che preserva il testo originale.", "Vai all’edizione polacca"),
+    "pt": ("Tipografia portoghese e design guidato dal significato, nel rispetto delle convenzioni brasiliane ed europee e delle intenzioni dell’autore.", "Vai all’edizione portoghese"),
+    "th": ("Rispetta i confini di parola e i caratteri combinanti del thai, per un design che si legge in modo naturale.", "Vai all’edizione thai"),
+    "vi": ("Tipografia vietnamita che rispetta i segni tonali, gli a capo sensati e il contenuto originale.", "Vai all’edizione vietnamita"),
+    "zh-hans": ("Punteggiatura, a capo e testi misti cinese-latino per la Cina continentale, senza riscrivere l’originale.", "Vai all’edizione in cinese semplificato"),
+    "zh-hant": ("Tiene conto delle diverse convenzioni di punteggiatura e composizione di Taiwan e Hong Kong.", "Vai all’edizione in cinese tradizionale"),
+}
+CARDS["ru"] = {
+    "ar": ("Арабская типографика: письмо справа налево и смешение письменностей без изменения оригинала.", "Открыть арабскую версию"),
+    "bn": ("Бенгальская типографика и дизайн: огласовки, лигатуры и оригинал под защитой, с различием bn-BD и bn-IN.", "Открыть бенгальскую версию"),
+    "de": ("Немецкая типографика: длинные сложные слова, кавычки и нормы DE/AT/CH без изменения оригинала.", "Открыть немецкую версию"),
+    "es": ("Испанская типографика: региональные нормы, сохранность текста и разделение проверенных фактов и редакторских решений.", "Открыть испанскую версию"),
+    "fr": ("Французская типографика: неразрывные пробелы, кавычки и региональные или институциональные редакционные стили.", "Открыть французскую версию"),
+    "hi": ("Типографика и дизайн на хинди с сохранением оригинала, лигатур согласных и матр.", "Открыть версию на хинди"),
+    "id": ("Индонезийская типографика: предлоги, аффиксы, повторы, пунктуация и суммы в рупиях с учётом контекста и без изменения оригинала.", "Открыть индонезийскую версию"),
+    "ja": ("От японских правил переноса (кинсоку) и естественных разрывов строк до структуры информации, пустого пространства и ритма чтения.", "Открыть японскую версию"),
+    "ko": ("Переносы по эоджолям (корейским единицам пробела), ритм текста и ясная структура информации.", "Открыть корейскую версию"),
+    "pl": ("Польская типографика: точные диакритические знаки, осмысленные переносы и сохранность оригинала.", "Открыть польскую версию"),
+    "pt": ("Португальская типографика и дизайн от смысла с учётом бразильских и европейских норм и замысла автора.", "Открыть португальскую версию"),
+    "th": ("Тайская типографика с учётом границ слов и комбинируемых знаков — для естественного чтения.", "Открыть тайскую версию"),
+    "vi": ("Вьетнамская типографика: тоновые знаки, осмысленные переносы строк и сохранность оригинала.", "Открыть вьетнамскую версию"),
+    "zh-hans": ("Пунктуация, переносы строк и смешанный китайско-латинский текст для материкового Китая без переписывания оригинала.", "Открыть версию на упрощённом китайском"),
+    "zh-hant": ("Учитывает различия в пунктуации и наборе Тайваня и Гонконга.", "Открыть версию на традиционном китайском"),
+}
+for _lang, _cards in CARDS.items():
+    _cards.setdefault("it", IT_CARD_COPY[_lang])
+    _cards.setdefault("ru", RU_CARD_COPY[_lang])
+
+# Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
+_PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
 
-
-# Equilibrio: append one edition, preserve all existing gateway cards.
-PRODUCTS["it"] = dict(name="Italiano", lang="it", brand="KUMIHAN｜Equilibrio", glyph="È",
-    label="IT · ITALIAN", version="v0.1.0", pages={"it":"kumihan-it.html", "en":"kumihan-it.en.html", "ja":"kumihan-it.ja.html"})
-for _lang, _copy in json.loads((ROOT / "assets/gateway-copy.json").read_text(encoding="utf-8")).items():
-    CARDS[_lang]["it"] = tuple(_copy["equilibrio_card"])
 
 
 def x(value):
@@ -376,12 +625,6 @@ def page(key, c):
     file, html_lang, _, _ = GATEWAYS[key]
     alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
     card_html, count = cards(key)
-    # Preserve the two independently published Bangla cards verbatim. They
-    # predate registry integration and are outside this edition's rewrite scope.
-    for card in c.get("preserved_parallel_cards", []):
-        anchor = 'aria-labelledby="language-' + card["after"] + '"'
-        end = card_html.index("</article>\n", card_html.index(anchor)) + len("</article>\n")
-        card_html = card_html[:end] + card["html"] + card_html[end:]
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
     return f"""<!doctype html>

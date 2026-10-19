@@ -9,12 +9,18 @@ on:
       - scripts/build_bn_release.py
       - tests/bn/**
       - .github/workflows/bn-v010.yml
+      - kumihan-bn*.html
+      - docs/install-kumihan-bn-*.html
+      - tools/base_copy.py
   pull_request:
     paths:
       - plugins/kumihan-bn/**
       - scripts/build_bn_release.py
       - tests/bn/**
       - .github/workflows/bn-v010.yml
+      - kumihan-bn*.html
+      - docs/install-kumihan-bn-*.html
+      - tools/base_copy.py
 permissions:
   contents: write
 jobs:
