@@ -1,12 +1,15 @@
 # KUMIHAN SEO v1.0 — 英語トップ切替・新言語版統合（W09–W15）
 
+> **Updated review — 2026-10-19 JST / main `73d2b01`:** This W09–W15 instruction has **NOT been executed**. Use the fresh critical review [REVIEW_REFRESH_20261019_MAIN_73D2B01.md](REVIEW_REFRESH_20261019_MAIN_73D2B01.md) before starting. Its P0/P1 fixes and newest main protections override older factual examples in this document. Review/WIP docs are not implementation evidence. Treat PR #100 as **already merged**, PR #101/#102 as independent Draft, and the old PR #93 20/20 as **stale for merge**. W09 must Fresh Read again.
+
+
 - Created: 2026-10-19 JST
 - Status: **RECONCILIATION REQUIRED / NOT YET IMPLEMENTED**
 - Scope: Update existing Draft PR #93; do **not** create a parallel SEO PR without need
 - PR: https://github.com/landco-llc/kumihan/pull/93
 - Work branch: `feature/seo-foundation-20261019`
 - Original SEO PR HEAD observed: `0cfadad8dba7aff4ca0c97c31cbdf5fa9846c8ce`
-- Latest main HEAD observed: `db14de27b4b7e8ffd298bd3ab4a940ba2a623bca`
+- Latest main HEAD at the second review: `73d2b01d2f604608360beabe364f59af72b8b66c` (refresh on entry); previous baseline `db14de27b4b7e8ffd298bd3ab4a940ba2a623bca`
 - **Refresh both refs before the work.** PR #93 is `draft=true`, `merged=false` and `mergeable=false` at time of observation
 - Prior Hosted CI 20/20 PASS applies to the **old** SEO HEAD only. It is **not** acceptance evidence for current main
 
@@ -50,7 +53,7 @@ New-product versions/names and language-preserving typography must follow curren
 - PR #97: Persian edition and its package/site.
 - PR #98: copy parity for Khmer/Persian.
 - **PR #99: shared language-matched previews and dedicated 1200×630 OG image.**
-- PR #100 is still Draft/open; not on main when inspected, so do not treat it as merged.
+- **PR #100 is now merged into main** at `73d2b01`. It updates KUMIHAN core skills/plugin manifests, versioned candidate v0.1.8-preview distributions, README/CHANGELOG and design-quality rules. Treat those main files as protected latest authority and **never restore old artifacts**. PR #101 (Universal MCP) and PR #102 (rendered QA documentation) are open Draft and not part of observed main.
 
 Other languages, style, footer, fonts and package artifacts in main must remain unchanged apart from necessary SEO metadata and integration changes.
 
@@ -82,6 +85,10 @@ Old SEO PR #93 instead:
 
 ### W09 — Fresh Read and safe branch integration
 
+**追加受入:** latest main `73d2b01` (or newer) already contains PR #100 changes. Before merging, capture current versions/checksums for protected core skills, plugin manifests, `downloads *` ZIP/MANIFEST/SHA256SUMS, README and CHANGELOG. Do not downgrade v0.1.8-preview candidate artifacts or touch release tags. Confirm PR #101/#102 status without conflating them with main. Existing PR #93 will require resolving genuine conflicts; do not force push stale main content.
+
+
+
 - Fetch latest `origin/main`, SEO PR #93 branch, merged PR #94–#99, open PR #100.
 - Record refreshed SHA, ahead/behind, conflicts, all tracked site generators and HTML pages.
 - Resolve main→SEO feature branch conflicts while retaining **current main body/footer/visual content** and existing SEO contract/tests. Do not force-push main or auto-merge PR.
@@ -89,6 +96,10 @@ Old SEO PR #93 instead:
 - Save a source→output map and conflict resolution ledger in `docs/seo/`.
 
 ### W10 — English-first gateway and redirect
+
+**新規P0:** main `top-en.html` is a noindex/meta refresh alias with no description. Existing SEO `enrich_html` requires description and will fail if blindly applied to the alias. Explicitly recognize allowlisted redirect/noindex pages and skip normal metadata enrichment, without suppressing missing description errors on real content pages. Add negative tests and assert the alias is NOT included in sitemap, while the root is exactly once. Canonical, OGP URL, JSON-LD and hreflang en/x-default should agree on the English **root URL**.
+
+
 
 - Update `tools/build_gateways.py` and any shared registries to `en:index.html`, `ja:top-ja.html`.
 - All 22 top pages must have correct self-canonical, language tag, 22-way reciprocal hreflang and English root x-default.
@@ -106,6 +117,10 @@ Old SEO PR #93 instead:
 
 ### W12 — Shared metadata + OGP merge
 
+**新規P0/P1:** Main's `tools/site_share.py` is OGP/Twitter presentation authority. Never overwrite its language-matched combined description with plain meta description, its 1200×630 PNG with the old square PNG, or `summary_large_image` with `summary`. Remove duplicated ownership from `seo_metadata.py`. Jekyll `_includes/share.html` currently constructs og:url from page.url; make it consume the computed canonical, including the root URL. `_data/site_share.json` is currently a subset of language names; add detection so missing Jekyll locales cannot silently get Japanese OGP. Verify idempotency, mixed quote-attribute meta removal, one copy of every required tag, and no import cycle across seo_metadata/site_share/web_fonts/build_gateways.
+
+
+
 - Reconcile `seo_metadata.py`, `site_share.py`, Jekyll includes/data, all Python/Node generators, special authored pages with one canonical/OGP/JSON-LD contract.
 - Do not clobber language-matched preview text or replace current 1200×630 share image with outdated square card output.
 - Update locales correctly (`fa_IR`, `km_KH`, `zu_ZA`, `sw_TZ` as used by current site share code). Respect existing page.lang and region variants.
@@ -114,6 +129,10 @@ Old SEO PR #93 instead:
 - Preserve existing SEO's idempotent, non-writing `--check`, and duplicate tag protection.
 
 ### W13 — Regenerate sitemap & run comprehensive checks
+
+**追加受入:** Test separately (1) script alias missing ordinary meta description but `noindex` remains, (2) normal HTML missing description fails, (3) main #99 language-specific OG copy and landscape dimensions survive, (4) root/index canonical x-default consistency, (5) new page/Jekyll locale missing share config fails CI, (6) no edits to #100 main packaged v0.1.8-preview files. Old job outputs and documentation-only green checks are NOT integrated-code evidence.
+
+
 
 - Run all builders and `python tools/build_seo.py` (or updated equivalent) after resolving main conflicts. Commit source and generated output together.
 - `python tools/build_seo.py --check` (nonwriting)
@@ -131,6 +150,10 @@ Old SEO PR #93 instead:
 
 ### W14 — Update durable sources and evidence
 
+**追加受入:** Update [REVIEW_REFRESH_20261019_MAIN_73D2B01.md](REVIEW_REFRESH_20261019_MAIN_73D2B01.md) with real resolution evidence and record the current main's PR #100 merged baseline; the previous 231-page table is historical. No invented live HTTP validation, Search Console result or Jekyll proof.
+
+
+
 - `docs/seo/BASELINE_INVENTORY.md`: record **refreshed** page count/source map, aliases, actual languages; stop presenting 231 as current.
 - `docs/seo/DECISIONS.md`: append design decisions for English-first root, alias, OGP share ownership, fa/km/zu/sw adapter.
 - `docs/seo/ADD_LANGUAGE_OR_PAGE.md`: new language addition must register site_share locale/about + appropriate Jekyll data when needed; mapping from product generators to gateway. New canonical/OGP compatibility checks.
@@ -138,6 +161,10 @@ Old SEO PR #93 instead:
 - Append file/URL inventories and CI URLs to the PR body. Do not fabricate PASS or production deployment.
 
 ### W15 — Fresh final CI and independent review
+
+**追加受入:** The CI must run after code reconciliation on the exact new HEAD, not just a documentation commit. Reviewer must independently check the five P0 issues documented in the 2026-10-19 refresh, and explicitly mark them resolved / not resolved. Keep Draft if PR remains merge-conflicted, stale, or checks incomplete.
+
+
 
 - Obtain fresh Hosted CI on **new final PR HEAD**. Old `0cfadad` 20/20 PASS no longer sufficient.
 - Independent reviewer inspect: correct English/Japanese URLs, 22 top hreflang group, new 3-language product groups, 271ish-page sitemap, Jekyll and pre-existing page body preservation, main #99 social previews.
@@ -150,7 +177,8 @@ Old SEO PR #93 instead:
 - **Baseline verification**: old SEO HEAD `0cfadad` passed 20/20 hosted CI.
 - **Current integration**: new main differs and PR #93 is `mergeable=false`.
 - **Technical conflict**: new main #99 owns social card generation while old SEO PR would override that content.
-- **Work completed in this current handoff**: read-only fresh inspection, this reconciliation document and review handoff. **W09–W15 code reconciliation and new CI are not yet executed**.
+- **Work completed in this current handoff**: fresh review and corrected GitHub instructions only. **W09–W15 code reconciliation, regeneration, post-reconciliation tests and new CI are NOT executed**.
+- **Review status:** reviewed against main `73d2b01` after PR #100 merge; see [REVIEW_REFRESH_20261019_MAIN_73D2B01.md](REVIEW_REFRESH_20261019_MAIN_73D2B01.md).
 - User must not submit an old 231-page sitemap to Search Console. Use the new version **after** a successful main merge and production validation.
 
 ## 5. Codex Cloud/App 起動文
