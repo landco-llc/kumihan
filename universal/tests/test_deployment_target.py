@@ -121,6 +121,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertIn(d["endpoint"], guide)
         self.assertIn("WEB PHP SDK, 21 LANGUAGES AND SESSION I/O VERIFIED", guide)
         self.assertIn("preflight_public_bootstrap.sh", guide)
+        self.assertIn("preflight_public_bootstrap_scoped.sh", guide)
         self.assertIn("check_private_runtime_web.sh", guide)
         self.assertIn("check_private_php_web.sh", guide)
         self.assertIn("check_lolipop_layout.py", guide)
