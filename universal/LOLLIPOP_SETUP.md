@@ -49,6 +49,31 @@ Recommended ROLES (the Owner supplied the absolute path for the FTP/web root; SS
 
 The private path must be accessible to PHP on this specific shared hosting account. If that cannot be achieved, STOP and redesign. Never use an unverified FTP-root sibling containing secrets as a workaround.
 
+## SSH verification: distinguish local Mac from remote Lolipop
+
+The full path given in the Owner's account panel is a **server filesystem path**. It does NOT exist on the local Mac. The Lai@laismacbook ~ % prompt confirms a local shell. Results of cd, test -d kmhn, or test -w .. from that local shell are INVALID for Lolipop. A failed cd must stop the test; never continue in the previous working directory.
+
+First log in over SSH, using the SSH server, account and password displayed in the Owner's private Lolipop control panel. Do NOT commit or paste account credentials:
+
+    ssh -p 2222 '<YOUR_SSH_ACCOUNT>@<SSH_HOST_SHOWN_IN_PANEL>'
+
+The official general server is ssh.lolipop.jp; use the exact host displayed in the account panel if different. Password input is invisible. Check the server fingerprint against current provider information before accepting it.
+
+ONLY AFTER successful SSH login, run this fail-closed, read-only block (replace the variable with the Owner-provided full web-root path locally, not in GitHub):
+
+    FTP_ROOT='<OWNER_PROVIDED_ABSOLUTE_WEB_ROOT>'
+    if [ "$(uname -s)" != "Linux" ]; then
+      echo "NOT_ON_REMOTE_LOLLIPOP_SERVER"; exit 1
+    fi
+    if ! cd "$FTP_ROOT"; then
+      echo "REMOTE_WEB_NOT_FOUND"; exit 1
+    fi
+    if test -d kmhn; then echo "KMHN_OK"; else echo "KMHN_NG"; fi
+    if test -w ..; then echo "PRIVATE_PARENT_WRITABLE"; else echo "PRIVATE_PARENT_NOT_WRITABLE"; fi
+
+This block creates, modifies and removes no files. The earlier failed test from a Mac shell is NOT a server failure. A writable parent still does not prove PHP can access it; PHP read access and virtual host isolation require separate verification.
+
+
 ## 1. Verify hosting account paths (no secrets in chat)
 
 1. In Lolipop Subdomain Settings, confirm the existing host maps to **kmhn**. This is already Owner-confirmed; do not recreate it.
