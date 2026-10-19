@@ -1,0 +1,3018 @@
+{
+  "schema_version": "research-1.0",
+  "product": "KUMIHAN Polish",
+  "language": "pl",
+  "format_locale": "pl-PL",
+  "created_date_jst": "2026-10-19",
+  "status": "proposed",
+  "intended_use": "KUMIHANポーランド語版開発のための設計候補。機械可読な受入仕様のたたき台であり、実行エンジンや採択済み仕様ではない。",
+  "source_preservation": {
+    "author_source_immutable": true,
+    "source_normalization_autowrite": false,
+    "nbsp_autowrite": false,
+    "spelling_update_autowrite": false,
+    "requires_existing_edit_authorization": true,
+    "permission_note_ja": "原本と保護領域を保持する。表示用の派生値や提案差分は案件で与えられた編集範囲に従う。既存の許可に再承認を要求する仕様ではない。",
+    "render_only_definition_ja": "原稿を変更せず、許可された対象領域のCSS・表示用値だけを変更する。URL、コード、属性、外国語、引用への一括置換は行わない。"
+  },
+  "terminology": {
+    "check_type": "static=構造や設定の検査、observed=実環境観測が必要、manual=人による意味・字形確認、proposed=設計方針の候補。これは実行結果を表さない。",
+    "severity": "error=適用条件が確定した範囲の必須不整合、warning=実装上の懸念、review=文脈または実測を要する。severityは規則自体の採択状態ではない。",
+    "status": "全規則・全ケースはproposed。既存の観測があってもfixtureを実行済みにしない。",
+    "expected_diagnostic": "no_findingはその規則で指摘を期待しない意味。フォント/画面/原稿の包括的な合格ではない。"
+  },
+  "evidence_artifacts": {
+    "font_static.json": {
+      "path": "observations/font_static.json",
+      "sha256": "911b4cf60459b8a76ecb43c5a1b149befb5dc084aa3e3f61e823745e13fc8592",
+      "role": "prior_observation_not_fixture_execution"
+    },
+    "unicode_static.json": {
+      "path": "observations/unicode_static.json",
+      "sha256": "c442587e2e7d493e745708a5822ffdf25a87aebf4cd1d29d1915956525ec3b7b",
+      "role": "prior_observation_not_fixture_execution"
+    },
+    "intl_static.json": {
+      "path": "observations/intl_static.json",
+      "sha256": "d382838a0d66aa4aa46a2d1186fb060f6bfc2a62eff9d216b38a6f57564eba3f",
+      "role": "prior_observation_not_fixture_execution"
+    },
+    "intl_observations.json": {
+      "path": "observations/intl_observations.json",
+      "sha256": "c3d94f7b9d35c7eab4ba0d3c27bfbe2a47aeae9a8e8d5a01339139768b053af9",
+      "role": "prior_observation_not_fixture_execution"
+    }
+  },
+  "runtime_baseline": {
+    "node": "24.19.0",
+    "icu": "78.3",
+    "unicode": "17.0",
+    "cldr": "48.0",
+    "scope": "このローカルランタイムでの先行観測。ブラウザ全体の保証ではない。"
+  },
+  "source_policy_ja": "Unicode/W3C/CLDRは仕様・データ、GUMはSIプロファイル、企業資料はその企業のスタイルとして扱う。Microsoftの2024資料を2026の正書法規範として使わない。",
+  "document_type": "proposed_fixture_catalog",
+  "rule_catalog": "KUMIHAN_PL_Rules_20261019.json",
+  "fixture_count": 64,
+  "fixture_execution_summary": {
+    "executed": 0,
+    "not_run": 64,
+    "result": null
+  },
+  "fixtures": [
+    {
+      "id": "PL-FIX-001",
+      "rule_ids": [
+        "PL-FONT-01"
+      ],
+      "description_ja": "一般UI書体の18字収録",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_role": "ui",
+        "font_binary": "fonts/Lato-Regular.ttf",
+        "required_characters": "ĄąĆćĘęŁłŃńÓóŚśŹźŻż"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "当該ファイルのcmapに18字がある場合、この収録規則の指摘を出さない。",
+          "字形やブラウザ表示まで合格したとは扱わない。"
+        ],
+        "assertions": {
+          "required_covered_count": 18,
+          "render_quality_verified": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "font_static.json",
+          "json_pointer": "/results/0",
+          "assertion_ja": "Lato Regular 2.015の先行cmap検査では欠落0。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T20",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-002",
+      "rule_ids": [
+        "PL-FONT-01"
+      ],
+      "description_ja": "一般UI書体からŹだけが欠落する合成ケース",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_role": "ui",
+        "cmap_characters": "ĄąĆćĘęŁłŃńÓóŚśźŻż",
+        "fixture_data": "synthetic"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "Źの欠落を記録する。原稿からŹを削除しない。"
+        ],
+        "assertions": {
+          "missing_characters": [
+            "Ź"
+          ],
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T20",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-003",
+      "rule_ids": [
+        "PL-FONT-02"
+      ],
+      "description_ja": "ogonek接続を資料だけで判定できないケース",
+      "status": "proposed",
+      "source_urls": [
+        "https://glyphsapp.com/learn/localize-your-font-polish-kreska",
+        "https://www.twardoch.com/download/polishhowto/ogonek.html",
+        "https://www.twardoch.com/download/polishhowto/stroke.html"
+      ],
+      "input": {
+        "font_role": "heading",
+        "text": "ĄĘąę",
+        "font_size_px": 48,
+        "font_weight": 700,
+        "rendered_specimen": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "実際の字形標本を要求する検査項目として残す。",
+          "接続が悪い、良いのいずれも断定しない。"
+        ],
+        "assertions": {
+          "observation_status": "not_checked"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T14",
+        "T22"
+      ]
+    },
+    {
+      "id": "PL-FIX-004",
+      "rule_ids": [
+        "PL-FONT-03"
+      ],
+      "description_ja": "結合記号はあるがNFD描画証拠がない",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.unicode.org/reports/tr15/",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_binary": "fonts/NotoSans[wdth,wght].ttf",
+        "nfc_text": "ąćż",
+        "nfd_text": "ąćż",
+        "render_evidence": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "収録と描画を区別し、NFD位置合わせは未検証のままにする。"
+        ],
+        "assertions": {
+          "cmap_alone_proves_rendering": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "font_static.json",
+          "json_pointer": "/results/3",
+          "assertion_ja": "Noto Sans代表VFは3結合記号を収録。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T20",
+        "T10",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-005",
+      "rule_ids": [
+        "PL-FONT-04"
+      ],
+      "description_ja": "Latin Extended-Aだけを配信する誤設定",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "unicode_ranges": [
+          "U+0100-017F"
+        ],
+        "served_font_cmap": [
+          "U+0104",
+          "U+0105",
+          "U+0106",
+          "U+0107",
+          "U+0118",
+          "U+0119",
+          "U+0141",
+          "U+0142",
+          "U+0143",
+          "U+0144",
+          "U+015A",
+          "U+015B",
+          "U+0179",
+          "U+017A",
+          "U+017B",
+          "U+017C"
+        ],
+        "role": "body"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "Ó/óが必要な配信設定に不足する。"
+        ],
+        "assertions": {
+          "missing_required_codepoints": [
+            "U+00D3",
+            "U+00F3"
+          ]
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T20",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-006",
+      "rule_ids": [
+        "PL-FONT-01"
+      ],
+      "description_ja": "固定ロゴ専用書体を本文規則で不合格にしない",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_role": "fixed_logo_only",
+        "fixed_text": "KUMIHAN",
+        "cmap_characters": "KUMIHAN",
+        "used_for_body": false
+      },
+      "expected": {
+        "diagnostic": "not_applicable",
+        "behavior_ja": [
+          "本文/UIの18字必須規則を固定ロゴ専用に拡張しない。"
+        ],
+        "assertions": {
+          "general_polish_coverage_error": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T20",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-007",
+      "rule_ids": [
+        "PL-FONT-05"
+      ],
+      "description_ja": "PLK専用LangSysなし",
+      "status": "proposed",
+      "source_urls": [
+        "https://glyphsapp.com/learn/localize-your-font-polish-kreska",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_binary": "fonts/Lato-Regular.ttf",
+        "gsub_has_PLK": false,
+        "rendered_specimen": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "PLK不在をエラーにせず、必要な字形確認だけを未検証として残す。"
+        ],
+        "assertions": {
+          "missing_PLK_error": false,
+          "render_quality_verified": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "font_static.json",
+          "json_pointer": "/results/0/PLK_GSUB_present",
+          "assertion_ja": "falseを先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T14",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-008",
+      "rule_ids": [
+        "PL-FONT-06"
+      ],
+      "description_ja": "AlegreyaのU+202F未収録",
+      "status": "proposed",
+      "source_urls": [
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/alegreya/METADATA.pb",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_binary": "fonts/Alegreya[wght].ttf",
+        "required_space": "U+202F",
+        "cmap_has_U202F": false,
+        "cmap_has_U00A0": true,
+        "render_evidence": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "未収録を記録し、幅・改行は描画検証へ回す。"
+        ],
+        "assertions": {
+          "render_failure_asserted": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "font_static.json",
+          "json_pointer": "/results/5/punct_missing",
+          "assertion_ja": "U+202Fのみ検査記号集合内で未収録。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "F06",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-009",
+      "rule_ids": [
+        "PL-FONT-07"
+      ],
+      "description_ja": "Source Sansの既定200をRegular標本とする",
+      "status": "proposed",
+      "source_urls": [
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/METADATA.pb",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_family": "Source Sans 3",
+        "font_version": "3.052",
+        "font_role": "regular_specimen",
+        "font_axes": {
+          "wght_default": 200
+        },
+        "requested_weight": null,
+        "presentation_adjustment_authorized": true
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "表示用の標本ウェイト400を明示する候補を出す。原文は変えない。"
+        ],
+        "assertions": {
+          "suggested_weight": 400,
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "F02",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-010",
+      "rule_ids": [
+        "PL-FONT-07"
+      ],
+      "description_ja": "Source Sansで400を明示する",
+      "status": "proposed",
+      "source_urls": [
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/METADATA.pb",
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "input": {
+        "font_family": "Source Sans 3",
+        "font_version": "3.052",
+        "font_role": "regular_specimen",
+        "font_axes": {
+          "wght_default": 200,
+          "wght_min": 200,
+          "wght_max": 900
+        },
+        "requested_weight": 400
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "既定200の誤使用という指摘を出さない。字形品質を合格とした意味ではない。"
+        ],
+        "assertions": {
+          "weight_configuration_finding": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "F02",
+        "T12"
+      ]
+    },
+    {
+      "id": "PL-FIX-011",
+      "rule_ids": [
+        "PL-FONT-08"
+      ],
+      "description_ja": "フォント読込失敗時の画像がない",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-fonts-4/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "font_load_state": "failed",
+        "viewport": {
+          "width": 320,
+          "height": 640
+        },
+        "zoom": 2,
+        "render_evidence": null,
+        "layout_properties": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "代替フォントでの切れ・はみ出しは未観測とする。"
+        ],
+        "assertions": {
+          "fallback_render_status": "not_checked"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T12",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-012",
+      "rule_ids": [
+        "PL-FONT-08"
+      ],
+      "description_ja": "固定行箱だけで切れを断定しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-fonts-4/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "font_load_state": "loaded",
+        "text": "ĄĆĘŁŃÓŚŹŻ",
+        "layout_properties": {
+          "font_size_px": 24,
+          "height_px": 20,
+          "overflow": "hidden"
+        },
+        "viewport": {
+          "width": 320,
+          "height": 640
+        },
+        "zoom": 1,
+        "render_evidence": null
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "切れのリスクを示すが、実際の切れがあったと断定しない。"
+        ],
+        "assertions": {
+          "clipping_observed": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T12",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-013",
+      "rule_ids": [
+        "PL-I18N-01"
+      ],
+      "description_ja": "混在言語の指定",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.w3.org/TR/css-fonts-4/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "document_lang": "pl",
+        "locale": "pl-PL",
+        "mixed_language_nodes": [
+          {
+            "id": "quote",
+            "lang": "en",
+            "text": "Source Sans 3"
+          }
+        ]
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "ポーランド語本体と英語引用の内容言語を保持する。"
+        ],
+        "assertions": {
+          "global_PLK_override_added": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T12",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-014",
+      "rule_ids": [
+        "PL-I18N-01"
+      ],
+      "description_ja": "langなしの自動分割",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.w3.org/TR/css-fonts-4/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "document_lang": null,
+        "locale": "pl-PL",
+        "mixed_language_nodes": [],
+        "css": {
+          "hyphens": "auto"
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "本文の内容言語を明示する。ハイフネーションは設定だけで実測済みにしない。"
+        ],
+        "assertions": {
+          "suggested_lang": "pl",
+          "hyphenation_verified": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T12",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-015",
+      "rule_ids": [
+        "PL-I18N-02"
+      ],
+      "description_ja": "著者NFD原稿へのNFC自動書戻しを防ぐ",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.unicode.org/reports/tr15/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "source_text": "ą",
+        "source_utf8_hex": "61cca8",
+        "source_role": "authored_source",
+        "edit_authorization": false,
+        "proposed_transform": "NFC"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "原文は61cca8のまま保持する。比較用にNFCの派生値を作っても書き戻さない。"
+        ],
+        "assertions": {
+          "source_utf8_hex_after": "61cca8",
+          "comparison_candidate": "ą",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T10",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-016",
+      "rule_ids": [
+        "PL-I18N-03"
+      ],
+      "description_ja": "łをlへ置き換える処理をNFDと呼ばない",
+      "status": "proposed",
+      "source_urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt",
+        "https://www.unicode.org/reports/tr15/"
+      ],
+      "input": {
+        "input_text": "Łódź",
+        "normalization_operation": "NFD_then_strip_diacritics_for_display"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "NFDとASCII転写を区別し、表示原文のŁ/łを変えない。"
+        ],
+        "assertions": {
+          "l_stroke_nfd": [
+            "U+0141"
+          ],
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "unicode_static.json",
+          "json_pointer": "/rows/6",
+          "assertion_ja": "ŁのNFDはU+0141。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T20",
+        "T10"
+      ]
+    },
+    {
+      "id": "PL-FIX-017",
+      "rule_ids": [
+        "PL-I18N-04"
+      ],
+      "description_ja": "結合列をgraphemeで切り出す",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/reports/tr29/"
+      ],
+      "input": {
+        "text": "ąćł",
+        "segmentation_granularity": "grapheme",
+        "cut_index": 1,
+        "cut_index_unit": "grapheme"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "最初の表示単位はa+ogonek全体とする。"
+        ],
+        "assertions": {
+          "segments": [
+            "ą",
+            "ć",
+            "ł"
+          ],
+          "first_segment_codepoints": [
+            "U+0061",
+            "U+0328"
+          ]
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_static.json",
+          "json_pointer": "/nfdGraphemes",
+          "assertion_ja": "同じ3graphemeの先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T21",
+        "T11"
+      ]
+    },
+    {
+      "id": "PL-FIX-018",
+      "rule_ids": [
+        "PL-I18N-05"
+      ],
+      "description_ja": "基数カテゴリーの代表行列",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "values": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          11,
+          12,
+          14,
+          21,
+          22,
+          25,
+          101,
+          112,
+          122,
+          1.5
+        ],
+        "locale": "pl",
+        "visible_fraction_options": {},
+        "messages": {
+          "one": "{n} plik",
+          "few": "{n} pliki",
+          "many": "{n} plików",
+          "other": "{n} pliku"
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "値ごとに期待カテゴリーを選ぶ。この行列はカテゴリー選択だけを検査する。",
+          "1.5個のファイルを数えるUIを推奨する意味ではない。"
+        ],
+        "assertions": {
+          "categories": {
+            "0": "many",
+            "1": "one",
+            "2": "few",
+            "4": "few",
+            "5": "many",
+            "11": "many",
+            "12": "many",
+            "14": "many",
+            "21": "many",
+            "22": "few",
+            "25": "many",
+            "101": "many",
+            "112": "many",
+            "122": "few",
+            "1.5": "other"
+          }
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_static.json",
+          "json_pointer": "/plural",
+          "assertion_ja": "同じ値集合の先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-019",
+      "rule_ids": [
+        "PL-I18N-05"
+      ],
+      "description_ja": "21をoneにする誤り",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "numeric_value": 21,
+        "visible_fraction_options": {},
+        "actual_category": "one",
+        "messages": {
+          "one": "21 plik",
+          "many": "21 plików"
+        }
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "21はmanyを選ぶ。"
+        ],
+        "assertions": {
+          "expected_category": "many",
+          "candidate_text": "21 plików"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-020",
+      "rule_ids": [
+        "PL-I18N-05"
+      ],
+      "description_ja": "12をfewにする誤り",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "numeric_value": 12,
+        "visible_fraction_options": {},
+        "actual_category": "few"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "12はmanyを選ぶ。"
+        ],
+        "assertions": {
+          "expected_category": "many"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-021",
+      "rule_ids": [
+        "PL-I18N-05"
+      ],
+      "description_ja": "22をmanyにする誤り",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "numeric_value": 22,
+        "visible_fraction_options": {},
+        "actual_category": "many"
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "22はfewを選ぶ。"
+        ],
+        "assertions": {
+          "expected_category": "few"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-022",
+      "rule_ids": [
+        "PL-I18N-05"
+      ],
+      "description_ja": "小数数量のother",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "numeric_value": 1.5,
+        "visible_fraction_options": {
+          "maximumFractionDigits": 1
+        },
+        "messages": {
+          "one": "{n} godzina",
+          "few": "{n} godziny",
+          "many": "{n} godzin",
+          "other": "{n} godziny"
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "otherを選び、表示候補は1,5 godzinyとする。"
+        ],
+        "assertions": {
+          "expected_category": "other",
+          "candidate_text": "1,5 godziny"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-023",
+      "rule_ids": [
+        "PL-I18N-06"
+      ],
+      "description_ja": "表示1.0と既定PluralRulesの不一致",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "numeric_value": 1,
+        "number_format_options": {
+          "minimumFractionDigits": 1,
+          "maximumFractionDigits": 1
+        },
+        "plural_rule_options": {}
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "PluralRulesにも小数1桁の方針を反映する。"
+        ],
+        "assertions": {
+          "expected_visible_number": "1,0",
+          "expected_category": "other"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_static.json",
+          "json_pointer": "/decimal",
+          "assertion_ja": "既定oneと小数1桁otherの差を先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T21",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-024",
+      "rule_ids": [
+        "PL-I18N-07"
+      ],
+      "description_ja": "一般UIの4桁区切りを強制しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "numeric_value": 1234,
+        "locale": "pl-PL",
+        "format_options": {
+          "useGrouping": "auto"
+        },
+        "format_profile": "ui_cldr48"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "既定の出力1234を許容する。"
+        ],
+        "assertions": {
+          "expected_text": "1234"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_observations.json",
+          "json_pointer": "/numbers/0",
+          "assertion_ja": "1234とコードポイントを先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T21",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-025",
+      "rule_ids": [
+        "PL-I18N-07"
+      ],
+      "description_ja": "PLN金額とNBSP",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "numeric_value": 12345.67,
+        "locale": "pl-PL",
+        "format_options": {
+          "style": "currency",
+          "currency": "PLN"
+        },
+        "format_profile": "ui_cldr48"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "小数コンマとzł後置を生成し、空白種を保持する。"
+        ],
+        "assertions": {
+          "expected_text": "12 345,67 zł",
+          "space_codepoints": [
+            "U+00A0",
+            "U+00A0"
+          ]
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_static.json",
+          "json_pointer": "/money",
+          "assertion_ja": "同値の金額表示とpartsを先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T21",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-026",
+      "rule_ids": [
+        "PL-I18N-08"
+      ],
+      "description_ja": "一般UIの25%を許容",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf",
+        "https://www.gum.gov.pl/pl/aktualnosci/komunikaty/4003,Liczbe-i-towarzyszacy-jej-symbol-zapisujemy-z-odstepem.html",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "value": 0.25,
+        "value_kind": "ratio",
+        "format_profile": "ui_cldr48",
+        "source_role": "generated_ui"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "CLDR一般UI出力の25%をSIの規則で矯正しない。"
+        ],
+        "assertions": {
+          "expected_text": "25%",
+          "forced_space_added": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [
+        {
+          "kind": "local_static_observation",
+          "artifact": "intl_observations.json",
+          "json_pointer": "/percent",
+          "assertion_ja": "0.25→25%を先行観測。",
+          "fixture_executed": false,
+          "limits_ja": [
+            "先行観測の対象だけを表し、この草案ケースの実行結果ではない。"
+          ]
+        }
+      ],
+      "source_ids": [
+        "T16",
+        "T26",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-027",
+      "rule_ids": [
+        "PL-I18N-08"
+      ],
+      "description_ja": "SI百分率の25 NBSP %",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf",
+        "https://www.gum.gov.pl/pl/aktualnosci/komunikaty/4003,Liczbe-i-towarzyszacy-jej-symbol-zapisujemy-z-odstepem.html",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "value": 25,
+        "value_kind": "percent_value",
+        "format_profile": "si_gum",
+        "source_role": "generated_measurement"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "百分率の値25に空きを添える。25をもう一度100倍しない。"
+        ],
+        "assertions": {
+          "candidate_text": "25 %",
+          "source_value_preserved": true,
+          "behavior_basis": "GUM source; proposed fixture not executed"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T16",
+        "T26",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-028",
+      "rule_ids": [
+        "PL-I18N-08"
+      ],
+      "description_ja": "プロファイル不明の%へ自動矯正しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf",
+        "https://www.gum.gov.pl/pl/aktualnosci/komunikaty/4003,Liczbe-i-towarzyszacy-jej-symbol-zapisujemy-z-odstepem.html",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "value": 25,
+        "value_kind": "percent_value",
+        "format_profile": "unspecified",
+        "source_role": "authored_source",
+        "source_text": "25%",
+        "edit_authorization": false
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "UIかSIかを判断する情報がないため原文を保持する。"
+        ],
+        "assertions": {
+          "source_text_after": "25%",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T16",
+        "T26",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-029",
+      "rule_ids": [
+        "PL-I18N-09"
+      ],
+      "description_ja": "温度と平面角の空きの違い",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf"
+      ],
+      "input": {
+        "format_profile": "si_gum",
+        "source_role": "generated_measurement",
+        "measurements": [
+          {
+            "value": 80,
+            "unit": "°C",
+            "quantity_kind": "temperature"
+          },
+          {
+            "value": 45,
+            "unit": "°",
+            "quantity_kind": "plane_angle"
+          }
+        ]
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "温度は数値と単位を空ける。平面角は記号前の空きの例外を保つ。"
+        ],
+        "assertions": {
+          "candidate_texts": [
+            "80 °C",
+            "45°"
+          ],
+          "behavior_basis": "GUM source; proposed fixture not executed"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T16"
+      ]
+    },
+    {
+      "id": "PL-FIX-030",
+      "rule_ids": [
+        "PL-I18N-10"
+      ],
+      "description_ja": "予定時刻のタイムゾーン不足",
+      "status": "proposed",
+      "source_urls": [
+        "https://tc39.es/ecma402/",
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "input": {
+        "timestamp_or_date": "2026-10-19T09:30",
+        "locale": "pl-PL",
+        "time_zone": null,
+        "date_semantics": "local_appointment_time"
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "タイムゾーンを推測してUTCや別国時刻へ変換しない。"
+        ],
+        "assertions": {
+          "source_value_after": "2026-10-19T09:30",
+          "time_zone_assumed": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T21",
+        "T07"
+      ]
+    },
+    {
+      "id": "PL-FIX-031",
+      "rule_ids": [
+        "PL-COPY-01"
+      ],
+      "description_ja": "丁寧な本文と親しい指示の混在",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf",
+        "https://www.mbank.pl/o-nas/mkanon/"
+      ],
+      "input": {
+        "register_profile": "formal_Panstwo",
+        "speaker_role": "service",
+        "copy_sequence": [
+          "Dziękujemy Państwu.",
+          "Sprawdź swoje ustawienia."
+        ]
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "同一フローか、引用か、媒体別方針かを確認して調整候補を出す。親しい指示を全国的に誤りとは判定しない。"
+        ],
+        "assertions": {
+          "universal_grammar_error": false,
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T25",
+        "C01"
+      ]
+    },
+    {
+      "id": "PL-FIX-032",
+      "rule_ids": [
+        "PL-COPY-02"
+      ],
+      "description_ja": "未知の読者に男性過去形を用いる",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+      ],
+      "input": {
+        "copy_text": "Zapomniałeś hasła?",
+        "audience_context": {
+          "gender": "unknown"
+        },
+        "speaker_role": "service"
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "性別を示さない現在形の候補を提示する。"
+        ],
+        "assertions": {
+          "candidate_text": "Nie pamiętasz hasła?",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T23"
+      ]
+    },
+    {
+      "id": "PL-FIX-033",
+      "rule_ids": [
+        "PL-COPY-02"
+      ],
+      "description_ja": "利用者の性別を含まない保存報告",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+      ],
+      "input": {
+        "copy_text": "Zapisaliśmy zmiany.",
+        "audience_context": {
+          "gender": "unknown"
+        },
+        "speaker_role": "service_we"
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "利用者の性別を推測するという指摘を出さない。"
+        ],
+        "assertions": {
+          "gender_assumption_finding": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T23"
+      ]
+    },
+    {
+      "id": "PL-FIX-034",
+      "rule_ids": [
+        "PL-COPY-03"
+      ],
+      "description_ja": "英語式の数量語句連結",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "input": {
+        "message_template": [
+          "Dodano ",
+          {
+            "placeholder": "count"
+          },
+          " plik"
+        ],
+        "placeholder_contract": {
+          "count": "nonnegative_integer"
+        },
+        "plural_messages": null
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "数詞カテゴリーごとの全文メッセージを用意する提案を出す。"
+        ],
+        "assertions": {
+          "placeholder_value_changed": false,
+          "whole_message_templates_recommended": true
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T08"
+      ]
+    },
+    {
+      "id": "PL-FIX-035",
+      "rule_ids": [
+        "PL-COPY-06"
+      ],
+      "description_ja": "未知の都市名を格変化させる",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://poradniajezykowa.uw.edu.pl/porady/mowa-inkluzywna/",
+        "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+      ],
+      "input": {
+        "text": "w {city}",
+        "entity_type": "city",
+        "preferred_form": "Łódź",
+        "grammatical_context": "location_with_preposition",
+        "proposed_automatic_suffix": "e"
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "未知の活用を機械生成しない。別ラベルのMiasto: Łódźなどを候補として提示する。"
+        ],
+        "assertions": {
+          "candidate_text": "Miasto: Łódź",
+          "entity_value_after": "Łódź",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T24",
+        "T23"
+      ]
+    },
+    {
+      "id": "PL-FIX-036",
+      "rule_ids": [
+        "PL-COPY-04"
+      ],
+      "description_ja": "ダウンロード表記なのに案内ページへ進む",
+      "status": "proposed",
+      "source_urls": [
+        "https://allegro.pl/pomoc/dla-kupujacych/podstawy-kupowania/czym-jest-i-jak-dziala-koszyk-4GDdXb8KBSD",
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/linki-i-przyciski",
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/prosty-jezyk"
+      ],
+      "input": {
+        "label": "Pobierz plik ZIP",
+        "actual_action": "navigate_to_installation_guide",
+        "adjacent_context": ""
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "動作が導入案内であると分かる候補を出す。"
+        ],
+        "assertions": {
+          "candidate_label": "Zobacz instrukcję instalacji"
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "C04",
+        "C02",
+        "C07"
+      ]
+    },
+    {
+      "id": "PL-FIX-037",
+      "rule_ids": [
+        "PL-COPY-04",
+        "PL-COPY-01"
+      ],
+      "description_ja": "購入確定を文脈のない次へで表す",
+      "status": "proposed",
+      "source_urls": [
+        "https://allegro.pl/pomoc/dla-kupujacych/podstawy-kupowania/czym-jest-i-jak-dziala-koszyk-4GDdXb8KBSD",
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf",
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/linki-i-przyciski",
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/prosty-jezyk",
+        "https://www.mbank.pl/o-nas/mkanon/"
+      ],
+      "input": {
+        "label": "Dalej",
+        "actual_action": "confirm_purchase_and_start_payment",
+        "adjacent_context": "",
+        "register_profile": "consumer_ui",
+        "speaker_role": "user_confirmation"
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "確定結果と話者を明確にする提案を出す。法的適合判定として扱わない。"
+        ],
+        "assertions": {
+          "requires_action_specific_label": true,
+          "legal_compliance_verified": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "C04",
+        "T15",
+        "T25",
+        "C02",
+        "C07",
+        "C01"
+      ]
+    },
+    {
+      "id": "PL-FIX-038",
+      "rule_ids": [
+        "PL-COPY-05"
+      ],
+      "description_ja": "旧稿の引用に2026正書法更新を無許可適用",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf",
+        "https://www.unicode.org/reports/tr15/"
+      ],
+      "input": {
+        "source_role": "quotation",
+        "authored_year": 2025,
+        "source_text": "„Nie bój się spróbować”",
+        "edit_authorization": false,
+        "proposed_spelling_update": {
+          "target_rules_year": 2026,
+          "mode": "rewrite_quote_in_place"
+        }
+      },
+      "expected": {
+        "diagnostic": "error",
+        "behavior_ja": [
+          "引用を保持し、現行表記の必要性は編集注・対照案で扱う。"
+        ],
+        "assertions": {
+          "source_text_after": "„Nie bój się spróbować”",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T25",
+        "T10"
+      ]
+    },
+    {
+      "id": "PL-FIX-039",
+      "rule_ids": [
+        "PL-I18N-02",
+        "PL-COPY-05"
+      ],
+      "description_ja": "NBSPは許可済み表示層だけに限定",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf",
+        "https://www.unicode.org/reports/tr15/",
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "source_role": "authored_source",
+        "source_text": "w Warszawie",
+        "source_markup": "<p>w Warszawie</p><code>w = 1</code><a href=\"/?i=a&w=b\">link</a>",
+        "edit_authorization": {
+          "presentation_only": true,
+          "allowed_node_ids": [
+            "paragraph"
+          ]
+        },
+        "proposed_transform": {
+          "kind": "nbsp_for_one_letter_word",
+          "target_node_id": "paragraph"
+        },
+        "authored_year": null,
+        "proposed_spelling_update": false
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "保存原稿とコード・属性を保持し、許可済み段落の表示用派生値だけを候補にする。NBSPを挿入しただけで改行の合格にしない。"
+        ],
+        "assertions": {
+          "source_text_after": "w Warszawie",
+          "render_candidate": "w Warszawie",
+          "code_and_attributes_unchanged": true,
+          "line_break_verified": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T25",
+        "T10",
+        "T09"
+      ]
+    },
+    {
+      "id": "PL-FIX-040",
+      "rule_ids": [
+        "PL-COPY-06"
+      ],
+      "description_ja": "女性職業名を機械的に変更しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf",
+        "https://poradniajezykowa.uw.edu.pl/porady/mowa-inkluzywna/",
+        "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+      ],
+      "input": {
+        "text": "projektantka",
+        "entity_type": "occupation",
+        "preferred_form": "projektantka",
+        "grammatical_context": "person_self_description",
+        "proposed_transform": "convert_all_occupations_to_masculine_or_underscore_form"
+      },
+      "expected": {
+        "diagnostic": "review",
+        "behavior_ja": [
+          "本人の選択した女性形を保持する。男性形やアンダースコアの短縮形へ自動変更しない。"
+        ],
+        "assertions": {
+          "source_text_after": "projektantka",
+          "source_mutated": false
+        }
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "この草案fixtureは未実行。evidenceは別途実施済みの先行観測だけを参照する。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T15",
+        "T24",
+        "T23"
+      ]
+    },
+    {
+      "id": "PL-FIX-041",
+      "rule_ids": [
+        "PL-TYPE-01"
+      ],
+      "description_ja": "十分な幅の本文でwが行末にある",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/sieroty-na-koncu-wiersza"
+      ],
+      "input": {
+        "language": "pl",
+        "media": "web",
+        "role": "body",
+        "line_capacity_estimate": 60,
+        "rendered_lines": [
+          "Nowe wydarzenia i spotkania dla odwiedzających w",
+          "Warszawie."
+        ],
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "前置詞と後続語を一緒に読む候補を示し、幅と再描画を確認する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "T04"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-042",
+      "rule_ids": [
+        "PL-TYPE-01"
+      ],
+      "description_ja": "狭いボタンで一文字語を含む語句がはみ出す",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/sieroty-na-koncu-wiersza"
+      ],
+      "input": {
+        "language": "pl",
+        "role": "button",
+        "viewport_css_px": 320,
+        "observed_overflow": true,
+        "render_candidate": "w Międzynarodowym",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "より大きい改行不可領域を追加せず、配置と語句の役割を再検討する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "T04"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-043",
+      "rule_ids": [
+        "PL-TYPE-01"
+      ],
+      "description_ja": "コードのwを前置詞と誤認しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/sieroty-na-koncu-wiersza"
+      ],
+      "input": {
+        "language": "pl",
+        "role": "code",
+        "source_text": "w = 1",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": "w = 1",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "コードの文字とスペースを保持する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "T04"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-044",
+      "rule_ids": [
+        "PL-TYPE-02"
+      ],
+      "description_ja": "修飾関係を持つ長い見出し",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://otwarte.studio/portfolio/element-talks",
+        "https://www.transparent.agency/projects/msn"
+      ],
+      "input": {
+        "language": "pl",
+        "role": "heading",
+        "source_text": "Nowe spojrzenie na polską typografię",
+        "break_proposal": [
+          "Nowe spojrzenie na",
+          "polską typografię"
+        ],
+        "native_review": null,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": "Nowe spojrzenie na polską typografię",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "意味単位の候補を人が確認する。文字数だけで合否を付けない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "D08",
+        "D10"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-045",
+      "rule_ids": [
+        "PL-TYPE-03"
+      ],
+      "description_ja": "新規文章に英語の外側引用符",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+        "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/"
+      ],
+      "input": {
+        "language": "pl",
+        "source_role": "new_copy",
+        "text": "“Czytelność”",
+        "media": "web",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "外側を„…”にする候補を示す。保存原稿は書き換えない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T07",
+        "T05"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-046",
+      "rule_ids": [
+        "PL-TYPE-03"
+      ],
+      "description_ja": "JSONの直線引用符を保持",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+        "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/"
+      ],
+      "input": {
+        "language": "pl",
+        "source_role": "code",
+        "text": "{\"label\":\"Czytelność\"}",
+        "media": "web",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "構文の引用符を曲線引用符に置換しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T07",
+        "T05"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-047",
+      "rule_ids": [
+        "PL-TYPE-04"
+      ],
+      "description_ja": "出版社指定の内側»…«",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html",
+        "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/",
+        "https://journals.akademicka.pl/rocznikkrakowski/about/submissions"
+      ],
+      "input": {
+        "language": "pl",
+        "text": "„Tekst »cytatu«.”",
+        "house_style": {
+          "inner_open": "»",
+          "inner_close": "«"
+        },
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "指定の向きだけを理由にエラーにしない。句読法全体の合格を意味しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T07",
+        "T05",
+        "T17"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-048",
+      "rule_ids": [
+        "PL-TYPE-05"
+      ],
+      "description_ja": "複数機能のハイフン系記号",
+      "status": "proposed",
+      "source_urls": [
+        "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf",
+        "https://journals.akademicka.pl/rocznikkrakowski/about/submissions"
+      ],
+      "input": {
+        "language": "pl",
+        "fragments": [
+          "polsko-francuski",
+          "10–12",
+          "−5",
+          "https://example.com/a-b"
+        ],
+        "replace_all_hyphens": true,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "接続、範囲、負号、URLを別々に扱い、一括変換を中止する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T02",
+        "T17"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-049",
+      "rule_ids": [
+        "PL-TYPE-06"
+      ],
+      "description_ja": "langはあるが分綴辞書不明",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://rjp.pan.pl/dzielenie-wyrazow-przy-przenoszeniu/"
+      ],
+      "input": {
+        "language": "pl",
+        "css": {
+          "hyphens": "auto"
+        },
+        "browser": null,
+        "hyphenation_dictionary": null,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "言語資源が確認できるまで自動分綴の成功を宣言しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T09",
+        "T06"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-050",
+      "rule_ids": [
+        "PL-TYPE-06"
+      ],
+      "description_ja": "Segmenterを分綴辞書へ流用",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://rjp.pan.pl/dzielenie-wyrazow-przy-przenoszeniu/"
+      ],
+      "input": {
+        "language": "pl",
+        "api": "Intl.Segmenter",
+        "granularity": "grapheme",
+        "used_as": "hyphenation_dictionary",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "書記素クラスタと音節分割を分け、辞書の利用を検討する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T09",
+        "T06"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-051",
+      "rule_ids": [
+        "PL-TYPE-07"
+      ],
+      "description_ja": "原語のハイフン位置で分割",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow",
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow-zlozonych"
+      ],
+      "input": {
+        "language": "pl",
+        "source_text": "polsko-francuski",
+        "break_at_original_hyphen": true,
+        "house_style": "repeat_original_hyphen_at_next_line",
+        "render_engine_support": null,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": "polsko-francuski",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "次行頭再掲の対応を確認し、原本へハイフンを追加しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T18",
+        "T19"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-052",
+      "rule_ids": [
+        "PL-TYPE-07"
+      ],
+      "description_ja": "再配置後にも二重ハイフンが残る",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow",
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow-zlozonych"
+      ],
+      "input": {
+        "language": "pl",
+        "source_text": "polsko-francuski",
+        "copied_text": "polsko--francuski",
+        "layout_wrapped": false,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": "polsko-francuski",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "再配置後のコピー結果へ余分なハイフンが混入した差分を示す。原本変更の有無と原因は別に確認する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T18",
+        "T19"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-053",
+      "rule_ids": [
+        "PL-TYPE-08"
+      ],
+      "description_ja": "ナビ全体のbreak-all",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/",
+        "https://otwarte.studio/portfolio/element-talks"
+      ],
+      "input": {
+        "language": "pl",
+        "role": "navigation",
+        "text": "Zarządzaj rezerwacją",
+        "css": {
+          "word-break": "break-all",
+          "height": "32px"
+        },
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "語中分割と固定高さの組み合わせを見直し、実測する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T09",
+        "D08"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-054",
+      "rule_ids": [
+        "PL-TYPE-09"
+      ],
+      "description_ja": "HTML全体へのNBSP置換",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://www.w3.org/TR/css-text-3/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input": {
+        "source_markup": "<p lang=\"pl\">w Warszawie</p><code>w = 1</code><a href=\"/?w=1&i=2\">link</a>",
+        "transform_scope": "entire_html_string",
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": "<p lang=\"pl\">w Warszawie</p><code>w = 1</code><a href=\"/?w=1&i=2\">link</a>",
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "文書構造と言語範囲を認識し、属性・コードを保護する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "T09",
+        "A01"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-055",
+      "rule_ids": [
+        "PL-TYPE-09"
+      ],
+      "description_ja": "URLだけの緊急折返し",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki",
+        "https://www.w3.org/TR/css-text-3/",
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input": {
+        "role": "url",
+        "url": "https://example.com/very-long-reference",
+        "css": {
+          "overflow-wrap": "anywhere"
+        },
+        "scope": "url_element",
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "no_finding",
+        "behavior_ja": [
+          "本文へ継承せず、URL局所の折返し候補として扱う。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T03",
+        "T09",
+        "A01"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-056",
+      "rule_ids": [
+        "PL-TYPE-10"
+      ],
+      "description_ja": "両端揃えと分綴の観測不足",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "input": {
+        "language": "pl",
+        "role": "body",
+        "css": {
+          "text-align": "justify",
+          "letter-spacing": "0.12em"
+        },
+        "rendered_sample": null,
+        "hyphenation_dictionary": null,
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "字間値のみで悪いと断定せず、語間・分綴を実サイズで観測する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T09"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-057",
+      "rule_ids": [
+        "PL-TYPE-11"
+      ],
+      "description_ja": "撤回前の変更案を新規コピーへ使用",
+      "status": "proposed",
+      "source_urls": [
+        "https://rjp.pan.pl/komunikat-rady-jezyka-polskiego-przy-prezydium-pan-z-dnia-7-listopada-2025-r/",
+        "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf"
+      ],
+      "input": {
+        "source_role": "new_copy",
+        "source_checked_version": "2024-proposal",
+        "orthography_effective_year": 2026,
+        "suggested_variant": "Cieśnina Bosfor",
+        "language": "pl",
+        "media": "web",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "2025年11月の撤回と最終統合版を確認し、この旧提案を自動採用しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T01",
+        "T02"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-058",
+      "rule_ids": [
+        "PL-TYPE-11"
+      ],
+      "description_ja": "歴史資料の綴りを保持",
+      "status": "proposed",
+      "source_urls": [
+        "https://rjp.pan.pl/komunikat-rady-jezyka-polskiego-przy-prezydium-pan-z-dnia-7-listopada-2025-r/",
+        "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf"
+      ],
+      "input": {
+        "source_role": "historical_quote",
+        "source_year": 2015,
+        "apply_2026_spelling": true,
+        "source_edit_allowed": false,
+        "language": "pl",
+        "media": "web",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "warning",
+        "behavior_ja": [
+          "新規コピーの基準更新と既存引用の編集を分ける。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "T01",
+        "T02"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-059",
+      "rule_ids": [
+        "PL-LAYOUT-01"
+      ],
+      "description_ja": "狭幅で通常本文が横へはみ出す",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input": {
+        "viewport_css_px": 320,
+        "content_role": "article_body",
+        "two_dimensional_layout_needed": false,
+        "observed_horizontal_overflow": true,
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "欠落・横スクロールの原因を記録し、語句固定と領域を見直す。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "A01"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-060",
+      "rule_ids": [
+        "PL-LAYOUT-01"
+      ],
+      "description_ja": "図表の例外をページ全体へ拡張しない",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "input": {
+        "viewport_css_px": 320,
+        "exception_part": "data_table",
+        "exempt_entire_page": true,
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "例外を必要な図表に限定し、見出し・本文・操作を別に評価する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "A01"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-061",
+      "rule_ids": [
+        "PL-LAYOUT-02"
+      ],
+      "description_ja": "テキスト200%でラベル欠け",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+      ],
+      "input": {
+        "text_zoom_percent": 200,
+        "role": "button",
+        "observed_clipping": true,
+        "reflow_test_done": false,
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "操作内容が読める寸法に直し、リフロー試験を別に記録する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "A02"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-062",
+      "rule_ids": [
+        "PL-LAYOUT-03"
+      ],
+      "description_ja": "文字間隔の上書き試験が未実施",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html"
+      ],
+      "input": {
+        "author_line_height": 1.4,
+        "text_spacing_override_test": null,
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "既定行高1.4だけで不適合にせず、指定の上書き条件で欠落を確認する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "A03"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-063",
+      "rule_ids": [
+        "PL-LAYOUT-04"
+      ],
+      "description_ja": "見出しのみがページ末尾にある",
+      "status": "proposed",
+      "source_urls": [],
+      "input": {
+        "media": "document",
+        "page_end": "heading",
+        "next_paragraph_page": "next",
+        "table_row_split": false,
+        "language": "pl",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "見出しと次段落の保持を提案し、全ページで再確認する。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [],
+      "provenance_note_ja": "KUMIHAN独自の文書レビュー提案に対する合成ケース。",
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    },
+    {
+      "id": "PL-FIX-064",
+      "rule_ids": [
+        "PL-DESIGN-01"
+      ],
+      "description_ja": "3Dと英語作品の扱い",
+      "status": "proposed",
+      "source_urls": [
+        "https://www.podpunkt.pl/projects/krakow-national-museum-brand-identity",
+        "https://www.podpunkt.pl/projects/the-city-of-warsaw-logo",
+        "https://capitalics.wtf/en/case/warszawa",
+        "https://www.podpunkt.pl/projects/kotlina-natury",
+        "https://www.podpunkt.pl/projects/instytut-adama-mickiewicza-brand-identity",
+        "https://iam.pl/en/press/adam-mickiewicz-institute-refreshes-its-visual-language-new-visual-identity-iam-and-culturepl",
+        "https://mamastudio.pl/works/good-mood/",
+        "https://www.zabka.pl/zabka-wprowadza-nowa-marke-wlasna-good-mood/",
+        "https://www.uniforma.pl/projects/european-design-festival-2019",
+        "https://www.transparent.agency/projects/msn",
+        "https://zacheta.art.pl/pl/mediateka-i-publikacje/prawda-piekno-dobro-z-kolekcji-zachety-45",
+        "https://projektroku.pl/nominacje/2022-2023/proj-dla-inst-publicznych/warszawa-w-budowie-15-zimno-juz-bylo.html?source=73",
+        "https://mnw.pl/en/temporary-exhibitions/current/en-polish-posters-the-collection"
+      ],
+      "input": {
+        "reference": "D09",
+        "work_language": "en",
+        "uses_3d": true,
+        "intended_inference": "Polish word breaking",
+        "language": "pl",
+        "media": "web",
+        "source_role": "synthetic_fixture",
+        "text": null,
+        "context": {
+          "fixture_data": "synthetic",
+          "text_may_be_null_for_nontext_observations": true
+        }
+      },
+      "expected": {
+        "diagnostic": "needs_review",
+        "behavior_ja": [
+          "情報領域と表現の関係は参考にし、英語作品からPLの分綴を導かない。3Dの存在だけで除外しない。"
+        ],
+        "assertions": {}
+      },
+      "execution": {
+        "status": "not_run",
+        "result": null,
+        "executed_at": null,
+        "note_ja": "合成された受入候補。実際のエンジンでは未実行。"
+      },
+      "evidence": [],
+      "source_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D07",
+        "D09",
+        "D10",
+        "D11",
+        "D13",
+        "H01"
+      ],
+      "input_binding_note_ja": "textはsource_textまたはsource_markupの明示的な別名。表示観測・設定だけのケースではnull。context内のsyntheticは現実の実測結果ではないことを示す。"
+    }
+  ],
+  "font_fixture_materialization": "fonts/... は試験時の配置例。フォント本体は同梱しない。font_static.jsonの公式URLから取得し、SHA-256を照合して配置する。",
+  "input_contract_semantics_ja": "required_keysはinputに存在するキー。required_field_alternativesは各論理項目ごとに候補キーの少なくとも一つが必要。required_input_formsは少なくとも一形式の全キーを満たす。nullは明示的な未確認情報であり、検査済みの値ではない。"
+}

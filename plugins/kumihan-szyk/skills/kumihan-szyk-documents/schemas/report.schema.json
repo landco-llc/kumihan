@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "product",
+    "version",
+    "locale",
+    "source_role",
+    "original_sha256",
+    "original_bytes",
+    "source_preservation",
+    "findings",
+    "rendering",
+    "native_host",
+    "research_fixtures_executed"
+  ],
+  "properties": {
+    "product": {
+      "const": "KUMIHAN｜Szyk"
+    },
+    "version": {
+      "const": "0.1.0"
+    },
+    "locale": {
+      "enum": [
+        "pl",
+        "pl-PL"
+      ]
+    },
+    "source_role": {
+      "enum": [
+        "authored_source",
+        "new_copy",
+        "observed_layout",
+        "code"
+      ]
+    },
+    "original_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "original_bytes": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_preservation": {
+      "type": "object",
+      "required": [
+        "status",
+        "candidate_sha256",
+        "method"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        },
+        "candidate_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "method": {
+          "const": "exact-byte-comparison"
+        }
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "rule_id",
+          "status",
+          "method",
+          "evidence",
+          "proposal",
+          "source_sha256"
+        ],
+        "properties": {
+          "rule_id": {
+            "pattern": "^PL-[A-Z0-9-]+$"
+          },
+          "status": {
+            "enum": [
+              "needs-review",
+              "not-checked",
+              "passed",
+              "failed"
+            ]
+          },
+          "method": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "object"
+          },
+          "proposal": {
+            "type": "string"
+          },
+          "source_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "rendering": {
+      "const": "not-checked"
+    },
+    "editorial_review": {
+      "const": "needs-review"
+    },
+    "native_host": {
+      "const": "not-checked"
+    },
+    "complete_spellcheck": {
+      "const": false
+    },
+    "research_fixtures_executed": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

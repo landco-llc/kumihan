@@ -258,6 +258,30 @@ CARDS['vi']["de"] = ('Kiểu chữ tiếng Đức tôn trọng từ ghép dài, 
 CARDS['th']["de"] = ('การจัดวางตัวอักษรเยอรมันที่เคารพคำประสม เครื่องหมายอัญประกาศ และความต่างระหว่างภูมิภาค โดยรักษาต้นฉบับ', 'ดูเวอร์ชันภาษาเยอรมัน')
 
 
+# KUMIHAN｜Szyk — Polish v0.1.0 language edition; all gateway cards are generated
+# from this single registry instead of manually changing index/top pages.
+PRODUCTS["pl"] = dict(
+    name="Polski", lang="pl", brand="KUMIHAN｜Szyk", glyph="Ł",
+    label="PL · POLISH", version="v0.1.0",
+    pages={"pl":"kumihan-pl.html", "en":"kumihan-pl.en.html", "ja":"kumihan-pl.ja.html"})
+PL_CARD_COPY = {
+    "ja": ("ポーランド語の特殊文字、一文字語の行末、数値・引用符を扱い、原稿と意味を守る文字組みとデザイン。","ポーランド語版を見る"),
+    "en": ("Polish typography with accurate diacritics, meaningful wrapping and source-preserving design.","View the Polish edition"),
+    "zh-hant": ("尊重波蘭文特殊字母、換行與數字格式，兼顧原稿完整性的排版與設計。","前往波蘭文版"),
+    "zh-hans": ("尊重波兰语特殊字母、换行和数字格式，维护原稿完整性的排版与设计。","前往波兰语版"),
+    "ko": ("폴란드어 특수문자, 줄바꿈, 숫자 표기를 존중하고 원문을 지키는 타이포그래피와 디자인.","폴란드어 버전 보기"),
+    "th": ("การจัดวางตัวอักษรโปแลนด์ที่ใส่ใจเครื่องหมายกำกับ การตัดบรรทัดและตัวเลข โดยรักษาต้นฉบับ","ดูเวอร์ชันภาษาโปแลนด์"),
+    "ar": ("تنضيد بولندي يراعي الحروف المميزة وفواصل الأسطر وتنسيق الأرقام مع الحفاظ على النص الأصلي.","عرض النسخة البولندية"),
+    "es": ("Tipografía polaca que respeta los signos diacríticos, los saltos de línea y el contenido original.","Ver la edición en polaco"),
+    "fr": ("Typographie polonaise respectueuse des signes diacritiques, des retours à la ligne et du texte source.","Voir la version polonaise"),
+    "hi": ("पोलिश टाइपोग्राफी में विशेष अक्षरों, पंक्ति-विभाजन और मूल पाठ की अखंडता का ध्यान रखा जाता है।","पोलिश संस्करण देखें"),
+    "pt": ("Tipografia polonesa que respeita diacríticos, quebras de linha e o texto original.","Ver a edição em polonês"),
+    "vi": ("Thiết kế chữ tiếng Ba Lan chú trọng dấu phụ, ngắt dòng và giữ nguyên nội dung gốc.","Xem phiên bản tiếng Ba Lan"),
+}
+for _lang, _cards in CARDS.items():
+    _cards["pl"] = PL_CARD_COPY[_lang]
+
+
 def x(value):
     return escape(str(value), quote=True)
 
