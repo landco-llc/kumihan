@@ -1,0 +1,3 @@
+# Swahili Web guidance / Mwongozo wa Wavuti
+
+Use the appropriate `lang` attribute (`sw`, `sw-TZ`, `sw-KE` etc). Preserve `ng’` and original apostrophe codepoints. For human language default to `word-break:normal; overflow-wrap:normal; hyphens:manual;`. Do not set `word-break:break-all` on paragraphs. For machine tokens only, allow `overflow-wrap:anywhere`. Prefer flexible layout and height, avoid hidden clipping at 320px and with 200% text zoom. Validate actual fonts, image-embedded copy, CTA, alt and every language switch. Use proper HTML text for essential information. Swahili time is not an automatic offset of stored timestamps.

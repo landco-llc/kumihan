@@ -1,0 +1,194 @@
+[
+  {
+    "id": "F01",
+    "input": "ng / ng’ / ng’ombe",
+    "expected": "Keep graphemes and source characters intact",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F02",
+    "input": "ng'ombe / ng’ombe / ngʼombe",
+    "expected": "Distinguish code points and preserve original apostrophe",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F03",
+    "input": "ng‘ombe and a quoted sentence",
+    "expected": "Detect unsafe opening quote substitution",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F04",
+    "input": "namuwahisha / brand names / URL",
+    "expected": "Never insert arbitrary spaces inside Swahili words",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F05",
+    "input": "sw-TZ / sw-KE / sw-Arab / sw_KE",
+    "expected": "Use canonical supported locale and record script separately",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F06",
+    "input": "1234567.89 for sw, sw-TZ, sw-KE, sw-UG, sw-CD",
+    "expected": "Format using explicit locale; do not hardcode punctuation",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F07",
+    "input": "TZS / KES / UGX / CDF amounts",
+    "expected": "Explicit currency, rounding and NBSP",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F08",
+    "input": "2026-10-19T09:30:00Z with Africa/Dar_es_Salaam",
+    "expected": "Preserve instant/time zone and label civil versus Swahili time",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F09",
+    "input": "0 / 1 / 2 items, full UI sentence",
+    "expected": "Translate context-complete units; review inflection",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F10",
+    "input": "Swahili text plus English inside promotional image",
+    "expected": "Mark image text, alt text and CTA independently",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F11",
+    "input": "NI BALAAA! and regional Sheng",
+    "expected": "Respect approved brand/regional copy",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F12",
+    "input": "Tafuta / Hifadhi / validation error",
+    "expected": "Mark proposals as needs-review",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F13",
+    "input": "320, 375, 768, 1280 CSS pixels",
+    "expected": "Responsive UI without clipping",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F14",
+    "input": "200% text zoom",
+    "expected": "No dropped text or controls",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F15",
+    "input": "reflow plus spacing overrides",
+    "expected": "Avoid forced horizontal scrolling",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F16",
+    "input": "hyphens:manual vs hyphens:auto",
+    "expected": "No unverified dictionary claims",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F17",
+    "input": "Noto Sans / Source Sans 3 / fallback",
+    "expected": "Check glyphs and font fallback in the actual output",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F18",
+    "input": "sentence case vs uppercase heading",
+    "expected": "Judge case by purpose",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F19",
+    "input": "long chart legend and attribution",
+    "expected": "Wrap labels and keep unit/source",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F20",
+    "input": "A4 report with page breaks and footnotes",
+    "expected": "Compare text extraction and layout",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F21",
+    "input": "landscape/square/portrait social media",
+    "expected": "Keep CTA legible after resize",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F22",
+    "input": "slides / brochure / packaging dieline",
+    "expected": "Test output in physical medium",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F23",
+    "input": "contrast / keyboard / voice",
+    "expected": "Review contrast, focus and language in the actual host",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  },
+  {
+    "id": "F24",
+    "input": "OS/browser/CLDR/font upgrade",
+    "expected": "Record environment and delta",
+    "status": "not-checked",
+    "native_review": "not-checked",
+    "source": "KUMIHAN_SW_Research_Report_20261019"
+  }
+]
