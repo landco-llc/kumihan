@@ -86,7 +86,7 @@ class PublicTrialTests(unittest.TestCase):
             web, public, app, _ = fixture(Path(td))
             self.assertEqual(run(INSTALL, web).returncode, 0)
             with (public / "index.php").open("a", encoding="utf-8") as out:
-                out.write("\\n")
+                out.write("\n")
             result = run(ROLLBACK, web)
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("PUBLIC_FILE_CONTENT_MISMATCH_STOP", result.stdout)
