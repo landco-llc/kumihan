@@ -1,0 +1,505 @@
+{
+  "product": "KUMIHAN｜تراز",
+  "version": "0.1.0",
+  "locale": "fa-IR",
+  "rule_count": 32,
+  "source": "RESEARCH/FA KUMIHAN_FA_Research_Report_20261019_JA.md",
+  "note": "Static checks do not establish native-language or rendered success.",
+  "rules": [
+    {
+      "id": "FA-ENC-01",
+      "title": "Preserve ZWNJ and ZWJ",
+      "severity": "blocking",
+      "checks": [
+        "static"
+      ],
+      "requirement_ja": "原稿のU+200C ZWNJとU+200D ZWJを保持する。不可視文字・Format categoryの一括削除で消さない。",
+      "source_ids": [
+        "S03",
+        "S04"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-ENC-02",
+      "title": "Persian Kaf and Yeh",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "native"
+      ],
+      "requirement_ja": "新規の標準ペルシア語本文はک U+06A9とی U+06CCを使う。既存原稿の類似文字は候補検出にとどめ、引用・固有名詞を無条件置換しない。",
+      "source_ids": [
+        "S11"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-ENC-03",
+      "title": "Base letters over presentation forms",
+      "severity": "blocking",
+      "checks": [
+        "static"
+      ],
+      "requirement_ja": "通常の交換用テキストは基底文字で保存する。位置別字形や合字をArabic Presentation Formsで新規生成しない。旧原稿は検出して扱いを判断する。",
+      "source_ids": [
+        "S03"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-ENC-04",
+      "title": "Ezafe and Heh forms",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "native"
+      ],
+      "requirement_ja": "ペルシア語のheh上のezafeを新規生成する場合はهٔ U+0647 U+0654を使う。U+06C0やウルドゥー語用の字形を同一視しない。原稿修正は文脈校閲を伴う。",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-ENC-05",
+      "title": "Original bytes vs normalization",
+      "severity": "blocking",
+      "checks": [
+        "static"
+      ],
+      "requirement_ja": "Unicode正規化とペルシア語校正を分離する。正本を保存し、NFKCなどの互換正規化を文書全体へ無条件適用しない。",
+      "source_ids": [
+        "S07"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-ENC-06",
+      "title": "Grapheme-safe editing",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "切詰め・文字数制限・装飾で基底文字と結合記号を分断しない。grapheme clusterを基本にし、合字・カーソル動作は描画結果でも確認する。",
+      "source_ids": [
+        "S06"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-BIDI-01",
+      "title": "Explicit Persian lang and RTL direction",
+      "severity": "blocking",
+      "checks": [
+        "static"
+      ],
+      "requirement_ja": "ペルシア語を主言語とするHTMLは適切なlangとdir=rtlを別々に指定する。lang指定だけ、またはCSS directionだけで文書方向を代替しない。",
+      "source_ids": [
+        "S08"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-BIDI-02",
+      "title": "Maintain Unicode logical order",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "原稿を論理順序で保持する。文字列反転、括弧の手動反転、表示順序の書戻しでRTLを実装しない。",
+      "source_ids": [
+        "S02"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-BIDI-03",
+      "title": "Locally isolate LTR tokens",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "欧文名・URL・バージョンなど既知の逆方向句を過不足なく囲み、適切なdirを指定する。通常の混植修正にbdoやdirection overrideを使わない。",
+      "source_ids": [
+        "S09"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-BIDI-04",
+      "title": "Unknown-direction inserted text",
+      "severity": "advisory",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "方向が未知の挿入文字列にdir=autoまたはbdiを使う。ラテン字で始まるペルシア語タイトルなど、意図が既知の文字列はfirst-strong推定に任せない。",
+      "source_ids": [
+        "S09",
+        "S08"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-BIDI-05",
+      "title": "Punctuation and bidirectional text",
+      "severity": "blocking",
+      "checks": [
+        "render"
+      ],
+      "requirement_ja": "括弧・引用符・末尾句読点・数値が接する混植を文脈ごとに確認する。HTML内はマークアップを優先し、プレーンテキストのisolate制御は用途を限定する。",
+      "source_ids": [
+        "S02",
+        "S09"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-TYPE-01",
+      "title": "No tracking across joining text",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "接続筆記を壊す均等字間を適用しない。ペルシア語本文はletter-spacing: normalを提案初期値とし、伸長は書体・エンジン別の確認後に採用する。",
+      "source_ids": [
+        "S10"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-TYPE-02",
+      "title": "Do not split joining words",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "語内の接続途中へ字形処理を断つ要素境界を挿入しない。1文字ごとのinline-block、余白・border・baseline変更、不要なBidi isolationを点検する。",
+      "source_ids": [
+        "S10"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-TYPE-03",
+      "title": "Persian glyph and mark coverage",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "採用フォントにペルシア語字種・数字・必要な字形置換と配置があることを確認する。サブセットや機能無効化で必須接続・合字・mark配置を失わせない。",
+      "source_ids": [
+        "S14",
+        "S03"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-TYPE-04",
+      "title": "Word and ZWNJ line breaking",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "通常本文は語間折返しを基本にする。ZWNJをZWSPとして扱わず、本文全体へのbreak-allやanywhereによる語内分割を避ける。URLは別扱いにする。",
+      "source_ids": [
+        "S05",
+        "S25",
+        "S01"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-TYPE-05",
+      "title": "Contextual justification and Kashida",
+      "severity": "advisory",
+      "checks": [
+        "static",
+        "render",
+        "native"
+      ],
+      "requirement_ja": "両端揃えとkashidaは書体・行幅・媒体別に判断する。行長合わせのために原稿へTATWEELを繰り返し挿入せず、過剰な語間や白い川を避ける。",
+      "source_ids": [
+        "S01",
+        "S10"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-NUM-01",
+      "title": "Preserve numbering systems",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "表示用のペルシア数字と技術識別子を分ける。arabextはU+06F0–U+06F9とし、U+0660系との混同やURL・version・IDの一括数字置換を避ける。",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-NUM-02",
+      "title": "Locale-dependent separators",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "指定localeの数値書式を使う。ペルシア数字の小数点U+066Bと桁区切りU+066Cを混同せず、数値の元値と表示文字列を分ける。",
+      "source_ids": [
+        "S11",
+        "S12"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-NUM-03",
+      "title": "Calendar currency unit locale",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "native"
+      ],
+      "requirement_ja": "locale・calendar・numberingSystem・通貨/単位を明示して扱う。fa-IRとfa-AFの月名を混同せず、数字字形の変換で暦や金額単位を変更しない。",
+      "source_ids": [
+        "S12",
+        "S13"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-NUM-04",
+      "title": "Signs percentages telephone ordering",
+      "severity": "blocking",
+      "checks": [
+        "render"
+      ],
+      "requirement_ja": "負号・百分率・通貨・単位・範囲・電話番号を含む数値の表示とコピー順序を確認する。見た目に合わせて符号や数字を反転しない。",
+      "source_ids": [
+        "S02",
+        "S01"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-UI-01",
+      "title": "Semantic CSS and DOM order",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "start/endを用いてレイアウトを設計し、DOM・読み順・フォーカス順を維持する。RTL化を理由に全コンポーネントへ機械的なrow-reverseを追加しない。",
+      "source_ids": [
+        "S08",
+        "S15"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-UI-02",
+      "title": "Font shaping and reflow",
+      "severity": "blocking",
+      "checks": [
+        "render"
+      ],
+      "requirement_ja": "採用書体・fallback・ウェイトで点と結合記号を欠けさせない。200%拡大と320 CSS px相当のreflowを別条件として確認し、固定高さの切れを避ける。",
+      "source_ids": [
+        "S15",
+        "S01"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-UI-03",
+      "title": "Selectable accessible text",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "ページ言語と必要な言語切替を機械判定可能にする。読める本文を画像だけにせず、読み上げ・選択・コピーと必要な代替テキストを確認する。",
+      "source_ids": [
+        "S15"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-UI-04",
+      "title": "Round-trip input preservation",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "入力・貼付け・保存・再表示でZWNJ、結合記号、混植の論理順序を保持する。自由記述の方向とメール/URL/電話欄の方向を用途別に扱う。",
+      "source_ids": [
+        "S03",
+        "S08",
+        "S09"
+      ],
+      "automation": "static-candidate-only",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-DOC-01",
+      "title": "Compatible document shaping engine",
+      "severity": "blocking",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "印刷・文書制作ではArabic scriptの文脈字形とBidiに対応した組版エンジンを使う。ソフト名だけで成功判定せず、書体と設定を記録して実出力を確認する。",
+      "source_ids": [
+        "S17",
+        "S26"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-DOC-02",
+      "title": "PDF visual and copy evidence",
+      "severity": "blocking",
+      "checks": [
+        "render"
+      ],
+      "requirement_ja": "PDFを目視し、字形・点・結合記号・段落順序・検索・コピーを確認する。フォント埋込と本文の抽出可能性を用途に応じて確認し、表示正常だけで完了としない。",
+      "source_ids": [
+        "S17",
+        "S15"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-DOC-03",
+      "title": "Preserve editable artwork source",
+      "severity": "advisory",
+      "checks": [
+        "static",
+        "render"
+      ],
+      "requirement_ja": "ロゴ等をアウトライン化する場合も編集可能な元文字列を残す。本文全体のアウトライン化で検索・選択・アクセシビリティを失う設計を既定にしない。",
+      "source_ids": [
+        "S15"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-COPY-01",
+      "title": "Register and regional copy",
+      "severity": "advisory",
+      "checks": [
+        "native"
+      ],
+      "requirement_ja": "対象地域と読者を定めて語彙・呼び掛け・敬語・CTAを選ぶ。イラン向けコピーを確認なしにダリー語向けとして表示しない。",
+      "source_ids": [
+        "S01",
+        "S12"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-COPY-02",
+      "title": "Native-aware ZWNJ and Ezafe proofreading",
+      "severity": "advisory",
+      "checks": [
+        "static",
+        "native"
+      ],
+      "requirement_ja": "ZWNJの位置、分かち書き、ezafe、既存固有名詞の変更は校正候補として提示する。任意の新規コピーは母語話者の文法・自然さ確認を必要とする。",
+      "source_ids": [
+        "S11",
+        "S03"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-COPY-03",
+      "title": "Quotation and punctuation review",
+      "severity": "advisory",
+      "checks": [
+        "static",
+        "native"
+      ],
+      "requirement_ja": "引用符・句読点・見出しの切れ目を文脈で校閲する。« »等の地域書式は採用基準を定め、欧文・コード・引用文中の記号を一括置換しない。",
+      "source_ids": [
+        "S12",
+        "S03"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-DESIGN-01",
+      "title": "Purpose-led font choice",
+      "severity": "advisory",
+      "checks": [
+        "render",
+        "native"
+      ],
+      "requirement_ja": "本文・UI・見出し・ロゴの役割で書体を選ぶ。ペルシア語を理由に全文ナスタアリーク化せず、可読性・行高・ブランド文脈を確認する。",
+      "source_ids": [
+        "S01"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    },
+    {
+      "id": "FA-DESIGN-02",
+      "title": "Avoid template-like cultural decoration",
+      "severity": "advisory",
+      "checks": [
+        "render",
+        "native"
+      ],
+      "requirement_ja": "現地の実例と依頼の目的から構成を決める。装飾・書体・反復カードを自動的な地域記号として付けず、文字の階層と読みの流れを評価する。これは製品品質上の提案である。",
+      "source_ids": [
+        "D01",
+        "D03",
+        "D04"
+      ],
+      "automation": "guidance-or-host-observation",
+      "status": "proposed-for-v0.1.0"
+    }
+  ]
+}
