@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "private_archive_verified_pending_private_extract",
+  "status": "private_runtime_extracted_pending_configuration_and_web_php_checks",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -40,15 +40,18 @@
     "private_archive_present_ssh_verified": true,
     "private_runtime_target_clean_verified": true,
     "private_archive_integrity_verified": true,
-    "private_archive_extracted": false,
+    "private_archive_extracted": true,
     "private_runtime_ready": false,
-    "public_bootstrap_installed": false
+    "public_bootstrap_installed": false,
+    "private_required_files_verified": true,
+    "private_config_absent_verified": true,
+    "public_bootstrap_still_absent_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner's 2026-10-19 Mac SCP readback produced REMOTE_ARCHIVE_SHA_OK and REMOTE_ARCHIVE_BYTES_OK. Remote SSH archive is intact. MCP runtime still NOT EXTRACTED, NOT CONFIGURED and NOT DEPLOYED.",
-  "deployment_blocker": "Integrity gate PASS. Next: verify tar utility and expected clean private target, extract only inside the SSH-verified private runtime directory, check required files; no public bootstrap or config until subsequent gate. Other virtual host exposure and session-write behavior remain NOT_VERIFIED.",
+  "notes": "Owner ran pinned private-only extractor and observed all six PASS markers: tar preflight, extraction, required PHP SDK+registry files, config absent, public unchanged, MCP not public. Host PHP 8.5.11 private canary passed earlier. Do not assert live MCP.",
+  "deployment_blocker": "Private MCP source/vendor/registry extracted successfully; next verify private config location, actual Web PHP ability to load autoloader+registry and write sessions, plus other virtual-host isolation before installing public two-file bootstrap. Real MCP transport still NOT CHECKED.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -162,5 +165,24 @@
       "contains_runtime_config_php": false,
       "inspected_from": "Original pinned GitHub Actions staging artifact, compared to Owner's remote archive via matching SHA256"
     }
+  },
+  "private_extraction": {
+    "observed_at": "2026-10-19",
+    "evidence_source": "Owner's authenticated Lolipop SSH terminal output",
+    "markers": [
+      "PRIVATE_TAR_PREFLIGHT_OK",
+      "PRIVATE_RUNTIME_EXTRACTED",
+      "PRIVATE_REQUIRED_FILES_OK",
+      "PRIVATE_CONFIG_ABSENT",
+      "PUBLIC_BOOTSTRAP_UNCHANGED",
+      "MCP_NOT_PUBLIC"
+    ],
+    "required_files_present": true,
+    "config_not_created": true,
+    "public_bootstrap_not_created": true,
+    "http_mcp_tested": false,
+    "web_php_autoload_and_registry_tested": false,
+    "web_php_session_write_tested": false,
+    "other_virtual_hosts_isolation_tested": false
   }
 }
