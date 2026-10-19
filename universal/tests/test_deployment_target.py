@@ -14,9 +14,13 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "planned_not_provisioned")
+        self.assertEqual(d["status"], "owner_configured_pending_remote_verification")
+        self.assertEqual(d["provisioning"]["verification_type"], "owner_report_only")
+        self.assertTrue(d["provisioning"]["subdomain_created"])
+        self.assertTrue(d["provisioning"]["ssl_configured"])
         gates = d["flags"]
-        self.assertFalse(gates["subdomain_created"])
+        self.assertTrue(gates["subdomain_created"])
+        self.assertTrue(gates["ssl_configured_owner_reported"])
         self.assertFalse(gates["ssl_verified"])
         self.assertFalse(gates["host_end_to_end_verified"])
         self.assertFalse(gates["public_release_authorized"])
@@ -35,7 +39,7 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("OWNER HOST SETUP ON HOLD", guide)
+        self.assertIn("OWNER SETUP REPORTED", guide)
 
 if __name__ == "__main__":
     unittest.main()
