@@ -87,10 +87,13 @@ jobs:
           mkdir -p universal/server/runtime/sessions
           rm -f universal/server/runtime/config.php
           tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
-            public src vendor composer.json runtime/config.example.php runtime/registry.json runtime/sessions
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
       - name: Upload staging artifact
         uses: actions/upload-artifact@v4
         with:
           name: kumihan-universal-mcp-php85-staging
-          path: /tmp/kumihan-universal-mcp-staging.tar.gz
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
           retention-days: 14
