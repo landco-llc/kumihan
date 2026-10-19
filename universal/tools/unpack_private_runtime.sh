@@ -8,7 +8,7 @@ set -eu
 fail() { echo "$1"; exit 1; }
 
 test "$(uname -s)" = "Linux" || fail "NOT_LINUX_REMOTE"
-test -n "$FTP_ROOT" || fail "FTP_ROOT_UNSET"
+test -n "${FTP_ROOT:-}" || fail "FTP_ROOT_UNSET"
 cd "$FTP_ROOT" || fail "FTP_ROOT_NOT_FOUND"
 FTP_ROOT="$(pwd -P)"
 test "$(basename "$FTP_ROOT")" = "web" || fail "WRONG_FTP_ROOT"
