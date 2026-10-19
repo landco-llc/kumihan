@@ -12,7 +12,7 @@
     "observed_web_php_version": "8.5.11",
     "observed_web_php_sapi": "litespeed"
   },
-  "status": "private_preflight_clean_awaiting_staging_upload",
+  "status": "private_archive_transferred_integrity_not_yet_verified",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
@@ -35,13 +35,18 @@
     "private_candidate_ssh_write_verified": true,
     "private_candidate_exists_verified": true,
     "public_bootstrap_absent_verified": true,
-    "ephemeral_probe_files_absent_verified": true
+    "ephemeral_probe_files_absent_verified": true,
+    "private_archive_owner_transfer_completed": true,
+    "private_archive_present_ssh_verified": true,
+    "private_runtime_target_clean_verified": true,
+    "private_archive_integrity_verified": false,
+    "private_archive_extracted": false
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Latest SSH operator results: PRIVATE_DIR_OK PUBLIC_INDEX_EMPTY HTACCESS_EMPTY no residual probe/marker matches. PHP8.5.11 and private file read verified. Staging tarball not uploaded; MCP not deployed.",
-  "deployment_blocker": "Safe public bootstrap locations free, private candidate exists and probe files absent. Stage reviewed private tarball only, after inventory and ensuring it is not exposed by any other vhost. Do not add public files until private runtime verified.",
+  "notes": "Owner's Mac reported LOCAL_ARCHIVE_SHA_OK and scp runtime.tar.gz 100% 779KB. Remote script progressed past test -f and clean target checks then stopped at HASH_TOOL_UNAVAILABLE. No checksum comparison completed remotely; no archive extraction or public bootstrap installation.",
+  "deployment_blocker": "Transfer complete; SSH confirms archive exists and intended runtime targets are clean, but server-held file SHA-256 remains UNVERIFIED because sha256sum/openssl are not on the SSH PATH. Read back archive to Mac for full hash+byte comparison before extraction.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -124,5 +129,17 @@
     "public_probe_files": "none matched kmhn_private_probe_*.php at kmhn maxdepth1",
     "private_marker_files": "none matched .kmhn-read-* in private candidate maxdepth1",
     "scope_limit": "Only specified names/globs were checked; other files and alternate vhost exposure were not inventoried; no server artifact installed."
+  },
+  "transfer_evidence": {
+    "source": "Owner Mac SCP output plus authenticated Lolipop SSH fail-closed verification, 2026-10-19",
+    "local_zip_digest_verified": true,
+    "local_runtime_archive_digest_verified": true,
+    "scp_progress_reported": "100% (779KB)",
+    "remote_archive_present": true,
+    "private_target_vendor_src_public_absent": true,
+    "remote_sha256_check": "NOT_CHECKED_TOOL_UNAVAILABLE",
+    "remote_tool_detection": "Neither sha256sum nor openssl was available on the SSH PATH",
+    "secure_fallback": "SCP server archive back to the Owner Mac and verify with shasum -a 256 and cmp against the locally authenticated archive. No need for server-side hash tools.",
+    "remote_transfer_warning": "The SCP client printed SSH post-quantum KEX and RSA host-key update proof warnings. Confirm server identity via official host-key guidance; do not disable host-key verification."
   }
 }
