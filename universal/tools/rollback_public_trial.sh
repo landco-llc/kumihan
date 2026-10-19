@@ -20,8 +20,15 @@ for name in index.php .htaccess; do
   staged="$PRIVATE/.kmhn-public-stage/$name"
   test -f "$file" && test ! -L "$file" || fail "PUBLIC_FILE_CHANGED_OR_ABSENT"
   test -f "$staged" && test ! -L "$staged" || fail "STAGED_FILE_CHANGED_OR_ABSENT"
-  # Avoid dependencies unavailable on Lolipop (sha256sum, openssl, cmp).
-  test "$(cat "$file")" = "$(cat "$staged")" || fail "PUBLIC_FILE_CONTENT_MISMATCH_STOP"
+  # These two files are verified text fixtures. Require exact byte count and
+  # identical content; cmp is preferable if present, but not required on Lolipop.
+  if command -v cmp >/dev/null 2>&1; then
+    cmp -s "$file" "$staged" || fail "PUBLIC_FILE_CONTENT_MISMATCH_STOP"
+  else
+    command -v wc >/dev/null 2>&1 || fail "ROLLBACK_EXACT_COMPARE_UNAVAILABLE"
+    test "$(wc -c < "$file")" = "$(wc -c < "$staged")" || fail "PUBLIC_FILE_SIZE_MISMATCH_STOP"
+    test "$(cat "$file")" = "$(cat "$staged")" || fail "PUBLIC_FILE_CONTENT_MISMATCH_STOP"
+  fi
 done
 
 rm -f "$WEB/kmhn/index.php" || fail "INDEX_REMOVE_FAILED"
