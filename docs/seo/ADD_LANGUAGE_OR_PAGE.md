@@ -60,3 +60,15 @@ New HTML directories (for example `guides/`) are discovered recursively by `tool
 ## 2026-10-19 integration notice — English first and new social preview generator
 
 This runbook currently describes the pre-switch SEO baseline. Before using it for publication, read [RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md). The latest main has English `index.html`, Japanese `top-ja.html`, a `noindex` `top-en.html` alias, 22 gateway languages, and `site_share.py` as the shared localized OGP/Twitter generator with a 1200×630 preview image. All future language editions need to register their localized share description/locale and any Jekyll share data as appropriate, without duplicate OG/Twitter meta or a second share-copy registry. These changes are pending integration into Draft PR #93, not yet certified by its original 20/20 check.
+
+## 2026-10-19 v2 additions — future language and new packages
+
+**PR #100はmainへマージ済み。** 新たな言語/ページを作成する前に最新mainと [SEO W09–W15再レビュー](REVIEW_REFRESH_20261019_MAIN_73D2B01.md) を確認する。旧SEOブランチ由来の配布ZIP・skills/・plugin manifest・README・CHANGELOGへの巻戻しを禁止。
+
+- [ ] 今回の実装対象は現在のmainに存在するindexableページ。言語またはURLを推測して追加しない
+- [ ] トップの英語 `index.html` にroot canonical、`top-ja.html` に自己canonical、転送 `top-en.html` はnoindex/Sitemap除外
+- [ ] `tools/site_share.py` の locale/ABOUT と `_includes/share.html` のJekyllデータを各言語で照合
+- [ ] 将来のJekyll言語を追加した際に `_data/site_share.json` の未登録がJAフォールバックで隠れないよう監査FAILにする
+- [ ] OGP/Twitterは現行 `assets/kumihan-share.png` の1200×630、ローカライズ済み説明文を維持。SEOだけで上書きしない
+- [ ] ビルドに使う生成器が転送aliasを通常ページとしてSEO強制しないこと（説明文なしを正常と認めるのは明示aliasのみ）
+- [ ] ソースHTMLだけでなくJekyll最終公開HTMLでOGP、canonical、hreflang、JSON-LD、Sitemapを確認
