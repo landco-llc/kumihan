@@ -59,6 +59,22 @@ class Laras(unittest.TestCase):
    with zipfile.ZipFile(z) as f:
     self.assertIsNone(f.testzip())
     self.assertTrue(any(n.endswith("/SKILL.md") for n in f.namelist()))
+ def test_canonical_site_language_and_links(self):
+  css=(ROOT/"assets/laras-site.css").read_text(encoding="utf-8")
+  self.assertIn("hyphens: manual",css)
+  self.assertIn('html[lang="id"]',css)
+  for suffix,lang in (("","id"),(".en","en"),(".ja","ja")):
+   page=(ROOT/f"kumihan-id{suffix}.html").read_text(encoding="utf-8")
+   self.assertIn(f'<link rel="alternate" hreflang="{lang}"',page)
+   self.assertIn('href="assets/laras-site.css"',page)
+   for key in ("kumihan-id.html","kumihan-id.en.html","kumihan-id.ja.html"):
+    self.assertIn('href="'+key+'"',page)
+   for host in ("chatgpt","claude","gemini"):
+    path=ROOT/f"docs/install-laras-{host}{suffix}.html"
+    guide=path.read_text(encoding="utf-8")
+    self.assertIn(f'<html lang="{lang}">',guide)
+    self.assertIn('v0.1.0.zip',guide)
+    self.assertIn('docs/install-laras-'+host+suffix+'.html',guide)
  def test_site_and_guides(self):
   for suffix,lang in (("","id"),(".en","en"),(".ja","ja")):
    s=(ROOT/f"kumihan-id{suffix}.html").read_text(encoding="utf-8")
