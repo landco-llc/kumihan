@@ -37,7 +37,7 @@ final class LanguageRouter
 
     public function detect(string $text, string $language = 'auto', string $documentLang = ''): array
     {
-        if (!mb_check_encoding($text, 'UTF-8')) {
+        if (preg_match('//u', $text) !== 1) {
             return $this->unknown('invalid-utf8', []);
         }
         if (strlen($text) > 30000) {
