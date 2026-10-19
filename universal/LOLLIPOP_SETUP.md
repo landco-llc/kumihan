@@ -51,7 +51,7 @@ The private path must be accessible to PHP on this specific shared hosting accou
 
 ## SSH verification: distinguish local Mac from remote Lolipop
 
-The full path given in the Owner's account panel is a **server filesystem path**. It does NOT exist on the local Mac. The Lai@laismacbook ~ % prompt confirms a local shell. Results of cd, test -d kmhn, or test -w .. from that local shell are INVALID for Lolipop. A failed cd must stop the test; never continue in the previous working directory.
+The full path given in the Owner's account panel is a **server filesystem path**. It does NOT exist on the local Mac. A prompt containing a personal Mac hostname, rather than the authenticated Lolipop SSH host, indicates a local shell. Results of cd, test -d kmhn, or test -w .. from that local shell are INVALID for Lolipop. A failed cd must stop the test; never continue in the previous working directory.
 
 First log in over SSH, using the SSH server, account and password displayed in the Owner's private Lolipop control panel. Do NOT commit or paste account credentials:
 
