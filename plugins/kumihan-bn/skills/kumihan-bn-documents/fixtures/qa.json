@@ -1,0 +1,487 @@
+{
+  "version": "0.1.0",
+  "count": 60,
+  "note": "60 candidate cases for separate source, browser and accessibility verification. None claimed executed.",
+  "cases": [
+    {
+      "id": "BN-Q01",
+      "input": "কি কো কৌ",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q02",
+      "input": "কি কো কৌ",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q03",
+      "input": "কি কো কৌ",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q04",
+      "input": "ক্ষ জ্ঞ শ্র",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q05",
+      "input": "ক্ষ জ্ঞ শ্র",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q06",
+      "input": "ক্ষ জ্ঞ শ্র",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q07",
+      "input": "স্ত্র ক্ত গ্ধ",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q08",
+      "input": "স্ত্র ক্ত গ্ধ",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q09",
+      "input": "স্ত্র ক্ত গ্ধ",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q10",
+      "input": "র্য র‍্য র্‌য",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q11",
+      "input": "র্য র‍্য র্‌য",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q12",
+      "input": "র্য র‍্য র্‌য",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q13",
+      "input": "ক্‌ষ ক্ষ",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q14",
+      "input": "ক্‌ষ ক্ষ",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q15",
+      "input": "ক্‌ষ ক্ষ",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q16",
+      "input": "অ্যা এ্যা অ্যাঁ",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q17",
+      "input": "অ্যা এ্যা অ্যাঁ",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q18",
+      "input": "অ্যা এ্যা অ্যাঁ",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q19",
+      "input": "ৎ ত্‍",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q20",
+      "input": "ৎ ত্‍",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q21",
+      "input": "ৎ ত্‍",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q22",
+      "input": "ড় ড় ঢ় ঢ় য় য়",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q23",
+      "input": "ড় ড় ঢ় ঢ় য় য়",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q24",
+      "input": "ড় ড় ঢ় ঢ় য় য়",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q25",
+      "input": "বাংলা ভাষা",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q26",
+      "input": "বাংলা ভাষা",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q27",
+      "input": "বাংলা ভাষা",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q28",
+      "input": "০১২৩৪৫৬৭৮৯",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q29",
+      "input": "০১২৩৪৫৬৭৮৯",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q30",
+      "input": "০১২৩৪৫৬৭৮৯",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q31",
+      "input": "123456 OTP 012345",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q32",
+      "input": "123456 OTP 012345",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q33",
+      "input": "123456 OTP 012345",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q34",
+      "input": "৳ ১,৫০০ BDT",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q35",
+      "input": "৳ ১,৫০০ BDT",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q36",
+      "input": "৳ ১,৫০০ BDT",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q37",
+      "input": "₹ 2,500 INR",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q38",
+      "input": "₹ 2,500 INR",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q39",
+      "input": "₹ 2,500 INR",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q40",
+      "input": "রং রঙ",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q41",
+      "input": "রং রঙ",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q42",
+      "input": "রং রঙ",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q43",
+      "input": "আরও আরো",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q44",
+      "input": "আরও আরো",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q45",
+      "input": "আরও আরো",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q46",
+      "input": "ঢাকা কলকাতা",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q47",
+      "input": "ঢাকা কলকাতা",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q48",
+      "input": "ঢাকা কলকাতা",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q49",
+      "input": "AI ও ডিজাইন",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q50",
+      "input": "AI ও ডিজাইন",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q51",
+      "input": "AI ও ডিজাইন",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q52",
+      "input": "“বাংলা” — লেখা।",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q53",
+      "input": "“বাংলা” — লেখা।",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q54",
+      "input": "“বাংলা” — লেখা।",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q55",
+      "input": "https://example.org/a/b?c=d",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q56",
+      "input": "https://example.org/a/b?c=d",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q57",
+      "input": "https://example.org/a/b?c=d",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q58",
+      "input": "একটি দীর্ঘ বাংলা বাক্য যেখানে অর্থপূর্ণ শব্দের মাঝখানে কোনো অনিচ্ছাকৃত বিভাজন গ্রহণযোগ্য নয়",
+      "mode": "source_integrity",
+      "expected": "Exact protected Unicode sequence and data retained",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q59",
+      "input": "একটি দীর্ঘ বাংলা বাক্য যেখানে অর্থপূর্ণ শব্দের মাঝখানে কোনো অনিচ্ছাকৃত বিভাজন গ্রহণযোগ্য নয়",
+      "mode": "glyph_shaping",
+      "expected": "Shaping and combining marks render under actual fonts; not assumed from plain text",
+      "result": "not-checked",
+      "environment": null
+    },
+    {
+      "id": "BN-Q60",
+      "input": "একটি দীর্ঘ বাংলা বাক্য যেখানে অর্থপূর্ণ শব্দের মাঝখানে কোনো অনিচ্ছাকৃত বিভাজন গ্রহণযোগ্য নয়",
+      "mode": "responsive_reflow",
+      "expected": "At narrow viewport and enlarged text no content loss or clipped mark",
+      "result": "not-checked",
+      "environment": null
+    }
+  ]
+}
