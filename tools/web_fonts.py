@@ -194,20 +194,30 @@ LINKS = re.compile(r'<link rel="(?:preconnect|stylesheet)" href="[^"]*(?:fonts\.
                    r'.*?assets/kumihan-fonts\.css[^"]*">', re.S)
 
 
+def format_static(text, relative):
+            path = Path(relative)
+            lang = re.search(r'<html lang="([^"]+)"', text).group(1)
+            root = "../" if path.parent.name == "docs" else ""
+            new = head(lang, root)
+            # Replace each legacy Google or local font link independently.
+            # Metadata enrichment can split a contiguous original font block.
+            # Keep the shared stylesheet last so per-script rules take precedence.
+            font_link = re.compile(r'<link\b[^>]*\bhref="[^"]*(?:fonts\.(?:googleapis|gstatic)\.com|assets/fonts/google/|assets/kumihan-fonts\.css)[^"]*"[^>]*>', re.I)
+            text = font_link.sub('', text)
+            text = text.replace("</head>", new + "\n</head>", 1)
+            footer = FOOTER.footer(lang, root)
+            text = (FOOTER_TAG.sub(lambda _: footer, text, count=1) if FOOTER_TAG.search(text)
+                    else text.replace("</body>", footer + "\n</body>", 1))
+            from seo_metadata import enrich_html
+            return enrich_html(SHARE.apply(text), relative)
+
+
 def static_pages():
     out = {}
     for pattern in STATIC:
         for path in sorted(ROOT.glob(pattern)):
-            text = path.read_text(encoding="utf-8")
-            lang = re.search(r'<html lang="([^"]+)"', text).group(1)
-            root = "../" if path.parent.name == "docs" else ""
-            new = head(lang, root)
-            text = (LINKS.sub(lambda _: new, text) if LINKS.search(text)
-                    else text.replace("</head>", new + "\n</head>", 1))
-            footer = FOOTER.footer(lang, root)
-            text = (FOOTER_TAG.sub(lambda _: footer, text, count=1) if FOOTER_TAG.search(text)
-                    else text.replace("</body>", footer + "\n</body>", 1))
-            out[str(path.relative_to(ROOT))] = SHARE.apply(text)
+            relative = str(path.relative_to(ROOT))
+            out[relative] = format_static(path.read_text(encoding="utf-8"), relative)
     return out
 
 

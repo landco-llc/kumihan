@@ -10,6 +10,7 @@ fonts and link previews. privacy-ja.html, the first address of the Japanese
 text, forwards to privacy.html#ja.
 """
 import argparse
+from seo_adapter import seo_outputs
 import json
 import re
 from html import escape
@@ -176,6 +177,7 @@ def redirect(target):
 """
 
 
+@seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "privacy-copy.json").read_text(encoding="utf-8"))
     return {PAGE: page(copy), **{old: redirect(new) for old, new in REDIRECTS.items()}}

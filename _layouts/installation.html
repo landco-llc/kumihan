@@ -10,15 +10,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-{% if page.lang == 'zh-Hant-TW' %}
-{% capture share_title %}{{ page.title_zh }} | KUMIHAN{% endcapture %}{% capture share_description %}在繁體中文安裝指南中了解如何將 KUMIHAN 日文排版 AI 技能加入 {{ page.platform }}。本頁包含安裝步驟、下載連結與預覽版注意事項。{% endcapture %}
-  <link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-{{ page.guide_id }}.zh-tw.html">
-{% else %}
-{% capture share_title %}{{ page.title_ja }} | KUMIHAN{% endcapture %}{% capture share_description %}KUMIHANの{{ page.platform }}向け導入方法。日本語・英語で手順、ダウンロード先、注意事項を確認できます。{% endcapture %}
-{% endif %}
-  <meta name="description" content="{{ share_description }}">
-  <title>{{ share_title }}</title>
-{% include share.html title=share_title description=share_description %}
+{% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
   <style>
     :root {
       color-scheme: light;

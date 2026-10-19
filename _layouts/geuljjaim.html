@@ -5,14 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f5f3ee">
-<title>{{ page.title | escape }} | KUMIHAN｜글짜임</title>
-<meta name="description" content="{{ page.description | escape }}">
-<link rel="canonical" href="https://landco-llc.github.io/kumihan{{ page.canonical_path }}">
-<link rel="alternate" hreflang="ko-KR" href="https://landco-llc.github.io/kumihan{{ page.ko_path }}">
-<link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan{{ page.en_path }}">
-<link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan{{ page.ja_path }}">
-<link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan{{ page.ko_path }}">
-{% capture share_title %}{{ page.title }} | KUMIHAN｜글짜임{% endcapture %}{% include share.html title=share_title description=page.description %}
+{% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
 <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>

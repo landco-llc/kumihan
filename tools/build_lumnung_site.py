@@ -8,6 +8,7 @@ declare lang="km" and new Khmer copy uses the explicitly selected
 id-standard house style; supplied text is reproduced byte for byte and
 never normalized. Japanese copy follows kumihan-web.
 """
+from seo_adapter import seo_outputs
 import argparse
 import json
 from html import escape
@@ -174,6 +175,7 @@ def guide(host, lang, c):
     return FRAME.render(frame)
 
 
+@seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "lumnung-site-copy.json").read_text(encoding="utf-8"))
     files = {landing_path(lang): landing(lang, copy[lang]) for lang in LANGS}

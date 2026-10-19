@@ -1,0 +1,15 @@
+# GitHub Pages project-site URL; SEO canonical URLs share assets/seo-config.json.
+url: https://landco-llc.github.io
+baseurl: /kumihan
+exclude:
+  - tools
+  - scripts
+  - tests
+  - templates
+  - docs/specs
+  - docs/seo
+  - requirements-dev.txt
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

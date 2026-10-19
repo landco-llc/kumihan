@@ -9,6 +9,11 @@ lang="es", emit only es/en/ja alternates (no es-419), never hide overflow, and
 do not rely on hyphens:auto or break-all; supplied text is reproduced byte for
 byte. Japanese copy follows kumihan-web.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import json
 from html import escape
@@ -169,6 +174,7 @@ def guide(host, lang, c):
     return FRAME.render(frame)
 
 
+@seo_outputs
 def outputs():
     """The twelve pages (three landings, nine guides)."""
     copy = json.loads((ROOT / "assets" / "grafia-site-copy.json").read_text(encoding="utf-8"))

@@ -87,6 +87,11 @@ def installation(host,lang):
   gateway=('../'+FRAME.GATEWAYS[lang][0],FRAME.GATEWAYS[lang][1]))
  return FRAME.render(frame)
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_metadata import enrich_html
+
 def main():
  parser=argparse.ArgumentParser();parser.add_argument('--check',action='store_true');args=parser.parse_args()
  index={'th':render_th_thai_index,'en':render_th_english_index,'ja':render_th_japanese_index}
@@ -94,6 +99,7 @@ def main():
  files.update({guide(h,l):installation(h,l) for h in HOSTS for l in COPY})
  stale=[]
  for name,content in files.items():
+  content=enrich_html(content,name)
   path=ROOT/name
   if args.check:
    if not path.exists() or path.read_text()!=content:stale.append(name)

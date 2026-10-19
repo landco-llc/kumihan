@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Generated with product-specific KUMIHAN｜Nhịp Chữ skills after standalone Skills were completed.
 // No external dependencies. --check is non-writing; otherwise regenerate all twelve HTML files.
+import {execFileSync} from "node:child_process";
 import {readFileSync,writeFileSync} from "node:fs";
 // KUMIHAN index (language gateway) for each page language.
 const GATEWAY={vi:"top-vi.html",en:"index.html",ja:"top-ja.html"};
@@ -149,7 +150,8 @@ for(const lang of ["vi","en","ja"]){
 }
 const base=resolve(new URL("..",import.meta.url).pathname);
 let invalid=[];
-for(const [p,content] of Object.entries(out)){
+for(const [p,source] of Object.entries(out)){
+ const content=execFileSync(process.env.PYTHON || "python3",[resolve(base,"tools/seo_metadata.py"),p],{input:source,encoding:"utf8"});
  const filepath=resolve(base,p);
  if(process.argv.includes("--check")){
   if(readFileSync(filepath,"utf8")!==content)invalid.push(p);

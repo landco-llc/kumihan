@@ -10,6 +10,11 @@ on hyphens:auto or break-all. The site's own Polish copy keeps one-letter words
 (a, i, o, u, w, z) off line ends with a no-break space, added at render time so
 assets/szyk-site-copy.json stays as written. Japanese copy follows kumihan-web.
 """
+
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from seo_adapter import seo_outputs
 import argparse
 import json
 import re
@@ -187,6 +192,7 @@ def bind_one_letter_words(value):
     return value
 
 
+@seo_outputs
 def outputs():
     """The twelve pages (three landings, nine guides)."""
     copy = json.loads((ROOT / "assets" / "szyk-site-copy.json").read_text(encoding="utf-8"))

@@ -9,23 +9,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/favicon-192x192.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
-{% if page.lang == 'zh-Hant-TW' %}
-{% capture share_title %}KUMIHAN — 讓 AI 協助打造更自然的日文排版{% endcapture %}{% capture share_description %}KUMIHAN 是一套開放原始碼 AI 技能，協助製作與檢視日文網站、文章、報告及簡報，重視日文排版、可讀性及原始內容的完整性。{% endcapture %}
-  <link rel="canonical" href="https://landco-llc.github.io/kumihan/zh-tw.html">
-{% elsif page.lang == 'en' %}
-{% capture share_title %}KUMIHAN — Natural Japanese typography, made with AI{% endcapture %}{% capture share_description %}KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.{% endcapture %}
-  <link rel="canonical" href="https://landco-llc.github.io/kumihan/en.html">
-{% else %}
-{% capture share_title %}KUMIHAN — 日本語のデザインをもっと自然に{% endcapture %}{% capture share_description %}KUMIHANは、AIによる日本語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。{% endcapture %}
-  <link rel="canonical" href="https://landco-llc.github.io/kumihan/kumihan.html">
-{% endif %}
-  <meta name="description" content="{{ share_description }}">
-  <title>{{ share_title }}</title>
-{% include share.html title=share_title description=share_description %}
-  <link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/kumihan.html">
-  <link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/en.html">
-  <link rel="alternate" hreflang="zh-Hant-TW" href="https://landco-llc.github.io/kumihan/zh-tw.html">
-  <link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/kumihan.html">
+{% capture seo_include %}seo-pages/{{ page.path }}{% endcapture %}{% include {{ seo_include }} %}
+{% include share.html lang=seo_share_lang title=seo_share_title description=seo_share_description canonical=seo_canonical %}
   <style>
     :root {
       color-scheme: light;

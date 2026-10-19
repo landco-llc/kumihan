@@ -58,7 +58,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y jekyll
-          jekyll build --destination /tmp/geuljjaim-serve/kumihan --baseurl /kumihan --disable-disk-cache
+          JEKYLL_NO_BUNDLER_REQUIRE=true jekyll build --destination /tmp/geuljjaim-serve/kumihan --baseurl /kumihan --disable-disk-cache
       - name: Browser matrix and local links
         run: |
           python -m playwright install --with-deps chromium

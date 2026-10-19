@@ -16,6 +16,7 @@ import re
 from html import escape, unescape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
+from html.parser import HTMLParser
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = "https://landco-llc.github.io/kumihan/"
@@ -36,6 +37,10 @@ ABOUT = {k: v["description"] for k, v in
 
 
 def key(lang):
+    normalized = lang.lower()
+    # FOOTER deliberately falls back to JA for presentation; SEO must fail closed.
+    if normalized.split('-')[0] not in {k.split('-')[0] for k in LOCALES}:
+        raise ValueError(f'Unregistered share language: {lang}')
     return FOOTER.key(lang)
 
 
@@ -77,18 +82,33 @@ def tags(lang, title, desc, url):
 
 def apply(html):
     """`html` with the shared tags; the page's canonical link is its address."""
-    lang = re.search(r'<html\b[^>]*\slang="([^"]+)"', html).group(1)
-    title = unescape(re.search(r"<title>(.*?)</title>", html, re.S).group(1).strip())
-    meta = re.search(r'<meta\b(?=[^>]*\sname="description")[^>]*\scontent="([^"]*)"', html)
-    page = unescape(meta.group(1)) if meta else ""
-    url = unescape(re.search(r'<link\b(?=[^>]*\srel="canonical")[^>]*\shref="([^"]*)"', html).group(1))
-    html = TAG.sub(lambda m: "" if SHARED.search(m.group(0)) else m.group(0), html)
-    return html.replace("</head>", tags(lang, title, description(lang, page), url) + "\n</head>", 1)
+    class Head(HTMLParser):
+        def __init__(self):
+            super().__init__(); self.lang = ''; self.title = ''; self.page = ''; self.url = ''; self.in_title = False
+        def handle_starttag(self, tag, attrs):
+            a = dict(attrs)
+            if tag == 'html': self.lang = a.get('lang', '')
+            if tag == 'title': self.in_title = True
+            if tag == 'meta' and a.get('name', '').lower() == 'description': self.page = a.get('content', '')
+            if tag == 'link' and a.get('rel') == 'canonical': self.url = a.get('href', '')
+        def handle_data(self, data):
+            if self.in_title: self.title += data
+        def handle_endtag(self, tag):
+            if tag == 'title': self.in_title = False
+    head = Head(); head.feed(html.split('</head>', 1)[0])
+    def remove(match):
+        class Attributes(HTMLParser):
+            def handle_starttag(self, tag, attrs): self.attrs = dict(attrs)
+        parser = Attributes(); parser.feed(match[0])
+        key = (parser.attrs.get('property') or parser.attrs.get('name') or '').lower()
+        return '' if key.startswith(('og:', 'twitter:')) else match[0]
+    html = re.sub(r'[ \t]*<meta\b[^>]*>\n?', remove, html, flags=re.I)
+    return html.replace('</head>', tags(head.lang, head.title.strip(), description(head.lang, head.page), head.url) + '\n</head>', 1)
 
 
 def data():
     """Per page language for the Jekyll layouts: KUMIHAN's description and the og:locale."""
-    langs = ["ja", "en", "ko-KR", "zh-Hant-TW", "zh-Hans-CN", "vi", "sw"]
+    langs = sorted(set(LOCALES) | {"ko-KR", "zh-Hant-TW", "zh-Hans-CN"})
     return {lang: {"about": ABOUT[key(lang)], "separator": separator(ABOUT[key(lang)]), "locale": locale(lang)}
             for lang in langs}
 
