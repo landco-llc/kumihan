@@ -48,6 +48,11 @@ jobs:
       - name: Install pinned SDK series
         working-directory: universal/server
         run: composer install --no-interaction --prefer-dist --no-dev --no-progress
+      - name: Audit resolved Composer dependencies
+        working-directory: universal/server
+        run: |
+          composer validate --no-check-publish --strict
+          composer audit --locked --no-dev --format=plain
       - name: PHP registry, routing and review smoke
         run: php universal/server/tests/smoke.php
       - name: Prepare test-only HTTP config
