@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-fa",
+  "version": "0.1.0",
+  "description": "مهارت‌هایی برای حروف‌چینی و طراحی فارسی با حفظ متن اصلی، نیم‌فاصله و ترتیب خواندن؛ بررسی فنی از نمایش واقعی جداست. | Open-source skills for Persian typography and design, preserving source text, ZWNJ and logical order while separating static checks from observed rendering.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/landco-llc/kumihan",
+  "locale": "fa",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜تراز",
+        "shortDescription": "حروف‌چینی فارسی با حفظ متن | Persian typography with source integrity",
+        "longDescription": "مهارت‌هایی برای حروف‌چینی و طراحی فارسی با حفظ متن اصلی، نیم‌فاصله و ترتیب خواندن؛ بررسی فنی از نمایش واقعی جداست. | Open-source skills for Persian typography and design, preserving source text, ZWNJ and logical order while separating static checks from observed rendering.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-fa.html",
+        "defaultPrompt": [
+          "متن فارسی این صفحه را بدون تغییر اصل بررسی کن.",
+          "Review Persian typography without modifying source."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
