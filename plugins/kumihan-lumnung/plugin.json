@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-lumnung",
+  "version": "0.1.0",
+  "description": "KUMIHAN｜លំនឹង ផ្តល់គោលការណ៍សម្រាប់ការរៀបចំអក្សរខ្មែរ និងការរចនាដែលសមនឹងគោលបំណង ដោយរក្សាអត្ថបទដើម។ | Open-source Khmer typography and purposeful design guidance for web, documents and graphics. It preserves source text, protects conjuncts and records what has not been verified.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜លំនឹង",
+        "shortDescription": "អក្សរខ្មែរ | Khmer typography",
+        "longDescription": "KUMIHAN｜លំនឹង ផ្តល់គោលការណ៍សម្រាប់ការរៀបចំអក្សរខ្មែរ និងការរចនាដែលសមនឹងគោលបំណង ដោយរក្សាអត្ថបទដើម។ | Open-source Khmer typography and purposeful design guidance for web, documents and graphics. It preserves source text, protects conjuncts and records what has not been verified.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-km.html",
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}
