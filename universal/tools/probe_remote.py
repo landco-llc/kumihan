@@ -117,10 +117,21 @@ def mcp_probe(endpoint: str) -> None:
         "method": "tools/call",
         "params": {"name": "kumihan_list_languages", "arguments": {}},
     }, session)
-    if "result" not in result or "21" not in json.dumps(result["result"]):
+    payload = result.get("result", {})
+    data = payload.get("structuredContent")
+    if not isinstance(data, dict):
+        for item in payload.get("content", []):
+            if item.get("type") == "text":
+                try:
+                    data = json.loads(item.get("text", ""))
+                except json.JSONDecodeError:
+                    continue
+                if isinstance(data, dict):
+                    break
+    if not isinstance(data, dict) or not isinstance(data.get("languages"), list) or not data["languages"]:
         raise RuntimeError("MCP language list was not returned as expected")
     print("MCP_PASS endpoint=" + endpoint + " server=" + server
-          + " tools=" + str(len(names)) + " registry=present")
+          + " tools=" + str(len(names)) + " modules=" + str(len(data["languages"])))
 
 
 def main() -> int:
