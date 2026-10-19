@@ -142,6 +142,211 @@ jobs:
             exit 1
           fi
           grep -q 'PUBLIC_DIR_HAS_OTHER_FILES_REVIEW' /tmp/kmhn-public-preflight-reject.log
+      - name: Read-only full-web scan diagnostic regression
+        run: |
+          set -eu
+          sh -n universal/tools/diagnose_public_symlink_scan.sh
+          BASE="$RUNNER_TEMP/kmhn-symlink-diagnostics"
+          mkdir -p "$BASE/web/kmhn"
+          FTP_ROOT="$BASE/web" sh universal/tools/diagnose_public_symlink_scan.sh >/tmp/kmhn-symlink-empty.log
+          grep -q '^KMHN_SYMLINK_SCOPE_CLEAR        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14
+ /tmp/kmhn-symlink-empty.log
+          grep -q '^WEB_WIDE_SYMLINK_SCAN_CLEAR        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14
+ /tmp/kmhn-symlink-empty.log
+          test ! -e "$BASE/web/kmhn/index.php"
+          ln -s /nonexistent-privileged-target "$BASE/web/other-site-alias"
+          FTP_ROOT="$BASE/web" sh universal/tools/diagnose_public_symlink_scan.sh >/tmp/kmhn-symlink-one.log
+          grep -q '^KMHN_SYMLINK_SCOPE_CLEAR        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14
+ /tmp/kmhn-symlink-one.log
+          grep -q '^WEB_WIDE_SYMLINKS_NEED_REVIEW        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14
+ /tmp/kmhn-symlink-one.log
+          grep -q '^NO_FILES_CHANGED        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14
+ /tmp/kmhn-symlink-one.log
       - name: Public domain TLS preflight (informational, not a release gate)
         run: |
           echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
