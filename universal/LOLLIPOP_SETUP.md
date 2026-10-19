@@ -73,6 +73,26 @@ Create the sessions directory as writable by PHP; avoid world-writable 777. PHP 
 6. Verify the response and error headers, Origin / DNS-rebinding controls, WAF, 4xx/5xx, request size 64 KiB cap, request concurrency, session persistence across PHP workers, and hosting timeouts. Never log full user content.
 7. Record the tested domain, PHP extensions, current revision, SDK version, CI artifact hash, rollback artifact and Owner approval before publishing/installing plugin packages.
 
+### Remote verification commands (do not paste credentials)
+
+After the Owner's DNS/SSL configuration, a terminal **with public Internet DNS access** can validate HTTPS before uploading PHP:
+
+```sh
+python3 universal/tools/probe_remote.py --mode tls
+```
+
+Only after uploading the MCP runtime and configuring private `runtime/config.php` should full MCP protocol testing be run:
+
+```sh
+python3 universal/tools/probe_remote.py --mode mcp
+```
+
+The probe uses only harmless static test requests and does not send real user documents. It checks a trusted TLS certificate for the exact hostname, invokes MCP initialize, then tools/list and kumihan_list_languages. If TLS fails, do not declare DNS/SSL verified. If TLS passes but MCP returns 404/503, continue deployment/config investigation; SSL success alone is not proof of the MCP service.
+
+The GitHub Actions `Universal MCP PHP 8.5` staging artifact contains `kumihan-universal-mcp-staging.tar.gz` and its SHA-256 checksum. It bundles the PHP vendor dependencies, generated language registry and a **public-file-only** folder tree; it does not contain user secrets or a production `runtime/config.php`. Check the checksum before uploading, and put only the `public/` contents inside the registered subdomain's *actual* web root. Place `src/`, `vendor/` and `runtime/` in the corresponding private sibling folders. Composer lock is bundled for dependency reproducibility; production source pinning/audit remains a release gate.
+
+If the configured public folder differs from `mcp-service/public`, do not change the domain mapping just to match this example. Determine the real folder first.
+
 ## 4. Decisions / TODO
 
 - Production domain / subdomain: **mcp-kmhn.landco.co.jp**, Owner reports subdomain already created. Remote DNS remains unverified in this session.
