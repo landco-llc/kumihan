@@ -376,6 +376,12 @@ def page(key, c):
     file, html_lang, _, _ = GATEWAYS[key]
     alternates = "".join(f'<link href="{f}" hreflang="{l}" rel="alternate"/>' for k, (f, l, _, _) in GATEWAYS.items())
     card_html, count = cards(key)
+    # Preserve the two independently published Bangla cards verbatim. They
+    # predate registry integration and are outside this edition's rewrite scope.
+    for card in c.get("preserved_parallel_cards", []):
+        anchor = 'aria-labelledby="language-' + card["after"] + '"'
+        end = card_html.index("</article>\n", card_html.index(anchor)) + len("</article>\n")
+        card_html = card_html[:end] + card["html"] + card_html[end:]
     more = (f'<div class="more-row"><button type="button" class="more-languages" data-label="{x(UI[key]["more"])}">'
             f'{x(UI[key]["more"].replace("{n}", str(min(STEP, count - VISIBLE))))}</button></div>' if count > VISIBLE else "")
     return f"""<!doctype html>
