@@ -10,20 +10,31 @@
     "php_version": "8.5",
     "deployment_mode": "PHP request lifecycle (no daemon)"
   },
-  "status": "planned_not_provisioned",
-  "configuration_blocker": "Lolipop emergency maintenance on 2026-10-19: user-control-panel functions stopped; do not infer a restoration time",
+  "status": "owner_configured_pending_remote_verification",
+  "configuration_blocker": null,
   "flags": {
-    "subdomain_created": false,
+    "subdomain_created": true,
     "ssl_verified": false,
     "php85_verified_on_target": false,
     "dns_verified": false,
     "github_staging_ci_verified": true,
     "host_end_to_end_verified": false,
     "client_connection_verified": false,
-    "public_release_authorized": false
+    "public_release_authorized": false,
+    "ssl_configured_owner_reported": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "mcp-service/public",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Domain designated by owner on 2026-10-19. Do not distribute endpoint-based plugin artifacts or claim service is available until host and MCP end-to-end tests pass."
+  "notes": "Owner reports hostname and SSL configured. Public DNS, TLS, PHP 8.5 effective runtime, document root, and live MCP handshake remain unverified. Do not distribute endpoint-bound plugin packages or declare production until tests pass.",
+  "deployment_blocker": "No verified document-root path or deployment access; PHP MCP has not been uploaded and HTTPS MCP protocol tests have not run on Lolipop.",
+  "provisioning": {
+    "reported_by": "Owner",
+    "reported_at": "2026-10-19",
+    "subdomain_created": true,
+    "ssl_configured": true,
+    "verification_type": "owner_report_only",
+    "network_tls_probe": "NOT_CHECKED",
+    "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint."
+  }
 }
