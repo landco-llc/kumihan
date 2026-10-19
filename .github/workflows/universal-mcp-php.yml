@@ -88,10 +88,12 @@ jobs:
           echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
           if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
             echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
-            cat /tmp/kumihan-tls.log >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
           else
             echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
-            sed -n '1,8p' /tmp/kumihan-tls.log >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
           fi
       - name: Prepare non-secret deploy artifact
         run: |
