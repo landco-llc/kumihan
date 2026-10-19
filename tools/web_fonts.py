@@ -38,6 +38,8 @@ SCRIPTS = {
     # assets/fonts) ahead of the Google copy, so pages that define it never fetch twice.
     "hi": ('"Kohinoor Devanagari", "Nirmala UI", "Kumihan Devanagari"', '"Kohinoor Devanagari", "Nirmala UI"',
            "Noto Sans Devanagari", "Noto Serif Devanagari"),
+    # Russian Cyrillic: system fonts first, Noto fallback for full script coverage.
+    "ru": ('"PT Sans", "Segoe UI", Arial', '"PT Serif", Georgia', "Noto Sans", "Noto Serif"),
     # Vietnamese: Be Vietnam Pro is drawn for Vietnamese stacked diacritics.
     "vi": ('"Helvetica Neue", "Segoe UI", Roboto', "Georgia", "Be Vietnam Pro", "Noto Serif"),
 }
@@ -48,7 +50,7 @@ AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..9
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
         "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900"}
 # Page language (html lang attribute) -> script key
-LANGS = {"de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
+LANGS = {"ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi"}
 # Characters of language and product names shown on pages of other languages.
@@ -118,7 +120,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi"):
+    for key in ("ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "ru"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")

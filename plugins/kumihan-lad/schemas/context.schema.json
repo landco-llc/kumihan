@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "locale",
+    "medium",
+    "mode",
+    "protected_spans",
+    "authorized_change_scope"
+  ],
+  "properties": {
+    "locale": {
+      "enum": [
+        "ru",
+        "ru-RU"
+      ]
+    },
+    "medium": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "study",
+        "build",
+        "audit",
+        "refine"
+      ]
+    },
+    "house_style": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protected_spans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authorized_change_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "currency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "time_zone": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

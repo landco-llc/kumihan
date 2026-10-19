@@ -29,7 +29,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
-                 "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html"]
+                 "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 self.assertEqual(sections((ROOT / page).read_text(encoding="utf-8")), INDEX_SECTIONS)
@@ -44,7 +45,8 @@ class LandingParity(unittest.TestCase):
                  "kumihan-pt.html", "kumihan-pt.en.html", "kumihan-pt.ja.html",
                  "kumihan-ar.html", "kumihan-ar.en.html", "kumihan-ar.ja.html",
                  "kumihan-es.html", "kumihan-es.en.html", "kumihan-es.ja.html",
-                 "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html"]
+                 "kumihan-pl.html", "kumihan-pl.en.html", "kumihan-pl.ja.html",
+                 "kumihan-ru.html", "kumihan-ru.en.html", "kumihan-ru.ja.html"]
         for page in pages:
             with self.subTest(page=page):
                 text = (ROOT / page).read_text(encoding="utf-8")
@@ -55,7 +57,7 @@ GATEWAY = {"de": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Han
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html"}
-PAGE_GATEWAY = dict(GATEWAY, pl="index.html")
+PAGE_GATEWAY = dict(GATEWAY, pl="index.html", ru="index.html")
 
 
 class GatewayLinks(unittest.TestCase):

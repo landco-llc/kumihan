@@ -1,0 +1,506 @@
+{
+  "product": "KUMIHAN｜Лад",
+  "version": "0.1.0",
+  "count": 40,
+  "origin": "RU Development Brief",
+  "status": "PROPOSED_NOT_RUN",
+  "fixtures": [
+    {
+      "id": "RU-T001",
+      "title_ja": "原稿保護と既存の編集権限",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n本文：«Текст»; 顧客名：Семён; ID：A-007; URL：https://example.test/a-b?q=\"x\"; JSON：{\"title\":\"Все\"}\n```",
+      "context_ja": "同じ入力を扱う二条件。Aは点検のみの依頼で原文変更の許可はない。Bは既存の会話内で「本文を整えて」と対象本文の修正依頼がある。顧客名・ID・URL・JSONは本文の編集範囲外。",
+      "expected_ja": "Aでは検出と提案を返し、原文の符号列を保持する。Bでは既存の修正依頼を対象本文の編集権限として利用し、再承認を求めずその範囲内で整える。両条件で顧客名・ID・URL・JSONを保護し、元原稿と変更差分を残す。このfixture自体を変更承認として扱わない。",
+      "related_rule_ids": [
+        "RU-001",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T002",
+      "title_ja": "内容言語・locl・取引通貨",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n同じ文字列「бгдпт」を含むru本文、bg引用、sr引用。金額データ：{ value: 25, currency: \"EUR\" }。\n```",
+      "context_ja": "対象言語の属性とfontのloclを調べる構成案。数値表示localeはru-RU。対象fontに明示的なRUS language recordがない場合も含む。",
+      "expected_ja": "各範囲に内容と一致する言語を設定し、ruをbg/srへ見た目目的で変更しない。locl差はfont仕様と実際の字形で評価し、RUS record欠落だけで不適合としない。ロシア語選択によってEURをRUBへ変更しない。",
+      "related_rule_ids": [
+        "RU-002",
+        "RU-032",
+        "RU-024"
+      ]
+    },
+    {
+      "id": "RU-T003",
+      "title_ja": "ёの編集方針と固有名詞",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nВсе готово. Всё готово. Семён. Орёл.\n```",
+      "context_ja": "一般向け既存原稿。ёの全面使用／選択使用の編集方針は未指定。人名と地名は登録済み表記。",
+      "expected_ja": "既存のёを保持する。е→ёの全文復元やё→еの一括省略を行わず、曖昧な語義と方針の混在を必要に応じて提案する。一般文の選択使用を一律に規範違反とせず、登録名を保護する。",
+      "related_rule_ids": [
+        "RU-003",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T004",
+      "title_ja": "教材のёと強勢",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nёлка; йод; за́мок; замо́к\n```",
+      "context_ja": "発音と強勢を示す学習教材の原稿。表示・文字選択・削除・文字数制限を検討する。",
+      "expected_ja": "教材のёと強勢の目的を保持する。за́мокとзамо́кを同一表示へ潰さない。基底文字とU+0301を切り離さず、実フォントで強勢位置と上下の欠けを確認する。発音の追加・変更には語義確認を要する。",
+      "related_rule_ids": [
+        "RU-003",
+        "RU-007"
+      ]
+    },
+    {
+      "id": "RU-T005",
+      "title_ja": "実fontの文字収録",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\nабвгдеёжзийклмнопрстуфхцчшщъыьэюя\nза́мок № ₽ «» „“ — – − …     ‑\n```",
+      "context_ja": "採用するfontの実ファイル・版・style・weightごとの静的収録調査と、その後の描画確認案。",
+      "expected_ja": "大小66字と必要な結合記号・約物を個別に記録する。cmap収録、実際の描画、fallbackの有無を別の証拠にする。U+0306、U+0308、U+202F、U+2011等のcmap未収録だけで表示失敗と断定しない。",
+      "related_rule_ids": [
+        "RU-030",
+        "RU-033"
+      ]
+    },
+    {
+      "id": "RU-T006",
+      "title_ja": "NFC比較とgrapheme保持",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nё | ё | й | й | за́мок\n```",
+      "context_ja": "NFC比較用コピーを作る場合と、原文保存・選択・省略を行う場合を分けたfixture。縦棒は比較対象の区切り。",
+      "expected_ja": "作業用NFC比較ではёとе＋U+0308、йとи＋U+0306の正準等価性を扱う。原文を無断で正規化保存しない。graphemeを途中で切らず、正準等価であっても元のcode point列の差分を記録する。",
+      "related_rule_ids": [
+        "RU-005",
+        "RU-007"
+      ]
+    },
+    {
+      "id": "RU-T007",
+      "title_ja": "NFKCと結合記号削除の分離",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n№ 7; 1 234; 20‑й; ёлка, йод, за́мок\n```",
+      "context_ja": "表示原稿へNFKCを全文適用する案、およびNFD後に結合記号を一括削除する案の検出fixture。",
+      "expected_ja": "無条件の変換を表示用原稿へ適用しない。NFKCの変換候補は№→No、U+00A0/U+202F→U+0020、U+2011→U+2010として操作別に示す。NFD後の結合記号削除ではё→е、й→и、強勢情報の消失が起きるため別に示し、NFKC単体で後者が消えると説明しない。検索用の派生キーを許可した場合も原文と分離する。",
+      "related_rule_ids": [
+        "RU-006",
+        "RU-001"
+      ]
+    },
+    {
+      "id": "RU-T008",
+      "title_ja": "Latin・Cyrillic同形文字",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nСервис; Cервис; API для Сервиса; React; РayPal\n```",
+      "context_ja": "混在文字の候補検出。Cервис先頭はLatin C（U+0043）、РayPal先頭はCyrillic Р（U+0420）。正当な英語名も含む。",
+      "expected_ja": "不自然な単語内混在は位置とcode pointを示す候補にする。Cyrillic С（U+0421）やLatin P（U+0050）へ無承認で置換しない。API、React等の正当な混在やブランドの登録表記を維持し、検出だけで不正と断定しない。",
+      "related_rule_ids": [
+        "RU-008",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T009",
+      "title_ja": "引用符の入れ子とコード保護",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nОна сказала: “Читайте журнал ‘Текст’”.\n{\"quote\":\"\\\"Текст\\\"\"}\n```",
+      "context_ja": "一行目はロシア語本文として編集提案する範囲。二行目はJSON保護範囲。引用符スタイル候補は外側«…»、内側„…“。",
+      "expected_ja": "一行目について「Она сказала: «Читайте журнал „Текст“».」を開閉・入れ子の提案として示せる。JSONのASCII引用符とエスケープは保持する。孤立した片側引用符や外国語引用へ無条件に補完・変換を広げない。",
+      "related_rule_ids": [
+        "RU-009",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T010",
+      "title_ja": "直話・対話・題名の句読点",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nОн спросил: «Готово?»\n— Готово?\nЯ прочитал роман «Что делать?».\n```",
+      "context_ja": "引用符型の直話、段落先頭dash型の対話、疑問符を含む作品題名が文の一部にある例。",
+      "expected_ja": "三つの構文を区別する。直話の末尾へ句点を機械追加せず、対話の行頭dashを禁止しない。作品題名を含む文の?».を一括削除しない。句読点接続の修正は構文に沿う提案として扱う。",
+      "related_rule_ids": [
+        "RU-010",
+        "RU-014"
+      ]
+    },
+    {
+      "id": "RU-T011",
+      "title_ja": "本文の空白と小数・コード",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nПривет ,мир ( текст ) . Цена 12,5 ₽.\nCSV：12,5,7\nコード：f(a,b)\n```",
+      "context_ja": "本文とデータ／コードの範囲を明示した空白検出fixture。",
+      "expected_ja": "本文のコンマ直前・括弧内側・句点直前等の不自然な空白を候補表示する。12,5の小数コンマに語間空白を加えず、CSVやコードのコンマへ本文ルールを適用しない。原稿を自動更新しない。",
+      "related_rule_ids": [
+        "RU-011",
+        "RU-023",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T012",
+      "title_ja": "横線の機能分類",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nпо-русски; кто-то; Чай - часть дня; -7; 8 - 3; const n = a - b;\n```",
+      "context_ja": "語彙上のハイフン、文中dash、数式の表示、locale formatterの符号、コードを分類する。",
+      "expected_ja": "文中dashには「Чай — часть дня」を候補提示できる。数式として指定された表示にはU+2212を検討できるが、CLDR48の既定minusSignだとは説明しない。語内ハイフン、数値入力、コードのASCII -は保護する。",
+      "related_rule_ids": [
+        "RU-012",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T013",
+      "title_ja": "範囲・日付・ID・数式",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n10-20; 2020—2026; от 10 до 20; Москва — Санкт-Петербург; 2026-10-19; A-10-20; -7 - -3\n```",
+      "context_ja": "数値範囲へen dashを採用するハウススタイル案。ISO日付、識別子、負数計算も含む。",
+      "expected_ja": "範囲と確認できた箇所だけ10–20等を候補にする。既存のem dashをロシア語の規範違反と断定しない。от…до…、経路名、ISO日付、ID、負数計算を単純な数字間ハイフン置換へまとめない。",
+      "related_rule_ids": [
+        "RU-013",
+        "RU-012"
+      ]
+    },
+    {
+      "id": "RU-T014",
+      "title_ja": "省略符と記号の組合せ",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nЧто?! Что?.. Стой!.. Подождите...; текст…\nコード：value...rest\n```",
+      "context_ja": "著者が意図した疑問・感嘆・省略表現、通常の三点、U+2026、コードが混在する。",
+      "expected_ja": "?!、?..、!..の正当な組合せを機械的に一文字へ簡略化しない。...と…の統一は出版方針と許可範囲を確認した提案に留める。コードの点列を保持し、UIの文字数切詰め処理と混同しない。",
+      "related_rule_ids": [
+        "RU-014",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T015",
+      "title_ja": "見出しの大小文字と終止符",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nНовая Выставка В Москве.\nЧто дальше?\nМы изменились. Посмотрите сами\nЭКОНИКА\n```",
+      "context_ja": "独立見出し、一文の問い、複数文の見出し、ロゴを区別した編集案。",
+      "expected_ja": "英語式Title Caseの一括適用を避け、通常見出しの先頭語と固有名詞を確認する。独立見出し末尾の句点は提案対象にできるが、?と複数文の途中の句点を保持する。ロゴの全大文字を本文の大小文字規則で変更しない。",
+      "related_rule_ids": [
+        "RU-015",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T016",
+      "title_ja": "略記・単位・文末の点",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n2026 г.; 2020–2026 гг.; 250 руб.; 3 млн; 5 млрд; Масса — 5 кг.\n```",
+      "context_ja": "略記と単位を含み、最後のкг.の点は文全体の終止符である本文。",
+      "expected_ja": "略記ごとのピリオドと単位記号を区別する。млн・млрд・кгへ略記だからと句点を自動追加せず、文末のкг.から必要な終止符を削除しない。文末記号と略記記号の役割を記録する。",
+      "related_rule_ids": [
+        "RU-016",
+        "RU-025"
+      ]
+    },
+    {
+      "id": "RU-T017",
+      "title_ja": "列挙とUIラベル",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nДля участия нужны:\nа) паспорт;\nб) билет.\n\n1. Заполните форму.\n2. Сохраните билет.\n\nUI：Выставки | События | Билеты\n```",
+      "context_ja": "文に従属する列挙、独立文の手順、短いUIナビゲーションを併置する。",
+      "expected_ja": "三つの構造を区別して大小文字・区切り・終止符・階層を評価する。すべての箇条書きへ同じセミコロンや句点を強制せず、UIラベルへ出版本文の列挙規則を自動適用しない。",
+      "related_rule_ids": [
+        "RU-017"
+      ]
+    },
+    {
+      "id": "RU-T018",
+      "title_ja": "短語の結合方向と行末",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nМы живём в | Москве.\nОн | же сказал.\nИ | снова дождь.\n```",
+      "context_ja": "縦棒は想定される行境界を表すfixture記法で、原文の一部ではない。一般本文と狭いUIで比較する。",
+      "expected_ja": "前置詞вと後続語、小詞жеと先行語の結合方向を区別する。短語だけを理由に普遍的な規範違反とせず、出版上の読みにくさとして候補を出す。全1〜3文字語を連結せず、幅を変えた際の副作用を目視確認する。",
+      "related_rule_ids": [
+        "RU-018",
+        "RU-021"
+      ]
+    },
+    {
+      "id": "RU-T019",
+      "title_ja": "非改行文字と狭い列",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nА. С. Пушкин; № 5; 250 г; 2026 г.; 20‑й\n```",
+      "context_ja": "U+00A0、U+202F、U+2011を含む短い意味単位を、狭い列と通常幅で表示する案。",
+      "expected_ja": "イニシャル、番号、数量・単位、日付略記、数字と序数語尾のまとまりを確認する。非改行文字を通常空白・通常ハイフンへ無条件変換しない。長いnowrapの連鎖やoverflowは別に確認し、cmapの結果だけで表示可否を確定しない。",
+      "related_rule_ids": [
+        "RU-021",
+        "RU-019",
+        "RU-030"
+      ]
+    },
+    {
+      "id": "RU-T020",
+      "title_ja": "分綴規則・辞書・SHY",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n分割候補：о-|сень、ма-|йка、под-|ъезд、пал-|ьто。\n本文：достопримечательность; ソフトハイフン入り：досто­примечательность。\n```",
+      "context_ja": "縦棒は行境界、直前の-は分綴表示を表す。lang=ru、hyphens:autoの辞書あり／なし、manual、U+00ADを比較する案。",
+      "expected_ja": "一文字だけの断片やъ・ь・йの不適切な切離しを指摘する。CSS設定だけでロシア語辞書分綴を実行済みとしない。U+00ADの表示・コピー・検索への影響を確認し、幅依存の可視ハイフンを原文の綴りに保存しない。",
+      "related_rule_ids": [
+        "RU-019",
+        "RU-020",
+        "RU-038"
+      ]
+    },
+    {
+      "id": "RU-T021",
+      "title_ja": "長語・URL・ハッシュの折返し",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nДостопримечательности Санкт-Петербурга\nhttps://example.test/verylongunbrokenpath012345678901234567890123456789\nsha256:0123456789abcdef0123456789abcdef0123456789abcdef\n```",
+      "context_ja": "320 CSS px程度の狭い画面を初期ケースとする提案。本文、見出し、URL、ハッシュの要素を分ける。",
+      "expected_ja": "通常本文を一律break-allにしない。URL・ハッシュの緊急折返しを必要な要素へ限定し、文字列のコピーを維持する。長い見出しと操作部品の重要情報に欠け・重なりがないか、対象環境で確認する。",
+      "related_rule_ids": [
+        "RU-022",
+        "RU-036"
+      ]
+    },
+    {
+      "id": "RU-T022",
+      "title_ja": "型付き数値と表示",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n数量：1234567.89; 負数：-7; 年：2026; 郵便番号：\"001234\"; version：\"1.2.3\"\n```",
+      "context_ja": "ru-RU表示、精度は小数2桁。版を固定したCLDR48参照結果と、採用runtimeのIntl結果を別記録にする。",
+      "expected_ja": "型付き数量では小数カンマと桁区切りを確認し、CLDR48のgroup U+00A0をcode pointで識別する。元値を変えず、年・郵便番号・versionを汎用数値formatterへ通さない。runtimeとIntlオプションを記録し、別環境の完全一致を未確認のまま主張しない。",
+      "related_rule_ids": [
+        "RU-023",
+        "RU-047"
+      ]
+    },
+    {
+      "id": "RU-T023",
+      "title_ja": "localeとcurrencyの分離",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n[{value:250,currency:\"EUR\",locale:\"ru-RU\"},{value:250,currency:\"USD\",locale:\"ru-RU\"},{value:250,currency:\"RUB\",locale:\"ru-RU\"},{value:250,locale:\"ru-RU\"}]\n```",
+      "context_ja": "同じ言語表示で複数通貨を扱うUI。換算の指示はない。",
+      "expected_ja": "各指定currencyと値を保持し、formatterの記号・配置・小数桁を設定と照合する。最後の通貨未指定データへ推測でRUBを補わず、未指定として残す。言語変更を通貨換算やcurrency変更として扱わない。",
+      "related_rule_ids": [
+        "RU-024",
+        "RU-023"
+      ]
+    },
+    {
+      "id": "RU-T024",
+      "title_ja": "単位・百分率・温度・角度",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n20°C; 90 °; 250г; 12,5%; №5; 5%-ный раствор\n```",
+      "context_ja": "通常の温度・平面角・質量・百分率・番号と、百分率由来形容詞を別トークンとする編集提案。",
+      "expected_ja": "20 °C、90°、250 г、通常の12,5 %、№ 5のような間隔を用途に応じて提案し、必要な非改行空白を媒体で確認する。%と№をSIの単位規則だけで説明しない。5%-ныйの空白は資料間の揺れがあるため自動確定せず、数値や単位の意味を変えない。",
+      "related_rule_ids": [
+        "RU-025",
+        "RU-021"
+      ]
+    },
+    {
+      "id": "RU-T025",
+      "title_ja": "日付・月名・時刻",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n日付値：2026-10-19; 月単独：2026-10; 時刻値：09:05; 年範囲：2020–2026\n```",
+      "context_ja": "日付値は日単位、時刻はタイムゾーン変換を行わないlocal時刻として入力。ロシア語本文用表示と機械値を分離する。",
+      "expected_ja": "参照候補は19.10.2026と19 октября 2026 г.、単独月はоктябрь、短時刻は09:05。長い日付の年とг.間のU+202FはCLDR48の固定データとして扱う。元のISO値を保持し、数値日付へг.を自動追加せず、年範囲のгг.等を構文に応じて確認する。",
+      "related_rule_ids": [
+        "RU-026",
+        "RU-023",
+        "RU-047"
+      ]
+    },
+    {
+      "id": "RU-T026",
+      "title_ja": "pluralと可視小数桁",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n数量：1, 2, 5, 11, 14, 21, 22, 25, 1.5。\n表示条件A：1（小数表示なし）。条件B：1,0（可視小数1桁）。\n```",
+      "context_ja": "単位語はдень。CLDR cardinal categoryの選択とロシア語メッセージの語形を分ける。実装方式・丸め／可視小数設定は実行時に記録する。",
+      "expected_ja": "少なくとも1 день、2 дня、5 дней、11 дней、21 день、1,5 дняをテンプレート候補と照合する。整数1と可視小数1,0の扱いを混同せず、必要な表示桁設定を明示する。plural categoryだけから任意文脈の格・性・序数語尾まで生成できるとしない。",
+      "related_rule_ids": [
+        "RU-027",
+        "RU-028",
+        "RU-045"
+      ]
+    },
+    {
+      "id": "RU-T027",
+      "title_ja": "序数語尾と番号の例外",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n5-й этаж; на 5-м этаже; 19 октября; глава 5; модель A-5\n```",
+      "context_ja": "序数の語尾、日付、章番号、製品IDを区別した語形点検。語尾規則のすべての例外を実装済みとはしない。",
+      "expected_ja": "5-й／5-мを性・格・構文と結び付けて扱い、数字へ同一接尾辞を追加しない。日付・章番号の省略条件は文脈を確認し、製品IDを保護する。CLDRのordinal category otherから語尾を推定しない。",
+      "related_rule_ids": [
+        "RU-028",
+        "RU-004"
+      ]
+    },
+    {
+      "id": "RU-T028",
+      "title_ja": "Вы・Вашと宛先",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n一般サイト：Сохраните Ваш билет.\n個人宛手紙：Благодарим Вас за письмо.\n文頭：Вы можете продолжить.\n```",
+      "context_ja": "不特定多数、特定一人への手紙、文頭の大文字を分ける。既存ブランドの方針も別に与える。",
+      "expected_ja": "一般サイトのВашには小文字候補を示せるが、一括置換しない。特定個人への敬意表現は著者の方針を確認する。文頭のВыは大文字という理由だけで不適切としない。小文字を常に無礼と判定しない。",
+      "related_rule_ids": [
+        "RU-029"
+      ]
+    },
+    {
+      "id": "RU-T029",
+      "title_ja": "正規Italicと擬似斜体",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nRegular：бвгдптйё\nItalic：бвгдптйё\n強調文：Это важная деталь.\n```",
+      "context_ja": "正規Italicのあるfamilyとないfamily、font-synthesisを許す／制御する場合を比較する案。fontファイル名・styleメタデータも記録する。",
+      "expected_ja": "使用fontの正規Italicを読み込んだ結果と擬似斜体を区別し、ロシア語字形と強調の伝わり方を目視確認する。Italicなしのfamilyでは別の強調方法を提案できる。作者設計のobliqueを擬似変形と決めつけず、字形をコードだけで品質PASSにしない。",
+      "related_rule_ids": [
+        "RU-031",
+        "RU-032",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T030",
+      "title_ja": "subset・fallback・ライセンス",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n@font-face：Latin subsetのみの候補／Cyrillic subsetもある候補。\n文字：Жизнь, за́мок, № 5, 250 ₽, 20‑й。\nfont file：配布予定の実ファイル。\n```",
+      "context_ja": "実ファイル、unicode-range、style/weight、fallback、OFLまたは商用契約を照合する計画。",
+      "expected_ja": "unicode-range宣言だけで欠けたglyphが追加されると扱わない。各文字の実表示・fallbackの字面を確認し、font名やfsTypeだけで再配布・Web利用・埋込み権限を判定しない。使用する実ファイルの版、出所、ライセンス条件を保持する。",
+      "related_rule_ids": [
+        "RU-033",
+        "RU-030",
+        "RU-037"
+      ]
+    },
+    {
+      "id": "RU-T031",
+      "title_ja": "Webfontの読込み状態",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n見出し：Выставка современного искусства\nCTA：Посмотреть расписание\n価格：1 250 ₽\n```",
+      "context_ja": "初回Webfont読込み、遅延、キャッシュ済み、失敗、オフラインを対象にする提案。",
+      "expected_ja": "各状態で読めること、重要なラベル・金額の欠け、行の移動、重なりを対象環境で確認する。computed font-familyやdocument.fonts.checkのみを、各glyphの実使用fontや視覚品質の証明にしない。未実施状態は未確認として残す。",
+      "related_rule_ids": [
+        "RU-034",
+        "RU-036",
+        "RU-047"
+      ]
+    },
+    {
+      "id": "RU-T032",
+      "title_ja": "実文の行高・字間・拡大",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nЖШЩЫЮ ЁЙ ёй за́мок\nНовая коллекция уже в магазине.\nСохранить изменения профиля\n```",
+      "context_ja": "本文line-height 1.5・letter-spacing normalを出発点とする試案と、狭い画面・200%拡大を比較。ユーザー設定として行高1.5、段落間2em、字間0.12em、語間0.16emも別試験とする。",
+      "expected_ja": "開始値をロシア語の規範値と呼ばない。広い字形、ダイアクリティカルマーク、複数行、長いラベルで欠け・重なり・読みにくさを目視確認する。WCAG text spacingの数値は上書き耐性の試験条件として記録し、初期デザインの強制値としない。",
+      "related_rule_ids": [
+        "RU-035",
+        "RU-036",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T033",
+      "title_ja": "編集用文書とfont未導入環境",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nDOCX/PPTX原稿：見出し「Новая выставка」、本文「Всё готово」、正規Italic「за́мок」、数表「1 250 ₽」。\n```",
+      "context_ja": "採用fontが導入済み／未導入の環境で、開く・編集する・再保存する試験案。font埋込みの有無と権限を記録する。",
+      "expected_ja": "文字オブジェクト、style、ru言語指定、Cyrillic font指定を保持し、置換と改行を確認する。使用glyphのみ埋込みの場合の新しい文字入力も確認する。画像化で編集確認を代替せず、fsTypeだけでライセンスを上書きしない。対象Office環境で未実施なら未確認とする。",
+      "related_rule_ids": [
+        "RU-037",
+        "RU-030",
+        "RU-047"
+      ]
+    },
+    {
+      "id": "RU-T034",
+      "title_ja": "PDF書出しと文字抽出",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n書出し原稿：Ёж, ёлка, йод, й, за́мок; № 7; 2026 г.; 20‑й; 1 250 ₽。\n```",
+      "context_ja": "文書→PDFの書出し後、全ページの画像確認と文字抽出・検索・コピーを別々に行う計画。",
+      "expected_ja": "見た目の欠字・強勢・Italic・数表を確認し、抽出結果は元文字列とcode point差分および正準等価比較を分けて記録する。NFKCで差を消して成功としない。見た目だけを検索・コピー保持の証明とせず、画像文字には元原稿と代替情報を残す。",
+      "related_rule_ids": [
+        "RU-038",
+        "RU-005",
+        "RU-006"
+      ]
+    },
+    {
+      "id": "RU-T035",
+      "title_ja": "PDFの構造・言語・読み順",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nPDF：二段組本文、見出し、脚注、表、ロシア語本文内の英語引用、リンク、画像キャプション。\n```",
+      "context_ja": "タグ構造、主言語・部分言語、reading order、支援技術による読取りを確認する受入案。",
+      "expected_ja": "視覚上の順序と構造上の順序を分け、見出し・表・脚注・リンクが意図した関係と順序で読めるか確認する。PDF/A出力や文字抽出だけでPDF/UA適合・screen reader確認済みとしない。実施した環境と未実施項目を記録する。",
+      "related_rule_ids": [
+        "RU-039",
+        "RU-047"
+      ]
+    },
+    {
+      "id": "RU-T036",
+      "title_ja": "文字情報の階層と意味",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n架空の依頼条件：地域の映画祭。確定情報は作品名、監督名、上映日、会場、券種、申込先。制作案は全テキストが同じサイズ・weightのポスター。\n```",
+      "context_ja": "文字情報の階層と、文化イベントの意味に対応する表現を提案するfixture。実在事例のレイアウトを複製する依頼ではない。",
+      "expected_ja": "主題・作品・日時・場所・行為の役割を定め、size・weight・位置・余白による階層案を根拠付きで示す。商品に意味を持つfont weight等の事例を、そのまま映画祭の規則へ転用しない。ポスターの品質は人が読める大きさで評価し、機械PASSにしない。",
+      "related_rule_ids": [
+        "RU-040",
+        "RU-042",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T037",
+      "title_ja": "内容に応じたレイアウト",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n同一内容の三案：展示会一覧のカード、記事本文の編集レイアウト、移動サービスの操作画面。すべてに同じ左右分割のheroと三枚カードを当てる案も比較対象。\n```",
+      "context_ja": "目的、情報量、更新頻度、読者の行動が異なるデザイン案をレビューするfixture。",
+      "expected_ja": "各構成が情報単位と閲覧行為に役立つ理由を説明する。内容と関係なく同じ構図を当てる案は改善提案の対象とする一方、更新一覧や操作のために有効なカード自体は禁じない。視覚の適否は機械的なレイアウト名でPASS／FAILにしない。",
+      "related_rule_ids": [
+        "RU-041",
+        "RU-040",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T038",
+      "title_ja": "多文字体系と具体的なCTA",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n架空の茶ブランド条件：Latinの登録ロゴ「Saito」、ロシア語の商品説明、原語品名、内容量。CTA候補：「Подробнее」「Посмотреть состав」。\n```",
+      "context_ja": "多文字体系の役割とコピーの具体性を確認する提案fixture。実在Saito製品の新表示やコピーとして公開するものではない。",
+      "expected_ja": "登録ロゴや原語品名を維持し、ロシア語説明・数量・行為の階層を提案する。全文Cyrillic化や疑似キリルへの置換をしない。CTAは遷移先が実際に成分表示ならПосмотреть состав等を候補にし、未提供の成分・効能・品質を補わない。視覚評価は人の確認として残す。",
+      "related_rule_ids": [
+        "RU-043",
+        "RU-044",
+        "RU-025",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T039",
+      "title_ja": "自然な語形と事実に基づくコピー",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\nUI案：Копировать ссылка\n広告案：Новый уровень вашего бизнеса\n与件：ファイル共有サービス。リンクをコピーできることだけが確認済み。\n```",
+      "context_ja": "語形・語順・語調と、ブランドの実情報に基づくコピーを提案するfixture。",
+      "expected_ja": "UIは動詞と格を確認し、Копировать ссылкуを修正候補として示せるが無承認で原文を更新しない。抽象的な広告文は文法誤りと断定せず、リンク共有という確認済み機能に沿う具体案を検討する。速度・売上・安全性等の未確認効果を追加せず、母語文脈の未確認点を明記する。",
+      "related_rule_ids": [
+        "RU-045",
+        "RU-044",
+        "RU-001",
+        "RU-048"
+      ]
+    },
+    {
+      "id": "RU-T040",
+      "title_ja": "特殊な文字表現と証拠・手動評価",
+      "origin_status": "PROPOSED_NOT_RUN",
+      "input": "```text\n参照事例：Ekonikaの公開コピー「Переменна я постоянная」。制作案：意味を持つ文字分割を使った見出し画像。根拠：公開画像、制作者説明、font静的解析、local実験、未実施の実機試験が混在。\n```",
+      "context_ja": "承認されたブランド表現の保護と、提案の根拠／検証状態を記録する最終レビューfixture。",
+      "expected_ja": "特殊な分割を通常本文の誤植として自動修正せず、作者の意図、正式な読取り用文字列、代替情報を確認する。事例観察をロシア語全体の規範とせず、画像目視・仕様・提案・local実験・実機未確認を区分する。機械検査だけで画像デザインや母語の語感をPASSにしない。",
+      "related_rule_ids": [
+        "RU-046",
+        "RU-047",
+        "RU-048"
+      ]
+    }
+  ]
+}

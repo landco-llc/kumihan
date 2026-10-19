@@ -25,6 +25,7 @@ EDITIONS = {
     "hi": ("KUMIHAN｜अक्षर-संगति", "अक्षर-संगति", "ヒンディー語", "Hindi", "0.1.0"),
     "fr": ("KUMIHAN｜Accord", "Accord", "フランス語", "French", "0.1.1"),
     "ar": ("KUMIHAN｜نضيد", "نضيد", "アラビア語", "Arabic", "0.1.0"),
+    "ru": ("KUMIHAN｜Лад", "Лад", "ロシア語", "Russian", "0.1.0"),
     "pt": ("KUMIHAN｜Compasso", "Compasso", "ポルトガル語", "Portuguese", "0.1.0"),
     "es": ("KUMIHAN｜Grafía", "Grafía", "スペイン語", "Spanish", "0.1.0"),
     "ko": ("KUMIHAN｜글짜임", "글짜임", "韓国語", "Korean", "0.1.0"),
@@ -35,7 +36,7 @@ EDITIONS = {
     "id": ("KUMIHAN｜Laras", "Laras", "インドネシア語", "Indonesian", "0.1.0"),
 }
 
-COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "id": "laras"}
+COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "id": "laras", "ru": "lad"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",
