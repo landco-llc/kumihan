@@ -4,11 +4,11 @@ Owner: L&Co. LLC
 Repository: landco-llc/kumihan
 Implementation branch: feat/universal-mcp-php-runtime
 Target endpoint: https://mcp-kmhn.landco.co.jp/mcp
-Status: DNS/TLS PASS; Owner supplied FTP root ending in /web; public folder kmhn; PHP private path and actual deployment not verified.
+Status: DNS/TLS PASS; FTP root and kmhn SSH verified; LiteSpeed PHP 8.5.11 + Web-PHP private-canary read PASS; private MCP runtime source/vendor/registry EXTRACTED with 6 PASS markers; private config, SDK Web-PHP session-write, public bootstrap and real MCP transport NOT YET VERIFIED.
 
 ## Authority and privacy
 
-The Owner supplied the absolute FTP-root/full-path account value in the orchestration chat. Do not request it again where already provided. It contains an account-specific identifier and must NEVER be committed to this public repository, a public issue or a log. Obtain the exact value from the authorized local deployment context. Public document-root role is web/kmhn. The candidate non-public root is a sibling OUTSIDE web, but its permissions and Web PHP accessibility are NOT yet verified. Do not change existing subdomain, SSL or neighboring sites.
+The Owner supplied the absolute FTP-root/full-path account value in the orchestration chat. Do not request it again where already provided. It contains an account-specific identifier and must NEVER be committed to this public repository, a public issue or a log. Obtain the exact value from the authorized local deployment context. Public document-root role is web/kmhn. The private candidate resides outside web; its SSH write permissions, PHP canary read, and successful extraction of the runtime are now verified. This is not proof that the directory is unreachable from every other virtual host or that Web PHP can load the SDK and write session files. Do not change existing subdomain, SSL or neighboring sites.
 
 ## Work group W00–W04
 
@@ -22,7 +22,7 @@ Use an authorized SSH session with the privately supplied FTP root to validate i
 Using the approved SHA, retrieve the GitHub Actions kumihan-universal-mcp-php85-staging artifact and validate SHA256, Composer lock/version/advisories, 21+ registry modules and expected files. Generate a two-file public bootstrap through universal/tools/build_lolipop_bootstrap.py using verified private path inputs; do NOT use guessed example paths. Map which files belong to public kmhn and which belong to private server. Prepare sanitized evidence, rollback procedures and permissions. This Work can proceed without host credentials but must remain STAGED until W01 succeeds.
 
 ### W03 Owner-gated host installation
-Requires a proven private non-Web PHP-readable path AND authorized, credential-safe SSH/SFTP deployment. Back up kmhn and target directory, unpack src/vendor/registry/Composer files to private host path, create runtime/config.php only there, confirm session write permissions and runtime PHP 8.5, then upload ONLY kmhn/index.php and kmhn/.htaccess. If unsafe paths, incorrect permissions or unexpected existing public files: STOP and do not overwrite. Roll back changed files on a failed hosting smoke.
+Owner already transferred and Mac-readback-verified the private tarball, and successfully extracted its source/vendor/registry with zero changes to kmhn. Next perform the one-shot Web-PHP private config, SDK autoload, 21-module Registry and session-write check via universal/tools/check_private_runtime_web.sh. Requires proven non-Web PHP-readable path and authorized credential-safe SSH/SFTP deployment. Back up kmhn and target directory, unpack src/vendor/registry/Composer files to private host path, create runtime/config.php only there, confirm session write permissions and runtime PHP 8.5, then upload ONLY kmhn/index.php and kmhn/.htaccess. If unsafe paths, incorrect permissions or unexpected existing public files: STOP and do not overwrite. Roll back changed files on a failed hosting smoke.
 
 ### W04 HTTPS MCP acceptance and platform adapters
 From independent public network test /mcp initialize, tools/list, tools/call, protocol revisions/session lifecycle, header/WAF behavior, and no public access to source/vendor/runtime through all domains. Test actual ChatGPT/Codex, Claude Code and Gemini CLI clients separately. Update gate flags only for direct observed evidence. Prepare a release candidate/PR, but do NOT merge or publish the integrated plugin before Owner publication approval.
