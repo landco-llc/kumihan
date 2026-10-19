@@ -64,7 +64,39 @@ else
 fi
 ```
 
-Report the status words and digest, NOT the absolute account path or login credentials. If the tar is absent, root has existing runtime files, hashing is unavailable, or SHA does not match, **STOP**. These checks alone perform no runtime extraction and do not expose public MCP.
+Report the status words and digest, NOT the absolute account path or login credentials. If the tar is absent or the target already has files, **STOP**. If neither SHA tool is available in SSH, run Stage B2 from a Mac and do not extract the archive until its SHA-256 and byte equality both succeed. A checksum mismatch is a STOP. These checks alone perform no runtime extraction and do not expose public MCP.
+
+## Stage B2 — transfer confirmed, but SSH has no hash tool
+
+On 2026-10-19 the Owner performed Stage A and Stage B. Mac reported `LOCAL_ARCHIVE_SHA_OK` and `scp ... 100% 779KB`. The authenticated remote shell passed `test -f runtime.tar.gz` and `test ! -e vendor/src/public`, but printed **HASH_TOOL_UNAVAILABLE**: neither sha256sum nor openssl exists on the remote SSH PATH. No extraction followed. This is NOT a checksum mismatch or evidence of corruption, just a missing verification utility.
+
+**Preferred fallback: read back the exact server-side archive and hash/compare it on Mac.** This needs no additional server-side packages, PHP scripts or temporary public endpoints. Run only in a local Mac terminal:
+
+```sh
+(
+  set -eu
+  WORK="$HOME/Downloads/kmhn-mcp-stage"
+  SOURCE="$WORK/runtime.tar.gz"
+  RETURNED="$WORK/runtime.from-lolipop.tar.gz"
+  EXPECTED='5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1'
+  test -f "$SOURCE" || { echo 'LOCAL_SOURCE_MISSING'; exit 1; }
+  test ! -e "$RETURNED" || { echo 'RETURN_FILE_ALREADY_EXISTS'; exit 1; }
+  REMOTE_USER='<SSH_USERNAME_FROM_PRIVATE_LOLIPOP_PANEL>'
+  REMOTE_ARCHIVE='<VERIFIED_ABSOLUTE_NON_WEB_PRIVATE_SERVER_PATH>/runtime.tar.gz'
+  scp -P 2222 "$REMOTE_USER@ssh.lolipop.jp:$REMOTE_ARCHIVE" "$RETURNED"
+  REMOTE_DIGEST="$(shasum -a 256 "$RETURNED" | awk '{print $1}')"
+  test "$REMOTE_DIGEST" = "$EXPECTED" || { echo 'REMOTE_ARCHIVE_SHA_NG'; exit 1; }
+  cmp -s "$SOURCE" "$RETURNED" || { echo 'REMOTE_ARCHIVE_BYTES_NG'; exit 1; }
+  echo 'REMOTE_ARCHIVE_SHA_OK'
+  echo 'REMOTE_ARCHIVE_BYTES_OK'
+)
+```
+
+If the return file already exists, do not overwrite it silently; inspect or delete that local test copy before rerunning. This procedure reads the server-held archive and writes only a new local file on the Mac. **Do not run in an SSH shell.** After the digest and byte-by-byte equality succeed, Stage B archive-integrity gate is verified. Otherwise STOP before extracting.
+
+### SSH transport warnings
+
+The SCP upload printed an OpenSSH 10.1+ warning about missing post-quantum key exchange and a `client_global_hostkeys_prove_confirm` RSA host-key-update proof warning. These do not by themselves negate the SCP 100% completion, but require accurate SSH-host identity verification using the provider's host-key guidance. Do not disable StrictHostKeyChecking, ignore fingerprint changes or treat warnings as artifact-hash evidence. Prefer a provider-side SSH algorithm update where offered.
 
 ## Stage C — after Stage B passes
 
