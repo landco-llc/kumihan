@@ -10,6 +10,7 @@ if [ "$(uname -s)" != "Linux" ]; then
   echo "NOT_ON_LINUX_SERVER"
   exit 1
 fi
+FTP_ROOT="${FTP_ROOT:-}"
 if [ -z "$FTP_ROOT" ]; then
   echo "FTP_ROOT_NOT_SUPPLIED"
   exit 1
@@ -30,6 +31,10 @@ fi
 
 umask 077
 PRIVATE="$(dirname "$FTP_ROOT")/kmhn-mcp-private/server"
+if [ -L "$(dirname "$FTP_ROOT")/kmhn-mcp-private" ] || [ -L "$PRIVATE" ]; then
+  echo "PRIVATE_SYMLINK_NOT_ALLOWED"
+  exit 1
+fi
 mkdir -p "$PRIVATE"
 if [ ! -d "$PRIVATE" ] || [ ! -w "$PRIVATE" ]; then
   echo "PRIVATE_DIR_UNAVAILABLE"
@@ -81,7 +86,11 @@ else
   echo "NO_HTTPS_CLIENT_AVAILABLE"
   exit 1
 fi
-printf '%s\n' "$OUT"
+if ! printf '%s\n' "$OUT" | grep -q '^PHP_VERSION='; then
+  echo "PUBLIC_PHP_RESPONSE_NOT_EXECUTED"
+  exit 1
+fi
+printf '%s\n' "$OUT" | grep -E '^(PHP_VERSION|PHP_SAPI|PRIVATE_PHP_READ)='
 case "$OUT" in
   *"PHP_VERSION=8.5."*)
     echo "TARGET_WEB_PHP85=PASS"
