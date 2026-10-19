@@ -63,7 +63,7 @@ class DeploymentTargetTests(unittest.TestCase):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         guide = (ROOT / "universal" / "LOLLIPOP_SETUP.md").read_text(encoding="utf-8")
         self.assertIn(d["endpoint"], guide)
-        self.assertIn("SSH PUBLIC ROOT AND PARENT WRITE CONFIRMED", guide)
+        self.assertIn("LITESPEED PHP 8.5.11 + PRIVATE FILE READ PASS", guide)
         self.assertIn("check_private_php_web.sh", guide)
         self.assertIn("check_lolipop_layout.py", guide)
         self.assertIn("FTP-root/kmhn", guide)
