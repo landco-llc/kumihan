@@ -599,6 +599,36 @@ _ZU_EDITION_NAMES = {"ar":"الزولو","bn":"জুলু","de":"Zulu","en":"i
 for _lang, _names in EDITION_NAMES.items():
     _names["zu"] = _ZU_EDITION_NAMES[_lang]
 
+
+# Khmer edition v0.1.0: registry and page routing; no rewrite of other language copy.
+GATEWAYS["km"] = ("top-km.html", "km", "KM", "ភាសាខ្មែរ")
+PRODUCTS["km"] = dict(name="ភាសាខ្មែរ", lang="km", brand="KUMIHAN｜លំនឹង",
+    glyph="ក", label="KM · KHMER", version="v0.1.0",
+    pages={"km":"kumihan-km.html","en":"kumihan-km.en.html","ja":"kumihan-km.ja.html"})
+UI["km"] = dict(heading="កំណែភាសារបស់ KUMIHAN", more="បង្ហាញ {n} បន្ថែម", menu="ភាសា")
+PICK["km"] = "ជ្រើសភាសា"
+_KM_EDITION_NAMES = {
+    "ar":"الخميرية", "bn":"খমের", "de":"Khmer", "en":"Khmer", "es":"Jemer",
+    "fr":"Khmer", "hi":"ख्मेर", "id":"Khmer", "it":"Khmer", "ja":"クメール語",
+    "ko":"크메르어", "pl":"khmerski", "pt":"Khmer", "ru":"кхмерский",
+    "th":"ภาษาเขมร", "vi":"Tiếng Khmer", "zh-hans":"高棉语",
+    "zh-hant":"高棉語", "km":"ភាសាខ្មែរ"
+}
+for _reader, _names in EDITION_NAMES.items():
+    _names["km"] = _KM_EDITION_NAMES.get(_reader, "Khmer")
+EDITION_NAMES["km"] = {code: product["name"] for code, product in PRODUCTS.items()}
+CARDS["km"] = {code: ("ការរៀបចំអក្សរ និងការរចនាតាមភាសា ដោយរក្សាអត្ថបទដើម។", "មើលកំណែភាសានេះ")
+               for code in PRODUCTS}
+CARDS["km"]["km"] = ("ការរៀបចំអក្សរខ្មែរ ដោយរក្សាអក្សរផ្សំ ការបំបែកបន្ទាត់ និងអត្ថបទដើម។", "មើលកំណែខ្មែរ")
+for _reader, _cards in CARDS.items():
+    if _reader == "km":
+        continue
+    _cards["km"] = (
+        ("結合文字・語のまとまり・原稿を守るクメール語の文字組みとデザイン。", "クメール語版を見る")
+        if _reader == "ja" else
+        ("Khmer typography protecting conjuncts, source text and purposeful line breaks.", "View Khmer edition")
+    )
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
