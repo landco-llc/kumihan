@@ -45,6 +45,7 @@ GATEWAYS = {
 # Language editions: code -> data. "pages" maps a reader language to the
 # edition page in that language; the first entry is the edition's own page.
 PRODUCTS = {
+    "sw": dict(name="Kiswahili", lang="sw", brand="KUMIHAN｜Mizani", glyph="ng’", label="SW · SWAHILI", version="v0.1.0", pages={"sw":"kumihan-sw.html","en":"kumihan-sw.en.html","ja":"kumihan-sw.ja.html"}),
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
     "id": dict(name="Bahasa Indonesia", lang="id", brand="KUMIHAN｜Laras", glyph="Ng", label="ID · INDONESIAN", version="v0.1.0",
@@ -581,6 +582,11 @@ def menu(key):
             f'<span>{code} - <span lang="{lang_attr(key)}">{x(name)}</span></span></summary><ul>{items}</ul></details>')
 
 
+# Mizani: append the new edition name in each existing gateway language.
+_SW_EDITION_NAMES = {"ar":"السواحيلية","bn":"সোয়াহিলি","de":"Suaheli","en":"Swahili","es":"Suajili","fr":"Swahili","hi":"स्वाहिली","id":"Swahili","it":"Swahili","ja":"スワヒリ語","ko":"스와힐리어","pl":"Suahili","pt":"Suaíli","ru":"Суахили","th":"ภาษาสวาฮีลี","vi":"Tiếng Swahili","zh-hans":"斯瓦希里语","zh-hant":"史瓦希利語"}
+for _lang, _names in EDITION_NAMES.items():
+    _names["sw"] = _SW_EDITION_NAMES[_lang]
+
 def edition_menu(key):
     """Language-edition menu under the section title: the page's language first, then by code."""
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
@@ -608,6 +614,13 @@ def marquee():
         out += f'<div class="glyph-row{" reverse" if i else ""}" style="--duration:{30 + 6 * i}s">{cells}{cells}</div>'
     return f'<div aria-hidden="true" class="glyph-marquee">{out}</div>'
 
+
+# Mizani v0.1.0: keep existing gateway copy unchanged and add a bounded fallback.
+for _lang, _cards in CARDS.items():
+    _cards.setdefault("sw",
+        ("スワヒリ語の語形・アポストロフィを保護し、地域ごとの数値と文字組を考える設計。", "スワヒリ語版を見る") if _lang=="ja" else
+        ("Swahili typography protecting apostrophes, original text, and regional formats.", "View the Swahili edition"))
+CARDS["en"]["sw"] = ("Swahili typography protecting ng’, original wording and regional formatting choices.", "View the Swahili edition")
 
 def cards(key):
     order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)

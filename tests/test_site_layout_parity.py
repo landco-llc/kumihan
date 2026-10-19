@@ -55,7 +55,7 @@ class LandingParity(unittest.TestCase):
                 self.assertEqual(len(re.findall(r'class="[^"]*\bplatform-row\b', text)), 3)
 
 
-GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
+GATEWAY = {"sw": "top-en.html", "ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
            "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",
