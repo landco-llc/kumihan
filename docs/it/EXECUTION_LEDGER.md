@@ -1,6 +1,6 @@
 # Equilibrio v0.1.0 — execution ledger
 
-Status: IN_PROGRESS / WG03_COMPLETE
+Status: PUBLISHED_VERIFIED
 Date: 2026-10-19 JST
 Owner-approved release scope: GitHub repo main、tag kumihan-it-v0.1.0、public GitHub Release、12 Pages。External Marketplace installation/listing is out of scope.
 Main control: [GOAL_EQUILIBRIO_V010.md](GOAL_EQUILIBRIO_V010.md)
@@ -9,10 +9,10 @@ Research canonical: https://drive.google.com/drive/folders/1EMib8ugMHyfNG2e38Mo7
 
 | Stage | State | Deliverables | Evidence |
 | --- | --- | --- | --- |
-| W00–W03 / WG01 | PASS | product + locales + 4 Skills + fixtures | none |
-| W04–W06 / WG02 | PASS | 3 hosts + 15 ZIP + manifest/hashes | none |
-| W07–W09 / WG03 | PASS | Applied web skill + LP3 + guide9 + gateway | none |
-| W10–W11 / WG04 | IN_PROGRESS | CI + PR + merge + tag + Release + Pages | none |
+| W00–W03 / WG01 | PASS | product + locales + 4 Skills + fixtures | See stage evidence below |
+| W04–W06 / WG02 | PASS | 3 hosts + 15 ZIP + manifest/hashes | See stage evidence below |
+| W07–W09 / WG03 | PASS | Applied web skill + LP3 + guide9 + gateway | See stage evidence below |
+| W10–W11 / WG04 | PASS | CI + PR + merge + tag + Release + Pages | See stage evidence below |
 
 - 40 rules and 48 evaluation cases are research candidates; the status of all cases begins as NOT_CHECKED.
 - Only completed and evidence-backed work can be marked PASS or PUBLISHED_VERIFIED.
@@ -58,3 +58,20 @@ Research canonical: https://drive.google.com/drive/folders/1EMib8ugMHyfNG2e38Mo7
 ## Explicit Italian Latin stack — final font integration
 - Final inspection found that web_fonts.script('it') returned Latin links but LANGS lacked it, so the shared CSS did not emit an Italian body selector. Added the explicitly allowed it→latin mapping and regenerated only assets/kumihan-fonts.css and _data/web_fonts.yml; existing language selectors/stacks are preserved.
 - Regression test failed on missing LANGS['it'], then passed after mapping and generated-selector checks. Equilibrio focused suite now 16 PASS; root 14 PASS; web_fonts/site/gateway --check PASS. Equilibrio CI now watches shared font inputs as well. A fresh local/CI browser matrix is run for this final stack; earlier JSON remains evidence of the earlier measured state, not retroactive proof of the font change.
+
+## W10–W11 — public release verified
+- PR #83 merged at e7e21628d444a2c0b4016570a1426bc6afa37c79. Exact-head Equilibrio push/PR CI succeeded before merge; remaining unchanged-language browser jobs were allowed to finish independently after local regressions and shared checks passed. No failed current checks were bypassed and no branch protection/permission was changed. Exact merge-main Equilibrio CI 39198411459 passed every step including browser measurements. Pages build at the same SHA succeeded.
+- Immutable annotated tag kumihan-it-v0.1.0: tag object 28d8c79d367717b561ffcad3960c9574dcef42f4, peeled commit e7e21628d444a2c0b4016570a1426bc6afa37c79. No existing tag moved.
+- Publication workflow 39198540492 SUCCESS: verified exact tested main SHA, empty draft, 17 asset names/sizes/SHA-256, draft=false, then all public bytes read back. Public Release: https://github.com/landco-llc/kumihan/releases/tag/kumihan-it-v0.1.0 . Independent session readback also compared all 17 public asset bytes; evidence/release-readback.json.
+- Public HTTP readback: all 12 Pages equal current source bytes, canonical/it/en/ja/x-default checked; JA/EN gateways retain IT cards and correct targets; official PNG, product CSS, installation CSS/JS and shared fonts all HTTP 200 and source-equal. evidence/public-pages.json. Follow-up updates the candidate status display to the now-observed publication fact, then rechecks public content.
+- Final font-state local Chromium 154.0.8037.57: 192/192 measurements PASS, source in evidence/browser-final-latin.json. Latest mobile screenshot visually inspected. Twelve keyboard skip/focus checks and nine guide Italian switch clicks PASS, evidence/keyboard.json. CSS enlargement is simulation, not native zoom. Earlier failed/superseded observations remain retained.
+- Final focused tests: 16 PASS on merge SHA; existing local regression 149 PASS. All original 93 product distribution digests unchanged, only Equilibrio product files authored against latest main. Parallel Indonesian/Bangla/Russian products retained unchanged; static shared integration adjustments are described above.
+- NOT-CHECKED: provider-native import/invocation/icon UI, official marketplace listing, native Italian editorial review, native text-only zoom, Google font success, Safari/Windows, hyphenation dictionary, screen reader, Office/PDF. These are nonblocking unverified environments, not claimed failures or approvals.
+- No MD/ZIP reattachment, owner-per-Work gate, force push, tag replacement, provider-store submission or authentication/permission modification was requested or performed.
+- Final PR #83 readback after release: all 15 exact-head check entries SUCCESS, including the unchanged-language browser jobs that finished after merge. No unresolved failed PR check remains.
+
+## Final released-display readback
+- PR #88 merged at ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee after both Candidate integrity and Equilibrio CI succeeded. Updated only publication facts and evidence; tagged ZIP/source artifacts unchanged.
+- Pages built ba035e9 successfully. Final live verification: all 12 Pages, all 12 generated gateways, and 5 shared resources HTTP 200; every fetched file equals current source bytes. All three LPs show RELEASED / v0.1.0 and contain no RELEASE CANDIDATE label. Language/canonical/alternates and IT card targets checked again. evidence/public-pages.json now holds this final readback, not the earlier candidate display.
+- Fixed release source main checks: 15/15 SUCCESS, captured in evidence/release-main-checks.json. Release publishing/readback workflow remains SUCCESS; remote tag object/peeled commit read back and unchanged. No stage remains on HOLD; no missing product/ZIP/Page deliverable or human handoff.
+- Restart point, if future optional native/environment testing is requested: immutable kumihan-it-v0.1.0 plus this ledger. Do not rebuild or replace the published tag/assets without a new version.
