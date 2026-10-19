@@ -24,7 +24,6 @@ PAGE = "privacy.html"
 REDIRECTS = {"privacy-ja.html": PAGE + "#ja"}
 LINKS = {"GH": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
          "GHJA": "https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement",
-         "G": "https://policies.google.com/privacy", "GJA": "https://policies.google.com/privacy?hl=ja",
          "LANDCO": "https://landco.co.jp/"}
 
 _wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
@@ -59,7 +58,7 @@ def fonts(languages):
         key = WEB_FONTS.script(l["lang"])
         if key != "latin" and key not in keys:
             keys.append(key)
-    extra = "".join(f'<link rel="stylesheet" href="{x(WEB_FONTS.own_url(k))}">' for k in keys)
+    extra = "".join(f'<link rel="stylesheet" href="{WEB_FONTS.local_css(WEB_FONTS.own_url(k))}">' for k in keys)
     return WEB_FONTS.head("en") + extra
 
 
