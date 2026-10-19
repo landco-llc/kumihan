@@ -1,7 +1,7 @@
 {
   "format": "kumihan-standalone-inventory-2",
   "skill": "kumihan-review",
-  "version": "0.1.7-preview",
+  "version": "0.1.8-preview",
   "path_base": "skill-folder-root",
   "self_digest": "inventory.json lists every other file; its own hash is in the distribution SHA256SUMS.",
   "files": [
@@ -12,8 +12,8 @@
     },
     {
       "path": "SKILL.md",
-      "bytes": 3470,
-      "sha256": "d628a16819b2abc73e24120b83c51fb351d0769e8e8b5cbd9793c845112dd9c2"
+      "bytes": 4137,
+      "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
     },
     {
       "path": "profiles/display-copy.json",
@@ -48,12 +48,17 @@
     {
       "path": "references/architecture.md",
       "bytes": 15868,
-      "sha256": "6bea1d2d3c4e2927dd7200f2d8de00456b556201d81d3ba59f67552df12e4502"
+      "sha256": "3654ce6e702d7c9d38394b5b2af36cebac336eac5718c5306c9ed0f7666c12cd"
     },
     {
       "path": "references/design-contract.md",
       "bytes": 7083,
       "sha256": "96c443c055a39c1fabfad7b130e77eeba0179ea4112c8de48a938e66ac234e91"
+    },
+    {
+      "path": "references/design-review-modes.md",
+      "bytes": 5200,
+      "sha256": "94425ab4044ac0fefe78d649a7d9cac7df67b2e0673ff49b02bab186c4714ef7"
     },
     {
       "path": "references/document-recipes.md",
@@ -64,6 +69,21 @@
       "path": "references/review-protocol.md",
       "bytes": 12582,
       "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+    },
+    {
+      "path": "references/use-case-adapters.json",
+      "bytes": 3121,
+      "sha256": "eacf4f391412c596a8fa844d4d7765ff9b715fbebf6186a5a77d0b08bda25374"
+    },
+    {
+      "path": "references/use-case-selection.md",
+      "bytes": 6291,
+      "sha256": "73058e3cdb2cefcf4ce8b68b7c707d1d093e3c5431cd75cb27947a6841d1a7ec"
+    },
+    {
+      "path": "references/visual-relationship-guidance.md",
+      "bytes": 3306,
+      "sha256": "a57849c985c837b7108d03bc276bd6dc49abfc4a8893f00c5f4c919ed8e415b4"
     },
     {
       "path": "references/web-recipes.md",
@@ -124,6 +144,11 @@
       "path": "schemas/rule.schema.json",
       "bytes": 5677,
       "sha256": "60e8e2bf7a34d3e4d3761ca6adfd93d309dc596ad9ab4ad340d3c86b0a99d1e5"
+    },
+    {
+      "path": "scripts/use_case_selector.py",
+      "bytes": 14288,
+      "sha256": "6d3b63d13358f9af803e03857899aa05298cbe97df724f4aaf4893caa37226fc"
     },
     {
       "path": "sources/public-sources.json",

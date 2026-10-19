@@ -78,7 +78,11 @@ def set_version(new):
 
 def skill_files(name):
     base = ROOT / "skills" / name
-    return sorted(p.relative_to(base).as_posix() for p in base.rglob("*") if p.is_file())
+    return sorted(
+        p.relative_to(base).as_posix()
+        for p in base.rglob("*")
+        if p.is_file() and p.suffix != ".pyc" and "__pycache__" not in p.parts
+    )
 
 
 def planned_tree():
@@ -281,7 +285,12 @@ def stale_download_files(planned):
     stale = []
     for folder in {p.split("/")[0] for p in planned}:
         for p in (ROOT / folder).rglob("*"):
-            if p.is_file() and p.relative_to(ROOT).as_posix() not in planned:
+            if (
+                p.is_file()
+                and p.suffix != ".pyc"
+                and "__pycache__" not in p.parts
+                and p.relative_to(ROOT).as_posix() not in planned
+            ):
                 stale.append(p)
     return stale
 
