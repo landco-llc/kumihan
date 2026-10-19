@@ -125,6 +125,17 @@ jobs:
           tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
             public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
           (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
       - name: Upload staging artifact
         uses: actions/upload-artifact@v4
         with:
