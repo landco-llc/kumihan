@@ -110,6 +110,9 @@ def page(copy):
 .lang-pick li a {{ display: block; margin: 0; padding: 8px 16px; border: 0; color: var(--ink-2); font-size: 13px; line-height: 1.5; text-decoration: none; }}
 .lang-pick li a .code {{ display: inline-block; min-width: 4.6em; color: var(--muted); font: 800 11px/1.5 Arial, Helvetica, sans-serif; letter-spacing: .04em; }}
 .lang-pick li a:hover, .lang-pick li a:focus-visible {{ background: #ede8de; color: var(--ink); }}
+.page-jump {{ display: flex; gap: 10px; margin-top: 14px; }}
+.page-jump a {{ display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; box-sizing: border-box; border: 1px solid var(--line); border-radius: 50%; background: #fffefa; color: var(--ink-2); font: 700 17px/1 Arial, Helvetica, sans-serif; text-decoration: none; }}
+.page-jump a:hover, .page-jump a:focus-visible {{ border-color: var(--ink); color: var(--ink); }}
 </style>
 {fonts(languages)}
 </head>
@@ -142,6 +145,7 @@ def page(copy):
       <ol>{toc}</ol>
     </details>
     <details class="lang-pick"><summary>{x(p['other_languages'])}</summary><ul>{menu}</ul></details>
+    <nav class="page-jump" aria-label="{x(p['jump'])}"><a href="#top" aria-label="{x(p['to_top'])}" title="{x(p['to_top'])}"><span aria-hidden="true">↑</span></a><a href="#page-bottom" aria-label="{x(p['to_bottom'])}" title="{x(p['to_bottom'])}"><span aria-hidden="true">↓</span></a></nav>
     <div class="toc-note"><strong>{x(p['note_title'])}</strong><p>{x(p['note'])}</p><p lang="ja">{x(p['note_ja'])}</p></div>
   </aside>
   <main class="guide" id="main" tabindex="-1">
@@ -150,6 +154,7 @@ def page(copy):
   </main>
 </div>
 {WEB_FONTS.FOOTER.footer('en')}
+<div id="page-bottom"></div>
 <script>document.querySelectorAll(".lang-pick a").forEach(a => a.addEventListener("click", () => a.closest("details").removeAttribute("open")));</script>
 </body>
 </html>
