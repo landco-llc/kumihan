@@ -10,13 +10,13 @@
     "php_version": "8.5",
     "deployment_mode": "PHP request lifecycle (no daemon)"
   },
-  "status": "owner_configured_pending_remote_verification",
+  "status": "tls_verified_pending_mcp_deployment",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
-    "ssl_verified": false,
+    "ssl_verified": true,
     "php85_verified_on_target": false,
-    "dns_verified": false,
+    "dns_verified": true,
     "github_staging_ci_verified": true,
     "host_end_to_end_verified": false,
     "client_connection_verified": false,
@@ -26,15 +26,25 @@
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "mcp-service/public",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner reports hostname and SSL configured. Public DNS, TLS, PHP 8.5 effective runtime, document root, and live MCP handshake remain unverified. Do not distribute endpoint-bound plugin packages or declare production until tests pass.",
-  "deployment_blocker": "No verified document-root path or deployment access; PHP MCP has not been uploaded and HTTPS MCP protocol tests have not run on Lolipop.",
+  "notes": "Owner confirmed domain and SSL setup; GitHub Actions independently validated DNS+hostname TLS1.3. Await actual subdomain document-root path, PHP 8.5 setting and MCP runtime upload. Do not declare MCP ready until HTTPS MCP initialize/tools pass.",
+  "deployment_blocker": "MCP PHP runtime has not been uploaded. Exact subdomain document-root path and SSH/SFTP upload path are not confirmed. TLS now verified.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
     "subdomain_created": true,
     "ssl_configured": true,
-    "verification_type": "owner_report_only",
-    "network_tls_probe": "NOT_CHECKED",
+    "verification_type": "owner_report_plus_independent_github_tls_probe",
+    "network_tls_probe": "PASS",
     "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint."
+  },
+  "tls_verification": {
+    "verification_type": "public_github_actions_runner",
+    "result": "PASS",
+    "checked_at": "2026-10-19T11:43:49Z",
+    "hostname": "mcp-kmhn.landco.co.jp",
+    "tls_version": "TLSv1.3",
+    "certificate_not_after": "2027-01-17T10:35:22Z",
+    "evidence_url": "https://github.com/landco-llc/kumihan/actions/runs/39246702661",
+    "limitation": "This validates TLS hostname and chain from one runner, NOT deployed PHP runtime or MCP protocol."
   }
 }
