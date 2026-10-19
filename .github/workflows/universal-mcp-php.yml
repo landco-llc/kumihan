@@ -53,6 +53,23 @@ jobs:
         run: |
           composer validate --no-check-publish --strict
           composer audit --locked --no-dev --format=plain
+      - name: Validate Lolipop private Web PHP readiness helper
+        run: |
+          set -eu
+          sh -n universal/tools/check_private_runtime_web.sh
+          python3 - <<'PY'
+          from pathlib import Path
+          source = Path('universal/tools/check_private_runtime_web.sh').read_text(encoding='utf-8')
+          start = "cat > \"$PROBE_PATH\" <<'PHP'\n"
+          assert source.count(start) == 1, 'PHP probe heredoc marker not unique'
+          rest = source.split(start, 1)[1]
+          assert '\nPHP\n' in rest, 'PHP probe heredoc terminator missing'
+          php = rest.split('\nPHP\n', 1)[0] + '\n'
+          Path('/tmp/kmhn-web-readiness-probe.php').write_text(php, encoding='utf-8')
+          assert 'REGISTRY_MODULES=' in php
+          assert 'SESSION_WRITE' in php
+          PY
+          php -l /tmp/kmhn-web-readiness-probe.php
       - name: PHP registry, routing and review smoke
         run: php universal/server/tests/smoke.php
       - name: Prepare test-only HTTP config
