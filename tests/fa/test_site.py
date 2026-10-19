@@ -23,7 +23,9 @@ class PageTests(unittest.TestCase):
                     self.assertIn('v0.1.0',source)
                     if lang=='fa':
                         self.assertIn('dir="rtl"',source)
-                        self.assertIn('Vazirmatn',source)
+                        # Vazirmatn comes from this site's copy of the Google Fonts stylesheet.
+                        sheets=re.findall(r'href="[^"]*(assets/fonts/google/[0-9a-f]+\.css)',source)
+                        self.assertTrue(any('Vazirmatn' in (ROOT/s).read_text(encoding='utf-8') for s in sheets))
                     else:
                         self.assertIn('dir="ltr"',source)
     def test_site_uses_canonical_sections(self):
