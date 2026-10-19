@@ -18,7 +18,7 @@ _wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name
 WEB_FONTS = module_from_spec(_wf_spec)
 _wf_spec.loader.exec_module(WEB_FONTS)
 BASE = "https://landco-llc.github.io/kumihan/"
-VISIBLE, STEP = 9, 6
+VISIBLE, STEP = 6, 6
 
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
@@ -539,6 +539,31 @@ CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for
 
 
 
+# Language-edition names in each page language, for the edition menu (CLDR names, first letter
+# capitalized; adjusted to the names used on the cards).
+EDITION_NAMES = {
+    "ar": {"ar": "العربية", "bn": "البنغالية", "de": "الألمانية", "es": "الإسبانية", "fr": "الفرنسية", "hi": "الهندية", "id": "الإندونيسية", "it": "الإيطالية", "ja": "اليابانية", "ko": "الكورية", "pl": "البولندية", "pt": "البرتغالية", "ru": "الروسية", "th": "التايلاندية", "vi": "الفيتنامية", "zh-hans": "الصينية المبسطة", "zh-hant": "الصينية التقليدية"},
+    "bn": {"ar": "আরবি", "bn": "বাংলা", "de": "জার্মান", "es": "স্প্যানিশ", "fr": "ফরাসি", "hi": "হিন্দি", "id": "ইন্দোনেশীয়", "it": "ইতালীয়", "ja": "জাপানি", "ko": "কোরীয়", "pl": "পোলিশ", "pt": "পর্তুগিজ", "ru": "রুশ", "th": "থাই", "vi": "ভিয়েতনামি", "zh-hans": "সরলীকৃত চীনা", "zh-hant": "প্রথাগত চীনা"},
+    "de": {"ar": "Arabisch", "bn": "Bengalisch", "de": "Deutsch", "es": "Spanisch", "fr": "Französisch", "hi": "Hindi", "id": "Indonesisch", "it": "Italienisch", "ja": "Japanisch", "ko": "Koreanisch", "pl": "Polnisch", "pt": "Portugiesisch", "ru": "Russisch", "th": "Thailändisch", "vi": "Vietnamesisch", "zh-hans": "Chinesisch (vereinfacht)", "zh-hant": "Chinesisch (traditionell)"},
+    "en": {"ar": "Arabic", "bn": "Bangla", "de": "German", "es": "Spanish", "fr": "French", "hi": "Hindi", "id": "Indonesian", "it": "Italian", "ja": "Japanese", "ko": "Korean", "pl": "Polish", "pt": "Portuguese", "ru": "Russian", "th": "Thai", "vi": "Vietnamese", "zh-hans": "Simplified Chinese", "zh-hant": "Traditional Chinese"},
+    "es": {"ar": "Árabe", "bn": "Bengalí", "de": "Alemán", "es": "Español", "fr": "Francés", "hi": "Hindi", "id": "Indonesio", "it": "Italiano", "ja": "Japonés", "ko": "Coreano", "pl": "Polaco", "pt": "Portugués", "ru": "Ruso", "th": "Tailandés", "vi": "Vietnamita", "zh-hans": "Chino simplificado", "zh-hant": "Chino tradicional"},
+    "fr": {"ar": "Arabe", "bn": "Bengali", "de": "Allemand", "es": "Espagnol", "fr": "Français", "hi": "Hindi", "id": "Indonésien", "it": "Italien", "ja": "Japonais", "ko": "Coréen", "pl": "Polonais", "pt": "Portugais", "ru": "Russe", "th": "Thaï", "vi": "Vietnamien", "zh-hans": "Chinois simplifié", "zh-hant": "Chinois traditionnel"},
+    "hi": {"ar": "अरबी", "bn": "बंगाली", "de": "जर्मन", "es": "स्पेनिश", "fr": "फ़्रेंच", "hi": "हिंदी", "id": "इंडोनेशियाई", "it": "इतालवी", "ja": "जापानी", "ko": "कोरियाई", "pl": "पोलिश", "pt": "पुर्तगाली", "ru": "रूसी", "th": "थाई", "vi": "वियतनामी", "zh-hans": "सरलीकृत चीनी", "zh-hant": "पारंपरिक चीनी"},
+    "id": {"ar": "Arab", "bn": "Bengali", "de": "Jerman", "es": "Spanyol", "fr": "Prancis", "hi": "Hindi", "id": "Indonesia", "it": "Italia", "ja": "Jepang", "ko": "Korea", "pl": "Polandia", "pt": "Portugis", "ru": "Rusia", "th": "Thai", "vi": "Vietnam", "zh-hans": "Tionghoa Sederhana", "zh-hant": "Tionghoa Tradisional"},
+    "it": {"ar": "Arabo", "bn": "Bengalese", "de": "Tedesco", "es": "Spagnolo", "fr": "Francese", "hi": "Hindi", "id": "Indonesiano", "it": "Italiano", "ja": "Giapponese", "ko": "Coreano", "pl": "Polacco", "pt": "Portoghese", "ru": "Russo", "th": "Thailandese", "vi": "Vietnamita", "zh-hans": "Cinese semplificato", "zh-hant": "Cinese tradizionale"},
+    "ja": {"ar": "アラビア語", "bn": "ベンガル語", "de": "ドイツ語", "es": "スペイン語", "fr": "フランス語", "hi": "ヒンディー語", "id": "インドネシア語", "it": "イタリア語", "ja": "日本語", "ko": "韓国語", "pl": "ポーランド語", "pt": "ポルトガル語", "ru": "ロシア語", "th": "タイ語", "vi": "ベトナム語", "zh-hans": "簡体中国語", "zh-hant": "繁体中国語"},
+    "ko": {"ar": "아랍어", "bn": "벵골어", "de": "독일어", "es": "스페인어", "fr": "프랑스어", "hi": "힌디어", "id": "인도네시아어", "it": "이탈리아어", "ja": "일본어", "ko": "한국어", "pl": "폴란드어", "pt": "포르투갈어", "ru": "러시아어", "th": "태국어", "vi": "베트남어", "zh-hans": "중국어(간체)", "zh-hant": "중국어(번체)"},
+    "pl": {"ar": "Arabski", "bn": "Bengalski", "de": "Niemiecki", "es": "Hiszpański", "fr": "Francuski", "hi": "Hindi", "id": "Indonezyjski", "it": "Włoski", "ja": "Japoński", "ko": "Koreański", "pl": "Polski", "pt": "Portugalski", "ru": "Rosyjski", "th": "Tajski", "vi": "Wietnamski", "zh-hans": "Chiński uproszczony", "zh-hant": "Chiński tradycyjny"},
+    "pt": {"ar": "Árabe", "bn": "Bengali", "de": "Alemão", "es": "Espanhol", "fr": "Francês", "hi": "Híndi", "id": "Indonésio", "it": "Italiano", "ja": "Japonês", "ko": "Coreano", "pl": "Polonês", "pt": "Português", "ru": "Russo", "th": "Tailandês", "vi": "Vietnamita", "zh-hans": "Chinês simplificado", "zh-hant": "Chinês tradicional"},
+    "ru": {"ar": "Арабский", "bn": "Бенгальский", "de": "Немецкий", "es": "Испанский", "fr": "Французский", "hi": "Хинди", "id": "Индонезийский", "it": "Итальянский", "ja": "Японский", "ko": "Корейский", "pl": "Польский", "pt": "Португальский", "ru": "Русский", "th": "Тайский", "vi": "Вьетнамский", "zh-hans": "Китайский (упрощённый)", "zh-hant": "Китайский (традиционный)"},
+    "th": {"ar": "อาหรับ", "bn": "เบงกาลี", "de": "เยอรมัน", "es": "สเปน", "fr": "ฝรั่งเศส", "hi": "ฮินดี", "id": "อินโดนีเซีย", "it": "อิตาลี", "ja": "ญี่ปุ่น", "ko": "เกาหลี", "pl": "โปแลนด์", "pt": "โปรตุเกส", "ru": "รัสเซีย", "th": "ไทย", "vi": "เวียดนาม", "zh-hans": "จีนตัวย่อ", "zh-hant": "จีนตัวเต็ม"},
+    "vi": {"ar": "Tiếng Ả Rập", "bn": "Tiếng Bengal", "de": "Tiếng Đức", "es": "Tiếng Tây Ban Nha", "fr": "Tiếng Pháp", "hi": "Tiếng Hindi", "id": "Tiếng Indonesia", "it": "Tiếng Ý", "ja": "Tiếng Nhật", "ko": "Tiếng Hàn", "pl": "Tiếng Ba Lan", "pt": "Tiếng Bồ Đào Nha", "ru": "Tiếng Nga", "th": "Tiếng Thái", "vi": "Tiếng Việt", "zh-hans": "Tiếng Trung (Giản thể)", "zh-hant": "Tiếng Trung (Phồn thể)"},
+    "zh-hans": {"ar": "阿拉伯语", "bn": "孟加拉语", "de": "德语", "es": "西班牙语", "fr": "法语", "hi": "印地语", "id": "印度尼西亚语", "it": "意大利语", "ja": "日语", "ko": "韩语", "pl": "波兰语", "pt": "葡萄牙语", "ru": "俄语", "th": "泰语", "vi": "越南语", "zh-hans": "简体中文", "zh-hant": "繁体中文"},
+    "zh-hant": {"ar": "阿拉伯文", "bn": "孟加拉文", "de": "德文", "es": "西班牙文", "fr": "法文", "hi": "印地文", "id": "印尼文", "it": "義大利文", "ja": "日文", "ko": "韓文", "pl": "波蘭文", "pt": "葡萄牙文", "ru": "俄文", "th": "泰文", "vi": "越南文", "zh-hans": "簡體中文", "zh-hant": "繁體中文"},
+}
+# Placeholder of the edition menu, in each page language.
+PICK = {"ja": "言語を選ぶ", "en": "Choose a language", "ar": "اختر لغة", "bn": "ভাষা বেছে নিন", "de": "Sprache wählen", "es": "Elige un idioma", "fr": "Choisir une langue", "hi": "भाषा चुनें", "id": "Pilih bahasa", "it": "Scegli una lingua", "ko": "언어 선택", "pl": "Wybierz język", "pt": "Escolha uma língua", "ru": "Выберите язык", "th": "เลือกภาษา", "vi": "Chọn ngôn ngữ", "zh-hans": "选择语言", "zh-hant": "選擇語言"}
+
 def x(value):
     return escape(str(value), quote=True)
 
@@ -554,6 +579,18 @@ def menu(key):
         for k in order)
     return (f'<details class="lang-menu"><summary aria-label="{x(UI[key]["menu"])}: {code} - {x(name)}">'
             f'<span>{code} - <span lang="{lang_attr(key)}">{x(name)}</span></span></summary><ul>{items}</ul></details>')
+
+
+def edition_menu(key):
+    """Language-edition menu under the section title: the page's language first, then by code."""
+    order = ([key] if key in PRODUCTS else []) + sorted(c for c in PRODUCTS if c != key)
+    items = "".join(
+        f'<li><a href="{PRODUCTS[c]["pages"].get(key) or PRODUCTS[c]["pages"]["en"]}"'
+        + (' class="current"' if c == key else "")
+        + f'><span class="code">{c.upper()}</span> - {x(EDITION_NAMES[key][c])}</a></li>'
+        for c in order)
+    return (f'<details class="lang-menu edition-menu"><summary>{x(PICK[key])}</summary>'
+            f'<ul>{items}</ul></details>')
 
 
 def marquee():
@@ -674,7 +711,7 @@ def page(key, c):
 <section aria-labelledby="language-title" class="language-section" id="languages">
 <div class="shell">
 <div class="section-heading">
-<div><p class="eyebrow">CHOOSE YOUR LANGUAGE</p><h2 id="language-title">{x(UI[key]['heading'])}</h2></div>
+<div><p class="eyebrow">CHOOSE YOUR LANGUAGE</p><h2 id="language-title">{x(UI[key]['heading'])}</h2>{edition_menu(key)}</div>
 <p class="section-note">{c['section_note']}</p>
 </div>
 <div class="language-grid">
