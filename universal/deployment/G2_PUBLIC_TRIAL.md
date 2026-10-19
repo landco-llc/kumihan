@@ -1,6 +1,6 @@
 # KUMIHAN Universal MCP — G2 controlled public bootstrap trial
 
-Status: G1 scoped PASS and Owner's domain upload-folder mapping review PASS; **G2 public files NOT YET INSTALLED**.
+Status: **G3 live HTTPS MCP PASS**; two public files installed, 4 tools / 21 modules verified, client integrations and general release pending.
 Source: https://github.com/landco-llc/kumihan/pull/101, Draft/unmerged.
 Target: https://mcp-kmhn.landco.co.jp/mcp
 
@@ -81,3 +81,11 @@ From a Mac or GitHub runner, use the reviewed `universal/tools/probe_remote.py -
 If live MCP smoke fails, do not modify DNS/SSL or disable WAF globally. Record HTTP status and response type without customer content, then roll back the public files with the explicit operator-gated `universal/tools/rollback_public_trial.sh` **only when** both installed files still exactly match their staged copies. The rollback retains the private runtime for diagnostics and touches no other websites.
 
 Remaining product gates after G3: genuine ChatGPT/Codex, Claude Code and Gemini CLI connections, abuse controls, installer compatibility, operator evidence, explicit Owner main merge and release authorization. The full FTP-root symlink scan remains `NOT_CHECKED_PERMISSION_LIMIT` and never becomes PASS implicitly.
+
+## G3 live evidence — verified
+
+Owner's Mac printed `G2_TWO_FILE_BOOTSTRAP_INSTALLED`, TLSv1.3, `MCP_PASS ... tools=4 modules=21`, `MCP_TRIAL_PASS`, and `PUBLIC_BOOTSTRAP_REMAINS_INSTALLED`.
+
+A second, independent read-only check from the connected Mac also PASSed HTTPS MCP initialize, tools/list and tools/call `kumihan_list_languages`. Tested GETs against `vendor/autoload.php`, `runtime/config.php`, `runtime/registry.json`, and `src/Registry.php` all returned HTTP 404; `.env` returned 403. These probes do **not** constitute an exhaustive security review.
+
+This endpoint is publicly reachable without authentication or per-user quotas. Keep the trial distinct from general release, client adapters and main merge; do not publish client plugins without a further Owner gate. Previous G2 rollback succeeded in an earlier trial, but **do not roll back this successfully verified live trial unless Owner requests it**.
