@@ -13,7 +13,10 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "g2_public_two_files_privately_staged_verified_pending_limited_install")
+        self.assertEqual(d["status"], "g2_trial_installed_then_rolled_back_before_mcp_probe_python_ca_fixed")
+        self.assertEqual(d["g2_trial_attempt"]["outcome"], "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST")
+        self.assertFalse(d["g2_trial_attempt"]["live_mcp_verified"])
+        self.assertFalse(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["g2_stage_evidence"]["owner_terminal_markers"], [
             "G2_LOCAL_FILE_SHA_OK",
             "G2_PRIVATE_STAGE_CREATED",
