@@ -102,7 +102,7 @@
   ],
   "install_extra": "15 ZIP-Dateien, MANIFEST.json und SHA256SUMS.txt ansehen ↗",
   "status_title": "RELEASE CANDIDATE / v0.1.0",
-  "status_body": "Die ZIP-Dateien stehen im Repository bereit. Der öffentliche Release wird noch geprüft. Der Aufruf in den KI-Werkzeugen und ein Lektorat durch deutsche Muttersprachler sind noch nicht geprüft.",
+  "status_body": "v0.1.0 ist als GitHub Release verfügbar. Der Aufruf in den einzelnen KI-Werkzeugen und ein Lektorat durch deutsche Muttersprachler sind noch nicht geprüft.",
   "status_link": "Distributionsdateien ansehen ↗",
   "cta_h2": [
    "Eine weitere Möglichkeit",
@@ -123,7 +123,7 @@
    "toc_title": "Auf dieser Seite",
    "toc_summary": "Inhaltsverzeichnis anzeigen",
    "platforms": "KI-Werkzeug wählen",
-   "note_title": "v0.1.0 / Release candidate",
+   "note_title": "v0.1.0 / GitHub Release",
    "note": "Installation und Aufruf wurden in den einzelnen Werkzeugen noch nicht geprüft. Je nach Umgebung sind nicht alle Schritte verfügbar.",
    "source": "Original INSTALL.md öffnen",
    "steps": "Schritte und Hinweise",
@@ -151,7 +151,7 @@
    "update": "Sichern Sie eigene Einstellungen und prüfen Sie neue Version und Prüfsumme. Aktualisieren Sie über die unterstützte Methode Ihres Werkzeugs. Ein neuer Commit aktualisiert eine bestehende Installation nicht. Andere Sprachplugins bleiben erhalten.",
    "limits": "44 Regelkandidaten und eine begrenzte CSS-Kandidatenregel; 48 vorgeschlagene Forschungsfälle werden getrennt geführt. Kein vollständiges Korrektorat und keine visuelle Zertifizierung. Nativer Import, Symboldarstellung und Aufnahme in Anbieter-Verzeichnisse sind nicht verifiziert."
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  },
  "en": {
   "house_style": null,
@@ -256,7 +256,7 @@
   ],
   "install_extra": "All 15 ZIP files, MANIFEST.json, and SHA256SUMS.txt ↗",
   "status_title": "RELEASED / v0.1.0",
-  "status_body": "Version 0.1.0 distribution files are available in the source repository. Public Release verification is pending. Native AI tool behavior and native German editorial review are not yet checked.",
+  "status_body": "Version 0.1.0 is published on GitHub Release. Native installation and invocation across AI tools, icon display and review by native German speakers remain unchecked.",
   "status_link": "Download latest ↗",
   "cta_h2": [
    "Another way to design",
@@ -277,7 +277,7 @@
    "toc_title": "On this page",
    "toc_summary": "Show contents",
    "platforms": "Choose an AI platform",
-   "note_title": "v0.1.0 / Release candidate",
+   "note_title": "v0.1.0 / GitHub Release",
    "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
    "source": "Open the original INSTALL.md",
    "steps": "Steps and notes",
@@ -305,7 +305,7 @@
    "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
    "limits": "44 guidance candidates and one bounded CSS candidate rule; 48 proposed research cases remain separately tracked. This is not a complete proofreader or visual certification. Native import, icon display and provider marketplace listing are not verified."
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  },
  "ja": {
   "house_style": null,
@@ -411,7 +411,7 @@
   ],
   "install_extra": "15個のZIP・MANIFEST.json・SHA256SUMS.txtを見る ↗",
   "status_title": "RELEASED / v0.1.0",
-  "status_body": "v0.1.0の配布ファイルをソースリポジトリで提供しています。正式Releaseの公開照合は準備中です。各AIツールでの動作とドイツ語母語話者による確認は未実施です。",
+  "status_body": "v0.1.0をGitHub Releaseで公開しています。各AIツールでの導入・呼び出し・アイコン表示と、ドイツ語母語話者による確認は未実施です。",
   "status_link": "最新版のダウンロード ↗",
   "cta_h2": [
    "ドイツ語のデザインに",
@@ -432,7 +432,7 @@
    "toc_title": "このページの目次",
    "toc_summary": "このページの目次を表示",
    "platforms": "AIプラットフォームを選ぶ",
-   "note_title": "v0.1.0 / Release candidate",
+   "note_title": "v0.1.0 / GitHub Release",
    "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
    "source": "元のINSTALL.mdを開く",
    "steps": "手順と注意事項",
@@ -460,6 +460,6 @@
    "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
    "limits": "44件の指針候補と1種類の限定的なCSS注意候補です。48件の研究ケースは別途管理し、全件合格とは扱いません。完全な校正や表示品質の保証ではなく、実ホストでの導入・アイコン表示・公式ストア掲載は未検証です。"
   },
-  "publication_state": "candidate"
+  "publication_state": "published"
  }
 }

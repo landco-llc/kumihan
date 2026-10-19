@@ -46,3 +46,11 @@ Browser measurements and external CI/PR/release evidence follow below after actu
 Chromium actual build (see QA_browser.json): 192 observations = 12 pages × 4 viewport widths × 100%/200% computed font sizes × normal/spacing override. External font requests blocked explicitly for fallback. Two initial failures in DE at 320/768 + 200% + spacing traced to text overflow in narrow explanations; fixed layout width, wrapping, card padding and draft German phrasing. Re-run: 192/192 passed, no horizontal overflow or DOM clipping. QA_interaction.json: 6 keyboard skip/focus + long-label stress observations passed; source untouched. Native zoom, online web-font download, Safari/Windows and assistive technology remain not-checked.
 
 PR: https://github.com/landco-llc/kumihan/pull/77. First Accord/Ziheng CI failure was missing generated _data/web_fonts.yml (DE selector source added but output not staged); corrected in 89d9059. Logs endpoint unavailable from cloud policy; job-step API identified exact failing web_fonts --check, local reproduction/check now passed. Administrative Actions permissions read returned 403 but ordinary PR/CI/push access works; no admin change needed.
+
+## W10–W11 first public verification — passed
+
+PR #77 all 13 checks green, merged to fd380a61823017f921bcdf09724fcd6c1c232ff6. Main Satzbild CI: https://github.com/landco-llc/kumihan/actions/runs/39190834291 (success). Pages Jekyll/deployment: https://github.com/landco-llc/kumihan/actions/runs/39190833972 (success).
+
+Immutable tag kumihan-de-v0.1.0 fixed to that merge SHA. Public Release: https://github.com/landco-llc/kumihan/releases/tag/kumihan-de-v0.1.0 (draft=false, 17 assets). Publisher run https://github.com/landco-llc/kumihan/actions/runs/39190944159 success, enforcing exact main and successful source CI, metadata size/digest checks and public byte-for-byte download verification. Independent public verifier also downloaded all 17 assets and matched local bytes; initial 12 Pages exact bytes + home DE card passed. MANIFEST SHA-256: aaad69624c88050f5380a1f78418177cd6d0aab4b4eeab68bc3f33789a6b1ec1. ZIP total bytes: 22200537.
+
+Only after this readback, site copy moved from candidate to published and guide downloads switched to actual Release asset URLs. Artifact bytes/tag stay unchanged. Final site CI/deployment/receipt follow in release result.
