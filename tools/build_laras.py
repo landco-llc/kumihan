@@ -42,7 +42,7 @@ def build(out):
         entries=[]
         for f in all_files:
             rel=f.relative_to(SOURCE).as_posix()
-            include=rel.startswith(("skills/","rules/","locales/","references/","schemas/","runtime/","entrypoints/","assets/")) or rel in COMMON or rel=="sources.json" or rel in META[host]
+            include=rel.startswith(("skills/","rules/","locales/","references/","schemas/","runtime/","entrypoints/","assets/","sources/","fixtures/")) or rel in COMMON or rel=="sources.json" or rel in META[host]
             if include:entries.append((f,"kumihan-laras/"+rel))
         target=out/f"kumihan-laras-{PLUGINS[host]}-v0.1.0.zip"
         write_zip(target,entries)
