@@ -8,14 +8,16 @@
     "plan": "High-Speed",
     "web_server": "LiteSpeed",
     "php_version": "8.5",
-    "deployment_mode": "PHP request lifecycle (no daemon)"
+    "deployment_mode": "PHP request lifecycle (no daemon)",
+    "observed_web_php_version": "8.5.11",
+    "observed_web_php_sapi": "litespeed"
   },
-  "status": "ssh_public_root_verified_parent_writable_pending_private_php_access",
+  "status": "php85_private_read_verified_staging_preparation",
   "configuration_blocker": null,
   "flags": {
     "subdomain_created": true,
     "ssl_verified": true,
-    "php85_verified_on_target": false,
+    "php85_verified_on_target": true,
     "dns_verified": true,
     "github_staging_ci_verified": true,
     "host_end_to_end_verified": false,
@@ -27,15 +29,16 @@
     "ssh_access_verified": true,
     "ftp_root_path_owner_confirmed": true,
     "ftp_root_ssh_verified": true,
-    "web_php_can_read_private_runtime_verified": false,
+    "web_php_can_read_private_runtime_verified": true,
     "public_ssh_folder_verified": true,
-    "ftp_parent_ssh_writable_verified": true
+    "ftp_parent_ssh_writable_verified": true,
+    "private_candidate_ssh_write_verified": true
   },
   "runtime_config_template": "universal/server/runtime/config.production.example.php",
   "production_upload_directory": "kmhn",
   "operations_doc": "universal/LOLLIPOP_SETUP.md",
-  "notes": "Owner's shell returned KMHN_OK and PRIVATE_PARENT_WRITABLE after successful cd. Keep full account-specific filesystem path private (not in public repo). No writes yet; private directory creation and PHP include remain NOT CHECKED.",
-  "deployment_blocker": "SSH confirmed FTP web root/kmhn and parent writable. Need create/check private sibling outside web, verify it is PHP-readable from HTTPS under target domain and effective PHP8.5 before placing MCP runtime.",
+  "notes": "Owner's remote one-shot Web PHP preflight returned PHP_VERSION=8.5.11 PHP_SAPI=litespeed PRIVATE_PHP_READ=PASS TARGET_WEB_PHP85=PASS PRIVATE_WEB_PHP_PRECHECK_PASS. No real MCP upload. Full isolation and clean canary removal require independent checks.",
+  "deployment_blocker": "PHP 8.5.11 LiteSpeed can read the canary outside web and private candidate was SSH-writable. Next: verify no unintended HTTP/vhost exposure, package dependency/lock/audit and artifact integrity, then credential-safe actual host staging upload and real MCP HTTPS E2E.",
   "provisioning": {
     "reported_by": "Owner",
     "reported_at": "2026-10-19",
@@ -79,10 +82,13 @@
     "private_server_candidate": {
       "relative_to_ftp_root": "../kmhn-mcp-private/server",
       "approved": false,
-      "ssh_write_verified": false,
-      "web_php_read_verified": false,
+      "ssh_write_verified": true,
+      "web_php_read_verified": true,
       "outside_all_http_roots_verified": false,
-      "parent_writable_verified": true
+      "parent_writable_verified": true,
+      "outside_ftp_root_verified": true,
+      "created_by_preflight": true,
+      "contents_verified_post_cleanup": false
     }
   },
   "ssh_validation": {
@@ -91,5 +97,18 @@
     "verified_on": "2026-10-19",
     "writes_performed": false,
     "important_limit": "Test -w on parent does not imply private candidate directory exists, nor Web PHP access to files outside web, nor effective PHP 8.5."
+  },
+  "php_web_private_read_validation": {
+    "source": "Owner-supplied authenticated Lolipop SSH terminal output from one-shot Web PHP canary",
+    "observed_at": "2026-10-19",
+    "observed_web_php_version": "8.5.11",
+    "observed_php_sapi": "litespeed",
+    "private_php_read": "PASS",
+    "target_web_php85": "PASS",
+    "private_web_php_precheck": "PASS",
+    "creates_private_candidate_directory": true,
+    "probe_files_cleanup": "Expected from EXIT trap; not separately verified on host",
+    "verifies_all_http_roots_private": false,
+    "mcp_not_deployed": true
   }
 }
