@@ -44,6 +44,36 @@ The public entrypoint includes the verified absolute private app path and contai
 
 Installer always writes `.htaccess` first, then `index.php`, with noclobber protections; on a partial failure it attempts to remove only those two files that it created. A successful installer is NOT a passing MCP protocol test.
 
+## G2-A result — private stage transfer and readback PASS
+
+Owner Mac terminal reported on 2026-10-19:
+
+    G2_LOCAL_FILE_SHA_OK
+    G2_PRIVATE_STAGE_CREATED
+    G2_SCP_READBACK_SHA_OK
+    G2_SCP_READBACK_BYTES_OK
+    G2_ONLY_PRIVATE_STAGED
+
+The 453-byte operator-specific public `index.php` and 192-byte `.htaccess` were copied **only** into private `.kmhn-public-stage` via authenticated SCP and downloaded again to Mac. Both SHA-256 values and byte-for-byte equality against the extracted, verified ZIP members passed. No public file was installed and no HTTP MCP connection has been attempted.
+
+## G2-B next — guarded trial install, explicit operator approval
+
+1. On authenticated Lolipop SSH, download pinned `universal/tools/install_public_trial.sh` (inspect source) to an SSH-home temporary file using `curl` or `wget`; do not pipe raw network data into a shell, do not use `mktemp` (unavailable on host).
+2. Verify nonempty download and `sh -n`. In the same SSH session with `cd` to the already verified FTP-root `web`, execute with `KUMIHAN_G2_TRIAL_APPROVED=YES FTP_ROOT="$(pwd -P)" sh "$SCRIPT"`.
+3. The installer checks private/public boundaries, staged files, expected private entrypoint, rewrites, runtime files, no existing public entries, and creates `.htaccess` then `index.php` under `web/kmhn` using `set -C` no-clobber protection. Only those two files are affected; no source/vendor/runtime moves. Partial errors trigger limited cleanup.
+4. **IMPORTANT: This makes `/mcp` reachable from the public Internet immediately**, even though it is called a limited trial. No authentication or per-user quota is configured. Do not run unless immediate G3 HTTPS smoke and rollback are ready.
+
+Expected messages:
+
+    G2_PUBLIC_PRECHECK_PASS
+    G2_TWO_FILE_BOOTSTRAP_INSTALLED
+    MCP_HTTPS_E2E_NOT_CHECKED
+    CLIENT_ADAPTERS_NOT_RELEASED
+
+Do not repeat installer on an error or after success. In the next step use the standalone `universal/tools/probe_remote.py --mode mcp --endpoint https://mcp-kmhn.landco.co.jp/mcp` from Mac (current script accepts explicit endpoint without a repo checkout). A successful HTTP TLS handshake alone is not MCP readiness.
+
+Rollback available in `universal/tools/rollback_public_trial.sh` after an explicit local approval flag. It refuses to remove files whose content differs from the staged copies and leaves private runtime untouched. If public MCP smoke fails, attempt rollback promptly and report status; if rollback refuses because files changed, STOP for manual investigation rather than deleting unrelated files.
+
 ## G3: immediate real HTTPS MCP transport verification
 
 From a Mac or GitHub runner, use the reviewed `universal/tools/probe_remote.py --mode mcp`. It performs real HTTPS initialize, tools/list and tools/call. Do not substitute a browser GET or a successful TLS connection for MCP readiness. Verify actual host name, response headers, WAF and errors, protocol versions and session behavior; test client adapters separately.
