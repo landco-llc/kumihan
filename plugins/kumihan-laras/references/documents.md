@@ -1,0 +1,1 @@
+Design documents and presentations from information hierarchy, table/figure captions and genuine reading order. Preserve original names, figures, dates and abbreviations. Distinguish formatted generated values from original copy. Verify DOCX/PDF text extraction and pagination before claiming success.

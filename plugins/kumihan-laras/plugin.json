@@ -1,0 +1,29 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kumihan-laras",
+  "version": "0.1.0",
+  "description": "Panduan tipografi dan desain berbahasa Indonesia dengan perlindungan naskah dan peninjauan berbasis bukti. | Indonesian typography and purposeful design guidance with source preservation and evidence-based review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "repository": "https://github.com/landco-llc/kumihan",
+  "license": "Apache-2.0",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Laras",
+        "shortDescription": "Tipografi Indonesia | Indonesian typography",
+        "longDescription": "Panduan tipografi dan desain berbahasa Indonesia dengan perlindungan naskah dan peninjauan berbasis bukti. | Indonesian typography and purposeful design guidance with source preservation and evidence-based review.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "websiteURL": "https://landco-llc.github.io/kumihan/kumihan-id.html",
+        "defaultPrompt": [
+          "Tinjau desain berbahasa Indonesia tanpa mengubah naskah asli.",
+          "Review Indonesian typography without altering the original text."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

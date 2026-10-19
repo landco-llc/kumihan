@@ -54,7 +54,8 @@ class LandingParity(unittest.TestCase):
 GATEWAY = {"ja": "index.html", "en": "top-en.html", "zh-Hant-TW": "top-zh-han.html",
            "zh-Hans-CN": "top-zh-cn.html", "ko-KR": "top-ko.html", "th": "top-th.html",
            "ar": "top-ar.html", "es": "top-es.html", "fr": "top-fr.html", "pt": "top-pt.html",
-           "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html"}
+           "hi": "top-hi.html", "vi": "top-vi.html", "de": "top-de.html", "pl": "top-pl.html",
+           "id": "top-id.html"}
 PAGE_GATEWAY = GATEWAY
 
 

@@ -51,7 +51,7 @@ AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..9
 LANGS = {"de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
-         "de": "latin", "pl": "latin"}
+         "de": "latin", "pl": "latin", "id": "latin"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
          "अक्षर-संगति あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文")

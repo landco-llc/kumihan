@@ -7,6 +7,7 @@ the page's own language first (and English second in the language menu).
 """
 import argparse
 import json
+import re
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
@@ -27,6 +28,7 @@ GATEWAYS = {
     "es": ("top-es.html", "es", "ES", "Español"),
     "fr": ("top-fr.html", "fr", "FR", "Français"),
     "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
+    "id": ("top-id.html", "id", "ID", "Bahasa Indonesia"),
     "ja": ("index.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
     "pl": ("top-pl.html", "pl", "PL", "Polski"),
@@ -42,6 +44,8 @@ GATEWAYS = {
 PRODUCTS = {
     "de": dict(name="Deutsch", lang="de", brand="KUMIHAN｜Satzbild", glyph="Ä", label="DE · GERMAN", version="v0.1.0", pages={"de":"kumihan-de.html", "en":"kumihan-de.en.html", "ja":"kumihan-de.ja.html"}),
     "hi": dict(name="हिंदी", lang="hi", brand="KUMIHAN｜अक्षर-संगति", glyph="अ", label="HI · HINDI", version="v0.1.0", pages={"hi":"kumihan-hi.html", "en":"kumihan-hi.en.html", "ja":"kumihan-hi.ja.html"}),
+    "id": dict(name="Bahasa Indonesia", lang="id", brand="KUMIHAN｜Laras", glyph="Ng", label="ID · INDONESIAN", version="v0.1.0",
+               pages={"id": "kumihan-id.html", "en": "kumihan-id.en.html", "ja": "kumihan-id.ja.html"}),
     "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
                pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
     "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.0",
@@ -69,6 +73,22 @@ RTL = {"ar"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
+    "id": {
+        "ar": ("Tipografi Arab yang menangani tulisan dari kanan ke kiri dan campuran aksara, tanpa mengubah naskah asli.", "Lihat edisi bahasa Arab"),
+        "de": ("Tipografi Jerman yang menghormati kata majemuk panjang, tanda kutip, ß dan ẞ, serta perbedaan DE, AT, dan CH sambil menjaga naskah asli.", "Lihat edisi bahasa Jerman"),
+        "es": ("Tipografi Spanyol yang menghormati penggunaan regional, menjaga naskah asli, dan memisahkan bukti terverifikasi dari pertimbangan editorial.", "Lihat edisi bahasa Spanyol"),
+        "fr": ("Tipografi Prancis yang membedakan spasi tak terputus, tanda kutip, dan gaya penulisan regional atau kelembagaan.", "Lihat edisi bahasa Prancis"),
+        "hi": ("Tipografi dan desain bahasa Hindi yang menjaga naskah asli, gugus konsonan, dan matra.", "Lihat edisi bahasa Hindi"),
+        "id": ("Tipografi bahasa Indonesia yang menimbang kata depan, imbuhan, kata ulang, tanda baca, dan nominal rupiah sesuai konteks, sambil menjaga naskah asli.", "Lihat edisi bahasa Indonesia"),
+        "ja": ("Dari aturan pemenggalan baris Jepang (kinsoku) dan pergantian baris yang alami hingga struktur informasi, ruang kosong, dan alur baca.", "Lihat edisi bahasa Jepang"),
+        "ko": ("Pergantian baris di antara eojeol (satuan spasi bahasa Korea), ritme teks, dan struktur informasi yang jelas.", "Lihat edisi bahasa Korea"),
+        "pl": ("Tipografi Polandia yang cermat pada diakritik, kata satu huruf di akhir baris, angka, dan tanda kutip, tanpa mengubah naskah asli.", "Lihat edisi bahasa Polandia"),
+        "pt": ("Tipografi Portugis dan desain berbasis makna yang menghormati konvensi Brasil dan Portugal serta maksud penulis.", "Lihat edisi bahasa Portugis"),
+        "th": ("Menghormati batas kata dan karakter gabung bahasa Thai, untuk desain bahasa Thai yang nyaman dibaca.", "Lihat edisi bahasa Thai"),
+        "vi": ("Tipografi Vietnam yang menghormati tanda nada, pergantian baris yang alami, dan konten asli.", "Lihat edisi bahasa Vietnam"),
+        "zh-hans": ("Tanda baca, pergantian baris, dan campuran teks Tionghoa–Latin untuk bahasa Tionghoa Sederhana, tanpa menulis ulang naskah asli.", "Lihat edisi bahasa Tionghoa Sederhana"),
+        "zh-hant": ("Memperhatikan kebiasaan tanda baca dan penataan huruf yang berbeda di Taiwan dan Hong Kong.", "Lihat edisi bahasa Tionghoa Tradisional"),
+    },
     "de": {
         "ar": ("Arabische Typografie für rechtsläufige Schrift und gemischte Schriftsysteme, die das Original unverändert lässt.", "Arabische Version ansehen"),
         "de": ("Deutsche Typografie, die lange Komposita, Anführungszeichen, ß und ẞ sowie die Unterschiede zwischen DE, AT und CH respektiert und das Original schützt.", "Deutsche Version ansehen"),
@@ -256,6 +276,7 @@ CARDS = {
 }
 
 UI = {
+    "id": dict(heading="Edisi bahasa KUMIHAN", more="Tampilkan {n} berikutnya", menu="Bahasa"),
     "de": dict(heading="Die Sprachversionen von KUMIHAN", more="Die nächsten {n} anzeigen", menu="Sprache"),
     "pl": dict(heading="Wersje językowe KUMIHAN", more="Pokaż kolejne {n}", menu="Język"),
     "ar": dict(heading="نسخ KUMIHAN اللغوية", more="عرض {n} أخرى", menu="اللغة"),
@@ -315,6 +336,73 @@ PL_CARD_COPY = {
 for _lang, _cards in CARDS.items():
     if _lang in PL_CARD_COPY:
         _cards.setdefault("pl", PL_CARD_COPY[_lang])
+
+# Indonesian edition (KUMIHAN｜Laras) for every reader language.
+ID_CARD_COPY = {
+    "de": (
+        "Indonesische Typografie, die Präpositionen, Affixe, Reduplikationen, Satzzeichen und Rupiah-Beträge im Kontext behandelt und das Original schützt.",
+        "Indonesische Version ansehen"
+    ),
+    "pl": (
+        "Typografia indonezyjska uwzględniająca przyimki, afiksy, reduplikację, interpunkcję i kwoty w rupiach, chroniąca oryginał.",
+        "Zobacz wersję indonezyjską"
+    ),
+    "ar": (
+        "تنضيد إندونيسي يراعي حروف الجر واللواحق والتكرار وعلامات الترقيم ومبالغ الروبية، ويحافظ على النص الأصلي.",
+        "عرض النسخة الإندونيسية"
+    ),
+    "es": (
+        "Tipografía indonesia que atiende preposiciones, afijos, reduplicación, puntuación e importes en rupias, sin alterar el original.",
+        "Ver la edición en indonesio"
+    ),
+    "fr": (
+        "Typographie indonésienne attentive aux prépositions, affixes, redoublements, à la ponctuation et aux montants en roupies, sans toucher au texte d’origine.",
+        "Voir l’édition indonésienne"
+    ),
+    "pt": (
+        "Tipografia indonésia atenta a preposições, afixos, reduplicação, pontuação e valores em rupias, sem alterar o original.",
+        "Ver a edição em indonésio"
+    ),
+    "hi": (
+        "पूर्वसर्ग, प्रत्यय, पुनरुक्ति, विराम चिह्न और रुपिया राशियों का ध्यान रखने वाली, मूल को सुरक्षित रखने वाली इंडोनेशियाई टाइपोग्राफ़ी।",
+        "इंडोनेशियाई संस्करण देखें"
+    ),
+    "vi": (
+        "Typography tiếng Indonesia chú ý giới từ, phụ tố, từ láy, dấu câu và số tiền rupiah, giữ nguyên bản gốc.",
+        "Xem phiên bản tiếng Indonesia"
+    ),
+    "ja": (
+        "前置詞と接辞、重複語、句読点、ルピアの金額を文脈に合わせて扱い、原稿を守るインドネシア語の文字組とデザイン。",
+        "インドネシア語版を見る"
+    ),
+    "en": (
+        "Indonesian typography that respects prepositions, affixes, reduplication, punctuation and rupiah values while keeping the source intact.",
+        "View the Indonesian edition"
+    ),
+    "zh-hant": (
+        "依語境處理介詞、詞綴、重疊詞、標點與印尼盾金額，並保留原稿的印尼文排版與設計。",
+        "前往印尼文版"
+    ),
+    "zh-hans": (
+        "按语境处理介词、词缀、重叠词、标点与印尼盾金额，并保留原稿的印尼语排版与设计。",
+        "前往印尼语版"
+    ),
+    "ko": (
+        "전치사와 접사, 중첩어, 문장 부호, 루피아 금액을 맥락에 맞게 다루고 원고를 지키는 인도네시아어 글짜임.",
+        "인도네시아어 버전 보기"
+    ),
+    "th": (
+        "การจัดวางตัวอักษรอินโดนีเซียที่ใส่ใจคำบุพบท หน่วยคำเติม คำซ้ำ เครื่องหมายวรรคตอน และจำนวนเงินรูเปียห์ โดยรักษาต้นฉบับ",
+        "ดูเวอร์ชันภาษาอินโดนีเซีย"
+    )
+}
+for _lang, _cards in CARDS.items():
+    if _lang in ID_CARD_COPY:
+        _cards.setdefault("id", tuple(ID_CARD_COPY[_lang]))
+
+# Polish readers: one-letter words (a, i, o, u, w, z) stay with the next word (kumihan-szyk-web).
+_PL_ONE_LETTER = re.compile(r"(?<![\w/=-])([AaIiOoUuWwZz]) (?=\S)")
+CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
 
 def x(value):

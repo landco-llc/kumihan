@@ -1,0 +1,110 @@
+name: KUMIHAN Laras v0.1.0 build and publish
+on:
+  pull_request:
+    paths:
+      - 'plugins/kumihan-laras/**'
+      - 'assets/laras-site-copy.json'
+      - 'assets/laras-site.css'
+      - 'tools/build_laras*.py'
+      - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - 'tools/build_gateways.py'
+      - 'tests/id/**'
+      - 'kumihan-id*.html'
+      - 'docs/install-laras-*.html'
+      - '.github/workflows/laras.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/kumihan-laras/**'
+      - 'assets/laras-site-copy.json'
+      - 'assets/laras-site.css'
+      - 'tools/build_laras*.py'
+      - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - 'tools/build_gateways.py'
+      - 'tests/id/**'
+      - 'kumihan-id*.html'
+      - 'docs/install-laras-*.html'
+      - '.github/workflows/laras.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          persist-credentials: true
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Generate site from finished skills and Japanese canonical KUMIHAN frame
+        if: github.event_name == 'pull_request'
+        run: |
+          python tools/base_copy.py
+          python tools/build_laras_site.py
+      - name: Verify exact generated web content
+        if: github.event_name != 'pull_request'
+        run: |
+          python tools/base_copy.py --check
+          python tools/build_laras_site.py --check
+      - name: Build deterministic v0.1.0 packages
+        run: python tools/build_laras.py
+      - name: Lightweight tests and checksum validation
+        run: |
+          python -m unittest discover -s tests/id -v
+          python tools/build_laras_site.py --check
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+          root=Path('plugins/kumihan-laras/downloads')
+          lines=(root/'SHA256SUMS.txt').read_text().splitlines()
+          assert len(lines)==15
+          for row in lines:
+              digest,name=row.split('  ',1)
+              assert (root/name).exists()
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest
+          print('15 ZIPs + SHA256 verified')
+          PY
+      - name: Commit generated site to feature branch
+        if: github.event_name == 'pull_request'
+        env:
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/laras-site-copy.json assets/laras-site.css kumihan-id.html kumihan-id.en.html kumihan-id.ja.html docs/install-laras-*.html
+          if ! git diff --cached --quiet; then
+            git commit -m "build(laras): render id/en/ja landing and canonical install guides"
+            git push origin "HEAD:$HEAD_BRANCH"
+          fi
+      - name: Publish public versioned release with checksums
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="kumihan-id-v0.1.0"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "Existing immutable release found: $TAG"
+            exit 0
+          fi
+          gh release create "$TAG" plugins/kumihan-laras/downloads/*.zip plugins/kumihan-laras/downloads/SHA256SUMS.txt plugins/kumihan-laras/downloads/MANIFEST.json \
+            --target "$GITHUB_SHA" --title "KUMIHAN｜Laras v0.1.0" \
+            --notes-file plugins/kumihan-laras/RELEASE_NOTES.md --latest=false
+          gh release view "$TAG" --json isDraft,tagName,url > /tmp/laras_release.json
+          python - <<'PY'
+          import json
+          data=json.load(open('/tmp/laras_release.json'))
+          assert data['isDraft'] is False
+          assert data['tagName']=='kumihan-id-v0.1.0'
+          print(data['url'])
+          PY
