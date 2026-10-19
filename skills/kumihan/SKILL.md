@@ -52,6 +52,12 @@ Write down, before producing anything:
 
 Confirm which fonts and assets actually exist and may be used. A familiar pattern such as three cards is fine when the content really has three peers.
 
+## Use-case adapter and design intensity (owner-adopted)
+
+Automatically recommend an appropriate use-case adapter when the actual deliverable makes it clear; otherwise keep the existing medium without an adapter. A compatible explicit manual adapter wins over an automatic recommendation. Ask one concise question only when output format, permission or important quality verification would materially differ. Read [the routing guide](references/use-case-selection.md), its [adapter definitions](references/use-case-adapters.json), [Standard/Strict design review](references/design-review-modes.md) and [cross-medium visual relationships](references/visual-relationship-guidance.md). The dependency-free `scripts/use_case_selector.py` is a limited optional routing aide, not a natural-language or visual-quality detector.
+
+Standard review is the default. Strict requires an explicit user request and cannot retroactively satisfy any pre-production policy/evidence condition. An adapter never authorizes editing, translating, uploading, publishing or waiving protected text. Retain the six existing media profiles and do not claim unobserved rendering as passed.
+
 ## 4. Build
 
 Use [web recipes](references/web-recipes.md) or [document recipes](references/document-recipes.md) for concrete settings. For display copy, tighten spacing only on the display text itself; never carry display treatment into body text. For short Japanese copy also use JA-TYPE-011: prefer a larger natural speech group to mechanically separated bunsetsu and first consider the layout width before conceding a weaker break.
