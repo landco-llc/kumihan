@@ -1,7 +1,7 @@
 # KUMIHAN Universal MCP — phase 1 runtime
 
 Status: **implementation candidate, not deployed**. GitHub source of truth: landco-llc/kumihan.
-Production hostname **mcp-kmhn.landco.co.jp** selected on 2026-10-19; planned endpoint **https://mcp-kmhn.landco.co.jp/mcp**. DNS, SSL and real remote access are NOT VERIFIED; Lolipop host control-panel operations are blocked by the provider's emergency maintenance. See [target manifest](deployment/target.json).
+Production hostname **mcp-kmhn.landco.co.jp** selected on 2026-10-19; planned endpoint **https://mcp-kmhn.landco.co.jp/mcp**. GitHub Actions independently verified public DNS and TLS 1.3 for the hostname ([evidence](https://github.com/landco-llc/kumihan/actions/runs/39246702661)). The real document root, PHP 8.5 hosting runtime, SSH/SFTP and live MCP endpoint are still NOT VERIFIED. The prior maintenance blocker no longer prevents Owner configuration. See [target manifest](deployment/target.json).
 Specification: [modular architecture proposal](https://github.com/landco-llc/kumihan/pull/87) (separate draft PR until merged).
 
 ## Purpose and supported behaviors
