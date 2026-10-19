@@ -1,0 +1,1 @@
+Apache-2.0 project by L&Co. LLC. Official KUMIHAN logo supplied by the project. No research images, third-party fonts or private research documents redistributed in Skill/plugin ZIPs. Source links are references, not an endorsement or provider approval.

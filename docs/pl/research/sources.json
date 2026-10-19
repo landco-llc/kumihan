@@ -1,0 +1,694 @@
+{
+  "title": "KUMIHAN PL 調査出典台帳",
+  "version": "research-20261019",
+  "accessed_date_jst": "2026-10-19",
+  "citation_policy": "本文のIDと出典を対応付ける。ページの現在の到達性と確認時の抽出結果は同義ではない。図版の出典はfigure_sources.jsonにも記録。",
+  "sources": [
+    {
+      "id": "T01",
+      "title": "2025年11月7日の正書法改定告知",
+      "publisher": "Rada Języka Polskiego",
+      "evidence_type": "current_orthography",
+      "urls": [
+        "https://rjp.pan.pl/komunikat-rady-jezyka-polskiego-przy-prezydium-pan-z-dnia-7-listopada-2025-r/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2026年1月施行。地理的名称の一部について変更を撤回した告知。"
+    },
+    {
+      "id": "T02",
+      "title": "Zasady pisowni i interpunkcji polskiej 最終統合版",
+      "publisher": "Rada Języka Polskiego",
+      "evidence_type": "current_orthography",
+      "urls": [
+        "https://rjp.pan.pl/app/uploads/2026/03/Zalacznik-do-komunikatu-11-25-wersja-ostateczna-jednolita.pdf"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "81ページ。2025年11月修正を反映する統合PDF。"
+    },
+    {
+      "id": "T03",
+      "title": "wiszące spójniki",
+      "publisher": "Uniwersytet Łódzki",
+      "evidence_type": "editorial_advice",
+      "urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/wiszace-spojniki"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "40字を超える行の一文字語に関する編集上の助言。"
+    },
+    {
+      "id": "T04",
+      "title": "sieroty na końcu wiersza",
+      "publisher": "Uniwersytet Łódzki",
+      "evidence_type": "editorial_advice",
+      "urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/sieroty-na-koncu-wiersza"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "T05",
+      "title": "cytaty a kursywa",
+      "publisher": "Uniwersytet Warszawski",
+      "evidence_type": "expert_advice",
+      "urls": [
+        "https://poradniajezykowa.uw.edu.pl/porady/cytaty-a-kursywa/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2022-01-06。入れ子の引用符の両方向を説明。"
+    },
+    {
+      "id": "T06",
+      "title": "Dzielenie wyrazów przy przenoszeniu",
+      "publisher": "Rada Języka Polskiego",
+      "evidence_type": "historical_expert_advice",
+      "urls": [
+        "https://rjp.pan.pl/dzielenie-wyrazow-przy-przenoszeniu/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2002年の専門家回答。2026年正書法の新規告知とは区別。"
+    },
+    {
+      "id": "T07",
+      "title": "CLDR 48 Polish locale summary",
+      "publisher": "Unicode Consortium",
+      "evidence_type": "locale_data",
+      "urls": [
+        "https://www.unicode.org/cldr/charts/48/summary/pl.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "今回のIntl環境に合わせて版48を固定。"
+    },
+    {
+      "id": "T08",
+      "title": "CLDR 48 Language Plural Rules",
+      "publisher": "Unicode Consortium",
+      "evidence_type": "locale_data",
+      "urls": [
+        "https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "Polishの基数カテゴリを参照。"
+    },
+    {
+      "id": "T09",
+      "title": "CSS Text Module Level 3",
+      "publisher": "W3C",
+      "evidence_type": "technical_specification",
+      "urls": [
+        "https://www.w3.org/TR/css-text-3/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "調査時点の仕様。機能定義と実装済み範囲を区別。"
+    },
+    {
+      "id": "T10",
+      "title": "Unicode Normalization Forms UAX #15",
+      "publisher": "Unicode Consortium",
+      "evidence_type": "technical_specification",
+      "urls": [
+        "https://www.unicode.org/reports/tr15/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "NFC/NFDと原本保持を分けて用いる。"
+    },
+    {
+      "id": "T11",
+      "title": "Unicode Text Segmentation UAX #29",
+      "publisher": "Unicode Consortium",
+      "evidence_type": "technical_specification",
+      "urls": [
+        "https://www.unicode.org/reports/tr29/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "書記素クラスタと音節分割は別の単位。"
+    },
+    {
+      "id": "T12",
+      "title": "CSS Fonts Module Level 4",
+      "publisher": "W3C",
+      "evidence_type": "technical_specification",
+      "urls": [
+        "https://www.w3.org/TR/css-fonts-4/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "内容言語とOpenTypeの処理。"
+    },
+    {
+      "id": "T13",
+      "title": "Polish Diacritics: how to? — Kreska",
+      "publisher": "Adam Twardoch",
+      "evidence_type": "type_designer_reference",
+      "urls": [
+        "https://www.twardoch.com/download/polishhowto/kreska.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "1999年working draftに属する字形設計資料。"
+    },
+    {
+      "id": "T14",
+      "title": "Localize your font: Polish kreska",
+      "publisher": "Glyphs",
+      "evidence_type": "type_software_documentation",
+      "urls": [
+        "https://glyphsapp.com/learn/localize-your-font-polish-kreska"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "共通字形とPLK専用字形の二つの方法。"
+    },
+    {
+      "id": "T15",
+      "title": "Polish Style Guide",
+      "publisher": "Microsoft",
+      "evidence_type": "corporate_language_guide",
+      "urls": [
+        "https://download.microsoft.com/download/b/d/c/bdc253ac-dbf3-4261-86a2-ffedfa718425/pol-pol-StyleGuide.pdf"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "47ページをローカル抽出で確認。PDF metadata更新日2024-09-05。企業固有の方針と2026正書法を区別。"
+    },
+    {
+      "id": "T16",
+      "title": "Międzynarodowy Układ Jednostek Miar SI 2025 リーフレット",
+      "publisher": "Główny Urząd Miar",
+      "evidence_type": "si_notation",
+      "urls": [
+        "https://www.gum.gov.pl/ftp/jpg/Redefinicja_SI/Ulotka_SI_v2025.pdf"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2ページ。数値と単位、割合、角度の例外。"
+    },
+    {
+      "id": "T17",
+      "title": "Author guidelines / Submissions",
+      "publisher": "Rocznik Krakowski",
+      "evidence_type": "publisher_house_style",
+      "urls": [
+        "https://journals.akademicka.pl/rocznikkrakowski/about/submissions"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "en dash、数値範囲と複数語の範囲、入れ子«…»の指定。"
+    },
+    {
+      "id": "T18",
+      "title": "przenoszenie wyrazów",
+      "publisher": "Uniwersytet Łódzki",
+      "evidence_type": "editorial_advice",
+      "urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "原語に含まれるハイフンを行頭へ再掲する扱い。"
+    },
+    {
+      "id": "T19",
+      "title": "przenoszenie wyrazów złożonych",
+      "publisher": "Uniwersytet Łódzki",
+      "evidence_type": "editorial_advice",
+      "urls": [
+        "https://www.poradnia-jezykowa.uni.lodz.pl/szczegoly/przenoszenie-wyrazow-zlozonych"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "T20",
+      "title": "UnicodeData",
+      "publisher": "Unicode Consortium",
+      "evidence_type": "character_data",
+      "urls": [
+        "https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "符号位置と分解情報。ローカル観測のUnicode DB 15.0.0は別途記録。"
+    },
+    {
+      "id": "T21",
+      "title": "ECMA-402 Internationalization API Specification",
+      "publisher": "TC39 / Ecma International",
+      "evidence_type": "technical_specification",
+      "urls": [
+        "https://tc39.es/ecma402/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "Intlの数値設定、PluralRules、Segmenter。"
+    },
+    {
+      "id": "T22",
+      "title": "Polish Diacritics: how to? — Ogonek / Stroke",
+      "publisher": "Adam Twardoch",
+      "evidence_type": "type_designer_reference",
+      "urls": [
+        "https://www.twardoch.com/download/polishhowto/ogonek.html",
+        "https://www.twardoch.com/download/polishhowto/stroke.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "T23",
+      "title": "女性職業名・肩書の形に関する2019年見解",
+      "publisher": "Rada Języka Polskiego",
+      "evidence_type": "language_policy",
+      "urls": [
+        "https://rjp.pan.pl/stanowisko-rady-jezyka-polskiego-przy-prezydium-pan-w-sprawie-zenskich-form-nazw-zawodow-i-tytulow-przyjete-na-posiedzeniu-plenarnym-rady-25-listopada-2019-r/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "付録のコピー規則で使用。"
+    },
+    {
+      "id": "T24",
+      "title": "mowa inkluzywna",
+      "publisher": "Uniwersytet Warszawski",
+      "evidence_type": "expert_advice",
+      "urls": [
+        "https://poradniajezykowa.uw.edu.pl/porady/mowa-inkluzywna/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "付録で文脈に応じた言語判断を参照。"
+    },
+    {
+      "id": "T25",
+      "title": "Język prosty a łatwy",
+      "publisher": "Tomasz Piekot / KSAP",
+      "evidence_type": "language_education",
+      "urls": [
+        "https://ksap.gov.pl/ksap/sites/default/files/files/t._piekot_jezyk_prosty_a_latwy.pdf"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "付録の簡潔さと内容保持の検討資料。"
+    },
+    {
+      "id": "T26",
+      "title": "Liczbę i towarzyszący jej symbol zapisujemy z odstępem",
+      "publisher": "Główny Urząd Miar",
+      "evidence_type": "si_notation",
+      "urls": [
+        "https://www.gum.gov.pl/pl/aktualnosci/komunikaty/4003,Liczbe-i-towarzyszacy-jej-symbol-zapisujemy-z-odstepem.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2020-12-16。SIの数値・記号の空き。"
+    },
+    {
+      "id": "A01",
+      "title": "Understanding SC 1.4.10 Reflow",
+      "publisher": "W3C WAI",
+      "evidence_type": "accessibility_guidance",
+      "urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "A02",
+      "title": "Understanding SC 1.4.4 Resize Text",
+      "publisher": "W3C WAI",
+      "evidence_type": "accessibility_guidance",
+      "urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "A03",
+      "title": "Understanding SC 1.4.12 Text Spacing",
+      "publisher": "W3C WAI",
+      "evidence_type": "accessibility_guidance",
+      "urls": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "C01",
+      "title": "mKanon 言語方針",
+      "publisher": "mBank",
+      "evidence_type": "brand_voice",
+      "urls": [
+        "https://www.mbank.pl/o-nas/mkanon/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "C02",
+      "title": "Linki i przyciski",
+      "publisher": "gov.pl",
+      "evidence_type": "public_accessibility_guidance",
+      "urls": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/linki-i-przyciski"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "C03",
+      "title": "InPost ポーランド公式サイト",
+      "publisher": "InPost",
+      "evidence_type": "current_ui_copy",
+      "urls": [
+        "https://inpost.pl/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "公開テキストを確認。追跡や注文操作は未実施。"
+    },
+    {
+      "id": "C04",
+      "title": "Czym jest i jak działa koszyk",
+      "publisher": "Allegro",
+      "evidence_type": "current_ui_help",
+      "urls": [
+        "https://allegro.pl/pomoc/dla-kupujacych/podstawy-kupowania/czym-jest-i-jak-dziala-koszyk-4GDdXb8KBSD"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "購入段階の公式説明。実際の決済操作は未実施。"
+    },
+    {
+      "id": "C05",
+      "title": "LOT ポーランド公式サイト",
+      "publisher": "LOT Polish Airlines",
+      "evidence_type": "current_ui_copy",
+      "urls": [
+        "https://www.lot.com/pl/pl"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "公開テキストを確認。予約操作は未実施。"
+    },
+    {
+      "id": "C06",
+      "title": "Muzeum Sztuki Nowoczesnej w Warszawie 公式サイト",
+      "publisher": "MSN",
+      "evidence_type": "current_ui_copy",
+      "urls": [
+        "https://artmuseum.pl/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "公開テキストの確認。D10の制作会社掲載画像とは区別。"
+    },
+    {
+      "id": "C07",
+      "title": "Prosty język",
+      "publisher": "gov.pl",
+      "evidence_type": "public_language_guidance",
+      "urls": [
+        "https://www.gov.pl/web/dostepnosc-cyfrowa/prosty-jezyk"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "付録のコピー規則で使用。"
+    },
+    {
+      "id": "F01",
+      "title": "Lato 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/lato",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/lato/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F02",
+      "title": "Source Sans 3 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/sourcesans3",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/OFL.txt",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/METADATA.pb"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F03",
+      "title": "Source Serif 4 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/sourceserif4",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F04",
+      "title": "Noto Sans 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/notosans",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/notosans/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F05",
+      "title": "Noto Serif 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/notoserif",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/notoserif/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F06",
+      "title": "Alegreya 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/alegreya",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/alegreya/OFL.txt",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/alegreya/METADATA.pb"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F07",
+      "title": "Bona Nova 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/bonanova",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/bonanova/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F08",
+      "title": "Półtawski Nowy 公式配布とOFL",
+      "publisher": "Google Fonts / 各書体の著作者",
+      "evidence_type": "font_distribution",
+      "urls": [
+        "https://github.com/google/fonts/tree/main/ofl/poltawskinowy",
+        "https://raw.githubusercontent.com/google/fonts/main/ofl/poltawskinowy/OFL.txt"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した代表ファイル、版、SHA-256はfont_static.jsonに記録。"
+    },
+    {
+      "id": "F09",
+      "title": "Bona Nova 配布と追加スタイル案内",
+      "publisher": "Bona Nova project",
+      "evidence_type": "font_product_information",
+      "urls": [
+        "https://bonanova.wtf/?lang=en"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "基本3スタイルと有償の追加スタイルを区別。"
+    },
+    {
+      "id": "D01",
+      "title": "Krakow National Museum brand identity",
+      "publisher": "Podpunkt / MNK",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://www.podpunkt.pl/projects/krakow-national-museum-brand-identity"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "D02",
+      "title": "City of Warsaw / Warszawa",
+      "publisher": "Podpunkt / Capitalics",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://www.podpunkt.pl/projects/the-city-of-warsaw-logo",
+        "https://capitalics.wtf/en/case/warszawa"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "D03",
+      "title": "Kotlina Natury",
+      "publisher": "Podpunkt",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://www.podpunkt.pl/projects/kotlina-natury"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "D04",
+      "title": "Instytut Adama Mickiewicza brand identity",
+      "publisher": "Podpunkt / IAM",
+      "evidence_type": "case_text",
+      "urls": [
+        "https://www.podpunkt.pl/projects/instytut-adama-mickiewicza-brand-identity",
+        "https://iam.pl/en/press/adam-mickiewicz-institute-refreshes-its-visual-language-new-visual-identity-iam-and-culturepl"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "D05",
+      "title": "Culture.pl brand identity",
+      "publisher": "Podpunkt",
+      "evidence_type": "case_text_and_english_image",
+      "urls": [
+        "https://www.podpunkt.pl/projects/culture-pl-brand-identity"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "取得した図版は英語。PLの改行の根拠に数えない。"
+    },
+    {
+      "id": "D06",
+      "title": "Pasibus",
+      "publisher": "BNA",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://bna.pl/projekt/pasibus/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": ""
+    },
+    {
+      "id": "D07",
+      "title": "Good Mood",
+      "publisher": "Mamastudio / Żabka",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://mamastudio.pl/works/good-mood/",
+        "https://www.zabka.pl/zabka-wprowadza-nowa-marke-wlasna-good-mood/"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "Żabka発売告知2025-11-18。"
+    },
+    {
+      "id": "D08",
+      "title": "Element Talks",
+      "publisher": "Studio Otwarte",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://otwarte.studio/portfolio/element-talks"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "旧公式URLからの移転先。"
+    },
+    {
+      "id": "D09",
+      "title": "European Design Festival 2019",
+      "publisher": "Uniforma",
+      "evidence_type": "case_text_and_english_image",
+      "urls": [
+        "https://www.uniforma.pl/projects/european-design-festival-2019"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "英語図版。国際イベントの表現を補足。"
+    },
+    {
+      "id": "D10",
+      "title": "MSN website",
+      "publisher": "Transparent / MSN",
+      "evidence_type": "case_text_and_published_web_image",
+      "urls": [
+        "https://www.transparent.agency/projects/msn"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "制作会社掲載の画面画像。現行ブラウザ実測ではない。"
+    },
+    {
+      "id": "D11",
+      "title": "Prawda Piękno Dobro z kolekcji Zachęty",
+      "publisher": "Zachęta / Fontarte",
+      "evidence_type": "case_text_and_image",
+      "urls": [
+        "https://zacheta.art.pl/pl/mediateka-i-publikacje/prawda-piekno-dobro-z-kolekcji-zachety-45"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2015年。公開ページの掲載クレジットを参照。"
+    },
+    {
+      "id": "D12",
+      "title": "Patryk Hardziej: Wyjść z twarzą",
+      "publisher": "Pismo",
+      "evidence_type": "case_text_only",
+      "urls": [
+        "https://magazynpismo.pl/obraz/okladka/patryk-hardziej-wyjsc-z-twarza/?seo=pw"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2026-01-08の公式表紙解説。画像の直接取得403、画像目視は未実施。"
+    },
+    {
+      "id": "D13",
+      "title": "WARSZAWA W BUDOWIE 15 / Zimno już było",
+      "publisher": "STGU Projekt Roku / Anna Światłowska",
+      "evidence_type": "case_text_only",
+      "urls": [
+        "https://projektroku.pl/nominacje/2022-2023/proj-dla-inst-publicznych/warszawa-w-budowie-15-zimno-juz-bylo.html?source=73"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "公式コンペ応募説明のWeb抽出を確認。URLの直接取得404、画像目視は未実施。"
+    },
+    {
+      "id": "D14",
+      "title": "Pan tu nie stał",
+      "publisher": "Pan tu nie stał / Culture.pl",
+      "evidence_type": "case_text_only",
+      "urls": [
+        "https://pantuniestal.com/",
+        "https://culture.pl/pl/tworca/pan-tu-nie-stal"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "公式の言語方針・商品語と2017年の背景記事。商品画像の目視は未実施。"
+    },
+    {
+      "id": "H01",
+      "title": "Polish Posters: The Collection",
+      "publisher": "National Museum in Warsaw",
+      "evidence_type": "museum_exhibition_text",
+      "urls": [
+        "https://mnw.pl/en/temporary-exhibitions/current/en-polish-posters-the-collection"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "2026年開始の展示説明。時代と用途を5章で扱う。"
+    },
+    {
+      "id": "H02",
+      "title": "The Origins of the Polish School of Posters",
+      "publisher": "Culture.pl",
+      "evidence_type": "video_introduction_text",
+      "urls": [
+        "https://culture.pl/en/video/the-origins-of-the-polish-school-of-posters-video"
+      ],
+      "accessed_date_jst": "2026-10-19",
+      "note": "動画紹介の本文を参照。動画全編の視聴・分析は未実施。"
+    }
+  ]
+}

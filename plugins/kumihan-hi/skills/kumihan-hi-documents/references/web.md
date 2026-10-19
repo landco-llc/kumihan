@@ -1,0 +1,7 @@
+# Web / UI
+
+Use semantic HTML with lang="hi" for Hindi and correct local lang for other languages; Hindi is LTR. Keep real selectable text and accessible labels. Start body text with letter-spacing: normal; word-break: normal; overflow-wrap: normal; line-height around 1.6–1.8 and enough padding. These are trial values, not universal standards. Localize emergency URL/ID breaks, never force break-all/anywhere on Hindi paragraphs. Do not disable required Indic shaping or judge it from liga alone.
+
+Use actual licensed font files, record version/weight and rendered fallback. Noto Sans Devanagari is a starting candidate. Hind 2.001 research native digit forms need separate verification; cmap coverage is insufficient. Compare Latin brand optical weight and numeral glyphs without rewriting text. Do not use scaleX as the default width fix. Avoid splitting UTF-16 or single code points for clipping/spans/animation; consider grapheme and orthographic syllables and inspect the exact browser operation. Same-style spans are not automatically defects.
+
+Check 320/768/1280 CSS px, 200% text zoom, line-height 1.5 + paragraph margin 2em + letter-spacing .12em + word-spacing .16em simultaneously, font load/failure, matras/conjuncts/RA forms, selection/copy and keyboard focus. Record exact browser and results; CSS source alone is not rendering evidence. Font fallback, shaping, IME, cursor, deletion and assistive technology are separate tests. A limited run does not establish WCAG conformance.

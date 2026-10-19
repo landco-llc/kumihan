@@ -1,0 +1,8 @@
+@font-face { font-family: "Kumihan Devanagari"; src: url("fonts/NotoSansDevanagari.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+:lang(hi), .brand, .brand-sub { font-family: "Kumihan Devanagari", "Noto Sans Devanagari", sans-serif; letter-spacing: normal !important; word-break: normal; line-height: 1.7; }
+.brand { white-space: normal; max-width: 100%; }
+.brand-sub { display: inline-block; }
+:lang(hi) :is(h1,h2,h3,p,li) { overflow-wrap: normal; }
+.download-list a, pre, code { overflow-wrap: anywhere; word-break: normal; }
+.guide-pane pre, .guide-pane pre code { white-space: pre-wrap; overflow-wrap: anywhere !important; }
+.guide-pane pre code { display: block; }

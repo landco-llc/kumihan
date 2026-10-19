@@ -1,0 +1,54 @@
+name: Publish Hindi v0.1.0
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: kumihan-hi-v0.1.0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - run: python -m unittest discover -s tests/hi -v
+      - run: python tools/build_hi_site.py --check
+      - run: python tools/build_hi.py
+      - name: Publish verified immutable product assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD)" = '5b7057366621ace37fd36185450bfe0d7282846c'
+          if gh release view kumihan-hi-v0.1.0 --json isDraft,assets > /tmp/hi-existing.json; then
+            python - <<'PY'
+          import json
+          d=json.load(open('/tmp/hi-existing.json'))
+          assert d['isDraft'] or len(d['assets']) == 17, 'Refuse to modify an incomplete public release'
+          PY
+          else
+            gh release create kumihan-hi-v0.1.0 --verify-tag --draft --latest=false --title 'KUMIHAN｜अक्षर-संगति v0.1.0' --notes-file plugins/kumihan-hi/RELEASE_NOTES.md
+          fi
+          if test "$(gh release view kumihan-hi-v0.1.0 --json assets --jq '.assets | length')" = '0'; then
+            gh release upload kumihan-hi-v0.1.0 dist/hi-v0.1.0/*.zip dist/hi-v0.1.0/SHA256SUMS.txt dist/hi-v0.1.0/MANIFEST.json
+          fi
+          # GitHub's tag endpoint can omit a draft; the authenticated list includes it.
+          gh api repos/landco-llc/kumihan/releases --jq '.[] | select(.tag_name == "kumihan-hi-v0.1.0")' > /tmp/hi-uploaded.json
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          d=json.load(open('/tmp/hi-uploaded.json'))
+          expected={p.name:p for p in Path('dist/hi-v0.1.0').iterdir() if p.is_file()}
+          assert len(expected)==17 and {a['name'] for a in d['assets']}==set(expected)
+          for a in d['assets']:
+              p=expected[a['name']]
+              assert a['size']==p.stat().st_size
+              assert a['digest']=='sha256:'+hashlib.sha256(p.read_bytes()).hexdigest()
+          PY
+          if test "$(gh release view kumihan-hi-v0.1.0 --json isDraft --jq .isDraft)" = 'true'; then
+            gh release edit kumihan-hi-v0.1.0 --draft=false --latest=false
+          fi

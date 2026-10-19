@@ -1,0 +1,332 @@
+{
+  "S01": {
+    "title": "Unicode 18 Core Specification 第12章",
+    "url": "https://www.unicode.org/versions/Unicode18.0.0/core-spec/chapter-12/",
+    "research_note": "§12.1。文字体系、符号化、結合と記号。仕様本文を確認。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S02": {
+    "title": "UAX 29 Unicode Text Segmentation",
+    "url": "https://www.unicode.org/reports/tr29/tr29-49.html",
+    "research_note": "Unicode 18、2026-09-01。境界規則と操作別の扱い。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S03": {
+    "title": "UAX 14 Unicode Line Breaking Algorithm",
+    "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+    "research_note": "Unicode 18、2026-09-01。改行機会と規則の適用条件。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S04": {
+    "title": "UAX 15 Unicode Normalization Forms",
+    "url": "https://www.unicode.org/reports/tr15/tr15-58.html",
+    "research_note": "Unicode 18、2026-08-12。正規化と合成除外。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S05": {
+    "title": "Unicode Character Database LineBreak.txt",
+    "url": "https://www.unicode.org/Public/18.0.0/ucd/LineBreak.txt",
+    "research_note": "Unicode 18の分類データ。AL・CM・BAを確認。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S06": {
+    "title": "W3C Devanagari Script Resources",
+    "url": "https://www.w3.org/TR/2026/DNOTE-deva-lreq-20260320/",
+    "research_note": "2026-03-20 Group Note Draft。課題・参照先の整理。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S07": {
+    "title": "W3C Indic Layout Requirements",
+    "url": "https://www.w3.org/TR/2020/WD-ilreq-20200529/",
+    "research_note": "2020-05-29 Working Draft。現行実装の合格証明にはしない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S08": {
+    "title": "W3C CSS Text Module Level 3",
+    "url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+    "research_note": "2026-08-14 Candidate Recommendation Draft。組版単位、字間、境界、改行。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S09": {
+    "title": "Microsoft Developing OpenType Fonts for Devanagari",
+    "url": "https://learn.microsoft.com/en-us/typography/script-development/devanagari",
+    "research_note": "公式のシェーピング説明。並べ替え、置換、位置調整。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S10": {
+    "title": "Central Hindi Directorate ヒンディー語綴りの標準化",
+    "url": "https://cdac.in/index.aspx?dynamicId=devnagri-lipi.pdf&id=pdf_rajbhasha",
+    "research_note": "2024年版、公式C-DAC掲載PDF。正書法の該当ページを画像でも確認。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S11": {
+    "title": "CLDR 48 Hindi Locale Summary",
+    "url": "https://www.unicode.org/cldr/charts/48/summary/hi.html",
+    "research_note": "数字方式、日付、数量、複数形、用語のデータ。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S12": {
+    "title": "CLDR 48 Hindi Number Verification",
+    "url": "https://www.unicode.org/cldr/charts/48/verify/numbers/hi.html",
+    "research_note": "桁区切り、通貨、コンパクト表示の例。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S13": {
+    "title": "UTS 35 Numbers",
+    "url": "https://www.unicode.org/reports/tr35/tr35-numbers.html",
+    "research_note": "数字書式と通貨等の仕様。原値と表示を分離する根拠。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S14": {
+    "title": "W3C Web Content Accessibility Guidelines 2.2",
+    "url": "https://www.w3.org/TR/WCAG22/",
+    "research_note": "文字拡大、リフロー、言語情報等。全要件の適合監査は未実施。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S15": {
+    "title": "Understanding SC 1.4.12 Text Spacing",
+    "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+    "research_note": "4項目の同時上書き耐性と文字体系に応じた例外。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S16": {
+    "title": "W3C Declaring language in HTML",
+    "url": "https://www.w3.org/International/questions/qa-html-language-declarations",
+    "research_note": "ルートと部分言語の宣言。文字体系と国名からの推定を避ける。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S17": {
+    "title": "ECMA-402 Segmenter Objects",
+    "url": "https://tc39.es/ecma402/#segmenter-objects",
+    "research_note": "Intl.Segmenterの一次仕様。実装版による差は別途検証。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S18": {
+    "title": "CSS Fonts 4 font-synthesis",
+    "url": "https://www.w3.org/TR/css-fonts-4/#font-synthesis",
+    "research_note": "合成ウェイト・スタイルの制御。実ウェイトの存在も確認する。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S54": {
+    "title": "Unicode CLDR Project News",
+    "url": "https://cldr.unicode.org/",
+    "research_note": "取得時の掲載：48.2は2026-03-17公開、49は2026-09-25 beta。本報告は48系列参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S55": {
+    "title": "W3C Devanagari Gap Analysis",
+    "url": "https://www.w3.org/TR/2025/DNOTE-deva-gap-20250531/",
+    "research_note": "2025-05-31 Group Note Draft。過去の課題を現在の全環境の不具合と混同しない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S19": {
+    "title": "Noto Devanagari Releases",
+    "url": "https://github.com/notofonts/devanagari/releases",
+    "research_note": "公式リポジトリのリリース情報。Sans / Serifの取得版は実ファイルから別途記録。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S20": {
+    "title": "Noto Fonts Use Guide",
+    "url": "https://github.com/notofonts/noto-docs/blob/main/docs/website/use.md",
+    "research_note": "文字体系別フォントとLatinの組合せを参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S21": {
+    "title": "Ek Type Mukta Repository",
+    "url": "https://github.com/EkType/Mukta",
+    "research_note": "公式の複数文字体系の設計説明と配布情報。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S22": {
+    "title": "Indian Type Foundry Hind Repository",
+    "url": "https://github.com/itfoundry/hind",
+    "research_note": "UI向け設計の一次情報。Google Fontsの公式紹介文も照合。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S23": {
+    "title": "IBM Plex Repository",
+    "url": "https://github.com/IBM/plex",
+    "research_note": "Plex Sans Devanagariを含む公式ファミリー説明と配布情報。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S24": {
+    "title": "Ek Type Anek Repository",
+    "url": "https://github.com/EkType/Anek",
+    "research_note": "weight・width軸、複数文字体系の設計意図。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S25": {
+    "title": "Google Fonts Repository",
+    "url": "https://github.com/google/fonts",
+    "research_note": "ofl内の6書体を取得。name/cmap/GSUB/GPOS/axisとOFL文を確認。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S26": {
+    "title": "SIL Open Font License",
+    "url": "https://openfontlicense.org/",
+    "research_note": "OFL本文と利用条件。第三者画像や商用書体の利用条件とは別。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S27": {
+    "title": "Matra Type ThePrint",
+    "url": "https://www.matratype.com/lettering/theprint",
+    "research_note": "制作者説明と公式原画像1点。Latin / Devanagariのロゴ。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S28": {
+    "title": "Matra Type Zyaada Fanta",
+    "url": "https://www.matratype.com/lettering/zyaada-fanta",
+    "research_note": "制作者説明と公式原画像1点。丸いレタリングと短句反復。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S29": {
+    "title": "Matra Type Uday Raj Sinha Rachnavali",
+    "url": "https://www.matratype.com/lettering/udayraj-sinha-rachnavali",
+    "research_note": "制作者説明と公式原画像1点。1967年活字カタログの参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S30": {
+    "title": "Codesign Sitara",
+    "url": "https://www.codesign.in/codesign-projects/sitara",
+    "research_note": "命名・ブランド説明と公式ポスター1点。現在の金融条件は調査対象外。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S31": {
+    "title": "Codesign Making Sanitation Fun",
+    "url": "https://www.codesign.in/codesign-projects/making-sanitation-fun",
+    "research_note": "イベント設計の説明と公式ロゴ1点。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S32": {
+    "title": "Ek Type Mukta Devanagari",
+    "url": "https://ektype.in/mukta-devanagari.html",
+    "research_note": "Trolley Times / Pratham Booksの原画像2点。本文サンプルの言語を区別。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S33": {
+    "title": "Universal Thirst Tiffin",
+    "url": "https://universalthirst.com/products/tiffin",
+    "research_note": "公開ページ内の製品データと公式PDFの第1ページ。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S34": {
+    "title": "Universal Thirst Abacaxi",
+    "url": "https://universalthirst.com/products/abacaxi",
+    "research_note": "公開ページ内の製品データと公式PDFの第1ページ。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S35": {
+    "title": "Universal Thirst Sarvatrik",
+    "url": "https://universalthirst.com/products/sarvatrik",
+    "research_note": "公開ページ内の製品データと公式PDFの第1ページ。WebとPDFの版差を記録。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S36": {
+    "title": "Ek Type Anek Devanagari",
+    "url": "https://ektype.in/anek-devanagari.html",
+    "research_note": "公式Sawai Foods原画像1点。マラーティー語をHindiへ誤分類しない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S37": {
+    "title": "Ek Type Jaini",
+    "url": "https://ektype.in/jaini.html",
+    "research_note": "公式CSMVS Museum原画像1点。短い展示名の言語は断定しない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S38": {
+    "title": "India Street Lettering Devanagari Archive",
+    "url": "https://indiastreetlettering.com/script/devanagari/",
+    "research_note": "地域・用途・素材の比較資料を探す入口。全件の実見は未実施。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S39": {
+    "title": "Netflix India Hindi",
+    "url": "https://www.netflix.com/in-hi/",
+    "research_note": "Hindi本文取得。短いCTAと消費者向けの説明を参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S40": {
+    "title": "Google Chrome Hindi Safety",
+    "url": "https://www.google.com/intl/hi/chrome/safety/",
+    "research_note": "Hindi本文取得。借用語、丁寧形、句点を参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S41": {
+    "title": "PhonePe Hindi UTR Help",
+    "url": "https://cms.phonepe.com/hi/bot-help-hindi/how-create-utr-hindi/hindi-how-find-utr/",
+    "research_note": "検索本文のみ。英語UI名を保つ操作説明の比較。現行画面は未確認。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S42": {
+    "title": "MyGov Hindi",
+    "url": "https://www.mygov.in/hi/",
+    "research_note": "Hindi本文取得。参加・共有のCTAを参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S43": {
+    "title": "Hindwi",
+    "url": "https://www.hindwi.org/",
+    "research_note": "Hindi本文取得。文学と読書の導線。近接言語の作品を区別。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S44": {
+    "title": "PM India Hindi",
+    "url": "https://www.pmindia.gov.in/hi/",
+    "research_note": "Hindi本文取得。役職と宛先、公式名称の扱い。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S45": {
+    "title": "NCERT Hindi",
+    "url": "https://www.ncert.nic.in/?ln=hi",
+    "research_note": "Hindi本文取得。教育分類と本文ジャンプ。英語混在を区別。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S46": {
+    "title": "Press Information Bureau Hindi",
+    "url": "https://www.pib.gov.in/indexd.aspx?lang=2&reg=3",
+    "research_note": "Hindi本文取得。公的文書の分類名。長い見出しを一般UIへ直輸入しない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S47": {
+    "title": "Sahitya Akademi Hindi Publications",
+    "url": "https://sahitya-akademi.gov.in/publications/publication_h.jsp",
+    "research_note": "Hindi本文取得。出版・書誌項目の語彙と固有名。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S48": {
+    "title": "Rajkamal Online Book Fair 2025",
+    "url": "https://rajkamalprakashan.com/blog/post/rajkamal-online-book-fair-2025",
+    "research_note": "検索本文のみ。2025年の出版販促例。現行施策とは扱わない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S49": {
+    "title": "UIDAI Hindi Entry",
+    "url": "https://uidai.gov.in/hi",
+    "research_note": "Hindi入口から英語本文を取得。試験的機械翻訳の注記を確認。Hindi画面実見の証拠にはしない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S50": {
+    "title": "The Lallantop",
+    "url": "https://www.thelallantop.com/",
+    "research_note": "Hindi本文取得。口語的なデジタル媒体の比較。見出し内容の支持や推奨ではない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S51": {
+    "title": "Microsoft Hindi Localization Style Guide",
+    "url": "https://download.microsoft.com/download/2/b/5/2b543b85-0ed4-49a7-8b3a-98ffa7addcfb/hin-ind-StyleGuide.pdf",
+    "research_note": "公式配布45ページPDF。平易さ、性・数、所有表現、動詞を参照。製品固有の指針。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S52": {
+    "title": "Mozilla Hindi India Style Guide",
+    "url": "https://mozilla-l10n.github.io/styleguides/hi-IN/",
+    "research_note": "公式ローカライズ指針。トーン、句点、UI名、変数を参照。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  },
+  "S53": {
+    "title": "Google for India 2021 Digital Inclusion",
+    "url": "https://blog.google/intl/en-in/company-news/outreach-initiatives/google-india-2021-stepping-product-focus-drive-digital-inclusion-india/",
+    "research_note": "Google PayのHinglish導入発表。存在の証拠であり、全利用者の選好や効果の証明ではない。",
+    "provenance": "Research report 2026-10-18; not a new product measurement"
+  }
+}

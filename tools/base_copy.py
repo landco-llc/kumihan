@@ -21,17 +21,21 @@ ROOT = Path(__file__).resolve().parents[1]
 
 # key: (brand, short name, Japanese language name, English language name, version)
 EDITIONS = {
+    "de": ("KUMIHAN｜Satzbild", "Satzbild", "ドイツ語", "German", "0.1.0"),
+    "hi": ("KUMIHAN｜अक्षर-संगति", "अक्षर-संगति", "ヒンディー語", "Hindi", "0.1.0"),
     "fr": ("KUMIHAN｜Accord", "Accord", "フランス語", "French", "0.1.1"),
     "ar": ("KUMIHAN｜نضيد", "نضيد", "アラビア語", "Arabic", "0.1.0"),
+    "ru": ("KUMIHAN｜Лад", "Лад", "ロシア語", "Russian", "0.1.0"),
     "pt": ("KUMIHAN｜Compasso", "Compasso", "ポルトガル語", "Portuguese", "0.1.0"),
     "es": ("KUMIHAN｜Grafía", "Grafía", "スペイン語", "Spanish", "0.1.0"),
     "ko": ("KUMIHAN｜글짜임", "글짜임", "韓国語", "Korean", "0.1.0"),
     "th": ("KUMIHAN｜ดุลอักษร", "ดุลอักษร", "タイ語", "Thai", "0.1.1"),
     "zh-hans": ("KUMIHAN｜字律", "字律", "簡体中国語", "Simplified Chinese", "0.1.0"),
     "zh-hant": ("KUMIHAN｜字衡", "字衡", "繁体中国語", "Traditional Chinese", "0.1.0"),
+    "vi": ("KUMIHAN｜Nhịp Chữ", "Nhịp Chữ", "ベトナム語", "Vietnamese", "0.1.0"),
 }
 
-COPY_FILES = {"fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia"}
+COPY_FILES = {"de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia", "ru": "lad"}
 
 JA = {
     "title": "{B} — {L}のデザインをもっと自然に",

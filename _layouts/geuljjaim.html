@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="{{ '/assets/kumihan-install.css' | relative_url }}">
 <script defer src="{{ '/assets/geuljjaim.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/kumihan-install.js' | relative_url }}"></script>
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
 </head>
 <body>
 <a class="skip skip-link" href="#main">{{ t.skip }}</a>

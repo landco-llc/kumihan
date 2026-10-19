@@ -173,6 +173,7 @@
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
+{{ site.data.web_fonts[page.lang] | default: site.data.web_fonts.ja }}<link rel="stylesheet" href="{{ '/assets/kumihan-fonts.css' | relative_url }}">
 </head>
 <body>
   <a class="skip-link" href="#guide-content"><span data-ui-ja>本文へ移動</span><span data-ui-en hidden>Skip to content</span><span data-ui-zh hidden>跳至主要內容</span></a>

@@ -15,6 +15,10 @@ on:
       - 'tools/install_frame.py'
       - 'tools/product_site.py'
       - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - '_data/web_fonts.yml'
+      - 'tests/test_web_fonts.py'
       - '_layouts/landing.html'
       - 'tests/test_site_layout_parity.py'
       - 'index.html'
@@ -35,6 +39,10 @@ on:
       - 'tools/install_frame.py'
       - 'tools/product_site.py'
       - 'tools/base_copy.py'
+      - 'tools/web_fonts.py'
+      - 'assets/kumihan-fonts.css'
+      - '_data/web_fonts.yml'
+      - 'tests/test_web_fonts.py'
       - '_layouts/landing.html'
       - 'tests/test_site_layout_parity.py'
       - 'index.html'
@@ -55,6 +63,8 @@ jobs:
       - run: python -m unittest discover -s tests/accord -v
       - run: python tools/build_accord_site.py --check
       - run: python tools/base_copy.py --check
+      - run: python tools/web_fonts.py --check
+      - run: python -m unittest tests/test_web_fonts.py -v
       - run: python -m unittest tests/test_site_layout_parity.py -v
       - run: python tools/build_accord.py --out /tmp/accord-dist
       - run: python tools/check_accord.py /tmp/accord-dist

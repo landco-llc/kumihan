@@ -1,0 +1,15 @@
+{
+  "claude_code": {
+    "version": "2.1.302",
+    "command": "claude plugin validate plugins/kumihan-hi",
+    "result": "passed",
+    "advice": "No marketplace install line; local --plugin-dir installation is the documented scope"
+  },
+  "gemini_cli": {
+    "version": "0.64.0",
+    "command": "gemini extensions validate plugins/kumihan-hi",
+    "result": "passed"
+  },
+  "method": "CLI validators installed into temporary directory; no account/plugin marketplace installation or model invocation",
+  "full_native_invocation": "NOT_CHECKED"
+}

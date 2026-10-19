@@ -104,4 +104,4 @@ Developed by L&Co. LLC.
 
 ## Russian edition / Русская версия
 
-**[KUMIHAN｜Лад v0.1.0](kumihan-ru.html)** — contextual Russian/Cyrillic typography, source integrity and content-led design. [Skills & sources](plugins/kumihan-lad/README.md) · [Public release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0). Russian/English host descriptions; no native-host or marketplace approval implied.
+**[KUMIHAN｜Лад v0.1.0](kumihan-ru.html)** — Russian typography, contextual Cyrillic rules and source-preserving content-led design. [Source and 4 Skills](plugins/kumihan-lad/README.md) · [GitHub Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ru-v0.1.0).

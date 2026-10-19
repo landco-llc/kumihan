@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "locale",
+    "mode",
+    "medium",
+    "source_origin",
+    "protected_spans",
+    "authorized_change_scope"
+  ],
+  "properties": {
+    "locale": {
+      "enum": [
+        "vi",
+        "vi-VN"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "study",
+        "build",
+        "audit",
+        "refine"
+      ]
+    },
+    "medium": {
+      "type": "string"
+    },
+    "source_origin": {
+      "enum": [
+        "supplied",
+        "quoted",
+        "generated",
+        "translation-proposal"
+      ]
+    },
+    "house_style": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "protected_spans": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "authorized_change_scope": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

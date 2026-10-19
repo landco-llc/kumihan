@@ -11,6 +11,9 @@ from pathlib import Path
 import re
 
 from importlib.util import spec_from_file_location, module_from_spec
+_wf_spec = spec_from_file_location("kumihan_web_fonts", Path(__file__).with_name("web_fonts.py"))
+WEB_FONTS = module_from_spec(_wf_spec)
+_wf_spec.loader.exec_module(WEB_FONTS)
 _ja_spec = spec_from_file_location("kumihan_th_reference", Path(__file__).with_name("build_th_ja_index.py"))
 _ja = module_from_spec(_ja_spec)
 _ja_spec.loader.exec_module(_ja)
@@ -143,6 +146,7 @@ def render(root: Path, copy: dict) -> str:
 {THAI_OVERRIDES}
   </style>
   <script src="assets/thai-site.js" defer></script>
+  {WEB_FONTS.head("th")}
 </head>
 <body id="top">
 <a class="skip-link" href="#main">ข้ามไปยังเนื้อหา</a>

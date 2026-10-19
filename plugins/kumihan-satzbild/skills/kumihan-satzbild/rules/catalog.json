@@ -1,0 +1,1108 @@
+[
+  {
+    "id": "DE-CTX-001",
+    "summary": "Resolve the explicit German locale; never convert unknown source conventions to Germany by default.",
+    "source_refs": [
+      "N01",
+      "N27"
+    ],
+    "source_ref": [
+      "N01",
+      "N27"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Resolve the explicit German locale; never convert unknown source conventions to Germany by default. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-002",
+    "summary": "Resolve medium and house style independently of locale.",
+    "source_refs": [
+      "N20",
+      "N22"
+    ],
+    "source_ref": [
+      "N20",
+      "N22"
+    ],
+    "authority_type": "organizational-house-style",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Resolve medium and house style independently of locale. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-003",
+    "summary": "Configure currency, timezone and value kind independently.",
+    "source_refs": [
+      "N30",
+      "W05"
+    ],
+    "source_ref": [
+      "N30",
+      "W05"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Configure currency, timezone and value kind independently. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-CTX-004",
+    "summary": "Preserve names, brand vocabulary, prices and original strings.",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Preserve names, brand vocabulary, prices and original strings. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-001",
+    "summary": "Check umlauts, ß, ẞ and punctuation in the actual final font.",
+    "source_refs": [
+      "N05",
+      "T01"
+    ],
+    "source_ref": [
+      "N05",
+      "T01"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check umlauts, ß, ẞ and punctuation in the actual final font. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-002",
+    "summary": "Allow both ẞ and SS; never silently reverse-convert.",
+    "source_refs": [
+      "N04"
+    ],
+    "source_ref": [
+      "N04"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Allow both ẞ and SS; never silently reverse-convert. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-003",
+    "summary": "Check opening/closing quotes, nesting, direction and the approved quotation set.",
+    "source_refs": [
+      "N17",
+      "N18",
+      "N38"
+    ],
+    "source_ref": [
+      "N17",
+      "N18",
+      "N38"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check opening/closing quotes, nesting, direction and the approved quotation set. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-004",
+    "summary": "Classify slashes and apostrophes in context.",
+    "source_refs": [
+      "N16",
+      "N19"
+    ],
+    "source_ref": [
+      "N16",
+      "N19"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Classify slashes and apostrophes in context. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-005",
+    "summary": "Distinguish dashes, hyphens, minus signs and ellipses.",
+    "source_refs": [
+      "N14",
+      "N15"
+    ],
+    "source_ref": [
+      "N14",
+      "N15"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Distinguish dashes, hyphens, minus signs and ellipses. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-006",
+    "summary": "Preserve compound-word structure and distinguish mandatory from optional hyphens.",
+    "source_refs": [
+      "N09"
+    ],
+    "source_ref": [
+      "N09"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Preserve compound-word structure and distinguish mandatory from optional hyphens. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-007",
+    "summary": "Observe language-aware hyphenation against word structure and actual rendering.",
+    "source_refs": [
+      "N10",
+      "N11",
+      "N12",
+      "N13"
+    ],
+    "source_ref": [
+      "N10",
+      "N11",
+      "N12",
+      "N13"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Observe language-aware hyphenation against word structure and actual rendering. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-008",
+    "summary": "Limit soft hyphens and nonbreaking groups to their intended scope; preserve protected strings.",
+    "source_refs": [
+      "T03",
+      "P02"
+    ],
+    "source_ref": [
+      "T03",
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Limit soft hyphens and nonbreaking groups to their intended scope; preserve protected strings. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-009",
+    "summary": "Set role-specific tracking and line height; check clipping.",
+    "source_refs": [
+      "P01"
+    ],
+    "source_ref": [
+      "P01"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Set role-specific tracking and line height; check clipping. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-010",
+    "summary": "Treat morphological ligature boundaries as specialist editorial review.",
+    "source_refs": [
+      "N37",
+      "W06"
+    ],
+    "source_ref": [
+      "N37",
+      "W06"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "A",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Treat morphological ligature boundaries as specialist editorial review. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-011",
+    "summary": "Judge rag, justification, hyphenation and word spacing together.",
+    "source_refs": [
+      "T03"
+    ],
+    "source_ref": [
+      "T03"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Judge rag, justification, hyphenation and word spacing together. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-TYPE-012",
+    "summary": "Preserve semantic relationships and meaningful heading groups.",
+    "source_refs": [
+      "N07",
+      "P01"
+    ],
+    "source_ref": [
+      "N07",
+      "P01"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Preserve semantic relationships and meaningful heading groups. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-001",
+    "summary": "Record the actual Intl/CLDR implementation version and observed output.",
+    "source_refs": [
+      "N24",
+      "N25",
+      "W05"
+    ],
+    "source_ref": [
+      "N24",
+      "N25",
+      "W05"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Record the actual Intl/CLDR implementation version and observed output. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-002",
+    "summary": "Check short number/unit and amount pairs at line endings.",
+    "source_refs": [
+      "N23"
+    ],
+    "source_ref": [
+      "N23"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check short number/unit and amount pairs at line endings. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-003",
+    "summary": "Separate civil date, time, regional month vocabulary and timezone.",
+    "source_refs": [
+      "N22",
+      "N26"
+    ],
+    "source_ref": [
+      "N22",
+      "N26"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Separate civil date, time, regional month vocabulary and timezone. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-NUM-004",
+    "summary": "Separate input parsing from display formatting; preserve identifiers.",
+    "source_refs": [
+      "W05",
+      "P02"
+    ],
+    "source_ref": [
+      "W05",
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Separate input parsing from display formatting; preserve identifiers. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-001",
+    "summary": "Check du/Sie and capitalization consistently by speaker and context.",
+    "source_refs": [
+      "N08",
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "source_ref": [
+      "N08",
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check du/Sie and capitalization consistently by speaker and context. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-002",
+    "summary": "Preserve German noun/heading capitalization; do not impose English title case.",
+    "source_refs": [
+      "N06",
+      "N07"
+    ],
+    "source_ref": [
+      "N06",
+      "N07"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Preserve German noun/heading capitalization; do not impose English title case. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-003",
+    "summary": "Match CTA and error wording to actual actions and confirmed states.",
+    "source_refs": [
+      "S01",
+      "S10",
+      "S14"
+    ],
+    "source_ref": [
+      "S01",
+      "S10",
+      "S14"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Match CTA and error wording to actual actions and confirmed states. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-004",
+    "summary": "Never invent vague benefits, unsupported claims or effects.",
+    "source_refs": [
+      "S12",
+      "P02"
+    ],
+    "source_ref": [
+      "S12",
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Never invent vague benefits, unsupported claims or effects. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-005",
+    "summary": "Preserve the chosen gender policy; no silent semantic rewrite.",
+    "source_refs": [
+      "N31",
+      "S16",
+      "S17"
+    ],
+    "source_ref": [
+      "N31",
+      "S16",
+      "S17"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Preserve the chosen gender policy; no silent semantic rewrite. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-COPY-006",
+    "summary": "Distinguish regional vocabulary, approved English names and plain/easy language aims.",
+    "source_refs": [
+      "S06",
+      "S11",
+      "S19",
+      "A01",
+      "A02"
+    ],
+    "source_ref": [
+      "S06",
+      "S11",
+      "S19",
+      "A01",
+      "A02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Distinguish regional vocabulary, approved English names and plain/easy language aims. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-001",
+    "summary": "Avoid blanket break-all or anywhere on body text.",
+    "source_refs": [
+      "T03"
+    ],
+    "source_ref": [
+      "T03"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Avoid blanket break-all or anywhere on body text. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "bounded-static-candidate",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-002",
+    "summary": "Allow width and multi-line layout for long labels; check fixed heights.",
+    "source_refs": [
+      "A05",
+      "A06"
+    ],
+    "source_ref": [
+      "A05",
+      "A06"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Allow width and multi-line layout for long labels; check fixed heights. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-003",
+    "summary": "Declare actual language and observe required hyphenation resources.",
+    "source_refs": [
+      "A03",
+      "A08",
+      "T03"
+    ],
+    "source_ref": [
+      "A03",
+      "A08",
+      "T03"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Declare actual language and observe required hyphenation resources. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-004",
+    "summary": "Check narrow width, 200 percent text enlargement and spacing overrides separately.",
+    "source_refs": [
+      "A05",
+      "A06",
+      "W07"
+    ],
+    "source_ref": [
+      "A05",
+      "A06",
+      "W07"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check narrow width, 200 percent text enlargement and spacing overrides separately. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-005",
+    "summary": "Test additional CSS features in the target environment; distinguish unsupported behavior.",
+    "source_refs": [
+      "W02"
+    ],
+    "source_ref": [
+      "W02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Test additional CSS features in the target environment; distinguish unsupported behavior. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-006",
+    "summary": "Check error/focus states and visible-label/accessibility-name correspondence.",
+    "source_refs": [
+      "A04",
+      "P02"
+    ],
+    "source_ref": [
+      "A04",
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check error/focus states and visible-label/accessibility-name correspondence. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-WEB-007",
+    "summary": "Check font loading and fallback; do not hide missing content with overflow clipping.",
+    "source_refs": [
+      "T01",
+      "A05"
+    ],
+    "source_ref": [
+      "T01",
+      "A05"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check font loading and fallback; do not hide missing content with overflow clipping. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-001",
+    "summary": "Check document language, hyphenation dictionary and export settings.",
+    "source_refs": [
+      "P02",
+      "N10"
+    ],
+    "source_ref": [
+      "P02",
+      "N10"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check document language, hyphenation dictionary and export settings. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-002",
+    "summary": "Inspect orphan headings, table rows, source notes and consecutive hyphenation.",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Inspect orphan headings, table rows, source notes and consecutive hyphenation. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-003",
+    "summary": "Split dense slide information before shrinking all text.",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Split dense slide information before shrinking all text. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DOC-004",
+    "summary": "Check PDF selection, copying, fonts and editability separately.",
+    "source_refs": [
+      "P02",
+      "T02"
+    ],
+    "source_ref": [
+      "P02",
+      "T02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Check PDF selection, copying, fonts and editability separately. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-001",
+    "summary": "Record audience, purpose, information structure and reasons before production.",
+    "source_refs": [
+      "P01"
+    ],
+    "source_ref": [
+      "P01"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Record audience, purpose, information structure and reasons before production. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-002",
+    "summary": "Judge expressive fonts, handwriting and rotated text by their role.",
+    "source_refs": [
+      "D06",
+      "D07",
+      "D09"
+    ],
+    "source_ref": [
+      "D06",
+      "D07",
+      "D09"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "A",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Judge expressive fonts, handwriting and rotated text by their role. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-003",
+    "summary": "Distinguish poster expression from functional web/UI reading.",
+    "source_refs": [
+      "D02",
+      "D04",
+      "D08"
+    ],
+    "source_ref": [
+      "D02",
+      "D04",
+      "D08"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "W",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Distinguish poster expression from functional web/UI reading. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-DESIGN-004",
+    "summary": "Verify provenance and permitted use of figures, quotations and fonts.",
+    "source_refs": [
+      "P02",
+      "F15",
+      "F20"
+    ],
+    "source_ref": [
+      "P02",
+      "F15",
+      "F20"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Verify provenance and permitted use of figures, quotations and fonts. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-001",
+    "summary": "Distinguish norms, organizational policy, observations and proposals.",
+    "source_refs": [
+      "P01",
+      "P02"
+    ],
+    "source_ref": [
+      "P01",
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Distinguish norms, organizational policy, observations and proposals. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-002",
+    "summary": "Record renderer, fonts, dictionaries and specification versions.",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Record renderer, fonts, dictionaries and specification versions. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  },
+  {
+    "id": "DE-EVID-003",
+    "summary": "Distinguish not-checked, exceptions and failed outcomes; recheck affected scope after changes.",
+    "source_refs": [
+      "P02"
+    ],
+    "source_ref": [
+      "P02"
+    ],
+    "authority_type": "mixed; distinguish official norms, runtime data and project guidance by source",
+    "impact": "E",
+    "scope": [
+      "de-DE",
+      "de-AT",
+      "de-CH"
+    ],
+    "recommended_action": "Distinguish not-checked, exceptions and failed outcomes; recheck affected scope after changes. Preserve the original and record evidence before proposing changes.",
+    "machine_check": "not-implemented",
+    "render_check": "required when visual behavior is relevant; not-checked",
+    "editorial_review": "needs-review",
+    "exception": "Approved quotations, proper names, code, identifiers and house style remain protected.",
+    "status": "guidance-candidate"
+  }
+]

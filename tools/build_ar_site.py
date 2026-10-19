@@ -5,8 +5,8 @@ from html import escape as e
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 BASE='/kumihan/'
-# KUMIHAN index in the page language; Arabic has no gateway yet, so it uses the Japanese index.
-GATEWAY={'ar':'index.html','en':'top-en.html','ja':'index.html'}
+# KUMIHAN index (language gateway) for each page language.
+GATEWAY={'ar':'top-ar.html','en':'top-en.html','ja':'index.html'}
 PUBLIC='https://landco-llc.github.io'+BASE
 REPO='https://github.com/landco-llc/kumihan'
 RELEASE=REPO+'/releases/download/kumihan-ar-v0.1.0/'
