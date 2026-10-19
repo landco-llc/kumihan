@@ -1,12 +1,12 @@
 {
-  "observed_at_utc": "2026-10-19T04:16:07Z",
+  "observed_at_utc": "2026-10-19T04:20:30Z",
   "pages": [
     {
       "path": "kumihan-it.html",
       "status": 200,
       "url": "https://landco-llc.github.io/kumihan/kumihan-it.html",
-      "bytes": 14111,
-      "sha256": "bf24f5d000a1dcdb7fb6377902dc6d8127b66e8668a4b901142dfe989b9be432",
+      "bytes": 14080,
+      "sha256": "d8260126a16c81dedb972b7ca7ee235b4cc47b10d3ab88716cf1e6888a41ae29",
       "source_equal": true,
       "canonical_alternates": true
     },
@@ -14,8 +14,8 @@
       "path": "kumihan-it.en.html",
       "status": 200,
       "url": "https://landco-llc.github.io/kumihan/kumihan-it.en.html",
-      "bytes": 14142,
-      "sha256": "d634da3fdfca3520b7c9f55e6551bd955ce9dd7f7e864de2ee7cd6cb80f47d27",
+      "bytes": 14123,
+      "sha256": "0e7cb13abdb71378da9419169193bf9bdb0f92e01df887db71a09d5395a28392",
       "source_equal": true,
       "canonical_alternates": true
     },
@@ -23,8 +23,8 @@
       "path": "kumihan-it.ja.html",
       "status": 200,
       "url": "https://landco-llc.github.io/kumihan/kumihan-it.ja.html",
-      "bytes": 14840,
-      "sha256": "7795c7983520bf00374dc6b55cd97de7acca194a5826547fdd04e610b76278ef",
+      "bytes": 14849,
+      "sha256": "8df3047d3bf1a81f2178b80dbf90c2a93f75586f04e1b7fa2ad213b890b45681",
       "source_equal": true,
       "canonical_alternates": true
     },
@@ -112,13 +112,73 @@
   ],
   "gateways": [
     {
+      "path": "top-ar.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-en.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-es.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-fr.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-hi.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
       "path": "index.html",
       "status": 200,
       "it_card": true,
       "target": "kumihan-it.ja.html"
     },
     {
-      "path": "top-en.html",
+      "path": "top-ko.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-pt.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-th.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-vi.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-zh-cn.html",
+      "status": 200,
+      "it_card": true,
+      "target": "kumihan-it.en.html"
+    },
+    {
+      "path": "top-zh-han.html",
       "status": 200,
       "it_card": true,
       "target": "kumihan-it.en.html"
@@ -156,5 +216,7 @@
       "sha256": "c8e1aae16035a01675ae3d54bb89cb0dbe13b7c7d0ebeb2de2ea0ce7cad5e2cd"
     }
   ],
-  "scope": "Public HTTP bytes equal repository sources; language/canonical/alternates and gateway target links checked. External provider/Google fonts/corporate endpoint not exercised."
+  "scope": "Public HTTP bytes equal repository sources; language/canonical/alternates and gateway target links checked. External provider/Google fonts/corporate endpoint not exercised.",
+  "deployed_source_sha": "ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee",
+  "publication_display": "RELEASED / v0.1.0 asserted on all three landing pages; RELEASE CANDIDATE absent"
 }

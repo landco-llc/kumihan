@@ -1,6 +1,6 @@
 # Equilibrio v0.1.0 — execution ledger
 
-Status: PUBLISHED_VERIFIED / publication-display-followup
+Status: PUBLISHED_VERIFIED
 Date: 2026-10-19 JST
 Owner-approved release scope: GitHub repo main、tag kumihan-it-v0.1.0、public GitHub Release、12 Pages。External Marketplace installation/listing is out of scope.
 Main control: [GOAL_EQUILIBRIO_V010.md](GOAL_EQUILIBRIO_V010.md)
@@ -69,3 +69,9 @@ Research canonical: https://drive.google.com/drive/folders/1EMib8ugMHyfNG2e38Mo7
 - NOT-CHECKED: provider-native import/invocation/icon UI, official marketplace listing, native Italian editorial review, native text-only zoom, Google font success, Safari/Windows, hyphenation dictionary, screen reader, Office/PDF. These are nonblocking unverified environments, not claimed failures or approvals.
 - No MD/ZIP reattachment, owner-per-Work gate, force push, tag replacement, provider-store submission or authentication/permission modification was requested or performed.
 - Final PR #83 readback after release: all 15 exact-head check entries SUCCESS, including the unchanged-language browser jobs that finished after merge. No unresolved failed PR check remains.
+
+## Final released-display readback
+- PR #88 merged at ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee after both Candidate integrity and Equilibrio CI succeeded. Updated only publication facts and evidence; tagged ZIP/source artifacts unchanged.
+- Pages built ba035e9 successfully. Final live verification: all 12 Pages, all 12 generated gateways, and 5 shared resources HTTP 200; every fetched file equals current source bytes. All three LPs show RELEASED / v0.1.0 and contain no RELEASE CANDIDATE label. Language/canonical/alternates and IT card targets checked again. evidence/public-pages.json now holds this final readback, not the earlier candidate display.
+- Fixed release source main checks: 15/15 SUCCESS, captured in evidence/release-main-checks.json. Release publishing/readback workflow remains SUCCESS; remote tag object/peeled commit read back and unchanged. No stage remains on HOLD; no missing product/ZIP/Page deliverable or human handoff.
+- Restart point, if future optional native/environment testing is requested: immutable kumihan-it-v0.1.0 plus this ledger. Do not rebuild or replace the published tag/assets without a new version.

@@ -4,9 +4,11 @@ Status: PUBLISHED_VERIFIED
 Date: 2026-10-19 JST
 
 - Implementation PR: https://github.com/landco-llc/kumihan/pull/83
+- Publication display PR: https://github.com/landco-llc/kumihan/pull/88 — merged ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee
 - Product implementation head: 8c5459a15c54e75fcc77ab4bc3cd2696095ed53b
 - Merge / fixed release source: e7e21628d444a2c0b4016570a1426bc6afa37c79
 - Tag: kumihan-it-v0.1.0 (annotated object 28d8c79d367717b561ffcad3960c9574dcef42f4; never moved)
+- Fixed release source: all 15 main check entries SUCCESS ([captured statuses](evidence/release-main-checks.json)).
 - Main CI: https://github.com/landco-llc/kumihan/actions/runs/39198411459 — SUCCESS
 - Publish + readback: https://github.com/landco-llc/kumihan/actions/runs/39198540492 — SUCCESS
 - Public Release: https://github.com/landco-llc/kumihan/releases/tag/kumihan-it-v0.1.0 — draft=false, 17 exact assets
@@ -54,7 +56,7 @@ MANIFEST.json lists all 15 ZIP digests/member summaries/host identities; SHA256S
 | https://landco-llc.github.io/kumihan/docs/install-equilibrio-gemini.en.html | 200 | PASS |
 | https://landco-llc.github.io/kumihan/docs/install-equilibrio-gemini.ja.html | 200 | PASS |
 
-JA/EN gateways: IT card, real target links and target HTTP checked. Official logo, product CSS, install CSS/JS and shared font sheet: HTTP 200 + source-byte equality. Evidence: [public readback](evidence/public-pages.json). The first readback used the truthful candidate display; publication-display follow-up changes it only after public Release verification and rechecks these same URLs.
+All twelve gateways: IT card, real target links, HTTP 200 and source-byte equality checked. Official logo, product CSS, install CSS/JS and shared font sheet: HTTP 200 + source-byte equality. Evidence: [public readback](evidence/public-pages.json). Final readback is after PR #88 and its successful Pages build at ba035e9dc8c9ba0fc5cf65ebd92d1fc50ab07eee. All three public LPs show RELEASED / v0.1.0; RELEASE CANDIDATE is absent. All twelve URL bodies and five resources equal final source bytes.
 
 ## Validation and limits
 
