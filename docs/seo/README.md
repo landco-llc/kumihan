@@ -1,5 +1,8 @@
 # KUMIHAN SEO運用正本
 
+> **2026-10-19 latest review v2 / MERGE HOLD:** 現行mainは `73d2b01`（PR #100マージ済み）。W09–W15は未実行です。実装の前に [再レビュー・P0指摘](REVIEW_REFRESH_20261019_MAIN_73D2B01.md) と [改訂W09–W15](RECONCILIATION_20261019_EN_TOP_NEW_LANGS.md) をFresh Readし、コード変更・テスト・PRに反映してください。旧231URL/20CIの記録は最新mainへの実装完了を意味しません。
+
+
 技術SEOの共通生成・横断検証を管理する。検索登録・順位・SNSキャッシュ更新を保証するものではない。実行結果と未確認事項は [VALIDATION_LOG.md](VALIDATION_LOG.md) を参照。
 
 | 責務 | 正本 |
