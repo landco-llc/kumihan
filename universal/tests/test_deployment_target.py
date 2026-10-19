@@ -13,9 +13,15 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
         self.assertEqual(d["endpoint"], "https://" + d["hostname"] + "/mcp")
-        self.assertEqual(d["status"], "g2_trial_installed_then_rolled_back_before_mcp_probe_python_ca_fixed")
+        self.assertEqual(d["status"], "chatgpt_live_mcp_connected_three_language_tools_smoked_router_fix_pending_deploy")
+        self.assertTrue(d["flags"]["chatgpt_client_connection_verified"])
+        self.assertTrue(d["flags"]["chatgpt_guidance_and_review_verified"])
+        self.assertEqual(d["chatgpt_connection"]["modules"], 21)
+        self.assertEqual(d["chatgpt_connection"]["rules"], 729)
+        self.assertFalse(d["chatgpt_connection"]["production_fix_deployed"])
         self.assertEqual(d["g2_trial_attempt"]["outcome"], "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST")
         self.assertFalse(d["g2_trial_attempt"]["live_mcp_verified"])
+        self.assertTrue(d["g3_live_mcp"]["public_bootstrap_live"])
         self.assertTrue(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["g2_stage_evidence"]["owner_terminal_markers"], [
             "G2_LOCAL_FILE_SHA_OK",
