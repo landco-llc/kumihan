@@ -1,0 +1,83 @@
+name: Bangla v0.1.0 package and checks
+on:
+  push:
+    branches:
+      - feat/bn-okkhor-shojja-v0.1.0
+      - main
+    paths:
+      - plugins/kumihan-bn/**
+      - scripts/build_bn_release.py
+      - tests/bn/**
+      - .github/workflows/bn-v010.yml
+  pull_request:
+    paths:
+      - plugins/kumihan-bn/**
+      - scripts/build_bn_release.py
+      - tests/bn/**
+      - .github/workflows/bn-v010.yml
+permissions:
+  contents: write
+jobs:
+  package:
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact revision
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validate source preservation and skill references
+        run: python3 -m unittest discover -s tests/bn -p 'test_*.py' -v
+      - name: Package binaries and hash manifest
+        run: python3 scripts/build_bn_release.py
+      - name: Verify manifest and ZIPs
+        run: |
+          cd plugins/kumihan-bn/downloads
+          sha256sum -c SHA256SUMS.txt
+          python3 - <<'PY'
+          import json,zipfile,pathlib
+          d=pathlib.Path('.')
+          m=json.loads((d/'MANIFEST.json').read_text())
+          assert len(m['files'])==7
+          for entry in m['files']:
+              with zipfile.ZipFile(d/entry['name']) as z:
+                  assert z.testzip() is None
+                  assert any(n.endswith('SKILL.md') for n in z.namelist())
+          print('7 ZIP archives verified')
+          PY
+      - name: Upload archives for auditing
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-bn-v0.1.0
+          path: plugins/kumihan-bn/downloads/
+          if-no-files-found: error
+      - name: Commit packaged files on feature branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/feat/bn-okkhor-shojja-v0.1.0'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add plugins/kumihan-bn/downloads
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(bn): add v0.1.0 distribution archives [skip ci]'
+            git push origin HEAD:feat/bn-okkhor-shojja-v0.1.0
+          fi
+
+      - name: Verify checked-in archives match rebuild
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: git diff --exit-code -- plugins/kumihan-bn/downloads
+      - name: Publish GitHub Release v0.1.0
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          tag="kumihan-bn-v0.1.0"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Existing release retained (no overwrite): $tag"
+            exit 0
+          fi
+          gh release create "$tag" plugins/kumihan-bn/downloads/*.zip plugins/kumihan-bn/downloads/MANIFEST.json plugins/kumihan-bn/downloads/SHA256SUMS.txt \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "KUMIHAN｜অক্ষরসজ্জা v0.1.0" \
+            --notes-file plugins/kumihan-bn/RELEASE_NOTES.md
