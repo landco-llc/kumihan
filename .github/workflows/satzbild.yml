@@ -2,10 +2,10 @@ name: Satzbild product and site
 on:
   pull_request:
     branches: [main]
-    paths: ['plugins/kumihan-satzbild/**', 'tools/*satzbild*', 'tests/satzbild/**', 'kumihan-de*.html', 'docs/install-satzbild-*.html', 'assets/satzbild-site*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'assets/kumihan-install.*', '_layouts/landing.html', 'tests/test_site_layout_parity.py', '.github/workflows/satzbild.yml']
+    paths: ['plugins/kumihan-satzbild/**', 'tools/*satzbild*', 'tests/satzbild/**', 'kumihan-de*.html', 'docs/install-satzbild-*.html', 'assets/satzbild-site*', 'tools/base_copy.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', 'tools/build_gateways.py', 'tools/product_site.py', 'tools/install_frame.py', 'assets/kumihan-install.*', '_layouts/landing.html', 'tests/test_site_layout_parity.py', '.github/workflows/satzbild.yml']
   push:
     branches: [main, feat/satzbild-v0.1.0]
-    paths: ['plugins/kumihan-satzbild/**', 'tools/*satzbild*', 'tests/satzbild/**', 'kumihan-de*.html', 'docs/install-satzbild-*.html', 'assets/satzbild-site*', 'tools/base_copy.py', 'tools/product_site.py', 'tools/install_frame.py', 'assets/kumihan-install.*', '_layouts/landing.html', 'tests/test_site_layout_parity.py', '.github/workflows/satzbild.yml']
+    paths: ['plugins/kumihan-satzbild/**', 'tools/*satzbild*', 'tests/satzbild/**', 'kumihan-de*.html', 'docs/install-satzbild-*.html', 'assets/satzbild-site*', 'tools/base_copy.py', 'tools/web_fonts.py', 'assets/kumihan-fonts.css', 'tools/build_gateways.py', 'tools/product_site.py', 'tools/install_frame.py', 'assets/kumihan-install.*', '_layouts/landing.html', 'tests/test_site_layout_parity.py', '.github/workflows/satzbild.yml']
 permissions:
   contents: read
 jobs:

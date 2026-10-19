@@ -22,12 +22,14 @@ VISIBLE, STEP = 9, 6
 # Gateway pages: key -> (file, html lang, menu label, native name)
 GATEWAYS = {
     "ar": ("top-ar.html", "ar", "AR", "العربية"),
+    "de": ("top-de.html", "de", "DE", "Deutsch"),
     "en": ("top-en.html", "en", "EN", "English"),
     "es": ("top-es.html", "es", "ES", "Español"),
     "fr": ("top-fr.html", "fr", "FR", "Français"),
     "hi": ("top-hi.html", "hi", "HI", "हिंदी"),
     "ja": ("index.html", "ja", "JA", "日本語"),
     "ko": ("top-ko.html", "ko-KR", "KO", "한국어"),
+    "pl": ("top-pl.html", "pl", "PL", "Polski"),
     "pt": ("top-pt.html", "pt", "PT", "Português"),
     "th": ("top-th.html", "th-TH", "TH", "ไทย"),
     "vi": ("top-vi.html", "vi", "VI", "Tiếng Việt"),
@@ -67,6 +69,36 @@ RTL = {"ar"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
+    "de": {
+        "ar": ("Arabische Typografie für rechtsläufige Schrift und gemischte Schriftsysteme, die das Original unverändert lässt.", "Arabische Version ansehen"),
+        "de": ("Deutsche Typografie, die lange Komposita, Anführungszeichen, ß und ẞ sowie die Unterschiede zwischen DE, AT und CH respektiert und das Original schützt.", "Deutsche Version ansehen"),
+        "es": ("Spanische Typografie, die regionalen Sprachgebrauch respektiert, das Original bewahrt und geprüfte Belege von redaktionellem Urteil trennt.", "Spanische Version ansehen"),
+        "fr": ("Französische Typografie, die geschützte Leerzeichen, Anführungszeichen und regionale oder institutionelle Hausstile unterscheidet.", "Französische Version ansehen"),
+        "hi": ("Hindi-Typografie und -Design, die das Original, Konsonantenverbindungen und Matras bewahren.", "Hindi-Version ansehen"),
+        "ja": ("Von japanischen Umbruchregeln (Kinsoku) und natürlichen Zeilenumbrüchen bis zu Informationsstruktur, Weißraum und Lesefluss.", "Japanische Version ansehen"),
+        "ko": ("Umbrüche zwischen Eojeol (koreanischen Leerzeicheneinheiten), Textrhythmus und klare Informationsstruktur.", "Koreanische Version ansehen"),
+        "pl": ("Polnische Typografie mit korrekten diakritischen Zeichen, Einzelbuchstaben am Zeilenende, Zahlen und Anführungszeichen – ohne das Original zu verändern.", "Polnische Version ansehen"),
+        "pt": ("Portugiesische Typografie und sinnorientiertes Design, das brasilianische und europäische Konventionen sowie die Absicht des Autors respektiert.", "Portugiesische Version ansehen"),
+        "th": ("Respektiert thailändische Wortgrenzen und kombinierende Zeichen für thailändisches Design, das sich natürlich liest.", "Thailändische Version ansehen"),
+        "vi": ("Vietnamesische Typografie, die Tonzeichen, natürliche Zeilenumbrüche und den Originalinhalt respektiert.", "Vietnamesische Version ansehen"),
+        "zh-hans": ("Interpunktion, Zeilenumbrüche und gemischter chinesisch-lateinischer Text für vereinfachtes Chinesisch, ohne das Original umzuschreiben.", "Version in vereinfachtem Chinesisch ansehen"),
+        "zh-hant": ("Berücksichtigt die unterschiedlichen Interpunktions- und Satzkonventionen Taiwans und Hongkongs.", "Version in traditionellem Chinesisch ansehen"),
+    },
+    "pl": {
+        "ar": ("Typografia arabska obsługująca pismo od prawej do lewej i mieszane systemy pisma, bez zmieniania oryginału.", "Zobacz wersję arabską"),
+        "de": ("Typografia niemiecka uwzględniająca długie złożenia, cudzysłowy, ß i ẞ oraz różnice między DE, AT i CH, chroniąca oryginał.", "Zobacz wersję niemiecką"),
+        "es": ("Typografia hiszpańska szanująca regionalne zwyczaje językowe, chroniąca oryginał i oddzielająca sprawdzone dowody od oceny redakcyjnej.", "Zobacz wersję hiszpańską"),
+        "fr": ("Typografia francuska rozróżniająca spacje niełamliwe, cudzysłowy oraz regionalne i instytucjonalne zasady redakcyjne.", "Zobacz wersję francuską"),
+        "hi": ("Typografia i projektowanie w hindi, zachowujące oryginał, ligatury spółgłoskowe i matry.", "Zobacz wersję w hindi"),
+        "ja": ("Od japońskich zasad łamania wierszy (kinsoku) i naturalnego podziału wierszy po strukturę informacji, światło i rytm czytania.", "Zobacz wersję japońską"),
+        "ko": ("Podział wierszy między eojeol (koreańskimi jednostkami odstępu), rytm tekstu i przejrzysta struktura informacji.", "Zobacz wersję koreańską"),
+        "pl": ("Typografia polska dbająca o znaki diakrytyczne, jednoliterowe wyrazy na końcu wiersza, liczby i cudzysłowy, chroniąca oryginał i jego sens.", "Zobacz wersję polską"),
+        "pt": ("Typografia portugalska i projektowanie oparte na znaczeniu, szanujące konwencje Brazylii i Portugalii oraz intencję autora.", "Zobacz wersję portugalską"),
+        "th": ("Szacunek dla granic wyrazów i znaków łączących w języku tajskim, dla tajskiego projektu, który czyta się naturalnie.", "Zobacz wersję tajską"),
+        "vi": ("Typografia wietnamska szanująca znaki tonów, naturalny podział wierszy i oryginalną treść.", "Zobacz wersję wietnamską"),
+        "zh-hans": ("Interpunkcja, podział wierszy i tekst mieszany chińsko-łaciński dla chińskiego uproszczonego, bez przepisywania oryginału.", "Zobacz wersję w chińskim uproszczonym"),
+        "zh-hant": ("Uwzględnia odmienne zwyczaje interpunkcyjne i składu Tajwanu oraz Hongkongu.", "Zobacz wersję w chińskim tradycyjnym"),
+    },
     "ar": {
         "ar": ("تنضيد عربي يراعي الكتابة من اليمين إلى اليسار وتداخل اللغات، ويحافظ على النص الأصلي.", "عرض النسخة العربية"),
         "es": ("تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.", "عرض النسخة الإسبانية"),
@@ -224,6 +256,8 @@ CARDS = {
 }
 
 UI = {
+    "de": dict(heading="Die Sprachversionen von KUMIHAN", more="Die nächsten {n} anzeigen", menu="Sprache"),
+    "pl": dict(heading="Wersje językowe KUMIHAN", more="Pokaż kolejne {n}", menu="Język"),
     "ar": dict(heading="نسخ KUMIHAN اللغوية", more="عرض {n} أخرى", menu="اللغة"),
     "es": dict(heading="Ediciones de KUMIHAN por idioma", more="Mostrar {n} más", menu="Idioma"),
     "fr": dict(heading="Les éditions de KUMIHAN", more="Afficher les {n} suivantes", menu="Langue"),
@@ -279,7 +313,8 @@ PL_CARD_COPY = {
     "vi": ("Thiết kế chữ tiếng Ba Lan chú trọng dấu phụ, ngắt dòng và giữ nguyên nội dung gốc.","Xem phiên bản tiếng Ba Lan"),
 }
 for _lang, _cards in CARDS.items():
-    _cards["pl"] = PL_CARD_COPY[_lang]
+    if _lang in PL_CARD_COPY:
+        _cards.setdefault("pl", PL_CARD_COPY[_lang])
 
 
 def x(value):
