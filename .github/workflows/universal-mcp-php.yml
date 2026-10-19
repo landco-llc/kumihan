@@ -82,6 +82,17 @@ jobs:
           fi
           grep -q 'kumihan_detect_language' /tmp/kumihan-tools.json
           python3 universal/tests/http_smoke.py
+      - name: Public domain TLS preflight (informational, not a release gate)
+        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            cat /tmp/kumihan-tls.log >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            sed -n '1,8p' /tmp/kumihan-tls.log >> "$GITHUB_STEP_SUMMARY"
+          fi
       - name: Prepare non-secret deploy artifact
         run: |
           mkdir -p universal/server/runtime/sessions
