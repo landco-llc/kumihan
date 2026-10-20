@@ -35,7 +35,8 @@ class SourceDownloads(unittest.TestCase):
             ('zh-hant','plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip'),
             ('zh-hant','plugins/kumihan-ziheng/downloads/skills/kumihan-ziheng-0.1.0.zip'),
             ('zh-hans','plugins/kumihan-zilu/downloads/plugins/kumihan-zilu-plugin-v0.1.0.zip')]:
-            f=v.load()['editions'][code]
+            f=dict(v.load()['editions'][code], source_version='0.1.0', published_version=None,
+                   release_status='unpublished', verified_assets=[], verified_metadata=[])
             for url in ['../'+path, v.REPO.replace('github.com','raw.githubusercontent.com')+'/main/'+path]:
                 with self.subTest(url=url):
                     out=rewrite_downloads(f'<a href="{url}">ZIP</a>',f)

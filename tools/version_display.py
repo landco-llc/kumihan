@@ -113,7 +113,6 @@ def source_archives(code, version):
 
 
 def is_source_download(url, f):
-    if f['release_status'] != 'unpublished': return False
     parsed = urlsplit(url)
     path = unquote(parsed.path)
     if parsed.query or parsed.fragment: return False
@@ -125,7 +124,7 @@ def is_source_download(url, f):
     else:
         if parsed.scheme: return False
         path = path.removeprefix('../').removeprefix('/kumihan/').lstrip('/')
-    if path in source_archives(f.get('edition'), f['source_version']): return True
+    if f['release_status'] == 'unpublished' and path in source_archives(f.get('edition'), f['source_version']): return True
     if f.get('edition') == 'zh-hant':
         from ziheng_retention import retained_outputs
         # Exact path/digest retention only; no basename or arbitrary old version.

@@ -7,7 +7,7 @@
 
 This guide explains how to use KUMIHAN with ChatGPT and Codex.
 
-> **About v0.1.8**
+> **About v0.2.0**
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -26,18 +26,18 @@ A **skill** is a single feature. The **plugin** bundles all four skills into one
 
 ## 2. Download the files
 
-All files are on the [downloads page](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8).
+All files are on the [downloads page](https://github.com/landco-llc/kumihan/releases/tag/v0.2.0).
 
 **Plugin (all four skills)**
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-plugin-0.1.8.zip)
+- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 **Individual skills**
 
-- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-skill-0.1.8.zip) — starting point
-- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-GPT-Codex-skill-0.1.8.zip) — web pages
-- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-GPT-Codex-skill-0.1.8.zip) — reports and slides
-- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-GPT-Codex-skill-0.1.8.zip) — review
+- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-skill-0.2.0.zip) — starting point
+- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-GPT-Codex-skill-0.2.0.zip) — web pages
+- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-GPT-Codex-skill-0.2.0.zip) — reports and slides
+- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-GPT-Codex-skill-0.2.0.zip) — review
 
 On GitHub, open a file and use the download button at the top right.
 
@@ -122,7 +122,7 @@ We recommend starting with a request that doesn't change any files:
 
 ## Verify your downloads (optional)
 
-To check that your downloads are intact, use [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20GPT-Codex/SHA256SUMS.txt).
+To check that your downloads are intact, use [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20GPT-Codex/SHA256SUMS.txt).
 
 Keep the same folder layout as the downloads page (`plugins/` and `skills/`), then run this in a terminal. If `shasum` is unavailable, use an equivalent SHA-256 command such as PowerShell `Get-FileHash` on Windows:
 
