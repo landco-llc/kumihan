@@ -1,0 +1,103 @@
+[
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-01.log"
+  },
+  {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/seo",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-02.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_ja_type_011_cases.py"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-03.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/build_dist.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-04.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/build_seo.py",
+      "--check"
+    ],
+    "exit_code": 1,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-05.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_seo_preservation.py"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-06.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/web_fonts.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-07.log"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-08.log"
+  },
+  {
+    "command": [
+      "/tmp/kumihan-ruby-run",
+      "exec",
+      "jekyll",
+      "build",
+      "--destination",
+      "/tmp/kumihan-qa-final-site",
+      "--trace"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-09.log"
+  },
+  {
+    "command": [
+      "python",
+      "tools/check_seo.py",
+      "--site-dir",
+      "/tmp/kumihan-qa-final-site"
+    ],
+    "exit_code": 0,
+    "log": "docs/development/ja-v020-20261020/qa/evidence/final-check-10.log"
+  }
+]

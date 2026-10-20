@@ -1,0 +1,144 @@
+- link "本文へ移動":
+  - /url: "#main"
+- banner:
+  - link "KUMIHAN — Top":
+    - /url: "#top"
+    - text: KUMIHAN
+  - navigation "メインナビゲーション":
+    - link "KUMIHANとは":
+      - /url: "#concept"
+    - link "できること":
+      - /url: "#features"
+    - link "4つのスキル":
+      - /url: "#skills"
+    - link "導入方法":
+      - /url: "#install"
+  - group "Language / 言語 / 語言":
+    - button "JA" [pressed]
+    - button "EN"
+    - button "繁中"
+- main:
+  - region "日本語の デザインを もっと自然に":
+    - paragraph: OPEN-SOURCE SKILLS / JAPANESE TYPOGRAPHY
+    - strong:
+      - text: 現行公開版
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: ソース v0.2.0
+    - heading "日本語の デザインを もっと自然に" [level=1]
+    - paragraph: AIとつくるWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHANは、日本語のための制作・レビュースキル集です。
+    - link "使いはじめる":
+      - /url: "#install"
+    - link "KUMIHANについて":
+      - /url: "#concept"
+    - text: OPEN SOURCE FOUR SKILLS JAPANESE FIRST
+    - img "KUMIHANの正式ロゴ。黒い組版グリッドと赤い横線、KUMIHANの文字。"
+    - text: WORDS · SPACE · PURPOSE KUMIHAN / 01
+  - region "「見た目をそろえる」より 「伝わる形を考える」":
+    - text: 01 / THE IDEA
+    - heading "「見た目をそろえる」より 「伝わる形を考える」" [level=2]:
+      - text: 「見た目をそろえる」より
+      - emphasis: 「伝わる形を考える」
+    - paragraph: 目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHANは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。
+  - region "伝えるための4つの視点":
+    - text: 02 / WHAT MATTERS
+    - heading "伝えるための4つの視点" [level=2]
+    - paragraph: 制作と見直しに共通する、KUMIHANが大切にする考え方。
+    - article:
+      - text: 01 / TYPE
+      - heading "自然な日本語組版" [level=3]
+      - paragraph: 改行・禁則・約物・和欧混植。文字の読みやすさを、実際の文脈から考えます。
+    - article:
+      - text: 02 / STRUCTURE
+      - heading "内容に合う構成" [level=3]
+      - paragraph: 伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。
+    - article:
+      - text: 03 / FIDELITY
+      - heading "原稿を大切に" [level=3]
+      - paragraph: 名前・価格・数値・原文を勝手に変えず、意味と情報の正確さを守ります。
+    - article:
+      - text: 04 / REVIEW
+      - heading "制作後の見直し" [level=3]
+      - paragraph: 完成物の気になる点を、対象を変更せずに確認・整理するための指針です。
+  - region "文字を並べるだけでなく 読む体験を組み立てる":
+    - paragraph: DESIGNED FOR THE MESSAGE
+    - heading "文字を並べるだけでなく 読む体験を組み立てる" [level=2]:
+      - text: 文字を並べるだけでなく
+      - strong: 読む体験を組み立てる
+    - paragraph: KUMIHANは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。
+  - region "4つのスキル ひとつの考え方":
+    - text: 03 / THE SKILLS
+    - heading "4つのスキル ひとつの考え方" [level=2]
+    - paragraph: 制作の入口から、Web・資料制作・レビューまで。
+    - link "01 / ENTRY kumihan 最初の入口。何をつくるか、目的や作業範囲を整理するためのスキル。 スキルを見る":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan
+      - text: 01 / ENTRY
+      - heading "kumihan" [level=3]
+      - paragraph: 最初の入口。何をつくるか、目的や作業範囲を整理するためのスキル。
+      - text: スキルを見る
+    - link "02 / WEB kumihan-web Webサイト、記事、LP、UIの文字組みとデザインを支援。 スキルを見る":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-web
+      - text: 02 / WEB
+      - heading "kumihan-web" [level=3]
+      - paragraph: Webサイト、記事、LP、UIの文字組みとデザインを支援。
+      - text: スキルを見る
+    - link "03 / DOCUMENTS kumihan-documents 報告書、資料、プレゼンテーションの構成と読みやすさを支援。 スキルを見る":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-documents
+      - text: 03 / DOCUMENTS
+      - heading "kumihan-documents" [level=3]
+      - paragraph: 報告書、資料、プレゼンテーションの構成と読みやすさを支援。
+      - text: スキルを見る
+    - link "04 / REVIEW kumihan-review 制作物を変更せず、組版・情報・デザインの見直しを支援。 スキルを見る":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-review
+      - text: 04 / REVIEW
+      - heading "kumihan-review" [level=3]
+      - paragraph: 制作物を変更せず、組版・情報・デザインの見直しを支援。
+      - text: スキルを見る
+  - region "いつものAIツールから はじめよう":
+    - strong:
+      - text: 現行公開版
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: 正式公開 · 公開日時
+    - time: 2026-10-19T12:51:29Z
+    - text: ソース v0.2.0 04 / GET STARTED
+    - heading "いつものAIツールから はじめよう" [level=2]
+    - paragraph: 導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。
+    - link "01 ChatGPT / Codex スキルの追加・プラグイン登録・ローカル導入のガイド":
+      - /url: docs/install-chatgpt.html
+    - link "02 Claude / Claude Code Claude Code・チャット向けの導入ガイド":
+      - /url: docs/install-claude.html
+    - link "03 Gemini Gemini CLI・Geminiアプリ向けの導入ガイド":
+      - /url: docs/install-gemini.html
+    - text: アップデートする場合は
+    - link "更新ガイド":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/docs/updates.md
+    - text: をご覧ください。
+  - region "SOURCE PACKAGE / v0.2.0":
+    - text: SOURCE PACKAGE / v0.2.0
+    - paragraph: 現行ソース版は v0.2.0 です。正式公開情報は導入セクションをご覧ください。日本語文字組と用途別デザイン支援を提供しますが、各AIツールでの実動作やすべての表示環境はまだ十分に確認できていません。
+    - link "過去版 v0.1.8-preview ↗":
+      - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview
+    - text: OPEN SOURCE · APACHE 2.0
+  - region "日本語のデザインに もうひとつの選択肢を":
+    - heading "日本語のデザインに もうひとつの選択肢を" [level=2]
+    - paragraph: KUMIHANはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。
+    - link "GitHubで見る":
+      - /url: https://github.com/landco-llc/kumihan
+- contentinfo:
+  - text: KUMIHAN
+  - paragraph:
+    - text: Open-source typography & design guidance by
+    - link "L&Co. LLC":
+      - /url: https://landco.co.jp/
+    - text: .
+  - navigation "KUMIHAN":
+    - link "KUMIHAN":
+      - /url: /kumihan/top-ja.html
+    - group: 言語を選ぶ
+    - link "GitHub":
+      - /url: https://github.com/landco-llc/kumihan
+    - link "Apache 2.0":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/LICENSE
+    - link "プライバシーポリシー":
+      - /url: /kumihan/privacy.html#ja

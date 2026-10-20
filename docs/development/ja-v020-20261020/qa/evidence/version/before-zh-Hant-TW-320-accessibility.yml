@@ -1,0 +1,143 @@
+- link "跳至主要內容":
+  - /url: "#main"
+- banner:
+  - link "KUMIHAN — Top":
+    - /url: "#top"
+    - text: KUMIHAN
+  - navigation "主要導覽":
+    - link "關於 KUMIHAN":
+      - /url: "#concept"
+    - link "核心原則":
+      - /url: "#features"
+    - link "技能":
+      - /url: "#skills"
+    - link "開始使用":
+      - /url: "#install"
+  - group "Language / 言語 / 語言":
+    - button "JA"
+    - button "EN"
+    - button "繁中" [pressed]
+- main:
+  - region "讓 AI 協助打造 更自然的日文排版":
+    - paragraph: OPEN-SOURCE SKILLS / JAPANESE TYPOGRAPHY
+    - strong:
+      - text: 目前公開版本
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: 原始碼 v0.2.0
+    - heading "讓 AI 協助打造 更自然的日文排版" [level=1]
+    - paragraph: KUMIHAN 是一套開放原始碼 AI 技能，協助製作與檢視日文網站、文章、報告及簡報，同時兼顧可讀性、版面配置與原始內容的完整性。
+    - link "開始使用":
+      - /url: "#install"
+    - link "了解更多":
+      - /url: "#concept"
+    - text: OPEN SOURCE FOUR SKILLS JAPANESE FIRST
+    - img "KUMIHAN 正式標誌，採用黑色組版格線、紅色橫線與 KUMIHAN 字樣。"
+    - text: WORDS · SPACE · PURPOSE KUMIHAN / 01
+  - region "不追求千篇一律 讓形式回應內容":
+    - text: 01 / THE IDEA
+    - heading "不追求千篇一律 讓形式回應內容" [level=2]:
+      - text: 不追求千篇一律
+      - emphasis: 讓形式回應內容
+    - paragraph: 每個專案的目的、讀者與訊息都不同。KUMIHAN 協助 AI 根據內容的意義與資訊優先順序，調整排版、留白與視覺層級，而非把所有作品都套進同一個範本。
+  - region "讓訊息更清楚的四個原則":
+    - text: 02 / WHAT MATTERS
+    - heading "讓訊息更清楚的四個原則" [level=2]
+    - paragraph: 從製作到檢視，KUMIHAN 始終重視的設計考量。
+    - article:
+      - text: 01 / TYPE
+      - heading "自然的日文排版" [level=3]
+      - paragraph: 依據實際內容，檢視換行、避頭尾規則、標點符號，以及日文與西文的混排。
+    - article:
+      - text: 02 / STRUCTURE
+      - heading "以目的為本的結構" [level=3]
+      - paragraph: 考量資訊的重要性與讀者需求，安排內容順序與版面。
+    - article:
+      - text: 03 / FIDELITY
+      - heading "忠於原始內容" [level=3]
+      - paragraph: 名稱、價格、數字與原文都保持原貌，不擅自修改。
+    - article:
+      - text: 04 / REVIEW
+      - heading "唯讀檢視" [level=3]
+      - paragraph: 檢查完成的作品並整理待改善事項，不直接修改檔案。
+  - region "不只是排列文字 更要設計閱讀體驗":
+    - paragraph: DESIGNED FOR THE MESSAGE
+    - heading "不只是排列文字 更要設計閱讀體驗" [level=2]:
+      - text: 不只是排列文字
+      - strong: 更要設計閱讀體驗
+    - paragraph: KUMIHAN 不會替每份作品決定固定外觀，而是協助 AI 根據媒體與需求做出合適的設計判斷。
+  - region "四項技能， 同一套思維":
+    - text: 03 / THE SKILLS
+    - heading "四項技能， 同一套思維" [level=2]
+    - paragraph: 從釐清工作範圍，到網站、文件與唯讀檢視。
+    - link "01 / ENTRY kumihan 從這裡開始。釐清要做什麼、為什麼做、做到什麼程度。 查看技能":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan
+      - text: 01 / ENTRY
+      - heading "kumihan" [level=3]
+      - paragraph: 從這裡開始。釐清要做什麼、為什麼做、做到什麼程度。
+      - text: 查看技能
+    - link "02 / WEB kumihan-web 為日文網站、文章、Landing Page 與 UI 提供排版與設計支援。 查看技能":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-web
+      - text: 02 / WEB
+      - heading "kumihan-web" [level=3]
+      - paragraph: 為日文網站、文章、Landing Page 與 UI 提供排版與設計支援。
+      - text: 查看技能
+    - link "03 / DOCUMENTS kumihan-documents 為報告、商務文件與簡報規劃結構、提升可讀性。 查看技能":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-documents
+      - text: 03 / DOCUMENTS
+      - heading "kumihan-documents" [level=3]
+      - paragraph: 為報告、商務文件與簡報規劃結構、提升可讀性。
+      - text: 查看技能
+    - link "04 / REVIEW kumihan-review 檢視排版、資訊與設計，不修改來源檔案。 查看技能":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-review
+      - text: 04 / REVIEW
+      - heading "kumihan-review" [level=3]
+      - paragraph: 檢視排版、資訊與設計，不修改來源檔案。
+      - text: 查看技能
+  - region "從你熟悉的 AI 工具 開始使用":
+    - strong:
+      - text: 目前公開版本
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: 正式公開 · 公開時間
+    - time: 2026-10-19T12:51:29Z
+    - text: 原始碼 v0.2.0 04 / GET STARTED
+    - heading "從你熟悉的 AI 工具 開始使用" [level=2]
+    - paragraph: 不同工具有不同的安裝方式。請選擇對應的指南，再挑選需要的技能。
+    - link "01 ChatGPT / Codex 新增技能、註冊外掛與本機安裝指南":
+      - /url: docs/install-chatgpt.zh-tw.html
+    - link "02 Claude / Claude Code Claude Code 與 Claude 應用程式安裝指南":
+      - /url: docs/install-claude.zh-tw.html
+    - link "03 Gemini Gemini CLI 與 Gemini 應用程式安裝指南":
+      - /url: docs/install-gemini.zh-tw.html
+    - text: 已經安裝了嗎？請參閱
+    - link "更新指南":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/docs/updates.md
+  - region "SOURCE PACKAGE / v0.2.0":
+    - text: SOURCE PACKAGE / v0.2.0
+    - paragraph: 目前原始碼版本為 v0.2.0，正式公開資訊請見安裝區段，提供日文文字組版與依用途調整的設計指引。AI 主機的原生運作及各種顯示環境仍未完成全面驗證。
+    - link "過去版本 v0.1.8-preview ↗":
+      - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview
+    - text: OPEN SOURCE · APACHE 2.0
+  - region "讓日文設計 多一種選擇":
+    - heading "讓日文設計 多一種選擇" [level=2]
+    - paragraph: KUMIHAN 是開放原始碼專案。你可以在 GitHub 查看技能、發行版本與完整更新紀錄。
+    - link "前往 GitHub":
+      - /url: https://github.com/landco-llc/kumihan
+- contentinfo:
+  - text: KUMIHAN
+  - paragraph:
+    - text: Open-source typography & design guidance by
+    - link "L&Co. LLC":
+      - /url: https://landco.co.jp/
+    - text: .
+  - navigation "KUMIHAN":
+    - link "KUMIHAN":
+      - /url: /kumihan/top-zh-han.html
+    - group: 選擇語言
+    - link "GitHub":
+      - /url: https://github.com/landco-llc/kumihan
+    - link "Apache 2.0":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/LICENSE
+    - link "隱私權政策":
+      - /url: /kumihan/privacy.html#zh-hant

@@ -1,0 +1,735 @@
+{
+  "warning": "11 partly-run /19 not-run historical baseline preserved. New original scenarios15 partly-run /15 not-run; zero whole-case certification. Supplemental prototype observations separate. Native/physical checks not-checked.",
+  "cases": [
+    {
+      "caseId": "PV-001",
+      "protectedSource": "髙﨑さま／料金１,２００円／が",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "passed",
+          "scope": "JSON fixture source equality, Python json extractor; no normalization"
+        },
+        {
+          "rule": "WEB-007",
+          "method": "rendered",
+          "status": "not-checked"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "new Web #protected across20 states",
+          "reason": "Exact DOM codepoints equal original input, no normalization.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-002",
+      "protectedSource": "髙﨑さま／料金１,２００円／が",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "failed",
+          "scope": "synthetic NFKC negative differs in codepoints"
+        },
+        {
+          "rule": "CONTENT-004",
+          "method": "static",
+          "status": "failed",
+          "scope": "protected original versus NFKC negative"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-003",
+      "protectedSource": "日本語：骨／繁體中文：骨",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "WEB-007",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "new Web locale comparison used-font identity",
+          "reason": "CDP observes JP/TC runs; this does not certify regional glyph correctness or execute every original scenario.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        },
+        {
+          "rule": "JA-TYPE-001",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "authorized regional glyph correctness",
+          "reason": "No independently authorized regional glyph reference; remain unverified.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-004",
+      "protectedSource": "日本語：骨／繁體中文：骨",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "WEB-007",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "new Web locale comparison used-font identity",
+          "reason": "CDP observes JP/TC runs; this does not certify regional glyph correctness or execute every original scenario.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        },
+        {
+          "rule": "JA-TYPE-001",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "authorized regional glyph correctness",
+          "reason": "No independently authorized regional glyph reference; remain unverified.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-005",
+      "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "WEB-005",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "button label clipping at 240px width; scrollWidth exceeds clientWidth"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "WEB-005",
+          "status": "failed",
+          "method": "rendered",
+          "scope": "separate new clipped negative",
+          "reason": "New negative also clips; historical negative preserved unchanged.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md",
+            "evidence/web-negative-320.png"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-006",
+      "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "WEB-005",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "same 240px button, full source and click retained with wrapping"
+        },
+        {
+          "rule": "JA-TYPE-004",
+          "method": "assisted",
+          "status": "needs-review",
+          "scope": "320px screenshot inspected: very short final line; wrapping is not automatic semantic approval"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "WEB-005",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "corrected synthetic specimen4 widths CSS18/36",
+          "reason": "Exact label, focus, no overflow in8 corrected states.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md",
+            "evidence/v01-comparisons.jpg"
+          ]
+        },
+        {
+          "rule": "JA-TYPE-004",
+          "status": "passed",
+          "method": "assisted",
+          "scope": "exact corrected specimen line groups18/36px",
+          "reason": "Ordinary-size modifier/object/action lines coherent, enlarged lexical groups retained; limited assisted judgment.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        },
+        {
+          "rule": "WEB-002",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "native user text zoom",
+          "reason": "CSS simulation is not browser-native user zoom.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-007",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "JA-TYPE-011",
+          "method": "assisted",
+          "status": "passed",
+          "scope": "1024px screenshot: source naturally fits; no intentional break needed in synthetic ordinary display"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-008",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-009",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-010",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "new Web exact repeated event source",
+          "reason": "Original complete event/date/place string retained in new positive prototype.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        },
+        {
+          "rule": "WEB-005",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "new Web required-information visibility",
+          "reason": "Mandatory info fully reachable in20 observed states; original unexecuted conditions not retroactively passed.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-011",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "passed",
+          "scope": "DOM contains exact protected string"
+        },
+        {
+          "rule": "WEB-004",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "26px clipped information container; complete venue not visible"
+        },
+        {
+          "rule": "DESIGN-003",
+          "method": "assisted",
+          "status": "failed",
+          "scope": "screenshot and fixture inspected: no alternate required-information presentation"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-012",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "new Web exact repeated event source",
+          "reason": "Original complete event/date/place string retained in new positive prototype.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        },
+        {
+          "rule": "WEB-005",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "new Web required-information visibility",
+          "reason": "Mandatory info fully reachable in20 observed states; original unexecuted conditions not retroactively passed.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-013",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-014",
+      "protectedSource": "処理済み 48件",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "DESIGN-005",
+          "method": "assisted",
+          "status": "passed",
+          "scope": "screenshot: 48件 value is prominent, label adjacent, title24px/value48px/label14px consistent with count task"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-015",
+      "protectedSource": "この書体なら全員の読解力が20%向上します。",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-016",
+      "protectedSource": "申込条件を確認してください。\nPlease read the application requirements.",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "WEB-003",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "applied language-specific spacing overrides, screenshot shows complete text without section horizontal overflow"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "WEB-003",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "supplemental new prototype spacing, different input",
+          "reason": "Twenty prototype states include five spacing overrides; exact original PV source/negative not rerun.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-017",
+      "protectedSource": "本文は読み手の設定によって表示が変わります。",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "WEB-003",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "supplemental new prototype spacing, different input",
+          "reason": "Twenty prototype states include five spacing overrides; exact original PV source/negative not rerun.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-018",
+      "protectedSource": "日本語の報告書本文と注記",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "DOC-004",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "supplemental new six-page PDF report",
+          "reason": "All six report pages inspected; original case input not rerun.",
+          "evidenceRefs": [
+            "evidence/documents/measurements.json",
+            "evidence/documents-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-019",
+      "protectedSource": "縦書きの短い頁が下へ続く記事",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "WEB-001",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "focused vertical-rl vertically stacked-page scroll",
+          "reason": "Exact source in first page; scrollHeight813/clientHeight300, vertical scrollTop350 actual.",
+          "evidenceRefs": [
+            "evidence/focused/measurements.json",
+            "evidence/focused/inspection.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-020",
+      "protectedSource": "登録内容を確認する",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "WEB-002",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "native enlargement mechanism",
+          "reason": "New prototype CSS200 states are supplemental, not native enlargement and not exact original label.",
+          "evidenceRefs": [
+            "evidence/web-observations.json",
+            "evidence/web-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-021",
+      "protectedSource": "文字と余白の時間",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "JA-TYPE-006",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "original syntax-only evidence condition",
+          "reason": "Original condition has no resolved-font evidence; separate PV022 comparison cannot retroactively pass it.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-022",
+      "protectedSource": "文字と余白の時間／道具の使い方を本文で説明します。",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "JA-TYPE-006",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "focused Noto JP normal vs palt display",
+          "reason": "CDP NotoSansCJKjp-Regular; actual widths240 vs235.359375; TTC GPOS palt inspected.",
+          "evidenceRefs": [
+            "evidence/focused/measurements.json",
+            "evidence/focused/inspection.md"
+          ]
+        },
+        {
+          "rule": "JA-TYPE-005",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "focused body outside optional display palt",
+          "reason": "Body computed fontFeatureSettings normal; complete original separately exact.",
+          "evidenceRefs": [
+            "evidence/focused/measurements.json",
+            "evidence/focused/inspection.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-023",
+      "protectedSource": "会場で共有する手順と注意事項",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "DOC-003",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "physical projection/sign and reader conditions",
+          "reason": "No equipment/participants/physical environment observed; no performance or physical acceptance claim.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-024",
+      "protectedSource": "手順3の前に電源を切ってください。",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "DOC-003",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "physical projection/sign and reader conditions",
+          "reason": "No equipment/participants/physical environment observed; no performance or physical acceptance claim.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-025",
+      "protectedSource": "出口 EXIT",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "JA-TYPE-009",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "physical projection/sign and reader conditions",
+          "reason": "No equipment/participants/physical environment observed; no performance or physical acceptance claim.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-026",
+      "protectedSource": "出口 EXIT",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "not-run",
+      "newObservations": [
+        {
+          "rule": "JA-TYPE-009",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "physical projection/sign and reader conditions",
+          "reason": "No equipment/participants/physical environment observed; no performance or physical acceptance claim.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-027",
+      "protectedSource": "項目A 120件／条件：対象は申請済みの記録です。",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "DOC-002",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "HTML print-preview analogue: 350px row clipped in200px paper container; final note absent in screenshot"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "DOC-002",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "supplemental new positive table spanning report pages2–5",
+          "reason": "44 fictional rows, repeated headers, final note visible. Historical clipped negative stays failed.",
+          "evidenceRefs": [
+            "evidence/documents/measurements.json",
+            "evidence/documents-result.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-028",
+      "protectedSource": "報告本文と集計表",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "DOC-004",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "synthetic PV-028 section in two-page Chromium PDF preview; both rasterized pages visually inspected; report/table readable in its region"
+        },
+        {
+          "rule": "DOC-004",
+          "method": "rendered",
+          "status": "not-checked",
+          "scope": "native Office"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "DOC-004",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "actual new six-page report PDF/eight-slide LO preview",
+          "reason": "Every page/slide image inspected; native Office remains separate.",
+          "evidenceRefs": [
+            "evidence/documents/measurements.json",
+            "evidence/documents-result.md"
+          ]
+        },
+        {
+          "rule": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "new report PDF extraction and saved PPTX XML",
+          "reason": "Three protected strings exact, including compatibility/decomposed source.",
+          "evidenceRefs": [
+            "evidence/documents/measurements.json",
+            "evidence/documents-result.md"
+          ]
+        },
+        {
+          "rule": "CONTENT-001",
+          "status": "failed",
+          "method": "static",
+          "scope": "LibreOffice-export PDF exact copy/extraction fidelity",
+          "reason": "P1: inserted spaces e.g.2026 年 and１, ２００. No normalized equality accepted; saved PPTX unchanged.",
+          "evidenceRefs": [
+            "evidence/documents/measurements.json",
+            "evidence/documents-result.md"
+          ]
+        },
+        {
+          "rule": "DOC-004",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "native Microsoft Office display/editing",
+          "reason": "LibreOffice preview not native Microsoft Office.",
+          "evidenceRefs": []
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-029",
+      "protectedSource": "静的な本文のみを持つ記事領域です。",
+      "baselineExecutionStatus": "partially-run",
+      "baselineObservedResult": [
+        {
+          "rule": "WEB-008",
+          "method": "manual",
+          "status": "not-applicable",
+          "scope": "static PV-029 region has no input/button/link/dynamic operation; source/DOM inspected"
+        }
+      ],
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    },
+    {
+      "caseId": "PV-030",
+      "protectedSource": "明日、こっちは17時で閉めます。",
+      "baselineExecutionStatus": "not-run",
+      "baselineObservedResult": null,
+      "newOriginalScenarioExecutionStatus": "partially-run",
+      "newObservations": [
+        {
+          "rule": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "focused original colloquial quote",
+          "reason": "Exact quote retained; no invented utterance date/store. Longer fictional contrast distinct.",
+          "evidenceRefs": [
+            "evidence/focused/measurements.json",
+            "evidence/focused/inspection.md"
+          ]
+        },
+        {
+          "rule": "DESIGN-005",
+          "status": "needs-review",
+          "method": "assisted",
+          "scope": "colloquial standalone notice suitability",
+          "reason": "Utterance date/store/quotation intent remain unknown; no reader experiment.",
+          "evidenceRefs": [
+            "evidence/focused/measurements.json",
+            "evidence/focused/inspection.md"
+          ]
+        }
+      ],
+      "note": "Original historical record immutable. New scopes are bounded; supplemental different artifacts do not complete original cases. No whole-case pass is assigned."
+    }
+  ]
+}

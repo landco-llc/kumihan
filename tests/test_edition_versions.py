@@ -204,3 +204,20 @@ class PreservationGate(unittest.TestCase):
                 if p.name!='.git':(root/p.name).symlink_to(p,target_is_directory=p.is_dir())
             (root/'README.md').unlink();(root/'README.md').write_text('unlisted change')
             self.assertIn('protected: main bytes changed: README.md',audit(root))
+
+class JapaneseVersionSeparation(unittest.TestCase):
+    def test_raw_text_separates_published_and_source_without_css(self):
+        from html.parser import HTMLParser
+        from version_display import panel
+        class Text(HTMLParser):
+            def __init__(self): super().__init__(); self.parts=[]
+            def handle_data(self, data): self.parts.append(data)
+        f=v.load()['editions']['ja']
+        for lang in ('ja', 'en', 'zh-Hant-TW'):
+            for slot in ('hero', 'install', 'current'):
+                with self.subTest(lang=lang, slot=slot):
+                    parser=Text(); parser.feed(panel(f,lang,slot))
+                    text=''.join(parser.parts)
+                    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+                    self.assertIn('v0.1.8 ',text)
+                    self.assertIn(' v0.2.0',text)

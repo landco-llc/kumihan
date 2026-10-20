@@ -1,0 +1,143 @@
+- link "Skip to content":
+  - /url: "#main"
+- banner:
+  - link "KUMIHAN — Top":
+    - /url: "#top"
+    - text: KUMIHAN
+  - navigation "Primary navigation":
+    - link "About":
+      - /url: "#concept"
+    - link "Principles":
+      - /url: "#features"
+    - link "Skills":
+      - /url: "#skills"
+    - link "Get started":
+      - /url: "#install"
+  - group "Language / 言語 / 語言":
+    - button "JA"
+    - button "EN" [pressed]
+    - button "繁中"
+- main:
+  - region "Natural Japanese typography, made with AI":
+    - paragraph: OPEN-SOURCE SKILLS / JAPANESE TYPOGRAPHY
+    - strong:
+      - text: Current Version
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: Source v0.2.0
+    - heading "Natural Japanese typography, made with AI" [level=1]
+    - paragraph: KUMIHAN is a set of open-source AI skills for creating and reviewing Japanese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.
+    - link "Get started":
+      - /url: "#install"
+    - link "Learn more":
+      - /url: "#concept"
+    - text: OPEN SOURCE FOUR SKILLS JAPANESE FIRST
+    - 'img "Official KUMIHAN logo: a black typographic grid, a red horizontal bar, and the KUMIHAN wordmark."'
+    - text: WORDS · SPACE · PURPOSE KUMIHAN / 01
+  - region "Not a uniform look— the right form for each message":
+    - text: 01 / THE IDEA
+    - heading "Not a uniform look— the right form for each message" [level=2]:
+      - text: Not a uniform look—
+      - emphasis: the right form for each message
+    - paragraph: Every brief, audience, and message is different. KUMIHAN helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.
+  - region "Four things worth getting right":
+    - text: 02 / WHAT MATTERS
+    - heading "Four things worth getting right" [level=2]
+    - paragraph: Practical priorities for creating and reviewing Japanese content.
+    - article:
+      - text: 01 / TYPE
+      - heading "Japanese typography" [level=3]
+      - paragraph: Line breaks, kinsoku rules, punctuation, and mixed Japanese–Latin text—judged in context.
+    - article:
+      - text: 02 / STRUCTURE
+      - heading "Purposeful structure" [level=3]
+      - paragraph: Shape the layout around the information, its priority, and the reader’s goal.
+    - article:
+      - text: 03 / FIDELITY
+      - heading "Source fidelity" [level=3]
+      - paragraph: Names, prices, figures, and original wording stay exactly as supplied.
+    - article:
+      - text: 04 / REVIEW
+      - heading "Read-only review" [level=3]
+      - paragraph: Check finished work and organize issues—without touching the files.
+  - region "Beyond arranging type Design the reading experience":
+    - paragraph: DESIGNED FOR THE MESSAGE
+    - heading "Beyond arranging type Design the reading experience" [level=2]:
+      - text: Beyond arranging type
+      - strong: Design the reading experience
+    - paragraph: KUMIHAN doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.
+  - region "Four skills One approach":
+    - text: 03 / THE SKILLS
+    - heading "Four skills One approach" [level=2]
+    - paragraph: From scoping the work to web, documents, and review.
+    - link "01 / ENTRY kumihan Start here. Define what you're making, why, and how far the work should go. View skill":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan
+      - text: 01 / ENTRY
+      - heading "kumihan" [level=3]
+      - paragraph: Start here. Define what you're making, why, and how far the work should go.
+      - text: View skill
+    - link "02 / WEB kumihan-web Typography and design for Japanese websites, articles, landing pages, and UI. View skill":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-web
+      - text: 02 / WEB
+      - heading "kumihan-web" [level=3]
+      - paragraph: Typography and design for Japanese websites, articles, landing pages, and UI.
+      - text: View skill
+    - link "03 / DOCUMENTS kumihan-documents Structure and readability for reports, business documents, and slide decks. View skill":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-documents
+      - text: 03 / DOCUMENTS
+      - heading "kumihan-documents" [level=3]
+      - paragraph: Structure and readability for reports, business documents, and slide decks.
+      - text: View skill
+    - link "04 / REVIEW kumihan-review Review typography, information, and layout without editing source files. View skill":
+      - /url: https://github.com/landco-llc/kumihan/tree/main/skills/kumihan-review
+      - text: 04 / REVIEW
+      - heading "kumihan-review" [level=3]
+      - paragraph: Review typography, information, and layout without editing source files.
+      - text: View skill
+  - region "Start with the AI tools you already use":
+    - strong:
+      - text: Current Version
+      - link "v0.1.8":
+        - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8
+    - text: Published · Published at
+    - time: 2026-10-19T12:51:29Z
+    - text: Source v0.2.0 04 / GET STARTED
+    - heading "Start with the AI tools you already use" [level=2]
+    - paragraph: Setup varies by tool. Pick the guide for yours, then choose the skills you need.
+    - link "01 ChatGPT / Codex Guides for adding skills, registering plugins, and local installation":
+      - /url: docs/install-chatgpt.html?lang=en
+    - link "02 Claude / Claude Code Setup guide for Claude Code and Claude chat":
+      - /url: docs/install-claude.html?lang=en
+    - link "03 Gemini Setup guide for Gemini CLI and the Gemini app":
+      - /url: docs/install-gemini.html?lang=en
+    - text: Already installed? See the
+    - link "update guide":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/docs/updates.md
+  - region "SOURCE PACKAGE / v0.2.0":
+    - text: SOURCE PACKAGE / v0.2.0
+    - paragraph: The current source version is v0.2.0. See the installation section for verified publication details. It provides Japanese typography and purpose-led design guidance. Native AI host behavior and all rendering environments have not been fully verified.
+    - link "Older release v0.1.8-preview ↗":
+      - /url: https://github.com/landco-llc/kumihan/releases/tag/v0.1.8-preview
+    - text: OPEN SOURCE · APACHE 2.0
+  - region "Another way to design in Japanese":
+    - heading "Another way to design in Japanese" [level=2]
+    - paragraph: KUMIHAN is open source. The skills, releases, and full change history are on GitHub.
+    - link "View on GitHub":
+      - /url: https://github.com/landco-llc/kumihan
+- contentinfo:
+  - text: KUMIHAN
+  - paragraph:
+    - text: Open-source typography & design guidance by
+    - link "L&Co. LLC":
+      - /url: https://landco.co.jp/
+    - text: .
+  - navigation "KUMIHAN":
+    - link "KUMIHAN":
+      - /url: /kumihan/index.html
+    - group: Choose a language
+    - link "GitHub":
+      - /url: https://github.com/landco-llc/kumihan
+    - link "Apache 2.0":
+      - /url: https://github.com/landco-llc/kumihan/blob/main/LICENSE
+    - link "Privacy Policy":
+      - /url: /kumihan/privacy.html#en
