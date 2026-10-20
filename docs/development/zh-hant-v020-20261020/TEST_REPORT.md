@@ -1,3 +1,33 @@
+# TEST_REPORT — integrated candidate evidence
+
+Fixed implementation source: `6be142c57300de933caaae94a59436aa1f319a0b`, TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch commands exited0; no test was removed, skipped or relaxed. The original112/4 failures were reproduced before correction in evidence/shared-root-before.log. Source0.2.0 and old0.1.0 contracts now pass together.
+
+| Execution | Result | Evidence / scope |
+|---|---|---|
+| Root unittest discovery |118 tests PASS, no skips | evidence/integration-validation-root-tests.log |
+| Legacy tests/ziheng discovery |26 tests PASS | evidence/integration-validation-ziheng-tests.log |
+| New shared boundary methods |6 PASS after source/display RED | evidence/shared-regression-red.log; evidence/shared-regression-green.log |
+| Isolated version naming |7 PASS | evidence/shared-naming-after.log |
+| build_ziheng / build_ziheng_hosts / build_ziheng_site --check | All exit0 | evidence/integration-validation-build_ziheng*.log |
+| build_dist --check; check_ja_type_011_cases | Both exit0 | evidence/integration-validation-build_dist.log; evidence/integration-validation-check_ja_type_011_cases.log |
+| build_seo --check | PASS,274 pages / sitemap272 URLs | evidence/integration-validation-build_seo.log |
+| check_seo_preservation; git diff --check | Both exit0 | evidence/integration-validation-check_seo_preservation.log; evidence/integration-validation-diff-check.log |
+| Current15 + old15 ZIPs | Size/SHA256/CRC/safe member paths PASS; distinct sets; byte unchanged | evidence/integration-validation-distributions.json |
+| Existing distribution bytes / old URLs |252 fixed files unchanged;15 old URLs matched SHA256 | evidence/integration-validation-distributions.json; evidence/integration-validation-old-url-readback.json |
+| Integrated pages | Chromium1024/320; keyboard Tab/Enter CTA to #install | evidence/integration-validation-browser.log; screenshots |
+| Hosted CI | Pending final branch push and readback | CI EVIDENCE NOT PRESENT for the integrated source revision |
+
+The six regression methods check source-only edition changes; other edition/distribution/snapshot facts unchanged; exact registered retained manifests; unknown history still reaches the original version assertion; unknown transition paths/old hash/snapshot hash/after hash/frozen baseline/candidate tampering; one-byte mutation and deletion of an old ZIP; and displayed old/new source versions with unpublished Release facts.
+
+The four former failures were corrected by connecting exact transition validation, changing only zh-hant source_version, admitting only validated historical manifests, and asserting current0.2.0 separately from retained0.1.0. The original unapplied patch and isolated112 PASS remain historical proposal evidence. They do not substitute for actual118 PASS. New isolated naming execution also exposed missing retention-module import resolution; explicit tools path setup corrected it before full-root rerun.
+
+PR #120 coexistence is separately documented in JA120_SHARED_HANDOFF.md and evidence/ja120-*; its synthetic tree never establishes actual PR #122 CI or future main acceptance. The completed single bounded shared-integration review (evidence/shared-integration-review.md) found no actionable defects and is separate from the earlier four-finding review and its recorded corrections. It is a nonformal same-task technical review, not independent audit certification. Raw historical failure logs retain three trailing-space lines; this formatting limitation is distinct from the clean working-tree whitespace check.
+
+32 fixture definitions remain14 partial /18 unexecuted /0 fully accepted. New keyboard navigation observations concern the local LP only; system clipboard, external navigation, real UA200%, regional glyph/IVS support, native Office/PDF, AT, native host invocation and TW/HK proofreading remain unverified as scoped. No production action is implied.
+
+<details>
+<summary>WG00–07 historical test report, including four failures and prior four-review correction history</summary>
+
 # TEST_REPORT — executed scope and unresolved checks
 
 These are this session's executions, not counts from the historical plugin report. Logs are under evidence/. Source candidates do not imply production acceptance.
@@ -41,3 +71,5 @@ One whole-branch lightweight read-only review is recorded separately in evidence
 The independent read-only review pinned3322d4840421cce4b53df64cd88d2f2e791ab3f8 found4 P2 issues. One correction pass installed pinned root-suite dependencies in Ziheng CI, bound old hashes to an independently frozen fresh-main baseline, restricted history exceptions to digest-validated Ziheng manifests, and rejected static-byte glyph acceptance. New failing tests reproduced the absent transition enforcement and glyph-method obligation;21 new checks now pass. Root112 retains only the same4 documented shared-path hold failures. Isolated integration root112, SEO and preservation pass. No second review or independent approval of the later revision is claimed.
 
 Structured unknown font face/version/fallback fields were added to the limited browser record; they do not create a glyph PASS. All15 existing main download URLs were also fetched and their bytes matched the old SHA256 values (`evidence/old-url-readback.json`).
+
+</details>

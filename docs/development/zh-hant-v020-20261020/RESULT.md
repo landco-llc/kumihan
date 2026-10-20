@@ -1,3 +1,29 @@
+# RESULT — KUMIHAN｜字衡 v0.2.0 shared integration
+
+Status: **SOURCE_CANDIDATE_INTEGRATED / LOCAL_CHECKS_PASSED / HOSTED_CI_PENDING / DRAFT_PR**. Owner authorization covers this dedicated PR #122 branch, tests, commit/push and Draft PR updates. Main merge and publication remain outside scope.
+
+The six shared files now connect source0.2.0, exact preservation admission and digest-validated old-history classification. Generated gateway Ziheng badges and Ziheng LP/install version panels reflect source0.2.0. Retained old links are explicitly labelled v0.1.0. Published-version/date/Release facts, other edition records, original SEO evidence, frozen preimages and the inactive Release asset contract are unchanged. [Plan and paths](SHARED_INTEGRATION_PLAN.md); [transition](source-transition.json).
+
+Fixed implementation source: commit `6be142c57300de933caaae94a59436aa1f319a0b`, TREE `a819dc438089509c4ad5a4f399540059aab84b36`; main/base `8b647cc752d7a9bc3db48356fa0ab7b221bb66d6`. Final reporting commits follow this source revision; final PR HEAD/TREE and hosted CI are pinned in the PR/task return rather than invented inside a self-referential report.
+
+| Work | Result | Evidence | Unverified / limit |
+|---|---|---|---|
+| WG08 | Fixed live refs; original4 failures reproduced; protected baseline captured | SHARED_INTEGRATION_PLAN.md; evidence/shared-root-before.log; evidence/shared-integration-baseline.json | Original patch retained as historical proposal |
+| WG09 | Shared integration and6 boundary regressions PASS; no skip/relaxation | Source commit above; evidence/shared-regression-{red,green}.log | Source metadata is separate from public Release |
+| WG10 actual branch | All10 required commands exit0: root118, legacy Ziheng26, all builders/SEO/preservation/whitespace | evidence/integration-validation-checks.json; evidence/integration-validation-summary.json | Local validation, not hosted CI |
+| WG10 distributions | Current15 / old15 ZIP CRC, member paths, size and SHA256 PASS;252 distribution files unchanged;15 old URLs matched bytes | evidence/integration-validation-distributions.json; evidence/integration-validation-old-url-readback.json; release-manifest.json | New ZIPs checked locally/fixed candidate, no0.2.0 main URL success claimed |
+| WG10 browser |1024px and320px; Tab reached CTA, Enter navigated to #install | evidence/integration-validation-browser.log; two screenshots | No native UA200%, glyph/font, Office/AT or native-language acceptance |
+| WG10 PR #120 | Read-only disposable coexistence PASS123/26,13 commands exit0 against fixed `ce2fd8d23e4afb0816b5870625e02af3aa7a96b8` | JA120_SHARED_HANDOFF.md; evidence/ja120-coexistence.json | Disposable baseline adaptation is explicit; synthetic validation is distinct from actual PR #122 |
+| WG11 | Single bounded read-only shared-integration review complete: no actionable findings; hosted checks pending | evidence/shared-integration-review.md | No formal audit certification claimed |
+| WG12 | Candidate records updated; final CI and fixed return pending | revision.json; TEST_REPORT.md; NEXT_GATE.md; MCP_HANDOFF.md | Stop at Owner Gate after final-head CI |
+
+For this newly integrated candidate: `CI EVIDENCE NOT PRESENT`. Hosted CI is pending branch publication and final-head verification. The original failing CI is history, not substituted as success.
+
+Research acceptance remains32 definitions /14 partially exercised /18 unexecuted /0 whole-case passes. Existing font/glyph/IVS, native UA200%, Office, AT, native-host and native-language unknowns remain scoped. Common document creation is **DESIGN ONLY / IMPLEMENTATION HOLD**. No main merge, ready transition, tag, Release, production Pages, Marketplace, MCP deployment or credentials/settings/permissions change is performed.
+
+<details>
+<summary>WG00–07 historical result at starting HEAD773289a (the former hold and four failures are retained)</summary>
+
 # RESULT — KUMIHAN｜字衡 v0.2.0
 
 Status: **SOURCE_CANDIDATE_FIXED / SHARED_INTEGRATION_HOLD / DRAFT_PR / OWNER_GATE**. This is not UPDATE_COMPLETE, RELEASED or a merge-ready candidate while the shared checks below fail.
@@ -24,3 +50,5 @@ Real Chromium observations covered1024px,320px and320px with spacing overrides, 
 | WG07 | validation/review and Draft handoff | Current branch failures explicitly listed; no merge-ready or independent full PASS claim. |
 
 Private packet and Drive links were excluded from Git. No main merge, tag, Release, production Pages/Marketplace update, live MCP replacement or credential/permission change was performed. Common document creation remains DESIGN ONLY / IMPLEMENTATION HOLD. See [NEXT_GATE.md](NEXT_GATE.md) and [MCP_HANDOFF.md](MCP_HANDOFF.md). Final branch revision is reported in the PR/task return; embedded reports do not invent a self-referential HEAD.
+
+</details>

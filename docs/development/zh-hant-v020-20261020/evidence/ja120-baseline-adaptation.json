@@ -1,0 +1,396 @@
+{
+  "disposable_only": true,
+  "fixed_ja120": "ce2fd8d23e4afb0816b5870625e02af3aa7a96b8",
+  "baseline_before_sha256": "1636af14834cf8db8d9caac36bb8b8920c9588884540e92f2f482fbac1d0f194",
+  "baseline_after_sha256": "5d1bbcf5bf16f8878a9f7451c109aecdef09e89dd24db7481e941d797b289b9b",
+  "edition_changed": "ja",
+  "ja_before": {
+    "edition": "ja",
+    "source_manifest": "plugin.json",
+    "tag_prefix": "v",
+    "source_version": "0.1.8",
+    "published_version": "0.1.8",
+    "release_status": "published",
+    "published_at": "2026-10-19T12:51:29Z",
+    "release_url": "https://github.com/landco-llc/kumihan/releases/tag/v0.1.8",
+    "tag": "v0.1.8",
+    "verified_assets": [
+      {
+        "name": "kumihan-Claude-Code-plugin-0.1.8.zip",
+        "bytes": 380346,
+        "sha256": "0886087e37a2efa40ae420896fae853bccb5a35677a47ec4de92df0ba4b3b6c4",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-Code-plugin-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Claude-skill-0.1.8.zip",
+        "bytes": 92429,
+        "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-GPT-Codex-plugin-0.1.8.zip",
+        "bytes": 1179401,
+        "sha256": "e72937c03e1e87ce35ccd7299090e179d5a17bd9c257b427cc531a624a8e8f07",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-plugin-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92429,
+        "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91933,
+        "sha256": "3c8c99f4bcd997e38d2873b9cda1df0805682684bb7b1d672990afa3414e9482",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Gemini-CLI-extension-0.1.8.zip",
+        "bytes": 378203,
+        "sha256": "f56613f51c8e3e71ec44d6f82d2514d131474358490db41fe0de704434b05223",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-CLI-extension-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-Claude-skill-0.1.8.zip",
+        "bytes": 92563,
+        "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92563,
+        "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91447,
+        "sha256": "df241dfbc71435e0390beceb9ab951d60c480dd7b35f8c081ade1dfe2f4f5d96",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-Claude-skill-0.1.8.zip",
+        "bytes": 92594,
+        "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92594,
+        "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91664,
+        "sha256": "7f39a7acb43a0f10e5bf25cab6dd831c434c8b043a5d359c4339551bb8c1c872",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-Claude-skill-0.1.8.zip",
+        "bytes": 92684,
+        "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92684,
+        "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91940,
+        "sha256": "42093f0e38f6adc0f0679df7f53599c43d9bb647d4e979c78898c2632ab438f6",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Gemini-Apps-skill-0.1.8.zip"
+      }
+    ],
+    "release_id": 417286574,
+    "source_commit": "d3d55a344ab5cfe942a640261f9a8760fceee2a2",
+    "source_tree": "fd1f3c84290b8998bfa2503b3804083ec4976fa2",
+    "source_manifest_sha256": "06b4dc232d04b4c038bb492b835bb978f16b80eb667d6ae561d33df4aa87e00e",
+    "verified_metadata": []
+  },
+  "ja_after": {
+    "edition": "ja",
+    "source_manifest": "plugin.json",
+    "tag_prefix": "v",
+    "source_version": "0.2.0",
+    "published_version": "0.1.8",
+    "release_status": "published",
+    "published_at": "2026-10-19T12:51:29Z",
+    "release_url": "https://github.com/landco-llc/kumihan/releases/tag/v0.1.8",
+    "tag": "v0.1.8",
+    "verified_assets": [
+      {
+        "name": "kumihan-Claude-Code-plugin-0.1.8.zip",
+        "bytes": 380346,
+        "sha256": "0886087e37a2efa40ae420896fae853bccb5a35677a47ec4de92df0ba4b3b6c4",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-Code-plugin-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Claude-skill-0.1.8.zip",
+        "bytes": 92429,
+        "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-GPT-Codex-plugin-0.1.8.zip",
+        "bytes": 1179401,
+        "sha256": "e72937c03e1e87ce35ccd7299090e179d5a17bd9c257b427cc531a624a8e8f07",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-plugin-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92429,
+        "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91933,
+        "sha256": "3c8c99f4bcd997e38d2873b9cda1df0805682684bb7b1d672990afa3414e9482",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-Gemini-CLI-extension-0.1.8.zip",
+        "bytes": 378203,
+        "sha256": "f56613f51c8e3e71ec44d6f82d2514d131474358490db41fe0de704434b05223",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-CLI-extension-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-Claude-skill-0.1.8.zip",
+        "bytes": 92563,
+        "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92563,
+        "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-documents-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91447,
+        "sha256": "df241dfbc71435e0390beceb9ab951d60c480dd7b35f8c081ade1dfe2f4f5d96",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-Claude-skill-0.1.8.zip",
+        "bytes": 92594,
+        "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92594,
+        "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-review-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91664,
+        "sha256": "7f39a7acb43a0f10e5bf25cab6dd831c434c8b043a5d359c4339551bb8c1c872",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Gemini-Apps-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-Claude-skill-0.1.8.zip",
+        "bytes": 92684,
+        "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Claude-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-GPT-Codex-skill-0.1.8.zip",
+        "bytes": 92684,
+        "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-GPT-Codex-skill-0.1.8.zip"
+      },
+      {
+        "name": "kumihan-web-Gemini-Apps-skill-0.1.8.zip",
+        "bytes": 91940,
+        "sha256": "42093f0e38f6adc0f0679df7f53599c43d9bb647d4e979c78898c2632ab438f6",
+        "url": "https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Gemini-Apps-skill-0.1.8.zip"
+      }
+    ],
+    "release_id": 417286574,
+    "source_commit": "d3d55a344ab5cfe942a640261f9a8760fceee2a2",
+    "source_tree": "fd1f3c84290b8998bfa2503b3804083ec4976fa2",
+    "source_manifest_sha256": "06b4dc232d04b4c038bb492b835bb978f16b80eb667d6ae561d33df4aa87e00e",
+    "verified_metadata": []
+  },
+  "removed_protected": {
+    "downloads Claude/MANIFEST.json": {
+      "bytes": 51748,
+      "sha256": "a351c7c9abfe3b2df7ca0bcf3ac4657db74762e4d44bc100d2f0e03b9686cc2e"
+    },
+    "downloads Claude/SHA256SUMS.txt": {
+      "bytes": 628,
+      "sha256": "c615eea1ff990ce394e5be172aee71e806ab607b6d48e61a486fed69cdecef51"
+    },
+    "downloads Claude/plugins/kumihan-Claude-Code-plugin-0.1.8.zip": {
+      "bytes": 380346,
+      "sha256": "0886087e37a2efa40ae420896fae853bccb5a35677a47ec4de92df0ba4b3b6c4"
+    },
+    "downloads Claude/skills/kumihan-Claude-skill-0.1.8.zip": {
+      "bytes": 92429,
+      "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952"
+    },
+    "downloads Claude/skills/kumihan-documents-Claude-skill-0.1.8.zip": {
+      "bytes": 92563,
+      "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc"
+    },
+    "downloads Claude/skills/kumihan-review-Claude-skill-0.1.8.zip": {
+      "bytes": 92594,
+      "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00"
+    },
+    "downloads Claude/skills/kumihan-web-Claude-skill-0.1.8.zip": {
+      "bytes": 92684,
+      "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2"
+    },
+    "downloads GPT-Codex/MANIFEST.json": {
+      "bytes": 55278,
+      "sha256": "b7e9b8218c6ec8b4dd76e26b5ebb4d54d9cb7789fc2eb80bd53f1c406fdd287d"
+    },
+    "downloads GPT-Codex/SHA256SUMS.txt": {
+      "bytes": 638,
+      "sha256": "21d047361c1d25fccebdf06c525021c66e1095a97913e8f4b6429fbecdcd5feb"
+    },
+    "downloads GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8.zip": {
+      "bytes": 1179401,
+      "sha256": "e72937c03e1e87ce35ccd7299090e179d5a17bd9c257b427cc531a624a8e8f07"
+    },
+    "downloads GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.8.zip": {
+      "bytes": 92429,
+      "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952"
+    },
+    "downloads GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.8.zip": {
+      "bytes": 92563,
+      "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc"
+    },
+    "downloads GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.8.zip": {
+      "bytes": 92594,
+      "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00"
+    },
+    "downloads GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.8.zip": {
+      "bytes": 92684,
+      "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2"
+    },
+    "downloads Gemini/MANIFEST.json": {
+      "bytes": 49101,
+      "sha256": "37518524e1580e05ed5762939123c48468a5557ecf4ad190c47c621793c1df04"
+    },
+    "downloads Gemini/SHA256SUMS.txt": {
+      "bytes": 653,
+      "sha256": "e63e113d5eb83cb3d51c5253cd22fbaca0e65df28eb13354ab7dd2f68cfe1b99"
+    },
+    "downloads Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.8.zip": {
+      "bytes": 378203,
+      "sha256": "f56613f51c8e3e71ec44d6f82d2514d131474358490db41fe0de704434b05223"
+    },
+    "downloads Gemini/skills/kumihan-Gemini-Apps-skill-0.1.8.zip": {
+      "bytes": 91933,
+      "sha256": "3c8c99f4bcd997e38d2873b9cda1df0805682684bb7b1d672990afa3414e9482"
+    },
+    "downloads Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.8.zip": {
+      "bytes": 91447,
+      "sha256": "df241dfbc71435e0390beceb9ab951d60c480dd7b35f8c081ade1dfe2f4f5d96"
+    },
+    "downloads Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.8.zip": {
+      "bytes": 91664,
+      "sha256": "7f39a7acb43a0f10e5bf25cab6dd831c434c8b043a5d359c4339551bb8c1c872"
+    },
+    "downloads Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.8.zip": {
+      "bytes": 91940,
+      "sha256": "42093f0e38f6adc0f0679df7f53599c43d9bb647d4e979c78898c2632ab438f6"
+    }
+  },
+  "added_protected": {
+    "downloads Claude/MANIFEST.json": {
+      "bytes": 60390,
+      "sha256": "0dc19d218bb4e033b1263dab4941c505ba1b58d8ce573c98580e109e6e0a9fc1"
+    },
+    "downloads Claude/SHA256SUMS.txt": {
+      "bytes": 628,
+      "sha256": "46053b0c519eee9f8209dca287623700b8b1a9f2b790c4ee2d752a80f47eb650"
+    },
+    "downloads Claude/plugins/kumihan-Claude-Code-plugin-0.2.0.zip": {
+      "bytes": 509143,
+      "sha256": "78eb29f367d9c0014709825a6f45f496e75930db77fc4b2198590092a2edeba1"
+    },
+    "downloads Claude/skills/kumihan-Claude-skill-0.2.0.zip": {
+      "bytes": 124375,
+      "sha256": "44d87e11078c48de44eea2d18aacdef74ba67620bab6b23adbe4592b031c76ca"
+    },
+    "downloads Claude/skills/kumihan-documents-Claude-skill-0.2.0.zip": {
+      "bytes": 124694,
+      "sha256": "d09b422f8f149fffd51c1e79f3ef3050ec7d5604f99fdaf9e9dcbe0d78a68242"
+    },
+    "downloads Claude/skills/kumihan-review-Claude-skill-0.2.0.zip": {
+      "bytes": 124674,
+      "sha256": "d292651bb180d688b5328857607ca34f6f05f31b005f76634b9cb95f301a5d69"
+    },
+    "downloads Claude/skills/kumihan-web-Claude-skill-0.2.0.zip": {
+      "bytes": 124727,
+      "sha256": "858c6eea185817a4ac228087ea88efd06d8d9428a6fe2ad0f19e0954b792e3c6"
+    },
+    "downloads GPT-Codex/MANIFEST.json": {
+      "bytes": 64400,
+      "sha256": "bf79d2e07ba9d0fd9322f2a41679b65379f989c00f30113f5a3729b91fac32e0"
+    },
+    "downloads GPT-Codex/SHA256SUMS.txt": {
+      "bytes": 638,
+      "sha256": "5a8d98587607265d189cd40c83ddd373643713f6e6e67e6e6307f00fbc3d7d9d"
+    },
+    "downloads GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.2.0.zip": {
+      "bytes": 1309156,
+      "sha256": "1f8b2aaa943cd619dd9b3ffa918fc144f3c76d08c097472a2e9c372bcc1564f2"
+    },
+    "downloads GPT-Codex/skills/kumihan-GPT-Codex-skill-0.2.0.zip": {
+      "bytes": 124375,
+      "sha256": "44d87e11078c48de44eea2d18aacdef74ba67620bab6b23adbe4592b031c76ca"
+    },
+    "downloads GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.2.0.zip": {
+      "bytes": 124694,
+      "sha256": "d09b422f8f149fffd51c1e79f3ef3050ec7d5604f99fdaf9e9dcbe0d78a68242"
+    },
+    "downloads GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.2.0.zip": {
+      "bytes": 124674,
+      "sha256": "d292651bb180d688b5328857607ca34f6f05f31b005f76634b9cb95f301a5d69"
+    },
+    "downloads GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.2.0.zip": {
+      "bytes": 124727,
+      "sha256": "858c6eea185817a4ac228087ea88efd06d8d9428a6fe2ad0f19e0954b792e3c6"
+    },
+    "downloads Gemini/MANIFEST.json": {
+      "bytes": 57318,
+      "sha256": "bf029ade4b4b81ca24a6e5c1f3987a1b0053b51b2d244890078e8253ef659433"
+    },
+    "downloads Gemini/SHA256SUMS.txt": {
+      "bytes": 653,
+      "sha256": "55c00bbabdfc595f9a219a1e33af488d5d02770b749d4e42db447668af3e462b"
+    },
+    "downloads Gemini/extensions/kumihan-Gemini-CLI-extension-0.2.0.zip": {
+      "bytes": 506683,
+      "sha256": "db68ec074cc45fecb48b1748f2048ab4f9a3ea73fcdbc362aafd353cd037cd3a"
+    },
+    "downloads Gemini/skills/kumihan-Gemini-Apps-skill-0.2.0.zip": {
+      "bytes": 123799,
+      "sha256": "067236ccd6b23ce97e50651a4bf4ee29cac8fa22de4b1240cf4df37845a58de8"
+    },
+    "downloads Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.2.0.zip": {
+      "bytes": 123398,
+      "sha256": "a0997a0f216fcecfefc0520f557240ae03c09d2f298c883e65d984e24969fc0d"
+    },
+    "downloads Gemini/skills/kumihan-review-Gemini-Apps-skill-0.2.0.zip": {
+      "bytes": 123594,
+      "sha256": "f36b62bdbdc76330dc6e8a72602fee1b7937c82eed99a07b3decfd3492526231"
+    },
+    "downloads Gemini/skills/kumihan-web-Gemini-Apps-skill-0.2.0.zip": {
+      "bytes": 123863,
+      "sha256": "3a07dd00511cfaf1b6c9ca15ea6fc83007a4db52862404c209167583bfe943cc"
+    }
+  },
+  "actual_pr122_baseline_unchanged": true
+}

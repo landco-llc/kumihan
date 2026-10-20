@@ -1,13 +1,18 @@
-# NEXT_GATE — fixed source candidate, integration still blocked
+# NEXT_GATE — integrated source candidate / Owner release gate
 
-1. Coordinate the six shared paths already owned by Japanese PR #120. Review/apply the exact Ziheng-only source-version/README/preservation/test transition in `shared-integration.patch` against the then-current main. This patch was validated in isolated staging; it is not active on this branch. Rebase/reconcile normally, do not force-push another writer. Preserve all other edition facts. The patch also updates gateway Ziheng badges; no other translations or distributions are changed. Re-run complete tests and build/SEO/preservation checks against the actual integrated HEAD. Until then this candidate is **not merge-ready**.
-2. Owner decides whether the fixed source candidate may merge after the integration blocker and checks are resolved. No main merge is authorized by this report.
-3. Formal Release requires a separate naming/asset-contract decision. `release-assets-proposal.json` proposes unique flat15 names; source ZIP paths stay intact. The currently unconfigured contract is not activated. No tag/Release exists from this work.
-4. Production Pages, Marketplace/registration ZIP adoption and native-host acceptance are separate gates. Existing downloads stay available; this source update is not an automatic installed-user update.
-5. MCP integration belongs to its separate lane. Use MCP_HANDOFF.md; no live registry/server is changed here.
+Current local source integration is complete at `6be142c57300de933caaae94a59436aa1f319a0b` / TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch local checks pass. Hosted CI for the integrated candidate is pending: **CI EVIDENCE NOT PRESENT**. The authorized PR #122 publication worker will update the same Draft PR, read final-head checks and actual checkout refs, and return fixed final HEAD/TREE. Routine Work boundaries need no additional approval.
 
-Remaining observations are scoped: real UA200%, regional font/glyph/IVS support, selected vertical/ruby operations, clipboard/navigation, native Office/PDF and AT, physical projection/signage, TW/HK native-language proofreading. These are not fabricated as32 passes, nor automatically made universal release blockers for unused features.
+The original six-path overlap hold and four starting failures are preserved as history in RESULT.md / TEST_REPORT.md. Owner's limited authorization permits the completed Ziheng integration on PR #122; it does not authorize changes to PR #120 or main. Read JA120_SHARED_HANDOFF.md for disposable coexistence results and required future integration order. No Japanese candidate code or archives are included in PR #122.
 
-No routine approval request is pending; authorized independent work has been carried through to this concrete Draft candidate. Owner Gate remains closed for publication and production actions.
+After final-head CI passes, stop for Owner's separate decisions:
 
-The one review is recorded in evidence/final-review.md. Its four P2 findings were corrected by the author and checked with regression tests; this is not a second independent review or permission to bypass the shared integration hold. The transition preimages are frozen in source-transition-baseline.json and pinned by the unactivated helper digest.
+1. Main integration / production Pages requires explicit authority; neither is executed here. Draft remains Draft.
+2. Formal Release and tag require a separate flat-name asset-contract decision. release-assets-proposal.json remains a proposal; assets/edition-release-contracts.json stays inactive.
+3. Marketplace/registration ZIP adoption and native host acceptance require their own gate. Current source ZIP candidates do not update installed users automatically.
+4. MCP registry/module integration and deployment remain a separate owner lane using MCP_HANDOFF.md. Running MCP and universal/ remain unchanged.
+
+Common document creation stays **DESIGN ONLY / IMPLEMENTATION HOLD**. No ready/auto-merge, tag, Release, production Pages, Marketplace, MCP deployment or settings/Secrets/permissions change is authorized.
+
+32 cases remain defined,14 partially exercised,18 unexecuted,0 wholly accepted. Real UA200%, regional font/glyph/IVS, selected vertical/ruby, system clipboard/navigation, native Office/PDF and AT, native-host invocation and TW/HK proofreading remain scoped unknowns. These are not fabricated passes or automatic new universal gates.
+
+Exact preservation transition preimages remain frozen; helper integration is now active in this source branch, not deployed to production. The prior four-review correction record remains REVIEW_RESOLUTIONS.md and evidence/final-review.md. The single new shared-diff review is recorded in evidence/shared-integration-review.md and found no blocking or nonblocking defects; no formal audit certification is claimed. Raw historical failure logs preserve three trailing-space lines as an explicit formatting limitation.
