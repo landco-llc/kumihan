@@ -1,0 +1,34 @@
+test_builds_three_isolated_reproducible_host_packages (test_adapters.AdapterTests.test_builds_three_isolated_reproducible_host_packages) ... ok
+test_rejects_unverified_placeholder_and_cleartext (test_adapters.AdapterTests.test_rejects_unverified_placeholder_and_cleartext) ... ok
+test_matches_public_roles_without_writing_or_leaking_account_id (test_check_lolipop_layout.LayoutCheckTests.test_matches_public_roles_without_writing_or_leaking_account_id) ... ok
+test_rejects_wrong_public_root_and_missing_paths (test_check_lolipop_layout.LayoutCheckTests.test_rejects_wrong_public_root_and_missing_paths) ... ok
+test_deployment_target_matches_bounded_live_preview (test_deployment_target.DeploymentTargetTests.test_deployment_target_matches_bounded_live_preview) ... ok
+test_production_template_matches_target_and_local_example_is_local (test_deployment_target.DeploymentTargetTests.test_production_template_matches_target_and_local_example_is_local) ... ok
+test_runbook_uses_exact_target (test_deployment_target.DeploymentTargetTests.test_runbook_uses_exact_target) ... ok
+test_empty_public_tree_is_clean_and_unchanged (test_diagnose_symlinks.PublicSymlinkDiagnosticTests.test_empty_public_tree_is_clean_and_unchanged) ... ok
+test_other_site_symlink_does_not_hide_scoped_status (test_diagnose_symlinks.PublicSymlinkDiagnosticTests.test_other_site_symlink_does_not_hide_scoped_status) ... ok
+test_permission_denied_does_not_claim_clean_web (test_diagnose_symlinks.PublicSymlinkDiagnosticTests.test_permission_denied_does_not_claim_clean_web) ... ok
+test_symlink_inside_kmhn_requires_review (test_diagnose_symlinks.PublicSymlinkDiagnosticTests.test_symlink_inside_kmhn_requires_review) ... ok
+test_paths_need_absolute_and_nonroot (test_lolipop_bootstrap.LolipopBootstrapTests.test_paths_need_absolute_and_nonroot) ... ok
+test_prevents_private_material_inside_default_web_root (test_lolipop_bootstrap.LolipopBootstrapTests.test_prevents_private_material_inside_default_web_root) ... ok
+test_public_layout_has_only_safe_loader_and_rewrite (test_lolipop_bootstrap.LolipopBootstrapTests.test_public_layout_has_only_safe_loader_and_rewrite) ... ok
+test_clean_scoped_filesystem_does_not_claim_sitewide_safety (test_preflight_scoped.ScopedPublicPreflightTests.test_clean_scoped_filesystem_does_not_claim_sitewide_safety) ... ok
+test_foreign_content_in_kmhn_blocks (test_preflight_scoped.ScopedPublicPreflightTests.test_foreign_content_in_kmhn_blocks) ... ok
+test_other_site_symlink_is_not_misrepresented_as_global_clearance (test_preflight_scoped.ScopedPublicPreflightTests.test_other_site_symlink_is_not_misrepresented_as_global_clearance) ... ok
+test_private_required_file_missing_blocks (test_preflight_scoped.ScopedPublicPreflightTests.test_private_required_file_missing_blocks) ... ok
+test_private_symlink_blocks (test_preflight_scoped.ScopedPublicPreflightTests.test_private_symlink_blocks) ... ok
+test_json_and_sse (test_probe_remote.RemoteProbeTests.test_json_and_sse) ... ok
+test_selected_endpoint (test_probe_remote.RemoteProbeTests.test_selected_endpoint) ... ok
+test_install_then_exact_match_rollback (test_public_trial_install.PublicTrialTests.test_install_then_exact_match_rollback) ... ok
+test_missing_owner_approval_blocks_install (test_public_trial_install.PublicTrialTests.test_missing_owner_approval_blocks_install) ... ok
+test_modified_trailing_newline_blocks_rollback (test_public_trial_install.PublicTrialTests.test_modified_trailing_newline_blocks_rollback) ... ok
+test_other_public_content_blocks_without_change (test_public_trial_install.PublicTrialTests.test_other_public_content_blocks_without_change) ... ok
+test_rollback_refuses_modified_files (test_public_trial_install.PublicTrialTests.test_rollback_refuses_modified_files) ... ok
+test_wrong_private_entrypoint_blocks (test_public_trial_install.PublicTrialTests.test_wrong_private_entrypoint_blocks) ... ok
+test_add_and_update_modules_without_engine_changes (test_registry.RegistryTests.test_add_and_update_modules_without_engine_changes) ... ok
+test_current_repository_builds_all_listed_modules (test_registry.RegistryTests.test_current_repository_builds_all_listed_modules) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.241s
+
+OK

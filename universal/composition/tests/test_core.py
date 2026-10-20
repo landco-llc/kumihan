@@ -55,7 +55,7 @@ class SourceTests(unittest.TestCase):
         for tag in ('ja_JP','en--US','-ja','en-a','en-123456789','en-u-ca-u-nu','sl-rozaj-rozaj'):
             r=request(((tag,'a'),))
             with self.subTest(tag=tag):self.reject(r,'E_REFERENCE')
-        for tag in ('x-private','zh-Hant-TW','sr-Latn','und','de-CH-1901','en-US-u-ca-japanese','i-klingon'):
+        for tag in ('x-private','zh-Hant-TW','sr-Latn','und','de-CH-1901','en-US-u-ca-japanese','i-klingon','en-u-ca-gregory-t-ca-gregory'):
             with self.subTest(tag=tag):self.check(request(((tag,'a'),)))
 
 class ResolverTests(unittest.TestCase):

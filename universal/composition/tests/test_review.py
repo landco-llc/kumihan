@@ -63,6 +63,13 @@ class ReviewTests(unittest.TestCase):
         forged=copy.deepcopy(a);forged['checks'][0].update(status='waived',waiver=dict(approval_ref='claim',scope='s0',reason='claimed',artifact_digest=a['artifact_digest']))
         with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs)
 
+    def test_static_evidence_cannot_be_relabelled_as_a_render_pass(self):
+        from review import validate_audit_binding
+        from contract import CompositionError
+        r=request();p=self.resolve(r);a,obs=self.review(r,p)
+        a['checks'][0]['rule_id']='MIX-009'
+        with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,obs)
+
     def test_missing_module_conflicts_and_bidi_are_reported(self):
         r=request((('he','עברית'),('ja','\u202e原稿')));p=self.resolve(r)
         a,_=self.review(r,p,source_id='s0')

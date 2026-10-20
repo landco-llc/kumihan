@@ -49,6 +49,12 @@ def validate_audit_binding(audit,request,plan,observations):
     scopes=set(sources)|{r['id'] for r in request['regions']}
     for i,c in enumerate(audit['checks']):
         if c['scope'] not in scopes:fail('E_REFERENCE',f'/audit/checks/{i}/scope','Unknown check scope')
+        if c['status']=='passed':
+            expected_fact={'MIX-001':'exact-utf8-sha256','MIX-004':'run-coverage','MIX-016':'immutable-plan-binding'}.get(c['rule_id'])
+            if expected_fact is None or c['method']!='static':
+                fail('E_REFERENCE',f'/audit/checks/{i}','Only implemented static checks may pass')
+            if not c['evidence_refs'] or any(not any(f['name']==expected_fact for f in evidence.get(ref,{}).get('facts',[])) for ref in c['evidence_refs']):
+                fail('E_REFERENCE',f'/audit/checks/{i}','Evidence lacks the checked static fact')
         if c['status']=='waived':fail('E_PERMISSION',f'/audit/checks/{i}/waiver','External approval validation not implemented; no waived results accepted')
         for ref in c['evidence_refs']:
             o=evidence.get(ref)
@@ -80,7 +86,7 @@ def evaluate(request,plan,registry,observations=(),target=None,source_id=None):
            host_ref='internal:'+ENGINE,environment=dict(application=ENGINE,version='1',operating_system=platform.system() or 'unknown',
            renderer='none',font_instance_refs=[],conditions={'target_kind':'utf8-file' if path else 'logical-source','index_unit':'unicode-scalar'}),
            scopes=scopes,method='static',facts=[dict(name='exact-utf8-sha256',value=s['text_digest'],unit=None),
-           dict(name='scalar-count',value=len(s['text']),unit='unicode-scalar'),dict(name='run-coverage',value='complete-nonoverlapping',unit=None)],
+           dict(name='scalar-count',value=len(s['text']),unit='unicode-scalar'),dict(name='run-coverage',value='complete-nonoverlapping',unit=None),dict(name='immutable-plan-binding',value=plan['id'],unit=None)],
            mapping=[],limitations=['No rendering; no trusted external observation or approval validation.'],extensions=[])
     validate_record(o)
     # Supplied observations are checked for references, never used to promote statuses.

@@ -1,0 +1,25 @@
+test_every_archive_inventory_paths_and_standalone_runtime (test_dist.DistributionTests.test_every_archive_inventory_paths_and_standalone_runtime) ... ok
+test_fifteen_exact_names_and_bytes (test_dist.DistributionTests.test_fifteen_exact_names_and_bytes) ... ok
+test_generator_is_fresh_and_reproducible (test_dist.DistributionTests.test_generator_is_fresh_and_reproducible) ... ok
+test_host_contracts_and_bilingual_metadata (test_dist.DistributionTests.test_host_contracts_and_bilingual_metadata) ... ok
+test_per_host_five_packages (test_dist.DistributionTests.test_per_host_five_packages) ... ok
+test_scope_catalog_truthful (test_dist.DistributionTests.test_scope_catalog_truthful) ... ok
+test_control_tatweel_tracking_and_wrapping_are_candidates (test_runtime.CandidateControls.test_control_tatweel_tracking_and_wrapping_are_candidates) ... ok
+test_explicit_fa_does_not_get_arabic_tracking_checks (test_runtime.CandidateControls.test_explicit_fa_does_not_get_arabic_tracking_checks) ... ok
+test_intentional_nonjoining_label_is_not_failed (test_runtime.CandidateControls.test_intentional_nonjoining_label_is_not_failed) ... ok
+test_mixed_url_local_isolation_negative_and_exception (test_runtime.CandidateControls.test_mixed_url_local_isolation_negative_and_exception) ... ok
+test_nfkc_proposal_has_real_input (test_runtime.CandidateControls.test_nfkc_proposal_has_real_input) ... ok
+test_original_number_proposal_has_real_input (test_runtime.CandidateControls.test_original_number_proposal_has_real_input) ... ok
+test_report_items_have_evidence_contract (test_runtime.CandidateControls.test_report_items_have_evidence_contract) ... ok
+test_bounded_input (test_runtime.SourceTests.test_bounded_input) ... ok
+test_exact_bytes_metadata_and_protected_unicode (test_runtime.SourceTests.test_exact_bytes_metadata_and_protected_unicode) ... ok
+test_html_positive_negative_and_no_render_claim (test_runtime.SourceTests.test_html_positive_negative_and_no_render_claim) ... ok
+test_language_exclusions_and_locale_unknown (test_runtime.SourceTests.test_language_exclusions_and_locale_unknown) ... ok
+test_locale_digits_are_never_converted (test_runtime.SourceTests.test_locale_digits_are_never_converted) ... ok
+test_normalization_is_only_derived (test_runtime.SourceTests.test_normalization_is_only_derived) ... ok
+test_twelve_pages_language_navigation_and_real_host_assets (test_site.Site.test_twelve_pages_language_navigation_and_real_host_assets) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.885s
+
+OK

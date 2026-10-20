@@ -1,0 +1,31 @@
+test_bad_locale (test_accord.TestAccord.test_bad_locale) ... ok
+test_bad_style (test_accord.TestAccord.test_bad_style) ... ok
+test_be (test_accord.TestAccord.test_be) ... ok
+test_ca_colon (test_accord.TestAccord.test_ca_colon) ... ok
+test_ca_zero_space (test_accord.TestAccord.test_ca_zero_space) ... ok
+test_ch (test_accord.TestAccord.test_ch) ... ok
+test_eu_zero (test_accord.TestAccord.test_eu_zero) ... ok
+test_fr_fr_candidate (test_accord.TestAccord.test_fr_fr_candidate) ... ok
+test_fr_fr_correct (test_accord.TestAccord.test_fr_fr_correct) ... ok
+test_generated_ca (test_accord.TestAccord.test_generated_ca) ... ok
+test_generated_eu (test_accord.TestAccord.test_generated_eu) ... ok
+test_generated_fr (test_accord.TestAccord.test_generated_fr) ... ok
+test_no_mutation (test_accord.TestAccord.test_no_mutation) ... ok
+test_no_style (test_accord.TestAccord.test_no_style) ... ok
+test_preserve_diff (test_accord.TestAccord.test_preserve_diff) ... ok
+test_preserve_exact (test_accord.TestAccord.test_preserve_exact) ... ok
+test_protect_html (test_accord.TestAccord.test_protect_html) ... ok
+test_protect_url (test_accord.TestAccord.test_protect_url) ... ok
+test_quotes_candidate (test_accord.TestAccord.test_quotes_candidate) ... ok
+test_quotes_correct (test_accord.TestAccord.test_quotes_correct) ... ok
+test_quotes_eu (test_accord.TestAccord.test_quotes_eu) ... ok
+test_requires_style (test_accord.TestAccord.test_requires_style) ... ok
+test_structured_rejected (test_accord.TestAccord.test_structured_rejected) ... ok
+test_host_manifest_versions (test_accord.TestAccordIcons.test_host_manifest_versions) ... ok
+test_icon_paths_and_skill_assets (test_accord.TestAccordIcons.test_icon_paths_and_skill_assets) ... ok
+test_logo_dimensions (test_accord.TestAccordIcons.test_logo_dimensions) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.013s
+
+OK

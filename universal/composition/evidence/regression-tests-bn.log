@@ -1,0 +1,15 @@
+test_ja_en_pages_use_shared_copy (test_shared_copy.SharedCopy.test_ja_en_pages_use_shared_copy) ... ok
+test_ja_title_breaks_like_kumihan (test_shared_copy.SharedCopy.test_ja_title_breaks_like_kumihan) ... ok
+test_all_guides (test_site.SiteContract.test_all_guides) ... ok
+test_archive_links (test_site.SiteContract.test_archive_links) ... ok
+test_main_pages (test_site.SiteContract.test_main_pages) ... ok
+test_joiner_difference (test_source_contract.SourceContract.test_joiner_difference) ... ok
+test_normalization_not_preservation (test_source_contract.SourceContract.test_normalization_not_preservation) ... ok
+test_original_same (test_source_contract.SourceContract.test_original_same) ... ok
+test_research_counts (test_source_contract.SourceContract.test_research_counts) ... ok
+test_standalone_references (test_source_contract.SourceContract.test_standalone_references) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+OK

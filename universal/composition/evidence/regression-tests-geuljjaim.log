@@ -1,0 +1,14 @@
+test_fifteen_unique_archives (test_hosts.HostPackages.test_fifteen_unique_archives) ... ok
+test_guides_link_their_host_packages (test_hosts.HostPackages.test_guides_link_their_host_packages) ... ok
+test_native_bundle_layouts (test_hosts.HostPackages.test_native_bundle_layouts) ... ok
+test_archives_integrity_inventory_and_independence (test_product.DistributionTests.test_archives_integrity_inventory_and_independence) ... ok
+test_fixture_preservation_claim_is_replayable (test_product.DistributionTests.test_fixture_preservation_claim_is_replayable) ... ok
+test_reproducible_builder_plan (test_product.DistributionTests.test_reproducible_builder_plan) ... ok
+test_catalog_fixture_contract (test_product.ProductTests.test_catalog_fixture_contract) ... ok
+test_exact_bytes_never_normalize (test_product.ProductTests.test_exact_bytes_never_normalize) ... ok
+test_four_candidates_and_safe_exceptions (test_product.ProductTests.test_four_candidates_and_safe_exceptions) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.446s
+
+OK

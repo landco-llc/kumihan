@@ -1,0 +1,26 @@
+test_host_display_and_licenses (test_mizani.Mizani.test_host_display_and_licenses) ... ok
+test_landing_and_install_guides (test_mizani.Mizani.test_landing_and_install_guides) ... ok
+test_readonly_and_unicode (test_mizani.Mizani.test_readonly_and_unicode) ... ok
+test_real_regex_matches (test_mizani.Mizani.test_real_regex_matches) ... ok
+test_released_archives (test_mizani.Mizani.test_released_archives) ... ERROR
+test_rules_and_fixtures (test_mizani.Mizani.test_rules_and_fixtures) ... ok
+
+======================================================================
+ERROR: test_released_archives (test_mizani.Mizani.test_released_archives)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/sw/test_mizani.py", line 34, in test_released_archives
+    root=BASE/"downloads";manifest=json.loads((root/"MANIFEST.json").read_text())
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/kumihan/plugins/kumihan-mizani/downloads/MANIFEST.json'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+FAILED (errors=1)

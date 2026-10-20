@@ -1,0 +1,15 @@
+test_original_cases_have_honest_reproducible_status (test_acceptance.Acceptance.test_original_cases_have_honest_reproducible_status) ... ok
+test_contextual_candidates_never_edit (test_checks.Checks.test_contextual_candidates_never_edit) ... ok
+test_no_rendering_claim_and_region_inference (test_checks.Checks.test_no_rendering_claim_and_region_inference) ... ok
+test_preserves_source_and_detects_changes (test_checks.Checks.test_preserves_source_and_detects_changes) ... ok
+test_archives_are_reproducible_safe_and_self_contained (test_distribution.Distribution.test_archives_are_reproducible_safe_and_self_contained) ... ok
+test_bundle_root_evidence_paths_exist (test_distribution.Distribution.test_bundle_root_evidence_paths_exist) ... ok
+test_manifest_hashes_and_authority (test_distribution.Distribution.test_manifest_hashes_and_authority) ... ok
+test_original_content_and_links (test_ja_landing_parity.JapaneseLanding.test_original_content_and_links) ... ok
+test_source_template_and_sections (test_ja_landing_parity.JapaneseLanding.test_source_template_and_sections) ... ok
+test_twelve_pages_locale_navigation_and_downloads (test_site.Site.test_twelve_pages_locale_navigation_and_downloads) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 1.125s
+
+OK

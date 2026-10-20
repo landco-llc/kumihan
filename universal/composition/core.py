@@ -45,13 +45,16 @@ def valid_tag(tag):
     if re.fullmatch(r'x(?:-[a-z0-9]{1,8})+',low,re.ASCII): return True
     if not TAG.fullmatch(tag): return False
     parts=low.split('-')
-    # Extensions and variants cannot repeat (private use is opaque).
-    used=set()
+    used_variants=set();used_singletons=set();in_extension=False
     for part in parts[1:]:
-        if part=='x': break
-        if len(part)==1 or len(part)>=5 or (len(part)==4 and part[0].isdigit()):
-            if part in used: return False
-            used.add(part)
+        if part=='x':break
+        if len(part)==1:
+            if part in used_singletons:return False
+            used_singletons.add(part);in_extension=True
+        elif not in_extension and (len(part)>=5 or (len(part)==4 and part[0].isdigit())):
+            if part in used_variants:return False
+            used_variants.add(part)
+
     return True
 
 def extensions(record):

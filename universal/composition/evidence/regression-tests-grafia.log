@@ -1,0 +1,18 @@
+test_coverage_and_source_closure (test_catalog.CatalogTests.test_coverage_and_source_closure) ... ok
+test_report_schema_and_cli_nonmutation (test_catalog.CatalogTests.test_report_schema_and_cli_nonmutation) ... ok
+test_archive_closure_host_roots_and_safety (test_distribution.DistributionTests.test_archive_closure_host_roots_and_safety) ... ok
+test_exact_matrix_and_manifest (test_distribution.DistributionTests.test_exact_matrix_and_manifest) ... ok
+test_symlink_source_rejected (test_distribution.DistributionTests.test_symlink_source_rejected) ... ok
+test_unsafe_members_rejected (test_distribution.DistributionTests.test_unsafe_members_rejected) ... ok
+test_editorial_candidates_are_not_blockers (test_runtime.RuntimeTests.test_editorial_candidates_are_not_blockers) ... ok
+test_exact_bytes_not_canonical_equivalence (test_runtime.RuntimeTests.test_exact_bytes_not_canonical_equivalence) ... ok
+test_invalid_utf8_explicit_error (test_runtime.RuntimeTests.test_invalid_utf8_explicit_error) ... ok
+test_no_country_or_currency_defaults (test_runtime.RuntimeTests.test_no_country_or_currency_defaults) ... ok
+test_titles_and_grouping_not_mechanically_rejected (test_runtime.RuntimeTests.test_titles_and_grouping_not_mechanically_rejected) ... ok
+test_unknown_locale_rejected (test_runtime.RuntimeTests.test_unknown_locale_rejected) ... ok
+test_twelve_pages_languages_downloads_and_alternates (test_site.SiteTests.test_twelve_pages_languages_downloads_and_alternates) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.806s
+
+OK

@@ -1,0 +1,362 @@
+[
+  {
+    "id": "P01",
+    "input": "JA+ZH-Hant、同じ漢字を含む商品説明",
+    "required": "原字保持、言語注釈、地域字形をfont選択で区別",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P01_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P02",
+    "input": "ZH-Hans+ZH-Hant、引用と地名",
+    "required": "簡繁自動変換なし、引用内部を保持",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P02_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P03",
+    "input": "KO+TH、短いボタンと本文",
+    "required": "韓国語・タイ語を同じ単語分割器に押し込まない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P03_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P04",
+    "input": "HI+BN、結合字と上下mark",
+    "required": "glyph clusterを途中分割しない、切取りなし",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P04_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P05",
+    "input": "AR+HE、同一段落と並列block",
+    "required": "RTL同士でも同じ接合処理にしない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P05_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P06",
+    "input": "FA+RU、引用符・型番・数字",
+    "required": "保存順不変、局所方向が段落を乱さない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P06_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P07",
+    "input": "JA+AR+FR、3言語の説明",
+    "required": "英語moduleなしで処理、段落ごとの方向",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P07_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P08",
+    "input": "ZH-Hant+KO+VI、展示解説",
+    "required": "行数を強制一致させない、同等の重要度",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P09",
+    "input": "FR+DE、同じLatin文字体系",
+    "required": "引用・分綴・約物のlanguage差を保持",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P09_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P10",
+    "input": "PL+ES、1字語・アクセント",
+    "required": "全大文字でも記号を脱落させない",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P11",
+    "input": "PT+NL、分綴の派生表示",
+    "required": "no_break/pre/postとsource mapping、抽出復元",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P12",
+    "input": "ID+SW+ZU、長い語・接辞",
+    "required": "見た目のために語へ空白を追加しない",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P13",
+    "input": "EL+RU、似た字形を含む語",
+    "required": "Latinへの置換なし、glyphとscriptの区別",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P14",
+    "input": "TH+KM、上下の記号と辞書分割",
+    "required": "不要なASCII空白を入れずmarkを表示",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P14_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P15",
+    "input": "HEのniqqud＋AR母音記号",
+    "required": "基底文字とmarkのfont fallbackを検証",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P16",
+    "input": "VIの結合アクセント＋FA ZWNJ",
+    "required": "NFC/NFKCや不可視文字除去をしない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P16_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P17",
+    "input": "空白・数字・記号だけ",
+    "required": "言語を英語と断定しない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P17_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P18",
+    "input": "1–2字のHan、固有名",
+    "required": "候補・undを返し、黙ってlocaleを確定しない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P18_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P19",
+    "input": "private-useタグ・未知locale",
+    "required": "入力保持、未対応規則を明示",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P19_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P20",
+    "input": "Adlam等の拡張script",
+    "required": "LTR地理推定をせず、能力不足を明示",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P21",
+    "input": "Mongolian縦組",
+    "required": "vertical-lr等とadapter能力を分離",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P22",
+    "input": "日本語縦組＋別scriptの長い語",
+    "required": "orientation/縦中横/回転を条件付きで検討",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P23",
+    "input": "数式・絵文字ZWJ列・異体字セレクタ",
+    "required": "scalar/UTF-16/glyph indexを混用しない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P23_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P24",
+    "input": "sourceに既存Bidi制御文字",
+    "required": "無断除去なし、異常は警告",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P24_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P25",
+    "input": "authorタグと検出候補の不一致",
+    "required": "明示情報と矛盾を示し、根拠を記録",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P25_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P26",
+    "input": "等価未確認の2言語見出し",
+    "required": "translation verifiedにしない",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P26_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P27",
+    "input": "ルビ・注音・IPA・翻字",
+    "required": "親範囲、注記、読み順を保持",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P28",
+    "input": "本文と広告短句が同じページ",
+    "required": "reading/displayの規則をregion単位に適用",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P28_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P29",
+    "input": "承認されたロゴの重なり",
+    "required": "指定範囲だけ例外、本文への波及なし",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P29_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P30",
+    "input": "CTAや重要条件が図形に隠れる",
+    "required": "displayを理由に許可せずfailed",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P30_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P31",
+    "input": "fallback font未ロード/ネット切断",
+    "required": "欠字・高さ・改行の変化を検出",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P32",
+    "input": "可変fontのaxes/版を変更",
+    "required": "前の校正結果をそのまま再利用しない",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P33",
+    "input": "Web 320 CSS px",
+    "required": "適用範囲のreflow、操作情報の欠落なし",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P34",
+    "input": "Web text 200% zoom",
+    "required": "clipping/overlapなし、重要情報保持",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P35",
+    "input": "適用されるWCAG spacing override",
+    "required": "言語例外を踏まえ内容・機能を保持",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P36",
+    "input": "PPTXの複数textbox/図形/ノート",
+    "required": "全slide表示、遮蔽、読み順、原稿・ノート保持",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P37",
+    "input": "DOCXの段落・脚注・表・caption",
+    "required": "ページ跨ぎと方向、source対応を保持",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P38",
+    "input": "PDF抽出とコピー",
+    "required": "画面の見た目と論理原文の一致を別に評価",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P39",
+    "input": "グラフィック化・outline化",
+    "required": "必須情報の読める別経路、source対応",
+    "status": "not-run",
+    "evidence": null,
+    "verified_portion": "None",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  },
+  {
+    "id": "P40",
+    "input": "stale digest/未知critical拡張/上限超過",
+    "required": "偽の完了を返さず対象範囲と再開条件を返す",
+    "status": "partial",
+    "evidence": "tests/test_acceptance.py::test_P40_static_only",
+    "verified_portion": "Exact source preservation, schema/plan/scoped audit static subset only",
+    "pending": "Original P-case host/render/font/native/editorial requirements remain unverified; synthetic text is not editorial approval."
+  }
+]

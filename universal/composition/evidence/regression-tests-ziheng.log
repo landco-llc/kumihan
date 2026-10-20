@@ -1,0 +1,31 @@
+test_all_twelve_pages_use_punctuation_free_headings (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_all_twelve_pages_use_punctuation_free_headings) ... ok
+test_host_steps_preserve_instructions_as_body_copy (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_host_steps_preserve_instructions_as_body_copy) ... ok
+test_only_approved_kumihan_image_mark_is_used (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_only_approved_kumihan_image_mark_is_used) ... ok
+test_exact_bytes_never_normalized (test_checks.ChecksTests.test_exact_bytes_never_normalized) ... ok
+test_original_regional_fixture_cases (test_checks.ChecksTests.test_original_regional_fixture_cases) ... ok
+test_unknown_context_rejected (test_checks.ChecksTests.test_unknown_context_rejected) ... ok
+test_existing_zi_heng_portal_and_top_links (test_host_pages.HostDocsTests.test_existing_zi_heng_portal_and_top_links) ... ok
+test_host_markdown_zip_checksum_and_instruction_separation (test_host_pages.HostDocsTests.test_host_markdown_zip_checksum_and_instruction_separation) ... ok
+test_host_page_localization_and_links (test_host_pages.HostDocsTests.test_host_page_localization_and_links) ... ok
+test_claude_marketplace_entry_preserves_japanese (test_hosts.HostPackagingTests.test_claude_marketplace_entry_preserves_japanese) ... ok
+test_generator_no_source_writes_in_check_and_determinism (test_hosts.HostPackagingTests.test_generator_no_source_writes_in_check_and_determinism) ... ok
+test_host_archives_self_contained_and_canonical (test_hosts.HostPackagingTests.test_host_archives_self_contained_and_canonical) ... ok
+test_host_package_locale_and_region_protection (test_hosts.HostPackagingTests.test_host_package_locale_and_region_protection) ... ok
+test_historical_japanese_fixture_exact_set (test_locale.LocaleTests.test_historical_japanese_fixture_exact_set) ... ok
+test_locale_is_explicit_and_case_insensitive (test_locale.LocaleTests.test_locale_is_explicit_and_case_insensitive) ... ok
+test_bilingual_branding_and_portable_icon (test_package.DistributionContractTests.test_bilingual_branding_and_portable_icon) ... ok
+test_plugin_archive_paths_and_identity (test_package.DistributionContractTests.test_plugin_archive_paths_and_identity) ... ok
+test_report_and_profiles_resolve_offline (test_package.DistributionContractTests.test_report_and_profiles_resolve_offline) ... ok
+test_version_change_and_check_do_not_touch_japanese (test_package.DistributionContractTests.test_version_change_and_check_do_not_touch_japanese) ... ok
+test_builder_isolated_deterministic_and_self_contained (test_package.PackageTests.test_builder_isolated_deterministic_and_self_contained) ... ok
+test_new_schemas_and_rules (test_package.PackageTests.test_new_schemas_and_rules) ... ok
+test_zh_resolver_regions_are_disjoint_and_deterministic (test_package.PackageTests.test_zh_resolver_regions_are_disjoint_and_deterministic) ... ok
+test_installation_claims_versioned_zip_and_unversioned_display (test_website.ZiHengWebsiteTests.test_installation_claims_versioned_zip_and_unversioned_display) ... ok
+test_internal_links_and_images_exist (test_website.ZiHengWebsiteTests.test_internal_links_and_images_exist) ... ok
+test_language_pages_headings_and_site_identity (test_website.ZiHengWebsiteTests.test_language_pages_headings_and_site_identity) ... ok
+test_logo_styles_and_japanese_site_footer (test_website.ZiHengWebsiteTests.test_logo_styles_and_japanese_site_footer) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.771s
+
+OK
