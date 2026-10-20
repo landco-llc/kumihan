@@ -144,10 +144,12 @@ class SnapshotAndCoverage(unittest.TestCase):
         from build_version_site import outputs, readme
         from build_gateways import outputs as gateways, GATEWAYS
         facts=v.load()
-        self.assertEqual(len(GATEWAYS),22)
+        # 21 editions with release facts plus 5 shown as coming soon (no facts yet).
+        self.assertEqual(len(GATEWAYS),27)
         for path,html in gateways().items():
             if 'http-equiv="refresh"' in html:continue
-            self.assertEqual(html.count('class="version-state"'),21,path)
+            self.assertEqual(html.count('class="version-state"'),26,path)
+            self.assertEqual(len(re.findall(r'<span class="state" aria-label="[^"]+"><span class="version-state"',html)),5,path)
         pages=[*v.ROOT.glob('kumihan*.html'),v.ROOT/'en.html',v.ROOT/'zh-tw.html',*(v.ROOT/'docs').glob('install-*.html')]
         counts={'landing':0,'install':0}
         generated=outputs()

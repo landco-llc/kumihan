@@ -13,6 +13,7 @@ every page already loads after its own stylesheet. Jekyll layouts and the
 Nhịp Chữ builder read _data/site_footer.json, where ROOT marks the path to
 the site root.
 """
+import json
 from html import escape
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path

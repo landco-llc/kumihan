@@ -1,0 +1,1407 @@
+{
+ "el": {
+  "gateway": [
+   "top-el.html",
+   "el",
+   "EL",
+   "Ελληνικά"
+  ],
+  "product": {
+   "name": "Ελληνικά",
+   "lang": "el",
+   "brand": "KUMIHAN｜Μέτρο",
+   "glyph": "Ω",
+   "label": "EL · GREEK",
+   "version": "v0.1.0",
+   "pages": {
+    "el": "kumihan-el.html",
+    "en": "kumihan-el.en.html",
+    "ja": "kumihan-el.ja.html"
+   }
+  },
+  "ui": {
+   "heading": "Γλωσσικές εκδόσεις του KUMIHAN",
+   "more": "Εμφάνιση {n} ακόμη",
+   "menu": "Γλώσσα"
+  },
+  "pick": "Επιλέξτε γλώσσα",
+  "privacy": "Πολιτική απορρήτου",
+  "names": {
+   "ar": "اليونانية",
+   "bn": "গ্রিক",
+   "de": "Griechisch",
+   "en": "Greek",
+   "es": "Griego",
+   "fr": "Grec",
+   "hi": "यूनानी",
+   "id": "Yunani",
+   "it": "Greco",
+   "ja": "ギリシャ語",
+   "ko": "그리스어",
+   "pl": "Grecki",
+   "pt": "Grego",
+   "sw": "Kigiriki",
+   "zu": "isi-Greek",
+   "ru": "Греческий",
+   "th": "กรีก",
+   "vi": "Tiếng Hy Lạp",
+   "zh-hans": "希腊语",
+   "zh-hant": "希臘文",
+   "km": "ក្រិក",
+   "fa": "یونانی",
+   "el": "Ελληνικά",
+   "nl": "Grieks",
+   "ms": "Yunani",
+   "tr": "Yunanca",
+   "he": "יוונית"
+  },
+  "edition_names": {
+   "ar": "Αραβικά",
+   "bn": "Βεγγαλικά",
+   "de": "Γερμανικά",
+   "el": "Ελληνικά",
+   "es": "Ισπανικά",
+   "fa": "Περσικά",
+   "fr": "Γαλλικά",
+   "he": "Εβραϊκά",
+   "hi": "Χίντι",
+   "id": "Ινδονησιακά",
+   "it": "Ιταλικά",
+   "ja": "Ιαπωνικά",
+   "km": "Χμερ",
+   "ko": "Κορεατικά",
+   "ms": "Μαλαϊκά",
+   "nl": "Ολλανδικά",
+   "pl": "Πολωνικά",
+   "pt": "Πορτογαλικά",
+   "ru": "Ρωσικά",
+   "sw": "Σουαχίλι",
+   "th": "Ταϊλανδικά",
+   "tr": "Τουρκικά",
+   "vi": "Βιετναμικά",
+   "zh-hans": "Κινεζικά (Απλοποιημένα)",
+   "zh-hant": "Κινεζικά (Παραδοσιακά)",
+   "zu": "Ζουλού"
+  },
+  "cards": {
+   "ar": [
+    "Αραβική τυπογραφία που χειρίζεται κείμενο από δεξιά προς τα αριστερά και μεικτές γραφές, διατηρώντας ανέπαφο το πρωτότυπο.",
+    "Δείτε την έκδοση στα αραβικά"
+   ],
+   "bn": [
+    "Τυπογραφία και σχεδιασμός για τα βεγγαλικά με ασφαλή φωνηεντικά σημεία, συμπλέγματα, πιστότητα στο πρωτότυπο και ξεχωριστή καθοδήγηση για bn-BD/bn-IN.",
+    "Δείτε την έκδοση στα βεγγαλικά"
+   ],
+   "de": [
+    "Γερμανική τυπογραφία με μακριές σύνθετες λέξεις, εισαγωγικά και τις ξεχωριστές συμβάσεις DE/AT/CH, που διατηρεί το πρωτότυπο.",
+    "Δείτε την έκδοση στα γερμανικά"
+   ],
+   "el": [
+    "Ελληνική τυπογραφία που κρατά τον τόνο και τα διαλυτικά επειδή φέρουν νόημα, εφαρμόζει ελληνικούς κανόνες στα κεφαλαία, σέβεται το ελληνικό ερωτηματικό και την άνω τελεία και ισορροπεί τα ελληνικά με τα λατινικά, διατηρώντας το πρωτότυπο κείμενο.",
+    "Δείτε την έκδοση στα ελληνικά"
+   ],
+   "es": [
+    "Ισπανική τυπογραφία που σέβεται την τοπική χρήση, διατηρεί το πρωτότυπο και διακρίνει τα επαληθευμένα τεκμήρια από την επιμελητική κρίση.",
+    "Δείτε την έκδοση στα ισπανικά"
+   ],
+   "fa": [
+    "Περσική τυπογραφία που κρατά σαφή την κατεύθυνση από δεξιά προς τα αριστερά, διατηρεί το ZWNJ και απομονώνει λατινικές διευθύνσεις URL και ενδείξεις έκδοσης.",
+    "Δείτε την έκδοση στα περσικά"
+   ],
+   "fr": [
+    "Γαλλική τυπογραφία που διακρίνει τα αδιάσπαστα κενά, τα εισαγωγικά και τα τοπικά ή θεσμικά πρότυπα ύφους.",
+    "Δείτε την έκδοση στα γαλλικά"
+   ],
+   "he": [
+    "Εβραϊκή τυπογραφία που κρατά στη σωστή σειρά το κείμενο από δεξιά προς τα αριστερά με ενσωματωμένα αγγλικά και αριθμούς, προστατεύει τα τελικά γράμματα, το niqqud και την εβραϊκή στίξη και αφήνει τη διατύπωση ως προς το γραμματικό γένος όπως γράφτηκε.",
+    "Δείτε την έκδοση στα εβραϊκά"
+   ],
+   "hi": [
+    "Τυπογραφία και σχεδιασμός για τα χίντι με πιστότητα στο πρωτότυπο, συμπλέγματα συμφώνων και matra.",
+    "Δείτε την έκδοση στα χίντι"
+   ],
+   "id": [
+    "Ινδονησιακή τυπογραφία που σέβεται προθέσεις, προσφύματα, αναδιπλασιασμό, στίξη και ποσά σε ρουπίες, διατηρώντας ανέπαφο το πρωτότυπο.",
+    "Δείτε την έκδοση στα ινδονησιακά"
+   ],
+   "it": [
+    "Ιταλική τυπογραφία που σέβεται τους τόνους, τα παραθέματα και τις τοπικές επιλογές, διατηρώντας το πρωτότυπο.",
+    "Δείτε την έκδοση στα ιταλικά"
+   ],
+   "ja": [
+    "Από τους ιαπωνικούς κανόνες αλλαγής γραμμής (kinsoku) και τις φυσικές αλλαγές γραμμής έως τη δομή της πληροφορίας, τον λευκό χώρο και τη ροή ανάγνωσης.",
+    "Δείτε την έκδοση στα ιαπωνικά"
+   ],
+   "km": [
+    "Τυπογραφία για τα χμερ που προστατεύει τα συμπλέγματα, το πρωτότυπο κείμενο και τις ουσιαστικές αλλαγές γραμμής.",
+    "Δείτε την έκδοση στα χμερ"
+   ],
+   "ko": [
+    "Αλλαγές γραμμής ανάμεσα στα eojeol (τις κορεατικές μονάδες διαστήματος), ρυθμός του κειμένου και δομή πληροφορίας που επικοινωνεί με σαφήνεια.",
+    "Δείτε την έκδοση στα κορεατικά"
+   ],
+   "ms": [
+    "Μαλαϊκή τυπογραφία που διακρίνει τα μαλαϊκά από τα ινδονησιακά, σέβεται τα προσφύματα, τις σύνθετες λέξεις και τον αναδιπλασιασμό της γραφής Rumi, ξεχωρίζει τη χρήση στη Μαλαισία, τη Σιγκαπούρη και το Μπρουνέι και χειρίζεται με προσοχή τη γραφή Jawi, διατηρώντας το πρωτότυπο κείμενο.",
+    "Δείτε την έκδοση στα μαλαϊκά"
+   ],
+   "nl": [
+    "Ολλανδική τυπογραφία που γράφει το IJ κεφαλαίο ως ζεύγος, κρατά ενιαίες τις σύνθετες λέξεις, διακρίνει την τρέμα από το ενωτικό και ελέγχει τις ορθογραφικές αλλαγές στον συλλαβισμό στο τέλος της γραμμής, κρατώντας διακριτά τα nl-NL και nl-BE και ανέπαφο το πρωτότυπο κείμενο.",
+    "Δείτε την έκδοση στα ολλανδικά"
+   ],
+   "pl": [
+    "Πολωνική τυπογραφία με ακριβή διακριτικά, ουσιαστική αναδίπλωση γραμμών και σχεδιασμό που διατηρεί το πρωτότυπο.",
+    "Δείτε την έκδοση στα πολωνικά"
+   ],
+   "pt": [
+    "Πορτογαλική τυπογραφία και σχεδιασμός με γνώμονα το νόημα, που σέβεται τις συμβάσεις της Βραζιλίας και της Πορτογαλίας και την πρόθεση του συγγραφέα.",
+    "Δείτε την έκδοση στα πορτογαλικά"
+   ],
+   "ru": [
+    "Ρωσική τυπογραφία που χειρίζεται τα ё και й, τα εισαγωγικά, τις παύλες και τις αλλαγές γραμμής ανάλογα με τα συμφραζόμενα, διατηρώντας το πρωτότυπο.",
+    "Δείτε την έκδοση στα ρωσικά"
+   ],
+   "sw": [
+    "Τυπογραφία για τα σουαχίλι που προστατεύει το ng’, την αρχική διατύπωση και τις τοπικές επιλογές μορφοποίησης.",
+    "Δείτε την έκδοση στα σουαχίλι"
+   ],
+   "th": [
+    "Σεβασμός στα όρια λέξεων και στους συνδυαστικούς χαρακτήρες της ταϊλανδικής, για ταϊλανδικό σχεδιασμό που διαβάζεται φυσικά.",
+    "Δείτε την έκδοση στα ταϊλανδικά"
+   ],
+   "tr": [
+    "Τουρκική τυπογραφία που κρατά διακριτά τα İ/i και I/ı στην αλλαγή πεζών και κεφαλαίων, κρίνει την απόστροφο πριν από τις καταλήξεις με βάση τη γραμματική, χωρίζει τις λέξεις μόνο στα όρια συλλαβών και διατηρεί το πρωτότυπο κείμενο.",
+    "Δείτε την έκδοση στα τουρκικά"
+   ],
+   "vi": [
+    "Βιετναμική τυπογραφία που σέβεται τα τονικά σημάδια, τις ουσιαστικές αλλαγές γραμμής και το πρωτότυπο περιεχόμενο.",
+    "Δείτε την έκδοση στα βιετναμικά"
+   ],
+   "zh-hans": [
+    "Στίξη, αλλαγές γραμμής και μεικτό κινεζικό–λατινικό κείμενο για την ηπειρωτική Κίνα, χωρίς να ξαναγράφεται το πρωτότυπό σας.",
+    "Δείτε την έκδοση στα απλοποιημένα κινεζικά"
+   ],
+   "zh-hant": [
+    "Αντιμετωπίζει τις ιδιαίτερες συμβάσεις στίξης και στοιχειοθεσίας της Ταϊβάν και του Χονγκ Κονγκ.",
+    "Δείτε την έκδοση στα παραδοσιακά κινεζικά"
+   ],
+   "zu": [
+    "Τυπογραφία για τα ζουλού που προστατεύει τις συνενωμένες λέξεις και τα εσωτερικά κεφαλαία, διατηρώντας ανέπαφο το πρωτότυπο.",
+    "Δείτε την έκδοση στα ζουλού"
+   ]
+  },
+  "card": {
+   "ar": [
+    "تنضيد يوناني يحافظ على علامتَي التونوس والديالِيتيكا لأنهما تحملان المعنى، ويطبّق قواعد اليونانية على الأحرف الكبيرة، ويحترم علامة الاستفهام اليونانية والنقطة العليا (آنو تيليا)، ويوازن بين اليونانية واللاتينية، مع الحفاظ على النص الأصلي.",
+    "عرض النسخة اليونانية"
+   ],
+   "bn": [
+    "অর্থবাহী টোনোস ও ডায়ালিটিকা রক্ষা করা, বড় হাতের অক্ষরে গ্রিক নিয়ম মানা, গ্রিক প্রশ্নচিহ্ন ও আনো তেলিয়াকে সম্মান করা এবং গ্রিক ও লাতিন লেখার ভারসাম্য রাখা গ্রিক টাইপোগ্রাফি, মূল লেখা অক্ষুণ্ণ রেখে।",
+    "গ্রিক সংস্করণ দেখুন"
+   ],
+   "de": [
+    "Griechische Typografie, die bedeutungstragende Tonos und Dialytika bewahrt, Großbuchstaben nach griechischen Regeln setzt, das griechische Fragezeichen und die Ano Teleia respektiert und Griechisch mit Lateinschrift ausbalanciert – unter Wahrung des Originaltexts.",
+    "Griechische Version ansehen"
+   ],
+   "en": [
+    "Greek typography that keeps meaningful tonos and dialytika, applies Greek rules to capitals, respects the Greek question mark and ano teleia, and balances Greek with Latin, while preserving the original text.",
+    "View the Greek edition"
+   ],
+   "es": [
+    "Tipografía griega que conserva el tonos y la diéresis (dialytika) porque cambian el sentido, aplica reglas griegas a las mayúsculas, respeta el signo de interrogación griego y la ano teleia, y equilibra el griego con el latín, preservando el texto original.",
+    "Ver la edición en griego"
+   ],
+   "fr": [
+    "Typographie grecque qui conserve le tonos et le tréma (dialytika) porteurs de sens, applique les règles grecques aux capitales, respecte le point d’interrogation grec et l’ano teleia, et équilibre grec et latin, tout en préservant le texte original.",
+    "Voir l’édition grecque"
+   ],
+   "hi": [
+    "अर्थ बताने वाले टोनोस और डायालिटिका को सुरक्षित रखने वाली, बड़े अक्षरों में ग्रीक नियम लागू करने वाली, ग्रीक प्रश्नचिह्न और आनो तेलिया का सम्मान करने वाली तथा ग्रीक और लैटिन में संतुलन रखने वाली ग्रीक टाइपोग्राफ़ी, मूल पाठ को सुरक्षित रखते हुए।",
+    "ग्रीक संस्करण देखें"
+   ],
+   "id": [
+    "Tipografi Yunani yang menjaga tonos dan dialytika yang membawa makna, menerapkan aturan Yunani pada huruf kapital, menghormati tanda tanya Yunani dan ano teleia, serta menyeimbangkan aksara Yunani dengan Latin, sambil menjaga teks asli.",
+    "Lihat edisi bahasa Yunani"
+   ],
+   "it": [
+    "Tipografia greca che conserva tonos e dialytika perché portano significato, applica le regole greche alle maiuscole, rispetta il punto interrogativo greco e l’ano teleia ed equilibra greco e latino, preservando il testo originale.",
+    "Vai all’edizione greca"
+   ],
+   "ja": [
+    "意味を担うトノスとディアリティカを守り、ギリシャ語の規則で大文字化し、疑問符「;」とアノ・テレイア、ラテン文字との混植にも配慮して原稿を守るギリシャ語の文字組みとデザイン。",
+    "ギリシャ語版を見る"
+   ],
+   "ko": [
+    "뜻을 가르는 토노스와 디알리티카를 지키고, 대문자에 그리스어 규칙을 적용하며, 그리스어 물음표와 아노 텔리아를 존중하고, 그리스 문자와 라틴 문자의 균형을 맞추며 원문을 지키는 그리스어 글짜임.",
+    "그리스어 버전 보기"
+   ],
+   "pl": [
+    "Typografia grecka, która zachowuje znaczeniowe tonos i dialytika, stosuje greckie reguły przy wersalikach, szanuje grecki znak zapytania i ano teleia oraz równoważy pismo greckie z łacińskim, zachowując oryginalny tekst.",
+    "Zobacz wersję grecką"
+   ],
+   "pt": [
+    "Tipografia grega que preserva o tonos e o dialytika, portadores de sentido, aplica regras gregas às maiúsculas, respeita o ponto de interrogação grego e a ano teleia e equilibra o grego com o latim, preservando o texto original.",
+    "Ver a edição em grego"
+   ],
+   "sw": [
+    "Uchapaji wa Kigiriki unaohifadhi tonos na dialytika zinazobeba maana, kufuata kanuni za Kigiriki kwa herufi kubwa, kuheshimu alama ya kuuliza ya Kigiriki na ano teleia, na kusawazisha Kigiriki na Kilatini, huku ukihifadhi maandishi asilia.",
+    "Tazama toleo la Kigiriki"
+   ],
+   "zu": [
+    "Ukuhlelwa kombhalo kwesi-Greek okugcina i-tonos ne-dialytika ezithwala incazelo, kusebenzise imithetho yesi-Greek ezinhlamvwini ezinkulu, kuhloniphe uphawu lombuzo lwesi-Greek ne-ano teleia, futhi kulinganise isi-Greek nesiLatini, kugcine umbhalo wokuqala.",
+    "Buka isi-Greek"
+   ],
+   "ru": [
+    "Греческая типографика: значимые тонос и диалитика, греческие правила для прописных, греческий вопросительный знак и ано телия, баланс греческого письма и латиницы и сохранность оригинала.",
+    "Открыть греческую версию"
+   ],
+   "th": [
+    "การจัดวางตัวอักษรภาษากรีกที่รักษาโทนอสและไดอะลิติกาซึ่งมีผลต่อความหมาย ใช้กฎภาษากรีกกับตัวพิมพ์ใหญ่ เคารพเครื่องหมายคำถามภาษากรีกและอาโน เตเลีย และจัดสมดุลระหว่างอักษรกรีกกับละติน โดยรักษาต้นฉบับไว้",
+    "ดูเวอร์ชันภาษากรีก"
+   ],
+   "vi": [
+    "Typography tiếng Hy Lạp giữ dấu tonos và dialytika vốn mang nghĩa, áp dụng quy tắc tiếng Hy Lạp khi viết hoa, tôn trọng dấu hỏi Hy Lạp và ano teleia, cân bằng chữ Hy Lạp với chữ Latinh và giữ nguyên văn bản gốc.",
+    "Xem phiên bản tiếng Hy Lạp"
+   ],
+   "zh-hans": [
+    "保留承载语义的重音符（tonos）与分音符（dialytika），按希腊语规则转换大写，尊重希腊语问号与上点（ano teleia），平衡希腊字母与拉丁字母，并保留原稿的希腊语排版与设计。",
+    "前往希腊语版"
+   ],
+   "zh-hant": [
+    "保留承載語義的重音符（tonos）與分音符（dialytika），依希臘文規則轉換大寫，尊重希臘文問號與上點（ano teleia），平衡希臘字母與拉丁字母，並保留原稿的希臘文排版與設計。",
+    "前往希臘文版"
+   ],
+   "km": [
+    "ការរៀបចំអក្សរក្រិក ដែលរក្សាសញ្ញា tonos និង dialytika ដែលមានន័យ អនុវត្តច្បាប់ក្រិកលើអក្សរធំ គោរពសញ្ញាសួរក្រិក និង ano teleia ហើយធ្វើឲ្យអក្សរក្រិក និងឡាតាំងមានតុល្យភាព ដោយរក្សាអត្ថបទដើម។",
+    "មើលកំណែក្រិក"
+   ],
+   "fa": [
+    "حروف‌چینی یونانی که تونوس و دیالیتیکا را چون معنا را تغییر می‌دهند حفظ می‌کند، قواعد یونانی را در حروف بزرگ به کار می‌برد، علامت پرسش یونانی و آنو تلیا را رعایت می‌کند و میان یونانی و لاتین توازن برقرار می‌کند، با حفظ متن اصلی.",
+    "دیدن نسخهٔ یونانی"
+   ]
+  }
+ },
+ "nl": {
+  "gateway": [
+   "top-nl.html",
+   "nl",
+   "NL",
+   "Nederlands"
+  ],
+  "product": {
+   "name": "Nederlands",
+   "lang": "nl",
+   "brand": "KUMIHAN｜Zetwerk",
+   "glyph": "IJ",
+   "label": "NL · DUTCH",
+   "version": "v0.1.0",
+   "pages": {
+    "nl": "kumihan-nl.html",
+    "en": "kumihan-nl.en.html",
+    "ja": "kumihan-nl.ja.html"
+   }
+  },
+  "ui": {
+   "heading": "Taaledities van KUMIHAN",
+   "more": "Toon nog {n}",
+   "menu": "Taal"
+  },
+  "pick": "Kies een taal",
+  "privacy": "Privacybeleid",
+  "names": {
+   "ar": "الهولندية",
+   "bn": "ওলন্দাজ",
+   "de": "Niederländisch",
+   "en": "Dutch",
+   "es": "Neerlandés",
+   "fr": "Néerlandais",
+   "hi": "डच",
+   "id": "Belanda",
+   "it": "Olandese",
+   "ja": "オランダ語",
+   "ko": "네덜란드어",
+   "pl": "Niderlandzki",
+   "pt": "Holandês",
+   "sw": "Kiholanzi",
+   "zu": "isi-Dutch",
+   "ru": "Нидерландский",
+   "th": "ดัตช์",
+   "vi": "Tiếng Hà Lan",
+   "zh-hans": "荷兰语",
+   "zh-hant": "荷蘭文",
+   "km": "ហូឡង់",
+   "fa": "هلندی",
+   "el": "Ολλανδικά",
+   "nl": "Nederlands",
+   "ms": "Belanda",
+   "tr": "Felemenkçe",
+   "he": "הולנדית"
+  },
+  "edition_names": {
+   "ar": "Arabisch",
+   "bn": "Bengaals",
+   "de": "Duits",
+   "el": "Grieks",
+   "es": "Spaans",
+   "fa": "Perzisch",
+   "fr": "Frans",
+   "he": "Hebreeuws",
+   "hi": "Hindi",
+   "id": "Indonesisch",
+   "it": "Italiaans",
+   "ja": "Japans",
+   "km": "Khmer",
+   "ko": "Koreaans",
+   "ms": "Maleis",
+   "nl": "Nederlands",
+   "pl": "Pools",
+   "pt": "Portugees",
+   "ru": "Russisch",
+   "sw": "Swahili",
+   "th": "Thai",
+   "tr": "Turks",
+   "vi": "Vietnamees",
+   "zh-hans": "Chinees (vereenvoudigd)",
+   "zh-hant": "Chinees (traditioneel)",
+   "zu": "Zoeloe"
+  },
+  "cards": {
+   "ar": [
+    "Arabische typografie die tekst van rechts naar links en gemengde schriften verwerkt en het origineel intact laat.",
+    "Bekijk de Arabische editie"
+   ],
+   "bn": [
+    "Bengaalse typografie en vormgeving met veilige klinkertekens, medeklinkerverbindingen, trouw aan de bron en aparte richtlijnen voor bn-BD en bn-IN.",
+    "Bekijk de Bengaalse editie"
+   ],
+   "de": [
+    "Duitse typografie met lange samenstellingen, aanhalingstekens en de eigen conventies van DE/AT/CH, met behoud van het origineel.",
+    "Bekijk de Duitse editie"
+   ],
+   "el": [
+    "Griekse typografie die betekenisdragende tonos en dialytika behoudt, Griekse regels toepast op hoofdletters, het Griekse vraagteken en de ano teleia respecteert en Grieks met Latijns schrift in balans brengt, met behoud van de oorspronkelijke tekst.",
+    "Bekijk de Griekse editie"
+   ],
+   "es": [
+    "Spaanse typografie die regionaal taalgebruik respecteert, de bron behoudt en geverifieerd bewijs scheidt van redactioneel oordeel.",
+    "Bekijk de Spaanse editie"
+   ],
+   "fa": [
+    "Perzische typografie die de leesrichting van rechts naar links helder houdt, ZWNJ behoudt en Latijnse URL’s en versieaanduidingen isoleert.",
+    "Bekijk de Perzische editie"
+   ],
+   "fr": [
+    "Franse typografie die onderscheid maakt tussen vaste spaties, aanhalingstekens en regionale of institutionele huisstijlen.",
+    "Bekijk de Franse editie"
+   ],
+   "he": [
+    "Hebreeuwse typografie die tekst van rechts naar links met ingebedde Engelse woorden en getallen in de juiste volgorde houdt, slotletters, niqqoed en Hebreeuwse leestekens beschermt en genderspecifieke formuleringen laat zoals ze geschreven zijn.",
+    "Bekijk de Hebreeuwse editie"
+   ],
+   "hi": [
+    "Hindi-typografie en -vormgeving met trouw aan de bron, medeklinkerverbindingen en matra’s.",
+    "Bekijk de Hindi-editie"
+   ],
+   "id": [
+    "Indonesische typografie die voorzetsels, affixen, reduplicatie, leestekens en rupiahbedragen respecteert en de bron intact laat.",
+    "Bekijk de Indonesische editie"
+   ],
+   "it": [
+    "Italiaanse typografie die accenten, citaten en regionale keuzes respecteert en het origineel behoudt.",
+    "Bekijk de Italiaanse editie"
+   ],
+   "ja": [
+    "Van Japanse regelafbreekregels (kinsoku) en natuurlijke regeleinden tot informatiestructuur, witruimte en leesvolgorde.",
+    "Bekijk de Japanse editie"
+   ],
+   "km": [
+    "Khmer-typografie die medeklinkerverbindingen, de brontekst en doordachte regeleinden beschermt.",
+    "Bekijk de Khmer-editie"
+   ],
+   "ko": [
+    "Regeleinden tussen eojeol (Koreaanse spatie-eenheden), tekstritme en een informatiestructuur die helder overkomt.",
+    "Bekijk de Koreaanse editie"
+   ],
+   "ms": [
+    "Maleise typografie die Maleis onderscheidt van Indonesisch, affixen, samenstellingen en reduplicatie in Rumi respecteert, Maleisisch, Singaporees en Bruneis gebruik uit elkaar houdt en Jawi zorgvuldig behandelt, met behoud van de oorspronkelijke tekst.",
+    "Bekijk de Maleise editie"
+   ],
+   "nl": [
+    "Nederlandse typografie die IJ met twee hoofdletters schrijft, samenstellingen heel houdt, het trema van het koppelteken onderscheidt en spellingwijzigingen bij afbreking controleert, met nl-NL en nl-BE apart en met behoud van de oorspronkelijke tekst.",
+    "Bekijk de Nederlandse editie"
+   ],
+   "pl": [
+    "Poolse typografie met correcte diakritische tekens, betekenisvolle regelafbreking en vormgeving die de bron behoudt.",
+    "Bekijk de Poolse editie"
+   ],
+   "pt": [
+    "Portugese typografie en betekenisgericht ontwerp, met respect voor Braziliaanse en Europese conventies en de bedoeling van de auteur.",
+    "Bekijk de Portugese editie"
+   ],
+   "ru": [
+    "Russische typografie die ё en й, aanhalingstekens, gedachtestreepjes en regeleinden in hun context behandelt en de bron behoudt.",
+    "Bekijk de Russische editie"
+   ],
+   "sw": [
+    "Swahili-typografie die ng’, de oorspronkelijke formulering en regionale opmaakkeuzes beschermt.",
+    "Bekijk de Swahili-editie"
+   ],
+   "th": [
+    "Respect voor Thaise woordgrenzen en combinerende tekens, voor Thais ontwerp dat natuurlijk leest.",
+    "Bekijk de Thaise editie"
+   ],
+   "tr": [
+    "Turkse typografie die İ/i en I/ı bij hoofdletterwissels uit elkaar houdt, apostrofs bij achtervoegsels op grammaticale gronden beoordeelt, woorden alleen op lettergreepgrenzen afbreekt en de oorspronkelijke tekst behoudt.",
+    "Bekijk de Turkse editie"
+   ],
+   "vi": [
+    "Vietnamese typografie die toontekens, betekenisvolle regeleinden en de oorspronkelijke inhoud respecteert.",
+    "Bekijk de Vietnamese editie"
+   ],
+   "zh-hans": [
+    "Leestekens, regeleinden en gemengde Chinees-Latijnse tekst voor het Chinese vasteland, zonder je brontekst te herschrijven.",
+    "Bekijk de editie in vereenvoudigd Chinees"
+   ],
+   "zh-hant": [
+    "Houdt rekening met de eigen leesteken- en zetconventies van Taiwan en Hongkong.",
+    "Bekijk de editie in traditioneel Chinees"
+   ],
+   "zu": [
+    "isiZulu-typografie die aaneengeschreven woorden en hoofdletters binnen woorden beschermt en de bron intact laat.",
+    "Bekijk de isiZulu-editie"
+   ]
+  },
+  "card": {
+   "ar": [
+    "تنضيد هولندي يكتب IJ بحرفين كبيرين معًا، ويحافظ على الكلمات المركّبة، ويميّز علامة التريما من الواصلة، ويتحقق من تغيّر الإملاء عند تقسيم الكلمات بين الأسطر، مع التمييز بين nl-NL وnl-BE والحفاظ على النص الأصلي.",
+    "عرض النسخة الهولندية"
+   ],
+   "bn": [
+    "IJ-এর দুটি অক্ষরই বড় হাতের লেখা, সমাসবদ্ধ শব্দ অটুট রাখা, ট্রেমা ও হাইফেনের পার্থক্য করা এবং লাইন ভাঙার সময় বানানের পরিবর্তন যাচাই করা, nl-NL ও nl-BE আলাদা রেখে মূল লেখা রক্ষা করা ডাচ টাইপোগ্রাফি।",
+    "ডাচ সংস্করণ দেখুন"
+   ],
+   "de": [
+    "Niederländische Typografie, die IJ als Paar großschreibt, Komposita zusammenhält, Trema und Bindestrich unterscheidet und Änderungen der Schreibung bei der Silbentrennung prüft – mit getrenntem nl-NL und nl-BE und unter Wahrung des Originals.",
+    "Niederländische Version ansehen"
+   ],
+   "en": [
+    "Dutch typography that capitalizes IJ as a pair, keeps compounds whole, tells the trema from the hyphen and checks spelling changes at line breaks, keeping nl-NL and nl-BE distinct and the original text intact.",
+    "View the Dutch edition"
+   ],
+   "es": [
+    "Tipografía neerlandesa que escribe IJ con ambas mayúsculas, mantiene intactas las palabras compuestas, distingue la diéresis del guion y comprueba los cambios ortográficos al dividir palabras, separando nl-NL y nl-BE y conservando el texto original.",
+    "Ver la edición en neerlandés"
+   ],
+   "fr": [
+    "Typographie néerlandaise qui met les deux lettres de IJ en capitales, garde les mots composés intacts, distingue le tréma du trait d’union et vérifie les changements d’orthographe à la coupure, en distinguant nl-NL et nl-BE et en préservant le texte original.",
+    "Voir l’édition néerlandaise"
+   ],
+   "hi": [
+    "IJ के दोनों अक्षरों को बड़ा लिखने, समस्त पदों को अखंड रखने, ट्रेमा और हाइफ़न में अंतर करने और पंक्ति-विभाजन पर वर्तनी में होने वाले बदलाव जाँचने वाली, nl-NL और nl-BE को अलग रखकर मूल पाठ को सुरक्षित रखने वाली डच टाइपोग्राफ़ी।",
+    "डच संस्करण देखें"
+   ],
+   "id": [
+    "Tipografi Belanda yang menulis IJ dengan kedua huruf kapital, menjaga kata majemuk tetap utuh, membedakan trema dari tanda hubung, dan memeriksa perubahan ejaan saat pemenggalan kata, dengan membedakan nl-NL dan nl-BE serta mempertahankan teks asli.",
+    "Lihat edisi bahasa Belanda"
+   ],
+   "it": [
+    "Tipografia nederlandese che scrive IJ con entrambe le maiuscole, mantiene integre le parole composte, distingue la dieresi dal trattino e verifica i cambi di grafia nella sillabazione, separando nl-NL e nl-BE e preservando il testo originale.",
+    "Vai all’edizione nederlandese"
+   ],
+   "ja": [
+    "IJの大文字化、複合語、トレマとハイフンの使い分け、改行で綴りが変わる分綴に配慮し、nl-NLとnl-BEを区別して原稿を守るオランダ語の文字組みとデザイン。",
+    "オランダ語版を見る"
+   ],
+   "ko": [
+    "IJ를 두 글자 모두 대문자로 쓰고 합성어를 지키며 트레마와 하이픈을 구별하고 줄바꿈 때의 철자 변화를 확인하는, nl-NL과 nl-BE를 구분해 원문을 지키는 네덜란드어 글짜임.",
+    "네덜란드어 버전 보기"
+   ],
+   "pl": [
+    "Typografia niderlandzka zapisująca IJ dwiema wielkimi literami, zachowująca wyrazy złożone, odróżniająca tremę od łącznika i sprawdzająca zmiany pisowni przy dzieleniu wyrazów, z rozróżnieniem nl-NL i nl-BE oraz zachowaniem oryginału.",
+    "Zobacz wersję niderlandzką"
+   ],
+   "pt": [
+    "Tipografia neerlandesa que escreve IJ com as duas maiúsculas, mantém intactas as palavras compostas, distingue o trema do hífen e verifica as mudanças de grafia na translineação, separando nl-NL e nl-BE e preservando o texto original.",
+    "Ver a edição em neerlandês"
+   ],
+   "sw": [
+    "Uchapaji wa Kiholanzi unaoandika IJ kwa herufi kubwa zote mbili, kudumisha maneno ambatani, kutofautisha trema na kistariungio, na kukagua mabadiliko ya tahajia wakati wa kukata maneno, huku ukitenganisha nl-NL na nl-BE na kuhifadhi maandishi asilia.",
+    "Tazama toleo la Kiholanzi"
+   ],
+   "zu": [
+    "Ukuhlelwa kombhalo kwesi-Dutch okubhala i-IJ ngosonhlamvukazi bobabili, kugcine amagama ahlanganisiwe ephelele, kuhlukanise i-trema nehayifeni, futhi kuhlole ushintsho lwesipelingi lapho amagama ehlukaniswa emgqeni, kuhlukanise i-nl-NL ne-nl-BE futhi kugcine umbhalo wokuqala.",
+    "Buka isi-Dutch"
+   ],
+   "ru": [
+    "Нидерландская типографика: IJ с двумя заглавными, целостность сложных слов, различие тремы и дефиса, проверка изменений написания при переносе, раздельные nl-NL и nl-BE и сохранность оригинала.",
+    "Открыть нидерландскую версию"
+   ],
+   "th": [
+    "การจัดวางตัวอักษรภาษาดัตช์ที่เขียน IJ เป็นตัวพิมพ์ใหญ่ทั้งคู่ รักษาคำประสมให้สมบูรณ์ แยกเทรมาออกจากยัติภังค์ และตรวจการสะกดที่เปลี่ยนไปเมื่อตัดคำขึ้นบรรทัดใหม่ โดยแยก nl-NL กับ nl-BE และรักษาต้นฉบับ",
+    "ดูเวอร์ชันภาษาดัตช์"
+   ],
+   "vi": [
+    "Typography tiếng Hà Lan viết hoa cả hai chữ IJ, giữ nguyên từ ghép, phân biệt dấu trema với dấu gạch nối và kiểm tra thay đổi chính tả khi ngắt dòng, đồng thời phân biệt nl-NL với nl-BE và giữ nguyên văn bản gốc.",
+    "Xem phiên bản tiếng Hà Lan"
+   ],
+   "zh-hans": [
+    "将 IJ 两字一同大写、保持复合词完整、区分分音符与连字符，并检查断行时的拼写变化；区分 nl-NL 与 nl-BE 并保护原稿的荷兰语排版与设计。",
+    "前往荷兰语版"
+   ],
+   "zh-hant": [
+    "將 IJ 兩字一同大寫、保持複合詞完整、區分分音符與連字號，並檢查斷行時的拼寫變化；區分 nl-NL 與 nl-BE 並保護原稿的荷蘭文排版與設計。",
+    "前往荷蘭文版"
+   ],
+   "km": [
+    "ការរៀបចំអក្សរហូឡង់ ដែលសរសេរ IJ ជាអក្សរធំទាំងពីរ រក្សាពាក្យផ្សំឲ្យនៅដដែល បែងចែកសញ្ញាត្រេម៉ាពីសញ្ញាភ្ជាប់ និងពិនិត្យការប្ដូរអក្ខរាវិរុទ្ធពេលកាត់ពាក្យចុះបន្ទាត់ ដោយបែងចែក nl-NL និង nl-BE ហើយរក្សាអត្ថបទដើម។",
+    "មើលកំណែហូឡង់"
+   ],
+   "fa": [
+    "حروف‌چینی هلندی که IJ را با هر دو حرف بزرگ می‌نویسد، واژه‌های مرکب را یکپارچه نگه می‌دارد، ترما را از خط پیوند جدا می‌داند و تغییر املا هنگام شکستن واژه در پایان سطر را بررسی می‌کند؛ nl-NL و nl-BE را از هم جدا می‌کند و متن اصلی را حفظ می‌کند.",
+    "دیدن نسخهٔ هلندی"
+   ]
+  }
+ },
+ "ms": {
+  "gateway": [
+   "top-ms.html",
+   "ms",
+   "MS",
+   "Bahasa Melayu"
+  ],
+  "product": {
+   "name": "Bahasa Melayu",
+   "lang": "ms",
+   "brand": "KUMIHAN｜Jalin",
+   "glyph": "-lah",
+   "label": "MS · MALAY",
+   "version": "v0.1.0",
+   "pages": {
+    "ms": "kumihan-ms.html",
+    "en": "kumihan-ms.en.html",
+    "ja": "kumihan-ms.ja.html"
+   }
+  },
+  "ui": {
+   "heading": "Edisi bahasa KUMIHAN",
+   "more": "Tunjukkan {n} lagi",
+   "menu": "Bahasa"
+  },
+  "pick": "Pilih bahasa",
+  "privacy": "Dasar Privasi",
+  "names": {
+   "ar": "الملايوية",
+   "bn": "মালয়",
+   "de": "Malaiisch",
+   "en": "Malay",
+   "es": "Malayo",
+   "fr": "Malais",
+   "hi": "मलय",
+   "id": "Melayu",
+   "it": "Malese",
+   "ja": "マレー語",
+   "ko": "말레이어",
+   "pl": "Malajski",
+   "pt": "Malaio",
+   "sw": "Kimalei",
+   "zu": "isi-Malay",
+   "ru": "Малайский",
+   "th": "มาเลย์",
+   "vi": "Tiếng Mã Lai",
+   "zh-hans": "马来语",
+   "zh-hant": "馬來文",
+   "km": "ម៉ាឡេ",
+   "fa": "مالایی",
+   "el": "Μαλαϊκά",
+   "nl": "Maleis",
+   "ms": "Melayu",
+   "tr": "Malayca",
+   "he": "מלאית"
+  },
+  "edition_names": {
+   "ar": "Arab",
+   "bn": "Benggali",
+   "de": "Jerman",
+   "el": "Yunani",
+   "es": "Sepanyol",
+   "fa": "Parsi",
+   "fr": "Perancis",
+   "he": "Ibrani",
+   "hi": "Hindi",
+   "id": "Indonesia",
+   "it": "Itali",
+   "ja": "Jepun",
+   "km": "Khmer",
+   "ko": "Korea",
+   "ms": "Melayu",
+   "nl": "Belanda",
+   "pl": "Poland",
+   "pt": "Portugis",
+   "ru": "Rusia",
+   "sw": "Swahili",
+   "th": "Thai",
+   "tr": "Turki",
+   "vi": "Vietnam",
+   "zh-hans": "Cina (Ringkas)",
+   "zh-hant": "Cina (Tradisional)",
+   "zu": "Zulu"
+  },
+  "cards": {
+   "ar": [
+    "Tipografi bahasa Arab yang mengendalikan teks dari kanan ke kiri dan tulisan bercampur sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Arab"
+   ],
+   "bn": [
+    "Tipografi dan reka bentuk bahasa Bangla dengan tanda vokal yang selamat, konjung, kesetiaan kepada teks asal dan panduan berasingan untuk bn-BD/bn-IN.",
+    "Lihat edisi bahasa Bangla"
+   ],
+   "de": [
+    "Tipografi bahasa Jerman dengan kata majmuk yang panjang, tanda petikan dan konvensyen DE/AT/CH yang berbeza, sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Jerman"
+   ],
+   "el": [
+    "Tipografi bahasa Greek yang mengekalkan tonos dan dialytika yang membawa makna, menggunakan peraturan bahasa Greek untuk huruf besar, menghormati tanda soal Greek dan ano teleia, serta mengimbangi tulisan Greek dengan Latin, sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Greek"
+   ],
+   "es": [
+    "Tipografi bahasa Sepanyol yang menghormati penggunaan serantau, mengekalkan teks asal dan memisahkan bukti yang disahkan daripada pertimbangan editorial.",
+    "Lihat edisi bahasa Sepanyol"
+   ],
+   "fa": [
+    "Tipografi bahasa Parsi yang memastikan arah kanan ke kiri kekal jelas, mengekalkan ZWNJ dan mengasingkan URL serta label versi Latin.",
+    "Lihat edisi bahasa Parsi"
+   ],
+   "fr": [
+    "Tipografi bahasa Perancis yang membezakan ruang tanpa pemisah, tanda petikan dan gaya rumah serantau atau institusi.",
+    "Lihat edisi bahasa Perancis"
+   ],
+   "he": [
+    "Tipografi bahasa Ibrani yang mengekalkan susunan teks kanan ke kiri yang mengandungi bahasa Inggeris dan angka, melindungi huruf akhir, niqqud dan tanda baca Ibrani, serta membiarkan bentuk kata mengikut jantina seperti yang ditulis.",
+    "Lihat edisi bahasa Ibrani"
+   ],
+   "hi": [
+    "Tipografi dan reka bentuk bahasa Hindi yang setia kepada teks asal, konjung dan matra.",
+    "Lihat edisi bahasa Hindi"
+   ],
+   "id": [
+    "Tipografi bahasa Indonesia yang menghormati kata sendi, imbuhan, penggandaan, tanda baca dan nilai rupiah sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Indonesia"
+   ],
+   "it": [
+    "Tipografi bahasa Itali yang menghormati tanda aksen, petikan dan pilihan serantau sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Itali"
+   ],
+   "ja": [
+    "Daripada peraturan pemisahan baris bahasa Jepun (kinsoku) dan pemisah baris yang semula jadi hingga struktur maklumat, ruang kosong dan aliran bacaan.",
+    "Lihat edisi bahasa Jepun"
+   ],
+   "km": [
+    "Tipografi bahasa Khmer yang melindungi konjung, teks asal dan pemisah baris yang bertujuan.",
+    "Lihat edisi bahasa Khmer"
+   ],
+   "ko": [
+    "Pemisah baris antara eojeol (unit jarak dalam bahasa Korea), rentak teks dan struktur maklumat yang menyampaikan dengan jelas.",
+    "Lihat edisi bahasa Korea"
+   ],
+   "ms": [
+    "Tipografi bahasa Melayu yang membezakan bahasa Melayu daripada bahasa Indonesia, menghormati imbuhan, kata majmuk dan penggandaan dalam tulisan Rumi, memisahkan penggunaan di Malaysia, Singapura dan Brunei serta mengendalikan Jawi dengan berhati-hati, sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Melayu"
+   ],
+   "nl": [
+    "Tipografi bahasa Belanda yang menukar IJ kepada huruf besar sebagai pasangan, mengekalkan kata majmuk secara utuh, membezakan trema daripada tanda sempang dan menyemak perubahan ejaan pada pemisah baris, sambil membezakan nl-NL dengan nl-BE dan mengekalkan teks asal.",
+    "Lihat edisi bahasa Belanda"
+   ],
+   "pl": [
+    "Tipografi bahasa Poland dengan diakritik yang tepat, pemisahan baris yang bermakna dan reka bentuk yang mengekalkan teks asal.",
+    "Lihat edisi bahasa Poland"
+   ],
+   "pt": [
+    "Tipografi bahasa Portugis dan reka bentuk berpandukan makna yang menghormati konvensyen Brazil dan Eropah serta niat penulis.",
+    "Lihat edisi bahasa Portugis"
+   ],
+   "ru": [
+    "Tipografi bahasa Rusia yang mengendalikan ё dan й, tanda petikan, sengkang dan pemisah baris mengikut konteks sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Rusia"
+   ],
+   "sw": [
+    "Tipografi bahasa Swahili yang melindungi ng’, perkataan asal dan pilihan format serantau.",
+    "Lihat edisi bahasa Swahili"
+   ],
+   "th": [
+    "Menghormati sempadan perkataan dan aksara gabungan bahasa Thai, demi reka bentuk Thai yang mudah dibaca secara semula jadi.",
+    "Lihat edisi bahasa Thai"
+   ],
+   "tr": [
+    "Tipografi bahasa Turki yang membezakan İ/i dan I/ı semasa menukar huruf besar-kecil, menilai apostrofi akhiran berdasarkan tatabahasa, memisahkan perkataan hanya pada sempadan suku kata dan mengekalkan teks asal.",
+    "Lihat edisi bahasa Turki"
+   ],
+   "vi": [
+    "Tipografi bahasa Vietnam yang menghormati tanda nada, pemisah baris yang bermakna dan kandungan asal.",
+    "Lihat edisi bahasa Vietnam"
+   ],
+   "zh-hans": [
+    "Tanda baca, pemisah baris dan teks campuran Cina–Latin untuk tanah besar China, tanpa menulis semula teks asal anda.",
+    "Lihat edisi Cina Ringkas"
+   ],
+   "zh-hant": [
+    "Menangani konvensyen tanda baca dan susunan huruf yang tersendiri bagi Taiwan dan Hong Kong.",
+    "Lihat edisi Cina Tradisional"
+   ],
+   "zu": [
+    "Tipografi bahasa isiZulu yang melindungi perkataan konjungtif dan huruf besar di tengah perkataan, sambil mengekalkan teks asal.",
+    "Lihat edisi bahasa Zulu"
+   ]
+  },
+  "card": {
+   "ar": [
+    "تنضيد ملايوي يميّز الملايوية عن الإندونيسية، ويراعي السوابق واللواحق والكلمات المركّبة والتكرار في الكتابة الرومية، ويفرّق بين استخدامات ماليزيا وسنغافورة وبروناي، ويتعامل مع الخط الجاوي بعناية، مع الحفاظ على النص الأصلي.",
+    "عرض النسخة الملايوية"
+   ],
+   "bn": [
+    "মালয়কে ইন্দোনেশীয় থেকে আলাদা রাখা, রুমি লেখায় উপসর্গ-প্রত্যয়, যৌগিক শব্দ ও দ্বিরুক্তি মেনে চলা, মালয়েশিয়া, সিঙ্গাপুর ও ব্রুনাইয়ের ব্যবহার আলাদা করা এবং জাওয়ি লিপি সাবধানে সামলানো মালয় টাইপোগ্রাফি, মূল লেখা অক্ষুণ্ণ রেখে।",
+    "মালয় সংস্করণ দেখুন"
+   ],
+   "de": [
+    "Malaiische Typografie, die Malaiisch vom Indonesischen unterscheidet, Affixe, Komposita und Reduplikation in der Rumi-Schrift respektiert, den Sprachgebrauch in Malaysia, Singapur und Brunei auseinanderhält und Jawi mit Sorgfalt behandelt, während das Original erhalten bleibt.",
+    "Malaiische Version ansehen"
+   ],
+   "en": [
+    "Malay typography that keeps Malay distinct from Indonesian, respects Rumi affixes, compounds and reduplication, separates Malaysian, Singaporean and Bruneian usage and handles Jawi with care, while preserving the original text.",
+    "View the Malay edition"
+   ],
+   "es": [
+    "Tipografía malaya que distingue el malayo del indonesio, respeta los afijos, los compuestos y la reduplicación en la escritura rumi, separa los usos de Malasia, Singapur y Brunéi y trata el jawi con cuidado, preservando el texto original.",
+    "Ver la edición en malayo"
+   ],
+   "fr": [
+    "Typographie malaise qui distingue le malais de l’indonésien, respecte les affixes, les mots composés et la réduplication en écriture rumi, sépare les usages de Malaisie, de Singapour et de Brunei et traite le jawi avec soin, tout en préservant le texte original.",
+    "Voir l’édition malaise"
+   ],
+   "hi": [
+    "मलय को इंडोनेशियाई से अलग रखने वाली, रूमी लिपि में उपसर्ग-प्रत्यय, समासों और द्विरुक्ति का सम्मान करने वाली, मलेशिया, सिंगापुर और ब्रुनेई के प्रयोग को अलग रखने वाली और जावी लिपि को सावधानी से संभालने वाली मलय टाइपोग्राफ़ी, मूल पाठ को सुरक्षित रखते हुए।",
+    "मलय संस्करण देखें"
+   ],
+   "id": [
+    "Tipografi Melayu yang membedakan bahasa Melayu dari bahasa Indonesia, menghormati imbuhan, kata majemuk, dan kata ulang dalam tulisan Rumi, memisahkan penggunaan di Malaysia, Singapura, dan Brunei, serta menangani Jawi dengan cermat sambil menjaga naskah asli.",
+    "Lihat edisi bahasa Melayu"
+   ],
+   "it": [
+    "Tipografia malese che distingue il malese dall’indonesiano, rispetta affissi, composti e reduplicazione nella scrittura rumi, tiene distinti gli usi di Malaysia, Singapore e Brunei e tratta lo jawi con cura, preservando il testo originale.",
+    "Vai all’edizione malese"
+   ],
+   "ja": [
+    "インドネシア語と区別し、ルミ表記の接辞・複合語・重複語を尊重し、マレーシア・シンガポール・ブルネイの用法を分け、ジャウィ文字も慎重に扱って原稿を守るマレー語の文字組みとデザイン。",
+    "マレー語版を見る"
+   ],
+   "ko": [
+    "말레이어를 인도네시아어와 구별하고 루미 표기의 접사·복합어·중첩어를 존중하며, 말레이시아·싱가포르·브루나이의 용법을 나누고 자위 문자도 신중히 다루어 원고를 지키는 말레이어 글짜임.",
+    "말레이어 버전 보기"
+   ],
+   "pl": [
+    "Typografia malajska odróżniająca malajski od indonezyjskiego, szanująca afiksy, złożenia i reduplikację w piśmie rumi, rozróżniająca uzus Malezji, Singapuru i Brunei oraz ostrożnie traktująca pismo jawi, z zachowaniem oryginału.",
+    "Zobacz wersję malajską"
+   ],
+   "pt": [
+    "Tipografia malaia que distingue o malaio do indonésio, respeita afixos, palavras compostas e reduplicação na escrita rumi, separa os usos da Malásia, de Singapura e do Brunei e trata o jawi com cuidado, preservando o texto original.",
+    "Ver a edição em malaio"
+   ],
+   "sw": [
+    "Uchapaji wa Kimalei unaotofautisha Kimalei na Kiindonesia, unaoheshimu viambishi, maneno ambatani na urudufishaji katika maandishi ya Rumi, unaotenganisha matumizi ya Malaysia, Singapore na Brunei, na kushughulikia Jawi kwa uangalifu, huku ukihifadhi maandishi asilia.",
+    "Tazama toleo la Kimalei"
+   ],
+   "zu": [
+    "Ukuhlelwa kombhalo kwesi-Malay okuhlukanisa isi-Malay nesi-Indonesian, okuhlonipha iziqalo nezijobelelo, amagama ahlanganisiwe nokuphindaphindwa kwamagama embhalweni we-Rumi, okuhlukanisa ukusetshenziswa eMalaysia, eSingapore naseBrunei, futhi kuphathe i-Jawi ngokucophelela, kugcine umbhalo wokuqala.",
+    "Buka isi-Malay"
+   ],
+   "ru": [
+    "Малайская типографика: отличие малайского от индонезийского, аффиксы, сложные слова и редупликация в письме руми, различение норм Малайзии, Сингапура и Брунея, бережная работа с джави и сохранность оригинала.",
+    "Открыть малайскую версию"
+   ],
+   "th": [
+    "การจัดวางตัวอักษรภาษามลายูที่แยกภาษามลายูออกจากภาษาอินโดนีเซีย เคารพหน่วยคำเติม คำประสม และคำซ้ำในอักษรรูมี แยกการใช้ในมาเลเซีย สิงคโปร์ และบรูไน ดูแลอักษรยาวีอย่างระมัดระวัง และรักษาต้นฉบับไว้",
+    "ดูเวอร์ชันภาษามลายู"
+   ],
+   "vi": [
+    "Typography tiếng Mã Lai phân biệt tiếng Mã Lai với tiếng Indonesia, tôn trọng phụ tố, từ ghép và từ láy trong chữ Rumi, phân biệt cách dùng ở Malaysia, Singapore và Brunei, xử lý chữ Jawi cẩn trọng, đồng thời giữ nguyên bản gốc.",
+    "Xem phiên bản tiếng Mã Lai"
+   ],
+   "zh-hans": [
+    "区分马来语与印尼语，尊重鲁米文字中的词缀、复合词与重叠词，分辨马来西亚、新加坡与文莱的用法，审慎处理爪夷文，并保留原稿的马来语排版与设计。",
+    "前往马来语版"
+   ],
+   "zh-hant": [
+    "區分馬來文與印尼文，尊重魯米文字中的詞綴、複合詞與重疊詞，分辨馬來西亞、新加坡與汶萊的用法，審慎處理爪夷文，並保留原稿的馬來文排版與設計。",
+    "前往馬來文版"
+   ],
+   "km": [
+    "ការរៀបចំអក្សរម៉ាឡេ ដែលបែងចែកភាសាម៉ាឡេពីភាសាឥណ្ឌូណេស៊ី គោរពបុព្វបទ និងបច្ច័យ ពាក្យផ្សំ និងពាក្យស្ទួនក្នុងអក្សររូមី បែងចែកការប្រើប្រាស់នៅម៉ាឡេស៊ី សិង្ហបុរី និងព្រុយណេ ព្រមទាំងប្រើអក្សរចាវីដោយប្រុងប្រយ័ត្ន ហើយរក្សាអត្ថបទដើម។",
+    "មើលកំណែម៉ាឡេ"
+   ],
+   "fa": [
+    "حروف‌چینی مالایی که مالایی را از اندونزیایی جدا می‌داند، وندها، واژه‌های مرکب و تکرار واژه را در خط رومی رعایت می‌کند، کاربرد مالزی، سنگاپور و برونئی را از هم تفکیک می‌کند و با خط جاوی با احتیاط رفتار می‌کند، و متن اصلی را حفظ می‌کند.",
+    "دیدن نسخهٔ مالایی"
+   ]
+  }
+ },
+ "tr": {
+  "gateway": [
+   "top-tr.html",
+   "tr",
+   "TR",
+   "Türkçe"
+  ],
+  "product": {
+   "name": "Türkçe",
+   "lang": "tr",
+   "brand": "KUMIHAN｜Ahenk",
+   "glyph": "İ",
+   "label": "TR · TURKISH",
+   "version": "v0.1.0",
+   "pages": {
+    "tr": "kumihan-tr.html",
+    "en": "kumihan-tr.en.html",
+    "ja": "kumihan-tr.ja.html"
+   }
+  },
+  "ui": {
+   "heading": "KUMIHAN dil sürümleri",
+   "more": "{n} sürüm daha göster",
+   "menu": "Dil"
+  },
+  "pick": "Dil seçin",
+  "privacy": "Gizlilik Politikası",
+  "names": {
+   "ar": "التركية",
+   "bn": "তুর্কী",
+   "de": "Türkisch",
+   "en": "Turkish",
+   "es": "Turco",
+   "fr": "Turc",
+   "hi": "तुर्की",
+   "id": "Turki",
+   "it": "Turco",
+   "ja": "トルコ語",
+   "ko": "튀르키예어",
+   "pl": "Turecki",
+   "pt": "Turco",
+   "sw": "Kituruki",
+   "zu": "isi-Turkish",
+   "ru": "Турецкий",
+   "th": "ตุรกี",
+   "vi": "Tiếng Thổ Nhĩ Kỳ",
+   "zh-hans": "土耳其语",
+   "zh-hant": "土耳其文",
+   "km": "ទួរគី",
+   "fa": "ترکی",
+   "el": "Τουρκικά",
+   "nl": "Turks",
+   "ms": "Turki",
+   "tr": "Türkçe",
+   "he": "טורקית"
+  },
+  "edition_names": {
+   "ar": "Arapça",
+   "bn": "Bengalce",
+   "de": "Almanca",
+   "el": "Yunanca",
+   "es": "İspanyolca",
+   "fa": "Farsça",
+   "fr": "Fransızca",
+   "he": "İbranice",
+   "hi": "Hintçe",
+   "id": "Endonezce",
+   "it": "İtalyanca",
+   "ja": "Japonca",
+   "km": "Khmer dili",
+   "ko": "Korece",
+   "ms": "Malayca",
+   "nl": "Felemenkçe",
+   "pl": "Lehçe",
+   "pt": "Portekizce",
+   "ru": "Rusça",
+   "sw": "Svahili dili",
+   "th": "Tayca",
+   "tr": "Türkçe",
+   "vi": "Vietnamca",
+   "zh-hans": "Çince (Basitleştirilmiş)",
+   "zh-hant": "Çince (Geleneksel)",
+   "zu": "Zuluca"
+  },
+  "cards": {
+   "ar": [
+    "Sağdan sola yazıyı ve karma yazı sistemlerini ele alan, özgün metni bozmadan koruyan Arapça tipografi.",
+    "Arapça sürümünü görüntüle"
+   ],
+   "bn": [
+    "Güvenli ünlü işaretleri, bitişik ünsüzler, kaynağa sadakat ve bn-BD/bn-IN için ayrı rehberlikle Bengalce tipografi ve tasarım.",
+    "Bengalce sürümünü görüntüle"
+   ],
+   "de": [
+    "Uzun bileşik sözcükleri, tırnak işaretlerini ve DE/AT/CH’ye özgü gelenekleri ele alan, özgün metni koruyan Almanca tipografi.",
+    "Almanca sürümünü görüntüle"
+   ],
+   "el": [
+    "Anlam taşıyan tonos ve dialytika işaretlerini koruyan, büyük harflerde Yunanca kurallarını uygulayan, Yunanca soru işaretine ve ano teleia’ya saygı gösteren, Yunancayı Latin harfleriyle dengeleyen ve özgün metni bozmayan Yunanca tipografi.",
+    "Yunanca sürümünü görüntüle"
+   ],
+   "es": [
+    "Bölgesel kullanıma saygı gösteren, kaynağı koruyan ve doğrulanmış kanıtı editoryal yargıdan ayıran İspanyolca tipografi.",
+    "İspanyolca sürümünü görüntüle"
+   ],
+   "fa": [
+    "Sağdan sola yönü net tutan, ZWNJ’yi koruyan, Latin harfli URL’leri ve sürüm etiketlerini ayıran Farsça tipografi.",
+    "Farsça sürümünü görüntüle"
+   ],
+   "fr": [
+    "Bölünmez boşlukları, tırnak işaretlerini ve bölgesel ya da kurumsal yazım kılavuzlarını birbirinden ayıran Fransızca tipografi.",
+    "Fransızca sürümünü görüntüle"
+   ],
+   "he": [
+    "İngilizce sözcükler ve sayılar içeren sağdan sola metnin sırasını bozmayan; sözcük sonu harflerini, nikudu ve İbranice noktalama işaretlerini koruyan; cinsiyete göre değişen ifadeleri yazıldığı gibi bırakan İbranice tipografi.",
+    "İbranice sürümünü görüntüle"
+   ],
+   "hi": [
+    "Kaynağa sadakat, bitişik ünsüzler ve matralarla Hintçe tipografi ve tasarım.",
+    "Hintçe sürümünü görüntüle"
+   ],
+   "id": [
+    "Edatlara, eklere, ikilemelere, noktalamaya ve rupi değerlerine saygı gösteren, kaynağı bozmadan koruyan Endonezce tipografi.",
+    "Endonezce sürümünü görüntüle"
+   ],
+   "it": [
+    "Aksanlara, alıntılara ve bölgesel tercihlere saygı gösteren, özgün metni koruyan İtalyanca tipografi.",
+    "İtalyanca sürümünü görüntüle"
+   ],
+   "ja": [
+    "Japoncanın satır bölme kurallarından (kinsoku) ve doğal satır sonlarından bilgi yapısına, boşluklara ve okuma akışına kadar.",
+    "Japonca sürümünü görüntüle"
+   ],
+   "km": [
+    "Bitişik ünsüzleri, kaynak metni ve amaçlı satır sonlarını koruyan Khmerce tipografi.",
+    "Khmerce sürümünü görüntüle"
+   ],
+   "ko": [
+    "Eojeol (Korecedeki boşluk birimleri) arasında satır bölme, metnin ritmi ve açıkça iletişim kuran bilgi yapısı.",
+    "Korece sürümünü görüntüle"
+   ],
+   "ms": [
+    "Malaycayı Endonezceden ayrı tutan; Rumi yazımındaki eklere, bileşik sözcüklere ve ikilemelere saygı gösteren; Malezya, Singapur ve Brunei kullanımlarını ayıran, Jawi yazısını özenle ele alan ve özgün metni koruyan Malayca tipografi.",
+    "Malayca sürümünü görüntüle"
+   ],
+   "nl": [
+    "IJ’yi büyük harfe birlikte çeviren, bileşik sözcükleri bütün tutan, tremayı kısa çizgiden ayıran, satır sonunda yazımı değişen bölmeleri denetleyen, nl-NL ile nl-BE’yi ayrı tutan ve özgün metni koruyan Felemenkçe tipografi.",
+    "Felemenkçe sürümünü görüntüle"
+   ],
+   "pl": [
+    "Doğru aksanlı harfler, anlamlı satır kaydırma ve kaynağı koruyan tasarımla Lehçe tipografi.",
+    "Lehçe sürümünü görüntüle"
+   ],
+   "pt": [
+    "Brezilya ve Avrupa geleneklerine ve yazarın niyetine saygı gösteren Portekizce tipografi ve anlam odaklı tasarım.",
+    "Portekizce sürümünü görüntüle"
+   ],
+   "ru": [
+    "ё ve й harflerini, tırnak işaretlerini, tireleri ve satır sonlarını bağlama göre ele alan, kaynağı koruyan Rusça tipografi.",
+    "Rusça sürümünü görüntüle"
+   ],
+   "sw": [
+    "ng’ yazımını, özgün ifadeleri ve bölgesel biçimlendirme tercihlerini koruyan Svahilice tipografi.",
+    "Svahilice sürümünü görüntüle"
+   ],
+   "th": [
+    "Doğal okunan Tayca tasarım için Tayca sözcük sınırlarına ve birleşen karakterlere saygı.",
+    "Tayca sürümünü görüntüle"
+   ],
+   "tr": [
+    "Büyük-küçük harf dönüşümünde İ/i ile I/ı’yı ayrı tutan, eklerden önceki kesme işaretini dil bilgisine göre değerlendiren, sözcükleri yalnızca hece sınırında bölen ve özgün metni koruyan Türkçe tipografi.",
+    "Türkçe sürümünü görüntüle"
+   ],
+   "vi": [
+    "Ton işaretlerine, anlamlı satır sonlarına ve özgün içeriğe saygı gösteren Vietnamca tipografi.",
+    "Vietnamca sürümünü görüntüle"
+   ],
+   "zh-hans": [
+    "Kaynağınızı yeniden yazmadan, Çin anakarası için noktalama, satır sonları ve karma Çince–Latin metin.",
+    "Basitleştirilmiş Çince sürümünü görüntüle"
+   ],
+   "zh-hant": [
+    "Tayvan ve Hong Kong’un kendine özgü noktalama ve dizgi geleneklerini ele alır.",
+    "Geleneksel Çince sürümünü görüntüle"
+   ],
+   "zu": [
+    "Bitişik yazılan sözcükleri ve sözcük içindeki büyük harfleri koruyan, kaynağı bozmadan bırakan Zuluca tipografi.",
+    "Zuluca sürümünü görüntüle"
+   ]
+  },
+  "card": {
+   "ar": [
+    "تنضيد تركي يميّز بين İ/i وI/ı عند تغيير حالة الأحرف، ويحكم على الفاصلة العليا قبل اللواحق وفق قواعد النحو، ولا يقسم الكلمات إلا عند حدود المقاطع، مع الحفاظ على النص الأصلي.",
+    "عرض النسخة التركية"
+   ],
+   "bn": [
+    "কেস বদলের সময় İ/i ও I/ı আলাদা রাখা, প্রত্যয়ের আগের অ্যাপোস্ট্রফি ব্যাকরণ অনুযায়ী বিচার করা এবং কেবল সিলেবলের সীমায় শব্দ ভাঙা তুর্কি টাইপোগ্রাফি, মূল লেখা অক্ষুণ্ণ রেখে।",
+    "তুর্কি সংস্করণ দেখুন"
+   ],
+   "de": [
+    "Türkische Typografie, die İ/i und I/ı bei der Groß- und Kleinschreibung auseinanderhält, Apostrophe vor Suffixen nach der Grammatik beurteilt, nur an Silbengrenzen trennt und den Originaltext bewahrt.",
+    "Türkische Version ansehen"
+   ],
+   "en": [
+    "Turkish typography that keeps İ/i and I/ı apart when changing case, judges suffix apostrophes by grammar, breaks words only at syllable boundaries and preserves the original text.",
+    "View the Turkish edition"
+   ],
+   "es": [
+    "Tipografía turca que distingue İ/i de I/ı al cambiar entre mayúsculas y minúsculas, decide el apóstrofo de los sufijos según la gramática, divide las palabras solo en el límite de sílaba y preserva el texto original.",
+    "Ver la edición en turco"
+   ],
+   "fr": [
+    "Typographie turque qui distingue İ/i et I/ı lors des changements de casse, juge l’apostrophe des suffixes selon la grammaire, ne coupe les mots qu’aux limites de syllabe et préserve le texte original.",
+    "Voir l’édition turque"
+   ],
+   "hi": [
+    "केस बदलते समय İ/i और I/ı को अलग रखने वाली, प्रत्ययों से पहले के एपॉस्ट्रॉफ़ी को व्याकरण के अनुसार परखने वाली और शब्दों को केवल अक्षरांश की सीमा पर तोड़ने वाली तुर्की टाइपोग्राफ़ी, मूल पाठ को सुरक्षित रखते हुए।",
+    "तुर्की संस्करण देखें"
+   ],
+   "id": [
+    "Tipografi Turki yang membedakan İ/i dan I/ı saat mengubah huruf besar-kecil, menilai apostrof sebelum sufiks menurut tata bahasa, memenggal kata hanya pada batas suku kata, dan menjaga teks asli.",
+    "Lihat edisi bahasa Turki"
+   ],
+   "it": [
+    "Tipografia turca che distingue İ/i e I/ı nel passaggio tra maiuscole e minuscole, valuta l’apostrofo dei suffissi secondo la grammatica, va a capo solo al confine di sillaba e preserva il testo originale.",
+    "Vai all’edizione turca"
+   ],
+   "ja": [
+    "大文字小文字の変換でİ/iとI/ıを取り違えず、接尾辞のアポストロフィを文法に沿って判断し、音節の境界でのみ分綴して原稿を守るトルコ語の文字組みとデザイン。",
+    "トルコ語版を見る"
+   ],
+   "ko": [
+    "대소문자를 바꿀 때 İ/i와 I/ı를 구분하고, 접미사 앞 아포스트로피를 문법에 따라 판단하며, 음절 경계에서만 단어를 나누고 원문을 지키는 튀르키예어 글짜임.",
+    "튀르키예어 버전 보기"
+   ],
+   "pl": [
+    "Typografia turecka, która przy zmianie wielkości liter odróżnia İ/i od I/ı, ocenia apostrof przed sufiksami według gramatyki, dzieli wyrazy tylko na granicy sylab i zachowuje oryginalny tekst.",
+    "Zobacz wersję turecką"
+   ],
+   "pt": [
+    "Tipografia turca que distingue İ/i de I/ı ao alternar entre maiúsculas e minúsculas, avalia o apóstrofo dos sufixos segundo a gramática, divide as palavras apenas no limite de sílaba e preserva o texto original.",
+    "Ver a edição em turco"
+   ],
+   "sw": [
+    "Uchapaji wa Kituruki unaotofautisha İ/i na I/ı wakati wa kubadilisha herufi kubwa na ndogo, kupima apostrofi kabla ya viambishi kwa kufuata sarufi, kugawa maneno kwenye mipaka ya silabi pekee na kuhifadhi maandishi asilia.",
+    "Tazama toleo la Kituruki"
+   ],
+   "zu": [
+    "Ukuhlelwa kombhalo kwesi-Turkish okuhlukanisa u-İ/i no-I/ı uma kushintshwa izinhlamvu ezinkulu nezincane, kuhlole i-apostrophe ngaphambi kwezijobelelo ngokohlelo lolimi, kwehlukanise amagama emingceleni yamalunga kuphela, futhi kugcine umbhalo wokuqala.",
+    "Buka isi-Turkish"
+   ],
+   "ru": [
+    "Турецкая типографика: различение İ/i и I/ı при смене регистра, апостроф перед аффиксами по правилам грамматики, перенос только по слогам и сохранность оригинала.",
+    "Открыть турецкую версию"
+   ],
+   "th": [
+    "การจัดวางตัวอักษรภาษาตุรกีที่แยก İ/i กับ I/ı เมื่อเปลี่ยนตัวพิมพ์ใหญ่และเล็ก พิจารณาอะพอสทรอฟีหน้าปัจจัยตามไวยากรณ์ ตัดคำเฉพาะที่ขอบพยางค์ และรักษาต้นฉบับไว้",
+    "ดูเวอร์ชันภาษาตุรกี"
+   ],
+   "vi": [
+    "Typography tiếng Thổ Nhĩ Kỳ phân biệt İ/i với I/ı khi đổi chữ hoa, chữ thường, xét dấu nháy trước hậu tố theo ngữ pháp, chỉ ngắt từ tại ranh giới âm tiết và giữ nguyên văn bản gốc.",
+    "Xem phiên bản tiếng Thổ Nhĩ Kỳ"
+   ],
+   "zh-hans": [
+    "大小写转换时区分 İ/i 与 I/ı，按语法判断后缀前的撇号，只在音节边界断词，并保留原稿的土耳其语排版与设计。",
+    "前往土耳其语版"
+   ],
+   "zh-hant": [
+    "大小寫轉換時區分 İ/i 與 I/ı，依文法判斷詞尾前的撇號，只在音節邊界斷字，並保留原稿的土耳其文排版與設計。",
+    "前往土耳其文版"
+   ],
+   "km": [
+    "ការរៀបចំអក្សរទួរគី ដែលបែងចែក İ/i និង I/ı ពេលប្ដូរអក្សរធំ និងអក្សរតូច វិនិច្ឆ័យសញ្ញាអាប៉ូស្ត្រូហ្វមុនបច្ច័យតាមវេយ្យាករណ៍ កាត់ពាក្យតែត្រង់ព្រំព្យាង្គ និងរក្សាអត្ថបទដើម។",
+    "មើលកំណែទួរគី"
+   ],
+   "fa": [
+    "حروف‌چینی ترکی که هنگام تبدیل حروف بزرگ و کوچک، İ/i و I/ı را از هم جدا نگه می‌دارد، آپاستروف پیش از پسوندها را بر پایهٔ دستور زبان می‌سنجد، واژه‌ها را فقط در مرز هجاها می‌شکند و متن اصلی را حفظ می‌کند.",
+    "دیدن نسخهٔ ترکی"
+   ]
+  }
+ },
+ "he": {
+  "gateway": [
+   "top-he.html",
+   "he",
+   "HE",
+   "עברית"
+  ],
+  "product": {
+   "name": "עברית",
+   "lang": "he",
+   "brand": "KUMIHAN｜מקצב",
+   "glyph": "א",
+   "label": "HE · HEBREW",
+   "version": "v0.1.0",
+   "pages": {
+    "he": "kumihan-he.html",
+    "en": "kumihan-he.en.html",
+    "ja": "kumihan-he.ja.html"
+   }
+  },
+  "ui": {
+   "heading": "מהדורות השפה של KUMIHAN",
+   "more": "הצגת {n} הבאות",
+   "menu": "שפה"
+  },
+  "pick": "בחירת שפה",
+  "privacy": "מדיניות פרטיות",
+  "names": {
+   "ar": "العبرية",
+   "bn": "হিব্রু",
+   "de": "Hebräisch",
+   "en": "Hebrew",
+   "es": "Hebreo",
+   "fr": "Hébreu",
+   "hi": "हिब्रू",
+   "id": "Ibrani",
+   "it": "Ebraico",
+   "ja": "ヘブライ語",
+   "ko": "히브리어",
+   "pl": "Hebrajski",
+   "pt": "Hebraico",
+   "sw": "Kiebrania",
+   "zu": "isi-Hebrew",
+   "ru": "Иврит",
+   "th": "ฮิบรู",
+   "vi": "Tiếng Do Thái",
+   "zh-hans": "希伯来语",
+   "zh-hant": "希伯來文",
+   "km": "ហេប្រឺ",
+   "fa": "عبری",
+   "el": "Εβραϊκά",
+   "nl": "Hebreeuws",
+   "ms": "Ibrani",
+   "tr": "İbranice",
+   "he": "עברית"
+  },
+  "edition_names": {
+   "ar": "ערבית",
+   "bn": "בנגלית",
+   "de": "גרמנית",
+   "el": "יוונית",
+   "es": "ספרדית",
+   "fa": "פרסית",
+   "fr": "צרפתית",
+   "he": "עברית",
+   "hi": "הינדי",
+   "id": "אינדונזית",
+   "it": "איטלקית",
+   "ja": "יפנית",
+   "km": "חמרית",
+   "ko": "קוריאנית",
+   "ms": "מלאית",
+   "nl": "הולנדית",
+   "pl": "פולנית",
+   "pt": "פורטוגזית",
+   "ru": "רוסית",
+   "sw": "סווהילי",
+   "th": "תאית",
+   "tr": "טורקית",
+   "vi": "וייטנאמית",
+   "zh-hans": "סינית פשוטה",
+   "zh-hant": "סינית מסורתית",
+   "zu": "זולו"
+  },
+  "cards": {
+   "ar": [
+    "טיפוגרפיה ערבית שמטפלת בטקסט מימין לשמאל ובשילוב כתבים, תוך שמירה על המקור.",
+    "למהדורה בערבית"
+   ],
+   "bn": [
+    "טיפוגרפיה ועיצוב בבנגלית עם טיפול בטוח בסימני תנועה ובצירופי עיצורים, נאמנות למקור והנחיות נפרדות ל-bn-BD ול-bn-IN.",
+    "למהדורה בבנגלית"
+   ],
+   "de": [
+    "טיפוגרפיה גרמנית עם מילים מורכבות ארוכות, מירכאות והמוסכמות הנפרדות של DE/AT/CH, תוך שמירה על המקור.",
+    "למהדורה בגרמנית"
+   ],
+   "el": [
+    "טיפוגרפיה יוונית ששומרת על הטונוס והדיאליטיקה הנושאים משמעות, מחילה כללים יווניים על אותיות רישיות, מכבדת את סימן השאלה היווני ואת האנו טליה ומאזנת בין יוונית ללטינית, תוך שמירה על הטקסט המקורי.",
+    "למהדורה ביוונית"
+   ],
+   "es": [
+    "טיפוגרפיה ספרדית שמכבדת שימושים אזוריים, שומרת על המקור ומפרידה בין ראיות שאומתו לבין שיקול דעת עריכתי.",
+    "למהדורה בספרדית"
+   ],
+   "fa": [
+    "טיפוגרפיה פרסית ששומרת על כיוון ברור מימין לשמאל, משמרת את ה-ZWNJ ומבודדת כתובות URL ותוויות גרסה בכתב לטיני.",
+    "למהדורה בפרסית"
+   ],
+   "fr": [
+    "טיפוגרפיה צרפתית שמבחינה בין רווחים בלתי שבירים, מירכאות וסגנונות בית אזוריים או מוסדיים.",
+    "למהדורה בצרפתית"
+   ],
+   "he": [
+    "טיפוגרפיה עברית ששומרת על סדר נכון בטקסט מימין לשמאל ששזורים בו אנגלית ומספרים, מגינה על האותיות הסופיות, על הניקוד ועל סימני הפיסוק העבריים, ומשאירה ניסוחים מגדריים כפי שנכתבו.",
+    "למהדורה בעברית"
+   ],
+   "hi": [
+    "טיפוגרפיה ועיצוב בהינדי עם נאמנות למקור, צירופי עיצורים וסימני תנועה (מאטרות).",
+    "למהדורה בהינדי"
+   ],
+   "id": [
+    "טיפוגרפיה אינדונזית שמתחשבת במילות יחס, בתוספיות, בהכפלות, בפיסוק ובסכומים ברופיה, תוך שמירה על המקור.",
+    "למהדורה באינדונזית"
+   ],
+   "it": [
+    "טיפוגרפיה איטלקית שמכבדת סימני הטעמה, ציטוטים ובחירות אזוריות, תוך שמירה על המקור.",
+    "למהדורה באיטלקית"
+   ],
+   "ja": [
+    "מכללי שבירת השורות היפניים (קינסוקו) ושבירות שורה טבעיות ועד מבנה המידע, השטחים הלבנים וזרימת הקריאה.",
+    "למהדורה ביפנית"
+   ],
+   "km": [
+    "טיפוגרפיה קמרית שמגינה על צירופי עיצורים, על טקסט המקור ועל שבירות שורה מכוונות.",
+    "למהדורה בקמרית"
+   ],
+   "ko": [
+    "שבירות שורה בין יחידות אוג׳ול (eojeol, יחידות הריווח בקוריאנית), מקצב הטקסט ומבנה מידע שמעביר את המסר בבהירות.",
+    "למהדורה בקוריאנית"
+   ],
+   "ms": [
+    "טיפוגרפיה מלאית ששומרת על ההבחנה בין מלאית לאינדונזית, מכבדת תוספיות, מילים מורכבות והכפלות בכתיב רומי (Rumi), מפרידה בין השימוש במלזיה, בסינגפור ובברוניי ומטפלת בכתב ג׳אווי (Jawi) בזהירות, תוך שמירה על הטקסט המקורי.",
+    "למהדורה במלאית"
+   ],
+   "nl": [
+    "טיפוגרפיה הולנדית שכותבת את IJ ברישיות כצמד אחד, שומרת על מילים מורכבות שלמות, מבחינה בין הטרמה למקף ובודקת שינויי כתיב בשבירת שורה, תוך הבחנה בין nl-NL ל-nl-BE ושמירה על הטקסט המקורי.",
+    "למהדורה בהולנדית"
+   ],
+   "pl": [
+    "טיפוגרפיה פולנית עם סימנים דיאקריטיים מדויקים, גלישת שורות בעלת משמעות ועיצוב ששומר על המקור.",
+    "למהדורה בפולנית"
+   ],
+   "pt": [
+    "טיפוגרפיה פורטוגזית ועיצוב מונחה משמעות שמכבדים את המוסכמות הברזילאיות והאירופיות ואת כוונת המחבר.",
+    "למהדורה בפורטוגזית"
+   ],
+   "ru": [
+    "טיפוגרפיה רוסית שמטפלת ב-ё וב-й, במירכאות, בקווים מפרידים ובשבירות שורה לפי ההקשר, תוך שמירה על המקור.",
+    "למהדורה ברוסית"
+   ],
+   "sw": [
+    "טיפוגרפיה סווהילית שמגינה על ng’, על הנוסח המקורי ועל בחירות אזוריות בפורמט.",
+    "למהדורה בסווהילית"
+   ],
+   "th": [
+    "כבוד לגבולות המילים ולתווים המצטרפים בתאית, לעיצוב תאי שנקרא באופן טבעי.",
+    "למהדורה בתאית"
+   ],
+   "tr": [
+    "טיפוגרפיה טורקית שמבחינה בין İ/i לבין I/ı בשינוי רישיות, קובעת אפוסטרופים לפני סיומות לפי הדקדוק, מפרידה מילים רק בגבולות הברה ושומרת על הטקסט המקורי.",
+    "למהדורה בטורקית"
+   ],
+   "vi": [
+    "טיפוגרפיה וייטנאמית שמכבדת את סימני הטונים, שבירות שורה בעלות משמעות ואת התוכן המקורי.",
+    "למהדורה בוייטנאמית"
+   ],
+   "zh-hans": [
+    "פיסוק, שבירות שורה וטקסט המשלב סינית ואותיות לטיניות, לסין היבשתית – בלי לשכתב את המקור.",
+    "למהדורה בסינית מפושטת"
+   ],
+   "zh-hant": [
+    "מטפלת במוסכמות הפיסוק והסידור הייחודיות של טאיוואן ושל הונג קונג.",
+    "למהדורה בסינית מסורתית"
+   ],
+   "zu": [
+    "טיפוגרפיה בזולו (isiZulu) שמגינה על מילים מחוברות ועל אותיות רישיות בתוך המילה, תוך שמירה על המקור.",
+    "למהדורה בזולו"
+   ]
+  },
+  "card": {
+   "ar": [
+    "تنضيد عبري يحافظ على ترتيب النص من اليمين إلى اليسار حين تتخلله الإنجليزية والأرقام، ويحمي الحروف النهائية والتشكيل (النيقود) وعلامات الترقيم العبرية، ويُبقي الصيغ الدالة على الجنس كما كُتبت.",
+    "عرض النسخة العبرية"
+   ],
+   "bn": [
+    "ইংরেজি ও সংখ্যা মেশানো ডান থেকে বাঁ লেখার ক্রম ঠিক রাখে, শেষ-রূপ বর্ণ, নিকুদ ও হিব্রু যতিচিহ্ন রক্ষা করে এবং লিঙ্গভিত্তিক শব্দরূপ যেমন লেখা তেমনই রাখে—এমন হিব্রু টাইপোগ্রাফি।",
+    "হিব্রু সংস্করণ দেখুন"
+   ],
+   "de": [
+    "Hebräische Typografie, die rechtsläufigen Text mit eingebettetem Englisch und Zahlen in der richtigen Reihenfolge hält, Finalbuchstaben, Nikkud und hebräische Satzzeichen schützt und gegenderte Formulierungen so belässt, wie sie geschrieben sind.",
+    "Hebräische Version ansehen"
+   ],
+   "en": [
+    "Hebrew typography that keeps right-to-left text with embedded English and numbers in order, protects final letters, niqqud and Hebrew punctuation, and leaves gendered wording as written.",
+    "View the Hebrew edition"
+   ],
+   "es": [
+    "Tipografía hebrea que mantiene en orden el texto de derecha a izquierda con inglés y números intercalados, protege las letras finales, el niqud y la puntuación hebrea, y deja las formas de género tal como se escribieron.",
+    "Ver la edición en hebreo"
+   ],
+   "fr": [
+    "Typographie hébraïque qui garde dans le bon ordre un texte de droite à gauche mêlé d’anglais et de chiffres, protège les lettres finales, le niqqoud et la ponctuation hébraïque, et laisse les formulations genrées telles qu’écrites.",
+    "Voir l’édition hébraïque"
+   ],
+   "hi": [
+    "अंग्रेज़ी और अंकों से मिले दाएँ से बाएँ पाठ का क्रम सही रखने वाली, अंतिम अक्षर-रूपों, निक़ुद और हिब्रू विराम-चिह्नों को सुरक्षित रखने वाली तथा लिंग-आधारित शब्द-रूपों को जैसा लिखा है वैसा ही छोड़ने वाली हिब्रू टाइपोग्राफ़ी।",
+    "हिब्रू संस्करण देखें"
+   ],
+   "id": [
+    "Tipografi Ibrani yang menjaga urutan teks kanan ke kiri yang bercampur bahasa Inggris dan angka, melindungi huruf akhir, niqqud, dan tanda baca Ibrani, serta membiarkan bentuk kata berjenis kelamin sesuai naskah.",
+    "Lihat edisi bahasa Ibrani"
+   ],
+   "it": [
+    "Tipografia ebraica che mantiene nell’ordine giusto il testo da destra a sinistra con inglese e numeri al suo interno, protegge le lettere finali, il niqqud e la punteggiatura ebraica e lascia le forme di genere come sono state scritte.",
+    "Vai all’edizione ebraica"
+   ],
+   "ja": [
+    "英字や数字が混じる右から左の文章の順序を保ち、語末形・ニクード・ヘブライ語の約物を守り、性の書き分けも原稿のまま残すヘブライ語の文字組みとデザイン。",
+    "ヘブライ語版を見る"
+   ],
+   "ko": [
+    "영어와 숫자가 섞인 오른쪽에서 왼쪽 글의 순서를 지키고, 어말형 글자와 니쿠드, 히브리어 문장부호를 보호하며, 성별에 따른 표현도 원문 그대로 두는 히브리어 글짜임.",
+    "히브리어 버전 보기"
+   ],
+   "pl": [
+    "Typografia hebrajska, która utrzymuje właściwą kolejność tekstu od prawej do lewej z wtrąceniami angielskimi i liczbami, chroni litery końcowe, nikud i hebrajską interpunkcję oraz zostawia formy rodzajowe tak, jak je zapisano.",
+    "Zobacz wersję hebrajską"
+   ],
+   "pt": [
+    "Tipografia hebraica que mantém em ordem o texto da direita para a esquerda com inglês e números no meio, protege as letras finais, o niqqud e a pontuação hebraica e deixa as formas de gênero como foram escritas.",
+    "Ver a edição em hebraico"
+   ],
+   "sw": [
+    "Uchapaji wa Kiebrania unaodumisha mpangilio sahihi wa maandishi ya kulia kwenda kushoto yenye Kiingereza na nambari ndani yake, kulinda herufi za mwisho, niqqud na alama za uakifishaji za Kiebrania, na kuacha maneno yanayoonyesha jinsia kama yalivyoandikwa.",
+    "Tazama toleo la Kiebrania"
+   ],
+   "zu": [
+    "Ukuhlelwa kombhalo kwesi-Hebrew okugcina ukulandelana okufanele kombhalo osuka kwesokudla uye kwesobunxele onesiNgisi nezinombolo phakathi, kuvikele izinhlamvu zokugcina, i-niqqud nezimpawu zokuloba zesi-Hebrew, futhi kushiye amagama abonisa ubulili njengoba ebhaliwe.",
+    "Buka isi-Hebrew"
+   ],
+   "ru": [
+    "Ивритская типографика: верный порядок текста справа налево со вставками на английском и числами, сохранение конечных форм букв, огласовок (никуд) и ивритской пунктуации, а формы рода остаются такими, как написаны.",
+    "Открыть версию на иврите"
+   ],
+   "th": [
+    "การจัดวางตัวอักษรฮีบรูที่รักษาลำดับของข้อความจากขวาไปซ้ายที่มีภาษาอังกฤษและตัวเลขแทรกอยู่ ปกป้องอักษรรูปท้ายคำ นิกกุด และเครื่องหมายวรรคตอนฮีบรู และคงรูปคำที่แสดงเพศไว้ตามต้นฉบับ",
+    "ดูเวอร์ชันภาษาฮีบรู"
+   ],
+   "vi": [
+    "Typography tiếng Do Thái giữ đúng thứ tự văn bản phải sang trái có xen tiếng Anh và chữ số, bảo toàn chữ cái dạng cuối, dấu niqqud và dấu câu tiếng Do Thái, đồng thời giữ nguyên cách viết theo giới tính như bản gốc.",
+    "Xem phiên bản tiếng Do Thái"
+   ],
+   "zh-hans": [
+    "让夹杂英文与数字的从右到左文本保持正确顺序，保护词尾字母形式、尼库德（元音符号）与希伯来语标点，并按原稿保留性别表达的希伯来语排版与设计。",
+    "前往希伯来语版"
+   ],
+   "zh-hant": [
+    "讓夾雜英文與數字的由右至左文字維持正確順序，保護詞尾字母形式、尼庫德（母音符號）與希伯來文標點，並依原稿保留性別表達的希伯來文排版與設計。",
+    "前往希伯來文版"
+   ],
+   "km": [
+    "ការរៀបចំអក្សរហេប្រឺ ដែលរក្សាលំដាប់អត្ថបទពីស្ដាំទៅឆ្វេងដែលមានភាសាអង់គ្លេស និងលេខលាយឡំឲ្យត្រឹមត្រូវ ការពារអក្សរចុងពាក្យ នីគូដ និងសញ្ញាវណ្ណយុត្តហេប្រឺ ហើយទុកពាក្យដែលបង្ហាញភេទដូចដែលបានសរសេរ។",
+    "មើលកំណែហេប្រឺ"
+   ],
+   "fa": [
+    "حروف‌چینی عبری که ترتیب متن راست‌به‌چپِ آمیخته با انگلیسی و عدد را درست نگه می‌دارد، از حروف پایانی، نیکود و نشانه‌های نگارشی عبری محافظت می‌کند و صورت‌های جنسیتیِ واژه‌ها را همان‌گونه که نوشته شده‌اند باقی می‌گذارد.",
+    "دیدن نسخهٔ عبری"
+   ]
+  }
+ }
+}
