@@ -27,6 +27,9 @@ PRIVACY = {"en": "Privacy Policy", "ja": "プライバシーポリシー", "ar":
            "pl": "Polityka prywatności", "pt": "Política de Privacidade", "ru": "Политика конфиденциальности",
            "sw": "Sera ya Faragha", "th": "นโยบายความเป็นส่วนตัว", "vi": "Chính sách quyền riêng tư",
            "zh-hans": "隐私政策", "zh-hant": "隱私權政策", "zu": "Inqubomgomo Yobumfihlo"}
+# Editions with pages but no package yet carry their label in assets/upcoming-editions.json.
+PRIVACY.update({k: v["privacy"] for k, v in json.loads(
+    (Path(__file__).resolve().parents[1] / "assets" / "upcoming-editions.json").read_text(encoding="utf-8")).items()})
 # html lang values that differ from the gateway keys
 KEYS = {"ko-KR": "ko", "th-TH": "th", "zh-Hans-CN": "zh-hans", "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hant"}
 

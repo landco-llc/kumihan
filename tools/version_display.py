@@ -184,8 +184,16 @@ def rewrite_downloads(text, f):
     return re.sub(r'<pre\b.*?</pre>', pre, text, flags=re.S)
 
 
+COMING = {'ja': '配布準備中', 'zh-Hant': '準備中', 'zh-Hans': '准备中'}
+
+
 def gateway_badge(code, lang):
-    f = v.load()['editions'][code]
+    facts = v.load()['editions']
+    if code not in facts:
+        # An edition with pages but no package or Release yet (tools/build_upcoming_sites.py).
+        status = next((s for k, s in COMING.items() if lang.startswith(k)), 'Coming soon')
+        return f'<span class="state" aria-label="{x(status)}"><span class="version-state" lang="{x(lang if lang.startswith(("ja","zh")) else "en")}">{x(status)}</span></span>'
+    f = facts[code]
     number = f.get('published_version') or f['source_version']
     w = words(lang)
     status = w['published'] if f['release_status']=='published' else w['unpublished']
