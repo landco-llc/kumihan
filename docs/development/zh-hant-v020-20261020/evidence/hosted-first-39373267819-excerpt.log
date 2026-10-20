@@ -1,6 +1,0 @@
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:16.6694755Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +78220612f5928cb26e479eed2c26a8b930c1e9bd:refs/remotes/pull/122/merge
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:18.3601492Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/122/merge
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:19.1940366Z Note: switching to 'refs/remotes/pull/122/merge'.
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:19.1953120Z HEAD is now at 7822061 Merge 3d7a892613cdec0f04259bacc00becbe5c61c70f into 8b647cc752d7a9bc3db48356fa0ab7b221bb66d6
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:19.2034939Z [command]/usr/bin/git log -1 --format=%H
-package-site	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:08:19.2064715Z 78220612f5928cb26e479eed2c26a8b930c1e9bd
