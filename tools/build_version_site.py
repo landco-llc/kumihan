@@ -98,6 +98,8 @@ def outputs():
 
 
 def preservation_allowed(path, family):
+    from ziheng_v020_transition import allowed
+    if allowed(path, family, ROOT): return True
     from version_display import edition_for
     from build_gateways import GATEWAYS
     if family=='protected': return path=='README.md'

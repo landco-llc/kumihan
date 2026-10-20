@@ -167,7 +167,7 @@ class DistributionContractTests(unittest.TestCase):
             subprocess.run([sys.executable,str(script),'--set-version','0.2.0'],check=True,capture_output=True)
             self.assertEqual(before,{p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()})
             self.assertTrue((root/'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.0.zip').is_file())
-            self.assertFalse(list((root/'plugins/kumihan-ziheng/downloads').rglob('*-0.1.0.zip')))
+            self.assertEqual(len(list((root/'plugins/kumihan-ziheng/downloads').rglob('*-0.1.0.zip'))), 5)
             target=root/'plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md'
             target.write_bytes(b'changed')
             check=subprocess.run([sys.executable,str(script),'--check'],capture_output=True)

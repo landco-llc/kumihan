@@ -1,0 +1,28 @@
+{
+  "status": "LOCAL_PRODUCER_VALIDATION_PASSED",
+  "base_head": "3d7a892613cdec0f04259bacc00becbe5c61c70f",
+  "fixed_source_sha256": {
+    "tests/thai/test_core.py": "6290c0c0a9e59985f6f29dca8d586b0d2394e78b4abecc10011dcae2a79f1a81",
+    "tests/test_ziheng_v020_shared_integration.py": "af768a4b1f9accf01314d5aad205a397b731fcc085b0180142a70d87ae27f3af",
+    "docs/development/zh-hant-v020-20261020/locale-output-transition.json": "3136ef8a1cbcf85eba725a14f0a1a0f24a5bea3f84b6f22d1f80a7f64687cc79"
+  },
+  "source_drift": [],
+  "all_11_commands_passed": true,
+  "tests": {
+    "thai": 22,
+    "root": 119,
+    "ziheng": 26
+  },
+  "rerun": "Final ingress baseline SHA assertion added during initial checks. Preserved pre-ingress logs; affected Thai22 and root119 rerun passed. Other9commands unchanged.",
+  "contexts_unchanged": 18,
+  "ja_rules_unchanged": 6,
+  "ziheng_full_rules_assertions": 12,
+  "negative_probes": 18,
+  "protected_unchanged": 255,
+  "baseline_unchanged": true,
+  "limits": [
+    "Working-tree fixed source hashes; commit identity to be bound after writer commits",
+    "Browser and public URLs reused from unchanged candidate pages/ZIP evidence; not rerun",
+    "Producer validation, not formal independent audit or final hosted CI acceptance"
+  ]
+}

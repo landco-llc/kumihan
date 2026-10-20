@@ -1,0 +1,38 @@
+[
+  {
+    "path": "README.md",
+    "base_blob": "5758bf4456cba9de6ede31704cbb000dbb09a694",
+    "ja120_blob": "eca62efb55de78a0602b5d522e6a20abde275691",
+    "delta_lines": 0
+  },
+  {
+    "path": "assets/edition-versions.json",
+    "base_blob": "790993212c67116939bfcd08682c21d077db1334",
+    "ja120_blob": "40e3d6ab61662523ba3bfb6b0485c200fa1a62e9",
+    "delta_lines": 0
+  },
+  {
+    "path": "tools/build_version_site.py",
+    "base_blob": "af49dfa525ec4425c8cbe988e496fd43f46cca8a",
+    "ja120_blob": "d7b3f1318aeb34cc776f6b0c5c56e4504826221d",
+    "delta_lines": 2
+  },
+  {
+    "path": "tools/check_seo_preservation.py",
+    "base_blob": "a9f33bca88528cfd7447903de513fa1146462fb2",
+    "ja120_blob": "294f2a0f84cdf967fbebae4e5190e29142bef7d3",
+    "delta_lines": 2
+  },
+  {
+    "path": "docs/version-automation/preservation.json",
+    "base_blob": "346d5b1e9a0a62228efa2555ed184bca7e20602b",
+    "ja120_blob": "b7ca4ecd69673cda9da0c67cc74e2e02b4a4ef2e",
+    "delta_lines": 0
+  },
+  {
+    "path": "tests/test_version_naming.py",
+    "base_blob": "07a4efb6efe1999901eff6fb5d659fd38dc76bb5",
+    "ja120_blob": "c6d9c67fa5776da66ad2b2b1060d09f788563d06",
+    "delta_lines": 0
+  }
+]

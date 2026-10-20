@@ -45,3 +45,8 @@ gemini extensions list
 - [ソースを見る](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng)
 
 - [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng/downloads%20Gemini/SHA256SUMS.txt)
+
+
+Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
+
+Current v0.2.0 full bundle SHA-256: `f535fdd34b66ef3b87d594e80b2fd60396e8ae3d3a8cc014dac71c4f7f36ce71`. The older checksum above applies only to its explicitly named v0.1.0 archive.

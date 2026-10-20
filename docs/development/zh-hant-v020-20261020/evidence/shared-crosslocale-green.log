@@ -1,0 +1,12 @@
+test_cross_locale_transition_rejects_unregistered_or_tampered_outputs (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_cross_locale_transition_rejects_unregistered_or_tampered_outputs) ... ok
+test_history_manifest_exception_requires_exact_retention (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_history_manifest_exception_requires_exact_retention) ... ok
+test_legacy_zip_mutation_remains_rejected (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_legacy_zip_mutation_remains_rejected) ... ok
+test_other_edition_facts_are_unchanged (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_other_edition_facts_are_unchanged) ... ok
+test_source_links_keep_versions_distinct (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_source_links_keep_versions_distinct) ... ok
+test_transition_rejects_unknown_path_and_changed_preimage (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_transition_rejects_unknown_path_and_changed_preimage) ... ok
+test_ziheng_source_bump_preserves_publication_facts (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_ziheng_source_bump_preserves_publication_facts) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.474s
+
+OK

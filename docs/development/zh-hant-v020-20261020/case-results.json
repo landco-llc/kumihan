@@ -1,0 +1,734 @@
+{
+  "version": "0.2.0",
+  "proposal_count": 32,
+  "priorities": {
+    "A": 18,
+    "B": 10,
+    "C": 4
+  },
+  "fixture_definitions": 32,
+  "partially_executed": 14,
+  "not_checked": 18,
+  "whole_case_passed": 0,
+  "browser_observation_conditions": 3,
+  "native_ua_enlargement_checks": 0,
+  "native_office_checks": 0,
+  "assistive_technology_checks": 0,
+  "native_language_reviews": 0,
+  "cases": [
+    {
+      "case_id": "F01",
+      "proposal_id": "ZH-HANT-P01",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-001"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F02",
+      "proposal_id": "ZH-HANT-P02",
+      "priority": "A",
+      "existing_rule_ids": [
+        "EVIDENCE-002"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F03",
+      "proposal_id": "ZH-HANT-P03",
+      "priority": "A",
+      "existing_rule_ids": [
+        "CONTENT-001",
+        "ZH-HANT-015"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F04",
+      "proposal_id": "ZH-HANT-P04",
+      "priority": "A",
+      "existing_rule_ids": [
+        "CONTENT-004",
+        "ZH-HANT-015"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F05",
+      "proposal_id": "ZH-HANT-P05",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F06",
+      "proposal_id": "ZH-HANT-P06",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-003"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F07",
+      "proposal_id": "ZH-HANT-P07",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-004"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F08",
+      "proposal_id": "ZH-HANT-P08",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F09",
+      "proposal_id": "ZH-HANT-P09",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F10",
+      "proposal_id": "ZH-HANT-P10",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "not-checked",
+      "rendered": "limited local screenshots/rectangles observed",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/rendered.json"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F11",
+      "proposal_id": "ZH-HANT-P11",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F12",
+      "proposal_id": "ZH-HANT-P12",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-008",
+        "ZH-HANT-006"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F13",
+      "proposal_id": "ZH-HANT-P13",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-009"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "not-checked",
+      "rendered": "limited local screenshots/rectangles observed",
+      "interaction": "DOM URL equality and local CTA click only",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/rendered.json"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F14",
+      "proposal_id": "ZH-HANT-P14",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "ZH-HANT-012"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F15",
+      "proposal_id": "ZH-HANT-P15",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-007"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F16",
+      "proposal_id": "ZH-HANT-P16",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-007",
+        "DESIGN-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F17",
+      "proposal_id": "ZH-HANT-P17",
+      "priority": "C",
+      "existing_rule_ids": [
+        "ZH-HANT-006",
+        "ZH-HANT-012"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F18",
+      "proposal_id": "ZH-HANT-P18",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-008",
+        "ZH-HANT-011"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F19",
+      "proposal_id": "ZH-HANT-P19",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "DESIGN-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F20",
+      "proposal_id": "ZH-HANT-P20",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "ZH-HANT-011",
+        "ZH-HANT-015"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "limited local screenshots/rectangles observed",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log",
+        "evidence/rendered.json"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F21",
+      "proposal_id": "ZH-HANT-P21",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-012"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F22",
+      "proposal_id": "ZH-HANT-P22",
+      "priority": "C",
+      "existing_rule_ids": [
+        "ZH-HANT-012"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F23",
+      "proposal_id": "ZH-HANT-P23",
+      "priority": "C",
+      "existing_rule_ids": [
+        "ZH-HANT-013"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F24",
+      "proposal_id": "ZH-HANT-P24",
+      "priority": "C",
+      "existing_rule_ids": [
+        "ZH-HANT-013"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F25",
+      "proposal_id": "ZH-HANT-P25",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F26",
+      "proposal_id": "ZH-HANT-P26",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "not-checked",
+      "rendered": "limited local screenshots/rectangles observed",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/rendered.json"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F27",
+      "proposal_id": "ZH-HANT-P27",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "not-checked",
+      "rendered": "limited local screenshots/rectangles observed",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/rendered.json"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F28",
+      "proposal_id": "ZH-HANT-P28",
+      "priority": "A",
+      "existing_rule_ids": [
+        "DESIGN-005",
+        "ZH-HANT-010"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F29",
+      "proposal_id": "ZH-HANT-P29",
+      "priority": "B",
+      "existing_rule_ids": [
+        "DESIGN-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F30",
+      "proposal_id": "ZH-HANT-P30",
+      "priority": "B",
+      "existing_rule_ids": [
+        "ZH-HANT-014"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "not-checked",
+      "status": "not-checked",
+      "static_contract": "not-checked",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F31",
+      "proposal_id": "ZH-HANT-P31",
+      "priority": "A",
+      "existing_rule_ids": [
+        "EVIDENCE-001",
+        "EVIDENCE-002",
+        "EVIDENCE-005"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    },
+    {
+      "case_id": "F32",
+      "proposal_id": "ZH-HANT-P32",
+      "priority": "A",
+      "existing_rule_ids": [
+        "ZH-HANT-001"
+      ],
+      "guidance": "provided",
+      "fixture": "defined",
+      "execution_status": "partially-executed",
+      "status": "needs-review",
+      "static_contract": "bounded unit checks executed",
+      "rendered": "not-checked",
+      "interaction": "not-checked",
+      "native_review": "not-checked",
+      "evidence": [
+        "evidence/new-tests.log"
+      ],
+      "limitations": [
+        "No whole-case or product-wide PASS.",
+        "No actual regional glyph/IVS, native UA 200%, clipboard/navigation, Office/AT or native-language acceptance."
+      ]
+    }
+  ]
+}

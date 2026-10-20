@@ -1,0 +1,1248 @@
+{
+  "format": "ziheng-research-cases-2",
+  "note": "32 research proposals mapped to existing product IDs; not 32 detectors or passes.",
+  "cases": [
+    {
+      "case_id": "F01",
+      "proposal_id": "ZH-HANT-P01",
+      "priority": "A",
+      "title": "Separate language and editorial region",
+      "existing_rule_ids": [
+        "ZH-HANT-001"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T15",
+        "ZR-T16"
+      ],
+      "scope": "explicit context",
+      "input": {
+        "text": "中文。",
+        "example": "examples/segments.json"
+      },
+      "expected": "TW/HK stay distinct; zh-Hant has no implicit region; MO retains MO.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F02",
+      "proposal_id": "ZH-HANT-P02",
+      "priority": "A",
+      "title": "Preserve source authority",
+      "existing_rule_ids": [
+        "EVIDENCE-002"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T02",
+        "ZR-T20",
+        "ZR-T25"
+      ],
+      "scope": "source metadata",
+      "input": {
+        "text": "CLReq / WCAG / project policy",
+        "example": "examples/segments.json"
+      },
+      "expected": "Record edition, section, access provenance and normative/informative status.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F03",
+      "proposal_id": "ZH-HANT-P03",
+      "priority": "A",
+      "title": "Compare exact supplied bytes",
+      "existing_rule_ids": [
+        "CONTENT-001",
+        "ZH-HANT-015"
+      ],
+      "source_refs": [
+        "ZR-T06",
+        "ZR-T10",
+        "ZR-T13"
+      ],
+      "scope": "trusted supplied bytes",
+      "input": {
+        "text": "臺 裏 HK$1,240 é 禰󠄀 👩‍💻",
+        "example": "examples/segments.json"
+      },
+      "expected": "An exact copy passes supplied-byte scope; any changed byte fails that scope.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F04",
+      "proposal_id": "ZH-HANT-P04",
+      "priority": "A",
+      "title": "Keep normalization out of layout",
+      "existing_rule_ids": [
+        "CONTENT-004",
+        "ZH-HANT-015"
+      ],
+      "source_refs": [
+        "ZR-T11",
+        "ZR-T12"
+      ],
+      "scope": "fixed source",
+      "input": {
+        "text": "Ａ ① é",
+        "example": "examples/segments.json"
+      },
+      "expected": "NFC/NFKC-equivalent text is still different source bytes.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F05",
+      "proposal_id": "ZH-HANT-P05",
+      "priority": "A",
+      "title": "Classify before scanning",
+      "existing_rule_ids": [
+        "ZH-HANT-005"
+      ],
+      "source_refs": [
+        "ZR-T10",
+        "ZR-T16"
+      ],
+      "scope": "caller-classified segments",
+      "input": {
+        "text": "😀é,中文 / https://example.org/a,b",
+        "example": "examples/segments.json"
+      },
+      "expected": "Only declared Chinese prose yields punctuation candidates; code point position is 3.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F06",
+      "proposal_id": "ZH-HANT-P06",
+      "priority": "B",
+      "title": "Choose Taiwan quotation style",
+      "existing_rule_ids": [
+        "ZH-HANT-003"
+      ],
+      "source_refs": [
+        "ZR-T01"
+      ],
+      "scope": "TW prose with selected house style",
+      "input": {
+        "text": "他說：「先看『指南』。」 “引文”",
+        "example": "examples/segments.json"
+      },
+      "expected": "Chosen corner style flags curly quotes as needs-review; preserved quotations stay exempt.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F07",
+      "proposal_id": "ZH-HANT-P07",
+      "priority": "A",
+      "title": "Choose Hong Kong house style",
+      "existing_rule_ids": [
+        "ZH-HANT-004"
+      ],
+      "source_refs": [
+        "ZR-T01"
+      ],
+      "scope": "HK prose with institutional policy",
+      "input": {
+        "text": "“開放時間”／「開放時間」",
+        "example": "examples/segments.json"
+      },
+      "expected": "HK has no implicit quote conversion; selected institution/style controls review.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F08",
+      "proposal_id": "ZH-HANT-P08",
+      "priority": "B",
+      "title": "Review punctuation meaning",
+      "existing_rule_ids": [
+        "ZH-HANT-005"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T09"
+      ],
+      "scope": "Chinese prose excluding protected tokens",
+      "input": {
+        "text": "姓名、電話，請確認。3.14 e.g.",
+        "example": "examples/segments.json"
+      },
+      "expected": "Distinguish list punctuation, clauses, decimals and original names; no global conversion.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F09",
+      "proposal_id": "ZH-HANT-P09",
+      "priority": "A",
+      "title": "Declare line-breaking intent",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T03",
+        "ZR-T09"
+      ],
+      "scope": "selected line-breaking style",
+      "input": {
+        "text": "「晨間，先看說明。」",
+        "example": "examples/review.html"
+      },
+      "expected": "Record house strictness and exceptions separately from CSS values.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "manual + rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F10",
+      "proposal_id": "ZH-HANT-P10",
+      "priority": "A",
+      "title": "Observe actual line edges",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "source_refs": [
+        "ZR-T03",
+        "ZR-T09"
+      ],
+      "scope": "horizontal and selected vertical blocks",
+      "input": {
+        "text": "『「小城，慢讀。」』",
+        "example": "examples/review.html"
+      },
+      "expected": "At 180/240/320 CSS px inspect actual start/end glyph rectangles and screenshots; CSS strict alone is insufficient.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F11",
+      "proposal_id": "ZH-HANT-P11",
+      "priority": "B",
+      "title": "Keep selected punctuation units",
+      "existing_rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T09"
+      ],
+      "scope": "selected Chinese dash/ellipsis style",
+      "input": {
+        "text": "—— ⸺ …… ………… …",
+        "example": "examples/review.html"
+      },
+      "expected": "Inspect selected two-character units at line edges; do not interchange code points.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F12",
+      "proposal_id": "ZH-HANT-P12",
+      "priority": "A",
+      "title": "Scope quantity binding",
+      "existing_rule_ids": [
+        "ZH-HANT-008",
+        "ZH-HANT-006"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T03",
+        "ZR-T09"
+      ],
+      "scope": "named quantity spans",
+      "input": {
+        "text": "HK$1,240／12.5%／−4°C／2026年11月",
+        "example": "examples/review.html"
+      },
+      "expected": "Preserve values; observe chosen amount/sign/unit spans without making whole paragraphs nowrap.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F13",
+      "proposal_id": "ZH-HANT-P13",
+      "priority": "A",
+      "title": "Wrap while preserving URL and code",
+      "existing_rule_ids": [
+        "ZH-HANT-009"
+      ],
+      "source_refs": [
+        "ZR-T03",
+        "ZR-T16"
+      ],
+      "scope": "long URL and code",
+      "input": {
+        "text": "https://example.org/very-long-path/a,b?q=%E8%8C%B6#guide",
+        "example": "examples/review.html"
+      },
+      "expected": "Compare source, href and copied value; inspect narrow wrapping and actual navigation separately.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F14",
+      "proposal_id": "ZH-HANT-P14",
+      "priority": "B",
+      "title": "Inspect punctuation glyph placement",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "ZH-HANT-012"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T05",
+        "ZR-T17",
+        "ZR-T19"
+      ],
+      "scope": "regional punctuation and orientation",
+      "input": {
+        "text": "、，。；：！？「」『』（茶）",
+        "example": "examples/review.html"
+      },
+      "expected": "Compare actual TW/HK horizontal/vertical glyph positions against chosen style; unchanged text.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F15",
+      "proposal_id": "ZH-HANT-P15",
+      "priority": "B",
+      "title": "Choose compression by position",
+      "existing_rule_ids": [
+        "ZH-HANT-007"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T04"
+      ],
+      "scope": "explicit compression policy",
+      "input": {
+        "text": "「茶。」！？（說明）",
+        "example": "examples/review.html"
+      },
+      "expected": "Compare internal/edge punctuation and collisions; no compression is allowed.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F16",
+      "proposal_id": "ZH-HANT-P16",
+      "priority": "B",
+      "title": "Avoid duplicate width adjustments",
+      "existing_rule_ids": [
+        "ZH-HANT-007",
+        "DESIGN-005"
+      ],
+      "source_refs": [
+        "ZR-T04",
+        "ZR-T17"
+      ],
+      "scope": "selected OpenType/CSS mechanisms",
+      "input": {
+        "text": "「晨間。」（茶）",
+        "example": "examples/review.html"
+      },
+      "expected": "Compare default, CSS trim, halt, palt and combination; record support and collisions.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F17",
+      "proposal_id": "ZH-HANT-P17",
+      "priority": "C",
+      "title": "Make hanging optional",
+      "existing_rule_ids": [
+        "ZH-HANT-006",
+        "ZH-HANT-012"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T03",
+        "ZR-T04"
+      ],
+      "scope": "only adopted hanging style",
+      "input": {
+        "text": "清晨，晚間。",
+        "example": "examples/review.html"
+      },
+      "expected": "Inspect chosen horizontal/vertical line-end protrusion, margin and adjacent elements; never a universal gate.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F18",
+      "proposal_id": "ZH-HANT-P18",
+      "priority": "B",
+      "title": "Adjust visual spacing only",
+      "existing_rule_ids": [
+        "ZH-HANT-008",
+        "ZH-HANT-011"
+      ],
+      "source_refs": [
+        "ZR-T04"
+      ],
+      "scope": "Chinese/Latin mixed spans",
+      "input": {
+        "text": "使用CSS排版 版本20 Unicode18.0",
+        "example": "examples/review.html"
+      },
+      "expected": "Exact source and copy stay intact; compare actual mixed-script spacing including existing spaces.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F19",
+      "proposal_id": "ZH-HANT-P19",
+      "priority": "A",
+      "title": "Observe actual regional fonts",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "DESIGN-005"
+      ],
+      "source_refs": [
+        "ZR-T06",
+        "ZR-T07",
+        "ZR-T17",
+        "ZR-T18"
+      ],
+      "scope": "declared regional font/glyph target",
+      "input": {
+        "text": "骨 直 令 門",
+        "example": "examples/review.html"
+      },
+      "expected": "Record actual family/face/version/fallback and glyph comparison; lang/CSS is not glyph proof.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F20",
+      "proposal_id": "ZH-HANT-P20",
+      "priority": "A",
+      "title": "Protect clusters and IVS",
+      "existing_rule_ids": [
+        "ZH-HANT-002",
+        "ZH-HANT-011",
+        "ZH-HANT-015"
+      ],
+      "source_refs": [
+        "ZR-T06",
+        "ZR-T10",
+        "ZR-T13",
+        "ZR-T14"
+      ],
+      "scope": "clusters, IVS-like test sequence; registration not asserted",
+      "input": {
+        "text": "é 禰󠄀 👩‍💻 𠮷",
+        "example": "examples/review.html"
+      },
+      "expected": "Compare source sequences; record collection/registration and actual font support before any IVS glyph claim.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static + rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F21",
+      "proposal_id": "ZH-HANT-P21",
+      "priority": "B",
+      "title": "Preserve vertical reading order",
+      "existing_rule_ids": [
+        "ZH-HANT-012"
+      ],
+      "source_refs": [
+        "ZR-T05",
+        "ZR-T19",
+        "ZR-T20"
+      ],
+      "scope": "vertical-rl or vertical-lr selected",
+      "input": {
+        "text": "小城散步（指南） API 20",
+        "example": "examples/review.html"
+      },
+      "expected": "Inspect line/block progress, mixed horizontal blocks, selection and page sequence.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F22",
+      "proposal_id": "ZH-HANT-P22",
+      "priority": "C",
+      "title": "Test vertical controls separately",
+      "existing_rule_ids": [
+        "ZH-HANT-012"
+      ],
+      "source_refs": [
+        "ZR-T02",
+        "ZR-T05"
+      ],
+      "scope": "adopted vertical controls only",
+      "input": {
+        "text": "12 2026 API English input select table",
+        "example": "examples/review.html"
+      },
+      "expected": "Test each selected combine/rotate range, input, dropdown and table; one feature cannot pass all.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F23",
+      "proposal_id": "ZH-HANT-P23",
+      "priority": "C",
+      "title": "Bind Bopomofo and tones",
+      "existing_rule_ids": [
+        "ZH-HANT-013"
+      ],
+      "source_refs": [
+        "ZR-T01",
+        "ZR-T02",
+        "ZR-T08",
+        "ZR-T16"
+      ],
+      "scope": "adopted annotation style; native specialist needed",
+      "input": {
+        "text": "茶 ㄔㄚˊ／的 ˙ㄉㄜ／水 ㄕㄨㄟˇ",
+        "example": "examples/review.html"
+      },
+      "expected": "Inspect base/annotation correspondence, neutral-tone position, line-edge separation and clipping.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F24",
+      "proposal_id": "ZH-HANT-P24",
+      "priority": "C",
+      "title": "Test ruby access independently",
+      "existing_rule_ids": [
+        "ZH-HANT-013"
+      ],
+      "source_refs": [
+        "ZR-T02",
+        "ZR-T16",
+        "ZR-T20"
+      ],
+      "scope": "ruby only when used",
+      "input": {
+        "text": "茶葉／ㄔㄚˊ ㄧㄝˋ",
+        "example": "examples/review.html"
+      },
+      "expected": "Test find, base-only/annotation-inclusive copy and AT reading order on named browser/AT.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F25",
+      "proposal_id": "ZH-HANT-P25",
+      "priority": "A",
+      "title": "Exercise supported enlargement",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "source_refs": [
+        "ZR-T20",
+        "ZR-T21"
+      ],
+      "scope": "Web resize scope and exceptions",
+      "input": {
+        "text": "說明 HK$1,240 查看時段",
+        "example": "examples/review.html"
+      },
+      "expected": "Use an actual supported UA enlargement method to 200%; record method, content and control results.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "interaction + rendered",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F26",
+      "proposal_id": "ZH-HANT-P26",
+      "priority": "A",
+      "title": "Reflow in each scrolling direction",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "source_refs": [
+        "ZR-T20",
+        "ZR-T22"
+      ],
+      "scope": "applicable Web reflow content",
+      "input": {
+        "text": "說明與長網址，選擇時段。",
+        "example": "examples/review.html"
+      },
+      "expected": "Test vertical scrolling at width320, horizontal scrolling at height256; preserve information; scope 2D exceptions.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F27",
+      "proposal_id": "ZH-HANT-P27",
+      "priority": "A",
+      "title": "Exercise user spacing override",
+      "existing_rule_ids": [
+        "ZH-HANT-010"
+      ],
+      "source_refs": [
+        "ZR-T20",
+        "ZR-T23"
+      ],
+      "scope": "applicable script spacing properties",
+      "input": {
+        "text": "中文與 Latin words 的說明。",
+        "example": "examples/review.html"
+      },
+      "expected": "Override only line-height1.5/paragraph2em/letter.12em/word.16em together; retain information and controls; record script exceptions.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F28",
+      "proposal_id": "ZH-HANT-P28",
+      "priority": "A",
+      "title": "Separate contrast and glyph legibility",
+      "existing_rule_ids": [
+        "DESIGN-005",
+        "ZH-HANT-010"
+      ],
+      "source_refs": [
+        "ZR-T20",
+        "ZR-T24"
+      ],
+      "scope": "applicable text/background/states",
+      "input": {
+        "text": "正文／大字／細字／注音",
+        "example": "examples/review.html"
+      },
+      "expected": "Evaluate actual adjacent colors, normal4.5:1/large3:1 with definitions/exceptions; inspect glyphs separately.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F29",
+      "proposal_id": "ZH-HANT-P29",
+      "priority": "B",
+      "title": "Evaluate scale by role",
+      "existing_rule_ids": [
+        "DESIGN-005"
+      ],
+      "source_refs": [
+        "ZR-T20",
+        "ZR-T24"
+      ],
+      "scope": "reading/display/hybrid by element",
+      "input": {
+        "text": "主題／說明／HK$1,240／註記／查看時段",
+        "example": "examples/review.html"
+      },
+      "expected": "Record mode, role, audience, distance and actual fonts; an out-of-range starting value is not failure.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "rendered + manual",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F30",
+      "proposal_id": "ZH-HANT-P30",
+      "priority": "B",
+      "title": "Separate native Office and PDF",
+      "existing_rule_ids": [
+        "ZH-HANT-014"
+      ],
+      "source_refs": [
+        "ZR-T06",
+        "ZR-T25"
+      ],
+      "scope": "DOCX/PPTX/PDF only when delivered",
+      "input": {
+        "text": "表格、註腳、連結、禰󠄀、茶 ㄔㄚˊ",
+        "example": "examples/segments.json"
+      },
+      "expected": "Native app display/editing, exported PDF glyphs/extraction/search/links/order have separate results.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "manual + rendered + interaction",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "not implemented as layout detector",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F31",
+      "proposal_id": "ZH-HANT-P31",
+      "priority": "A",
+      "title": "Bind evidence to artifact and method",
+      "existing_rule_ids": [
+        "EVIDENCE-001",
+        "EVIDENCE-002",
+        "EVIDENCE-005"
+      ],
+      "source_refs": [
+        "ZR-T02",
+        "ZR-T20"
+      ],
+      "scope": "v2 evidence declarations",
+      "input": {
+        "text": "static / rendered / not-checked / unsupported",
+        "example": "examples/segments.json"
+      },
+      "expected": "Reject empty, mismatched or CSS-only rendered passes; unknown fonts cannot pass requested regional glyph.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    },
+    {
+      "case_id": "F32",
+      "proposal_id": "ZH-HANT-P32",
+      "priority": "A",
+      "title": "Separate candidates from applicability",
+      "existing_rule_ids": [
+        "ZH-HANT-001"
+      ],
+      "source_refs": [
+        "ZR-T15"
+      ],
+      "scope": "profile/context contract; synthetic MCP response only",
+      "input": {
+        "text": "TW / HK / zh-Hant / MO",
+        "example": "examples/segments.json"
+      },
+      "expected": "TW excludes004, HK excludes003 from applicable; defer missing style/features; selection_only=true.",
+      "exceptions": [
+        "Original quotations, names and fixed source remain protected.",
+        "Conditional features apply only when adopted; no blanket page exemption."
+      ],
+      "method": "static",
+      "execution_status": "not-checked",
+      "result": "Fixture contract defined; execution recorded separately in candidate case-results.",
+      "evidence": [],
+      "limitations": [
+        "Fixture definition is not a rendered, interaction or native-language pass."
+      ],
+      "implementation": {
+        "guidance": "provided",
+        "static_helper": "bounded contract/candidate checks",
+        "fixture": "defined",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native_review": "not-checked"
+      }
+    }
+  ]
+}

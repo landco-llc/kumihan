@@ -1,0 +1,1065 @@
+{
+  "format": 2,
+  "product": "KUMIHAN｜字衡 for Claude",
+  "publisher": "L&Co. LLC",
+  "version": "0.1.0",
+  "source_repository": "landco-llc/kumihan",
+  "status": "Preview. Host-native installation and invocation not yet verified.",
+  "archives": [
+    {
+      "file": "plugins/kumihan-ziheng-Claude-Code-plugin-0.1.0.zip",
+      "sha256": "b37ee0c95c7575b773667f0256eadd3ecf983d7f1e9db26761614ee71c76fe0e",
+      "bytes": 154588,
+      "members": [
+        {
+          "path": "kumihan-ziheng/.claude-plugin/plugin.json",
+          "bytes": 405,
+          "sha256": "0a00e445f25a6b3a82fb762f7f4b1a90deedc817ef1824d5e48ef92ec847c65d"
+        },
+        {
+          "path": "kumihan-ziheng/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/README.md",
+          "bytes": 514,
+          "sha256": "43d6421365db3e4e32ef5a500dd32ded935fe1932e70c777edcfb9415cba6396"
+        },
+        {
+          "path": "kumihan-ziheng/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/SKILL.md",
+          "bytes": 1072,
+          "sha256": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/inventory.json",
+          "bytes": 4034,
+          "sha256": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/SKILL.md",
+          "bytes": 1196,
+          "sha256": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/inventory.json",
+          "bytes": 4031,
+          "sha256": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-review/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/SKILL.md",
+          "bytes": 1075,
+          "sha256": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/inventory.json",
+          "bytes": 4028,
+          "sha256": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng-web/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/SKILL.md",
+          "bytes": 1163,
+          "sha256": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/inventory.json",
+          "bytes": 4024,
+          "sha256": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng/skills/kumihan-ziheng/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-ziheng-Claude-skill-0.1.0.zip",
+      "sha256": "93c64d407311996c11c5a82649c6f70736363102cc53fbad0934b6830aeb97b9",
+      "bytes": 35864,
+      "members": [
+        {
+          "path": "kumihan-ziheng/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng/SKILL.md",
+          "bytes": 1163,
+          "sha256": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd"
+        },
+        {
+          "path": "kumihan-ziheng/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng/inventory.json",
+          "bytes": 4024,
+          "sha256": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a"
+        },
+        {
+          "path": "kumihan-ziheng/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-ziheng-documents-Claude-skill-0.1.0.zip",
+      "sha256": "6035d91366cedf3ea2047c66be7d872dfd24e2fb0e8eef0fcf79f2815ca4441a",
+      "bytes": 36307,
+      "members": [
+        {
+          "path": "kumihan-ziheng-documents/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng-documents/SKILL.md",
+          "bytes": 1072,
+          "sha256": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb"
+        },
+        {
+          "path": "kumihan-ziheng-documents/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng-documents/inventory.json",
+          "bytes": 4034,
+          "sha256": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d"
+        },
+        {
+          "path": "kumihan-ziheng-documents/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng-documents/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng-documents/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng-documents/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng-documents/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng-documents/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng-documents/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng-documents/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng-documents/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng-documents/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng-documents/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng-documents/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng-documents/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng-documents/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng-documents/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng-documents/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-ziheng-review-Claude-skill-0.1.0.zip",
+      "sha256": "3d5e30c45451cb197370b67eb08477d9a569caaf28df1504b762793c5d8081ea",
+      "bytes": 36270,
+      "members": [
+        {
+          "path": "kumihan-ziheng-review/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng-review/SKILL.md",
+          "bytes": 1196,
+          "sha256": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57"
+        },
+        {
+          "path": "kumihan-ziheng-review/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng-review/inventory.json",
+          "bytes": 4031,
+          "sha256": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313"
+        },
+        {
+          "path": "kumihan-ziheng-review/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng-review/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng-review/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng-review/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng-review/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng-review/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng-review/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng-review/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng-review/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng-review/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng-review/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng-review/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng-review/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng-review/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng-review/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng-review/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        }
+      ]
+    },
+    {
+      "file": "skills/kumihan-ziheng-web-Claude-skill-0.1.0.zip",
+      "sha256": "8572f57e4860083fc10a1797309e074e71789b6146869829445d17011f74002d",
+      "bytes": 36046,
+      "members": [
+        {
+          "path": "kumihan-ziheng-web/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        {
+          "path": "kumihan-ziheng-web/SKILL.md",
+          "bytes": 1075,
+          "sha256": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898"
+        },
+        {
+          "path": "kumihan-ziheng-web/THIRD_PARTY_NOTICES.md",
+          "bytes": 874,
+          "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+        },
+        {
+          "path": "kumihan-ziheng-web/inventory.json",
+          "bytes": 4028,
+          "sha256": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74"
+        },
+        {
+          "path": "kumihan-ziheng-web/locales/zh-Hant-HK.json",
+          "bytes": 774,
+          "sha256": "a91c0b89ca153086342aa9ff09c5e9ac6d800361eb1695f0a74f3eba926e0f44"
+        },
+        {
+          "path": "kumihan-ziheng-web/locales/zh-Hant-TW.json",
+          "bytes": 812,
+          "sha256": "608f65ff1d2a78b13276be74a7a7f2e1c7bf0d4b0ca063d4ac648641d4e086ad"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/display-copy.json",
+          "bytes": 1442,
+          "sha256": "01b4fa66b91d0e863c8d8972fa91197a227caeae21f94954181c673dd77db0d8"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/presentation.json",
+          "bytes": 1442,
+          "sha256": "457851459b02435c21d7a8c7ace96cfe2e76721bc78af7587c8d3dc4a0685371"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/report-document.json",
+          "bytes": 1445,
+          "sha256": "4a35b8cab57c03daccdca52cad8976460c81875d6d4d61a4a7ab27470049f74a"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/web-editorial.json",
+          "bytes": 1485,
+          "sha256": "57114c1e9ca874a1dc64fe651075e23c78cb1bb643c91c5b77afc52ab0008e7e"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/web-marketing.json",
+          "bytes": 1485,
+          "sha256": "dfa1ad15fda758e932ee0e583f26a886f3a49a82e4a36d6a3fcc641541e316fb"
+        },
+        {
+          "path": "kumihan-ziheng-web/profiles/web-ui.json",
+          "bytes": 1478,
+          "sha256": "fdf55e03c28c00693bd1d987e88edfaf417596b49dc3b526a2ff2e2edfdbda6e"
+        },
+        {
+          "path": "kumihan-ziheng-web/references/documents.md",
+          "bytes": 1023,
+          "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+        },
+        {
+          "path": "kumihan-ziheng-web/references/regions.md",
+          "bytes": 1139,
+          "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+        },
+        {
+          "path": "kumihan-ziheng-web/references/review.md",
+          "bytes": 2171,
+          "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
+        },
+        {
+          "path": "kumihan-ziheng-web/references/web.md",
+          "bytes": 1548,
+          "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+        },
+        {
+          "path": "kumihan-ziheng-web/references/workflow.md",
+          "bytes": 1556,
+          "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+        },
+        {
+          "path": "kumihan-ziheng-web/rules/catalog.json",
+          "bytes": 57170,
+          "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+        },
+        {
+          "path": "kumihan-ziheng-web/schemas/context.schema.json",
+          "bytes": 1153,
+          "sha256": "2e0f53368cd7a1b30e997af8cd87272d9fcc68f0918d3ffdf59630cc1c863a4d"
+        },
+        {
+          "path": "kumihan-ziheng-web/schemas/profile.schema.json",
+          "bytes": 1239,
+          "sha256": "917d841fdcde60fb2a2ce2261d63b31df55ad65eee917323ee0b13391b58e3b0"
+        },
+        {
+          "path": "kumihan-ziheng-web/schemas/report.schema.json",
+          "bytes": 5604,
+          "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
+        },
+        {
+          "path": "kumihan-ziheng-web/schemas/rule.schema.json",
+          "bytes": 6117,
+          "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
+        },
+        {
+          "path": "kumihan-ziheng-web/scripts/checks.py",
+          "bytes": 2532,
+          "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+        },
+        {
+          "path": "kumihan-ziheng-web/sources/common-provenance.json",
+          "bytes": 567,
+          "sha256": "e8578b11a3c8314f7540415f7472bf18be254b58a00b4a8a80ae670f3dfff8ff"
+        },
+        {
+          "path": "kumihan-ziheng-web/sources/public-sources.json",
+          "bytes": 14816,
+          "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+        }
+      ]
+    }
+  ]
+}

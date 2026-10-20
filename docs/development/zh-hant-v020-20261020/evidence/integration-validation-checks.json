@@ -1,0 +1,108 @@
+[
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:27.059690+00:00",
+    "log": "integration-validation-root-tests.log"
+  },
+  {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/ziheng",
+      "-v"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:39.059626+00:00",
+    "log": "integration-validation-ziheng-tests.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/build_ziheng.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:44.096020+00:00",
+    "log": "integration-validation-build_ziheng.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/build_ziheng_hosts.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:44.310662+00:00",
+    "log": "integration-validation-build_ziheng_hosts.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/build_ziheng_site.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:44.624525+00:00",
+    "log": "integration-validation-build_ziheng_site.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/build_dist.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:45.147261+00:00",
+    "log": "integration-validation-build_dist.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_ja_type_011_cases.py"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:45.465832+00:00",
+    "log": "integration-validation-check_ja_type_011_cases.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/build_seo.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:45.497512+00:00",
+    "log": "integration-validation-build_seo.log"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_seo_preservation.py"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:55.598694+00:00",
+    "log": "integration-validation-check_seo_preservation.log"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-20T05:02:56.361978+00:00",
+    "log": "integration-validation-diff-check.log"
+  }
+]

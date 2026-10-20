@@ -1,0 +1,416 @@
+{
+  "authority": "KUMI-ZIHENG-V020-RESEARCH-WG-20261020-01",
+  "base": "8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
+  "status": "SOURCE_TRANSITION_INTEGRATED_NOT_RELEASED",
+  "updates": {
+    "protected": {
+      "plugins/kumihan-ziheng/.claude-plugin/plugin.json": {
+        "snapshot_before": "0a00e445f25a6b3a82fb762f7f4b1a90deedc817ef1824d5e48ef92ec847c65d",
+        "main_before": "0a00e445f25a6b3a82fb762f7f4b1a90deedc817ef1824d5e48ef92ec847c65d",
+        "after": "c0a3ca0902950f2b0eaf89a4a4dbcc9ca1e71eb7dcb78aae6778d2f3ad0282d8"
+      },
+      "plugins/kumihan-ziheng/.codex-plugin/plugin.json": {
+        "snapshot_before": "c3dfdf2a833f21b4b0484898b2626d68fe3fc0735d514cf2e7b57fee3334b6f8",
+        "main_before": "c3dfdf2a833f21b4b0484898b2626d68fe3fc0735d514cf2e7b57fee3334b6f8",
+        "after": "0ead00524c2ee588f101d1ee8b186c6ebf80a888401b005ebb6d512360ed4fc8"
+      },
+      "plugins/kumihan-ziheng/INSTALL.md": {
+        "snapshot_before": "22c077d9ca89c1f81d18818582055366748f34c6d7a1a630b6ef83504de4b7c1",
+        "main_before": "22c077d9ca89c1f81d18818582055366748f34c6d7a1a630b6ef83504de4b7c1",
+        "after": "57014036e0a9f821ce485d5b3e00cb78743dd6f7af17313d5372e04a6a06a920"
+      },
+      "plugins/kumihan-ziheng/README.md": {
+        "snapshot_before": "b168e8e94ed606798b3a74716453ee6a28169fadb17cbb10e311574c3fd1dc2b",
+        "main_before": "b168e8e94ed606798b3a74716453ee6a28169fadb17cbb10e311574c3fd1dc2b",
+        "after": "179b938ae96a63f314d33ee49e8288632bd526e27d2edb0a1c78e5d9563df697"
+      },
+      "plugins/kumihan-ziheng/TEST_REPORT.md": {
+        "snapshot_before": "da57b85a8de182960c7ce8456184d8f21edea07009b59e0f945aa6fffca515fe",
+        "main_before": "da57b85a8de182960c7ce8456184d8f21edea07009b59e0f945aa6fffca515fe",
+        "after": "a9b10237959237ae40a957dbd405d7b589172a2f7dfeaeb627677e919a71795e"
+      },
+      "plugins/kumihan-ziheng/UPDATES.md": {
+        "snapshot_before": "288165236f8a2cb75c475243d473f260ab07ba8fd326dc506421c27f8e3d3752",
+        "main_before": "288165236f8a2cb75c475243d473f260ab07ba8fd326dc506421c27f8e3d3752",
+        "after": "164da0f28e6ce86a5378c095eb07c6acd929eacb40f2c745ac50734021cfef96"
+      },
+      "plugins/kumihan-ziheng/docs/installation-claude.en.md": {
+        "snapshot_before": "6ee78936af3c8abba13cb56dbf54b6ddf8b7f7b1a5cd99bef16d33eb240f437b",
+        "main_before": "6ee78936af3c8abba13cb56dbf54b6ddf8b7f7b1a5cd99bef16d33eb240f437b",
+        "after": "b0dfff6f2e2d74d03cf6eafc90141ddb0b5a94ef58a973015e89eccf12fbc8f6"
+      },
+      "plugins/kumihan-ziheng/docs/installation-claude.ja.md": {
+        "snapshot_before": "1948db019d0603804a5a12b97ae4b40e299bca1cc6f66df5eee422d37b4ce37b",
+        "main_before": "1948db019d0603804a5a12b97ae4b40e299bca1cc6f66df5eee422d37b4ce37b",
+        "after": "94a92a301a3760be6b473e90f37869d441f77bff8e07a02be9ad305dec214149"
+      },
+      "plugins/kumihan-ziheng/docs/installation-claude.zh-hant.md": {
+        "snapshot_before": "b928c8bf3dc27d16a72edc6d36e5efed362d90aea9ad0bf18913209ce1d88ab7",
+        "main_before": "b928c8bf3dc27d16a72edc6d36e5efed362d90aea9ad0bf18913209ce1d88ab7",
+        "after": "39de537797f03127ab1b53a82b413bd0611acff694b96d2d5ce4d65646e21e36"
+      },
+      "plugins/kumihan-ziheng/docs/installation-gemini.en.md": {
+        "snapshot_before": "8f3b229fd0e2ea8e41d38c6176ea1e06de6bc95e5cf3a358701feae204ec26f4",
+        "main_before": "8f3b229fd0e2ea8e41d38c6176ea1e06de6bc95e5cf3a358701feae204ec26f4",
+        "after": "1cd176914ad38926136d166226e8c8f29366abc9ddfd69916a51ab3490e8d6c3"
+      },
+      "plugins/kumihan-ziheng/docs/installation-gemini.ja.md": {
+        "snapshot_before": "4ca698ad60ec247d560ef5b4450cef6f778c277ab1413a657b5cb07dde840e6c",
+        "main_before": "4ca698ad60ec247d560ef5b4450cef6f778c277ab1413a657b5cb07dde840e6c",
+        "after": "688d659ad62a8f893c4ff36e2f1cd206ab9193c7a82e237bdda7ad91f5a9666e"
+      },
+      "plugins/kumihan-ziheng/docs/installation-gemini.zh-hant.md": {
+        "snapshot_before": "6cf93eba428fc2c51eb7c97008116d4705c43fd93e98125efd1ce6c7de0fc8a0",
+        "main_before": "6cf93eba428fc2c51eb7c97008116d4705c43fd93e98125efd1ce6c7de0fc8a0",
+        "after": "66256cc0dca75073f23c604d46f7632dbb8e7e65803f4dbc40a6df55bfe16452"
+      },
+      "plugins/kumihan-ziheng/downloads Claude/MANIFEST.json": {
+        "snapshot_before": "ccd2a05a3eb65d8b363ec7398ab3fc69f211ef30746150b5574e8a873d46e81c",
+        "main_before": "ccd2a05a3eb65d8b363ec7398ab3fc69f211ef30746150b5574e8a873d46e81c",
+        "after": "16e4041db0580de628547d7a995e7d6ae545d581483f838c87e66d5a1711f883"
+      },
+      "plugins/kumihan-ziheng/downloads Claude/README.md": {
+        "snapshot_before": "99033ad5584c83d85bbf0fe83c4e688c8e5be015f19df1e51c7f5505fac5c0db",
+        "main_before": "99033ad5584c83d85bbf0fe83c4e688c8e5be015f19df1e51c7f5505fac5c0db",
+        "after": "9c34f222cef5fa890d48b80efde039803cfc2e778a229db5557fe982c6a87c8e"
+      },
+      "plugins/kumihan-ziheng/downloads Claude/SHA256SUMS.txt": {
+        "snapshot_before": "7679fa8f089ebfaa321af5a9b7120ddf00286451976a5c29fb30fbf839eb87b1",
+        "main_before": "7679fa8f089ebfaa321af5a9b7120ddf00286451976a5c29fb30fbf839eb87b1",
+        "after": "f660112b71eaeff8f9029c0765ab346056f3d52e126891e5c1ff09a8c14f8522"
+      },
+      "plugins/kumihan-ziheng/downloads Gemini/MANIFEST.json": {
+        "snapshot_before": "ef2864f0dbf901975ca5c2daeaaca3dd01acba62e8dbf45d0d9da957dfc21ad0",
+        "main_before": "ef2864f0dbf901975ca5c2daeaaca3dd01acba62e8dbf45d0d9da957dfc21ad0",
+        "after": "0828a819bf0d5c83830260983b0be171b6ddb78661ed6ba7cb5f6ec074fec865"
+      },
+      "plugins/kumihan-ziheng/downloads Gemini/README.md": {
+        "snapshot_before": "6178220dea04c0ca6e37090edfc801fcab59e9383318cf8e43654495839f1fe0",
+        "main_before": "6178220dea04c0ca6e37090edfc801fcab59e9383318cf8e43654495839f1fe0",
+        "after": "f9e964076e9e6e9baedc5a814a56a4c65f36edbd77ec2e837986fa8f806508b0"
+      },
+      "plugins/kumihan-ziheng/downloads Gemini/SHA256SUMS.txt": {
+        "snapshot_before": "9b8a83c057405d8f16dccd501acf8fbf1505f449705b39713aad608e80ed1f68",
+        "main_before": "9b8a83c057405d8f16dccd501acf8fbf1505f449705b39713aad608e80ed1f68",
+        "after": "fd24fbfe0b2b947e30857201cf66834a453d8bb86a8d8c7ff60c73dc515d57ea"
+      },
+      "plugins/kumihan-ziheng/downloads/MANIFEST.json": {
+        "snapshot_before": "3dfc527cc840706d773f8d69cb131da975a3a88256bfe1fad41097771cf57e01",
+        "main_before": "3dfc527cc840706d773f8d69cb131da975a3a88256bfe1fad41097771cf57e01",
+        "after": "7d6449cafa8f21c14a8a668ffd4538b17014bc2111eab6baaf5e9c832ea9fa29"
+      },
+      "plugins/kumihan-ziheng/downloads/SHA256SUMS.txt": {
+        "snapshot_before": "f8a032d3df920144971f0586207995b0d9bbda40fcd5f6a4a6ced1e630cc1b0e",
+        "main_before": "f8a032d3df920144971f0586207995b0d9bbda40fcd5f6a4a6ced1e630cc1b0e",
+        "after": "9c28b52dd95eb047448243c9e3a62cb946e037d78dc41f0c4c76f4b6eff8eed8"
+      },
+      "plugins/kumihan-ziheng/entrypoints/kumihan-ziheng-documents.md": {
+        "snapshot_before": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb",
+        "main_before": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb",
+        "after": "5d99414ce0d608da1a8e81cde39762c8806d2a330154c13f33c95248901e39fb"
+      },
+      "plugins/kumihan-ziheng/entrypoints/kumihan-ziheng-review.md": {
+        "snapshot_before": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57",
+        "main_before": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57",
+        "after": "fab926cda2651dcda36dcc41e94448a83a88a4eb8b03b3903cce39f9eb6c71ce"
+      },
+      "plugins/kumihan-ziheng/entrypoints/kumihan-ziheng-web.md": {
+        "snapshot_before": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898",
+        "main_before": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898",
+        "after": "b7fedcb7e6ec07c6c69fba7d191eb5ca72cc1f32ee5a0a96c7f87e5ba69c6e18"
+      },
+      "plugins/kumihan-ziheng/entrypoints/kumihan-ziheng.md": {
+        "snapshot_before": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd",
+        "main_before": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd",
+        "after": "0651a6d25bb7d564ea91ab0ccdec11da835323ec138eb6bf945c563bd45a39e3"
+      },
+      "plugins/kumihan-ziheng/gemini-extension.json": {
+        "snapshot_before": "6dc484e91a1503d4403f4a06d36d9202191e4c90050a6fda1653e83f299dd9a5",
+        "main_before": "6dc484e91a1503d4403f4a06d36d9202191e4c90050a6fda1653e83f299dd9a5",
+        "after": "a743ea0295fe8adc5a1c09684787304c3edbd112bfa1f42052d788a706737f25"
+      },
+      "plugins/kumihan-ziheng/plugin.json": {
+        "snapshot_before": "2ba2426365bc30039b5411478dba9c839f9d51f50275937f0160b8f3074b288a",
+        "main_before": "2ba2426365bc30039b5411478dba9c839f9d51f50275937f0160b8f3074b288a",
+        "after": "a032d62201666e234e8caf193460dcbf1daaf21a14f47ff2d301e77a19d6e9ca"
+      },
+      "plugins/kumihan-ziheng/references/documents.md": {
+        "snapshot_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "main_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "after": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+      },
+      "plugins/kumihan-ziheng/references/regions.md": {
+        "snapshot_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "main_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "after": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+      },
+      "plugins/kumihan-ziheng/references/web.md": {
+        "snapshot_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "main_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "after": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
+      },
+      "plugins/kumihan-ziheng/references/workflow.md": {
+        "snapshot_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "main_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "after": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
+      },
+      "plugins/kumihan-ziheng/rules/zh-hant.json": {
+        "snapshot_before": "a478e959f8521843c28ab57f848f0c2614d7768cfbddc30f1546cda5627442ef",
+        "main_before": "a478e959f8521843c28ab57f848f0c2614d7768cfbddc30f1546cda5627442ef",
+        "after": "5079baacb1b0093e9b8fdec095232a79c152a3671a2cc3b4675be2fabefd7555"
+      },
+      "plugins/kumihan-ziheng/runtime/checks.py": {
+        "snapshot_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "main_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "after": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/SKILL.md": {
+        "snapshot_before": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb",
+        "main_before": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb",
+        "after": "5d99414ce0d608da1a8e81cde39762c8806d2a330154c13f33c95248901e39fb"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/inventory.json": {
+        "snapshot_before": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d",
+        "main_before": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d",
+        "after": "d82239d7cd20fd8692c92547ea72c08e314bd4279c86b82a0d387d8f5615583c"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/references/documents.md": {
+        "snapshot_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "main_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "after": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/references/regions.md": {
+        "snapshot_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "main_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "after": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/references/web.md": {
+        "snapshot_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "main_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "after": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/references/workflow.md": {
+        "snapshot_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "main_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "after": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/rules/catalog.json": {
+        "snapshot_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "main_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "after": "4676da92f47d2a76a7808a7554dafce2a6859a4034b5f2c81bf93d12fa4e5c55"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/scripts/checks.py": {
+        "snapshot_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "main_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "after": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/sources/public-sources.json": {
+        "snapshot_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "main_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "after": "9fb5d6085096652b605dee1db9bd916517a681d3b425e86e93290d0a2e9775b8"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/SKILL.md": {
+        "snapshot_before": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57",
+        "main_before": "db31e6ef4ebd098fdb310229b68f3319a08a43250b11f0197b32df254f117c57",
+        "after": "fab926cda2651dcda36dcc41e94448a83a88a4eb8b03b3903cce39f9eb6c71ce"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/inventory.json": {
+        "snapshot_before": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313",
+        "main_before": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313",
+        "after": "5f4ecb688350d3282d0e306c5965da26ccc3a160cb11f036ef9174a3baf4f0bd"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/references/documents.md": {
+        "snapshot_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "main_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "after": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/references/regions.md": {
+        "snapshot_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "main_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "after": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/references/web.md": {
+        "snapshot_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "main_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "after": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/references/workflow.md": {
+        "snapshot_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "main_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "after": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/rules/catalog.json": {
+        "snapshot_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "main_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "after": "4676da92f47d2a76a7808a7554dafce2a6859a4034b5f2c81bf93d12fa4e5c55"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/scripts/checks.py": {
+        "snapshot_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "main_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "after": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/sources/public-sources.json": {
+        "snapshot_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "main_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "after": "9fb5d6085096652b605dee1db9bd916517a681d3b425e86e93290d0a2e9775b8"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/SKILL.md": {
+        "snapshot_before": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898",
+        "main_before": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898",
+        "after": "b7fedcb7e6ec07c6c69fba7d191eb5ca72cc1f32ee5a0a96c7f87e5ba69c6e18"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/inventory.json": {
+        "snapshot_before": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74",
+        "main_before": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74",
+        "after": "c951e7031aed787a740907810c1af97b7a961736e4ad275b4955c751e8108879"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/references/documents.md": {
+        "snapshot_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "main_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "after": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/references/regions.md": {
+        "snapshot_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "main_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "after": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/references/web.md": {
+        "snapshot_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "main_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "after": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/references/workflow.md": {
+        "snapshot_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "main_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "after": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/rules/catalog.json": {
+        "snapshot_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "main_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "after": "4676da92f47d2a76a7808a7554dafce2a6859a4034b5f2c81bf93d12fa4e5c55"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/scripts/checks.py": {
+        "snapshot_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "main_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "after": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/sources/public-sources.json": {
+        "snapshot_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "main_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "after": "9fb5d6085096652b605dee1db9bd916517a681d3b425e86e93290d0a2e9775b8"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md": {
+        "snapshot_before": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd",
+        "main_before": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd",
+        "after": "0651a6d25bb7d564ea91ab0ccdec11da835323ec138eb6bf945c563bd45a39e3"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/inventory.json": {
+        "snapshot_before": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a",
+        "main_before": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a",
+        "after": "8460317463d4d842b61d2a801eb0ba22aa5cd0e6aab8e0d6ba45bae79ae0ad93"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/references/documents.md": {
+        "snapshot_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "main_before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
+        "after": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/references/regions.md": {
+        "snapshot_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "main_before": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e",
+        "after": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/references/web.md": {
+        "snapshot_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "main_before": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7",
+        "after": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/references/workflow.md": {
+        "snapshot_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "main_before": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f",
+        "after": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/rules/catalog.json": {
+        "snapshot_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "main_before": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948",
+        "after": "4676da92f47d2a76a7808a7554dafce2a6859a4034b5f2c81bf93d12fa4e5c55"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/scripts/checks.py": {
+        "snapshot_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "main_before": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9",
+        "after": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+      },
+      "plugins/kumihan-ziheng/skills/kumihan-ziheng/sources/public-sources.json": {
+        "snapshot_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "main_before": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd",
+        "after": "9fb5d6085096652b605dee1db9bd916517a681d3b425e86e93290d0a2e9775b8"
+      },
+      "plugins/kumihan-ziheng/sources.json": {
+        "snapshot_before": "a766473fa8c0d1c2edd71750649b4789e523e2f95fcfb509fcf760a141e60fb3",
+        "main_before": "a766473fa8c0d1c2edd71750649b4789e523e2f95fcfb509fcf760a141e60fb3",
+        "after": "ff2fff7cce96b8d3a33ab8a3c202a41029399ff7536fa817a5484f6310612d44"
+      }
+    },
+    "bodies": {
+      "docs/install-ziheng-claude.en.html": {
+        "snapshot_before": "53797c38ee1798afc5d99989086a427baf40f6ec10509fb8041c2a357c8273d6",
+        "main_before": "fc7c9b2a662b569ad7dfea62563064ac3ac33563e74dea7b380ae709b083d6dd",
+        "after": "a3c722531613bd95d61c37327b9f94289f7f4bbd0a8ba5e42342926904d27aeb"
+      },
+      "docs/install-ziheng-claude.html": {
+        "snapshot_before": "d3f8c2ae884adc25c1e909c6ee2f0b9114fe359648160c2fa08ea74737c154e0",
+        "main_before": "f87e6575f4906bbabe7aefa62a8b87f9e91e6fb33bc1d8db258632d71ae5f6d4",
+        "after": "a7ed16cfe8a632d9296f0ac1ad7bb8f9dad1004b9fa20cc8f29dbc1c20a90c31"
+      },
+      "docs/install-ziheng-claude.ja.html": {
+        "snapshot_before": "d3517d634a490f5e8632d83524ae709f600ee2168e22448b781796fbc3796c67",
+        "main_before": "00f0ae3592759fb23bc95916781f59c1f7940cd2e00e97b0fddcb466e1a4572b",
+        "after": "7a453b7d81172a9f9c6ddebca52657a28c4c5ec21138ace69b70ba387bf4f537"
+      },
+      "docs/install-ziheng-gemini.en.html": {
+        "snapshot_before": "a30e6166b9d8e96bf7b81f07523d836015df39ce9c99c12faa6ec1f74456b2e9",
+        "main_before": "9db031cf95eb4f62bcfe054f3323c26e832ba230164736e741a8b2d091c4719d",
+        "after": "6a928181ae9f60117bd8d77e3b7a600516ca801deb1875b292b98eea37b8e608"
+      },
+      "docs/install-ziheng-gemini.html": {
+        "snapshot_before": "3d3aaca8007b4cc6afd4d818520081ca1ee0e6c51ba407e1a44db63fb6d6a906",
+        "main_before": "7a8269d4250f15b32eebb9d6fe8b012475ee1cbc3936ff47b5c22072e5fc6bf0",
+        "after": "dededd9f7c4e87869f5a3ffc3a6616fb93f1428748a8ad2d57bad9d0bab767e0"
+      },
+      "docs/install-ziheng-gemini.ja.html": {
+        "snapshot_before": "4d83c90a862a4eec1b076921cddbe9aafcbe2c1ab3a2d1e3891004466fce6429",
+        "main_before": "1432409dd3178007d61a9d077fbb6c098ff88562f6fb6cb3bdf7ab3b0dde248e",
+        "after": "6e4864cc93b7b142bdcd6239e0b80c29756cae57ef5311a7834d472eb2cb5976"
+      },
+      "docs/install-ziheng.en.html": {
+        "snapshot_before": "4555e135b85a48296bb58dbae05b01072c47e3ed3018ce74ba57bed18402f120",
+        "main_before": "f4b67002f5133b6e6c95791c3bb84826fcbce8029ecb756ed8b4df54951669af",
+        "after": "7ad535b47a8449d430051e5525965c971a9549920485f81ef3e7d2284d336c9e"
+      },
+      "docs/install-ziheng.html": {
+        "snapshot_before": "de79a72429f1a443a12c094d49f357e15d9e6c890da3ad0e993ad6d7a505998f",
+        "main_before": "8f5015d563c623441e6f414b1697ff6076d0093a6b185373e4c1e55ee9708d4f",
+        "after": "4d57a251f8af32fc68e664c227618b222d4488795e82492c5ac6a81237b5fce4"
+      },
+      "docs/install-ziheng.ja.html": {
+        "snapshot_before": "cc7137d5f493079ac1ee89b1b5b2ce6b28ed0f5cf70234283a519fe45e2cba74",
+        "main_before": "84352bd9ce68533d5846979646defb88bba5681d382271f5b434b2b986b5c58d",
+        "after": "5e253dfd812828b4ca38bf459ddf8dfe7aaabcbf11aceb32f6d0394c9a157e9a"
+      },
+      "kumihan-zh-han.en.html": {
+        "snapshot_before": "4c72e694d1aadab92df763b9c29fb8c304765866aec075b8b6502d118f68922a",
+        "main_before": "3915ebeeee353161f53785e1b8cff6df4cc8ce26e5b429ae83692c3be80bfc23",
+        "after": "054df7d122a275753efbfc35968ea0a761954b50d90013b95dffaba464ab482b"
+      },
+      "kumihan-zh-han.html": {
+        "snapshot_before": "a0bc3ad800ce9dfbe40078874d92322a4d062312f0aca990d1cb866ef88c2aba",
+        "main_before": "8589be12c49cf092f53b238e64ca469ac3338403a7e70b02e72e8be3025a3a96",
+        "after": "4a679b03b6f6eb747bf20ccba2d0cb2089143d2d123074bdd2b5b6ede335acf4"
+      },
+      "kumihan-zh-han.ja.html": {
+        "snapshot_before": "ba7ef83a23c23d4f40bf2289a242b0eb4aad35e6c2ec8835a8838be88340fb0c",
+        "main_before": "59803408d0634066d22e5bc5fb98b4fc3a89d139c54b9cb999d83ffccfa83475",
+        "after": "3886e37f430a2b7adec941905e82fd5bd51a863b2e27d54f71fbec9936854eba"
+      }
+    }
+  }
+}

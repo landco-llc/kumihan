@@ -41,3 +41,9 @@ Gemini CLI 無法將 monorepo 根目錄視作字衡延伸；請解壓 Gemini CLI
 確認 `zh-Hant-TW` 和 `zh-Hant-HK` 能分開選；原稿「陳𠮷、臺／台、ＨＫ＄１２３、é」保持原樣。
 香港未指定引號體例時應先確認；URL、程式碼和英文引文不應被改寫。
 唯讀檢視前後比較目標 digest，保留 needs-review／not-checked。
+
+## v0.2.0 candidate migration
+
+Use the active MANIFEST.json in downloads, downloads Claude or downloads Gemini to select exactly one full bundle or the four Skills for the same host/version. Verify SHA256SUMS.txt before replacing the backed-up installation folder. Do not combine v0.1.0 and v0.2.0 references/scripts. Native host discovery/invocation still needs acceptance testing. Historical v0.1.0 paths remain usable.
+
+先備份舊版，按相同host取得並校驗0.2.0候選；整包替換、重載、以固定原稿小樣本確認。版本升級不是正式公開或自動更新。

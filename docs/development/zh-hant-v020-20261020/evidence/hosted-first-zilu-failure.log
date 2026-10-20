@@ -1,0 +1,361 @@
+product-site	Other-language regression	﻿2026-10-20T05:08:25.6821085Z ##[group]Run python -m unittest discover -s tests -v
+product-site	Other-language regression	2026-10-20T05:08:25.6821575Z ^[[36;1mpython -m unittest discover -s tests -v^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6822030Z ^[[36;1mpython -m unittest discover -s tests/ziheng -v^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6822498Z ^[[36;1mpython -m unittest discover -s tests/geuljjaim -v^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6822925Z ^[[36;1mpython -m unittest discover -s tests/thai -v^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6823538Z ^[[36;1mpython tools/build_dist.py --check^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6823937Z ^[[36;1mpython tools/build_ziheng.py --check^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6824310Z ^[[36;1mpython tools/build_ziheng_hosts.py --check^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6824780Z ^[[36;1mpython tools/build_geuljjaim.py --check^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6825149Z ^[[36;1mpython tools/build_th.py --check^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6825565Z ^[[36;1mpython tools/check_ja_type_011_cases.py^[[0m
+product-site	Other-language regression	2026-10-20T05:08:25.6866372Z shell: /usr/bin/bash -e {0}
+product-site	Other-language regression	2026-10-20T05:08:25.6866730Z env:
+product-site	Other-language regression	2026-10-20T05:08:25.6867030Z   PYTHONDONTWRITEBYTECODE: 1
+product-site	Other-language regression	2026-10-20T05:08:25.6867559Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+product-site	Other-language regression	2026-10-20T05:08:25.6868060Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+product-site	Other-language regression	2026-10-20T05:08:25.6868592Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+product-site	Other-language regression	2026-10-20T05:08:25.6869038Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+product-site	Other-language regression	2026-10-20T05:08:25.6869456Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+product-site	Other-language regression	2026-10-20T05:08:25.6869952Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+product-site	Other-language regression	2026-10-20T05:08:25.6870355Z ##[endgroup]
+product-site	Other-language regression	2026-10-20T05:08:26.0428931Z test_shared_renderer_replaces_downloads_and_marks_unpublished (test_edition_versions.DisplayContract.test_shared_renderer_replaces_downloads_and_marks_unpublished) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6917284Z test_unlisted_mutations_still_fail (test_edition_versions.PreservationGate.test_unlisted_mutations_still_fail) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6930671Z test_complete_promotion_and_idempotence (test_edition_versions.ReleaseAdmission.test_complete_promotion_and_idempotence) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6932166Z test_failure_keeps_snapshot_unchanged (test_edition_versions.ReleaseAdmission.test_failure_keeps_snapshot_unchanged) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6934546Z test_ignores_unrelated_and_draft_events (test_edition_versions.ReleaseAdmission.test_ignores_unrelated_and_draft_events) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6937628Z test_old_formal_release_does_not_downgrade (test_edition_versions.ReleaseAdmission.test_old_formal_release_does_not_downgrade) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6940078Z test_rejects_bytes_size_manifest_and_source_mismatch (test_edition_versions.ReleaseAdmission.test_rejects_bytes_size_manifest_and_source_mismatch) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6941516Z test_rejects_draft_prerelease_unrelated_and_partial (test_edition_versions.ReleaseAdmission.test_rejects_draft_prerelease_unrelated_and_partial) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6943442Z test_rejects_missing_or_corrupt_checksums (test_edition_versions.ReleaseAdmission.test_rejects_missing_or_corrupt_checksums) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6944879Z test_same_count_wrong_package_role_is_rejected (test_edition_versions.ReleaseAdmission.test_same_count_wrong_package_role_is_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6946846Z test_unadopted_flat_contract_does_not_promote (test_edition_versions.ReleaseAdmission.test_unadopted_flat_contract_does_not_promote) ... ok
+product-site	Other-language regression	2026-10-20T05:08:27.6950684Z test_withdrawn_current_release_fails_without_mutation (test_edition_versions.ReleaseAdmission.test_withdrawn_current_release_fails_without_mutation) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7301637Z test_all_generated_surfaces_and_idempotence (test_edition_versions.SnapshotAndCoverage.test_all_generated_surfaces_and_idempotence) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7324617Z test_catalogue_source_and_release_integrity (test_edition_versions.SnapshotAndCoverage.test_catalogue_source_and_release_integrity) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7472744Z test_sync_failure_never_replaces_facts_file (test_edition_versions.SnapshotAndCoverage.test_sync_failure_never_replaces_facts_file) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7511358Z test_every_top_has_the_menu_in_its_language (test_gateway_edition_menu.EditionMenu.test_every_top_has_the_menu_in_its_language) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7512778Z test_polish_example (test_gateway_edition_menu.EditionMenu.test_polish_example) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7516522Z test_six_cards_before_show_more (test_gateway_edition_menu.EditionMenu.test_six_cards_before_show_more) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7542818Z test_stylesheet_link_carries_its_content_version (test_gateway_edition_menu.EditionMenu.test_stylesheet_link_carries_its_content_version) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7576736Z test_company_name_and_no_draft_notes (test_privacy.PrivacyPolicy.test_company_name_and_no_draft_notes) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.7587323Z test_every_gateway_language_has_a_complete_section (test_privacy.PrivacyPolicy.test_every_gateway_language_has_a_complete_section) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.8094188Z test_every_page_links_to_its_language (test_privacy.PrivacyPolicy.test_every_page_links_to_its_language) ... ok
+product-site	Other-language regression	2026-10-20T05:08:28.8487645Z test_pages_are_current (test_privacy.PrivacyPolicy.test_pages_are_current) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.6023839Z test_archives_match_manifest_inventory_and_rule_contract (test_rule_contract.RuleContractTests.test_archives_match_manifest_inventory_and_rule_contract) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.7076854Z test_four_skills_and_six_profiles (test_rule_contract.RuleContractTests.test_four_skills_and_six_profiles) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.7079255Z test_reject_duplicate_catalog_and_enum_ids (test_rule_contract.RuleContractTests.test_reject_duplicate_catalog_and_enum_ids) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.7557794Z test_reject_invalid_rule_objects (test_rule_contract.RuleContractTests.test_reject_invalid_rule_objects) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.7559274Z test_reject_missing_enum_id (test_rule_contract.RuleContractTests.test_reject_missing_enum_id) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8321028Z test_every_static_page_has_the_shared_footer (test_site_footer.SharedFooter.test_every_static_page_has_the_shared_footer) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8323251Z test_footer_content (test_site_footer.SharedFooter.test_footer_content) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8332233Z test_jekyll_layouts_use_the_shared_footer (test_site_footer.SharedFooter.test_jekyll_layouts_use_the_shared_footer) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8549039Z test_every_static_page_links_to_its_language_gateway (test_site_layout_parity.GatewayLinks.test_every_static_page_links_to_its_language_gateway) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8591421Z test_jekyll_layouts_and_gateways (test_site_layout_parity.GatewayLinks.test_jekyll_layouts_and_gateways) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8807289Z test_product_install_guides_use_canonical_frame (test_site_layout_parity.InstallGuideParity.test_product_install_guides_use_canonical_frame) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8811556Z test_shared_stylesheet_contains_canonical_guide_css (test_site_layout_parity.InstallGuideParity.test_shared_stylesheet_contains_canonical_guide_css) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8869952Z test_landing_install_lists_one_row_per_host (test_site_layout_parity.LandingParity.test_landing_install_lists_one_row_per_host) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8922334Z test_landings_follow_canonical_index_sections (test_site_layout_parity.LandingParity.test_landings_follow_canonical_index_sections) ... ok
+product-site	Other-language regression	2026-10-20T05:08:29.8924060Z test_description_joins_kumihan_and_the_page (test_site_share.SharedPreview.test_description_joins_kumihan_and_the_page) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.2453707Z test_every_static_page_has_the_shared_tags (test_site_share.SharedPreview.test_every_static_page_has_the_shared_tags) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.2460312Z test_jekyll_layouts_use_the_shared_tags (test_site_share.SharedPreview.test_jekyll_layouts_use_the_shared_tags) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.2462118Z test_share_image_is_a_wide_logo (test_site_share.SharedPreview.test_share_image_is_a_wide_logo) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.2476427Z test_corrupt_source_bytes_abort_instead_of_promoting (test_source_zip_links.SourceDownloads.test_corrupt_source_bytes_abort_instead_of_promoting) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.3900931Z test_existing_sources_remain_links_without_claiming_release (test_source_zip_links.SourceDownloads.test_existing_sources_remain_links_without_claiming_release) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4312652Z test_source_inventory_preserves_distinct_roles (test_source_zip_links.SourceDownloads.test_source_inventory_preserves_distinct_roles) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4361725Z test_untrusted_or_wrong_product_sources_stay_disabled (test_source_zip_links.SourceDownloads.test_untrusted_or_wrong_product_sources_stay_disabled) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4370280Z test_article_and_ui_keep_profiles_without_adapters (test_use_case_selection.UseCaseRoutingTests.test_article_and_ui_keep_profiles_without_adapters) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4800546Z test_cli_outputs_json_and_no_quality_pass (test_use_case_selection.UseCaseRoutingTests.test_cli_outputs_json_and_no_quality_pass) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4802497Z test_compatible_same_medium_manual_override_is_respected (test_use_case_selection.UseCaseRoutingTests.test_compatible_same_medium_manual_override_is_respected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4837327Z test_distribution_archives_exclude_python_bytecode (test_use_case_selection.UseCaseRoutingTests.test_distribution_archives_exclude_python_bytecode) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4839526Z test_english_headline_only_is_display_copy (test_use_case_selection.UseCaseRoutingTests.test_english_headline_only_is_display_copy) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4841408Z test_image_and_html_banner_is_ambiguous (test_use_case_selection.UseCaseRoutingTests.test_image_and_html_banner_is_ambiguous) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4843241Z test_interactive_html_banner_is_not_static (test_use_case_selection.UseCaseRoutingTests.test_interactive_html_banner_is_not_static) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4845320Z test_lp_copy_only_is_display_copy_not_web_marketing (test_use_case_selection.UseCaseRoutingTests.test_lp_copy_only_is_display_copy_not_web_marketing) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4847443Z test_lp_page_with_minor_headline_only_verification_is_not_copy_only (test_use_case_selection.UseCaseRoutingTests.test_lp_page_with_minor_headline_only_verification_is_not_copy_only) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4849516Z test_manual_medium_compatible_or_conflicting (test_use_case_selection.UseCaseRoutingTests.test_manual_medium_compatible_or_conflicting) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4851454Z test_multiple_output_media_requires_one_question (test_use_case_selection.UseCaseRoutingTests.test_multiple_output_media_requires_one_question) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4853469Z test_negated_poster_does_not_trigger_poster_adapter (test_use_case_selection.UseCaseRoutingTests.test_negated_poster_does_not_trigger_poster_adapter) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4855435Z test_negated_static_banner_selects_web_deliverable (test_use_case_selection.UseCaseRoutingTests.test_negated_static_banner_selects_web_deliverable) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4857235Z test_no_forced_language_conversion (test_use_case_selection.UseCaseRoutingTests.test_no_forced_language_conversion) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4858950Z test_original_design_contract_and_report_not_extended (test_use_case_selection.UseCaseRoutingTests.test_original_design_contract_and_report_not_extended) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4860959Z test_presentation_routes_to_existing_medium (test_use_case_selection.UseCaseRoutingTests.test_presentation_routes_to_existing_medium) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4869112Z test_reference_catalog_and_profiles_intact (test_use_case_selection.UseCaseRoutingTests.test_reference_catalog_and_profiles_intact) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4870542Z test_report_routes_to_existing_medium (test_use_case_selection.UseCaseRoutingTests.test_report_routes_to_existing_medium) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4878038Z test_route_configuration_rejects_bad_media_and_duplicates (test_use_case_selection.UseCaseRoutingTests.test_route_configuration_rejects_bad_media_and_duplicates) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4879787Z test_script_data_standalone_relative_paths (test_use_case_selection.UseCaseRoutingTests.test_script_data_standalone_relative_paths) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4881222Z test_static_banner_routes_to_display_copy (test_use_case_selection.UseCaseRoutingTests.test_static_banner_routes_to_display_copy) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4882351Z test_uca01_social_static_auto (test_use_case_selection.UseCaseRoutingTests.test_uca01_social_static_auto) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4883601Z test_uca02_landing_page_auto (test_use_case_selection.UseCaseRoutingTests.test_uca02_landing_page_auto) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4884778Z test_uca03_generic_copy_not_forced_into_an_adapter (test_use_case_selection.UseCaseRoutingTests.test_uca03_generic_copy_not_forced_into_an_adapter) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4886252Z test_uca04_compatible_manual_override (test_use_case_selection.UseCaseRoutingTests.test_uca04_compatible_manual_override) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4887502Z test_uca05_incompatible_manual_override_confirms (test_use_case_selection.UseCaseRoutingTests.test_uca05_incompatible_manual_override_confirms) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4888819Z test_uca06_minor_unknown_details_no_question (test_use_case_selection.UseCaseRoutingTests.test_uca06_minor_unknown_details_no_question) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4890340Z test_uca07_ambiguous_banner_asks_once (test_use_case_selection.UseCaseRoutingTests.test_uca07_ambiguous_banner_asks_once) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4891341Z test_uca08_strict_not_inferred_from_use_case (test_use_case_selection.UseCaseRoutingTests.test_uca08_strict_not_inferred_from_use_case) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4892720Z test_uca09_post_production_strict_is_not_retroactive (test_use_case_selection.UseCaseRoutingTests.test_uca09_post_production_strict_is_not_retroactive) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4893936Z test_uca10_audit_does_not_edit (test_use_case_selection.UseCaseRoutingTests.test_uca10_audit_does_not_edit) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4894968Z test_unknown_adapter_and_medium_rejected (test_use_case_selection.UseCaseRoutingTests.test_unknown_adapter_and_medium_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4896411Z test_unknown_media_not_assumed (test_use_case_selection.UseCaseRoutingTests.test_unknown_media_not_assumed) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4899242Z test_valid_workflow_modes_do_not_grant_edit_authority (test_use_case_selection.UseCaseRoutingTests.test_valid_workflow_modes_do_not_grant_edit_authority) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.4930495Z test_current_21_product_versions_have_no_preview_suffix (test_version_naming.VersionNamingPolicyTests.test_current_21_product_versions_have_no_preview_suffix) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5095334Z test_current_distribution_manifest_versions_match_their_products (test_version_naming.VersionNamingPolicyTests.test_current_distribution_manifest_versions_match_their_products) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5099164Z test_current_site_status_uses_suffix_free_version (test_version_naming.VersionNamingPolicyTests.test_current_site_status_uses_suffix_free_version) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5109250Z test_japanese_15_active_distribution_names_and_sizes (test_version_naming.VersionNamingPolicyTests.test_japanese_15_active_distribution_names_and_sizes) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5110507Z test_naming_contract_has_examples (test_version_naming.VersionNamingPolicyTests.test_naming_contract_has_examples) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5120306Z test_publication_status_comes_from_verified_facts (test_version_naming.VersionNamingPolicyTests.test_publication_status_comes_from_verified_facts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5161379Z test_ziheng_active_distribution_and_site_names (test_version_naming.VersionNamingPolicyTests.test_ziheng_active_distribution_and_site_names) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.5330840Z test_every_font_file_is_on_this_site (test_web_fonts.WebFonts.test_every_font_file_is_on_this_site) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.6084097Z test_every_static_page_links_its_language_fonts (test_web_fonts.WebFonts.test_every_static_page_links_its_language_fonts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.6086680Z test_jekyll_layouts_link_language_fonts (test_web_fonts.WebFonts.test_jekyll_layouts_link_language_fonts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.6396947Z test_no_page_requests_fonts_from_google (test_web_fonts.WebFonts.test_no_page_requests_fonts_from_google) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.6397887Z test_system_fonts_come_before_google_fonts (test_web_fonts.WebFonts.test_system_fonts_come_before_google_fonts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.6469854Z test_conflicts_and_types_rejected (test_ziheng_v020_context.ContextTests.test_conflicts_and_types_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:30.9013865Z test_explicit_modes_and_no_style_default (test_ziheng_v020_context.ContextTests.test_explicit_modes_and_no_style_default) ... ok
+product-site	Other-language regression	2026-10-20T05:08:31.4039037Z test_regions_and_sets (test_ziheng_v020_context.ContextTests.test_regions_and_sets) ... ok
+product-site	Other-language regression	2026-10-20T05:08:31.5401309Z test_research_mapping_and_sources (test_ziheng_v020_context.ContextTests.test_research_mapping_and_sources) ... ok
+product-site	Other-language regression	2026-10-20T05:08:31.5518448Z test_strict_legacy_resolver_preserved (test_ziheng_v020_context.ContextTests.test_strict_legacy_resolver_preserved) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8003637Z test_unknown_mo_and_foreign_stay_neutral (test_ziheng_v020_context.ContextTests.test_unknown_mo_and_foreign_stay_neutral) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8050354Z test_evidence_rejects_empty_mismatched_and_css_only (test_ziheng_v020_evidence.EvidenceTests.test_evidence_rejects_empty_mismatched_and_css_only) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8074457Z test_glyph_scopes_cannot_pass_with_static_byte_evidence (test_ziheng_v020_evidence.EvidenceTests.test_glyph_scopes_cannot_pass_with_static_byte_evidence) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8084787Z test_preservation_exact_not_normalized (test_ziheng_v020_evidence.EvidenceTests.test_preservation_exact_not_normalized) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8108794Z test_rendered_needs_real_conditions_and_glyph_proof (test_ziheng_v020_evidence.EvidenceTests.test_rendered_needs_real_conditions_and_glyph_proof) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8280443Z test_schemas_validate_static_and_context (test_ziheng_v020_evidence.EvidenceTests.test_schemas_validate_static_and_context) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8291541Z test_segment_roles_unknown_and_code_point_positions (test_ziheng_v020_evidence.EvidenceTests.test_segment_roles_unknown_and_code_point_positions) ... ok
+product-site	Other-language regression	2026-10-20T05:08:32.8304623Z test_static_evidence_not_browser_required (test_ziheng_v020_evidence.EvidenceTests.test_static_evidence_not_browser_required) ... ok
+product-site	Other-language regression	2026-10-20T05:08:33.4184334Z test_build_checks_are_read_only_and_unknown_stale_is_not_whitelisted (test_ziheng_v020_packaging.PackagingTests.test_build_checks_are_read_only_and_unknown_stale_is_not_whitelisted) ... ok
+product-site	Other-language regression	2026-10-20T05:08:34.3705458Z test_current_fifteen_archives_crc_size_hash_icons_and_determinism (test_ziheng_v020_packaging.PackagingTests.test_current_fifteen_archives_crc_size_hash_icons_and_determinism) ... ok
+product-site	Other-language regression	2026-10-20T05:08:34.5098850Z test_four_standalone_scripts_and_references (test_ziheng_v020_packaging.PackagingTests.test_four_standalone_scripts_and_references) ... ok
+product-site	Other-language regression	2026-10-20T05:08:34.5512185Z test_historical_source_links_are_verified_against_retention (test_ziheng_v020_packaging.PackagingTests.test_historical_source_links_are_verified_against_retention) ... ok
+product-site	Other-language regression	2026-10-20T05:08:34.6239575Z test_legacy_url_stays_admitted_after_shared_version_snapshot_updates (test_ziheng_v020_packaging.PackagingTests.test_legacy_url_stays_admitted_after_shared_version_snapshot_updates) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.3649993Z test_old_archives_survive_version_transition_and_corruption_is_rejected (test_ziheng_v020_packaging.PackagingTests.test_old_archives_survive_version_transition_and_corruption_is_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.4056765Z test_history_manifest_exception_requires_exact_retention (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_history_manifest_exception_requires_exact_retention) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.4388458Z test_legacy_zip_mutation_remains_rejected (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_legacy_zip_mutation_remains_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5411663Z test_other_edition_facts_are_unchanged (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_other_edition_facts_are_unchanged) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5436066Z test_source_links_keep_versions_distinct (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_source_links_keep_versions_distinct) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5595369Z test_transition_rejects_unknown_path_and_changed_preimage (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_transition_rejects_unknown_path_and_changed_preimage) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5601713Z test_ziheng_source_bump_preserves_publication_facts (test_ziheng_v020_shared_integration.SharedIntegrationTests.test_ziheng_source_bump_preserves_publication_facts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5633028Z test_history_exemption_only_accepts_exact_retained_ziheng_manifests (test_ziheng_v020_transition.TransitionTests.test_history_exemption_only_accepts_exact_retained_ziheng_manifests) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5698147Z test_old_hash_and_candidate_hash_must_both_match (test_ziheng_v020_transition.TransitionTests.test_old_hash_and_candidate_hash_must_both_match) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.5699622Z 
+product-site	Other-language regression	2026-10-20T05:08:35.5700030Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:35.5701124Z Ran 118 tests in 9.528s
+product-site	Other-language regression	2026-10-20T05:08:35.5701511Z 
+product-site	Other-language regression	2026-10-20T05:08:35.5701766Z OK
+product-site	Other-language regression	2026-10-20T05:08:35.7289782Z test_all_twelve_pages_use_punctuation_free_headings (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_all_twelve_pages_use_punctuation_free_headings) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7294044Z test_host_steps_preserve_instructions_as_body_copy (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_host_steps_preserve_instructions_as_body_copy) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7306202Z test_only_approved_kumihan_image_mark_is_used (test_branding_copy.ZiHengApprovedBrandAndHeadlines.test_only_approved_kumihan_image_mark_is_used) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7317824Z test_exact_bytes_never_normalized (test_checks.ChecksTests.test_exact_bytes_never_normalized) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7330914Z test_original_regional_fixture_cases (test_checks.ChecksTests.test_original_regional_fixture_cases) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7340649Z test_unknown_context_rejected (test_checks.ChecksTests.test_unknown_context_rejected) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7348902Z test_existing_zi_heng_portal_and_top_links (test_host_pages.HostDocsTests.test_existing_zi_heng_portal_and_top_links) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7364549Z test_host_markdown_zip_checksum_and_instruction_separation (test_host_pages.HostDocsTests.test_host_markdown_zip_checksum_and_instruction_separation) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7643903Z test_host_page_localization_and_links (test_host_pages.HostDocsTests.test_host_page_localization_and_links) ... ok
+product-site	Other-language regression	2026-10-20T05:08:35.7645463Z test_claude_marketplace_entry_preserves_japanese (test_hosts.HostPackagingTests.test_claude_marketplace_entry_preserves_japanese) ... ok
+product-site	Other-language regression	2026-10-20T05:08:36.4158220Z test_generator_no_source_writes_in_check_and_determinism (test_hosts.HostPackagingTests.test_generator_no_source_writes_in_check_and_determinism) ... ok
+product-site	Other-language regression	2026-10-20T05:08:36.8088597Z test_host_archives_self_contained_and_canonical (test_hosts.HostPackagingTests.test_host_archives_self_contained_and_canonical) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.1231749Z test_host_package_locale_and_region_protection (test_hosts.HostPackagingTests.test_host_package_locale_and_region_protection) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.1288102Z test_historical_japanese_fixture_exact_set (test_locale.LocaleTests.test_historical_japanese_fixture_exact_set) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.1289509Z test_locale_is_explicit_and_case_insensitive (test_locale.LocaleTests.test_locale_is_explicit_and_case_insensitive) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.2641389Z test_bilingual_branding_and_portable_icon (test_package.DistributionContractTests.test_bilingual_branding_and_portable_icon) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.4264759Z test_plugin_archive_paths_and_identity (test_package.DistributionContractTests.test_plugin_archive_paths_and_identity) ... ok
+product-site	Other-language regression	2026-10-20T05:08:37.6516614Z test_report_and_profiles_resolve_offline (test_package.DistributionContractTests.test_report_and_profiles_resolve_offline) ... ok
+product-site	Other-language regression	2026-10-20T05:08:38.3772208Z test_version_change_and_check_do_not_touch_japanese (test_package.DistributionContractTests.test_version_change_and_check_do_not_touch_japanese) ... ok
+product-site	Other-language regression	2026-10-20T05:08:38.6711271Z test_builder_isolated_deterministic_and_self_contained (test_package.PackageTests.test_builder_isolated_deterministic_and_self_contained) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1209716Z test_new_schemas_and_rules (test_package.PackageTests.test_new_schemas_and_rules) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1344428Z test_zh_resolver_regions_are_disjoint_and_deterministic (test_package.PackageTests.test_zh_resolver_regions_are_disjoint_and_deterministic) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1352104Z test_installation_claims_versioned_zip_and_unversioned_display (test_website.ZiHengWebsiteTests.test_installation_claims_versioned_zip_and_unversioned_display) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1644158Z test_internal_links_and_images_exist (test_website.ZiHengWebsiteTests.test_internal_links_and_images_exist) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1794816Z test_language_pages_headings_and_site_identity (test_website.ZiHengWebsiteTests.test_language_pages_headings_and_site_identity) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1802478Z test_logo_styles_and_japanese_site_footer (test_website.ZiHengWebsiteTests.test_logo_styles_and_japanese_site_footer) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.1803895Z 
+product-site	Other-language regression	2026-10-20T05:08:39.1804492Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:39.1805329Z Ran 26 tests in 3.479s
+product-site	Other-language regression	2026-10-20T05:08:39.1805655Z 
+product-site	Other-language regression	2026-10-20T05:08:39.1805875Z OK
+product-site	Other-language regression	2026-10-20T05:08:39.2794498Z test_fifteen_unique_archives (test_hosts.HostPackages.test_fifteen_unique_archives) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.2796536Z test_guides_link_their_host_packages (test_hosts.HostPackages.test_guides_link_their_host_packages) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.2812402Z test_native_bundle_layouts (test_hosts.HostPackages.test_native_bundle_layouts) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.3574079Z test_archives_integrity_inventory_and_independence (test_product.DistributionTests.test_archives_integrity_inventory_and_independence) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.3584197Z test_fixture_preservation_claim_is_replayable (test_product.DistributionTests.test_fixture_preservation_claim_is_replayable) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.7801296Z test_reproducible_builder_plan (test_product.DistributionTests.test_reproducible_builder_plan) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.7808864Z test_catalog_fixture_contract (test_product.ProductTests.test_catalog_fixture_contract) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.7815860Z test_exact_bytes_never_normalize (test_product.ProductTests.test_exact_bytes_never_normalize) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.7833170Z test_four_candidates_and_safe_exceptions (test_product.ProductTests.test_four_candidates_and_safe_exceptions) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.7834207Z 
+product-site	Other-language regression	2026-10-20T05:08:39.7834434Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:39.7834875Z Ran 9 tests in 0.504s
+product-site	Other-language regression	2026-10-20T05:08:39.7835067Z 
+product-site	Other-language regression	2026-10-20T05:08:39.7835208Z OK
+product-site	Other-language regression	2026-10-20T05:08:39.9637069Z test_bounds (test_core.IntegrityTests.test_bounds) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.9765022Z test_offsets_are_utf16 (test_core.IntegrityTests.test_offsets_are_utf16) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.9772762Z test_positive_and_negative_unicode (test_core.IntegrityTests.test_positive_and_negative_unicode) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.9774069Z test_utf16_protected_range (test_core.IntegrityTests.test_utf16_protected_range) ... ok
+product-site	Other-language regression	2026-10-20T05:08:39.9872822Z test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) ... 
+product-site	Other-language regression	2026-10-20T05:08:39.9873881Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-editorial') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9889224Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-marketing') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9903182Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-ui') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9918567Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='report-document') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9933346Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='presentation') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9948395Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='display-copy') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9963616Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-editorial') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9978621Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-marketing') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:39.9993551Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-ui') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:40.0008200Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='report-document') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:40.0022134Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='presentation') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:40.0036872Z   test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='display-copy') ... FAIL
+product-site	Other-language regression	2026-10-20T05:08:40.0056212Z test_thai_explicit_profiles (test_core.LocaleTests.test_thai_explicit_profiles) ... ok
+product-site	Other-language regression	2026-10-20T05:08:40.3102817Z test_fifteen_safe_archives_and_inventories (test_dist.ThaiDistributionTests.test_fifteen_safe_archives_and_inventories) ... ok
+product-site	Other-language regression	2026-10-20T05:08:40.5653810Z test_generated_bytes_and_repeatability (test_dist.ThaiDistributionTests.test_generated_bytes_and_repeatability) ... ok
+product-site	Other-language regression	2026-10-20T05:08:40.5707328Z test_manifest_checksums_and_logo (test_dist.ThaiDistributionTests.test_manifest_checksums_and_logo) ... ok
+product-site	Other-language regression	2026-10-20T05:08:41.4594795Z test_standalone_runtime_without_repository (test_dist.ThaiDistributionTests.test_standalone_runtime_without_repository) ... ok
+product-site	Other-language regression	2026-10-20T05:08:41.4619721Z test_actual_results_match_execution (test_fixtures.FixtureTests.test_actual_results_match_execution) ... ok
+product-site	Other-language regression	2026-10-20T05:08:41.7486057Z test_host_manifests_and_closed_references (test_host_parity.HostParity.test_host_manifests_and_closed_references) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.0041742Z test_per_host_manifests (test_host_parity.HostParity.test_per_host_manifests) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.0172793Z test_rejects_single_language_metadata (test_host_parity.HostParity.test_rejects_single_language_metadata) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.3362592Z test_all_localized_pages_and_links (test_site.ThaiSiteContract.test_all_localized_pages_and_links) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.3370471Z test_exact_assets_and_host_scope (test_site.ThaiSiteContract.test_exact_assets_and_host_scope) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.6805244Z test_generated_output_current (test_site.ThaiSiteContract.test_generated_output_current) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.6892031Z test_hash_switch_uses_real_anchors (test_site.ThaiSiteContract.test_hash_switch_uses_real_anchors) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.6915847Z test_japanese_landing_uses_canonical_index_structure (test_site.ThaiSiteContract.test_japanese_landing_uses_canonical_index_structure) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.6922234Z test_no_destructive_typography_hacks (test_site.ThaiSiteContract.test_no_destructive_typography_hacks) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.7095064Z test_release_download_links_use_flat_asset_names (test_site.ThaiSiteContract.test_release_download_links_use_flat_asset_names) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.7106146Z test_thai_landing_uses_canonical_index_without_forced_thai_breaks (test_site.ThaiSiteContract.test_thai_landing_uses_canonical_index_without_forced_thai_breaks) ... ok
+product-site	Other-language regression	2026-10-20T05:08:42.7107240Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7107704Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7108836Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-editorial')
+product-site	Other-language regression	2026-10-20T05:08:42.7110034Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7110995Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7119823Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7121088Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7122241Z AssertionError: '80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274' != '6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d'
+product-site	Other-language regression	2026-10-20T05:08:42.7123447Z - 80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274
+product-site	Other-language regression	2026-10-20T05:08:42.7124494Z + 6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d
+product-site	Other-language regression	2026-10-20T05:08:42.7124911Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7124920Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7125072Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7126210Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-marketing')
+product-site	Other-language regression	2026-10-20T05:08:42.7127283Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7127816Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7128898Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7129831Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7130957Z AssertionError: '80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274' != '6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d'
+product-site	Other-language regression	2026-10-20T05:08:42.7132065Z - 80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274
+product-site	Other-language regression	2026-10-20T05:08:42.7132921Z + 6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d
+product-site	Other-language regression	2026-10-20T05:08:42.7133545Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7133559Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7133751Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7134713Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='web-ui')
+product-site	Other-language regression	2026-10-20T05:08:42.7135832Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7136402Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7137410Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7138398Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7139581Z AssertionError: '80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274' != '6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d'
+product-site	Other-language regression	2026-10-20T05:08:42.7140808Z - 80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274
+product-site	Other-language regression	2026-10-20T05:08:42.7141759Z + 6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d
+product-site	Other-language regression	2026-10-20T05:08:42.7142314Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7142323Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7142809Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7144407Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='report-document')
+product-site	Other-language regression	2026-10-20T05:08:42.7146150Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7147036Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7148289Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7149377Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7150622Z AssertionError: '405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd' != 'b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510'
+product-site	Other-language regression	2026-10-20T05:08:42.7151936Z - 405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd
+product-site	Other-language regression	2026-10-20T05:08:42.7153051Z + b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510
+product-site	Other-language regression	2026-10-20T05:08:42.7153687Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7153700Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7153945Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7155074Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='presentation')
+product-site	Other-language regression	2026-10-20T05:08:42.7156252Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7156809Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7157791Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7158872Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7160114Z AssertionError: '405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd' != 'b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510'
+product-site	Other-language regression	2026-10-20T05:08:42.7161427Z - 405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd
+product-site	Other-language regression	2026-10-20T05:08:42.7162224Z + b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510
+product-site	Other-language regression	2026-10-20T05:08:42.7162735Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7162744Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7163003Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7164286Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-TW', medium='display-copy')
+product-site	Other-language regression	2026-10-20T05:08:42.7165476Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7166268Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7167420Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7168837Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7170170Z AssertionError: '405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd' != 'b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510'
+product-site	Other-language regression	2026-10-20T05:08:42.7171537Z - 405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd
+product-site	Other-language regression	2026-10-20T05:08:42.7172335Z + b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510
+product-site	Other-language regression	2026-10-20T05:08:42.7172799Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7172809Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7173016Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7174365Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-editorial')
+product-site	Other-language regression	2026-10-20T05:08:42.7175813Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7176412Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7177335Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7178401Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7179754Z AssertionError: 'd7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892' != '755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b'
+product-site	Other-language regression	2026-10-20T05:08:42.7181116Z - d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892
+product-site	Other-language regression	2026-10-20T05:08:42.7181870Z + 755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b
+product-site	Other-language regression	2026-10-20T05:08:42.7182452Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7182461Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7182681Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7183914Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-marketing')
+product-site	Other-language regression	2026-10-20T05:08:42.7185073Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7185639Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7186569Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7187594Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7188815Z AssertionError: 'd7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892' != '755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b'
+product-site	Other-language regression	2026-10-20T05:08:42.7190081Z - d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892
+product-site	Other-language regression	2026-10-20T05:08:42.7190819Z + 755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b
+product-site	Other-language regression	2026-10-20T05:08:42.7191245Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7191254Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7191463Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7192478Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='web-ui')
+product-site	Other-language regression	2026-10-20T05:08:42.7193731Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7194405Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7195352Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7196402Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7197621Z AssertionError: 'd7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892' != '755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b'
+product-site	Other-language regression	2026-10-20T05:08:42.7198792Z - d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892
+product-site	Other-language regression	2026-10-20T05:08:42.7199520Z + 755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b
+product-site	Other-language regression	2026-10-20T05:08:42.7199960Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7199968Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7200188Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7201204Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='report-document')
+product-site	Other-language regression	2026-10-20T05:08:42.7202279Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7202876Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7203907Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7205089Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7206465Z AssertionError: '8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b' != '9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008'
+product-site	Other-language regression	2026-10-20T05:08:42.7207738Z - 8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b
+product-site	Other-language regression	2026-10-20T05:08:42.7208504Z + 9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008
+product-site	Other-language regression	2026-10-20T05:08:42.7209613Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7209629Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7209845Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7210970Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='presentation')
+product-site	Other-language regression	2026-10-20T05:08:42.7212377Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7213247Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7214342Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7215609Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7217041Z AssertionError: '8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b' != '9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008'
+product-site	Other-language regression	2026-10-20T05:08:42.7218411Z - 8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b
+product-site	Other-language regression	2026-10-20T05:08:42.7219339Z + 9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008
+product-site	Other-language regression	2026-10-20T05:08:42.7219754Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7219764Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7219993Z ======================================================================
+product-site	Other-language regression	2026-10-20T05:08:42.7221069Z FAIL: test_existing_locale_outputs_match_base (test_core.LocaleTests.test_existing_locale_outputs_match_base) (locale='zh-Hant-HK', medium='display-copy')
+product-site	Other-language regression	2026-10-20T05:08:42.7222154Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7222703Z Traceback (most recent call last):
+product-site	Other-language regression	2026-10-20T05:08:42.7224082Z   File "/home/runner/work/kumihan/kumihan/tests/thai/test_core.py", line 40, in test_existing_locale_outputs_match_base
+product-site	Other-language regression	2026-10-20T05:08:42.7225200Z     self.assertEqual(digest(resolve_rules(context, ROOT)), record['rules_sha256'])
+product-site	Other-language regression	2026-10-20T05:08:42.7226654Z AssertionError: '8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b' != '9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008'
+product-site	Other-language regression	2026-10-20T05:08:42.7227921Z - 8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b
+product-site	Other-language regression	2026-10-20T05:08:42.7228743Z + 9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008
+product-site	Other-language regression	2026-10-20T05:08:42.7229264Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7229273Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7229509Z ----------------------------------------------------------------------
+product-site	Other-language regression	2026-10-20T05:08:42.7230117Z Ran 22 tests in 2.748s
+product-site	Other-language regression	2026-10-20T05:08:42.7230331Z 
+product-site	Other-language regression	2026-10-20T05:08:42.7230570Z FAILED (failures=12)
+product-site	Other-language regression	2026-10-20T05:08:42.7272709Z ##[error]Process completed with exit code 1.

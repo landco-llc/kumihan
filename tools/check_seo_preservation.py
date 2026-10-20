@@ -31,6 +31,8 @@ def audit(root=ROOT):
             actual = hashlib.sha256(content).hexdigest()
             admitted = (update.get('before') == expected and update.get('after') == actual
                         and preservation_allowed(path, family))
+            from ziheng_v020_transition import allowed
+            admitted = admitted or allowed(path, family, root)
             if actual != expected and not admitted:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors

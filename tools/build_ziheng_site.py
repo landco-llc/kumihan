@@ -287,6 +287,18 @@ def outputs():
     files.update({p.relative_to(templates).as_posix(): p.read_text(encoding="utf-8")
                   for p in sorted(templates.rglob("*.html"))})
     files["assets/ziheng-site.css"] = canonical_css()
+    # Source candidate panels and retained downloads refer to different versions.
+    # Label only Ziheng's exact legacy ZIP links; preserve every URL and other copy.
+    def legacy_label(match):
+        start, label, end = match.groups()
+        if '0.1.0' not in re.sub(r'<[^>]+>', '', label):
+            label += ' <span lang="en">v0.1.0</span>'
+        return start + label + end
+    for name in files:
+        if name.endswith('.html'):
+            files[name] = re.sub(
+                r'(<a\b[^>]*href="[^"]*/plugins/kumihan-ziheng/downloads[^"#?]*-0\.1\.0\.zip"[^>]*>)(.*?)(</a>)',
+                legacy_label, files[name], flags=re.S)
     return files
 
 
