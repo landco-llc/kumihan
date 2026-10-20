@@ -316,7 +316,23 @@
       "kumihan-zilu-web-gemini-skill-v{version}.zip",
       "kumihan-zilu-web-skill-v{version}.zip"
     ],
-    "zh-hant": null,
+    "zh-hant": [
+      "kumihan-ziheng-claude-kumihan-ziheng-Claude-skill-{version}.zip",
+      "kumihan-ziheng-claude-kumihan-ziheng-documents-Claude-skill-{version}.zip",
+      "kumihan-ziheng-claude-kumihan-ziheng-review-Claude-skill-{version}.zip",
+      "kumihan-ziheng-claude-kumihan-ziheng-web-Claude-skill-{version}.zip",
+      "kumihan-ziheng-claude-plugin-{version}.zip",
+      "kumihan-ziheng-gemini-kumihan-ziheng-Gemini-Apps-skill-{version}.zip",
+      "kumihan-ziheng-gemini-kumihan-ziheng-documents-Gemini-Apps-skill-{version}.zip",
+      "kumihan-ziheng-gemini-kumihan-ziheng-review-Gemini-Apps-skill-{version}.zip",
+      "kumihan-ziheng-gemini-kumihan-ziheng-web-Gemini-Apps-skill-{version}.zip",
+      "kumihan-ziheng-gemini-plugin-{version}.zip",
+      "kumihan-ziheng-openai-codex-kumihan-ziheng-documents-{version}.zip",
+      "kumihan-ziheng-openai-codex-kumihan-ziheng-review-{version}.zip",
+      "kumihan-ziheng-openai-codex-kumihan-ziheng-web-{version}.zip",
+      "kumihan-ziheng-openai-codex-kumihan-ziheng-{version}.zip",
+      "kumihan-ziheng-openai-codex-plugin-{version}.zip"
+    ],
     "zu": [
       "kumihan-hlela-chatgpt-codex-plugin-v{version}.zip",
       "kumihan-hlela-chatgpt-skill-v{version}.zip",
@@ -336,6 +352,6 @@
     ]
   },
   "notes": {
-    "zh-hant": "No adopted flat Release asset contract. Source plugin and entry Skill share kumihan-ziheng-{version}.zip in different folders. Owner must approve distinct Release asset names and role mappings before first formal promotion; do not rename existing ZIPs."
+    "zh-hant": "Distinct flat names for the three hosts and four Skills are adopted. Original source ZIP paths and historical bytes remain preserved."
   }
 }
