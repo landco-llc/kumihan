@@ -1,0 +1,18 @@
+{
+  "base": "8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
+  "source_commit": "7dcc60695db01ac1d23e08ae9f29274c2c6fe675",
+  "source_tree": "fa0a42224bc62751bc5771e9531f63621fa0a808",
+  "note": "Source/package revision after the single review correction pass. Subsequent commit records this metadata; final branch HEAD/tree are pinned in the PR/task return.",
+  "version": "0.2.0",
+  "module_candidate_sha256": {
+    "plugins/kumihan-ziheng/plugin.json": "a032d62201666e234e8caf193460dcbf1daaf21a14f47ff2d301e77a19d6e9ca",
+    "plugins/kumihan-ziheng/runtime/context.py": "7c4afcb8d9556e1d400844581e131eb872d4e6711fdf4e2103364c4f8b0558cc",
+    "plugins/kumihan-ziheng/runtime/checks.py": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d",
+    "plugins/kumihan-ziheng/runtime/evidence.py": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15",
+    "plugins/kumihan-ziheng/rules/zh-hant.json": "5079baacb1b0093e9b8fdec095232a79c152a3671a2cc3b4675be2fabefd7555",
+    "plugins/kumihan-ziheng/sources.json": "ff2fff7cce96b8d3a33ab8a3c202a41029399ff7536fa817a5484f6310612d44",
+    "plugins/kumihan-ziheng/fixtures/research-v020/cases.json": "70ca57ec3cc9c87eb2accc2bb65c8709f8cafc1cee7ce2c76879e73a075c2225"
+  },
+  "release_manifest_sha256": "5346f2ffdecb40b5611c1303aa5cec09c5786ebb18714e23bab20873a1d68d70",
+  "status": "SOURCE_CANDIDATE_FIXED_SHARED_INTEGRATION_HOLD"
+}

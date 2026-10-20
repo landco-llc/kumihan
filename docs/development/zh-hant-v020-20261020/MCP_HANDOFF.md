@@ -1,6 +1,6 @@
 # MCP_HANDOFF — source contract only
 
-Source: dedicated branch `feat/zh-hant-v020-research-20261020`, source version0.2.0. Base8b647cc752d7a9bc3db48356fa0ab7b221bb66d6. Final commit/tree are pinned in the PR/task return. Current archive module candidates are pinned by SHA256 in release-manifest.json; they are **not** the live registry/module digest.
+Source: dedicated branch `feat/zh-hant-v020-research-20261020`, source version0.2.0. Base8b647cc752d7a9bc3db48356fa0ab7b221bb66d6. Source/package commit `7dcc60695db01ac1d23e08ae9f29274c2c6fe675`, tree `fa0a42224bc62751bc5771e9531f63621fa0a808`; per-file module candidate digests are in revision.json. Final branch commit/tree are pinned in the PR/task return. Current archive module candidates are pinned by SHA256 in release-manifest.json; they are **not** the live registry/module digest.
 
 Read `plugins/kumihan-ziheng/runtime/context.py`, checks.py, evidence.py, v2 schemas, fixture cases, sources and progressive references. `candidate_rule_ids` is the profile/medium universe; `applicable_rule_ids` satisfies declared conditions but has not been executed; `deferred_rules` carries missing conditions or unused-feature reasons; `selection_only=true`. No candidate count is a pass/fail denominator.
 
