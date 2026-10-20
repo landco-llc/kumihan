@@ -3,4 +3,13 @@ __pycache__/
 dist/
 
 # Internal execution evidence belongs in kumihan-internal.
-docs/development/
+docs/development/*
+!docs/development/zh-hant-v020-20261020/
+docs/development/zh-hant-v020-20261020/*
+# Existing public CI consumes only these four preservation fixtures.
+!docs/development/zh-hant-v020-20261020/source-transition.json
+!docs/development/zh-hant-v020-20261020/source-transition-baseline.json
+!docs/development/zh-hant-v020-20261020/locale-output-transition.json
+!docs/development/zh-hant-v020-20261020/evidence/
+docs/development/zh-hant-v020-20261020/evidence/*
+!docs/development/zh-hant-v020-20261020/evidence/shared-integration-baseline.json
