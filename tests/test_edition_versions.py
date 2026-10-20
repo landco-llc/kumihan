@@ -204,3 +204,17 @@ class PreservationGate(unittest.TestCase):
                 if p.name!='.git':(root/p.name).symlink_to(p,target_is_directory=p.is_dir())
             (root/'README.md').unlink();(root/'README.md').write_text('unlisted change')
             self.assertIn('protected: main bytes changed: README.md',audit(root))
+
+class PublishedZihengInstallLinks(unittest.TestCase):
+    def test_current_guides_use_verified_host_assets_and_matching_checksums(self):
+        import build_ziheng_site
+        facts=v.load()['editions']['zh-hant']
+        assets={a['name']:a for a in facts['verified_assets']}
+        for path,body in build_ziheng_site.outputs().items():
+            if not path.endswith('.html'):continue
+            self.assertNotRegex(body,r'href="[^"\n]+-0\.1\.0\.zip"')
+            host='claude' if 'claude' in path else 'gemini' if 'gemini' in path else 'openai-codex'
+            plugin=assets[f'kumihan-ziheng-{host}-plugin-0.2.0.zip']
+            self.assertIn(plugin['url'],body)
+            if path.startswith('docs/'):
+                self.assertIn(plugin['sha256'],body)

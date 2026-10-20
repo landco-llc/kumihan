@@ -287,6 +287,27 @@ def outputs():
     files.update({p.relative_to(templates).as_posix(): p.read_text(encoding="utf-8")
                   for p in sorted(templates.rglob("*.html"))})
     files["assets/ziheng-site.css"] = canonical_css()
+    # Current install surfaces must use admitted Release roles, while the shared
+    # renderer separately retains explicitly requested historical source links.
+    from edition_versions import load
+    from urllib.parse import quote
+    facts = load()['editions']['zh-hant']
+    if facts['release_status'] == 'published':
+        assets = {a['name']: a for a in facts['verified_assets']}
+        for folder, host in [('downloads', 'openai-codex'),
+                             ('downloads Claude', 'claude'), ('downloads Gemini', 'gemini')]:
+            history = ROOT / 'plugins/kumihan-ziheng' / folder / 'history/0.1.0/MANIFEST.json'
+            for row in json.loads(history.read_text())['archives']:
+                old_path = 'plugins/kumihan-ziheng/' + folder + '/' + row['file']
+                old_name = Path(row['file']).name
+                stem = old_name.removesuffix('-0.1.0.zip')
+                role = 'plugin' if row['file'].startswith(('plugins/', 'extensions/')) else stem
+                name = f"kumihan-ziheng-{host}-{role}-{facts['published_version']}.zip"
+                asset = assets[name]  # fail closed if an approved role is absent
+                old_url = 'https://raw.githubusercontent.com/landco-llc/kumihan/main/' + quote(old_path)
+                for page in files:
+                    if page.endswith('.html'):
+                        files[page] = files[page].replace(old_url, asset['url']).replace(row['sha256'], asset['sha256'])
     # Source candidate panels and retained downloads refer to different versions.
     # Label only Ziheng's exact legacy ZIP links; preserve every URL and other copy.
     def legacy_label(match):
