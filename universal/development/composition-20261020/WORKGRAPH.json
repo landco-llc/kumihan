@@ -1,0 +1,106 @@
+{
+  "work_id": "KMC-CORE-20261020-P1",
+  "state": "CONTROL_PACKET_READY_NOT_LAUNCHED",
+  "target_repo": "landco-llc/kumihan",
+  "target_branch": "feat/universal-composition-core-20261020",
+  "base_pr": 101,
+  "source_design": "0.1.0-design.1",
+  "schema_sha256": "14d9226833c8ff1af8a92f8da56de4c852f003e87803f78c3ec8bf45c8c75cda",
+  "groups": [
+    {
+      "id": "WG-A",
+      "work_ids": [
+        "W00",
+        "W01",
+        "W02"
+      ],
+      "depends_on": [],
+      "gate": "sidecar contract and unchanged legacy API"
+    },
+    {
+      "id": "WG-B",
+      "work_ids": [
+        "W03",
+        "W04",
+        "W05"
+      ],
+      "depends_on": [
+        "WG-A"
+      ],
+      "gate": "source exactness and conservative resolver"
+    },
+    {
+      "id": "WG-C",
+      "work_ids": [
+        "W06",
+        "W07",
+        "W08"
+      ],
+      "depends_on": [
+        "WG-B"
+      ],
+      "gate": "read-only evidence and owner handoff"
+    }
+  ],
+  "work_items": [
+    {
+      "id": "W00",
+      "objective": "Fresh read and baseline",
+      "evidence": "baseline read receipts, parallel PR collision map"
+    },
+    {
+      "id": "W01",
+      "objective": "Versioned sidecar schema",
+      "evidence": "source schema SHA, runtime/validator honesty"
+    },
+    {
+      "id": "W02",
+      "objective": "Legacy compatibility",
+      "evidence": "old 4 MCP tools unchanged, schema-safe mapping"
+    },
+    {
+      "id": "W03",
+      "objective": "Source integrity & offsets",
+      "evidence": "exact UTF-8 bytes and scalar/byte conversion tests"
+    },
+    {
+      "id": "W04",
+      "objective": "Module and capability resolution",
+      "evidence": "ambiguous/unknown and mixed language cases"
+    },
+    {
+      "id": "W05",
+      "objective": "Conflict and plan model",
+      "evidence": "hard/soft constraints, no document edits"
+    },
+    {
+      "id": "W06",
+      "objective": "Read-only review",
+      "evidence": "evidence statuses, zero target mutations"
+    },
+    {
+      "id": "W07",
+      "objective": "Representative acceptance fixtures",
+      "evidence": "positive/negative, P01-P40 scoped matrix"
+    },
+    {
+      "id": "W08",
+      "objective": "Integration proof and Owner Gate",
+      "evidence": "test receipts, next gate, Draft only"
+    }
+  ],
+  "out_of_scope": [
+    "W09+",
+    "deployment",
+    "merge",
+    "publish",
+    "release",
+    "existing 21 language packages",
+    "4 public MCP signatures"
+  ],
+  "final_states": [
+    "READY_FOR_OWNER_REVIEW/VERIFIED",
+    "BLOCKED/VALID",
+    "PARTIAL/NOT_VERIFIED"
+  ]
+}
