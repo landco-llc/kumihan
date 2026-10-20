@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-008",
+  "synthetic": true,
+  "protectedSource": "いつものAIツールからはじめよう",
+  "conditions": [
+    "解析器による文節境界だけがあり、実際の幅・font・行マップ・画像がない。"
+  ],
+  "wrongDecisionToAvoid": "本文リーダーの実験を広告見出しの自動正解として引用する。"
+}

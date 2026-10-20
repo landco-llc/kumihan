@@ -25,7 +25,7 @@ Use [Standard/Strict guidance](references/design-review-modes.md), [routing](ref
 Use the [catalog](rules/catalog.json) for each rule's conditions and impact.
 
 1. **Content** — names, prices, numbers, units, tables, captions, notes and characters match the source exactly. Claims and assets have real evidence.
-2. **Typography** — kinsoku at actual line edges, JA-TYPE-011 semantic and natural prosodic grouping in short Japanese headings, body vs display spacing, mixed Japanese and Latin, ruby and notes. Judge larger connected speech groups versus mechanically split bunsetsu; distinguish assisted semantic conclusions from actual rendered evidence. See [web recipes](references/web-recipes.md) and [document recipes](references/document-recipes.md) for what good settings look like.
+2. **Typography** — kinsoku at actual line edges, JA-TYPE-011 semantic and natural prosodic grouping in short Japanese headings, body vs display spacing, mixed Japanese and Latin, ruby and notes. First assess ordinary wrapping and the need for intentional breaks; compare whole composition without compulsory speech-group segmentation; distinguish assisted semantic conclusions from actual rendered evidence. See [web recipes](references/web-recipes.md) and [document recipes](references/document-recipes.md) for what good settings look like.
 3. **Layout and access** — web: 320 px reflow, 200% zoom, spacing overrides, long labels, fonts, interface states. Documents: every page, headings and page breaks, figures with captions, slide density and notes, export results.
 4. **Design intent** — does the structure serve the stated purpose and audience? Familiar patterns are not failures by themselves.
 
@@ -54,3 +54,7 @@ State the tools, browser or application versions, and which pages or regions you
 Hash the target again and write both hashes (before and after) in the report before you finish. If they differ, stop and report it; do not quietly restore the target.
 
 If a referenced file is missing, say so and continue with what is available.
+
+## Context and evidence by region (v0.2.0)
+
+Use [typography context](references/typography-context.md) for role, readingTask, attributed intent, prose/display/hybrid and required-information mapping. Keep the brief proportional to the task. Use [Japanese writing and type](references/japanese-writing-and-type.md) and [task recipes](references/typography-recipes-by-task.md) only for relevant decisions. Ordinary wrapping comes first unless intentional breaks are needed; JA-TYPE-002 kinsoku, 003 indivisible ranges, 004 meaning and 011 whole-line composition remain separate. Compare actual fonts, widths and surrounding layout without a mandatory speech-group or widening sequence.

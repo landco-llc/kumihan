@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-021",
+  "synthetic": true,
+  "protectedSource": "文字と余白の時間",
+  "conditions": [
+    "CSS.supports等の構文結果はあるが、実font、OpenType機能の支持、表示比較はない。"
+  ],
+  "wrongDecisionToAvoid": "構文が支持されたため、全てのfontでpaltが安全に機能するとする。"
+}

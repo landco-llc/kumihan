@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-023",
+  "synthetic": true,
+  "protectedSource": "会場で共有する手順と注意事項",
+  "conditions": [
+    "主要本文24ptとスライド寸法は分かるが、投影面の物理高・最遠席・環境は未定。"
+  ],
+  "wrongDecisionToAvoid": "24pt以上なので会場で必ず読めるとする。"
+}

@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-027",
+  "synthetic": true,
+  "protectedSource": "項目A 120件／条件：対象は申請済みの記録です。",
+  "conditions": [
+    "一ページの有効高を超える表行にkeep-togetherを強制し、注記・末尾セルがclipされる負例を準備する。"
+  ],
+  "wrongDecisionToAvoid": "表の行を分割しなかったことだけで文書品質を合格にする。"
+}

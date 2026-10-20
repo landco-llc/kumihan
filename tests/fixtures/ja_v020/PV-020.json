@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-020",
+  "synthetic": true,
+  "protectedSource": "登録内容を確認する",
+  "conditions": [
+    "DevTools等で試験者が一括CSS値を書き換えただけで、利用者が使える拡大機構は試していない。",
+    "native text zoomを200%確認済みという報告を対照とする。"
+  ],
+  "wrongDecisionToAvoid": "CSS模擬をnative確認へ昇格させる、またはWCAGがnative text zoomだけを認めると主張する。"
+}

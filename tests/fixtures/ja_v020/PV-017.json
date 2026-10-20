@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-017",
+  "synthetic": true,
+  "protectedSource": "本文は読み手の設定によって表示が変わります。",
+  "conditions": [
+    "初期CSSにletter-spacing:0.12emがあるだけで、実際の利用者変更試験は行っていない。",
+    "試験合格という不適切な報告を対照fixtureとして準備する。"
+  ],
+  "wrongDecisionToAvoid": "WCAGが作者の全本文に0.12emを義務付けていると説明する。"
+}

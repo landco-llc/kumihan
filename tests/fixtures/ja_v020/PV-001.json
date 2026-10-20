@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-001",
+  "synthetic": true,
+  "protectedSource": "髙﨑さま／料金１,２００円／が",
+  "conditions": [
+    "指定extractorで原稿のコードポイント列と対象fieldを比較できるfixtureを準備する。",
+    "fontの解決・実描画はまだ行っていないという報告条件を与える。"
+  ],
+  "wrongDecisionToAvoid": "静的な文字列一致をartifact全体のrendered passedへ昇格させる。"
+}

@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-007",
+  "synthetic": true,
+  "protectedSource": "いつものAIツールからはじめよう",
+  "conditions": [
+    "有効幅、実font、字間を含め、見出し全体が一行で自然に収まるfixtureを準備する。",
+    "固定二行にする明示的な表現意図はない。"
+  ],
+  "wrongDecisionToAvoid": "文節解析の結果があるので、必ず文節ごとにbrを挿入する。"
+}

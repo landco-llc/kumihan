@@ -1,0 +1,2577 @@
+{
+  "status": "reference-ledger; supplied research, not independent re-fetch",
+  "adoption": "2026-10-20 JA v0.2.0 guidance only",
+  "sources": [
+    {
+      "id": "S01",
+      "aliases": [
+        "M13"
+      ],
+      "title": "日本語組版処理の要件",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Working Group Note 2020-08-11",
+      "source_type": "一次規格解説",
+      "url": "https://www.w3.org/TR/2020/NOTE-jlreq-20200811/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "本文組版と禁則・ルビ・版面の基礎。法令や万能な美的規範ではない。 / §2.4基本版面、行長・行間・行送り、冒頭status。",
+      "claims": [
+        {
+          "id": "M13-C01",
+          "status": "source_description",
+          "text": "版面は文字サイズ、字詰め、行数、行間等で設計する。横組最大40字くらい、縦組最大52字くらいを目安として記載。"
+        }
+      ],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。",
+        "JIS X 4051を主な基礎とする説明文書で、WCAG Recommendationそのものではない。全画面の最適字数の実験証拠ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S02",
+      "aliases": [],
+      "title": "Unicode Line Breaking Algorithm",
+      "publisher": "Unicode Consortium",
+      "authors": [],
+      "date_or_version": "Unicode 18.0.0 / Revision 57 / 2026-09-01",
+      "source_type": "文字処理仕様",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "改行機会と実際の行への収容を分離。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S03",
+      "aliases": [],
+      "title": "CSS Text Module Level 3",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Candidate Recommendation Draft 2026-08-14",
+      "source_type": "草案仕様",
+      "url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "言語指定・禁則・字間・折り返しの責務。実装対応は別検証。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S04",
+      "aliases": [],
+      "title": "CSS Text Module Level 4",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Working Draft 2026-08-14",
+      "source_type": "草案仕様",
+      "url": "https://www.w3.org/TR/2026/WD-css-text-4-20260814/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "auto-phrase、balance、text-autospace、text-spacing-trimの条件。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S05",
+      "aliases": [],
+      "title": "OpenType Registered Features p–t",
+      "publisher": "Microsoft / Adobe",
+      "authors": [],
+      "date_or_version": "OpenType 1.9.1 ページ",
+      "source_type": "文字処理仕様",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/features_pt",
+      "accessed_at": "2026-10-20",
+      "access_scope": "paltは位置調整、pknaは字形置換。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S06",
+      "aliases": [],
+      "title": "OpenType Registered Features f–j",
+      "publisher": "Microsoft / Adobe",
+      "authors": [],
+      "date_or_version": "OpenType 1.9.1 ページ",
+      "source_type": "文字処理仕様",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/features_fj",
+      "accessed_at": "2026-10-20",
+      "access_scope": "haltなど字幅機能の区別と併用条件。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S07",
+      "aliases": [],
+      "title": "CSS Writing Modes Level 4",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Candidate Recommendation 2019-07-30",
+      "source_type": "草案仕様",
+      "url": "https://www.w3.org/TR/2019/CR-css-writing-modes-4-20190730/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "縦横の流れ、文字方向、縦中横の分離。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S08",
+      "aliases": [],
+      "title": "CSS Ruby Annotation Layout Module Level 1",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Working Draft 2022-12-31",
+      "source_type": "文字処理仕様",
+      "url": "https://www.w3.org/TR/2022/WD-css-ruby-1-20221231/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "ルビの配置と衝突の扱い。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S09",
+      "aliases": [
+        "M11"
+      ],
+      "title": "CSS Fonts Module Level 4",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Working Draft 2026-10-16",
+      "source_type": "草案仕様",
+      "url": "https://www.w3.org/TR/2026/WD-css-fonts-4-20261016/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "字形選択、フォールバック、見かけの大きさと文字サイズ。 / §2.5 font-size、§2.6 font-size-adjust、文書status。",
+      "claims": [
+        {
+          "id": "M11-C01",
+          "status": "source_description",
+          "text": "同じfont-sizeでも字形の見かけの大きさは異なり、EM外に描画されることがある。"
+        }
+      ],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。",
+        "Working Draft。ブラウザー互換性や特定環境の描画を実測した証拠ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S10",
+      "aliases": [
+        "M10"
+      ],
+      "title": "CSS Values and Units Module Level 4",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "Working Draft 2024-03-12",
+      "source_type": "文字処理仕様",
+      "url": "https://www.w3.org/TR/2024/WD-css-values-4-20240312/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "CSS px・pt・em・icの異なる意味。 / §6.2絶対長、reference pixel。",
+      "claims": [
+        {
+          "id": "M10-C01",
+          "status": "source_description",
+          "text": "CSS上の固定換算と、画面の物理寸法との対応は別。参照pixelは視角で定義される。"
+        }
+      ],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。",
+        "デバイス上で指定1cmが必ず実寸1cmになるとの保証ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S11",
+      "aliases": [],
+      "title": "Unicode Normalization Forms",
+      "publisher": "Unicode Consortium",
+      "authors": [],
+      "date_or_version": "Unicode 18.0.0 / Revision 58 / 2026-08-12",
+      "source_type": "文字処理仕様",
+      "url": "https://www.unicode.org/reports/tr15/tr15-58.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "正規化は字幅調整ではない。互換正規化による情報差に注意。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S12",
+      "aliases": [],
+      "title": "FAQ Chinese and Japanese",
+      "publisher": "Unicode Consortium",
+      "authors": [],
+      "date_or_version": "取得時公開版",
+      "source_type": "一次解説",
+      "url": "https://www.unicode.org/faq/han_cjk.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "漢字の符号化と地域別の字形の区別。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S13",
+      "aliases": [],
+      "title": "Types of language declaration",
+      "publisher": "W3C Internationalization",
+      "authors": [],
+      "date_or_version": "取得時公開版",
+      "source_type": "一次解説",
+      "url": "https://www.w3.org/International/questions/qa-text-processing-vs-metadata",
+      "accessed_at": "2026-10-20",
+      "access_scope": "文書の対象言語と文字処理用の言語指定は別。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S14",
+      "aliases": [],
+      "title": "BudouX",
+      "publisher": "Google",
+      "authors": [],
+      "date_or_version": "取得時README",
+      "source_type": "参考実装",
+      "url": "https://github.com/google/budoux",
+      "accessed_at": "2026-10-20",
+      "access_scope": "フレーズ分割の実装例。組版の意味・品質保証ではない。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S15",
+      "aliases": [
+        "M17"
+      ],
+      "title": "ベタ組とツメ組 日本語の文字の並べ方を押さえよう",
+      "publisher": "モリサワ",
+      "authors": [],
+      "date_or_version": "2024-06-05",
+      "source_type": "メーカー一次解説",
+      "url": "https://note.morisawa.co.jp/n/n9b07908be089",
+      "accessed_at": "2026-10-20",
+      "access_scope": "ベタ・字面詰め・均等詰めを分け、本文のツメも目的で判断。 / ベタ組/ツメ組の定義と用途。",
+      "claims": [
+        {
+          "id": "M17-C01",
+          "status": "source_description",
+          "text": "本文的な組み方と広告・見出し等の字面を基準とした調整の役割を説明する。"
+        }
+      ],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。",
+        "全本文への詰め禁止を立証する比較実験ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S16",
+      "aliases": [],
+      "title": "行と行のアキは必要 行間や行送りの基本",
+      "publisher": "モリサワ",
+      "authors": [],
+      "date_or_version": "2025-02-06",
+      "source_type": "メーカー一次解説",
+      "url": "https://note.morisawa.co.jp/n/n2b06edcb3a45",
+      "accessed_at": "2026-10-20",
+      "access_scope": "行間と行送りは異なる。行長・サイズ・ルビを合わせて判断。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S17",
+      "aliases": [],
+      "title": "Adobe Illustrator 文字組みの手引き",
+      "publisher": "Adobe",
+      "authors": [],
+      "date_or_version": "取得PDF 53ページ 表題v301",
+      "source_type": "メーカー一次資料",
+      "url": "https://download.adobe.com/pub/adobe/jp/pdf/2604/Ai_Mojikumi_Guide.pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "p10–13、p33、p45。p33/p45を実画像で確認。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S18",
+      "aliases": [],
+      "title": "InDesignでのCJKテキストの書式設定",
+      "publisher": "Adobe",
+      "authors": [],
+      "date_or_version": "取得時公開版",
+      "source_type": "メーカー一次資料",
+      "url": "https://helpx.adobe.com/jp/indesign/desktop/language-and-proofing/chinese-japanese-and-korean/format-cjk-text.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "アプリケーション内の日本語組版設定。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S19",
+      "aliases": [
+        "M07"
+      ],
+      "title": "Understanding SC 1.4.5 Images of Text",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "WCAG 2.2 Understanding",
+      "source_type": "公式非規範解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "本物のテキストと必要な文字画像、情報の代替経路。 / SC、Essential、Examples。",
+      "claims": [
+        {
+          "id": "M07-C01",
+          "status": "source_description",
+          "text": "同等の表現をテキストで実現可能なら情報文字をテキストで提供する。ロゴや書体見本等に本質的表示の例外がある。"
+        }
+      ],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。",
+        "画像文字へのalt付与だけで全アクセシビリティ要件が満たされるわけではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "S20",
+      "aliases": [],
+      "title": "Unicode Text Segmentation",
+      "publisher": "Unicode Consortium",
+      "authors": [],
+      "date_or_version": "Unicode 18.0.0 Revision 49 2026-09-01",
+      "source_type": "文字処理仕様",
+      "url": "https://www.unicode.org/reports/tr29/tr29-49.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "コードポイントと書記素クラスタ・語境界は別。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "H01",
+      "aliases": [],
+      "title": "Oxford-NINJAL Corpus of Old Japanese（ONCOJ）フロントページ",
+      "publisher": "Oxford University・国立国語研究所",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "コーパス編者の公式説明",
+      "url": "https://oncoj.ninjal.ac.jp/front_page_Japanese.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H01-C01",
+          "status": "fact",
+          "text": "上代日本語コーパスは漢字使用を表音的なものと表語的なものに区別している。",
+          "location": "漢字の表記・転写の説明、本文行52・79付近"
+        }
+      ],
+      "limitations": [
+        "コーパス注釈の説明であり、かな成立の年代や発明者を確定する証拠ではない。",
+        "コーパスの現在の総件数や版を本資料の主張に使用していない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H02",
+      "aliases": [],
+      "title": "『とも』2024年4月号：「ひらがな」と「カタカナ」の成り立ち",
+      "publisher": "公益財団法人 国際人材協力機構（JITCO）",
+      "authors": [],
+      "date_or_version": "2024-04",
+      "source_type": "日本語学習者向け教育資料",
+      "url": "https://www.jitco.or.jp/wordpress/wp-content/uploads/2024/03/Japanese2024_4.pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "全4ページのPDFテキスト取得、該当ページを画像でも確認",
+      "claims": [
+        {
+          "id": "H02-C01",
+          "status": "fact",
+          "text": "平仮名を万葉仮名の草体化、片仮名を漢字の一部を使った簡略化として紹介する。",
+          "location": "PDF2枚目（スクリーンショット確認）"
+        }
+      ],
+      "limitations": [
+        "初学者向けの説明であり、成立史に関する一次史料・専門研究の代替ではない。",
+        "掲載画像は成果物へ転載していない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H03",
+      "aliases": [],
+      "title": "平仮名は誰が作ったのですか",
+      "publisher": "国立国語研究所・矢田勉",
+      "authors": [],
+      "date_or_version": "2019-04-05",
+      "source_type": "公的機関の解説",
+      "url": "https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-72/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H03-C01",
+          "status": "fact",
+          "text": "平仮名を一人の発明、または女性による発明とする単純な説明は支持されず、初期資料の残存条件を考慮する必要がある。",
+          "location": "回答本文"
+        }
+      ],
+      "limitations": [
+        "初期の利用者に関する記述には蓋然性の判断を含む。誰が最初に作ったかは確定しない。",
+        "媒体ごとの史料残存に関する仮説は本メモでは確定事実にしていない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H04",
+      "aliases": [],
+      "title": "伊勢物語・源氏物語 1（開館60周年記念貴重書展）",
+      "publisher": "国立国会図書館",
+      "authors": [],
+      "date_or_version": "2008",
+      "source_type": "収蔵資料に基づく展示解説",
+      "url": "https://www.ndl.go.jp/exhibit60/copy1/1ise.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H04-C01",
+          "status": "fact",
+          "text": "1608年刊の嵯峨本『伊勢物語』は古活字版で、活字による本文と整版の挿絵を併せ持つ。",
+          "location": "本文行39〜49付近"
+        }
+      ],
+      "limitations": [
+        "取り上げた1つの版本がすべての古活字版を代表するわけではない。",
+        "画像を再配布せず、確認した特徴を短く言い換えた。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H05",
+      "aliases": [],
+      "title": "本木昌造｜近代日本人の肖像",
+      "publisher": "国立国会図書館",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "公的機関の解説",
+      "url": "https://www.ndl.go.jp/portrait/datas/6051/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H05-C01",
+          "status": "fact",
+          "text": "1869年のガンブル招聘、1870年の長崎での活版所創設が記される。",
+          "location": "人物解説本文、行24付近"
+        }
+      ],
+      "limitations": [
+        "近代活字技術の人物紹介であり、日本での印刷・活字全体の開始を示す年代ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H06",
+      "aliases": [],
+      "title": "明朝体｜フォント用語集",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカーによる用語・技術史解説",
+      "url": "https://www.morisawa.co.jp/culture/dictionary/1955",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H06-C01",
+          "status": "fact",
+          "text": "中国の木版印刷を源流として説明し、縦横の画の差、ウロコ、筆書に由来するかなの特徴を挙げる。",
+          "location": "本文行66〜77付近"
+        }
+      ],
+      "limitations": [
+        "形態と歴史の説明として使用し、書体カテゴリ別の読み速度や心理効果の実証には使用しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H07",
+      "aliases": [],
+      "title": "ゴシック体｜フォント用語集",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカーによる用語・技術史解説",
+      "url": "https://www.morisawa.co.jp/culture/dictionary/1956",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H07-C01",
+          "status": "fact",
+          "text": "強調用途の起源を紹介するとともに、筆脈を残す伝統的な設計と、1970年代以降の整理された構成・ファミリー化を区別する。",
+          "location": "本文行66〜77付近"
+        }
+      ],
+      "limitations": [
+        "起源の説明には推量的な表現が含まれる。",
+        "ゴシック体全体の用途や印象を固定する根拠ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H08",
+      "aliases": [],
+      "title": "技術と方法(2)写真植字｜文字を組む方法",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "2008-04-03",
+      "source_type": "メーカーによる自社・業界技術史解説",
+      "url": "https://www.morisawa.co.jp/culture/japanese-typesetting/05/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H08-C01",
+          "status": "fact",
+          "text": "1924年の邦文写真植字機特許出願、光学的な文字拡縮・変形、級・歯という単位を紹介する。",
+          "location": "写真植字機・文字の大きさ・詰めの説明"
+        }
+      ],
+      "limitations": [
+        "単位や組版方法に関する執筆者の価値判断を普遍的な優劣として使用しない。",
+        "写植で可能な変形や詰めを、現代本文の一律推奨に変換しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H09",
+      "aliases": [],
+      "title": "秀英体の歴史",
+      "publisher": "大日本印刷株式会社（DNP）",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカーの開発年表",
+      "url": "https://shueitai.dnp.co.jp/history/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H09-C01",
+          "status": "fact",
+          "text": "年表は1976年にコンピューター組版へ向けたデジタル化、2005年に平成の大改刻開始を記す。",
+          "location": "公式年表の1976年・2005年項目"
+        }
+      ],
+      "limitations": [
+        "秀英体の年表であり、世界または日本で最初のデジタルフォントの年代ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H10",
+      "aliases": [],
+      "title": "モリサワのフォント・開発のプロセス",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "メーカーによる実際の書体開発工程の説明",
+      "url": "https://www.morisawa.co.jp/fonts/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H10-C01",
+          "status": "fact",
+          "text": "開発工程はコンセプト・基本文字・展開に加え、熟語と文章を異なる大きさで出力して確認する作業を含む。",
+          "location": "フォントができるまで／開発のプロセス"
+        }
+      ],
+      "limitations": [
+        "品質比較の第三者試験ではない。工程をKUMIHAN検査へ応用する部分は本調査の提案。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H11",
+      "aliases": [],
+      "title": "The Unicode Standard: A Technical Introduction",
+      "publisher": "Unicode Consortium",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "符号化規格の発行団体による技術説明",
+      "url": "https://www.unicode.org/standard/principles.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H11-C01",
+          "status": "fact",
+          "text": "Unicodeは抽象的な文字を扱い、文字の具体的な大きさ・形・スタイル等を規定しない。",
+          "location": "Characters and Glyphs、本文行30〜37付近"
+        }
+      ],
+      "limitations": [
+        "ページ内の文字数など古い可能性のある統計値は採用しない。",
+        "文字列保全とレンダリング検査を分離する設計は独自提案。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H12",
+      "aliases": [],
+      "title": "表外漢字字体表 I前文3(1) 字体・書体・字形について",
+      "publisher": "文化庁・国語審議会",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "国語審議会文書",
+      "url": "https://www.bunka.go.jp/kokugo_nihongo/sisaku/joho/joho/kakuki/22/tosin03/08.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H12-C01",
+          "status": "fact",
+          "text": "字体を骨組み、書体を共通した表現様式、字形を実際に表された具体的な形として区別する。",
+          "location": "本文行17〜19"
+        }
+      ],
+      "limitations": [
+        "このページ単独の発行日を未確認。",
+        "日本語の字体・書体・字形の用語とソフトウェアのfont/glyphを無条件に同一視しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H13",
+      "aliases": [],
+      "title": "「常用漢字表」を知っていますか。―「常用漢字表」シリーズ①―",
+      "publisher": "文化庁国語課",
+      "authors": [],
+      "date_or_version": "2016-05-06",
+      "source_type": "公的機関の解説",
+      "url": "https://www.bunka.go.jp/prmagazine/rensai/kotoba/kotoba_009.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H13-C01",
+          "status": "fact",
+          "text": "常用漢字表は一般社会の表記の目安であり、専門分野や個人の表記、固有名詞等を一律に拘束するものではない。",
+          "location": "本文行22〜29付近"
+        },
+        {
+          "id": "H13-C02",
+          "status": "fact",
+          "text": "手書き文字と印刷文字には表し方の慣習の差がある。",
+          "location": "本文行58付近"
+        }
+      ],
+      "limitations": [
+        "2016年の説明であるため、小学校配当漢字数など更新されうる周辺数値を転載しない。",
+        "表外字を一律にフォント収録対象から外すという解釈を支持しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H14",
+      "aliases": [],
+      "title": "#源ノ明朝 開発のプロセス",
+      "publisher": "Adobe（Ken Lundeの原著記事に基づく日本語記事）",
+      "authors": [],
+      "date_or_version": "2017-04-10",
+      "source_type": "開発者・メーカーによる書体開発報告",
+      "url": "https://blog.adobe.com/jp/publish/2017/04/10/dtp-source-han-serif-history-development",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H14-C01",
+          "status": "fact",
+          "text": "源ノ明朝の開発では複数言語・スクリプトを混ぜた仮ビルドで表示を確認し、修正したと報告される。",
+          "location": "開発の反復工程、本文行52〜55付近"
+        }
+      ],
+      "limitations": [
+        "開発当時の報告であり、現在の製品の全収録文字数・全対応機能を表すものではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H15",
+      "aliases": [],
+      "title": "Source Han Sans - Pan-CJK Japanese",
+      "publisher": "Adobe Fonts",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "製品提供元の公式書体仕様",
+      "url": "https://fonts.adobe.com/fonts/source-han-sans-cjk-japanese",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H15-C01",
+          "status": "fact",
+          "text": "Pan-CJK Japanese版は日本語のグリフを既定として表示し、他言語のグリフも利用できると説明する。",
+          "location": "Description、本文行36〜37"
+        }
+      ],
+      "limitations": [
+        "対応するアプリケーションや指定方法を別途確認する必要がある。",
+        "当該フォントの説明をすべてのCJKフォントへ一般化しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H16",
+      "aliases": [],
+      "title": "解説：現代の書き言葉はどのようにして確立したか",
+      "publisher": "国立国語研究所",
+      "authors": [],
+      "date_or_version": "2005-10-01",
+      "source_type": "歴史コーパスによる研究解説",
+      "url": "https://kotoba.ninjal.ac.jp/mado/25/25-03/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H16-C01",
+          "status": "fact",
+          "text": "『太陽』の1895・1901・1909・1917・1925年資料から口語文への移行を扱い、表現による変化の違いも示す。",
+          "location": "『太陽コーパス』と表現変化の解説"
+        }
+      ],
+      "limitations": [
+        "雑誌『太陽』という資料の範囲に依存する。",
+        "全媒体・全話者が同時に一つの書き言葉へ転換したことは示さない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H17",
+      "aliases": [],
+      "title": "日常会話における日本語の姿",
+      "publisher": "国立国語研究所・小磯花絵",
+      "authors": [],
+      "date_or_version": "2018-04-03",
+      "source_type": "会話コーパス研究者の解説",
+      "url": "https://kotoba.ninjal.ac.jp/digest/01/d-01-06/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H17-C01",
+          "status": "fact",
+          "text": "自己認識と実際の日常発話に違いがあること、書き言葉では見て推敲できることを説明する。",
+          "location": "話し言葉と書き言葉の比較、本文行37〜39付近"
+        }
+      ],
+      "limitations": [
+        "紹介記事の全ての集計値を転載しておらず、場面差を無視した話し言葉一般の比率を主張しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H18",
+      "aliases": [],
+      "title": "話し言葉と書き言葉─音声学からみた違い─",
+      "publisher": "国立国語研究所・前川喜久雄",
+      "authors": [],
+      "date_or_version": "2021",
+      "source_type": "研究者による講義紹介",
+      "url": "https://www2.ninjal.ac.jp/tanken/2021/hanashikotoba-to-kakikotoba/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTMLの講義概要のみ。動画は視聴していない。",
+      "claims": [
+        {
+          "id": "H18-C01",
+          "status": "fact",
+          "text": "音声は態度や感情を伝えるパラ言語情報を持つという講義主題を説明する。",
+          "location": "講義の紹介文"
+        }
+      ],
+      "limitations": [
+        "講義中の詳細な実験や音声例は確認していない。",
+        "音声の強弱と文字の大小が一対一対応する根拠として使用しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H19",
+      "aliases": [],
+      "title": "CSJ本体との主な相違点",
+      "publisher": "国立国語研究所",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "研究コーパスの公式注釈仕様",
+      "url": "https://clrd.ninjal.ac.jp/csj/rdb-diff.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H19-C01",
+          "status": "fact",
+          "text": "CSJ-RDBはアクセント句・イントネーション句・ポーズに基づく転記単位を分け、非流暢現象の注釈も扱う。",
+          "location": "アクセント句・イントネーション句等、本文行70〜82付近"
+        }
+      ],
+      "limitations": [
+        "テキスト上の文節境界と音声の各境界を等号で結ぶ仕様ではない。",
+        "リンク先PDFの一部は取得できず、このHTMLの説明範囲のみ使用。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H20",
+      "aliases": [],
+      "title": "日本語の文章で読点のルールはどうなっていますか",
+      "publisher": "国立国語研究所・岩崎拓也",
+      "authors": [],
+      "date_or_version": "2018-10-31",
+      "source_type": "公的機関の解説",
+      "url": "https://kotoba.ninjal.ac.jp/qa/yokuaru/qa-53/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H20-C01",
+          "status": "fact",
+          "text": "読点の係り受け・並列・分かち書きの役割と、文章の長さやジャンルによる判断の違いを説明する。",
+          "location": "回答本文"
+        },
+        {
+          "id": "H20-C02",
+          "status": "fact",
+          "text": "公用文の横書きのカンマについては旧来の要領を参照する。",
+          "location": "旧「公用文作成の要領」に言及する段落"
+        }
+      ],
+      "limitations": [
+        "横書きの読点に関する公用文の現在の方針はH21の2022年文書を参照する。",
+        "文節の数だけ読点を打つという規則ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H21",
+      "aliases": [],
+      "title": "公用文作成の考え方（建議）（付）解説",
+      "publisher": "文化審議会・文化庁",
+      "authors": [],
+      "date_or_version": "2022-01-07",
+      "source_type": "政府文書作成の建議・解説",
+      "url": "https://www.bunka.go.jp/seisaku/bunkashingikai/kokugo/hokoku/pdf/93651301_01.pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "全63ページのPDF本文を取得し、該当箇所を確認",
+      "claims": [
+        {
+          "id": "H21-C01",
+          "status": "fact",
+          "text": "一文50〜60字は読みにくさを見直す目安であり、適切な長さを一律には定めない。",
+          "location": "PDF44枚目、印刷ページ32"
+        },
+        {
+          "id": "H21-C02",
+          "status": "fact",
+          "text": "読点は「、」を原則とし、横書きの「，」も文書内で統一すれば使用可能とする。",
+          "location": "PDF6枚目、印刷ページ4"
+        },
+        {
+          "id": "H21-C03",
+          "status": "fact",
+          "text": "資料自体の設定を、本文10.5pt明朝、見出し12ptゴシックと記す。",
+          "location": "PDF43枚目、印刷ページ31"
+        }
+      ],
+      "limitations": [
+        "公用文の手引であり、広告・詩・文芸等へそのまま強制しない。",
+        "10.5ptと12ptはこの資料の設定例であり、全用途の推奨値ではない。",
+        "H21の転載・要約を統合後も合計200 words以内の短い事実説明に抑える。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H22",
+      "aliases": [],
+      "title": "文節間改行レイアウトを有する日本語リーダーの読み効率評価",
+      "publisher": "小林潤平・関口隆・新堀英二・川嶋稔夫／人工知能学会論文誌30(2), 479–484",
+      "authors": [],
+      "date_or_version": "2015-03-01",
+      "source_type": "原著査読論文",
+      "url": "https://www.jstage.jst.go.jp/article/tjsai/30/2/30_30_479/_pdf/-char/ja",
+      "accessed_at": "2026-10-20",
+      "access_scope": "6ページの本文PDFを取得し、実験条件・結果・考察を確認",
+      "claims": [
+        {
+          "id": "H22-C01",
+          "status": "fact",
+          "text": "文節を分断しない改行条件で読み速度が上がる傾向を報告し、基準行長5字・40字で有意差があった。",
+          "location": "結果・考察"
+        }
+      ],
+      "limitations": [
+        "学生中心・安定データ14名・一書体一端末の条件である。",
+        "広告コピー、縦書き、高齢者・低視力者、ブランド好感度には直接外挿できない。",
+        "条件間で実際の平均行長も異なる。読み速度の変化を理解向上と同一視しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H23",
+      "aliases": [],
+      "title": "わかりやすい文章表現と文章理解に関する一検討",
+      "publisher": "吉田直人・中山実・清水康敬／日本教育工学雑誌25(4), 217–224",
+      "authors": [],
+      "date_or_version": "2002-03-20",
+      "source_type": "原著査読論文",
+      "url": "https://www.jstage.jst.go.jp/article/jmet/25/4/25_25.4_217/_pdf/-char/ja",
+      "accessed_at": "2026-10-20",
+      "access_scope": "本文PDFを取得し、特に第3節の文長実験の条件・結果を確認",
+      "claims": [
+        {
+          "id": "H23-C01",
+          "status": "fact",
+          "text": "文長を比較した実験では短文条件の解答時間が短くなった一方、文長による正答率の有意差はなかった。",
+          "location": "第3節：文の長さと文章理解に関する実験"
+        }
+      ],
+      "limitations": [
+        "小規模な学生実験であり、一定時間だけ提示する説明文とCRTの条件に依存する。",
+        "短文化すれば全場面で理解・記憶・好みが同時に改善するとは示さない。",
+        "読点等を扱う後続実験の詳細結果は本メモの結論に使用しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認",
+      "doi": "10.15077/jmet.25.4_217"
+    },
+    {
+      "id": "H24",
+      "aliases": [],
+      "title": "第155回NINJALコロキウム：電子メディアのコミュニケーションを考える―「打ち言葉」とは何か―",
+      "publisher": "国立国語研究所・三宅和子",
+      "authors": [],
+      "date_or_version": "2025-10-28（開催日）",
+      "source_type": "研究者の講演要旨",
+      "url": "https://www.ninjal.ac.jp/events_jp/20251028a/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "イベント告知HTMLの要旨のみ。講演は視聴していない。",
+      "claims": [
+        {
+          "id": "H24-C01",
+          "status": "fact",
+          "text": "電子メディアの「打ち言葉」を扱い、話し言葉と書き言葉の二分を再検討する講演主題を示す。",
+          "location": "講演要旨"
+        }
+      ],
+      "limitations": [
+        "要旨を完成済みの実験研究結果として扱わない。",
+        "SNSすべてに一つの文体を定義するものではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H25",
+      "aliases": [],
+      "title": "現代日本語書き言葉均衡コーパス（BCCWJ）概要",
+      "publisher": "国立国語研究所",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "研究コーパスの公式説明",
+      "url": "https://clrd.ninjal.ac.jp/bccwj/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H25-C01",
+          "status": "fact",
+          "text": "多様な出版物・ウェブのジャンルからサンプルを収集した書き言葉コーパスである。",
+          "location": "概要、本文行56〜58"
+        },
+        {
+          "id": "H25-C02",
+          "status": "fact",
+          "text": "従来版は第1部（BCCWJ1）と呼ばれ、収録刊行年代は最大1976〜2005年。構築中の第2部は別対象である。",
+          "location": "重要注記、本文行52〜53、行92"
+        }
+      ],
+      "limitations": [
+        "現在の全てのSNS・私信を代表するものではない。",
+        "本調査はコーパスの実データを抽出・集計していない。漢字率の最適値を算定していない。",
+        "利用・引用時は版、収録年代、ジャンルとサンプル識別情報を確認する。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H26",
+      "aliases": [],
+      "title": "秀英体のデザイン",
+      "publisher": "大日本印刷株式会社（DNP）",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカーの設計・用途説明",
+      "url": "https://shueitai.dnp.co.jp/design/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H26-C01",
+          "status": "fact",
+          "text": "秀英横太明朝は画面で残る横画を意識した設計として紹介され、複数の用途に向けた書体差が示される。",
+          "location": "秀英横太明朝、本文行128〜136"
+        }
+      ],
+      "limitations": [
+        "用途適性や視認性はメーカー自身の説明であり、独立した比較実験ではない。",
+        "メモでは横画の具体的な倍率や他社比較を推奨数値として転用していない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H27",
+      "aliases": [],
+      "title": "第六回 黎ミン グラデーションファミリー",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカーの開発・設計解説",
+      "url": "https://www.morisawa.co.jp/culture/inside-story/2001",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H27-C01",
+          "status": "fact",
+          "text": "黎ミンには縦画に加えて横画の太さを変えた複数のファミリーがあり、画面表示や白抜きなどの用途が説明される。",
+          "location": "ファミリー構成と用途説明"
+        }
+      ],
+      "limitations": [
+        "書体構造の選択肢を示す証拠として用い、全出力条件で優れるという実証には用いない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H28",
+      "aliases": [],
+      "title": "漢検の出題分野について",
+      "publisher": "公益財団法人 日本漢字能力検定協会",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "検定主催機関による出題概念の説明",
+      "url": "https://www.kanken.or.jp/kanken/field/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H28-C01",
+          "status": "fact",
+          "text": "漢字の読みに音訓のほか混用、当て字、熟字訓等があることを出題分野として説明する。",
+          "location": "読み・熟字訓等の出題分野"
+        }
+      ],
+      "limitations": [
+        "文字史の原史料ではなく、現代の読み方の用語を確認する補助資料。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H29",
+      "aliases": [],
+      "title": "夏の所蔵品展1「漢字の源流 －文字が生まれた」",
+      "publisher": "ふくやま書道美術館（福山市）",
+      "authors": [],
+      "date_or_version": "2022-06-27",
+      "source_type": "美術館所蔵資料の展示解説",
+      "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-syodo/265526.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H29-C01",
+          "status": "fact",
+          "text": "殷の甲骨文を最古の状態を伝える資料とし、殷・周の青銅器の銘文を金文、秦の小篆までを広く篆書に含めて説明する。",
+          "location": "概要、本文行45〜47"
+        }
+      ],
+      "limitations": [
+        "展示の教育解説であり、漢字が初めて作られた時点や場所を確定する資料ではない。",
+        "隷書の発生時期の説明幅はH30と併読し、唯一の年で確定しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H30",
+      "aliases": [],
+      "title": "中国の書跡 篆隷草行楷—五書体の諸相",
+      "publisher": "東京国立博物館",
+      "authors": [],
+      "date_or_version": "2023-04-25（会期開始日）",
+      "source_type": "博物館所蔵品・展示に基づく書史解説",
+      "url": "https://www.tnm.jp/modules/r_exhibition/index.php?controller=item&id=7353",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H30-C01",
+          "status": "fact",
+          "text": "五書体の変化には地域差と数世紀の幅があり、成立時期の特定は難しい。およそ篆書・隷書・草書・行書・楷書の順で発生したと説明する。",
+          "location": "展示趣旨、本文行236〜239"
+        },
+        {
+          "id": "H30-C02",
+          "status": "fact",
+          "text": "同じ書体内でも書風が多様であると説明し、近世・近代の肉筆を含む複数書体の作品を展示する。",
+          "location": "展示趣旨および作品リスト、行239以降"
+        }
+      ],
+      "limitations": [
+        "およその発生順は、それ以前の書体がすべて廃れた順序ではない。",
+        "個々の書体の始期・範囲の厳密な異説を決着させる専門論文ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "H31",
+      "aliases": [],
+      "title": "ことばQ&A：「魂」の偏（へん）と旁（つくり）について",
+      "publisher": "国立国語研究所・山田貞雄",
+      "authors": [],
+      "date_or_version": "2006-10-01",
+      "source_type": "国語研究者による文字構成の解説",
+      "url": "https://kotoba.ninjal.ac.jp/mado/29/29-06/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "HTML本文を取得",
+      "claims": [
+        {
+          "id": "H31-C01",
+          "status": "fact",
+          "text": "形声を意味のまとまりに関わる意符と、もとの中国語の発音に関わる音符の組合せとして説明する。",
+          "location": "六書・形声の説明、本文行42"
+        },
+        {
+          "id": "H31-C02",
+          "status": "fact",
+          "text": "部首による分類と、字の部分の位置や、形声の意符・音符の分担は同じではなく、解字には辞典間の相違もある。",
+          "location": "本文行38・42〜47"
+        }
+      ],
+      "limitations": [
+        "意味・音の役割を現代日本語の読みや字の左右位置だけで断定しない。",
+        "記事中の形声字の割合は資料集合と分類に依存するため、本メモでは数値を転載していない。"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認"
+    },
+    {
+      "id": "M01",
+      "aliases": [],
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "publisher": "W3C",
+      "authors": [],
+      "date_or_version": "2024-12-12",
+      "source_type": "W3C Recommendation",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "文書の位置付けと対象達成基準。細部の解釈はM02–M08。",
+      "claims": [
+        {
+          "id": "M01-C01",
+          "status": "source_description",
+          "text": "Webアクセシビリティの達成基準として、測定可能な要件を提供する。"
+        }
+      ],
+      "limitations": [
+        "この調査はサイト全体のWCAG適合監査ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M02",
+      "aliases": [],
+      "title": "Understanding Success Criterion 1.4.4: Resize Text",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "accessed 2026-10-20",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "Success Criterionおよび失敗例。",
+      "claims": [
+        {
+          "id": "M02-C01",
+          "status": "source_description",
+          "text": "対象テキストを200%まで拡大しても情報や機能を失わない。"
+        }
+      ],
+      "limitations": [
+        "captionsとimages of text等の例外を保持。初期font sizeの一律最小値ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M03",
+      "aliases": [],
+      "title": "Understanding Success Criterion 1.4.10: Reflow",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "accessed 2026-10-20",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "320/256 CSS pxの条件と拡大倍率の説明。",
+      "claims": [
+        {
+          "id": "M03-C01",
+          "status": "source_description",
+          "text": "縦スクロールで320 CSS px相当、横スクロールで256 CSS px相当を扱う。"
+        }
+      ],
+      "limitations": [
+        "二次元的配置が必要な図表等の例外がある。200%文字拡大と同一テストではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M04",
+      "aliases": [],
+      "title": "Understanding Success Criterion 1.4.12: Text Spacing",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "2025-10-01",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "SC、Author Responsibility、Applicability、Languages and Scripts。",
+      "claims": [
+        {
+          "id": "M04-C01",
+          "status": "source_description",
+          "text": "規定のspacingをユーザーが上書きした時の情報・機能保持を求める。作者の初期値として固定する要件ではない。"
+        }
+      ],
+      "limitations": [
+        "言語・scriptが使わない特性は例外。現在このSCはPDFには適用されないと解説されている。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M05",
+      "aliases": [],
+      "title": "Understanding Success Criterion 1.4.8: Visual Presentation",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "accessed 2026-10-20",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "SC、Note1/2、Intent。",
+      "claims": [
+        {
+          "id": "M05-C01",
+          "status": "source_description",
+          "text": "AAAとしてCJK40字以内等へ表示を変更できる仕組みを扱う。"
+        }
+      ],
+      "limitations": [
+        "作者が全ページを一律40字にしなければならないという意味ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M06",
+      "aliases": [],
+      "title": "Understanding Success Criterion 1.4.3: Contrast (Minimum)",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "accessed 2026-10-20",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "SC、large scale定義と注記。",
+      "claims": [
+        {
+          "id": "M06-C01",
+          "status": "source_description",
+          "text": "通常文字4.5:1、大きな文字3:1。大きな文字のCJK等価サイズや細い字形に留意。"
+        }
+      ],
+      "limitations": [
+        "比率の四捨五入で閾値を満たした扱いにしない。ロゴ例外と通常のブランド本文を混同しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M08",
+      "aliases": [],
+      "title": "Understanding Success Criterion 2.5.8: Target Size (Minimum)",
+      "publisher": "W3C WAI",
+      "authors": [],
+      "date_or_version": "accessed 2026-10-20",
+      "source_type": "公式解説",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "SC、サイズ/間隔/インライン例外。",
+      "claims": [
+        {
+          "id": "M08-C01",
+          "status": "source_description",
+          "text": "原則24×24 CSS pxは操作対象の寸法。font sizeの24px指定を意味しない。"
+        }
+      ],
+      "limitations": [
+        "例外条件を省略して全テキストへ拡張しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M09",
+      "aliases": [],
+      "title": "タイポグラフィ（概要）｜デジタル庁デザインシステムβ版",
+      "publisher": "デジタル庁",
+      "authors": [],
+      "date_or_version": "2026-08-05",
+      "source_type": "公式デザインシステム",
+      "url": "https://design.digital.go.jp/dads/foundations/typography/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "v2.18.1表示。サイズ、行高、役割別テキストスタイル。",
+      "claims": [
+        {
+          "id": "M09-C01",
+          "status": "source_description",
+          "text": "本文/UIは16 CSS px以上が基準。Display/Standard/Dense/Onelineを分け、用途に応じた行高を示す。"
+        }
+      ],
+      "limitations": [
+        "当該システムの具体的方針。世界共通の可読性最適値やWCAGの最小サイズではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M12",
+      "aliases": [],
+      "title": "Registered Design-Variation Axis Tag: 'opsz'",
+      "publisher": "Microsoft Learn / OpenType specification",
+      "authors": [],
+      "date_or_version": "2024-05-29",
+      "source_type": "フォント技術仕様",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxistag_opsz",
+      "accessed_at": "2026-10-20",
+      "access_scope": "軸定義、Additional information。",
+      "claims": [
+        {
+          "id": "M12-C01",
+          "status": "source_description",
+          "text": "光学サイズは表示サイズに応じたデザインの変化を表す。視距離や機器条件も選択の文脈となる。"
+        }
+      ],
+      "limitations": [
+        "すべての可変フォントがopszを含むとの保証ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M14",
+      "aliases": [],
+      "title": "仮想ボディ｜フォント用語集",
+      "publisher": "株式会社モリサワ",
+      "authors": [],
+      "date_or_version": "publication date not shown",
+      "source_type": "メーカー一次資料・用語",
+      "url": "https://www.morisawa.co.jp/culture/dictionary/1964",
+      "accessed_at": "2026-10-20",
+      "access_scope": "用語本文。",
+      "claims": [
+        {
+          "id": "M14-C01",
+          "status": "source_description",
+          "text": "和文書体の配置基準枠である仮想ボディの意味。"
+        }
+      ],
+      "limitations": [
+        "性能比較を行った研究ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M15",
+      "aliases": [],
+      "title": "pt? 級? 号? 文字に関する単位の話",
+      "publisher": "モリサワ note編集部",
+      "authors": [],
+      "date_or_version": "2023-09-05",
+      "source_type": "メーカー一次資料・制作解説",
+      "url": "https://note.morisawa.co.jp/n/nf63dc1bd449b",
+      "accessed_at": "2026-10-20",
+      "access_scope": "文字サイズ単位と字面/仮想ボディ。",
+      "claims": [
+        {
+          "id": "M15-C01",
+          "status": "source_description",
+          "text": "字面の占有率は書体によって異なる。サイズ数値は実際の形の寸法と同義ではない。"
+        }
+      ],
+      "limitations": [
+        "同サイズでの見え方は実フォント・字種ごとに確認が必要。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M16",
+      "aliases": [],
+      "title": "InDesignで使用できる単位の設定方法（InDesign CC）",
+      "publisher": "Adobe",
+      "authors": [],
+      "date_or_version": "2024-01-10",
+      "source_type": "製品公式ヘルプ",
+      "url": "https://helpx.adobe.com/jp/indesign/kb/2623.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "B-2単位の種類。",
+      "claims": [
+        {
+          "id": "M16-C01",
+          "status": "source_description",
+          "text": "pt、H、アメリカ式point等の換算・用途。"
+        }
+      ],
+      "limitations": [
+        "InDesignの単位説明。CSSのdevice pixel対応を規定する資料ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M18",
+      "aliases": [],
+      "title": "「高齢者・障害者の感覚特性データベース」を公開",
+      "publisher": "産業技術総合研究所",
+      "authors": [],
+      "date_or_version": "2013-08-19",
+      "source_type": "研究機関一次発表",
+      "url": "https://www.aist.go.jp/aist_j/press_release/pr2013/pr20130819/pr20130819.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "研究内容と可読文字サイズツールの説明。",
+      "claims": [
+        {
+          "id": "M18-C01",
+          "status": "source_description",
+          "text": "年齢・視距離・輝度・文字種によって最小可読サイズ等を条件化する。"
+        }
+      ],
+      "limitations": [
+        "のべ3000人超は全感覚特性データ群の人数で、特定の文字サイズ実験の人数と解釈しない。現行計算ツールでのパラメータ実行はしていない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M19",
+      "aliases": [],
+      "title": "公共交通機関の旅客施設に関する移動等円滑化整備ガイドライン（バリアフリー整備ガイドライン旅客施設編）第2部2.誘導案内設備に関するガイドライン",
+      "publisher": "国土交通省",
+      "authors": [],
+      "date_or_version": "2025-09",
+      "source_type": "公的ガイドライン",
+      "url": "https://www.mlit.go.jp/sogoseisaku/barrierfree/content/001913508.pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "参考2-2-3の文字高表は印刷頁99（PDF index 20）。文字高の定義は印刷頁100（index 21）。PDF画像/本文を確認。旧メモのp.98は前頁フッターの読み違いのため訂正。",
+      "claims": [
+        {
+          "id": "M19-C01",
+          "status": "source_description",
+          "text": "視距離ごとの和欧文文字高の目安。文字高は指定書体の和文「木」、欧文「E」の実際の高さ。ボディサイズではない。"
+        }
+      ],
+      "limitations": [
+        "過度な長体には適用できない。法的最小基準と同一視せず参考表として扱う。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "table_verified": {
+        "distance_m": [
+          "30",
+          "20",
+          "10",
+          "4-5",
+          "1-2"
+        ],
+        "japanese_height_min_mm": [
+          120,
+          80,
+          40,
+          20,
+          9
+        ],
+        "english_height_min_mm": [
+          90,
+          60,
+          30,
+          15,
+          7
+        ],
+        "printed_page": 99,
+        "pdf_zero_based_page_index": 20,
+        "height_definition_printed_page": 100,
+        "height_definition_pdf_zero_based_page_index": 21,
+        "japanese_reference_glyph": "木",
+        "english_reference_glyph": "E",
+        "measurement": "height of the specified font reference glyph, not nominal em/body size"
+      }
+    },
+    {
+      "id": "M20",
+      "aliases": [],
+      "title": "文字の読みやすさ2：読みやすさと読みの速さの比較",
+      "publisher": "日本官能評価学会誌 14(1-2), 26–33",
+      "authors": [
+        "阿久津洋巳",
+        "近藤雄希"
+      ],
+      "date_or_version": "2010-04-15",
+      "source_type": "原著",
+      "url": "https://www.jstage.jst.go.jp/article/jjsse/14/1-2/14_26/_pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "本文の方法、対象、結果、考察。",
+      "claims": [
+        {
+          "id": "M20-C01",
+          "status": "source_description",
+          "text": "主観的快適性と音読速度は文字サイズに対して同じ変化をしない。"
+        }
+      ],
+      "limitations": [
+        "大学生中心・MS明朝・紙・縦組・40cm。全世代やスマートフォンへの単純移植不可。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "doi": "10.9763/jjsse.14.26",
+      "sample": "主観実験I分析110名、音読実験III学生10名"
+    },
+    {
+      "id": "M21",
+      "aliases": [],
+      "title": "本文横組版におけるゴシック体と明朝体の読みやすさの比較",
+      "publisher": "日本デザイン学会第66回春季研究発表大会",
+      "authors": [
+        "山本政幸"
+      ],
+      "date_or_version": "2019",
+      "source_type": "大会研究梗概",
+      "url": "https://www.jstage.jst.go.jp/article/jssd/66/0/66_266/_pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "2ページ本文。対象・装置・書体・サイズ・結果を確認。",
+      "claims": [
+        {
+          "id": "M21-C01",
+          "status": "source_description",
+          "text": "12Q/24Qと16Qで書体間の相対的な結果が変わり、単純な書体類型の優劣は導けない。"
+        }
+      ],
+      "limitations": [
+        "28名、美術/デザイン専攻19–25歳、約92ppi液晶、約60cm、游明朝/游ゴシックMedium。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M22",
+      "aliases": [],
+      "title": "発達性ディスレクシア児童の音読における書体の影響",
+      "publisher": "音声言語医学 57(2), 238–245",
+      "authors": [
+        "谷尚樹",
+        "後藤多可志",
+        "宇野彰",
+        "内山俊朗",
+        "山中敏正"
+      ],
+      "date_or_version": "2016",
+      "source_type": "原著",
+      "url": "https://www.jstage.jst.go.jp/article/jjlp/57/2/57_238/_article/-char/ja/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "J-STAGE抄録・書誌。",
+      "claims": [
+        {
+          "id": "M22-C01",
+          "status": "source_description",
+          "text": "丸ゴシック/明朝の課題で客観成績と主観選好が一致しない。"
+        }
+      ],
+      "limitations": [
+        "障害児23名/典型発達児36名。本文PDFの全方法詳細は本担当で精査していない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "doi": "10.5112/jjlp.57.238"
+    },
+    {
+      "id": "M23",
+      "aliases": [],
+      "title": "ユニバーサルデザインデジタル教科書体が発達性読み書き障害児群の音読の正確性，流暢性および読解力に与える影響",
+      "publisher": "音声言語医学 64(2), 105–115",
+      "authors": [
+        "後藤多可志",
+        "宇野彰",
+        "春原則子",
+        "横井美緒",
+        "三盃亜美",
+        "大六一志"
+      ],
+      "date_or_version": "2023",
+      "source_type": "原著",
+      "url": "https://www.jstage.jst.go.jp/article/jjlp/64/2/64_105/_pdf/-char/ja",
+      "accessed_at": "2026-10-20",
+      "access_scope": "抄録と本文方法・対象・結果を確認。",
+      "claims": [
+        {
+          "id": "M23-C01",
+          "status": "source_description",
+          "text": "対象条件ではUD/教科書体による客観的な成績差は有意でなく、主観選好とは異なる。"
+        }
+      ],
+      "limitations": [
+        "小4–中3、障害児24名/典型24名。HG教科書体/UDデジタル教科書体N-R等、16pt紙、約60cm。全UD書体や全用途の無効証明ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "doi": "10.5112/jjlp.64.105"
+    },
+    {
+      "id": "M24",
+      "aliases": [],
+      "title": "教科書体付属欧文の読みやすさに関する実証研究―発達性ディスレクシアを持つ読者を対象として",
+      "publisher": "デザイン学研究 66(3), 3_51–3_60",
+      "authors": [
+        "朱心茹",
+        "高田裕美",
+        "影浦峡"
+      ],
+      "date_or_version": "2020-01-31",
+      "source_type": "原著",
+      "url": "https://www.jstage.jst.go.jp/article/jssdj/66/3/66_3_51/_pdf/-char/ja",
+      "accessed_at": "2026-10-20",
+      "access_scope": "方法/対象/表2・5・6・考察を確認。",
+      "claims": [
+        {
+          "id": "M24-C01",
+          "status": "source_description",
+          "text": "一部の群×課題で全体検定に書体差がある。DXの個別ペア比較を有意なUD優越と断定できない。"
+        }
+      ],
+      "limitations": [
+        "ローマ字日本語短文と欧文字列、16pt紙。DX16名/対照19名、10–53歳。メーカー所属共著者あり。漢字かな本文へ直結不可。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "doi": "10.11247/jssdj.66.3_51"
+    },
+    {
+      "id": "M25",
+      "aliases": [],
+      "title": "文節単位の視点移動を促す日本語リーダーの読書アシスト効果",
+      "publisher": "人工知能学会全国大会論文集 JSAI2016",
+      "authors": [
+        "小林潤平",
+        "関口隆",
+        "新堀英二",
+        "川嶋稔夫"
+      ],
+      "date_or_version": "2016",
+      "source_type": "大会研究論文",
+      "url": "https://www.jstage.jst.go.jp/article/pjsai/JSAI2016/0/JSAI2016_1E22in2/_pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "実験対象/刺激/方法と行長に関する結果。",
+      "claims": [
+        {
+          "id": "M25-C01",
+          "status": "source_description",
+          "text": "対象リーダーで行長や文節境界の手掛かりが読み速度・視線挙動に関係。"
+        }
+      ],
+      "limitations": [
+        "大学生53名、iPad9.7inch/264ppi、ヒラギノ角ゴProW3/4.4mm、行間1.6mm、約2000字。広告コピーの改行最適化実験ではない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read"
+    },
+    {
+      "id": "M26",
+      "aliases": [],
+      "title": "サインの体系的評価に関する研究―鉄道駅構内サインの印象評価実験による評価項目の寄与度算出",
+      "publisher": "日本建築学会環境系論文集 90(829), 113–121",
+      "authors": [
+        "小﨑美希",
+        "大澤夏帆",
+        "平手小太郎"
+      ],
+      "date_or_version": "2025-03-01",
+      "source_type": "原著",
+      "url": "https://www.jstage.jst.go.jp/article/aije/90/829/90_113/_pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "多層評価の定義と現地・写真の方法、対象、検証対象。",
+      "claims": [
+        {
+          "id": "M26-C01",
+          "status": "source_description",
+          "text": "サインを発見・視認・判読/誤読防止の複数軸で構造化して評価する。"
+        }
+      ],
+      "limitations": [
+        "算出は18–25歳20名/7サイン、検証20–25歳5名/3サイン。印象評価由来の寄与率をWeb・高齢者へそのまま移植しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "source-read",
+      "doi": "10.3130/aije.90.113"
+    },
+    {
+      "id": "C01",
+      "aliases": [],
+      "title": "無印良品とクリエイター 原研哉",
+      "publisher": "良品計画／無印良品",
+      "authors": [],
+      "date_or_version": "2003年の広告についての作者説明",
+      "source_type": "依頼主公式に掲載された制作者講演",
+      "url": "https://www.muji.com/jp/flagship/huaihai755/archive/hara.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "地平線の広告とブランドの考えを受け手が見いだす構成",
+      "claims": [
+        {
+          "id": "C01-C01",
+          "status": "source_description",
+          "text": "地平線の広告とブランドの考えを受け手が見いだす構成"
+        }
+      ],
+      "limitations": [
+        "ブランドイメージ広告の画像1点",
+        "紙面実寸・書体・サイズは未測定",
+        "実用情報を省略する根拠にはしない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://www.muji.com/img/flagship/huaihai755/archive/hara_img02.jpg",
+          "visually_inspected": true,
+          "scope": "横長の地平線、人物、小さなMUJI表記",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "原研哉の一人称の説明"
+    },
+    {
+      "id": "C02",
+      "aliases": [],
+      "title": "「人生には、飲食店がいる。」11月3日の新聞広告掲載から順次展開",
+      "publisher": "サントリーホールディングス",
+      "authors": [],
+      "date_or_version": "2021-11-02",
+      "source_type": "依頼主公式ニュースリリース",
+      "url": "https://www.suntory.co.jp/news/article/14021.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "B2ポスター2種、13cm角ステッカーなどへの展開",
+      "claims": [
+        {
+          "id": "C02-C01",
+          "status": "source_description",
+          "text": "B2ポスター2種、13cm角ステッカーなどへの展開"
+        }
+      ],
+      "limitations": [
+        "小さな一覧画像のみ",
+        "文字の正確な字間・サイズを測定していない",
+        "コピー全文の転載なし"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://www.suntory.co.jp/news/article/mt_items/14021-2.jpg",
+          "visually_inspected": true,
+          "scope": "ポスター2種とステッカー2種を並べた低解像度一覧",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "飲食店支援メッセージと媒体展開の公式説明"
+    },
+    {
+      "id": "C03",
+      "aliases": [],
+      "title": "Fontworks Brand Site",
+      "publisher": "日本デザインセンター",
+      "authors": [],
+      "date_or_version": "2019",
+      "source_type": "制作者公式実績紹介",
+      "url": "https://www.ndc.co.jp/projects/fontworks-brand-site/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "ブランドの約束と根拠を接続するサイト",
+      "claims": [
+        {
+          "id": "C03-C01",
+          "status": "source_description",
+          "text": "ブランドの約束と根拠を接続するサイト"
+        }
+      ],
+      "limitations": [
+        "制作紹介のデスクトップ画面のみ",
+        "ライブCSS・モバイル・音声・操作未検証",
+        "書体名の断定なし"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://images.microcms-assets.io/assets/e1792d85c6294bf7a4758eaa4c992c03/e16388c788c344bb94f4194dc0989519/fontworks_main_pc.jpg?fm=webp&w=1920",
+          "visually_inspected": true,
+          "scope": "中央のひらがなタグライン、赤い点や線、余白、右側ナビゲーション",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "ワークショップ、タグラインと16の言葉、実際のサービスへの接続に関する制作説明"
+    },
+    {
+      "id": "C04",
+      "aliases": [],
+      "title": "Featured Projects",
+      "publisher": "日本デザインセンター",
+      "authors": [],
+      "date_or_version": "2023",
+      "source_type": "制作者公式実績紹介",
+      "url": "https://www.ndc.co.jp/projects/featured-project/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "制作現場の物質感をイベントのグラフィックへ展開",
+      "claims": [
+        {
+          "id": "C04-C01",
+          "status": "source_description",
+          "text": "制作現場の物質感をイベントのグラフィックへ展開"
+        }
+      ],
+      "limitations": [
+        "英字主体の和欧混在事例",
+        "ポスター一覧のみ",
+        "フォント・数値比・現場の閲覧距離未測定"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://images.microcms-assets.io/assets/e1792d85c6294bf7a4758eaa4c992c03/cfd92a17e3724392b0bad83aea257826/featured-project_graphic_01.jpg?fm=webp&w=1920",
+          "visually_inspected": true,
+          "scope": "大きな横組・回転英字と小さな和文・日付を持つポスター2点",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "作業現場の素材、共同設営に関する制作説明"
+    },
+    {
+      "id": "C05",
+      "aliases": [],
+      "title": "企画展「もじ イメージ Graphic 展」開催概要",
+      "publisher": "21_21 DESIGN SIGHT",
+      "authors": [],
+      "date_or_version": "2023-11-23–2024-03-10",
+      "source_type": "主催者公式展覧会概要",
+      "url": "https://2121designsight.jp/program/graphic/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "1990年代以降の日本語とグラフィック。グラフィック担当LABORATORIES",
+      "claims": [
+        {
+          "id": "C05-C01",
+          "status": "source_description",
+          "text": "1990年代以降の日本語とグラフィック。グラフィック担当LABORATORIES"
+        }
+      ],
+      "limitations": [
+        "紙面構造はC17の実際の観察から分析",
+        "主催者の展覧会意図と紙面の観察を区別"
+      ],
+      "visual_evidence": [],
+      "verification": "資料記述の取得範囲を確認",
+      "intent_source": "日本語とグラフィックの関係を扱う展覧会の公式説明。個別紙面の断裁意図そのものの明言ではない"
+    },
+    {
+      "id": "C06",
+      "aliases": [],
+      "title": "TDC特別賞2022 佐藤卓 MILK",
+      "publisher": "東京タイプディレクターズクラブ",
+      "authors": [],
+      "date_or_version": "2022年の受賞資料",
+      "source_type": "受賞アーカイブに掲載された制作者本人の説明",
+      "url": "https://tokyotypedirectorsclub.org/award/2022_special_02/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "日用品の文字・形・素材を展示物にする",
+      "claims": [
+        {
+          "id": "C06-C01",
+          "status": "source_description",
+          "text": "日用品の文字・形・素材を展示物にする"
+        }
+      ],
+      "limitations": [
+        "展示写真1点",
+        "会場全体と案内は未検証",
+        "受賞を読みやすさの実験結果として扱わない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://i0.wp.com/tokyotypedirectorsclub.org/wp-content/uploads/2022/03/11_%E4%BD%90%E8%97%A4-%E5%8D%93_a.jpg?fit=2000%2C1412&ssl=1",
+          "visually_inspected": true,
+          "scope": "牛乳パック部分の巨大立体、部分化された日本語、展示室",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "牛乳パックの部分を拡大・立体化してアートへ転換するという作者の説明"
+    },
+    {
+      "id": "C07",
+      "aliases": [],
+      "title": "市谷の杜 本と活字館のデザイン",
+      "publisher": "DNP／市谷の杜 本と活字館",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "依頼主・施設の公式デザイン説明",
+      "url": "https://ichigaya-letterpress.jp/about/design.html",
+      "accessed_at": "2026-10-20",
+      "access_scope": "文化施設のVIと書体の歴史の接続",
+      "claims": [
+        {
+          "id": "C07-C01",
+          "status": "source_description",
+          "text": "文化施設のVIと書体の歴史の接続"
+        }
+      ],
+      "limitations": [
+        "ロゴ画像のみ",
+        "英字書体とサイズは未特定",
+        "館内発見距離は未検証"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://ichigaya-letterpress.jp/about/image/design_img01.png",
+          "visually_inspected": true,
+          "scope": "本・活・字の立体記号と横組の和欧館名",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "本・活字の立体性、配置に応じたシンボル変化、秀英初号明朝の指定についての説明"
+    },
+    {
+      "id": "C08",
+      "aliases": [],
+      "title": "武蔵野美術大学",
+      "publisher": "日本デザインセンター",
+      "authors": [],
+      "date_or_version": "実績の年表示2012–2016",
+      "source_type": "制作者公式実績紹介",
+      "url": "https://www.ndc.co.jp/projects/musabi/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "同一組織のポスターと大学案内の役割差",
+      "claims": [
+        {
+          "id": "C08-C01",
+          "status": "source_description",
+          "text": "同一組織のポスターと大学案内の役割差"
+        }
+      ],
+      "limitations": [
+        "ポスター1点と冊子見開き1点",
+        "正確な本文級数・全年度・全冊は未確認"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://images.microcms-assets.io/assets/e1792d85c6294bf7a4758eaa4c992c03/b5c0c74177bf4f23b42488586904fe10/musabi_graphics_02.jpg?fm=webp&w=1920",
+          "visually_inspected": true,
+          "scope": "青い円と端の縦組校名のポスター",
+          "final_report_reproduction": false
+        },
+        {
+          "source_url": "https://images.microcms-assets.io/assets/e1792d85c6294bf7a4758eaa4c992c03/0c41530b906c4a2fa070a28df4df5ab1/musabi_editing_s_03.jpg?fm=webp&w=960",
+          "visually_inspected": true,
+          "scope": "日本画学科見開き、縦見出し、横本文、制作写真",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "年次テーマと大学の創造性を各媒体に展開したという制作説明"
+    },
+    {
+      "id": "C09",
+      "aliases": [],
+      "title": "二十四節氣カレンダー 制作者インタビュー",
+      "publisher": "D-BROS",
+      "authors": [],
+      "date_or_version": "2020-12-11",
+      "source_type": "メーカー公式の制作者インタビュー",
+      "url": "https://d-bros.jp/blogs/magazine/24sekki-calendar",
+      "accessed_at": "2026-10-20",
+      "access_scope": "日付検索と季節の連続性の両立",
+      "claims": [
+        {
+          "id": "C09-C01",
+          "status": "source_description",
+          "text": "日付検索と季節の連続性の両立"
+        }
+      ],
+      "limitations": [
+        "壁面写真1点",
+        "色覚・照明・距離別の実験なし",
+        "別年版のサイズを混用しない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://cdn.shopify.com/s/files/1/0374/6817/6515/files/2_bbeb78c7-8c11-46d3-bda5-b00c63597926_1024x1024.jpg?v=1607663345",
+          "visually_inspected": true,
+          "scope": "2か月のグリッドと週・月をまたぐ節氣の色帯",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "小山麻子の2か月1枚への構成変更と色の説明"
+    },
+    {
+      "id": "C10",
+      "aliases": [],
+      "title": "はじまりの美 / The Beginning of Beauty",
+      "publisher": "SHISEIDO CREATIVE",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "制作者公式プロジェクト紹介",
+      "url": "https://www.shiseidocreative.com/beauty-beyond01",
+      "accessed_at": "2026-10-20",
+      "access_scope": "書体と折り紙の立体表現",
+      "claims": [
+        {
+          "id": "C10-C01",
+          "status": "source_description",
+          "text": "書体と折り紙の立体表現"
+        }
+      ],
+      "limitations": [
+        "展示写真2点",
+        "写真から実寸・照明・観覧距離は確定できない",
+        "文化的自己解釈を集団全体の特性に一般化しない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://images.squarespace-cdn.com/content/v1/664d9d8d6d8e5d30be950292/431476fa-514f-4081-83d7-2be141abd42a/_14A2355.jpg",
+          "visually_inspected": true,
+          "scope": "大小の見出し・説明と実物を配する展示壁面",
+          "final_report_reproduction": false
+        },
+        {
+          "source_url": "https://images.squarespace-cdn.com/content/v1/664d9d8d6d8e5d30be950292/d6019caa-25e2-4dbc-9966-e1f3f3ef1d19/0117_2%E6%8A%95%E7%A8%BF%E7%9B%AE_%E3%81%AF%E3%81%97%E3%82%99%E3%81%BE%E3%82%8A%E3%81%AE%E7%BE%8E.jpg",
+          "visually_inspected": true,
+          "scope": "金色の折り紙による美の文字と下部の説明",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "和文資生堂書体の継承と一枚の紙による文字造形の説明"
+    },
+    {
+      "id": "C11",
+      "aliases": [],
+      "title": "Branding for SHISEIDO FUTURE UNIVERSITY",
+      "publisher": "SHISEIDO CREATIVE",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "制作者公式プロジェクト紹介",
+      "url": "https://www.shiseidocreative.com/branding-for-shiseidofuture-university",
+      "accessed_at": "2026-10-20",
+      "access_scope": "統一感を複数媒体に展開",
+      "claims": [
+        {
+          "id": "C11-C01",
+          "status": "source_description",
+          "text": "統一感を複数媒体に展開"
+        }
+      ],
+      "limitations": [
+        "文具画像とピクトグラム一覧だけを目視",
+        "文字入りの現場サインは今回未観察",
+        "ピクトグラムの理解度未検証"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://images.squarespace-cdn.com/content/v1/664d9d8d6d8e5d30be950292/f45f21e9-100b-4ee3-9867-f65d3198203d/2024-03-01_19-54-41_261284.png",
+          "visually_inspected": true,
+          "scope": "文具セット。ローカルファイル名は旧作業名でサイン画像ではない",
+          "final_report_reproduction": false
+        },
+        {
+          "source_url": "https://images.squarespace-cdn.com/content/v1/664d9d8d6d8e5d30be950292/06216976-0a4b-4152-8ac7-627d26bb117b/2024-03-01_19-41-11_477810.png",
+          "visually_inspected": true,
+          "scope": "ピクトグラム一覧。文字入りの現場サインではない",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "シンボル、サイン書体、ピクトグラム、文具の統合についての公式説明"
+    },
+    {
+      "id": "C12",
+      "aliases": [],
+      "title": "TDC賞2010 藤田重信 筑紫オールド明朝・筑紫丸ゴシック",
+      "publisher": "東京タイプディレクターズクラブ",
+      "authors": [],
+      "date_or_version": "2010年の受賞資料",
+      "source_type": "受賞アーカイブの制作者本人の説明",
+      "url": "https://tokyotypedirectorsclub.org/award/2010_tdc_04/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "書体の造形意図と使い手の要求",
+      "claims": [
+        {
+          "id": "C12-C01",
+          "status": "source_description",
+          "text": "書体の造形意図と使い手の要求"
+        }
+      ],
+      "limitations": [
+        "オールド明朝の見本1点のみ",
+        "丸ゴシックの画像は今回未観察",
+        "受賞・メーカー意図を可読性実験と混同しない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://i0.wp.com/tokyotypedirectorsclub.org/wp-content/uploads/2020/01/03_j119_01_a_p-1.jpg?fit=848%2C1199&ssl=1",
+          "visually_inspected": true,
+          "scope": "筑紫オールド明朝-Rの縦横・大小を含む見本",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "漢字の風合い・顧客要望についての作者の説明"
+    },
+    {
+      "id": "C13",
+      "aliases": [],
+      "title": "AXIS Font",
+      "publisher": "タイププロジェクト",
+      "authors": [],
+      "date_or_version": "公開日未表示",
+      "source_type": "書体メーカー公式製品説明",
+      "url": "https://typeproject.com/fonts/axisfont/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "字面・字幅・線質・和欧の光学関係",
+      "claims": [
+        {
+          "id": "C13-C01",
+          "status": "source_description",
+          "text": "字面・字幅・線質・和欧の光学関係"
+        }
+      ],
+      "limitations": [
+        "特徴図1点のみ",
+        "メーカーの収容量係数は他書体へ一般化しない",
+        "実誌面・比較読書実験未検証"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://cms.typeproject.com/wp-content/uploads/2025/05/img_fonts_axisfont_feature1_ja.png",
+          "visually_inspected": true,
+          "scope": "大きな漢字の払いと点を指示する特徴図",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "字面、筆跡、ウエイト、独立設計の字幅、和欧調整に関する説明"
+    },
+    {
+      "id": "C14",
+      "aliases": [],
+      "title": "TDC賞2013 新世界タイポ研究会「横書き仮名」の開発",
+      "publisher": "東京タイプディレクターズクラブ",
+      "authors": [],
+      "date_or_version": "2013年の受賞資料",
+      "source_type": "Experimental Workの制作者本人の説明",
+      "url": "https://tokyotypedirectorsclub.org/award/2013_tdc_01/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "書字方向と文字骨格の実験",
+      "claims": [
+        {
+          "id": "C14-C01",
+          "status": "source_description",
+          "text": "書字方向と文字骨格の実験"
+        }
+      ],
+      "limitations": [
+        "仮説的デザインであり歴史の証明ではない",
+        "見慣れない字形の読者テストなし"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://i0.wp.com/tokyotypedirectorsclub.org/wp-content/uploads/2019/09/08_j370_02_a_p.jpg?fit=707%2C1000&ssl=1",
+          "visually_inspected": true,
+          "scope": "格子状の仮名見本と短い組み例",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "横書きの運筆から仮名が生まれた場合を考える仮説"
+    },
+    {
+      "id": "C15",
+      "aliases": [],
+      "title": "ギンザ・グラフィック・ギャラリー 第362回企画展 組版造形 白井敬尚",
+      "publisher": "DNP文化振興財団／ギンザ・グラフィック・ギャラリー",
+      "authors": [],
+      "date_or_version": "2017-09-26–2017-11-07",
+      "source_type": "展覧会主催者公式説明",
+      "url": "https://dnpfcp.jp/gallery/ggg/jp/00000709",
+      "accessed_at": "2026-10-20",
+      "access_scope": "文字ブロックが作る面と空間",
+      "claims": [
+        {
+          "id": "C15-C01",
+          "status": "source_description",
+          "text": "文字ブロックが作る面と空間"
+        }
+      ],
+      "limitations": [
+        "ポスターと表紙写真のみ",
+        "本文ブロック全文の精読なし",
+        "実際の本文見開きの詳細分析は別調査が必要"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://dnpfcp.jp/gallery/schedule/schedule_images/IMG_1_00000709.jpg",
+          "visually_inspected": true,
+          "scope": "組版造形の大きな4文字と、方向・密度が異なる本文状ブロックのポスター",
+          "final_report_reproduction": false
+        },
+        {
+          "source_url": "https://dnpfcp.jp/gallery/schedule/schedule_images/IMG_2_00000709.jpg",
+          "visually_inspected": true,
+          "scope": "アイデア310号の表紙写真",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "本文組版と空間、表紙・本文・参照資料を扱うという展示解説"
+    },
+    {
+      "id": "C16",
+      "aliases": [],
+      "title": "うたう仲條 おどる仲條 ―文字と画と、資生堂と",
+      "publisher": "資生堂ギャラリー",
+      "authors": [],
+      "date_or_version": "参照作品は花椿1983年1月号表紙。出典は2026年回顧展資料",
+      "source_type": "依頼主・主催者公式の作品資料と解説",
+      "url": "https://gallery.shiseido.com/jp/exhibition/9630/",
+      "accessed_at": "2026-10-20",
+      "access_scope": "誌名を画像の構成要素として扱う表紙",
+      "claims": [
+        {
+          "id": "C16-C01",
+          "status": "source_description",
+          "text": "誌名を画像の構成要素として扱う表紙"
+        }
+      ],
+      "limitations": [
+        "表紙1点のみ",
+        "同号本文・視線・販売効果未検証"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://gallery.shiseido.com/wpss/wp-content/uploads/2026/01/2026-01-23_16-10-59_592562.jpg",
+          "visually_inspected": true,
+          "scope": "人物写真、左右に分かれた花と椿、縦方向の英語月名、年月、細かな内容案内",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "intent_source": "文字と画の関係を扱う回顧展解説。特定表紙の作者本人の意図とは区別"
+    },
+    {
+      "id": "C17",
+      "aliases": [],
+      "title": "もじ イメージ Graphic 展 公式チラシPDF",
+      "publisher": "21_21 DESIGN SIGHT",
+      "authors": [],
+      "date_or_version": "2023–2024年展覧会",
+      "source_type": "公式配布PDFの実物データと目視",
+      "url": "https://2121designsight.jp/program/graphic/graphic_flyer.pdf",
+      "accessed_at": "2026-10-20",
+      "access_scope": "紙面内に併存する断裁文字・完全題名・開催情報",
+      "claims": [
+        {
+          "id": "C17-C01",
+          "status": "source_description",
+          "text": "紙面内に併存する断裁文字・完全題名・開催情報"
+        }
+      ],
+      "limitations": [
+        "印刷実寸・読者実験なし",
+        "Webアクセシビリティを確認した資料ではない",
+        "抽出値を汎用推奨サイズ・倍率にしない"
+      ],
+      "visual_evidence": [
+        {
+          "source_url": "https://2121designsight.jp/program/graphic/graphic_flyer.pdf",
+          "visually_inspected": true,
+          "scope": "PDF第1頁全体",
+          "final_report_reproduction": false
+        },
+        {
+          "source_url": "https://2121designsight.jp/program/graphic/graphic_flyer.pdf",
+          "visually_inspected": true,
+          "scope": "PDF第2頁全体",
+          "final_report_reproduction": false
+        }
+      ],
+      "verification": "公式説明と画像を確認",
+      "pdf_sha256": "f54afa775f817f4dee2da32c8c8ad802b0e5131e87c7a2cda58c6f19d1e4007c",
+      "pdf_bytes": 14567030,
+      "intent_source": "内容とグラフィック担当はC05。配置の理由は本調査の観察・推論である。"
+    },
+    {
+      "id": "B01",
+      "aliases": [],
+      "title": "KUMIHAN 日本語ルールカタログ",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "固定Git main 8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/rules/catalog.json",
+      "accessed_at": "2026-10-20",
+      "access_scope": "39個の既存規則を実取得。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B02",
+      "aliases": [],
+      "title": "KUMIHAN Web recipes",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/references/web-recipes.md",
+      "accessed_at": "2026-10-20",
+      "access_scope": "初期値と条件付き改行制御。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B03",
+      "aliases": [],
+      "title": "KUMIHAN Document recipes",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/references/document-recipes.md",
+      "accessed_at": "2026-10-20",
+      "access_scope": "報告書/スライドの初期値、ネイティブ確認の境界。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B04",
+      "aliases": [],
+      "title": "JA-TYPE-011 改行設計",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/docs/ja-type-011-prosodic-wrap.md",
+      "accessed_at": "2026-10-20",
+      "access_scope": "layout-firstと意味・韻律・実描画を分離。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B05",
+      "aliases": [],
+      "title": "KUMIHAN use-case adapters",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/references/use-case-adapters.json",
+      "accessed_at": "2026-10-20",
+      "access_scope": "6媒体を維持した用途別アダプター。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B06",
+      "aliases": [],
+      "title": "KUMIHAN visual relationship guidance",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/references/visual-relationship-guidance.md",
+      "accessed_at": "2026-10-20",
+      "access_scope": "図文の対応、優先順位、実サイズの検証。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B07",
+      "aliases": [],
+      "title": "KUMIHAN public source registry",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/sources/public-sources.json",
+      "accessed_at": "2026-10-20",
+      "access_scope": "未採用候補・比較資料・採用資料の分離。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    },
+    {
+      "id": "B08",
+      "aliases": [],
+      "title": "KUMIHAN design review modes",
+      "publisher": "L&Co. LLC",
+      "authors": [],
+      "date_or_version": "同固定コミット",
+      "source_type": "プロジェクト基準",
+      "url": "https://github.com/landco-llc/kumihan/blob/8b647cc752d7a9bc3db48356fa0ab7b221bb66d6/skills/kumihan/references/design-review-modes.md",
+      "accessed_at": "2026-10-20",
+      "access_scope": "Standard/Strictと証拠区分を実取得。",
+      "claims": [],
+      "limitations": [
+        "本文の適用条件に限定。閲覧のみで規格適合・実装対応・効果は証明しない。"
+      ],
+      "visual_evidence": [],
+      "verification": "本文取得"
+    }
+  ],
+  "alias_map": {
+    "M07": "S19",
+    "M10": "S10",
+    "M11": "S09",
+    "M13": "S01",
+    "M17": "S15"
+  }
+}

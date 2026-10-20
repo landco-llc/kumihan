@@ -1,0 +1,1511 @@
+{
+  "warning": "Expected and observed separated; partial scopes do not certify whole planned case.",
+  "cases": [
+    {
+      "caseId": "PV-001",
+      "fixturePath": "tests/fixtures/ja_v020/PV-001.json",
+      "fixtureDigest": "sha256:e67bf475c945e0261a5c87060993af31df1f0a058d98db00bd0c4d196ef9e5fd",
+      "region": "mandatory-info",
+      "protectedSource": "髙﨑さま／料金１,２００円／が",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護fieldのコードポイント保全",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "対応extractorによる正確な一致を確認した場合に限る。",
+          "minimumEvidenceIfExecuted": [
+            "入力と抽出結果",
+            "extractor名・版",
+            "比較対象範囲"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実際のglyphとfallback",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "文字列一致は字形の証拠ではない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施と明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "passed",
+          "scope": "JSON fixture source equality, Python json extractor; no normalization"
+        },
+        {
+          "rule": "WEB-007",
+          "method": "rendered",
+          "status": "not-checked"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/unicode.json"
+      ],
+      "limitations": [
+        "Glyphs and fallback not observed for this source."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-002",
+      "fixturePath": "tests/fixtures/ja_v020/PV-002.json",
+      "fixtureDigest": "sha256:e6942b384f2e8686735159560e64b5ab38cb8fc533d5058782c119d8d2a4fd86",
+      "region": "mandatory-info",
+      "protectedSource": "髙﨑さま／料金１,２００円／が",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護fieldの変更",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "具体的なコードポイント差が保護範囲内にある。",
+          "minimumEvidenceIfExecuted": [
+            "正確なdiff",
+            "保護範囲"
+          ]
+        },
+        {
+          "existingRuleId": "CONTENT-004",
+          "scope": "無断の一括正規化",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "処理と原稿差を確認できる場合の期待結果。",
+          "minimumEvidenceIfExecuted": [
+            "処理または変換記録",
+            "入力と出力"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "failed",
+          "scope": "synthetic NFKC negative differs in codepoints"
+        },
+        {
+          "rule": "CONTENT-004",
+          "method": "static",
+          "status": "failed",
+          "scope": "protected original versus NFKC negative"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/unicode.json"
+      ],
+      "limitations": [
+        "Synthetic negative only; no production normalization performed."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-003",
+      "fixturePath": "tests/fixtures/ja_v020/PV-003.json",
+      "fixtureDigest": "sha256:0e3963770e893bdfba9b66ad8d692ddc2fb43f15127f5190026c913c1b59cdf9",
+      "region": "body",
+      "protectedSource": "日本語：骨／繁體中文：骨",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-001",
+          "scope": "実使用字形と言語の整合",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "設定の存在だけでは実字形を観察していない。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実font・glyph coverage",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "family名を使用書体の証明にしない。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-004",
+      "fixturePath": "tests/fixtures/ja_v020/PV-004.json",
+      "fixtureDigest": "sha256:168b06548cb0e7c6106af42c37a69a86c2f3643346e9829b3068543e443612b3",
+      "region": "body",
+      "protectedSource": "日本語：骨／繁體中文：骨",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-001",
+          "scope": "観察したrunの地域字形と書字設定",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実観察と参照が整合した条件だけを合格にする。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "font解決記録",
+            "言語別の参照根拠"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "観察したfont状態",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実行した正常読込状態に限定する。",
+          "minimumEvidenceIfExecuted": [
+            "font名・版",
+            "glyph画像",
+            "renderer・状態"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-005",
+      "fixturePath": "tests/fixtures/ja_v020/PV-005.json",
+      "fixtureDigest": "sha256:79f47c37e596dd125a13fcd1f2598f139bc84796503523217ad7323f4eb8f904",
+      "region": "label",
+      "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "WEB-005",
+          "scope": "長いボタンの内容と操作",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "所定状態で必要なラベルの内容・操作が失われる。",
+          "minimumEvidenceIfExecuted": [
+            "実表示",
+            "操作記録"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-004",
+          "scope": "clippingによる情報損失",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "clip宣言だけでなく実際の損失を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "clip領域と失われた内容の画像"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-003",
+          "scope": "過大な不可分範囲",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "全文の不可分化が必要なアクセスを妨げる。",
+          "minimumEvidenceIfExecuted": [
+            "group範囲",
+            "実overflow"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "WEB-005",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "button label clipping at 240px width; scrollWidth exceeds clientWidth"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "Click availability does not establish downstream application operation; no app backend exists."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-006",
+      "fixturePath": "tests/fixtures/ja_v020/PV-006.json",
+      "fixtureDigest": "sha256:48d1dc519afdbd7d5d66d17a44e30542d43b697553684c53d1a2d7fa311f3668",
+      "region": "label",
+      "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "WEB-005",
+          "scope": "試したラベルと状態",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "複数行でも全文が読め、必要な操作が成立する。",
+          "minimumEvidenceIfExecuted": [
+            "実表示",
+            "操作記録",
+            "対象状態"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "短い操作文の意味",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "実際の改行と意味関係を評価して成立した場合。",
+          "minimumEvidenceIfExecuted": [
+            "実行マップ",
+            "理由付き意味レビュー"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "WEB-005",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "same 240px button, full source and click retained with wrapping"
+        },
+        {
+          "rule": "JA-TYPE-004",
+          "method": "assisted",
+          "status": "needs-review",
+          "scope": "320px screenshot inspected: very short final line; wrapping is not automatic semantic approval"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "No real application behavior or user enlargement tested."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-007",
+      "fixturePath": "tests/fixtures/ja_v020/PV-007.json",
+      "fixtureDigest": "sha256:e59ad9046939946b43e66cb2ebbeebefaefcf611ae572214a0fb9ed46f87dac1",
+      "region": "title",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "当該幅・fontでの見出し構成",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "意図的改行の必要性を検討し、通常表示が妥当と確認された場合。",
+          "minimumEvidenceIfExecuted": [
+            "実幅・font",
+            "実画像",
+            "理由付き構成レビュー"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "JA-TYPE-011",
+          "method": "assisted",
+          "status": "passed",
+          "scope": "1024px screenshot: source naturally fits; no intentional break needed in synthetic ordinary display"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "Only wide ordinary display inspected for this conclusion."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-008",
+      "fixturePath": "tests/fixtures/ja_v020/PV-008.json",
+      "fixtureDigest": "sha256:c0c3aa0f5d09ccb558cb072605afad7c0c3b6fb894a3893bdef3d40efe804e57",
+      "region": "title",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "意味上の候補判断",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "文節境界だけでは焦点・まとまりの良否を確定できない。",
+          "minimumEvidenceIfExecuted": [
+            "候補の比較と未解決理由"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "実行数・行幅・周囲の構成",
+          "expectedResult": "not-checked",
+          "method": "assisted",
+          "reason": "必要な実表示を未観察。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-009",
+      "fixturePath": "tests/fixtures/ja_v020/PV-009.json",
+      "fixtureDigest": "sha256:dccff9f7713769297dee0a3c5d6940933663849a16e5dcb447fc6a55d1d17eb4",
+      "region": "title",
+      "protectedSource": "いつものAIツールからはじめよう",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-002",
+          "scope": "この見出しの禁則行端",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "対象profileに反する行端がない場合。",
+          "minimumEvidenceIfExecuted": [
+            "実行端",
+            "選択profile"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "修飾・助詞の意味の流れ",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "形態上の境界と読みにくさの判断を区別する。",
+          "minimumEvidenceIfExecuted": [
+            "実行マップ",
+            "意味レビュー"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "全行と周囲の構成",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "短い中間行を含む全体の改善候補を比較する。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "比較候補"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-010",
+      "fixturePath": "tests/fixtures/ja_v020/PV-010.json",
+      "fixtureDigest": "sha256:0676f48995ab9aba48d61c98cf01b3da773ca63d47782e395e485da422e4c046",
+      "region": "artwork + mandatory-info",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "profile": "display-copy",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護された情報field",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "対応extractor等により完全な再提示文字列の一致を確認した範囲。",
+          "minimumEvidenceIfExecuted": [
+            "原稿と提示fieldの対応",
+            "正確な比較"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "必須情報への実際の到達",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "実物で情報が見え、所定の読者行動に利用できると確認された場合。",
+          "minimumEvidenceIfExecuted": [
+            "全体画像",
+            "実寸・距離",
+            "到達レビュー"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "造形領域に本文の連続読書用行長を要求する小確認",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "文章の連続読書を担わない領域への本文目安に限るN/A。規則全体を免除しない。",
+          "minimumEvidenceIfExecuted": [
+            "領域の役割と適用理由"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-011",
+      "fixturePath": "tests/fixtures/ja_v020/PV-011.json",
+      "fixtureDigest": "sha256:d399de090d59cd9c208dc5163bfc86dd2d7ead902515f2b5985145104fe21707",
+      "region": "mandatory-info",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "DOM内の文字列保全",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "正確な抽出一致を確認した場合だけ。",
+          "minimumEvidenceIfExecuted": [
+            "入力・DOM抽出比較"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-004",
+          "scope": "実表示でのclipping",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "所定状態で必要情報が隠され到達できない。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "到達操作の記録"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "伝達すべき情報の可用性",
+          "expectedResult": "failed",
+          "method": "assisted",
+          "reason": "装飾とは別の必須情報が読者へ届いていない。",
+          "minimumEvidenceIfExecuted": [
+            "役割表",
+            "実表示と理由"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "CONTENT-001",
+          "method": "static",
+          "status": "passed",
+          "scope": "DOM contains exact protected string"
+        },
+        {
+          "rule": "WEB-004",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "26px clipped information container; complete venue not visible"
+        },
+        {
+          "rule": "DESIGN-003",
+          "method": "assisted",
+          "status": "failed",
+          "scope": "screenshot and fixture inspected: no alternate required-information presentation"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "No actual poster/device or external destination tested."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-012",
+      "fixturePath": "tests/fixtures/ja_v020/PV-012.json",
+      "fixtureDigest": "sha256:852909ab92fcf3349bde90c0e43f765f9ce86ee0274828b4c3eeb7c6da1c45c6",
+      "region": "mandatory-info",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "profile": "display-copy",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "複数の保護fieldの整合",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "保護対象の日時が一箇所で変更されている。",
+          "minimumEvidenceIfExecuted": [
+            "全提示箇所の対応表",
+            "正確なdiff"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-013",
+      "fixturePath": "tests/fixtures/ja_v020/PV-013.json",
+      "fixtureDigest": "sha256:13a5baac9ebfef335b378d0ff11a173a53633024c05a785babe9499732f59563",
+      "region": "mandatory-info",
+      "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+      "profile": "display-copy",
+      "expected": [
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "読者の利用場面に対する情報配置",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "別ページで足りるか、同じ掲示で必要かが未解決。",
+          "minimumEvidenceIfExecuted": [
+            "利用場面",
+            "必要情報の根拠",
+            "判断上の欠損"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "外部ページの可用性を未検証とする報告",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "当該未実施を正確に報告している場合の構造確認だけ。",
+          "minimumEvidenceIfExecuted": [
+            "検査記録と結果状態"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-014",
+      "fixturePath": "tests/fixtures/ja_v020/PV-014.json",
+      "fixtureDigest": "sha256:8af751d32d12f13e8cd1154fdbfa02629b7b68875e93af640a059a5cd611ee6f",
+      "region": "value + label",
+      "protectedSource": "処理済み 48件",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "DESIGN-005",
+          "scope": "数値・labelの情報役割と実表示",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "valueを主役にする意図と実際の認識・関連付けが整合する。",
+          "minimumEvidenceIfExecuted": [
+            "role定義",
+            "実画像",
+            "対象状態"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "DESIGN-005",
+          "method": "assisted",
+          "status": "passed",
+          "scope": "screenshot: 48件 value is prominent, label adjacent, title24px/value48px/label14px consistent with count task"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "Synthetic visual association only; no reader performance experiment."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-015",
+      "fixturePath": "tests/fixtures/ja_v020/PV-015.json",
+      "fixtureDigest": "sha256:fed04523b9b62ac1b876c1552f8a941fda3e8edf2ed7d5ed152b25471096dd30",
+      "region": "body",
+      "protectedSource": "この書体なら全員の読解力が20%向上します。",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-002",
+          "scope": "実証されていない性能主張",
+          "expectedResult": "failed",
+          "method": "assisted",
+          "reason": "供給された資料が当該主張を裏付けないことを確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "主張と出典の対応",
+            "対象・指標・限界"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-016",
+      "fixturePath": "tests/fixtures/ja_v020/PV-016.json",
+      "fixtureDigest": "sha256:18a40ce8562a4f16224c5db6e6170c8d6aaa237f5c6fdb415dbbf5ea4f8a872a",
+      "region": "body",
+      "protectedSource": "申込条件を確認してください。\nPlease read the application requirements.",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "適用特性を変更した対象領域",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "適用条件に沿う実変更後も内容・機能が保持された場合。",
+          "minimumEvidenceIfExecuted": [
+            "言語runと適用特性",
+            "実上書き値",
+            "変更後画像・操作"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "WEB-003",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "applied language-specific spacing overrides, screenshot shows complete text without section horizontal overflow"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/spacing-320.png"
+      ],
+      "limitations": [
+        "Only recorded overrides; no blanket WCAG conformity."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-017",
+      "fixturePath": "tests/fixtures/ja_v020/PV-017.json",
+      "fixtureDigest": "sha256:f367bacfeeda1ef33fd7fbffccf4b38021d639931098c21ab18f869f02ff0065",
+      "region": "body",
+      "protectedSource": "本文は読み手の設定によって表示が変わります。",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "利用者変更後の表示",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "変更試験が未実施。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の記録"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "未実施をpassedとした報告",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "報告と実行履歴の明確な不整合を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "報告",
+            "実行履歴"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-018",
+      "fixturePath": "tests/fixtures/ja_v020/PV-018.json",
+      "fixtureDigest": "sha256:a3b28beb7fe0cdac1ece20adcbeec97916980ac20d33a023a67f3b3ad051c0b7",
+      "region": "body",
+      "protectedSource": "日本語の報告書本文と注記",
+      "profile": "report-document",
+      "expected": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "PDFのみの出力",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "Web markupの同一spacing試験をPDFへそのまま適用しない。",
+          "minimumEvidenceIfExecuted": [
+            "媒体の確認",
+            "適用理由"
+          ]
+        },
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "PDF変換後の実表示",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "別の必要な文書確認は未実施のまま。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-019",
+      "fixturePath": "tests/fixtures/ja_v020/PV-019.json",
+      "fixtureDigest": "sha256:74b4dc6154c929c97f629f3533f5c8c47f7cb26a1a4955c0ae09ac3299cc07f0",
+      "region": "body",
+      "protectedSource": "縦書きの短い頁が下へ続く記事",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "WEB-001",
+          "scope": "実際に縦scrollする記事領域",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "観察した軸に沿う条件で再配置・操作が成立した場合。",
+          "minimumEvidenceIfExecuted": [
+            "scroll軸の観察",
+            "幅条件",
+            "実表示・操作"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-020",
+      "fixturePath": "tests/fixtures/ja_v020/PV-020.json",
+      "fixtureDigest": "sha256:171b56c4cfb9df6ed2da0149a174256a4135d17e4150c966def16a1a51677be5",
+      "region": "label",
+      "protectedSource": "登録内容を確認する",
+      "profile": "web-ui",
+      "expected": [
+        {
+          "existingRuleId": "WEB-002",
+          "scope": "利用者が使用できる実拡大機構",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "このfixtureのCSS模擬は該当機構の実施証拠でない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "実施方式と報告の対応",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "CSS模擬をnative実行と呼ぶ不一致を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "操作履歴",
+            "報告された方式"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-021",
+      "fixturePath": "tests/fixtures/ja_v020/PV-021.json",
+      "fixtureDigest": "sha256:960bb272a12ec05d936ae3c9cd76aa364b3a443c908cef14efa2932f676aa215",
+      "region": "display",
+      "protectedSource": "文字と余白の時間",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-006",
+          "scope": "当該fontの機能と適用効果",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "宣言の受理はfontの支持・効果の証拠ではない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実font解決",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "宣言されたfamilyと使用されたfontは別。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-022",
+      "fixturePath": "tests/fixtures/ja_v020/PV-022.json",
+      "fixtureDigest": "sha256:51963627300c4418359a1bd3723e0138672e1ffc89d3c2943e8ee83f0945525a",
+      "region": "display + body",
+      "protectedSource": "文字と余白の時間／道具の使い方を本文で説明します。",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-005",
+          "scope": "displayとbodyの適用範囲",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "役割別の処理と実表示を確認できた条件に限る。",
+          "minimumEvidenceIfExecuted": [
+            "scopeのstyle",
+            "本文・displayの実画像"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-006",
+          "scope": "観察したfontとfeature",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "当該fontでの支持と表示上の結果を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "font支持記録",
+            "比較画像・実幅"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-023",
+      "fixturePath": "tests/fixtures/ja_v020/PV-023.json",
+      "fixtureDigest": "sha256:fad5a15b0d3fc0a73594f91fc9ed4b6ea9545c307f5a755865b108b883004ed3",
+      "region": "body",
+      "protectedSource": "会場で共有する手順と注意事項",
+      "profile": "presentation",
+      "expected": [
+        {
+          "existingRuleId": "DOC-003",
+          "scope": "実会場での投影可読性",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "24ptという指定だけでは所定の視角・字面・読者課題を確認できない。",
+          "minimumEvidenceIfExecuted": [
+            "未定条件と未実施の明記"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-024",
+      "fixturePath": "tests/fixtures/ja_v020/PV-024.json",
+      "fixtureDigest": "sha256:91311cbb77229807ccfaabc0b35c324d64fcc6426a3d5444435aacaaa1c078f5",
+      "region": "note + mandatory-info",
+      "protectedSource": "手順3の前に電源を切ってください。",
+      "profile": "presentation",
+      "expected": [
+        {
+          "existingRuleId": "DOC-003",
+          "scope": "聴衆が必要な注意書きを読む条件",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "宣言した利用条件で必須情報が読めないと確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "投影寸法・距離・字面",
+            "表示記録",
+            "対象・課題・観察結果"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-025",
+      "fixturePath": "tests/fixtures/ja_v020/PV-025.json",
+      "fixtureDigest": "sha256:766e26e54e07246b2adada787bc03802a54eddecb3c5484b4cea3ec78989a346",
+      "region": "mandatory-info",
+      "protectedSource": "出口 EXIT",
+      "profile": "display-copy",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "採用したサイン寸法条件の評価",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "projectで採用した実字面の目安をボディ値で満たしたと扱っている。法的最低基準違反とは呼ばない。",
+          "minimumEvidenceIfExecuted": [
+            "採用条件",
+            "指定書体",
+            "「木」の実高",
+            "物理縮尺"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-026",
+      "fixturePath": "tests/fixtures/ja_v020/PV-026.json",
+      "fixtureDigest": "sha256:46a76956c8998cdd2c1be3e9d26c03e2f8664f0da74786b67d91fabeadf748c7",
+      "region": "mandatory-info",
+      "protectedSource": "出口 EXIT",
+      "profile": "display-copy",
+      "expected": [
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "採用した文字高の測定と目安への照合",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実字面の測定と当該目安への照合が整合するという限定的な合格。",
+          "minimumEvidenceIfExecuted": [
+            "指定書体",
+            "基準字形の実測",
+            "採用条件として仮定した距離（現地実測ではない）",
+            "採用基準"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-005",
+          "scope": "現場全体の読者課題",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "寸法以外を未確認なら、その範囲は未検証として残す。",
+          "minimumEvidenceIfExecuted": [
+            "未確認条件"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    },
+    {
+      "caseId": "PV-027",
+      "fixturePath": "tests/fixtures/ja_v020/PV-027.json",
+      "fixtureDigest": "sha256:20e730252bcd28847175abf0b9ae37165b64ec4854620062d6cd2982aefe1e6f",
+      "region": "table + note",
+      "protectedSource": "項目A 120件／条件：対象は申請済みの記録です。",
+      "profile": "report-document",
+      "expected": [
+        {
+          "existingRuleId": "DOC-002",
+          "scope": "表と注記の内容・対応",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "全体を一塊にした結果、説明・セルが利用できなくなる。",
+          "minimumEvidenceIfExecuted": [
+            "元表",
+            "全該当頁画像",
+            "欠落範囲"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "DOC-002",
+          "method": "rendered",
+          "status": "failed",
+          "scope": "HTML print-preview analogue: 350px row clipped in200px paper container; final note absent in screenshot"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "Analogue only, not native Word long-row pagination."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-028",
+      "fixturePath": "tests/fixtures/ja_v020/PV-028.json",
+      "fixtureDigest": "sha256:f1209d6c10a435c5de51de1166b76b62f13ccdd9c824b64b4f6c0eb3e7e8b50b",
+      "region": "body + table",
+      "protectedSource": "報告本文と集計表",
+      "profile": "report-document",
+      "expected": [
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "確認したPDF previewの実表示",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "当該previewについて必要な表示を観察した条件に限る。",
+          "minimumEvidenceIfExecuted": [
+            "全頁画像",
+            "変換経路",
+            "renderer・font"
+          ]
+        },
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "native Officeの表示・編集性",
+          "expectedResult": "unsupported",
+          "method": "rendered",
+          "reason": "この検査環境が対象native検査に対応できないと確認した場合。単なる未着手ならnot-checked。",
+          "minimumEvidenceIfExecuted": [
+            "利用可能な検査機能の確認",
+            "非対応範囲"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "DOC-004",
+          "method": "rendered",
+          "status": "passed",
+          "scope": "synthetic PV-028 section in two-page Chromium PDF preview; both rasterized pages visually inspected; report/table readable in its region"
+        },
+        {
+          "rule": "DOC-004",
+          "method": "rendered",
+          "status": "not-checked",
+          "scope": "native Office"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/preview.pdf",
+        "evidence/pdf-page-1.png",
+        "evidence/pdf-page-2.png"
+      ],
+      "limitations": [
+        "Deliberate clipping negative controls elsewhere in PDF remain failed. This is HTML print preview only; no Office file or native app tested."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-029",
+      "fixturePath": "tests/fixtures/ja_v020/PV-029.json",
+      "fixtureDigest": "sha256:ab8fb562aa76fcf4d3b1e141dad15f20c0b7d393fbcac6d8f3ce6dd7fe7d6e32",
+      "region": "body",
+      "protectedSource": "静的な本文のみを持つ記事領域です。",
+      "profile": "web-editorial",
+      "expected": [
+        {
+          "existingRuleId": "WEB-008",
+          "scope": "当該の静的記事領域の操作状態",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "実在する操作がないため、その状態検査が非該当。",
+          "minimumEvidenceIfExecuted": [
+            "対象region",
+            "構造・操作の確認"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": [
+        {
+          "rule": "WEB-008",
+          "method": "manual",
+          "status": "not-applicable",
+          "scope": "static PV-029 region has no input/button/link/dynamic operation; source/DOM inspected"
+        }
+      ],
+      "executionStatus": "partially-run",
+      "evidenceRefs": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "limitations": [
+        "Browser UI and unrelated sections are outside region."
+      ],
+      "environment": {
+        "renderer": "Chromium 154.0.8037.57",
+        "font": "Noto Sans CJK JP declaration; resolved glyph identity not certified",
+        "viewport": [
+          320,
+          1024
+        ]
+      }
+    },
+    {
+      "caseId": "PV-030",
+      "fixturePath": "tests/fixtures/ja_v020/PV-030.json",
+      "fixtureDigest": "sha256:b1c297566671a52362ff48a369ce8ab3035a348f87619b9e899092bc1edd5a11",
+      "region": "mandatory-info",
+      "protectedSource": "明日、こっちは17時で閉めます。",
+      "profile": "web-marketing",
+      "expected": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "レビュー後の保護原稿",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "レビューが原稿を書き換えず、完全に保持した場合の限定的な比較。",
+          "minimumEvidenceIfExecuted": [
+            "原稿とレビュー対象の比較"
+          ]
+        }
+      ],
+      "contractObserved": {
+        "sourceExact": true,
+        "kind": "static JSON contract only; not execution of planned rendering/meaning scenario"
+      },
+      "observedResult": null,
+      "executionStatus": "not-run",
+      "evidenceRefs": [],
+      "limitations": [
+        "Planned scenario not executed; fixture contract registration is not its expected result."
+      ],
+      "environment": {
+        "renderer": null,
+        "font": null,
+        "viewport": null
+      }
+    }
+  ]
+}

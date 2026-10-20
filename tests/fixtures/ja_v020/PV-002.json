@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-002",
+  "synthetic": true,
+  "protectedSource": "髙﨑さま／料金１,２００円／が",
+  "conditions": [
+    "対照fixtureとしてNFKC等により全角数字や分解表記を無断で変更した出力を準備する。",
+    "見た目の類似性や検索用の別データは原稿変更の許可ではない。"
+  ],
+  "wrongDecisionToAvoid": "NFC/NFKC後の比較が等しいため原稿保全を合格にする。"
+}

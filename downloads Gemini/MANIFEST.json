@@ -2,14 +2,14 @@
   "format": 2,
   "product": "KUMIHAN for Gemini",
   "publisher": "L&Co. LLC",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "source_repository": "landco-llc/kumihan",
   "status": "Source distribution. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "extensions/kumihan-Gemini-CLI-extension-0.1.8.zip",
-      "sha256": "f56613f51c8e3e71ec44d6f82d2514d131474358490db41fe0de704434b05223",
-      "bytes": 378203,
+      "file": "extensions/kumihan-Gemini-CLI-extension-0.2.0.zip",
+      "sha256": "db68ec074cc45fecb48b1748f2048ab4f9a3ea73fcdbc362aafd353cd037cd3a",
+      "bytes": 506683,
       "members": [
         {
           "path": "LICENSE",
@@ -29,7 +29,7 @@
         {
           "path": "gemini-extension.json",
           "bytes": 202,
-          "sha256": "33888e3f49663f0f1040722c532d4ea0ea825b490739f2dc66c05186716b9a01"
+          "sha256": "4ced29deee19bd0adea90c0fe1abafc7c0f1a6fd2e9df9e0dbd5219e47ffcf1e"
         },
         {
           "path": "skills/kumihan-documents/LICENSE",
@@ -38,13 +38,13 @@
         },
         {
           "path": "skills/kumihan-documents/SKILL.md",
-          "bytes": 3758,
-          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
+          "bytes": 4558,
+          "sha256": "5ee39bcb106f33726cab3eabe879d0e9ea44f7f0740d1b4397d18a7311e86431"
         },
         {
           "path": "skills/kumihan-documents/inventory.json",
-          "bytes": 5068,
-          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
+          "bytes": 5944,
+          "sha256": "ce8f867196aedf906653e36897242ad15c2b3d10b3bc008fadfc15d08513c2fa"
         },
         {
           "path": "skills/kumihan-documents/profiles/display-copy.json",
@@ -93,13 +93,38 @@
         },
         {
           "path": "skills/kumihan-documents/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "skills/kumihan-documents/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "skills/kumihan-documents/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "skills/kumihan-documents/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "skills/kumihan-documents/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "skills/kumihan-documents/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "skills/kumihan-documents/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "skills/kumihan-documents/references/use-case-adapters.json",
@@ -118,8 +143,8 @@
         },
         {
           "path": "skills/kumihan-documents/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "skills/kumihan-documents/rules/catalog.json",
@@ -193,13 +218,13 @@
         },
         {
           "path": "skills/kumihan-review/SKILL.md",
-          "bytes": 4137,
-          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
+          "bytes": 4889,
+          "sha256": "d37a5400ef82d844632334672c63281f7463f4152aebee47ed88a97c003a5323"
         },
         {
           "path": "skills/kumihan-review/inventory.json",
-          "bytes": 5065,
-          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
+          "bytes": 5941,
+          "sha256": "9bf7fc4c7a9bbe9ebea3b7afb06d8cd876219bf8e4d8947392bd328ec2509956"
         },
         {
           "path": "skills/kumihan-review/profiles/display-copy.json",
@@ -248,13 +273,38 @@
         },
         {
           "path": "skills/kumihan-review/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "skills/kumihan-review/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "skills/kumihan-review/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "skills/kumihan-review/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "skills/kumihan-review/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "skills/kumihan-review/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "skills/kumihan-review/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "skills/kumihan-review/references/use-case-adapters.json",
@@ -273,8 +323,8 @@
         },
         {
           "path": "skills/kumihan-review/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "skills/kumihan-review/rules/catalog.json",
@@ -348,13 +398,13 @@
         },
         {
           "path": "skills/kumihan-web/SKILL.md",
-          "bytes": 4481,
-          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
+          "bytes": 5217,
+          "sha256": "66324050f2422b007e2b7953510d98b35ce759ed2401dafffd693f16c2003874"
         },
         {
           "path": "skills/kumihan-web/inventory.json",
-          "bytes": 5062,
-          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
+          "bytes": 5938,
+          "sha256": "a8d02ea7e9f8b1353f80db349dc29093b34f9dbd4c7dc0d680faa0978022aa24"
         },
         {
           "path": "skills/kumihan-web/profiles/display-copy.json",
@@ -403,13 +453,38 @@
         },
         {
           "path": "skills/kumihan-web/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "skills/kumihan-web/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "skills/kumihan-web/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "skills/kumihan-web/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "skills/kumihan-web/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "skills/kumihan-web/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "skills/kumihan-web/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "skills/kumihan-web/references/use-case-adapters.json",
@@ -428,8 +503,8 @@
         },
         {
           "path": "skills/kumihan-web/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "skills/kumihan-web/rules/catalog.json",
@@ -503,13 +578,13 @@
         },
         {
           "path": "skills/kumihan/SKILL.md",
-          "bytes": 4840,
-          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
+          "bytes": 5459,
+          "sha256": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
         },
         {
           "path": "skills/kumihan/inventory.json",
-          "bytes": 5058,
-          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
+          "bytes": 5934,
+          "sha256": "d85495c4061c9bf38cebd699e575f085ad7453ee68f9a5c894d7a199b786f832"
         },
         {
           "path": "skills/kumihan/profiles/display-copy.json",
@@ -558,13 +633,38 @@
         },
         {
           "path": "skills/kumihan/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "skills/kumihan/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "skills/kumihan/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "skills/kumihan/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "skills/kumihan/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "skills/kumihan/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "skills/kumihan/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "skills/kumihan/references/use-case-adapters.json",
@@ -583,8 +683,8 @@
         },
         {
           "path": "skills/kumihan/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "skills/kumihan/rules/catalog.json",
@@ -654,9 +754,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-Gemini-Apps-skill-0.1.8.zip",
-      "sha256": "3c8c99f4bcd997e38d2873b9cda1df0805682684bb7b1d672990afa3414e9482",
-      "bytes": 91933,
+      "file": "skills/kumihan-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "067236ccd6b23ce97e50651a4bf4ee29cac8fa22de4b1240cf4df37845a58de8",
+      "bytes": 123799,
       "members": [
         {
           "path": "LICENSE",
@@ -665,13 +765,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 4840,
-          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
+          "bytes": 5459,
+          "sha256": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
         },
         {
           "path": "inventory.json",
-          "bytes": 5058,
-          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
+          "bytes": 5934,
+          "sha256": "d85495c4061c9bf38cebd699e575f085ad7453ee68f9a5c894d7a199b786f832"
         },
         {
           "path": "profiles/display-copy.json",
@@ -720,13 +820,38 @@
         },
         {
           "path": "references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "references/use-case-adapters.json",
@@ -745,8 +870,8 @@
         },
         {
           "path": "references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "rules/catalog.json",
@@ -816,9 +941,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-Gemini-Apps-skill-0.1.8.zip",
-      "sha256": "42093f0e38f6adc0f0679df7f53599c43d9bb647d4e979c78898c2632ab438f6",
-      "bytes": 91940,
+      "file": "skills/kumihan-web-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "3a07dd00511cfaf1b6c9ca15ea6fc83007a4db52862404c209167583bfe943cc",
+      "bytes": 123863,
       "members": [
         {
           "path": "LICENSE",
@@ -827,13 +952,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 4481,
-          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
+          "bytes": 5217,
+          "sha256": "66324050f2422b007e2b7953510d98b35ce759ed2401dafffd693f16c2003874"
         },
         {
           "path": "inventory.json",
-          "bytes": 5062,
-          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
+          "bytes": 5938,
+          "sha256": "a8d02ea7e9f8b1353f80db349dc29093b34f9dbd4c7dc0d680faa0978022aa24"
         },
         {
           "path": "profiles/display-copy.json",
@@ -882,13 +1007,38 @@
         },
         {
           "path": "references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "references/use-case-adapters.json",
@@ -907,8 +1057,8 @@
         },
         {
           "path": "references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "rules/catalog.json",
@@ -978,9 +1128,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.1.8.zip",
-      "sha256": "df241dfbc71435e0390beceb9ab951d60c480dd7b35f8c081ade1dfe2f4f5d96",
-      "bytes": 91447,
+      "file": "skills/kumihan-documents-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "a0997a0f216fcecfefc0520f557240ae03c09d2f298c883e65d984e24969fc0d",
+      "bytes": 123398,
       "members": [
         {
           "path": "LICENSE",
@@ -989,13 +1139,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 3758,
-          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
+          "bytes": 4558,
+          "sha256": "5ee39bcb106f33726cab3eabe879d0e9ea44f7f0740d1b4397d18a7311e86431"
         },
         {
           "path": "inventory.json",
-          "bytes": 5068,
-          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
+          "bytes": 5944,
+          "sha256": "ce8f867196aedf906653e36897242ad15c2b3d10b3bc008fadfc15d08513c2fa"
         },
         {
           "path": "profiles/display-copy.json",
@@ -1044,13 +1194,38 @@
         },
         {
           "path": "references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "references/use-case-adapters.json",
@@ -1069,8 +1244,8 @@
         },
         {
           "path": "references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "rules/catalog.json",
@@ -1140,9 +1315,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-Gemini-Apps-skill-0.1.8.zip",
-      "sha256": "7f39a7acb43a0f10e5bf25cab6dd831c434c8b043a5d359c4339551bb8c1c872",
-      "bytes": 91664,
+      "file": "skills/kumihan-review-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "f36b62bdbdc76330dc6e8a72602fee1b7937c82eed99a07b3decfd3492526231",
+      "bytes": 123594,
       "members": [
         {
           "path": "LICENSE",
@@ -1151,13 +1326,13 @@
         },
         {
           "path": "SKILL.md",
-          "bytes": 4137,
-          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
+          "bytes": 4889,
+          "sha256": "d37a5400ef82d844632334672c63281f7463f4152aebee47ed88a97c003a5323"
         },
         {
           "path": "inventory.json",
-          "bytes": 5065,
-          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
+          "bytes": 5941,
+          "sha256": "9bf7fc4c7a9bbe9ebea3b7afb06d8cd876219bf8e4d8947392bd328ec2509956"
         },
         {
           "path": "profiles/display-copy.json",
@@ -1206,13 +1381,38 @@
         },
         {
           "path": "references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "references/use-case-adapters.json",
@@ -1231,8 +1431,8 @@
         },
         {
           "path": "references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "rules/catalog.json",

@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-013",
+  "synthetic": true,
+  "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+  "conditions": [
+    "掲示面には題名とQR、詳細は外部ページにあるというfixtureを計画する。",
+    "通信環境、読者の端末、掲示単独で必要な情報が未確定。"
+  ],
+  "wrongDecisionToAvoid": "どこかのURLに情報があるという説明だけで到達可能とする。"
+}

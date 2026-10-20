@@ -115,6 +115,8 @@ def preservation():
     updates={}
     for family in ('protected','bodies','jekyll_sources'):
         for path,before in baseline[family].items():
+            from ja_v020_preservation import admitted
+            if admitted(ROOT,path,before): continue
             content=(ROOT/path).read_bytes()
             if family=='bodies':
                 body=re.search(rb'<body\b[\s\S]*',content,re.I);content=body[0] if body else b''

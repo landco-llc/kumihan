@@ -20,6 +20,8 @@ def audit(root=ROOT):
     errors = []
     for family in ('protected', 'bodies', 'jekyll_sources'):
         for path, expected in snapshot[family].items():
+            from ja_v020_preservation import admitted
+            if family == 'protected' and admitted(root, path, expected): continue
             target = root / path
             if not target.is_file():
                 errors.append(f'{family}: missing {path}'); continue

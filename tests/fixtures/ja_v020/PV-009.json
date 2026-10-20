@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-009",
+  "synthetic": true,
+  "protectedSource": "いつものAIツールからはじめよう",
+  "conditions": [
+    "実行マップが「いつものAIツールか／ら／はじめよう」となった対照を準備する。",
+    "当該日本語profileで、観察した行端に禁則文字がないことを確認する。"
+  ],
+  "wrongDecisionToAvoid": "気になる改行を全てJA-TYPE-002の禁則エラーにする。"
+}

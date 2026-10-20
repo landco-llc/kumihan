@@ -1,7 +1,7 @@
 {
   "format": "kumihan-standalone-inventory-2",
   "skill": "kumihan",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "path_base": "skill-folder-root",
   "self_digest": "inventory.json lists every other file; its own hash is in the distribution SHA256SUMS.",
   "files": [
@@ -12,8 +12,8 @@
     },
     {
       "path": "SKILL.md",
-      "bytes": 4840,
-      "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
+      "bytes": 5459,
+      "sha256": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
     },
     {
       "path": "profiles/display-copy.json",
@@ -62,13 +62,38 @@
     },
     {
       "path": "references/document-recipes.md",
-      "bytes": 5661,
-      "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+      "bytes": 6507,
+      "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+    },
+    {
+      "path": "references/experimental/typography-evidence.schema.json",
+      "bytes": 15704,
+      "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+    },
+    {
+      "path": "references/japanese-writing-and-type.md",
+      "bytes": 3709,
+      "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+    },
+    {
+      "path": "references/research-claims.json",
+      "bytes": 105032,
+      "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
     },
     {
       "path": "references/review-protocol.md",
-      "bytes": 12582,
-      "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+      "bytes": 12913,
+      "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+    },
+    {
+      "path": "references/typography-context.md",
+      "bytes": 2017,
+      "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+    },
+    {
+      "path": "references/typography-recipes-by-task.md",
+      "bytes": 1252,
+      "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
     },
     {
       "path": "references/use-case-adapters.json",
@@ -87,8 +112,8 @@
     },
     {
       "path": "references/web-recipes.md",
-      "bytes": 9552,
-      "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+      "bytes": 10487,
+      "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
     },
     {
       "path": "rules/catalog.json",

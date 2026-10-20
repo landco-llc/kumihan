@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-029",
+  "synthetic": true,
+  "protectedSource": "静的な本文のみを持つ記事領域です。",
+  "conditions": [
+    "対象regionにはリンク・入力・button・動的操作がなく、ページ外のbrowser UIは対象外。",
+    "そのregionについてerror/loading/disabledの操作状態を捏造しない。"
+  ],
+  "wrongDecisionToAvoid": "記事にもerrorやdisabledの画面がないため欠陥とする。"
+}

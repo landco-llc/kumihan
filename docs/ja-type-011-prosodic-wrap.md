@@ -8,7 +8,7 @@
 
 元の文字列：`いつものAIツールからはじめよう`
 
-**第一候補（成立する表示幅がある場合）**：
+**意図的改行を比較する一例（通常表示を確認し、成立する表示幅がある場合）**：
 
 ```text
 いつものAIツールから
@@ -72,3 +72,7 @@ AIツールから
 **固定候補48d77009d9643ee528e91bb116f446e72c9109ddではJA-TYPE-011は既にソース・4 Skills・15 preview archivesに存在します。** 分類はshould/warning、assisted/guidance-onlyであり、正式公開や全ホスト検証の完了を意味しません。本候補はW06Cの限定実装承認に基づき、layout-firstの判断順序を改訂しています。4 Skills・inventory・配布物・manifestは既存0.1.5-previewで同期し、静的回帰・実描画・新HEAD CIの証跡を別途記録します。実装後の非生産者による独立レビューとHuman Gateは別工程であり、公開GateはCLOSEDです。旧R02 SOURCE_WARNING_ONLY / HOLDは履歴として維持します。CSSによる200%サイズ模擬をNative Text ZoomやWCAG適合の証明にしません。
 
 参考：[CSS Text Level 4](https://www.w3.org/TR/css-text-4/#word-break-property) ／ [MDN `word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) ／ [BudouX](https://github.com/google/budoux)（参考実装であり現状の依存ではない）。
+
+## v0.2.0の運用補足
+
+通常表示と意図的改行の必要性を先に確認します。禁則002、不可分003、意味004、全行構成011を分離し、「話すように」「文節で」「幅を広げる」を強制順序にしません。上記の固定候補・旧版の証拠は履歴です。v0.2.0の実施範囲は [RESULT](development/ja-v020-20261020/RESULT.md) に別記し、過去の描画を再実行したと扱いません。

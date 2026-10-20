@@ -4,10 +4,10 @@ Concrete starting points for Japanese reports and presentations in Word, PowerPo
 
 ## 1. Fonts
 
-- Set the **Japanese (East Asian) font** and the **Latin font** separately. Office applies them independently, and a missing Japanese font setting is the most common cause of wrong glyphs.
+- Set the **Japanese (East Asian) font** and the **Latin font** separately. Office applies them independently, and a missing Japanese font setting is one possible cause of wrong glyphs; also inspect resolved fonts, fallback, language and renderer.
 - Use fonts that are installed on the machines that will open the file, or embed them where the license allows.
 - Common choices: Yu Gothic / Yu Mincho (Windows and Office), Hiragino (macOS), Noto Sans JP / Noto Serif JP (free, cross-platform), Meiryo (older Windows).
-- For projected slides, a gothic (sans-serif) face is usually easier to read than mincho.
+- For projection, compare actual gothic and mincho faces, ink size, weight, contrast, viewing distance and reader task; classification alone guarantees no advantage.
 
 ### Generating Office files with code
 
@@ -34,7 +34,7 @@ Check actual line starts and ends after the final font is applied. Do not insert
 
 ### Natural prosodic groups in Japanese titles (JA-TYPE-011)
 
-For short Word, PDF and PowerPoint headings, choose meaningful multi-bunsetsu groups based on modifier attachment and the natural spoken pause, not just valid kinsoku or equal-looking line widths. Prefer `いつものAIツールから／はじめよう` where its first line fits. Adjust a text box, column width, spacing or surrounding layout before accepting a weaker split. Check actual exported line ends and smaller/zoomed states. Preserve every original source character; never assume font or Office kinsoku alone proves a natural break. Document semantic judgments (assisted) and actual rendering (observed) separately.
+For short Word, PDF and PowerPoint headings, first check ordinary wrapping and whether intentional breaks are needed. Compare modifier attachment, all lines and surrounding space; natural speech is an assisted interpretation, not a measured fact. `いつものAIツールから／はじめよう` is one conditional comparison, not a compulsory split or widening sequence. Check actual exported line ends and smaller/zoomed states. Preserve every original source character; never assume font or Office kinsoku alone proves a natural break. Document semantic judgments (assisted) and actual rendering (observed) separately.
 
 ## 3. Reports
 
@@ -43,14 +43,14 @@ For short Word, PDF and PowerPoint headings, choose meaningful multi-bunsetsu gr
 | Body text | 10.5–11 pt (A4 print); line spacing about 1.5–1.8 lines |
 | Line length | About 35–45 characters per line in a single-column A4 layout |
 | Headings | Clear size or weight steps; keep with the next paragraph |
-| Tables | Repeat the header row on each page; do not let a row split across pages |
+| Tables | Repeat headers; keep only short rows that fit a page together. Split oversized rows while retaining final cells and notes |
 | Figures | Keep the figure, caption and source note together |
 | Numbers | Align digits in tables; keep units with numbers |
 
 Word settings that help:
 
 - Heading styles: "Keep with next" (次の段落と分離しない).
-- Table rows: turn off "Allow row to break across pages".
+- Table rows: disable splitting only for rows that fit the usable page height; allow and inspect continuation for longer rows.
 - Table header: "Repeat as header row".
 
 Check every page, not just the first few. Look for headings stranded at the bottom of a page, split table rows, separated captions, and wrong page numbers or cross-references.
@@ -59,7 +59,7 @@ Check every page, not just the first few. Look for headings stranded at the bott
 
 | Element | Starting point (16:9 projection) |
 | --- | --- |
-| Body text | About 18 pt or larger for a typical meeting room |
+| Body text | 18pt or 24pt can be comparison starts only; record smallest required role, projected dimensions and farthest seat |
 | Titles | About 28–40 pt |
 | Lines per slide | Keep text short; one main message per slide |
 | Notes | Keep speaker notes complete and on the right slide |
@@ -87,7 +87,8 @@ body {
 
 h1, h2, h3 { break-after: avoid; }
 
-figure, table, .keep-together { break-inside: avoid; }
+figure, .short-row, .keep-together { break-inside: avoid; }
+/* Apply keep only to units that fit a page. Oversized rows must continue. */
 
 p { orphans: 2; widows: 2; }
 
@@ -102,9 +103,11 @@ thead { display: table-header-group; } /* Repeat table headers */
 
 | Check | Why |
 | --- | --- |
-| Copy text out of the PDF/PPTX/DOCX and compare with the source | Confirms no characters were lost or changed |
+| Copy text out of the PDF/PPTX/DOCX and compare with the source | Checks exact supported extracted text only; does not prove glyphs, visibility, reading order or absence of clipping |
 | Open the file in the target application (actual Office, not only a preview) | Previews and converters can render differently |
 | Confirm fonts are the intended ones | Missing fonts are silently substituted |
 | Confirm required editability | Text converted to images or outlines cannot be edited |
 
 Record the application name and version, fonts and page size used. If you could only check a preview or a PDF, say that native Office rendering was not checked.
+
+Projection remains not-checked when physical dimensions, farthest seat or environment are unknown. Inspect every rendered page for overlap, clipping, continuation headers, final cells, notes and reading order. PDF extraction and PDF preview are distinct observations, and neither establishes native Office acceptance. These recipes add no common document-generation service.

@@ -1,0 +1,149 @@
+M	.claude-plugin/plugin.json
+M	.codex-plugin/plugin.json
+M	README.md
+M	_includes/version/docs/installation.ja.md
+M	_includes/version/docs/installation.md
+M	_includes/version/ja-current.html
+M	_includes/version/ja-hero.html
+M	_includes/version/ja-install.html
+M	_includes/version/ja-source-version.html
+M	assets/edition-versions.json
+A	docs/development/ja-v020-20261020/MCP_HANDOFF.md
+A	docs/development/ja-v020-20261020/NEXT_GATE.md
+A	docs/development/ja-v020-20261020/RESEARCH_CASES.md
+A	docs/development/ja-v020-20261020/RESULT.md
+A	docs/development/ja-v020-20261020/WORKGROUP.md
+A	docs/development/ja-v020-20261020/baseline.json
+A	docs/development/ja-v020-20261020/case-results.json
+A	docs/development/ja-v020-20261020/evidence/baseline-tests.log
+A	docs/development/ja-v020-20261020/evidence/final-dist.log
+A	docs/development/ja-v020-20261020/evidence/final-preservation.log
+A	docs/development/ja-v020-20261020/evidence/final-seo-check.log
+A	docs/development/ja-v020-20261020/evidence/final-tests.log
+A	docs/development/ja-v020-20261020/evidence/first-preservation.log
+A	docs/development/ja-v020-20261020/evidence/first-regression.log
+A	docs/development/ja-v020-20261020/evidence/first-seo.log
+A	docs/development/ja-v020-20261020/evidence/independent-review.md
+A	docs/development/ja-v020-20261020/evidence/ja-type-011.log
+A	docs/development/ja-v020-20261020/evidence/pdf-page-1.png
+A	docs/development/ja-v020-20261020/evidence/pdf-page-2.png
+A	docs/development/ja-v020-20261020/evidence/preserved.json
+A	docs/development/ja-v020-20261020/evidence/preview.pdf
+A	docs/development/ja-v020-20261020/evidence/red-tests.log
+A	docs/development/ja-v020-20261020/evidence/rendered.json
+A	docs/development/ja-v020-20261020/evidence/reproducibility.json
+A	docs/development/ja-v020-20261020/evidence/site-version-panel.png
+A	docs/development/ja-v020-20261020/evidence/spacing-320.png
+A	docs/development/ja-v020-20261020/evidence/unicode.json
+A	docs/development/ja-v020-20261020/evidence/web-1024.png
+A	docs/development/ja-v020-20261020/evidence/web-320.png
+A	docs/development/ja-v020-20261020/release-manifest.json
+A	docs/development/ja-v020-20261020/source-transition.json
+M	docs/installation.ja.md
+M	docs/installation.md
+M	docs/ja-type-011-prosodic-wrap.md
+M	docs/version-automation/preservation.json
+M	downloads Claude/MANIFEST.json
+M	downloads Claude/README.md
+M	downloads Claude/SHA256SUMS.txt
+R058	downloads Claude/plugins/kumihan-Claude-Code-plugin-0.1.8.zip	downloads Claude/plugins/kumihan-Claude-Code-plugin-0.2.0.zip
+R058	downloads GPT-Codex/skills/kumihan-GPT-Codex-skill-0.1.8.zip	downloads Claude/skills/kumihan-Claude-skill-0.2.0.zip
+R058	downloads Claude/skills/kumihan-documents-Claude-skill-0.1.8.zip	downloads Claude/skills/kumihan-documents-Claude-skill-0.2.0.zip
+R057	downloads GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.1.8.zip	downloads Claude/skills/kumihan-review-Claude-skill-0.2.0.zip
+R057	downloads Claude/skills/kumihan-web-Claude-skill-0.1.8.zip	downloads Claude/skills/kumihan-web-Claude-skill-0.2.0.zip
+M	downloads GPT-Codex/MANIFEST.json
+M	downloads GPT-Codex/README.md
+M	downloads GPT-Codex/SHA256SUMS.txt
+R083	downloads GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8.zip	downloads GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.2.0.zip
+R058	downloads Claude/skills/kumihan-Claude-skill-0.1.8.zip	downloads GPT-Codex/skills/kumihan-GPT-Codex-skill-0.2.0.zip
+R058	downloads GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.1.8.zip	downloads GPT-Codex/skills/kumihan-documents-GPT-Codex-skill-0.2.0.zip
+R057	downloads Claude/skills/kumihan-review-Claude-skill-0.1.8.zip	downloads GPT-Codex/skills/kumihan-review-GPT-Codex-skill-0.2.0.zip
+R057	downloads GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.1.8.zip	downloads GPT-Codex/skills/kumihan-web-GPT-Codex-skill-0.2.0.zip
+M	downloads Gemini/MANIFEST.json
+M	downloads Gemini/README.md
+M	downloads Gemini/SHA256SUMS.txt
+R058	downloads Gemini/extensions/kumihan-Gemini-CLI-extension-0.1.8.zip	downloads Gemini/extensions/kumihan-Gemini-CLI-extension-0.2.0.zip
+R058	downloads Gemini/skills/kumihan-web-Gemini-Apps-skill-0.1.8.zip	downloads Gemini/skills/kumihan-Gemini-Apps-skill-0.2.0.zip
+R058	downloads Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.1.8.zip	downloads Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.2.0.zip
+R058	downloads Gemini/skills/kumihan-Gemini-Apps-skill-0.1.8.zip	downloads Gemini/skills/kumihan-review-Gemini-Apps-skill-0.2.0.zip
+R058	downloads Gemini/skills/kumihan-review-Gemini-Apps-skill-0.1.8.zip	downloads Gemini/skills/kumihan-web-Gemini-Apps-skill-0.2.0.zip
+M	gemini-extension.json
+M	plugin.json
+M	skills/kumihan-documents/SKILL.md
+M	skills/kumihan-documents/inventory.json
+M	skills/kumihan-documents/references/document-recipes.md
+A	skills/kumihan-documents/references/experimental/typography-evidence.schema.json
+A	skills/kumihan-documents/references/japanese-writing-and-type.md
+A	skills/kumihan-documents/references/research-claims.json
+M	skills/kumihan-documents/references/review-protocol.md
+A	skills/kumihan-documents/references/typography-context.md
+A	skills/kumihan-documents/references/typography-recipes-by-task.md
+M	skills/kumihan-documents/references/web-recipes.md
+M	skills/kumihan-review/SKILL.md
+M	skills/kumihan-review/inventory.json
+M	skills/kumihan-review/references/document-recipes.md
+A	skills/kumihan-review/references/experimental/typography-evidence.schema.json
+A	skills/kumihan-review/references/japanese-writing-and-type.md
+A	skills/kumihan-review/references/research-claims.json
+M	skills/kumihan-review/references/review-protocol.md
+A	skills/kumihan-review/references/typography-context.md
+A	skills/kumihan-review/references/typography-recipes-by-task.md
+M	skills/kumihan-review/references/web-recipes.md
+M	skills/kumihan-web/SKILL.md
+M	skills/kumihan-web/inventory.json
+M	skills/kumihan-web/references/document-recipes.md
+A	skills/kumihan-web/references/experimental/typography-evidence.schema.json
+A	skills/kumihan-web/references/japanese-writing-and-type.md
+A	skills/kumihan-web/references/research-claims.json
+M	skills/kumihan-web/references/review-protocol.md
+A	skills/kumihan-web/references/typography-context.md
+A	skills/kumihan-web/references/typography-recipes-by-task.md
+M	skills/kumihan-web/references/web-recipes.md
+M	skills/kumihan/SKILL.md
+M	skills/kumihan/inventory.json
+M	skills/kumihan/references/document-recipes.md
+A	skills/kumihan/references/experimental/typography-evidence.schema.json
+A	skills/kumihan/references/japanese-writing-and-type.md
+A	skills/kumihan/references/research-claims.json
+M	skills/kumihan/references/review-protocol.md
+A	skills/kumihan/references/typography-context.md
+A	skills/kumihan/references/typography-recipes-by-task.md
+M	skills/kumihan/references/web-recipes.md
+A	tests/fixtures/ja_v020/PV-001.json
+A	tests/fixtures/ja_v020/PV-002.json
+A	tests/fixtures/ja_v020/PV-003.json
+A	tests/fixtures/ja_v020/PV-004.json
+A	tests/fixtures/ja_v020/PV-005.json
+A	tests/fixtures/ja_v020/PV-006.json
+A	tests/fixtures/ja_v020/PV-007.json
+A	tests/fixtures/ja_v020/PV-008.json
+A	tests/fixtures/ja_v020/PV-009.json
+A	tests/fixtures/ja_v020/PV-010.json
+A	tests/fixtures/ja_v020/PV-011.json
+A	tests/fixtures/ja_v020/PV-012.json
+A	tests/fixtures/ja_v020/PV-013.json
+A	tests/fixtures/ja_v020/PV-014.json
+A	tests/fixtures/ja_v020/PV-015.json
+A	tests/fixtures/ja_v020/PV-016.json
+A	tests/fixtures/ja_v020/PV-017.json
+A	tests/fixtures/ja_v020/PV-018.json
+A	tests/fixtures/ja_v020/PV-019.json
+A	tests/fixtures/ja_v020/PV-020.json
+A	tests/fixtures/ja_v020/PV-021.json
+A	tests/fixtures/ja_v020/PV-022.json
+A	tests/fixtures/ja_v020/PV-023.json
+A	tests/fixtures/ja_v020/PV-024.json
+A	tests/fixtures/ja_v020/PV-025.json
+A	tests/fixtures/ja_v020/PV-026.json
+A	tests/fixtures/ja_v020/PV-027.json
+A	tests/fixtures/ja_v020/PV-028.json
+A	tests/fixtures/ja_v020/PV-029.json
+A	tests/fixtures/ja_v020/PV-030.json
+A	tests/fixtures/ja_v020/cases.json
+A	tests/fixtures/ja_v020/web-contrasts.html
+A	tests/test_ja_v020_research.py
+M	tests/test_version_naming.py
+M	tools/build_version_site.py
+M	tools/check_seo_preservation.py
+A	tools/ja_v020_preservation.py
+A	tools/render_ja_v020_research.py

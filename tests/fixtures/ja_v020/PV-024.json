@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-024",
+  "synthetic": true,
+  "protectedSource": "手順3の前に電源を切ってください。",
+  "conditions": [
+    "投影寸法・最遠席を定め、必須注意書きが読み取れない縮小表示となる負例を用意する。",
+    "完全な文はspeaker notesにだけ残り、聴衆への説明・表示経路がない。"
+  ],
+  "wrongDecisionToAvoid": "notesに文字があるので聴衆にも情報が届くとする。"
+}

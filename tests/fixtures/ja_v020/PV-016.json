@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-016",
+  "synthetic": true,
+  "protectedSource": "申込条件を確認してください。\nPlease read the application requirements.",
+  "conditions": [
+    "段落余白を使う日本語Web本文と、単語間spaceを使う英語runを準備する。",
+    "作者の初期値ではなく、基準の利用者上書きを対象として実施する。"
+  ],
+  "wrongDecisionToAvoid": "日本語ページなので英語runや段落余白も全て対象外とする。"
+}

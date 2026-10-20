@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-014",
+  "synthetic": true,
+  "protectedSource": "処理済み 48件",
+  "conditions": [
+    "架空の提供データ48件をvalue 48px、label 14px、page title 24px等で組む。",
+    "比率自体を最適とせず、labelとvalueが読める条件を準備する。"
+  ],
+  "wrongDecisionToAvoid": "全てのheadingより値が大きいことを単純な階層逆転エラーにする。"
+}

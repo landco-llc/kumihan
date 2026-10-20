@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-022",
+  "synthetic": true,
+  "protectedSource": "文字と余白の時間／道具の使い方を本文で説明します。",
+  "conditions": [
+    "実在・利用可能なfontで機能の支持を確認したfixtureを別途準備する。",
+    "display限定の任意variantと通常表示を比較し、bodyへcascadeさせない。"
+  ],
+  "wrongDecisionToAvoid": "displayで採用した値を本文へ全適用する、または本文のpalt使用を文脈なしに自動失敗にする。"
+}

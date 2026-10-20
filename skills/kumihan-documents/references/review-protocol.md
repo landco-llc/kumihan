@@ -210,3 +210,7 @@ rerun affected content, static, render and style checks on the new bytes.
 Record changed fonts, extractors, renderers and viewing conditions. Previous
 passes cannot verify a changed target. Return the new report with remaining
 limitations and the actual content-change summary.
+
+## Region and evidence mapping
+
+Apply [typography context](typography-context.md): record each required source field and its visible, reachable representations. Keep static preservation, rendered visibility and assisted meaning separate. Use existing scope/reason/evidence_refs/limitations; unknown intent does not waive a check.
