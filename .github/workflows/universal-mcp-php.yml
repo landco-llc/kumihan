@@ -45,7 +45,12 @@ jobs:
       - name: PHP lint
         run: |
           find universal/server/src universal/server/public universal/server/tests -name '*.php' -print0 | xargs -0 -n1 php -l
-      - name: Install pinned SDK series
+      - name: Verify committed Composer lock
+        working-directory: universal/server
+        run: |
+          test -s composer.lock
+          composer validate --no-check-publish --strict
+      - name: Install locked PHP dependencies
         working-directory: universal/server
         run: composer install --no-interaction --prefer-dist --no-dev --no-progress
       - name: Audit resolved Composer dependencies
