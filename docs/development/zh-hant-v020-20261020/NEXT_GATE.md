@@ -1,20 +1,18 @@
-# NEXT_GATE — integrated source candidate / Owner release gate
+# NEXT_GATE — SOURCE_CANDIDATE_INTEGRATED / OWNER_RELEASE_GATE
 
-Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
+Corrected source `2b628a611bf6d532c416645dc76efb68400404eb` / TREE `43ac9edf1dcfae7b5b9feaa6e1705335ff46b3da` passes all10 hosted workflows and all required local checks (root119 / Thai22 / Ziheng26, no skips). Hosted merge checkout `31ed997236c035b95897586ddb8a939a3e8273c6` and exact head/base/jobs/links are recorded in evidence/hosted-ci-corrected.json. The final documentation HEAD is verified separately and fixed in the PR/task return. Draft remains Draft.
 
-Current local source integration is complete at `6be142c57300de933caaae94a59436aa1f319a0b` / TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch local checks pass. The first hosted candidate had8 success /1 new cross-locale regression failure; a bounded correction now passes local Thai22/root119/Ziheng26 and all11 checks. Corrected-head hosted CI is pending. The authorized PR #122 publication worker will update the same Draft PR, read final-head checks and actual checkout refs, and return fixed final HEAD/TREE. Routine Work boundaries need no additional approval.
+The approved shared integration and deterministic CI recovery are complete. Historical six-path hold, original4 failures, first integrated cross-locale CI failure and all corrections remain in RESULT / TEST_REPORT and evidence. PR #120 remains unchanged at fixedce2fd8d; JA120_SHARED_HANDOFF.md separates disposable composition123/26 checks from actual PR CI and describes future shared record/overlay integration. No Japanese candidate implementation or ZIP was imported into PR #122.
 
-The original six-path overlap hold and four starting failures are preserved as history in RESULT.md / TEST_REPORT.md. Owner's limited authorization permits the completed Ziheng integration on PR #122; it does not authorize changes to PR #120 or main. Read JA120_SHARED_HANDOFF.md for disposable coexistence results and required future integration order. No Japanese candidate code or archives are included in PR #122.
+Stop at Owner's separate gates:
 
-After final-head CI passes, stop for Owner's separate decisions:
+1. Main integration and production Pages need explicit authority; neither is executed.
+2. Formal tag/Release needs a separate flat-name asset-contract decision. release-assets-proposal.json remains a proposal; assets/edition-release-contracts.json stays inactive.
+3. Marketplace/registration adoption and native-host acceptance have their own gate. Source ZIP candidates do not automatically update installed users.
+4. MCP registry/module integration and deployment remain a separate lane using MCP_HANDOFF.md. Running MCP and universal/ remain unchanged.
 
-1. Main integration / production Pages requires explicit authority; neither is executed here. Draft remains Draft.
-2. Formal Release and tag require a separate flat-name asset-contract decision. release-assets-proposal.json remains a proposal; assets/edition-release-contracts.json stays inactive.
-3. Marketplace/registration ZIP adoption and native host acceptance require their own gate. Current source ZIP candidates do not update installed users automatically.
-4. MCP registry/module integration and deployment remain a separate owner lane using MCP_HANDOFF.md. Running MCP and universal/ remain unchanged.
+Common document creation remains **DESIGN ONLY / IMPLEMENTATION HOLD**. No Ready/auto-merge, tag, Release, production Pages, Marketplace, MCP deployment, credentials/Secrets/settings/permissions action is authorized.
 
-Common document creation stays **DESIGN ONLY / IMPLEMENTATION HOLD**. No ready/auto-merge, tag, Release, production Pages, Marketplace, MCP deployment or settings/Secrets/permissions change is authorized.
+32 definitions /14 partial /18 unexecuted /0 whole-case passes remain. Real UA200%, actual regional font/glyph/IVS, selected vertical/ruby, system clipboard/navigation, native Office/PDF and AT, native-host invocation and TW/HK proofreading remain scoped unknowns, not fabricated passes or new automatic universal gates.
 
-32 cases remain defined,14 partially exercised,18 unexecuted,0 wholly accepted. Real UA200%, regional font/glyph/IVS, selected vertical/ruby, system clipboard/navigation, native Office/PDF and AT, native-host invocation and TW/HK proofreading remain scoped unknowns. These are not fabricated passes or automatic new universal gates.
-
-Exact preservation transition preimages remain frozen; helper integration is now active in this source branch, not deployed to production. The prior four-review correction record remains REVIEW_RESOLUTIONS.md and evidence/final-review.md. The single new shared-diff review is recorded in evidence/shared-integration-review.md and found no blocking or nonblocking defects; no formal audit certification is claimed. Raw historical failure logs preserve three trailing-space lines as an explicit formatting limitation.
+Frozen preservation preimages and original Thai locale baseline remain unchanged. The initial source review and later correction validation retain distinct identities and assurance scopes. No routine approval is pending; the next decisions are the Owner gates above.

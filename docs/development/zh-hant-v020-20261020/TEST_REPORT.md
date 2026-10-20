@@ -1,35 +1,28 @@
-# TEST_REPORT — integrated candidate evidence
+# TEST_REPORT — integrated candidate and hosted CI
 
-Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
-
-Fixed implementation source: `6be142c57300de933caaae94a59436aa1f319a0b`, TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch commands exited0; no test was removed, skipped or relaxed. The original112/4 failures were reproduced before correction in evidence/shared-root-before.log. Source0.2.0 and old0.1.0 contracts now pass together.
+Corrected source `2b628a611bf6d532c416645dc76efb68400404eb` / TREE `43ac9edf1dcfae7b5b9feaa6e1705335ff46b3da` has all10 hosted workflows successful. The final documentation HEAD is independently checked before task return; its fixed identity and actual CI are supplied there and in the Draft PR. The evidence snapshot in this commit is deliberately for the immutable corrected predecessor.
 
 | Execution | Result | Evidence / scope |
 |---|---|---|
-| Root unittest discovery |118 tests PASS, no skips | evidence/integration-validation-root-tests.log |
-| Legacy tests/ziheng discovery |26 tests PASS | evidence/integration-validation-ziheng-tests.log |
-| New shared boundary methods |6 PASS after source/display RED | evidence/shared-regression-red.log; evidence/shared-regression-green.log |
-| Isolated version naming |7 PASS | evidence/shared-naming-after.log |
-| build_ziheng / build_ziheng_hosts / build_ziheng_site --check | All exit0 | evidence/integration-validation-build_ziheng*.log |
-| build_dist --check; check_ja_type_011_cases | Both exit0 | evidence/integration-validation-build_dist.log; evidence/integration-validation-check_ja_type_011_cases.log |
-| build_seo --check | PASS,274 pages / sitemap272 URLs | evidence/integration-validation-build_seo.log |
-| check_seo_preservation; git diff --check | Both exit0 | evidence/integration-validation-check_seo_preservation.log; evidence/integration-validation-diff-check.log |
-| Current15 + old15 ZIPs | Size/SHA256/CRC/safe member paths PASS; distinct sets; byte unchanged | evidence/integration-validation-distributions.json |
-| Existing distribution bytes / old URLs |252 fixed files unchanged;15 old URLs matched SHA256 | evidence/integration-validation-distributions.json; evidence/integration-validation-old-url-readback.json |
-| Integrated pages | Chromium1024/320; keyboard Tab/Enter CTA to #install | evidence/integration-validation-browser.log; screenshots |
-| First hosted CI |8 workflows success /1 new cross-locale failure | evidence/hosted-ci-first.json; corrected-head CI pending |
+| Initial integration root / legacy Ziheng |118 /26 PASS | evidence/integration-validation-checks.json |
+| Corrected source root / Thai / legacy Ziheng |119 /22 /26 PASS, no skips | evidence/integration-correction-validation-{root,thai,ziheng}-tests.log |
+| Shared regression boundary methods |7 PASS; new consumer observed RED then GREEN | evidence/shared-crosslocale-{red,green}.log; earlier shared-regression logs |
+| Correction command set | All11 exit0, including all10 originally required checks plus Thai | evidence/integration-correction-validation-checks.json |
+| Exact semantic regression validation |18 context digests,6 original JA full outputs,12 new full Ziheng outputs;18 negative probes | evidence/integration-correction-validation-semantic.json |
+| Builders / SEO / preservation | All current;274 pages /272 sitemap URLs | evidence/integration-correction-validation-build_*.log; preservation log |
+| Current15 / old15 ZIPs | Size/SHA256/CRC/member paths PASS; distinct sets unchanged | evidence/integration-validation-distributions.json; release-manifest.json |
+| Distribution preservation / URLs |252 files unchanged;15 old URLs match SHA256;255 protected baseline files unchanged | integration-validation and integration-correction-validation evidence |
+| Integrated LP | Chromium1024/320; keyboard Tab/Enter CTA to #install | evidence/integration-validation-browser.log; screenshots |
+| Hosted corrected source CI |10 workflow success /10 executed jobs success /1 expected event-condition job skipped | evidence/hosted-ci-corrected.json |
+| PR #120 disposable coexistence |123 root /26 Ziheng;13 checks PASS, no skips | JA120_SHARED_HANDOFF.md; separate synthetic tree, explicit inherited-JA baseline adaptation |
 
-The first hosted candidate `3d7a892613cdec0f04259bacc00becbe5c61c70f` completed9 workflows:8 success and1 new ZiLu failure. All four originally failing workflows succeeded. ZiLu's unchanged Other-language regression exposed12 Ziheng output hashes in the Thai historical regression consumer. This failure and merge checkout `78220612f5928cb26e479eed2c26a8b930c1e9bd` are preserved in [first CI](evidence/hosted-ci-first.json) and [diagnosis](evidence/shared-ci-diagnosis.md).
+Hosted PR head `2b628a611bf6d532c416645dc76efb68400404eb`, base `8b647cc752d7a9bc3db48356fa0ab7b221bb66d6`, actual merge checkout `31ed997236c035b95897586ddb8a939a3e8273c6`. Candidate integrity, Ziheng, SEO, Edition, ZiLu, Thai, Accord, Hlela, Khmer and Szyk all succeed. Expected `propose-verified-update` skip requires an event other than pull_request and is not counted as test success. ZiLu's formerly unreachable host-manifest/Jekyll/browser steps now succeed.
 
-A bounded shared regression correction now pins the original immutable Thai baseline and exactly12 registered Ziheng old→new full-output digests, with exact source hashes and frozen transition guards. The original fixture, resolver, Thai/ZiLu product sources, workflows and all distribution bytes are unchanged. No skip or expected-output normalization is used. Separate correction validation passed Thai22 / root119 / Ziheng26 and all11 commands,18 unchanged contexts,6 unchanged Japanese outputs,12 complete current Ziheng outputs and18 rejection probes. Evidence: [correction validation](evidence/integration-correction-validation-summary.json). The one initial source review remains scoped to its fixed tree; this later bounded correction has separate test evidence and no second review claim. Corrected-head hosted CI is pending push/readback.
+History remains explicit: starting112 tests /4 failures reproduced; the old isolated staging112 PASS did not establish actual branch acceptance. First integrated hosted candidate3d7a892 had8 success /1 newly exposed cross-locale failure. Original Thai baselineSHA52307cc… and fixedbase remain immutable; exact registered source before/after and frozen preimages guard the new12-output transition. No resolver/product/workflow changes, baseline rewrite, general metadata stripping or skips. First failure/raw checkout records: evidence/hosted-ci-first.json and hosted-first-zilu-failure.log.
 
-The six regression methods check source-only edition changes; other edition/distribution/snapshot facts unchanged; exact registered retained manifests; unknown history still reaches the original version assertion; unknown transition paths/old hash/snapshot hash/after hash/frozen baseline/candidate tampering; one-byte mutation and deletion of an old ZIP; and displayed old/new source versions with unpublished Release facts.
+One bounded same-task technical review (evidence/shared-integration-review.md) found no actionable defects in its fixed initial source tree. The later exact cross-locale consumer correction was separately validated; no second review or independent audit certification is claimed. Original prior four-review corrections remain in the historical record below. Three trailing-space lines in captured historical raw failure logs remain a documented formatting limitation, distinct from the clean working-tree whitespace checks.
 
-The four former failures were corrected by connecting exact transition validation, changing only zh-hant source_version, admitting only validated historical manifests, and asserting current0.2.0 separately from retained0.1.0. The original unapplied patch and isolated112 PASS remain historical proposal evidence. They do not substitute for actual118 PASS. New isolated naming execution also exposed missing retention-module import resolution; explicit tools path setup corrected it before full-root rerun.
-
-PR #120 coexistence is separately documented in JA120_SHARED_HANDOFF.md and evidence/ja120-*; its synthetic tree never establishes actual PR #122 CI or future main acceptance. The completed single bounded shared-integration review (evidence/shared-integration-review.md) found no actionable defects and is separate from the earlier four-finding review and its recorded corrections. It is a nonformal same-task technical review, not independent audit certification. Raw historical failure logs retain three trailing-space lines; this formatting limitation is distinct from the clean working-tree whitespace check.
-
-32 fixture definitions remain14 partial /18 unexecuted /0 fully accepted. New keyboard navigation observations concern the local LP only; system clipboard, external navigation, real UA200%, regional glyph/IVS support, native Office/PDF, AT, native host invocation and TW/HK proofreading remain unverified as scoped. No production action is implied.
+32 definitions remain14 partial /18 unexecuted /0 fully accepted. Browser/keyboard observations concern the local LP; system clipboard, external navigation, real UA200%, actual regional glyph/IVS, native Office/PDF, AT, native host invocation and TW/HK proofreading remain scoped unknowns. No production or publication acceptance is implied.
 
 <details>
 <summary>WG00–07 historical test report, including four failures and prior four-review correction history</summary>
