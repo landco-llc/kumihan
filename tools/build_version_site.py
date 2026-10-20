@@ -98,8 +98,6 @@ def outputs():
 
 
 def preservation_allowed(path, family):
-    from ziheng_v020_transition import allowed
-    if allowed(path, family, ROOT): return True
     from version_display import edition_for
     from build_gateways import GATEWAYS
     if family=='protected': return path=='README.md'
@@ -109,25 +107,7 @@ def preservation_allowed(path, family):
 
 
 def preservation():
-    """Exact reviewed before/after hashes; immutable SEO evidence stays unchanged."""
-    from version_display import edition_for
-    from build_gateways import GATEWAYS
-    baseline=json.loads((ROOT/'docs/seo/evidence/20261019-main-preservation.json').read_text())
-    gateways={p[0] for p in GATEWAYS.values()}
-    updates={}
-    for family in ('protected','bodies','jekyll_sources'):
-        for path,before in baseline[family].items():
-            content=(ROOT/path).read_bytes()
-            if family=='bodies':
-                body=re.search(rb'<body\b[\s\S]*',content,re.I);content=body[0] if body else b''
-            after=hashlib.sha256(content).hexdigest()
-            if before==after:continue
-            allowed=preservation_allowed(path,family)
-            if not allowed:raise ValueError('Unrelated protected change: '+path)
-            updates.setdefault(family,{})[path]=dict(before=before,after=after)
-    data=dict(authority='KUMI-VERSION-AUTO-WG00-WG04-20261019-01',
-              baseline=baseline['baseline'],updates=updates)
-    return {'docs/version-automation/preservation.json':json.dumps(data,ensure_ascii=False,indent=2)+'\n'}
+    raise ValueError('Historical preservation generation belongs to private regression; public release contracts are reviewed immutable inputs')
 
 
 def main():

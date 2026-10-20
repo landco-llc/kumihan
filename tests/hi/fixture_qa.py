@@ -32,5 +32,5 @@ cases[19]['static_status']='PDF extraction measured separately';cases[19]['extra
 for n in [20,21,22]:cases[n]['render_status']='See browser-results.json for webfont failure, viewport, text200 and spacing observations; no universal PASS'
 cases[23]['operation_status']='NOT_CHECKED: IME, deletion and screen reader unavailable'
 report={'method':'Chromium rendered fixture; exact DOM text; optional read-only Python comparison; Poppler extraction', 'cases':cases,'segmenter_observed':seg,'language_comparison_text':langs,'pdf_exact_matches':matches,'not_checked':['native speaker','full Hindi glyph correctness','native devices','Office','IME','screen reader']}
-(R/'docs/hi/qa-results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+(Path('/tmp/kumihan-hi-qa-results.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print('19 exact DOM source round-trips; PDF exact substrings',sum(matches.values()),'/',len(matches));print('segmenter',seg)

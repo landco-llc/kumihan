@@ -88,7 +88,7 @@ def main():
         data=image.read_bytes()
         if data[:8]!=b'\x89PNG\r\n\x1a\n' or struct.unpack('>II',data[16:24])!=(CONFIG['image']['width'],CONFIG['image']['height']): errors.append('OG image MIME/dimensions mismatch')
     if errors:
-        print('\n'.join(errors)); print('See docs/seo/ADD_LANGUAGE_OR_PAGE.md'); return 1
+        print('\n'.join(errors)); print('Review page metadata and the committed SEO configuration'); return 1
     print(f'SEO {"built HTML" if args.site_dir else "source contracts"}: PASS ({len(pages(root))} pages)')
     return 0
 

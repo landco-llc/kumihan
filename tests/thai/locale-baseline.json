@@ -1,5 +1,4 @@
 {
-  "base_commit": "5f4925460e118398f99003ff475bcc686c1c2e76",
   "canonical_json": "UTF-8; ensure_ascii=False; sort_keys=True; separators=comma,colon",
   "records": [
     {
@@ -42,73 +41,74 @@
       "locale": "zh-Hant-TW",
       "medium": "web-editorial",
       "context_sha256": "93318774454b70b8737df546ac1d714b41c42deb37162c9dfa23a5f7c7272963",
-      "rules_sha256": "6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d"
+      "rules_sha256": "80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274"
     },
     {
       "locale": "zh-Hant-TW",
       "medium": "web-marketing",
       "context_sha256": "3d7b26bf407f27a8f76921a77af3b1d3d2ab4101743bf36d25baecd199b4e63c",
-      "rules_sha256": "6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d"
+      "rules_sha256": "80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274"
     },
     {
       "locale": "zh-Hant-TW",
       "medium": "web-ui",
       "context_sha256": "ebb0892d8b5a82e9e3064e0c86206f94e449d1340806300266c996b4a278d178",
-      "rules_sha256": "6df7ec87d1cd08159f05b9d6b531c1ec0b0985c2e19bc91ba23156299a54db8d"
+      "rules_sha256": "80483b225146cad3cb9dd14eaebccc424c4b52dc8cf2de2f6d94eeca174d2274"
     },
     {
       "locale": "zh-Hant-TW",
       "medium": "report-document",
       "context_sha256": "234dcc40d1e6db23cfefb3c97dc9a6ca457cb2851b42e6c237bbe161e9d72319",
-      "rules_sha256": "b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510"
+      "rules_sha256": "405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd"
     },
     {
       "locale": "zh-Hant-TW",
       "medium": "presentation",
       "context_sha256": "c138ceaa17c75544011b3f17890441295543a154939740cb0b25a7c2ba2d7519",
-      "rules_sha256": "b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510"
+      "rules_sha256": "405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd"
     },
     {
       "locale": "zh-Hant-TW",
       "medium": "display-copy",
       "context_sha256": "1126f31a05be70eae0c1e4bfd2a1efddc151eedec888d4440b2997a5d85ed9a5",
-      "rules_sha256": "b3ebeed3ab1ee647130640950b92839252aaa06371e99a71c704baa7357ec510"
+      "rules_sha256": "405c76f81898ea981628fb0219a29c656beec420a654e24cbb2daae359ebe3cd"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "web-editorial",
       "context_sha256": "ea8905d99022aac4127f60ad49630d6f935762df4d82a30188546d0470559cd0",
-      "rules_sha256": "755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b"
+      "rules_sha256": "d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "web-marketing",
       "context_sha256": "717b103ecea6b90aae61c72bea90589ce2faa5fce134a2ebecc2f9ce1ca0fcca",
-      "rules_sha256": "755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b"
+      "rules_sha256": "d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "web-ui",
       "context_sha256": "fb66425ceac0cd2b3d613e3cf1532472a4772220b460eef255d482bb8aeaa79a",
-      "rules_sha256": "755880562622602c17dc6b384d0752fefe8cd90fff4d7d0582e98ca5b849782b"
+      "rules_sha256": "d7f3834a7e516c8102ebb92535edf3c98bc8dca1902ca830c6620c7139615892"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "report-document",
       "context_sha256": "1c98d2e4813a53a41fd5a0666f09c37e8d8e1bca9660a10a2e1288f421e5482e",
-      "rules_sha256": "9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008"
+      "rules_sha256": "8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "presentation",
       "context_sha256": "348edde43f9aad54b8141c360c44b0a9c206b54a3eecaa4ef994f6e1f405e397",
-      "rules_sha256": "9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008"
+      "rules_sha256": "8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b"
     },
     {
       "locale": "zh-Hant-HK",
       "medium": "display-copy",
       "context_sha256": "c775e7976364312b8fd2ee5b3abd23c6ff908a8f7277d4ac6963c7adf82cb51f",
-      "rules_sha256": "9d4637679e22ba4830470a7a455ad1f242716a2f81ec85de9d319caf83f10008"
+      "rules_sha256": "8e75b02d95a15c7f1ca85d9cf6cc700398ce28c10bd533e93e7ad31bfc03e29b"
     }
-  ]
+  ],
+  "format": "public-locale-output-contract-1"
 }

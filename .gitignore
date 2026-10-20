@@ -1,3 +1,16 @@
 __pycache__/
 .jekyll-cache/
 dist/
+
+# Development evidence is never a public product input.
+/docs/development/
+/docs/seo/
+/docs/version-automation/
+/docs/hi/
+/docs/thai/
+/docs/de/
+/docs/it/
+
+# Local Bundler dependency/cache output; never a tracked product exception.
+/vendor/
+/.bundle/

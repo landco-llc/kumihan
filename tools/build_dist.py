@@ -33,7 +33,7 @@ VERSION_TEXT_FILES = ["README.md", "docs/*.md"]
 ZIP_DATE = (2026, 10, 14, 0, 0, 0)
 PUBLISHER = "L&Co. LLC"
 REPOSITORY = "landco-llc/kumihan"
-COMMON_EXTRAS = ["LICENSE", "THIRD_PARTY_NOTICES.md", "docs/development.md"]
+COMMON_EXTRAS = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
 SKILL_LABELS = {
     "kumihan": "最初の入口 / starting point",
     "kumihan-web": "Webページ / web pages",
@@ -148,6 +148,10 @@ def skill_members(tree, name, prefix):
 def plugin_members(tree, prefix, extras):
     members = [(prefix + p, b) for p, b in tree.items()]
     members += [(prefix + f, (ROOT / f).read_bytes()) for f in extras]
+    if VERSION == '0.1.8':
+        from legacy_release_documents import documents
+        legacy = documents(ROOT, 'kumihan-Gemini-CLI-extension-0.1.8.zip')
+        members += [(prefix+p, b) for p,b in legacy.items()]
     return members
 
 

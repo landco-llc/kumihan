@@ -15,9 +15,10 @@ def commands(check=False):
     result=[[sys.executable,str(p)] for p in builders]
     result.append(['node',str(tools/'build_nhip_chu_site.mjs')])
     result.append([sys.executable,str(tools/'web_fonts.py')])
-    result.append([sys.executable,str(tools/'build_version_site.py'),'--preservation'])
+    # Preservation is a reviewed release contract, never a generated internal report.
+    result.append([sys.executable,str(tools/'check_seo_preservation.py')])
     result.append([sys.executable,str(tools/'build_sitemap.py')])
-    return [cmd+(['--check'] if check else []) for cmd in result]
+    return [cmd+(['--check'] if check and not cmd[1].endswith('check_seo_preservation.py') else []) for cmd in result]
 
 
 def main():

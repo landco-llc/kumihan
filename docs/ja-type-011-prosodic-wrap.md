@@ -59,16 +59,4 @@ AIツールから
 - Webでは `lang="ja"`、`line-break: strict` に加え、対応環境で `word-break: auto-phrase` や `text-wrap: balance` を**補助的に**使える。ただし、ブラウザが選ぶ文節付近のフレーズ境界は、今回優先する複数文節にまたがる発話単位と必ずしも一致しない。
 - 必要性と実描画上の改善が確認できる場合のみ、確認済みの境界に局所的な `<wbr>` を検討する。不要なら追加せず、既存の作者側制御も対象条件で再評価する。これは他の箇所の改行を絶対に禁止しない。文字列の可視スペース、無条件 `word-break: keep-all`、段落全体の `white-space: nowrap`、隠すための `overflow: hidden` を用いない。
 - 規則適合性は、`assisted`（意味・係り受け・発話上の判断）と `rendered`（実際の行分け・行端・表示領域・操作性）を別々に記録する。ブラウザのCSS宣言やAI推論だけで全環境 `passed` とはしない。
-- 検証対象と優先候補は [`ja-type-011-cases.json`](ja-type-011-cases.json) に収録する。好ましい候補も原文の文字列が完全に同一でなければならない。
-
-## 現行規則との接続とリリース境界
-
-- `JA-TYPE-002`：禁則を独立して維持。
-- `JA-TYPE-003`：分割しない範囲を文脈で判断。
-- `JA-TYPE-004`：意味のまとまりと禁則を別に評価。本仕様は意味判断を**複数文節にまたがる発話単位とレイアウト設計**まで具体化。
-- `JA-TYPE-009`：行長・行送り・字間・実フォントを考慮。
-- `WEB-001`〜`WEB-005`：狭い表示、文字拡大・間隔変更、長いラベル、クリッピング防止を確認。
-
-**固定候補48d77009d9643ee528e91bb116f446e72c9109ddではJA-TYPE-011は既にソース・4 Skills・15 preview archivesに存在します。** 分類はshould/warning、assisted/guidance-onlyであり、正式公開や全ホスト検証の完了を意味しません。本候補はW06Cの限定実装承認に基づき、layout-firstの判断順序を改訂しています。4 Skills・inventory・配布物・manifestは既存0.1.5-previewで同期し、静的回帰・実描画・新HEAD CIの証跡を別途記録します。実装後の非生産者による独立レビューとHuman Gateは別工程であり、公開GateはCLOSEDです。旧R02 SOURCE_WARNING_ONLY / HOLDは履歴として維持します。CSSによる200%サイズ模擬をNative Text ZoomやWCAG適合の証明にしません。
-
-参考：[CSS Text Level 4](https://www.w3.org/TR/css-text-4/#word-break-property) ／ [MDN `word-break`](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break) ／ [BudouX](https://github.com/google/budoux)（参考実装であり現状の依存ではない）。
+- 検証対象と優先候補は [`ja-type-011-cases.json`](../tests/contracts/ja-type-011-cases.json) に収録する。好ましい候補も原文の文字列が完全に同一でなければならない。

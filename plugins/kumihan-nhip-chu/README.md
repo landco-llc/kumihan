@@ -26,4 +26,4 @@ Four independent skills for entry, web, documents and read-only review. Vietname
 
 Public name: **KUMIHAN｜Nhịp Chữ**. ZIP filenames include v0.1.0; host machine ID is `kumihan-nhip-chu` because CLI metadata requires compatible ASCII identifiers. All user-facing descriptions are Vietnamese and English. Logo is bundled with plugin and each Skill. GitHub release does not mean official ChatGPT/Claude/Gemini directory approval.
 
-[Installation](INSTALL.md) · [Rules](rules/catalog.json) · [Sources](sources.json) · [Review limits](LIGHT_REVIEW.md)
+[Installation](INSTALL.md) · [Rules](rules/catalog.json) · [Sources](sources.json) · [Review limits](VERIFICATION.md)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build independent Thai product pages; --check verifies committed output.
 
-Copy follows packet 03; authoring context/evidence is in docs/thai-site-authoring.md.
+Build the committed Thai public pages.
 """
 from pathlib import Path
 from importlib.util import spec_from_file_location, module_from_spec

@@ -1,9 +1,0 @@
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:36.5409134Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +31ed997236c035b95897586ddb8a939a3e8273c6:refs/remotes/pull/122/merge
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:38.7167196Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/122/merge
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:39.4144581Z Note: switching to 'refs/remotes/pull/122/merge'.
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:39.4152221Z HEAD is now at 31ed997 Merge 2b628a611bf6d532c416645dc76efb68400404eb into 8b647cc752d7a9bc3db48356fa0ab7b221bb66d6
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:39.5448099Z [command]/usr/bin/git log -1 --format=%H
-thai	Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262	2026-10-20T05:14:39.5474704Z 31ed997236c035b95897586ddb8a939a3e8273c6
-thai	Run python -m unittest discover -s tests/thai -v	2026-10-20T05:14:47.1652609Z Ran 22 tests in 2.472s
-thai	Run python -m unittest discover -s tests -v	2026-10-20T05:14:57.9730405Z Ran 119 tests in 8.427s
-thai	Run python -m unittest discover -s tests/ziheng -v	2026-10-20T05:15:01.0955838Z Ran 26 tests in 2.992s

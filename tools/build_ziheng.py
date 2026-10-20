@@ -97,8 +97,11 @@ def plan_outputs(root=ROOT):
                     'LICENSE': shared['LICENSE'],
                     'THIRD_PARTY_NOTICES.md': shared['THIRD_PARTY_NOTICES.md']}
     outputs[f'{PRODUCT}/LICENSE'] = shared['LICENSE']
-    for doc in ['README.md', 'INSTALL.md', 'UPDATES.md', 'TEST_REPORT.md', 'LIGHT_REVIEW.md']:
+    for doc in ['README.md', 'INSTALL.md', 'UPDATES.md']:
         plugin_files[doc] = (base/doc).read_bytes()
+    from legacy_release_documents import documents
+    for name,raw in documents(root, f'kumihan-ziheng-{version}.zip').items():
+        plugin_files[name.removeprefix('kumihan-ziheng/')] = raw
     # Use the approved repository master logo as the only canonical image source.
     # Ship an unmodified local copy so the standalone plugin can render its icon.
     logo_rel = 'assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'

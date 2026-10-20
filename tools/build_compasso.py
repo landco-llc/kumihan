@@ -14,7 +14,7 @@ PLUGINS={"chatgpt":"chatgpt-codex-plugin","claude":"claude-code-plugin","gemini"
 META={"chatgpt":{"plugin.json",".codex-plugin/plugin.json"},
       "claude":{".claude-plugin/plugin.json"},
       "gemini":{"gemini-extension.json","GEMINI.md"}}
-COMMON={"README.md","INSTALL.md","LICENSE","RELEASE_NOTES.md","THIRD_PARTY_NOTICES.md","UPDATES.md","LIGHT_REVIEW.md"}
+COMMON={"README.md","INSTALL.md","LICENSE","RELEASE_NOTES.md","THIRD_PARTY_NOTICES.md","UPDATES.md"}
 
 def write_zip(path,entries):
     with ZipFile(path,"w",compression=ZIP_DEFLATED) as archive:
@@ -45,6 +45,8 @@ def build(out):
             include=rel.startswith(("skills/","rules/","locales/","references/","schemas/","runtime/","entrypoints/","assets/")) or rel in COMMON or rel=="sources.json" or rel in META[host]
             if include:entries.append((f,"kumihan-compasso/"+rel))
         target=out/f"kumihan-compasso-{PLUGINS[host]}-v0.1.0.zip"
+        from legacy_release_documents import entries as legacy_entries
+        entries += legacy_entries(ROOT, target.name)
         write_zip(target,entries)
         hashes.append((target.name,hashlib.sha256(target.read_bytes()).hexdigest()))
     hashes.sort()

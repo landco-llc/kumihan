@@ -33,7 +33,7 @@ ASCII 標點和引號只回報 needs-review 候選。精確 bytes 比對不保�
 香港的機構別引號體例需確認；不套用臺灣教育部體例作為香港的預設。
 22 件原創 fixture 是本次靜態測試資料；未取得較早研究集的 52 候選／28 案例原本，不宣稱已全部移植或驗證。
 
-[測試摘要](TEST_REPORT.md) 與 [輕量審查](LIGHT_REVIEW.md) 說明實測及未測範圍。
+[驗證範圍](VERIFICATION.md) 說明實測及未測範圍。
 Apache-2.0，見 [LICENSE](LICENSE)；出處與素材限制見 [notices](THIRD_PARTY_NOTICES.md)。
 
 ## 日本語
@@ -65,6 +65,6 @@ Downloads: [Claude](https://github.com/landco-llc/kumihan/blob/main/plugins/kumi
 
 ## v0.2.0 source candidate / 原始碼候選
 
-Four independent Skills now separate editorial region, register, element role, expression mode and source permissions. New context/evidence helpers are bounded, read-only contracts; 32 research fixtures are definitions, not 32 automated detectors or rendered passes. See the versioned candidate report in the repository under `docs/development/zh-hant-v020-20261020/`.
+Four independent Skills now separate editorial region, register, element role, expression mode and source permissions. New context/evidence helpers are bounded, read-only contracts; 32 research fixtures are definitions, not 32 automated detectors or rendered passes. See [verification scope](VERIFICATION.md) for acceptance limits.
 
 四個技能補充編輯、表現與用途別尺度；保留原稿及原有介面。未驗證的地域字形、Office、AT與母語校閱分開記錄。三個host各有完整套件及四個獨立Skill，依各downloads目錄MANIFEST核對0.2.0候選；舊0.1.0仍保留。正式Release、Marketplace與稼働MCP尚未套用。
