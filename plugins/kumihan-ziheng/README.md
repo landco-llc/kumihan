@@ -1,7 +1,7 @@
 # KUMIHAN｜字衡
 
 繁體中文的文字組版指引，分別處理臺灣 `zh-Hant-TW` 與香港 `zh-Hant-HK`。
-這是獨立預覽套件；GitHub 原始碼已提供，ChatGPT 公開插件商店尚未發布。版本以 [plugin.json](plugin.json) 為準；
+這是獨立技能套件；GitHub 原始碼已提供，ChatGPT 公開插件商店尚未發布。版本以 [plugin.json](plugin.json) 為準；
 與日本語 KUMIHAN 分開安裝、管理版本及配布，不需要先裝日本語版。
 
 ## 開始使用
@@ -42,13 +42,13 @@ KUMIHAN｜字衡は台湾／香港の繁體中文向けの独立プラグイン�
 
 ## English
 
-KUMIHAN｜字衡 is an independent Traditional Chinese guidance plugin with explicit Taiwan and Hong Kong contexts. It preserves source text, reuses canonical shared policies at build time, and keeps Japanese package identity and distributions unchanged. Static candidates are separate from rendered evidence. Native host acceptance and document rendering remain unverified. The GitHub source preview is available; the ChatGPT public plugin has not been released.
+KUMIHAN｜字衡 is an independent Traditional Chinese guidance plugin with explicit Taiwan and Hong Kong contexts. It preserves source text, reuses canonical shared policies at build time, and keeps Japanese package identity and distributions unchanged. Static candidates are separate from rendered evidence. Native host acceptance and document rendering remain unverified. The GitHub source and ZIP distributions are available; the ChatGPT public plugin has not been released.
 
 ## Claude / Gemini 配布と導入 / Claude and Gemini
 
-Claude Code、Claude chat、Gemini CLI 及 Gemini 應用程式已有字衡專用預覽套件，均沿用同一套臺灣與香港規則。正式主機驗收仍需在使用者環境中進行。
+Claude Code、Claude chat、Gemini CLI 及 Gemini 應用程式已有字衡專用套件，均沿用同一套臺灣與香港規則。正式主機驗收仍需在使用者環境中進行。
 
-ZiHeng preview bundles for Claude Code / Claude chat and Gemini CLI / Gemini app are available; native invocation is **not yet verified**. Separate skill ZIPs and SHA-256 values are provided for each host.
+ZiHeng bundles for Claude Code / Claude chat and Gemini CLI / Gemini app are available; native invocation is **not yet verified**. Separate skill ZIPs and SHA-256 values are provided for each host.
 
 | Host | 繁體中文 | English | 日本語 |
 | --- | --- | --- | --- |
@@ -59,6 +59,12 @@ Downloads: [Claude](https://github.com/landco-llc/kumihan/blob/main/plugins/kumi
 
 ## Display name / 顯示名稱
 
-**KUMIHAN｜字衡** is the version-free display name used for `@` mentions. Versions stay in ZIP filenames (for example `kumihan-ziheng-0.1.0-preview.zip`) and package metadata.
+**KUMIHAN｜字衡** is the version-free display name used for `@` mentions. Versions stay in ZIP filenames (for example `kumihan-ziheng-0.1.0.zip`) and package metadata.
 
-**KUMIHAN｜字衡** 為不含版號的顯示名稱，避免影響 `@` 提及操作。版本寫在 ZIP 檔名（例如 `kumihan-ziheng-0.1.0-preview.zip`）與套件資訊中。
+**KUMIHAN｜字衡** 為不含版號的顯示名稱，避免影響 `@` 提及操作。版本寫在 ZIP 檔名（例如 `kumihan-ziheng-0.1.0.zip`）與套件資訊中。
+
+## v0.2.0 source candidate / 原始碼候選
+
+Four independent Skills now separate editorial region, register, element role, expression mode and source permissions. New context/evidence helpers are bounded, read-only contracts; 32 research fixtures are definitions, not 32 automated detectors or rendered passes. See the versioned candidate report in the repository under `docs/development/zh-hant-v020-20261020/`.
+
+四個技能補充編輯、表現與用途別尺度；保留原稿及原有介面。未驗證的地域字形、Office、AT與母語校閱分開記錄。三個host各有完整套件及四個獨立Skill，依各downloads目錄MANIFEST核對0.2.0候選；舊0.1.0仍保留。正式Release、Marketplace與稼働MCP尚未套用。

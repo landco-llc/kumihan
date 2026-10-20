@@ -46,3 +46,37 @@ def review_text(text, locale, role, quote_style=None):
                   [i for i, c in enumerate(text) if c in '“”‘’'],
                   'Curly quotation under selected corner style; quotations may be valid exceptions.')
     return findings
+
+
+def review_segment(segment, context):
+    """Review caller-classified text without parsing HTML or changing any text.
+
+    v2 requires an explicit quote style; v1 review_text defaults stay unchanged.
+    A segment's optional content_locale overrides the document's language.
+    """
+    if not isinstance(segment, dict) or not isinstance(context, dict):
+        raise TypeError('Segment and context objects required')
+    text, role = segment.get('text'), segment.get('role')
+    if not isinstance(text, str) or not isinstance(role, str):
+        raise TypeError('Segment text and caller-classified role required')
+    locale = segment.get('content_locale', context.get('content_locale'))
+    region = context.get('editorial_region')
+    if locale == 'zh-Hant' and region in ('TW', 'HK'):
+        locale = 'zh-Hant-' + region
+    findings, limitations = [], ['Static candidates only; rendering, extraction and native review not established.']
+    status = 'not-checked'
+    if role not in ROLES:
+        status = 'needs-review'; limitations.append('Ambiguous role: classify before prose inspection.')
+    elif role != 'prose':
+        status = 'not-applicable'; limitations.append('Protected/non-prose role excluded from punctuation scan.')
+    elif locale not in LOCALES:
+        limitations.append('Regional Chinese punctuation deferred; no TW/HK fallback.')
+    elif region in ('TW', 'HK', 'MO') and region != locale[-2:]:
+        raise ValueError('Contradictory explicit segment context')
+    else:
+        style = context.get('editorial_style')
+        findings = review_text(text, locale, role, style if style in STYLES and style is not None else 'preserve')
+        # An empty candidate set has no artifact-level pass meaning.
+        status = 'needs-review' if findings else 'not-checked'
+    return dict(findings=findings, coverage={'status':status, 'scope':'declared segment punctuation candidates only'},
+                limitations=limitations, position_unit='unicode-code-point', source_changed=False)

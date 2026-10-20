@@ -1,3 +1,5 @@
+> Historical v0.1.0 report retained below. v0.2.0 execution evidence and unresolved integration checks are recorded separately in the repository at docs/development/zh-hant-v020-20261020/TEST_REPORT.md; these old counts are not current-run results.
+
 # 字衡：測試範圍與結果
 
 2026-10-18。Cloud Linux，Python 3.12.14，zlib 1.3.2；JSON Schema 測試使用 jsonschema 4.26.0。
