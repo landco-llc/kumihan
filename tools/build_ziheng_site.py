@@ -308,6 +308,16 @@ def outputs():
                 for page in files:
                     if page.endswith('.html'):
                         files[page] = files[page].replace(old_url, asset['url']).replace(row['sha256'], asset['sha256'])
+                        files[page] = re.sub(re.escape(stem) + r'-v?0\.1\.0\.zip', lambda _: asset['name'], files[page])
+        old_notice = ('Source candidate v0.2.0: context, source protection and evidence contracts updated. '
+                      'The source version is v0.2.0; retained download links are v0.1.0. '
+                      'The candidate is not a formal Release or native-host acceptance.')
+        new_notice = (f"Published v{facts['published_version']}: context, source protection and evidence contracts updated. "
+                      'Download links and SHA-256 values match the verified GitHub Release. '
+                      'Native-host installation and skill invocation still require separate acceptance.')
+        for page in files:
+            if page.endswith('.html'):
+                files[page] = files[page].replace(old_notice, new_notice)
     # Source candidate panels and retained downloads refer to different versions.
     # Label only Ziheng's exact legacy ZIP links; preserve every URL and other copy.
     def legacy_label(match):
