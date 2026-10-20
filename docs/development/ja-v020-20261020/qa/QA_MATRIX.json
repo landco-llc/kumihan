@@ -1,0 +1,970 @@
+{
+  "schema": "kumihan-ja-v020-qa-matrix-1",
+  "as_of_date": "2026-10-20",
+  "basis": {
+    "pr": "https://github.com/landco-llc/kumihan/pull/120",
+    "head": "ce2fd8d23e4afb0816b5870625e02af3aa7a96b8",
+    "case_results": "docs/development/ja-v020-20261020/case-results.json",
+    "phase": "QA planning, not actual additional execution"
+  },
+  "status_note": "Existing outcomes reproduced from recorded baseline; new tests not executed by this matrix. Negative expected results must remain negative.",
+  "gates": [
+    {
+      "id": "G0",
+      "category": "provenance",
+      "release_blocking": true,
+      "requirement": "Exact new final HEAD/TREE, clean scope, historic v0.1.8 publication and v0.2.0 candidate correctly separated"
+    },
+    {
+      "id": "G1",
+      "category": "static-ci",
+      "release_blocking": true,
+      "requirement": "Final-HEAD unit/dist/SEO/Pages CI, SHA-256/CRC/15 ZIP reproducible, no unrelated language/schema/MCP changes"
+    },
+    {
+      "id": "G2",
+      "category": "rendered-native-artifact",
+      "release_blocking": true,
+      "requirement": "Actual generated Web/PDF/PPTX/display positive samples have no protected-field change, hidden required text, unintended overlap or observed meaning-breaking line split"
+    },
+    {
+      "id": "G3",
+      "category": "native-install",
+      "release_blocking_for_claimed_hosts": true,
+      "requirement": "Exact candidate four-skill discover/invoke per advertised host, or NOT-CHECKED and no host-accepted claim"
+    },
+    {
+      "id": "G4",
+      "category": "claim-evidence",
+      "release_blocking": true,
+      "requirement": "Case scopes/methods match evidence, no 30/30 test claim, no PDF-to-native-Office or CSS-to-user-zoom equivalence"
+    },
+    {
+      "id": "G5",
+      "category": "owner",
+      "release_blocking": true,
+      "requirement": "Owner reviews final QA, immutable v0.1.8 Release and expressly authorizes main/tag/Release/Pages or Marketplace changes"
+    }
+  ],
+  "visual_findings": [
+    {
+      "id": "QA-V01",
+      "baseline_case": "PV-006",
+      "severity": "high-for-positive-sample",
+      "observed": "Synthetic button splits オンライン across first/second lines at オ/ンライン. No assertion about production skill output.",
+      "source_images": [
+        "docs/development/ja-v020-20261020/evidence/web-320.png",
+        "docs/development/ja-v020-20261020/evidence/web-1024.png",
+        "docs/development/ja-v020-20261020/evidence/pdf-page-1.png"
+      ],
+      "expected_closure": "Before/after rendered proof, exact source preserved, viewport/zoom/interaction and semantic judgement"
+    },
+    {
+      "id": "QA-V02",
+      "baseline_case": null,
+      "severity": "medium-fallback-text",
+      "observed": "Unstyled version fragment visually concatenates English v0.1.8Source v0.2.0; full Pages stylesheet/accessible text not checked.",
+      "source_images": [
+        "docs/development/ja-v020-20261020/evidence/site-version-panel.png"
+      ],
+      "expected_closure": "Real built-site evidence, no-CSS visible text, language toggles, generator source fix if reproduced"
+    }
+  ],
+  "artifact_tasks": [
+    {
+      "artifact": "Japanese responsive page",
+      "profiles": [
+        "web-marketing",
+        "web-ui",
+        "web-editorial"
+      ],
+      "views": [
+        320,
+        375,
+        768,
+        1024,
+        1440
+      ],
+      "checks": [
+        "source byte preservation",
+        "compound and kinsoku wrapping",
+        "occlusion/overflow",
+        "mandatory-info reachability",
+        "font/fallback",
+        "spacing overrides",
+        "native zoom if available"
+      ]
+    },
+    {
+      "artifact": "Japanese paginated report PDF",
+      "profiles": [
+        "report-document"
+      ],
+      "minimum_pages": 4,
+      "checks": [
+        "all pages rendered",
+        "long table across pages",
+        "notes",
+        "line heads",
+        "source extraction separate from visibility"
+      ]
+    },
+    {
+      "artifact": "Japanese slide PPTX",
+      "profiles": [
+        "presentation"
+      ],
+      "minimum_slides": 8,
+      "checks": [
+        "every slide rendered",
+        "text behind shapes",
+        "one-character lineheads",
+        "hierarchy",
+        "font resolved",
+        "source text and required info"
+      ]
+    },
+    {
+      "artifact": "display/hybrid poster",
+      "profiles": [
+        "display-copy"
+      ],
+      "checks": [
+        "artwork cropping intent",
+        "complete reachable required data",
+        "positive and negative separated"
+      ]
+    }
+  ],
+  "host_paths": [
+    "ChatGPT/Codex",
+    "Claude/Claude Code",
+    "Gemini/Gemini CLI"
+  ],
+  "cases": [
+    {
+      "case_id": "PV-001",
+      "profile": "web-ui",
+      "region": "mandatory-info",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "JSON fixture source equality, Python json extractor; no normalization"
+        },
+        {
+          "rule_id": "WEB-007",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": ""
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/unicode.json"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "passed",
+          "method": "static",
+          "scope": "保護fieldのコードポイント保全"
+        },
+        {
+          "rule_id": "WEB-007",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "実際のglyphとfallback"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-002",
+      "profile": "web-ui",
+      "region": "mandatory-info",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "CONTENT-001",
+          "status": "failed",
+          "method": "static",
+          "scope": "synthetic NFKC negative differs in codepoints"
+        },
+        {
+          "rule_id": "CONTENT-004",
+          "status": "failed",
+          "method": "static",
+          "scope": "protected original versus NFKC negative"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/unicode.json"
+      ],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "failed",
+          "method": "static",
+          "scope": "保護fieldの変更"
+        },
+        {
+          "rule_id": "CONTENT-004",
+          "expected_status_if_executed": "failed",
+          "method": "static",
+          "scope": "無断の一括正規化"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-003",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-001",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "実使用字形と言語の整合"
+        },
+        {
+          "rule_id": "WEB-007",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "実font・glyph coverage"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-004",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-001",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "観察したrunの地域字形と書字設定"
+        },
+        {
+          "rule_id": "WEB-007",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "観察したfont状態"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-005",
+      "profile": "web-ui",
+      "region": "label",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "WEB-005",
+          "status": "failed",
+          "method": "rendered",
+          "scope": "button label clipping at 240px width; scrollWidth exceeds clientWidth"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-005",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "長いボタンの内容と操作"
+        },
+        {
+          "rule_id": "WEB-004",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "clippingによる情報損失"
+        },
+        {
+          "rule_id": "JA-TYPE-003",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "過大な不可分範囲"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-006",
+      "profile": "web-ui",
+      "region": "label",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "WEB-005",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "same 240px button, full source and click retained with wrapping"
+        },
+        {
+          "rule_id": "JA-TYPE-004",
+          "status": "needs-review",
+          "method": "assisted",
+          "scope": "320px screenshot inspected: very short final line; wrapping is not automatic semantic approval"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-005",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "試したラベルと状態"
+        },
+        {
+          "rule_id": "JA-TYPE-004",
+          "expected_status_if_executed": "passed",
+          "method": "assisted",
+          "scope": "短い操作文の意味"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-007",
+      "profile": "web-marketing",
+      "region": "title",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "JA-TYPE-011",
+          "status": "passed",
+          "method": "assisted",
+          "scope": "1024px screenshot: source naturally fits; no intentional break needed in synthetic ordinary display"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-011",
+          "expected_status_if_executed": "passed",
+          "method": "assisted",
+          "scope": "当該幅・fontでの見出し構成"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-008",
+      "profile": "web-marketing",
+      "region": "title",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-004",
+          "expected_status_if_executed": "needs-review",
+          "method": "assisted",
+          "scope": "意味上の候補判断"
+        },
+        {
+          "rule_id": "JA-TYPE-011",
+          "expected_status_if_executed": "not-checked",
+          "method": "assisted",
+          "scope": "実行数・行幅・周囲の構成"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-009",
+      "profile": "web-marketing",
+      "region": "title",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-002",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "この見出しの禁則行端"
+        },
+        {
+          "rule_id": "JA-TYPE-004",
+          "expected_status_if_executed": "needs-review",
+          "method": "assisted",
+          "scope": "修飾・助詞の意味の流れ"
+        },
+        {
+          "rule_id": "JA-TYPE-011",
+          "expected_status_if_executed": "needs-review",
+          "method": "assisted",
+          "scope": "全行と周囲の構成"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-010",
+      "profile": "display-copy",
+      "region": "artwork + mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "passed",
+          "method": "static",
+          "scope": "保護された情報field"
+        },
+        {
+          "rule_id": "DESIGN-003",
+          "expected_status_if_executed": "passed",
+          "method": "assisted",
+          "scope": "必須情報への実際の到達"
+        },
+        {
+          "rule_id": "JA-TYPE-009",
+          "expected_status_if_executed": "not-applicable",
+          "method": "manual",
+          "scope": "造形領域に本文の連続読書用行長を要求する小確認"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-011",
+      "profile": "web-marketing",
+      "region": "mandatory-info",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "CONTENT-001",
+          "status": "passed",
+          "method": "static",
+          "scope": "DOM contains exact protected string"
+        },
+        {
+          "rule_id": "WEB-004",
+          "status": "failed",
+          "method": "rendered",
+          "scope": "26px clipped information container; complete venue not visible"
+        },
+        {
+          "rule_id": "DESIGN-003",
+          "status": "failed",
+          "method": "assisted",
+          "scope": "screenshot and fixture inspected: no alternate required-information presentation"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "passed",
+          "method": "static",
+          "scope": "DOM内の文字列保全"
+        },
+        {
+          "rule_id": "WEB-004",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "実表示でのclipping"
+        },
+        {
+          "rule_id": "DESIGN-003",
+          "expected_status_if_executed": "failed",
+          "method": "assisted",
+          "scope": "伝達すべき情報の可用性"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-012",
+      "profile": "display-copy",
+      "region": "mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "failed",
+          "method": "static",
+          "scope": "複数の保護fieldの整合"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-013",
+      "profile": "display-copy",
+      "region": "mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DESIGN-003",
+          "expected_status_if_executed": "needs-review",
+          "method": "assisted",
+          "scope": "読者の利用場面に対する情報配置"
+        },
+        {
+          "rule_id": "EVIDENCE-001",
+          "expected_status_if_executed": "passed",
+          "method": "static",
+          "scope": "外部ページの可用性を未検証とする報告"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-014",
+      "profile": "web-ui",
+      "region": "value + label",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "DESIGN-005",
+          "status": "passed",
+          "method": "assisted",
+          "scope": "screenshot: 48件 value is prominent, label adjacent, title24px/value48px/label14px consistent with count task"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DESIGN-005",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "数値・labelの情報役割と実表示"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-015",
+      "profile": "web-marketing",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-002",
+          "expected_status_if_executed": "failed",
+          "method": "assisted",
+          "scope": "実証されていない性能主張"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-016",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "WEB-003",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "applied language-specific spacing overrides, screenshot shows complete text without section horizontal overflow"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/spacing-320.png"
+      ],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-003",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "適用特性を変更した対象領域"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-017",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-003",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "利用者変更後の表示"
+        },
+        {
+          "rule_id": "EVIDENCE-001",
+          "expected_status_if_executed": "failed",
+          "method": "static",
+          "scope": "未実施をpassedとした報告"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-018",
+      "profile": "report-document",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P2",
+      "new_test_requirement": "Keep declared limitation; never auto-promote contract success",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-003",
+          "expected_status_if_executed": "not-applicable",
+          "method": "manual",
+          "scope": "PDFのみの出力"
+        },
+        {
+          "rule_id": "DOC-004",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "PDF変換後の実表示"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-019",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-001",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "実際に縦scrollする記事領域"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-020",
+      "profile": "web-ui",
+      "region": "label",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-002",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "利用者が使用できる実拡大機構"
+        },
+        {
+          "rule_id": "EVIDENCE-001",
+          "expected_status_if_executed": "failed",
+          "method": "static",
+          "scope": "実施方式と報告の対応"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-021",
+      "profile": "web-marketing",
+      "region": "display",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-006",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "当該fontの機能と適用効果"
+        },
+        {
+          "rule_id": "WEB-007",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "実font解決"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-022",
+      "profile": "web-marketing",
+      "region": "display + body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-005",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "displayとbodyの適用範囲"
+        },
+        {
+          "rule_id": "JA-TYPE-006",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "観察したfontとfeature"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-023",
+      "profile": "presentation",
+      "region": "body",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "CLAIM_CONDITIONAL",
+      "new_test_requirement": "Physical/venue/user test only if claimed; otherwise preserve not-checked limits",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DOC-003",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "実会場での投影可読性"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-024",
+      "profile": "presentation",
+      "region": "note + mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "CLAIM_CONDITIONAL",
+      "new_test_requirement": "Physical/venue/user test only if claimed; otherwise preserve not-checked limits",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DOC-003",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "聴衆が必要な注意書きを読む条件"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-025",
+      "profile": "display-copy",
+      "region": "mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "CLAIM_CONDITIONAL",
+      "new_test_requirement": "Physical/venue/user test only if claimed; otherwise preserve not-checked limits",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-009",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "採用したサイン寸法条件の評価"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-026",
+      "profile": "display-copy",
+      "region": "mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "CLAIM_CONDITIONAL",
+      "new_test_requirement": "Physical/venue/user test only if claimed; otherwise preserve not-checked limits",
+      "expected_rule_scope": [
+        {
+          "rule_id": "JA-TYPE-009",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "採用した文字高の測定と目安への照合"
+        },
+        {
+          "rule_id": "DESIGN-005",
+          "expected_status_if_executed": "not-checked",
+          "method": "rendered",
+          "scope": "現場全体の読者課題"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-027",
+      "profile": "report-document",
+      "region": "table + note",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "DOC-002",
+          "status": "failed",
+          "method": "rendered",
+          "scope": "HTML print-preview analogue: 350px row clipped in200px paper container; final note absent in screenshot"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DOC-002",
+          "expected_status_if_executed": "failed",
+          "method": "rendered",
+          "scope": "表と注記の内容・対応"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-028",
+      "profile": "report-document",
+      "region": "body + table",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "DOC-004",
+          "status": "passed",
+          "method": "rendered",
+          "scope": "synthetic PV-028 section in two-page Chromium PDF preview; both rasterized pages visually inspected; report/table readable in its region"
+        },
+        {
+          "rule_id": "DOC-004",
+          "status": "not-checked",
+          "method": "rendered",
+          "scope": "native Office"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/preview.pdf",
+        "evidence/pdf-page-1.png",
+        "evidence/pdf-page-2.png"
+      ],
+      "priority": "P0",
+      "new_test_requirement": "Real positive output or deliberate negative control with role-scoped evidence; no blanket acceptance",
+      "expected_rule_scope": [
+        {
+          "rule_id": "DOC-004",
+          "expected_status_if_executed": "passed",
+          "method": "rendered",
+          "scope": "確認したPDF previewの実表示"
+        },
+        {
+          "rule_id": "DOC-004",
+          "expected_status_if_executed": "unsupported",
+          "method": "rendered",
+          "scope": "native Officeの表示・編集性"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-029",
+      "profile": "web-editorial",
+      "region": "body",
+      "baseline_execution": "partially-run",
+      "baseline_statuses": [
+        {
+          "rule_id": "WEB-008",
+          "status": "not-applicable",
+          "method": "manual",
+          "scope": "static PV-029 region has no input/button/link/dynamic operation; source/DOM inspected"
+        }
+      ],
+      "baseline_evidence": [
+        "evidence/rendered.json",
+        "evidence/web-320.png",
+        "evidence/web-1024.png"
+      ],
+      "priority": "P2",
+      "new_test_requirement": "Keep declared limitation; never auto-promote contract success",
+      "expected_rule_scope": [
+        {
+          "rule_id": "WEB-008",
+          "expected_status_if_executed": "not-applicable",
+          "method": "manual",
+          "scope": "当該の静的記事領域の操作状態"
+        }
+      ]
+    },
+    {
+      "case_id": "PV-030",
+      "profile": "web-marketing",
+      "region": "mandatory-info",
+      "baseline_execution": "not-run",
+      "baseline_statuses": [],
+      "baseline_evidence": [],
+      "priority": "P1",
+      "new_test_requirement": "Focused comparatives when possible; leave unexecuted as not-checked",
+      "expected_rule_scope": [
+        {
+          "rule_id": "CONTENT-001",
+          "expected_status_if_executed": "passed",
+          "method": "static",
+          "scope": "レビュー後の保護原稿"
+        }
+      ]
+    }
+  ]
+}
