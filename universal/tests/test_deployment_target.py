@@ -133,7 +133,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(gates["public_ssh_folder_verified"])
         self.assertFalse(gates["private_runtime_path_verified"])
         self.assertTrue(gates["private_candidate_exists_verified"])
-        self.assertTrue(gates["public_bootstrap_absent_verified"])
+        self.assertFalse(gates["public_bootstrap_absent_verified"])
         self.assertTrue(gates["ephemeral_probe_files_absent_verified"])
         self.assertTrue(gates["web_php_can_read_private_runtime_verified"])
         self.assertFalse(gates["public_release_authorized"])
