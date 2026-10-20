@@ -14,7 +14,7 @@
     "plugins/kumihan-ziheng/fixtures/research-v020/cases.json": "70ca57ec3cc9c87eb2accc2bb65c8709f8cafc1cee7ce2c76879e73a075c2225"
   },
   "release_manifest_sha256": "5346f2ffdecb40b5611c1303aa5cec09c5786ebb18714e23bab20873a1d68d70",
-  "status": "SOURCE_CANDIDATE_INTEGRATED_LOCAL_CHECKS_PASSED_HOSTED_CI_PENDING",
+  "status": "SOURCE_CANDIDATE_INTEGRATED_CORRECTION_LOCALLY_PASSED_HOSTED_CI_PENDING",
   "package_source_commit": "7dcc60695db01ac1d23e08ae9f29274c2c6fe675",
   "package_source_tree": "fa0a42224bc62751bc5771e9531f63621fa0a808",
   "local_validation": {
@@ -25,8 +25,12 @@
     "evidence": "evidence/integration-validation-checks.json"
   },
   "hosted_ci": {
-    "status": "PENDING",
-    "note": "CI EVIDENCE NOT PRESENT for integrated source revision before push; historical failing runs remain recorded separately."
+    "status": "FIRST_ATTEMPT_FAILED_CORRECTION_PENDING",
+    "head": "3d7a892613cdec0f04259bacc00becbe5c61c70f",
+    "merge_checkout": "78220612f5928cb26e479eed2c26a8b930c1e9bd",
+    "workflows_success": 8,
+    "workflows_failure": 1,
+    "evidence": "evidence/hosted-ci-first.json"
   },
   "shared_integration_review": {
     "source_commit": "6be142c57300de933caaae94a59436aa1f319a0b",
@@ -47,5 +51,33 @@
     "actual_pr122_baseline_unchanged": true
   },
   "reviewed_source_commit": "6be142c57300de933caaae94a59436aa1f319a0b",
-  "public_commit_mapping": "evidence/public-commit-map.json"
+  "public_commit_mapping": "evidence/public-commit-map.json",
+  "ci_correction_validation": {
+    "status": "LOCAL_PRODUCER_VALIDATION_PASSED",
+    "base_head": "3d7a892613cdec0f04259bacc00becbe5c61c70f",
+    "fixed_source_sha256": {
+      "tests/thai/test_core.py": "6290c0c0a9e59985f6f29dca8d586b0d2394e78b4abecc10011dcae2a79f1a81",
+      "tests/test_ziheng_v020_shared_integration.py": "af768a4b1f9accf01314d5aad205a397b731fcc085b0180142a70d87ae27f3af",
+      "docs/development/zh-hant-v020-20261020/locale-output-transition.json": "3136ef8a1cbcf85eba725a14f0a1a0f24a5bea3f84b6f22d1f80a7f64687cc79"
+    },
+    "source_drift": [],
+    "all_11_commands_passed": true,
+    "tests": {
+      "thai": 22,
+      "root": 119,
+      "ziheng": 26
+    },
+    "rerun": "Final ingress baseline SHA assertion added during initial checks. Preserved pre-ingress logs; affected Thai22 and root119 rerun passed. Other9commands unchanged.",
+    "contexts_unchanged": 18,
+    "ja_rules_unchanged": 6,
+    "ziheng_full_rules_assertions": 12,
+    "negative_probes": 18,
+    "protected_unchanged": 255,
+    "baseline_unchanged": true,
+    "limits": [
+      "Working-tree fixed source hashes; commit identity to be bound after writer commits",
+      "Browser and public URLs reused from unchanged candidate pages/ZIP evidence; not rerun",
+      "Producer validation, not formal independent audit or final hosted CI acceptance"
+    ]
+  }
 }

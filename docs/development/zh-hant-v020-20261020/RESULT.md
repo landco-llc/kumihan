@@ -2,7 +2,7 @@
 
 Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
 
-Status: **SOURCE_CANDIDATE_INTEGRATED / LOCAL_CHECKS_PASSED / HOSTED_CI_PENDING / DRAFT_PR**. Owner authorization covers this dedicated PR #122 branch, tests, commit/push and Draft PR updates. Main merge and publication remain outside scope.
+Status: **SOURCE_CANDIDATE_INTEGRATED / CORRECTION_LOCAL_CHECKS_PASSED / CORRECTED_HOSTED_CI_PENDING / DRAFT_PR**. Owner authorization covers this dedicated PR #122 branch, tests, commit/push and Draft PR updates. Main merge and publication remain outside scope.
 
 The six shared files now connect source0.2.0, exact preservation admission and digest-validated old-history classification. Generated gateway Ziheng badges and Ziheng LP/install version panels reflect source0.2.0. Retained old links are explicitly labelled v0.1.0. Published-version/date/Release facts, other edition records, original SEO evidence, frozen preimages and the inactive Release asset contract are unchanged. [Plan and paths](SHARED_INTEGRATION_PLAN.md); [transition](source-transition.json).
 
@@ -19,7 +19,11 @@ Fixed implementation source: commit `6be142c57300de933caaae94a59436aa1f319a0b`, 
 | WG11 | Single bounded read-only shared-integration review complete: no actionable findings; hosted checks pending | evidence/shared-integration-review.md | No formal audit certification claimed |
 | WG12 | Candidate records updated; final CI and fixed return pending | revision.json; TEST_REPORT.md; NEXT_GATE.md; MCP_HANDOFF.md | Stop at Owner Gate after final-head CI |
 
-For this newly integrated candidate: `CI EVIDENCE NOT PRESENT`. Hosted CI is pending branch publication and final-head verification. The original failing CI is history, not substituted as success.
+
+The first hosted candidate `3d7a892613cdec0f04259bacc00becbe5c61c70f` completed9 workflows:8 success and1 new ZiLu failure. All four originally failing workflows succeeded. ZiLu's unchanged Other-language regression exposed12 Ziheng output hashes in the Thai historical regression consumer. This failure and merge checkout `78220612f5928cb26e479eed2c26a8b930c1e9bd` are preserved in [first CI](evidence/hosted-ci-first.json) and [diagnosis](evidence/shared-ci-diagnosis.md).
+
+A bounded shared regression correction now pins the original immutable Thai baseline and exactly12 registered Ziheng old→new full-output digests, with exact source hashes and frozen transition guards. The original fixture, resolver, Thai/ZiLu product sources, workflows and all distribution bytes are unchanged. No skip or expected-output normalization is used. Separate correction validation passed Thai22 / root119 / Ziheng26 and all11 commands,18 unchanged contexts,6 unchanged Japanese outputs,12 complete current Ziheng outputs and18 rejection probes. Evidence: [correction validation](evidence/integration-correction-validation-summary.json). The one initial source review remains scoped to its fixed tree; this later bounded correction has separate test evidence and no second review claim. Corrected-head hosted CI is pending push/readback.
+
 
 Research acceptance remains32 definitions /14 partially exercised /18 unexecuted /0 whole-case passes. Existing font/glyph/IVS, native UA200%, Office, AT, native-host and native-language unknowns remain scoped. Common document creation is **DESIGN ONLY / IMPLEMENTATION HOLD**. No main merge, ready transition, tag, Release, production Pages, Marketplace, MCP deployment or credentials/settings/permissions change is performed.
 

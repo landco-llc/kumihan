@@ -126,6 +126,62 @@ class SharedIntegrationTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 retained_outputs(root, FOLDERS)
 
+    def test_cross_locale_transition_rejects_unregistered_or_tampered_outputs(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location('thai_shared_consumer', ROOT/'tests/thai/test_core.py')
+        consumer = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(consumer)
+        self.assertTrue(hasattr(consumer, 'ziheng_rules_transition'), 'exact cross-locale transition consumer missing')
+        baseline = json.loads((ROOT/'tests/thai/locale-baseline.json').read_text())
+        record = next(row for row in baseline['records'] if row['locale']=='zh-Hant-TW')
+        self.assertIsNotNone(consumer.ziheng_rules_transition(record, ROOT))
+        for key, value in [('locale', 'zh-Hant-MO'), ('medium', 'unknown'), ('rules_sha256', '0'*64), ('context_sha256', '0'*64)]:
+            changed = dict(record, **{key: value})
+            self.assertIsNone(consumer.ziheng_rules_transition(changed, ROOT), key)
+        fixture = PREFIX+'locale-output-transition.json'
+        rel = 'plugins/kumihan-ziheng/rules/zh-hant.json'
+        names = (fixture, PREFIX+'source-transition.json', PREFIX+'source-transition-baseline.json',
+                 'docs/seo/evidence/20261019-main-preservation.json', 'tests/thai/locale-baseline.json', rel)
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for name in names:
+                target = root/name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(ROOT/name, target)
+            self.assertIsNotNone(consumer.ziheng_rules_transition(record, root))
+            target = root/fixture
+            original = target.read_bytes()
+            for mutation in ('after', 'before', 'missing', 'additional'):
+                data = json.loads(original)
+                if mutation == 'missing':
+                    data['records'].pop()
+                elif mutation == 'additional':
+                    data['records'].append(dict(data['records'][0], medium='unknown'))
+                else:
+                    data['records'][0][mutation] = '0'*64
+                target.write_text(json.dumps(data))
+                self.assertIsNone(consumer.ziheng_rules_transition(record, root), mutation)
+            target.write_bytes(original)
+            target = root/'tests/thai/locale-baseline.json'
+            original = target.read_bytes()
+            target.write_bytes(original+b' ')
+            self.assertIsNone(consumer.ziheng_rules_transition(record, root))
+            target.write_bytes(original)
+            target = root/PREFIX/'source-transition.json'
+            original = target.read_bytes()
+            data = json.loads(original)
+            data['updates']['protected'][rel]['main_before'] = '0'*64
+            target.write_text(json.dumps(data))
+            self.assertIsNone(consumer.ziheng_rules_transition(record, root))
+            target.write_bytes(original)
+            (root/rel).write_bytes((root/rel).read_bytes()+b' ')
+            self.assertIsNone(consumer.ziheng_rules_transition(record, root))
+            # Matching a tampered ledger to tampered bytes cannot broaden admission.
+            data = json.loads(original)
+            data['updates']['protected'][rel]['after'] = hashlib.sha256((root/rel).read_bytes()).hexdigest()
+            target.write_text(json.dumps(data))
+            self.assertIsNone(consumer.ziheng_rules_transition(record, root))
+
     def test_source_links_keep_versions_distinct(self):
         from version_display import source_archives
         old = source_archives('zh-hant', '0.1.0')
