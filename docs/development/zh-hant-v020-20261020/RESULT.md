@@ -1,5 +1,7 @@
 # RESULT — KUMIHAN｜字衡 v0.2.0 shared integration
 
+Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
+
 Status: **SOURCE_CANDIDATE_INTEGRATED / LOCAL_CHECKS_PASSED / HOSTED_CI_PENDING / DRAFT_PR**. Owner authorization covers this dedicated PR #122 branch, tests, commit/push and Draft PR updates. Main merge and publication remain outside scope.
 
 The six shared files now connect source0.2.0, exact preservation admission and digest-validated old-history classification. Generated gateway Ziheng badges and Ziheng LP/install version panels reflect source0.2.0. Retained old links are explicitly labelled v0.1.0. Published-version/date/Release facts, other edition records, original SEO evidence, frozen preimages and the inactive Release asset contract are unchanged. [Plan and paths](SHARED_INTEGRATION_PLAN.md); [transition](source-transition.json).

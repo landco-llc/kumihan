@@ -1,5 +1,7 @@
 # TEST_REPORT — integrated candidate evidence
 
+Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
+
 Fixed implementation source: `6be142c57300de933caaae94a59436aa1f319a0b`, TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch commands exited0; no test was removed, skipped or relaxed. The original112/4 failures were reproduced before correction in evidence/shared-root-before.log. Source0.2.0 and old0.1.0 contracts now pass together.
 
 | Execution | Result | Evidence / scope |

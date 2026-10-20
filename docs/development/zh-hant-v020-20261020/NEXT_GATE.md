@@ -1,5 +1,7 @@
 # NEXT_GATE — integrated source candidate / Owner release gate
 
+Public metadata mapping: the original reviewed source `6be142c57300de933caaae94a59436aa1f319a0b` is published as `ad9c31f2a33ea038fea7288d3febc809db00b883` with the identical TREE `a819dc438089509c4ad5a4f399540059aab84b36`. GitHub GH007 rejected the initial push; only unpublished author/committer metadata was corrected using the authenticated owner’s existing public noreply identity. No executable bytes, review report, remote history, settings or publication authority changed. See [mapping](evidence/public-commit-map.json).
+
 Current local source integration is complete at `6be142c57300de933caaae94a59436aa1f319a0b` / TREE `a819dc438089509c4ad5a4f399540059aab84b36`. All required actual-branch local checks pass. Hosted CI for the integrated candidate is pending: **CI EVIDENCE NOT PRESENT**. The authorized PR #122 publication worker will update the same Draft PR, read final-head checks and actual checkout refs, and return fixed final HEAD/TREE. Routine Work boundaries need no additional approval.
 
 The original six-path overlap hold and four starting failures are preserved as history in RESULT.md / TEST_REPORT.md. Owner's limited authorization permits the completed Ziheng integration on PR #122; it does not authorize changes to PR #120 or main. Read JA120_SHARED_HANDOFF.md for disposable coexistence results and required future integration order. No Japanese candidate code or archives are included in PR #122.
