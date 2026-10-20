@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-019",
+  "synthetic": true,
+  "protectedSource": "縦書きの短い頁が下へ続く記事",
+  "conditions": [
+    "writing-modeはvertical-rlだが、記事全体は頁が縦に積まれ、実際の主scrollが縦であるfixtureを作る。"
+  ],
+  "wrongDecisionToAvoid": "縦書きだから自動的に高さ256pxだけを試す。"
+}

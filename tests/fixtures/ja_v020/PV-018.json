@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-018",
+  "synthetic": true,
+  "protectedSource": "日本語の報告書本文と注記",
+  "conditions": [
+    "出力はPDFのみでHTML版はない。",
+    "PDF全頁の目視や抽出はこのケースでは未実施。"
+  ],
+  "wrongDecisionToAvoid": "Web試験がN/AなのでPDF品質全体もpassedとする。"
+}

@@ -4,9 +4,9 @@
 
 <br>
 
-現行パッケージ **v0.1.8** です。導入の手順は、上の導入ガイドをご覧ください。
+現行パッケージ **v0.2.0** です。導入の手順は、上の導入ガイドをご覧ください。
 
-Current package **v0.1.8**. See the installation guide above for setup steps.
+Current package **v0.2.0**. See the installation guide above for setup steps.
 
 <br>
 
@@ -16,7 +16,7 @@ Current package **v0.1.8**. See the installation guide above for setup steps.
 
 All four skills in one package.
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](plugins/kumihan-GPT-Codex-plugin-0.1.8.zip)
+- [kumihan-GPT-Codex-plugin-0.2.0.zip](plugins/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 <br>
 
@@ -26,10 +26,10 @@ All four skills in one package.
 
 Add them one at a time.
 
-- [kumihan](skills/kumihan-GPT-Codex-skill-0.1.8.zip) — 最初の入口 / starting point
-- [kumihan-web](skills/kumihan-web-GPT-Codex-skill-0.1.8.zip) — Webページ / web pages
-- [kumihan-documents](skills/kumihan-documents-GPT-Codex-skill-0.1.8.zip) — 報告書・スライド / reports and slides
-- [kumihan-review](skills/kumihan-review-GPT-Codex-skill-0.1.8.zip) — レビュー / review
+- [kumihan](skills/kumihan-GPT-Codex-skill-0.2.0.zip) — 最初の入口 / starting point
+- [kumihan-web](skills/kumihan-web-GPT-Codex-skill-0.2.0.zip) — Webページ / web pages
+- [kumihan-documents](skills/kumihan-documents-GPT-Codex-skill-0.2.0.zip) — 報告書・スライド / reports and slides
+- [kumihan-review](skills/kumihan-review-GPT-Codex-skill-0.2.0.zip) — レビュー / review
 
 <br>
 

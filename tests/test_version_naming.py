@@ -49,10 +49,10 @@ class VersionNamingPolicyTests(unittest.TestCase):
             with self.subTest(platform=dr):
                 folder=ROOT/dr
                 obj=json.loads((folder/"MANIFEST.json").read_text())
-                self.assertEqual(obj["version"], "0.1.8")
+                self.assertEqual(obj["version"], version_of(ROOT/"plugin.json"))
                 self.assertEqual(len(obj["archives"]), 5)
                 self.assertTrue(all("preview" not in a["file"].lower() for a in obj["archives"]))
-                self.assertTrue(all("0.1.8.zip" in a["file"] for a in obj["archives"]))
+                self.assertTrue(all(a["file"].endswith(version_of(ROOT/"plugin.json")+".zip") for a in obj["archives"]))
                 for a in obj["archives"]:
                     self.assertTrue((folder/a["file"]).is_file())
 

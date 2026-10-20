@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-003",
+  "synthetic": true,
+  "protectedSource": "日本語：骨／繁體中文：骨",
+  "conditions": [
+    "日本語と台湾向け繁体字を含む。Pan-CJKというfamily指定だけが提示されている。",
+    "意図した地域字形の参照と実glyphの画像はない。"
+  ],
+  "wrongDecisionToAvoid": "豆腐がない、またはfontにCJKと書かれているだけで地域字形が正しいとする。"
+}

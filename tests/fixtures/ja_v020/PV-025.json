@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-025",
+  "synthetic": true,
+  "protectedSource": "出口 EXIT",
+  "conditions": [
+    "架空のprojectではM19の10m和文40mm目安を採用している。",
+    "fontの仮想ボディ40mmだが、指定書体の「木」の実高が32mmである対照を作る。"
+  ],
+  "wrongDecisionToAvoid": "CSS/DTPの指定sizeと、ガイドラインの文字高を同じ測定量として比較する。"
+}

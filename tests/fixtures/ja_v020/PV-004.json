@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-004",
+  "synthetic": true,
+  "protectedSource": "日本語：骨／繁體中文：骨",
+  "conditions": [
+    "jaとzh-Hant-TWの対象run、使用許可のある字形参照、実fontを準備する。",
+    "対象文字が必ず同じ差を持つとは仮定せず、採用fontの実データに従う。"
+  ],
+  "wrongDecisionToAvoid": "正常読込時の一例を全fallback、全ブラウザーの合格に拡張する。"
+}

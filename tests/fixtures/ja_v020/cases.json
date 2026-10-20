@@ -1,0 +1,3293 @@
+{
+  "documentTitle": "KUMIHAN 日本語タイポグラフィー更新案：計画中の検証ケース",
+  "draftVersion": "2026-10-20-draft1.1",
+  "createdOn": "2026-10-20",
+  "status": "proposal-only-unadopted",
+  "executionStatus": "not-run",
+  "implementationChanged": false,
+  "currentReportSchemaPolicy": "frozen; schema body not read or modified in this research; no compatibility claim",
+  "caseCount": 30,
+  "contrastClassCounts": {
+    "good": 10,
+    "bad": 10,
+    "needs-review": 8,
+    "N/A": 2
+  },
+  "priorityCounts": {
+    "P0": 17,
+    "P1": 11,
+    "P2": 2
+  },
+  "baseline": {
+    "catalogSnapshotFile": "baseline_catalog.json",
+    "catalogSnapshotSha256": "f3735fdc872d27b43770e3320a7962bc133e90c0318ea0439285daf06c87ab70",
+    "catalogRuleCount": 39,
+    "catalogRuleIds": [
+      "CONTENT-001",
+      "CONTENT-002",
+      "CONTENT-003",
+      "CONTENT-004",
+      "CONTENT-005",
+      "JA-TYPE-001",
+      "JA-TYPE-002",
+      "JA-TYPE-003",
+      "JA-TYPE-004",
+      "JA-TYPE-005",
+      "JA-TYPE-006",
+      "JA-TYPE-007",
+      "JA-TYPE-008",
+      "JA-TYPE-009",
+      "JA-TYPE-010",
+      "JA-TYPE-011",
+      "WEB-001",
+      "WEB-002",
+      "WEB-003",
+      "WEB-004",
+      "WEB-005",
+      "WEB-006",
+      "WEB-007",
+      "WEB-008",
+      "DOC-001",
+      "DOC-002",
+      "DOC-003",
+      "DOC-004",
+      "DESIGN-001",
+      "DESIGN-002",
+      "DESIGN-003",
+      "DESIGN-004",
+      "DESIGN-005",
+      "DESIGN-006",
+      "EVIDENCE-001",
+      "EVIDENCE-002",
+      "EVIDENCE-003",
+      "EVIDENCE-004",
+      "EVIDENCE-005"
+    ],
+    "warning": "調査用39規則snapshot。module_version 0.1.8のrules_total 78や別固定候補の全配布物と同一視しない。",
+    "githubRepository": "landco-llc/kumihan",
+    "gitCommit": "8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
+    "sourceLedgerFile": "KUMIHAN_JA_Sources_20261020.json",
+    "sourceIdNote": "B01–B08 are the shared report source IDs; the separate live MCP snapshot is OBS-MCP-01, not B05."
+  },
+  "interpretation": {
+    "contrastLabels": "good/bad/needs-review/N/Aは研究用シナリオの対照ラベル。現行出力schemaのenumではない。",
+    "expectedResults": "plannedObservationsを実施して指定の観察が得られた場合の期待結果。現在の実行結果ではない。",
+    "visualEvidence": "架空の条件文、CSS宣言、JSON妥当性は画像・操作・実描画の証拠ではない。",
+    "scope": "期待結果は対象scopeごとのもの。一つのpassedをartifact全体・全環境の合格に昇格しない。",
+    "nA": "適用条件が外れる小確認の理由を記録する。displayのラベルだけで既存規則全体を免除しない。",
+    "sidecar": "evidence_packet_schema_draftは研究用sidecarの提案。現行report.schema.jsonへ投入しない。"
+  },
+  "evidence_packet_schema_draft": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:kumihan:research:typography-evidence:2026-10-20:draft1.1",
+    "title": "KUMIHAN Typography Research Evidence Packet — Unadopted Draft",
+    "description": "研究用sidecarの設計案。現行report.schema.jsonの変更・互換実装ではない。形式の妥当性は証拠の真正性・関連性・実描画品質を保証しない。",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "packetId": {
+        "type": "string"
+      },
+      "draftVersion": {
+        "const": "2026-10-20-draft1.1"
+      },
+      "subject": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "artifactId": {
+            "type": "string"
+          },
+          "artifactDigest": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "regionId": {
+            "type": "string"
+          },
+          "sourceFieldIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "artifactId",
+          "artifactDigest",
+          "regionId",
+          "sourceFieldIds"
+        ]
+      },
+      "context": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mediumProfile": {
+            "enum": [
+              "web-editorial",
+              "web-marketing",
+              "web-ui",
+              "report-document",
+              "presentation",
+              "display-copy"
+            ]
+          },
+          "surface": {
+            "enum": [
+              "html",
+              "word",
+              "pdf",
+              "powerpoint",
+              "printed",
+              "projected",
+              "physical-sign",
+              "unknown"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "intent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "attribution": {
+                "enum": [
+                  "declared",
+                  "inferred",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "description",
+              "attribution"
+            ]
+          },
+          "readingTask": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "sustained-reading",
+                "scan-find",
+                "glance-recognition",
+                "operate",
+                "compare-values",
+                "follow-sequence",
+                "remember-copy",
+                "art-viewing",
+                "unknown"
+              ]
+            }
+          },
+          "expressionMode": {
+            "enum": [
+              "prose",
+              "display",
+              "hybrid",
+              "unknown"
+            ]
+          },
+          "languageRuns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "sourceFieldId": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "codepointRange": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "languageStatus": {
+                  "enum": [
+                    "declared",
+                    "observed",
+                    "inferred",
+                    "unknown"
+                  ]
+                }
+              },
+              "required": [
+                "sourceFieldId",
+                "language",
+                "codepointRange",
+                "languageStatus"
+              ]
+            }
+          },
+          "writingMode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scrollAxis": {
+            "enum": [
+              "vertical",
+              "horizontal",
+              "both",
+              "none",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "mediumProfile",
+          "surface",
+          "role",
+          "intent",
+          "readingTask",
+          "expressionMode",
+          "languageRuns",
+          "writingMode",
+          "scrollAxis"
+        ]
+      },
+      "typographyObservations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "regionId": {
+              "type": "string"
+            },
+            "sourceFieldId": {
+              "type": "string"
+            },
+            "sampleText": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "measurementKind": {
+              "enum": [
+                "authored-value",
+                "computed-style",
+                "font-metric",
+                "pdf-text-state",
+                "ink-bounds",
+                "physical-measurement",
+                "estimated",
+                "unknown"
+              ]
+            },
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "enum": [
+                "CSS-px",
+                "device-px",
+                "pt",
+                "Q",
+                "H",
+                "em",
+                "mm",
+                "degree",
+                "ratio",
+                "unknown"
+              ]
+            },
+            "coordinateSpace": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "actualFont": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fontVersion": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "measurementMethod": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "physicalConditions": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "viewingDistanceMm": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "outputHeightMm": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "scaleBasis": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "viewingDistanceMm",
+                "outputHeightMm",
+                "scaleBasis"
+              ]
+            },
+            "observationStatus": {
+              "enum": [
+                "not-run",
+                "observed",
+                "unavailable"
+              ]
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "regionId",
+            "sourceFieldId",
+            "sampleText",
+            "measurementKind",
+            "value",
+            "unit",
+            "coordinateSpace",
+            "actualFont",
+            "fontVersion",
+            "measurementMethod",
+            "physicalConditions",
+            "observationStatus",
+            "evidenceIds"
+          ]
+        }
+      },
+      "representationMap": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "sourceFieldId": {
+              "type": "string"
+            },
+            "sourceText": {
+              "type": "string"
+            },
+            "requirementBasis": {
+              "enum": [
+                "provided-brief",
+                "approved-contract",
+                "inferred-candidate",
+                "unknown"
+              ]
+            },
+            "requiredUsage": {
+              "type": "string"
+            },
+            "presentations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "regionId": {
+                    "type": "string"
+                  },
+                  "relation": {
+                    "enum": [
+                      "exact-repeat",
+                      "authorized-derived",
+                      "decorative-echo"
+                    ]
+                  },
+                  "availability": {
+                    "enum": [
+                      "visible",
+                      "hidden",
+                      "unknown"
+                    ]
+                  },
+                  "reachabilityObservation": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "authorizationRef": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "evidenceIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "required": [
+                  "regionId",
+                  "relation",
+                  "availability",
+                  "reachabilityObservation",
+                  "authorizationRef",
+                  "evidenceIds"
+                ]
+              }
+            },
+            "conflictObservation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "sourceFieldId",
+            "sourceText",
+            "requirementBasis",
+            "requiredUsage",
+            "presentations",
+            "conflictObservation"
+          ]
+        }
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "evidenceId": {
+              "type": "string"
+            },
+            "method": {
+              "enum": [
+                "static",
+                "rendered",
+                "assisted",
+                "manual"
+              ]
+            },
+            "executionStatus": {
+              "enum": [
+                "not-run",
+                "observed",
+                "unsupported"
+              ]
+            },
+            "artifactRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "subjectRegion": {
+              "type": "string"
+            },
+            "environment": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "state": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "observation": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "inference": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "primarySourceRefs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "evidenceId",
+            "method",
+            "executionStatus",
+            "artifactRefs",
+            "subjectRegion",
+            "environment",
+            "state",
+            "observation",
+            "inference",
+            "primarySourceRefs"
+          ]
+        }
+      },
+      "findingsDraft": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "findingId": {
+              "type": "string"
+            },
+            "existingRuleId": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "CONTENT-001",
+                    "CONTENT-002",
+                    "CONTENT-003",
+                    "CONTENT-004",
+                    "CONTENT-005",
+                    "JA-TYPE-001",
+                    "JA-TYPE-002",
+                    "JA-TYPE-003",
+                    "JA-TYPE-004",
+                    "JA-TYPE-005",
+                    "JA-TYPE-006",
+                    "JA-TYPE-007",
+                    "JA-TYPE-008",
+                    "JA-TYPE-009",
+                    "JA-TYPE-010",
+                    "JA-TYPE-011",
+                    "WEB-001",
+                    "WEB-002",
+                    "WEB-003",
+                    "WEB-004",
+                    "WEB-005",
+                    "WEB-006",
+                    "WEB-007",
+                    "WEB-008",
+                    "DOC-001",
+                    "DOC-002",
+                    "DOC-003",
+                    "DOC-004",
+                    "DESIGN-001",
+                    "DESIGN-002",
+                    "DESIGN-003",
+                    "DESIGN-004",
+                    "DESIGN-005",
+                    "DESIGN-006",
+                    "EVIDENCE-001",
+                    "EVIDENCE-002",
+                    "EVIDENCE-003",
+                    "EVIDENCE-004",
+                    "EVIDENCE-005"
+                  ]
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "scope": {
+              "type": "string"
+            },
+            "claim": {
+              "type": "string"
+            },
+            "claimClass": {
+              "enum": [
+                "baseline-observation",
+                "source-fact",
+                "inference",
+                "proposal"
+              ]
+            },
+            "resultCandidate": {
+              "enum": [
+                "passed",
+                "failed",
+                "needs-review",
+                "not-checked",
+                "unsupported",
+                "waived",
+                "not-applicable"
+              ]
+            },
+            "method": {
+              "enum": [
+                "static",
+                "rendered",
+                "assisted",
+                "manual"
+              ]
+            },
+            "evidenceIds": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "findingId",
+            "existingRuleId",
+            "scope",
+            "claim",
+            "claimClass",
+            "resultCandidate",
+            "method",
+            "evidenceIds",
+            "limitations"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "resultCandidate": {
+                    "const": "passed"
+                  }
+                },
+                "required": [
+                  "resultCandidate"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "evidenceIds": {
+                    "minItems": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "executionStatus": {
+        "enum": [
+          "not-run",
+          "partially-run",
+          "run"
+        ]
+      }
+    },
+    "required": [
+      "packetId",
+      "draftVersion",
+      "subject",
+      "context",
+      "typographyObservations",
+      "representationMap",
+      "evidence",
+      "findingsDraft",
+      "executionStatus"
+    ]
+  },
+  "case_record_schema_draft": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:kumihan:research:validation-case:2026-10-20:draft1.1",
+    "title": "Planned synthetic validation case, not a test result",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "caseId": {
+        "type": "string",
+        "pattern": "^PV-[0-9]{3}$"
+      },
+      "contrastClass": {
+        "enum": [
+          "good",
+          "bad",
+          "needs-review",
+          "N/A"
+        ]
+      },
+      "priority": {
+        "enum": [
+          "P0",
+          "P1",
+          "P2"
+        ]
+      },
+      "title": {
+        "type": "string"
+      },
+      "fixtureKind": {
+        "const": "synthetic-planned"
+      },
+      "context": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mediumProfile": {
+            "enum": [
+              "web-editorial",
+              "web-marketing",
+              "web-ui",
+              "report-document",
+              "presentation",
+              "display-copy"
+            ]
+          },
+          "surface": {
+            "enum": [
+              "html",
+              "word",
+              "pdf",
+              "powerpoint",
+              "printed",
+              "projected",
+              "physical-sign",
+              "unknown"
+            ]
+          },
+          "role": {
+            "type": "string"
+          },
+          "intent": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "description": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "attribution": {
+                "enum": [
+                  "declared",
+                  "inferred",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "description",
+              "attribution"
+            ]
+          },
+          "readingTask": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "enum": [
+                "sustained-reading",
+                "scan-find",
+                "glance-recognition",
+                "operate",
+                "compare-values",
+                "follow-sequence",
+                "remember-copy",
+                "art-viewing",
+                "unknown"
+              ]
+            }
+          },
+          "expressionMode": {
+            "enum": [
+              "prose",
+              "display",
+              "hybrid",
+              "unknown"
+            ]
+          },
+          "languageRuns": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "sourceFieldId": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "codepointRange": {
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "languageStatus": {
+                  "enum": [
+                    "declared",
+                    "observed",
+                    "inferred",
+                    "unknown"
+                  ]
+                }
+              },
+              "required": [
+                "sourceFieldId",
+                "language",
+                "codepointRange",
+                "languageStatus"
+              ]
+            }
+          },
+          "writingMode": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scrollAxis": {
+            "enum": [
+              "vertical",
+              "horizontal",
+              "both",
+              "none",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "mediumProfile",
+          "surface",
+          "role",
+          "intent",
+          "readingTask",
+          "expressionMode",
+          "languageRuns",
+          "writingMode",
+          "scrollAxis"
+        ]
+      },
+      "fixture": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "protectedSource": {
+            "type": "string"
+          },
+          "plannedConditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "artifactPath": {
+            "type": "null"
+          },
+          "artifactDigest": {
+            "type": "null"
+          },
+          "notice": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "protectedSource",
+          "plannedConditions",
+          "artifactPath",
+          "artifactDigest",
+          "notice"
+        ]
+      },
+      "plannedObservations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "expectedScopedResults": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "existingRuleId": {
+              "enum": [
+                "CONTENT-001",
+                "CONTENT-002",
+                "CONTENT-003",
+                "CONTENT-004",
+                "CONTENT-005",
+                "JA-TYPE-001",
+                "JA-TYPE-002",
+                "JA-TYPE-003",
+                "JA-TYPE-004",
+                "JA-TYPE-005",
+                "JA-TYPE-006",
+                "JA-TYPE-007",
+                "JA-TYPE-008",
+                "JA-TYPE-009",
+                "JA-TYPE-010",
+                "JA-TYPE-011",
+                "WEB-001",
+                "WEB-002",
+                "WEB-003",
+                "WEB-004",
+                "WEB-005",
+                "WEB-006",
+                "WEB-007",
+                "WEB-008",
+                "DOC-001",
+                "DOC-002",
+                "DOC-003",
+                "DOC-004",
+                "DESIGN-001",
+                "DESIGN-002",
+                "DESIGN-003",
+                "DESIGN-004",
+                "DESIGN-005",
+                "DESIGN-006",
+                "EVIDENCE-001",
+                "EVIDENCE-002",
+                "EVIDENCE-003",
+                "EVIDENCE-004",
+                "EVIDENCE-005"
+              ]
+            },
+            "scope": {
+              "type": "string"
+            },
+            "expectedResult": {
+              "enum": [
+                "passed",
+                "failed",
+                "needs-review",
+                "not-checked",
+                "unsupported",
+                "waived",
+                "not-applicable"
+              ]
+            },
+            "method": {
+              "enum": [
+                "static",
+                "rendered",
+                "assisted",
+                "manual"
+              ]
+            },
+            "reason": {
+              "type": "string"
+            },
+            "minimumEvidenceIfExecuted": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "existingRuleId",
+            "scope",
+            "expectedResult",
+            "method",
+            "reason",
+            "minimumEvidenceIfExecuted"
+          ]
+        }
+      },
+      "wrongDecisionToAvoid": {
+        "type": "string"
+      },
+      "sourceRefs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "contrastCaseIds": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "execution": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "status": {
+            "const": "not-run"
+          },
+          "observedResult": {
+            "type": "null"
+          },
+          "evidenceRefs": {
+            "type": "array",
+            "maxItems": 0
+          }
+        },
+        "required": [
+          "status",
+          "observedResult",
+          "evidenceRefs"
+        ]
+      },
+      "researchAdvisories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "topic": {
+              "type": "string"
+            },
+            "expectedAdviceStatus": {
+              "const": "needs-review"
+            },
+            "scope": {
+              "type": "string"
+            },
+            "method": {
+              "const": "assisted"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "productRuleId": {
+              "type": "null"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "topic",
+            "expectedAdviceStatus",
+            "scope",
+            "method",
+            "reason",
+            "productRuleId",
+            "note"
+          ]
+        }
+      }
+    },
+    "required": [
+      "caseId",
+      "contrastClass",
+      "priority",
+      "title",
+      "fixtureKind",
+      "context",
+      "fixture",
+      "plannedObservations",
+      "expectedScopedResults",
+      "wrongDecisionToAvoid",
+      "sourceRefs",
+      "contrastCaseIds",
+      "execution"
+    ]
+  },
+  "cases": [
+    {
+      "caseId": "PV-001",
+      "contrastClass": "good",
+      "priority": "P0",
+      "title": "文字列の一致だけを静的合格とし、字形は未検証に残す",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "髙﨑さま／料金１,２００円／が",
+        "plannedConditions": [
+          "指定extractorで原稿のコードポイント列と対象fieldを比較できるfixtureを準備する。",
+          "fontの解決・実描画はまだ行っていないという報告条件を与える。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-001.json",
+        "artifactDigest": "sha256:e67bf475c945e0261a5c87060993af31df1f0a058d98db00bd0c4d196ef9e5fd",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "保護fieldのコードポイント比較を行う。",
+        "fontと字形の未検証が独立して記録されるか確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護fieldのコードポイント保全",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "対応extractorによる正確な一致を確認した場合に限る。",
+          "minimumEvidenceIfExecuted": [
+            "入力と抽出結果",
+            "extractor名・版",
+            "比較対象範囲"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実際のglyphとfallback",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "文字列一致は字形の証拠ではない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施と明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "静的な文字列一致をartifact全体のrendered passedへ昇格させる。",
+      "sourceRefs": [
+        "H11",
+        "H12",
+        "M11",
+        "S11"
+      ],
+      "contrastCaseIds": [
+        "PV-002",
+        "PV-003",
+        "PV-004"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-002",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "レイアウト調整のための一括正規化",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "髙﨑さま／料金１,２００円／が",
+        "plannedConditions": [
+          "対照fixtureとしてNFKC等により全角数字や分解表記を無断で変更した出力を準備する。",
+          "見た目の類似性や検索用の別データは原稿変更の許可ではない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-002.json",
+        "artifactDigest": "sha256:e6942b384f2e8686735159560e64b5ab38cb8fc533d5058782c119d8d2a4fd86",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "正規化前の入力と出力を正規化せず比較する。",
+        "許可された派生fieldと保護原稿fieldを分ける。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護fieldの変更",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "具体的なコードポイント差が保護範囲内にある。",
+          "minimumEvidenceIfExecuted": [
+            "正確なdiff",
+            "保護範囲"
+          ]
+        },
+        {
+          "existingRuleId": "CONTENT-004",
+          "scope": "無断の一括正規化",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "処理と原稿差を確認できる場合の期待結果。",
+          "minimumEvidenceIfExecuted": [
+            "処理または変換記録",
+            "入力と出力"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "NFC/NFKC後の比較が等しいため原稿保全を合格にする。",
+      "sourceRefs": [
+        "H11",
+        "H12",
+        "S11"
+      ],
+      "contrastCaseIds": [
+        "PV-001"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-003",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "CJK混在でfont名と言語指定しかない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "日本語：骨／繁體中文：骨",
+        "plannedConditions": [
+          "日本語と台湾向け繁体字を含む。Pan-CJKというfamily指定だけが提示されている。",
+          "意図した地域字形の参照と実glyphの画像はない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-003.json",
+        "artifactDigest": "sha256:0e3963770e893bdfba9b66ad8d692ddc2fb43f15127f5190026c913c1b59cdf9",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "language runを記録する。",
+        "実際のfont解決と意図した地域字形の照合を計画する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-001",
+          "scope": "実使用字形と言語の整合",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "設定の存在だけでは実字形を観察していない。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実font・glyph coverage",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "family名を使用書体の証明にしない。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "豆腐がない、またはfontにCJKと書かれているだけで地域字形が正しいとする。",
+      "sourceRefs": [
+        "H14",
+        "H15",
+        "M11"
+      ],
+      "contrastCaseIds": [
+        "PV-004"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-004",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "CJKの言語run・実書体・参照字形を照合する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "日本語：骨／繁體中文：骨",
+        "plannedConditions": [
+          "jaとzh-Hant-TWの対象run、使用許可のある字形参照、実fontを準備する。",
+          "対象文字が必ず同じ差を持つとは仮定せず、採用fontの実データに従う。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-004.json",
+        "artifactDigest": "sha256:168b06548cb0e7c6106af42c37a69a86c2f3643346e9829b3068543e443612b3",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "元文字列を保ったままlanguage runとfont解決を確認する。",
+        "対象rendererで参照と実glyphを比較し、fallback条件を別に記録する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-001",
+          "scope": "観察したrunの地域字形と書字設定",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実観察と参照が整合した条件だけを合格にする。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "font解決記録",
+            "言語別の参照根拠"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "観察したfont状態",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実行した正常読込状態に限定する。",
+          "minimumEvidenceIfExecuted": [
+            "font名・版",
+            "glyph画像",
+            "renderer・状態"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "正常読込時の一例を全fallback、全ブラウザーの合格に拡張する。",
+      "sourceRefs": [
+        "H14",
+        "H15"
+      ],
+      "contrastCaseIds": [
+        "PV-003"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-005",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "長いUIラベルをnowrapとclipで隠す",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "label",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "operate"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+        "plannedConditions": [
+          "幅320 CSS px相当の実状態で、全文nowrapと親containerのclipにより末尾と操作領域が失われる対照fixtureを作る。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-005.json",
+        "artifactDigest": "sha256:79f47c37e596dd125a13fcd1f2598f139bc84796503523217ad7323f4eb8f904",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "表示文字列、focus、activation、完全なラベルへの到達を観察する。",
+        "全段落の不可分化によるoverflowを観察する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-005",
+          "scope": "長いボタンの内容と操作",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "所定状態で必要なラベルの内容・操作が失われる。",
+          "minimumEvidenceIfExecuted": [
+            "実表示",
+            "操作記録"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-004",
+          "scope": "clippingによる情報損失",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "clip宣言だけでなく実際の損失を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "clip領域と失われた内容の画像"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-003",
+          "scope": "過大な不可分範囲",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "全文の不可分化が必要なアクセスを妨げる。",
+          "minimumEvidenceIfExecuted": [
+            "group範囲",
+            "実overflow"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "一行表示を守ったことを品質向上とする。",
+      "sourceRefs": [
+        "M03"
+      ],
+      "contrastCaseIds": [
+        "PV-006"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-006",
+      "contrastClass": "good",
+      "priority": "P0",
+      "title": "長いUIラベルを折り返して操作を保つ",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "label",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "operate"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+        "plannedConditions": [
+          "PV-005と同じ文字列・font・viewportで、実用的な複数行labelと操作領域を用意する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-006.json",
+        "artifactDigest": "sha256:48d1dc519afdbd7d5d66d17a44e30542d43b697553684c53d1a2d7fa311f3668",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "元の全文、意味のつながり、focus、activationを確認する。",
+        "試した拡大と幅の条件を明記する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-005",
+          "scope": "試したラベルと状態",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "複数行でも全文が読め、必要な操作が成立する。",
+          "minimumEvidenceIfExecuted": [
+            "実表示",
+            "操作記録",
+            "対象状態"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "短い操作文の意味",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "実際の改行と意味関係を評価して成立した場合。",
+          "minimumEvidenceIfExecuted": [
+            "実行マップ",
+            "理由付き意味レビュー"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "二行のボタンを形式だけで失敗にする。",
+      "sourceRefs": [
+        "M03"
+      ],
+      "contrastCaseIds": [
+        "PV-005"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-007",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "自然に一行へ収まる見出しに改行を追加しない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "title",
+        "intent": {
+          "description": "短い主張を一瞥で理解する",
+          "attribution": "declared"
+        },
+        "readingTask": [
+          "glance-recognition"
+        ],
+        "expressionMode": "display",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "いつものAIツールからはじめよう",
+        "plannedConditions": [
+          "有効幅、実font、字間を含め、見出し全体が一行で自然に収まるfixtureを準備する。",
+          "固定二行にする明示的な表現意図はない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-007.json",
+        "artifactDigest": "sha256:e59ad9046939946b43e66cb2ebbeebefaefcf611ae572214a0fb9ed46f87dac1",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "通常折り返しを比較基準として保存する。",
+        "周囲の余白・競合する画像・文字列と操作への影響をレビューする。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "当該幅・fontでの見出し構成",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "意図的改行の必要性を検討し、通常表示が妥当と確認された場合。",
+          "minimumEvidenceIfExecuted": [
+            "実幅・font",
+            "実画像",
+            "理由付き構成レビュー"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "文節解析の結果があるので、必ず文節ごとにbrを挿入する。",
+      "sourceRefs": [
+        "H22",
+        "M25"
+      ],
+      "contrastCaseIds": [
+        "PV-008",
+        "PV-009"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-008",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "文節解析だけで改行の品質を確定しない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "title",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition"
+        ],
+        "expressionMode": "display",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "unknown"
+      },
+      "fixture": {
+        "protectedSource": "いつものAIツールからはじめよう",
+        "plannedConditions": [
+          "解析器による文節境界だけがあり、実際の幅・font・行マップ・画像がない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-008.json",
+        "artifactDigest": "sha256:c0c3aa0f5d09ccb558cb072605afad7c0c3b6fb894a3893bdef3d40efe804e57",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "解析出力を改行候補として記録する。",
+        "係り受けと表現意図のレビューを、未実施の実描画と分ける。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "意味上の候補判断",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "文節境界だけでは焦点・まとまりの良否を確定できない。",
+          "minimumEvidenceIfExecuted": [
+            "候補の比較と未解決理由"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "実行数・行幅・周囲の構成",
+          "expectedResult": "not-checked",
+          "method": "assisted",
+          "reason": "必要な実表示を未観察。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "本文リーダーの実験を広告見出しの自動正解として引用する。",
+      "sourceRefs": [
+        "H19",
+        "H22",
+        "M25"
+      ],
+      "contrastCaseIds": [
+        "PV-007",
+        "PV-009"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-009",
+      "contrastClass": "needs-review",
+      "priority": "P1",
+      "title": "助詞の一部だけの短い行を禁則違反と混同しない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "title",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition"
+        ],
+        "expressionMode": "display",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "いつものAIツールからはじめよう",
+        "plannedConditions": [
+          "実行マップが「いつものAIツールか／ら／はじめよう」となった対照を準備する。",
+          "当該日本語profileで、観察した行端に禁則文字がないことを確認する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-009.json",
+        "artifactDigest": "sha256:dccff9f7713769297dee0a3c5d6940933663849a16e5dcb447fc6a55d1d17eb4",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "禁則文字クラスと行端を照合する。",
+        "全行の短長、焦点、読み、余白をnormal等の候補と比較する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-002",
+          "scope": "この見出しの禁則行端",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "対象profileに反する行端がない場合。",
+          "minimumEvidenceIfExecuted": [
+            "実行端",
+            "選択profile"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-004",
+          "scope": "修飾・助詞の意味の流れ",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "形態上の境界と読みにくさの判断を区別する。",
+          "minimumEvidenceIfExecuted": [
+            "実行マップ",
+            "意味レビュー"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-011",
+          "scope": "全行と周囲の構成",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "短い中間行を含む全体の改善候補を比較する。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "比較候補"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "気になる改行を全てJA-TYPE-002の禁則エラーにする。",
+      "sourceRefs": [
+        "H19",
+        "H22"
+      ],
+      "contrastCaseIds": [
+        "PV-007",
+        "PV-008"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-010",
+      "contrastClass": "good",
+      "priority": "P0",
+      "title": "造形文字を断裁しても、別領域の必須情報を検証する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "display-copy",
+        "surface": "printed",
+        "role": "artwork + mandatory-info",
+        "intent": {
+          "description": "造形で印象を残し、別領域で日時・会場を伝える",
+          "attribution": "declared"
+        },
+        "readingTask": [
+          "art-viewing",
+          "scan-find"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+        "plannedConditions": [
+          "架空のブリーフでは造形領域が編集可能で、題名・日時・会場の情報fieldは保護対象。",
+          "造形の一部を断裁し、同一掲示面の別領域で完全な保護fieldを明瞭に示すfixtureを用意する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-010.json",
+        "artifactDigest": "sha256:0676f48995ab9aba48d61c98cf01b3da773ca63d47782e395e485da422e4c046",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "保護fieldを正確に比較する。",
+        "実寸と利用距離で情報領域の可視性・到達を確認する。",
+        "装飾領域への本文連続読書の適用可否と、全体の目的適合を別記する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "保護された情報field",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "対応extractor等により完全な再提示文字列の一致を確認した範囲。",
+          "minimumEvidenceIfExecuted": [
+            "原稿と提示fieldの対応",
+            "正確な比較"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "必須情報への実際の到達",
+          "expectedResult": "passed",
+          "method": "assisted",
+          "reason": "実物で情報が見え、所定の読者行動に利用できると確認された場合。",
+          "minimumEvidenceIfExecuted": [
+            "全体画像",
+            "実寸・距離",
+            "到達レビュー"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "造形領域に本文の連続読書用行長を要求する小確認",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "文章の連続読書を担わない領域への本文目安に限るN/A。規則全体を免除しない。",
+          "minimumEvidenceIfExecuted": [
+            "領域の役割と適用理由"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "装飾の断裁だけで全体の情報欠落にする、または再提示の存在だけで全条件を合格にする。",
+      "sourceRefs": [
+        "C05",
+        "C17",
+        "M07"
+      ],
+      "contrastCaseIds": [
+        "PV-011",
+        "PV-012",
+        "PV-013"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-011",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "DOMにある必須情報がclipで見えない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+        "plannedConditions": [
+          "保護文字列はDOMから抽出できるが、日時・会場がcontainerの外へ出てclipされる。",
+          "他の表示・利用可能な代替経路はない対照を準備する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-011.json",
+        "artifactDigest": "sha256:d399de090d59cd9c208dc5163bfc86dd2d7ead902515f2b5985145104fe21707",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "抽出比較と実画像を別に確認する。",
+        "必要情報へfocus・scroll等で到達できるか確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "DOM内の文字列保全",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "正確な抽出一致を確認した場合だけ。",
+          "minimumEvidenceIfExecuted": [
+            "入力・DOM抽出比較"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-004",
+          "scope": "実表示でのclipping",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "所定状態で必要情報が隠され到達できない。",
+          "minimumEvidenceIfExecuted": [
+            "実画像",
+            "到達操作の記録"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "伝達すべき情報の可用性",
+          "expectedResult": "failed",
+          "method": "assisted",
+          "reason": "装飾とは別の必須情報が読者へ届いていない。",
+          "minimumEvidenceIfExecuted": [
+            "役割表",
+            "実表示と理由"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "HTML検索で見つかったことを、利用者に見えている証拠にする。",
+      "sourceRefs": [
+        "M03",
+        "M04"
+      ],
+      "contrastCaseIds": [
+        "PV-010",
+        "PV-012",
+        "PV-013"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-012",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "再提示の一箇所だけ日付が異なる",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "display-copy",
+        "surface": "printed",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+        "plannedConditions": [
+          "正本は11月3日。完全な情報領域の一箇所が11月4日になったfixtureを用意する。",
+          "別の箇所には正しい11月3日が残る。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-012.json",
+        "artifactDigest": "sha256:852909ab92fcf3349bde90c0e43f765f9ce86ee0274828b4c3eeb7c6da1c45c6",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "各再提示fieldを正本へ対応させる。",
+        "読者が正しい方を推測すればよい、という解決を採らない。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "複数の保護fieldの整合",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "保護対象の日時が一箇所で変更されている。",
+          "minimumEvidenceIfExecuted": [
+            "全提示箇所の対応表",
+            "正確なdiff"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "一箇所が正しいため、別箇所の不一致も許容する。",
+      "sourceRefs": [],
+      "contrastCaseIds": [
+        "PV-010",
+        "PV-011",
+        "PV-013"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-013",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "別ページへの再提示が利用場面を満たすか不明",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "display-copy",
+        "surface": "printed",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+        "plannedConditions": [
+          "掲示面には題名とQR、詳細は外部ページにあるというfixtureを計画する。",
+          "通信環境、読者の端末、掲示単独で必要な情報が未確定。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-013.json",
+        "artifactDigest": "sha256:13a5baac9ebfef335b378d0ff11a173a53633024c05a785babe9499732f59563",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "ブリーフで必要な利用場面と詳細への経路を確認する。",
+        "実際のページや端末操作が未観察である点を分離する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DESIGN-003",
+          "scope": "読者の利用場面に対する情報配置",
+          "expectedResult": "needs-review",
+          "method": "assisted",
+          "reason": "別ページで足りるか、同じ掲示で必要かが未解決。",
+          "minimumEvidenceIfExecuted": [
+            "利用場面",
+            "必要情報の根拠",
+            "判断上の欠損"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "外部ページの可用性を未検証とする報告",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "当該未実施を正確に報告している場合の構造確認だけ。",
+          "minimumEvidenceIfExecuted": [
+            "検査記録と結果状態"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "どこかのURLに情報があるという説明だけで到達可能とする。",
+      "sourceRefs": [
+        "M07"
+      ],
+      "contrastCaseIds": [
+        "PV-010",
+        "PV-011",
+        "PV-012"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-014",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "valueがlabelや見出しより大きい構成",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "value + label",
+        "intent": {
+          "description": "集計値を先に見つけ、その項目名を確認する",
+          "attribution": "declared"
+        },
+        "readingTask": [
+          "compare-values"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "処理済み 48件",
+        "plannedConditions": [
+          "架空の提供データ48件をvalue 48px、label 14px、page title 24px等で組む。",
+          "比率自体を最適とせず、labelとvalueが読める条件を準備する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-014.json",
+        "artifactDigest": "sha256:8af751d32d12f13e8cd1154fdbfa02629b7b68875e93af640a059a5cd611ee6f",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "値とlabelの結び付き、単位、比較の揃い、実字面を確認する。",
+        "実際の拡大・表示条件を限定して記録する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DESIGN-005",
+          "scope": "数値・labelの情報役割と実表示",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "valueを主役にする意図と実際の認識・関連付けが整合する。",
+          "minimumEvidenceIfExecuted": [
+            "role定義",
+            "実画像",
+            "対象状態"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "全てのheadingより値が大きいことを単純な階層逆転エラーにする。",
+      "sourceRefs": [
+        "M09",
+        "M11"
+      ],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-015",
+      "contrastClass": "bad",
+      "priority": "P2",
+      "title": "UD書体の選好を全員の性能向上へ書き換える",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "この書体なら全員の読解力が20%向上します。",
+        "plannedConditions": [
+          "架空の広告原稿。根拠としてメーカーの用途説明か、限定的な選好調査だけが添えられている。",
+          "全員・読解力・20%を直接裏付ける資料はない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-015.json",
+        "artifactDigest": "sha256:fed04523b9b62ac1b876c1552f8a941fda3e8edf2ed7d5ed152b25471096dd30",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "主張の対象、指標、比較、改善量と一次資料を対応させる。",
+        "欠けた根拠を創作せず、変更権限のない原稿は指摘にとどめる。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-002",
+          "scope": "実証されていない性能主張",
+          "expectedResult": "failed",
+          "method": "assisted",
+          "reason": "供給された資料が当該主張を裏付けないことを確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "主張と出典の対応",
+            "対象・指標・限界"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "好まれた書体を、速度・誤読・理解の全指標に優れると報告する。",
+      "sourceRefs": [
+        "M20",
+        "M22",
+        "M23",
+        "M24"
+      ],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-016",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "混在する和文と英語で適用可能なspacingを確認する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "申込条件を確認してください。\nPlease read the application requirements.",
+        "plannedConditions": [
+          "段落余白を使う日本語Web本文と、単語間spaceを使う英語runを準備する。",
+          "作者の初期値ではなく、基準の利用者上書きを対象として実施する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-016.json",
+        "artifactDigest": "sha256:18a40ce8562a4f16224c5db6e6170c8d6aaa237f5c6fdb415dbbf5ea4f8a872a",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "行高1.5、段落後2、字間0.12、単語間0.16の適用特性を記録して変更する。",
+        "spaceのない和文でword-spacingの変化がないことと、英語runの確認を区別する。",
+        "全文の表示・操作・clipを確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "適用特性を変更した対象領域",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "適用条件に沿う実変更後も内容・機能が保持された場合。",
+          "minimumEvidenceIfExecuted": [
+            "言語runと適用特性",
+            "実上書き値",
+            "変更後画像・操作"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "日本語ページなので英語runや段落余白も全て対象外とする。",
+      "sourceRefs": [
+        "M04"
+      ],
+      "contrastCaseIds": [
+        "PV-017",
+        "PV-018"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-017",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "初期letter-spacing設定だけで耐性試験を合格にする",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "本文は読み手の設定によって表示が変わります。",
+        "plannedConditions": [
+          "初期CSSにletter-spacing:0.12emがあるだけで、実際の利用者変更試験は行っていない。",
+          "試験合格という不適切な報告を対照fixtureとして準備する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-017.json",
+        "artifactDigest": "sha256:f367bacfeeda1ef33fd7fbffccf4b38021d639931098c21ab18f869f02ff0065",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "実行履歴・対象状態と報告の主張を照合する。",
+        "初期値の採否と変更耐性の結果を分離する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "利用者変更後の表示",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "変更試験が未実施。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の記録"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "未実施をpassedとした報告",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "報告と実行履歴の明確な不整合を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "報告",
+            "実行履歴"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "WCAGが作者の全本文に0.12emを義務付けていると説明する。",
+      "sourceRefs": [
+        "M04"
+      ],
+      "contrastCaseIds": [
+        "PV-016"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-018",
+      "contrastClass": "N/A",
+      "priority": "P0",
+      "title": "PDFにWebの文字間隔試験をそのまま当てない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "report-document",
+        "surface": "pdf",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "日本語の報告書本文と注記",
+        "plannedConditions": [
+          "出力はPDFのみでHTML版はない。",
+          "PDF全頁の目視や抽出はこのケースでは未実施。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-018.json",
+        "artifactDigest": "sha256:a3b28beb7fe0cdac1ece20adcbeec97916980ac20d33a023a67f3b3ad051c0b7",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "WEB-003の媒体・適用条件を先に確認する。",
+        "PDF側の全頁・字形・注記・変換確認を別に計画する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-003",
+          "scope": "PDFのみの出力",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "Web markupの同一spacing試験をPDFへそのまま適用しない。",
+          "minimumEvidenceIfExecuted": [
+            "媒体の確認",
+            "適用理由"
+          ]
+        },
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "PDF変換後の実表示",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "別の必要な文書確認は未実施のまま。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "Web試験がN/AなのでPDF品質全体もpassedとする。",
+      "sourceRefs": [
+        "M04"
+      ],
+      "contrastCaseIds": [
+        "PV-016",
+        "PV-017",
+        "PV-028"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-019",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "縦書きでも実scroll軸が縦なら幅条件で確認する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "vertical-rl",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "縦書きの短い頁が下へ続く記事",
+        "plannedConditions": [
+          "writing-modeはvertical-rlだが、記事全体は頁が縦に積まれ、実際の主scrollが縦であるfixtureを作る。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-019.json",
+        "artifactDigest": "sha256:74b4dc6154c929c97f629f3533f5c8c47f7cb26a1a4955c0ae09ac3299cc07f0",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "対象scopeのscroll軸を操作・寸法で確認する。",
+        "幅320 CSS px相当で内容と機能が保持されるか確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-001",
+          "scope": "実際に縦scrollする記事領域",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "観察した軸に沿う条件で再配置・操作が成立した場合。",
+          "minimumEvidenceIfExecuted": [
+            "scroll軸の観察",
+            "幅条件",
+            "実表示・操作"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "縦書きだから自動的に高さ256pxだけを試す。",
+      "sourceRefs": [
+        "M03"
+      ],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-020",
+      "contrastClass": "bad",
+      "priority": "P0",
+      "title": "CSSの試験用拡大をnative text zoomと報告する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-ui",
+        "surface": "html",
+        "role": "label",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "operate"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "登録内容を確認する",
+        "plannedConditions": [
+          "DevTools等で試験者が一括CSS値を書き換えただけで、利用者が使える拡大機構は試していない。",
+          "native text zoomを200%確認済みという報告を対照とする。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-020.json",
+        "artifactDigest": "sha256:171b56c4cfb9df6ed2da0149a174256a4135d17e4150c966def16a1a51677be5",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "実際の拡大方式と操作経路を記録する。",
+        "正当なbrowser zoomや利用者向け拡大機構まで、native text zoomでないという理由で排除しない。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-002",
+          "scope": "利用者が使用できる実拡大機構",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "このfixtureのCSS模擬は該当機構の実施証拠でない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        },
+        {
+          "existingRuleId": "EVIDENCE-001",
+          "scope": "実施方式と報告の対応",
+          "expectedResult": "failed",
+          "method": "static",
+          "reason": "CSS模擬をnative実行と呼ぶ不一致を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "操作履歴",
+            "報告された方式"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "CSS模擬をnative確認へ昇格させる、またはWCAGがnative text zoomだけを認めると主張する。",
+      "sourceRefs": [
+        "M02"
+      ],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-021",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "paltの構文対応しか分からない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "display",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition"
+        ],
+        "expressionMode": "display",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "文字と余白の時間",
+        "plannedConditions": [
+          "CSS.supports等の構文結果はあるが、実font、OpenType機能の支持、表示比較はない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-021.json",
+        "artifactDigest": "sha256:960bb272a12ec05d936ae3c9cd76aa364b3a443c908cef14efa2932f676aa215",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "font支持の確認と実際の字送りの観察を計画する。",
+        "構文の成功を品質の結果と分ける。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-006",
+          "scope": "当該fontの機能と適用効果",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "宣言の受理はfontの支持・効果の証拠ではない。",
+          "minimumEvidenceIfExecuted": [
+            "未実施の明記"
+          ]
+        },
+        {
+          "existingRuleId": "WEB-007",
+          "scope": "実font解決",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "宣言されたfamilyと使用されたfontは別。",
+          "minimumEvidenceIfExecuted": [
+            "未観察の明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "構文が支持されたため、全てのfontでpaltが安全に機能するとする。",
+      "sourceRefs": [
+        "M11",
+        "M17"
+      ],
+      "contrastCaseIds": [
+        "PV-022"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-022",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "displayの機能を実書体で比較し本文へ波及させない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "display + body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition",
+          "sustained-reading"
+        ],
+        "expressionMode": "hybrid",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "文字と余白の時間／道具の使い方を本文で説明します。",
+        "plannedConditions": [
+          "実在・利用可能なfontで機能の支持を確認したfixtureを別途準備する。",
+          "display限定の任意variantと通常表示を比較し、bodyへcascadeさせない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-022.json",
+        "artifactDigest": "sha256:51963627300c4418359a1bd3723e0138672e1ffc89d3c2943e8ee83f0945525a",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "font・字送り・実幅・行端・clipを比較する。",
+        "本文のstyleと実表示が意図した役割に合うか確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-005",
+          "scope": "displayとbodyの適用範囲",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "役割別の処理と実表示を確認できた条件に限る。",
+          "minimumEvidenceIfExecuted": [
+            "scopeのstyle",
+            "本文・displayの実画像"
+          ]
+        },
+        {
+          "existingRuleId": "JA-TYPE-006",
+          "scope": "観察したfontとfeature",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "当該fontでの支持と表示上の結果を確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "font支持記録",
+            "比較画像・実幅"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "displayで採用した値を本文へ全適用する、または本文のpalt使用を文脈なしに自動失敗にする。",
+      "sourceRefs": [
+        "M17"
+      ],
+      "contrastCaseIds": [
+        "PV-021"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-023",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "投影会場が未定で24ptという指定しかない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "presentation",
+        "surface": "projected",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition",
+          "follow-sequence"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "会場で共有する手順と注意事項",
+        "plannedConditions": [
+          "主要本文24ptとスライド寸法は分かるが、投影面の物理高・最遠席・環境は未定。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-023.json",
+        "artifactDigest": "sha256:fad5a15b0d3fc0a73594f91fc9ed4b6ea9545c307f5a755865b108b883004ed3",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "ファイル内の指定値と投影可読性を分けて記録する。",
+        "実測する物理条件と最小の必須情報を列挙する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DOC-003",
+          "scope": "実会場での投影可読性",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "24ptという指定だけでは所定の視角・字面・読者課題を確認できない。",
+          "minimumEvidenceIfExecuted": [
+            "未定条件と未実施の明記"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "24pt以上なので会場で必ず読めるとする。",
+      "sourceRefs": [
+        "M10",
+        "M12",
+        "M18"
+      ],
+      "contrastCaseIds": [
+        "PV-024"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-024",
+      "contrastClass": "bad",
+      "priority": "P1",
+      "title": "投影時に必要な注意書きが読めずnotesにしか残らない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "presentation",
+        "surface": "projected",
+        "role": "note + mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "follow-sequence"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "手順3の前に電源を切ってください。",
+        "plannedConditions": [
+          "投影寸法・最遠席を定め、必須注意書きが読み取れない縮小表示となる負例を用意する。",
+          "完全な文はspeaker notesにだけ残り、聴衆への説明・表示経路がない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-024.json",
+        "artifactDigest": "sha256:91311cbb77229807ccfaabc0b35c324d64fcc6426a3d5444435aacaaa1c078f5",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "実会場または縮尺根拠のある再現で、最小必須情報を確認する。",
+        "対象者、課題、条件、判読の結果を記録する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DOC-003",
+          "scope": "聴衆が必要な注意書きを読む条件",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "宣言した利用条件で必須情報が読めないと確認した場合。",
+          "minimumEvidenceIfExecuted": [
+            "投影寸法・距離・字面",
+            "表示記録",
+            "対象・課題・観察結果"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "notesに文字があるので聴衆にも情報が届くとする。",
+      "sourceRefs": [
+        "M18"
+      ],
+      "contrastCaseIds": [
+        "PV-023"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-025",
+      "contrastClass": "bad",
+      "priority": "P1",
+      "title": "サインの40mmボディを40mm文字高と誤称する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "display-copy",
+        "surface": "physical-sign",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition",
+          "scan-find"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "出口 EXIT",
+        "plannedConditions": [
+          "架空のprojectではM19の10m和文40mm目安を採用している。",
+          "fontの仮想ボディ40mmだが、指定書体の「木」の実高が32mmである対照を作る。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-025.json",
+        "artifactDigest": "sha256:766e26e54e07246b2adada787bc03802a54eddecb3c5484b4cea3ec78989a346",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "指定ボディと「木」「E」の実高を同じ物理単位で測る。",
+        "採用した目安との比較に用いた測定対象を確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "採用したサイン寸法条件の評価",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "projectで採用した実字面の目安をボディ値で満たしたと扱っている。法的最低基準違反とは呼ばない。",
+          "minimumEvidenceIfExecuted": [
+            "採用条件",
+            "指定書体",
+            "「木」の実高",
+            "物理縮尺"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "CSS/DTPの指定sizeと、ガイドラインの文字高を同じ測定量として比較する。",
+      "sourceRefs": [
+        "M19"
+      ],
+      "contrastCaseIds": [
+        "PV-026"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-026",
+      "contrastClass": "good",
+      "priority": "P1",
+      "title": "サインの指定書体の「木」と「E」を測定する",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "display-copy",
+        "surface": "physical-sign",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "glance-recognition",
+          "scan-find"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "出口 EXIT",
+        "plannedConditions": [
+          "PV-025と同じ採用条件で、指定書体の「木」の実高40mm以上となる対照を準備する。",
+          "このケースで実測するのは指定書体の文字高のみ。距離・照明・遮蔽・接近可能性などの現場条件は未観測として記録し、別の評価計画へ残す。",
+          "10mを採用条件として仮定し、同じ表の欧文「E」の実高30mm以上も別に照合する。10mは現地で実測した値ではない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-026.json",
+        "artifactDigest": "sha256:46a76956c8998cdd2c1be3e9d26c03e2f8664f0da74786b67d91fabeadf748c7",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "実高と採用した目安との一致を確認する。",
+        "寸法の一致だけで全利用者の読解や現場全体の適合を保証しない。",
+        "文字高以外の現場条件がnot-checkedとして残ることを確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "JA-TYPE-009",
+          "scope": "採用した文字高の測定と目安への照合",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "実字面の測定と当該目安への照合が整合するという限定的な合格。",
+          "minimumEvidenceIfExecuted": [
+            "指定書体",
+            "基準字形の実測",
+            "採用条件として仮定した距離（現地実測ではない）",
+            "採用基準"
+          ]
+        },
+        {
+          "existingRuleId": "DESIGN-005",
+          "scope": "現場全体の読者課題",
+          "expectedResult": "not-checked",
+          "method": "rendered",
+          "reason": "寸法以外を未確認なら、その範囲は未検証として残す。",
+          "minimumEvidenceIfExecuted": [
+            "未確認条件"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "寸法表を満たしたため低視力者を含む全員の利用性能を保証する。",
+      "sourceRefs": [
+        "M19"
+      ],
+      "contrastCaseIds": [
+        "PV-025"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-027",
+      "contrastClass": "bad",
+      "priority": "P1",
+      "title": "長い表行の分割禁止で注記が欠ける",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "report-document",
+        "surface": "pdf",
+        "role": "table + note",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "compare-values",
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "項目A 120件／条件：対象は申請済みの記録です。",
+        "plannedConditions": [
+          "一ページの有効高を超える表行にkeep-togetherを強制し、注記・末尾セルがclipされる負例を準備する。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-027.json",
+        "artifactDigest": "sha256:20e730252bcd28847175abf0b9ae37165b64ec4854620062d6cd2982aefe1e6f",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "全頁と表の継続を確認する。",
+        "値、注記、headerの対応を元資料と実表示の両方で確認する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DOC-002",
+          "scope": "表と注記の内容・対応",
+          "expectedResult": "failed",
+          "method": "rendered",
+          "reason": "全体を一塊にした結果、説明・セルが利用できなくなる。",
+          "minimumEvidenceIfExecuted": [
+            "元表",
+            "全該当頁画像",
+            "欠落範囲"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "表の行を分割しなかったことだけで文書品質を合格にする。",
+      "sourceRefs": [],
+      "contrastCaseIds": [
+        "PV-028"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-028",
+      "contrastClass": "needs-review",
+      "priority": "P0",
+      "title": "PDF previewは見たがnative Officeへ対応できない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "report-document",
+        "surface": "word",
+        "role": "body + table",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading",
+          "compare-values"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "none"
+      },
+      "fixture": {
+        "protectedSource": "報告本文と集計表",
+        "plannedConditions": [
+          "利用環境がPDF previewのみを提供し、対象native Officeを実行できないと確認したfixtureを用意する。",
+          "PDF previewの全頁は確認するが、nativeでの再編集・表示は実行しない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-028.json",
+        "artifactDigest": "sha256:f1209d6c10a435c5de51de1166b76b62f13ccdd9c824b64b4f6c0eb3e7e8b50b",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "変換経路・renderer・font・previewの対象頁を記録する。",
+        "環境として非対応のnative確認と、実施したPDF確認を別scopeにする。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "確認したPDF previewの実表示",
+          "expectedResult": "passed",
+          "method": "rendered",
+          "reason": "当該previewについて必要な表示を観察した条件に限る。",
+          "minimumEvidenceIfExecuted": [
+            "全頁画像",
+            "変換経路",
+            "renderer・font"
+          ]
+        },
+        {
+          "existingRuleId": "DOC-004",
+          "scope": "native Officeの表示・編集性",
+          "expectedResult": "unsupported",
+          "method": "rendered",
+          "reason": "この検査環境が対象native検査に対応できないと確認した場合。単なる未着手ならnot-checked。",
+          "minimumEvidenceIfExecuted": [
+            "利用可能な検査機能の確認",
+            "非対応範囲"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "別rendererのpreviewをnative Officeで確認済みと報告する。",
+      "sourceRefs": [],
+      "contrastCaseIds": [
+        "PV-018",
+        "PV-027"
+      ],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-029",
+      "contrastClass": "N/A",
+      "priority": "P0",
+      "title": "操作のない記事領域に架空のUI状態を要求しない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-editorial",
+        "surface": "html",
+        "role": "body",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "sustained-reading"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "静的な本文のみを持つ記事領域です。",
+        "plannedConditions": [
+          "対象regionにはリンク・入力・button・動的操作がなく、ページ外のbrowser UIは対象外。",
+          "そのregionについてerror/loading/disabledの操作状態を捏造しない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-029.json",
+        "artifactDigest": "sha256:ab8fb562aa76fcf4d3b1e141dad15f20c0b7d393fbcac6d8f3ce6dd7fe7d6e32",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "実際の構造と操作の有無を確認する。",
+        "他regionに実在するUIまで一括で対象外にしない。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "WEB-008",
+          "scope": "当該の静的記事領域の操作状態",
+          "expectedResult": "not-applicable",
+          "method": "manual",
+          "reason": "実在する操作がないため、その状態検査が非該当。",
+          "minimumEvidenceIfExecuted": [
+            "対象region",
+            "構造・操作の確認"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "記事にもerrorやdisabledの画面がないため欠陥とする。",
+      "sourceRefs": [],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      }
+    },
+    {
+      "caseId": "PV-030",
+      "contrastClass": "needs-review",
+      "priority": "P2",
+      "title": "文脈の足りない口語告知を勝手に補完しない",
+      "fixtureKind": "synthetic-planned",
+      "context": {
+        "mediumProfile": "web-marketing",
+        "surface": "html",
+        "role": "mandatory-info",
+        "intent": {
+          "description": null,
+          "attribution": "unknown"
+        },
+        "readingTask": [
+          "scan-find"
+        ],
+        "expressionMode": "prose",
+        "languageRuns": [],
+        "writingMode": "horizontal-tb",
+        "scrollAxis": "vertical"
+      },
+      "fixture": {
+        "protectedSource": "明日、こっちは17時で閉めます。",
+        "plannedConditions": [
+          "単独の告知へ移す目的は分かるが、発話日、店舗、引用として保持すべきかが未確定。",
+          "対照として、日付・場所・条件が明確な長めの文を別途準備する。長いというだけで失敗にしない。"
+        ],
+        "artifactPath": "tests/fixtures/ja_v020/PV-030.json",
+        "artifactDigest": "sha256:b1c297566671a52362ff48a369ce8ab3035a348f87619b9e899092bc1edd5a11",
+        "notice": "検証のための架空条件。実際の顧客、数値、試験結果、承認、画像は存在すると主張していない。"
+      },
+      "plannedObservations": [
+        "共有文脈、指示語、主体、必要条件を確認する。",
+        "文長や漢字率を合否閾値にせず、変更候補と原稿を分ける。",
+        "音声がなければ韻律判断を推定と記録する。"
+      ],
+      "expectedScopedResults": [
+        {
+          "existingRuleId": "CONTENT-001",
+          "scope": "レビュー後の保護原稿",
+          "expectedResult": "passed",
+          "method": "static",
+          "reason": "レビューが原稿を書き換えず、完全に保持した場合の限定的な比較。",
+          "minimumEvidenceIfExecuted": [
+            "原稿とレビュー対象の比較"
+          ]
+        }
+      ],
+      "wrongDecisionToAvoid": "日時・店舗名を推測で埋める、または短文だから分かりやすいと判定する。",
+      "sourceRefs": [
+        "H17",
+        "H18",
+        "H19",
+        "H21",
+        "H23",
+        "H24"
+      ],
+      "contrastCaseIds": [],
+      "execution": {
+        "status": "not-run",
+        "observedResult": null,
+        "evidenceRefs": []
+      },
+      "researchAdvisories": [
+        {
+          "topic": "指示語と共有文脈",
+          "expectedAdviceStatus": "needs-review",
+          "scope": "短い告知の指示対象と意味",
+          "method": "assisted",
+          "reason": "単独で理解するための文脈が不足している。",
+          "productRuleId": null,
+          "note": "既存JA-TYPE-004の改行検査の守備範囲を広げず、研究上の助言として記録する。"
+        }
+      ]
+    }
+  ],
+  "documentIntegrityCheck": "JSON構造・件数・既存ID・出典ID・未実施状態を資料内で確認。各ケースの実行、KUMIHANの回帰試験、実描画検証は未実施。"
+}

@@ -1,0 +1,69 @@
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_accord_site.py
+Accord site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_ar_site.py
+Generated 12 Arabic product pages and kumihan-ar.css
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_bn_site.py
+Bengali site: 12 pages built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_compasso_site.py
+Compasso site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_equilibrio_site.py
+Equilibrio site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_fa_site.py
+Generated 12 Arabic product pages and kumihan-fa.css
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_grafia_site.py
+Grafía site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_hi_site.py
+अक्षर-संगति site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_hlela_site.py
+Hlela site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_lad_site.py
+Лад site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_laras_site.py
+Laras site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_lumnung_site.py
+លំនឹង site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_mizani_site.py
+Mizani site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_satzbild_site.py
+Satzbild site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_szyk_site.py
+Szyk site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_th_site.py
+Thai site: 12 pages built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_version_site.py
+Jekyll version fragments and README built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_ziheng_site.py
+ZiHeng site: 13 files built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_zilu_site.py
+Generated 12 ZiLu pages
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_gateways.py
+Gateway: 22 pages built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_privacy.py
+Privacy pages: built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_jekyll_seo.py
+Jekyll SEO: 21 pages built
++ node /workspace/kumihan/tools/build_nhip_chu_site.mjs
+KUMIHAN Nhịp Chữ pages: 12 written
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/web_fonts.py
+Web fonts: built
++ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python /workspace/kumihan/tools/build_version_site.py --preservation
+Traceback (most recent call last):
+  File "/workspace/kumihan/tools/build_version_site.py", line 143, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/kumihan/tools/build_version_site.py", line 134, in main
+    for name,content in (preservation() if args.preservation else outputs()).items():
+                         ^^^^^^^^^^^^^^
+  File "/workspace/kumihan/tools/build_version_site.py", line 124, in preservation
+    if not allowed:raise ValueError('Unrelated protected change: '+path)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Unrelated protected change: .claude-plugin/plugin.json
+Traceback (most recent call last):
+  File "/workspace/kumihan/tools/build_seo.py", line 33, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/workspace/kumihan/tools/build_seo.py", line 29, in main
+    subprocess.run(command,cwd=ROOT,check=True)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python', '/workspace/kumihan/tools/build_version_site.py', '--preservation']' returned non-zero exit status 1.

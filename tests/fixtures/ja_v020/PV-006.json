@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-006",
+  "synthetic": true,
+  "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+  "conditions": [
+    "PV-005と同じ文字列・font・viewportで、実用的な複数行labelと操作領域を用意する。"
+  ],
+  "wrongDecisionToAvoid": "二行のボタンを形式だけで失敗にする。"
+}

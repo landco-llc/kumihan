@@ -139,3 +139,7 @@ If every line shows `OK`, the files are intact.
 Other tools: [Claude](installation.claude.md) · [Gemini](installation.gemini.md)
 
 Screens and availability may change. Please check each service's official guidance for the latest information (last checked: October 14, 2026).
+
+## Japanese source v0.2.0 candidate / 日本語ソース候補
+
+The source v0.2.0 adds region-based context, scoped evidence, conditional Web/document recipes and a research source ledger. / 領域別の文脈、証拠の範囲、条件付きレシピと研究出典を追加しています。Published downloads above remain the verified v0.1.8 Release. / 上の公開配布リンクは検証済みv0.1.8のままです。Candidate archives are reviewed in [Issue #119](https://github.com/landco-llc/kumihan/issues/119); they do not establish native-host acceptance. / 候補ZIPの存在はネイティブホストの動作検証を意味しません。

@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-011",
+  "synthetic": true,
+  "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+  "conditions": [
+    "保護文字列はDOMから抽出できるが、日時・会場がcontainerの外へ出てclipされる。",
+    "他の表示・利用可能な代替経路はない対照を準備する。"
+  ],
+  "wrongDecisionToAvoid": "HTML検索で見つかったことを、利用者に見えている証拠にする。"
+}

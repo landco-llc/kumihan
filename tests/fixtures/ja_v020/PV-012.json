@@ -1,0 +1,10 @@
+{
+  "caseId": "PV-012",
+  "synthetic": true,
+  "protectedSource": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+  "conditions": [
+    "正本は11月3日。完全な情報領域の一箇所が11月4日になったfixtureを用意する。",
+    "別の箇所には正しい11月3日が残る。"
+  ],
+  "wrongDecisionToAvoid": "一箇所が正しいため、別箇所の不一致も許容する。"
+}

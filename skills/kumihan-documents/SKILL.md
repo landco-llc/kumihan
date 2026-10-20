@@ -36,8 +36,8 @@ Read [document recipes](references/document-recipes.md) for Word, PowerPoint and
 
 - Set the Japanese (East Asian) font separately from the Latin font.
 - Turn on kinsoku (line-breaking rules) in the application.
-- For short Japanese titles, apply JA-TYPE-011: compare natural speech groups, keep modifier and particle relationships together when feasible, adjust the text box/layout first, and check actual rendered/exported lines.
-- Reports: keep headings with the content that follows; avoid splitting table rows, captions and footnotes across pages.
+- For short Japanese titles, apply JA-TYPE-011: first check ordinary wrapping and whether intentional breaks are needed, then compare whole-line composition and meaning in actual rendered/exported lines; no compulsory widening or speech-group sequence.
+- Reports: keep headings with the content that follows; keep short rows/captions/notes together only when they fit a page; allow oversized-row continuation while checking headers, final cells and notes.
 - Slides: when content overflows, split the slide or regroup it. Do not shrink all text to fit.
 
 ## 4. Check before delivery
@@ -57,3 +57,7 @@ For a read-only review, use `kumihan-review`. To apply its findings, get explici
 If the user asks for a formal design record, an exception or a waiver, use the [design contract](references/design-contract.md) and [architecture](references/architecture.md).
 
 If a referenced file is missing, say so and continue with what is available.
+
+## Context and evidence by region (v0.2.0)
+
+Use [typography context](references/typography-context.md) for role, readingTask, attributed intent, prose/display/hybrid and required-information mapping. Keep the brief proportional to the task. Use [Japanese writing and type](references/japanese-writing-and-type.md) and [task recipes](references/typography-recipes-by-task.md) only for relevant decisions. Ordinary wrapping comes first unless intentional breaks are needed; JA-TYPE-002 kinsoku, 003 indivisible ranges, 004 meaning and 011 whole-line composition remain separate. Compare actual fonts, widths and surrounding layout without a mandatory speech-group or widening sequence.

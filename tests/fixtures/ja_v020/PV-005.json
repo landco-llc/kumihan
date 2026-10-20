@@ -1,0 +1,9 @@
+{
+  "caseId": "PV-005",
+  "synthetic": true,
+  "protectedSource": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+  "conditions": [
+    "幅320 CSS px相当の実状態で、全文nowrapと親containerのclipにより末尾と操作領域が失われる対照fixtureを作る。"
+  ],
+  "wrongDecisionToAvoid": "一行表示を守ったことを品質向上とする。"
+}
