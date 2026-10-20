@@ -1,0 +1,275 @@
+{
+  "schema": "kumihan-universal-ja-v020-rollout-contract-1",
+  "state": "PREDEPLOY / not rolled out",
+  "authority": "Owner 2026-10-20 explicitly approved GitHub JA v0.2.0 limited release and Universal MCP JA reflection",
+  "source_pr_101": "5d32ea64618e33a171705363c223fe43060c31e1",
+  "release_tag": "v0.2.0",
+  "released_sha": "MUST_RESOLVE_FROM_VERIFIED_GITHUB_RELEASE_AFTER_ISSUE_126",
+  "current_live": {
+    "observed": "2026-10-20 JST",
+    "source": "Direct connected KUMIHAN Universal MCP kumihan_list_languages",
+    "endpoint": "https://mcp-kmhn.landco.co.jp/mcp",
+    "module_count": 21,
+    "japanese_canonical_catalog_count": 39,
+    "modules": [
+      {
+        "id": "ar",
+        "name": "KUMIHAN｜نضيد",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "9928ec8bf4651ec390095d458adf78f3dece22264f398933fbfabd1d5fde7b0f"
+      },
+      {
+        "id": "bn",
+        "name": "KUMIHAN｜অক্ষরসজ্জা",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "452d4547d6879309c5902ecac0b712b813195ad1654293c41b87615885a8f5a6"
+      },
+      {
+        "id": "de",
+        "name": "KUMIHAN｜Satzbild",
+        "version": "0.1.0",
+        "rule_count": 44,
+        "status": "preview_unverified",
+        "module_sha256": "1179956f24b9253589860e42e06fd5f6b25f786474609a4bd4a3a8e4da534253"
+      },
+      {
+        "id": "es",
+        "name": "KUMIHAN｜Grafía",
+        "version": "0.1.0",
+        "rule_count": 48,
+        "status": "preview_unverified",
+        "module_sha256": "0acc237140aa544647d862b2771a1939aa10fe5c475355852cc4af90e427a480"
+      },
+      {
+        "id": "fa",
+        "name": "KUMIHAN｜تراز",
+        "version": "0.1.0",
+        "rule_count": 32,
+        "status": "preview_unverified",
+        "module_sha256": "42df317e031a030c497729fd97541d75e04b6721413241aebc57084a4c0a0627"
+      },
+      {
+        "id": "fr",
+        "name": "KUMIHAN｜Accord",
+        "version": "0.1.1",
+        "rule_count": 20,
+        "status": "preview_unverified",
+        "module_sha256": "0fce3425a7d31eedfe70a78c33897fa16c473d7cfe25631d5eeeded1d7722118"
+      },
+      {
+        "id": "hi",
+        "name": "KUMIHAN｜अक्षर-संगति",
+        "version": "0.1.0",
+        "rule_count": 24,
+        "status": "preview_unverified",
+        "module_sha256": "2850edfc95e223c28756318425f1233099d1cd0eb2f0bccbebb75b385116cc3b"
+      },
+      {
+        "id": "id",
+        "name": "KUMIHAN｜Laras",
+        "version": "0.1.0",
+        "rule_count": 34,
+        "status": "preview_unverified",
+        "module_sha256": "4739d65e36ce6deb82414af1bed899eff2e9a30a6c3752e9255c513e8086c687"
+      },
+      {
+        "id": "it",
+        "name": "KUMIHAN｜Equilibrio",
+        "version": "0.1.0",
+        "rule_count": 40,
+        "status": "preview_unverified",
+        "module_sha256": "1288d3f6b9ae421c15b3831433338dd647082299ff287217f2a945e79a08815a"
+      },
+      {
+        "id": "ja",
+        "name": "KUMIHAN",
+        "version": "0.1.8",
+        "rule_count": 78,
+        "status": "preview_unverified",
+        "module_sha256": "ec67c409db050ae3fe371c795fabe614d99b406d563bf3e270ce160e22332b93"
+      },
+      {
+        "id": "km",
+        "name": "KUMIHAN｜លំនឹង",
+        "version": "0.1.0",
+        "rule_count": 30,
+        "status": "preview_unverified",
+        "module_sha256": "d15bbde83992e9b306d6b07f640687a267fd239bb3636e1f40d7b53b7a93377b"
+      },
+      {
+        "id": "ko",
+        "name": "KUMIHAN｜글짜임",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "1215a07eb26b60f3f2f3c4c907d31fceb4b1fd6108f919446a175a6b920aa3d7"
+      },
+      {
+        "id": "pl",
+        "name": "KUMIHAN｜Szyk",
+        "version": "0.1.0",
+        "rule_count": 40,
+        "status": "preview_unverified",
+        "module_sha256": "b60fb38461c8d746e95f660e7765d18c0279ca60d96c16df075bfa0aa6fb91e8"
+      },
+      {
+        "id": "pt",
+        "name": "KUMIHAN｜Compasso",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "3a38931a19aeacfaa7d37a3842ad02b8527972e388fe752236e09a1a81e95f7b"
+      },
+      {
+        "id": "ru",
+        "name": "KUMIHAN｜Лад",
+        "version": "0.1.0",
+        "rule_count": 48,
+        "status": "preview_unverified",
+        "module_sha256": "6bef0e067c3e7575e5c039e02cb5b9a4b792e699a736b57f79ca14e7a7fafe52"
+      },
+      {
+        "id": "sw",
+        "name": "KUMIHAN｜Mizani",
+        "version": "0.1.0",
+        "rule_count": 24,
+        "status": "preview_unverified",
+        "module_sha256": "b906432b87a25c5ef035dd26bdba8e8ada5856bf38760b9a8d2c29a7ae403172"
+      },
+      {
+        "id": "th",
+        "name": "KUMIHAN｜ดุลอักษร",
+        "version": "0.1.1",
+        "rule_count": 32,
+        "status": "preview_unverified",
+        "module_sha256": "4c3b4a53c7d013d413485211afc731a401faec7ba5a94b2e010e9f622a66c709"
+      },
+      {
+        "id": "vi",
+        "name": "KUMIHAN｜Nhịp Chữ",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "f1a3b01c55529473c1e2e2985390b01ed86a70b4e1123f587228b2ea1f7102eb"
+      },
+      {
+        "id": "zh-Hans",
+        "name": "KUMIHAN｜字律",
+        "version": "0.1.0",
+        "rule_count": 36,
+        "status": "preview_unverified",
+        "module_sha256": "22df09af9813e9e32bf1967de3fe5d8c9fb125c524a61e70da6753d932601548"
+      },
+      {
+        "id": "zh-Hant",
+        "name": "KUMIHAN｜字衡",
+        "version": "0.1.0",
+        "rule_count": 15,
+        "status": "preview_unverified",
+        "module_sha256": "7e3980c292521b97f6606b23fe819eb670e3b4dd55eecfb644a8c60c62fc4ab4"
+      },
+      {
+        "id": "zu",
+        "name": "KUMIHAN｜Hlela",
+        "version": "0.1.0",
+        "rule_count": 24,
+        "status": "preview_unverified",
+        "module_sha256": "9e33790c6804097804e291ea8a5ce74df1e61ea51dec63abe949c78dbb6e2c93"
+      }
+    ],
+    "note": "Current live MCP status includes preview_unverified. Catalog JA 39 rule IDs and Universal registry 78 normalizations are separate measures; do not alter count by inference."
+  },
+  "required_after": {
+    "module_count": 21,
+    "ja_version": "0.2.0",
+    "ja_rules": "retain existing registry normalized count unless exact source audits justify delta",
+    "other_module_hashes_must_equal_baseline": true,
+    "no_host_or_auto_audit_claim": true,
+    "ja_reference_guidance_required": true
+  },
+  "japanese_source_refs_pinned_candidate_only": {
+    "candidate_head": "1f205124cee538235f4cee384ca67f414c5e0e26",
+    "files": [
+      {
+        "path": "skills/kumihan/SKILL.md",
+        "git_blob_sha": "19de6ea0b7bd6699a98a5d5adcc4bb8f6b88c60e",
+        "utf8_length": 5453,
+        "delivery": "essential_module_source"
+      },
+      {
+        "path": "skills/kumihan/references/typography-context.md",
+        "git_blob_sha": "256d2e05e7ac22fbf1a51cc57a5759ad56a0dfb0",
+        "utf8_length": 2017,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/typography-recipes-by-task.md",
+        "git_blob_sha": "623c35bdc992b107e0bb4f44df8cb30878c9ce7b",
+        "utf8_length": 1250,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/japanese-writing-and-type.md",
+        "git_blob_sha": "83c86f4c6964c901199079a4f95024a77b66c0a6",
+        "utf8_length": 3654,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/web-recipes.md",
+        "git_blob_sha": "1810b1a2e5fecf6931fb1965535a8dab81f60f06",
+        "utf8_length": 10369,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/document-recipes.md",
+        "git_blob_sha": "c37554c53ee60355be1b8d6e5b19eafbd5b50c5f",
+        "utf8_length": 6389,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/review-protocol.md",
+        "git_blob_sha": "d38fb327787cffc7f7e14f79cc89778e84ddd793",
+        "utf8_length": 12913,
+        "delivery": "candidate_reference_bounded"
+      },
+      {
+        "path": "skills/kumihan/references/research-claims.json",
+        "git_blob_sha": "fabfdca123b9ec2824709f1c5ca583f443e97647",
+        "utf8_length": 78075,
+        "delivery": "metadata_only_large_not_embedded"
+      },
+      {
+        "path": "plugin.json",
+        "git_blob_sha": "3b492802abcf3ec63884e90ce16708668c3008a9",
+        "utf8_length": 2706,
+        "delivery": "essential_module_source"
+      }
+    ]
+  },
+  "remote_deployment": {
+    "status": "not-executed",
+    "credentials": "must not be put into this file or GitHub",
+    "before_registry_backup_required": true,
+    "verify_original_loaded_php_before_swap": true,
+    "deploy_sequence": [
+      "compatible optional PHP guidance reader",
+      "new registry"
+    ],
+    "rollback_sequence": [
+      "old registry",
+      "old PHP"
+    ],
+    "postcheck": [
+      "21 modules",
+      "ja 0.2.0",
+      "all other module digests identical",
+      "getGuidance ja references returned",
+      "reviewText protected source unchanged",
+      "known language router behavior not regressed"
+    ]
+  }
+}
