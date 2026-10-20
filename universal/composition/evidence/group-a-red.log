@@ -1,0 +1,163 @@
+test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) ... 
+  test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'passed'}) ... ERROR
+  test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'checked'}) ... ERROR
+  test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'waived'}) ... ERROR
+  test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'verified'}) ... ERROR
+test_legacy_mapping_is_separate_and_lossless (test_contract.ContractTests.test_legacy_mapping_is_separate_and_lossless) ... ERROR
+test_reference_copy_exact (test_contract.ContractTests.test_reference_copy_exact) ... ok
+test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) ... 
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='request') ... ERROR
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='plan') ... ERROR
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='module') ... ERROR
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='observation') ... ERROR
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='audit') ... ERROR
+  test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='error') ... ERROR
+test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) ... 
+  test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) (key='unknown_core') ... ERROR
+  test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) (key='contract_version') ... ERROR
+test_validator_exists (test_contract.ContractTests.test_validator_exists) ... FAIL
+
+======================================================================
+ERROR: test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'passed'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 33, in test_forged_status_and_waiver_structure_rejected
+    with self.subTest(change=change), self.assertRaises(ValueError): self.validate(value)
+                                                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'checked'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 33, in test_forged_status_and_waiver_structure_rejected
+    with self.subTest(change=change), self.assertRaises(ValueError): self.validate(value)
+                                                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'waived'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 33, in test_forged_status_and_waiver_structure_rejected
+    with self.subTest(change=change), self.assertRaises(ValueError): self.validate(value)
+                                                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) (change={'status': 'verified'})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 33, in test_forged_status_and_waiver_structure_rejected
+    with self.subTest(change=change), self.assertRaises(ValueError): self.validate(value)
+                                                                     ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_legacy_mapping_is_separate_and_lossless (test_contract.ContractTests.test_legacy_mapping_is_separate_and_lossless)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 40, in test_legacy_mapping_is_separate_and_lossless
+    from contract import legacy_snapshot, restore_legacy
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='request')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='plan')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='module')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='observation')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='audit')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) (kind='error')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 21, in test_six_record_kinds
+    self.validate(value)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) (key='unknown_core')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 27, in test_unknown_fields_and_version_rejected
+    self.validate(r)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+ERROR: test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) (key='contract_version')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 27, in test_unknown_fields_and_version_rejected
+    self.validate(r)
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 14, in validate
+    from contract import validate_record
+ModuleNotFoundError: No module named 'contract'
+
+======================================================================
+FAIL: test_validator_exists (test_contract.ContractTests.test_validator_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_contract.py", line 11, in test_validator_exists
+    self.assertTrue((ROOT / 'contract.py').exists(), 'Full development Draft202012 validator is missing')
+AssertionError: False is not true : Full development Draft202012 validator is missing
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+FAILED (failures=1, errors=13)

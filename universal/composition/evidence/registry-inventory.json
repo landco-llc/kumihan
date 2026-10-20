@@ -1,0 +1,748 @@
+{
+  "engine": "KUMIHAN Universal MCP",
+  "module_count": 21,
+  "modules": {
+    "ar": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "مهارات لتنسيق النص العربي وتصميمه ومراجعته مع الحفاظ على الأصل وفصل الفحص النصي عن العرض الفعلي. | Skills for composing and reviewing Arabic typography while preserving source text and separating static checks from rendered evidence.",
+      "entry_skill_path": "plugins/kumihan-ar/skills/kumihan-ar/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-ar/plugin.json",
+          "sha256": "77a6ee2af1ea3ef70b1465ba2050928c51a77c25a465af6a9a04fe217fcab998"
+        },
+        {
+          "path": "plugins/kumihan-ar/skills/kumihan-ar/SKILL.md",
+          "sha256": "1c1cc9a7e9e34ca2d69385b893a1fc4b3fcaa5b3bc97a339c811bd4c2d4cd305"
+        },
+        {
+          "path": "plugins/kumihan-ar/rules/catalog.json",
+          "sha256": "912a0744428653fe2e658c161bea3a581bde04dccc1fec0badb4e28d77fb6b23"
+        }
+      ],
+      "id": "ar",
+      "locales": [
+        "ar",
+        "ar-AE",
+        "ar-EG",
+        "ar-MA",
+        "ar-SA"
+      ],
+      "module_sha256": "9928ec8bf4651ec390095d458adf78f3dece22264f398933fbfabd1d5fde7b0f",
+      "name": "KUMIHAN｜نضيد",
+      "source": "plugins/kumihan-ar",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "bn": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "বাংলা অক্ষরবিন্যাস ও উদ্দেশ্যভিত্তিক ডিজাইনের জন্য উন্মুক্ত AI দক্ষতা; মূল লেখা অক্ষত রাখুন এবং প্রমাণসহ যাচাই করুন। | Open-source AI skills for Bangla typography and purposeful design; preserve source text and review with evidence.",
+      "entry_skill_path": "plugins/kumihan-bn/skills/kumihan-bn/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-bn/plugin.json",
+          "sha256": "f91fcdffbb134565ea7a317f6fd2a0118cc77426fb45795b4c651e28f0c13fc5"
+        },
+        {
+          "path": "plugins/kumihan-bn/skills/kumihan-bn/SKILL.md",
+          "sha256": "65ed5c673ce94007ae695b59db709e1110f6e0adcc2586308cca7775ae3d7983"
+        },
+        {
+          "path": "plugins/kumihan-bn/rules/catalog.json",
+          "sha256": "388d04cf0aba1c87ce0612fc72f67cc86c7e8b4f43c8f27825f2512efdd92e87"
+        }
+      ],
+      "id": "bn",
+      "locales": [
+        "bn",
+        "bn-BD",
+        "bn-IN"
+      ],
+      "module_sha256": "452d4547d6879309c5902ecac0b712b813195ad1654293c41b87615885a8f5a6",
+      "name": "KUMIHAN｜অক্ষরসজ্জা",
+      "source": "plugins/kumihan-bn",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "de": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Offene KI-Skills für deutsche Typografie und durchdachte Gestaltung, mit Schutz des Originaltexts und nachvollziehbarer Prüfung. | Open-source AI skills for German typography and purposeful design, preserving original content and providing evidence-based review.",
+      "entry_skill_path": "plugins/kumihan-satzbild/skills/kumihan-satzbild/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-satzbild/plugin.json",
+          "sha256": "8ee30274f8f39fdb0cc4b4bd91508c99e1afe9a20e460ab29d6abf85e6d84467"
+        },
+        {
+          "path": "plugins/kumihan-satzbild/skills/kumihan-satzbild/SKILL.md",
+          "sha256": "fa01578d303c6602f75960b622e08b116aedbd291c1d35c2f10ec07e94b678bd"
+        },
+        {
+          "path": "plugins/kumihan-satzbild/rules/catalog.json",
+          "sha256": "7dce6ff92b326832c022b954342f7b46cf7faef79fba661c66ef2c210e5f15fa"
+        }
+      ],
+      "id": "de",
+      "locales": [
+        "de",
+        "de-AT",
+        "de-CH",
+        "de-DE"
+      ],
+      "module_sha256": "1179956f24b9253589860e42e06fd5f6b25f786474609a4bd4a3a8e4da534253",
+      "name": "KUMIHAN｜Satzbild",
+      "source": "plugins/kumihan-satzbild",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 44
+    },
+    "es": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Guía tipográfica en español con conservación del original y revisión basada en evidencias. | Spanish typography guidance with source preservation and evidence-based review.",
+      "entry_skill_path": "plugins/kumihan-grafia/skills/kumihan-grafia/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-grafia/plugin.json",
+          "sha256": "a29c1adb9774aa42faf409fdc49f6951b945ca811d1833967f8d3509bbd78065"
+        },
+        {
+          "path": "plugins/kumihan-grafia/skills/kumihan-grafia/SKILL.md",
+          "sha256": "abcd188697f154d7dc4815e32f32be5e064d848f063729a5545664bbe988fe41"
+        },
+        {
+          "path": "plugins/kumihan-grafia/rules/catalog.json",
+          "sha256": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc"
+        }
+      ],
+      "id": "es",
+      "locales": [
+        "es",
+        "es-419",
+        "es-AR",
+        "es-CL",
+        "es-CO",
+        "es-ES",
+        "es-MX",
+        "es-PE"
+      ],
+      "module_sha256": "0acc237140aa544647d862b2771a1939aa10fe5c475355852cc4af90e427a480",
+      "name": "KUMIHAN｜Grafía",
+      "source": "plugins/kumihan-grafia",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 48
+    },
+    "fa": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "مهارت‌هایی برای حروف‌چینی و طراحی فارسی با حفظ متن اصلی، نیم‌فاصله و ترتیب خواندن؛ بررسی فنی از نمایش واقعی جداست. | Open-source skills for Persian typography and design, preserving source text, ZWNJ and logical order while separating static checks from observed rendering.",
+      "entry_skill_path": "plugins/kumihan-fa/skills/kumihan-fa/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-fa/plugin.json",
+          "sha256": "0a83cea4fb822ac85c53a233aa2e866f7ceffcedbf9fff60ae2954deea523dae"
+        },
+        {
+          "path": "plugins/kumihan-fa/skills/kumihan-fa/SKILL.md",
+          "sha256": "adb99641aeb7c983a4113227ae68699b4566b0e337f158739194d3a6c5f94894"
+        },
+        {
+          "path": "plugins/kumihan-fa/rules/catalog.json",
+          "sha256": "0bc3797ff9b8091483555e07f2c9165b20115a7519752c4dee2c9ea1f828877e"
+        }
+      ],
+      "id": "fa",
+      "locales": [
+        "fa",
+        "fa-AF",
+        "fa-IR"
+      ],
+      "module_sha256": "42df317e031a030c497729fd97541d75e04b6721413241aebc57084a4c0a0627",
+      "name": "KUMIHAN｜تراز",
+      "source": "plugins/kumihan-fa",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 32
+    },
+    "fr": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Guía de tipografía francesa para web, documentos y presentaciones; conserva el texto original y permite revisiones de solo lectura. | French typography guidance for web, documents and presentations; preserves original text and supports read-only reviews.",
+      "entry_skill_path": "plugins/kumihan-accord/skills/kumihan-accord/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-accord/plugin.json",
+          "sha256": "b0963bf52e40ce9e892d2844c3528f7c5a1b6ab3c3d1bd0697e57e8d8d84b464"
+        },
+        {
+          "path": "plugins/kumihan-accord/skills/kumihan-accord/SKILL.md",
+          "sha256": "e302f1906da5b942d97c72709d6e90536a8abad623685aca18b1d06486ea3599"
+        },
+        {
+          "path": "plugins/kumihan-accord/rules/catalog.json",
+          "sha256": "a8b83fc1c3f934a5ca36aef31ed8a5681070efeb3db70e7a82ff2100cced6402"
+        }
+      ],
+      "id": "fr",
+      "locales": [
+        "fr",
+        "fr-BE",
+        "fr-CA",
+        "fr-CH",
+        "fr-FR"
+      ],
+      "module_sha256": "0fce3425a7d31eedfe70a78c33897fa16c473d7cfe25631d5eeeded1d7722118",
+      "name": "KUMIHAN｜Accord",
+      "source": "plugins/kumihan-accord",
+      "status": "preview_unverified",
+      "version": "0.1.1",
+      "rule_count": 20
+    },
+    "hi": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "हिंदी अक्षर-विन्यास और डिज़ाइन में सहायता; मूल पाठ सुरक्षित रखें। | Hindi typography and design guidance with source preservation.",
+      "entry_skill_path": "plugins/kumihan-hi/skills/kumihan-hi/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-hi/plugin.json",
+          "sha256": "b6b9e800d0198993382c1a74259088e5717ca1318764a9fbf1295a221beb713c"
+        },
+        {
+          "path": "plugins/kumihan-hi/skills/kumihan-hi/SKILL.md",
+          "sha256": "610b1d4bc6b6529711144fc48239f67c64d37932ecb95d16a30f68ca5598e227"
+        },
+        {
+          "path": "plugins/kumihan-hi/rules/catalog.json",
+          "sha256": "afa1e1105c7deb793a9f9426db3af8bb8ee9d62482905194c2ee644dcc0c007e"
+        }
+      ],
+      "id": "hi",
+      "locales": [
+        "hi",
+        "hi-IN"
+      ],
+      "module_sha256": "2850edfc95e223c28756318425f1233099d1cd0eb2f0bccbebb75b385116cc3b",
+      "name": "KUMIHAN｜अक्षर-संगति",
+      "source": "plugins/kumihan-hi",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 24
+    },
+    "id": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Panduan tipografi dan desain berbahasa Indonesia dengan perlindungan naskah dan peninjauan berbasis bukti. | Indonesian typography and purposeful design guidance with source preservation and evidence-based review.",
+      "entry_skill_path": "plugins/kumihan-laras/skills/kumihan-laras/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-laras/plugin.json",
+          "sha256": "4e466313983e0f2e98a5fdd88d6d5d96bbed9146eb9e0871ab2c3af4252bf4a8"
+        },
+        {
+          "path": "plugins/kumihan-laras/skills/kumihan-laras/SKILL.md",
+          "sha256": "44b16d8f48c1c794348a89776ca7b1ab4d824f16b7301bfb377ba1d9168f518a"
+        },
+        {
+          "path": "plugins/kumihan-laras/rules/catalog.json",
+          "sha256": "adec883e3a217649ba4c00386dbe53ea3821271e10db0ae098258eb554e8ccb5"
+        }
+      ],
+      "id": "id",
+      "locales": [
+        "id",
+        "id-ID"
+      ],
+      "module_sha256": "4739d65e36ce6deb82414af1bed899eff2e9a30a6c3752e9255c513e8086c687",
+      "name": "KUMIHAN｜Laras",
+      "source": "plugins/kumihan-laras",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 34
+    },
+    "it": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Skill di IA open source per la tipografia italiana e un design consapevole, con tutela del testo originale e revisione basata su evidenze. | Open-source AI skills for Italian typography and purposeful design, preserving original content and providing evidence-based review.",
+      "entry_skill_path": "plugins/kumihan-equilibrio/skills/kumihan-equilibrio/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-equilibrio/plugin.json",
+          "sha256": "6fe86a40eea32d49e9bfd886d70408031a634a389bf781ac764b6a6dad247be3"
+        },
+        {
+          "path": "plugins/kumihan-equilibrio/skills/kumihan-equilibrio/SKILL.md",
+          "sha256": "561051fbef52c456f81b90d1102297d70bc362a02dad187608554f9fae1cd4fd"
+        },
+        {
+          "path": "plugins/kumihan-equilibrio/rules/catalog.json",
+          "sha256": "5ef51fc2c952625ca4b63dec45964be7f2dd66bfee45ce9140d77dc95c58343a"
+        }
+      ],
+      "id": "it",
+      "locales": [
+        "it",
+        "it-CH",
+        "it-IT"
+      ],
+      "module_sha256": "1288d3f6b9ae421c15b3831433338dd647082299ff287217f2a945e79a08815a",
+      "name": "KUMIHAN｜Equilibrio",
+      "source": "plugins/kumihan-equilibrio",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 40
+    },
+    "ja": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "日本語の文字組・デザイン制作とレビューを支援。 / Guidance for Japanese typography, design, and read-only review.",
+      "entry_skill_path": "skills/kumihan/SKILL.md",
+      "files": [
+        {
+          "path": "plugin.json",
+          "sha256": "88ff7e3036e4cfd29c0a7af2b47a36b4d0fb7902c15dbaefea1c54788a1cbba2"
+        },
+        {
+          "path": "skills/kumihan/SKILL.md",
+          "sha256": "e09e2e580e2927656ab9fe9fd01e3f09bd52763a319c84f4687e3cc4eeb0ee5b"
+        },
+        {
+          "path": "skills/kumihan/rules/catalog.json",
+          "sha256": "cac9be6435fe9dcbbd2cc7a341be6cac686b1da91461eb01d8306a10c0426f93"
+        },
+        {
+          "path": "skills/kumihan/rules/content.json",
+          "sha256": "ba512c8bb4717a624c2da963bbbaa4fc72def40478a1b367fcece4f8ce41df38"
+        },
+        {
+          "path": "skills/kumihan/rules/design.json",
+          "sha256": "33c3f4de38f6127e9d7f0e1a874ffa39f405c113ef30c0854cb675d3091ec69b"
+        },
+        {
+          "path": "skills/kumihan/rules/documents.json",
+          "sha256": "e75413365942a4183dc950f410d07a5e8a553a07cd7e0898201eb302b8be8ed2"
+        },
+        {
+          "path": "skills/kumihan/rules/evidence.json",
+          "sha256": "5fc13ee886f712650212a799236d6d64ac68658846fc64b1f0349e1b02494d0f"
+        },
+        {
+          "path": "skills/kumihan/rules/japanese-type.json",
+          "sha256": "66af522966e764456bc1dca0df2dda0dd3d43228cbd7a9d9930282231265f5dc"
+        },
+        {
+          "path": "skills/kumihan/rules/web.json",
+          "sha256": "e5ccf6e1134cff9b1f1768b67b4778e768fc838e7c81229957d50a5af5279893"
+        }
+      ],
+      "id": "ja",
+      "locales": [
+        "ja"
+      ],
+      "module_sha256": "c27b0ba9daf7652c26a562aca11ddb2356dacfd21a683b6f3fd8701da18e50aa",
+      "name": "KUMIHAN",
+      "source": "skills/kumihan",
+      "status": "preview_unverified",
+      "version": "0.1.7-preview",
+      "rule_count": 78
+    },
+    "km": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "KUMIHAN｜លំនឹង ផ្តល់គោលការណ៍សម្រាប់ការរៀបចំអក្សរខ្មែរ និងការរចនាដែលសមនឹងគោលបំណង ដោយរក្សាអត្ថបទដើម។ | Open-source Khmer typography and purposeful design guidance for web, documents and graphics. It preserves source text, protects conjuncts and records what has not been verified.",
+      "entry_skill_path": "plugins/kumihan-lumnung/skills/kumihan-lumnung/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-lumnung/plugin.json",
+          "sha256": "8bb774357c20d019f056d0494e2ef910f36e52d95643c3c698af1760e5ca6ba1"
+        },
+        {
+          "path": "plugins/kumihan-lumnung/skills/kumihan-lumnung/SKILL.md",
+          "sha256": "9b6af8f7dceff45e9b1d86637caac5fba114b27cb4df09a36e20afea3302c4f7"
+        },
+        {
+          "path": "plugins/kumihan-lumnung/rules/catalog.json",
+          "sha256": "a431f27fef92fc26619410ce9ba04c961eb057127c9c4e1b63adc0e04f5ceebd"
+        }
+      ],
+      "id": "km",
+      "locales": [
+        "km",
+        "km-KH"
+      ],
+      "module_sha256": "d15bbde83992e9b306d6b07f640687a267fd239bb3636e1f40d7b53b7a93377b",
+      "name": "KUMIHAN｜លំនឹង",
+      "source": "plugins/kumihan-lumnung",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 30
+    },
+    "ko": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "한국어 웹·문서·프레젠테이션의 글짜임과 카피를 다루며 원문 보존과 읽기 전용 검토를 지원합니다. / Guidance for Korean typography and copy across web, documents and presentations, preserving source text and supporting read-only review.",
+      "entry_skill_path": "plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-geuljjaim/plugin.json",
+          "sha256": "c59207b0722b72ba9cc39ba27758d5b26ef6f3e846f773684095e733174165c9"
+        },
+        {
+          "path": "plugins/kumihan-geuljjaim/skills/kumihan-geuljjaim/SKILL.md",
+          "sha256": "0ea556a9ca996635745cd45d4f56d69cfc5fcfb30236f5928b2befb636cecec6"
+        },
+        {
+          "path": "plugins/kumihan-geuljjaim/rules/ko-kr.json",
+          "sha256": "ee7d3b03dd8ea3a834f8e263dfa56952136a4303648495460d73e79eea99e457"
+        }
+      ],
+      "id": "ko",
+      "locales": [
+        "ko",
+        "ko-KR"
+      ],
+      "module_sha256": "1215a07eb26b60f3f2f3c4c907d31fceb4b1fd6108f919446a175a6b920aa3d7",
+      "name": "KUMIHAN｜글짜임",
+      "source": "plugins/kumihan-geuljjaim",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "pl": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Polska typografia, projektowanie i analiza składu z poszanowaniem oryginału. | Polish typography, content design and source-preserving review.",
+      "entry_skill_path": "plugins/kumihan-szyk/skills/kumihan-szyk/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-szyk/plugin.json",
+          "sha256": "bef9030e2a78949347fc6af80d1047e7d12f04fbbb2890a19607206550569b5e"
+        },
+        {
+          "path": "plugins/kumihan-szyk/skills/kumihan-szyk/SKILL.md",
+          "sha256": "828ff1ebfee8b62120fc5560cb44f068ed0615414cdf5b009d65dfe6116d4f47"
+        },
+        {
+          "path": "plugins/kumihan-szyk/rules/catalog.json",
+          "sha256": "7579f6b6bfe13486a0e13beb707fa49e4455a7697feb6ac7debdee741dccab51"
+        }
+      ],
+      "id": "pl",
+      "locales": [
+        "pl",
+        "pl-PL"
+      ],
+      "module_sha256": "b60fb38461c8d746e95f660e7765d18c0279ca60d96c16df075bfa0aa6fb91e8",
+      "name": "KUMIHAN｜Szyk",
+      "source": "plugins/kumihan-szyk",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 40
+    },
+    "pt": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Orientação de tipografia e design editorial em português (PT/BR), sem alterar o texto original. | Portuguese typography and editorial design guidance with source preservation.",
+      "entry_skill_path": "plugins/kumihan-compasso/skills/kumihan-compasso/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-compasso/plugin.json",
+          "sha256": "14567fc88893dd24870eda266ffc3fab3006ea1d5bc1bcb6698402dd8bb136a5"
+        },
+        {
+          "path": "plugins/kumihan-compasso/skills/kumihan-compasso/SKILL.md",
+          "sha256": "bcb99217c4d4fa675be31569180a8ae64bb4002a0f4cbebe6799f324d8ad923d"
+        },
+        {
+          "path": "plugins/kumihan-compasso/rules/catalog.json",
+          "sha256": "3ce6dcf9845bbf8e1a27509d8ca3f277bcd2f5dc49ff7f9bd82c15363408c54a"
+        }
+      ],
+      "id": "pt",
+      "locales": [
+        "pt",
+        "pt-AO",
+        "pt-BR",
+        "pt-MZ",
+        "pt-PT"
+      ],
+      "module_sha256": "3a38931a19aeacfaa7d37a3842ad02b8527972e388fe752236e09a1a81e95f7b",
+      "name": "KUMIHAN｜Compasso",
+      "source": "plugins/kumihan-compasso",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "ru": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Русская типографика и дизайн по смыслу текста с сохранением оригинала. | Russian typography and content-led design with source preservation.",
+      "entry_skill_path": "plugins/kumihan-lad/skills/kumihan-lad/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-lad/plugin.json",
+          "sha256": "769fc16ab30edb460b6b0723bafbf04929ff0a7e55bb6088e836cb0dedb604e0"
+        },
+        {
+          "path": "plugins/kumihan-lad/skills/kumihan-lad/SKILL.md",
+          "sha256": "93ca64527a4db4a3848d5efc91e4660687c8ba9559b646655e1bac8018f344ff"
+        },
+        {
+          "path": "plugins/kumihan-lad/rules/catalog.json",
+          "sha256": "ece55f39b262961beebdbfd7d7d1a567574d117f61b6209057b96252deebc648"
+        }
+      ],
+      "id": "ru",
+      "locales": [
+        "ru"
+      ],
+      "module_sha256": "6bef0e067c3e7575e5c039e02cb5b9a4b792e699a736b57f79ca14e7a7fafe52",
+      "name": "KUMIHAN｜Лад",
+      "source": "plugins/kumihan-lad",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 48
+    },
+    "sw": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Mwongozo wa wazi wa upangaji wa maandishi na usanifu wa Kiswahili unaolinda matini asilia na kutenganisha yaliyojaribiwa na yanayohitaji ukaguzi. | Open-source Swahili typography and purposeful design guidance that preserves source text and distinguishes tested findings from editorial review.",
+      "entry_skill_path": "plugins/kumihan-mizani/skills/kumihan-mizani/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-mizani/plugin.json",
+          "sha256": "34473414e3fe8beecbf437ee1dd668d0fc892e5f0fa0f2e805c03de7d465462f"
+        },
+        {
+          "path": "plugins/kumihan-mizani/skills/kumihan-mizani/SKILL.md",
+          "sha256": "40db4f66049d05ff2668197b525b75ff3e412acfa6fbc00743852c4154c3358f"
+        },
+        {
+          "path": "plugins/kumihan-mizani/rules/catalog.json",
+          "sha256": "846d8c5f49ddae9b31711f02d7e464476ba1f7d0b56fd8d61deefdb5a7d66d63"
+        }
+      ],
+      "id": "sw",
+      "locales": [
+        "sw",
+        "sw-CD",
+        "sw-KE",
+        "sw-TZ",
+        "sw-UG"
+      ],
+      "module_sha256": "b906432b87a25c5ef035dd26bdba8e8ada5856bf38760b9a8d2c29a7ae403172",
+      "name": "KUMIHAN｜Mizani",
+      "source": "plugins/kumihan-mizani",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 24
+    },
+    "th": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "แนวทางจัดวางอักษรไทยที่รักษาต้นฉบับ พร้อมตรวจทานแบบอ่านอย่างเดียว | Thai typography guidance with source preservation and read-only review.",
+      "entry_skill_path": "plugins/kumihan-th/skills/kumihan-th/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-th/plugin.json",
+          "sha256": "b1a910afd7626a21fb86f27c1329d4df26e54a11d9e4305bf7475c5588c4e364"
+        },
+        {
+          "path": "plugins/kumihan-th/skills/kumihan-th/SKILL.md",
+          "sha256": "59d7ec600c75fa6921483bcd21b692062aac2778025b1414ab46fe471509f6b2"
+        },
+        {
+          "path": "plugins/kumihan-th/rules/catalog.json",
+          "sha256": "d93a062e08a36810db94157036fc975864faf85ee24b95574cb9367bcd407c84"
+        }
+      ],
+      "id": "th",
+      "locales": [
+        "th",
+        "th-TH"
+      ],
+      "module_sha256": "4c3b4a53c7d013d413485211afc731a401faec7ba5a94b2e010e9f622a66c709",
+      "name": "KUMIHAN｜ดุลอักษร",
+      "source": "plugins/kumihan-th",
+      "status": "preview_unverified",
+      "version": "0.1.1",
+      "rule_count": 32
+    },
+    "vi": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Bộ kỹ năng mã nguồn mở hỗ trợ thiết kế chữ tiếng Việt cho web, tài liệu và bản trình bày; giữ nguyên nội dung gốc và rà soát mà không sửa tệp. | Open-source skills for Vietnamese typography in websites, documents and presentations; preserve source text and support read-only review.",
+      "entry_skill_path": "plugins/kumihan-nhip-chu/skills/kumihan-nhip-chu/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-nhip-chu/plugin.json",
+          "sha256": "8a168e26485f689f4b3da967d2269de83efb48579a8f25cb82245738a4fdc145"
+        },
+        {
+          "path": "plugins/kumihan-nhip-chu/skills/kumihan-nhip-chu/SKILL.md",
+          "sha256": "bc09d0beed8ad11bf5e1c5b7b09847797432ac6095b4f269be30c854f0cbac40"
+        },
+        {
+          "path": "plugins/kumihan-nhip-chu/rules/catalog.json",
+          "sha256": "d238fad37f4479655b23915c7a66a4a35447a9020a0205d3ae6c592c46f0db8e"
+        }
+      ],
+      "id": "vi",
+      "locales": [
+        "vi",
+        "vi-VN"
+      ],
+      "module_sha256": "f1a3b01c55529473c1e2e2985390b01ed86a70b4e1123f587228b2ea1f7102eb",
+      "name": "KUMIHAN｜Nhịp Chữ",
+      "source": "plugins/kumihan-nhip-chu",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "zh-Hans": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "面向简体中文的排版与内容设计指导，保护原文，并提供有依据的只读检查。 | Simplified Chinese typography and content-design guidance with source preservation and evidence-based read-only review.",
+      "entry_skill_path": "plugins/kumihan-zilu/skills/kumihan-zilu/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-zilu/plugin.json",
+          "sha256": "2354720f8c40b45ba82bc248e8442af9728eddf9d0fd99a4714ee2ba1ab7ea24"
+        },
+        {
+          "path": "plugins/kumihan-zilu/skills/kumihan-zilu/SKILL.md",
+          "sha256": "4d95b6afedb998172d76bc146b58d51c5e01984eeaa2482cb4628686c2ae2c7d"
+        },
+        {
+          "path": "plugins/kumihan-zilu/rules/zh-hans-cn.json",
+          "sha256": "eda74e618754eeeb2bd23a8aa52d75a7cb5f171c269930f76a7a662650090ae4"
+        }
+      ],
+      "id": "zh-Hans",
+      "locales": [
+        "zh-Hans",
+        "zh-Hans-CN"
+      ],
+      "module_sha256": "22df09af9813e9e32bf1967de3fe5d8c9fb125c524a61e70da6753d932601548",
+      "name": "KUMIHAN｜字律",
+      "source": "plugins/kumihan-zilu",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 36
+    },
+    "zh-Hant": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "Traditional Chinese typography guidance for Taiwan and Hong Kong, with source-text preservation and read-only review.｜臺灣與香港繁體中文文字組版指引，重視原稿保護與唯讀檢視。",
+      "entry_skill_path": "plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-ziheng/plugin.json",
+          "sha256": "99bc358e463327b67bb097d942f3909bcbd742e88fb47a9805f884442ed4f8b8"
+        },
+        {
+          "path": "plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md",
+          "sha256": "655cea1536f6b42097c05946bd11446c8fb563a5d1f504aa1898d916b977e6cd"
+        },
+        {
+          "path": "plugins/kumihan-ziheng/rules/zh-hant.json",
+          "sha256": "a478e959f8521843c28ab57f848f0c2614d7768cfbddc30f1546cda5627442ef"
+        }
+      ],
+      "id": "zh-Hant",
+      "locales": [
+        "zh-Hant",
+        "zh-Hant-HK",
+        "zh-Hant-TW"
+      ],
+      "module_sha256": "77f5342ca10d3706578b9d6ff88a406d00af5c962a1a61666b3894d406d04172",
+      "name": "KUMIHAN｜字衡",
+      "source": "plugins/kumihan-ziheng",
+      "status": "preview_unverified",
+      "version": "0.1.0-preview",
+      "rule_count": 15
+    },
+    "zu": {
+      "capabilities": [
+        "reference_guidance",
+        "source_preserving_review"
+      ],
+      "description": "I-KUMIHAN｜Hlela ihlinzeka ngemihlahlandlela evulekile yokuhlela nokubuyekeza umbhalo wesiZulu, ivikele umbhalo wangempela futhi ihlukanise okuhloliwe nalokho okusadinga ukuqinisekiswa. | Open-source isiZulu typography and purposeful design guidance that protects original text and distinguishes tested observations from editorial or rendering checks.",
+      "entry_skill_path": "plugins/kumihan-hlela/skills/kumihan-hlela/SKILL.md",
+      "files": [
+        {
+          "path": "plugins/kumihan-hlela/plugin.json",
+          "sha256": "cfe8c6fdece2674bb50578f62d0710579108c0ed6ed85c8e32e2837e27b89335"
+        },
+        {
+          "path": "plugins/kumihan-hlela/skills/kumihan-hlela/SKILL.md",
+          "sha256": "34fa2806a589e24c3c34b50e6ed920fe015813b280be169de0e718bc789ec76c"
+        },
+        {
+          "path": "plugins/kumihan-hlela/rules/catalog.json",
+          "sha256": "a9db99d2ef7806ab344b844a769f8051c43be26e98fb254bc65ad6acb0fc5ac3"
+        }
+      ],
+      "id": "zu",
+      "locales": [
+        "zu",
+        "zu-ZA"
+      ],
+      "module_sha256": "9e33790c6804097804e291ea8a5ce74df1e61ea51dec63abe949c78dbb6e2c93",
+      "name": "KUMIHAN｜Hlela",
+      "source": "plugins/kumihan-hlela",
+      "status": "preview_unverified",
+      "version": "0.1.0",
+      "rule_count": 24
+    }
+  },
+  "schema_version": "1.0",
+  "source_integrity": "per_module_sha256",
+  "validation": "guidance-only until host/render/static checks independently proven"
+}
