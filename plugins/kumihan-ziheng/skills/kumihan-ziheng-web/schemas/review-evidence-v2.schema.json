@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ziheng v2 evidence sidecar",
+  "description": "Structural declarations only. runtime/evidence.py checks method/scope obligations; neither authenticates evidence.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "artifact",
+    "scope",
+    "method",
+    "status",
+    "evidence_refs",
+    "limitations"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0"
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "method": {
+      "enum": [
+        "static",
+        "rendered",
+        "interaction",
+        "manual",
+        "native-review"
+      ]
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "needs-review",
+        "not-checked",
+        "unsupported",
+        "not-applicable",
+        "waived"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "artifact_sha256",
+          "kind"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "artifact_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "kind": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "environment": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "passed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "evidence_refs": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ]
+}

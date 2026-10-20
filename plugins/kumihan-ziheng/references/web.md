@@ -2,7 +2,7 @@
 
 先確認 [地區與原稿](workflow.md)，再選 [文章](../profiles/web-editorial.json)、[行銷](../profiles/web-marketing.json) 或 [介面](../profiles/web-ui.json)。保留標題、價格、說明、錯誤訊息及可操作內容。
 
-- 在對應區塊寫入正確 `lang="zh-Hant-TW"` 或 `lang="zh-Hant-HK"`；英語片段可另標記。lang 是排版情境，不是文字轉換指令。
+- 在對應區塊標記實際內容語言；已明示臺港時可用 `lang="zh-Hant-TW"` 或 `lang="zh-Hant-HK"`，未定地域可保留 `zh-Hant`。英語片段另標示，不從文字猜地域。lang不是編輯體例或文字轉換指令。
 - 以瀏覽器正常換行為起點，實際比較行寬、字級、行距、字型與 fallback。看到 DOM 的「，」不等於行首禁則失敗；需要實際行端證據。禁則嚴格度依出版需求記錄。
 - 320 CSS px 重排、實際 200% 文字放大、使用者間距調整分開測試，記錄瀏覽器／字型與頁面狀態。CSS 模擬放大不能充當實際瀏覽器 zoom 測試。
 - 長網址可局部試用 `overflow-wrap: anywhere`，但要確認複製、連結目標與原稿一致。不要對全站套用 `word-break: break-all`、`nowrap`、裁切或縮字來藏住問題。

@@ -1,0 +1,23 @@
+{
+  "fictional": true,
+  "source_policy": "fixed",
+  "segments": [
+    {
+      "text": "清晨讀一段，午後再出發。",
+      "role": "prose",
+      "content_locale": "zh-Hant-TW"
+    },
+    {
+      "text": "HK$1,240",
+      "role": "protected"
+    },
+    {
+      "text": "https://example.org/a,b?q=%E8%8C%B6#guide",
+      "role": "url"
+    },
+    {
+      "text": "é 禰󠄀 👩‍💻",
+      "role": "protected"
+    }
+  ]
+}
