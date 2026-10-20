@@ -55,6 +55,21 @@ class PublicBoundaryTests(unittest.TestCase):
             (root/'new.zip').write_bytes(b'injected')
             self.assertTrue(b.audit_site(root, contract))
 
+    def test_ignored_dependency_cache_does_not_exempt_tracked_injection(self):
+        import public_boundary as b
+        import subprocess
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            subprocess.run(['git','init','-q',td],check=True)
+            rules=b'/vendor/\n/.bundle/\n'
+            (root/'.gitignore').write_bytes(rules)
+            (root/'vendor').mkdir()
+            (root/'vendor/cache.txt').write_text('dependency cache')
+            contract={'files': {'.gitignore': b.digest(rules)}, 'legacy_archives': {}}
+            self.assertEqual(b.audit(root,contract), [])
+            subprocess.run(['git','-C',td,'add','-f','vendor/cache.txt'],check=True)
+            self.assertTrue(b.audit(root,contract))
+
     def test_contract_and_legacy_archives_are_exact(self):
         import public_boundary as b
         self.assertEqual(b.audit(ROOT), [])

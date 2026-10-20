@@ -10,3 +10,7 @@ dist/
 /docs/thai/
 /docs/de/
 /docs/it/
+
+# Local Bundler dependency/cache output; never a tracked product exception.
+/vendor/
+/.bundle/
