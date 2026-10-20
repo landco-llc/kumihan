@@ -63,15 +63,17 @@ class ZiHengWebsiteTests(unittest.TestCase):
                         self.assertTrue(target.is_file(), (path,key,value))
 
     def test_installation_claims_versioned_zip_and_unversioned_display(self):
-        zipfilename='kumihan-ziheng-0.1.0.zip'
+        zipfilename='kumihan-ziheng-openai-codex-plugin-0.2.0.zip'
         for path in CASE:
             content=(ROOT/path).read_text(encoding='utf-8')
-            self.assertTrue(zipfilename in content if path.startswith('docs/') else 'kumihan-ziheng-0.1.0.zip' in content, path)
+            self.assertIn(zipfilename, content, path)
             self.assertIn('zh-Hant-TW',content)
             self.assertIn('zh-Hant-HK',content)
         for path in ('docs/install-ziheng.html','docs/install-ziheng.en.html','docs/install-ziheng.ja.html'):
             content=(ROOT/path).read_text(encoding='utf-8')
-            self.assertIn('6ad81765ece7d4fc37297e7ba62af767d94347c814e9432c',content)
+            facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['zh-hant']
+            plugin=next(a for a in facts['verified_assets'] if a['name']==zipfilename)
+            self.assertIn(plugin['sha256'],content)
             self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
 
     def test_logo_styles_and_japanese_site_footer(self):
