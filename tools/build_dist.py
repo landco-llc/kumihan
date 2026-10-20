@@ -305,6 +305,22 @@ def stale_download_files(planned):
     return stale
 
 
+def retained_downloads(root, ledger):
+    """Keep only reviewed historical Japanese ZIP bytes, never arbitrary stale files."""
+    out = {}
+    for name, expected in ledger.items():
+        path = Path(name)
+        if (len(path.parts) != 3 or path.parts[0] not in ('downloads Claude', 'downloads GPT-Codex', 'downloads Gemini')
+                or path.parts[1] not in ('skills', 'plugins', 'extensions')
+                or not path.name.startswith('kumihan-') or not path.name.endswith('-0.1.8.zip')):
+            raise ValueError('Invalid retained JA path: ' + name)
+        raw = (Path(root) / name).read_bytes()
+        if sha256(raw) != expected:
+            raise ValueError('Historical JA ZIP changed: ' + name)
+        out[name] = raw
+    return out
+
+
 def main():
     global VERSION
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -321,6 +337,9 @@ def main():
     tree = planned_tree()
     planned = dict(tree)
     planned.update(planned_downloads(tree))
+    if VERSION != '0.1.8':
+        ledger = json.loads((ROOT / 'tools/ja-retained-distributions.json').read_text())
+        planned.update(retained_downloads(ROOT, ledger))
     stale = stale_skill_files() + stale_download_files(planned)
 
     changed = [p for p, b in planned.items() if not (ROOT / p).is_file() or (ROOT / p).read_bytes() != b]

@@ -1,0 +1,662 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kumihan:research:typography-evidence:2026-10-20:draft1.1",
+  "title": "KUMIHAN Typography Research Evidence Packet — Unadopted Draft",
+  "description": "研究用sidecarの設計案。現行report.schema.jsonの変更・互換実装ではない。形式の妥当性は証拠の真正性・関連性・実描画品質を保証しない。",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "packetId": {
+      "type": "string"
+    },
+    "draftVersion": {
+      "const": "2026-10-20-draft1.1"
+    },
+    "subject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "artifactId": {
+          "type": "string"
+        },
+        "artifactDigest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "regionId": {
+          "type": "string"
+        },
+        "sourceFieldIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "artifactId",
+        "artifactDigest",
+        "regionId",
+        "sourceFieldIds"
+      ]
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mediumProfile": {
+          "enum": [
+            "web-editorial",
+            "web-marketing",
+            "web-ui",
+            "report-document",
+            "presentation",
+            "display-copy"
+          ]
+        },
+        "surface": {
+          "enum": [
+            "html",
+            "word",
+            "pdf",
+            "powerpoint",
+            "printed",
+            "projected",
+            "physical-sign",
+            "unknown"
+          ]
+        },
+        "role": {
+          "type": "string"
+        },
+        "intent": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "attribution": {
+              "enum": [
+                "declared",
+                "inferred",
+                "unknown"
+              ]
+            }
+          },
+          "required": [
+            "description",
+            "attribution"
+          ]
+        },
+        "readingTask": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "sustained-reading",
+              "scan-find",
+              "glance-recognition",
+              "operate",
+              "compare-values",
+              "follow-sequence",
+              "remember-copy",
+              "art-viewing",
+              "unknown"
+            ]
+          }
+        },
+        "expressionMode": {
+          "enum": [
+            "prose",
+            "display",
+            "hybrid",
+            "unknown"
+          ]
+        },
+        "languageRuns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "sourceFieldId": {
+                "type": "string"
+              },
+              "language": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "codepointRange": {
+                "anyOf": [
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "languageStatus": {
+                "enum": [
+                  "declared",
+                  "observed",
+                  "inferred",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "sourceFieldId",
+              "language",
+              "codepointRange",
+              "languageStatus"
+            ]
+          }
+        },
+        "writingMode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scrollAxis": {
+          "enum": [
+            "vertical",
+            "horizontal",
+            "both",
+            "none",
+            "unknown"
+          ]
+        }
+      },
+      "required": [
+        "mediumProfile",
+        "surface",
+        "role",
+        "intent",
+        "readingTask",
+        "expressionMode",
+        "languageRuns",
+        "writingMode",
+        "scrollAxis"
+      ]
+    },
+    "typographyObservations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "regionId": {
+            "type": "string"
+          },
+          "sourceFieldId": {
+            "type": "string"
+          },
+          "sampleText": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "measurementKind": {
+            "enum": [
+              "authored-value",
+              "computed-style",
+              "font-metric",
+              "pdf-text-state",
+              "ink-bounds",
+              "physical-measurement",
+              "estimated",
+              "unknown"
+            ]
+          },
+          "value": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "enum": [
+              "CSS-px",
+              "device-px",
+              "pt",
+              "Q",
+              "H",
+              "em",
+              "mm",
+              "degree",
+              "ratio",
+              "unknown"
+            ]
+          },
+          "coordinateSpace": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "actualFont": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fontVersion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "measurementMethod": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "physicalConditions": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "viewingDistanceMm": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "outputHeightMm": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "scaleBasis": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "viewingDistanceMm",
+              "outputHeightMm",
+              "scaleBasis"
+            ]
+          },
+          "observationStatus": {
+            "enum": [
+              "not-run",
+              "observed",
+              "unavailable"
+            ]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "regionId",
+          "sourceFieldId",
+          "sampleText",
+          "measurementKind",
+          "value",
+          "unit",
+          "coordinateSpace",
+          "actualFont",
+          "fontVersion",
+          "measurementMethod",
+          "physicalConditions",
+          "observationStatus",
+          "evidenceIds"
+        ]
+      }
+    },
+    "representationMap": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sourceFieldId": {
+            "type": "string"
+          },
+          "sourceText": {
+            "type": "string"
+          },
+          "requirementBasis": {
+            "enum": [
+              "provided-brief",
+              "approved-contract",
+              "inferred-candidate",
+              "unknown"
+            ]
+          },
+          "requiredUsage": {
+            "type": "string"
+          },
+          "presentations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "regionId": {
+                  "type": "string"
+                },
+                "relation": {
+                  "enum": [
+                    "exact-repeat",
+                    "authorized-derived",
+                    "decorative-echo"
+                  ]
+                },
+                "availability": {
+                  "enum": [
+                    "visible",
+                    "hidden",
+                    "unknown"
+                  ]
+                },
+                "reachabilityObservation": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "authorizationRef": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "evidenceIds": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "regionId",
+                "relation",
+                "availability",
+                "reachabilityObservation",
+                "authorizationRef",
+                "evidenceIds"
+              ]
+            }
+          },
+          "conflictObservation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "sourceFieldId",
+          "sourceText",
+          "requirementBasis",
+          "requiredUsage",
+          "presentations",
+          "conflictObservation"
+        ]
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "evidenceId": {
+            "type": "string"
+          },
+          "method": {
+            "enum": [
+              "static",
+              "rendered",
+              "assisted",
+              "manual"
+            ]
+          },
+          "executionStatus": {
+            "enum": [
+              "not-run",
+              "observed",
+              "unsupported"
+            ]
+          },
+          "artifactRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subjectRegion": {
+            "type": "string"
+          },
+          "environment": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "state": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "observation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inference": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "primarySourceRefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "evidenceId",
+          "method",
+          "executionStatus",
+          "artifactRefs",
+          "subjectRegion",
+          "environment",
+          "state",
+          "observation",
+          "inference",
+          "primarySourceRefs"
+        ]
+      }
+    },
+    "findingsDraft": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "findingId": {
+            "type": "string"
+          },
+          "existingRuleId": {
+            "anyOf": [
+              {
+                "enum": [
+                  "CONTENT-001",
+                  "CONTENT-002",
+                  "CONTENT-003",
+                  "CONTENT-004",
+                  "CONTENT-005",
+                  "JA-TYPE-001",
+                  "JA-TYPE-002",
+                  "JA-TYPE-003",
+                  "JA-TYPE-004",
+                  "JA-TYPE-005",
+                  "JA-TYPE-006",
+                  "JA-TYPE-007",
+                  "JA-TYPE-008",
+                  "JA-TYPE-009",
+                  "JA-TYPE-010",
+                  "JA-TYPE-011",
+                  "WEB-001",
+                  "WEB-002",
+                  "WEB-003",
+                  "WEB-004",
+                  "WEB-005",
+                  "WEB-006",
+                  "WEB-007",
+                  "WEB-008",
+                  "DOC-001",
+                  "DOC-002",
+                  "DOC-003",
+                  "DOC-004",
+                  "DESIGN-001",
+                  "DESIGN-002",
+                  "DESIGN-003",
+                  "DESIGN-004",
+                  "DESIGN-005",
+                  "DESIGN-006",
+                  "EVIDENCE-001",
+                  "EVIDENCE-002",
+                  "EVIDENCE-003",
+                  "EVIDENCE-004",
+                  "EVIDENCE-005"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "scope": {
+            "type": "string"
+          },
+          "claim": {
+            "type": "string"
+          },
+          "claimClass": {
+            "enum": [
+              "baseline-observation",
+              "source-fact",
+              "inference",
+              "proposal"
+            ]
+          },
+          "resultCandidate": {
+            "enum": [
+              "passed",
+              "failed",
+              "needs-review",
+              "not-checked",
+              "unsupported",
+              "waived",
+              "not-applicable"
+            ]
+          },
+          "method": {
+            "enum": [
+              "static",
+              "rendered",
+              "assisted",
+              "manual"
+            ]
+          },
+          "evidenceIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "findingId",
+          "existingRuleId",
+          "scope",
+          "claim",
+          "claimClass",
+          "resultCandidate",
+          "method",
+          "evidenceIds",
+          "limitations"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "resultCandidate": {
+                  "const": "passed"
+                }
+              },
+              "required": [
+                "resultCandidate"
+              ]
+            },
+            "then": {
+              "properties": {
+                "evidenceIds": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "executionStatus": {
+      "enum": [
+        "not-run",
+        "partially-run",
+        "run"
+      ]
+    }
+  },
+  "required": [
+    "packetId",
+    "draftVersion",
+    "subject",
+    "context",
+    "typographyObservations",
+    "representationMap",
+    "evidence",
+    "findingsDraft",
+    "executionStatus"
+  ]
+}

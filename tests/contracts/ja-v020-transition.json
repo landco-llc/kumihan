@@ -1,0 +1,142 @@
+{
+  "format": "ja-v020-transition-1",
+  "base": "c10181ef46d984aaaf8362e0d7d1164972cc6b5e",
+  "paths": {
+    ".claude-plugin/plugin.json": {
+      "before": "e530651909272ba31f0123fc91a9de32feb392760b0296b903f3232531d382ca",
+      "after": "0eda4c7792a229f51d97149cf708f2ff2128dbbe5547b12a0ba5ba8aaa788d60"
+    },
+    ".codex-plugin/plugin.json": {
+      "before": "44a50fdfce3d66580e9ad1da193b372ae74da0371c8f1d18cebff1d71798f55f",
+      "after": "46878e249a57d9189ef95ca396fa4a5280076e7a8fc45b862abe1585038aafcd"
+    },
+    "README.md": {
+      "before": "523755426e673ee62412b673152d8a49e1636bb9503623f69c024dd5adb03016",
+      "after": "6f84e41ac9c564668e363bc5e0e4ea98858c7094ba06921ab629a2af215f6623"
+    },
+    "downloads Claude/MANIFEST.json": {
+      "before": "a351c7c9abfe3b2df7ca0bcf3ac4657db74762e4d44bc100d2f0e03b9686cc2e",
+      "after": "addb3bb06c0b9b0f920d7a9bea0a43a1cd92e5a71a509dc7547db3a14e2c28c0"
+    },
+    "downloads Claude/README.md": {
+      "before": "f83d7de649ecf3a01d18dc108119e323c37e062a44a216a8c8f796b375346c8d",
+      "after": "d1a24d5a98135b4c76fcb1d528f5972e9d346cf0c69a5a145c933cc19886c06d"
+    },
+    "downloads Claude/SHA256SUMS.txt": {
+      "before": "c615eea1ff990ce394e5be172aee71e806ab607b6d48e61a486fed69cdecef51",
+      "after": "d58dd8f7646ff6b6164040ee10c9c47364f08402518beaf8ff1acca8f6bf16f1"
+    },
+    "downloads GPT-Codex/MANIFEST.json": {
+      "before": "b7e9b8218c6ec8b4dd76e26b5ebb4d54d9cb7789fc2eb80bd53f1c406fdd287d",
+      "after": "c629296d7cfd16fd32baeb3932f6c63d0d8502827d12d35b8677818311eeadf3"
+    },
+    "downloads GPT-Codex/README.md": {
+      "before": "424da72cad2f54541ba2356dd13dcefbf42731ff03b4708258cbfbcbfcada31f",
+      "after": "c8c7366020df7245871530d2363731564c1458d802f64839dc47b1ce05e595f1"
+    },
+    "downloads GPT-Codex/SHA256SUMS.txt": {
+      "before": "21d047361c1d25fccebdf06c525021c66e1095a97913e8f4b6429fbecdcd5feb",
+      "after": "061df35e7a2eac3c53f808725fb75800ec5944f3445fb8b813abd91f2127978d"
+    },
+    "downloads Gemini/MANIFEST.json": {
+      "before": "37518524e1580e05ed5762939123c48468a5557ecf4ad190c47c621793c1df04",
+      "after": "e13e3c7766fbf26b52e6d1e8fa8ac1d522c0ef1480e75e20ebe62f5b8fb0bc55"
+    },
+    "downloads Gemini/README.md": {
+      "before": "c96fc75401508447f72636a1719066aa48cfd1bf47a8cbb0bb17b1284ab5eadb",
+      "after": "90f16b4956e5449f1becf867573d020dd353f503c5ac328a8f422d57318e380e"
+    },
+    "downloads Gemini/SHA256SUMS.txt": {
+      "before": "e63e113d5eb83cb3d51c5253cd22fbaca0e65df28eb13354ab7dd2f68cfe1b99",
+      "after": "66847e5c882895087b59d927f6a5046bb8f0f29632e33796a96351bf1677e1f1"
+    },
+    "gemini-extension.json": {
+      "before": "33888e3f49663f0f1040722c532d4ea0ea825b490739f2dc66c05186716b9a01",
+      "after": "4ced29deee19bd0adea90c0fe1abafc7c0f1a6fd2e9df9e0dbd5219e47ffcf1e"
+    },
+    "plugin.json": {
+      "before": "06b4dc232d04b4c038bb492b835bb978f16b80eb667d6ae561d33df4aa87e00e",
+      "after": "53ac6cc5777af46452a689e86b918fea8dde33db97b76d5412386c518428c2bd"
+    },
+    "skills/kumihan-documents/SKILL.md": {
+      "before": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a",
+      "after": "5ee39bcb106f33726cab3eabe879d0e9ea44f7f0740d1b4397d18a7311e86431"
+    },
+    "skills/kumihan-documents/inventory.json": {
+      "before": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad",
+      "after": "ce8f867196aedf906653e36897242ad15c2b3d10b3bc008fadfc15d08513c2fa"
+    },
+    "skills/kumihan-documents/references/document-recipes.md": {
+      "before": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507",
+      "after": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+    },
+    "skills/kumihan-documents/references/review-protocol.md": {
+      "before": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+      "after": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+    },
+    "skills/kumihan-documents/references/web-recipes.md": {
+      "before": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf",
+      "after": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
+    },
+    "skills/kumihan-review/SKILL.md": {
+      "before": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a",
+      "after": "d37a5400ef82d844632334672c63281f7463f4152aebee47ed88a97c003a5323"
+    },
+    "skills/kumihan-review/inventory.json": {
+      "before": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f",
+      "after": "9bf7fc4c7a9bbe9ebea3b7afb06d8cd876219bf8e4d8947392bd328ec2509956"
+    },
+    "skills/kumihan-review/references/document-recipes.md": {
+      "before": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507",
+      "after": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+    },
+    "skills/kumihan-review/references/review-protocol.md": {
+      "before": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+      "after": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+    },
+    "skills/kumihan-review/references/web-recipes.md": {
+      "before": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf",
+      "after": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
+    },
+    "skills/kumihan-web/SKILL.md": {
+      "before": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9",
+      "after": "66324050f2422b007e2b7953510d98b35ce759ed2401dafffd693f16c2003874"
+    },
+    "skills/kumihan-web/inventory.json": {
+      "before": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998",
+      "after": "a8d02ea7e9f8b1353f80db349dc29093b34f9dbd4c7dc0d680faa0978022aa24"
+    },
+    "skills/kumihan-web/references/document-recipes.md": {
+      "before": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507",
+      "after": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+    },
+    "skills/kumihan-web/references/review-protocol.md": {
+      "before": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+      "after": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+    },
+    "skills/kumihan-web/references/web-recipes.md": {
+      "before": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf",
+      "after": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
+    },
+    "skills/kumihan/SKILL.md": {
+      "before": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3",
+      "after": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
+    },
+    "skills/kumihan/inventory.json": {
+      "before": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae",
+      "after": "d85495c4061c9bf38cebd699e575f085ad7453ee68f9a5c894d7a199b786f832"
+    },
+    "skills/kumihan/references/document-recipes.md": {
+      "before": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507",
+      "after": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+    },
+    "skills/kumihan/references/review-protocol.md": {
+      "before": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504",
+      "after": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+    },
+    "skills/kumihan/references/web-recipes.md": {
+      "before": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf",
+      "after": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
+    }
+  }
+}
