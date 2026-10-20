@@ -1,6 +1,6 @@
 # JA v0.2.0 additional acceptance QA — Owner Gate
 
-Management: #121 / original #119 / Draft candidate #120. QA branch `qa/ja-v020-acceptance-20261020`, stacked against `feat/ja-v020-research-20261020`. This is source-guided acceptance evidence, not a native-host certification or shipping approval.
+Management: #121 / original #119 / Draft candidate #120. **Draft QA PR: [#123](https://github.com/landco-llc/kumihan/pull/123)**. QA branch `qa/ja-v020-acceptance-20261020`, stacked against `feat/ja-v020-research-20261020`. This is source-guided acceptance evidence, not a native-host certification or shipping approval.
 
 ## Scope state
 
@@ -18,7 +18,7 @@ Management: #121 / original #119 / Draft candidate #120. QA branch `qa/ja-v020-a
 
 Fresh Read main/base: `8b647cc752d7a9bc3db48356fa0ab7b221bb66d6`; original candidate HEAD `ce2fd8d23e4afb0816b5870625e02af3aa7a96b8`, TREE `0a654d87b38d036b2f7401e1de507696af8b1ba8`. Original PR HEAD did not move. Control branch fetched fresh; its SHA/TREE, concurrent #101/#116/#118 identities, environment/fonts, clean initial worktree and input digests are in [fresh-read.json](evidence/fresh-read.json).
 
-Exact tested implementation HEAD/TREE is recorded in `revision.json` when the implementation commit is frozen. The final reporting commit cannot embed its own hash; the final Issue #121/#119 reports and Draft PR identify the actual final HEAD/TREE. Reporting-only additions are separated from tested implementation. Final CI must match that actual final PR HEAD; an older green run is not substituted.
+Exact tested implementation HEAD `c395c8d19850c782b03cd8d4de73c5d805a2b323` / TREE `85e0098c20b5b26df18fa828bd1d9f9c319ab200` is frozen in [revision.json](revision.json). The final reporting commit cannot embed its own hash; the final Issue #121/#119 reports and Draft PR identify the actual final HEAD/TREE. Reporting-only additions are separated from tested implementation. Final CI must match that actual final PR HEAD; an older green run is not substituted.
 
 Bounded production-source changes: `tools/version_display.py` + three JA generated fragments separate labels; synthetic fixture + `tools/render_ja_v020_research.py` retain the visual correction. `_config.yml` and `tools/seo_inventory.py` exclude `docs/development/` consistently from built Pages and source sitemap discovery so standalone QA HTML is not misclassified as public content. Existing SEO discovery still detects new public directories; regression red/green is retained. `.github/workflows/ja-acceptance-qa.yml` adds read-only unit/distribution/SEO/Jekyll CI for the stacked feature-base PR; no deploy/release step. New `tools/qa_*` scripts reproduce bounded evidence. QA reports and actual outputs are isolated below this directory. [changed paths](changed-paths.txt).
 
@@ -71,6 +71,10 @@ Each path below was read independently; safe unique member paths, CRC, byte size
 | `downloads Gemini/skills/kumihan-documents-Gemini-Apps-skill-0.2.0.zip` | 123398 | `a0997a0f216fcecfefc0520f557240ae03c09d2f298c883e65d984e24969fc0d` |
 | `downloads Gemini/skills/kumihan-review-Gemini-Apps-skill-0.2.0.zip` | 123594 | `f36b62bdbdc76330dc6e8a72602fee1b7937c82eed99a07b3decfd3492526231` |
 | `downloads Gemini/skills/kumihan-web-Gemini-Apps-skill-0.2.0.zip` | 123863 | `3a07dd00511cfaf1b6c9ca15ea6fc83007a4db52862404c209167583bfe943cc` |
+
+## Current-head CI
+
+[Draft PR #123 checks](https://github.com/landco-llc/kumihan/pull/123/checks) binds the latest QA HEAD. The implementation run is [39370868845](https://github.com/landco-llc/kumihan/actions/runs/39370868845); final reporting-only HEAD will trigger a fresh run, whose exact HEAD/TREE, URL and outcome are recorded in the final Issue #121/#119 reports. No old candidate or implementation run is substituted for final-head CI. The QA workflow runs unit + SEO + dist + actual Pages/Jekyll build with read-only permissions and no deployment.
 
 ## Failures, access needed and Owner Gate
 
