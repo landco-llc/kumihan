@@ -1,0 +1,45 @@
+[
+  {
+    "command": [
+      "/private/tmp/kumihan-w09-checks-venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit": 0,
+    "log": "dependency-check-01.log"
+  },
+  {
+    "command": [
+      "/private/tmp/kumihan-w09-checks-venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/seo",
+      "-v"
+    ],
+    "exit": 0,
+    "log": "dependency-check-02.log"
+  },
+  {
+    "command": [
+      "/private/tmp/kumihan-w09-checks-venv/bin/python",
+      "tools/build_seo.py",
+      "--check"
+    ],
+    "exit": 0,
+    "log": "dependency-check-03.log"
+  },
+  {
+    "command": [
+      "/private/tmp/kumihan-w09-checks-venv/bin/python",
+      "tools/check_seo_preservation.py"
+    ],
+    "exit": 0,
+    "log": "dependency-check-04.log"
+  }
+]

@@ -1,0 +1,1980 @@
+{
+  "schema": "kumihan-w09-evidence-map-1",
+  "entries": [
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "state": "normal"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-320-normal.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "state": "css200"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-320-css200.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "state": "spacing"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-320-spacing.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 320,
+        "state": "fallback"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-320-fallback.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 375,
+        "state": "normal"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-375-normal.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 375,
+        "state": "css200"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-375-css200.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 375,
+        "state": "spacing"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-375-spacing.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 375,
+        "state": "fallback"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-375-fallback.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 768,
+        "state": "normal"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-768-normal.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 768,
+        "state": "css200"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-768-css200.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 768,
+        "state": "spacing"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-768-spacing.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 768,
+        "state": "fallback"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-768-fallback.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1024,
+        "state": "normal"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1024-normal.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1024,
+        "state": "css200"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1024-css200.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1024,
+        "state": "spacing"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1024-spacing.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1024,
+        "state": "fallback"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1024-fallback.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1440,
+        "state": "normal"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1440-normal.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1440,
+        "state": "css200"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1440-css200.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Kaku Gothic ProN",
+              "postScriptName": "HiraKakuProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1440,
+        "state": "spacing"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1440-spacing.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "web",
+      "source_digest": "baaef07889e8319e8f59af0d91adae45103c51534c6eeb277e0007f45e969029",
+      "renderer": {
+        "browser": "153.0.8010.12",
+        "executable": "/Users/Lai/Library/Caches/ms-playwright/chromium-1243/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        "fonts": "Verdana.ttf: \"Verdana\" \"Regular\""
+      },
+      "font": {
+        "#cancel": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 30
+            }
+          ]
+        },
+        "#protected": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 15
+            }
+          ]
+        },
+        "#ja-glyph": {
+          "fonts": [
+            {
+              "familyName": "Hiragino Mincho ProN",
+              "postScriptName": "HiraMinProN-W3",
+              "isCustomFont": false,
+              "glyphCount": 5
+            }
+          ]
+        },
+        "#tw-glyph": {
+          "fonts": [
+            {
+              "familyName": "PingFang TC",
+              "postScriptName": "PingFangTC-Regular",
+              "isCustomFont": false,
+              "glyphCount": 6
+            }
+          ]
+        }
+      },
+      "viewport": {
+        "width": 1440,
+        "state": "fallback"
+      },
+      "target_region": [
+        "#reading",
+        ".note",
+        "#cancel",
+        "#protected"
+      ],
+      "actual_observation": "Short semantic ranges intact, exact DOM pair, required values and focus/action, no horizontal overflow. Assisted full-page review in observations.md.",
+      "method": [
+        "DOM exact",
+        "Range geometry",
+        "CDP font",
+        "assisted image review"
+      ],
+      "status": "VERIFIED",
+      "image": "web/web-after-1440-fallback.png",
+      "raw_record": "web/web-observations.json",
+      "limitations": [
+        "native zoom not-checked",
+        "macOS Hiragino differs historical Noto"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide1",
+      "actual_observation": "required fields, hierarchy, introductory note",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-01.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide2",
+      "actual_observation": "legend and rows01-12",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-02.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide3",
+      "actual_observation": "repeated header rows13-26",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-03.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide4",
+      "actual_observation": "repeated header rows27-40",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-04.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide5",
+      "actual_observation": "rows41-44 and final note",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-05.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "report",
+      "source_digest": "2d1c0e499899d3fec5f58c998a745dfd3b659975a20e21738973316e4a8d7c23",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+      "viewport": "A4 20mm margins",
+      "target_region": "page/slide6",
+      "actual_observation": "cancellation field, sections, closing note",
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "DOM exact"
+      ],
+      "status": "VERIFIED",
+      "image": "report/font-configured/report-06.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "Assisted visual review, not reader study",
+        "Platform font fallback differs from old Chromium154 CJK environment; local before reproduces the three wrap symptoms"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide1",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-01.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide2",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-02.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide3",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-03.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide4",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-04.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide5",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-05.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide6",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-06.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide7",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-07.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    },
+    {
+      "scope": "presentation",
+      "source_digest": "6776d57ffe56f84818ed570bd4667f789dca83b5c856aa66c043d64b0e6298a6",
+      "renderer": {
+        "chromium": "155.0.8059.85",
+        "libreoffice": "LibreOfficeDev 26.8.0.0.alpha0 2c87e51eeaa2b413ff4ae097b2705eea1995d8e5",
+        "report_actual_font": "Chrome platform fallback; Type3 PDF fonts do not identify family. Same local before/after. Declared Noto Sans CJK JP absent.",
+        "presentation_actual_font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+        "font_hashes": {
+          "NotoSansJP-Regular.ttf": "d930d5d52d15231c283089760f84584272ad5e37e14607ba0d19c798e7a9caec",
+          "NotoSansJP-Bold.ttf": "c5b7b9d6a6eb682b0d4e6bbb38509575fd2759a28f147daa74714d1359a7909e"
+        }
+      },
+      "font": "Noto Sans JP Regular/Bold via isolated fontconfig alias; PDF embedded names verified",
+      "viewport": "13.333 x 7.5 in",
+      "target_region": "page/slide8",
+      "actual_observation": [
+        "All8 font-configured slide images viewed; no missing Japanese glyphs, overlaps or clipped required info; slide3 columns remain distinct",
+        "Slide1 date normal contiguous Japanese spacing; price uses original fullwidth digits and remains visibly fullwidth",
+        "Initial default fontconfig gives boxes/blank Japanese glyphs and is FAILED even though extracted text is exact",
+        "No PPTX content/font/run change made: new configured environment alone explains difference from failed default-fontconfig and historical output"
+      ],
+      "method": [
+        "rendered PDF",
+        "assisted image review",
+        "source exact",
+        "raw geometry"
+      ],
+      "status": "VERIFIED",
+      "image": "presentation/after/presentation-08.png",
+      "raw_record": "report/documents-observations.json",
+      "limitations": [
+        "historical converter mismatch FAILED",
+        "native Office actual copy not-checked"
+      ]
+    }
+  ],
+  "historical_modified_paths": []
+}

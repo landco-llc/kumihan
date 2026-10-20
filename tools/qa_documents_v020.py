@@ -1,6 +1,6 @@
 """Create bounded QA deliverables; not a document service or native host test."""
 from pathlib import Path
-import hashlib, json, subprocess, html, zipfile, xml.etree.ElementTree as ET
+import argparse, hashlib, json, subprocess, html, zipfile, tempfile, xml.etree.ElementTree as ET
 import fitz
 from playwright.sync_api import sync_playwright
 from pptx import Presentation
@@ -9,8 +9,20 @@ from pptx.dml.color import RGBColor
 from pptx.oxml.xmlchemy import OxmlElement
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'docs/development/ja-v020-20261020/qa/evidence/documents'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--output-dir', type=Path, required=True, help='New empty output directory; historical evidence is never overwritten')
+parser.add_argument('--chromium', help='Explicit Chromium executable; otherwise use installed Playwright browser')
+args = parser.parse_args()
+OUT = args.output_dir.resolve()
+if OUT.exists() and any(OUT.iterdir()):
+    parser.error('refusing to overwrite a nonempty evidence directory')
 OUT.mkdir(parents=True, exist_ok=True)
+
+def keep_phrase(markup):
+    # Only three short lexical groups identified in W09-V03; never entire cells.
+    for phrase in ('ありません。', '継続欄', 'しない。'):
+        markup = markup.replace(phrase, '<span class="keep-phrase">' + phrase + '</span>')
+    return markup
 PROTECTED = ['髙﨑さま／料金１,２００円／が', '2026年度・特別会員向けオンライン講座の受講登録を取り消す', '2026年11月3日／文字の広場（架空会場）']
 brief = {'purpose':'架空の講座運営担当が案内と取消手続の確認点を理解する。実在事業の実績を示さない。', 'audience':'画面で報告書とスライドを読む運営担当。印刷・投影条件は未確認。', 'profiles':['report-document','presentation'], 'adapters':['report','slide-deck'], 'intensity':'Standard', 'roles':{'report_body':'Noto Sans CJK JP 11pt / 1.7','report_heading':'20pt / 14pt','slides':'Noto Sans CJK JP title 30pt, body 22pt, note 16pt'},'protected':PROTECTED,'source':'HOST_SMOKE H-02 exact protected strings. Other copy and table/chart values are explicitly fictional QA inputs, not measured performance.'}
 (OUT/'brief.json').write_text(json.dumps(brief, ensure_ascii=False, indent=2)+'\n')
@@ -22,12 +34,14 @@ content=f'''<!doctype html><html lang="ja"><meta charset="utf-8"><title>架空�
 content+=''.join(f'<tr><td>{r["id"]}</td><td>{r["task"]}</td><td>{r["note"]}</td></tr>' for r in rows)
 content+='</tbody></table><p class="note">台帳末尾の注記：最終項目44までの内容と、継続ページの見出しを確認する。台帳の空欄は実施済みを意味しない。</p></section>'
 content+=f'''<section class="page"><h2>3. 取消案内と判断の境界</h2><div class="field">{html.escape(PROTECTED[1])}</div><p>{paragraph}</p><h2>表示と原稿の確認を分ける</h2><p>PDFの文字抽出は原稿保存の限定的な証拠です。全ページの画像で表、注記、行末と行頭、必須情報の見え方を確認します。実際のOfficeでの表示・編集、印刷機、会場の投影距離はこの検証に含みません。</p><h2>担当者への引継ぎ</h2><p>元の原稿を保存し、実表示の問題は場所と条件を添えて記録します。条件不明のまま可読性を保証せず、実機で確認する項目を明示します。</p><p class="note">補足凡例：原稿一致＝抽出範囲の比較。画像確認＝このレンダラーの表示。実ホスト確認＝別の検証。</p></section></html>'''
+content = keep_phrase(content.replace('</style>', '.keep-phrase{white-space:nowrap}</style>'))
 (OUT/'report.html').write_text(content)
 with sync_playwright() as p:
-    browser=p.chromium.launch(executable_path='/usr/bin/chromium',args=['--no-sandbox'])
+    browser=p.chromium.launch(executable_path=args.chromium,args=['--no-sandbox'])
     page=browser.new_page()
     page.set_content(content,wait_until='load')
     page.evaluate('document.fonts.ready')
+    (OUT/'report-dom-text.txt').write_text(page.locator('body').text_content())
     page.pdf(path=str(OUT/'report.pdf'),print_background=True,prefer_css_page_size=True)
     chromium=browser.version
     browser.close()
@@ -81,7 +95,7 @@ s=slide('まとめ：確認した範囲を引き継ぐ','このスライドは�
 box(s,.9,1.7,11.5,3.5,'1. 原稿の文字と数値を変えない\n2. 全ページ・全スライドを見る\n3. 未確認の環境を明示する',27,bold=True)
 box(s,.9,5.7,11.5,.7,'公開・本番更新にはOwner Gateが必要です。',21,color=TEAL)
 prs.save(OUT/'presentation.pptx')
-conversion=subprocess.run(['soffice','--headless','-env:UserInstallation=file:///tmp/kumihan-qa-lo','--convert-to','pdf','--outdir',str(OUT),str(OUT/'presentation.pptx')],capture_output=True,text=True)
+conversion=subprocess.run(['soffice','--headless','-env:UserInstallation=' + Path(tempfile.mkdtemp(prefix='kumihan-w09-lo-')).as_uri(),'--convert-to','pdf','--outdir',str(OUT),str(OUT/'presentation.pptx')],capture_output=True,text=True)
 (OUT/'conversion.log').write_text(conversion.stdout+conversion.stderr)
 results={'chromium':chromium,'libreoffice':subprocess.run(['soffice','--version'],capture_output=True,text=True).stdout.strip(),'conversion_returncode':conversion.returncode,'native_office':'not-checked','projection':'not-checked','files':{}}
 for stem in ['report','presentation']:
@@ -97,7 +111,7 @@ pptx_text='\n'.join(shape.text for s in prs.slides for shape in s.shapes if shap
 results['pptx_protected_exact']={v:v in pptx_text for v in PROTECTED}
 results['pptx_slides']=len(prs.slides)
 results['pptx_notes']=[s.notes_slide.notes_text_frame.text for s in prs.slides]
-results['converter_fidelity']={'status':'failed','priority':'P1','scope':'LibreOffice-export PDF exact extraction/copy fidelity','reason':'Protected strings are not exact substrings in PyMuPDF extraction due to inserted spaces in numeric/Latin-Japanese boundaries. Source PPTX XML remains exact. Native Office export and copy/paste are not-checked.'}
+results['converter_fidelity']={'status':'passed' if all(results['presentation']['protected_exact_substring_extraction'].values()) else 'failed','priority':'P1','scope':'LibreOffice-export PDF exact PyMuPDF extraction; actual copy/paste not-checked','reason':'All protected exact substrings are present in PyMuPDF extraction.' if all(results['presentation']['protected_exact_substring_extraction'].values()) else 'At least one protected string is not an exact substring in PyMuPDF extraction; see extracted text.', 'visual':'not-checked', 'actual_copy_paste':'not-checked', 'native_office':'not-checked'}
 with zipfile.ZipFile(OUT/'presentation.pptx') as z:
     texts=[]
     for i in range(1,9):

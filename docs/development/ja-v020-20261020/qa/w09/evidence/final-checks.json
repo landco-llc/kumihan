@@ -1,0 +1,103 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "final-check-01.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/seo",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "final-check-02.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/check_ja_type_011_cases.py"
+      ],
+      "exit": 0,
+      "log": "final-check-03.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/build_dist.py",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "final-check-04.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/build_seo.py",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "final-check-05.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/check_seo_preservation.py"
+      ],
+      "exit": 0,
+      "log": "final-check-06.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/web_fonts.py",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "final-check-07.log"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "final-check-08.log"
+    },
+    {
+      "command": [
+        "bundle",
+        "exec",
+        "jekyll",
+        "build",
+        "--destination",
+        "/private/tmp/kumihan-w09-site",
+        "--trace"
+      ],
+      "exit": 1,
+      "log": "final-check-09.log"
+    }
+  ],
+  "historical_modified": [],
+  "source_digest": {
+    "tools/qa_documents_v020.py": "a7d30a709ccddda661d96c49f2c7da02a2cdf15d78c1d03f5522e03c0dcca12d",
+    "tools/qa_web_acceptance.py": "74753538a5cb3896687e5607d2c28a19ba360049af62749f63f6e2daa5ad6822",
+    ".github/workflows/ja-acceptance-qa.yml": "40bf754ea7cdb9f5ea4183f10969293f96ec887aa8a72d0cef7c9233b7e9817e"
+  },
+  "local_jekyll": "FAILED environment: Ruby2.6 lacks required Bundler2.5.22; hosted check pending",
+  "final_head_ci": "CI EVIDENCE NOT PRESENT"
+}

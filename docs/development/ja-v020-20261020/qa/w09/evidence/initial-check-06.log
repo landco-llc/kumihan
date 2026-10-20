@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/private/tmp/kumihan-w09-execution/tools/check_seo_preservation.py", line 41, in <module>
+    errors = audit()
+             ^^^^^^^
+  File "/private/tmp/kumihan-w09-execution/tools/check_seo_preservation.py", line 19, in audit
+    from build_version_site import preservation_allowed
+  File "/private/tmp/kumihan-w09-execution/tools/build_version_site.py", line 9, in <module>
+    import yaml
+ModuleNotFoundError: No module named 'yaml'

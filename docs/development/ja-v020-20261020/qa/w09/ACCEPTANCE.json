@@ -1,0 +1,203 @@
+{
+  "schema": "kumihan-ja-v020-w09-acceptance-1",
+  "workgroup": "KUMI-JA-V020-W09-20261020-01",
+  "created_date": "2026-10-20",
+  "state": "not-run",
+  "baseline": {
+    "pr": 123,
+    "head": "384f073ba122abde42f5836b15650c055928e724",
+    "tree": "a0a937658a24381bf2dd10012f1f977a46be3418",
+    "published_ja": "0.1.8",
+    "source_candidate_ja": "0.2.0",
+    "preexisting_qa": {
+      "unit_passes": 97,
+      "seo_tests": 29,
+      "zip_candidates": 15,
+      "original_cases_partially_run": 15,
+      "original_cases_not_run": 15
+    }
+  },
+  "rules": {
+    "protected_source": "Compare exact Unicode code points, including compatibility characters, fullwidth numeric text and decomposed dakuten; no normalization, punctuation insertion or copy edits",
+    "evidence_isolation": "Do not overwrite prior QA result/images/negative specimens. W09 outputs live under qa/w09/evidence",
+    "scope": "Use source/DOM/PDF extraction/visual/Office-native/host-native statuses separately; historical failures remain as history",
+    "availability": "A check not attempted is not-checked. Unsupported only on demonstrated unsupported technology. Assisted semantic judgement is not automated certification.",
+    "forbidden": [
+      "main merge",
+      "tag/release",
+      "Pages deployment",
+      "Marketplace submission",
+      "Universal MCP production change",
+      "foreign-language edition changes"
+    ]
+  },
+  "acceptance": [
+    {
+      "id": "W09-V03-A",
+      "priority": "P1",
+      "artifact": "report.pdf",
+      "baseline": "report page 2 introduction: ありませ／ん。",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Show before/after actual line map, ensure ありません。 is not split in positive report at observed condition",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V03-B",
+      "priority": "P1",
+      "artifact": "report.pdf",
+      "baseline": "report pages 2-4 tabular text: 継／続欄 (repeated)",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Avoid splitting 継続欄 while retaining table 44 records, repeated header and full information; no entire-row nowrap or line overflow",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V03-C",
+      "priority": "P1",
+      "artifact": "report.pdf",
+      "baseline": "report page 5 note: しな／い。",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Show natural note wrapping and full note; record any unresolved width constraints",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V03-D",
+      "priority": "P0",
+      "artifact": "report.pdf",
+      "baseline": "protected source and 44-row table",
+      "method": [
+        "static",
+        "rendered"
+      ],
+      "outcome": "Protected source exact; inspect every resultant PDF page and table continuation; no clipped mandatory values",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V04-A",
+      "priority": "P1",
+      "artifact": "web-positive.html",
+      "baseline": "320 CSS200 heading: 資料を読む前／に",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Compare scoped heading rendering and readability, without changing source or creating horizontal overflow",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V04-B",
+      "priority": "P1",
+      "artifact": "web-positive.html",
+      "baseline": "320 CSS200 paragraphs: できませ／ん。, 認定しませ／ん。",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Compare local reflow and short lexical groups; any unavoidable split remains needs-review with exact reason",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V04-C",
+      "priority": "P0",
+      "artifact": "web-positive.html",
+      "baseline": "20 positive states 5 widths × 4 conditions",
+      "method": [
+        "static",
+        "rendered"
+      ],
+      "outcome": "All 20 states re-rendered and inspected; exact protected data, click/focus, no required info occlusion or sideways scrolling; deliberate negatives preserved",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V05-A",
+      "priority": "P1",
+      "artifact": "presentation.pptx",
+      "baseline": "PPTX exact vs LO PDF extraction inserts spaces (2026 年, １, ２００)",
+      "method": [
+        "static",
+        "rendered",
+        "manual"
+      ],
+      "outcome": "Pin raw OOXML text, PDF raw character/run data, independent extractors if available and actual copy when possible; do not fake exactness",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V05-B",
+      "priority": "P1",
+      "artifact": "presentation.pdf",
+      "baseline": "slide-01 visibly wide spacing between year/month/day and price numerals in LO preview",
+      "method": [
+        "rendered",
+        "assisted"
+      ],
+      "outcome": "Before/after visual of slide 01 plus all 8 slides; identify whether PPTX run/font/LO exporter caused issue and disclose renderer limits",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-V05-C",
+      "priority": "P0",
+      "artifact": "presentation.pptx",
+      "baseline": "saved XML source exact, prior slide3 aligned after correction",
+      "method": [
+        "static",
+        "rendered"
+      ],
+      "outcome": "No source Unicode edits, remains editable shapes, all 8 slide images read, no overlap/hidden information or slide3 regression",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-R01",
+      "priority": "P0",
+      "artifact": "repository",
+      "baseline": "97 unit /29 SEO / final-head 39370914128 success only for previous SHA",
+      "method": [
+        "static"
+      ],
+      "outcome": "New final W09 SHA CI green with readback of unit/SEO/build/Pages/Preservation and git diff --check; no old green reuse",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-R02",
+      "priority": "P0",
+      "artifact": "distribution",
+      "baseline": "15 ZIP candidates v0.2.0 with known SHA-256 in original release-manifest.json",
+      "method": [
+        "static"
+      ],
+      "outcome": "15 bytes/CRC/member/digest checked vs candidate baseline; all non-JA packages and original frozen catalog/schema remain unchanged unless explicitly reviewed within scope",
+      "observed": null,
+      "status": "not-run"
+    },
+    {
+      "id": "W09-GATE",
+      "priority": "owner",
+      "artifact": "release control",
+      "baseline": "main, tag, Release and production changes withheld",
+      "method": [
+        "manual"
+      ],
+      "outcome": "Draft PR + evidence to Issues #121/#119; Owner reviews residual P1 and host/native gaps before any authorization",
+      "observed": null,
+      "status": "not-run"
+    }
+  ]
+}
