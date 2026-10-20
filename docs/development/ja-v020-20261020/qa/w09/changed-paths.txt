@@ -1,5 +1,9 @@
 .github/workflows/ja-acceptance-qa.yml
+docs/development/ja-v020-20261020/qa/w09/ACCEPTANCE.json
 docs/development/ja-v020-20261020/qa/w09/RESULT.md
+docs/development/ja-v020-20261020/qa/w09/START_HERE.md
+docs/development/ja-v020-20261020/qa/w09/WORKGROUP.md
+docs/development/ja-v020-20261020/qa/w09/changed-paths.txt
 docs/development/ja-v020-20261020/qa/w09/evidence/baseline.json
 docs/development/ja-v020-20261020/qa/w09/evidence/dependency-check-01.log
 docs/development/ja-v020-20261020/qa/w09/evidence/dependency-check-02.log
@@ -17,6 +21,12 @@ docs/development/ja-v020-20261020/qa/w09/evidence/final-check-07.log
 docs/development/ja-v020-20261020/qa/w09/evidence/final-check-08.log
 docs/development/ja-v020-20261020/qa/w09/evidence/final-check-09.log
 docs/development/ja-v020-20261020/qa/w09/evidence/final-checks.json
+docs/development/ja-v020-20261020/qa/w09/evidence/fixed-head-checks/1.log
+docs/development/ja-v020-20261020/qa/w09/evidence/fixed-head-checks/2.log
+docs/development/ja-v020-20261020/qa/w09/evidence/fixed-head-checks/3.log
+docs/development/ja-v020-20261020/qa/w09/evidence/fixed-head-checks/4.log
+docs/development/ja-v020-20261020/qa/w09/evidence/fixed-head-checks/record.json
+docs/development/ja-v020-20261020/qa/w09/evidence/independent-review.md
 docs/development/ja-v020-20261020/qa/w09/evidence/initial-check-01.log
 docs/development/ja-v020-20261020/qa/w09/evidence/initial-check-02.log
 docs/development/ja-v020-20261020/qa/w09/evidence/initial-check-03.log
@@ -218,6 +228,7 @@ docs/development/ja-v020-20261020/qa/w09/evidence/web/web-negative.html
 docs/development/ja-v020-20261020/qa/w09/evidence/web/web-observations.json
 docs/development/ja-v020-20261020/qa/w09/evidence/web/web-positive-before.html
 docs/development/ja-v020-20261020/qa/w09/evidence/web/web-positive.html
+docs/development/ja-v020-20261020/qa/w09/evidence/writer-freeze.json
 tests/test_ja_v020_w09_documents.py
 tests/test_ja_v020_w09_web.py
 tools/qa_documents_v020.py

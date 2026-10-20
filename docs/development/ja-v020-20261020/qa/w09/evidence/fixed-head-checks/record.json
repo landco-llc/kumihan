@@ -1,0 +1,50 @@
+{
+  "head": "f91ff023056425b9746c9c1f22b9fca38732dca7",
+  "tree": "7014f85c5c14b875e21c941e6a3246714d82dd22",
+  "commands": [
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "1.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/seo",
+        "-v"
+      ],
+      "exit": 0,
+      "log": "2.log"
+    },
+    {
+      "command": [
+        "/private/tmp/kumihan-w09-checks-venv/bin/python",
+        "tools/build_dist.py",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "3.log"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit": 0,
+      "log": "4.log"
+    }
+  ]
+}
