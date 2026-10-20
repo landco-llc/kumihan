@@ -1,5 +1,7 @@
 # START_HERE — 日本語v0.2.0 GitHub限定公開
 
+**CRITICAL CURRENT MAIN UPDATE:** PR #122 (Traditional Chinese source v0.2.0) merged to main at `de6ec7d6c393a832ffff8f842be47a5335d3ecd0` after the original JA instruction was prepared. Provisional Draft PR #128 now reports mergeable=false: DO NOT merge it. Read **WORKGROUP.md §W00B** and the merged `docs/development/zh-hant-v020-20261020/JA120_SHARED_HANDOFF.md`, then prepare a clean JA integration from the **new** main retaining all ZH-HANT shared files. Once merged and verified, continue tag/Release and MCP handoff.
+
 Status: OWNER_AUTHORIZED / RELEASE_NOT_YET_CREATED. This is an execution entry, not the Release itself.
 
 - Execution: Codex Cloud or Codex App, repository `landco-llc/kumihan`.
