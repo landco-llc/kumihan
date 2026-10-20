@@ -2,19 +2,19 @@
   "format": 2,
   "product": "KUMIHAN for ChatGPT and Codex",
   "publisher": "L&Co. LLC",
-  "version": "0.1.8",
+  "version": "0.2.0",
   "source_repository": "landco-llc/kumihan",
   "status": "Source distribution. Behavior in each host has not been fully verified.",
   "archives": [
     {
-      "file": "plugins/kumihan-GPT-Codex-plugin-0.1.8.zip",
-      "sha256": "e72937c03e1e87ce35ccd7299090e179d5a17bd9c257b427cc531a624a8e8f07",
-      "bytes": 1179401,
+      "file": "plugins/kumihan-GPT-Codex-plugin-0.2.0.zip",
+      "sha256": "caa29f9b955cf874c7c7e4a220a354732f8d8ea785b1afd69e4d7cfca9582695",
+      "bytes": 1308236,
       "members": [
         {
           "path": "kumihan-private-install-preview/.codex-plugin/plugin.json",
           "bytes": 2810,
-          "sha256": "44a50fdfce3d66580e9ad1da193b372ae74da0371c8f1d18cebff1d71798f55f"
+          "sha256": "46878e249a57d9189ef95ca396fa4a5280076e7a8fc45b862abe1585038aafcd"
         },
         {
           "path": "kumihan-private-install-preview/LICENSE",
@@ -32,14 +32,9 @@
           "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
         },
         {
-          "path": "kumihan-private-install-preview/docs/development.md",
-          "bytes": 1403,
-          "sha256": "11f860fe885d0f3ec7f23d1131ca7c15574082d57b6d4683364c49955bc99c8b"
-        },
-        {
           "path": "kumihan-private-install-preview/plugin.json",
           "bytes": 2984,
-          "sha256": "06b4dc232d04b4c038bb492b835bb978f16b80eb667d6ae561d33df4aa87e00e"
+          "sha256": "53ac6cc5777af46452a689e86b918fea8dde33db97b76d5412386c518428c2bd"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/LICENSE",
@@ -48,13 +43,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/SKILL.md",
-          "bytes": 3758,
-          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
+          "bytes": 4558,
+          "sha256": "5ee39bcb106f33726cab3eabe879d0e9ea44f7f0740d1b4397d18a7311e86431"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/inventory.json",
-          "bytes": 5068,
-          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
+          "bytes": 5944,
+          "sha256": "ce8f867196aedf906653e36897242ad15c2b3d10b3bc008fadfc15d08513c2fa"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/profiles/display-copy.json",
@@ -103,13 +98,38 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-documents/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/use-case-adapters.json",
@@ -128,8 +148,8 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-documents/rules/catalog.json",
@@ -203,13 +223,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/SKILL.md",
-          "bytes": 4137,
-          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
+          "bytes": 4889,
+          "sha256": "d37a5400ef82d844632334672c63281f7463f4152aebee47ed88a97c003a5323"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/inventory.json",
-          "bytes": 5065,
-          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
+          "bytes": 5941,
+          "sha256": "9bf7fc4c7a9bbe9ebea3b7afb06d8cd876219bf8e4d8947392bd328ec2509956"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/profiles/display-copy.json",
@@ -258,13 +278,38 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-review/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/use-case-adapters.json",
@@ -283,8 +328,8 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-review/rules/catalog.json",
@@ -358,13 +403,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/SKILL.md",
-          "bytes": 4481,
-          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
+          "bytes": 5217,
+          "sha256": "66324050f2422b007e2b7953510d98b35ce759ed2401dafffd693f16c2003874"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/inventory.json",
-          "bytes": 5062,
-          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
+          "bytes": 5938,
+          "sha256": "a8d02ea7e9f8b1353f80db349dc29093b34f9dbd4c7dc0d680faa0978022aa24"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/profiles/display-copy.json",
@@ -413,13 +458,38 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan-web/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/use-case-adapters.json",
@@ -438,8 +508,8 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan-web/rules/catalog.json",
@@ -513,13 +583,13 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/SKILL.md",
-          "bytes": 4840,
-          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
+          "bytes": 5459,
+          "sha256": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/inventory.json",
-          "bytes": 5058,
-          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
+          "bytes": 5934,
+          "sha256": "d85495c4061c9bf38cebd699e575f085ad7453ee68f9a5c894d7a199b786f832"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/profiles/display-copy.json",
@@ -568,13 +638,38 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-private-install-preview/skills/kumihan/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/use-case-adapters.json",
@@ -593,8 +688,8 @@
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-private-install-preview/skills/kumihan/rules/catalog.json",
@@ -664,9 +759,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-GPT-Codex-skill-0.1.8.zip",
-      "sha256": "cbddb1660b7ed97cf7ff64e5480fb58c8a4aff66a7576c9f55922651075cf952",
-      "bytes": 92429,
+      "file": "skills/kumihan-GPT-Codex-skill-0.2.0.zip",
+      "sha256": "44d87e11078c48de44eea2d18aacdef74ba67620bab6b23adbe4592b031c76ca",
+      "bytes": 124375,
       "members": [
         {
           "path": "kumihan/LICENSE",
@@ -675,13 +770,13 @@
         },
         {
           "path": "kumihan/SKILL.md",
-          "bytes": 4840,
-          "sha256": "1062b3be629c8c28bc6c2ed19a52329f214fc3ada789b7e76f91037d4f6942b3"
+          "bytes": 5459,
+          "sha256": "6dca5b26aeace378158a0f70cc38847125548ae00d2c0303b76c95d34392eec1"
         },
         {
           "path": "kumihan/inventory.json",
-          "bytes": 5058,
-          "sha256": "20e06d6b2f266d7f4f4e6bfbdddd4e376cfcfffefa213ed7067f821ad8abcbae"
+          "bytes": 5934,
+          "sha256": "d85495c4061c9bf38cebd699e575f085ad7453ee68f9a5c894d7a199b786f832"
         },
         {
           "path": "kumihan/profiles/display-copy.json",
@@ -730,13 +825,38 @@
         },
         {
           "path": "kumihan/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan/references/use-case-adapters.json",
@@ -755,8 +875,8 @@
         },
         {
           "path": "kumihan/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan/rules/catalog.json",
@@ -826,9 +946,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-web-GPT-Codex-skill-0.1.8.zip",
-      "sha256": "f64b09a72705f4f353450562f93496b8298fbe62a239218db741a0bcb3be69e2",
-      "bytes": 92684,
+      "file": "skills/kumihan-web-GPT-Codex-skill-0.2.0.zip",
+      "sha256": "858c6eea185817a4ac228087ea88efd06d8d9428a6fe2ad0f19e0954b792e3c6",
+      "bytes": 124727,
       "members": [
         {
           "path": "kumihan-web/LICENSE",
@@ -837,13 +957,13 @@
         },
         {
           "path": "kumihan-web/SKILL.md",
-          "bytes": 4481,
-          "sha256": "21d43fbda2975c7a2f092bb34f849515e2b476430dd0c0fb813b7938adb7c1c9"
+          "bytes": 5217,
+          "sha256": "66324050f2422b007e2b7953510d98b35ce759ed2401dafffd693f16c2003874"
         },
         {
           "path": "kumihan-web/inventory.json",
-          "bytes": 5062,
-          "sha256": "7fd106244e5f79cde8cf4cb8ee028ebe0c17b7e943b18d9464652f2c04221998"
+          "bytes": 5938,
+          "sha256": "a8d02ea7e9f8b1353f80db349dc29093b34f9dbd4c7dc0d680faa0978022aa24"
         },
         {
           "path": "kumihan-web/profiles/display-copy.json",
@@ -892,13 +1012,38 @@
         },
         {
           "path": "kumihan-web/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-web/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-web/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-web/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-web/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-web/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-web/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-web/references/use-case-adapters.json",
@@ -917,8 +1062,8 @@
         },
         {
           "path": "kumihan-web/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-web/rules/catalog.json",
@@ -988,9 +1133,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-documents-GPT-Codex-skill-0.1.8.zip",
-      "sha256": "c7e6490f4855c7d31a019b851cfbca4b775f74ec38c04448637b7763a5e4f3fc",
-      "bytes": 92563,
+      "file": "skills/kumihan-documents-GPT-Codex-skill-0.2.0.zip",
+      "sha256": "d09b422f8f149fffd51c1e79f3ef3050ec7d5604f99fdaf9e9dcbe0d78a68242",
+      "bytes": 124694,
       "members": [
         {
           "path": "kumihan-documents/LICENSE",
@@ -999,13 +1144,13 @@
         },
         {
           "path": "kumihan-documents/SKILL.md",
-          "bytes": 3758,
-          "sha256": "e1d1477e69b499ae0135422b3f3de42aaba97769af94e61f6ace1a386263204a"
+          "bytes": 4558,
+          "sha256": "5ee39bcb106f33726cab3eabe879d0e9ea44f7f0740d1b4397d18a7311e86431"
         },
         {
           "path": "kumihan-documents/inventory.json",
-          "bytes": 5068,
-          "sha256": "c262687e81ee4003e7692d2f926622854c5a5cacda9d77430ffaf6f7acac7dad"
+          "bytes": 5944,
+          "sha256": "ce8f867196aedf906653e36897242ad15c2b3d10b3bc008fadfc15d08513c2fa"
         },
         {
           "path": "kumihan-documents/profiles/display-copy.json",
@@ -1054,13 +1199,38 @@
         },
         {
           "path": "kumihan-documents/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-documents/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-documents/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-documents/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-documents/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-documents/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-documents/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-documents/references/use-case-adapters.json",
@@ -1079,8 +1249,8 @@
         },
         {
           "path": "kumihan-documents/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-documents/rules/catalog.json",
@@ -1150,9 +1320,9 @@
       ]
     },
     {
-      "file": "skills/kumihan-review-GPT-Codex-skill-0.1.8.zip",
-      "sha256": "8baaecb1b4e01004c9bd35a08f72d6ab3434fbd14e3fab46b7dbd8969958dc00",
-      "bytes": 92594,
+      "file": "skills/kumihan-review-GPT-Codex-skill-0.2.0.zip",
+      "sha256": "d292651bb180d688b5328857607ca34f6f05f31b005f76634b9cb95f301a5d69",
+      "bytes": 124674,
       "members": [
         {
           "path": "kumihan-review/LICENSE",
@@ -1161,13 +1331,13 @@
         },
         {
           "path": "kumihan-review/SKILL.md",
-          "bytes": 4137,
-          "sha256": "19d826bf17ccb8640c12df65ee99759a62a37c418b36e02fae87abd6d78fd71a"
+          "bytes": 4889,
+          "sha256": "d37a5400ef82d844632334672c63281f7463f4152aebee47ed88a97c003a5323"
         },
         {
           "path": "kumihan-review/inventory.json",
-          "bytes": 5065,
-          "sha256": "02fcad6abe9a4acda5f60210b9339e824f64e70dfcdfa76139df1a832f97ca2f"
+          "bytes": 5941,
+          "sha256": "9bf7fc4c7a9bbe9ebea3b7afb06d8cd876219bf8e4d8947392bd328ec2509956"
         },
         {
           "path": "kumihan-review/profiles/display-copy.json",
@@ -1216,13 +1386,38 @@
         },
         {
           "path": "kumihan-review/references/document-recipes.md",
-          "bytes": 5661,
-          "sha256": "3fbea847e9f6f616baf05e8456c9754ff68562867f63fe77d11c31a75543f507"
+          "bytes": 6507,
+          "sha256": "f1d8ecd55d91cf0ac002517a3305916e8a5ff00d20575181619567e026dcb706"
+        },
+        {
+          "path": "kumihan-review/references/experimental/typography-evidence.schema.json",
+          "bytes": 15704,
+          "sha256": "3190655199a372697461efc2826facefa685f7f19dfad6db22a4a0b19c10a0e0"
+        },
+        {
+          "path": "kumihan-review/references/japanese-writing-and-type.md",
+          "bytes": 3709,
+          "sha256": "f1c42b703e6a02078d4ec075c84c0230d19377eda834aec5f5de7b2ff9cb1b7b"
+        },
+        {
+          "path": "kumihan-review/references/research-claims.json",
+          "bytes": 105032,
+          "sha256": "dcc8fdb7de2562fc55d8094d847dcdc604b3b61913dda28cb7066ad78f6e889c"
         },
         {
           "path": "kumihan-review/references/review-protocol.md",
-          "bytes": 12582,
-          "sha256": "9c5aa411f703e09dad399b7e201ead68f006d1ce894de5d932821f6383ccd504"
+          "bytes": 12913,
+          "sha256": "e80aa7802ba9510dab486f4d12367402a6123e54aaf2064bf97e4f4890847c0e"
+        },
+        {
+          "path": "kumihan-review/references/typography-context.md",
+          "bytes": 2017,
+          "sha256": "9d8f58717456de8f46254f06c793f5c83641020026d144eec2ec54b3fb05d4da"
+        },
+        {
+          "path": "kumihan-review/references/typography-recipes-by-task.md",
+          "bytes": 1252,
+          "sha256": "3b2c15ae37735ad0ec6211ff322f27c787fe34b5b38fe5fcf6c436a67535cbe1"
         },
         {
           "path": "kumihan-review/references/use-case-adapters.json",
@@ -1241,8 +1436,8 @@
         },
         {
           "path": "kumihan-review/references/web-recipes.md",
-          "bytes": 9552,
-          "sha256": "35ad45051ab344953c0ad19ed60013866640303ca6b0faa8a97e67ab79729dcf"
+          "bytes": 10487,
+          "sha256": "7105129f8476ddbb4357e6bd4d1e30cc443d3ae11028b73adeea9164b8504269"
         },
         {
           "path": "kumihan-review/rules/catalog.json",

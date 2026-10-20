@@ -220,7 +220,12 @@ class UseCaseRoutingTests(unittest.TestCase):
         import zipfile
         zips = sorted(p for folder in ('downloads GPT-Codex', 'downloads Claude', 'downloads Gemini')
                       for p in (ROOT / folder).rglob('*.zip'))
-        self.assertEqual(len(zips), 15)
+        active = {ROOT / folder / row['file']
+                  for folder in ('downloads GPT-Codex', 'downloads Claude', 'downloads Gemini')
+                  for row in json.loads((ROOT / folder / 'MANIFEST.json').read_text())['archives']}
+        retained = {ROOT / p for p in json.loads((ROOT / 'tools/ja-retained-distributions.json').read_text())}
+        self.assertEqual(len(active), 15)
+        self.assertEqual(set(zips), active | retained)
         for path in zips:
             with zipfile.ZipFile(path) as z:
                 self.assertFalse(any('__pycache__' in x or x.endswith('.pyc') for x in z.namelist()), path)

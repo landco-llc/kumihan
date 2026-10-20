@@ -2,7 +2,7 @@
 
 Concrete starting points for Japanese web typography. Apply them by text role, then check the result in a real browser. Values are starting points to adjust for the actual font, column and audience, not fixed requirements.
 
-Browser support changes. The support notes below follow MDN browser-compat-data as of October 2026 and were confirmed with `CSS.supports()` in Chromium 141. Check MDN again before relying on a newer property. Every property here degrades safely: an unsupported property is ignored and the browser default applies.
+Browser support changes. The support notes below follow MDN browser-compat-data as of October 2026 and were confirmed with `CSS.supports()` in Chromium 141. Check MDN again before relying on a newer property. Ignoring unsupported syntax does not establish a safe fallback. Separately test syntax acceptance, resolved fonts, actual output and fallback. These Chromium 141 notes are historical observations, not a rerun in v0.2.0.
 
 ## 1. Page setup
 
@@ -10,7 +10,7 @@ Browser support changes. The support notes below follow MDN browser-compat-data 
 <html lang="ja">
 ```
 
-- `lang="ja"` lets the browser pick Japanese glyphs and apply Japanese line breaking. Mark embedded English with `lang="en"` where it matters.
+- `lang="ja"` informs language selection and line breaking but does not prove the actual regional glyphs. Compare resolved fonts and authorized regional references for ja / zh-Hant runs. Mark embedded English with `lang="en"` where it matters.
 - Never fix layout problems by editing the text itself (inserting spaces, `<br>` inside names, replacing characters).
 
 ### Font stacks
@@ -37,7 +37,7 @@ font-family: "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", YuMincho, ser
 | Display copy (hero, banners) | Same conditional comparison as headings; tighter spacing only after rendering | Keep the tightening on this element only. |
 | Captions, notes | `font-size: 0.875em` or larger; `line-height: 1.6–1.8` | Must stay readable; do not shrink to hide overlap. |
 | UI labels, buttons | `line-height: 1.4–1.5`; allow wrapping | Two-line labels are fine. Do not force `white-space: nowrap` on long labels. |
-| Tables and numbers | `font-variant-numeric: tabular-nums` | Aligns digits in columns. |
+| Tables and numbers | `font-variant-numeric: tabular-nums` | Requests tabular digits; verify support and actual advances in the resolved font. |
 
 ### Example
 
@@ -56,8 +56,12 @@ h1, h2, h3 {
 }
 
 .display {
-  font-feature-settings: "palt" 1;
-  letter-spacing: 0.02em;
+  font-feature-settings: normal;
+  letter-spacing: 0; /* Ordinary spacing baseline. */
+}
+
+.display.palt-variant {
+  font-feature-settings: "palt" 1; /* Optional, compare with the actual font. */
 }
 
 .url, .code-id {
@@ -97,7 +101,7 @@ Measure the actual content width, effective type and used font before deciding w
 | Goal | Property | Support | Use |
 | --- | --- | --- | --- |
 | Trim the extra space of brackets and punctuation | `text-spacing-trim` | Chrome 123+ only | `trim-start` trims at line starts; `space-all` keeps full-width spacing. The default varies; check the output. Needs a font with the relevant OpenType features. |
-| Proportional punctuation and kana in headings | `font-feature-settings: "palt" 1` | All major browsers, if the font supports `palt` | Headings and display copy only. Not for body text. |
+| Proportional punctuation and kana in headings | `font-feature-settings: "palt" 1` | All major browsers, if the font supports `palt` | Optional local display variant; avoid blanket body cascade. Body palt is not an automatic failure: evaluate role, font and actual output. |
 | Space between Japanese and Latin/numerals | `text-autospace: normal` | Chrome 140+, Firefox 145+, Safari 18.4+ | Adds a small gap automatically. Never type spaces into the source for this. |
 | Hanging punctuation | `hanging-punctuation: allow-end` | Safari only | Optional enhancement. |
 
@@ -118,7 +122,7 @@ Measure the actual content width, effective type and used font before deciding w
 }
 ```
 
-- Check scrolling direction. Vertical text usually scrolls horizontally, so reflow is checked at 256 CSS px height instead of 320 px width.
+- Check scrolling direction. Choose the reflow condition from the actual scroll axis: vertical scrolling uses the width condition (320 CSS px); horizontal scrolling uses the height condition (256 CSS px). A vertical-rl article may stack pages downward.
 
 ## 6. Ruby and notes
 
@@ -136,8 +140,8 @@ Check these in a real browser:
 | Check | How |
 | --- | --- |
 | Reflow | Set the viewport to 320 CSS px wide. Content and controls must work without horizontal scrolling (except genuine 2D content such as maps or wide data tables). |
-| Text zoom | Zoom text to 200%. Nothing is cut off or overlapping. |
-| Spacing overrides | Apply line height 1.5×, paragraph spacing 2×, letter spacing 0.12× and word spacing 0.16× the font size. Nothing is cut off. |
+| Text zoom | Record the actual user enlargement mechanism at 200% and check content/function. Label CSS simulation separately; do not claim native text zoom from it. |
+| Spacing overrides | Record applicable language runs and overridden properties: line height 1.5×, paragraph spacing 2×, letter spacing 0.12× and word spacing 0.16× font size where applicable. Inspect content/function after change. These are override tests, not mandatory author defaults; Japanese does not exempt embedded English or paragraph spacing. |
 | Long content | Test with the longest real label, name and URL. |
 | Fonts | Check the page with the web font loaded and with the fallback font. |
 | States | Check focus, error, loading and disabled states that actually exist. |
@@ -148,7 +152,7 @@ Do not use `overflow: hidden` on large containers to hide overflowing text. Find
 
 | Mistake | Instead |
 | --- | --- |
-| Global `letter-spacing` or `palt` on all text | Apply to headings or display copy only |
+| Global `letter-spacing` or `palt` on all text | Compare local optional variants; do not apply indiscriminately |
 | `white-space: nowrap` on buttons and headings | Allow wrapping; shorten only with permission |
 | Typing spaces between Japanese and Latin | Use `text-autospace` or leave as is |
 | Shrinking text to fit a box | Change the layout or allow wrapping |

@@ -60,7 +60,7 @@ Standard review is the default. Strict requires an explicit user request and can
 
 ## 4. Build
 
-Use [web recipes](references/web-recipes.md) or [document recipes](references/document-recipes.md) for concrete settings. For display copy, tighten spacing only on the display text itself; never carry display treatment into body text. For short Japanese copy also use JA-TYPE-011: prefer a larger natural speech group to mechanically separated bunsetsu and first consider the layout width before conceding a weaker break.
+Use [web recipes](references/web-recipes.md) or [document recipes](references/document-recipes.md) for concrete settings. For display copy, start with ordinary spacing and compare optional local treatments in the actual font. For short copy, first determine whether intentional breaks are needed; evaluate all lines and surrounding space with JA-TYPE-011.
 
 ## 5. Review
 
@@ -71,3 +71,7 @@ Follow the [review protocol](references/review-protocol.md) and report with the 
 If the user asks for a formal design record, an exception or a waiver, use the [design contract](references/design-contract.md) and the approval rules in [architecture](references/architecture.md). Otherwise the short brief above is enough.
 
 If a referenced file is missing, say so and continue with what is available.
+
+## Context and evidence by region (v0.2.0)
+
+Use [typography context](references/typography-context.md) for role, readingTask, attributed intent, prose/display/hybrid and required-information mapping. Keep the brief proportional to the task. Use [Japanese writing and type](references/japanese-writing-and-type.md) and [task recipes](references/typography-recipes-by-task.md) only for relevant decisions. Ordinary wrapping comes first unless intentional breaks are needed; JA-TYPE-002 kinsoku, 003 indivisible ranges, 004 meaning and 011 whole-line composition remain separate. Compare actual fonts, widths and surrounding layout without a mandatory speech-group or widening sequence.

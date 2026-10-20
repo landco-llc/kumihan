@@ -41,7 +41,7 @@ Read [web recipes](references/web-recipes.md) and apply its settings by text rol
 
 - Set `lang="ja"` on the page.
 - Body text: `line-break: strict`, comfortable line height and line length, no letter-spacing tricks.
-- Headings and short display text: use JA-TYPE-011 to compare semantic/prosodic candidates. Prefer `いつものAIツールから／はじめよう` to smaller bunsetsu chunks when it fits, adjusting the local layout. `auto-phrase` and balanced lines are aids, not proof. Use optional `palt` only where supported.
+- Headings and short display text: use JA-TYPE-011 to compare semantic/prosodic candidates. First determine whether intentional breaks are needed. `いつものAIツールから／はじめよう` is a conditional comparison, not a required split or widening sequence. `auto-phrase` and balanced lines are aids, not proof. Use optional `palt` only where supported.
 - Long URLs, IDs and labels: wrap locally; never clip or hide them.
 - Mixed Japanese and Latin: adjust with CSS, never by editing the text.
 
@@ -66,3 +66,7 @@ For a read-only review, use `kumihan-review`. To apply its findings, get explici
 If the user asks for a formal design record, an exception or a waiver, use the [design contract](references/design-contract.md) and [architecture](references/architecture.md).
 
 If a referenced file is missing, say so and continue with what is available.
+
+## Context and evidence by region (v0.2.0)
+
+Use [typography context](references/typography-context.md) for role, readingTask, attributed intent, prose/display/hybrid and required-information mapping. Keep the brief proportional to the task. Use [Japanese writing and type](references/japanese-writing-and-type.md) and [task recipes](references/typography-recipes-by-task.md) only for relevant decisions. Ordinary wrapping comes first unless intentional breaks are needed; JA-TYPE-002 kinsoku, 003 indivisible ranges, 004 meaning and 011 whole-line composition remain separate. Compare actual fonts, widths and surrounding layout without a mandatory speech-group or widening sequence.

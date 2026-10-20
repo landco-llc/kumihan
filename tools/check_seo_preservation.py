@@ -15,6 +15,10 @@ def audit(root=ROOT):
             if not target.is_file():
                 errors.append(f'{family}: missing {path}'); continue
             raw=target.read_bytes()
+            if family == 'protected':
+                from ja_release_transition import admitted
+                if admitted(root, path, expected):
+                    continue
             if family=='bodies':
                 body=re.search(rb'<body\b[\s\S]*',raw,re.I); raw=body[0] if body else b''
             if hashlib.sha256(raw).hexdigest()!=expected:
