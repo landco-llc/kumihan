@@ -1,0 +1,80 @@
+test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) ... ok
+test_legacy_mapping_is_separate_and_lossless (test_contract.ContractTests.test_legacy_mapping_is_separate_and_lossless) ... ok
+test_reference_copy_exact (test_contract.ContractTests.test_reference_copy_exact) ... ok
+test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) ... ok
+test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) ... ok
+test_validator_exists (test_contract.ContractTests.test_validator_exists) ... ok
+test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback) ... ok
+test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review) ... ok
+test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically) ... ok
+test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure) ... ok
+test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound) ... ok
+test_core_exists (test_core.SourceTests.test_core_exists) ... ok
+test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) ... ok
+test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) ... ok
+test_invalid_unicode_utf8_and_byte_boundaries (test_core.SourceTests.test_invalid_unicode_utf8_and_byte_boundaries) ... ok
+test_unknown_critical_resource_and_tag (test_core.SourceTests.test_unknown_critical_resource_and_tag) ... ok
+test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback) ... ok
+test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review) ... ok
+test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically) ... ok
+test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure) ... ok
+test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound) ... ok
+test_evaluator_exists (test_review.ReviewTests.test_evaluator_exists) ... FAIL
+test_exact_target_readonly_and_source_bound_evidence (test_review.ReviewTests.test_exact_target_readonly_and_source_bound_evidence) ... ERROR
+test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver (test_review.ReviewTests.test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver) ... ERROR
+test_missing_module_conflicts_and_bidi_are_reported (test_review.ReviewTests.test_missing_module_conflicts_and_bidi_are_reported) ... ERROR
+test_stale_or_modified_plan_target_observation_rejected (test_review.ReviewTests.test_stale_or_modified_plan_target_observation_rejected) ... ERROR
+
+======================================================================
+ERROR: test_exact_target_readonly_and_source_bound_evidence (test_review.ReviewTests.test_exact_target_readonly_and_source_bound_evidence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 22, in test_exact_target_readonly_and_source_bound_evidence
+    a, observations=self.review(r,p,target=target,source_id='s0')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 11, in review
+    from review import evaluate
+ModuleNotFoundError: No module named 'review'
+
+======================================================================
+ERROR: test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver (test_review.ReviewTests.test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 54, in test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver
+    from review import validate_audit_binding
+ModuleNotFoundError: No module named 'review'
+
+======================================================================
+ERROR: test_missing_module_conflicts_and_bidi_are_reported (test_review.ReviewTests.test_missing_module_conflicts_and_bidi_are_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 67, in test_missing_module_conflicts_and_bidi_are_reported
+    a,_=self.review(r,p)
+        ^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 11, in review
+    from review import evaluate
+ModuleNotFoundError: No module named 'review'
+
+======================================================================
+ERROR: test_stale_or_modified_plan_target_observation_rejected (test_review.ReviewTests.test_stale_or_modified_plan_target_observation_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 41, in test_stale_or_modified_plan_target_observation_rejected
+    with self.assertRaises(CompositionError):self.review(r,stale)
+                                             ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 11, in review
+    from review import evaluate
+ModuleNotFoundError: No module named 'review'
+
+======================================================================
+FAIL: test_evaluator_exists (test_review.ReviewTests.test_evaluator_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 15, in test_evaluator_exists
+    self.assertTrue((Path(__file__).resolve().parents[1]/'review.py').exists(),'Read-only evaluator missing')
+AssertionError: False is not true : Read-only evaluator missing
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.993s
+
+FAILED (failures=1, errors=4)
