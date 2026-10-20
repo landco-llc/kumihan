@@ -91,7 +91,7 @@ class ZiHengApprovedBrandAndHeadlines(unittest.TestCase):
                 self.assertEqual(html.count('class="step-detail"'), 4)
                 self.assertEqual(html.count("<h3>"), 4)
                 self.assertIn('class="steps"', html)
-                self.assertIn("0.1.0.zip", html)
+                self.assertIn("0.2.0.zip", html)
 
 
 if __name__ == "__main__":

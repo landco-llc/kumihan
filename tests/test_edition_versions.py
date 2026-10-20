@@ -204,3 +204,29 @@ class PreservationGate(unittest.TestCase):
                 if p.name!='.git':(root/p.name).symlink_to(p,target_is_directory=p.is_dir())
             (root/'README.md').unlink();(root/'README.md').write_text('unlisted change')
             self.assertIn('protected: main bytes changed: README.md',audit(root))
+
+class PublishedZihengInstallLinks(unittest.TestCase):
+    def test_current_guides_use_verified_host_assets_and_matching_checksums(self):
+        import build_ziheng_site
+        facts=v.load()['editions']['zh-hant']
+        assets={a['name']:a for a in facts['verified_assets']}
+        for path,body in build_ziheng_site.outputs().items():
+            if not path.endswith('.html'):continue
+            self.assertNotIn('retained download links are v0.1.0',body)
+            self.assertNotIn('candidate is not a formal Release',body)
+            self.assertNotRegex(body,r'kumihan-ziheng-(?:Claude-Code-plugin|Gemini-CLI-extension)-v?0.2.0.zip')
+            self.assertNotRegex(body,r'href="[^"\n]+-0\.1\.0\.zip"')
+            host='claude' if 'claude' in path else 'gemini' if 'gemini' in path else 'openai-codex'
+            plugin=assets[f'kumihan-ziheng-{host}-plugin-0.2.0.zip']
+            self.assertIn(plugin['url'],body)
+            if path.startswith('docs/'):
+                self.assertIn(plugin['sha256'],body)
+
+class JapaneseCurrentGuideNames(unittest.TestCase):
+    def test_current_zip_labels_and_commands_match_published_version(self):
+        from build_version_site import generated_markdown
+        f=v.load()['editions']['ja']
+        source='[kumihan-GPT-Codex-plugin-0.1.8.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8.zip)\nunzip kumihan-GPT-Codex-plugin-0.1.8.zip'
+        out=generated_markdown(source,f)
+        self.assertNotIn('0.1.8.zip',out)
+        self.assertIn('unzip kumihan-GPT-Codex-plugin-0.2.0.zip',out)

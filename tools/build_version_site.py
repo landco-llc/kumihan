@@ -67,7 +67,7 @@ def generated_markdown(text, f):
     text=re.sub(r'\[([^\]]+)\]\((\.\./downloads[^)]+)\)',metadata_link,text)
     # All current-guide filenames and copy commands are concrete; historical guides
     # outside installation*.md remain untouched.
-    text=re.sub(r'(?<!\d)0\.1\.8(?![\d.-])',f['published_version'],text)
+    text=re.sub(r'(?<!\d)0\.1\.8(?!\d)',f['published_version'],text)
     return '<!-- Generated from authored installation Markdown; do not edit. -->\n'+text
 
 
