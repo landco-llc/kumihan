@@ -3,7 +3,7 @@ import hashlib,json,platform
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[2]
-OUT=ROOT/'docs/hi/browser-results.json'
+OUT=Path('/tmp/kumihan-hi-browser-results.json')
 PAGES=[f'kumihan-hi{s}.html' for s in ('','.en','.ja')]+[f'docs/install-kumihan-hi-{h}{s}.html' for h in ('chatgpt','claude','gemini') for s in ('','.en','.ja')]
 def main():
  rows=[];hashes={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in PAGES}

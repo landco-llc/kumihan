@@ -14,7 +14,7 @@ PLUGINS={"chatgpt":"chatgpt-codex-plugin","claude":"claude-code-plugin","gemini"
 META={"chatgpt":{"plugin.json",".codex-plugin/plugin.json"},
       "claude":{".claude-plugin/plugin.json"},
       "gemini":{"gemini-extension.json","GEMINI.md"}}
-COMMON={"README.md","INSTALL.md","LICENSE","RELEASE_NOTES.md","THIRD_PARTY_NOTICES.md","UPDATES.md","LIGHT_REVIEW.md"}
+COMMON={"README.md","INSTALL.md","LICENSE","RELEASE_NOTES.md","THIRD_PARTY_NOTICES.md","UPDATES.md","VERIFICATION.md"}
 
 def write_zip(path,entries):
     with ZipFile(path,"w",compression=ZIP_DEFLATED) as archive:

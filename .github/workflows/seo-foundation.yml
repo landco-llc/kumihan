@@ -33,6 +33,7 @@ jobs:
         run: bundle exec jekyll build --destination /tmp/kumihan-seo-site --trace
       - name: Audit actual built HTML and committed sitemap
         run: python tools/check_seo.py --site-dir /tmp/kumihan-seo-site
+      - run: python tools/public_boundary.py --site-dir /tmp/kumihan-seo-site
       - name: Verify built fixtures and source templates are not published
         run: |
           test ! -e /tmp/kumihan-seo-site/tests

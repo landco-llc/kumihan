@@ -1,8 +1,0 @@
-{
-  "release_count": 25,
-  "initial_projection_sha256": "1bc45cabb92db0cad76edbceaf2625a72dc2b99737a51a96f354e98d0a40ad39",
-  "final_projection_sha256": "1bc45cabb92db0cad76edbceaf2625a72dc2b99737a51a96f354e98d0a40ad39",
-  "unchanged": true,
-  "fields": "Release id/tag/status/published_at and asset id/name/size/digest",
-  "operation": "read-only API; no actual tag or Release writes"
-}

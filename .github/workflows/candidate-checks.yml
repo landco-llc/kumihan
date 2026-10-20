@@ -16,5 +16,6 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m unittest discover -s tests -v
+      - run: python tools/public_boundary.py
       - run: python tools/check_ja_type_011_cases.py
       - run: python tools/build_dist.py --check

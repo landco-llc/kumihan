@@ -1,6 +1,5 @@
 # KUMIHAN Version Naming Policy / 全言語版バージョン表記方針
 
-**Owner decision:** 2026-10-19 JST — remove the `-preview` suffix from active version names for **every KUMIHAN language edition**.
 
 ## Normative current-version naming
 
@@ -13,7 +12,6 @@
 - **Verification limits:** Removing “preview” from a name does **not** establish wider runtime, native host, print or accessibility acceptance. Continue to state genuine `not-checked` or other limitations accurately, without inventing qualifications.
 - **Historical immutability:** Older published `*-preview` tags/releases and their ZIP contents are kept as historical artifacts. Do not force-move/delete old tags or silently replace their attachments. Prior release notes and validation reports may cite their exact historical original names.
 - **Version release process:** Release artifacts are built from a fixed, verified source commit; verify manifests, ZIP members, sizes and SHA-256; create a *new* tag; publish only with Owner's approval; read back all public artifacts. When a language product has no release, renaming its active manifest does not authorize a first marketplace or GitHub release.
-- **Existing parallel work:** The SEO Draft PR #93 and multilingual MCP Draft PR #101 are independent; incorporate the new naming policy through review/rebase rather than rewriting or merging unrelated branches without their own approval.
 
 ## Examples
 
@@ -26,6 +24,6 @@
 
 Current active manifests are protected by `tests/test_version_naming.py`. This test distinguishes canonical active package metadata from archived historical versions; it does not relabel past evidence.
 
-## Verified publication metadata
+## Published and source versions
 
-[Edition version automation](version-automation/README.md) separates source versions from verified stable GitHub Releases. Shared renderers and README consume `assets/edition-versions.json`; no source file addition or common naming change publishes an edition. The release/manual workflow produces a reviewed patch proposal with read-only permissions. Owner approval remains necessary to merge or publish it.
+The edition page distinguishes the source version from a verified published release. A source update does not publish an edition. Use the download links and checksums on the edition page; see [updates](updates.md) for installation instructions.

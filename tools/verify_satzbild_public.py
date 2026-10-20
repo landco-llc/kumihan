@@ -21,4 +21,4 @@ def page(path):
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:pages=list(pool.map(page,paths))
 status,b,url=get(BASE);assert status==200 and 'kumihan-de.ja.html' in b.decode()
 result=dict(tag=TAG,release=release['html_url'],draft=release['draft'],asset_count=len(assets),assets=assets,pages=pages,gateway=dict(url=url,http=status,de_link='kumihan-de.ja.html',status='passed'),local_sha=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip())
-(ROOT/'docs/de/PUBLIC_VERIFICATION.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('PUBLIC VERIFIED: 17 assets exact bytes/digests + 12 Pages exact bytes + DE gateway')
+(Path('/tmp/kumihan-de-public-verification.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print('PUBLIC VERIFIED: 17 assets exact bytes/digests + 12 Pages exact bytes + DE gateway')
