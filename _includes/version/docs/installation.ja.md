@@ -7,7 +7,7 @@
 
 KUMIHANをChatGPTやCodexで使うための手順です。
 
-> **v0.1.8について**
+> **v0.2.0について**
 > ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
 <br>
@@ -26,18 +26,18 @@ KUMIHANをChatGPTやCodexで使うための手順です。
 
 ## 2. ファイルをダウンロードする
 
-ファイルは [ダウンロードページ](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8) にあります。
+ファイルは [ダウンロードページ](https://github.com/landco-llc/kumihan/releases/tag/v0.2.0) にあります。
 
 **プラグイン（4つのスキルをまとめたもの）**
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-plugin-0.1.8.zip)
+- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 **スキル（1つずつ）**
 
-- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-skill-0.1.8.zip) — 最初の入口
-- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-GPT-Codex-skill-0.1.8.zip) — Webページ
-- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-GPT-Codex-skill-0.1.8.zip) — 報告書・スライド
-- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-GPT-Codex-skill-0.1.8.zip) — レビュー
+- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-skill-0.2.0.zip) — 最初の入口
+- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-GPT-Codex-skill-0.2.0.zip) — Webページ
+- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-GPT-Codex-skill-0.2.0.zip) — 報告書・スライド
+- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-GPT-Codex-skill-0.2.0.zip) — レビュー
 
 GitHubでファイルを開いたら、右上のダウンロードボタンから保存してください。
 
@@ -122,7 +122,7 @@ GitHubから直接導入したい場合や、Codexのマーケットプレイス
 
 ## ファイルが正しいか確認する（任意）
 
-ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20GPT-Codex/SHA256SUMS.txt) を使います。
+ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20GPT-Codex/SHA256SUMS.txt) を使います。
 
 ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 

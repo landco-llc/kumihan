@@ -7,7 +7,7 @@
 
 這份指南說明如何在 Claude Code 與 Claude 應用程式中使用 KUMIHAN。
 
-> **關於 v0.1.8**
+> **關於 v0.2.0**
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -53,7 +53,7 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 
 ## B. Claude Code：從 ZIP 安裝
 
-1. 下載 [Claude Code 外掛 ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-Code-plugin-0.1.8.zip)。
+1. 下載 [Claude Code 外掛 ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Claude-Code-plugin-0.2.0.zip)。
 2. 解壓縮後會得到 `kumihan` 資料夾。
 3. 指定該資料夾並啟動 Claude Code。
 
@@ -73,10 +73,10 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 適用於 claude.ai 或 Claude 應用程式。
 
 1. 下載想使用的技能 ZIP。
-   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-skill-0.1.8.zip) — 開始使用前的規劃入口
-   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Claude-skill-0.1.8.zip) — 網頁製作
-   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Claude-skill-0.1.8.zip) — 報告與簡報
-   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Claude-skill-0.1.8.zip) — 成果檢視
+   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Claude-skill-0.2.0.zip) — 開始使用前的規劃入口
+   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-Claude-skill-0.2.0.zip) — 網頁製作
+   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-Claude-skill-0.2.0.zip) — 報告與簡報
+   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-Claude-skill-0.2.0.zip) — 成果檢視
 2. 在 Claude 開啟 **Customize → Skills**，使用新增按鈕選擇 **Upload a skill**。
 3. 逐一上傳 ZIP 並啟用技能。
 
@@ -100,7 +100,7 @@ Claude Code 和 Claude 應用程式的安裝方式不同。
 
 ## 驗證下載檔案（選用）
 
-若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20Claude/SHA256SUMS.txt)。
+若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20Claude/SHA256SUMS.txt)。
 
 將檔案放在與下載目錄相同的結構（`plugins/` 和 `skills/`），並在終端機執行以下命令。若無 `shasum`，可使用 Windows PowerShell 的 `Get-FileHash` 等工具檢查 SHA-256：
 

@@ -7,7 +7,7 @@
 
 這份指南說明如何在 Gemini CLI 或 Gemini 應用程式中使用 KUMIHAN。
 
-> **關於 v0.1.8**
+> **關於 v0.2.0**
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -42,7 +42,7 @@ gemini extensions update kumihan
 
 **從 ZIP 安裝時**
 
-1. 下載[擴充功能 ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-CLI-extension-0.1.8.zip)。
+1. 下載[擴充功能 ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-CLI-extension-0.2.0.zip)。
 2. 建立空的 `kumihan` 資料夾，並將 ZIP 內容解壓縮到其中。
 3. 指定資料夾並安裝。
 
@@ -81,10 +81,10 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 ## C. Gemini 應用程式：上傳技能
 
 1. 下載想使用的技能 ZIP。
-   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-Apps-skill-0.1.8.zip) — 開始使用前的規劃入口
-   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Gemini-Apps-skill-0.1.8.zip) — 網頁製作
-   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Gemini-Apps-skill-0.1.8.zip) — 報告與簡報
-   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Gemini-Apps-skill-0.1.8.zip) — 成果檢視
+   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-Apps-skill-0.2.0.zip) — 開始使用前的規劃入口
+   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-Gemini-Apps-skill-0.2.0.zip) — 網頁製作
+   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-Gemini-Apps-skill-0.2.0.zip) — 報告與簡報
+   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-Gemini-Apps-skill-0.2.0.zip) — 成果檢視
 2. 在 Gemini 開啟 **Customize**（若未看到，可先點選 **More**）→ **Skills** → **Upload**。
 3. 逐一選擇 ZIP、確認內容後按下 **Create**。
 
@@ -108,7 +108,7 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 
 ## 驗證下載檔案（選用）
 
-若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20Gemini/SHA256SUMS.txt)。
+若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20Gemini/SHA256SUMS.txt)。
 
 將檔案放在與下載目錄相同的結構（`extensions/` 和 `skills/`），並在終端機執行以下命令。若無 `shasum`，可使用 Windows PowerShell 的 `Get-FileHash` 等工具檢查 SHA-256：
 

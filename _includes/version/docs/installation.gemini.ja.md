@@ -7,7 +7,7 @@
 
 KUMIHANをGemini CLIやGeminiアプリで使うための手順です。
 
-> **v0.1.8について**
+> **v0.2.0について**
 > ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
 <br>
@@ -42,7 +42,7 @@ gemini extensions update kumihan
 
 **ZIPから導入する場合**
 
-1. [拡張機能のZIP](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-CLI-extension-0.1.8.zip) をダウンロードします。
+1. [拡張機能のZIP](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-CLI-extension-0.2.0.zip) をダウンロードします。
 2. 空の `kumihan` フォルダーを作り、その中に展開します。
 3. フォルダーを指定して導入します。
 
@@ -81,10 +81,10 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 ## C. Geminiアプリ：スキルをアップロードする
 
 1. 使いたいスキルのZIPをダウンロードします。
-   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-Apps-skill-0.1.8.zip) — 最初の入口
-   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Gemini-Apps-skill-0.1.8.zip) — Webページ
-   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Gemini-Apps-skill-0.1.8.zip) — 報告書・スライド
-   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Gemini-Apps-skill-0.1.8.zip) — レビュー
+   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-Apps-skill-0.2.0.zip) — 最初の入口
+   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-Gemini-Apps-skill-0.2.0.zip) — Webページ
+   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-Gemini-Apps-skill-0.2.0.zip) — 報告書・スライド
+   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-Gemini-Apps-skill-0.2.0.zip) — レビュー
 2. Geminiの **Customize**（見当たらない場合は **More**）→ **Skills** → **Upload** を開きます。
 3. ZIPを1つずつ選び、内容を確認して **Create** を押します。
 
@@ -108,7 +108,7 @@ gemini skills install https://github.com/landco-llc/kumihan --path skills/kumiha
 
 ## ファイルが正しいか確認する（任意）
 
-ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20Gemini/SHA256SUMS.txt) を使います。
+ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20Gemini/SHA256SUMS.txt) を使います。
 
 ダウンロードページと同じフォルダー構成（`extensions/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 

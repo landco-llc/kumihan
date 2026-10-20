@@ -7,7 +7,7 @@
 
 這份指南說明如何在 ChatGPT 或 Codex 中使用 KUMIHAN。
 
-> **關於 v0.1.8**
+> **關於 v0.2.0**
 > 此版本供你在自己的環境中試用。各工具的實際運作尚未經過充分驗證，因此部分步驟可能無法如預期使用。
 
 <br>
@@ -26,18 +26,18 @@
 
 ## 2. 下載檔案
 
-檔案位於[下載目錄](https://github.com/landco-llc/kumihan/releases/tag/v0.1.8)。
+檔案位於[下載目錄](https://github.com/landco-llc/kumihan/releases/tag/v0.2.0)。
 
 **外掛套件（包含四項技能）**
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-plugin-0.1.8.zip)
+- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 **個別技能**
 
-- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-GPT-Codex-skill-0.1.8.zip) — 開始使用前的規劃入口
-- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-GPT-Codex-skill-0.1.8.zip) — 網頁製作
-- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-GPT-Codex-skill-0.1.8.zip) — 報告與簡報
-- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-GPT-Codex-skill-0.1.8.zip) — 成果檢視
+- [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-skill-0.2.0.zip) — 開始使用前的規劃入口
+- [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-GPT-Codex-skill-0.2.0.zip) — 網頁製作
+- [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-GPT-Codex-skill-0.2.0.zip) — 報告與簡報
+- [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-GPT-Codex-skill-0.2.0.zip) — 成果檢視
 
 在 GitHub 開啟檔案後，使用右上角的下載按鈕儲存。
 
@@ -122,7 +122,7 @@ cp -R kumihan /path/to/your-project/.agents/skills/
 
 ## 驗證下載檔案（選用）
 
-若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20GPT-Codex/SHA256SUMS.txt)。
+若要檢查下載檔案是否完整，可使用 [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20GPT-Codex/SHA256SUMS.txt)。
 
 將檔案放在與下載目錄相同的結構（`plugins/` 和 `skills/`），並在終端機執行以下命令。若無 `shasum`，可使用 Windows PowerShell 的 `Get-FileHash` 等工具檢查 SHA-256：
 

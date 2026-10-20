@@ -7,7 +7,7 @@
 
 This guide explains how to use KUMIHAN with Gemini CLI and the Gemini app.
 
-> **About v0.1.8**
+> **About v0.2.0**
 > This version is for trying KUMIHAN in your own environment. Behavior in each tool has not yet been fully verified, so some steps may not work as expected.
 
 <br>
@@ -42,7 +42,7 @@ Restart Gemini CLI after updating.
 
 **Installing from a ZIP**
 
-1. Download the [extension ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-CLI-extension-0.1.8.zip).
+1. Download the [extension ZIP](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-CLI-extension-0.2.0.zip).
 2. Create an empty `kumihan` folder and extract the ZIP into it.
 3. Install from that folder:
 
@@ -81,10 +81,10 @@ Run the same command again. The installed skill will be replaced, so save any ch
 ## C. Gemini app: upload skills
 
 1. Download the skill ZIPs you want to use.
-   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Gemini-Apps-skill-0.1.8.zip) — starting point
-   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Gemini-Apps-skill-0.1.8.zip) — web pages
-   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Gemini-Apps-skill-0.1.8.zip) — reports and slides
-   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Gemini-Apps-skill-0.1.8.zip) — review
+   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Gemini-Apps-skill-0.2.0.zip) — starting point
+   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-Gemini-Apps-skill-0.2.0.zip) — web pages
+   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-Gemini-Apps-skill-0.2.0.zip) — reports and slides
+   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-Gemini-Apps-skill-0.2.0.zip) — review
 2. In Gemini, open **Customize** (or **More** if you don't see it) → **Skills** → **Upload**.
 3. Choose one ZIP at a time, review the details, and select **Create**.
 
@@ -108,7 +108,7 @@ We recommend starting with a request that doesn't change any files:
 
 ## Verify your downloads (optional)
 
-To check that your downloads are intact, use [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20Gemini/SHA256SUMS.txt).
+To check that your downloads are intact, use [SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20Gemini/SHA256SUMS.txt).
 
 Keep the same folder layout as the downloads page (`extensions/` and `skills/`), then run this in a terminal. If `shasum` is unavailable, use an equivalent SHA-256 command such as PowerShell `Get-FileHash` on Windows:
 

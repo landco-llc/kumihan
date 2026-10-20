@@ -7,7 +7,7 @@
 
 KUMIHANをClaude CodeやClaudeチャットで使うための手順です。
 
-> **v0.1.8について**
+> **v0.2.0について**
 > ご自身の環境で導入を試していただくための版です。各ツールでの動作はまだ十分に確認できていないため、うまく動かない場合があります。
 
 <br>
@@ -53,7 +53,7 @@ Claude CodeとClaudeチャットは、導入方法が異なります。
 
 ## B. Claude Code：ZIPから導入する
 
-1. [Claude Code用プラグインのZIP](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-Code-plugin-0.1.8.zip) をダウンロードします。
+1. [Claude Code用プラグインのZIP](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Claude-Code-plugin-0.2.0.zip) をダウンロードします。
 2. ZIPを展開すると、`kumihan` フォルダーができます。
 3. そのフォルダーを指定して、Claude Codeを起動します。
 
@@ -73,10 +73,10 @@ Claude CodeとClaudeチャットは、導入方法が異なります。
 claude.aiやClaudeアプリで使う方法です。
 
 1. 使いたいスキルのZIPをダウンロードします。
-   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-Claude-skill-0.1.8.zip) — 最初の入口
-   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-web-Claude-skill-0.1.8.zip) — Webページ
-   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-documents-Claude-skill-0.1.8.zip) — 報告書・スライド
-   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.1.8/kumihan-review-Claude-skill-0.1.8.zip) — レビュー
+   - [kumihan](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-Claude-skill-0.2.0.zip) — 最初の入口
+   - [kumihan-web](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-web-Claude-skill-0.2.0.zip) — Webページ
+   - [kumihan-documents](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-documents-Claude-skill-0.2.0.zip) — 報告書・スライド
+   - [kumihan-review](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-review-Claude-skill-0.2.0.zip) — レビュー
 2. Claudeの **Customize → Skills** を開き、追加ボタンから **Upload a skill** を選びます。
 3. ZIPを1つずつアップロードし、スキルを有効にします。
 
@@ -100,7 +100,7 @@ claude.aiやClaudeアプリで使う方法です。
 
 ## ファイルが正しいか確認する（任意）
 
-ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/d3d55a344ab5cfe942a640261f9a8760fceee2a2/downloads%20Claude/SHA256SUMS.txt) を使います。
+ダウンロードしたファイルが壊れていないかを確認したい場合は、[SHA256SUMS.txt](https://raw.githubusercontent.com/landco-llc/kumihan/f5f8dc16f745b57013bc71e77940400765db6248/downloads%20Claude/SHA256SUMS.txt) を使います。
 
 ダウンロードページと同じフォルダー構成（`plugins/` と `skills/`）でファイルを置き、ターミナルで次のコマンドを実行します。`shasum` がない環境では、Windows PowerShellの `Get-FileHash` などでSHA-256を照合してください。
 
