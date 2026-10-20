@@ -16,7 +16,7 @@ Previous result: https://github.com/landco-llc/kumihan/issues/119
 ## First reads
 
 1. Fresh Read PR #120 status/HEAD/main and concurrent #101/#116/#118; preserve unrelated changes.
-2. Read qa/WORKGROUP.md, qa/QA_OBSERVATIONS.md, qa/QA_MATRIX.json, qa/HOST_SMOKE.md.
+2. Read qa/WORKGROUP.md, qa/QA_OBSERVATIONS.md, qa/QA_V01_PROBE.md, qa/QA_MATRIX.json, qa/HOST_SMOKE.md. The QA-V01 independent Chromium 144 experiment is reproducible but NOT native host acceptance.
 3. Read RESULT.md / case-results.json / release-manifest.json and the actual four Japanese Skills.
 4. If the PR HEAD changed, compare to pinned candidate and re-evaluate the two visual findings.
 
