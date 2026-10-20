@@ -59,16 +59,26 @@ class ReviewTests(unittest.TestCase):
         a,obs=self.review(r,p,observations=[o])
         self.assertTrue(all(c['status']=='not-checked' for c in a['checks'] if c['rule_id']=='MIX-009'))
         forged=copy.deepcopy(a);forged['checks'][0].update(status='passed',evidence_refs=['imaginary'])
-        with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs)
+        with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs,self.registry)
         forged=copy.deepcopy(a);forged['checks'][0].update(status='waived',waiver=dict(approval_ref='claim',scope='s0',reason='claimed',artifact_digest=a['artifact_digest']))
-        with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs)
+        with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs,self.registry)
 
     def test_static_evidence_cannot_be_relabelled_as_a_render_pass(self):
         from review import validate_audit_binding
         from contract import CompositionError
         r=request();p=self.resolve(r);a,obs=self.review(r,p)
         a['checks'][0]['rule_id']='MIX-009'
-        with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,obs)
+        with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,obs,self.registry)
+
+    def test_forged_static_fact_value_and_provenance_rejected(self):
+        from review import validate_audit_binding
+        from contract import CompositionError
+        r=request();p=self.resolve(r);a,obs=self.review(r,p)
+        o=observation(r);o['scopes']=['s0'];o['facts']=[dict(name='exact-utf8-sha256',value='WRONG',unit=None)]
+        a['checks']=[dict(rule_id='MIX-001',scope='s0',status='passed',method='static',evidence_refs=[o['id']],reason='forged')]
+        with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,[o],self.registry)
+        a,obs=self.review(r,p);obs[0]['facts'][0]['value']='WRONG'
+        with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,obs,self.registry)
 
     def test_missing_module_conflicts_and_bidi_are_reported(self):
         r=request((('he','עברית'),('ja','\u202e原稿')));p=self.resolve(r)

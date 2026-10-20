@@ -37,7 +37,20 @@ def bind_observations(observations, request, plan):
             check_range(m['range'],sources,f'/observations/{i}/mapping/{j}/range')
             if m['range']['source_id']!=source['id']:fail('E_REFERENCE',f'/observations/{i}/mapping/{j}','Mapping belongs to different source')
 
-def validate_audit_binding(audit,request,plan,observations):
+def static_observation(r,plan,source_id,from_file=False):
+    s=next(s for s in r['sources'] if s['id']==source_id)
+    scopes=[source_id]+[x['id'] for x in r['regions'] if x['range']['source_id']==source_id]
+    oid='static-'+object_digest(dict(source_id=source_id,digest=s['text_digest'],plan=plan['id']))[7:]
+    o=dict(contract_version=VERSION,kind='observation',id=oid,artifact_ref=source_id,artifact_digest=s['text_digest'],
+           host_ref='internal:'+ENGINE,environment=dict(application=ENGINE,version='1',operating_system=platform.system() or 'unknown',
+           renderer='none',font_instance_refs=[],conditions={'target_kind':'utf8-file' if from_file else 'logical-source','index_unit':'unicode-scalar'}),
+           scopes=scopes,method='static',facts=[dict(name='exact-utf8-sha256',value=s['text_digest'],unit=None),
+           dict(name='scalar-count',value=len(s['text']),unit='unicode-scalar'),dict(name='run-coverage',value='complete-nonoverlapping',unit=None),dict(name='immutable-plan-binding',value=plan['id'],unit=None)],
+           mapping=[],limitations=['No rendering; no trusted external observation or approval validation.'],extensions=[])
+    return o
+
+def validate_audit_binding(audit,request,plan,observations,registry):
+    validate_request(request);bind_plan(request,plan,registry)
     validate_record(audit);extensions(audit)
     if audit['kind']!='audit' or audit['request_id']!=request['id'] or audit['plan_id']!=plan['id']:
         fail('E_REFERENCE','/audit','Audit/plan/request identity mismatch')
@@ -53,8 +66,12 @@ def validate_audit_binding(audit,request,plan,observations):
             expected_fact={'MIX-001':'exact-utf8-sha256','MIX-004':'run-coverage','MIX-016':'immutable-plan-binding'}.get(c['rule_id'])
             if expected_fact is None or c['method']!='static':
                 fail('E_REFERENCE',f'/audit/checks/{i}','Only implemented static checks may pass')
-            if not c['evidence_refs'] or any(not any(f['name']==expected_fact for f in evidence.get(ref,{}).get('facts',[])) for ref in c['evidence_refs']):
-                fail('E_REFERENCE',f'/audit/checks/{i}','Evidence lacks the checked static fact')
+            for ref in c['evidence_refs']:
+                candidate=evidence.get(ref)
+                from_file=candidate is not None and candidate['environment']['conditions'].get('target_kind')=='utf8-file'
+                expected=static_observation(request,plan,audit['artifact_ref'],from_file)
+                if candidate!=expected:
+                    fail('E_REFERENCE',f'/audit/checks/{i}','Passed static facts must equal internally recomputed source/plan evidence')
         if c['status']=='waived':fail('E_PERMISSION',f'/audit/checks/{i}/waiver','External approval validation not implemented; no waived results accepted')
         for ref in c['evidence_refs']:
             o=evidence.get(ref)
@@ -81,13 +98,8 @@ def evaluate(request,plan,registry,observations=(),target=None,source_id=None):
             fail('E_SOURCE_DIGEST','/target','Target text differs from selected SourceStory')
     regions=[x for x in r['regions'] if x['range']['source_id']==source_id]
     scopes=[source_id]+[x['id'] for x in regions]
-    oid='static-'+object_digest(dict(source_id=source_id,digest=s['text_digest'],plan=plan['id']))[7:]
-    o=dict(contract_version=VERSION,kind='observation',id=oid,artifact_ref=source_id,artifact_digest=s['text_digest'],
-           host_ref='internal:'+ENGINE,environment=dict(application=ENGINE,version='1',operating_system=platform.system() or 'unknown',
-           renderer='none',font_instance_refs=[],conditions={'target_kind':'utf8-file' if path else 'logical-source','index_unit':'unicode-scalar'}),
-           scopes=scopes,method='static',facts=[dict(name='exact-utf8-sha256',value=s['text_digest'],unit=None),
-           dict(name='scalar-count',value=len(s['text']),unit='unicode-scalar'),dict(name='run-coverage',value='complete-nonoverlapping',unit=None),dict(name='immutable-plan-binding',value=plan['id'],unit=None)],
-           mapping=[],limitations=['No rendering; no trusted external observation or approval validation.'],extensions=[])
+    o=static_observation(r,plan,source_id,from_file=path is not None)
+    oid=o['id']
     validate_record(o)
     # Supplied observations are checked for references, never used to promote statuses.
     if any(x['id']==oid for x in supplied):fail('E_REFERENCE','/observations/id','Caller cannot replace generated static evidence')
@@ -116,7 +128,7 @@ def evaluate(request,plan,registry,observations=(),target=None,source_id=None):
            request_id=r['id'],plan_id=plan['id'],artifact_ref=source_id,artifact_digest=s['text_digest'],checks=checks,
            limitations=copy.deepcopy(plan['limitations'])+['Only selected logical UTF-8 story inspected; supplied observations are untrusted and do not upgrade checks.'],extensions=[])
     output_observations=[o]+supplied
-    validate_audit_binding(a,r,plan,output_observations)
+    validate_audit_binding(a,r,plan,output_observations,registry)
     if path is not None:
         with path.open('rb') as f: after=f.read(MAX_BYTES+1)
         if after!=raw:fail('E_SOURCE_DIGEST','/target','Target changed during read-only review')

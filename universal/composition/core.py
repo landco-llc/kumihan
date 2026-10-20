@@ -134,6 +134,30 @@ def validate_request(request):
         fail('E_REFERENCE','/policies/ranked_language_tags','Explicit ranking requires tags')
     return copy.deepcopy(request)
 
+def validate_registry(registry):
+    if not isinstance(registry,dict) or registry.get('schema_version')!='1.0' or not isinstance(registry.get('modules'),dict):
+        fail('E_REFERENCE','/registry','Legacy registry 1.0 required')
+    if len(registry['modules'])>MAX_ITEMS:fail('E_RESOURCE_LIMIT','/registry/modules','Too many module declarations')
+    for mid,m in registry['modules'].items():
+        loc='/registry/modules'
+        if not isinstance(mid,str) or not mid or not isinstance(m,dict):
+            fail('E_REFERENCE',loc,'Invalid module identity')
+        if not isinstance(m.get('version'),str) or not m['version'].strip():
+            fail('E_REFERENCE',loc+'/version','Module version required')
+        if not isinstance(m.get('module_sha256'),str) or not re.fullmatch('[0-9a-f]{64}',m['module_sha256'],re.ASCII):
+            fail('E_REFERENCE',loc+'/module_sha256','Pinned module hash required')
+        if m.get('status')!='preview_unverified':
+            fail('E_REFERENCE',loc+'/status','Only current preview registry declarations supported')
+        locales=m.get('locales')
+        if not isinstance(locales,list) or not locales or len(locales)>MAX_ITEMS or any(not isinstance(t,str) or not valid_tag(t) for t in locales):
+            fail('E_REFERENCE',loc+'/locales','Explicit well-formed locale strings required')
+        caps=m.get('capabilities')
+        if not isinstance(caps,list) or len(caps)>MAX_ITEMS or any(not isinstance(c,str) or not c.strip() for c in caps):
+            fail('E_REFERENCE',loc+'/capabilities','Capability name declarations required')
+    try:canonical(registry)
+    except (ValueError,TypeError,UnicodeError,RecursionError):
+        fail('E_REFERENCE','/registry','Registry must be bounded JSON data')
+
 def module_for(tag, registry):
     matches=[]
     for module_id,m in sorted(registry['modules'].items()):
@@ -149,8 +173,7 @@ def candidate_check(candidates, runs):
 
 def resolve(request, registry, candidates=()):
     r=validate_request(request)
-    if not isinstance(registry,dict) or registry.get('schema_version')!='1.0' or not isinstance(registry.get('modules'),dict):
-        fail('E_REFERENCE','/registry','Legacy registry 1.0 required')
+    validate_registry(registry)
     run_map={run['id']:run for run in r['language_runs']}
     candidate_check(candidates,run_map)
     binding=dict(engine=ENGINE,request_digest=object_digest(r),registry_digest=object_digest(registry),

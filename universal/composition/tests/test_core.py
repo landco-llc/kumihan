@@ -110,6 +110,16 @@ class ResolverTests(unittest.TestCase):
         from core import resolve
         self.assertNotEqual(p['id'],resolve(r,altered)['id'])
 
+    def test_malformed_registry_always_returns_named_error(self):
+        from core import resolve
+        from contract import CompositionError
+        for field,value in (('locales',[3]),('version',None),('module_sha256','bad'),('capabilities',[1]),('status','verified')):
+            registry=copy.deepcopy(self.registry);registry['modules']['ja'][field]=value
+            with self.subTest(field=field):
+                with self.assertRaises(CompositionError) as ctx:resolve(request(),registry)
+                self.assertEqual(ctx.exception.code,'E_REFERENCE')
+                self.assertTrue(ctx.exception.scope.startswith('/registry'))
+
     def test_translation_and_direction_limits_never_measure(self):
         r=request((('ar','العربية'),('he','עברית')))
         r['relationships']=[dict(id='t1',type='translation-of',from_region='r1',to_region='r0',alignment_status='unverified',evidence_refs=[],reviewer_ref=None)]

@@ -1,0 +1,137 @@
+{
+  "contract_version": "0.1.0-design.1",
+  "kind": "request",
+  "id": "request-fixture",
+  "operation": "resolve",
+  "sources": [
+    {
+      "id": "s0",
+      "text": "原稿\r\n👩‍🔬",
+      "text_digest": "sha256:db14de542374929a1274e40c7b6894fe465003e94dc00ec659209814f3e6103e",
+      "origin_ref": "fixture:synthetic"
+    },
+    {
+      "id": "s1",
+      "text": "العربية",
+      "text_digest": "sha256:d274159863057eb5c633116c3b54e4f8659167f0b73fabbee256e881fa1ac8c8",
+      "origin_ref": "fixture:synthetic"
+    },
+    {
+      "id": "s2",
+      "text": "français",
+      "text_digest": "sha256:fb62c0c2c296e4626dc55d728c2edef038e8351baf4e7a6aca4e1c263667ad9e",
+      "origin_ref": "fixture:synthetic"
+    }
+  ],
+  "language_runs": [
+    {
+      "id": "run0",
+      "range": {
+        "source_id": "s0",
+        "start": 0,
+        "end": 7
+      },
+      "language_tag": "ja",
+      "script_hint": null,
+      "origin": "author",
+      "confidence": null,
+      "method": "fixture:explicit"
+    },
+    {
+      "id": "run1",
+      "range": {
+        "source_id": "s1",
+        "start": 0,
+        "end": 7
+      },
+      "language_tag": "ar",
+      "script_hint": null,
+      "origin": "author",
+      "confidence": null,
+      "method": "fixture:explicit"
+    },
+    {
+      "id": "run2",
+      "range": {
+        "source_id": "s2",
+        "start": 0,
+        "end": 8
+      },
+      "language_tag": "fr",
+      "script_hint": null,
+      "origin": "author",
+      "confidence": null,
+      "method": "fixture:explicit"
+    }
+  ],
+  "regions": [
+    {
+      "id": "r0",
+      "range": {
+        "source_id": "s0",
+        "start": 0,
+        "end": 7
+      },
+      "parent_id": null,
+      "reading_order": 0,
+      "level": "paragraph",
+      "role": "body",
+      "expression": "reading",
+      "direction": "auto",
+      "writing_mode": "horizontal-tb",
+      "required_content": true,
+      "register": "fixture"
+    },
+    {
+      "id": "r1",
+      "range": {
+        "source_id": "s1",
+        "start": 0,
+        "end": 7
+      },
+      "parent_id": null,
+      "reading_order": 1,
+      "level": "paragraph",
+      "role": "body",
+      "expression": "reading",
+      "direction": "auto",
+      "writing_mode": "horizontal-tb",
+      "required_content": true,
+      "register": "fixture"
+    },
+    {
+      "id": "r2",
+      "range": {
+        "source_id": "s2",
+        "start": 0,
+        "end": 8
+      },
+      "parent_id": null,
+      "reading_order": 2,
+      "level": "paragraph",
+      "role": "body",
+      "expression": "reading",
+      "direction": "auto",
+      "writing_mode": "horizontal-tb",
+      "required_content": true,
+      "register": "fixture"
+    }
+  ],
+  "relationships": [],
+  "policies": {
+    "source_text_protected": true,
+    "allowed_layout_changes": [],
+    "editorial_conventions": [],
+    "language_priority": "coequal",
+    "ranked_language_tags": [],
+    "approval_refs": []
+  },
+  "target": {
+    "profile": "web-editorial",
+    "output": "web",
+    "viewing_conditions": "not-rendered",
+    "host_capability_refs": []
+  },
+  "dependencies": [],
+  "extensions": []
+}

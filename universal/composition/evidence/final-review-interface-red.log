@@ -1,0 +1,109 @@
+test_P01_static_only (test_acceptance.AcceptanceTests.test_P01_static_only) ... ok
+test_P02_static_only (test_acceptance.AcceptanceTests.test_P02_static_only) ... ok
+test_P03_static_only (test_acceptance.AcceptanceTests.test_P03_static_only) ... ok
+test_P04_static_only (test_acceptance.AcceptanceTests.test_P04_static_only) ... ok
+test_P05_static_only (test_acceptance.AcceptanceTests.test_P05_static_only) ... ok
+test_P06_static_only (test_acceptance.AcceptanceTests.test_P06_static_only) ... ok
+test_P07_static_only (test_acceptance.AcceptanceTests.test_P07_static_only) ... ok
+test_P09_static_only (test_acceptance.AcceptanceTests.test_P09_static_only) ... ok
+test_P14_static_only (test_acceptance.AcceptanceTests.test_P14_static_only) ... ok
+test_P16_static_only (test_acceptance.AcceptanceTests.test_P16_static_only) ... ok
+test_P17_static_only (test_acceptance.AcceptanceTests.test_P17_static_only) ... ok
+test_P18_static_only (test_acceptance.AcceptanceTests.test_P18_static_only) ... ok
+test_P19_static_only (test_acceptance.AcceptanceTests.test_P19_static_only) ... ok
+test_P23_static_only (test_acceptance.AcceptanceTests.test_P23_static_only) ... ok
+test_P24_static_only (test_acceptance.AcceptanceTests.test_P24_static_only) ... ok
+test_P25_static_only (test_acceptance.AcceptanceTests.test_P25_static_only) ... ok
+test_P26_static_only (test_acceptance.AcceptanceTests.test_P26_static_only) ... ok
+test_P28_static_only (test_acceptance.AcceptanceTests.test_P28_static_only) ... ok
+test_P29_static_only (test_acceptance.AcceptanceTests.test_P29_static_only) ... ok
+test_P30_static_only (test_acceptance.AcceptanceTests.test_P30_static_only) ... ok
+test_P40_static_only (test_acceptance.AcceptanceTests.test_P40_static_only) ... ok
+test_mixed_runs_in_single_story_stay_distinct (test_acceptance.AcceptanceTests.test_mixed_runs_in_single_story_stay_distinct) ... ok
+test_cli_exists (test_cli.CliTests.test_cli_exists) ... ok
+test_validate_exit_and_named_error_no_source_log (test_cli.CliTests.test_validate_exit_and_named_error_no_source_log) ... ok
+test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) ... ok
+test_legacy_mapping_is_separate_and_lossless (test_contract.ContractTests.test_legacy_mapping_is_separate_and_lossless) ... ok
+test_reference_copy_exact (test_contract.ContractTests.test_reference_copy_exact) ... ok
+test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) ... ok
+test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) ... ok
+test_validator_exists (test_contract.ContractTests.test_validator_exists) ... ok
+test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback) ... ok
+test_malformed_registry_always_returns_named_error (test_core.ResolverTests.test_malformed_registry_always_returns_named_error) ... 
+  test_malformed_registry_always_returns_named_error (test_core.ResolverTests.test_malformed_registry_always_returns_named_error) (field='locales') ... ERROR
+test_malformed_registry_always_returns_named_error (test_core.ResolverTests.test_malformed_registry_always_returns_named_error) ... ERROR
+test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review) ... ok
+test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically) ... ok
+test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure) ... ok
+test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound) ... ok
+test_core_exists (test_core.SourceTests.test_core_exists) ... ok
+test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) ... ok
+test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) ... ok
+test_invalid_unicode_utf8_and_byte_boundaries (test_core.SourceTests.test_invalid_unicode_utf8_and_byte_boundaries) ... ok
+test_unknown_critical_resource_and_tag (test_core.SourceTests.test_unknown_critical_resource_and_tag) ... ok
+test_evaluator_exists (test_review.ReviewTests.test_evaluator_exists) ... ok
+test_exact_target_readonly_and_source_bound_evidence (test_review.ReviewTests.test_exact_target_readonly_and_source_bound_evidence) ... ok
+test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver (test_review.ReviewTests.test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver) ... ERROR
+test_forged_static_fact_value_and_provenance_rejected (test_review.ReviewTests.test_forged_static_fact_value_and_provenance_rejected) ... ERROR
+test_missing_module_conflicts_and_bidi_are_reported (test_review.ReviewTests.test_missing_module_conflicts_and_bidi_are_reported) ... ok
+test_stale_or_modified_plan_target_observation_rejected (test_review.ReviewTests.test_stale_or_modified_plan_target_observation_rejected) ... ok
+test_static_evidence_cannot_be_relabelled_as_a_render_pass (test_review.ReviewTests.test_static_evidence_cannot_be_relabelled_as_a_render_pass) ... ERROR
+
+======================================================================
+ERROR: test_malformed_registry_always_returns_named_error (test_core.ResolverTests.test_malformed_registry_always_returns_named_error) (field='locales')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 118, in test_malformed_registry_always_returns_named_error
+    with self.subTest(field=field),self.assertRaises(CompositionError) as ctx:resolve(request(),registry)
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/core.py", line 177, in resolve
+    mid,m=module_for(tag,registry)
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/core.py", line 140, in module_for
+    if any(tag.lower()==locale.lower() for locale in m['locales']): matches.append((module_id,m))
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/core.py", line 140, in <genexpr>
+    if any(tag.lower()==locale.lower() for locale in m['locales']): matches.append((module_id,m))
+                        ^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'lower'
+
+======================================================================
+ERROR: test_malformed_registry_always_returns_named_error (test_core.ResolverTests.test_malformed_registry_always_returns_named_error)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 119, in test_malformed_registry_always_returns_named_error
+    self.assertEqual(ctx.exception.code,'E_REFERENCE')
+                     ^^^^^^^^^^^^^
+AttributeError: '_AssertRaisesContext' object has no attribute 'exception'
+
+======================================================================
+ERROR: test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver (test_review.ReviewTests.test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 62, in test_forged_evidence_cannot_upgrade_render_or_alignment_or_waiver
+    with self.assertRaises(CompositionError):validate_audit_binding(forged,r,p,obs,self.registry)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate_audit_binding() takes 4 positional arguments but 5 were given
+
+======================================================================
+ERROR: test_forged_static_fact_value_and_provenance_rejected (test_review.ReviewTests.test_forged_static_fact_value_and_provenance_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 79, in test_forged_static_fact_value_and_provenance_rejected
+    with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,[o],self.registry)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate_audit_binding() takes 4 positional arguments but 5 were given
+
+======================================================================
+ERROR: test_static_evidence_cannot_be_relabelled_as_a_render_pass (test_review.ReviewTests.test_static_evidence_cannot_be_relabelled_as_a_render_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_review.py", line 71, in test_static_evidence_cannot_be_relabelled_as_a_render_pass
+    with self.assertRaises(CompositionError):validate_audit_binding(a,r,p,obs,self.registry)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate_audit_binding() takes 4 positional arguments but 5 were given
+
+----------------------------------------------------------------------
+Ran 48 tests in 1.551s
+
+FAILED (errors=5)

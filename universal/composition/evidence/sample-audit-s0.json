@@ -1,0 +1,137 @@
+{
+  "contract_version": "0.1.0-design.1",
+  "kind": "audit",
+  "id": "audit-27b2f031ef837d074ea90292efa47116d84637aa28097999624d7315dcf6c7bf",
+  "request_id": "request-fixture",
+  "plan_id": "plan-8b41d94ab0fad7928f16344fb55948f7f98ae14d132da44fef148a4960d7fe22",
+  "artifact_ref": "s0",
+  "artifact_digest": "sha256:db14de542374929a1274e40c7b6894fe465003e94dc00ec659209814f3e6103e",
+  "checks": [
+    {
+      "rule_id": "MIX-001",
+      "scope": "s0",
+      "status": "passed",
+      "method": "static",
+      "evidence_refs": [
+        "static-3226e1146c940f50a4760a09271e7c63446f4a16c5e4a0103ab751c1337bb533"
+      ],
+      "reason": "Exact UTF-8 source digest computed on this selected story."
+    },
+    {
+      "rule_id": "MIX-004",
+      "scope": "s0",
+      "status": "passed",
+      "method": "static",
+      "evidence_refs": [
+        "static-3226e1146c940f50a4760a09271e7c63446f4a16c5e4a0103ab751c1337bb533"
+      ],
+      "reason": "All source ranges and language coverage validated in scalar offsets."
+    },
+    {
+      "rule_id": "MIX-016",
+      "scope": "s0",
+      "status": "passed",
+      "method": "static",
+      "evidence_refs": [
+        "static-3226e1146c940f50a4760a09271e7c63446f4a16c5e4a0103ab751c1337bb533"
+      ],
+      "reason": "Exact design schema, immutable plan/request/registry binding and extensions checked."
+    },
+    {
+      "rule_id": "MIX-002",
+      "scope": "s0",
+      "status": "needs-review",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "Language tag syntax checked; IANA registration/deprecation and native applicability remain unverified."
+    },
+    {
+      "rule_id": "MIX-006",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "Bidi host rendering not inspected."
+    },
+    {
+      "rule_id": "MIX-003",
+      "scope": "r0",
+      "status": "needs-review",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "Exact locale declarations only; language-specific guidance remains preview/unverified."
+    },
+    {
+      "rule_id": "MIX-013",
+      "scope": "r0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "Display intent does not authorize loss of required content; actual visibility not inspected."
+    },
+    {
+      "rule_id": "MIX-017",
+      "scope": "r0",
+      "status": "not-applicable",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No relationship declared for this region."
+    },
+    {
+      "rule_id": "MIX-005",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    },
+    {
+      "rule_id": "MIX-007",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    },
+    {
+      "rule_id": "MIX-009",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    },
+    {
+      "rule_id": "MIX-010",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    },
+    {
+      "rule_id": "MIX-011",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    },
+    {
+      "rule_id": "MIX-018",
+      "scope": "s0",
+      "status": "not-checked",
+      "method": "static",
+      "evidence_refs": [],
+      "reason": "No actual host/font/layout/accessibility/native editorial evidence; static declarations cannot pass this check."
+    }
+  ],
+  "limitations": [
+    "Static plan only; no rendered, native-editorial, accessibility or font optical measurements.",
+    "BCP47 syntax-only parser; registry/deprecation validation not performed.",
+    "Capability manifests are declarations; host capabilities remain unknown.",
+    "Font sizing not proposed: absolute/relative units and measured metrics unavailable.",
+    "Only selected logical UTF-8 story inspected; supplied observations are untrusted and do not upgrade checks."
+  ],
+  "extensions": []
+}
