@@ -1,0 +1,21 @@
+test_archive_closure_host_roots_and_safety (test_distribution.DistributionTests.test_archive_closure_host_roots_and_safety) ... ok
+test_builder_check_nonwriting (test_distribution.DistributionTests.test_builder_check_nonwriting) ... ok
+test_exact_matrix_and_manifest (test_distribution.DistributionTests.test_exact_matrix_and_manifest) ... ok
+test_missing_reference_rejected (test_distribution.DistributionTests.test_missing_reference_rejected) ... ok
+test_symlink_source_rejected (test_distribution.DistributionTests.test_symlink_source_rejected) ... ok
+test_unsafe_members_rejected (test_distribution.DistributionTests.test_unsafe_members_rejected) ... ok
+test_cli_read_only (test_runtime.ItalianTests.test_cli_read_only) ... ok
+test_context_axes (test_runtime.ItalianTests.test_context_axes) ... ok
+test_css_is_only_candidate_evidence (test_runtime.ItalianTests.test_css_is_only_candidate_evidence) ... ok
+test_mutations_detected (test_runtime.ItalianTests.test_mutations_detected) ... ok
+test_preservation_counterexamples (test_runtime.ItalianTests.test_preservation_counterexamples) ... ok
+test_research_registration_is_not_success (test_runtime.ItalianTests.test_research_registration_is_not_success) ... ok
+test_corporate_footer_link (test_site.SiteTests.test_corporate_footer_link) ... ok
+test_italian_language_switch_has_italian_name (test_site.SiteTests.test_italian_language_switch_has_italian_name) ... ok
+test_italian_language_uses_latin_font_stack (test_site.SiteTests.test_italian_language_uses_latin_font_stack) ... ok
+test_twelve_pages_languages_downloads_and_alternates (test_site.SiteTests.test_twelve_pages_languages_downloads_and_alternates) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 6.444s
+
+OK

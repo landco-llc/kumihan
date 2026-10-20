@@ -1,0 +1,26 @@
+test_every_top_has_the_menu_in_its_language (test_gateway_edition_menu.EditionMenu.test_every_top_has_the_menu_in_its_language) ... ok
+test_polish_example (test_gateway_edition_menu.EditionMenu.test_polish_example) ... ok
+test_six_cards_before_show_more (test_gateway_edition_menu.EditionMenu.test_six_cards_before_show_more) ... ok
+test_stylesheet_link_carries_its_content_version (test_gateway_edition_menu.EditionMenu.test_stylesheet_link_carries_its_content_version) ... ok
+test_archives_match_manifest_inventory_and_rule_contract (test_rule_contract.RuleContractTests.test_archives_match_manifest_inventory_and_rule_contract) ... ok
+test_four_skills_and_six_profiles (test_rule_contract.RuleContractTests.test_four_skills_and_six_profiles) ... ok
+test_reject_duplicate_catalog_and_enum_ids (test_rule_contract.RuleContractTests.test_reject_duplicate_catalog_and_enum_ids) ... ok
+test_reject_invalid_rule_objects (test_rule_contract.RuleContractTests.test_reject_invalid_rule_objects) ... ok
+test_reject_missing_enum_id (test_rule_contract.RuleContractTests.test_reject_missing_enum_id) ... ok
+test_every_static_page_has_the_shared_footer (test_site_footer.SharedFooter.test_every_static_page_has_the_shared_footer) ... ok
+test_footer_content (test_site_footer.SharedFooter.test_footer_content) ... ok
+test_jekyll_layouts_use_the_shared_footer (test_site_footer.SharedFooter.test_jekyll_layouts_use_the_shared_footer) ... ok
+test_every_static_page_links_to_its_language_gateway (test_site_layout_parity.GatewayLinks.test_every_static_page_links_to_its_language_gateway) ... ok
+test_jekyll_layouts_and_gateways (test_site_layout_parity.GatewayLinks.test_jekyll_layouts_and_gateways) ... ok
+test_product_install_guides_use_canonical_frame (test_site_layout_parity.InstallGuideParity.test_product_install_guides_use_canonical_frame) ... ok
+test_shared_stylesheet_contains_canonical_guide_css (test_site_layout_parity.InstallGuideParity.test_shared_stylesheet_contains_canonical_guide_css) ... ok
+test_landing_install_lists_one_row_per_host (test_site_layout_parity.LandingParity.test_landing_install_lists_one_row_per_host) ... ok
+test_landings_follow_canonical_index_sections (test_site_layout_parity.LandingParity.test_landings_follow_canonical_index_sections) ... ok
+test_every_static_page_links_its_language_fonts (test_web_fonts.WebFonts.test_every_static_page_links_its_language_fonts) ... ok
+test_jekyll_layouts_link_language_fonts (test_web_fonts.WebFonts.test_jekyll_layouts_link_language_fonts) ... ok
+test_system_fonts_come_before_google_fonts (test_web_fonts.WebFonts.test_system_fonts_come_before_google_fonts) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.710s
+
+OK

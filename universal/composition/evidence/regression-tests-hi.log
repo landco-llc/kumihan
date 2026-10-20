@@ -1,0 +1,13 @@
+test_preserves_distinct_nfc_sources (test_hi.Integrity.test_preserves_distinct_nfc_sources) ... ok
+test_rejects_text_damaging_transformations (test_hi.Integrity.test_rejects_text_damaging_transformations) ... ok
+test_runtime_exists (test_hi.Integrity.test_runtime_exists) ... ok
+test_all_fifteen_safe_reproducible_self_contained (test_hi.Packages.test_all_fifteen_safe_reproducible_self_contained) ... ok
+test_contract_and_bilingual_identity (test_hi.Packages.test_contract_and_bilingual_identity) ... ok
+test_download_filenames_and_gateway (test_hi.Site.test_download_filenames_and_gateway) ... ok
+test_generated_pages_and_links (test_hi.Site.test_generated_pages_and_links) ... ok
+test_master_copy_parity (test_hi.Site.test_master_copy_parity) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 4.559s
+
+OK

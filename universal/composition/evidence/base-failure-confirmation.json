@@ -1,0 +1,26 @@
+[
+  {
+    "command": "python3 -m unittest discover -s tests/id -v",
+    "base": "70727ff81ef0e14403f6145244b134ed3729a120",
+    "exit_code": 1,
+    "log": "baseline-id.log"
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/km -v",
+    "base": "70727ff81ef0e14403f6145244b134ed3729a120",
+    "exit_code": 1,
+    "log": "baseline-km.log"
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/sw -v",
+    "base": "70727ff81ef0e14403f6145244b134ed3729a120",
+    "exit_code": 1,
+    "log": "baseline-sw.log"
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/zu -v",
+    "base": "70727ff81ef0e14403f6145244b134ed3729a120",
+    "exit_code": 1,
+    "log": "baseline-zu.log"
+  }
+]

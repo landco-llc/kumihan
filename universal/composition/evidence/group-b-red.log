@@ -1,0 +1,331 @@
+test_forged_status_and_waiver_structure_rejected (test_contract.ContractTests.test_forged_status_and_waiver_structure_rejected) ... ok
+test_legacy_mapping_is_separate_and_lossless (test_contract.ContractTests.test_legacy_mapping_is_separate_and_lossless) ... ok
+test_reference_copy_exact (test_contract.ContractTests.test_reference_copy_exact) ... ok
+test_six_record_kinds (test_contract.ContractTests.test_six_record_kinds) ... ok
+test_unknown_fields_and_version_rejected (test_contract.ContractTests.test_unknown_fields_and_version_rejected) ... ok
+test_validator_exists (test_contract.ContractTests.test_validator_exists) ... ok
+test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback) ... ERROR
+test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review) ... ERROR
+test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically) ... ERROR
+test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure) ... ERROR
+test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound) ... ERROR
+test_core_exists (test_core.SourceTests.test_core_exists) ... FAIL
+test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) ... 
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_SOURCE_DIGEST', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa2a0>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa160>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa0c0>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa340>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa3e0>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa480>) ... ERROR
+  test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa520>) ... ERROR
+test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) ... 
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'ASCII'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u3072\\u3089\\u304c\\u306a\\u6f22\\u5b57'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0e20\\u0e32\\u0e29\\u0e32\\u0e44\\u0e17\\u0e22'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'e\\u0301'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0915\\u094d\\u200d\\u0937'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\U0001f469\\u200d\\U0001f52c\\U0001f600'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\r\\n\\xa0\\u200c\\ufe0f'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u05e2\\u05d1\\u05e8\\u05d9\\u05ea 123 abc'") ... ERROR
+  test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="''") ... ERROR
+test_invalid_unicode_utf8_and_byte_boundaries (test_core.SourceTests.test_invalid_unicode_utf8_and_byte_boundaries) ... ERROR
+test_unknown_critical_resource_and_tag (test_core.SourceTests.test_unknown_critical_resource_and_tag) ... ERROR
+
+======================================================================
+ERROR: test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 76, in test_exact_locale_only_no_script_or_english_fallback
+    r=request(((tag,'漢 abc العربية'),));p=self.resolve(r)
+                                           ^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 71, in resolve
+    from core import resolve
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 96, in test_metadata_disagreement_and_detected_only_remain_review
+    p=self.resolve(r,candidates=candidates)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 71, in resolve
+    from core import resolve
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 86, in test_mixed_nonenglish_pairs_are_representable_deterministically
+    p=self.resolve(r)
+      ^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 71, in resolve
+    from core import resolve
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 117, in test_translation_and_direction_limits_never_measure
+    p=self.resolve(r)
+      ^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 71, in resolve
+    from core import resolve
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 105, in test_unknown_noncritical_preserved_and_all_inputs_bound
+    p=self.resolve(r)
+      ^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 71, in resolve
+    from core import resolve
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_SOURCE_DIGEST', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa2a0>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa160>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa0c0>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_RANGE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa340>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa3e0>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa480>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) (code='E_REFERENCE', mutate=<function SourceTests.test_digest_range_gaps_overlap_duplicate.<locals>.<lambda> at 0x7f52ff4fa520>)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 50, in test_digest_range_gaps_overlap_duplicate
+    with self.subTest(code=code,mutate=mutate):self.reject(r,code)
+                                               ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'ASCII'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u3072\\u3089\\u304c\\u306a\\u6f22\\u5b57'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0e20\\u0e32\\u0e29\\u0e32\\u0e44\\u0e17\\u0e22'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0627\\u0644\\u0639\\u0631\\u0628\\u064a\\u0629'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'e\\u0301'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u0915\\u094d\\u200d\\u0937'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\U0001f469\\u200d\\U0001f52c\\U0001f600'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\r\\n\\xa0\\u200c\\ufe0f'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="'\\u05e2\\u05d1\\u05e8\\u05d9\\u05ea 123 abc'")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) (text="''")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 25, in test_exact_unicode_and_empty_source
+    self.check(r); self.assertEqual(r,before)
+    ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_invalid_unicode_utf8_and_byte_boundaries (test_core.SourceTests.test_invalid_unicode_utf8_and_byte_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 29, in test_invalid_unicode_utf8_and_byte_boundaries
+    from core import decode_utf8, byte_range_to_scalar
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+ERROR: test_unknown_critical_resource_and_tag (test_core.SourceTests.test_unknown_critical_resource_and_tag)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 53, in test_unknown_critical_resource_and_tag
+    r=request(); r['extensions']=[dict(namespace='example:unknown',version='1',critical=True,payload={})];self.reject(r,'E_CRITICAL_EXTENSION')
+                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 14, in reject
+    with self.assertRaises(CompositionError) as ctx: self.check(r)
+                                                     ^^^^^^^^^^^^^
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 9, in check
+    from core import validate_request
+ModuleNotFoundError: No module named 'core'
+
+======================================================================
+FAIL: test_core_exists (test_core.SourceTests.test_core_exists)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/universal/composition/tests/test_core.py", line 19, in test_core_exists
+    self.assertTrue((Path(__file__).resolve().parents[1]/'core.py').exists(), 'Source integrity core is missing')
+AssertionError: False is not true : Source integrity core is missing
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.166s
+
+FAILED (failures=1, errors=24)

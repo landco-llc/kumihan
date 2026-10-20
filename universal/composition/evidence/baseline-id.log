@@ -1,0 +1,22 @@
+test_archives (test_laras.Laras.test_archives) ... FAIL
+test_canonical_site_language_and_links (test_laras.Laras.test_canonical_site_language_and_links) ... ok
+test_dont_overclaim_hyphenation (test_laras.Laras.test_dont_overclaim_hyphenation) ... ok
+test_independent_skills (test_laras.Laras.test_independent_skills) ... ok
+test_metadata (test_laras.Laras.test_metadata) ... ok
+test_readonly_and_utf8 (test_laras.Laras.test_readonly_and_utf8) ... ok
+test_research_acceptance (test_laras.Laras.test_research_acceptance) ... ok
+test_rules_and_sources (test_laras.Laras.test_rules_and_sources) ... ok
+test_site_and_guides (test_laras.Laras.test_site_and_guides) ... ok
+
+======================================================================
+FAIL: test_archives (test_laras.Laras.test_archives)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/kmc-baseline/tests/id/test_laras.py", line 52, in test_archives
+    self.assertEqual(len(archives),15)
+AssertionError: 0 != 15
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.006s
+
+FAILED (failures=1)

@@ -1,0 +1,26 @@
+test_checker (test_hlela.Hlela.test_checker) ... ok
+test_metadata (test_hlela.Hlela.test_metadata) ... ok
+test_packages (test_hlela.Hlela.test_packages) ... ERROR
+test_pages (test_hlela.Hlela.test_pages) ... ok
+test_rules (test_hlela.Hlela.test_rules) ... ok
+test_skills (test_hlela.Hlela.test_skills) ... ok
+
+======================================================================
+ERROR: test_packages (test_hlela.Hlela.test_packages)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/tmp/kmc-baseline/tests/zu/test_hlela.py", line 34, in test_packages
+    root=BASE/"downloads";manifest=json.loads((root/"MANIFEST.json").read_text())
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/kmc-baseline/plugins/kumihan-hlela/downloads/MANIFEST.json'
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.003s
+
+FAILED (errors=1)

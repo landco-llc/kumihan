@@ -1,0 +1,343 @@
+{
+  "contract_version": "0.1.0-design.1",
+  "kind": "plan",
+  "id": "plan-8b41d94ab0fad7928f16344fb55948f7f98ae14d132da44fef148a4960d7fe22",
+  "request_id": "request-fixture",
+  "source_digests": [
+    {
+      "source_id": "s0",
+      "text_digest": "sha256:db14de542374929a1274e40c7b6894fe465003e94dc00ec659209814f3e6103e"
+    },
+    {
+      "source_id": "s1",
+      "text_digest": "sha256:d274159863057eb5c633116c3b54e4f8659167f0b73fabbee256e881fa1ac8c8"
+    },
+    {
+      "source_id": "s2",
+      "text_digest": "sha256:fb62c0c2c296e4626dc55d728c2edef038e8351baf4e7a6aca4e1c263667ad9e"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "metadata-r0",
+      "region_id": "r0",
+      "property": "composition-metadata",
+      "value": {
+        "range": {
+          "source_id": "s0",
+          "start": 0,
+          "end": 7
+        },
+        "expression": "reading",
+        "direction": "auto",
+        "writing_mode": "horizontal-tb",
+        "required_content": true,
+        "role": "body",
+        "register": "fixture",
+        "runs": [
+          {
+            "run_id": "run0",
+            "range": {
+              "source_id": "s0",
+              "start": 0,
+              "end": 7
+            },
+            "language_tag": "ja",
+            "declared_language_tag": "ja",
+            "script_hint": null,
+            "origin": "author",
+            "module_id": "ja",
+            "module_version": "0.1.7-preview",
+            "module_sha256": "c27b0ba9daf7652c26a562aca11ddb2356dacfd21a683b6f3fd8701da18e50aa",
+            "module_status": "preview_unverified",
+            "capability_state": "declared",
+            "declared_capabilities": [
+              "reference_guidance",
+              "source_preserving_review"
+            ],
+            "candidates": [
+              {
+                "run_id": "run0",
+                "language_tag": "ja",
+                "origin": "author"
+              }
+            ]
+          }
+        ],
+        "language_priority": {
+          "source_text_protected": true,
+          "allowed_layout_changes": [],
+          "editorial_conventions": [],
+          "language_priority": "coequal",
+          "ranked_language_tags": [],
+          "approval_refs": []
+        },
+        "relationships": []
+      },
+      "rule_refs": [
+        "MIX-001",
+        "MIX-002",
+        "MIX-014"
+      ],
+      "reason": "Hard source/direction/boundary constraints precede soft layout; stable region order then ID, origin precedence then exact locale.",
+      "state": "resolved"
+    },
+    {
+      "id": "metadata-r1",
+      "region_id": "r1",
+      "property": "composition-metadata",
+      "value": {
+        "range": {
+          "source_id": "s1",
+          "start": 0,
+          "end": 7
+        },
+        "expression": "reading",
+        "direction": "auto",
+        "writing_mode": "horizontal-tb",
+        "required_content": true,
+        "role": "body",
+        "register": "fixture",
+        "runs": [
+          {
+            "run_id": "run1",
+            "range": {
+              "source_id": "s1",
+              "start": 0,
+              "end": 7
+            },
+            "language_tag": "ar",
+            "declared_language_tag": "ar",
+            "script_hint": null,
+            "origin": "author",
+            "module_id": "ar",
+            "module_version": "0.1.0",
+            "module_sha256": "9928ec8bf4651ec390095d458adf78f3dece22264f398933fbfabd1d5fde7b0f",
+            "module_status": "preview_unverified",
+            "capability_state": "declared",
+            "declared_capabilities": [
+              "reference_guidance",
+              "source_preserving_review"
+            ],
+            "candidates": [
+              {
+                "run_id": "run1",
+                "language_tag": "ar",
+                "origin": "author"
+              }
+            ]
+          }
+        ],
+        "language_priority": {
+          "source_text_protected": true,
+          "allowed_layout_changes": [],
+          "editorial_conventions": [],
+          "language_priority": "coequal",
+          "ranked_language_tags": [],
+          "approval_refs": []
+        },
+        "relationships": []
+      },
+      "rule_refs": [
+        "MIX-001",
+        "MIX-002",
+        "MIX-014"
+      ],
+      "reason": "Hard source/direction/boundary constraints precede soft layout; stable region order then ID, origin precedence then exact locale.",
+      "state": "resolved"
+    },
+    {
+      "id": "metadata-r2",
+      "region_id": "r2",
+      "property": "composition-metadata",
+      "value": {
+        "range": {
+          "source_id": "s2",
+          "start": 0,
+          "end": 8
+        },
+        "expression": "reading",
+        "direction": "auto",
+        "writing_mode": "horizontal-tb",
+        "required_content": true,
+        "role": "body",
+        "register": "fixture",
+        "runs": [
+          {
+            "run_id": "run2",
+            "range": {
+              "source_id": "s2",
+              "start": 0,
+              "end": 8
+            },
+            "language_tag": "fr",
+            "declared_language_tag": "fr",
+            "script_hint": null,
+            "origin": "author",
+            "module_id": "fr",
+            "module_version": "0.1.1",
+            "module_sha256": "0fce3425a7d31eedfe70a78c33897fa16c473d7cfe25631d5eeeded1d7722118",
+            "module_status": "preview_unverified",
+            "capability_state": "declared",
+            "declared_capabilities": [
+              "reference_guidance",
+              "source_preserving_review"
+            ],
+            "candidates": [
+              {
+                "run_id": "run2",
+                "language_tag": "fr",
+                "origin": "author"
+              }
+            ]
+          }
+        ],
+        "language_priority": {
+          "source_text_protected": true,
+          "allowed_layout_changes": [],
+          "editorial_conventions": [],
+          "language_priority": "coequal",
+          "ranked_language_tags": [],
+          "approval_refs": []
+        },
+        "relationships": []
+      },
+      "rule_refs": [
+        "MIX-001",
+        "MIX-002",
+        "MIX-014"
+      ],
+      "reason": "Hard source/direction/boundary constraints precede soft layout; stable region order then ID, origin precedence then exact locale.",
+      "state": "resolved"
+    }
+  ],
+  "constraints": [
+    {
+      "id": "r0-MIX-001",
+      "region_id": "r0",
+      "rule_ref": "MIX-001",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Preserve exact logical source and digest"
+    },
+    {
+      "id": "r0-MIX-004",
+      "region_id": "r0",
+      "rule_ref": "MIX-004",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Scalar ranges; host shaping boundaries require evidence"
+    },
+    {
+      "id": "r0-MIX-006",
+      "region_id": "r0",
+      "rule_ref": "MIX-006",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Delegate Bidi; never reverse source"
+    },
+    {
+      "id": "r0-MIX-013",
+      "region_id": "r0",
+      "rule_ref": "MIX-013",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Required content cannot be waived by display intent"
+    },
+    {
+      "id": "r1-MIX-001",
+      "region_id": "r1",
+      "rule_ref": "MIX-001",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Preserve exact logical source and digest"
+    },
+    {
+      "id": "r1-MIX-004",
+      "region_id": "r1",
+      "rule_ref": "MIX-004",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Scalar ranges; host shaping boundaries require evidence"
+    },
+    {
+      "id": "r1-MIX-006",
+      "region_id": "r1",
+      "rule_ref": "MIX-006",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Delegate Bidi; never reverse source"
+    },
+    {
+      "id": "r1-MIX-013",
+      "region_id": "r1",
+      "rule_ref": "MIX-013",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Required content cannot be waived by display intent"
+    },
+    {
+      "id": "r2-MIX-001",
+      "region_id": "r2",
+      "rule_ref": "MIX-001",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Preserve exact logical source and digest"
+    },
+    {
+      "id": "r2-MIX-004",
+      "region_id": "r2",
+      "rule_ref": "MIX-004",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Scalar ranges; host shaping boundaries require evidence"
+    },
+    {
+      "id": "r2-MIX-006",
+      "region_id": "r2",
+      "rule_ref": "MIX-006",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Delegate Bidi; never reverse source"
+    },
+    {
+      "id": "r2-MIX-013",
+      "region_id": "r2",
+      "rule_ref": "MIX-013",
+      "strength": "hard",
+      "condition": "always",
+      "requirement": "Required content cannot be waived by display intent"
+    }
+  ],
+  "font_instances": [],
+  "optical_profiles": [],
+  "discretionaries": [],
+  "required_capabilities": [
+    "shaping",
+    "bidi",
+    "font-metrics",
+    "render-observation"
+  ],
+  "conflicts": [],
+  "limitations": [
+    "Static plan only; no rendered, native-editorial, accessibility or font optical measurements.",
+    "BCP47 syntax-only parser; registry/deprecation validation not performed.",
+    "Capability manifests are declarations; host capabilities remain unknown.",
+    "Font sizing not proposed: absolute/relative units and measured metrics unavailable."
+  ],
+  "extensions": [
+    {
+      "namespace": "kumihan:composition-binding",
+      "version": "1",
+      "critical": false,
+      "payload": {
+        "engine": "composition-static-1",
+        "request_digest": "sha256:cb03503a45ba832d8a59ffe7c2bc7cc59acb30830b53224e2c0fdcc78abe4731",
+        "registry_digest": "sha256:cd4b9e5e17ac6b3f0d7e10656e60ca3dc70a7b8ec4c0316f7a95869a52bebf9b",
+        "candidates": [],
+        "dependencies": [],
+        "parser": "rfc5646-syntax-1; IANA registration/deprecation not checked"
+      }
+    }
+  ]
+}

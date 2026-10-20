@@ -1,0 +1,53 @@
+[
+  {
+    "contract_version": "0.1.0-design.1",
+    "kind": "observation",
+    "id": "static-2aa9599f505cf4ef0dc16890d02baf93d2bbb893e9a9bd0b2cea7b15741a8e99",
+    "artifact_ref": "s1",
+    "artifact_digest": "sha256:d274159863057eb5c633116c3b54e4f8659167f0b73fabbee256e881fa1ac8c8",
+    "host_ref": "internal:composition-static-1",
+    "environment": {
+      "application": "composition-static-1",
+      "version": "1",
+      "operating_system": "Linux",
+      "renderer": "none",
+      "font_instance_refs": [],
+      "conditions": {
+        "target_kind": "logical-source",
+        "index_unit": "unicode-scalar"
+      }
+    },
+    "scopes": [
+      "s1",
+      "r1"
+    ],
+    "method": "static",
+    "facts": [
+      {
+        "name": "exact-utf8-sha256",
+        "value": "sha256:d274159863057eb5c633116c3b54e4f8659167f0b73fabbee256e881fa1ac8c8",
+        "unit": null
+      },
+      {
+        "name": "scalar-count",
+        "value": 7,
+        "unit": "unicode-scalar"
+      },
+      {
+        "name": "run-coverage",
+        "value": "complete-nonoverlapping",
+        "unit": null
+      },
+      {
+        "name": "immutable-plan-binding",
+        "value": "plan-8b41d94ab0fad7928f16344fb55948f7f98ae14d132da44fef148a4960d7fe22",
+        "unit": null
+      }
+    ],
+    "mapping": [],
+    "limitations": [
+      "No rendering; no trusted external observation or approval validation."
+    ],
+    "extensions": []
+  }
+]

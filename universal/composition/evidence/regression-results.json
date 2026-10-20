@@ -1,0 +1,222 @@
+[
+  {
+    "command": "python3 -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "log": "regression-tests.log",
+    "summary": [
+      "Ran 21 tests in 0.710s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/accord -v",
+    "exit_code": 0,
+    "log": "regression-tests-accord.log",
+    "summary": [
+      "Ran 26 tests in 0.013s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/arabic -v",
+    "exit_code": 0,
+    "log": "regression-tests-arabic.log",
+    "summary": [
+      "Ran 20 tests in 0.885s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/bn -v",
+    "exit_code": 0,
+    "log": "regression-tests-bn.log",
+    "summary": [
+      "Ran 10 tests in 0.004s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/compasso -v",
+    "exit_code": 0,
+    "log": "regression-tests-compasso.log",
+    "summary": [
+      "Ran 8 tests in 0.179s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/equilibrio -v",
+    "exit_code": 0,
+    "log": "regression-tests-equilibrio.log",
+    "summary": [
+      "Ran 16 tests in 6.444s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/fa -v",
+    "exit_code": 0,
+    "log": "regression-tests-fa.log",
+    "summary": [
+      "Ran 8 tests in 0.205s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/geuljjaim -v",
+    "exit_code": 0,
+    "log": "regression-tests-geuljjaim.log",
+    "summary": [
+      "Ran 9 tests in 0.446s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/geuljjaim_adapter -v",
+    "exit_code": 0,
+    "log": "regression-tests-geuljjaim_adapter.log",
+    "summary": [
+      "Ran 2 tests in 0.000s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/geuljjaim_site -v",
+    "exit_code": 0,
+    "log": "regression-tests-geuljjaim_site.log",
+    "summary": [
+      "Ran 3 tests in 0.012s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/grafia -v",
+    "exit_code": 0,
+    "log": "regression-tests-grafia.log",
+    "summary": [
+      "Ran 13 tests in 0.806s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/hi -v",
+    "exit_code": 0,
+    "log": "regression-tests-hi.log",
+    "summary": [
+      "Ran 8 tests in 4.559s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/id -v",
+    "exit_code": 1,
+    "log": "regression-tests-id.log",
+    "summary": [
+      "FAIL: test_archives (test_laras.Laras.test_archives)",
+      "Ran 9 tests in 0.004s",
+      "FAILED (failures=1)"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/km -v",
+    "exit_code": 1,
+    "log": "regression-tests-km.log",
+    "summary": [
+      "ERROR: test_archives (test_lumnung.Khmer.test_archives)",
+      "Ran 5 tests in 0.003s",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/lad -v",
+    "exit_code": 0,
+    "log": "regression-tests-lad.log",
+    "summary": [
+      "Ran 8 tests in 1.476s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/nhip_chu -v",
+    "exit_code": 0,
+    "log": "regression-tests-nhip_chu.log",
+    "summary": [
+      "Ran 7 tests in 0.003s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/satzbild -v",
+    "exit_code": 0,
+    "log": "regression-tests-satzbild.log",
+    "summary": [
+      "Ran 22 tests in 6.547s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/sw -v",
+    "exit_code": 1,
+    "log": "regression-tests-sw.log",
+    "summary": [
+      "ERROR: test_released_archives (test_mizani.Mizani.test_released_archives)",
+      "Ran 6 tests in 0.003s",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/szyk -v",
+    "exit_code": 0,
+    "log": "regression-tests-szyk.log",
+    "summary": [
+      "Ran 8 tests in 1.256s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/thai -v",
+    "exit_code": 0,
+    "log": "regression-tests-thai.log",
+    "summary": [
+      "Ran 22 tests in 1.975s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/ziheng -v",
+    "exit_code": 0,
+    "log": "regression-tests-ziheng.log",
+    "summary": [
+      "Ran 26 tests in 1.771s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/zilu -v",
+    "exit_code": 0,
+    "log": "regression-tests-zilu.log",
+    "summary": [
+      "Ran 10 tests in 1.125s",
+      "OK"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s tests/zu -v",
+    "exit_code": 1,
+    "log": "regression-tests-zu.log",
+    "summary": [
+      "ERROR: test_packages (test_hlela.Hlela.test_packages)",
+      "Ran 6 tests in 0.003s",
+      "FAILED (errors=1)"
+    ]
+  },
+  {
+    "command": "python3 -m unittest discover -s universal/tests -v",
+    "exit_code": 0,
+    "log": "regression-universal-tests.log",
+    "summary": [
+      "Ran 29 tests in 0.241s",
+      "OK"
+    ]
+  }
+]

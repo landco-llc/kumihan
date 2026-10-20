@@ -1,0 +1,15 @@
+test_exact_locale_only_no_script_or_english_fallback (test_core.ResolverTests.test_exact_locale_only_no_script_or_english_fallback) ... ok
+test_metadata_disagreement_and_detected_only_remain_review (test_core.ResolverTests.test_metadata_disagreement_and_detected_only_remain_review) ... ok
+test_mixed_nonenglish_pairs_are_representable_deterministically (test_core.ResolverTests.test_mixed_nonenglish_pairs_are_representable_deterministically) ... ok
+test_translation_and_direction_limits_never_measure (test_core.ResolverTests.test_translation_and_direction_limits_never_measure) ... ok
+test_unknown_noncritical_preserved_and_all_inputs_bound (test_core.ResolverTests.test_unknown_noncritical_preserved_and_all_inputs_bound) ... ok
+test_core_exists (test_core.SourceTests.test_core_exists) ... ok
+test_digest_range_gaps_overlap_duplicate (test_core.SourceTests.test_digest_range_gaps_overlap_duplicate) ... ok
+test_exact_unicode_and_empty_source (test_core.SourceTests.test_exact_unicode_and_empty_source) ... ok
+test_invalid_unicode_utf8_and_byte_boundaries (test_core.SourceTests.test_invalid_unicode_utf8_and_byte_boundaries) ... ok
+test_unknown_critical_resource_and_tag (test_core.SourceTests.test_unknown_critical_resource_and_tag) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.417s
+
+OK

@@ -1,0 +1,27 @@
+test_archive_closure_host_roots_and_safety (test_distribution.DistributionTests.test_archive_closure_host_roots_and_safety) ... ok
+test_exact_matrix_and_manifest (test_distribution.DistributionTests.test_exact_matrix_and_manifest) ... ok
+test_symlink_source_rejected (test_distribution.DistributionTests.test_symlink_source_rejected) ... ok
+test_unsafe_members_rejected (test_distribution.DistributionTests.test_unsafe_members_rejected) ... ok
+test_bounded_css_candidates_are_not_errors (test_runtime.RuntimeTests.test_bounded_css_candidates_are_not_errors) ... ok
+test_candidate_mutations_fail (test_runtime.RuntimeTests.test_candidate_mutations_fail) ... ok
+test_check_is_nonmutating (test_runtime.RuntimeTests.test_check_is_nonmutating) ... ok
+test_cli_preserves_bytes (test_runtime.RuntimeTests.test_cli_preserves_bytes) ... ok
+test_empty_candidate_is_not_missing (test_runtime.RuntimeTests.test_empty_candidate_is_not_missing) ... ok
+test_explicit_context_wins (test_runtime.RuntimeTests.test_explicit_context_wins) ... ok
+test_explicit_profiles_do_not_infer_financial_context (test_runtime.RuntimeTests.test_explicit_profiles_do_not_infer_financial_context) ... ok
+test_host_identity_and_icons (test_runtime.RuntimeTests.test_host_identity_and_icons) ... ok
+test_invalid_context (test_runtime.RuntimeTests.test_invalid_context) ... ok
+test_invalid_locale (test_runtime.RuntimeTests.test_invalid_locale) ... ok
+test_invalid_medium (test_runtime.RuntimeTests.test_invalid_medium) ... ok
+test_invalid_mode (test_runtime.RuntimeTests.test_invalid_mode) ... ok
+test_invalid_utf8 (test_runtime.RuntimeTests.test_invalid_utf8) ... ok
+test_representative_preservation (test_runtime.RuntimeTests.test_representative_preservation) ... ok
+test_research_catalog_and_fixtures (test_runtime.RuntimeTests.test_research_catalog_and_fixtures) ... ok
+test_schema (test_runtime.RuntimeTests.test_schema) ... ok
+test_unknown_locale_stays_unknown (test_runtime.RuntimeTests.test_unknown_locale_stays_unknown) ... ok
+test_twelve_pages_languages_downloads_and_alternates (test_site.SiteTests.test_twelve_pages_languages_downloads_and_alternates) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 6.547s
+
+OK
