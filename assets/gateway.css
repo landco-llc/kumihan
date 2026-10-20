@@ -178,6 +178,8 @@ html[lang="th-TH"] body,html[lang="en"] body{line-break:auto;}
 .edition-menu { display: block; width: min(300px, 100%); margin-top: 22px; }
 .edition-menu summary { display: flex; justify-content: space-between; width: 100%; padding: 10px 18px; border-radius: 12px; color: var(--muted); font-weight: 600; letter-spacing: .01em; white-space: normal; }
 .lang-menu:not([open]) ul { display: none; }
+/* Header language menu: 27 languages; the list scrolls inside the menu instead of running off the screen. */
+.header-inner .lang-menu ul { max-height: min(60vh, 420px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
 .edition-menu ul { inset-inline: 0 auto; min-width: 100%; max-height: min(50vh, 360px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; border-radius: 12px; }
 .edition-menu li a { white-space: normal; }
 .edition-menu li a.current, .edition-menu li a.current .code { color: var(--red-dark); }
