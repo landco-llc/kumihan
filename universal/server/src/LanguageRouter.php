@@ -18,7 +18,7 @@ final class LanguageRouter
         'devanagari' => '/\p{Devanagari}+/u',
         'arabic' => '/\p{Arabic}+/u',
         'cyrillic' => '/\p{Cyrillic}+/u',
-        'han' => '/\p{Han}+/u',
+        'han' => '/\p{sc=Han}+/u',
         'latin' => '/\p{Latin}+/u',
         'hebrew' => '/\p{Hebrew}+/u',
     ];
@@ -122,7 +122,7 @@ final class LanguageRouter
         $spans = [];
         $matches = [];
         // Each run is only a script clue. Spaces/punctuation remain untouched.
-        preg_match_all('/[\p{sc=Hiragana}\p{sc=Katakana}]+|\p{Hangul}+|\p{Thai}+|\p{Khmer}+|\p{Bengali}+|\p{Devanagari}+|\p{Arabic}+|\p{Cyrillic}+|\p{Han}+|\p{Latin}+|\p{Hebrew}+/u', $text, $matches, PREG_OFFSET_CAPTURE);
+        preg_match_all('/[\p{sc=Hiragana}\p{sc=Katakana}]+|\p{Hangul}+|\p{Thai}+|\p{Khmer}+|\p{Bengali}+|\p{Devanagari}+|\p{Arabic}+|\p{Cyrillic}+|\p{sc=Han}+|\p{Latin}+|\p{Hebrew}+/u', $text, $matches, PREG_OFFSET_CAPTURE);
         foreach ($matches[0] ?? [] as $match) {
             [$run, $byteOffset] = $match;
             $script = 'unknown';
