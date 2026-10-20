@@ -1,0 +1,29 @@
+{
+  "name": "landco-llc/kumihan-universal-mcp",
+  "description": "KUMIHAN Universal modular multilingual MCP server for LiteSpeed PHP 8.5",
+  "type": "project",
+  "license": "Apache-2.0",
+  "require": {
+    "php": "^8.5",
+    "ext-json": "*",
+    "ext-fileinfo": "*",
+    "mcp/sdk": "^0.9.0",
+    "php-http/discovery": "^1.20",
+    "nyholm/psr7": "^1.8",
+    "laminas/laminas-httphandlerrunner": "^2.14",
+    "symfony/finder": "^7.3 || ^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kumihan\\Mcp\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.5.0"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

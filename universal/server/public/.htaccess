@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^mcp/?$ index.php [L,QSA]
+RewriteRule ^$ - [F]
+<FilesMatch "^(?!index\.php$).*\.(?:php|json|env|ini|lock)$">
+    Require all denied
+</FilesMatch>

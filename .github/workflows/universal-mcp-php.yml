@@ -1,0 +1,183 @@
+name: Universal MCP PHP 8.5
+
+on:
+  push:
+    branches: [feat/universal-mcp-php-runtime]
+    paths:
+      - "universal/**"
+      - ".github/workflows/universal-mcp-php.yml"
+      - "plugins/**"
+      - "skills/**"
+      - "plugin.json"
+  pull_request:
+    paths:
+      - "universal/**"
+      - ".github/workflows/universal-mcp-php.yml"
+      - "plugins/**"
+      - "skills/**"
+      - "plugin.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  registry-and-php:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python registry tests
+        run: python3 -m unittest discover -s universal/tests -v
+      - name: Check Lolipop private PHP probe shell syntax
+        run: sh -n universal/tools/check_private_php_web.sh
+      - name: Build deterministic language registry
+        run: |
+          python3 universal/tools/build_registry.py
+          python3 universal/tools/build_registry.py --check
+      - name: Setup PHP 8.5
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.5"
+          tools: composer:v2
+          extensions: fileinfo
+          coverage: none
+      - name: PHP lint
+        run: |
+          find universal/server/src universal/server/public universal/server/tests -name '*.php' -print0 | xargs -0 -n1 php -l
+      - name: Install pinned SDK series
+        working-directory: universal/server
+        run: composer install --no-interaction --prefer-dist --no-dev --no-progress
+      - name: Audit resolved Composer dependencies
+        working-directory: universal/server
+        run: |
+          composer validate --no-check-publish --strict
+          composer audit --locked --no-dev --format=plain
+      - name: Validate Lolipop private Web PHP readiness helper
+        run: |
+          set -eu
+          sh -n universal/tools/check_private_runtime_web.sh
+          python3 - <<'PY'
+          from pathlib import Path
+          source = Path('universal/tools/check_private_runtime_web.sh').read_text(encoding='utf-8')
+          start = "cat > \"$PROBE_PATH\" <<'PHP'\n"
+          assert source.count(start) == 1, 'PHP probe heredoc marker not unique'
+          rest = source.split(start, 1)[1]
+          assert '\nPHP\n' in rest, 'PHP probe heredoc terminator missing'
+          php = rest.split('\nPHP\n', 1)[0] + '\n'
+          Path('/tmp/kmhn-web-readiness-probe.php').write_text(php, encoding='utf-8')
+          assert 'REGISTRY_MODULES=' in php
+          assert 'SESSION_WRITE' in php
+          PY
+          php -l /tmp/kmhn-web-readiness-probe.php
+      - name: PHP registry, routing and review smoke
+        run: php universal/server/tests/smoke.php
+      - name: Prepare test-only HTTP config
+        run: cp universal/server/runtime/config.example.php universal/server/runtime/config.php
+      - name: Official SDK initialization and tools discovery
+        run: |
+          php -S 127.0.0.1:8989 -t universal/server/public >/tmp/kumihan-mcp-php.log 2>&1 &
+          sleep 2
+          curl --fail-with-body -sS -D /tmp/kumihan-headers.txt \
+            -H "Content-Type: application/json" \
+            -H "Accept: application/json, text/event-stream" \
+            -X POST http://127.0.0.1:8989/index.php \
+            -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"kumihan-ci","version":"0.1"}}}' \
+            > /tmp/kumihan-init.json
+          grep -q 'KUMIHAN Universal' /tmp/kumihan-init.json
+          SESSION="$(grep -i '^mcp-session-id:' /tmp/kumihan-headers.txt | head -1 | cut -d' ' -f2 | tr -d '\r')"
+          if [ -n "$SESSION" ]; then
+            curl --fail-with-body -sS \
+              -H "Content-Type: application/json" \
+              -H "Accept: application/json, text/event-stream" \
+              -H "Mcp-Session-Id: $SESSION" \
+              -H "MCP-Protocol-Version: 2025-11-25" \
+              -X POST http://127.0.0.1:8989/index.php \
+              -d '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' \
+              > /tmp/kumihan-tools.json
+          else
+            curl --fail-with-body -sS \
+              -H "Content-Type: application/json" \
+              -H "Accept: application/json, text/event-stream" \
+              -H "MCP-Protocol-Version: 2025-11-25" \
+              -X POST http://127.0.0.1:8989/index.php \
+              -d '{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}' \
+              > /tmp/kumihan-tools.json
+          fi
+          grep -q 'kumihan_detect_language' /tmp/kumihan-tools.json
+          python3 universal/tests/http_smoke.py
+      - name: Simulated Lolipop kmhn public root + private runtime MCP smoke
+        run: |
+          set -eu
+          BASE="$RUNNER_TEMP/kmhn-lolipop-layout"
+          mkdir -p "$BASE/web" "$BASE/kmhn-mcp-private/server"
+          cp -a universal/server/. "$BASE/kmhn-mcp-private/server/"
+          python3 universal/tools/build_lolipop_bootstrap.py \
+            --ftp-root "$BASE/web" \
+            --private-server-root "$BASE/kmhn-mcp-private/server" \
+            --output-dir "$BASE/offline"
+          mkdir -p "$BASE/web/kmhn"
+          cp -a "$BASE/offline/kmhn/." "$BASE/web/kmhn/"
+          php -l "$BASE/web/kmhn/index.php"
+          php -S 127.0.0.1:8990 -t "$BASE/web/kmhn" >/tmp/kmhn-lolipop-test.log 2>&1 &
+          sleep 2
+          KUMIHAN_MCP_LOCAL_URL=http://127.0.0.1:8990/index.php python3 universal/tests/http_smoke.py
+      - name: Read-only public bootstrap preflight and fail-closed regression
+        run: |
+          set -eu
+          sh -n universal/tools/preflight_public_bootstrap.sh
+          BASE="$RUNNER_TEMP/kmhn-public-preflight"
+          mkdir -p "$BASE/web/kmhn" \
+            "$BASE/kmhn-mcp-private/server/public" \
+            "$BASE/kmhn-mcp-private/server/src" \
+            "$BASE/kmhn-mcp-private/server/vendor" \
+            "$BASE/kmhn-mcp-private/server/runtime/sessions"
+          for file in public/index.php src/Registry.php vendor/autoload.php runtime/config.php runtime/registry.json composer.lock; do
+            touch "$BASE/kmhn-mcp-private/server/$file"
+          done
+          FTP_ROOT="$BASE/web" sh universal/tools/preflight_public_bootstrap.sh
+          touch "$BASE/web/kmhn/unrelated-existing-file"
+          if FTP_ROOT="$BASE/web" sh universal/tools/preflight_public_bootstrap.sh >/tmp/kmhn-public-preflight-reject.log 2>&1; then
+            echo 'FAIL: public bootstrap preflight did not reject unrelated files'
+            exit 1
+          fi
+          grep -q 'PUBLIC_DIR_HAS_OTHER_FILES_REVIEW' /tmp/kmhn-public-preflight-reject.log
+      - name: Public domain TLS preflight (informational, not a release gate)
+        run: |
+          echo "## Planned KUMIHAN MCP hostname" >> "$GITHUB_STEP_SUMMARY"
+          echo "Owner reports subdomain and SSL configured. MCP runtime not deployed." >> "$GITHUB_STEP_SUMMARY"
+          if python3 universal/tools/probe_remote.py --mode tls > /tmp/kumihan-tls.log 2>&1; then
+            echo "Remote TLS: VERIFIED FROM GITHUB RUNNER" >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: VERIFIED" 
+            cat /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Remote TLS: NOT VERIFIED FROM THIS RUNNER; no conclusion about hosting account settings." >> "$GITHUB_STEP_SUMMARY"
+            echo "TLS probe: NOT VERIFIED"
+            sed -n '1,8p' /tmp/kumihan-tls.log | tee -a "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Prepare non-secret deploy artifact
+        run: |
+          mkdir -p universal/server/runtime/sessions
+          rm -f universal/server/runtime/config.php
+          tar -czf /tmp/kumihan-universal-mcp-staging.tar.gz -C universal/server \
+            public src vendor composer.json composer.lock runtime/config.example.php runtime/config.production.example.php runtime/registry.json runtime/sessions
+          (cd /tmp && sha256sum kumihan-universal-mcp-staging.tar.gz > kumihan-universal-mcp-staging.sha256)
+      - name: Private-only artifact extraction smoke
+        run: |
+          set -eu
+          sh -n universal/tools/unpack_private_runtime.sh
+          BASE="$RUNNER_TEMP/kmhn-archive-stage"
+          mkdir -p "$BASE/web/kmhn" "$BASE/kmhn-mcp-private/server"
+          cp /tmp/kumihan-universal-mcp-staging.tar.gz "$BASE/kmhn-mcp-private/server/runtime.tar.gz"
+          FTP_ROOT="$BASE/web" sh universal/tools/unpack_private_runtime.sh
+          test -s "$BASE/kmhn-mcp-private/server/runtime/registry.json"
+          test ! -e "$BASE/web/kmhn/index.php"
+          test ! -e "$BASE/web/kmhn/.htaccess"
+      - name: Upload staging artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: kumihan-universal-mcp-php85-staging
+          path: |
+            /tmp/kumihan-universal-mcp-staging.tar.gz
+            /tmp/kumihan-universal-mcp-staging.sha256
+          retention-days: 14

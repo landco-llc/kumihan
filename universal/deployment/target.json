@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.0",
+  "product": "KUMIHAN Universal",
+  "hostname": "mcp-kmhn.landco.co.jp",
+  "endpoint": "https://mcp-kmhn.landco.co.jp/mcp",
+  "hosting": {
+    "provider": "Lolipop",
+    "plan": "High-Speed",
+    "web_server": "LiteSpeed",
+    "php_version": "8.5",
+    "deployment_mode": "PHP request lifecycle (no daemon)",
+    "observed_web_php_version": "8.5.11",
+    "observed_web_php_sapi": "litespeed"
+  },
+  "status": "chatgpt_live_mcp_connected_three_language_tools_smoked_router_fix_pending_deploy",
+  "configuration_blocker": null,
+  "flags": {
+    "subdomain_created": true,
+    "ssl_verified": true,
+    "php85_verified_on_target": true,
+    "dns_verified": true,
+    "github_staging_ci_verified": true,
+    "host_end_to_end_verified": true,
+    "client_connection_verified": true,
+    "public_release_authorized": false,
+    "ssl_configured_owner_reported": true,
+    "public_upload_folder_owner_confirmed": true,
+    "private_runtime_path_verified": false,
+    "ssh_access_verified": true,
+    "ftp_root_path_owner_confirmed": true,
+    "ftp_root_ssh_verified": true,
+    "web_php_can_read_private_runtime_verified": true,
+    "public_ssh_folder_verified": true,
+    "ftp_parent_ssh_writable_verified": true,
+    "private_candidate_ssh_write_verified": true,
+    "private_candidate_exists_verified": true,
+    "public_bootstrap_absent_verified": false,
+    "ephemeral_probe_files_absent_verified": true,
+    "private_archive_owner_transfer_completed": true,
+    "private_archive_present_ssh_verified": true,
+    "private_runtime_target_clean_verified": true,
+    "private_archive_integrity_verified": true,
+    "private_archive_extracted": true,
+    "private_runtime_ready": true,
+    "public_bootstrap_installed": true,
+    "private_required_files_verified": true,
+    "private_config_absent_verified": false,
+    "public_bootstrap_still_absent_verified": false,
+    "private_config_created_verified": true,
+    "web_php_sdk_autoload_verified": true,
+    "web_php_registry_21_verified": true,
+    "web_php_session_write_verified": true,
+    "web_php_extension_checks_verified": true,
+    "public_symlink_scan_complete": false,
+    "public_root_preflight_passed": true,
+    "other_vhosts_isolation_verified": false,
+    "public_kmhn_symlink_scope_verified": true,
+    "public_web_wide_symlink_scan_complete": false,
+    "public_web_wide_scan_permission_limited": true,
+    "owner_vhost_upload_mappings_reviewed": true,
+    "owner_reports_no_private_runtime_public_alias": true,
+    "public_scoped_prebootstrap_recheck_verified": true,
+    "g2_public_stage_created_verified": true,
+    "g2_public_stage_local_hash_verified": true,
+    "g2_public_stage_ssh_transfer_verified": true,
+    "g2_public_stage_readback_hash_verified": true,
+    "g2_public_stage_readback_byte_verified": true,
+    "chatgpt_client_connection_verified": true,
+    "chatgpt_guidance_and_review_verified": true
+  },
+  "runtime_config_template": "universal/server/runtime/config.production.example.php",
+  "production_upload_directory": "kmhn",
+  "operations_doc": "universal/LOLLIPOP_SETUP.md",
+  "notes": "Owner confirmed direct ChatGPT connected plugin list 21 language modules/729 rules, and assistant invoked connected plugin guidance and review ja/zh-Hant/ar successfully. Found false auto-language classification of Traditional Chinese punctuation; fix committed to branch, not installed in live private PHP runtime.",
+  "deployment_blocker": "ChatGPT integration PASS. New zh-Hant punctuation -> kana false positive fixed only in Draft PR source and needs CI + guarded private runtime rollout. Other clients and true renderer, authentication/quotas remain pending.",
+  "provisioning": {
+    "reported_by": "Owner",
+    "reported_at": "2026-10-19",
+    "subdomain_created": true,
+    "ssl_configured": true,
+    "verification_type": "owner_report_plus_independent_github_tls_probe",
+    "network_tls_probe": "PASS",
+    "note": "Owner explicitly confirmed mcp-kmhn.landco.co.jp and SSL setup. Treat as configured, not as proof of publicly reachable TLS or a deployed MCP endpoint.",
+    "public_upload_folder": "kmhn",
+    "public_upload_folder_confirmation": "Owner report 2026-10-19",
+    "ftp_full_path_received_from_owner": true,
+    "full_path_confidentiality": "Exact absolute account path is kept out of this public repository; use local SSH/private deployment variable.",
+    "full_path_verified_on_server": true
+  },
+  "tls_verification": {
+    "verification_type": "public_github_actions_runner",
+    "result": "PASS",
+    "checked_at": "2026-10-19T11:43:49Z",
+    "hostname": "mcp-kmhn.landco.co.jp",
+    "tls_version": "TLSv1.3",
+    "certificate_not_after": "2027-01-17T10:35:22Z",
+    "evidence_url": "https://github.com/landco-llc/kumihan/actions/runs/39246702661",
+    "limitation": "This validates TLS hostname and chain from one runner, NOT deployed PHP runtime or MCP protocol."
+  },
+  "production_public_folder": "kmhn",
+  "public_root_type": "FTP account full path is the web document root; owner-confirmed, not independently inspected over SSH",
+  "private_runtime_layout": "An SSH-accessible directory OUTSIDE the FTP root and any other HTTP document root; do not assume an FTP-root sibling is private",
+  "layout_strategy": "Only bootstrap index.php and .htaccess under FTP root/kmhn. Place original universal/server tree outside HTTP roots and require its absolute entrypoint from bootstrap.",
+  "deployment_paths": {
+    "ftp_root": {
+      "scope": "account-local only; never commit absolute full path",
+      "basename": "web",
+      "owner_confirmed": true,
+      "ssh_realpath_verified": true
+    },
+    "public_root": {
+      "relative_to_ftp_root": "kmhn",
+      "owner_confirmed": true,
+      "ssh_realpath_verified": true
+    },
+    "private_server_candidate": {
+      "relative_to_ftp_root": "../kmhn-mcp-private/server",
+      "approved": false,
+      "ssh_write_verified": true,
+      "web_php_read_verified": true,
+      "outside_all_http_roots_verified": false,
+      "parent_writable_verified": true,
+      "outside_ftp_root_verified": true,
+      "created_by_preflight": true,
+      "contents_verified_post_cleanup": false,
+      "exists_verified": true,
+      "observed_probes_absent": true
+    }
+  },
+  "ssh_validation": {
+    "source": "Owner-supplied remote SSH shell transcript",
+    "observed": "Successful cd to previously supplied full web root; KMHN_OK; PRIVATE_PARENT_WRITABLE",
+    "verified_on": "2026-10-19",
+    "writes_performed": false,
+    "important_limit": "Test -w on parent does not imply private candidate directory exists, nor Web PHP access to files outside web, nor effective PHP 8.5."
+  },
+  "php_web_private_read_validation": {
+    "source": "Owner-supplied authenticated Lolipop SSH terminal output from one-shot Web PHP canary",
+    "observed_at": "2026-10-19",
+    "observed_web_php_version": "8.5.11",
+    "observed_php_sapi": "litespeed",
+    "private_php_read": "PASS",
+    "target_web_php85": "PASS",
+    "private_web_php_precheck": "PASS",
+    "creates_private_candidate_directory": true,
+    "probe_files_cleanup": "Expected from EXIT trap; not separately verified on host",
+    "verifies_all_http_roots_private": false,
+    "mcp_not_deployed": true
+  },
+  "pre_deployment_inventory": {
+    "source": "Owner's authenticated Lolipop SSH checks 2026-10-19",
+    "private_candidate_exists": "PRIVATE_DIR_OK",
+    "public_index_file": "PUBLIC_INDEX_EMPTY",
+    "public_htaccess_file": "HTACCESS_EMPTY",
+    "public_probe_files": "none matched kmhn_private_probe_*.php at kmhn maxdepth1",
+    "private_marker_files": "none matched .kmhn-read-* in private candidate maxdepth1",
+    "scope_limit": "Only specified names/globs were checked; other files and alternate vhost exposure were not inventoried; no server artifact installed."
+  },
+  "transfer_evidence": {
+    "source": "Owner Mac SCP output plus authenticated Lolipop SSH fail-closed verification, 2026-10-19",
+    "local_zip_digest_verified": true,
+    "local_runtime_archive_digest_verified": true,
+    "scp_progress_reported": "100% (779KB)",
+    "remote_archive_present": true,
+    "private_target_vendor_src_public_absent": true,
+    "remote_sha256_check": "PASS_VIA_MAC_FULL_READBACK",
+    "remote_tool_detection": "Neither sha256sum nor openssl was available on the SSH PATH",
+    "secure_fallback": "SCP server archive back to the Owner Mac and verify with shasum -a 256 and cmp against the locally authenticated archive. No need for server-side hash tools.",
+    "remote_transfer_warning": "The SCP client printed SSH post-quantum KEX and RSA host-key update proof warnings. Confirm server identity via official host-key guidance; do not disable host-key verification.",
+    "mac_readback_digest": "5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1",
+    "mac_readback_byte_comparison": "PASS",
+    "mac_readback_verified": true,
+    "remote_tools_unavailable": true,
+    "readback_note": "Owner SCP-downloaded the remote archive to a different Mac filename; shasum -a 256 matched immutable expected SHA, cmp -s with prevalidated local source PASS. This verifies the exact bytes stored on the remote host at test time.",
+    "public_host_ssh_identity_independently_verified": false,
+    "archive_source_github_run": "https://github.com/landco-llc/kumihan/actions/runs/39255977471",
+    "source_archive_inventory": {
+      "tar_sha256": "5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1",
+      "tar_bytes": 798016,
+      "entries": 1227,
+      "regular_files": 1067,
+      "directories": 160,
+      "symlinks": 0,
+      "hardlinks": 0,
+      "path_traversal_or_absolute_entries": 0,
+      "contains_runtime_config_php": false,
+      "inspected_from": "Original pinned GitHub Actions staging artifact, compared to Owner's remote archive via matching SHA256"
+    }
+  },
+  "private_extraction": {
+    "observed_at": "2026-10-19",
+    "evidence_source": "Owner's authenticated Lolipop SSH terminal output",
+    "markers": [
+      "PRIVATE_TAR_PREFLIGHT_OK",
+      "PRIVATE_RUNTIME_EXTRACTED",
+      "PRIVATE_REQUIRED_FILES_OK",
+      "PRIVATE_CONFIG_ABSENT",
+      "PUBLIC_BOOTSTRAP_UNCHANGED",
+      "MCP_NOT_PUBLIC"
+    ],
+    "required_files_present": true,
+    "config_not_created": true,
+    "public_bootstrap_not_created": true,
+    "http_mcp_tested": false,
+    "web_php_autoload_and_registry_tested": true,
+    "web_php_session_write_tested": true,
+    "other_virtual_hosts_isolation_tested": false
+  },
+  "private_runtime_web_verification": {
+    "observed_at": "2026-10-19",
+    "source": "Owner's authenticated Lolipop SSH and HTTPS Web PHP temporary probe output",
+    "observed_php_version": "8.5.11",
+    "observed_php_sapi": "litespeed",
+    "registry_modules": 21,
+    "markers": {
+      "PRIVATE_CONFIG_CREATED": "PASS",
+      "WEB_PHP85": "PASS",
+      "WEB_SAPI_LITESPEED": "PASS",
+      "EXTENSIONS": "PASS",
+      "PRIVATE_CONFIG": "PASS",
+      "SDK_AUTOLOAD": "PASS",
+      "REGISTRY": "PASS",
+      "SESSION_WRITE": "PASS",
+      "PRIVATE_RUNTIME_WEB_READY": "PASS",
+      "MCP_NOT_PUBLIC": "PASS"
+    },
+    "private_config_permissions_expected": "0600 from verified helper",
+    "temporary_web_probe_cleanup_expected": true,
+    "temporary_web_probe_cleanup_independently_checked": false,
+    "scope_limit": "SDK autoload, registry construction and private session file I/O PASS; actual HTTP MCP protocol, WAF, alternate vhosts and cross-client compatibility not tested."
+  },
+  "public_preflight": {
+    "observed_at": "2026-10-19",
+    "source": "Owner authenticated Lolipop SSH run of revision dd6d932c5a1491f23912eb7d2f8d752a3ee8e4a0",
+    "status": "SCOPED_G1_PASS_OWNER_MAPPING_CONFIRMED",
+    "markers": [
+      "PRIVATE_PATH_OUTSIDE_WEB_OK",
+      "PUBLIC_KMHN_EMPTY_OK",
+      "PRIVATE_RUNTIME_FILES_PRESENT_OK",
+      "PUBLIC_SYMLINK_SCAN_INCOMPLETE"
+    ],
+    "success_before_failure": true,
+    "failure_scope": "Whole FTP-root symlink traversal cannot finish due to permission denial; the designated kmhn directory has no symlinks by separate complete read-only scan.",
+    "safety_conclusion": "Scoped kmhn empty and no symlinks, private runtime files present; owner reviewed vhost mappings and reported none exposes private runtime. Wide FTP scan remains NOT_CHECKED_PERMISSION_LIMIT.",
+    "writes_performed": false,
+    "next_step": "Stage the exact two SHA256-pinned public bootstrap files OUTSIDE web, Mac SCP-readback validate, then explicitly execute guarded G2 two-file trial installer; immediately test MCP HTTPS and roll back if needed.",
+    "scoped_diagnostic": {
+      "observed_at": "2026-10-19",
+      "source": "Owner's authenticated Lolipop SSH session; read-only diagnostic command",
+      "markers": [
+        "KMHN_SYMLINK_SCOPE_CLEAR",
+        "WEB_WIDE_SCAN_PERMISSION_LIMIT",
+        "WEB_WIDE_SYMLINK_SCAN_INCOMPLETE",
+        "NO_FILES_CHANGED"
+      ],
+      "kmhn_symlink_scope_verified": true,
+      "full_web_symlink_scope_verified": false,
+      "full_web_failure_cause": "Permission denial in FTP-root descendant; inaccessible entry not identified by this sanitized check.",
+      "exposed_symlink_detected": "NOT_DETERMINED_OUTSIDE_KMHN",
+      "exposure_globally_excluded": false,
+      "writes_performed": false,
+      "next": "Review all configured domain/subdomain public upload folders and any aliases to the non-web private directory. Record whether unreadable web subtree remains a residual risk; do not claim it is globally clean.",
+      "audit_limit": "Sanitized failed find may include path errors and/or symlink path output; only kmhn-specific scan establishes zero symlinks."
+    }
+  },
+  "owner_domain_mapping_review": {
+    "observed_at": "2026-10-19",
+    "evidence_type": "Owner explicit confirmation based on Lolipop control panel",
+    "statement": "All domains' upload destinations reviewed; none references the non-public MCP runtime folder",
+    "configuration_mapping_checked_by_owner": true,
+    "private_runtime_alias_found": false,
+    "limited_to": "Domain/subdomain upload-folder configuration as manually inspected; not exhaustive traversal of unreadable FTP subtrees",
+    "full_ftp_root_symlink_scan": "NOT_CHECKED_PERMISSION_LIMIT",
+    "resulting_scope": "Bounded public bootstrap TEST admission, contingent on freshly passing no-write scoped preflight and only two public files; not client/public release approval"
+  },
+  "g1_scoped_final_preflight": {
+    "observed_at": "2026-10-19",
+    "source": "Owner's authenticated Lolipop SSH, pinned GitHub script at 7823df95a8d4854dee2076ad1422fae31fbd2fee",
+    "markers": [
+      "PRIVATE_PATH_OUTSIDE_WEB_OK",
+      "PUBLIC_KMHN_EMPTY_OK",
+      "KMHN_SYMLINK_SCOPE_CLEAR",
+      "PRIVATE_RUNTIME_FILES_PRESENT_OK",
+      "SCOPED_PREBOOTSTRAP_CHECKS_PASS",
+      "WEB_WIDE_SYMLINK_SCAN_NOT_ATTESTED",
+      "OTHER_VHOST_UPLOAD_MAPPINGS_NEED_OWNER_REVIEW",
+      "MCP_NOT_PUBLIC"
+    ],
+    "scoped_filesystem_checks": "PASS",
+    "owner_vhost_mapping_review": "PASS_OWNER_REPORT",
+    "full_ftp_symlink_scan": "NOT_CHECKED_PERMISSION_LIMIT",
+    "production_write_occurred": false,
+    "g2_limited_trial_eligible": true,
+    "scope_limit": "Does not certify inaccessible unrelated FTP sites or any completed MCP transport/host integration."
+  },
+  "g2_stage_evidence": {
+    "observed_at": "2026-10-19",
+    "source": "Owner Mac terminal: verified downloaded local ZIP and public index/.htaccess; created private stage via SSH; SCP upload and return readback of both; SHA256 and cmp PASS.",
+    "owner_terminal_markers": [
+      "G2_LOCAL_FILE_SHA_OK",
+      "G2_PRIVATE_STAGE_CREATED",
+      "G2_SCP_READBACK_SHA_OK",
+      "G2_SCP_READBACK_BYTES_OK",
+      "G2_ONLY_PRIVATE_STAGED"
+    ],
+    "files": {
+      "index.php": {
+        "bytes": 453,
+        "sha256": "603b6b77e87f96176e5762127384bfde95c56706db16aef53a3311119846a715"
+      },
+      ".htaccess": {
+        "bytes": 192,
+        "sha256": "c83a8917efadb548c16d37c8234f5ea9af9080891e5b60afac7b341516e1e80a"
+      }
+    },
+    "destination": "Non-Web private server subdirectory .kmhn-public-stage; public web/kmhn unchanged.",
+    "authentication": "SCP used preconfigured SSH session; post-quantum key exchange and RSA hostkeys proof warnings persisted.",
+    "g2_trial_install_was_run": false,
+    "http_mcp_tested": false
+  },
+  "g2_trial_attempt": {
+    "observed_at": "2026-10-19",
+    "source": "Owner authenticated SSH and Mac terminal logs",
+    "install_markers": [
+      "G2_PUBLIC_PRECHECK_PASS",
+      "G2_TWO_FILE_BOOTSTRAP_INSTALLED",
+      "MCP_HTTPS_E2E_NOT_CHECKED",
+      "CLIENT_ADAPTERS_NOT_RELEASED"
+    ],
+    "rollback_markers": [
+      "G2_PUBLIC_TRIAL_ROLLED_BACK",
+      "PRIVATE_RUNTIME_RETAINED",
+      "MCP_NOT_PUBLIC"
+    ],
+    "outcome": "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST",
+    "ordering": "Owner ran rollback BEFORE Mac MCP probe, so endpoint was not live for protocol verification.",
+    "mac_probe_error": "SSLCertVerificationError unable to get local issuer certificate",
+    "python_ca_issue": "Mac Python 3.12 default openssl_cafile did not exist; macOS /etc/ssl/cert.pem exists and supports verified Python TLS. Confirmed with SSL_CERT_FILE=/etc/ssl/cert.pem and HTTP 404.",
+    "mac_curl_tls": "CERTIFICATE_VALID_HTTP_404 after rollback",
+    "private_runtime_retained": true,
+    "live_mcp_verified": false,
+    "second_probe": {
+      "source": "Owner transcript from Lolipop remote SSH prompt",
+      "outcome": "SSL_CERT_VERIFY_FAILED_ON_REMOTE_SSH_PYTHON",
+      "host_probe_environment": "Lolipop spd163 SSH, not Mac",
+      "live_mcp_verified": false
+    },
+    "mac_current_check": {
+      "source": "Authorized connected Mac local terminal",
+      "curl_http_head": 404,
+      "curl_tls_verify_result": 0,
+      "python_system_ca_get_status": 404,
+      "mac_hostname": "withheld",
+      "interpretation": "Mac TLS validates successfully but endpoint HTTP 404 after confirmed G2 rollback; bootstrap absent inferred, not freshly confirmed through SSH"
+    }
+  },
+  "g3_live_mcp": {
+    "verified_on": "2026-10-19",
+    "owner_mac_markers": [
+      "G2_PUBLIC_PRECHECK_PASS",
+      "G2_TWO_FILE_BOOTSTRAP_INSTALLED",
+      "TLS_VALID",
+      "MCP_PASS",
+      "MCP_TRIAL_PASS",
+      "PUBLIC_BOOTSTRAP_REMAINS_INSTALLED"
+    ],
+    "independent_mac_validation": {
+      "tls_version": "TLSv1.3",
+      "issuer_valid": true,
+      "certificate_expiry": "2027-01-17",
+      "protocol_initialize": "PASS",
+      "tools_list": "PASS",
+      "tools_call_list_languages": "PASS",
+      "tools_count": 4,
+      "modules_count": 21,
+      "private_route_http_codes": {
+        "vendor/autoload.php": 404,
+        "runtime/config.php": 404,
+        "runtime/registry.json": 404,
+        "src/Registry.php": 404,
+        ".env": 403
+      },
+      "access_checks_note": "Exact tested routes only; other virtual hosts or all possible paths not proven safe."
+    },
+    "public_bootstrap_live": true,
+    "authentication_or_quotas_configured": false,
+    "client_adapters_tested": false,
+    "scope": "Bounded public HTTPS trial. No main merge/general plugin release authorization."
+  },
+  "chatgpt_connection": {
+    "source": "Owner's ChatGPT direct plugin run and independently invoked connected mcp__KUMIHAN_Universal tools",
+    "observed_at": "2026-10-19",
+    "direct_list_languages": "PASS",
+    "modules": 21,
+    "rules": 729,
+    "guidance_languages": [
+      "ja",
+      "zh-Hant",
+      "ar"
+    ],
+    "guidance_status": "guidance_only",
+    "review_languages": [
+      "ja",
+      "zh-Hant",
+      "ar"
+    ],
+    "review_status": "guidance-only",
+    "review_source_unchanged": true,
+    "actual_rendering_verified": false,
+    "other_clients_verified": false,
+    "issue": "Automatic route for Han+punctuation incorrectly labels kana and selects Japanese; explicit zh-Hant still resolves correctly.",
+    "remediation": "Fixed Unicode kana categorization from Script_Extensions to Script in Draft PR, with PHP smoke regressions; production still on earlier staged runtime until separately deployed.",
+    "production_fix_deployed": false
+  }
+}
