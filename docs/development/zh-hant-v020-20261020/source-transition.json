@@ -1,7 +1,7 @@
 {
   "authority": "KUMI-ZIHENG-V020-RESEARCH-WG-20261020-01",
   "base": "8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
-  "status": "PROPOSED_NOT_ACTIVE_SHARED_PATH_HOLD",
+  "status": "SOURCE_TRANSITION_INTEGRATED_NOT_RELEASED",
   "updates": {
     "protected": {
       "plugins/kumihan-ziheng/.claude-plugin/plugin.json": {
@@ -354,62 +354,62 @@
       "docs/install-ziheng-claude.en.html": {
         "snapshot_before": "53797c38ee1798afc5d99989086a427baf40f6ec10509fb8041c2a357c8273d6",
         "main_before": "fc7c9b2a662b569ad7dfea62563064ac3ac33563e74dea7b380ae709b083d6dd",
-        "after": "dbf8bee7285a077639ebd14f96ffa41e5a94ff93609db9bf9fc8e1921afcc1ee"
+        "after": "a3c722531613bd95d61c37327b9f94289f7f4bbd0a8ba5e42342926904d27aeb"
       },
       "docs/install-ziheng-claude.html": {
         "snapshot_before": "d3f8c2ae884adc25c1e909c6ee2f0b9114fe359648160c2fa08ea74737c154e0",
         "main_before": "f87e6575f4906bbabe7aefa62a8b87f9e91e6fb33bc1d8db258632d71ae5f6d4",
-        "after": "d40b3709d5957faa92dfc67c795466f93e7f69a17211d1b35e6c5d74aeeec1a5"
+        "after": "a7ed16cfe8a632d9296f0ac1ad7bb8f9dad1004b9fa20cc8f29dbc1c20a90c31"
       },
       "docs/install-ziheng-claude.ja.html": {
         "snapshot_before": "d3517d634a490f5e8632d83524ae709f600ee2168e22448b781796fbc3796c67",
         "main_before": "00f0ae3592759fb23bc95916781f59c1f7940cd2e00e97b0fddcb466e1a4572b",
-        "after": "c681db09980596503c6f48f7325073a1ccd39a1bbeb57c06fe423c2f67519e8a"
+        "after": "7a453b7d81172a9f9c6ddebca52657a28c4c5ec21138ace69b70ba387bf4f537"
       },
       "docs/install-ziheng-gemini.en.html": {
         "snapshot_before": "a30e6166b9d8e96bf7b81f07523d836015df39ce9c99c12faa6ec1f74456b2e9",
         "main_before": "9db031cf95eb4f62bcfe054f3323c26e832ba230164736e741a8b2d091c4719d",
-        "after": "9bdd0ebb90547d740bca6e4db62a46ab78ec884afdd992c0a77ff77ffc80bdcf"
+        "after": "6a928181ae9f60117bd8d77e3b7a600516ca801deb1875b292b98eea37b8e608"
       },
       "docs/install-ziheng-gemini.html": {
         "snapshot_before": "3d3aaca8007b4cc6afd4d818520081ca1ee0e6c51ba407e1a44db63fb6d6a906",
         "main_before": "7a8269d4250f15b32eebb9d6fe8b012475ee1cbc3936ff47b5c22072e5fc6bf0",
-        "after": "94aead7daff04d9e9519f59d753dec8b7c7346cd28ef4707a57e0d3b0c58e7f2"
+        "after": "dededd9f7c4e87869f5a3ffc3a6616fb93f1428748a8ad2d57bad9d0bab767e0"
       },
       "docs/install-ziheng-gemini.ja.html": {
         "snapshot_before": "4d83c90a862a4eec1b076921cddbe9aafcbe2c1ab3a2d1e3891004466fce6429",
         "main_before": "1432409dd3178007d61a9d077fbb6c098ff88562f6fb6cb3bdf7ab3b0dde248e",
-        "after": "b924a335eb6c24373842fa66bc4df3b03bccec15f2dc58efe515644b1e71195d"
+        "after": "6e4864cc93b7b142bdcd6239e0b80c29756cae57ef5311a7834d472eb2cb5976"
       },
       "docs/install-ziheng.en.html": {
         "snapshot_before": "4555e135b85a48296bb58dbae05b01072c47e3ed3018ce74ba57bed18402f120",
         "main_before": "f4b67002f5133b6e6c95791c3bb84826fcbce8029ecb756ed8b4df54951669af",
-        "after": "35cf4b73ee0ee7d89a0aa11d2ebad5e8d116b5aaec2b5610bf08cdd152d68714"
+        "after": "7ad535b47a8449d430051e5525965c971a9549920485f81ef3e7d2284d336c9e"
       },
       "docs/install-ziheng.html": {
         "snapshot_before": "de79a72429f1a443a12c094d49f357e15d9e6c890da3ad0e993ad6d7a505998f",
         "main_before": "8f5015d563c623441e6f414b1697ff6076d0093a6b185373e4c1e55ee9708d4f",
-        "after": "98b4f5f9f99de356d5c63d578b1a8dcd8183829cb7dd66249bfe6b9826305448"
+        "after": "4d57a251f8af32fc68e664c227618b222d4488795e82492c5ac6a81237b5fce4"
       },
       "docs/install-ziheng.ja.html": {
         "snapshot_before": "cc7137d5f493079ac1ee89b1b5b2ce6b28ed0f5cf70234283a519fe45e2cba74",
         "main_before": "84352bd9ce68533d5846979646defb88bba5681d382271f5b434b2b986b5c58d",
-        "after": "0fb28569c1689de4041775b4a9bc42925354b11e3957361501130dbcf76e23ab"
+        "after": "5e253dfd812828b4ca38bf459ddf8dfe7aaabcbf11aceb32f6d0394c9a157e9a"
       },
       "kumihan-zh-han.en.html": {
         "snapshot_before": "4c72e694d1aadab92df763b9c29fb8c304765866aec075b8b6502d118f68922a",
         "main_before": "3915ebeeee353161f53785e1b8cff6df4cc8ce26e5b429ae83692c3be80bfc23",
-        "after": "593ae4d16e6476fdc822fae83612108fb5fc05cb7d59006a7c96f463a426ca16"
+        "after": "054df7d122a275753efbfc35968ea0a761954b50d90013b95dffaba464ab482b"
       },
       "kumihan-zh-han.html": {
         "snapshot_before": "a0bc3ad800ce9dfbe40078874d92322a4d062312f0aca990d1cb866ef88c2aba",
         "main_before": "8589be12c49cf092f53b238e64ca469ac3338403a7e70b02e72e8be3025a3a96",
-        "after": "608aaedba85778a27a740958fd65deef396e5143ff307f363c6de8651d74bbc9"
+        "after": "4a679b03b6f6eb747bf20ccba2d0cb2089143d2d123074bdd2b5b6ede335acf4"
       },
       "kumihan-zh-han.ja.html": {
         "snapshot_before": "ba7ef83a23c23d4f40bf2289a242b0eb4aad35e6c2ec8835a8838be88340fb0c",
         "main_before": "59803408d0634066d22e5bc5fb98b4fc3a89d139c54b9cb999d83ffccfa83475",
-        "after": "86f0f1ddd468b14c48c6f09a05abf45c9cfee3b2d888b4096a063285be49fdd7"
+        "after": "3886e37f430a2b7adec941905e82fd5bd51a863b2e27d54f71fbec9936854eba"
       }
     }
   }

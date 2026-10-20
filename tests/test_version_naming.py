@@ -4,10 +4,12 @@ Historical releases are immutable and intentionally excluded from this rule.
 """
 import json
 import re
+import sys
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
 SEMVER = re.compile(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\Z")
 
 
@@ -36,6 +38,8 @@ class VersionNamingPolicyTests(unittest.TestCase):
             ver=version_of(product/"plugin.json")
             manifests=list(product.glob("downloads*/MANIFEST.json"))+list(product.glob("downloads/**/MANIFEST.json"))
             for m in manifests:
+                from ziheng_retention import is_retained_manifest
+                if is_retained_manifest(ROOT, m): continue  # exact validated Ziheng historical manifest only
                 with self.subTest(path=str(m.relative_to(ROOT))):
                     data=json.loads(m.read_text(encoding="utf-8"))
                     v=data.get("version")
@@ -58,16 +62,16 @@ class VersionNamingPolicyTests(unittest.TestCase):
 
     def test_ziheng_active_distribution_and_site_names(self):
         z=ROOT/"plugins/kumihan-ziheng"
-        self.assertEqual(version_of(z/"plugin.json"),"0.1.0")
+        self.assertEqual(version_of(z/"plugin.json"),"0.2.0")
         for dr in ("downloads","downloads Claude","downloads Gemini"):
             with self.subTest(platform=dr):
                 folder=z/dr
                 obj=json.loads((folder/"MANIFEST.json").read_text())
-                self.assertEqual(obj["version"], "0.1.0")
+                self.assertEqual(obj["version"], "0.2.0")
                 self.assertEqual(len(obj["archives"]), 5)
                 for a in obj["archives"]:
                     self.assertNotIn("preview",a["file"].lower())
-                    self.assertIn("0.1.0.zip",a["file"])
+                    self.assertIn("0.2.0.zip",a["file"])
                     self.assertTrue((folder/a["file"]).is_file())
         live_sources=[
             z/"README.md",z/"INSTALL.md",z/"UPDATES.md",
