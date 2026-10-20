@@ -25,3 +25,14 @@ PR本文と旧申請MDにはNOT DEPLOYED、ZIP未登録等の古い記述。targ
 ## 次アクション
 
 PlatformにアクセスできるCodex Appで現ドラフトの識別子・Findings・MCP annotations・登録ZIPの実体を読戻し。再認証・再登録は不要。W00全体はPARTIAL、公開判定NO-GO。
+
+## PR #116同期 Fresh Read（2026-10-20 JST、今回の限定Work）
+
+従前の本文は当時の観測として保持する。今回の正本は添付 `KUMIHAN_04_PR116_SYNC_WORKGROUPS_20261020.md`（KUMI-PR116-SYNC-CI-20261020-01）。公開申請用START_HEREのW00〜W06は実行しない。現行の結果とCI証拠は `WORK_RESULTS.md` のPR116同期欄を参照。
+
+- main: `8b647cc752d7a9bc3db48356fa0ab7b221bb66d6`。
+- current_upstream_pr101: `5d32ea64618e33a171705363c223fe43060c31e1`、Draft/OPEN、base main。
+- original_pr116: `4bd43f4047d4d77d3dd448eda05e82be9ea9a146`、Draft/OPEN、base feat/universal-mcp-php-runtime。同期前3 behind / 1 ahead、レビューthread 0、既存差分15パス。
+- 同期前PR116 CI: FAILURE [39304816216](https://github.com/landco-llc/kumihan/actions/runs/39304816216)。PR101のSUCCESS [39348755061](https://github.com/landco-llc/kumihan/actions/runs/39348755061)・[39348750061](https://github.com/landco-llc/kumihan/actions/runs/39348750061)はPR116新HEADの合格証拠ではない。
+- 過去のlive ja/kana誤判定と、旧PHP8.5/PCRE10.42 CIのko誤判定は別観測。live 21/749と過去chatgpt_connection 21/729を保持。live再試験はNOT_CHECKED、production_fix_deployed=false。
+- terms404・privacy内容不整合・Platform NOT_CHECKED_ACCESS・公開NO-GOは過去観測/継続ゲート。今回サイト・Platform・稼働MCPは再検査していない。
