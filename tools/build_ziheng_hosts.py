@@ -13,6 +13,7 @@ import re
 import sys
 import zipfile
 from pathlib import Path
+from ziheng_retention import retained_outputs
 
 ROOT = Path(__file__).resolve().parents[1]
 PRODUCT = "plugins/kumihan-ziheng"
@@ -131,6 +132,8 @@ def plan_outputs(root=ROOT):
             prefix = ""
             bundle_members["gemini-extension.json"] = outputs[f"{PRODUCT}/gemini-extension.json"]
             bundle_members["README.md"] = readme_gemini
+        logo = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+        bundle_members[prefix + logo] = (base / logo).read_bytes()
         bundle_members[prefix + "LICENSE"] = license_data
         bundle_members[prefix + "THIRD_PARTY_NOTICES.md"] = notices
         for name, files in assets.items():
@@ -207,6 +210,11 @@ def plan_outputs(root=ROOT):
         for path, data in downloads.items():
             outputs[f"{PRODUCT}/{folder}/{path}"] = data
 
+    retained = retained_outputs(root, ('downloads Claude', 'downloads Gemini'))
+    for path, data in retained.items():
+        if path in outputs and outputs[path] != data:
+            raise ValueError('Historical output collision: ' + path)
+        outputs[path] = data
     return outputs
 
 

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ziheng v2 raw review context",
+  "description": "Additive contract. Semantic conflicts checked by runtime/context.py; does not validate BCP47.",
+  "type": "object",
+  "properties": {
+    "content_locale": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "editorial_region": {
+      "enum": [
+        null,
+        "TW",
+        "HK",
+        "MO",
+        "unknown"
+      ]
+    },
+    "register": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "editorial_style": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "element_role": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    },
+    "expression_mode": {
+      "enum": [
+        null,
+        "reading",
+        "display",
+        "hybrid"
+      ]
+    },
+    "medium": {
+      "enum": [
+        null,
+        "web-editorial",
+        "web-marketing",
+        "web-ui",
+        "report-document",
+        "presentation",
+        "display-copy"
+      ]
+    },
+    "writing_mode": {
+      "enum": [
+        null,
+        "horizontal-tb",
+        "vertical-rl",
+        "vertical-lr"
+      ]
+    },
+    "source_policy": {
+      "enum": [
+        "fixed",
+        "propose-edits",
+        "approved-revision"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "audience_and_distance": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

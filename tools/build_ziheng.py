@@ -14,6 +14,7 @@ import sys
 import zipfile
 from pathlib import Path
 
+from ziheng_retention import retained_outputs
 from locale_resolver import COMMON, MEDIA, resolve_context, resolve_rules
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -77,11 +78,12 @@ def plan_outputs(root=ROOT):
     shared['sources/common-provenance.json'] = encode(dict(
         note='Generated from canonical Japanese shared policies; never independently edit shipped copies.',
         inputs=provenance))
-    for folder in ['references', 'schemas', 'locales']:
+    for folder in ['references', 'schemas', 'locales', 'fixtures']:
         for p in sorted((base/folder).rglob('*')):
             if p.is_file():
                 shared[p.relative_to(base).as_posix()] = p.read_bytes()
-    shared['scripts/checks.py'] = (base/'runtime/checks.py').read_bytes()
+    for script in ('checks', 'context', 'evidence'):
+        shared[f'scripts/{script}.py'] = (base/f'runtime/{script}.py').read_bytes()
     shared['LICENSE'] = (root/'LICENSE').read_bytes()
     shared['THIRD_PARTY_NOTICES.md'] = (base/'THIRD_PARTY_NOTICES.md').read_bytes()
     for medium in MEDIA:
@@ -129,6 +131,11 @@ def plan_outputs(root=ROOT):
     archives['SHA256SUMS.txt'] = ''.join(f'{digest(b)}  {p}\n' for p,b in sorted(archives.items())).encode()
     for p,b in archives.items():
         outputs[f'{PRODUCT}/downloads/{p}'] = b
+    retained = retained_outputs(root, ('downloads',))
+    for path, data in retained.items():
+        if path in outputs and outputs[path] != data:
+            raise ValueError('Historical output collision: ' + path)
+        outputs[path] = data
     return outputs
 
 

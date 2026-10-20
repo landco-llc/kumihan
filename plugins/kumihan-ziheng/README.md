@@ -62,3 +62,9 @@ Downloads: [Claude](https://github.com/landco-llc/kumihan/blob/main/plugins/kumi
 **KUMIHAN｜字衡** is the version-free display name used for `@` mentions. Versions stay in ZIP filenames (for example `kumihan-ziheng-0.1.0.zip`) and package metadata.
 
 **KUMIHAN｜字衡** 為不含版號的顯示名稱，避免影響 `@` 提及操作。版本寫在 ZIP 檔名（例如 `kumihan-ziheng-0.1.0.zip`）與套件資訊中。
+
+## v0.2.0 source candidate / 原始碼候選
+
+Four independent Skills now separate editorial region, register, element role, expression mode and source permissions. New context/evidence helpers are bounded, read-only contracts; 32 research fixtures are definitions, not 32 automated detectors or rendered passes. See the versioned candidate report in the repository under `docs/development/zh-hant-v020-20261020/`.
+
+四個技能補充編輯、表現與用途別尺度；保留原稿及原有介面。未驗證的地域字形、Office、AT與母語校閱分開記錄。三個host各有完整套件及四個獨立Skill，依各downloads目錄MANIFEST核對0.2.0候選；舊0.1.0仍保留。正式Release、Marketplace與稼働MCP尚未套用。

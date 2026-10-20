@@ -4,6 +4,9 @@ on:
     paths:
       - 'plugins/kumihan-ziheng/**'
       - 'tests/ziheng/**'
+      - 'tests/test_ziheng_v020_*.py'
+      - 'tools/ziheng_retention.py'
+      - 'tools/version_display.py'
       - 'kumihan-zh-han*.html'
       - 'docs/install-ziheng*.html'
       - 'docs/ziheng-routing.md'
@@ -48,7 +51,9 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install jsonschema==4.26.0
+      - run: python -m unittest discover -s tests -p 'test_ziheng_v020_*.py' -v
       - run: python -m unittest discover -s tests/ziheng -v
+      - run: python -m unittest discover -s tests -v
       - run: python tools/build_ziheng.py --check
       - run: python tools/build_ziheng_site.py --check
       - run: python tools/build_gateways.py --check

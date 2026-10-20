@@ -16,7 +16,7 @@ python3 tools/build_dist.py --check
 不會呼叫日本語 builder 或重新包裝日本語 ZIP。修改版號可用：
 
 ```sh
-python3 tools/build_ziheng.py --set-version 0.1.1-preview
+python3 tools/build_ziheng.py --set-version 0.2.0
 ```
 
 此命令只修改字衡正本 manifest，再產生字衡輸出。建置或更改版本都不是發布。
@@ -50,3 +50,11 @@ python3 tools/build_ziheng_hosts.py --check
 ```
 
 Claude 的 `.claude-plugin/plugin.json` 與 Gemini 的 `gemini-extension.json` 由字衡 Host builder 產生；原本的日本語 KUMIHAN 配布不會改變。生成的 `downloads Claude/`、`downloads Gemini/` 各含五個 ZIP、完整 manifest 及 SHA-256。
+
+## v0.2.0 候選更新
+
+新增地域／語體／角色／原稿權限的v2契約、證據sidecar、32個研究案例定義與16個作品決策卡。4個Skill保留獨立資料，靜態候選不代表描畫或母語驗收。原本v1介面與31個產品ID不變。
+
+更新時先備份原安裝，取得相同host的完整0.2.0候選，核對該host active MANIFEST及SHA256，整個目錄替換，不混搭版本。重載後用固定原稿小樣本確認。現有使用者不會自動更新；原0.1.0 ZIP及URL保留，history/0.1.0留存原manifest與checksum。正式Release與Marketplace未更新。
+
+`retained-distributions.json`只允許列明path與digest的歷史bytes。`--check`不寫入，會拒絕舊版損壞；未知stale不會因保留舊版而獲豁免。

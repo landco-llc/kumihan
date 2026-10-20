@@ -1,0 +1,81 @@
+{
+  "status": "PROPOSAL_ONLY_OWNER_NAMING_GATE",
+  "contract_activated": false,
+  "assets": [
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-openai-codex-plugin-0.2.0.zip",
+      "sha256": "0681ab65ee6dd778cedbac27bf54b0e5289d6df936da1bc08761b105175348e0"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads/skills/kumihan-ziheng-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-openai-codex-kumihan-ziheng-0.2.0.zip",
+      "sha256": "20b9847bbd91d840c9c426e5cad963a0d190b1c226845c0a95e1a2b1640404c1"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads/skills/kumihan-ziheng-documents-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-openai-codex-kumihan-ziheng-documents-0.2.0.zip",
+      "sha256": "f041368797aff001cfdd195a5f8cb134e11e506bbf98fc9614577a88804db3a6"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads/skills/kumihan-ziheng-review-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-openai-codex-kumihan-ziheng-review-0.2.0.zip",
+      "sha256": "55357f82e779915bd72d284c9747ff31033175d10721753ee079b1a423199569"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads/skills/kumihan-ziheng-web-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-openai-codex-kumihan-ziheng-web-0.2.0.zip",
+      "sha256": "b7e94acd8aca5aaeaad4c925ba5bef52296ec1ce1f062e2b3bda9286d8d835c1"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Claude/plugins/kumihan-ziheng-Claude-Code-plugin-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-claude-plugin-0.2.0.zip",
+      "sha256": "7fcbe1c52d58b100fa92a1769f150c941849d0179a36e09ec2b72d1de84622b0"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Claude/skills/kumihan-ziheng-Claude-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-claude-kumihan-ziheng-Claude-skill-0.2.0.zip",
+      "sha256": "20b9847bbd91d840c9c426e5cad963a0d190b1c226845c0a95e1a2b1640404c1"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Claude/skills/kumihan-ziheng-documents-Claude-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-claude-kumihan-ziheng-documents-Claude-skill-0.2.0.zip",
+      "sha256": "f041368797aff001cfdd195a5f8cb134e11e506bbf98fc9614577a88804db3a6"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Claude/skills/kumihan-ziheng-review-Claude-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-claude-kumihan-ziheng-review-Claude-skill-0.2.0.zip",
+      "sha256": "55357f82e779915bd72d284c9747ff31033175d10721753ee079b1a423199569"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Claude/skills/kumihan-ziheng-web-Claude-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-claude-kumihan-ziheng-web-Claude-skill-0.2.0.zip",
+      "sha256": "b7e94acd8aca5aaeaad4c925ba5bef52296ec1ce1f062e2b3bda9286d8d835c1"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-gemini-plugin-0.2.0.zip",
+      "sha256": "076ad2100a17b4a9fd25f8be608f01de06e4bf162b3fab8be8d166a24856c703"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-gemini-kumihan-ziheng-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "d1b584a2be6d316a819458fcd7080017063fdd27a90c4b9c7288840dfbf42fa3"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-gemini-kumihan-ziheng-documents-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "ad79d3408dceffdcba2dc90c425d68d4050a30478328d3f78c4628fa5152eacd"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-gemini-kumihan-ziheng-review-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "6c81c12d9fc891c03aa35f608c9c53061a83438445b267207c792864fec61357"
+    },
+    {
+      "source_path": "plugins/kumihan-ziheng/downloads Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.2.0.zip",
+      "flat_name": "kumihan-ziheng-gemini-kumihan-ziheng-web-Gemini-Apps-skill-0.2.0.zip",
+      "sha256": "0279dafa578c615d56607bb9c673fe5ecc0f422b0b4d5eda1c7262434dafded0"
+    }
+  ]
+}

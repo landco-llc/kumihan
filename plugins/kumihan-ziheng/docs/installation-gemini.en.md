@@ -45,3 +45,8 @@ Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve t
 - [View source](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng)
 
 - [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng/downloads%20Gemini/SHA256SUMS.txt)
+
+
+Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
+
+Current v0.2.0 full bundle SHA-256: `076ad2100a17b4a9fd25f8be608f01de06e4bf162b3fab8be8d166a24856c703`. The older checksum above applies only to its explicitly named v0.1.0 archive.

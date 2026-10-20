@@ -45,3 +45,8 @@ claude --plugin-dir "/absolute/path/kumihan-ziheng"
 - [查看原始碼](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng)
 
 - [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng/downloads%20Claude/SHA256SUMS.txt)
+
+
+Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
+
+Current v0.2.0 full bundle SHA-256: `7fcbe1c52d58b100fa92a1769f150c941849d0179a36e09ec2b72d1de84622b0`. The older checksum above applies only to its explicitly named v0.1.0 archive.

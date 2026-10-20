@@ -1,7 +1,7 @@
 {
   "format": "kumihan-ziheng-standalone-1",
   "skill": "kumihan-ziheng-web",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "path_base": "skill-folder-root",
   "self_digest": "Inventory excludes itself; distribution checksums cover the complete archive.",
   "files": [
@@ -12,13 +12,28 @@
     },
     {
       "path": "SKILL.md",
-      "bytes": 1075,
-      "sha256": "09800164091154c4d9795b87ebe54482ecaf8bc0bbccd8088e8132a749c38898"
+      "bytes": 2665,
+      "sha256": "b7fedcb7e6ec07c6c69fba7d191eb5ca72cc1f32ee5a0a96c7f87e5ba69c6e18"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
       "bytes": 874,
       "sha256": "34d67c04034f8fe2ea5793a4bb8d830af452ac4cb9fd80cb56d4687b385ed4a0"
+    },
+    {
+      "path": "fixtures/research-v020/cases.json",
+      "bytes": 43305,
+      "sha256": "70ca57ec3cc9c87eb2accc2bb65c8709f8cafc1cee7ce2c76879e73a075c2225"
+    },
+    {
+      "path": "fixtures/research-v020/examples/review.html",
+      "bytes": 2520,
+      "sha256": "cfda6287aad9d03281f9e4d0a2f4979e81ccc7cd20bdccf2ec466ae5a1b2ca25"
+    },
+    {
+      "path": "fixtures/research-v020/examples/segments.json",
+      "bytes": 436,
+      "sha256": "ac3cbba54fb49ad8584c25ce5c7228119aac42dc47c049fb37fdcd0f060ba94c"
     },
     {
       "path": "locales/zh-Hant-HK.json",
@@ -62,13 +77,28 @@
     },
     {
       "path": "references/documents.md",
-      "bytes": 1023,
-      "sha256": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047"
+      "bytes": 1229,
+      "sha256": "a72592fd2fd7b9512eb3656eeab55103982712b9e1478b120f58fac64dc0e4e5"
+    },
+    {
+      "path": "references/editorial-registers.md",
+      "bytes": 4087,
+      "sha256": "83023e904716e1651b91accb7105f5436577edd19818dbb89d5cd30dd5b27f05"
+    },
+    {
+      "path": "references/expression-and-scale.md",
+      "bytes": 3893,
+      "sha256": "0ca34a427505e5ff3e18cfd864c7c6e9b008f4a5b13a318af906c57657db57a8"
     },
     {
       "path": "references/regions.md",
-      "bytes": 1139,
-      "sha256": "b4ac6378feea7a49055915ba61fdd9ea7434fbb875f4965e74817d26006b507e"
+      "bytes": 1424,
+      "sha256": "da0351534bcddd91068e658b6a19e790cc7e2358657815a1e4faad1f98463f36"
+    },
+    {
+      "path": "references/research-20261020.md",
+      "bytes": 5667,
+      "sha256": "f4687450af711e1fd70c590c9a0c624ea863893e06f28b27a52d3b0f85592502"
     },
     {
       "path": "references/review.md",
@@ -76,19 +106,29 @@
       "sha256": "391378ab34a3a840ccaa2f9f547046f0f3007d702599a4265e79f1148f11e463"
     },
     {
+      "path": "references/source-crosswalk.json",
+      "bytes": 375,
+      "sha256": "b03c2fa80ab2b181d519a2cedf9cf817a8de268e452f4b75b6b60a29f255a93e"
+    },
+    {
+      "path": "references/verification-matrix.md",
+      "bytes": 3827,
+      "sha256": "7e13a130aa6746bf5ff8fabbffce2d8aca16690ba50de5e1058c5b6887d5d821"
+    },
+    {
       "path": "references/web.md",
-      "bytes": 1548,
-      "sha256": "56d19f0de63dd4ea8412c90bffb8c08d7c457857bcabb8ae643e29eefbef38a7"
+      "bytes": 1638,
+      "sha256": "64e055d31eb36a4619c5eca40c0f9980b0f9b92600a5f0b048342cf31339a913"
     },
     {
       "path": "references/workflow.md",
-      "bytes": 1556,
-      "sha256": "d2facf3b04c026a211fc03fb29ed4bfb0419e9ba43f256f53d7bfe4b8b730d3f"
+      "bytes": 2029,
+      "sha256": "061b8e3014e1fb85b4919f224dc4d774a2d1df76e73c95e1fdc502bc021eab17"
     },
     {
       "path": "rules/catalog.json",
-      "bytes": 57170,
-      "sha256": "9a53d4b8701a6de6555d59b214bb75682fa13e15ec11d1c6508d9ac12d1cd948"
+      "bytes": 57685,
+      "sha256": "4676da92f47d2a76a7808a7554dafce2a6859a4034b5f2c81bf93d12fa4e5c55"
     },
     {
       "path": "schemas/context.schema.json",
@@ -106,14 +146,34 @@
       "sha256": "7a2e169d7d30387b634ca91892f8e09956d3ee153e9022bceed5dd7a1ef5511a"
     },
     {
+      "path": "schemas/review-context-v2.schema.json",
+      "bytes": 1688,
+      "sha256": "f4709540317141fd3fae4d51c1f509698193b61b782f68fa62f3dc032ad2da42"
+    },
+    {
+      "path": "schemas/review-evidence-v2.schema.json",
+      "bytes": 2294,
+      "sha256": "867b7e4f31aeca385f79a5191d815865f6b0a1f99707aaa572c23e86e6a3b506"
+    },
+    {
       "path": "schemas/rule.schema.json",
       "bytes": 6117,
       "sha256": "d6ddfc0d188748ec726407485963503095745dac5d035f8ad5807f755c4c678b"
     },
     {
       "path": "scripts/checks.py",
-      "bytes": 2532,
-      "sha256": "37e7ff969fbdb0c1d6564f4dcfab0077341aa2c3b1ee5fb8c4f05206909876e9"
+      "bytes": 4549,
+      "sha256": "9fa0d732fe8645aa09d35de3fcb531b7889fd0116d56345e851a134a4a2d616d"
+    },
+    {
+      "path": "scripts/context.py",
+      "bytes": 5728,
+      "sha256": "7c4afcb8d9556e1d400844581e131eb872d4e6711fdf4e2103364c4f8b0558cc"
+    },
+    {
+      "path": "scripts/evidence.py",
+      "bytes": 4755,
+      "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
     },
     {
       "path": "sources/common-provenance.json",
@@ -122,8 +182,8 @@
     },
     {
       "path": "sources/public-sources.json",
-      "bytes": 14816,
-      "sha256": "eb91a1aff65edc6922cc1edbd769a3bb1d8ada7d7007e6247d30d60bfea108fd"
+      "bytes": 54521,
+      "sha256": "9fb5d6085096652b605dee1db9bd916517a681d3b425e86e93290d0a2e9775b8"
     }
   ]
 }

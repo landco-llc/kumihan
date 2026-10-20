@@ -105,7 +105,7 @@
   ],
   "install_extra": "也可以直接<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>取得 ZIP</a>，或在 <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> 檢視原始碼。",
   "status_h": "清楚區分已驗證與尚未驗證的範圍",
-  "status_body": "字衡包含 15 條地區規則、16 條共通政策與四個技能。僅有部分靜態子功能可以用程式檢查；實際瀏覽器排版、Word／PDF 與各主機行為不可一概宣稱通過。",
+  "status_body": "字衡包含 15 條地區規則、16 條共通政策與四個技能。僅有部分靜態子功能可以用程式檢查；實際瀏覽器排版、Word／PDF 與各主機行為不可一概宣稱通過。 v0.2.0 原始碼候選新增語體、角色、原稿權限與證據契約。32個案例是驗證定義；尚未完成的描畫、操作及當地校閱分別記錄。共通版本顯示待整合，舊版下載仍保留。",
   "cta_h2": "用更慎重的方式對待每一行文字",
   "cta_body": "開放原始碼、可獨立導入，讓文字組版的判斷能夠檢查、說明與改進。",
   "cta_button": "前往 GitHub",
@@ -235,7 +235,7 @@
   "install_extra": "You can also <a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>download the ZIP</a> or view the source on <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
   "status_title": "VERSION / v0.1.0",
   "status_h": "Clear verification boundaries",
-  "status_body": "ZiHeng includes 15 regional rules, 16 shared policies and four skills. Only limited static checks are automated; browser layout, Office/PDF rendering and host behavior are not universally verified.",
+  "status_body": "ZiHeng includes 15 regional rules, 16 shared policies and four skills. Only limited static checks are automated; browser layout, Office/PDF rendering and host behavior are not universally verified. The v0.2.0 source candidate separates register, element role, source permissions and evidence. Its 32 case definitions are separate from rendered, interaction and native-language acceptance. Shared version display awaits integration; older downloads remain available.",
   "status_link": "Download latest ↗",
   "cta_h2": [
    "Another way to design",
@@ -370,7 +370,7 @@
   "install_extra": "<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>ZIPを入手</a>、または <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> でソースを確認できます。",
   "status_title": "VERSION / v0.1.0",
   "status_h": "できることと未検証の範囲を明確に",
-  "status_body": "繁体中国語固有の15規則と共通16ポリシー、4スキルを収録。一部の静的チェック以外はガイドラインであり、ブラウザやOffice/PDFの描画、ホストでの実動作を一律に保証しません。",
+  "status_body": "繁体中国語固有の15規則と共通16ポリシー、4スキルを収録。一部の静的チェック以外はガイドラインであり、ブラウザやOffice/PDFの描画、ホストでの実動作を一律に保証しません。 v0.2.0ソース候補では文体・役割・原稿権限と証拠契約を分離しました。32項目の定義と実描画・操作・母語校閲の結果は別に記録します。共通版表示は統合待ちで、旧版のダウンロードを保持しています。",
   "status_link": "最新版のダウンロード ↗",
   "cta_h2": [
    "繁体中国語のデザインに",

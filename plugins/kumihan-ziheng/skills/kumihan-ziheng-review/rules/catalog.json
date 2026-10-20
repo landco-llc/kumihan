@@ -783,7 +783,7 @@
   },
   {
     "id": "ZH-HANT-001",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "明示語言、字體系統與地區",
     "requirement_en": "Resolve only explicit zh-Hant-TW or zh-Hant-HK plus a supported medium; never infer region from Han characters.",
     "kind": "project-policy",
@@ -833,11 +833,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F01",
+      "F32"
+    ]
   },
   {
     "id": "ZH-HANT-002",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "保留地區字形與異體字",
     "requirement_en": "Keep supplied character identities and variation sequences. Inspect glyphs with the actual regional language tag and available licensed font; do not replace 臺/台 or 裏/裡 automatically.",
     "kind": "project-policy",
@@ -887,11 +890,15 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F14",
+      "F19",
+      "F20"
+    ]
   },
   {
     "id": "ZH-HANT-003",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "臺灣引號體例",
     "requirement_en": "For newly authored Taiwan prose, recommend 「」 outside and 『』 inside when no house style is specified. Original quotes, proper names and agreed alternate styles stay unchanged.",
     "kind": "project-policy",
@@ -942,11 +949,13 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F06"
+    ]
   },
   {
     "id": "ZH-HANT-004",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "香港引號體例另行確認",
     "requirement_en": "For Hong Kong, record the publisher or document-specific quote style. Do not import Taiwan educational conventions as a universal Hong Kong rule; preserve original corner or curly quotation until a style is chosen.",
     "kind": "project-policy",
@@ -995,11 +1004,13 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F07"
+    ]
   },
   {
     "id": "ZH-HANT-005",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "區分中文正文與受保護片段",
     "requirement_en": "Consider fullwidth punctuation for newly authored Chinese prose. ASCII marks in names, URLs, code, English quotations and protected spans are not a prose-punctuation fault.",
     "kind": "project-policy",
@@ -1049,11 +1060,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F05",
+      "F08"
+    ]
   },
   {
     "id": "ZH-HANT-006",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "實際行首行尾檢視",
     "requirement_en": "Inspect observed lines for closing punctuation at a line start and opening brackets at a line end using the chosen editorial strictness. DOM punctuation alone is not a rendered violation.",
     "kind": "standard-reference",
@@ -1103,11 +1117,17 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F09",
+      "F10",
+      "F11",
+      "F12",
+      "F17"
+    ]
   },
   {
     "id": "ZH-HANT-007",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "標點壓縮不是必要條件",
     "requirement_en": "Taiwan publications often retain full punctuation width; Hong Kong publications often use squeezing. Choose and record the project treatment, inspect available shaping support, and keep exceptions; neither region mandates a universal setting.",
     "kind": "project-policy",
@@ -1157,11 +1177,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F15",
+      "F16"
+    ]
   },
   {
     "id": "ZH-HANT-008",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "中西文與數字混排",
     "requirement_en": "Preserve original Latin case, digits, currencies, units and fullwidth forms. Adjust layout only within permission; do not NFKC-normalize to make mixed text fit.",
     "kind": "project-policy",
@@ -1211,11 +1234,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F12",
+      "F18"
+    ]
   },
   {
     "id": "ZH-HANT-009",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "網址與程式碼的換行",
     "requirement_en": "Keep URL targets and displayed source bytes. Try scoped overflow-wrap on long tokens and test copy/paste and navigation; avoid global break-all or generic nowrap.",
     "kind": "project-policy",
@@ -1265,11 +1291,13 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F13"
+    ]
   },
   {
     "id": "ZH-HANT-010",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "窄螢幕與文字放大",
     "requirement_en": "Check 320 CSS px reflow and actual 200% text enlargement separately; retain labels, notes and controls. Do not hide lost content with clipping.",
     "kind": "project-policy",
@@ -1314,11 +1342,16 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F25",
+      "F26",
+      "F27",
+      "F28"
+    ]
   },
   {
     "id": "ZH-HANT-011",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "不插入無意義不可見字元",
     "requirement_en": "Do not add spaces, ZWSP, ZWJ or joiners to force a pleasing line. Preserve meaningful supplied combining marks and emoji/variation sequences.",
     "kind": "project-policy",
@@ -1368,11 +1401,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F18",
+      "F20"
+    ]
   },
   {
     "id": "ZH-HANT-012",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "直排與標點方向",
     "requirement_en": "Use writing-mode and actual font/renderer support for vertical composition. Do not replace ordinary punctuation with presentation forms solely to rotate it.",
     "kind": "project-policy",
@@ -1422,11 +1458,16 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F14",
+      "F17",
+      "F21",
+      "F22"
+    ]
   },
   {
     "id": "ZH-HANT-013",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "注音與行間注",
     "requirement_en": "Keep Bopomofo and ruby text with its base and tone marks. Plan the annotation layout and inspect clipping and reading order.",
     "kind": "project-policy",
@@ -1476,11 +1517,14 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F23",
+      "F24"
+    ]
   },
   {
     "id": "ZH-HANT-014",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "文件與匯出分開檢驗",
     "requirement_en": "Check each page/slide for overflow, headings, captions and notes; compare extractable text before/after export and inspect the exported PDF in its actual reader.",
     "kind": "project-policy",
@@ -1528,11 +1572,13 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F30"
+    ]
   },
   {
     "id": "ZH-HANT-015",
-    "revision": 1,
+    "revision": 2,
     "title_zh_hant": "保護字元序列與原稿",
     "requirement_en": "Preserve original source sequences, names, quotation, numbers and punctuation without normalization or traditional/simplified conversion.",
     "kind": "project-policy",
@@ -1580,6 +1626,10 @@
       "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
       "approval_required": true
     },
-    "case_ids": []
+    "case_ids": [
+      "F03",
+      "F04",
+      "F20"
+    ]
   }
 ]
