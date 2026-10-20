@@ -1,0 +1,26 @@
+test_check_mode_is_nonwriting (test_audit.AuditTests.test_check_mode_is_nonwriting) ... ok
+test_comma_delimited_robots_none_is_not_indexable (test_audit.AuditTests.test_comma_delimited_robots_none_is_not_indexable) ... ok
+test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected (test_audit.AuditTests.test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected) ... ok
+test_new_directory_is_discovered_and_sources_excluded (test_audit.AuditTests.test_new_directory_is_discovered_and_sources_excluded) ... FAIL
+test_new_language_is_discovered_and_missing_metadata_fails (test_audit.AuditTests.test_new_language_is_discovered_and_missing_metadata_fails) ... ok
+test_sitemap_sorted_noindex_and_external_excluded_without_lastmod (test_audit.AuditTests.test_sitemap_sorted_noindex_and_external_excluded_without_lastmod) ... ok
+test_wrong_canonical_and_nonreciprocal_alternates_rejected (test_audit.AuditTests.test_wrong_canonical_and_nonreciprocal_alternates_rejected) ... ok
+
+======================================================================
+FAIL: test_new_directory_is_discovered_and_sources_excluded (test_audit.AuditTests.test_new_directory_is_discovered_and_sources_excluded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/seo/test_audit.py", line 41, in test_new_directory_is_discovered_and_sources_excluded
+    self.assertEqual([],audit(root,check_sitemap=False))
+AssertionError: Lists differ: [] != ['docs/development/qa/evidence/prototype.h[1530 chars]e: ']
+
+Second list contains 18 additional elements.
+First extra element 0:
+'docs/development/qa/evidence/prototype.html: exactly one canonical is required'
+
+Diff is 1732 characters long. Set self.maxDiff to None to see it.
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.136s
+
+FAILED (failures=1)

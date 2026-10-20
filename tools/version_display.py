@@ -54,13 +54,16 @@ def panel(f, lang, slot='current'):
     number = f'<bdi dir="ltr">v{x(current)}</bdi>'
     if status == 'published': number = f'<a href="{x(f["release_url"])}">{number}</a>'
     text = f'<strong>{x(label)} {number}</strong>'
+    # Keep Japanese publication/source labels separate in raw/no-CSS and
+    # accessibility text too. Scope this QA correction to the JA candidate.
+    separator = ' ' if f.get('edition') == 'ja' else ''
     if status == 'published':
         if slot != 'hero':
-            text += f'<span>{x(w["published"])} · {x(w["date"])} <time datetime="{x(f["published_at"])}"><bdi dir="ltr">{x(f["published_at"])}</bdi></time></span>'
-        if f['source_version'] != current: text += f'<span>{x(w["source"])} v{x(f["source_version"])}</span>'
+            text += separator + f'<span>{x(w["published"])} · {x(w["date"])} <time datetime="{x(f["published_at"])}"><bdi dir="ltr">{x(f["published_at"])}</bdi></time></span>'
+        if f['source_version'] != current: text += separator + f'<span>{x(w["source"])} v{x(f["source_version"])}</span>'
     else:
         label = w['unpublished'] if status == 'unpublished' else w['unverified']
-        text += f'<span>{x(label)} — {x(w["unavailable"])}</span>'
+        text += separator + f'<span>{x(label)} — {x(w["unavailable"])}</span>'
     return f'<!-- edition-version:{slot} --><div {attrs}>{text}</div><!-- /edition-version:{slot} -->'
 
 

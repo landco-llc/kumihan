@@ -1,0 +1,34 @@
+test_bengali_body_is_exactly_preserved (test_adapters.AdapterTests.test_bengali_body_is_exactly_preserved) ... ok
+test_default_jekyll_language_is_passed_to_share_renderer (test_adapters.AdapterTests.test_default_jekyll_language_is_passed_to_share_renderer) ... ok
+test_head_branches_and_unknown_syntax_fail_explicitly (test_adapters.AdapterTests.test_head_branches_and_unknown_syntax_fail_explicitly) ... ok
+test_jekyll_missing_share_data_fails (test_adapters.AdapterTests.test_jekyll_missing_share_data_fails) ... ok
+test_layout_does_not_duplicate_generated_alternates (test_adapters.AdapterTests.test_layout_does_not_duplicate_generated_alternates) ... ok
+test_new_jekyll_page_uses_frontmatter_without_page_registry (test_adapters.AdapterTests.test_new_jekyll_page_uses_frontmatter_without_page_registry) ... ok
+test_check_mode_is_nonwriting (test_audit.AuditTests.test_check_mode_is_nonwriting) ... ok
+test_comma_delimited_robots_none_is_not_indexable (test_audit.AuditTests.test_comma_delimited_robots_none_is_not_indexable) ... ok
+test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected (test_audit.AuditTests.test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected) ... ok
+test_new_directory_is_discovered_and_sources_excluded (test_audit.AuditTests.test_new_directory_is_discovered_and_sources_excluded) ... ok
+test_new_language_is_discovered_and_missing_metadata_fails (test_audit.AuditTests.test_new_language_is_discovered_and_missing_metadata_fails) ... ok
+test_sitemap_sorted_noindex_and_external_excluded_without_lastmod (test_audit.AuditTests.test_sitemap_sorted_noindex_and_external_excluded_without_lastmod) ... ok
+test_wrong_canonical_and_nonreciprocal_alternates_rejected (test_audit.AuditTests.test_wrong_canonical_and_nonreciprocal_alternates_rejected) ... ok
+test_idempotent_and_preserves_body (test_metadata.MetadataTests.test_idempotent_and_preserves_body) ... ok
+test_registry_groups_are_separate (test_metadata.MetadataTests.test_registry_groups_are_separate) ... ok
+test_root_canonical (test_metadata.MetadataTests.test_root_canonical) ... ok
+test_safe_json_and_actual_image (test_metadata.MetadataTests.test_safe_json_and_actual_image) ... ok
+test_unknown_pages_do_not_guess_translations (test_metadata.MetadataTests.test_unknown_pages_do_not_guess_translations) ... ok
+test_privacy_builder_is_checked_by_common_pipeline (test_reconciliation.PrivacyIntegrationTests.test_privacy_builder_is_checked_by_common_pipeline) ... ok
+test_privacy_pages_use_shared_seo_and_disjoint_translations (test_reconciliation.PrivacyIntegrationTests.test_privacy_pages_use_shared_seo_and_disjoint_translations) ... ok
+test_allowlisted_alias_without_description (test_reconciliation.ReconciliationTests.test_allowlisted_alias_without_description) ... ok
+test_english_root_and_new_gateway_languages (test_reconciliation.ReconciliationTests.test_english_root_and_new_gateway_languages) ... ok
+test_jekyll_data_covers_all_registered_languages (test_reconciliation.ReconciliationTests.test_jekyll_data_covers_all_registered_languages) ... ok
+test_missing_description_is_not_an_alias (test_reconciliation.ReconciliationTests.test_missing_description_is_not_an_alias) ... ok
+test_shared_card_survives_mixed_quotes_and_repeated_enrichment (test_reconciliation.ReconciliationTests.test_shared_card_survives_mixed_quotes_and_repeated_enrichment) ... ok
+test_unknown_share_language_fails (test_reconciliation.ReconciliationTests.test_unknown_share_language_fails) ... ok
+test_exact_verification_file (test_search_console_verification.SearchConsoleVerification.test_exact_verification_file) ... ok
+test_home_tag_is_generated_only_in_english_head (test_search_console_verification.SearchConsoleVerification.test_home_tag_is_generated_only_in_english_head) ... ok
+test_source_page_matches_generator (test_search_console_verification.SearchConsoleVerification.test_source_page_matches_generator) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.760s
+
+OK

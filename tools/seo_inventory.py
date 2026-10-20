@@ -72,7 +72,7 @@ def public_paths(root):
                   if not any(part.startswith(('.', '_')) for part in p.relative_to(root).parts)
                   and p.relative_to(root).parts[0] not in excluded
                   and not p.relative_to(root).parts[0].startswith('downloads ')
-                  and not p.relative_to(root).as_posix().startswith(('docs/specs/','docs/seo/')))
+                  and not p.relative_to(root).as_posix().startswith(('docs/specs/','docs/seo/','docs/development/')))
 
 
 def pages(root=ROOT):

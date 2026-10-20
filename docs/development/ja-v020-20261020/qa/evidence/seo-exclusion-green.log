@@ -1,0 +1,12 @@
+test_check_mode_is_nonwriting (test_audit.AuditTests.test_check_mode_is_nonwriting) ... ok
+test_comma_delimited_robots_none_is_not_indexable (test_audit.AuditTests.test_comma_delimited_robots_none_is_not_indexable) ... ok
+test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected (test_audit.AuditTests.test_duplicate_meta_jsonld_mismatch_and_sitemap_drift_rejected) ... ok
+test_new_directory_is_discovered_and_sources_excluded (test_audit.AuditTests.test_new_directory_is_discovered_and_sources_excluded) ... ok
+test_new_language_is_discovered_and_missing_metadata_fails (test_audit.AuditTests.test_new_language_is_discovered_and_missing_metadata_fails) ... ok
+test_sitemap_sorted_noindex_and_external_excluded_without_lastmod (test_audit.AuditTests.test_sitemap_sorted_noindex_and_external_excluded_without_lastmod) ... ok
+test_wrong_canonical_and_nonreciprocal_alternates_rejected (test_audit.AuditTests.test_wrong_canonical_and_nonreciprocal_alternates_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.128s
+
+OK

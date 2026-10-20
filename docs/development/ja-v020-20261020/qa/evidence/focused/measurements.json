@@ -1,0 +1,61 @@
+{
+  "scroll": {
+    "width": 690,
+    "scrollWidth": 690,
+    "height": 300,
+    "scrollHeight": 813
+  },
+  "normalWidth": 240,
+  "paltWidth": 235.359375,
+  "bodyFeature": "normal",
+  "source": "文字と余白の時間／道具の使い方を本文で説明します。",
+  "quote": "明日、こっちは17時で閉めます。",
+  "afterScrollTop": 350,
+  "browser": "154.0.8037.57",
+  "fonts": {
+    "#normal": {
+      "fonts": [
+        {
+          "familyName": "Noto Sans CJK JP",
+          "postScriptName": "NotoSansCJKjp-Regular",
+          "isCustomFont": false,
+          "glyphCount": 8
+        }
+      ]
+    },
+    "#palt": {
+      "fonts": [
+        {
+          "familyName": "Noto Sans CJK JP",
+          "postScriptName": "NotoSansCJKjp-Regular",
+          "isCustomFont": false,
+          "glyphCount": 8
+        }
+      ]
+    },
+    "#body": {
+      "fonts": [
+        {
+          "familyName": "Noto Sans CJK JP",
+          "postScriptName": "NotoSansCJKjp-Regular",
+          "isCustomFont": false,
+          "glyphCount": 16
+        }
+      ]
+    }
+  },
+  "fontFile": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
+  "fontSha256": "b76b0433203017ca80401b2ee0dd69350349871c4b19d504c34dbdd80541690a",
+  "gposFeatures": [
+    "halt",
+    "kern",
+    "mark",
+    "palt",
+    "vert",
+    "vhal",
+    "vkrn",
+    "vpal"
+  ],
+  "nativeTextZoom": "not-checked",
+  "physicalReading": "not-checked"
+}

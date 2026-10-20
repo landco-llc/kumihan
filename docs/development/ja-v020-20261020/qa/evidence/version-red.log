@@ -1,0 +1,102 @@
+test_shared_renderer_replaces_downloads_and_marks_unpublished (test_edition_versions.DisplayContract.test_shared_renderer_replaces_downloads_and_marks_unpublished) ... ok
+test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) ... 
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='hero') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='install') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='current') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='hero') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='install') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='current') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='hero') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='install') ... FAIL
+  test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='current') ... FAIL
+test_unlisted_mutations_still_fail (test_edition_versions.PreservationGate.test_unlisted_mutations_still_fail) ... ok
+test_complete_promotion_and_idempotence (test_edition_versions.ReleaseAdmission.test_complete_promotion_and_idempotence) ... ok
+test_failure_keeps_snapshot_unchanged (test_edition_versions.ReleaseAdmission.test_failure_keeps_snapshot_unchanged) ... ok
+test_ignores_unrelated_and_draft_events (test_edition_versions.ReleaseAdmission.test_ignores_unrelated_and_draft_events) ... ok
+test_old_formal_release_does_not_downgrade (test_edition_versions.ReleaseAdmission.test_old_formal_release_does_not_downgrade) ... ok
+test_rejects_bytes_size_manifest_and_source_mismatch (test_edition_versions.ReleaseAdmission.test_rejects_bytes_size_manifest_and_source_mismatch) ... ok
+test_rejects_draft_prerelease_unrelated_and_partial (test_edition_versions.ReleaseAdmission.test_rejects_draft_prerelease_unrelated_and_partial) ... ok
+test_rejects_missing_or_corrupt_checksums (test_edition_versions.ReleaseAdmission.test_rejects_missing_or_corrupt_checksums) ... ok
+test_same_count_wrong_package_role_is_rejected (test_edition_versions.ReleaseAdmission.test_same_count_wrong_package_role_is_rejected) ... ok
+test_unadopted_flat_contract_does_not_promote (test_edition_versions.ReleaseAdmission.test_unadopted_flat_contract_does_not_promote) ... ok
+test_withdrawn_current_release_fails_without_mutation (test_edition_versions.ReleaseAdmission.test_withdrawn_current_release_fails_without_mutation) ... ok
+test_all_generated_surfaces_and_idempotence (test_edition_versions.SnapshotAndCoverage.test_all_generated_surfaces_and_idempotence) ... ok
+test_catalogue_source_and_release_integrity (test_edition_versions.SnapshotAndCoverage.test_catalogue_source_and_release_integrity) ... ok
+test_sync_failure_never_replaces_facts_file (test_edition_versions.SnapshotAndCoverage.test_sync_failure_never_replaces_facts_file) ... ok
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='hero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8ソース' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '現行公開版 v0.1.8ソース v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='install')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8正式公開' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '現行公開版 v0.1.8正式公開 · 公開日時 2026-10-19T12:51:29Zソース v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='ja', slot='current')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8正式公開' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '現行公開版 v0.1.8正式公開 · 公開日時 2026-10-19T12:51:29Zソース v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='hero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8Source' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in 'Current Version v0.1.8Source v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='install')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8Published' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in 'Current Version v0.1.8Published · Published at 2026-10-19T12:51:29ZSource v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='en', slot='current')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8Published' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in 'Current Version v0.1.8Published · Published at 2026-10-19T12:51:29ZSource v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='hero')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8原始碼' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '目前公開版本 v0.1.8原始碼 v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='install')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8正式公開' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '目前公開版本 v0.1.8正式公開 · 公開時間 2026-10-19T12:51:29Z原始碼 v0.2.0'
+
+======================================================================
+FAIL: test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) (lang='zh-Hant-TW', slot='current')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/kumihan/tests/test_edition_versions.py", line 221, in test_raw_text_separates_published_and_source_without_css
+    self.assertNotRegex(text, r'v0\.1\.8(?:Source|ソース|原始碼|Published|正式公開)')
+AssertionError: Regex matched: 'v0.1.8正式公開' matches 'v0\\.1\\.8(?:Source|ソース|原始碼|Published|正式公開)' in '目前公開版本 v0.1.8正式公開 · 公開時間 2026-10-19T12:51:29Z原始碼 v0.2.0'
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.304s
+
+FAILED (failures=9)

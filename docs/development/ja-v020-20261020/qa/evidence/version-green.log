@@ -1,0 +1,21 @@
+test_shared_renderer_replaces_downloads_and_marks_unpublished (test_edition_versions.DisplayContract.test_shared_renderer_replaces_downloads_and_marks_unpublished) ... ok
+test_raw_text_separates_published_and_source_without_css (test_edition_versions.JapaneseVersionSeparation.test_raw_text_separates_published_and_source_without_css) ... ok
+test_unlisted_mutations_still_fail (test_edition_versions.PreservationGate.test_unlisted_mutations_still_fail) ... ok
+test_complete_promotion_and_idempotence (test_edition_versions.ReleaseAdmission.test_complete_promotion_and_idempotence) ... ok
+test_failure_keeps_snapshot_unchanged (test_edition_versions.ReleaseAdmission.test_failure_keeps_snapshot_unchanged) ... ok
+test_ignores_unrelated_and_draft_events (test_edition_versions.ReleaseAdmission.test_ignores_unrelated_and_draft_events) ... ok
+test_old_formal_release_does_not_downgrade (test_edition_versions.ReleaseAdmission.test_old_formal_release_does_not_downgrade) ... ok
+test_rejects_bytes_size_manifest_and_source_mismatch (test_edition_versions.ReleaseAdmission.test_rejects_bytes_size_manifest_and_source_mismatch) ... ok
+test_rejects_draft_prerelease_unrelated_and_partial (test_edition_versions.ReleaseAdmission.test_rejects_draft_prerelease_unrelated_and_partial) ... ok
+test_rejects_missing_or_corrupt_checksums (test_edition_versions.ReleaseAdmission.test_rejects_missing_or_corrupt_checksums) ... ok
+test_same_count_wrong_package_role_is_rejected (test_edition_versions.ReleaseAdmission.test_same_count_wrong_package_role_is_rejected) ... ok
+test_unadopted_flat_contract_does_not_promote (test_edition_versions.ReleaseAdmission.test_unadopted_flat_contract_does_not_promote) ... ok
+test_withdrawn_current_release_fails_without_mutation (test_edition_versions.ReleaseAdmission.test_withdrawn_current_release_fails_without_mutation) ... ok
+test_all_generated_surfaces_and_idempotence (test_edition_versions.SnapshotAndCoverage.test_all_generated_surfaces_and_idempotence) ... ok
+test_catalogue_source_and_release_integrity (test_edition_versions.SnapshotAndCoverage.test_catalogue_source_and_release_integrity) ... ok
+test_sync_failure_never_replaces_facts_file (test_edition_versions.SnapshotAndCoverage.test_sync_failure_never_replaces_facts_file) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.175s
+
+OK

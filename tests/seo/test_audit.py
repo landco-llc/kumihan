@@ -36,6 +36,8 @@ class AuditTests(unittest.TestCase):
             self.assertTrue(any('guides/new.html' in e for e in audit(root,check_sitemap=False)))
             self.page(root,'guides/new.html')
             ignored=root/'templates/hidden.html'; ignored.parent.mkdir(); ignored.write_text('not public')
+            qa=root/'docs/development/qa/evidence/prototype.html'
+            qa.parent.mkdir(parents=True); qa.write_text('standalone QA artifact, not public')
             self.assertEqual([],audit(root,check_sitemap=False))
             self.assertEqual(2,sitemap(root).count('<loc>'))
 
