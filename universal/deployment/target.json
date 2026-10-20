@@ -411,5 +411,35 @@
     "issue": "Automatic route for Han+punctuation incorrectly labels kana and selects Japanese; explicit zh-Hant still resolves correctly.",
     "remediation": "Fixed Unicode kana categorization from Script_Extensions to Script in Draft PR, with PHP smoke regressions; production still on earlier staged runtime until separately deployed.",
     "production_fix_deployed": false
+  },
+  "publication_control_20261020": {
+    "status": "PUBLICATION_PRE_SUBMISSION_HOLD",
+    "instructions": "universal/deployment/publication-20261020/START_HERE.md",
+    "baseline_main": "8b647cc752d7a9bc3db48356fa0ab7b221bb66d6",
+    "baseline_pr101": "d3dff4eff590980e115d002b93bca4d51b20169f",
+    "live_connector": {
+      "modules": 21,
+      "rules": 749,
+      "module_status": "preview_unverified",
+      "han_punctuation_detection": "FAIL_ja_kana",
+      "router_fix_in_scope": false
+    },
+    "site_http": {
+      "home": 200,
+      "privacy": 200,
+      "terms": 404
+    },
+    "platform_fresh_read": "NOT_CHECKED_ACCESS",
+    "inherited_not_reexecuted": [
+      "business_verification_complete",
+      "domain_verified",
+      "zip_registered",
+      "four_skill_checks_passed"
+    ],
+    "production_changed": false,
+    "legal_published": false,
+    "submitted": false,
+    "published": false,
+    "prior_records": "Historical observations remain unchanged; connector availability does not prove all transports or Platform scan."
   }
 }

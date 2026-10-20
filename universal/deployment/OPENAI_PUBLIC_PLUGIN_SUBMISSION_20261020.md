@@ -1,3 +1,22 @@
+# KUMIHAN Universal — OpenAI公開申請管制
+
+状態: `PUBLICATION_PRE_SUBMISSION_HOLD`。最新指示は [publication-20261020/START_HERE.md](publication-20261020/START_HERE.md)。
+
+## 2026-10-20 JST 照合
+
+- 制御文書から継承: L&Co. LLC法人認証済み、ZIP登録済み、4 Skill Checks passed、Domain verified。再申請・再登録・再検査しない。今回Platformへのアクセスがなく、現画面の独立読戻しは未完。
+- 既存4 Skill: kumihan-start / kumihan-web / kumihan-documents / kumihan-review。
+- GitHub main 8b647cc、Draft PR #101 d3dff4e、未マージ。
+- 接続済みMCPから21モジュール/749ルールを実測。全件preview_unverified。文字，排版。の自動判定はja/kanaのままFAIL。別管制へ留保。
+- サイト/Privacy HTTPS 200。Privacyは静的Skill中心でMCP運用と不整合。terms.htmlは404。
+- 過去の明示的Findings: Terms of service URL is required. / Incomplete review information。最新スキャン最終結果はNOT_CHECKED。
+- 現登録ZIPの実体・SHA未取得。旧DRAFT_r02（1 Skill）をアップロードしない。
+- 法務公開、本番MCP変更、審査提出、一般公開の各Owner Gateは未承認。NO-GO。
+
+## 過去記録（現行実行手順ではない）
+
+以下は引き継ぎ前の記録を監査用に残す。未アップロード・未認証・1 Skill・認証や登録の実行を促す記述は失効し、上記照合とSTART_HEREを優先する。再実行しない。
+
 # KUMIHAN Universal — OpenAI public Plugin submission track
 
 ## Scope and authority
