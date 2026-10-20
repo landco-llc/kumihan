@@ -60,17 +60,22 @@ def landing(p, c):
         f'<div class="feature-motif" aria-hidden="true">{x(f["mark"])}</div><h3>{x(f["h3"])}</h3><p>{x(f["p"])}</p></article>'
         for f in c["features"])
     types = ("01 / ENTRY", "02 / WEB", "03 / DOCUMENTS", "04 / REVIEW")
+    # A skill or host without an address (an edition not yet distributed) is shown, not linked.
     skills = "".join(
-        f'<a class="skill-card" href="{x(href)}" target="_blank" rel="noopener noreferrer">'
-        f'<div class="card-top"><span class="skill-type">{types[i]}</span><span class="skill-symbol" aria-hidden="true">{x(symbol)}</span></div>'
+        (f'<a class="skill-card" href="{x(href)}" target="_blank" rel="noopener noreferrer">' if href else '<div class="skill-card">')
+        + f'<div class="card-top"><span class="skill-type">{types[i]}</span><span class="skill-symbol" aria-hidden="true">{x(symbol)}</span></div>'
         f'<div><h3 class="skill-name"><bdi dir="ltr">{x(name)}</bdi></h3><p class="skill-desc">{x(c["skills"][i][1])}</p>'
-        f'<div class="skill-end"><span>{x(c["skill_view"])}</span><span aria-hidden="true">↗</span></div></div></a>'
+        f'<div class="skill-end"><span>{x(c["skill_view"])}</span>' + ('<span aria-hidden="true">↗</span>' if href else "")
+        + "</div></div>" + ("</a>" if href else "</div>")
         for i, (name, href, symbol) in enumerate(p["skills"]))
     rows = "".join(
-        f'<a class="platform-row" href="{x(href)}"><span class="platform-index">0{i + 1}</span>'
+        (f'<a class="platform-row" href="{x(href)}">' if href else '<div class="platform-row">')
+        + f'<span class="platform-index">0{i + 1}</span>'
         f'<div class="platform-info"><div class="platform-name"><bdi dir="ltr">{x(name)}</bdi></div><div class="platform-note">{x(c["install_notes"][i])}</div></div>'
-        f'<span class="platform-arrow" aria-hidden="true">↗</span></a>'
+        + ('<span class="platform-arrow" aria-hidden="true">↗</span></a>' if href else "</div>")
         for i, (name, href) in enumerate(p["hosts"]))
+    extra = (f'<div class="install-extra"><a href="{x(p["release"])}" target="_blank" rel="noopener noreferrer">{x(c["install_extra"])}</a></div>'
+             if c.get("install_extra") else "")
     foot = '<span class="rule" aria-hidden="true"></span>'.join(f"<span>{x(t)}</span>" for t in c["hero_foot"])
     direction = f' dir="{p["dir"]}"' if p.get("dir") else ""
     out = f"""<!doctype html>
@@ -137,7 +142,7 @@ def landing(p, c):
 <section class="install-section" id="install" aria-labelledby="install-title">
   <div class="shell install-layout">
     <div class="install-intro"><div class="section-number" dir="ltr">04 / GET STARTED</div><h2 id="install-title">{x(c['install_h2'][0])}<br>{x(c['install_h2'][1])}</h2><p>{x(c['install_body'])}</p></div>
-    <div><div class="install-links">{rows}</div><div class="install-extra"><a href="{x(p['release'])}" target="_blank" rel="noopener noreferrer">{x(c['install_extra'])}</a></div></div>
+    <div><div class="install-links">{rows}</div>{extra}</div>
   </div>
 </section>
 <section class="status-section" aria-labelledby="status-title">

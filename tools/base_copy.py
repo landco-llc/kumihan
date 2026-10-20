@@ -10,7 +10,7 @@ edition's copy file: feature 01, the entry skill, the fidelity details
 extends with script-specific detail is kept as written.
 
 Usage: python tools/base_copy.py [--check]
-Rewrites the shared keys of assets/{accord,ar,compasso,grafia}-site-copy.json.
+Rewrites the shared keys of assets/*-site-copy.json and assets/upcoming-site-copy.json.
 """
 
 import json
@@ -41,7 +41,15 @@ EDITIONS = {
     "zu": ("KUMIHAN｜Hlela", "Hlela", "ズールー語", "isiZulu", "0.1.0"),
     "km": ("KUMIHAN｜លំនឹង", "លំនឹង", "クメール語", "Khmer", "0.1.0"),
     "fa": ("KUMIHAN｜تراز", "تراز", "ペルシア語", "Persian", "0.1.0"),
+    "el": ("KUMIHAN｜Μέτρο", "Μέτρο", "ギリシャ語", "Greek", "0.1.0"),
+    "nl": ("KUMIHAN｜Zetwerk", "Zetwerk", "オランダ語", "Dutch", "0.1.0"),
+    "ms": ("KUMIHAN｜Jalin", "Jalin", "マレー語", "Malay", "0.1.0"),
+    "tr": ("KUMIHAN｜Ahenk", "Ahenk", "トルコ語", "Turkish", "0.1.0"),
+    "he": ("KUMIHAN｜מקצב", "מקצב", "ヘブライ語", "Hebrew", "0.1.0"),
 }
+# Editions with pages but no package or Release yet: their copy lives together in
+# assets/upcoming-site-copy.json and the release wording below replaces the shared one.
+UPCOMING = ("el", "nl", "ms", "tr", "he")
 
 COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
               "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela",
@@ -123,7 +131,33 @@ EN = {
     "footer_sub": "{LE} typography skills for AI-assisted design.",
 }
 
+# Not yet distributed: no "RELEASED", download or installation guide (KUMIHAN_07, rule 5).
+JA_UPCOMING = {
+    "cta": ["準備状況を見る", "{S}について"],
+    "hero_foot": ["OPEN SOURCE", "FOUR SKILLS", "COMING SOON"],
+    "skill_view": "近日公開",
+    "install_h2": ["導入ガイドは", "準備中です"],
+    "install_body": "配布ファイルと導入ガイドは準備中です。公開時にこのページでご案内します。",
+    "install_notes": ["ChatGPT・Codex向けの導入ガイドを準備中", "Claude・Claude Code向けの導入ガイドを準備中", "Gemini向けの導入ガイドを準備中"],
+    "status_title": "COMING SOON / v{V}",
+    "status_link": "GitHubでKUMIHANを見る ↗",
+    "cta_body": "{B}はオープンソースで開発しています。準備が整い次第、スキルと配布ファイルをGitHubで公開します。",
+}
+
+EN_UPCOMING = {
+    "cta": ["See status", "Learn more"],
+    "hero_foot": ["OPEN SOURCE", "FOUR SKILLS", "COMING SOON"],
+    "skill_view": "Coming soon",
+    "install_h2": ["Installation guides", "are in preparation"],
+    "install_body": "Distribution files and installation guides are in preparation. They will be published on this page when ready.",
+    "install_notes": ["Installation guide for ChatGPT and Codex in preparation", "Installation guide for Claude and Claude Code in preparation", "Installation guide for Gemini in preparation"],
+    "status_title": "COMING SOON / v{V}",
+    "status_link": "View KUMIHAN on GitHub ↗",
+    "cta_body": "{B} is developed as open source. The skills and distribution files will be published on GitHub once ready.",
+}
+
 BASE = {"ja": JA, "en": EN}
+UPCOMING_BASE = {"ja": dict(JA, **JA_UPCOMING), "en": dict(EN, **EN_UPCOMING)}
 
 
 def fill(value, edition):
@@ -140,7 +174,7 @@ def fill(value, edition):
 
 def shared(lang, edition):
     """Shared copy for one edition; None entries are edition-specific."""
-    return fill(BASE[lang], edition)
+    return fill((UPCOMING_BASE if edition in UPCOMING else BASE)[lang], edition)
 
 
 def extends(current, base):
@@ -198,6 +232,17 @@ def main():
             stale.append(path.relative_to(ROOT))
             if not check:
                 path.write_text(text, encoding="utf-8")
+    path = ROOT / "assets" / "upcoming-site-copy.json"
+    source = path.read_text(encoding="utf-8")
+    data = json.loads(source)
+    for edition in UPCOMING:
+        for lang in ("ja", "en"):
+            data[edition][lang] = apply(data[edition][lang], lang, edition)
+    text = json.dumps(data, ensure_ascii=False, indent=1) + "\n"
+    if source != text:
+        stale.append(path.relative_to(ROOT))
+        if not check:
+            path.write_text(text, encoding="utf-8")
     if check and stale:
         sys.exit("shared ja/en copy out of date: " + ", ".join(map(str, stale)))
     print(("stale: " if stale else "ok: ") + ", ".join(map(str, stale)))

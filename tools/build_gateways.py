@@ -81,7 +81,7 @@ PRODUCTS = {
 }
 
 # Right-to-left gateway languages.
-RTL = {"ar", "fa"}
+RTL = {"ar", "fa", "he"}
 
 # Card text per gateway language: code -> (description, action label)
 CARDS = {
@@ -913,6 +913,26 @@ FA_CARD_COPY = {
 for _reader, _cards in CARDS.items():
     if _reader != "fa":
         _cards["fa"] = FA_CARD_COPY[_reader]
+
+
+# Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב):
+# registry, top page, names and cards from assets/upcoming-editions.json. "names" is the
+# edition's name in each reader language and "card" its card in each earlier reader
+# language; "edition_names" and "cards" are the new reader language's own tables.
+UPCOMING = json.loads((ROOT / "assets" / "upcoming-editions.json").read_text(encoding="utf-8"))
+for _code, _e in UPCOMING.items():
+    GATEWAYS[_code] = tuple(_e["gateway"])
+    PRODUCTS[_code] = _e["product"]
+    UI[_code] = _e["ui"]
+    PICK[_code] = _e["pick"]
+    EDITION_NAMES[_code] = dict(_e["edition_names"])
+    CARDS[_code] = {c: tuple(pair) for c, pair in _e["cards"].items()}
+for _code, _e in UPCOMING.items():
+    for _reader, _name in _e["names"].items():
+        if _reader not in UPCOMING:
+            EDITION_NAMES[_reader][_code] = _name
+    for _reader, _pair in _e["card"].items():
+        CARDS[_reader][_code] = tuple(_pair)
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
 
@@ -952,7 +972,7 @@ def cards(key):
         p = PRODUCTS[code]
         desc, action = CARDS[key][code]
         href = p["pages"].get(key) or p["pages"].get("en") or next(iter(p["pages"].values()))
-        direction = ' dir="rtl"' if code in ("ar", "fa") else ""
+        direction = ' dir="rtl"' if code in RTL else ""
         current = code == key
         out += (f'<article class="lang-card{" current" if current else ""}" aria-labelledby="language-{code}"'
                 + (" data-extra" if i >= VISIBLE else "") + ">"

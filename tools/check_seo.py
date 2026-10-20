@@ -37,7 +37,7 @@ def audit(root=ROOT,check_sitemap=True):
         for key in required:
             if len(page.meta[key])!=1 or not page.meta[key][0].strip(): fail(f'exactly one nonempty {key} required')
         if not re.fullmatch(r'[a-z]{2,3}(?:-[A-Za-z0-9]{2,8})*',page.lang): fail('invalid html lang')
-        if page.lang.split('-')[0] in ('ar', 'fa') and page.direction!='rtl': fail('Arabic html dir must be rtl')
+        if page.lang.split('-')[0] in ('ar', 'fa', 'he') and page.direction!='rtl': fail('Right-to-left html dir must be rtl')
         if '\ufffd' in page.html: fail('Unicode replacement character found')
         try:
             expected_locale = locale(page.lang)
