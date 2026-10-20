@@ -981,5 +981,15 @@
         "Local button click and DOM URL equality do not prove external navigation."
       ]
     }
+  ],
+  "fonts": [
+    {
+      "family": "unknown",
+      "face": "unknown",
+      "version": "unknown",
+      "fallback": "unknown",
+      "actual_used": false,
+      "note": "Computed CSS stacks are in each observation; actual font usage was not established."
+    }
   ]
 }

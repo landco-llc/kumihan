@@ -38,3 +38,7 @@ class EvidenceTests(unittest.TestCase):
         for name in ['review-context-v2','review-evidence-v2']:
             p=BASE/f'schemas/{name}.schema.json';self.assertTrue(p.exists());jsonschema.Draft202012Validator.check_schema(json.loads(p.read_text()))
         jsonschema.validate(self.static(),json.loads((BASE/'schemas/review-evidence-v2.schema.json').read_text()))
+    def test_glyph_scopes_cannot_pass_with_static_byte_evidence(self):
+        for scope in ['regional-glyph','ivs-glyph']:
+            r=self.static();r['scope']=scope
+            self.assertTrue(self.api().validate_evidence_context(r),scope)

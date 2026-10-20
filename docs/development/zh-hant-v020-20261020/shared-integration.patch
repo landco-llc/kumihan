@@ -349,36 +349,6 @@
              if actual != expected and not admitted:
                  errors.append(f'{family}: main bytes changed: {path}')
      return errors
---- /dev/null
-+++ b/tools/ziheng_v020_transition.py
-@@ -0,0 +1,27 @@
-+"""Candidate-only exact Ziheng source transition. Not publication permission."""
-+import hashlib
-+import json
-+import re
-+from pathlib import Path
-+
-+def allowed(path, family, root):
-+    root=Path(root)
-+    ledger=root/'docs/development/zh-hant-v020-20261020/source-transition.json'
-+    if not ledger.exists(): return False
-+    data=json.loads(ledger.read_text())
-+    if data.get('authority')!='KUMI-ZIHENG-V020-RESEARCH-WG-20261020-01': return False
-+    scoped=(path.startswith('plugins/kumihan-ziheng/') and family=='protected') or (family=='bodies' and (path.startswith('kumihan-zh-han') or path.startswith('docs/install-ziheng')))
-+    if not scoped: return False
-+    row=data.get('updates',{}).get(family,{}).get(path,{})
-+    snapshot=json.loads((root/'docs/seo/evidence/20261019-main-preservation.json').read_text())
-+    previous=json.loads((root/'docs/version-automation/preservation.json').read_text())
-+    historical=snapshot.get(family,{}).get(path)
-+    if row.get('snapshot_before')!=historical or not historical: return False
-+    # main_before is retained for integration review; exact candidate bytes gate admission.
-+    if not re.fullmatch('[a-f0-9]{64}',row.get('main_before','')): return False
-+    target=root/path
-+    if not target.is_file(): return False
-+    raw=target.read_bytes()
-+    if family=='bodies':
-+        body=re.search(rb'<body\b[\s\S]*',raw,re.I);raw=body[0] if body else b''
-+    return row.get('after')==hashlib.sha256(raw).hexdigest()
 --- a/tools/build_version_site.py
 +++ b/tools/build_version_site.py
 @@ -98,6 +98,8 @@
@@ -502,15 +472,16 @@
        "published_at": null,
 --- a/tests/test_version_naming.py
 +++ b/tests/test_version_naming.py
-@@ -36,6 +36,7 @@
+@@ -36,6 +36,8 @@
              ver=version_of(product/"plugin.json")
              manifests=list(product.glob("downloads*/MANIFEST.json"))+list(product.glob("downloads/**/MANIFEST.json"))
              for m in manifests:
-+                if "history" in m.relative_to(product).parts: continue  # validated by exact historical retention contract
++                from ziheng_retention import is_retained_manifest
++                if is_retained_manifest(ROOT, m): continue  # exact validated Ziheng historical manifest only
                  with self.subTest(path=str(m.relative_to(ROOT))):
                      data=json.loads(m.read_text(encoding="utf-8"))
                      v=data.get("version")
-@@ -58,16 +59,16 @@
+@@ -58,16 +60,16 @@
  
      def test_ziheng_active_distribution_and_site_names(self):
          z=ROOT/"plugins/kumihan-ziheng"
@@ -565,31 +536,31 @@
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-claude.en.md": {
 +        "before": "6ee78936af3c8abba13cb56dbf54b6ddf8b7f7b1a5cd99bef16d33eb240f437b",
-+        "after": "8e6828c4c137cf4243e324ac43ca939054b1197ea26c6ad890f4a906073a7bd6"
++        "after": "b0dfff6f2e2d74d03cf6eafc90141ddb0b5a94ef58a973015e89eccf12fbc8f6"
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-claude.ja.md": {
 +        "before": "1948db019d0603804a5a12b97ae4b40e299bca1cc6f66df5eee422d37b4ce37b",
-+        "after": "6ce74e663a68bad5137151bfb27557f63eb90b398151f70ab971ad1dc5e2622f"
++        "after": "94a92a301a3760be6b473e90f37869d441f77bff8e07a02be9ad305dec214149"
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-claude.zh-hant.md": {
 +        "before": "b928c8bf3dc27d16a72edc6d36e5efed362d90aea9ad0bf18913209ce1d88ab7",
-+        "after": "2c6701f3c5f816a3bb0ec1a74e2768f5f5d80567f617ca679a403323865313b2"
++        "after": "39de537797f03127ab1b53a82b413bd0611acff694b96d2d5ce4d65646e21e36"
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-gemini.en.md": {
 +        "before": "8f3b229fd0e2ea8e41d38c6176ea1e06de6bc95e5cf3a358701feae204ec26f4",
-+        "after": "c1502df5540e491dfb41765c640038936f826d3a2def6a6af6f88d1fc5aa01a5"
++        "after": "1cd176914ad38926136d166226e8c8f29366abc9ddfd69916a51ab3490e8d6c3"
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-gemini.ja.md": {
 +        "before": "4ca698ad60ec247d560ef5b4450cef6f778c277ab1413a657b5cb07dde840e6c",
-+        "after": "3cefd0d1090f0cde2a8f39f7b83cd0157ed63ccb22915f1cf0341b07af55b6d0"
++        "after": "688d659ad62a8f893c4ff36e2f1cd206ab9193c7a82e237bdda7ad91f5a9666e"
 +      },
 +      "plugins/kumihan-ziheng/docs/installation-gemini.zh-hant.md": {
 +        "before": "6cf93eba428fc2c51eb7c97008116d4705c43fd93e98125efd1ce6c7de0fc8a0",
-+        "after": "0384a8028cc285fba42a6fe71af5bd446311725a94710aea9a03882e3dff318a"
++        "after": "66256cc0dca75073f23c604d46f7632dbb8e7e65803f4dbc40a6df55bfe16452"
 +      },
 +      "plugins/kumihan-ziheng/downloads Claude/MANIFEST.json": {
 +        "before": "ccd2a05a3eb65d8b363ec7398ab3fc69f211ef30746150b5574e8a873d46e81c",
-+        "after": "2b2831ac5bdd5327b2cc04bb1c40bae5e8557e54b4e36e16203207f25a89c025"
++        "after": "16e4041db0580de628547d7a995e7d6ae545d581483f838c87e66d5a1711f883"
 +      },
 +      "plugins/kumihan-ziheng/downloads Claude/README.md": {
 +        "before": "99033ad5584c83d85bbf0fe83c4e688c8e5be015f19df1e51c7f5505fac5c0db",
@@ -597,11 +568,11 @@
 +      },
 +      "plugins/kumihan-ziheng/downloads Claude/SHA256SUMS.txt": {
 +        "before": "7679fa8f089ebfaa321af5a9b7120ddf00286451976a5c29fb30fbf839eb87b1",
-+        "after": "3d1f070437c728cb31fa15fc104d2c589860b3285da61033df333592b615aa31"
++        "after": "f660112b71eaeff8f9029c0765ab346056f3d52e126891e5c1ff09a8c14f8522"
 +      },
 +      "plugins/kumihan-ziheng/downloads Gemini/MANIFEST.json": {
 +        "before": "ef2864f0dbf901975ca5c2daeaaca3dd01acba62e8dbf45d0d9da957dfc21ad0",
-+        "after": "45a57d653c2ab355091ca9684a7ca14d01e63a0adfa58d58469f9f9e33c26380"
++        "after": "0828a819bf0d5c83830260983b0be171b6ddb78661ed6ba7cb5f6ec074fec865"
 +      },
 +      "plugins/kumihan-ziheng/downloads Gemini/README.md": {
 +        "before": "6178220dea04c0ca6e37090edfc801fcab59e9383318cf8e43654495839f1fe0",
@@ -609,15 +580,15 @@
 +      },
 +      "plugins/kumihan-ziheng/downloads Gemini/SHA256SUMS.txt": {
 +        "before": "9b8a83c057405d8f16dccd501acf8fbf1505f449705b39713aad608e80ed1f68",
-+        "after": "3d85bbaed7e8dc483fe5b6e90ca8c43b44196a847a883a88afe1e4d4380b4db4"
++        "after": "fd24fbfe0b2b947e30857201cf66834a453d8bb86a8d8c7ff60c73dc515d57ea"
 +      },
 +      "plugins/kumihan-ziheng/downloads/MANIFEST.json": {
 +        "before": "3dfc527cc840706d773f8d69cb131da975a3a88256bfe1fad41097771cf57e01",
-+        "after": "1ef2de3650f6c294cd0bab3df7612576964070a19bd72ecdf20d22d35258e174"
++        "after": "7d6449cafa8f21c14a8a668ffd4538b17014bc2111eab6baaf5e9c832ea9fa29"
 +      },
 +      "plugins/kumihan-ziheng/downloads/SHA256SUMS.txt": {
 +        "before": "f8a032d3df920144971f0586207995b0d9bbda40fcd5f6a4a6ced1e630cc1b0e",
-+        "after": "972b2339df5281b3fdc6a4d85f69d371e145fa3cb0031585cf65eb7f49fd2143"
++        "after": "9c28b52dd95eb047448243c9e3a62cb946e037d78dc41f0c4c76f4b6eff8eed8"
 +      },
 +      "plugins/kumihan-ziheng/entrypoints/kumihan-ziheng-documents.md": {
 +        "before": "c27e2a8f506c925d503bbcad07efc320205154611cdcd4e1b75e998d245dfecb",
@@ -673,7 +644,7 @@
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/inventory.json": {
 +        "before": "fda99efaf25c3fea553a86f9cbebc3029cfab1707bf1198ac81781e2a006770d",
-+        "after": "9cb26a9a3c80e433dedf16e4c852c182c4b8c955d445a3a0c17e77d8beb86c26"
++        "after": "d82239d7cd20fd8692c92547ea72c08e314bd4279c86b82a0d387d8f5615583c"
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-documents/references/documents.md": {
 +        "before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
@@ -709,7 +680,7 @@
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/inventory.json": {
 +        "before": "c14daa86e3472be2673a9eabd3b68f93a532d0102995b20a309e3c9c08b7b313",
-+        "after": "6dc494787c4ce241bd8780305fd471557608460df8d962c071ef4d97c2362145"
++        "after": "5f4ecb688350d3282d0e306c5965da26ccc3a160cb11f036ef9174a3baf4f0bd"
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-review/references/documents.md": {
 +        "before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
@@ -745,7 +716,7 @@
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/inventory.json": {
 +        "before": "c4f38d3339d745efe33635ebe37c48e18aeae17204a990b984087bbbff5a0c74",
-+        "after": "f445b0c5606c712ae1efe73dad7b59f80669aba3d03e192fe81b5eef598ba31b"
++        "after": "c951e7031aed787a740907810c1af97b7a961736e4ad275b4955c751e8108879"
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng-web/references/documents.md": {
 +        "before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
@@ -781,7 +752,7 @@
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng/inventory.json": {
 +        "before": "63c36a1fec6354e6f19ac84da0f94ff3258f18fcc86c144798d250342a6b0b5a",
-+        "after": "444c126ba5bd2e07e0ba0bddb0141b11a6ed6b781d9c5a537cc9eee6bf8c03df"
++        "after": "8460317463d4d842b61d2a801eb0ba22aa5cd0e6aab8e0d6ba45bae79ae0ad93"
 +      },
 +      "plugins/kumihan-ziheng/skills/kumihan-ziheng/references/documents.md": {
 +        "before": "69e994fe06dadf59f7e0e99c0d388bd28e22ecb71d8777ff394b936a8eade047",
@@ -822,32 +793,32 @@
        "docs/install-ziheng-claude.en.html": {
          "before": "53797c38ee1798afc5d99989086a427baf40f6ec10509fb8041c2a357c8273d6",
 -        "after": "fc7c9b2a662b569ad7dfea62563064ac3ac33563e74dea7b380ae709b083d6dd"
-+        "after": "50c8befcdb9ae2c1345ac44ad3fc50c1da1d1a4111f724579aa88c0a885409df"
++        "after": "dbf8bee7285a077639ebd14f96ffa41e5a94ff93609db9bf9fc8e1921afcc1ee"
        },
        "docs/install-ziheng-claude.html": {
          "before": "d3f8c2ae884adc25c1e909c6ee2f0b9114fe359648160c2fa08ea74737c154e0",
 -        "after": "f87e6575f4906bbabe7aefa62a8b87f9e91e6fb33bc1d8db258632d71ae5f6d4"
-+        "after": "27fea415115f5e896b9d7e0b7c02ce19a49af11e291d127422b7d52174d2b35b"
++        "after": "d40b3709d5957faa92dfc67c795466f93e7f69a17211d1b35e6c5d74aeeec1a5"
        },
        "docs/install-ziheng-claude.ja.html": {
          "before": "d3517d634a490f5e8632d83524ae709f600ee2168e22448b781796fbc3796c67",
 -        "after": "00f0ae3592759fb23bc95916781f59c1f7940cd2e00e97b0fddcb466e1a4572b"
-+        "after": "a1ce987be2eb5f3cf79cf39978afae156e29ace5a761d9b45b03a23ebef3ed39"
++        "after": "c681db09980596503c6f48f7325073a1ccd39a1bbeb57c06fe423c2f67519e8a"
        },
        "docs/install-ziheng-gemini.en.html": {
          "before": "a30e6166b9d8e96bf7b81f07523d836015df39ce9c99c12faa6ec1f74456b2e9",
 -        "after": "9db031cf95eb4f62bcfe054f3323c26e832ba230164736e741a8b2d091c4719d"
-+        "after": "b71e68cf945b28abe9f3db3cc59a7f66410b7a81dff426c49a22e0cbb9bc3ee6"
++        "after": "9bdd0ebb90547d740bca6e4db62a46ab78ec884afdd992c0a77ff77ffc80bdcf"
        },
        "docs/install-ziheng-gemini.html": {
          "before": "3d3aaca8007b4cc6afd4d818520081ca1ee0e6c51ba407e1a44db63fb6d6a906",
 -        "after": "7a8269d4250f15b32eebb9d6fe8b012475ee1cbc3936ff47b5c22072e5fc6bf0"
-+        "after": "4df9aa64e77d7a8e2c7b766fac708bae62fd69a5330b736bfd1891ab68687348"
++        "after": "94aead7daff04d9e9519f59d753dec8b7c7346cd28ef4707a57e0d3b0c58e7f2"
        },
        "docs/install-ziheng-gemini.ja.html": {
          "before": "4d83c90a862a4eec1b076921cddbe9aafcbe2c1ab3a2d1e3891004466fce6429",
 -        "after": "1432409dd3178007d61a9d077fbb6c098ff88562f6fb6cb3bdf7ab3b0dde248e"
-+        "after": "05763238fdfc89502f234766c838013c0a61f040fa4d7dec039cc48151f09edf"
++        "after": "b924a335eb6c24373842fa66bc4df3b03bccec15f2dc58efe515644b1e71195d"
        },
        "docs/install-ziheng.en.html": {
          "before": "4555e135b85a48296bb58dbae05b01072c47e3ed3018ce74ba57bed18402f120",

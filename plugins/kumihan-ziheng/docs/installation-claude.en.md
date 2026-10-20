@@ -49,4 +49,4 @@ Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve t
 
 Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
 
-Current v0.2.0 full bundle SHA-256: `7fcbe1c52d58b100fa92a1769f150c941849d0179a36e09ec2b72d1de84622b0`. The older checksum above applies only to its explicitly named v0.1.0 archive.
+Current v0.2.0 full bundle SHA-256: `5da65c3d2085ec55e48309c01ee8a6a148ffecff13f490ec9747b24a0c51b06e`. The older checksum above applies only to its explicitly named v0.1.0 archive.

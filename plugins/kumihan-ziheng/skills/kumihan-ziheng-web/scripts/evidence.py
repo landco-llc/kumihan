@@ -35,6 +35,8 @@ def validate_evidence_context(record):
         if not isinstance(ref, dict): error('evidence_refs', 'Structured reference required'); continue
         if not text(ref.get('path')) or not text(ref.get('kind')): error('evidence_refs', 'Nonempty path and kind required')
         if ref.get('artifact_sha256') != digest: error('evidence_refs', 'Evidence belongs to another artifact')
+    if status == 'passed' and record.get('scope') in ('regional-glyph', 'ivs-glyph') and method != 'rendered':
+        error('method', 'Glyph acceptance requires rendered observations, never static byte comparison')
     if status == 'passed' and method in ('rendered', 'interaction'):
         env = record.get('environment')
         if not isinstance(env, dict): env = {}

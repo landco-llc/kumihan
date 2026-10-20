@@ -8,8 +8,8 @@
   "archives": [
     {
       "file": "plugins/kumihan-ziheng-Claude-Code-plugin-0.2.0.zip",
-      "sha256": "7fcbe1c52d58b100fa92a1769f150c941849d0179a36e09ec2b72d1de84622b0",
-      "bytes": 1077076,
+      "sha256": "5da65c3d2085ec55e48309c01ee8a6a148ffecff13f490ec9747b24a0c51b06e",
+      "bytes": 1077288,
       "members": [
         {
           "path": "kumihan-ziheng/.claude-plugin/plugin.json",
@@ -69,7 +69,7 @@
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/inventory.json",
           "bytes": 6049,
-          "sha256": "9cb26a9a3c80e433dedf16e4c852c182c4b8c955d445a3a0c17e77d8beb86c26"
+          "sha256": "d82239d7cd20fd8692c92547ea72c08e314bd4279c86b82a0d387d8f5615583c"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/locales/zh-Hant-HK.json",
@@ -208,8 +208,8 @@
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-documents/sources/common-provenance.json",
@@ -254,7 +254,7 @@
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-review/inventory.json",
           "bytes": 6046,
-          "sha256": "6dc494787c4ce241bd8780305fd471557608460df8d962c071ef4d97c2362145"
+          "sha256": "5f4ecb688350d3282d0e306c5965da26ccc3a160cb11f036ef9174a3baf4f0bd"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-review/locales/zh-Hant-HK.json",
@@ -393,8 +393,8 @@
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-review/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-review/sources/common-provenance.json",
@@ -439,7 +439,7 @@
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-web/inventory.json",
           "bytes": 6043,
-          "sha256": "f445b0c5606c712ae1efe73dad7b59f80669aba3d03e192fe81b5eef598ba31b"
+          "sha256": "c951e7031aed787a740907810c1af97b7a961736e4ad275b4955c751e8108879"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-web/locales/zh-Hant-HK.json",
@@ -578,8 +578,8 @@
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-web/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng-web/sources/common-provenance.json",
@@ -624,7 +624,7 @@
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng/inventory.json",
           "bytes": 6039,
-          "sha256": "444c126ba5bd2e07e0ba0bddb0141b11a6ed6b781d9c5a537cc9eee6bf8c03df"
+          "sha256": "8460317463d4d842b61d2a801eb0ba22aa5cd0e6aab8e0d6ba45bae79ae0ad93"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng/locales/zh-Hant-HK.json",
@@ -763,8 +763,8 @@
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng/skills/kumihan-ziheng/sources/common-provenance.json",
@@ -780,8 +780,8 @@
     },
     {
       "file": "skills/kumihan-ziheng-Claude-skill-0.2.0.zip",
-      "sha256": "20b9847bbd91d840c9c426e5cad963a0d190b1c226845c0a95e1a2b1640404c1",
-      "bytes": 68177,
+      "sha256": "52740d649697ea2446dfdf7a0e9d85eeaed18eb6468fd1075ac84ff888768a83",
+      "bytes": 68228,
       "members": [
         {
           "path": "kumihan-ziheng/LICENSE",
@@ -816,7 +816,7 @@
         {
           "path": "kumihan-ziheng/inventory.json",
           "bytes": 6039,
-          "sha256": "444c126ba5bd2e07e0ba0bddb0141b11a6ed6b781d9c5a537cc9eee6bf8c03df"
+          "sha256": "8460317463d4d842b61d2a801eb0ba22aa5cd0e6aab8e0d6ba45bae79ae0ad93"
         },
         {
           "path": "kumihan-ziheng/locales/zh-Hant-HK.json",
@@ -955,8 +955,8 @@
         },
         {
           "path": "kumihan-ziheng/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng/sources/common-provenance.json",
@@ -972,8 +972,8 @@
     },
     {
       "file": "skills/kumihan-ziheng-documents-Claude-skill-0.2.0.zip",
-      "sha256": "f041368797aff001cfdd195a5f8cb134e11e506bbf98fc9614577a88804db3a6",
-      "bytes": 69017,
+      "sha256": "2893bba5d478a13cf581d308793340bc7f0c9491486d7a0db2153a63ee9feb3e",
+      "bytes": 69070,
       "members": [
         {
           "path": "kumihan-ziheng-documents/LICENSE",
@@ -1008,7 +1008,7 @@
         {
           "path": "kumihan-ziheng-documents/inventory.json",
           "bytes": 6049,
-          "sha256": "9cb26a9a3c80e433dedf16e4c852c182c4b8c955d445a3a0c17e77d8beb86c26"
+          "sha256": "d82239d7cd20fd8692c92547ea72c08e314bd4279c86b82a0d387d8f5615583c"
         },
         {
           "path": "kumihan-ziheng-documents/locales/zh-Hant-HK.json",
@@ -1147,8 +1147,8 @@
         },
         {
           "path": "kumihan-ziheng-documents/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng-documents/sources/common-provenance.json",
@@ -1164,8 +1164,8 @@
     },
     {
       "file": "skills/kumihan-ziheng-review-Claude-skill-0.2.0.zip",
-      "sha256": "55357f82e779915bd72d284c9747ff31033175d10721753ee079b1a423199569",
-      "bytes": 68882,
+      "sha256": "43c4793c458693cff50d199227b12bb0b1feb9e6e9f3a0c681a50ebbeca780fd",
+      "bytes": 68936,
       "members": [
         {
           "path": "kumihan-ziheng-review/LICENSE",
@@ -1200,7 +1200,7 @@
         {
           "path": "kumihan-ziheng-review/inventory.json",
           "bytes": 6046,
-          "sha256": "6dc494787c4ce241bd8780305fd471557608460df8d962c071ef4d97c2362145"
+          "sha256": "5f4ecb688350d3282d0e306c5965da26ccc3a160cb11f036ef9174a3baf4f0bd"
         },
         {
           "path": "kumihan-ziheng-review/locales/zh-Hant-HK.json",
@@ -1339,8 +1339,8 @@
         },
         {
           "path": "kumihan-ziheng-review/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng-review/sources/common-provenance.json",
@@ -1356,8 +1356,8 @@
     },
     {
       "file": "skills/kumihan-ziheng-web-Claude-skill-0.2.0.zip",
-      "sha256": "b7e94acd8aca5aaeaad4c925ba5bef52296ec1ce1f062e2b3bda9286d8d835c1",
-      "bytes": 68606,
+      "sha256": "fce4d4a7e11668d22d61bf944321fa2a5b1220ef29fd52dd266a29b157892fcf",
+      "bytes": 68660,
       "members": [
         {
           "path": "kumihan-ziheng-web/LICENSE",
@@ -1392,7 +1392,7 @@
         {
           "path": "kumihan-ziheng-web/inventory.json",
           "bytes": 6043,
-          "sha256": "f445b0c5606c712ae1efe73dad7b59f80669aba3d03e192fe81b5eef598ba31b"
+          "sha256": "c951e7031aed787a740907810c1af97b7a961736e4ad275b4955c751e8108879"
         },
         {
           "path": "kumihan-ziheng-web/locales/zh-Hant-HK.json",
@@ -1531,8 +1531,8 @@
         },
         {
           "path": "kumihan-ziheng-web/scripts/evidence.py",
-          "bytes": 4755,
-          "sha256": "3a100cff99ab36f3f980153ba844376f2ea69900aa159c8f8b7e78b1cf91d804"
+          "bytes": 4971,
+          "sha256": "edbe1e2f42bf1379994714ce3ce0fdac637732a7b818913ce80dd47fbd7bbe15"
         },
         {
           "path": "kumihan-ziheng-web/sources/common-provenance.json",

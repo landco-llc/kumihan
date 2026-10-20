@@ -34,3 +34,13 @@ def retained_outputs(root, folders):
             raise ValueError('Corrupt retained distribution: '+path)
         outputs[path]=data
     return outputs
+
+
+def is_retained_manifest(root, path):
+    """Admit only the exact historical Ziheng manifests after byte validation."""
+    root=Path(root).resolve()
+    try: rel=Path(path).resolve().relative_to(root).as_posix()
+    except ValueError: return False
+    known={PRODUCT+'/'+folder+'/history/0.1.0/MANIFEST.json' for folder in FOLDERS}
+    if rel not in known: return False
+    return rel in retained_outputs(root,FOLDERS)

@@ -1,0 +1,26 @@
+test_conflicts_and_types_rejected (test_ziheng_v020_context.ContextTests.test_conflicts_and_types_rejected) ... ok
+test_explicit_modes_and_no_style_default (test_ziheng_v020_context.ContextTests.test_explicit_modes_and_no_style_default) ... ok
+test_regions_and_sets (test_ziheng_v020_context.ContextTests.test_regions_and_sets) ... ok
+test_research_mapping_and_sources (test_ziheng_v020_context.ContextTests.test_research_mapping_and_sources) ... ok
+test_strict_legacy_resolver_preserved (test_ziheng_v020_context.ContextTests.test_strict_legacy_resolver_preserved) ... ok
+test_unknown_mo_and_foreign_stay_neutral (test_ziheng_v020_context.ContextTests.test_unknown_mo_and_foreign_stay_neutral) ... ok
+test_evidence_rejects_empty_mismatched_and_css_only (test_ziheng_v020_evidence.EvidenceTests.test_evidence_rejects_empty_mismatched_and_css_only) ... ok
+test_glyph_scopes_cannot_pass_with_static_byte_evidence (test_ziheng_v020_evidence.EvidenceTests.test_glyph_scopes_cannot_pass_with_static_byte_evidence) ... ok
+test_preservation_exact_not_normalized (test_ziheng_v020_evidence.EvidenceTests.test_preservation_exact_not_normalized) ... ok
+test_rendered_needs_real_conditions_and_glyph_proof (test_ziheng_v020_evidence.EvidenceTests.test_rendered_needs_real_conditions_and_glyph_proof) ... ok
+test_schemas_validate_static_and_context (test_ziheng_v020_evidence.EvidenceTests.test_schemas_validate_static_and_context) ... ok
+test_segment_roles_unknown_and_code_point_positions (test_ziheng_v020_evidence.EvidenceTests.test_segment_roles_unknown_and_code_point_positions) ... ok
+test_static_evidence_not_browser_required (test_ziheng_v020_evidence.EvidenceTests.test_static_evidence_not_browser_required) ... ok
+test_build_checks_are_read_only_and_unknown_stale_is_not_whitelisted (test_ziheng_v020_packaging.PackagingTests.test_build_checks_are_read_only_and_unknown_stale_is_not_whitelisted) ... ok
+test_current_fifteen_archives_crc_size_hash_icons_and_determinism (test_ziheng_v020_packaging.PackagingTests.test_current_fifteen_archives_crc_size_hash_icons_and_determinism) ... ok
+test_four_standalone_scripts_and_references (test_ziheng_v020_packaging.PackagingTests.test_four_standalone_scripts_and_references) ... ok
+test_historical_source_links_are_verified_against_retention (test_ziheng_v020_packaging.PackagingTests.test_historical_source_links_are_verified_against_retention) ... ok
+test_legacy_url_stays_admitted_after_shared_version_snapshot_updates (test_ziheng_v020_packaging.PackagingTests.test_legacy_url_stays_admitted_after_shared_version_snapshot_updates) ... ok
+test_old_archives_survive_version_transition_and_corruption_is_rejected (test_ziheng_v020_packaging.PackagingTests.test_old_archives_survive_version_transition_and_corruption_is_rejected) ... ok
+test_history_exemption_only_accepts_exact_retained_ziheng_manifests (test_ziheng_v020_transition.TransitionTests.test_history_exemption_only_accepts_exact_retained_ziheng_manifests) ... ok
+test_old_hash_and_candidate_hash_must_both_match (test_ziheng_v020_transition.TransitionTests.test_old_hash_and_candidate_hash_must_both_match) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 4.492s
+
+OK

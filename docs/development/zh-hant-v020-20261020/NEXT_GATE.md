@@ -9,3 +9,5 @@
 Remaining observations are scoped: real UA200%, regional font/glyph/IVS support, selected vertical/ruby operations, clipboard/navigation, native Office/PDF and AT, physical projection/signage, TW/HK native-language proofreading. These are not fabricated as32 passes, nor automatically made universal release blockers for unused features.
 
 No routine approval request is pending; authorized independent work has been carried through to this concrete Draft candidate. Owner Gate remains closed for publication and production actions.
+
+The one review is recorded in evidence/final-review.md. Its four P2 findings were corrected by the author and checked with regression tests; this is not a second independent review or permission to bypass the shared integration hold. The transition preimages are frozen in source-transition-baseline.json and pinned by the unactivated helper digest.
