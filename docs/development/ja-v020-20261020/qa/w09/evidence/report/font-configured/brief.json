@@ -1,0 +1,24 @@
+{
+  "purpose": "架空の講座運営担当が案内と取消手続の確認点を理解する。実在事業の実績を示さない。",
+  "audience": "画面で報告書とスライドを読む運営担当。印刷・投影条件は未確認。",
+  "profiles": [
+    "report-document",
+    "presentation"
+  ],
+  "adapters": [
+    "report",
+    "slide-deck"
+  ],
+  "intensity": "Standard",
+  "roles": {
+    "report_body": "Noto Sans CJK JP 11pt / 1.7",
+    "report_heading": "20pt / 14pt",
+    "slides": "Noto Sans CJK JP title 30pt, body 22pt, note 16pt"
+  },
+  "protected": [
+    "髙﨑さま／料金１,２００円／が",
+    "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+    "2026年11月3日／文字の広場（架空会場）"
+  ],
+  "source": "HOST_SMOKE H-02 exact protected strings. Other copy and table/chart values are explicitly fictional QA inputs, not measured performance."
+}

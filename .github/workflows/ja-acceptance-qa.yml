@@ -1,7 +1,7 @@
 name: JA acceptance QA
 on:
   pull_request:
-    branches: [feat/ja-v020-research-20261020]
+    branches: [feat/ja-v020-research-20261020, qa/ja-v020-acceptance-20261020]
 permissions:
   contents: read
 jobs:

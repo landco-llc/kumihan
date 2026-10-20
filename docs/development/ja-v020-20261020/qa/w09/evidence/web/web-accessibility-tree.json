@@ -1,0 +1,4311 @@
+{
+  "nodes": [
+    {
+      "nodeId": "1",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "RootWebArea"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 144
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭｜受講案内の検証用プロトタイプ",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label",
+            "superseded": true
+          },
+          {
+            "type": "relatedElement",
+            "value": {
+              "type": "computedString",
+              "value": "文字の庭｜受講案内の検証用プロトタイプ"
+            },
+            "nativeSource": "title"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "focused",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "url",
+          "value": {
+            "type": "string",
+            "value": "about:blank"
+          }
+        }
+      ],
+      "childIds": [
+        "2031"
+      ],
+      "backendDOMNodeId": 1,
+      "frameId": "61EC65A8FCB5912DB4D47678984FD4DF"
+    },
+    {
+      "nodeId": "2031",
+      "ignored": true,
+      "ignoredReasons": [
+        {
+          "name": "uninteresting",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        }
+      ],
+      "role": {
+        "type": "role",
+        "value": "none"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 0
+      },
+      "parentId": "1",
+      "childIds": [
+        "2037"
+      ],
+      "backendDOMNodeId": 2031
+    },
+    {
+      "nodeId": "2037",
+      "ignored": true,
+      "ignoredReasons": [
+        {
+          "name": "uninteresting",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        }
+      ],
+      "role": {
+        "type": "role",
+        "value": "none"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 0
+      },
+      "parentId": "2031",
+      "childIds": [
+        "2038"
+      ],
+      "backendDOMNodeId": 2037
+    },
+    {
+      "nodeId": "2038",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "main"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 118
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "title"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2037",
+      "childIds": [
+        "2039",
+        "2044",
+        "2056",
+        "2066",
+        "2072",
+        "2081"
+      ],
+      "backendDOMNodeId": 2038
+    },
+    {
+      "nodeId": "2039",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "sectionheader"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 95
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "title"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2038",
+      "childIds": [
+        "2040",
+        "2041",
+        "2042",
+        "2043"
+      ],
+      "backendDOMNodeId": 2039
+    },
+    {
+      "nodeId": "2044",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "region"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 143
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "value": {
+              "type": "computedString",
+              "value": "開催と料金"
+            },
+            "attribute": "aria-labelledby",
+            "attributeValue": {
+              "type": "idrefList",
+              "value": "details",
+              "relatedNodes": [
+                {
+                  "backendDOMNodeId": 2045,
+                  "idref": "details",
+                  "text": "開催と料金"
+                }
+              ]
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label",
+            "superseded": true
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 2045,
+                "idref": "details",
+                "text": "開催と料金"
+              }
+            ]
+          }
+        }
+      ],
+      "parentId": "2038",
+      "childIds": [
+        "2045",
+        "2046",
+        "2047",
+        "2054"
+      ],
+      "backendDOMNodeId": 2044
+    },
+    {
+      "nodeId": "2056",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "region"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 143
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録の確認",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "value": {
+              "type": "computedString",
+              "value": "受講登録の確認"
+            },
+            "attribute": "aria-labelledby",
+            "attributeValue": {
+              "type": "idrefList",
+              "value": "registration",
+              "relatedNodes": [
+                {
+                  "backendDOMNodeId": 2057,
+                  "idref": "registration",
+                  "text": "受講登録の確認"
+                }
+              ]
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label",
+            "superseded": true
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 2057,
+                "idref": "registration",
+                "text": "受講登録の確認"
+              }
+            ]
+          }
+        }
+      ],
+      "parentId": "2038",
+      "childIds": [
+        "2057",
+        "2058",
+        "2059",
+        "2065"
+      ],
+      "backendDOMNodeId": 2056
+    },
+    {
+      "nodeId": "2066",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "article"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 5
+      },
+      "name": {
+        "type": "computedString",
+        "value": "資料を読む前に",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "value": {
+              "type": "computedString",
+              "value": "資料を読む前に"
+            },
+            "attribute": "aria-labelledby",
+            "attributeValue": {
+              "type": "idrefList",
+              "value": "reading",
+              "relatedNodes": [
+                {
+                  "backendDOMNodeId": 2067,
+                  "idref": "reading",
+                  "text": "資料を読む前に"
+                }
+              ]
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label",
+            "superseded": true
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 2067,
+                "idref": "reading",
+                "text": "資料を読む前に"
+              }
+            ]
+          }
+        }
+      ],
+      "parentId": "2038",
+      "childIds": [
+        "2067",
+        "2069",
+        "2070"
+      ],
+      "backendDOMNodeId": 2066
+    },
+    {
+      "nodeId": "2072",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "region"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 143
+      },
+      "name": {
+        "type": "computedString",
+        "value": "言語と字形の比較",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "value": {
+              "type": "computedString",
+              "value": "言語と字形の比較"
+            },
+            "attribute": "aria-labelledby",
+            "attributeValue": {
+              "type": "idrefList",
+              "value": "fonts",
+              "relatedNodes": [
+                {
+                  "backendDOMNodeId": 2073,
+                  "idref": "fonts",
+                  "text": "言語と字形の比較"
+                }
+              ]
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label",
+            "superseded": true
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 2073,
+                "idref": "fonts",
+                "text": "言語と字形の比較"
+              }
+            ]
+          }
+        }
+      ],
+      "parentId": "2038",
+      "childIds": [
+        "2073",
+        "2074",
+        "2077",
+        "2079",
+        "2080"
+      ],
+      "backendDOMNodeId": 2072
+    },
+    {
+      "nodeId": "2081",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "sectionfooter"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 86
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "title"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2038",
+      "childIds": [
+        "2082",
+        "2083"
+      ],
+      "backendDOMNodeId": 2081
+    },
+    {
+      "nodeId": "2040",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2039",
+      "childIds": [
+        "2085"
+      ],
+      "backendDOMNodeId": 2040
+    },
+    {
+      "nodeId": "2041",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "heading"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 96
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "文字の庭"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "level",
+          "value": {
+            "type": "integer",
+            "value": 1
+          }
+        }
+      ],
+      "parentId": "2039",
+      "childIds": [
+        "2086"
+      ],
+      "backendDOMNodeId": 2041
+    },
+    {
+      "nodeId": "2042",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2039",
+      "childIds": [
+        "2087"
+      ],
+      "backendDOMNodeId": 2042
+    },
+    {
+      "nodeId": "2043",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2039",
+      "childIds": [
+        "2088"
+      ],
+      "backendDOMNodeId": 2043
+    },
+    {
+      "nodeId": "2045",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "heading"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 96
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "開催と料金"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "level",
+          "value": {
+            "type": "integer",
+            "value": 2
+          }
+        }
+      ],
+      "parentId": "2044",
+      "childIds": [
+        "2089"
+      ],
+      "backendDOMNodeId": 2045
+    },
+    {
+      "nodeId": "2046",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2044",
+      "childIds": [
+        "2090"
+      ],
+      "backendDOMNodeId": 2046
+    },
+    {
+      "nodeId": "2047",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "DescriptionList"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 30
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "title"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2044",
+      "childIds": [
+        "2048",
+        "2049",
+        "2050",
+        "2051",
+        "2052",
+        "2053"
+      ],
+      "backendDOMNodeId": 2047
+    },
+    {
+      "nodeId": "2054",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2044",
+      "childIds": [
+        "2097",
+        "2098"
+      ],
+      "backendDOMNodeId": 2054
+    },
+    {
+      "nodeId": "2057",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "heading"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 96
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録の確認",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "受講登録の確認"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "level",
+          "value": {
+            "type": "integer",
+            "value": 2
+          }
+        }
+      ],
+      "parentId": "2056",
+      "childIds": [
+        "2099"
+      ],
+      "backendDOMNodeId": 2057
+    },
+    {
+      "nodeId": "2058",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2056",
+      "childIds": [
+        "2100"
+      ],
+      "backendDOMNodeId": 2058
+    },
+    {
+      "nodeId": "2059",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "button"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 9
+      },
+      "name": {
+        "type": "computedString",
+        "value": "2026年度・特別会員向けオンライン講座の受講登録を取り消す",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "relatedElement",
+            "nativeSource": "label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "2026年度・特別会員向けオンライン講座の受講登録を取り消す"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "focused",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        }
+      ],
+      "parentId": "2056",
+      "childIds": [
+        "2101",
+        "2102",
+        "2103",
+        "2104",
+        "2105",
+        "2106",
+        "2107",
+        "2108"
+      ],
+      "backendDOMNodeId": 2059
+    },
+    {
+      "nodeId": "2065",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "status"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 159
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "attribute",
+            "attribute": "title"
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "live",
+          "value": {
+            "type": "token",
+            "value": "polite"
+          }
+        },
+        {
+          "name": "atomic",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "name": "relevant",
+          "value": {
+            "type": "tokenList",
+            "value": "additions text"
+          }
+        }
+      ],
+      "parentId": "2056",
+      "childIds": [
+        "2127"
+      ],
+      "backendDOMNodeId": 2065
+    },
+    {
+      "nodeId": "2067",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "heading"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 96
+      },
+      "name": {
+        "type": "computedString",
+        "value": "資料を読む前に",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "資料を読む前に"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "level",
+          "value": {
+            "type": "integer",
+            "value": 2
+          }
+        }
+      ],
+      "parentId": "2066",
+      "childIds": [
+        "2110",
+        "2111"
+      ],
+      "backendDOMNodeId": 2067
+    },
+    {
+      "nodeId": "2069",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2066",
+      "childIds": [
+        "2112"
+      ],
+      "backendDOMNodeId": 2069
+    },
+    {
+      "nodeId": "2070",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2066",
+      "childIds": [
+        "2113",
+        "2071",
+        "2115"
+      ],
+      "backendDOMNodeId": 2070
+    },
+    {
+      "nodeId": "2073",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "heading"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 96
+      },
+      "name": {
+        "type": "computedString",
+        "value": "言語と字形の比較",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "言語と字形の比較"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "level",
+          "value": {
+            "type": "integer",
+            "value": 2
+          }
+        }
+      ],
+      "parentId": "2072",
+      "childIds": [
+        "2116"
+      ],
+      "backendDOMNodeId": 2073
+    },
+    {
+      "nodeId": "2074",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2072",
+      "childIds": [
+        "2075",
+        "2118",
+        "2076"
+      ],
+      "backendDOMNodeId": 2074
+    },
+    {
+      "nodeId": "2077",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2072",
+      "childIds": [
+        "2120",
+        "2121"
+      ],
+      "backendDOMNodeId": 2077
+    },
+    {
+      "nodeId": "2079",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2072",
+      "childIds": [
+        "2122"
+      ],
+      "backendDOMNodeId": 2079
+    },
+    {
+      "nodeId": "2080",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2072",
+      "childIds": [
+        "2123"
+      ],
+      "backendDOMNodeId": 2080
+    },
+    {
+      "nodeId": "2082",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "link"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 110
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金に戻る",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "開催と料金に戻る"
+            }
+          },
+          {
+            "type": "attribute",
+            "attribute": "title",
+            "superseded": true
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "url",
+          "value": {
+            "type": "string",
+            "value": "about:blank#details"
+          }
+        }
+      ],
+      "parentId": "2081",
+      "childIds": [
+        "2124"
+      ],
+      "backendDOMNodeId": 2082
+    },
+    {
+      "nodeId": "2083",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "paragraph"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 133
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2081",
+      "childIds": [
+        "2125"
+      ],
+      "backendDOMNodeId": 2083
+    },
+    {
+      "nodeId": "2085",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "検証用・架空のイベント案内",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "検証用・架空のイベント案内"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2040",
+      "childIds": [
+        "-1000005510"
+      ],
+      "backendDOMNodeId": 2085
+    },
+    {
+      "nodeId": "2086",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "文字の庭"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2041",
+      "childIds": [
+        "-1000005511"
+      ],
+      "backendDOMNodeId": 2086
+    },
+    {
+      "nodeId": "2087",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "オンライン講座の受講案内",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "オンライン講座の受講案内"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2042",
+      "childIds": [
+        "-1000005512"
+      ],
+      "backendDOMNodeId": 2087
+    },
+    {
+      "nodeId": "2088",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "原稿と必須情報を保ちながら、読む順序と操作を確かめるプロトタイプです。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "原稿と必須情報を保ちながら、読む順序と操作を確かめるプロトタイプです。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2043",
+      "childIds": [
+        "-1000005513",
+        "-1000005514",
+        "-1000005515"
+      ],
+      "backendDOMNodeId": 2088
+    },
+    {
+      "nodeId": "2089",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "開催と料金"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2045",
+      "childIds": [
+        "-1000005516"
+      ],
+      "backendDOMNodeId": 2089
+    },
+    {
+      "nodeId": "2090",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭／2026年11月3日／文字の広場（架空会場）",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "文字の庭／2026年11月3日／文字の広場（架空会場）"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2046",
+      "childIds": [
+        "-1000005517",
+        "-1000005518"
+      ],
+      "backendDOMNodeId": 2090
+    },
+    {
+      "nodeId": "2048",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "term"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 169
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日時",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "日時"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2091"
+      ],
+      "backendDOMNodeId": 2048
+    },
+    {
+      "nodeId": "2049",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "definition"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 29
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2092"
+      ],
+      "backendDOMNodeId": 2049
+    },
+    {
+      "nodeId": "2050",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "term"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 169
+      },
+      "name": {
+        "type": "computedString",
+        "value": "会場",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "会場"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2093"
+      ],
+      "backendDOMNodeId": 2050
+    },
+    {
+      "nodeId": "2051",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "definition"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 29
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2094"
+      ],
+      "backendDOMNodeId": 2051
+    },
+    {
+      "nodeId": "2052",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "term"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 169
+      },
+      "name": {
+        "type": "computedString",
+        "value": "宛名と料金",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          },
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "宛名と料金"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2095"
+      ],
+      "backendDOMNodeId": 2052
+    },
+    {
+      "nodeId": "2053",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "definition"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 29
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2047",
+      "childIds": [
+        "2096"
+      ],
+      "backendDOMNodeId": 2053
+    },
+    {
+      "nodeId": "2097",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "架空の案内です。実際の申込や決済は",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "架空の案内です。実際の申込や決済は"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2054",
+      "childIds": [
+        "-1000005526",
+        "-1000005527"
+      ],
+      "backendDOMNodeId": 2097
+    },
+    {
+      "nodeId": "2098",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "できません。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "できません。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2054",
+      "childIds": [
+        "-1000005528"
+      ],
+      "backendDOMNodeId": 2098
+    },
+    {
+      "nodeId": "2099",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録の確認",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "受講登録の確認"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2057",
+      "childIds": [
+        "-1000005529"
+      ],
+      "backendDOMNodeId": 2099
+    },
+    {
+      "nodeId": "2100",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "以下のボタンで、この画面内の操作デモを実行できます。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "以下のボタンで、この画面内の操作デモを実行できます。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2058",
+      "childIds": [
+        "-1000005530",
+        "-1000005531"
+      ],
+      "backendDOMNodeId": 2100
+    },
+    {
+      "nodeId": "2101",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "2026年度・",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "2026年度・"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005532"
+      ],
+      "backendDOMNodeId": 2101
+    },
+    {
+      "nodeId": "2102",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "特別会員向け",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "特別会員向け"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005533"
+      ],
+      "backendDOMNodeId": 2102
+    },
+    {
+      "nodeId": "2103",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "オンライン",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "オンライン"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005534"
+      ],
+      "backendDOMNodeId": 2103
+    },
+    {
+      "nodeId": "2104",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "講座",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "講座"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005535"
+      ],
+      "backendDOMNodeId": 2104
+    },
+    {
+      "nodeId": "2105",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "の",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "の"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005536"
+      ],
+      "backendDOMNodeId": 2105
+    },
+    {
+      "nodeId": "2106",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "受講登録"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005537"
+      ],
+      "backendDOMNodeId": 2106
+    },
+    {
+      "nodeId": "2107",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "を",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "を"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005538"
+      ],
+      "backendDOMNodeId": 2107
+    },
+    {
+      "nodeId": "2108",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "取り消す",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "取り消す"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2059",
+      "childIds": [
+        "-1000005539"
+      ],
+      "backendDOMNodeId": 2108
+    },
+    {
+      "nodeId": "2127",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "操作デモを実行しました。実際の受講登録は変更していません。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "操作デモを実行しました。実際の受講登録は変更していません。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2065",
+      "childIds": [
+        "-1000005540",
+        "-1000005541",
+        "-1000005542"
+      ],
+      "backendDOMNodeId": 2127
+    },
+    {
+      "nodeId": "2110",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "資料を",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "資料を"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2067",
+      "childIds": [
+        "-1000005543"
+      ],
+      "backendDOMNodeId": 2110
+    },
+    {
+      "nodeId": "2111",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "読む前に",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "読む前に"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2067",
+      "childIds": [
+        "-1000005544"
+      ],
+      "backendDOMNodeId": 2111
+    },
+    {
+      "nodeId": "2112",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日本語の本文では、見出しから説明、注記へと順に読めることを確かめます。文字を小さくして押し込めるのではなく、必要な情報が見える配置を選びます。長い文章は段落ごとに話題を分け、画面の幅に合わせて自然に折り返します。日付や料金などの保護された値は、見た目の都合で書き換えません。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "日本語の本文では、見出しから説明、注記へと順に読めることを確かめます。文字を小さくして押し込めるのではなく、必要な情報が見える配置を選びます。長い文章は段落ごとに話題を分け、画面の幅に合わせて自然に折り返します。日付や料金などの保護された値は、見た目の都合で書き換えません。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2069",
+      "childIds": [
+        "-1000005545",
+        "-1000005546",
+        "-1000005547",
+        "-1000005548",
+        "-1000005549",
+        "-1000005550",
+        "-1000005551",
+        "-1000005552",
+        "-1000005553"
+      ],
+      "backendDOMNodeId": 2112
+    },
+    {
+      "nodeId": "2113",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "本文中の",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "本文中の"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2070",
+      "childIds": [
+        "-1000005554"
+      ],
+      "backendDOMNodeId": 2113
+    },
+    {
+      "nodeId": "2071",
+      "ignored": true,
+      "ignoredReasons": [
+        {
+          "name": "uninteresting",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        }
+      ],
+      "role": {
+        "type": "role",
+        "value": "none"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 0
+      },
+      "parentId": "2070",
+      "childIds": [
+        "2114"
+      ],
+      "backendDOMNodeId": 2071
+    },
+    {
+      "nodeId": "2114",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "OpenType features and accessible controls",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "OpenType features and accessible controls"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2071",
+      "childIds": [
+        "-1000005555",
+        "-1000005556"
+      ],
+      "backendDOMNodeId": 2114
+    },
+    {
+      "nodeId": "2115",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "は、日本語との混在を比較するための英語です。ここで示す文字の間隔や改行は、実際のフォントと画面の条件に依存します。表示を確認できなかった環境について、合格したとは報告しません。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "は、日本語との混在を比較するための英語です。ここで示す文字の間隔や改行は、実際のフォントと画面の条件に依存します。表示を確認できなかった環境について、合格したとは報告しません。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2070",
+      "childIds": [
+        "-1000005557",
+        "-1000005558",
+        "-1000005559",
+        "-1000005560",
+        "-1000005561",
+        "-1000005562",
+        "-1000005563"
+      ],
+      "backendDOMNodeId": 2115
+    },
+    {
+      "nodeId": "2116",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "言語と字形の比較",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "言語と字形の比較"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2073",
+      "childIds": [
+        "-1000005564"
+      ],
+      "backendDOMNodeId": 2116
+    },
+    {
+      "nodeId": "2075",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "generic"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 88
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2074",
+      "childIds": [
+        "2117"
+      ],
+      "backendDOMNodeId": 2075
+    },
+    {
+      "nodeId": "2118",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "／",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "／"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2074",
+      "childIds": [
+        "-1000005566"
+      ],
+      "backendDOMNodeId": 2118
+    },
+    {
+      "nodeId": "2076",
+      "ignored": false,
+      "role": {
+        "type": "role",
+        "value": "generic"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 88
+      },
+      "name": {
+        "type": "computedString",
+        "value": "",
+        "sources": [
+          {
+            "type": "relatedElement",
+            "attribute": "aria-labelledby"
+          },
+          {
+            "type": "attribute",
+            "attribute": "aria-label"
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2074",
+      "childIds": [
+        "2119"
+      ],
+      "backendDOMNodeId": 2076
+    },
+    {
+      "nodeId": "2120",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "この比較だけで地域字形の正しさを",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "この比較だけで地域字形の正しさを"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2077",
+      "childIds": [
+        "-1000005569",
+        "-1000005570"
+      ],
+      "backendDOMNodeId": 2120
+    },
+    {
+      "nodeId": "2121",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "認定しません。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "認定しません。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2077",
+      "childIds": [
+        "-1000005571"
+      ],
+      "backendDOMNodeId": 2121
+    },
+    {
+      "nodeId": "2122",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "「文字の庭」で、読む時間を。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "「文字の庭」で、読む時間を。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2079",
+      "childIds": [
+        "-1000005572"
+      ],
+      "backendDOMNodeId": 2122
+    },
+    {
+      "nodeId": "2123",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "「文字の庭」で、読む時間を。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "「文字の庭」で、読む時間を。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2080",
+      "childIds": [
+        "-1000005573"
+      ],
+      "backendDOMNodeId": 2123
+    },
+    {
+      "nodeId": "2124",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金に戻る",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "開催と料金に戻る"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2082",
+      "childIds": [
+        "-1000005574"
+      ],
+      "backendDOMNodeId": 2124
+    },
+    {
+      "nodeId": "2125",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "ブラウザー内の検証用成果物。実ホストへのスキル導入確認とは別の記録です。",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "ブラウザー内の検証用成果物。実ホストへのスキル導入確認とは別の記録です。"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2083",
+      "childIds": [
+        "-1000005575",
+        "-1000005576"
+      ],
+      "backendDOMNodeId": 2125
+    },
+    {
+      "nodeId": "-1000005510",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "検証用・架空のイベント案内"
+      },
+      "properties": [],
+      "parentId": "2085",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005511",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭"
+      },
+      "properties": [],
+      "parentId": "2086",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005512",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "オンライン講座の受講案内"
+      },
+      "properties": [],
+      "parentId": "2087",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005513",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "原稿と必須情報を保ちながら、読む"
+      },
+      "properties": [],
+      "parentId": "2088",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005514",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "順序と操作を確かめるプロトタイプ"
+      },
+      "properties": [],
+      "parentId": "2088",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005515",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "です。"
+      },
+      "properties": [],
+      "parentId": "2088",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005516",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金"
+      },
+      "properties": [],
+      "parentId": "2089",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005517",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の庭／2026年11月3日／"
+      },
+      "properties": [],
+      "parentId": "2090",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005518",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の広場（架空会場）"
+      },
+      "properties": [],
+      "parentId": "2090",
+      "childIds": []
+    },
+    {
+      "nodeId": "2091",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日時",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "日時"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2048",
+      "childIds": [
+        "-1000005519"
+      ],
+      "backendDOMNodeId": 2091
+    },
+    {
+      "nodeId": "2092",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "2026年11月3日",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "2026年11月3日"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2049",
+      "childIds": [
+        "-1000005520"
+      ],
+      "backendDOMNodeId": 2092
+    },
+    {
+      "nodeId": "2093",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "会場",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "会場"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2050",
+      "childIds": [
+        "-1000005521"
+      ],
+      "backendDOMNodeId": 2093
+    },
+    {
+      "nodeId": "2094",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の広場（架空会場）",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "文字の広場（架空会場）"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2051",
+      "childIds": [
+        "-1000005522"
+      ],
+      "backendDOMNodeId": 2094
+    },
+    {
+      "nodeId": "2095",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "宛名と料金",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "宛名と料金"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2052",
+      "childIds": [
+        "-1000005523"
+      ],
+      "backendDOMNodeId": 2095
+    },
+    {
+      "nodeId": "2096",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "髙﨑さま／料金１,２００円／が",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "髙﨑さま／料金１,２００円／が"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2053",
+      "childIds": [
+        "-1000005524",
+        "-1000005525"
+      ],
+      "backendDOMNodeId": 2096
+    },
+    {
+      "nodeId": "-1000005526",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "架空の案内です。実際の申込や決"
+      },
+      "properties": [],
+      "parentId": "2097",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005527",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "済は"
+      },
+      "properties": [],
+      "parentId": "2097",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005528",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "できません。"
+      },
+      "properties": [],
+      "parentId": "2098",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005529",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録の確認"
+      },
+      "properties": [],
+      "parentId": "2099",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005530",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "以下のボタンで、この画面内の"
+      },
+      "properties": [],
+      "parentId": "2100",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005531",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "操作デモを実行できます。"
+      },
+      "properties": [],
+      "parentId": "2100",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005532",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "2026年度・"
+      },
+      "properties": [],
+      "parentId": "2101",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005533",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "特別会員向け"
+      },
+      "properties": [],
+      "parentId": "2102",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005534",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "オンライン"
+      },
+      "properties": [],
+      "parentId": "2103",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005535",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "講座"
+      },
+      "properties": [],
+      "parentId": "2104",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005536",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "の"
+      },
+      "properties": [],
+      "parentId": "2105",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005537",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "受講登録"
+      },
+      "properties": [],
+      "parentId": "2106",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005538",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "を"
+      },
+      "properties": [],
+      "parentId": "2107",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005539",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "取り消す"
+      },
+      "properties": [],
+      "parentId": "2108",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005540",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "操作デモを実行しました。実"
+      },
+      "properties": [],
+      "parentId": "2127",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005541",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "際の受講登録は変更していま"
+      },
+      "properties": [],
+      "parentId": "2127",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005542",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "せん。"
+      },
+      "properties": [],
+      "parentId": "2127",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005543",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "資料を"
+      },
+      "properties": [],
+      "parentId": "2110",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005544",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "読む前に"
+      },
+      "properties": [],
+      "parentId": "2111",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005545",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日本語の本文では、見出しから説"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005546",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "明、注記へと順に読めることを確か"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005547",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "めます。文字を小さくして押し込め"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005548",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "るのではなく、必要な情報が見える"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005549",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "配置を選びます。長い文章は段落ご"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005550",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "とに話題を分け、画面の幅に合わせ"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005551",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "て自然に折り返します。日付や料金"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005552",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "などの保護された値は、見た目の都"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005553",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "合で書き換えません。"
+      },
+      "properties": [],
+      "parentId": "2112",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005554",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "本文中の"
+      },
+      "properties": [],
+      "parentId": "2113",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005555",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "OpenType features and "
+      },
+      "properties": [],
+      "parentId": "2114",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005556",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "accessible controls"
+      },
+      "properties": [],
+      "parentId": "2114",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005557",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "は、日本語と"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005558",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "の混在を比較するための英語です。"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005559",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "ここで示す文字の間隔や改行は、実"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005560",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "際のフォントと画面の条件に依存し"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005561",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "ます。表示を確認できなかった環境"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005562",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "について、合格したとは報告しませ"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005563",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "ん。"
+      },
+      "properties": [],
+      "parentId": "2115",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005564",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "言語と字形の比較"
+      },
+      "properties": [],
+      "parentId": "2116",
+      "childIds": []
+    },
+    {
+      "nodeId": "2117",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日本語：骨",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "日本語：骨"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2075",
+      "childIds": [
+        "-1000005565"
+      ],
+      "backendDOMNodeId": 2117
+    },
+    {
+      "nodeId": "-1000005566",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "／"
+      },
+      "properties": [],
+      "parentId": "2118",
+      "childIds": []
+    },
+    {
+      "nodeId": "2119",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "StaticText"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 158
+      },
+      "name": {
+        "type": "computedString",
+        "value": "繁體中文：骨",
+        "sources": [
+          {
+            "type": "contents",
+            "value": {
+              "type": "computedString",
+              "value": "繁體中文：骨"
+            }
+          }
+        ]
+      },
+      "properties": [],
+      "parentId": "2076",
+      "childIds": [
+        "-1000005567",
+        "-1000005568"
+      ],
+      "backendDOMNodeId": 2119
+    },
+    {
+      "nodeId": "-1000005569",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "この比較だけで地域字形の正しさ"
+      },
+      "properties": [],
+      "parentId": "2120",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005570",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "を"
+      },
+      "properties": [],
+      "parentId": "2120",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005571",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "認定しません。"
+      },
+      "properties": [],
+      "parentId": "2121",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005572",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "「文字の庭」で、読む時間を。"
+      },
+      "properties": [],
+      "parentId": "2122",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005573",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "「文字の庭」で、読む時間を。"
+      },
+      "properties": [],
+      "parentId": "2123",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005574",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "開催と料金に戻る"
+      },
+      "properties": [],
+      "parentId": "2124",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005575",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "ブラウザー内の検証用成果物。実ホスト"
+      },
+      "properties": [],
+      "parentId": "2125",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005576",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "へのスキル導入確認とは別の記録です。"
+      },
+      "properties": [],
+      "parentId": "2125",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005519",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日時"
+      },
+      "properties": [],
+      "parentId": "2091",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005520",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "2026年11月3日"
+      },
+      "properties": [],
+      "parentId": "2092",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005521",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "会場"
+      },
+      "properties": [],
+      "parentId": "2093",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005522",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "文字の広場（架空会場）"
+      },
+      "properties": [],
+      "parentId": "2094",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005523",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "宛名と料金"
+      },
+      "properties": [],
+      "parentId": "2095",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005524",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "髙﨑さま／料金１,２００円／"
+      },
+      "properties": [],
+      "parentId": "2096",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005525",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "が"
+      },
+      "properties": [],
+      "parentId": "2096",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005565",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "日本語：骨"
+      },
+      "properties": [],
+      "parentId": "2117",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005567",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "繁"
+      },
+      "properties": [],
+      "parentId": "2119",
+      "childIds": []
+    },
+    {
+      "nodeId": "-1000005568",
+      "ignored": false,
+      "role": {
+        "type": "internalRole",
+        "value": "InlineTextBox"
+      },
+      "chromeRole": {
+        "type": "internalRole",
+        "value": 101
+      },
+      "name": {
+        "type": "computedString",
+        "value": "體中文：骨"
+      },
+      "properties": [],
+      "parentId": "2119",
+      "childIds": []
+    }
+  ]
+}

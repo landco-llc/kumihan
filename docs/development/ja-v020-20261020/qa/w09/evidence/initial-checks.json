@@ -1,0 +1,93 @@
+[
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit": 1,
+    "log": "initial-check-01.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/seo",
+      "-v"
+    ],
+    "exit": 1,
+    "log": "initial-check-02.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/check_ja_type_011_cases.py"
+    ],
+    "exit": 0,
+    "log": "initial-check-03.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_dist.py",
+      "--check"
+    ],
+    "exit": 0,
+    "log": "initial-check-04.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/build_seo.py",
+      "--check"
+    ],
+    "exit": 1,
+    "log": "initial-check-05.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/check_seo_preservation.py"
+    ],
+    "exit": 1,
+    "log": "initial-check-06.log"
+  },
+  {
+    "command": [
+      "/Users/Lai/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "tools/web_fonts.py",
+      "--check"
+    ],
+    "exit": 0,
+    "log": "initial-check-07.log"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit": 0,
+    "log": "initial-check-08.log"
+  },
+  {
+    "command": [
+      "bundle",
+      "exec",
+      "jekyll",
+      "build",
+      "--destination",
+      "/private/tmp/kumihan-w09-site",
+      "--trace"
+    ],
+    "exit": 1,
+    "log": "initial-check-09.log"
+  }
+]

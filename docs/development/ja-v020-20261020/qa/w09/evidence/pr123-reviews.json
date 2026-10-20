@@ -1,0 +1,42 @@
+[
+  {
+    "id": 5580901893,
+    "node_id": "PRR_kwDOVHv0A88AAAABTKXOBQ",
+    "user": {
+      "login": "mmryrmt",
+      "id": 278702103,
+      "node_id": "U_kgDOEJyoFw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/278702103?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mmryrmt",
+      "html_url": "https://github.com/mmryrmt",
+      "followers_url": "https://api.github.com/users/mmryrmt/followers",
+      "following_url": "https://api.github.com/users/mmryrmt/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mmryrmt/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mmryrmt/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mmryrmt/subscriptions",
+      "organizations_url": "https://api.github.com/users/mmryrmt/orgs",
+      "repos_url": "https://api.github.com/users/mmryrmt/repos",
+      "events_url": "https://api.github.com/users/mmryrmt/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mmryrmt/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "body": "## Owner Gate 追加審査 — 独立目視による未記録の組版課題（COMMENT / NOT APPROVAL）\n\n対象: PR #123 final HEAD `384f073ba122abde42f5836b15650c055928e724`。現行の97 unit / 29 SEO / final-head CI、15 ZIP整合、原稿保全の記録は認識しています。**今回のコメントは新たに読み戻した最終画像の目視評価であり、製品本体の改行エンジン不具合と断定するものではありません。**\n\n### QA-V03 — P1: 正常例のPDF報告書に不自然な意味上の分断\n\n保存された最終レンダリング:\n- [report-02.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/documents/report-02.png): 凡例文に `ありませ／ん。`。表中の「結果を継／続欄に残す」の分断。\n- [report-03.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/documents/report-03.png) / [report-04.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/documents/report-04.png): 「継／続欄」の分断が繰り返される。\n- [report-05.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/documents/report-05.png): 末尾注記 `しな／い。`。\n\n文字列は保持されており技術的な禁則エラーと同一視しませんが、日本語の意味・読みやすさの受入では無視できません。既存「全ページ目視済み」は事実でも、**組版品質全項目PASSを示す証拠ではありません**。\n\n### QA-V04 — P1: 320px/CSS200%のWeb正常例にも語尾・見出しの孤立\n\n[web-320-css200.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/web-320-css200.png) では `できませ／ん。`、`認定しませ／ん。`、見出し `資料を読む前／に` が確認できます。幅内で操作できることと、意味単位の整った改行は別検査です。320px拡大条件ゆえ避けられない分断もあり得るため、局所的な幅・送り・段落・改行候補を比較し、悪化や横スクロールがないことを検証してください。原稿やコードポイントの書換は禁止。\n\n### QA-V05 — 既存P1のLibreOffice出力は可視状態も要確認\n\n保存PPTXの原稿一致と、LibreOfficeDev26.8(alpha)出力PDFの完全抽出不一致を区別した記録は正しいです。最終[slide-01.png](https://github.com/landco-llc/kumihan/blob/384f073ba122abde42f5836b15650c055928e724/docs/development/ja-v020-20261020/qa/evidence/documents/presentation-01.png)では日付/価格の字間が不自然に広がって見えるため、単なるcopy/extractionの問題というより **当該rendererによる視覚的な組版差も可能性あり** として比較してください。元PPTX XMLの文字列変更やKUMIHAN source破損は証明されていません。安定版/別rendererの画像比較、編集可能なPPTX内の状態、抽出差を分けて記録。\n\n### 次の受入条件\n\n- 上記3箇所を限定修正するか、未達として明示し、同一原稿でBEFORE/AFTER、全ページ/全スライド/該当320px状態の再描画・再確認を保存。\n- P0（必須情報の遮蔽・欠落・Unicode変更）を新たに発生させない。初期のPV-005等の意図的な負例はそのまま維持。\n- 変更後の新しい最終HEADで97+テスト/SEO/配布15ZIP保全/CIを再確認する。\n- ネイティブホスト4 Skills×3系統=12呼び出しは依然0件。ソースREADだけでは本番サポート認証とせず、明示的な適用範囲限定またはOperator QAが必要。\n\n**公開判断: HOLD。** PR #120/#123はDraftのまま、main merge/tag/Release/Pages本番/Marketplace/Universal MCP本番は承認していません。",
+    "state": "COMMENTED",
+    "html_url": "https://github.com/landco-llc/kumihan/pull/123#pullrequestreview-5580901893",
+    "pull_request_url": "https://api.github.com/repos/landco-llc/kumihan/pulls/123",
+    "author_association": "MEMBER",
+    "_links": {
+      "html": {
+        "href": "https://github.com/landco-llc/kumihan/pull/123#pullrequestreview-5580901893"
+      },
+      "pull_request": {
+        "href": "https://api.github.com/repos/landco-llc/kumihan/pulls/123"
+      }
+    },
+    "submitted_at": "2026-10-20T04:53:41Z",
+    "commit_id": "384f073ba122abde42f5836b15650c055928e724"
+  }
+]
