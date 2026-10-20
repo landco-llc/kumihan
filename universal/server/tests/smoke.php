@@ -27,6 +27,14 @@ check($router->detect('ภาษาไทย')['module_id'] === 'th', 'Thai');
 check($router->detect('ភាសាខ្មែរ')['module_id'] === 'km', 'Khmer');
 check($router->detect('বাংলা')['module_id'] === 'bn', 'Bengali');
 check($router->detect('漢字')['language'] === 'und', 'Han alone is ambiguous');
+$diagText = '語言不同，文字編排也會改變。設計時應留意標點與換行。';
+$diag = $router->detect($diagText);
+fwrite(STDERR, 'KUMIHAN_DIAG_PHP=' . PHP_VERSION . ' PCRE=' . PCRE_VERSION . PHP_EOL);
+fwrite(STDERR, 'KUMIHAN_DIAG_ROUTE=' . json_encode($diag, JSON_UNESCAPED_UNICODE) . PHP_EOL);
+foreach (['sc_hiragana' => '/\\p{sc=Hiragana}+/u', 'sc_katakana' => '/\\p{sc=Katakana}+/u', 'script_han' => '/\\p{sc=Han}+/u', 'script_extensions_han' => '/\\p{Han}+/u'] as $label => $expr) {
+    preg_match_all($expr, $diagText, $mm);
+    fwrite(STDERR, 'KUMIHAN_DIAG_' . $label . '=' . json_encode($mm[0], JSON_UNESCAPED_UNICODE) . PHP_EOL);
+}
 check($router->detect('語言不同，文字編排也會改變。設計時應留意標點與換行。')['language'] === 'und', 'Chinese punctuation is not Japanese kana');
 check(!in_array('kana', $router->detect('文字，排版。')['scripts'], true), 'Han punctuation must not register kana');
 check($router->detect('文字，排版。', 'zh-Hant')['module_id'] === 'zh-Hant', 'Explicit Traditional Chinese preserved');
