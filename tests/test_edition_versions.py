@@ -221,3 +221,12 @@ class PublishedZihengInstallLinks(unittest.TestCase):
             self.assertIn(plugin['url'],body)
             if path.startswith('docs/'):
                 self.assertIn(plugin['sha256'],body)
+
+class JapaneseCurrentGuideNames(unittest.TestCase):
+    def test_current_zip_labels_and_commands_match_published_version(self):
+        from build_version_site import generated_markdown
+        f=v.load()['editions']['ja']
+        source='[kumihan-GPT-Codex-plugin-0.1.8.zip](../downloads%20GPT-Codex/plugins/kumihan-GPT-Codex-plugin-0.1.8.zip)\nunzip kumihan-GPT-Codex-plugin-0.1.8.zip'
+        out=generated_markdown(source,f)
+        self.assertNotIn('0.1.8.zip',out)
+        self.assertIn('unzip kumihan-GPT-Codex-plugin-0.2.0.zip',out)

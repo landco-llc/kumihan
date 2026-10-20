@@ -30,7 +30,7 @@ All files are on the [downloads page](https://github.com/landco-llc/kumihan/rele
 
 **Plugin (all four skills)**
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
+- [kumihan-GPT-Codex-plugin-0.2.0.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 **Individual skills**
 

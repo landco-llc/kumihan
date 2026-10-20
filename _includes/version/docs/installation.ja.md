@@ -30,7 +30,7 @@ KUMIHANをChatGPTやCodexで使うための手順です。
 
 **プラグイン（4つのスキルをまとめたもの）**
 
-- [kumihan-GPT-Codex-plugin-0.1.8.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
+- [kumihan-GPT-Codex-plugin-0.2.0.zip](https://github.com/landco-llc/kumihan/releases/download/v0.2.0/kumihan-GPT-Codex-plugin-0.2.0.zip)
 
 **スキル（1つずつ）**
 
