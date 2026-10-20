@@ -83,3 +83,30 @@ Return one RESULT record to Issue #126, #119 and #121 with:
 - any blocker's exact unavailable capability, not an invented publication completion.
 
 No further Owner approval loop is required for these **explicitly authorized bounded GitHub actions** if every prescribed gate passes. Any new unrelated production/Marketplace/security scope or inability to satisfy hard release checks requires stopping that operation and reporting.
+
+
+## W00B — Mandatory new-main integration update (2026-10-20, after this workgroup was created)
+
+A concurrent main integration occurred during preparation: **PR #122 KUMIHAN｜字衡 source v0.2.0 has merged**. New main is `de6ec7d6c393a832ffff8f842be47a5335d3ecd0`; previous main `8b647cc752d7a9bc3db48356fa0ab7b221bb66d6` is no longer current. A provisional JA source integration [Draft PR #128](https://github.com/landco-llc/kumihan/pull/128) was created from frozen PR #125 before that merge; it now reports **mergeable=false**, base new main and 617 changed files. **DO NOT Ready/merge/force-rebase PR #128 as-is.** Use it only as an auditable, stale initial attempt, and build a fresh integration branch from new main.
+
+Read the newly merged [JA/#120 shared-path coexistence handoff](https://github.com/landco-llc/kumihan/blob/de6ec7d6c393a832ffff8f842be47a5335d3ecd0/docs/development/zh-hant-v020-20261020/JA120_SHARED_HANDOFF.md) before integrating. Its disposable three-way composition validated 123 root +26 ZiHeng tests in a **synthetic** tree (not hosted integration acceptance) and identifies six shared files:
+
+1. `README.md`: keep JA source0.2.0/published0.1.8 (before release), plus ZH-HANT source0.2.0/unpublished (retained legacy v0.1.0 source downloads).
+2. `assets/edition-versions.json`: merge two per-edition records; never set ZH-HANT published_version to 0.2.0.
+3. `tools/build_version_site.py`: preserve BOTH JA old→new source transition admission and ZH-HANT source transition admission.
+4. `tools/check_seo_preservation.py`: retain BOTH exact transition paths and normal overlay checks; no weakening or skip.
+5. `docs/version-automation/preservation.json`: regenerate combined overlay, preserving all existing preimage hashes and 330 accepted ZH-HANT rows; the README after-hash changes with JA combined status.
+6. `tests/test_version_naming.py`: maintain both dynamic JA source version expectations and ZH-HANT retained-manifest/test policies.
+
+The first disposable assembly had a known 15 old-JA-ZIP deletion loss due to rename detection; replay the original JA ZIP *deletions* explicitly with `--no-renames` or a robust exact path manifest and verify no old active ZIP remains at v0.1.8 on current source tree (old published v0.1.8 Release assets remain preserved off-tree).
+
+A prior synthetic test failed `test_other_edition_facts_are_unchanged` because its baseline pinned JA before the new JA source transition. DO NOT skip, disable or whitewash that check. Establish a new, narrowly accepted JA-after-#122 transition record under this Release Work's evidence, with strict before/after hashes; preserve the immutable ZH-HANT historical baseline and all other source ZIP hashes.
+
+**New integration sequence (required):**
+- branch fresh from main `de6ec...` (and Fresh Read again before applying). Replay #120 Japanese source diff, then #123 QA delta, then #125 W09 delta, resolving only the authorized six shared paths and necessary generated records.
+- Verify ZH-HANT source code, site, legacy ZIP and release status preserve the merged #122 exact values.
+- Rerun root, ZH-HANT (26), Thai cross-locale and all originally triggered GitHub Actions, `static-and-distribution`, dist, SEO, both preservation paths and real Jekyll build on **new main-based integration SHA**. The old PR #125 and synthetic tree checks do not pass this gate.
+- Create a **new clean main-target Release PR** with explicit old/new main SHA and PR #128 supersession; do not try to merge PR #128 until reconciled. If another main merge arrives, repeat Fresh Read/compare.
+- If the six-file composition or cross-locale baseline cannot be made exact without mutating unrelated modules, HOLD integration and return a single blocker rather than forcing release.
+
+GitHub v0.2.0 tag/Release/upload, verification, version sync and MCP handoff remain authorized **after** this new integration gate passes. The GitHub source-only Release must not be labelled published while #128 is unmergeable.
