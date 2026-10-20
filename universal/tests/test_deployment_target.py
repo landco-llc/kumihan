@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ensure the designated production hostname is recorded without treating it as live."""
+"""Check the bounded live preview state without claiming a general release."""
 from pathlib import Path
 import json
 import unittest
@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[2]
 MANIFEST = ROOT / "universal" / "deployment" / "target.json"
 
 class DeploymentTargetTests(unittest.TestCase):
-    def test_deployment_target_is_planned_not_live(self):
+    def test_deployment_target_matches_bounded_live_preview(self):
         d = json.loads(MANIFEST.read_text(encoding="utf-8"))
         self.assertEqual(d["schema_version"], "1.0")
         self.assertEqual(d["hostname"], "mcp-kmhn.landco.co.jp")
@@ -22,6 +22,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertEqual(d["g2_trial_attempt"]["outcome"], "INSTALL_PASS_ROLLBACK_PASS_NO_MCP_PROTOCOL_TEST")
         self.assertFalse(d["g2_trial_attempt"]["live_mcp_verified"])
         self.assertTrue(d["g3_live_mcp"]["public_bootstrap_live"])
+        # This is the current G3 state. Earlier G1/G2 absent checks record historical observations.
         self.assertTrue(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["g2_stage_evidence"]["owner_terminal_markers"], [
             "G2_LOCAL_FILE_SHA_OK",
@@ -65,7 +66,6 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(d["flags"]["public_web_wide_scan_permission_limited"])
         self.assertTrue(d["flags"]["public_root_preflight_passed"])
         self.assertFalse(d["flags"]["other_vhosts_isolation_verified"])
-        self.assertFalse(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["private_runtime_web_verification"]["observed_php_version"], "8.5.11")
         self.assertEqual(d["private_runtime_web_verification"]["registry_modules"], 21)
         self.assertEqual(d["private_runtime_web_verification"]["markers"]["SESSION_WRITE"], "PASS")
@@ -96,7 +96,6 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(d["flags"]["web_php_registry_21_verified"])
         self.assertTrue(d["flags"]["web_php_session_write_verified"])
         self.assertTrue(d["flags"]["web_php_extension_checks_verified"])
-        self.assertFalse(d["flags"]["public_bootstrap_installed"])
         self.assertEqual(d["transfer_evidence"]["mac_readback_digest"], "5d814cc505374bbf126d058119ece6b04e9eaf757938600eedfb2e3983f6a3e1")
         self.assertEqual(d["pre_deployment_inventory"]["private_candidate_exists"], "PRIVATE_DIR_OK")
         self.assertEqual(d["pre_deployment_inventory"]["public_index_file"], "PUBLIC_INDEX_EMPTY")
@@ -134,7 +133,7 @@ class DeploymentTargetTests(unittest.TestCase):
         self.assertTrue(gates["public_ssh_folder_verified"])
         self.assertFalse(gates["private_runtime_path_verified"])
         self.assertTrue(gates["private_candidate_exists_verified"])
-        self.assertTrue(gates["public_bootstrap_absent_verified"])
+        self.assertFalse(gates["public_bootstrap_absent_verified"])
         self.assertTrue(gates["ephemeral_probe_files_absent_verified"])
         self.assertTrue(gates["web_php_can_read_private_runtime_verified"])
         self.assertFalse(gates["public_release_authorized"])
