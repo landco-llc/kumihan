@@ -21,16 +21,21 @@ def forbidden(name, raw):
     return bool(INTERNAL.search(name) or MCP_NAME.search(name) or MCP_CONFIG.search(raw) or INTERNAL_TEXT.search(raw))
 
 def clean_archive(raw):
-    out=io.BytesIO()
-    with zipfile.ZipFile(io.BytesIO(raw)) as src, zipfile.ZipFile(out,'w') as dst:
+    out=io.BytesIO();kept=[];removed=False
+    with zipfile.ZipFile(io.BytesIO(raw)) as src:
         for info in src.infolist():
             name=info.filename
             if name.startswith('/') or '..' in Path(name).parts:raise ValueError('Unsafe archive member: '+name)
             data=src.read(info)
-            if INTERNAL.search(name):continue
+            if INTERNAL.search(name):
+                removed=True;continue
             if forbidden(name,data):raise ValueError('Forbidden archive member: '+name)
-            dst.writestr(info,data)
+            kept.append((info,data))
+    if not removed:return raw
+    with zipfile.ZipFile(out,'w') as dst:
+        for info,data in kept:dst.writestr(info,data,compresslevel=9)
     return out.getvalue()
+
 
 def source_paths(root):
     root=Path(root)

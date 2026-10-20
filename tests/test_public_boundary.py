@@ -31,6 +31,8 @@ class PublicBoundaryTests(unittest.TestCase):
             with zipfile.ZipFile(out,'w') as z:
                 for name,raw in files.items():z.writestr(name,raw)
             return out.getvalue()
+        safe=next((ROOT/'downloads Claude/skills').glob('*.zip')).read_bytes()
+        self.assertEqual(b.clean_archive(safe),safe)
         raw=archive({'pkg/SKILL.md':b'Product guidance','pkg/LIGHT_REVIEW.md':b'internal','pkg/LICENSE':b'license'})
         clean=b.clean_archive(raw)
         with zipfile.ZipFile(io.BytesIO(clean)) as z:
