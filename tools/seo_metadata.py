@@ -112,6 +112,25 @@ def _seo_tag(match):
     return tag
 
 
+# The icon set of _layouts/landing.html and _layouts/installation.html.
+ICONS = ('<link rel="icon" type="image/x-icon" href="{root}favicon.ico">\n'
+         '<link rel="icon" type="image/png" sizes="16x16" href="{root}assets/favicon-16x16.png">\n'
+         '<link rel="icon" type="image/png" sizes="32x32" href="{root}assets/favicon-32x32.png">\n'
+         '<link rel="icon" type="image/png" sizes="192x192" href="{root}assets/favicon-192x192.png">\n'
+         '<link rel="apple-touch-icon" sizes="180x180" href="{root}assets/apple-touch-icon.png">')
+
+
+def _icons(head, path):
+    """Give every generated page the same icon set as the Jekyll layouts, in place of its own."""
+    icon = re.compile(r'<link\b[^>]*\brel\s*=\s*[\'"](?:icon|shortcut icon|apple-touch-icon)[\'"][^>]*>\n?', re.I)
+    first = icon.search(head)
+    if not first:
+        return head
+    root = '../' * str(path).count('/')
+    rest = icon.sub('', head[first.end():])
+    return head[:first.start()] + ICONS.format(root=root) + '\n' + rest
+
+
 def enrich_html(html, path):
     """Replace SEO head only; preserve all body text, style, and page language."""
     match = re.search(r'<head\b[^>]*>(.*?)</head\s*>', html, re.I | re.S)
@@ -141,6 +160,7 @@ def enrich_html(html, path):
     head = re.sub(r'<title\b[^>]*>.*?</title\s*>', '', match[1], flags=re.I | re.S)
     head = re.sub(r'<script\b[^>]*type\s*=\s*[\'"]application/ld\+json[\'"][^>]*>.*?</script\s*>', '', head, flags=re.I | re.S)
     head = re.sub(r'<(?:meta|link)\b[^>]*>', _seo_tag, head, flags=re.I)
+    head = _icons(head, path)
     # Strip whitespace left by prior metadata to guarantee repeated builds agree.
     head = '\n'.join(line for line in head.splitlines() if line.strip())
     metadata = render_metadata(title, parser.description, parser.lang, canonical, alternates)

@@ -116,12 +116,6 @@ OVERRIDES = r"""
     .intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2 {
       text-wrap: balance; word-break: normal;
     }
-    .hero .edition {
-      display: inline-block; margin-top: 10px;
-      color: var(--red-dark); font: 750 16px/1.65 "Noto Sans Thai", Thonburi,
-            "Hiragino Sans", sans-serif;
-      letter-spacing: 0; overflow-wrap: anywhere;
-    }
     .feature-motif { font-family: "Noto Sans Thai", Thonburi, "Hiragino Sans", sans-serif; }
     .feature:nth-child(2) .feature-motif { letter-spacing: -.12em; }
     .feature:nth-child(3) .feature-motif { font-size: 31px; }
@@ -147,7 +141,6 @@ OVERRIDES = r"""
     @media (max-width: 560px) {
       .hero h1 { font-size: clamp(36px, 9vw, 50px); letter-spacing: -.04em; }
       .language-switch a { padding: 7px 9px; }
-      .hero .edition { font-size: 15px; }
       .hero-stage::after { right: 8px; }
       .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .skill-name { font-size: 25px; }
@@ -234,7 +227,6 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell hero-layout">
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(s["eyebrow"])}</p>
-      <div class="edition" lang="th">{BRAND}</div>
       <h1 id="hero-title">{"<br>".join(x(p) for p in s["h1"][:-1])}<br><span class="accent">{x(s["h1"][-1])}</span></h1>
       <p class="hero-desc">{thai_name(s["lead"])}</p>
       <div class="hero-cta">
@@ -285,7 +277,7 @@ def render(root: Path, copy: dict) -> str:
     shaping_detail = shaping_detail.replace("記号の重なり、欠け、", "母音・声調記号の重なりや欠け、")
     shared = s["features"]
     features = [
-        ("01 / BREAKS", "ก", breaks, breaks_detail + shaping_detail),
+        ("01 / TYPE", "ก", breaks, breaks_detail + shaping_detail),
         (shared[1]["idx"], shared[1]["mark"], shared[1]["h3"], shared[1]["p"]),
         (shared[2]["idx"], "Aa/ก", shared[2]["h3"], split(c["feature 3"])[1]),
         (shared[3]["idx"], shared[3]["mark"], shared[3]["h3"], shared[3]["p"]),
@@ -318,7 +310,7 @@ def render(root: Path, copy: dict) -> str:
     <div class="skills-grid">
 """
     skills = [
-        ("kumihan-th", "01 / ENTRY", "組"),
+        ("kumihan-th", "01 / ENTRY", "ก"),
         ("kumihan-th-web", "02 / WEB", "↗"),
         ("kumihan-th-documents", "03 / DOCUMENTS", "文"),
         ("kumihan-th-review", "04 / REVIEW", "◎"),
@@ -370,8 +362,7 @@ def render(root: Path, copy: dict) -> str:
   <div class="shell status-box">
     <div>
       <div class="status-title" id="status-title">{x(s["status_title"])}</div>
-      <p>{x(c["status body"])}</p>
-      <p>ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です</p>
+      <p>{x(c["status body"])}ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です。</p>
     </div>
     <div class="status-meta">{anchor(RELEASE, x(s["status_link"]), extra='target="_blank" rel="noopener noreferrer"')}
       <br>OPEN SOURCE · APACHE 2.0</div>

@@ -3,14 +3,16 @@
     "title": "KUMIHAN｜Nhịp Chữ — Thiết kế chữ tiếng Việt tự nhiên hơn",
     "description": "KUMIHAN｜Nhịp Chữ là bộ kỹ năng AI mã nguồn mở hỗ trợ tạo và rà soát web, tài liệu, bài viết và bản trình bày tiếng Việt, chú trọng dấu thanh, khả năng đọc và sự toàn vẹn của nguyên bản.",
     "skip": "Đến nội dung",
-    "navLabel": "Điều hướng chính",
-    "language": "Ngôn ngữ",
+    "nav_label": "Điều hướng chính",
     "nav": [
       "Giới thiệu",
       "Nguyên tắc",
       "Kỹ năng",
       "Bắt đầu"
     ],
+    "lang_label": "Ngôn ngữ",
+    "gateway_label": "Trang chủ KUMIHAN",
+    "top": "Lên đầu trang",
     "eyebrow": "OPEN-SOURCE SKILLS / VIETNAMESE TYPOGRAPHY",
     "h1": [
       "Thiết kế chữ tiếng Việt",
@@ -21,55 +23,55 @@
       "Bắt đầu",
       "Tìm hiểu thêm"
     ],
-    "heroFoot": [
-      "MÃ NGUỒN MỞ",
-      "BỐN KỸ NĂNG",
-      "TIẾNG VIỆT"
+    "hero_foot": [
+      "OPEN SOURCE",
+      "FOUR SKILLS",
+      "VIETNAMESE FIRST"
     ],
-    "concept": [
+    "concept_h2": [
       "Không phải một kiểu thiết kế áp dụng cho mọi nơi",
       "mà là cách thể hiện phù hợp với từng thông điệp"
     ],
-    "conceptBody": "Mỗi dự án, người đọc và thông điệp đều khác nhau. KUMIHAN giúp AI tổ chức chữ, khoảng trắng và thứ bậc thông tin theo nội dung và mục đích — không lặp lại những mẫu thiết kế chung chung.",
-    "featuresH2": "Bốn nguyên tắc để truyền đạt rõ ràng",
-    "featuresDeck": "Những điều cần cân nhắc khi tạo mới và rà soát nội dung tiếng Việt.",
+    "concept_body": "Mỗi dự án, người đọc và thông điệp đều khác nhau. KUMIHAN giúp AI tổ chức chữ, khoảng trắng và thứ bậc thông tin theo nội dung và mục đích — không lặp lại những mẫu thiết kế chung chung.",
+    "features_h2": "Bốn nguyên tắc để truyền đạt rõ ràng",
+    "features_deck": "Những điều cần cân nhắc khi tạo mới và rà soát nội dung tiếng Việt.",
     "features": [
-      [
-        "01 / TYPOGRAPHY",
-        "Ắ Ệ",
-        "Dấu và chữ rõ ràng",
-        "Giữ nguyên dấu thanh, chọn phông chữ hỗ trợ tiếng Việt, kiểm tra khoảng dòng và cách ngắt câu trong bối cảnh thực tế."
-      ],
-      [
-        "02 / STRUCTURE",
-        "▮▮▯",
-        "Thiết kế có mục đích",
-        "Xây dựng bố cục dựa trên thứ tự thông tin, mức độ quan trọng và nhu cầu của người đọc."
-      ],
-      [
-        "03 / FIDELITY",
-        "Đ / đ",
-        "Tôn trọng bản gốc",
-        "Không tự ý thay đổi tên, giá, số liệu, dấu tiếng Việt hay câu chữ do người dùng cung cấp."
-      ],
-      [
-        "04 / REVIEW",
-        "◌",
-        "Rà soát không sửa tệp",
-        "Nêu rõ vấn đề, bằng chứng và điểm chưa kiểm chứng trước khi đề xuất chỉnh sửa."
-      ]
+      {
+        "idx": "01 / TYPE",
+        "mark": "Ắ Ệ",
+        "h3": "Dấu và chữ rõ ràng",
+        "p": "Giữ nguyên dấu thanh, chọn phông chữ hỗ trợ tiếng Việt, kiểm tra khoảng dòng và cách ngắt câu trong bối cảnh thực tế."
+      },
+      {
+        "idx": "02 / STRUCTURE",
+        "mark": "▮▮▯",
+        "h3": "Thiết kế có mục đích",
+        "p": "Xây dựng bố cục dựa trên thứ tự thông tin, mức độ quan trọng và nhu cầu của người đọc."
+      },
+      {
+        "idx": "03 / FIDELITY",
+        "mark": "Đ / đ",
+        "h3": "Tôn trọng bản gốc",
+        "p": "Không tự ý thay đổi tên, giá, số liệu, dấu tiếng Việt hay câu chữ do người dùng cung cấp."
+      },
+      {
+        "idx": "04 / REVIEW",
+        "mark": "◌",
+        "h3": "Rà soát không sửa tệp",
+        "p": "Nêu rõ vấn đề, bằng chứng và điểm chưa kiểm chứng trước khi đề xuất chỉnh sửa."
+      }
     ],
-    "ideaEyebrow": "DESIGNED FOR THE MESSAGE",
-    "idea": [
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
       "Không chỉ xếp chữ",
       "mà thiết kế trải nghiệm đọc"
     ],
-    "ideaBody": "KUMIHAN không ép mọi trang vào một giao diện giống nhau. Công cụ giúp AI lựa chọn chữ, khoảng trắng, hình ảnh và nhịp đọc phù hợp với từng nhiệm vụ.",
-    "skillsH2": [
+    "idea_body": "KUMIHAN không ép mọi trang vào một giao diện giống nhau. Công cụ giúp AI lựa chọn chữ, khoảng trắng, hình ảnh và nhịp đọc phù hợp với từng nhiệm vụ.",
+    "skills_h2": [
       "Bốn kỹ năng",
       "một cách tiếp cận"
     ],
-    "skillsDeck": "Từ xác định mục tiêu đến thiết kế web, tài liệu và rà soát.",
+    "skills_deck": "Từ xác định mục tiêu đến thiết kế web, tài liệu và rà soát.",
     "skills": [
       [
         "Nhịp Chữ",
@@ -88,43 +90,43 @@
         "Rà soát chữ, bố cục và thông tin ở chế độ chỉ đọc, kèm theo các bằng chứng cụ thể."
       ]
     ],
-    "view": "Xem kỹ năng",
-    "installH2": [
+    "skill_view": "Xem kỹ năng",
+    "install_h2": [
       "Dùng ngay với công cụ AI",
       "bạn đang sử dụng"
     ],
-    "installBody": "Chọn hướng dẫn tương ứng với ChatGPT / Codex, Claude hoặc Gemini. Có thể dùng gói plugin đầy đủ hoặc kỹ năng riêng. Mô tả kỹ năng và plugin được viết bằng tiếng Việt và tiếng Anh.",
-    "installNotes": [
+    "install_body": "Chọn hướng dẫn tương ứng với ChatGPT / Codex, Claude hoặc Gemini. Có thể dùng gói plugin đầy đủ hoặc kỹ năng riêng. Mô tả kỹ năng và plugin được viết bằng tiếng Việt và tiếng Anh.",
+    "install_notes": [
       "Kỹ năng, plugin và Codex",
       "Claude Code và Claude",
       "Gemini CLI và Gemini"
     ],
-    "allZips": "15 tệp ZIP và SHA-256 ↗",
-    "statusTitle": "PHÁT HÀNH / v0.1.0",
-    "statusBody": "Phiên bản v0.1.0 được phát hành dưới dạng mã nguồn mở trên GitHub. Kiểm tra trong ứng dụng AI thực tế và hiệu đính bởi biên tập viên bản ngữ vẫn phải thực hiện riêng.",
-    "statusLink": "Xem bản phát hành ↗",
-    "finalH2": [
+    "install_extra": "15 tệp ZIP và SHA-256 ↗",
+    "status_title": "RELEASED / v0.1.0",
+    "status_body": "Phiên bản v0.1.0 được phát hành dưới dạng mã nguồn mở trên GitHub. Kiểm tra trong ứng dụng AI thực tế và hiệu đính bởi biên tập viên bản ngữ vẫn phải thực hiện riêng.",
+    "status_link": "Xem bản phát hành ↗",
+    "cta_h2": [
       "Thiết kế có lý do",
       "cho tiếng Việt"
     ],
-    "finalBody": "KUMIHAN｜Nhịp Chữ là dự án mã nguồn mở miễn phí. Xem mã nguồn, các kỹ năng và lịch sử thay đổi trên GitHub.",
-    "finalCta": "Mở GitHub",
-    "footerSub": "Vietnamese typography and thoughtful AI-assisted design.",
-    "family": "Trang chủ KUMIHAN",
-    "backTop": "Lên đầu trang"
+    "cta_body": "KUMIHAN｜Nhịp Chữ là dự án mã nguồn mở miễn phí. Xem mã nguồn, các kỹ năng và lịch sử thay đổi trên GitHub.",
+    "cta_button": "Mở GitHub",
+    "footer_sub": "Vietnamese typography and thoughtful AI-assisted design."
   },
   "en": {
     "title": "KUMIHAN｜Nhịp Chữ — Natural Vietnamese typography, made with AI",
     "description": "KUMIHAN｜Nhịp Chữ is a set of open-source AI skills for creating and reviewing Vietnamese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
     "skip": "Skip to content",
-    "navLabel": "Primary navigation",
-    "language": "Language",
+    "nav_label": "Primary navigation",
     "nav": [
       "About",
       "Principles",
       "Skills",
       "Get started"
     ],
+    "lang_label": "Language",
+    "gateway_label": "KUMIHAN home",
+    "top": "Back to top",
     "eyebrow": "OPEN-SOURCE SKILLS / VIETNAMESE TYPOGRAPHY",
     "h1": [
       "Natural Vietnamese typography,",
@@ -135,55 +137,55 @@
       "Get started",
       "Learn more"
     ],
-    "heroFoot": [
+    "hero_foot": [
       "OPEN SOURCE",
       "FOUR SKILLS",
       "VIETNAMESE FIRST"
     ],
-    "concept": [
+    "concept_h2": [
       "Not a uniform look—",
       "the right form for each message"
     ],
-    "conceptBody": "Every brief, audience, and message is different. KUMIHAN｜Nhịp Chữ helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
-    "featuresH2": "Four things worth getting right",
-    "featuresDeck": "Practical priorities for creating and reviewing Vietnamese content.",
+    "concept_body": "Every brief, audience, and message is different. KUMIHAN｜Nhịp Chữ helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
+    "features_h2": "Four things worth getting right",
+    "features_deck": "Practical priorities for creating and reviewing Vietnamese content.",
     "features": [
-      [
-        "01 / TYPOGRAPHY",
-        "Ắ Ệ",
-        "Readable Vietnamese type",
-        "Protect tone marks, verify font coverage and account for accent clearance, line breaks and actual rendered conditions."
-      ],
-      [
-        "02 / STRUCTURE",
-        "▮▮▯",
-        "Purposeful structure",
-        "Shape the layout around the information, its priority, and the reader’s goal."
-      ],
-      [
-        "03 / FIDELITY",
-        "Đ / đ",
-        "Source fidelity",
-        "Names, prices, figures, tone marks, and original wording stay exactly as supplied."
-      ],
-      [
-        "04 / REVIEW",
-        "◌",
-        "Read-only review",
-        "Check finished work and organize issues—without touching the files."
-      ]
+      {
+        "idx": "01 / TYPE",
+        "mark": "Ắ Ệ",
+        "h3": "Readable Vietnamese type",
+        "p": "Protect tone marks, verify font coverage and account for accent clearance, line breaks and actual rendered conditions."
+      },
+      {
+        "idx": "02 / STRUCTURE",
+        "mark": "▮▮▯",
+        "h3": "Purposeful structure",
+        "p": "Shape the layout around the information, its priority, and the reader’s goal."
+      },
+      {
+        "idx": "03 / FIDELITY",
+        "mark": "Đ / đ",
+        "h3": "Source fidelity",
+        "p": "Names, prices, figures, tone marks, and original wording stay exactly as supplied."
+      },
+      {
+        "idx": "04 / REVIEW",
+        "mark": "◌",
+        "h3": "Read-only review",
+        "p": "Check finished work and organize issues—without touching the files."
+      }
     ],
-    "ideaEyebrow": "DESIGNED FOR THE MESSAGE",
-    "idea": [
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
       "Beyond arranging type",
       "Design the reading experience"
     ],
-    "ideaBody": "KUMIHAN｜Nhịp Chữ doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
-    "skillsH2": [
+    "idea_body": "KUMIHAN｜Nhịp Chữ doesn't dictate a finished look. It gives AI the knowledge to adapt to each medium and brief.",
+    "skills_h2": [
       "Four skills",
       "One approach"
     ],
-    "skillsDeck": "From scoping the work to web, documents, and review.",
+    "skills_deck": "From scoping the work to web, documents, and review.",
     "skills": [
       [
         "Nhịp Chữ",
@@ -202,43 +204,43 @@
         "Review typography, information, and layout without editing source files."
       ]
     ],
-    "view": "View skill",
-    "installH2": [
+    "skill_view": "View skill",
+    "install_h2": [
       "Start with the AI tools",
       "you already use"
     ],
-    "installBody": "Setup varies by tool. Pick the guide for yours, then choose the skills you need. Skill and plugin descriptions are provided in Vietnamese and English.",
-    "installNotes": [
+    "install_body": "Setup varies by tool. Pick the guide for yours, then choose the skills you need. Skill and plugin descriptions are provided in Vietnamese and English.",
+    "install_notes": [
       "Guides for adding skills, registering plugins, and local installation",
       "Setup guide for Claude Code and Claude chat",
       "Setup guide for Gemini CLI and the Gemini app"
     ],
-    "allZips": "All 15 ZIP files and SHA-256 ↗",
-    "statusTitle": "RELEASED / v0.1.0",
-    "statusBody": "Open-source v0.1.0 is published through GitHub Releases. Native AI host behavior, final media rendering and native-speaker proofreading require separate checks.",
-    "statusLink": "Download latest ↗",
-    "finalH2": [
+    "install_extra": "All 15 ZIP files and SHA-256 ↗",
+    "status_title": "RELEASED / v0.1.0",
+    "status_body": "Open-source v0.1.0 is published through GitHub Releases. Native AI host behavior, final media rendering and native-speaker proofreading require separate checks.",
+    "status_link": "Download latest ↗",
+    "cta_h2": [
       "Another way to design",
       "in Vietnamese"
     ],
-    "finalBody": "KUMIHAN｜Nhịp Chữ is open source. The skills, releases, and full change history are on GitHub.",
-    "finalCta": "View on GitHub",
-    "footerSub": "Vietnamese typography skills for AI-assisted design.",
-    "family": "KUMIHAN home",
-    "backTop": "Back to top"
+    "cta_body": "KUMIHAN｜Nhịp Chữ is open source. The skills, releases, and full change history are on GitHub.",
+    "cta_button": "View on GitHub",
+    "footer_sub": "Vietnamese typography skills for AI-assisted design."
   },
   "ja": {
     "title": "KUMIHAN｜Nhịp Chữ — ベトナム語のデザインをもっと自然に",
     "description": "KUMIHAN｜Nhịp Chữは、AIによるベトナム語のWebサイト・文書・プレゼン資料の制作とレビューを支援する、オープンソースのスキル集です。",
     "skip": "本文へ移動",
-    "navLabel": "メインナビゲーション",
-    "language": "表示言語",
+    "nav_label": "メインナビゲーション",
     "nav": [
       "Nhịp Chữとは",
       "できること",
       "4つのスキル",
       "導入方法"
     ],
+    "lang_label": "表示言語",
+    "gateway_label": "KUMIHANのトップ",
+    "top": "ページの先頭へ",
     "eyebrow": "OPEN-SOURCE SKILLS / VIETNAMESE TYPOGRAPHY",
     "h1": [
       "ベトナム語の",
@@ -250,55 +252,55 @@
       "使いはじめる",
       "Nhịp Chữについて"
     ],
-    "heroFoot": [
+    "hero_foot": [
       "OPEN SOURCE",
       "FOUR SKILLS",
       "VIETNAMESE FIRST"
     ],
-    "concept": [
+    "concept_h2": [
       "「見た目をそろえる」より",
       "「伝わる形を考える」"
     ],
-    "conceptBody": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Nhịp Chữは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
-    "featuresH2": "伝えるための4つの視点",
-    "featuresDeck": "制作と見直しに共通する、KUMIHAN｜Nhịp Chữが大切にする考え方。",
+    "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜Nhịp Chữは、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
+    "features_h2": "伝えるための4つの視点",
+    "features_deck": "制作と見直しに共通する、KUMIHAN｜Nhịp Chữが大切にする考え方。",
     "features": [
-      [
-        "01 / TYPE",
-        "Ắ Ệ",
-        "自然なベトナム語の文字組",
-        "声調記号を正しく保ち、適切な改行と行間、ベトナム語に対応したフォントを考えます。"
-      ],
-      [
-        "02 / STRUCTURE",
-        "▮▮▯",
-        "内容に合う構成",
-        "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
-      ],
-      [
-        "03 / FIDELITY",
-        "Đ / đ",
-        "原稿を大切に",
-        "名前・価格・数値・声調記号・原文を勝手に変えず、意味と情報の正確さを守ります。"
-      ],
-      [
-        "04 / REVIEW",
-        "◌",
-        "制作後の見直し",
-        "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
-      ]
+      {
+        "idx": "01 / TYPE",
+        "mark": "Ắ Ệ",
+        "h3": "自然なベトナム語の文字組",
+        "p": "声調記号を正しく保ち、適切な改行と行間、ベトナム語に対応したフォントを考えます。"
+      },
+      {
+        "idx": "02 / STRUCTURE",
+        "mark": "▮▮▯",
+        "h3": "内容に合う構成",
+        "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+      },
+      {
+        "idx": "03 / FIDELITY",
+        "mark": "Đ / đ",
+        "h3": "原稿を大切に",
+        "p": "名前・価格・数値・声調記号・原文を勝手に変えず、意味と情報の正確さを守ります。"
+      },
+      {
+        "idx": "04 / REVIEW",
+        "mark": "◌",
+        "h3": "制作後の見直し",
+        "p": "完成物の気になる点を、対象を変更せずに確認・整理するための指針です。"
+      }
     ],
-    "ideaEyebrow": "DESIGNED FOR THE MESSAGE",
-    "idea": [
+    "idea_eyebrow": "DESIGNED FOR THE MESSAGE",
+    "idea_h2": [
       "文字を並べるだけでなく",
       "読む体験を組み立てる"
     ],
-    "ideaBody": "KUMIHAN｜Nhịp Chữは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
-    "skillsH2": [
+    "idea_body": "KUMIHAN｜Nhịp Chữは完成デザインを一律に指定しません。使う媒体や条件に合わせて考えるための知識を提供します。",
+    "skills_h2": [
       "4つのスキル",
       "ひとつの考え方"
     ],
-    "skillsDeck": "制作の入口から、Web・資料制作・レビューまで。",
+    "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
     "skills": [
       [
         "Nhịp Chữ",
@@ -317,29 +319,27 @@
         "制作物を変更せず、組版・情報・デザインの見直しを支援。"
       ]
     ],
-    "view": "スキルを見る",
-    "installH2": [
+    "skill_view": "スキルを見る",
+    "install_h2": [
       "いつものAIツールから",
       "はじめよう"
     ],
-    "installBody": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。説明文はベトナム語・英語の2言語で提供します。",
-    "installNotes": [
+    "install_body": "導入方法は利用環境によって異なります。お使いのツールのガイドから、必要なスキルを選んでください。説明文はベトナム語・英語の2言語で提供します。",
+    "install_notes": [
       "スキルの追加・プラグイン登録・ローカル導入のガイド",
       "Claude Code・チャット向けの導入ガイド",
       "Gemini CLI・Geminiアプリ向けの導入ガイド"
     ],
-    "allZips": "15 ZIPとSHA-256を見る ↗",
-    "statusTitle": "RELEASED / v0.1.0",
-    "statusBody": "v0.1.0をGitHubでオープンソース公開します。各AI環境での起動・表示やベトナム語ネイティブ校正は別途検証が必要です。",
-    "statusLink": "最新版のダウンロード ↗",
-    "finalH2": [
+    "install_extra": "15 ZIPとSHA-256を見る ↗",
+    "status_title": "RELEASED / v0.1.0",
+    "status_body": "v0.1.0をGitHubでオープンソース公開します。各AI環境での起動・表示やベトナム語ネイティブ校正は別途検証が必要です。",
+    "status_link": "最新版のダウンロード ↗",
+    "cta_h2": [
       "ベトナム語のデザインに",
       "もうひとつの選択肢を"
     ],
-    "finalBody": "KUMIHAN｜Nhịp Chữはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
-    "finalCta": "GitHubで見る",
-    "footerSub": "Vietnamese typography skills for AI-assisted design.",
-    "family": "KUMIHANのトップ",
-    "backTop": "ページの先頭へ"
+    "cta_body": "KUMIHAN｜Nhịp Chữはオープンソース。ソースコード、配布ファイル、変更履歴はGitHubで公開しています。",
+    "cta_button": "GitHubで見る",
+    "footer_sub": "Vietnamese typography skills for AI-assisted design."
   }
 }

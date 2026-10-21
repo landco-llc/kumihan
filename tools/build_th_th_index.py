@@ -223,8 +223,8 @@ def render(root: Path, copy: dict) -> str:
     <div class="feature-grid">
 """
     features = [
-        ("01 / BREAKS", "ก", c["feature 1"]),
-        ("02 / SHAPING", "◌", c["feature 2"]),
+        ("01 / TYPE", "ก", c["feature 1"]),
+        ("02 / STRUCTURE", "◌", c["feature 2"]),
         ("03 / FIDELITY", "Aa/ก", c["feature 3"]),
         ("04 / REVIEW", "◎", c["feature 4"]),
     ]
@@ -259,7 +259,7 @@ def render(root: Path, copy: dict) -> str:
     <div class="skills-grid">
 """
     skills = [
-        ("kumihan-th", "01 / ENTRY", "組"),
+        ("kumihan-th", "01 / ENTRY", "ก"),
         ("kumihan-th-web", "02 / WEB", "↗"),
         ("kumihan-th-documents", "03 / DOCUMENTS", "文"),
         ("kumihan-th-review", "04 / REVIEW", "◎"),
@@ -311,9 +311,8 @@ def render(root: Path, copy: dict) -> str:
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
     <div>
-      <div class="status-title" id="status-title">KUMIHAN / THAI v0.1.1</div>
-      <p>{x(c["release status body"])}</p>
-      <p>การติดตั้งและเรียกใช้จริงบน ChatGPT / Codex / Claude / Gemini ยังไม่ได้ทดสอบ (not-checked)</p>
+      <div class="status-title" id="status-title">RELEASED / v0.1.1</div>
+      <p>{x(c["release status body"])} การติดตั้งและเรียกใช้จริงบน ChatGPT / Codex / Claude / Gemini ยังไม่ได้ทดสอบ (not-checked)</p>
     </div>
     <div class="status-meta">{anchor(RELEASE, "ดาวน์โหลดเวอร์ชันล่าสุด ↗", extra='target="_blank" rel="noopener noreferrer"')}
       <br>OPEN SOURCE · APACHE 2.0</div>
