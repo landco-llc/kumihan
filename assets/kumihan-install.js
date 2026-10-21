@@ -1,7 +1,11 @@
-/* KUMIHAN install guides: a localized Copy button on every command block.
+/* KUMIHAN install guides: a localized Copy button on every command block, and the
+   page contents folded on narrow screens (as the Japanese guide layout does).
    Blocks that already carry their own copy control are left as they are. */
 (() => {
   'use strict';
+  if (window.matchMedia('(max-width: 710px)').matches) {
+    document.querySelectorAll('.toc details.toc-details[open]').forEach(d => { d.open = false; });
+  }
   const LABELS = {
     ja: ['コピー', 'コピーしました', 'コピーできませんでした'],
     en: ['Copy', 'Copied', 'Copy failed'],
