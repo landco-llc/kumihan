@@ -35,14 +35,19 @@ def edition_for(path):
 
 def words(lang):
     if lang.startswith('ja'):
-        return dict(current='現行公開版', source='ソース', published='正式公開', unpublished='Release未公開', unavailable='正式公開ZIPはダウンロードできません', date='公開日時', release='Release履歴', downloads='検証済みZIP', unverified='未検証')
+        return dict(current='現行公開版', source='ソース', published='正式公開', unpublished='Release未公開', unavailable='正式公開ZIPはダウンロードできません', zipready='ZIP配布中', zipnote='GitHub Releaseは準備中', date='公開日時', release='Release履歴', downloads='検証済みZIP', unverified='未検証')
     if lang.startswith('zh-Hant'):
-        return dict(current='目前公開版本', source='原始碼', published='正式公開', unpublished='Release 尚未公開', unavailable='尚無正式公開 ZIP 可供下載', date='公開時間', release='Release 紀錄', downloads='已驗證 ZIP', unverified='尚未驗證')
+        return dict(current='目前公開版本', source='原始碼', published='正式公開', unpublished='Release 尚未公開', unavailable='尚無正式公開 ZIP 可供下載', zipready='ZIP 提供下載中', zipnote='GitHub Release 準備中', date='公開時間', release='Release 紀錄', downloads='已驗證 ZIP', unverified='尚未驗證')
     if lang.startswith('zh-Hans'):
-        return dict(current='当前公开版本', source='源码', published='正式公开', unpublished='Release 尚未公开', unavailable='暂无正式公开 ZIP 可下载', date='公开时间', release='Release 记录', downloads='已验证 ZIP', unverified='未验证')
+        return dict(current='当前公开版本', source='源码', published='正式公开', unpublished='Release 尚未公开', unavailable='暂无正式公开 ZIP 可下载', zipready='ZIP 提供下载中', zipnote='GitHub Release 准备中', date='公开时间', release='Release 记录', downloads='已验证 ZIP', unverified='未验证')
     # New metadata uses explicitly marked English on other page locales. Existing
     # editorial translations remain verbatim; native metadata translation is pending.
-    return dict(current='Current Version', source='Source', published='Published', unpublished='Release unpublished', unavailable='Published ZIP downloads unavailable', date='Published at', release='Release history', downloads='Verified ZIP downloads', unverified='Not verified')
+    return dict(current='Current Version', source='Source', published='Published', unpublished='Release unpublished', unavailable='Published ZIP downloads unavailable', zipready='ZIP available', zipnote='GitHub Release pending', date='Published at', release='Release history', downloads='Verified ZIP downloads', unverified='Not verified')
+
+
+def zip_ready(f):
+    """Unreleased edition whose checksummed offline ZIPs are already downloadable from the repository."""
+    return f['release_status'] == 'unpublished' and bool(f.get('edition')) and bool(source_archives(f['edition'], f['source_version']))
 
 
 def panel(f, lang, slot='current'):
@@ -58,6 +63,8 @@ def panel(f, lang, slot='current'):
         if slot != 'hero':
             text += f'<span>{x(w["published"])} · {x(w["date"])} <time datetime="{x(f["published_at"])}"><bdi dir="ltr">{x(f["published_at"])}</bdi></time></span>'
         if f['source_version'] != current: text += f'<span>{x(w["source"])} v{x(f["source_version"])}</span>'
+    elif zip_ready(f):
+        text += f'<span>{x(w["zipready"])} — {x(w["zipnote"])}</span>'
     else:
         label = w['unpublished'] if status == 'unpublished' else w['unverified']
         text += f'<span>{x(label)} — {x(w["unavailable"])}</span>'
@@ -220,7 +227,7 @@ def gateway_badge(code, lang):
     f = facts[code]
     number = f.get('published_version') or f['source_version']
     w = words(lang)
-    status = w['published'] if f['release_status']=='published' else w['unpublished']
+    status = w['published'] if f['release_status']=='published' else (w['zipready'] if zip_ready(f) else w['unpublished'])
     label = f'v{number} · {status}'
     return f'<span class="state" aria-label="{x(label)}"><bdi dir="ltr">v{x(number)}</bdi><span class="version-state" lang="{x(lang if lang.startswith(("ja","zh")) else "en")}">{x(status)}</span></span>'
 

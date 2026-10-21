@@ -8,7 +8,7 @@ import re
 from urllib.parse import unquote, quote
 import yaml
 import edition_versions as v
-from version_display import panel, role, x, apply_html
+from version_display import panel, role, x, apply_html, zip_ready
 ROOT=v.ROOT
 
 
@@ -22,7 +22,8 @@ def readme(text, facts):
                 f=facts['editions'][code]
                 cells[2]='v'+f['source_version']
                 status=(f'公開済 / Published **v{f["published_version"]}** · {f["published_at"]} · [Release]({f["release_url"]})'
-                        if f['release_status']=='published' else 'Release未公開 / Unpublished — ソース版 / source v'+f['source_version'])
+                        if f['release_status']=='published' else ('ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v'+f['source_version']
+                              if zip_ready(f) else 'Release未公開 / Unpublished — ソース版 / source v'+f['source_version']))
                 cells[-1]=status+' |'
                 line=' | '.join(cells)
         lines.append(line)
