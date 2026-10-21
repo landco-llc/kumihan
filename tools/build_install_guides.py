@@ -25,6 +25,7 @@ import argparse
 import json
 import re
 from html import escape
+from urllib.parse import quote
 from importlib.util import module_from_spec, spec_from_file_location
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -41,6 +42,8 @@ PAGES = {
     "de": "satzbild", "es": "grafia", "fr": "accord", "id": "laras", "it": "equilibrio", "km": "lumnung",
     "ko": "ko", "pl": "szyk", "pt": "compasso", "ru": "lad", "sw": "mizani", "vi": "nhip-chu",
     "zh-hans": "zilu", "zh-hant": "ziheng", "zu": "hlela",
+    "sa": "vinyasa", "my": "kumihan-my", "tl": "tugma", "fi": "rytmi", "sv": "samspel",
+    "da": "samklang-da", "no": "samklang-no", "uk": "mira-uk", "en": "measure",
 }
 RTL = {"ar", "fa", "he"}
 
@@ -89,12 +92,26 @@ def edition(code):
         archives = [(a["name"], a["url"]) for a in facts["verified_assets"]]
         release = facts["release_url"]
         sums = next(m["url"] for m in facts["verified_metadata"] if m["name"] == "SHA256SUMS.txt")
-    else:  # source packages in the repository (no GitHub Release yet)
+    elif (plugin_dir / "downloads" / "MANIFEST.json").exists():  # source packages in the repository (no GitHub Release yet)
         version = facts["source_version"]
         manifest = json.loads((plugin_dir / "downloads" / "MANIFEST.json").read_text(encoding="utf-8"))
         archives = [(Path(r["file"]).name, f"../plugins/{slug}/downloads/{r['file']}") for r in manifest["archives"]]
         release = f"{REPO}/tree/main/plugins/{slug}/downloads"
         sums = f"../plugins/{slug}/downloads/SHA256SUMS.txt"
+    elif not (plugin_dir / "downloads").exists():  # packages in the shared downloads <Host>/ folders (English)
+        version = facts["source_version"]
+        folders = {"chatgpt": "downloads GPT-Codex", "claude": "downloads Claude", "gemini": "downloads Gemini"}
+        archives = [(p.name, "../" + quote(f"{folder}/{p.name}")) for folder in folders.values()
+                    for p in sorted((ROOT / folder).glob(f"{slug}-*.zip"))]
+        release = f"{REPO}/tree/main/" + quote(folders["chatgpt"])
+        sums = {h: "../" + quote(f"{folder}/{slug}-v{version}-SHA256SUMS.txt") for h, folder in folders.items()}
+    else:  # offline consumer packages (downloads/manifest.json) with one checksum file per host
+        version = facts["source_version"]
+        manifest = json.loads((plugin_dir / "downloads" / "manifest.json").read_text(encoding="utf-8"))
+        archives = [(r["file"], f"../plugins/{slug}/downloads/{r['file']}") for r in manifest["packages"]]
+        release = f"{REPO}/tree/main/plugins/{slug}/downloads"
+        sums = {h: f"../plugins/{slug}/downloads/SHA256SUMS-{f}" for h, f in
+                (("chatgpt", "gpt-codex"), ("claude", "claude"), ("gemini", "gemini"))}
     hosts = {h: {"plugin": None, "skills": {}} for h in HOSTS}
     shared = {}
     for name, url in archives:
@@ -302,6 +319,11 @@ def brand_html(code, name):
     return inner if "｜" in inner else x(name)
 
 
+def sums(ed, host):
+    """Checksum file for a host's guide: one SHA256SUMS for the edition, or one per host."""
+    return ed["sums"][host] if isinstance(ed["sums"], dict) else ed["sums"]
+
+
 def render(code, host, lang, ed):
     tdir = TEMPLATES / (lang if lang in ("en", "ja") else code)
     ui = json.loads((tdir / "ui.json").read_text(encoding="utf-8"))
@@ -317,7 +339,7 @@ def render(code, host, lang, ed):
     letters = ("B", "C") if ed["marketplace"] else ("A", "B")
     page = lambda other: guide_path(code, other, lang).removeprefix("docs/")
     values = dict(
-        brand=ed["brand"], version=ed["version"], release=ed["release"], sums=ed["sums"], display=ed["display"],
+        brand=ed["brand"], version=ed["version"], release=ed["release"], sums=sums(ed, host), display=ed["display"],
         lang=GATEWAYS.EDITION_NAMES[lang][code],
         first=ed["skills"]["base"], plugin=ed["slug"], plugin_url=plugin_url, plugin_folder=plugin_folder or "",
         plugin_dir=plugin_folder or ed["slug"], plugin_link=f"[{plugin_name}]({plugin_url})",
@@ -333,7 +355,7 @@ def render(code, host, lang, ed):
     hl = {"en": "", "zh-hans": "zh-CN", "zh-hant": "zh-TW"}.get(lang, lang)
     md = re.sub(r"(support\.google\.com/gemini/answer/\d+)(\?hl=[\w-]+)?", lambda m: m[1] + (f"?hl={hl}" if hl else ""), md)
     content, toc = render_md(md)
-    langs = [c for c in (code, "en", "ja")]
+    langs = list(dict.fromkeys((code, "en", "ja")))
     attr = page_lang_attr(code, lang)
     title = ui["titles"][host]
     path = guide_path(code, host, lang)

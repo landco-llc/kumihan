@@ -23,6 +23,17 @@ PRODUCTS = {
     'th': ('th', 'th', 15), 'vi': ('nhip-chu', 'vi', 15),
     'zh-hans': ('zilu', 'zilu', 15), 'zh-hant': ('ziheng', 'ziheng', 15),
     'zu': ('hlela', 'zu', 15),
+    # Offline consumer packages in plugins/<product>/downloads (no GitHub Release yet).
+    'sa': ('vinyasa', 'vinyasa', 15),
+    'my': ('my', 'my', 15),
+    'tl': ('tugma', 'tugma', 15),
+    'fi': ('rytmi', 'rytmi', 15),
+    'sv': ('samspel', 'samspel', 15),
+    'da': ('samklang-da', 'samklang-da', 15),
+    'no': ('samklang-no', 'samklang-no', 15),
+    'uk': ('mira-uk', 'mira-uk', 15),
+    # English: packages in the shared downloads <Host>/ folders, as the Japanese edition's.
+    'en': ('measure', 'measure', 15),
 }
 
 

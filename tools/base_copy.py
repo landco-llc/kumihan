@@ -47,6 +47,8 @@ EDITIONS = {
     "tr": ("KUMIHAN｜Ahenk", "Ahenk", "トルコ語", "Turkish", "0.1.0"),
     "he": ("KUMIHAN｜מקצב", "מקצב", "ヘブライ語", "Hebrew", "0.1.0"),
     "sa": ("KUMIHAN｜विन्यास", "विन्यास", "サンスクリット語", "Sanskrit", "0.1.0"),
+    "no": ("KUMIHAN｜Samklang", "Samklang", "ノルウェー語", "Norwegian", "0.1.0"),
+    "uk": ("KUMIHAN｜Міра", "Міра", "ウクライナ語", "Ukrainian", "0.1.0"),
     "cs": ("KUMIHAN｜Soulad", "Soulad", "チェコ語", "Czech", "0.1.0"),
     "hu": ("KUMIHAN｜Arány", "Arány", "ハンガリー語", "Hungarian", "0.1.0"),
     "my": ("KUMIHAN｜ဟန်ချက်", "ဟန်ချက်", "ビルマ語", "Burmese", "0.1.0"),
@@ -59,7 +61,14 @@ EDITIONS = {
 }
 # Editions with pages but no package or Release yet: their copy lives together in
 # assets/upcoming-site-copy.json and the release wording below replaces the shared one.
-UPCOMING = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da")
+UPCOMING = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da", "no", "uk")
+
+
+def released(edition):
+    """An edition whose packages are in the version catalogue uses the released wording."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import edition_versions
+    return edition in edition_versions.catalogue()
 
 COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
               "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela",
@@ -184,7 +193,7 @@ def fill(value, edition):
 
 def shared(lang, edition):
     """Shared copy for one edition; None entries are edition-specific."""
-    return fill((UPCOMING_BASE if edition in UPCOMING else BASE)[lang], edition)
+    return fill((UPCOMING_BASE if edition in UPCOMING and not released(edition) else BASE)[lang], edition)
 
 
 def extends(current, base):
@@ -245,7 +254,7 @@ def main():
     path = ROOT / "assets" / "upcoming-site-copy.json"
     source = path.read_text(encoding="utf-8")
     data = json.loads(source)
-    for edition in UPCOMING:
+    for edition in (e for e in UPCOMING if e in data):
         for lang in ("ja", "en"):
             data[edition][lang] = apply(data[edition][lang], lang, edition)
     text = json.dumps(data, ensure_ascii=False, indent=1) + "\n"
