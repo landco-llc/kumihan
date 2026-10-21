@@ -260,8 +260,8 @@
     "regions": {
       "eyebrow": "IRAN / AFGHANISTAN",
       "h2": [
-        "One Persian language,",
-        "two regional conventions"
+        "One Persian language",
+        "different regional customs"
       ],
       "body": "An explicit locale choice outranks metadata and guesses. In both regions ZWNJ, Persian Kaf/Yeh, digits and dates stay exactly as supplied; calendar or digit changes need explicit authority.",
       "cards": [
@@ -402,7 +402,7 @@
       "eyebrow": "IRAN / AFGHANISTAN",
       "h2": [
         "同じペルシア語でも",
-        "地域の慣習は異なる"
+        "地域の習慣は異なる"
       ],
       "body": "ロケールはメタデータや推測より利用者の明示指定を優先。どちらの地域でもZWNJ、ペルシア語のک・ی、数字・日付は原文のまま保持し、暦や数字の変換には明示的な許可が必要です。",
       "cards": [
