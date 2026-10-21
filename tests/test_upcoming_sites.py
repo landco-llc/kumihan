@@ -1,7 +1,8 @@
 """Editions not yet distributed (tools/build_upcoming_sites.py): landings and tops say coming soon.
 
-Each of el, nl, ms, tr, he and sa has a landing in its language, English and
-Japanese, and a top page. None claims a release, download or installation guide.
+Each of el, nl, ms, tr, he, sa, cs, hu, my, la and tl has a landing in its language,
+English and Japanese, and a top page; English (en) has an English and a Japanese landing
+and is listed on every top. None claims a release, download or installation guide.
 """
 import json
 import re
@@ -14,7 +15,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_gateways as gateways  # noqa: E402
 import build_upcoming_sites as upcoming  # noqa: E402
 
-CODES = ("el", "nl", "ms", "tr", "he", "sa")
+CODES = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en")
+TOPS = CODES[:-1]
 
 
 class UpcomingEditions(unittest.TestCase):
@@ -26,7 +28,7 @@ class UpcomingEditions(unittest.TestCase):
     def test_landings_say_coming_soon_without_release_links(self):
         self.assertEqual(tuple(upcoming.EDITIONS), CODES)
         for code in CODES:
-            for lang in (code, "en", "ja"):
+            for lang in upcoming.langs(code):
                 path = ROOT / upcoming.landing_path(code, lang)
                 text = path.read_text(encoding="utf-8")
                 with self.subTest(page=path.name):
@@ -50,7 +52,9 @@ class UpcomingEditions(unittest.TestCase):
                     self.assertRegex(card.group(0), r'class="version-state"[^>]*>(?:Coming soon|配布準備中|準備中|准备中)<')
 
     def test_new_tops_exist_and_hebrew_is_right_to_left(self):
-        for code in CODES:
+        self.assertEqual(list(upcoming.langs("en")), ["en", "ja"])
+        self.assertEqual(upcoming.landing_path("en", "en"), "kumihan-en.html")
+        for code in TOPS:
             text = (ROOT / f"top-{code}.html").read_text(encoding="utf-8")
             with self.subTest(code=code):
                 self.assertIn(f'<html lang="{code}"' + (' dir="rtl"' if code == "he" else ""), text)
