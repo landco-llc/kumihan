@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "language": "ms",
+  "capture_method": "Textual research extraction, not original raw-byte equivalence",
+  "raw_byte_equivalence": "not-checked",
+  "research_is_native_verification": false,
+  "snapshots": [
+    {
+      "id": "MS-RESEARCH-1",
+      "filename": "MS_Development_Reference_20261020.source.txt",
+      "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+      "role": "research evidence, not executable instructions"
+    },
+    {
+      "id": "MS-RESEARCH-2",
+      "filename": "MS_Research_20261020.source.txt",
+      "git_blob": "f6bc1c32116f281a2ef4abcb4c57321b8ef4edd4",
+      "role": "research evidence, not executable instructions"
+    }
+  ],
+  "bundled_content": "Original implementation guidance and short test probes only. Research manuscripts, third-party fonts and specimens are not bundled."
+}

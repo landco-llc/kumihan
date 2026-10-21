@@ -1,0 +1,626 @@
+[
+  {
+    "id": "NL-TYPE-01",
+    "language": "nl",
+    "title": "Contextual IJ capitalization",
+    "description_en": "When authorized text needs initial capitalization, treat ij as IJ, as in IJsland; do not force every in-word ij to capitals or alter a registered name.",
+    "requirement": "When authorized text needs initial capitalization, treat ij as IJ, as in IJsland; do not force every in-word ij to capitals or alter a registered name.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 60
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-02",
+    "language": "nl",
+    "title": "IJ collation and compatibility forms",
+    "description_en": "Keep i+j distinct from y for ordinary sorting and keep U+0132/U+0133 source characters intact; ligature appearance is a separate font decision.",
+    "requirement": "Keep i+j distinct from y for ordinary sorting and keep U+0132/U+0133 source characters intact; ligature appearance is a separate font decision.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 64
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-03",
+    "language": "nl",
+    "title": "Emphasis and lexical accents",
+    "description_en": "Distinguish lexical accents in café or Émile from added emphasis. Keep íj́ combining marks and allow documented technical omission of the j accent without automatic failure.",
+    "requirement": "Distinguish lexical accents in café or Émile from added emphasis. Keep íj́ combining marks and allow documented technical omission of the j accent without automatic failure.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 69
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-04",
+    "language": "nl",
+    "title": "Trema depends on word structure",
+    "description_en": "Preserve poëzie, coördinatie, reeën and essentiële. Do not substitute a trema for the compound-boundary hyphen in co-ouderschap or gala-avond.",
+    "requirement": "Preserve poëzie, coördinatie, reeën and essentiële. Do not substitute a trema for the compound-boundary hyphen in co-ouderschap or gala-avond.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-05",
+    "language": "nl",
+    "title": "Compound word boundaries",
+    "description_en": "Keep langetermijnplanning intact rather than inserting spaces to fit a card; assess optional clarifying hyphens through meaning and house style.",
+    "requirement": "Keep langetermijnplanning intact rather than inserting spaces to fit a card; assess optional clarifying hyphens through meaning and house style.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-06",
+    "language": "nl",
+    "title": "Compound exceptions",
+    "description_en": "A4-formaat, IQ-test, top 10, e-mail, lay-out and second opinion follow different constructions; a single English-derived joining rule cannot cover them.",
+    "requirement": "A4-formaat, IQ-test, top 10, e-mail, lay-out and second opinion follow different constructions; a single English-derived joining rule cannot cover them.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-07",
+    "language": "nl",
+    "title": "Dictionary absence is advisory",
+    "description_en": "A missing dictionary entry can be a new compound, specialist term or brand. Confirm the authoritative spelling before calling it an error.",
+    "requirement": "A missing dictionary entry can be a new compound, specialist term or brand. Confirm the authoritative spelling before calling it an error.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-08",
+    "language": "nl",
+    "title": "Apostrophe roles",
+    "description_en": "Distinguish plural, possession, abbreviation and elision in risico's, cafés, oma's, Agnes', sms'en and AOW'er; exclude code and stable identifiers from typography edits.",
+    "requirement": "Distinguish plural, possession, abbreviation and elision in risico's, cafés, oma's, Agnes', sms'en and AOW'er; exclude code and stable identifiers from typography edits.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-09",
+    "language": "nl",
+    "title": "Sentence-initial elision",
+    "description_en": "Preserve the apostrophe role and capitalized full word in 's Morgens; a smart-quote pass must not turn it into an opening quotation.",
+    "requirement": "Preserve the apostrophe role and capitalized full word in 's Morgens; a smart-quote pass must not turn it into an opening quotation.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 112
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-10",
+    "language": "nl",
+    "title": "Registered personal names",
+    "description_en": "Keep Anna van den Bos and Anna Van den Bossche as supplied. Do not infer nationality or silently normalize surname particles from presumed region.",
+    "requirement": "Keep Anna van den Bos and Anna Van den Bossche as supplied. Do not infer nationality or silently normalize surname particles from presumed region.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-11",
+    "language": "nl",
+    "title": "Quotation hierarchy",
+    "description_en": "Select a house quotation and nesting style; sentence punctuation depends on complete versus partial quotations and the cited source.",
+    "requirement": "Select a house quotation and nesting style; sentence punctuation depends on complete versus partial quotations and the cited source.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 119
+      }
+    ]
+  },
+  {
+    "id": "NL-TYPE-12",
+    "language": "nl",
+    "title": "Punctuation semantics",
+    "description_en": "Spacing guidance must exempt decimals, abbreviations, code and URLs. Keep hyphens, ranges, minus signs and parenthetical dashes distinct.",
+    "requirement": "Spacing guidance must exempt decimals, abbreviations, code and URLs. Keep hyphens, ranges, minus signs and parenthetical dashes distinct.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 127
+      }
+    ]
+  },
+  {
+    "id": "NL-HYPH-01",
+    "language": "nl",
+    "title": "Contextual hyphenation",
+    "description_en": "Dutch line-end forms can change spelling. Verify beëindigen→be-/eindigen, parapluutje→paraplu-/tje and cafeetje→café-/tje only in a capable target engine; preserve unbroken source.",
+    "requirement": "Dutch line-end forms can change spelling. Verify beëindigen→be-/eindigen, parapluutje→paraplu-/tje and cafeetje→café-/tje only in a capable target engine; preserve unbroken source.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 136
+      }
+    ]
+  },
+  {
+    "id": "NL-HYPH-02",
+    "language": "nl",
+    "title": "Meaning-dependent boundaries",
+    "description_en": "balletje can have different valid splits depending on meaning; do not advertise a unique answer without context. Dictionary middle dots are notation, not manuscript insertions.",
+    "requirement": "balletje can have different valid splits depending on meaning; do not advertise a unique answer without context. Dictionary middle dots are notation, not manuscript insertions.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 148
+      }
+    ]
+  },
+  {
+    "id": "NL-WEB-01",
+    "language": "nl",
+    "title": "Conditional hyphenation support",
+    "description_en": "Check the installed nl dictionary, language declaration, real width and copy/search results; hyphens:auto or a soft hyphen alone does not prove correct behavior.",
+    "requirement": "Check the installed nl dictionary, language declaration, real width and copy/search results; hyphens:auto or a soft hyphen alone does not prove correct behavior.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "NL-NUM-01",
+    "language": "nl",
+    "title": "Amount and identifier semantics",
+    "description_en": "Preserve € 5,00, € 5,– and €5-biljet as distinct roles. Apply a declared style to typed amounts rather than globally changing separators or spacing.",
+    "requirement": "Preserve € 5,00, € 5,– and €5-biljet as distinct roles. Apply a declared style to typed amounts rather than globally changing separators or spacing.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 172
+      }
+    ]
+  },
+  {
+    "id": "NL-NUM-02",
+    "language": "nl",
+    "title": "NL and BE formatter contexts",
+    "description_en": "Keep nl-NL and nl-BE separate, recording runtime version and exact spacing codepoints for number, currency and date output; do not treat every difference as an error.",
+    "requirement": "Keep nl-NL and nl-BE separate, recording runtime version and exact spacing codepoints for number, currency and date output; do not treat every difference as an error.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 188
+      }
+    ]
+  },
+  {
+    "id": "NL-DATE-01",
+    "language": "nl",
+    "title": "Inclusive date meaning",
+    "description_en": "Clarify whether tot includes the end date and preserve explicit tot en met. Typography must not silently decide an ambiguous deadline.",
+    "requirement": "Clarify whether tot includes the end date and preserve explicit tot en met. Typography must not silently decide an ambiguous deadline.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 198
+      }
+    ]
+  },
+  {
+    "id": "NL-DOC-01",
+    "language": "nl",
+    "title": "Document output checks",
+    "description_en": "Reopen exported documents and inspect PDF visual layout, selected text, Unicode extraction and font substitution separately; source checks are not Office acceptance.",
+    "requirement": "Reopen exported documents and inspect PDF visual layout, selected text, Unicode extraction and font substitution separately; source checks are not Office acceptance.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 206
+      }
+    ]
+  },
+  {
+    "id": "NL-FONT-01",
+    "language": "nl",
+    "title": "Fonts selected by task",
+    "description_en": "Assess required glyphs, IJ design, combining marks, styles, fallback and licensing for the actual file and medium; Dutch provenance is not a functional requirement.",
+    "requirement": "Assess required glyphs, IJ design, combining marks, styles, fallback and licensing for the actual file and medium; Dutch provenance is not a functional requirement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 214
+      }
+    ]
+  },
+  {
+    "id": "NL-PROFILE-01",
+    "language": "nl",
+    "title": "Purpose-specific scale",
+    "description_en": "Use reading, display or hybrid goals and actual distance to choose type hierarchy; trial values are not a universal Dutch point-size standard.",
+    "requirement": "Use reading, display or hybrid goals and actual distance to choose type hierarchy; trial values are not a universal Dutch point-size standard.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 241
+      }
+    ]
+  },
+  {
+    "id": "NL-COPY-01",
+    "language": "nl",
+    "title": "Address policy",
+    "description_en": "Review je/u and possessive forms in context. Region alone does not determine address; quotations, generic je and emphatic jouw can be legitimate exceptions.",
+    "requirement": "Review je/u and possessive forms in context. Region alone does not determine address; quotations, generic je and emphatic jouw can be legitimate exceptions.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 371
+      }
+    ]
+  },
+  {
+    "id": "NL-COPY-02",
+    "language": "nl",
+    "title": "Clarity beyond a label",
+    "description_en": "Assess the reader's task, action, recovery and necessary conditions. A B1 label or shorter sentence does not by itself prove clarity or permit omitted meaning.",
+    "requirement": "Assess the reader's task, action, recovery and necessary conditions. A B1 label or shorter sentence does not by itself prove clarity or permit omitted meaning.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 385
+      }
+    ]
+  },
+  {
+    "id": "NL-COPY-03",
+    "language": "nl",
+    "title": "Regional and branded voice",
+    "description_en": "Preserve nl-BE bankkaart/lidkaart, foreign titles, lowercase brands and approved display breaks. Avoid replacing them with nl-NL vocabulary or applying graphic exceptions to body text.",
+    "requirement": "Preserve nl-BE bankkaart/lidkaart, foreign titles, lowercase brands and approved display breaks. Avoid replacing them with nl-NL vocabulary or applying graphic exceptions to body text.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+        "filename": "NL_Research_20261019.source.txt",
+        "line": 408
+      }
+    ]
+  }
+]

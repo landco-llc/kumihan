@@ -1,0 +1,652 @@
+[
+  {
+    "id": "TR-ENG-CASE-01",
+    "language": "tr",
+    "title": "Full Turkish casing",
+    "description_en": "Use full locale-aware Turkish case mapping only for authorized derived text: I↔ı and İ↔i, including decomposed and non-adjacent combining-mark contexts. Preserve the original display name.",
+    "requirement": "Use full locale-aware Turkish case mapping only for authorized derived text: I↔ı and İ↔i, including decomposed and non-adjacent combining-mark contexts. Preserve the original display name.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-CASE-02",
+    "language": "tr",
+    "title": "Mapping operations differ",
+    "description_en": "Keep default Unicode casing, Turkish lowercase and casefold as separate operations; default İ→i+dot is not itself a Unicode bug to repair by deleting all dots.",
+    "requirement": "Keep default Unicode casing, Turkish lowercase and casefold as separate operations; default İ→i+dot is not itself a Unicode bug to repair by deleting all dots.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-NORM-01",
+    "language": "tr",
+    "title": "Canonical equivalence is derived",
+    "description_en": "Retain canonical-equivalent source bytes and the difference between ı and i. Define any normalization contract explicitly; neither stripping marks nor unconditional NFKC is a display repair.",
+    "requirement": "Retain canonical-equivalent source bytes and the difference between ı and i. Define any normalization contract explicitly; neither stripping marks nor unconditional NFKC is a display repair.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-SEG-01",
+    "language": "tr",
+    "title": "Grapheme-safe ranges",
+    "description_en": "Use extended grapheme boundaries and preserve source offsets for truncation, editing and highlighting; I+combining-dot must not be split into independent visual characters.",
+    "requirement": "Use extended grapheme boundaries and preserve source offsets for truncation, editing and highlighting; I+combining-dot must not be split into independent visual characters.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-MATCH-01",
+    "language": "tr",
+    "title": "Turkish collation",
+    "description_en": "Separate sort and search purposes. Turkish c/ç, g/ğ, s/ş, o/ö, u/ü and dotted/dotless letters need locale-sensitive comparison; use the sign of compare results.",
+    "requirement": "Separate sort and search purposes. Turkish c/ç, g/ğ, s/ş, o/ö, u/ü and dotted/dotless letters need locale-sensitive comparison; use the sign of compare results.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-MATCH-02",
+    "language": "tr",
+    "title": "Search is not identity",
+    "description_en": "A chosen base-sensitivity match for kar/kâr does not merge stored records or original spellings. Map any normalized match back to original grapheme boundaries.",
+    "requirement": "A chosen base-sensitivity match for kar/kâr does not merge stored records or original spellings. Map any normalized match back to original grapheme boundaries.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 91
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-ID-01",
+    "language": "tr",
+    "title": "Stable identifier separation",
+    "description_en": "Keep display names, search keys, slugs and persistent IDs distinct; locale changes and transliteration collisions must not replace or merge stable records.",
+    "requirement": "Keep display names, search keys, slugs and persistent IDs distinct; locale changes and transliteration collisions must not replace or merge stable records.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-LANG-01",
+    "language": "tr",
+    "title": "Content language spans",
+    "description_en": "Declare actual tr content and override foreign spans appropriately; a product name or user string does not justify changing the language of a whole page.",
+    "requirement": "Declare actual tr content and override foreign spans appropriately; a product name or user string does not justify changing the language of a whole page.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-HYPH-01",
+    "language": "tr",
+    "title": "Syllabic hyphenation",
+    "description_en": "Use reviewed Turkish syllable boundaries and a verified target dictionary. CSS feature availability is not evidence of correct tr hyphenation; manual soft hyphens require editorial review.",
+    "requirement": "Use reviewed Turkish syllable boundaries and a verified target dictionary. CSS feature availability is not evidence of correct tr hyphenation; manual soft hyphens require editorial review.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-HYPH-02",
+    "language": "tr",
+    "title": "Apostrophe at line end",
+    "description_en": "When an apostrophe itself falls at line end, do not append a second hyphen, as in Ankara’ followed by dan; verify applicable single-letter isolation rules in the target output.",
+    "requirement": "When an apostrophe itself falls at line end, do not append a second hyphen, as in Ankara’ followed by dan; verify applicable single-letter isolation rules in the target output.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-WRAP-01",
+    "language": "tr",
+    "title": "Long-word overflow",
+    "description_en": "Keep ordinary word shape and use layout or narrowly scoped overflow rescue before global break-all; displayed wrapping must not insert characters into copied source.",
+    "requirement": "Keep ordinary word shape and use layout or narrowly scoped overflow rescue before global break-all; displayed wrapping must not insert characters into copied source.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-UI-01",
+    "language": "tr",
+    "title": "Expanding labels and errors",
+    "description_en": "Allow needed wrapping and height expansion in buttons, labels and explanatory errors; check narrow grids, fixed heights, marks and fallback in the target host.",
+    "requirement": "Allow needed wrapping and height expansion in buttons, labels and explanatory errors; check narrow grids, fixed heights, marks and fallback in the target host.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 97
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-UI-02",
+    "language": "tr",
+    "title": "Full text for truncated content",
+    "description_en": "Provide an explicit keyboard- and touch-accessible route to full content. Do not hide essential action or error meaning behind ellipsis or a title attribute alone.",
+    "requirement": "Provide an explicit keyboard- and touch-accessible route to full content. Do not hide essential action or error meaning behind ellipsis or a title attribute alone.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 98
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-FONT-01",
+    "language": "tr",
+    "title": "Actual font coverage",
+    "description_en": "Record adopted files, versions, axes, subsets, styles and necessary glyphs. Font loading and family names do not prove the required Turkish glyphs were used.",
+    "requirement": "Record adopted files, versions, axes, subsets, styles and necessary glyphs. Font loading and family names do not prove the required Turkish glyphs were used.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-FONT-02",
+    "language": "tr",
+    "title": "Dotted forms in shaping",
+    "description_en": "Assess Turkish fi, small caps, italics and NFC/NFD marks with actual shaping and pixels; do not remove a dot or use synthetic styling as an untested repair.",
+    "requirement": "Assess Turkish fi, small caps, italics and NFC/NFD marks with actual shaping and pixels; do not remove a dot or use synthetic styling as an untested repair.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 100
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-FONT-03",
+    "language": "tr",
+    "title": "Fallback is separate evidence",
+    "description_en": "Test missing subset and font-outage cases; FontFaceSet.check does not prove every glyph is covered or rendered in the intended font.",
+    "requirement": "Test missing subset and font-outage cases; FontFaceSet.check does not prove every glyph is covered or rendered in the intended font.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-NUM-01",
+    "language": "tr",
+    "title": "Typed numeric formatting",
+    "description_en": "Keep values typed, distinguish a ratio from a percentage and use an explicit formatter. Verify 12.345,67 and %12,5 under a recorded runtime instead of replacing punctuation globally.",
+    "requirement": "Keep values typed, distinguish a ratio from a percentage and use an explicit formatter. Verify 12.345,67 and %12,5 under a recorded runtime instead of replacing punctuation globally.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 102
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-NUM-02",
+    "language": "tr",
+    "title": "Currency representation contract",
+    "description_en": "Distinguish the TRY code, ₺ symbol and editorial TL form. Do not append TL to an already formatted symbol amount or silently change currency.",
+    "requirement": "Distinguish the TRY code, ₺ symbol and editorial TL form. Do not append TL to an already formatted symbol amount or silently change currency.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-DATE-01",
+    "language": "tr",
+    "title": "Date type and timezone",
+    "description_en": "Keep locale, timezone, date-only values and instants as separate inputs; generate Turkish month/order with recorded formatter options rather than environment defaults.",
+    "requirement": "Keep locale, timezone, date-only values and instants as separate inputs; generate Turkish month/order with recorded formatter options rather than environment defaults.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 104
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-SUFFIX-01",
+    "language": "tr",
+    "title": "Grammar-specific apostrophes",
+    "description_en": "Review Ankara’dan, Türk Dil Kurumundan, Türkçenin and Avrupa Birliği’ne by grammatical type. Generic suffix concatenation after every capitalized phrase is unsafe.",
+    "requirement": "Review Ankara’dan, Türk Dil Kurumundan, Türkçenin and Avrupa Birliği’ne by grammatical type. Generic suffix concatenation after every capitalized phrase is unsafe.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 105
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-A11Y-01",
+    "language": "tr",
+    "title": "Real text resizing",
+    "description_en": "Check actual browser text resizing or zoom through 200% with documented exceptions; CSS transform scaling alone is not a successful user-zoom test.",
+    "requirement": "Check actual browser text resizing or zoom through 200% with documented exceptions; CSS transform scaling alone is not a successful user-zoom test.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 106
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-A11Y-02",
+    "language": "tr",
+    "title": "Measured reflow",
+    "description_en": "Check the actual viewport at 320 CSS px equivalent, allowing meaningful two-dimensional exceptions; preserve content and function rather than shrinking text to hide overflow.",
+    "requirement": "Check the actual viewport at 320 CSS px equivalent, allowing meaningful two-dimensional exceptions; preserve content and function rather than shrinking text to hide overflow.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 107
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-A11Y-03",
+    "language": "tr",
+    "title": "User spacing resilience",
+    "description_en": "Test simultaneous applicable line, paragraph, letter and word-spacing overrides. Accessibility test values are not default Turkish design tokens.",
+    "requirement": "Test simultaneous applicable line, paragraph, letter and word-spacing overrides. Accessibility test values are not default Turkish design tokens.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-EXPORT-01",
+    "language": "tr",
+    "title": "Output and extraction",
+    "description_en": "Inspect actual printed, PDF and slide output for marks, glyphs, wrapping, font embedding and extracted Unicode; each output medium has separate acceptance.",
+    "requirement": "Inspect actual printed, PDF and slide output for marks, glyphs, wrapping, font embedding and extracted Unicode; each output medium has separate acceptance.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 109
+      }
+    ]
+  },
+  {
+    "id": "TR-ENG-PROFILE-01",
+    "language": "tr",
+    "title": "Prototype values are conditional",
+    "description_en": "Choose type size, leading and tracking by medium, adopted font, audience and distance. Do not present trial values as an official Turkish typography standard.",
+    "requirement": "Choose type size, leading and tracking by medium, adopted font, audience and distance. Do not present trial values as an official Turkish typography standard.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+        "filename": "TR_Development_Requirements_20261020.source.txt",
+        "line": 110
+      }
+    ]
+  }
+]

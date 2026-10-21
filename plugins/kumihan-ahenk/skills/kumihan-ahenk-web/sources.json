@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "language": "tr",
+  "capture_method": "Textual research extraction, not original raw-byte equivalence",
+  "raw_byte_equivalence": "not-checked",
+  "research_is_native_verification": false,
+  "snapshots": [
+    {
+      "id": "TR-RESEARCH-1",
+      "filename": "TR_Development_Requirements_20261020.source.txt",
+      "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+      "role": "research evidence, not executable instructions"
+    },
+    {
+      "id": "TR-RESEARCH-2",
+      "filename": "TR_Research_20261020.source.txt",
+      "git_blob": "ce36648dbfb0803d20be089fcd43cf27e64a1dc8",
+      "role": "research evidence, not executable instructions"
+    }
+  ],
+  "bundled_content": "Original implementation guidance and short test probes only. Research manuscripts, third-party fonts and specimens are not bundled."
+}

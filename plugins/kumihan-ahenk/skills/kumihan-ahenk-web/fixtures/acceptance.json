@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "language": "tr",
+  "scope": "Exact UTF-8 preservation and advisory diagnostics only; these are not render or proofreading tests.",
+  "research_fixture_completion": "NOT_CLAIMED; short probes derived from cited research sections",
+  "cases": [
+    {
+      "id": "TR-PRESERVE-01",
+      "input": "İstanbul Iğdır Iıİi",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 86
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-CASE-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-02",
+      "input": "Ị̇zmir Ankara’dan kâr",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 86
+        },
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 88
+        },
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 105
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-CASE-01",
+        "TR-ENG-NORM-01",
+        "TR-ENG-SUFFIX-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-03",
+      "input": "ÇĞİÖŞÜ ₺ %12,5",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 99
+        },
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 102
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-FONT-01",
+        "TR-ENG-NUM-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-04",
+      "input": "istanbul DİYARBAKIR",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 86
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-CASE-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-05",
+      "input": "İ i̇ ı i",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 87
+        },
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 88
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-CASE-02",
+        "TR-ENG-NORM-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-06",
+      "input": "kar kâr",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 91
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-MATCH-02"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-07",
+      "input": "Türk Dil Kurumundan Türkçenin Avrupa Birliği’ne",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 105
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-SUFFIX-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-08",
+      "input": "gerçekleştirebileceklerimizden",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 96
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-WRAP-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-09",
+      "input": "Değişiklikleri kaydet",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 97
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-UI-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-10",
+      "input": "ARTICLE_ID İstanbul",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 92
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-ID-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-11",
+      "input": "12.345,67 TRY ₺1.234,56",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 102
+        },
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 103
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-NUM-01",
+        "TR-ENG-NUM-02"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-12",
+      "input": "20 Ekim 2026 16:05",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 104
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-DATE-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-13",
+      "input": "il­ko­kul prog­ram",
+      "locale": "tr",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 94
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-HYPH-01"
+      ]
+    },
+    {
+      "id": "TR-PRESERVE-14",
+      "input": "fi İı smcp c2sc",
+      "locale": "tr-TR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c8a29d3fb93fd76797e57d4835211b1af6c91026",
+          "filename": "TR_Development_Requirements_20261020.source.txt",
+          "line": 100
+        }
+      ],
+      "related_rule_ids": [
+        "TR-ENG-FONT-02"
+      ]
+    }
+  ]
+}

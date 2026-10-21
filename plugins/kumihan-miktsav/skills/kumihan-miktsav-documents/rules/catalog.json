@@ -1,0 +1,735 @@
+[
+  {
+    "id": "HE-R01",
+    "language": "he",
+    "title": "Logical source order",
+    "description_en": "Store and return the original logical Unicode sequence; do not reverse Hebrew strings or hand-swap brackets to simulate right-to-left display.",
+    "requirement": "Store and return the original logical Unicode sequence; do not reverse Hebrew strings or hand-swap brackets to simulate right-to-left display.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "HE-R02",
+    "language": "he",
+    "title": "Five final-letter forms",
+    "description_en": "Preserve כ/ך מ/ם נ/ן פ/ף צ/ץ as supplied. Final forms are orthographic choices, not automatic end-of-word substitutions; names and loans may need editorial review.",
+    "requirement": "Preserve כ/ך מ/ם נ/ן פ/ף צ/ץ as supplied. Final forms are orthographic choices, not automatic end-of-word substitutions; names and loans may need editorial review.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "HE-R03",
+    "language": "he",
+    "title": "Niqqud and marks",
+    "description_en": "Preserve vowel points, dagesh and distinct shin/sin dots even in otherwise unpointed text. Existing marks are not disposable decoration.",
+    "requirement": "Preserve vowel points, dagesh and distinct shin/sin dots even in otherwise unpointed text. Existing marks are not disposable decoration.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "HE-R04",
+    "language": "he",
+    "title": "Extended grapheme integrity",
+    "description_en": "Keep base letters and all attached marks together for animation, truncation and highlighting; codepoints and UTF-16 elements are not displayed characters.",
+    "requirement": "Keep base letters and all attached marks together for animation, truncation and highlighting; codepoints and UTF-16 elements are not displayed characters.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "HE-R05",
+    "language": "he",
+    "title": "Script is not language",
+    "description_en": "Explicit language or document context precedes script. Hebrew script can encode Yiddish or Ladino and does not prove modern he; unknown remains unresolved.",
+    "requirement": "Explicit language or document context precedes script. Hebrew script can encode Yiddish or Ladino and does not prove modern he; unknown remains unresolved.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 110
+      }
+    ]
+  },
+  {
+    "id": "HE-R06",
+    "language": "he",
+    "title": "Language differs from direction",
+    "description_en": "Declare known Hebrew language and RTL paragraph direction independently; right alignment alone does not establish a correct bidi paragraph or reading order.",
+    "requirement": "Declare known Hebrew language and RTL paragraph direction independently; right alignment alone does not establish a correct bidi paragraph or reading order.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 174
+      }
+    ]
+  },
+  {
+    "id": "HE-R07",
+    "language": "he",
+    "title": "Known opposite-direction spans",
+    "description_en": "Isolate complete semantic LTR spans such as product versions, URLs, email and amounts without swallowing surrounding sentence punctuation; preserve source order.",
+    "requirement": "Isolate complete semantic LTR spans such as product versions, URLs, email and amounts without swallowing surrounding sentence punctuation; preserve source order.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 184
+      }
+    ]
+  },
+  {
+    "id": "HE-R08",
+    "language": "he",
+    "title": "Dynamic text and bidi controls",
+    "description_en": "Use appropriate bdi or dir=auto for unknown dynamic strings when authoring markup. Plain-text isolates require a supported environment and a recorded diff; never silently remove existing controls.",
+    "requirement": "Use appropriate bdi or dir=auto for unknown dynamic strings when authoring markup. Plain-text isolates require a supported environment and a recorded diff; never silently remove existing controls.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 185
+      },
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 205
+      }
+    ]
+  },
+  {
+    "id": "HE-R09",
+    "language": "he",
+    "title": "Functional punctuation",
+    "description_en": "Keep geresh U+05F3, gershayim U+05F4 and maqaf U+05BE distinct from quotes, cantillation marks, minus signs and dashes; apply an explicit editorial policy instead of global replacement.",
+    "requirement": "Keep geresh U+05F3, gershayim U+05F4 and maqaf U+05BE distinct from quotes, cantillation marks, minus signs and dashes; apply an explicit editorial policy instead of global replacement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 146
+      }
+    ]
+  },
+  {
+    "id": "HE-R10",
+    "language": "he",
+    "title": "Word and line boundaries",
+    "description_en": "Prefer ordinary word wrapping and the target engine's versioned line-breaking rules; do not apply break-all to all body copy or treat word segmentation as line breaking.",
+    "requirement": "Prefer ordinary word wrapping and the target engine's versioned line-breaking rules; do not apply break-all to all body copy or treat word segmentation as line breaking.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 211
+      }
+    ]
+  },
+  {
+    "id": "HE-R11",
+    "language": "he",
+    "title": "Tracking and emphasis",
+    "description_en": "Choose Hebrew tracking and emphasis by actual font and purpose; do not import Arabic kashida/tatweel or Latin tracking as a generic Hebrew solution.",
+    "requirement": "Choose Hebrew tracking and emphasis by actual font and purpose; do not import Arabic kashida/tatweel or Latin tracking as a generic Hebrew solution.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 217
+      }
+    ]
+  },
+  {
+    "id": "HE-R12",
+    "language": "he",
+    "title": "Italic is a font decision",
+    "description_en": "Inspect real italic or alternative emphasis in the chosen family, preserving readability and marks; neither mandatory italic nor an unconditional italic ban is justified.",
+    "requirement": "Inspect real italic or alternative emphasis in the chosen family, preserving readability and marks; neither mandatory italic nor an unconditional italic ban is justified.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 231
+      }
+    ]
+  },
+  {
+    "id": "HE-R13",
+    "language": "he",
+    "title": "Glyph coverage and fallback",
+    "description_en": "Inspect adopted font files, needed Hebrew and Latin glyphs, actual fallback and weights. A font-family declaration or successful load does not prove all glyphs render correctly.",
+    "requirement": "Inspect adopted font files, needed Hebrew and Latin glyphs, actual fallback and weights. A font-family declaration or successful load does not prove all glyphs render correctly.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 239
+      }
+    ]
+  },
+  {
+    "id": "HE-R14",
+    "language": "he",
+    "title": "Mixed-script optical balance",
+    "description_en": "Compare apparent body size, baseline, numerals, spacing and intended hierarchy locally rather than enforcing one Hebrew-Latin size multiplier.",
+    "requirement": "Compare apparent body size, baseline, numerals, spacing and intended hierarchy locally rather than enforcing one Hebrew-Latin size multiplier.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 243
+      }
+    ]
+  },
+  {
+    "id": "HE-R15",
+    "language": "he",
+    "title": "Mark clearance in line boxes",
+    "description_en": "Test pointed words and multiple marks at all adopted weights and output sizes for collisions or clipping; do not erase niqqud to fit a fixed-height box.",
+    "requirement": "Test pointed words and multiple marks at all adopted weights and output sizes for collisions or clipping; do not erase niqqud to fit a fixed-height box.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 124
+      }
+    ]
+  },
+  {
+    "id": "HE-R16",
+    "language": "he",
+    "title": "Font license provenance",
+    "description_en": "Record actual font origin, version, file hash and applicable license/embedding conditions before distribution; free download is not a license grant.",
+    "requirement": "Record actual font origin, version, file hash and applicable license/embedding conditions before distribution; free download is not a license grant.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 268
+      }
+    ]
+  },
+  {
+    "id": "HE-R17",
+    "language": "he",
+    "title": "Address and grammatical policy",
+    "description_en": "Separate grammar, addressee and editorial gender policy. Preserve dot/slash or other approved brand forms; do not infer a reader's gender from a name or address.",
+    "requirement": "Separate grammar, addressee and editorial gender policy. Preserve dot/slash or other approved brand forms; do not infer a reader's gender from a name or address.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 590
+      }
+    ]
+  },
+  {
+    "id": "HE-R18",
+    "language": "he",
+    "title": "Meaning-preserving UI copy",
+    "description_en": "Keep actions, consent, negation, costs, conditions and durations intact. Agreeing, reading and requesting are different actions and cannot be swapped to fit a CTA.",
+    "requirement": "Keep actions, consent, negation, costs, conditions and durations intact. Agreeing, reading and requesting are different actions and cannot be swapped to fit a CTA.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 631
+      }
+    ]
+  },
+  {
+    "id": "HE-R19",
+    "language": "he",
+    "title": "Locale and typed values",
+    "description_en": "Keep language, region, currency, numbering system, calendar and timezone separate. Preserve amount/currency and range endpoints instead of reversing digits or silently converting calendars.",
+    "requirement": "Keep language, region, currency, numbering system, calendar and timezone separate. Preserve amount/currency and range endpoints instead of reversing digits or silently converting calendars.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 650
+      }
+    ]
+  },
+  {
+    "id": "HE-R20",
+    "language": "he",
+    "title": "Versioned plural messages",
+    "description_en": "Select reviewed full phrases using the installed Hebrew plural data and visible decimal operands. A two category does not authorize arbitrary dual suffixes; record runtime and CLDR versions.",
+    "requirement": "Select reviewed full phrases using the installed Hebrew plural data and visible decimal operands. A two category does not authorize arbitrary dual suffixes; record runtime and CLDR versions.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 683
+      }
+    ]
+  },
+  {
+    "id": "HE-R21",
+    "language": "he",
+    "title": "Meaningful reading and focus order",
+    "description_en": "Check DOM/document order, keyboard order and visual order independently. row-reverse or global mirroring alone does not demonstrate meaningful RTL navigation.",
+    "requirement": "Check DOM/document order, keyboard order and visual order independently. row-reverse or global mirroring alone does not demonstrate meaningful RTL navigation.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 715
+      }
+    ]
+  },
+  {
+    "id": "HE-R22",
+    "language": "he",
+    "title": "Zoom and spacing acceptance",
+    "description_en": "Test actual 200% resizing, 320 CSS px-equivalent reflow and applicable user text-spacing separately; preserve content and function with documented exceptions.",
+    "requirement": "Test actual 200% resizing, 320 CSS px-equivalent reflow and applicable user text-spacing separately; preserve content and function with documented exceptions.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 733
+      }
+    ]
+  },
+  {
+    "id": "HE-R23",
+    "language": "he",
+    "title": "Native document acceptance",
+    "description_en": "Check paragraph/run direction, complex-script fonts, tables and marks in the actual Word or publishing engine, then reopen exported files; a static XML inspection is insufficient.",
+    "requirement": "Check paragraph/run direction, complex-script fonts, tables and marks in the actual Word or publishing engine, then reopen exported files; a static XML inspection is insufficient.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 743
+      }
+    ]
+  },
+  {
+    "id": "HE-R24",
+    "language": "he",
+    "title": "PDF has two evidence layers",
+    "description_en": "Review pixels for marks, fallback and layout, and separately compare Unicode extraction, search, copy and tagged reading order; searchable text is not PDF/UA certification.",
+    "requirement": "Review pixels for marks, fallback and layout, and separately compare Unicode extraction, search, copy and tagged reading order; searchable text is not PDF/UA certification.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 760
+      }
+    ]
+  },
+  {
+    "id": "HE-R25",
+    "language": "he",
+    "title": "Scope before styling",
+    "description_en": "Establish purpose, medium, audience, reading/display/hybrid role and authorized editing policy from available context; ask only for missing information that changes the work.",
+    "requirement": "Establish purpose, medium, audience, reading/display/hybrid role and authorized editing policy from available context; ask only for missing information that changes the work.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 794
+      }
+    ]
+  },
+  {
+    "id": "HE-R26",
+    "language": "he",
+    "title": "Identity and logo protection",
+    "description_en": "Keep official logos and exact product names intact; do not mirror lettering, maps or data axes merely because nearby text is RTL.",
+    "requirement": "Keep official logos and exact product names intact; do not mirror lettering, maps or data axes merely because nearby text is RTL.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "HE-R27",
+    "language": "he",
+    "title": "Specialized and historical scope",
+    "description_en": "Preserve unsupported special marks and distinguish modern Hebrew guidance from cantillation, historical text or other Hebrew-script languages. State the limitation instead of deleting unknown characters.",
+    "requirement": "Preserve unsupported special marks and distinguish modern Hebrew guidance from cantillation, historical text or other Hebrew-script languages. State the limitation instead of deleting unknown characters.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 138
+      }
+    ]
+  },
+  {
+    "id": "HE-R28",
+    "language": "he",
+    "title": "Evidence-specific reporting",
+    "description_en": "Return source integrity, advisory findings and environment-specific evidence separately. Static checks never certify native spelling, glyph placement, screen readers or Office rendering.",
+    "requirement": "Return source integrity, advisory findings and environment-specific evidence separately. Static checks never certify native spelling, glyph placement, screen readers or Office rendering.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+        "filename": "HE_Research_20261019.source.txt",
+        "line": 840
+      }
+    ]
+  }
+]

@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0",
+  "language": "he",
+  "scope": "Exact UTF-8 preservation and advisory diagnostics only; these are not render or proofreading tests.",
+  "research_fixture_completion": "NOT_CLAIMED; short probes derived from cited research sections",
+  "cases": [
+    {
+      "id": "HE-PRESERVE-01",
+      "input": "אבג ךםןףץ שָׁלוֹם",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 96
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 116
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R02",
+        "HE-R03"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-02",
+      "input": "ק״ג יום־יום ר׳",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 146
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R09"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-03",
+      "input": "גרסה 1.2 ⁦https://example.test⁩ (₪12.50)",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 184
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 185
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 205
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R07",
+        "HE-R08"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-04",
+      "input": "כ ך מ ם נ ן פ ף צ ץ",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 96
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R02"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-05",
+      "input": "שׁ שׂ בּ",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 116
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R03"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-06",
+      "input": "שלום שָׁלוֹם",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 116
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 124
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R03",
+        "HE-R04"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-07",
+      "input": "KUMIHAN｜מקצב",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 421
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R26"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-08",
+      "input": "דוא״ל user@example.test",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 184
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 146
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R07",
+        "HE-R09"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-09",
+      "input": "₪1,234.50 USD 20",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 650
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R19"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-10",
+      "input": "1 2 0.5 1.0 2.0",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 683
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R20"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-11",
+      "input": "2026-10-20 Asia/Jerusalem",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 650
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R19"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-12",
+      "input": "https://example.test/abc?q=12",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 184
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R07"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-13",
+      "input": "אבג‏ 123 ⁧abc⁩",
+      "locale": "he",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 185
+        },
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 205
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R08"
+      ]
+    },
+    {
+      "id": "HE-PRESERVE-14",
+      "input": "הורדת התוסף מדריך התקנה",
+      "locale": "he-IL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "9537b23b7ac4453812f2cdc2d7f86d2624e754a7",
+          "filename": "HE_Research_20261019.source.txt",
+          "line": 631
+        }
+      ],
+      "related_rule_ids": [
+        "HE-R18"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+[
+  {
+    "id": "LA-TYPE-01",
+    "language": "la",
+    "title": "Original and annotation layers",
+    "description_en": "Keep supplied original, editorial reading, annotations and display styling separate. Never infer an edited reading from appearance.",
+    "requirement": "Keep supplied original, editorial reading, annotations and display styling separate. Never infer an edited reading from appearance.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-02",
+    "language": "la",
+    "title": "I/J and U/V policy",
+    "description_en": "Preserve I/J and U/V from the selected edition. Classical capitals are not authority for converting U to V or deleting J.",
+    "requirement": "Preserve I/J and U/V from the selected edition. Classical capitals are not authority for converting U to V or deleting J.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 94
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-03",
+    "language": "la",
+    "title": "Ligature and spelling variants",
+    "description_en": "Keep ae/oe/æ/œ/e distinct according to source and edition; neither medieval nor ecclesiastical mode authorizes blanket conversion.",
+    "requirement": "Keep ae/oe/æ/œ/e distinct according to source and edition; neither medieval nor ecclesiastical mode authorizes blanket conversion.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 95
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-04",
+    "language": "la",
+    "title": "Length and stress notation",
+    "description_en": "Preserve macron, breve, acute and apex. Adding marks requires philological context and an authorized separate annotation, not guessed vowel length.",
+    "requirement": "Preserve macron, breve, acute and apex. Adding marks requires philological context and an authorized separate annotation, not guessed vowel length.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-05",
+    "language": "la",
+    "title": "Period and usage context",
+    "description_en": "Record classical, medieval, ecclesiastical, modern or editorial purpose explicitly; the period of composition, manuscript and edition can differ.",
+    "requirement": "Record classical, medieval, ecclesiastical, modern or editorial purpose explicitly; the period of composition, manuscript and edition can differ.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 490
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-06",
+    "language": "la",
+    "title": "Pronunciation is separate",
+    "description_en": "Record restored classical or ecclesiastical pronunciation where relevant; pronunciation choice never silently changes source orthography.",
+    "requirement": "Record restored classical or ecclesiastical pronunciation where relevant; pronunciation choice never silently changes source orthography.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 121
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-07",
+    "language": "la",
+    "title": "Word order and meaning",
+    "description_en": "Do not rearrange words to fill a layout. Translation, shortening and living-Latin copy require explicit editorial permission and specialist review.",
+    "requirement": "Do not rearrange words to fill a layout. Translation, shortening and living-Latin copy require explicit editorial permission and specialist review.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-08",
+    "language": "la",
+    "title": "Latin language versus script",
+    "description_en": "Latin alphabet or a Latin-looking font does not establish la. English marketing and Lorem ipsum are not evidence of authentic Latin usage.",
+    "requirement": "Latin alphabet or a Latin-looking font does not establish la. English marketing and Lorem ipsum are not evidence of authentic Latin usage.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 207
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-09",
+    "language": "la",
+    "title": "Unicode and glyph layers",
+    "description_en": "Preserve composed and decomposed accents and compatibility forms; font ligatures and editorial expansion are distinct from original byte identity.",
+    "requirement": "Preserve composed and decomposed accents and compatibility forms; font ligatures and editorial expansion are distinct from original byte identity.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 421
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-10",
+    "language": "la",
+    "title": "Verse and epigraphic lines",
+    "description_en": "Protect verse lineation, physical inscription lines, lacunae and critical apparatus. Distinguish physical line breaks from word boundaries and UI wrapping.",
+    "requirement": "Protect verse lineation, physical inscription lines, lacunae and critical apparatus. Distinguish physical line breaks from word boundaries and UI wrapping.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 446
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-11",
+    "language": "la",
+    "title": "Font provenance and licensing",
+    "description_en": "Select actual coverage for macron/breve/ligatures and actual licenses. A revival serif is not a universal ancient-Latin font.",
+    "requirement": "Select actual coverage for macron/breve/ligatures and actual licenses. A revival serif is not a universal ancient-Latin font.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 280
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-12",
+    "language": "la",
+    "title": "Hierarchy is contextual",
+    "description_en": "Measure actual reading/display/learning context, font, width and distance. Do not turn observed source ratios into mandatory universal sizes.",
+    "requirement": "Measure actual reading/display/learning context, font, width and distance. Do not turn observed source ratios into mandatory universal sizes.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 528
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-13",
+    "language": "la",
+    "title": "Accessible multilingual reading",
+    "description_en": "Review lang=la spans, readable text alternatives, copy/search order and zoom in actual hosts. Static markup does not establish accessibility acceptance.",
+    "requirement": "Review lang=la spans, readable text alternatives, copy/search order and zoom in actual hosts. Static markup does not establish accessibility acceptance.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 529
+      }
+    ]
+  },
+  {
+    "id": "LA-TYPE-14",
+    "language": "la",
+    "title": "Edition metadata",
+    "description_en": "Record source, editorial policy, period and intended use independently; keep unknown fields needs-review rather than inventing scholarly certainty.",
+    "requirement": "Record source, editorial policy, period and intended use independently; keep unknown fields needs-review rather than inventing scholarly certainty.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "43188a4c5e913fd1ea59c31aaf36e788da3a0bd8",
+        "filename": "LA_Research_20261020.source.md",
+        "line": 496
+      }
+    ]
+  }
+]

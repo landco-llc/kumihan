@@ -1,0 +1,834 @@
+[
+  {
+    "id": "EL-01",
+    "language": "el",
+    "title": "Explicit language before script",
+    "description_en": "Use the supplied language or document metadata; Greek letters can also occur in formulas and other languages.",
+    "requirement": "Use the supplied language or document metadata; Greek letters can also occur in formulas and other languages.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 424
+      }
+    ]
+  },
+  {
+    "id": "EL-02",
+    "language": "el",
+    "title": "Greek region and orthography",
+    "description_en": "Keep el-GR and el-CY distinct from the selected monotonic or polytonic orthography; do not silently replace either axis.",
+    "requirement": "Keep el-GR and el-CY distinct from the selected monotonic or polytonic orthography; do not silently replace either axis.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 425
+      }
+    ]
+  },
+  {
+    "id": "EL-03",
+    "language": "el",
+    "title": "Protected source spans",
+    "description_en": "Preserve personal names, marks, code, mathematical notation and quotations; offer edits separately with the exact original span.",
+    "requirement": "Preserve personal names, marks, code, mathematical notation and quotations; offer edits separately with the exact original span.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 426
+      }
+    ]
+  },
+  {
+    "id": "EL-04",
+    "language": "el",
+    "title": "Derived NFC comparison",
+    "description_en": "A derived NFC comparison may explain canonical equivalence but never overwrite received UTF-8 bytes.",
+    "requirement": "A derived NFC comparison may explain canonical equivalence but never overwrite received UTF-8 bytes.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 427
+      }
+    ]
+  },
+  {
+    "id": "EL-05",
+    "language": "el",
+    "title": "Compatibility normalization boundary",
+    "description_en": "Do not apply NFKC or NFKD across the manuscript; symbol identity and quoted historical forms can carry meaning.",
+    "requirement": "Do not apply NFKC or NFKD across the manuscript; symbol identity and quoted historical forms can carry meaning.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 428
+      }
+    ]
+  },
+  {
+    "id": "EL-06",
+    "language": "el",
+    "title": "Grapheme boundaries",
+    "description_en": "Use a target engine supporting extended grapheme clusters for truncation, animation and highlighting; codepoint counts are not visible character counts.",
+    "requirement": "Use a target engine supporting extended grapheme clusters for truncation, animation and highlighting; codepoint counts are not visible character counts.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 429
+      }
+    ]
+  },
+  {
+    "id": "EL-07",
+    "language": "el",
+    "title": "Tonos and dialytika",
+    "description_en": "Preserve accents and diaeresis, including combinations in Μαΐου; assess missing or colliding marks in the chosen font rather than removing marks.",
+    "requirement": "Preserve accents and diaeresis, including combinations in Μαΐου; assess missing or colliding marks in the chosen font rather than removing marks.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 430
+      }
+    ]
+  },
+  {
+    "id": "EL-08",
+    "language": "el",
+    "title": "Contextual uppercase",
+    "description_en": "For authorized derived uppercase, use full Greek-locale mapping and test isolated ή, accents and diaeresis; generic ASCII mapping is inadequate.",
+    "requirement": "For authorized derived uppercase, use full Greek-locale mapping and test isolated ή, accents and diaeresis; generic ASCII mapping is inadequate.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 431
+      }
+    ]
+  },
+  {
+    "id": "EL-09",
+    "language": "el",
+    "title": "Titlecase differs from uppercase",
+    "description_en": "Choose sentence or word-initial capitalization separately from all-caps display text; preserve proper names and branded case.",
+    "requirement": "Choose sentence or word-initial capitalization separately from all-caps display text; preserve proper names and branded case.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 432
+      }
+    ]
+  },
+  {
+    "id": "EL-10",
+    "language": "el",
+    "title": "Contextual sigma",
+    "description_en": "Context controls σ and ς in case mapping. A spelling candidate in existing text is advisory and never an automatic final-sigma replacement.",
+    "requirement": "Context controls σ and ς in case mapping. A spelling candidate in existing text is advisory and never an automatic final-sigma replacement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 433
+      }
+    ]
+  },
+  {
+    "id": "EL-11",
+    "language": "el",
+    "title": "Greek punctuation equivalence",
+    "description_en": "Do not require dedicated Greek question-mark or ano-teleia codepoints when canonically equivalent source forms are intentional; preserve the supplied semicolon role.",
+    "requirement": "Do not require dedicated Greek question-mark or ano-teleia codepoints when canonically equivalent source forms are intentional; preserve the supplied semicolon role.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 434
+      }
+    ]
+  },
+  {
+    "id": "EL-12",
+    "language": "el",
+    "title": "Ano teleia placement",
+    "description_en": "Check the height and spacing of άνω τελεία with the actual adopted font and weight; codepoint presence does not prove acceptable placement.",
+    "requirement": "Check the height and spacing of άνω τελεία with the actual adopted font and weight; codepoint presence does not prove acceptable placement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 435
+      }
+    ]
+  },
+  {
+    "id": "EL-13",
+    "language": "el",
+    "title": "Comma semantics",
+    "description_en": "Protect ό,τι and decimal commas from generic whitespace cleanup; a punctuation match cannot determine the intended semantic role.",
+    "requirement": "Protect ό,τι and decimal commas from generic whitespace cleanup; a punctuation match cannot determine the intended semantic role.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 436
+      }
+    ]
+  },
+  {
+    "id": "EL-14",
+    "language": "el",
+    "title": "Quotation policy",
+    "description_en": "Use a declared house style and quotation nesting; locale defaults are guidance for generated text, not permission to rewrite quotations.",
+    "requirement": "Use a declared house style and quotation nesting; locale defaults are guidance for generated text, not permission to rewrite quotations.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 437
+      }
+    ]
+  },
+  {
+    "id": "EL-15",
+    "language": "el",
+    "title": "Font instance coverage",
+    "description_en": "Test adopted font files, weights, NFD marks and mixed-script text; successful loading alone does not prove glyph coverage.",
+    "requirement": "Test adopted font files, weights, NFD marks and mixed-script text; successful loading alone does not prove glyph coverage.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 438
+      }
+    ]
+  },
+  {
+    "id": "EL-16",
+    "language": "el",
+    "title": "Greek and Latin optical balance",
+    "description_en": "Compare actual apparent size, baseline and density locally; do not impose a universal scaling factor on every Greek-Latin pair.",
+    "requirement": "Compare actual apparent size, baseline and density locally; do not impose a universal scaling factor on every Greek-Latin pair.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 439
+      }
+    ]
+  },
+  {
+    "id": "EL-17",
+    "language": "el",
+    "title": "Hyphenation dictionary",
+    "description_en": "Confirm the Greek locale dictionary and browser or publishing engine before relying on automatic hyphenation; CSS feature support is insufficient.",
+    "requirement": "Confirm the Greek locale dictionary and browser or publishing engine before relying on automatic hyphenation; CSS feature support is insufficient.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 445
+      }
+    ]
+  },
+  {
+    "id": "EL-18",
+    "language": "el",
+    "title": "Normal word wrapping",
+    "description_en": "Keep ordinary word-boundary wrapping as the starting point; broad break-all or no-wrap rules require bounded exceptions and real layout review.",
+    "requirement": "Keep ordinary word-boundary wrapping as the starting point; broad break-all or no-wrap rules require bounded exceptions and real layout review.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 446
+      }
+    ]
+  },
+  {
+    "id": "EL-19",
+    "language": "el",
+    "title": "Accent clipping",
+    "description_en": "Inspect accent clearance at fixed heights and line boxes in the real output; removing tonos to avoid clipping changes the source.",
+    "requirement": "Inspect accent clearance at fixed heights and line boxes in the real output; removing tonos to avoid clipping changes the source.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 447
+      }
+    ]
+  },
+  {
+    "id": "EL-20",
+    "language": "el",
+    "title": "Independent accessibility checks",
+    "description_en": "Run narrow-width, real zoom and user-spacing checks separately, recording the viewport and exceptions instead of treating one screenshot as all three.",
+    "requirement": "Run narrow-width, real zoom and user-spacing checks separately, recording the viewport and exceptions instead of treating one screenshot as all three.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 448
+      }
+    ]
+  },
+  {
+    "id": "EL-21",
+    "language": "el",
+    "title": "Typed number formatting",
+    "description_en": "Format typed values through an explicitly selected locale and currency contract; never replace comma and period characters globally in source text.",
+    "requirement": "Format typed values through an explicitly selected locale and currency contract; never replace comma and period characters globally in source text.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 449
+      }
+    ]
+  },
+  {
+    "id": "EL-22",
+    "language": "el",
+    "title": "Month context",
+    "description_en": "Test month names in full dates separately from standalone month headings; preserve date-only values and distinguish them from instants.",
+    "requirement": "Test month names in full dates separately from standalone month headings; preserve date-only values and distinguish them from instants.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 450
+      }
+    ]
+  },
+  {
+    "id": "EL-23",
+    "language": "el",
+    "title": "Plural messages",
+    "description_en": "Select complete reviewed messages through the installed Greek plural rules; do not construct grammar from a count plus a guessed noun ending.",
+    "requirement": "Select complete reviewed messages through the installed Greek plural rules; do not construct grammar from a count plus a guessed noun ending.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 451
+      }
+    ]
+  },
+  {
+    "id": "EL-24",
+    "language": "el",
+    "title": "Time and timezone",
+    "description_en": "Specify time style and timezone independently of language or region; do not change an event instant as a typography adjustment.",
+    "requirement": "Specify time style and timezone independently of language or region; do not change an event instant as a typography adjustment.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 452
+      }
+    ]
+  },
+  {
+    "id": "EL-25",
+    "language": "el",
+    "title": "Person and tone",
+    "description_en": "Review address and tone across the same flow and role, keeping intentional quotations and author voice rather than enforcing one national personality.",
+    "requirement": "Review address and tone across the same flow and role, keeping intentional quotations and author voice rather than enforcing one national personality.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 453
+      }
+    ]
+  },
+  {
+    "id": "EL-26",
+    "language": "el",
+    "title": "Actionable UI wording",
+    "description_en": "Distinguish label, status, error and recovery action. Shortening text to fit must preserve what failed and what the reader can do.",
+    "requirement": "Distinguish label, status, error and recovery action. Shortening text to fit must preserve what failed and what the reader can do.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 454
+      }
+    ]
+  },
+  {
+    "id": "EL-27",
+    "language": "el",
+    "title": "Label and language agreement",
+    "description_en": "Compare visible labels, content language and accessible action names in the target UI; static source inspection alone does not validate an accessibility tree.",
+    "requirement": "Compare visible labels, content language and accessible action names in the target UI; static source inspection alone does not validate an accessibility tree.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 455
+      }
+    ]
+  },
+  {
+    "id": "EL-28",
+    "language": "el",
+    "title": "Logo and lettering exceptions",
+    "description_en": "Keep official logos and custom lettering outside ordinary body-copy capitalization and spacing rules; do not redraw an identity to satisfy a checker.",
+    "requirement": "Keep official logos and custom lettering outside ordinary body-copy capitalization and spacing rules; do not redraw an identity to satisfy a checker.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 456
+      }
+    ]
+  },
+  {
+    "id": "EL-29",
+    "language": "el",
+    "title": "PDF extraction and fallback",
+    "description_en": "Review PDF pixels and extracted Unicode separately, including fallback, marks and search/copy order in each produced file.",
+    "requirement": "Review PDF pixels and extracted Unicode separately, including fallback, marks and search/copy order in each produced file.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 457
+      }
+    ]
+  },
+  {
+    "id": "EL-30",
+    "language": "el",
+    "title": "Polytonic and ancient-language scope",
+    "description_en": "Preserve modern polytonic text and distinguish Ancient Greek scope; the modern el guidance does not certify historical orthography.",
+    "requirement": "Preserve modern polytonic text and distinguish Ancient Greek scope; the modern el guidance does not certify historical orthography.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 458
+      }
+    ]
+  },
+  {
+    "id": "EL-31",
+    "language": "el",
+    "title": "Cyprus-specific review",
+    "description_en": "Retain el-CY declarations and record local terminology or institutional practice as requiring regional editorial review when not verified.",
+    "requirement": "Retain el-CY declarations and record local terminology or institutional practice as requiring regional editorial review when not verified.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 459
+      }
+    ]
+  },
+  {
+    "id": "EL-32",
+    "language": "el",
+    "title": "Design follows purpose",
+    "description_en": "Select hierarchy, decoration and voice from the task and audience; language detection does not prescribe a palette, ornament or personality.",
+    "requirement": "Select hierarchy, decoration and voice from the task and audience; language detection does not prescribe a palette, ornament or personality.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+        "filename": "EL_Research_20261019.source.txt",
+        "line": 460
+      }
+    ]
+  }
+]

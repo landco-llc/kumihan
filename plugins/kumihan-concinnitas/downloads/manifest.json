@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Concinnitas",
+  "slug": "kumihan-concinnitas",
+  "language": "la",
+  "version": "0.1.0",
+  "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "a0df728f69dd80c7e7d048a9d5d001b878806babad038880d43d4ef911f31b10"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "556bca8e2b35dbf2b1c0efb81f000497366044323970a3024b9a773636cefefe"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "863bfa47153ccba041651096587595f067bb8e82af44055961920602b4958508"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "bbda8f10fa26e6a64eed1c44ca19e1b51a8366d7c8219215760a9b60dbe512ef"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "e2b4163593bed53193f4dea2cd7a907dddadbe21675cabeb428ff573a29b5433"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "dc5f67772adb71dda39bdc40966fae65e52fe37c7ce77c1349cd8741c7283eba"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "8249e8bcfc35e1433a6c5e380dd16290948cda679fe8484166520b049710c07c"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "6069e44ba83eb42df50710d5f8a8dbf43ecb18b2c45f8f060fda05a9f1ba3ece"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "270ce7feb21c706ea589a9fb33ee963b8fb62062adc66c2d0f825c32e9e5d3f7"
+    },
+    {
+      "path": "locales/la.json",
+      "sha256": "0536649ea6f953ba394d3abd2edc5216f56681228a1f8c7e9043d47ce2c9b143"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "9a6ae121c8e706bc1c66d2b54589f53d14fa83af4e284edea0051639de122bc0"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "9aee22de6130f5f4b31e798024783d4b4aa38478af4a19d290a34684d32c6890"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "6a134069be3618afc2ee639f08ac4e6a160d99597b3867cc6fb7306cce70df7b"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "99b67b607bfb5e995a2d2732cb53425d3e1b0d78425ba3c4450e29920d9fcf9b"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/SKILL.md",
+      "sha256": "07b15b757193a1d6ddea40c2f60b84ce1a585b31db050b85568df1aa4d39b136"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/fixtures/acceptance.json",
+      "sha256": "8249e8bcfc35e1433a6c5e380dd16290948cda679fe8484166520b049710c07c"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/inventory.json",
+      "sha256": "270ce7feb21c706ea589a9fb33ee963b8fb62062adc66c2d0f825c32e9e5d3f7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/locales/la.json",
+      "sha256": "0536649ea6f953ba394d3abd2edc5216f56681228a1f8c7e9043d47ce2c9b143"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/locales/supported.json",
+      "sha256": "9a6ae121c8e706bc1c66d2b54589f53d14fa83af4e284edea0051639de122bc0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/references/workflow.md",
+      "sha256": "6a134069be3618afc2ee639f08ac4e6a160d99597b3867cc6fb7306cce70df7b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/rules/catalog.json",
+      "sha256": "99b67b607bfb5e995a2d2732cb53425d3e1b0d78425ba3c4450e29920d9fcf9b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas/sources.json",
+      "sha256": "232c4a84fbb554edd08b6ca8cd89fa4bad6d31a8fa7745930d29869cb2846541"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/SKILL.md",
+      "sha256": "6cefab8fffcd382616b45ddfc0a5f3ea28f26dcff201c9fd4dd04da513c5f23a"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/fixtures/acceptance.json",
+      "sha256": "8249e8bcfc35e1433a6c5e380dd16290948cda679fe8484166520b049710c07c"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/inventory.json",
+      "sha256": "270ce7feb21c706ea589a9fb33ee963b8fb62062adc66c2d0f825c32e9e5d3f7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/locales/la.json",
+      "sha256": "0536649ea6f953ba394d3abd2edc5216f56681228a1f8c7e9043d47ce2c9b143"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/locales/supported.json",
+      "sha256": "9a6ae121c8e706bc1c66d2b54589f53d14fa83af4e284edea0051639de122bc0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/references/workflow.md",
+      "sha256": "6a134069be3618afc2ee639f08ac4e6a160d99597b3867cc6fb7306cce70df7b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/rules/catalog.json",
+      "sha256": "99b67b607bfb5e995a2d2732cb53425d3e1b0d78425ba3c4450e29920d9fcf9b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-documents/sources.json",
+      "sha256": "232c4a84fbb554edd08b6ca8cd89fa4bad6d31a8fa7745930d29869cb2846541"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/SKILL.md",
+      "sha256": "121de2516e3d061ffa152845fe7a5334123d9386b243c39a86e08767bcb061ee"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/fixtures/acceptance.json",
+      "sha256": "8249e8bcfc35e1433a6c5e380dd16290948cda679fe8484166520b049710c07c"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/inventory.json",
+      "sha256": "270ce7feb21c706ea589a9fb33ee963b8fb62062adc66c2d0f825c32e9e5d3f7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/locales/la.json",
+      "sha256": "0536649ea6f953ba394d3abd2edc5216f56681228a1f8c7e9043d47ce2c9b143"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/locales/supported.json",
+      "sha256": "9a6ae121c8e706bc1c66d2b54589f53d14fa83af4e284edea0051639de122bc0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/references/workflow.md",
+      "sha256": "6a134069be3618afc2ee639f08ac4e6a160d99597b3867cc6fb7306cce70df7b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/rules/catalog.json",
+      "sha256": "99b67b607bfb5e995a2d2732cb53425d3e1b0d78425ba3c4450e29920d9fcf9b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-review/sources.json",
+      "sha256": "232c4a84fbb554edd08b6ca8cd89fa4bad6d31a8fa7745930d29869cb2846541"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/SKILL.md",
+      "sha256": "bca290d4ba0203c8de572253e1d64450bd3432c052d53ca7e00af5b11a09a7ad"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/fixtures/acceptance.json",
+      "sha256": "8249e8bcfc35e1433a6c5e380dd16290948cda679fe8484166520b049710c07c"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/inventory.json",
+      "sha256": "270ce7feb21c706ea589a9fb33ee963b8fb62062adc66c2d0f825c32e9e5d3f7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/locales/la.json",
+      "sha256": "0536649ea6f953ba394d3abd2edc5216f56681228a1f8c7e9043d47ce2c9b143"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/locales/supported.json",
+      "sha256": "9a6ae121c8e706bc1c66d2b54589f53d14fa83af4e284edea0051639de122bc0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/references/workflow.md",
+      "sha256": "6a134069be3618afc2ee639f08ac4e6a160d99597b3867cc6fb7306cce70df7b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/rules/catalog.json",
+      "sha256": "99b67b607bfb5e995a2d2732cb53425d3e1b0d78425ba3c4450e29920d9fcf9b"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-concinnitas-web/sources.json",
+      "sha256": "232c4a84fbb554edd08b6ca8cd89fa4bad6d31a8fa7745930d29869cb2846541"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "232c4a84fbb554edd08b6ca8cd89fa4bad6d31a8fa7745930d29869cb2846541"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 14,
+  "scope": "Private deterministic packaging; no publication or native-host acceptance",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-concinnitas-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4030953,
+      "sha256": "66bea6d3b4dcf65dfa88f0968bbbd74ac36714acfaf7dbab5954734b1c14721b",
+      "members": 73,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4031633,
+      "sha256": "7238a92e70cbbc4be2be8d25345dd3a2412e9c41676d342360842c427c4c0c9a",
+      "members": 74,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4031330,
+      "sha256": "16f0466e71d2aa956609dbe2ba6f4caa9c309634e13a8f8d0729e87bacf1d538",
+      "members": 74,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-claude-skill-v0.1.0.zip",
+      "bytes": 805294,
+      "sha256": "5844b3d1b6e0e0c37bb3d1576d95d013aeb797f6482d25c2203be4c3ebfe9546",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-documents-claude-skill-v0.1.0.zip",
+      "bytes": 805586,
+      "sha256": "6770db0d081cb7397d30d221bd7780a7b5e0afcf15344b6550e78365534a0d91",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-documents",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 805586,
+      "sha256": "6770db0d081cb7397d30d221bd7780a7b5e0afcf15344b6550e78365534a0d91",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-documents",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805586,
+      "sha256": "6770db0d081cb7397d30d221bd7780a7b5e0afcf15344b6550e78365534a0d91",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-documents",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-gemini-skill-v0.1.0.zip",
+      "bytes": 805294,
+      "sha256": "5844b3d1b6e0e0c37bb3d1576d95d013aeb797f6482d25c2203be4c3ebfe9546",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805294,
+      "sha256": "5844b3d1b6e0e0c37bb3d1576d95d013aeb797f6482d25c2203be4c3ebfe9546",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-review-claude-skill-v0.1.0.zip",
+      "bytes": 805492,
+      "sha256": "78374d7c5b4b79b4567acf582779549f9b9823fa7f7a548de0e4cacc237398d0",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-review",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-review-gemini-skill-v0.1.0.zip",
+      "bytes": 805492,
+      "sha256": "78374d7c5b4b79b4567acf582779549f9b9823fa7f7a548de0e4cacc237398d0",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-review",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805492,
+      "sha256": "78374d7c5b4b79b4567acf582779549f9b9823fa7f7a548de0e4cacc237398d0",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-review",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-web-claude-skill-v0.1.0.zip",
+      "bytes": 805407,
+      "sha256": "d53a88f8c8d44e2774a8ba8d9d6f418842646151130a1a722a71cf5f76f44646",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-web",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-web-gemini-skill-v0.1.0.zip",
+      "bytes": 805407,
+      "sha256": "d53a88f8c8d44e2774a8ba8d9d6f418842646151130a1a722a71cf5f76f44646",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-web",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    },
+    {
+      "file": "kumihan-concinnitas-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805407,
+      "sha256": "d53a88f8c8d44e2774a8ba8d9d6f418842646151130a1a722a71cf5f76f44646",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-concinnitas-web",
+      "slug": "kumihan-concinnitas",
+      "version": "0.1.0",
+      "source_sha256": "13d006a1a7401a11c99fb0e39cd128a61b591c080a1906b3524147ba366eb6e3"
+    }
+  ]
+}

@@ -52,7 +52,7 @@ def main():
             os.replace(name, v.FACTS)
         finally:
             Path(name).unlink(missing_ok=True)
-    print('21 editions verified; '+('unchanged' if updated == current else 'updated'))
+    print(f'{len(v.catalogue())} editions verified; '+('unchanged' if updated == current else 'updated'))
 
 
 if __name__ == '__main__': main()

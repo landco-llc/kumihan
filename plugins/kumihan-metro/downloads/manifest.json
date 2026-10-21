@@ -1,0 +1,664 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Μέτρο",
+  "slug": "kumihan-metro",
+  "language": "el",
+  "version": "0.1.0",
+  "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "3715e5d4605b707ee9a537ed097c2662087599e1dabc28e11560897bff61cb74"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "7f36f4ce178aec468023843247577d4f77e8e98331e9f1bc12dc5a11fb2de378"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "3bedabc210521b894f9f120ab050fc258084822869092730ed7fb0d3c8f22c00"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "c5952083b985249e986f1cd9cd7c1749886c981f656aeb8205504dda5445c66b"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "0b3dbc57a47855ea2eb69c01a410ef512380eac237c85d3e454adef404a2aaff"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "3f8ff43f38e0e5ddf921ffaad06aa5cacb1d9b136464edc89aa73073ebc65d7c"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "5fe33818ab3594ffcab362608253c0f89507b3678d7df4cc99c70ae9107e9c19"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "entrypoints/kumihan-metro-documents.md",
+      "sha256": "e12041ebbc6cb994024abc49e9ec446414f7d6ed1bd54e651985590582234322"
+    },
+    {
+      "path": "entrypoints/kumihan-metro-review.md",
+      "sha256": "91a7fe750c8a06e27d6e785784a30019a6a0190dae6548f5748d18dd2db75b03"
+    },
+    {
+      "path": "entrypoints/kumihan-metro-web.md",
+      "sha256": "e0ecd1aa3aa1902100feaf429ceb85e4fad09e67c72178e9630e0558335110c3"
+    },
+    {
+      "path": "entrypoints/kumihan-metro.md",
+      "sha256": "e0b9b07444904d5162b1cd51cbffefcd27bbae13cb2eeccf9af6ce04b715be99"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "38e55f8ec21ebef1ebd5e43d2f100076802e87e175efef88042451e639a41899"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "f3ec015aac5c44a515e748e6495be516c24d727c4d779f189e12e399ca03aab8"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "79657a0adaaad292165931ee3ea22faa0a1ad3aba45e6a94a7ca67238706643c"
+    },
+    {
+      "path": "locales/el-CY.json",
+      "sha256": "d00a2e71b141bd12b87d100c1f936dfd3d0c50b8f8c60efcb2c505352f74d15d"
+    },
+    {
+      "path": "locales/el-GR.json",
+      "sha256": "cdef21fa34783001f05b1cf6b9704ce2338b6f95f159c67a1024b4d597bb5367"
+    },
+    {
+      "path": "locales/el.json",
+      "sha256": "6435ac4131b286ac86937ef2d7c6bc8765d7b454406c4d98d9a76a4e41af18d7"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "85bbce57537dda668155de98f2b1222fab449233d7355bed2168c870219197b8"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "0a85b768b6855fe9252914750514e6d8882842f3c7e9a9f14bb7afed6bf96036"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "2e4fd2b138349996ccceff6ed29bac37c19a793e1d36924afb0cb6654da848ff"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-metro/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-metro/SKILL.md",
+      "sha256": "7174ae2eb71afbe979298ae65835f5547b963364b38b6ffffee6e53c2d9c8f6a"
+    },
+    {
+      "path": "skills/kumihan-metro/THIRD_PARTY_NOTICES.md",
+      "sha256": "3f8ff43f38e0e5ddf921ffaad06aa5cacb1d9b136464edc89aa73073ebc65d7c"
+    },
+    {
+      "path": "skills/kumihan-metro/agents/openai.yaml",
+      "sha256": "cad846b4161cc6c1d544c54650544245b5473ab3df49e874b48e265ac8a34575"
+    },
+    {
+      "path": "skills/kumihan-metro/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-metro/fixtures/acceptance.json",
+      "sha256": "38e55f8ec21ebef1ebd5e43d2f100076802e87e175efef88042451e639a41899"
+    },
+    {
+      "path": "skills/kumihan-metro/inventory.json",
+      "sha256": "79657a0adaaad292165931ee3ea22faa0a1ad3aba45e6a94a7ca67238706643c"
+    },
+    {
+      "path": "skills/kumihan-metro/locales/el-CY.json",
+      "sha256": "d00a2e71b141bd12b87d100c1f936dfd3d0c50b8f8c60efcb2c505352f74d15d"
+    },
+    {
+      "path": "skills/kumihan-metro/locales/el-GR.json",
+      "sha256": "cdef21fa34783001f05b1cf6b9704ce2338b6f95f159c67a1024b4d597bb5367"
+    },
+    {
+      "path": "skills/kumihan-metro/locales/el.json",
+      "sha256": "6435ac4131b286ac86937ef2d7c6bc8765d7b454406c4d98d9a76a4e41af18d7"
+    },
+    {
+      "path": "skills/kumihan-metro/locales/supported.json",
+      "sha256": "85bbce57537dda668155de98f2b1222fab449233d7355bed2168c870219197b8"
+    },
+    {
+      "path": "skills/kumihan-metro/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-metro/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-metro/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-metro/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-metro/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-metro/rules/catalog.json",
+      "sha256": "2e4fd2b138349996ccceff6ed29bac37c19a793e1d36924afb0cb6654da848ff"
+    },
+    {
+      "path": "skills/kumihan-metro/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-metro/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-metro/sources.json",
+      "sha256": "b41eedc554ee9cb444cb41654214fd46c308d202e3ba2d52f2cea26e19392e7f"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/SKILL.md",
+      "sha256": "f3dc8332ba293d2b9b96cd292adfffd234bf33b752151102485ba05c19364f25"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "3f8ff43f38e0e5ddf921ffaad06aa5cacb1d9b136464edc89aa73073ebc65d7c"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/agents/openai.yaml",
+      "sha256": "cad846b4161cc6c1d544c54650544245b5473ab3df49e874b48e265ac8a34575"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/fixtures/acceptance.json",
+      "sha256": "38e55f8ec21ebef1ebd5e43d2f100076802e87e175efef88042451e639a41899"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/inventory.json",
+      "sha256": "79657a0adaaad292165931ee3ea22faa0a1ad3aba45e6a94a7ca67238706643c"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/locales/el-CY.json",
+      "sha256": "d00a2e71b141bd12b87d100c1f936dfd3d0c50b8f8c60efcb2c505352f74d15d"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/locales/el-GR.json",
+      "sha256": "cdef21fa34783001f05b1cf6b9704ce2338b6f95f159c67a1024b4d597bb5367"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/locales/el.json",
+      "sha256": "6435ac4131b286ac86937ef2d7c6bc8765d7b454406c4d98d9a76a4e41af18d7"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/locales/supported.json",
+      "sha256": "85bbce57537dda668155de98f2b1222fab449233d7355bed2168c870219197b8"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/rules/catalog.json",
+      "sha256": "2e4fd2b138349996ccceff6ed29bac37c19a793e1d36924afb0cb6654da848ff"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-metro-documents/sources.json",
+      "sha256": "b41eedc554ee9cb444cb41654214fd46c308d202e3ba2d52f2cea26e19392e7f"
+    },
+    {
+      "path": "skills/kumihan-metro-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-metro-review/SKILL.md",
+      "sha256": "f9cb4f11d8584321fb03f7879a7d0316338eb2ca58e6f379f81bd48fa741cf9d"
+    },
+    {
+      "path": "skills/kumihan-metro-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "3f8ff43f38e0e5ddf921ffaad06aa5cacb1d9b136464edc89aa73073ebc65d7c"
+    },
+    {
+      "path": "skills/kumihan-metro-review/agents/openai.yaml",
+      "sha256": "cad846b4161cc6c1d544c54650544245b5473ab3df49e874b48e265ac8a34575"
+    },
+    {
+      "path": "skills/kumihan-metro-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-metro-review/fixtures/acceptance.json",
+      "sha256": "38e55f8ec21ebef1ebd5e43d2f100076802e87e175efef88042451e639a41899"
+    },
+    {
+      "path": "skills/kumihan-metro-review/inventory.json",
+      "sha256": "79657a0adaaad292165931ee3ea22faa0a1ad3aba45e6a94a7ca67238706643c"
+    },
+    {
+      "path": "skills/kumihan-metro-review/locales/el-CY.json",
+      "sha256": "d00a2e71b141bd12b87d100c1f936dfd3d0c50b8f8c60efcb2c505352f74d15d"
+    },
+    {
+      "path": "skills/kumihan-metro-review/locales/el-GR.json",
+      "sha256": "cdef21fa34783001f05b1cf6b9704ce2338b6f95f159c67a1024b4d597bb5367"
+    },
+    {
+      "path": "skills/kumihan-metro-review/locales/el.json",
+      "sha256": "6435ac4131b286ac86937ef2d7c6bc8765d7b454406c4d98d9a76a4e41af18d7"
+    },
+    {
+      "path": "skills/kumihan-metro-review/locales/supported.json",
+      "sha256": "85bbce57537dda668155de98f2b1222fab449233d7355bed2168c870219197b8"
+    },
+    {
+      "path": "skills/kumihan-metro-review/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-metro-review/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-metro-review/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-metro-review/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-metro-review/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-metro-review/rules/catalog.json",
+      "sha256": "2e4fd2b138349996ccceff6ed29bac37c19a793e1d36924afb0cb6654da848ff"
+    },
+    {
+      "path": "skills/kumihan-metro-review/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-metro-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-metro-review/sources.json",
+      "sha256": "b41eedc554ee9cb444cb41654214fd46c308d202e3ba2d52f2cea26e19392e7f"
+    },
+    {
+      "path": "skills/kumihan-metro-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-metro-web/SKILL.md",
+      "sha256": "c8e67765d53d3b21199ebd4de0e0d7e309fe9b7aee84dd537c44c352ef35ce1a"
+    },
+    {
+      "path": "skills/kumihan-metro-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "3f8ff43f38e0e5ddf921ffaad06aa5cacb1d9b136464edc89aa73073ebc65d7c"
+    },
+    {
+      "path": "skills/kumihan-metro-web/agents/openai.yaml",
+      "sha256": "cad846b4161cc6c1d544c54650544245b5473ab3df49e874b48e265ac8a34575"
+    },
+    {
+      "path": "skills/kumihan-metro-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-metro-web/fixtures/acceptance.json",
+      "sha256": "38e55f8ec21ebef1ebd5e43d2f100076802e87e175efef88042451e639a41899"
+    },
+    {
+      "path": "skills/kumihan-metro-web/inventory.json",
+      "sha256": "79657a0adaaad292165931ee3ea22faa0a1ad3aba45e6a94a7ca67238706643c"
+    },
+    {
+      "path": "skills/kumihan-metro-web/locales/el-CY.json",
+      "sha256": "d00a2e71b141bd12b87d100c1f936dfd3d0c50b8f8c60efcb2c505352f74d15d"
+    },
+    {
+      "path": "skills/kumihan-metro-web/locales/el-GR.json",
+      "sha256": "cdef21fa34783001f05b1cf6b9704ce2338b6f95f159c67a1024b4d597bb5367"
+    },
+    {
+      "path": "skills/kumihan-metro-web/locales/el.json",
+      "sha256": "6435ac4131b286ac86937ef2d7c6bc8765d7b454406c4d98d9a76a4e41af18d7"
+    },
+    {
+      "path": "skills/kumihan-metro-web/locales/supported.json",
+      "sha256": "85bbce57537dda668155de98f2b1222fab449233d7355bed2168c870219197b8"
+    },
+    {
+      "path": "skills/kumihan-metro-web/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-metro-web/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-metro-web/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-metro-web/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-metro-web/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-metro-web/rules/catalog.json",
+      "sha256": "2e4fd2b138349996ccceff6ed29bac37c19a793e1d36924afb0cb6654da848ff"
+    },
+    {
+      "path": "skills/kumihan-metro-web/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-metro-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-metro-web/sources.json",
+      "sha256": "b41eedc554ee9cb444cb41654214fd46c308d202e3ba2d52f2cea26e19392e7f"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "b41eedc554ee9cb444cb41654214fd46c308d202e3ba2d52f2cea26e19392e7f"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 32,
+  "scope": "Private deterministic packaging; no publication or native-host acceptance",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-metro-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4067596,
+      "sha256": "74fa8da4683eab1adab285ae5be172e79802e32d4412057f048a7ddebb838d38",
+      "members": 106,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4068560,
+      "sha256": "6b00fdb561fbc6dbcba08ffbe61bbcc1dc7a2f957757b4492593d6666593c850",
+      "members": 107,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4068327,
+      "sha256": "6cc7c9337fe184c83c993584f88616c2c9a4c99fe132bae57376be3ead4683a4",
+      "members": 107,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-claude-skill-v0.1.0.zip",
+      "bytes": 811960,
+      "sha256": "4ad4142be6b0cb6a08197be5d208608e8a531df9bb267c05e7fe1ca2b3c44b36",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-metro",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-documents-claude-skill-v0.1.0.zip",
+      "bytes": 812355,
+      "sha256": "561f3ccdde2378161424ac8b0c38878d4ff7acb0616b9ec160182188a3796a9a",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-metro-documents",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 812355,
+      "sha256": "561f3ccdde2378161424ac8b0c38878d4ff7acb0616b9ec160182188a3796a9a",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-metro-documents",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 812355,
+      "sha256": "561f3ccdde2378161424ac8b0c38878d4ff7acb0616b9ec160182188a3796a9a",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-metro-documents",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-gemini-skill-v0.1.0.zip",
+      "bytes": 811960,
+      "sha256": "4ad4142be6b0cb6a08197be5d208608e8a531df9bb267c05e7fe1ca2b3c44b36",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-metro",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 811960,
+      "sha256": "4ad4142be6b0cb6a08197be5d208608e8a531df9bb267c05e7fe1ca2b3c44b36",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-metro",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-review-claude-skill-v0.1.0.zip",
+      "bytes": 812224,
+      "sha256": "ffb710f0e669587a9b3e165f33f49bba0dc5542e4bdb451304f04a06f3f06475",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-metro-review",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-review-gemini-skill-v0.1.0.zip",
+      "bytes": 812224,
+      "sha256": "ffb710f0e669587a9b3e165f33f49bba0dc5542e4bdb451304f04a06f3f06475",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-metro-review",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 812224,
+      "sha256": "ffb710f0e669587a9b3e165f33f49bba0dc5542e4bdb451304f04a06f3f06475",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-metro-review",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-web-claude-skill-v0.1.0.zip",
+      "bytes": 812120,
+      "sha256": "8d4c8a176f11c97211b2f416aec454595fbb1f3a50740dc7a16f85a24f195704",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-metro-web",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-web-gemini-skill-v0.1.0.zip",
+      "bytes": 812120,
+      "sha256": "8d4c8a176f11c97211b2f416aec454595fbb1f3a50740dc7a16f85a24f195704",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-metro-web",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    },
+    {
+      "file": "kumihan-metro-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 812120,
+      "sha256": "8d4c8a176f11c97211b2f416aec454595fbb1f3a50740dc7a16f85a24f195704",
+      "members": 20,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-metro-web",
+      "slug": "kumihan-metro",
+      "version": "0.1.0",
+      "source_sha256": "f6933a99b69eb96afda0c06896398c152faf4b341d29175379e353d4f971d5a3"
+    }
+  ]
+}

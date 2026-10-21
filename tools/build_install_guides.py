@@ -44,6 +44,7 @@ PAGES = {
     "zh-hans": "zilu", "zh-hant": "ziheng", "zu": "hlela",
     "sa": "vinyasa", "my": "kumihan-my", "tl": "tugma", "fi": "rytmi", "sv": "samspel",
     "da": "samklang-da", "no": "samklang-no", "uk": "mira-uk",
+    "tr": "ahenk", "ms": "jalin", "hu": "arany", "cs": "soulad", "la": "concinnitas", "he": "miktsav", "el": "metro", "nl": "zetwerk",
 }
 RTL = {"ar", "fa", "he"}
 
@@ -92,12 +93,25 @@ def edition(code):
         archives = [(a["name"], a["url"]) for a in facts["verified_assets"]]
         release = facts["release_url"]
         sums = next(m["url"] for m in facts["verified_metadata"] if m["name"] == "SHA256SUMS.txt")
+    elif code in {"tr", "ms", "hu", "cs", "la", "he", "el", "nl",
+                 "sa", "my", "tl", "fi", "sv", "da", "no", "uk"}:
+        # Product-local 0.1.0 manifests are tracked as lowercase manifest.json.
+        # OS/filesystem case sensitivity MUST NOT change the generated installation pages.
+        version = facts["source_version"]
+        manifest = json.loads((plugin_dir / "downloads" / "manifest.json").read_text(encoding="utf-8"))
+        archives = [(row["file"], f"../plugins/{slug}/downloads/{row['file']}") for row in manifest["packages"]]
+        release = f"{REPO}/tree/main/plugins/{slug}/downloads"
+        if code in {"tr", "ms", "hu", "cs", "la", "he", "el", "nl"}:
+            sums = f"../plugins/{slug}/downloads/SHA256SUMS"
+        else:
+            sums = {h: f"../plugins/{slug}/downloads/SHA256SUMS-{suffix}"
+                    for h, suffix in (("chatgpt", "gpt-codex"), ("claude", "claude"), ("gemini", "gemini"))}
     elif (plugin_dir / "downloads" / "MANIFEST.json").exists():  # source packages in the repository (no GitHub Release yet)
         version = facts["source_version"]
         manifest = json.loads((plugin_dir / "downloads" / "MANIFEST.json").read_text(encoding="utf-8"))
-        archives = [(Path(r["file"]).name, f"../plugins/{slug}/downloads/{r['file']}") for r in manifest["archives"]]
+        archives = [(Path(r["file"]).name, f"../plugins/{slug}/downloads/{r['file']}") for r in manifest.get("archives", manifest.get("packages", []))]
         release = f"{REPO}/tree/main/plugins/{slug}/downloads"
-        sums = f"../plugins/{slug}/downloads/SHA256SUMS.txt"
+        sums = f"../plugins/{slug}/downloads/" + ("SHA256SUMS.txt" if (plugin_dir / "downloads" / "SHA256SUMS.txt").exists() else "SHA256SUMS")
     elif not (plugin_dir / "downloads").exists():  # packages in the shared downloads <Host>/ folders (English)
         version = facts["source_version"]
         folders = {"chatgpt": "downloads GPT-Codex", "claude": "downloads Claude", "gemini": "downloads Gemini"}
