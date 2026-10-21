@@ -94,8 +94,12 @@ OVERRIDES = r"""
     html:is([lang="@LANG@"], [lang="en"]) :is(h1, h2, h3, .eyebrow, .button, .feature p) { overflow-wrap: break-word; }
     html[lang="ja"] body { line-break: strict; }
     @supports (word-break: auto-phrase) {
-      html[lang="ja"] :is(h2, h3) { word-break: auto-phrase; }
+      html[lang="ja"] :is(h2, h3, .hero-desc) { word-break: auto-phrase; }
     }
+    /* Japanese heading: its three lines stay whole; long language names (サンスクリット語の)
+       get smaller type instead of a fourth line, sized to the column, not the window. */
+    html[lang="ja"] .hero-copy { container-type: inline-size; }
+    html[lang="ja"] .hero h1 { font-size: min(clamp(44px, 5.2vw, 77px), 10.4cqi); word-break: keep-all; }
     .brand .brand-sub { margin-inline-start: 2px; font-weight: 700; letter-spacing: -.02em; }
     .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; min-width: 38px; border-radius: 40px; color: var(--muted); padding: 7px 10px; font-size: 11px; font-weight: 800; letter-spacing: .05em; }
     .language-switch a[aria-current="page"] { background: var(--ink); color: white; }
@@ -120,6 +124,7 @@ OVERRIDES = r"""
     .skill-card, .platform-info, .status-box > *, .hero-copy, .hero-stage, .feature, .install-layout > * { min-width: 0; }
     @media (max-width: 560px) {
       html:is([lang="@LANG@"], [lang="en"]) .hero h1 { font-size: clamp(33px,9vw,45px); line-height: 1.18; }
+      html[lang="ja"] .hero h1 { font-size: min(clamp(38px,9.7vw,56px), 10.4cqi); }
       .header-nav { flex-wrap: wrap; overflow: visible; gap: 12px 18px; }
       .header-nav a { white-space: normal; }
       .idea-layout { grid-template-columns: minmax(0,1fr); }
