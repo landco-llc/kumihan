@@ -42,7 +42,8 @@ x = SITE.x
 
 
 def langs(code):
-    return {code: "", "en": ".en", "ja": ".ja"}
+    """Page languages and file suffixes; English (Measure) is its own language, so it has two."""
+    return {code: "", **{lang: "." + lang for lang in ("en", "ja") if lang != code}}
 
 
 def landing_path(code, lang):
