@@ -7,6 +7,12 @@ from pathlib import Path
 import sys
 from playwright.sync_api import sync_playwright
 from build_satzbild_site import outputs
+import build_install_guides
+
+
+def pages():
+ """The 3 landings (build_satzbild_site.py) and the 9 installation guides (build_install_guides.py)."""
+ return list(outputs())+[build_install_guides.guide_path('de',h,l) for h in build_install_guides.HOSTS for l in ('de','en','ja')]
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--base',default='http://127.0.0.1:8765/kumihan/');p.add_argument('--output',type=Path,required=True);p.add_argument('--chromium',default='/usr/bin/chromium');a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
@@ -14,7 +20,7 @@ def main():
  with sync_playwright() as playwright:
   browser=playwright.chromium.launch(executable_path=a.chromium or None,args=['--no-sandbox'])
   page=browser.new_page();page.route('https://**/*',lambda route:route.abort())
-  for path in outputs():
+  for path in pages():
    print('measuring '+path,flush=True)
    for width in (320,375,768,1280):
     for scale in (1,2):

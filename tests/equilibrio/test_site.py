@@ -78,7 +78,7 @@ class SiteTests(unittest.TestCase):
   import sys
   sys.path.insert(0,str(ROOT/'tools'))
   import build_equilibrio_site as m
-  for path,text in m.outputs().items():
+  for path,text in {**m.outputs(),**install_guides('it')[1]}.items():
    with self.subTest(path=path):
     self.assertNotIn('Deutsch',text)
     if path.startswith('docs/'):self.assertIn('Italiano',text)
@@ -86,7 +86,7 @@ class SiteTests(unittest.TestCase):
   import sys
   sys.path.insert(0,str(ROOT/'tools'))
   import build_equilibrio_site as m
-  for path,text in m.outputs().items():
+  for path,text in {**m.outputs(),**install_guides('it')[1]}.items():
    self.assertRegex(text,r'<a href="https://landco.co.jp/"[^>]*target="_blank"[^>]*rel="noopener noreferrer"')
  def test_italian_language_uses_latin_font_stack(self):
   import sys
