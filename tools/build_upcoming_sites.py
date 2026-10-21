@@ -2,7 +2,8 @@
 """Build the landings of language editions not yet distributed; --check verifies committed output.
 
 KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he), विन्यास (sa),
-Soulad (cs), Arány (hu), ဟန်ချက် (my), Concinnitas (la) and Tugma (tl) each get a
+Soulad (cs), Arány (hu), ဟန်ချက် (my), Concinnitas (la), Tugma (tl), Rytmi (fi),
+Samspel (sv) and Samklang (da) each get a
 landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html);
 Measure (en) has an English and a Japanese landing (kumihan-en[.ja].html),
 in the canonical KUMIHAN index structure (tools/product_site.py). Their skills

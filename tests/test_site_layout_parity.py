@@ -66,7 +66,8 @@ GATEWAY = {"fa": "top-fa.html", "km": "top-km.html", "zu": "top-zu.html", "sw": 
            "id": "top-id.html", "bn": "top-bn.html",
            "it": "top-it.html", "ru": "top-ru.html", "el": "top-el.html", "nl": "top-nl.html",
            "ms": "top-ms.html", "tr": "top-tr.html", "he": "top-he.html", "sa": "top-sa.html",
-           "cs": "top-cs.html", "hu": "top-hu.html", "my": "top-my.html", "la": "top-la.html", "tl": "top-tl.html"}
+           "cs": "top-cs.html", "hu": "top-hu.html", "my": "top-my.html", "la": "top-la.html", "tl": "top-tl.html",
+           "fi": "top-fi.html", "sv": "top-sv.html", "da": "top-da.html"}
 PAGE_GATEWAY = GATEWAY
 
 

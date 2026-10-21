@@ -53,10 +53,13 @@ EDITIONS = {
     "la": ("KUMIHAN｜Concinnitas", "Concinnitas", "ラテン語", "Latin", "0.1.0"),
     "tl": ("KUMIHAN｜Tugma", "Tugma", "タガログ語", "Tagalog", "0.1.0"),
     "en": ("KUMIHAN｜Measure", "Measure", "英語", "English", "0.1.0"),
+    "fi": ("KUMIHAN｜Rytmi", "Rytmi", "フィンランド語", "Finnish", "0.1.0"),
+    "sv": ("KUMIHAN｜Samspel", "Samspel", "スウェーデン語", "Swedish", "0.1.0"),
+    "da": ("KUMIHAN｜Samklang", "Samklang", "デンマーク語", "Danish", "0.1.0"),
 }
 # Editions with pages but no package or Release yet: their copy lives together in
 # assets/upcoming-site-copy.json and the release wording below replaces the shared one.
-UPCOMING = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en")
+UPCOMING = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da")
 
 COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
               "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela",

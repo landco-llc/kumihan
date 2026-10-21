@@ -916,7 +916,7 @@ for _reader, _cards in CARDS.items():
 
 
 # Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב, विन्यास,
-# Soulad, Arány, ဟန်ချက်, Concinnitas, Tugma, Measure): registry, top page, names and cards
+# Soulad, Arány, ဟန်ချက်, Concinnitas, Tugma, Measure, Rytmi, Samspel, Samklang): registry, top page, names and cards
 # from assets/upcoming-editions.json. "names" is the edition's name in each reader language
 # and "card" its card in each earlier reader language; "edition_names" and "cards" are the
 # new reader language's own tables. English (Measure) adds no reader: its top is index.html.

@@ -1,6 +1,6 @@
 """Editions not yet distributed (tools/build_upcoming_sites.py): landings and tops say coming soon.
 
-Each of el, nl, ms, tr, he, sa, cs, hu, my, la and tl has a landing in its language,
+Each of el, nl, ms, tr, he, sa, cs, hu, my, la, tl, fi, sv and da has a landing in its language,
 English and Japanese, and a top page; English (en) has an English and a Japanese landing
 and is listed on every top. None claims a release, download or installation guide.
 """
@@ -15,8 +15,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_gateways as gateways  # noqa: E402
 import build_upcoming_sites as upcoming  # noqa: E402
 
-CODES = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en")
-TOPS = CODES[:-1]
+CODES = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da")
+TOPS = tuple(c for c in CODES if c != "en")
 
 
 class UpcomingEditions(unittest.TestCase):
