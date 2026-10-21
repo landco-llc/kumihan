@@ -10,7 +10,7 @@
       --line: #d9d5cc;
       --red: #c83334;
       --red-dark: #982327;
-      --display: "Be Vietnam Pro", "Noto Sans", system-ui, -apple-system, Arial, sans-serif;
+      --display: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, system-ui, sans-serif;
       --serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", serif;
       --shell: min(1184px, calc(100% - 88px));
     }
@@ -234,7 +234,8 @@
       *, *::before, *::after { transition: none !important; animation: none !important; }
     }
   
-    /* KUMIHAN｜Nhịp Chữ (kumihan-nhip-chu-web): lang="fr" with dictionary hyphenation
+    :root { --display: "Be Vietnam Pro", "Noto Sans", system-ui, -apple-system, Arial, sans-serif; }
+    /* KUMIHAN｜Nhịp Chữ (kumihan-nhip-chu-web): lang="vi" with dictionary hyphenation
        for running text only; headings, names and URLs are never hyphenated. */
     html[lang="vi"] body { line-break: auto; }
     html[lang="vi"] :is(.hero-desc, .intro-text p, .feature p, .idea-band p, .skill-desc, .install-intro p, .status-box p, .cta-layout p) { hyphens: manual; }

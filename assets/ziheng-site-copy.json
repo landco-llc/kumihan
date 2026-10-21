@@ -11,7 +11,7 @@
    "四個技能",
    "安裝指南"
   ],
-  "eyebrow": "OPEN SOURCE / TRADITIONAL CHINESE TYPOGRAPHY",
+  "eyebrow": "OPEN-SOURCE SKILLS / TRADITIONAL CHINESE TYPOGRAPHY",
   "h1": [
    "繁體中文排版",
    "讓閱讀更自然"
@@ -21,8 +21,12 @@
    "開始安裝",
    "認識字衡"
   ],
-  "hero_foot": "臺灣 zh-Hant-TW ／ 香港 zh-Hant-HK",
-  "stage_text": "<span lang=\"zh-Hant-TW\">閱讀</span><small>香港：先確認編輯體例</small>",
+  "hero_foot": [
+   "OPEN SOURCE",
+   "FOUR SKILLS",
+   "TRADITIONAL CHINESE FIRST"
+  ],
+  "stage_text": "WORDS · SPACE · PURPOSE",
   "concept_h2": [
    "不是把文字套進模板",
    "而是為內容找到合適的位置"
@@ -73,25 +77,25 @@
   "skills": [
    {
     "role": "01 / 工作入口與範圍",
-    "motif": "◆",
+    "motif": "字",
     "name": "kumihan-ziheng",
     "p": "先選擇地區、媒體與工作模式，確定可以改動的範圍。"
    },
    {
     "role": "02 / 網頁、文章與介面",
-    "motif": "文",
+    "motif": "↗",
     "name": "kumihan-ziheng-web",
     "p": "處理內容結構、語言標示、換行與不同螢幕寬度。"
    },
    {
     "role": "03 / 文件、報告與簡報",
-    "motif": "版",
+    "motif": "文",
     "name": "kumihan-ziheng-documents",
     "p": "規劃資訊層級與可閱讀的文件、投影片及輸出檢查。"
    },
    {
     "role": "04 / 唯讀排版審閱",
-    "motif": "✓",
+    "motif": "◎",
     "name": "kumihan-ziheng-review",
     "p": "列出問題及證據，不修改原始內容；未實測的項目如實標記。"
    }
@@ -116,7 +120,8 @@
    "Apache-2.0",
    "日文版 KUMIHAN"
   ],
-  "lang_label": "Language / 語言 / 言語"
+  "lang_label": "Language / 語言 / 言語",
+  "status_title": "RELEASED / v0.2.0"
  },
  "en": {
   "description": "KUMIHAN｜字衡 is a set of open-source AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
@@ -145,7 +150,7 @@
    "FOUR SKILLS",
    "TRADITIONAL CHINESE FIRST"
   ],
-  "stage_text": "<span lang=\"zh-Hant-TW\">閱讀</span><small>HK: confirm the house style first</small>",
+  "stage_text": "WORDS · SPACE · PURPOSE",
   "concept_h2": [
    "Not a uniform look",
    "the right form for each message"
@@ -155,7 +160,7 @@
   "features_deck": "Practical priorities for creating and reviewing Traditional Chinese content.",
   "features": [
    {
-    "idx": "01 / REGION",
+    "idx": "01 / TYPE",
     "mark": "「」",
     "h3": "Taiwan and Hong Kong in context",
     "p": "Quotation, punctuation, glyphs and spacing are interpreted in regional and editorial context. Taiwan conventions are not silently imposed on Hong Kong."
@@ -202,22 +207,22 @@
   "skills_deck": "From scoping the work to web, documents, and review.",
   "skills": [
    {
-    "motif": "◆",
+    "motif": "字",
     "name": "kumihan-ziheng",
     "p": "Start here. Set the locale, medium and permitted change scope before design begins."
    },
    {
-    "motif": "文",
+    "motif": "↗",
     "name": "kumihan-ziheng-web",
     "p": "Typography and design for Traditional Chinese websites, articles, landing pages, and UI."
    },
    {
-    "motif": "版",
+    "motif": "文",
     "name": "kumihan-ziheng-documents",
     "p": "Structure and readability for reports, business documents, and slide decks."
    },
    {
-    "motif": "✓",
+    "motif": "◎",
     "name": "kumihan-ziheng-review",
     "p": "Review typography, information, and layout without editing source files."
    }
@@ -233,7 +238,7 @@
    "Setup guide for Gemini CLI and the Gemini app"
   ],
   "install_extra": "You can also <a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>download the ZIP</a> or view the source on <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
-  "status_title": "SOURCE / v0.2.0",
+  "status_title": "RELEASED / v0.2.0",
   "status_h": "Clear verification boundaries",
   "status_body": "ZiHeng includes 15 regional rules, 16 shared policies and four skills. Only limited static checks are automated; browser layout, Office/PDF rendering and host behavior are not universally verified. The v0.2.0 source candidate separates register, element role, source permissions and evidence. Its 32 case definitions are separate from rendered, interaction and native-language acceptance. The source version is v0.2.0; retained download links are v0.1.0. No formal Release is published.",
   "status_link": "Download v0.1.0 ↗",
@@ -280,7 +285,7 @@
    "FOUR SKILLS",
    "TRADITIONAL CHINESE FIRST"
   ],
-  "stage_text": "<span lang=\"zh-Hant-TW\">閱讀</span><small>香港：編集スタイルを先に確認</small>",
+  "stage_text": "WORDS · SPACE · PURPOSE",
   "concept_h2": [
    "見た目をそろえるより",
    "伝わる形を考える"
@@ -290,7 +295,7 @@
   "features_deck": "制作と見直しに共通する、KUMIHAN｜字衡が大切にする考え方。",
   "features": [
    {
-    "idx": "01 / REGION",
+    "idx": "01 / TYPE",
     "mark": "「」",
     "h3": "台湾と香港を区別",
     "p": "引用符、約物、字形、詰め方を地域・媒体・編集方針に応じて扱い、台湾式の規則を香港へ自動適用しません。"
@@ -337,22 +342,22 @@
   "skills_deck": "制作の入口から、Web・資料制作・レビューまで。",
   "skills": [
    {
-    "motif": "◆",
+    "motif": "字",
     "name": "kumihan-ziheng",
     "p": "最初の入口。地域、媒体、作業モードと変更を認める対象を整理するためのスキル。"
    },
    {
-    "motif": "文",
+    "motif": "↗",
     "name": "kumihan-ziheng-web",
     "p": "繁体中国語のWebサイト、記事、LP、UIの文字組みとデザインを支援。"
    },
    {
-    "motif": "版",
+    "motif": "文",
     "name": "kumihan-ziheng-documents",
     "p": "報告書、資料、プレゼンテーションの構成と読みやすさを支援。"
    },
    {
-    "motif": "✓",
+    "motif": "◎",
     "name": "kumihan-ziheng-review",
     "p": "制作物を変更せず、組版・情報・デザインの見直しを支援。"
    }
@@ -368,7 +373,7 @@
    "Gemini CLI・Geminiアプリ向けの導入ガイド"
   ],
   "install_extra": "<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>ZIPを入手</a>、または <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> でソースを確認できます。",
-  "status_title": "SOURCE / v0.2.0",
+  "status_title": "RELEASED / v0.2.0",
   "status_h": "できることと未検証の範囲を明確に",
   "status_body": "繁体中国語固有の15規則と共通16ポリシー、4スキルを収録。一部の静的チェック以外はガイドラインであり、ブラウザやOffice/PDFの描画、ホストでの実動作を一律に保証しません。 v0.2.0ソース候補では文体・役割・原稿権限と証拠契約を分離しました。32項目の定義と実描画・操作・母語校閲の結果は別に記録します。ソース版は v0.2.0、保持するダウンロードリンクは v0.1.0 です。正式Releaseは未公開です。",
   "status_link": "v0.1.0のダウンロード ↗",

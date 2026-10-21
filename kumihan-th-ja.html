@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#f5f3ee">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <style>
     :root {
       color-scheme: light;
@@ -273,12 +277,6 @@
     .intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2 {
       text-wrap: balance; word-break: normal;
     }
-    .hero .edition {
-      display: inline-block; margin-top: 10px;
-      color: var(--red-dark); font: 750 16px/1.65 "Noto Sans Thai", Thonburi,
-            "Hiragino Sans", sans-serif;
-      letter-spacing: 0; overflow-wrap: anywhere;
-    }
     .feature-motif { font-family: "Noto Sans Thai", Thonburi, "Hiragino Sans", sans-serif; }
     .feature:nth-child(2) .feature-motif { letter-spacing: -.12em; }
     .feature:nth-child(3) .feature-motif { font-size: 31px; }
@@ -304,7 +302,6 @@
     @media (max-width: 560px) {
       .hero h1 { font-size: clamp(36px, 9vw, 50px); letter-spacing: -.04em; }
       .language-switch a { padding: 7px 9px; }
-      .hero .edition { font-size: 15px; }
       .hero-stage::after { right: 8px; }
       .feature-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
       .skill-name { font-size: 25px; }
@@ -367,7 +364,6 @@
   <div class="shell hero-layout">
     <div class="hero-copy">
       <p class="eyebrow"><span class="line" aria-hidden="true"></span> OPEN-SOURCE SKILLS / THAI TYPOGRAPHY</p>
-      <div class="edition" lang="th">KUMIHAN｜ดุลอักษร</div>
       <!-- edition-version:hero --><div class="edition-version" lang="ja" data-edition-version="hero" data-release-status="published" dir="ltr"><strong>現行公開版 <a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1"><bdi dir="ltr">v0.1.1</bdi></a></strong></div><!-- /edition-version:hero --><h1 id="hero-title">タイ語の<br>デザインを<br><span class="accent">もっと自然に</span></h1>
       <p class="hero-desc">AIとつくるタイ語のWebサイト、記事、報告書、プレゼンテーション。読みやすさも、伝わりやすさも、内容を大切にすることも。KUMIHAN｜<span lang="th">ดุลอักษร</span>は、タイ語のための制作・レビュースキル集です。</p>
       <div class="hero-cta">
@@ -405,7 +401,7 @@
     </div>
     <div class="feature-grid">
 <article class="feature">
-  <div class="feature-index">01 / BREAKS</div>
+  <div class="feature-index">01 / TYPE</div>
   <div class="feature-motif" aria-hidden="true">ก</div>
   <h3>改行と行全体のバランス</h3><p>語分割候補と実表示幅を分けて検討し、文節単位の改行を強制しない。母音・声調記号の重なりや欠け、フォントフォールバック、行間を実描画で確認する。</p>
 </article>
@@ -445,7 +441,7 @@
     <div class="skills-grid">
 <a class="skill-card" href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-th/skills/kumihan-th" target="_blank" rel="noopener noreferrer">
   <div class="card-top"><span class="skill-type">01 / ENTRY</span>
-    <span class="skill-symbol" aria-hidden="true">組</span></div>
+    <span class="skill-symbol" aria-hidden="true">ก</span></div>
   <div><h3 class="skill-name">kumihan-th</h3>
     <p class="skill-desc">目的・媒体・言語・作業範囲の整理</p>
     <div class="skill-end"><span>スキルを見る</span><span aria-hidden="true">↗</span></div>
@@ -507,8 +503,7 @@
   <div class="shell status-box">
     <div>
       <div class="status-title" id="status-title">RELEASED / v0.1.1</div>
-      <p>v0.1.1は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。</p>
-      <p>ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です</p>
+      <p>v0.1.1は組版の制作指針と限定的なチェックを提供します。あらゆるタイ語の組版を自動修正するエンジンではありません。検査済み範囲と未検証事項はRelease Notesに明示します。ChatGPT・Codex・Claude・Geminiでの実ホスト導入と呼び出しは未検証（not-checked）です。</p>
     </div>
     <div class="status-meta"><a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-th-v0.1.1" target="_blank" rel="noopener noreferrer">最新版のダウンロード ↗</a>
       <br>OPEN SOURCE · APACHE 2.0</div>

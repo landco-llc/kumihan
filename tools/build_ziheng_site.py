@@ -53,7 +53,7 @@ UI = {
 # a heading longer than its column otherwise splits inside a word such as 脈絡.
 # Headings stored as a list (the shared KUMIHAN copy) break between its items instead.
 PHRASE_BREAKS = {"zh-Hant-TW": {"locale_h2": "同是繁體中文"}, "ja": {"locale_h2": "同じ繁体中国語でも"}, "en": {}}
-FEATURE_INDEX = ("01 / REGION", "02 / SOURCE", "03 / LAYOUT", "04 / REVIEW")
+FEATURE_INDEX = ("01 / TYPE", "02 / STRUCTURE", "03 / FIDELITY", "04 / REVIEW")
 SKILL_TYPES = ("01 / ENTRY", "02 / WEB", "03 / DOCUMENTS", "04 / REVIEW")
 HOSTS = (("ChatGPT / Codex", "docs/install-ziheng{}.html"),
          ("Claude / Claude Code", "docs/install-ziheng-claude{}.html"),
@@ -256,7 +256,7 @@ def render(lang, c):
 </section>
 <section class="status-section" aria-labelledby="status-title">
   <div class="shell status-box">
-    <div><div class="status-title" id="status-title">{x(c.get('status_title', 'VERSION / v0.1.0'))}</div><p><strong>{x(c['status_h'])}</strong></p><p>{x(c['status_body'])}</p></div>
+    <div><div class="status-title" id="status-title">{x(c['status_title'])}</div><p><strong>{x(c['status_h'])}</strong><br>{x(c['status_body'])}</p></div>
     <div class="status-meta"><a href="{ZIP}" download>{x(c.get('status_link', u['zip'] + ' ↗'))}</a><br>OPEN SOURCE · APACHE 2.0</div>
   </div>
 </section>
