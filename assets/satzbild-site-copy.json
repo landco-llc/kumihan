@@ -117,7 +117,35 @@
    "kumihan.html"
   ],
   "top": "Nach oben",
-  "publication_state": "published"
+  "publication_state": "published",
+  "regions": {
+   "eyebrow": "GERMANY / AUSTRIA / SWITZERLAND",
+   "h2": [
+    "Eine Sprache",
+    "drei regionale Konventionen"
+   ],
+   "body": "Die Sprachvariante wird ausdrücklich festgelegt; ist sie unbekannt, bleibt sie offen und wird nicht als de-DE angenommen. Währung, Zeitzone, du/Sie und Hausstil werden nie aus dem Land abgeleitet.",
+   "cards": [
+    {
+     "tag": "DE",
+     "name": "Deutschland",
+     "code": "de-DE",
+     "p": "Anführungszeichen „…“ und ‚…‘, alternativ »…« und ›…‹. ß, ẞ und SS bleiben wie geliefert und werden nicht stillschweigend zurückverwandelt."
+    },
+    {
+     "tag": "AT",
+     "name": "Österreich",
+     "code": "de-AT",
+     "p": "Anführungszeichen wie in de-DE. Regionale Wörter wie Jänner oder Marille werden nicht vereinheitlicht; Unterschiede bei Zahlen und Eurobeträgen bleiben erhalten."
+    },
+    {
+     "tag": "CH",
+     "name": "Schweiz",
+     "code": "de-CH",
+     "p": "Anführungszeichen «…» und ‹…›; üblich ist ss statt ß (Strasse). Namen und gelieferte Zeichen bleiben erhalten; Runtime-Ausgabe und kantonaler Hausstil sind getrennte Profile."
+    }
+   ]
+  }
  },
  "en": {
   "house_style": null,
@@ -237,7 +265,35 @@
    "en.html"
   ],
   "top": "Back to top",
-  "publication_state": "published"
+  "publication_state": "published",
+  "regions": {
+   "eyebrow": "GERMANY / AUSTRIA / SWITZERLAND",
+   "h2": [
+    "One German language",
+    "three regional conventions"
+   ],
+   "body": "The locale is set explicitly; if unknown, it stays unknown and is not assumed to be de-DE. Currency, time zone, du/Sie and house style are never inferred from the country.",
+   "cards": [
+    {
+     "tag": "DE",
+     "name": "Germany",
+     "code": "de-DE",
+     "p": "Quotation marks „…“ and ‚…‘, with »…« and ›…‹ as alternatives. ß, ẞ and SS stay as supplied and are never silently converted back."
+    },
+    {
+     "tag": "AT",
+     "name": "Austria",
+     "code": "de-AT",
+     "p": "Same quotation marks as de-DE. Regional words such as Jänner or Marille are not standardized, and differences in numbers and euro amounts are kept."
+    },
+    {
+     "tag": "CH",
+     "name": "Switzerland",
+     "code": "de-CH",
+     "p": "Quotation marks «…» and ‹…›; ss is the ordinary convention instead of ß (Strasse). Names and supplied text are preserved; runtime output and cantonal house style are separate profiles."
+    }
+   ]
+  }
  },
  "ja": {
   "house_style": null,
@@ -358,6 +414,34 @@
    "kumihan.html"
   ],
   "top": "ページ上部へ",
-  "publication_state": "published"
+  "publication_state": "published",
+  "regions": {
+   "eyebrow": "GERMANY / AUSTRIA / SWITZERLAND",
+   "h2": [
+    "同じドイツ語でも",
+    "国ごとに慣習は異なる"
+   ],
+   "body": "地域は明示して指定し、不明ならde-DEとみなしません。通貨・タイムゾーン・du/Sie・ハウススタイルも国から推測しません。",
+   "cards": [
+    {
+     "tag": "DE",
+     "name": "ドイツ",
+     "code": "de-DE",
+     "p": "引用符は„…“と‚…‘、代替として»…«と›…‹。ß・ẞ・SSは原稿のまま保持し、勝手に書き換えません。"
+    },
+    {
+     "tag": "AT",
+     "name": "オーストリア",
+     "code": "de-AT",
+     "p": "引用符はde-DEと同じ。JännerやMarilleなどの地域語をドイツの語に統一せず、数値とユーロ表記の違いも保持します。"
+    },
+    {
+     "tag": "CH",
+     "name": "スイス",
+     "code": "de-CH",
+     "p": "引用符は«…»と‹…›。通常はßではなくss（Strasse）。固有名と原稿の文字は保持し、runtime出力と州の規程は別プロファイルで扱います。"
+    }
+   ]
+  }
  }
 }

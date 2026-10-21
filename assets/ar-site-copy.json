@@ -115,7 +115,41 @@
    "KUMIHAN اليابانية",
    "kumihan.html"
   ],
-  "top": "العودة إلى الأعلى"
+  "top": "العودة إلى الأعلى",
+  "regions": {
+   "eyebrow": "SAUDI ARABIA / UAE / EGYPT / MOROCCO",
+   "h2": [
+    "عربية فصحى واحدة",
+    "وأعراف محلية مختلفة"
+   ],
+   "body": "تعتمد ملفات التعريف الأربعة العربيةَ الفصحى المعاصرة والكتابة من اليمين إلى اليسار. نؤكد المنطقة أولًا، ونُبقي الأرقام والتواريخ والأسعار كما وردت ما لم يحدد عقد تنسيق صريح غير ذلك.",
+   "cards": [
+    {
+     "tag": "SA",
+     "name": "السعودية",
+     "code": "ar-SA",
+     "p": "ملف تعريف أولي للسوق. تُحدَّد الأرقام والعملة والتقويم والمنطقة الزمنية بعقد صريح، ولا نحوّل أرقام النص الأصلي."
+    },
+    {
+     "tag": "AE",
+     "name": "الإمارات",
+     "code": "ar-AE",
+     "p": "ملف تعريف أولي آخر للسوق. نؤكد نظام الأرقام والعملة وصيغة التاريخ لكل مشروع، ولا نستنتجها من رمز المنطقة."
+    },
+    {
+     "tag": "EG",
+     "name": "مصر",
+     "code": "ar-EG",
+     "p": "ملف مقارنة للأرقام والتواريخ يختبر الافتراضات، وليس وصفة عامة للأرقام. تبقى الأرقام والتواريخ كما وردت."
+    },
+    {
+     "tag": "MA",
+     "name": "المغرب",
+     "code": "ar-MA",
+     "p": "ملف مقارنة ثانٍ للأرقام والتواريخ. نؤكد نظام الأرقام والتقويم مع صاحب العمل، ولا نحوّل شيئًا تلقائيًا."
+    }
+   ]
+  }
  },
  "en": {
   "title": "KUMIHAN｜نضيد — Natural Arabic typography, made with AI",
@@ -233,7 +267,41 @@
    "KUMIHAN Japanese",
    "en.html"
   ],
-  "top": "Back to top"
+  "top": "Back to top",
+  "regions": {
+   "eyebrow": "SAUDI ARABIA / UAE / EGYPT / MOROCCO",
+   "h2": [
+    "One Arabic standard,",
+    "different local contracts"
+   ],
+   "body": "All four profiles use Modern Standard Arabic, right to left. The region is confirmed first, and digits, dates and prices stay as supplied unless an explicit formatting contract says otherwise.",
+   "cards": [
+    {
+     "tag": "SA",
+     "name": "Saudi Arabia",
+     "code": "ar-SA",
+     "p": "An initial market profile. Digits, currency, calendar and timezone follow an explicit contract; source digits are never converted."
+    },
+    {
+     "tag": "AE",
+     "name": "United Arab Emirates",
+     "code": "ar-AE",
+     "p": "Also an initial market profile. Number system, currency and date format are confirmed per project, not inferred from the region code."
+    },
+    {
+     "tag": "EG",
+     "name": "Egypt",
+     "code": "ar-EG",
+     "p": "A numeric and date contrast profile for testing assumptions—not a universal number recipe. Supplied digits and dates stay as written."
+    },
+    {
+     "tag": "MA",
+     "name": "Morocco",
+     "code": "ar-MA",
+     "p": "A second numeric and date contrast profile. Number system and calendar are confirmed with the brief; nothing is converted automatically."
+    }
+   ]
+  }
  },
  "ja": {
   "title": "KUMIHAN｜نضيد — アラビア語のデザインをもっと自然に",
@@ -352,6 +420,40 @@
    "日本語版 KUMIHAN",
    "kumihan.html"
   ],
-  "top": "ページ上部へ"
+  "top": "ページ上部へ",
+  "regions": {
+   "eyebrow": "SAUDI ARABIA / UAE / EGYPT / MOROCCO",
+   "h2": [
+    "同じアラビア語でも",
+    "地域ごとの取り決めは異なる"
+   ],
+   "body": "4つのプロファイルはいずれも現代標準アラビア語・右から左。最初に地域を確認し、明示的な書式指定がない限り、数字・日付・価格は原文のまま保持します。",
+   "cards": [
+    {
+     "tag": "SA",
+     "name": "サウジアラビア",
+     "code": "ar-SA",
+     "p": "初期の市場プロファイル。数字体系・通貨・暦・タイムゾーンは明示的な取り決めに従い、原文の数字は変換しません。"
+    },
+    {
+     "tag": "AE",
+     "name": "アラブ首長国連邦",
+     "code": "ar-AE",
+     "p": "同じく初期の市場プロファイル。数字体系・通貨・日付書式は案件ごとに確認し、地域コードから推測しません。"
+    },
+    {
+     "tag": "EG",
+     "name": "エジプト",
+     "code": "ar-EG",
+     "p": "数字・日付の比較用プロファイル。前提を確かめるためのもので、数字表記の共通レシピではありません。原文の数字と日付は保持します。"
+    },
+    {
+     "tag": "MA",
+     "name": "モロッコ",
+     "code": "ar-MA",
+     "p": "2つ目の数字・日付の比較用プロファイル。数字体系と暦は依頼内容で確認し、自動では変換しません。"
+    }
+   ]
+  }
  }
 }

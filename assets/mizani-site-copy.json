@@ -116,7 +116,41 @@
       "KUMIHAN · Kijapani",
       "kumihan.html"
     ],
-    "top": "Rudi juu"
+    "top": "Rudi juu",
+    "regions": {
+      "eyebrow": "TANZANIA / KENYA / UGANDA / DR CONGO",
+      "h2": [
+        "Kiswahili kimoja",
+        "desturi tofauti za kila eneo"
+      ],
+      "body": "Eneo halikisiwi kutoka “sw”: chagua sw-TZ, sw-KE, sw-UG au sw-CD waziwazi. Sarafu na saa za eneo hutoka kwenye maelezo ya kazi, na matini asilia hayabadilishwi.",
+      "cards": [
+        {
+          "tag": "TZ",
+          "name": "Tanzania",
+          "code": "sw-TZ",
+          "p": "Namba hupangwa kwa Intl/CLDR na sw-TZ. Saa za Kiswahili huwekwa lebo tofauti na saa za kawaida; muda halisi wa tukio hausogezwi saa sita."
+        },
+        {
+          "tag": "KE",
+          "name": "Kenya",
+          "code": "sw-KE",
+          "p": "Tumia lang=\"sw-KE\". Sheng ya vijana wa Kenya haichukuliwi kama kanuni ya Kiswahili chote; nakala ya chapa iliyoidhinishwa huheshimiwa."
+        },
+        {
+          "tag": "UG",
+          "name": "Uganda",
+          "code": "sw-UG",
+          "p": "Wasifu wa sw-UG huchaguliwa waziwazi. Sarafu haikisiwi kutoka lugha wala eneo; itajwe wazi, na kiasi asilia kihifadhiwe."
+        },
+        {
+          "tag": "CD",
+          "name": "DR Kongo",
+          "code": "sw-CD",
+          "p": "Namba na sarafu za sw-CD hupangwa kando, si kwa kunakili mpangilio wa nchi nyingine. Kiasi asilia hubaki kama kilivyotolewa."
+        }
+      ]
+    }
   },
   "en": {
     "house_style": "id-standard",
@@ -235,7 +269,41 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top"
+    "top": "Back to top",
+    "regions": {
+      "eyebrow": "TANZANIA / KENYA / UGANDA / DR CONGO",
+      "h2": [
+        "One Swahili",
+        "different regional formats"
+      ],
+      "body": "Region is never inferred from “sw”: choose sw-TZ, sw-KE, sw-UG or sw-CD explicitly. Currency and time zone come from the brief, and the source text stays unchanged.",
+      "cards": [
+        {
+          "tag": "TZ",
+          "name": "Tanzania",
+          "code": "sw-TZ",
+          "p": "Numbers are formatted with Intl/CLDR for sw-TZ. Swahili time is labeled separately from civil time; actual event timestamps are never shifted six hours."
+        },
+        {
+          "tag": "KE",
+          "name": "Kenya",
+          "code": "sw-KE",
+          "p": "Use lang=\"sw-KE\". Kenyan youth slang (Sheng) is not treated as a universal Swahili convention; approved brand copy is respected."
+        },
+        {
+          "tag": "UG",
+          "name": "Uganda",
+          "code": "sw-UG",
+          "p": "The sw-UG profile is selected explicitly. Currency is never inferred from language or region—it must be stated, and original amounts are kept."
+        },
+        {
+          "tag": "CD",
+          "name": "DR Congo",
+          "code": "sw-CD",
+          "p": "sw-CD numbers and currency are formatted separately, not copied from another country’s pattern. Original amounts stay as supplied."
+        }
+      ]
+    }
   },
   "ja": {
     "house_style": "id-standard",
@@ -355,6 +423,40 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ページ上部へ"
+    "top": "ページ上部へ",
+    "regions": {
+      "eyebrow": "TANZANIA / KENYA / UGANDA / DR CONGO",
+      "h2": [
+        "同じスワヒリ語でも",
+        "地域ごとに書式は異なる"
+      ],
+      "body": "「sw」から地域を推測せず、sw-TZ・sw-KE・sw-UG・sw-CDを明示して選びます。通貨とタイムゾーンは依頼から受け取り、原文は変更しません。",
+      "cards": [
+        {
+          "tag": "TZ",
+          "name": "タンザニア",
+          "code": "sw-TZ",
+          "p": "数値はsw-TZを指定してIntl/CLDRで整形。スワヒリ時間は通常の時刻と区別して表示し、実際の日時を6時間ずらしません。"
+        },
+        {
+          "tag": "KE",
+          "name": "ケニア",
+          "code": "sw-KE",
+          "p": "lang=\"sw-KE\"を指定。ケニアの若者言葉シェンをスワヒリ語全体の規範とみなさず、承認済みのブランド表現を尊重します。"
+        },
+        {
+          "tag": "UG",
+          "name": "ウガンダ",
+          "code": "sw-UG",
+          "p": "sw-UGのプロファイルを明示して選択。通貨は言語や地域から推測せず明記し、元の金額を保持します。"
+        },
+        {
+          "tag": "CD",
+          "name": "コンゴ民主共和国",
+          "code": "sw-CD",
+          "p": "sw-CDの数値と通貨は他国の書式を流用せず個別に整形。元の金額は受け取ったまま保持します。"
+        }
+      ]
+    }
   }
 }

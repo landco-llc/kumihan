@@ -116,7 +116,41 @@
    "KUMIHAN · japonais",
    "kumihan.html"
   ],
-  "top": "Haut de page"
+  "top": "Haut de page",
+  "regions": {
+   "eyebrow": "FRANCE / CANADA / BELGIUM / SWITZERLAND",
+   "h2": [
+    "Un même français",
+    "des usages éditoriaux différents"
+   ],
+   "body": "La région et le style maison se choisissent séparément : le style n’est jamais déduit de la région. Sans style explicite, Accord se limite à la relecture et ne modifie pas le texte d’origine.",
+   "cards": [
+    {
+     "tag": "FR",
+     "name": "France",
+     "code": "fr-FR",
+     "p": "Style fr-fr-editorial, sur sélection explicite : espace fine insécable avant ! ? ; et dans les guillemets, espace insécable avant le deux-points."
+    },
+    {
+     "tag": "CA",
+     "name": "Canada",
+     "code": "fr-CA",
+     "p": "Style fr-ca-oqlf (Québec) : avant ! ? ; l’absence d’espace comme l’espace fine sont admises et jamais signalées. Espace insécable avant le deux-points et dans les guillemets."
+    },
+    {
+     "tag": "BE",
+     "name": "Belgique",
+     "code": "fr-BE",
+     "p": "Aucun style maison prédéfini. Sans norme éditoriale fournie par l’organisation, la question reste ouverte et les usages de France ne sont pas appliqués."
+    },
+    {
+     "tag": "CH",
+     "name": "Suisse",
+     "code": "fr-CH",
+     "p": "Aucun style maison prédéfini. La norme de l’institution ou de l’éditeur doit être indiquée ; à défaut, Accord relit sans imposer l’usage fr-FR."
+    }
+   ]
+  }
  },
  "en": {
   "house_style": null,
@@ -235,7 +269,41 @@
    "KUMIHAN Japanese",
    "en.html"
   ],
-  "top": "Back to top"
+  "top": "Back to top",
+  "regions": {
+   "eyebrow": "FRANCE / CANADA / BELGIUM / SWITZERLAND",
+   "h2": [
+    "One French language",
+    "different editorial conventions"
+   ],
+   "body": "Region and house style are chosen separately; house style is never inferred from the region. Without an explicit style, Accord only reviews and leaves the original text untouched.",
+   "cards": [
+    {
+     "tag": "FR",
+     "name": "France",
+     "code": "fr-FR",
+     "p": "The fr-fr-editorial style, when explicitly selected: narrow no-break space before ! ? ; and inside guillemets, no-break space before the colon."
+    },
+    {
+     "tag": "CA",
+     "name": "Canada",
+     "code": "fr-CA",
+     "p": "fr-ca-oqlf (Québec): no space or a narrow space before ! ? ; are both accepted and never flagged. No-break space before the colon and inside guillemets."
+    },
+    {
+     "tag": "BE",
+     "name": "Belgium",
+     "code": "fr-BE",
+     "p": "No predefined house style. Without an editorial standard from the organization, the choice stays unresolved and France’s conventions are not applied."
+    },
+    {
+     "tag": "CH",
+     "name": "Switzerland",
+     "code": "fr-CH",
+     "p": "No predefined house style. The institution’s or publisher’s standard must be supplied; otherwise Accord reviews without imposing fr-FR usage."
+    }
+   ]
+  }
  },
  "ja": {
   "house_style": null,
@@ -355,6 +423,40 @@
    "日本語版 KUMIHAN",
    "kumihan.html"
   ],
-  "top": "ページ上部へ"
+  "top": "ページ上部へ",
+  "regions": {
+   "eyebrow": "FRANCE / CANADA / BELGIUM / SWITZERLAND",
+   "h2": [
+    "同じフランス語でも",
+    "編集の慣習は異なる"
+   ],
+   "body": "地域と編集スタイルは別々に指定し、地域からスタイルを推測しません。スタイルが未指定なら見直しのみ行い、原文は変更しません。",
+   "cards": [
+    {
+     "tag": "FR",
+     "name": "フランス",
+     "code": "fr-FR",
+     "p": "fr-fr-editorialを明示した場合、! ? ; の前と« »の内側に細い改行しない空白、コロンの前に改行しない空白を提案します。"
+    },
+    {
+     "tag": "CA",
+     "name": "カナダ",
+     "code": "fr-CA",
+     "p": "fr-ca-oqlf（ケベック）では、! ? ; の前の空白なし・細い空白をどちらも許容し、誤りとしません。コロンの前と« »の内側は改行しない空白です。"
+    },
+    {
+     "tag": "BE",
+     "name": "ベルギー",
+     "code": "fr-BE",
+     "p": "既定の編集スタイルはありません。組織の編集規程がなければ未確定のまま扱い、フランスの慣習を当てはめません。"
+    },
+    {
+     "tag": "CH",
+     "name": "スイス",
+     "code": "fr-CH",
+     "p": "既定の編集スタイルはありません。機関や出版社の規程を確認し、未指定ならfr-FRの慣習を強制せず見直しのみ行います。"
+    }
+   ]
+  }
  }
 }

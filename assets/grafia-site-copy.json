@@ -116,7 +116,59 @@
    "KUMIHAN · japonés",
    "kumihan.html"
   ],
-  "top": "Volver arriba"
+  "top": "Volver arriba",
+  "regions": {
+   "eyebrow": "SPANISH-SPEAKING REGIONS",
+   "h2": [
+    "Un mismo español",
+    "distintas convenciones en cada región"
+   ],
+   "body": "Grafía trabaja con perfiles regionales explícitos. Si el encargo no indica la región, la registra como desconocida y no deduce moneda, zona horaria ni tratamiento (tú, vos o usted) del país.",
+   "cards": [
+    {
+     "tag": "ES",
+     "name": "España",
+     "code": "es-ES",
+     "p": "Perfil explícito para España. Moneda, zona horaria y tratamiento vienen del encargo; el texto original se conserva tal como se entregó."
+    },
+    {
+     "tag": "MX",
+     "name": "México",
+     "code": "es-MX",
+     "p": "La moneda se declara de forma explícita (por ejemplo, MXN) junto con su precisión; nunca se presupone a partir de la región."
+    },
+    {
+     "tag": "AR",
+     "name": "Argentina",
+     "code": "es-AR",
+     "p": "Se mantiene el voseo del original («vos tenés») y su diferencia con el chileno; no se convierte a tú ni a usted sin autorización."
+    },
+    {
+     "tag": "CO",
+     "name": "Colombia",
+     "code": "es-CO",
+     "p": "Perfil explícito para Colombia. El vocabulario sigue el glosario revisado de la marca y del mercado, sin unificar variantes legítimas."
+    },
+    {
+     "tag": "CL",
+     "name": "Chile",
+     "code": "es-CL",
+     "p": "El voseo chileno se respeta tal como aparece en el original, sin igualarlo al argentino ni sustituirlo por otro tratamiento."
+    },
+    {
+     "tag": "PE",
+     "name": "Perú",
+     "code": "es-PE",
+     "p": "Perfil explícito para Perú. Fechas, horas y cifras conservan su significado; la zona horaria solo se usa si el encargo la declara."
+    },
+    {
+     "tag": "419",
+     "name": "Latinoamérica",
+     "code": "es-419",
+     "p": "Válido como lang, pero no se emite como hreflang para Google Search: se usan solo alternantes reales y admitidos."
+    }
+   ]
+  }
  },
  "en": {
   "house_style": null,
@@ -235,7 +287,59 @@
    "KUMIHAN Japanese",
    "en.html"
   ],
-  "top": "Back to top"
+  "top": "Back to top",
+  "regions": {
+   "eyebrow": "SPANISH-SPEAKING REGIONS",
+   "h2": [
+    "One Spanish",
+    "many regional conventions"
+   ],
+   "body": "Grafía works with explicit regional profiles. When the brief names no region, it is recorded as unknown—currency, time zone and form of address (tú, vos or usted) are never inferred from a country.",
+   "cards": [
+    {
+     "tag": "ES",
+     "name": "Spain",
+     "code": "es-ES",
+     "p": "An explicit profile for Spain. Currency, time zone and form of address come from the brief; source text stays exactly as supplied."
+    },
+    {
+     "tag": "MX",
+     "name": "Mexico",
+     "code": "es-MX",
+     "p": "Currency is declared explicitly (for example, MXN) along with its precision—never assumed from the region."
+    },
+    {
+     "tag": "AR",
+     "name": "Argentina",
+     "code": "es-AR",
+     "p": "Voseo in the source (“vos tenés”) is kept, as is its difference from Chilean usage; it is not switched to tú or usted without authorization."
+    },
+    {
+     "tag": "CO",
+     "name": "Colombia",
+     "code": "es-CO",
+     "p": "An explicit profile for Colombia. Vocabulary follows the reviewed brand and market glossary, keeping legitimate variants rather than unifying them."
+    },
+    {
+     "tag": "CL",
+     "name": "Chile",
+     "code": "es-CL",
+     "p": "Chilean voseo is respected as it appears in the source—never merged with Argentine usage or replaced by another form of address."
+    },
+    {
+     "tag": "PE",
+     "name": "Peru",
+     "code": "es-PE",
+     "p": "An explicit profile for Peru. Dates, times and figures keep their meaning; a time zone is applied only when the brief declares one."
+    },
+    {
+     "tag": "419",
+     "name": "Latin America",
+     "code": "es-419",
+     "p": "Valid as a lang value, but never emitted as hreflang for Google Search: only real, supported alternates are used."
+    }
+   ]
+  }
  },
  "ja": {
   "house_style": null,
@@ -355,6 +459,58 @@
    "日本語版 KUMIHAN",
    "kumihan.html"
   ],
-  "top": "ページ上部へ"
+  "top": "ページ上部へ",
+  "regions": {
+   "eyebrow": "SPANISH-SPEAKING REGIONS",
+   "h2": [
+    "同じスペイン語でも",
+    "地域ごとに慣習は異なる"
+   ],
+   "body": "地域は明示されたプロファイルで扱います。依頼に地域がなければ「不明」と記録し、国から通貨・タイムゾーン・呼びかけ（tú・vos・usted）を推測しません。",
+   "cards": [
+    {
+     "tag": "ES",
+     "name": "スペイン",
+     "code": "es-ES",
+     "p": "スペイン向けの明示プロファイル。通貨・タイムゾーン・呼びかけは依頼から受け継ぎ、原文は受け取ったまま保持します。"
+    },
+    {
+     "tag": "MX",
+     "name": "メキシコ",
+     "code": "es-MX",
+     "p": "通貨は（例：MXN）精度とあわせて明示的に宣言します。地域から推定しません。"
+    },
+    {
+     "tag": "AR",
+     "name": "アルゼンチン",
+     "code": "es-AR",
+     "p": "原文のvoseo（vos tenés）とチリとの違いを保持。許可なくtúやustedに置き換えません。"
+    },
+    {
+     "tag": "CO",
+     "name": "コロンビア",
+     "code": "es-CO",
+     "p": "コロンビア向けの明示プロファイル。語彙はブランドと市場の確認済み用語集に従い、正当な異形を統一しません。"
+    },
+    {
+     "tag": "CL",
+     "name": "チリ",
+     "code": "es-CL",
+     "p": "チリのvoseoは原文のまま尊重し、アルゼンチンの用法と同一視したり、別の呼びかけに替えたりしません。"
+    },
+    {
+     "tag": "PE",
+     "name": "ペルー",
+     "code": "es-PE",
+     "p": "ペルー向けの明示プロファイル。日付・時刻・数値の意味を保ち、タイムゾーンは依頼で宣言された場合のみ使います。"
+    },
+    {
+     "tag": "419",
+     "name": "ラテンアメリカ",
+     "code": "es-419",
+     "p": "lang属性には使えますが、Google検索向けのhreflangには出力しません。実在し対応する代替URLだけを使います。"
+    }
+   ]
+  }
  }
 }
