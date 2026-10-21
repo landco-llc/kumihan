@@ -1,6 +1,6 @@
 """Editions not yet distributed (tools/build_upcoming_sites.py): landings and tops say coming soon.
 
-Each of el, nl, ms, tr and he has a landing in its language, English and
+Each of el, nl, ms, tr, he and sa has a landing in its language, English and
 Japanese, and a top page. None claims a release, download or installation guide.
 """
 import json
@@ -14,7 +14,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 import build_gateways as gateways  # noqa: E402
 import build_upcoming_sites as upcoming  # noqa: E402
 
-CODES = ("el", "nl", "ms", "tr", "he")
+CODES = ("el", "nl", "ms", "tr", "he", "sa")
 
 
 class UpcomingEditions(unittest.TestCase):

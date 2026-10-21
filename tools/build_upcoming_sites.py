@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the landings of language editions not yet distributed; --check verifies committed output.
 
-KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr) and מקצב (he) each get a
+KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he) and विन्यास (sa) each get a
 landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html),
 in the canonical KUMIHAN index structure (tools/product_site.py). Their skills
 have no Release, ZIP, installation guide or public source yet, so the pages say
@@ -29,6 +29,7 @@ EDITIONS = {
     "ms": ("Jalin", "jalin", "MS", "MS", "ms_MY", ("ng", "↗", "¶", "◎")),
     "tr": ("Ahenk", "ahenk", "TR", "TR", "tr_TR", ("İı", "↗", "¶", "◎")),
     "he": ("מקצב", "miktsav", "HE", "עב", "he_IL", ("ך", "↗", "¶", "◎")),
+    "sa": ("विन्यास", "vinyasa", "SA", "सं", "sa_IN", ("क्ष", "↗", "¶", "◎")),
 }
 RTL = {"he"}
 HOSTS = ("ChatGPT / Codex", "Claude / Claude Code", "Gemini")
@@ -80,7 +81,7 @@ def landing(code, lang, c):
 
 def css(code):
     sub, slug, label, *_ = EDITIONS[code]
-    rtl = RTL_CSS if code in RTL else ""
+    rtl = {"he": RTL_CSS, "sa": DEVANAGARI_CSS}.get(code, "")
     return SITE.canonical_css(f"KUMIHAN｜{sub} index: canonical KUMIHAN index CSS + edition settings (tools/build_upcoming_sites.py).",
                               OVERRIDES.replace("@LABEL@", label).replace("@LANG@", code) + rtl)
 
@@ -123,6 +124,16 @@ OVERRIDES = r"""
       .header-nav a { white-space: normal; }
       .idea-layout { grid-template-columns: minmax(0,1fr); }
     }
+"""
+
+# Devanagari (as the Hindi edition): no tracking, which would break the headline
+# (shirorekha) and conjuncts, and taller lines for vowel signs above and below.
+DEVANAGARI_CSS = r"""
+    html[lang="sa"] :is(h1, h2, h3, p, .eyebrow, .feature-index, .section-number, .skill-desc, .feature p) { letter-spacing: normal; }
+    html[lang="sa"] .hero h1 { font-size: clamp(32px,4.4vw,64px); line-height: 1.5; }
+    html[lang="sa"] :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { line-height: 1.55; }
+    html[lang="sa"] body { line-height: 1.9; }
+    html[lang="sa"] .skill-end { letter-spacing: 0; font-size: 12px; }
 """
 
 # Right-to-left (as the Arabic and Persian editions): the canonical index CSS uses

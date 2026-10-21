@@ -77,11 +77,11 @@ LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "j
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
          "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa",
-         "el": "el", "nl": "latin", "ms": "latin", "tr": "latin", "he": "he"}
+         "el": "el", "nl": "latin", "ms": "latin", "tr": "latin", "he": "he", "sa": "hi"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
          "अक्षर-संगति বাংলা অক্ষরসজ্জা فارسی تراز ភាសាខ្មែរ លំនឹង ក あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文 "
-         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך")
+         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך संस्कृतम् विन्यास सं क्ष")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
           "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn", "Noto Sans Hebrew", "Noto Sans")
@@ -112,9 +112,40 @@ def subset_url(key):
             + "&text=" + quote(chars) + "&display=swap")
 
 
+# Display typefaces for the large letters on the top-page cards (one character per
+# edition), chosen to show each script's own letterforms rather than a Gothic/sans
+# face: page language (html lang of the character) -> Google Fonts family.
+GLYPH_LATIN = "Cormorant Garamond"
+GLYPH_FAMILIES = {
+    "ja": "Shippori Mincho", "ko": "Nanum Myeongjo", "zh-Hans-CN": "Noto Serif SC", "zh-Hant-TW": "Noto Serif TC",
+    "th": "Noto Serif Thai", "km": "Noto Serif Khmer", "ar": "Amiri", "fa": "Noto Nastaliq Urdu",
+    "he": "Frank Ruhl Libre", "hi": "Tiro Devanagari Hindi", "sa": "Tiro Devanagari Sanskrit",
+    "bn": "Tiro Bangla", "el": "GFS Didot",
+}
+# The card characters; the stylesheet carries only these glyphs.
+GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ"
+
+
+def glyph_url():
+    names = sorted(set(GLYPH_FAMILIES.values()) | {GLYPH_LATIN})
+    chars = "".join(sorted(set(GLYPHS.replace(" ", ""))))
+    return (GOOGLE + "&".join("family=" + quote(n).replace("%20", "+") + (":wght@500" if n == GLYPH_LATIN else "")
+                              for n in names) + "&text=" + quote(chars) + "&display=swap")
+
+
+def glyph_css():
+    """Rules for the card characters; Latin, Cyrillic and Vietnamese letters use GLYPH_LATIN."""
+    out = [f'.type-art .glyph .character {{ font-family: "{GLYPH_LATIN}", var(--serif); font-weight: 500; }}']
+    for lang, family in GLYPH_FAMILIES.items():
+        out.append(f'.type-art .glyph .character[lang="{lang}"] {{ font-family: "{family}", var(--serif); font-weight: 400; }}')
+    # Amiri's ع has a deep descending tail: lift it so it clears the label.
+    out.append('.type-art .glyph .character[lang="ar"] { line-height: 1; transform: translateY(-.32em); }')
+    return out
+
+
 def google_urls():
     """Every Google Fonts stylesheet the pages use; tools/fetch_fonts.py copies them to this site."""
-    return [u for key in SCRIPTS for u in (own_url(key), subset_url(key))]
+    return [u for key in SCRIPTS for u in (own_url(key), subset_url(key))] + [glyph_url()]
 
 
 def stacks(key):
@@ -170,6 +201,8 @@ def css():
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
+    out.append("/* Top-page cards: each edition's character in a typeface that shows its script (GLYPH_FAMILIES). */")
+    out += glyph_css()
     out.append("/* Decorative symbol motifs (▮▮▯, « », ◌) take whichever font has the glyph; when that")
     out.append("   font is wide, let them wrap between symbols instead of widening the page. */")
     out.append(":is(.feature-motif, .skill-symbol) { overflow-wrap: anywhere; min-width: 0; }")

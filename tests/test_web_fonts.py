@@ -69,6 +69,18 @@ class WebFonts(unittest.TestCase):
                 self.assertLess(s.index(local_sans.split(",")[0]), s.index(f'"{sans}"'))
                 self.assertTrue(s.endswith("sans-serif") and r.endswith("serif"))
 
+    def test_top_card_characters_have_their_display_typefaces(self):
+        import build_gateways as gateways
+        chars = set(web_fonts.GLYPHS.replace(" ", ""))
+        css = web_fonts.css()
+        for code, product in gateways.PRODUCTS.items():
+            with self.subTest(edition=code):
+                self.assertLessEqual(set(product["glyph"]), chars)
+                if product["lang"] in web_fonts.GLYPH_FAMILIES:
+                    self.assertIn(f'.glyph .character[lang="{product["lang"]}"] {{ font-family: "{web_fonts.GLYPH_FAMILIES[product["lang"]]}"', css)
+        for file, *_rest in gateways.GATEWAYS.values():
+            self.assertIn(web_fonts.local_css(web_fonts.glyph_url()), (ROOT / file).read_text(encoding="utf-8"))
+
 
 if __name__ == "__main__":
     unittest.main()
