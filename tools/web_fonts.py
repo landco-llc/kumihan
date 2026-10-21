@@ -129,7 +129,7 @@ GLYPH_FAMILIES = {
     "bn": "Tiro Bangla", "el": "GFS Didot", "my": "Noto Serif Myanmar",
 }
 # The card characters; the stylesheet carries only these glyphs.
-GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ Ř Ő မြ Æ Â Th"
+GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ Ř Ő မြ Æ Â Th Öö Å Ø"
 
 
 def glyph_url():

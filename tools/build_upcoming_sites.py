@@ -39,6 +39,9 @@ EDITIONS = {
     "la": ("Concinnitas", "concinnitas", "LA", "LA", "la_VA", ("ā æ", "↗", "¶", "◎")),
     "tl": ("Tugma", "tugma", "TL", "TL", "tl_PH", ("â ñ", "↗", "¶", "◎")),
     "en": ("Measure", "measure", "EN", "EN", "en_US", ("&", "↗", "¶", "◎")),
+    "fi": ("Rytmi", "rytmi", "FI", "FI", "fi_FI", ("Ää", "↗", "¶", "◎")),
+    "sv": ("Samspel", "samspel", "SV", "SV", "sv_SE", ("Åö", "↗", "¶", "◎")),
+    "da": ("Samklang", "samklang", "DA", "DA", "da_DK", ("Æøå", "↗", "¶", "◎")),
 }
 RTL = {"he"}
 HOSTS = ("ChatGPT / Codex", "Claude / Claude Code", "Gemini")
