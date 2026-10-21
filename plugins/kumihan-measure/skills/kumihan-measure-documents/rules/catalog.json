@@ -1,0 +1,785 @@
+[
+  {
+    "id": "EN-CORE-001",
+    "title": "Preserve original text",
+    "guidance": "Keep exact bytes, names, numbers, code, IDs and quotations; proposed edits require explicit permission.",
+    "source_id": "H24",
+    "source_ids": [
+      "H24",
+      "H25"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "引用・名前・コード・識別子を扱う。"
+  },
+  {
+    "id": "EN-CORE-002",
+    "title": "Quotation conventions",
+    "guidance": "Record en-US/en-GB and publisher style before suggesting quotation punctuation; preserve quotations and intentional variants.",
+    "source_id": "H23",
+    "source_ids": [
+      "H23",
+      "H40"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "引用符の扱いが、選んだ編集規約と一致しない。"
+  },
+  {
+    "id": "EN-CORE-003",
+    "title": "Ambiguous dates",
+    "guidance": "Flag numeric dates such as 03/04/2026 for locale/house-style confirmation; never silently swap month and day.",
+    "source_id": "H37",
+    "source_ids": [
+      "H37",
+      "H41"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "日・月が数値だけで表記され、地域が不明である。"
+  },
+  {
+    "id": "EN-CORE-004",
+    "title": "Figure features",
+    "guidance": "Compare tabular versus proportional figures and lining versus oldstyle in actual tables, amounts and running text; retain numeric values.",
+    "source_id": "H15",
+    "source_ids": [
+      "H15",
+      "H16"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "本文・数値比較・価格表示の数字を設定する。"
+  },
+  {
+    "id": "EN-CORE-005",
+    "title": "Optical size",
+    "guidance": "Use an available opsz axis for the actual size and renderer, then inspect; no universal font-size multiplier.",
+    "source_id": "H14",
+    "source_ids": [
+      "H14"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "選択したフォントがopsz軸を持つ。"
+  },
+  {
+    "id": "EN-CORE-006",
+    "title": "Confusable identifiers",
+    "guidance": "Inspect Il1, O0, rn/m and 8B in actual code/ID fonts; do not replace characters to resolve visual ambiguity.",
+    "source_id": "H09",
+    "source_ids": [
+      "H09"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "ID、コード、数字主体のUIに書体を使用する。"
+  },
+  {
+    "id": "EN-CORE-007",
+    "title": "Glyph coverage",
+    "guidance": "Inspect required accents, currencies and mixed scripts in the selected fallback chain and actual output.",
+    "source_id": "H18",
+    "source_ids": [
+      "H18"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "必要な文字が選択したフォントに含まれていない。"
+  },
+  {
+    "id": "EN-CORE-008",
+    "title": "Intentional fragments",
+    "guidance": "Treat brand phrases and display fragments as potentially deliberate. Confirm purpose before grammar or capitalization proposals.",
+    "source_id": "H27",
+    "source_ids": [
+      "H27",
+      "H32"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "見出し、ボタン、広告に完全文ではない表現がある。"
+  },
+  {
+    "id": "EN-CORE-009",
+    "title": "Compressed noun phrases",
+    "guidance": "Review audience understanding of noun stacks; offer separately labeled alternatives only within editing permission.",
+    "source_id": "H22",
+    "source_ids": [
+      "H22",
+      "H30"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "国際向けの説明・操作に、圧縮された名詞列がある。"
+  },
+  {
+    "id": "EN-CORE-010",
+    "title": "Paragraph topic",
+    "guidance": "Check the paragraph topic and reading sequence against purpose; semantic judgment remains human review.",
+    "source_id": "H28",
+    "source_ids": [
+      "H28"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "情報説明の長文を扱う。"
+  },
+  {
+    "id": "EN-CORE-011",
+    "title": "Terminology",
+    "guidance": "Compare abbreviations and terms with the supplied house style; retain proper names, code and approved exceptions.",
+    "source_id": "H22",
+    "source_ids": [
+      "H22",
+      "H29"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "同じ概念に複数の名称が使われている。"
+  },
+  {
+    "id": "EN-CORE-012",
+    "title": "Readability claims",
+    "guidance": "Separate measured evidence from readability hypotheses; no universal performance or aesthetic score.",
+    "source_id": "H19",
+    "source_ids": [
+      "H19"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "書体を推薦する。"
+  },
+  {
+    "id": "EN-CORE-013",
+    "title": "Typeface classification",
+    "guidance": "Use classification as a comparison aid, not proof of suitability; compare actual glyphs and output.",
+    "source_id": "H20",
+    "source_ids": [
+      "H20"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": "多言語の書体を検索・分類する。"
+  },
+  {
+    "id": "EN-MIX-001",
+    "title": "Language and script",
+    "guidance": "Separate language, script, locale and direction; Latn does not establish English.",
+    "source_id": "M01",
+    "source_ids": [
+      "M01",
+      "M02",
+      "M03",
+      "M04"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "複数の言語や文字体系を含む原稿、UI、テンプレートを取り込む場合",
+        "数値・日時などlocale依存の内容がある場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-002",
+    "title": "Explicit language wins",
+    "guidance": "Use explicit language before documentLang; do not overwrite either from script clues.",
+    "source_id": "M02",
+    "source_ids": [
+      "M02",
+      "M03",
+      "M04"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "コンテンツ、利用者、翻訳資源に明示言語がある場合",
+        "自動言語推定が併用される場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-003",
+    "title": "Ambiguous Latin text",
+    "guidance": "Short brands, code and shared Latin vocabulary remain uncertain without explicit language context.",
+    "source_id": "RESEARCH:EN-MIX-003",
+    "source_ids": [
+      "RESEARCH:EN-MIX-003"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Latinの短文、固有名、ブランド名、製品コード、URLを判定する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-004",
+    "title": "Base and inserted language",
+    "guidance": "Record base-language policy and inserted spans; preserve Japanese, Chinese and Korean punctuation and words.",
+    "source_id": "M06",
+    "source_ids": [
+      "M06",
+      "M07",
+      "M08"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "一つの文章内に別言語の語や製品名が挿入される場合",
+        "和欧文・中西文・韓英の文中混植を扱う場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-005",
+    "title": "Visual spacing",
+    "guidance": "Change layout separately from source characters; do not insert spaces or NBSP into immutable text.",
+    "source_id": "M06",
+    "source_ids": [
+      "M06",
+      "M22"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "文字体系の境界に見かけの空きを設ける場合",
+        "文面を保護する商品名、検索語、URL、コードを扱う場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-006",
+    "title": "Script-specific tracking",
+    "guidance": "Avoid inheriting Latin letter spacing into Arabic joining or other scripts; inspect each script in context.",
+    "source_id": "M21",
+    "source_ids": [
+      "M21",
+      "M23",
+      "M24",
+      "M25",
+      "M26",
+      "M27"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Latin用trackingやletter-spacingが他の文字体系へ継承される場合",
+        "接続・結合・補助記号を含む見出しやUIを扱う場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-007",
+    "title": "Regional CJK glyphs",
+    "guidance": "Retain ja, zh-Hans and zh-Hant language tags; inspect region-specific glyphs and fallback.",
+    "source_id": "M20",
+    "source_ids": [
+      "M20",
+      "M32"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Han文字を含むja、zh-Hans、zh-Hant-TW等の内容を表示する場合",
+        "複数のCJKフォントから字形を選択する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-008",
+    "title": "Mixed-script scale",
+    "guidance": "Compare visual weight, baseline and x-height for actual fonts; do not impose a fixed cross-script ratio.",
+    "source_id": "M18",
+    "source_ids": [
+      "M18",
+      "M19",
+      "M29"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "異なる文字体系のサイズ、weight、ベースラインを調整する場合",
+        "既存ブランドの倍率を別書体へ転用しようとする場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-009",
+    "title": "Fallback and line height",
+    "guidance": "Test fallback glyphs, ascenders, descenders and line boxes after loading and on failure.",
+    "source_id": "M18",
+    "source_ids": [
+      "M18",
+      "M33"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "フォント読込失敗、未収録文字、OSフォントによる代替が起こり得る場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-010",
+    "title": "Bidirectional isolation",
+    "guidance": "For dynamic inserts use semantic bdi or dir=auto as appropriate, retain logical source order and test copy/paste.",
+    "source_id": "M09",
+    "source_ids": [
+      "M09",
+      "M10",
+      "M11"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "LTR文中にRTLの氏名等を挿入する場合",
+        "RTL文中に英語の型番、数字、記号等を挿入する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-011",
+    "title": "Logical RTL order",
+    "guidance": "Never reverse stored characters for visual RTL layout; preserve code, numbers and punctuation.",
+    "source_id": "M09",
+    "source_ids": [
+      "M09"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "RTLまたは双方向文字列を保存・変換・出力する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-012",
+    "title": "Joining controls",
+    "guidance": "Preserve ZWJ/ZWNJ and Arabic/Persian joining controls; actual shaping requires the target engine.",
+    "source_id": "M24",
+    "source_ids": [
+      "M24"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "ArabicやPersianの接続制御を含む原稿を処理する場合",
+        "不可視文字を削除または正規化する機能を適用する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-013",
+    "title": "Grapheme integrity",
+    "guidance": "Preserve combining marks and emoji/Indic sequences; never split a grapheme for tracking or line wrapping.",
+    "source_id": "M13",
+    "source_ids": [
+      "M13"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "選択、省略、文字数制限、文字単位アニメーション、改行を行う場合",
+        "結合文字、分解Jamo、Indic、emoji等を含む場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-014",
+    "title": "Script-specific wrapping",
+    "guidance": "Use language-aware word and line breaks; distinguish Latin words, CJK line breaking, Korean profiles and Thai segmentation.",
+    "source_id": "M06",
+    "source_ids": [
+      "M06",
+      "M07",
+      "M08",
+      "M12",
+      "M28"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "多言語の改行、均等割付、狭幅レイアウトを設定する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-015",
+    "title": "Clipping risk",
+    "guidance": "Inspect marks and descenders at narrow widths and text enlargement; avoid untested fixed-height or hidden text.",
+    "source_id": "M18",
+    "source_ids": [
+      "M18",
+      "M34"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "固定高、overflow、狭いline-heightを使う要素がある場合",
+        "Vietnamese等の上下記号や結合を含む場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-016",
+    "title": "Language-specific emphasis",
+    "guidance": "Choose emphasis with the language owner; Latin uppercase is not a universal emphasis mechanism.",
+    "source_id": "M05",
+    "source_ids": [
+      "M05",
+      "M37"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "italic、bold、大文字化等の強調を翻訳や別文字体系へ展開する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-017",
+    "title": "Locale-sensitive values",
+    "guidance": "Format proposed display values only with explicit locale and house style; preserve original date, currency and number source.",
+    "source_id": "M15",
+    "source_ids": [
+      "M15",
+      "M16",
+      "M17"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "数値、通貨、日付、時刻、単位等を表示する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-018",
+    "title": "Translation expansion",
+    "guidance": "Allow labels and controls to grow; test long words and actual translated text, retaining action and recovery meaning.",
+    "source_id": "M42",
+    "source_ids": [
+      "M42"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "UIラベル、カード、ボタン等を翻訳する場合",
+        "原文と訳文で長さや行数が変化する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-019",
+    "title": "Language hierarchy",
+    "guidance": "Make primary and equal-status languages explicit in hierarchy and reading order; avoid accidental suppression.",
+    "source_id": "M35",
+    "source_ids": [
+      "M35",
+      "M36",
+      "M39",
+      "M40"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "二言語以上の案内、見出し、対訳、ブランドを設計する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-020",
+    "title": "Original names",
+    "guidance": "Keep names in original spelling and ordering; transliteration and renaming require permission.",
+    "source_id": "M41",
+    "source_ids": [
+      "M41"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "氏名、表示名、個人の原綴りを入力・保存・表示する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-021",
+    "title": "CSS support",
+    "guidance": "Check target browser support before adopting new text-spacing or wrapping features; retain usable fallback.",
+    "source_id": "M18",
+    "source_ids": [
+      "M18",
+      "M22"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "text-autospace、font-size-adjust等のCSS機能を採用する場合",
+        "草案や実装差のある機能に依存する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-022",
+    "title": "Graphic text",
+    "guidance": "Separate editable text, visual outlines and reading-order alternatives; do not rewrite source to mimic a graphic.",
+    "source_id": "M35",
+    "source_ids": [
+      "M35",
+      "M36"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "二言語ロゴ、ポスター見出し、カスタム字形等を編集する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-023",
+    "title": "Normalization",
+    "guidance": "NFC equivalence is diagnostic only; preserve original Unicode, metadata and normalization unless authorized.",
+    "source_id": "M14",
+    "source_ids": [
+      "M14"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Unicode正規化、幅変換、不可視文字の整理等を実行する場合",
+        "氏名、引用、価格、単位、識別子を含む保護原稿を処理する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-MIX-024",
+    "title": "Measurement provenance",
+    "guidance": "Label published values, static checks, rendered measurements and human judgments separately.",
+    "source_id": "RESEARCH:EN-MIX-024",
+    "source_ids": [
+      "RESEARCH:EN-MIX-024"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "倍率、サイズ、行高、可読性等の根拠を登録する場合",
+        "公開デザイン事例や実測データをルール化する場合"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-OUT-001",
+    "title": "Visual hierarchy",
+    "guidance": "Choose roles for body, heading, UI and display copy from audience, medium and distance; no universal type scale.",
+    "source_id": "R04",
+    "source_ids": [
+      "R04",
+      "R05"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "見出し・本文・補足が同居する画面や紙面"
+    ]
+  },
+  {
+    "id": "EN-OUT-002",
+    "title": "Long words and IDs",
+    "guidance": "Use bounded wrapping for long URLs/IDs without breaking ordinary English words indiscriminately; test extraction.",
+    "source_id": "R15",
+    "source_ids": [
+      "R15",
+      "R22"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "通常英語とURL・コードが同居する出力"
+    ]
+  },
+  {
+    "id": "EN-OUT-003",
+    "title": "User spacing",
+    "guidance": "Test user line/word/letter spacing changes without lost text or clipped controls.",
+    "source_id": "R08",
+    "source_ids": [
+      "R08",
+      "R25"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "WCAG 1.4.12が適用されるWebのテキスト"
+    ]
+  },
+  {
+    "id": "EN-OUT-004",
+    "title": "Narrow reflow",
+    "guidance": "At 320 CSS px check content, actions, order and overlap; report exceptions with evidence.",
+    "source_id": "R09",
+    "source_ids": [
+      "R09",
+      "R25"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "WCAG 1.4.10の対象となるWebコンテンツ"
+    ]
+  },
+  {
+    "id": "EN-OUT-005",
+    "title": "Text enlargement",
+    "guidance": "Test 200% text resize in the actual browser; source presence is not a rendered pass.",
+    "source_id": "R10",
+    "source_ids": [
+      "R10",
+      "R25"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "WCAG 1.4.4の適用対象"
+    ]
+  },
+  {
+    "id": "EN-OUT-006",
+    "title": "Font loading",
+    "guidance": "Test loading and blocked-font fallback, layout shift, licensing and offline behavior in the real target.",
+    "source_id": "R17",
+    "source_ids": [
+      "R17",
+      "R24"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "Web fontを利用する出力"
+    ]
+  },
+  {
+    "id": "EN-OUT-007",
+    "title": "Contrast",
+    "guidance": "Measure actual foreground/background colors and states; visual impression alone does not prove contrast.",
+    "source_id": "R11",
+    "source_ids": [
+      "R11",
+      "R25"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "WCAG 1.4.3の適用対象"
+    ]
+  },
+  {
+    "id": "EN-OUT-008",
+    "title": "Final output",
+    "guidance": "Reopen Office/PDF and inspect font embedding, extraction, reading order and visual output; unrun checks stay not-checked.",
+    "source_id": "K01",
+    "source_ids": [
+      "K01",
+      "R24"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": [
+      "PDF、Office、HTML等を納品またはレビューするとき"
+    ]
+  }
+]
