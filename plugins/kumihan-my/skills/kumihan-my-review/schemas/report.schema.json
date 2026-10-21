@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Burmese bounded source report",
+  "type": "object",
+  "required": [
+    "source",
+    "source_sha256",
+    "source_integrity",
+    "locale",
+    "guidance",
+    "diagnostics",
+    "native_rendering"
+  ],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_integrity": {
+      "type": "object",
+      "required": [
+        "status",
+        "bytes_equal"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        },
+        "bytes_equal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "locale": {
+      "enum": [
+        "my",
+        "my-MM",
+        "und"
+      ]
+    },
+    "guidance": {
+      "type": "array"
+    },
+    "diagnostics": {
+      "type": "array"
+    },
+    "native_rendering": {
+      "const": "not_checked"
+    }
+  }
+}

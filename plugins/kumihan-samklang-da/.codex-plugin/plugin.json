@@ -1,0 +1,23 @@
+{
+  "name": "kumihan-samklang-da",
+  "version": "0.1.0",
+  "description": "Dansk typografisk vejledning til web, dokumenter og gennemgang med bevaring af originalteksten. | Danish typography guidance for web, documents and review while preserving the original text.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Samklang",
+    "shortDescription": "Dansk typografisk vejledning til web, dokumenter og gennemgang med bevaring af originalteksten. | Danish typography guidance for web, documents and review while preserving the original text.",
+    "longDescription": "Dansk typografisk vejledning til web, dokumenter og gennemgang med bevaring af originalteksten. | Danish typography guidance for web, documents and review while preserving the original text.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Gennemgå dansk typografi og bevar originalen.",
+      "Review Danish typography while preserving the original."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

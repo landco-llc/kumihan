@@ -1,0 +1,577 @@
+[
+  {
+    "id": "DA-R01",
+    "title": "Bevar originalen / Preserve the original",
+    "guidance": "Alle medier: Bevar navne, tal, citater og de oprindelige Unicode-bytes. Vis forslag særskilt. / All media: retain names, values, quotations and original Unicode bytes; separate proposals.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Ingen ændring uden udtrykkelig tilladelse. / No change without explicit permission.",
+    "example": "Aarhus, Åse, 1.234,50 kr.",
+    "source_id": "L02",
+    "source_ids": [
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "SYS16"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R02",
+    "title": "Danske bogstaver / Danish letters",
+    "guidance": "Hvis teksten indeholder ÆØÅ/æøå, kontroller tegnene i den valgte skrift og ved kopiering. / For ÆØÅ/æøå, inspect glyph coverage and copy round trips.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Erstat aldrig Æ med AE, Ø med 0 eller Å med A for at få plads. / Never substitute ASCII or digits to fit.",
+    "example": "Æblegrød, smørrebrød og blåbær",
+    "source_id": "L02",
+    "source_ids": [
+      "L02",
+      "L03",
+      "L04",
+      "SYS15"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R04",
+    "title": "Normalisering / Normalization",
+    "guidance": "Ved sammenligning: registrer både rå bytes og afledt NFC-lighed. / When comparing, record raw bytes and derived NFC equivalence separately.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "NFC-lighed tillader ikke at overskrive originalen. / NFC equivalence does not authorize rewriting.",
+    "example": "Å / Å",
+    "source_id": "SYS16",
+    "source_ids": [
+      "SYS16"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R05",
+    "title": "Aa i navne / Aa in names",
+    "guidance": "For person-, sted- og organisationsnavne bevares den angivne form med Aa eller Å. / Preserve supplied Aa/Å in personal, place and organization names.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "En ordliste eller sorteringsnøgle er ikke tilladelse til at omdøbe. / A dictionary or sort key does not authorize renaming.",
+    "example": "Aarhus / Århus",
+    "source_id": "L04",
+    "source_ids": [
+      "L04",
+      "L05",
+      "SYS17"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R06",
+    "title": "Sortering / Collation",
+    "guidance": "Ved danske lister: vælg da-lokale og sammenligningsstyrke; prøv ÆØÅ og Aa med den faktiske ICU/CLDR-version. / For Danish lists, choose da collation and strength; test actual runtime versions.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Skriv ikke visningsteksten om efter sorteringsnøglen. / Do not rewrite display text from sort keys.",
+    "example": "Zebra, Æble, Ørn, Ål",
+    "source_id": "SYS17",
+    "source_ids": [
+      "SYS17"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R08",
+    "title": "Store og små bogstaver / Case",
+    "guidance": "Ved redigering: skeln mellem sætningsstart, navne, I, De og du. / For editorial proposals, distinguish sentence starts, names and forms of address.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Påfør ikke engelsk Title Case eller automatisk småt i. / Do not impose English title case or lowercase I automatically.",
+    "example": "I kan gemme ændringerne.",
+    "source_id": "L13",
+    "source_ids": [
+      "L13",
+      "L14"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R09",
+    "title": "Sammensætninger / Compounds",
+    "guidance": "Når et langt ord ikke passer, prøv bredde, spalter og lovlig orddeling før en redaktionel ændring. / For long compounds, compare width, columns and valid hyphenation before editing.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Del ikke ord med mellemrum alene af hensyn til layout. / Never insert spaces merely to fit.",
+    "example": "arbejdsmiljørepræsentant",
+    "source_id": "L15",
+    "source_ids": [
+      "L15",
+      "L35"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R10",
+    "title": "Bindestreg / Hyphen",
+    "guidance": "Ved forkortelser, tal og udeladte fællesled: kontroller ordets bindestreg særskilt fra linjedeling. / Distinguish lexical hyphens from line-end hyphenation.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Slet ikke alle bindestreger under oprydning. / Never strip all hyphens.",
+    "example": "EU-regler / 3-årig",
+    "source_id": "L16",
+    "source_ids": [
+      "L16"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R11",
+    "title": "Ejefald / Genitive",
+    "guidance": "Ved forslag om ejefald: kontroller endelser på s, x og z samt forkortelser og navne i RO. / For genitive proposals, check endings, abbreviations and names against RO.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Tilføj ikke engelsk ’s til alle navne. / Do not append English ’s mechanically.",
+    "example": "Lars’ bog",
+    "source_id": "L19",
+    "source_ids": [
+      "L19"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R12",
+    "title": "Startkomma / Initial comma",
+    "guidance": "Ved korrektur: vælg med startkomma, uden startkomma eller bevar eksisterende praksis. / In proofreading, record with, without or preserve existing startkomma.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Begge systemer er mulige; påstå ikke at udeladelse stadig er den officielle anbefaling. / Both are available; do not claim omission remains officially preferred.",
+    "example": "Jeg ved, at du kommer. / Jeg ved at du kommer.",
+    "source_id": "L09",
+    "source_ids": [
+      "L09",
+      "L10",
+      "L11"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R13",
+    "title": "Nødvendige kommaer / Required commas",
+    "guidance": "Også uden startkomma: undersøg slutkomma og komma mellem helsætninger ud fra syntaks. / Without startkomma, still check required closing and main-clause commas.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Fjern ikke alle kommaer omkring ledsætninger. / Never delete every subordinate-clause comma.",
+    "example": "Når du kommer, åbner vi døren.",
+    "source_id": "L09",
+    "source_ids": [
+      "L09",
+      "L10"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R14",
+    "title": "Anførselstegn / Quotation marks",
+    "guidance": "Ved dokumentredigering: fastlæg par og indlejring efter redaktionel praksis og citatets sprog. / Establish paired and nested quotation style per house style and quoted language.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "»…« er ikke eneste gyldige typografiske valg; citater omskrives ikke. / »…« is not the only valid choice; preserve quoted text.",
+    "example": "»En lille pause« / “En lille pause”",
+    "source_id": "L20",
+    "source_ids": [
+      "L20",
+      "L26"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R16",
+    "title": "Dato og klokkeslæt / Dates and times",
+    "guidance": "Ved visning: aftal dansk eller ISO-format og bevar den underliggende dato og tid. / Agree Danish or ISO display while retaining the underlying date and time.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Behandl ikke kl. 9.45 som et decimaltal. / Do not treat a time as a decimal number.",
+    "example": "kl. 9.45 / 21. oktober 2026 / 2026-10-21",
+    "source_id": "L12",
+    "source_ids": [
+      "L12",
+      "L25"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R17",
+    "title": "Tal og valuta / Numbers and currency",
+    "guidance": "Ved lokalisering: bevar datatype, værdi, valuta og inputlokale; formater kun visningen. / Preserve numeric type, value, currency and input locale before display formatting.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Dansk tekst betyder ikke automatisk DKK; byt ikke blot punktum og komma. / Danish does not imply DKK; do not merely swap punctuation.",
+    "example": "1.234,50 kr. / EUR",
+    "source_id": "L26",
+    "source_ids": [
+      "L26",
+      "SYS15"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R18",
+    "title": "Procenter og store tal / Percentages and large numbers",
+    "guidance": "Ved tal: skeln mellem forholdstal og procent; dansk milliard er 10^9 og billion 10^12. / Distinguish ratios from percentages and Danish milliard/billion.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Oversæt ikke engelsk billion uden værdikontrol. / Do not translate English billion without checking magnitude.",
+    "example": "ratio 0.25 → 25 %; 10^9 → milliard",
+    "source_id": "L26",
+    "source_ids": [
+      "L26",
+      "SYS15"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R19",
+    "title": "Mellemrum ved enheder / Unit spacing",
+    "guidance": "Ved brødtekst: vurder mellemrum eller NBSP før %, kr. og enheder; prøv kopiering og linjeskift. / In prose, consider space/NBSP before %, currency and units; test copying and wrapping.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Tabelpraksis kan afvige; indsæt ikke en fast regel uden kontekst. / Table conventions can differ.",
+    "example": "25 % / 1.250,00 kr.",
+    "source_id": "L23",
+    "source_ids": [
+      "L23",
+      "L24",
+      "L26"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R20",
+    "title": "Sprog og orddeling / Language and hyphenation",
+    "guidance": "Ved web og dokumenter: marker danske områder med da/da-DK og prøv den faktiske orddelingsordbog. / Mark Danish regions and test actual hyphenation dictionaries.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "lang og hyphens:auto alene beviser ikke korrekt orddeling. / Attributes alone do not prove runtime hyphenation.",
+    "example": "<p lang=\"da\">arbejdsmiljørepræsentant</p>",
+    "source_id": "L17",
+    "source_ids": [
+      "L17",
+      "L18",
+      "SYS19",
+      "SYS20"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R22",
+    "title": "Linjeskift og originaltekst / Wrapping and original text",
+    "guidance": "Ved smalle spalter: adskil visningsombrydning fra ordets stavning og kontrollér soft hyphen ved kopiering. / Distinguish wrapping from spelling; check soft hyphens during copying.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Indsæt ikke permanente bindestreger for en bestemt bredde. / Never insert permanent hyphens to fix one width.",
+    "example": "arbejds­miljø",
+    "source_id": "L17",
+    "source_ids": [
+      "L17",
+      "SYS19",
+      "SYS20"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R23",
+    "title": "Tekstens rolle / Text roles",
+    "guidance": "For hver region: vælg brødtekst, data, handling, overskrift, grafisk tekst eller en blanding. / Classify prose, data, actions, headings and graphic lettering per region.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Et ekspressivt slogan bestemmer ikke stilen for priser og vilkår. / An expressive slogan does not set terms and price styles.",
+    "example": "Plads til en pause / pris og vilkår",
+    "source_id": "D07",
+    "source_ids": [
+      "D07",
+      "D13",
+      "D24",
+      "SYS10"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R24",
+    "title": "Skrift og rettigheder / Typeface and rights",
+    "guidance": "Ved skriftvalg: prøv text/display, tal, ÆØÅ og faktisk licens for brug og indlejring. / Test text/display suitability, figures, glyphs and usage/embedding rights.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Offentlig download er ikke fri ret til distribution; skrifter medfølger ikke. / Public download does not grant redistribution; no font files are included.",
+    "example": "ÆØÅ 0123456789",
+    "source_id": "D21",
+    "source_ids": [
+      "D21",
+      "D22",
+      "D23",
+      "SYS01",
+      "SYS07"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R25",
+    "title": "Fallback / Font fallback",
+    "guidance": "Ved web, Office og PDF: prøv manglende webfont og kontroller ændrede linjer og sider. / Test missing fonts and resulting line/page changes.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "En font-family-erklæring beviser ikke den faktisk brugte skrift. / A font-family declaration does not prove resolved glyph fonts.",
+    "example": "Åse / café / ǿ",
+    "source_id": "SYS07",
+    "source_ids": [
+      "SYS07",
+      "SYS12",
+      "PDF02",
+      "PDF03"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R27",
+    "title": "Størrelse og forhold / Sizes and ratios",
+    "guidance": "Ved layout: sammenlign overskrift og brødtekst fra samme rolle, skrift og bredde; mål i den relevante enhed. / Compare matching regions, fonts and viewports in relevant units.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "En hero-ratio er ikke en universel dansk skala. / A hero ratio is not a universal Danish scale.",
+    "example": "H1 / brødtekst",
+    "source_id": "SYS02",
+    "source_ids": [
+      "SYS02",
+      "SYS03",
+      "D05",
+      "D25"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R29",
+    "title": "Grafiske bogstaver / Graphic lettering",
+    "guidance": "Ved logoer, bevægelse og grafisk tekst: giv navne og nødvendig information også som læsbar tekst. / For graphic or moving lettering, retain accessible readable names and essential information.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Lad ikke pris, dato eller vilkår eksistere kun som grafik. / Do not leave essential information only in graphics.",
+    "example": "Kunst / åbent 10–17",
+    "source_id": "SYS08",
+    "source_ids": [
+      "SYS08",
+      "SYS10",
+      "D24"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R30",
+    "title": "Stemme og copy / Voice and copy",
+    "guidance": "Ved autoriseret tekstforslag: vælg målgruppe, rolle og stemme; skeln mellem samtale og standardstavning. / For authorized proposals, choose audience, role and voice; distinguish speech from standard spelling.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Ret ikke bevidste fragmenter eller navne automatisk. / Do not automatically repair intentional fragments or names.",
+    "example": "Plads til en pause",
+    "source_id": "L27",
+    "source_ids": [
+      "L27",
+      "L28",
+      "L30",
+      "D13"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R31",
+    "title": "Handling og fejl / Actions and errors",
+    "guidance": "Ved UI: vis handling og mål; ved fejl vis problem og næste mulige skridt. / In UI, name action and object; in errors, state problem and recovery.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Forkort ikke væsentlige betingelser væk; kontroller at Gem faktisk gemmer. / Do not remove essential conditions; confirm Save actually saves.",
+    "example": "Gem ændringer / Vi kunne ikke gemme ændringerne. Prøv igen.",
+    "source_id": "L31",
+    "source_ids": [
+      "L31",
+      "SYS05",
+      "SYS06",
+      "D15"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R32",
+    "title": "Semantiske overskrifter / Semantic headings",
+    "guidance": "Ved struktureret web og dokumenter: hold overskriftsniveau og visuel størrelse adskilt. / Separate heading semantics from visual scale.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Vælg ikke H1 alene for at få stor tekst. / Do not choose H1 merely for size.",
+    "example": "h1 → h2 → h3",
+    "source_id": "SYS02",
+    "source_ids": [
+      "SYS02",
+      "SYS13"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R33",
+    "title": "Zoom og reflow / Zoom and reflow",
+    "guidance": "Ved relevant WCAG-evaluering: prøv faktisk 200% zoom og separat 320 CSS px reflow; dokumenter undtagelser. / Test actual zoom and narrow reflow separately with scoped exceptions.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "390px-observation eller CSS-fordobling er ikke bevis for bestået zoom/reflow. / A 390px observation or doubled CSS is not acceptance.",
+    "example": "Lange etiketter ved 200% og 320 CSS px",
+    "source_id": "SYS21",
+    "source_ids": [
+      "SYS21",
+      "SYS22",
+      "SYS26"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R35",
+    "title": "Afstand og kontrast / Spacing and contrast",
+    "guidance": "Ved relevant tilgængelighedsvurdering: prøv de specificerede afstandsoverstyringer og tekstkontrast i den faktiske komponent. / Test specified text-spacing overrides and contrast in actual components.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "WCAG-overstyringer er ikke standarddesign; mål med de gældende definitioner og undtagelser. / WCAG overrides are not default design values.",
+    "example": "linjehøjde 1.5, afsnit 2em, bogstaver .12em, ord .16em",
+    "source_id": "SYS23",
+    "source_ids": [
+      "SYS23",
+      "SYS24",
+      "SYS26"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R38",
+    "title": "PDF og Office / PDF and Office",
+    "guidance": "Ved levering: prøv søgning, valg, kopiering, læserækkefølge og redigering/genåbning i målappen. / Test search, selection, copy, reading order and editing/reopening in target apps.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Et pænt PDF-billede beviser ikke tekstbevaring, tags eller native Office. / A clean PDF image proves neither text integrity, tags nor native Office.",
+    "example": "Åse / Lars’ / tabelkolonner",
+    "source_id": "SYS13",
+    "source_ids": [
+      "SYS13",
+      "PDF01",
+      "PDF02",
+      "PDF03"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R42",
+    "title": "Projektion og skilte / Projection and signs",
+    "guidance": "Ved præsentation eller skilt: afprøv faktisk størrelse, afstand, lys og visningstid. / For projection/signs, test real size, distance, lighting and display duration.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "CSS px alene beviser ikke læsbarhed fra bagerste række. / CSS pixels do not prove back-row readability.",
+    "example": "Afgang 10.45",
+    "source_id": "D08",
+    "source_ids": [
+      "D08",
+      "D16",
+      "D17"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R51",
+    "title": "Startforslag til web / Web starting proposal",
+    "guidance": "Hvis ingen vedtaget skala findes: sammenlign 16–18 CSS px, linjehøjde 1.5–1.65 og H1 omkring 2–3 gange brødtekst med de faktiske læsere. / Without an adopted scale, compare these starting ranges in context.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Designhypotese, ikke national norm eller målt optimum; smalle skærme kræver ny vurdering. / A design hypothesis, not a national norm or measured optimum.",
+    "example": "16/24 som ét sammenligningspunkt",
+    "source_id": "SYS02",
+    "source_ids": [
+      "SYS02",
+      "SYS03",
+      "D05",
+      "D25"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "DA-R52",
+    "title": "Startforslag til papir og slides / Print and slide starting proposal",
+    "guidance": "Hvis ingen vedtaget skala findes: sammenlign papir 10.5–12pt med linjehøjde 1.35–1.55; projektion 24–28pt og overskrift 36–44pt i faktisk afstand. / Compare print and slide starting ranges at actual distance.",
+    "scope": "Eksplicit dansk kontekst og relevant medium. / Explicit Danish context and relevant medium.",
+    "condition": "Anvend kun i den beskrevne situation. / Apply only in the described situation.",
+    "exceptions": "Forslagene er ikke empirisk validerede; brandkrav og læseforhold kan kræve andre værdier. / These proposals are not empirically validated.",
+    "example": "Papir og projektion vurderes særskilt.",
+    "source_id": "SYS11",
+    "source_ids": [
+      "SYS11",
+      "D16",
+      "D17",
+      "PDF01",
+      "PDF02"
+    ],
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  }
+]

@@ -1,0 +1,656 @@
+[
+  {
+    "id": "SVL-R01",
+    "title": "Regional svenska / Regional Swedish",
+    "guidance": "När regionen saknas eller blandas, skilj sv-SE från sv-FI. Bevara finlandssvenska institutionsnamn. | When region is missing or mixed, distinguish sv-SE from sv-FI and preserve Finland-specific institutional terms.",
+    "condition": "locale scope",
+    "exceptions": "sv är gemensam språknivå, inte ett antagande om land eller valuta. / sv does not select a country or currency.",
+    "example": "ministerium",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S30",
+    "source_ids": [
+      "SVL-S30",
+      "SVL-S31"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R02",
+    "title": "ÅÄÖ och namn / Letters and names",
+    "guidance": "Bevara ÅÄÖ, åäö och andra diakritiska tecken i namn, även i versaler. | Retain ÅÄÖ, åäö and name accents, including capitals.",
+    "condition": "alphabet integrity",
+    "exceptions": "Ändra inte W till V och ta inte bort accenter. / Do not turn W into V or remove accents.",
+    "example": "Åsa Öberg – ÉVA",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S02",
+    "source_ids": [
+      "SVL-S02",
+      "SVL-S03",
+      "SVL-S15"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R03",
+    "title": "Citattecken / Quotation marks",
+    "guidance": "Vid ny svensk löptext kan ”…” föreslås; originalcitat och främmande språk bevaras. | For new Swedish prose, suggest ”…” when appropriate; preserve existing quotations and other-language spans.",
+    "condition": "quotation pair",
+    "exceptions": "Ingen global teckenersättning. / No global replacement.",
+    "example": "”Välkommen”",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S04",
+    "source_ids": [
+      "SVL-S04",
+      "SVL-S05"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R05",
+    "title": "Citatets funktion / Quotation context",
+    "guidance": "Skilj självständiga citat från citerade fragment innan du föreslår punktens placering. | Distinguish complete quoted sentences from fragments before proposing period placement.",
+    "condition": "quote sentence punctuation",
+    "exceptions": "Citatets språk och avsändarens stil kan kräva annat. / Quoted language and house style may differ.",
+    "example": "Hon sa: ”Vi ses.” / Hon kallade det ”en idé”.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S06",
+    "source_ids": [
+      "SVL-S06"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R06",
+    "title": "Decimalkomma / Decimal comma",
+    "guidance": "Använd decimalkomma som förslag för svensk visning, med värdet oförändrat. | Suggest a decimal comma for Swedish display while preserving the numeric value.",
+    "condition": "decimal comma",
+    "exceptions": "Kod, dataformat och identifierare ska inte ändras. / Never alter code, data formats or identifiers.",
+    "example": "12,5",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S13",
+    "source_ids": [
+      "SVL-S13"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R07",
+    "title": "Siffergrupper / Number grouping",
+    "guidance": "Bedöm mellanrum i stora tal och undvik olämpliga radbrott inom gruppen. | Review spacing in large displayed numbers and avoid inappropriate breaks within groups.",
+    "condition": "number grouping",
+    "exceptions": "Årtal, ID och telefonnummer har egna mönster. / Years, IDs and phone numbers need separate patterns.",
+    "example": "1 234",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S10",
+    "source_ids": [
+      "SVL-S10",
+      "SVL-S32",
+      "SVR-S03"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R08",
+    "title": "Procent / Percent spacing",
+    "guidance": "Föreslå mellanrum mellan tal och procenttecken och kontrollera radbrytningen. | Suggest a space between number and percent sign and inspect wrapping.",
+    "condition": "percent spacing",
+    "exceptions": "Bevara maskinläsbara värden och citat. / Preserve machine-readable values and quotations.",
+    "example": "25 %",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S23",
+    "source_ids": [
+      "SVL-S23"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R10",
+    "title": "Tid och region / Time and region",
+    "guidance": "Punkt och kolon kan förekomma i klockslag. Ange region och redaktionell stil före ändring. | Both period and colon can occur in times; record region and editorial style before changing.",
+    "condition": "time style",
+    "exceptions": "Formatterutdata är inte en allmän språkregel. / Formatter output is not a universal editorial rule.",
+    "example": "9.45 / 9:45",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S07",
+    "source_ids": [
+      "SVL-S07"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R15",
+    "title": "Förkortningars böjning / Inflected abbreviations",
+    "guidance": "Skilj kolon vid böjning från bindestreck i sammansättningar. | Distinguish inflection with a colon from compounds with a hyphen.",
+    "condition": "abbreviation inflection",
+    "exceptions": "Kontrollera uttal och egennamn innan ett förslag. / Check pronunciation and names first.",
+    "example": "EU:s / EU-regler",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S12",
+    "source_ids": [
+      "SVL-S12"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R19",
+    "title": "Sammansättningar / Compounds",
+    "guidance": "Lös inte långa sammansättningar genom att lägga in blanksteg. Bedöm spaltbredd och avstavning först. | Do not solve long compounds by inserting spaces; review column width and hyphenation first.",
+    "condition": "compound boundary",
+    "exceptions": "Ett okänt ord är inte automatiskt fel. / An unfamiliar word is not automatically wrong.",
+    "example": "tebutik",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S19",
+    "source_ids": [
+      "SVL-S19"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R22",
+    "title": "Avstavning efter medium / Hyphenation by medium",
+    "guidance": "Pröva naturlig ombrytning i vanlig webbtext; i smala tryckspalter kan språkstödd avstavning behövas. | Try natural wrapping in ordinary web prose; narrow print columns may need language-aware hyphenation.",
+    "condition": "hyphenation context",
+    "exceptions": "Deklarationen hyphens:auto bevisar inte korrekt avstavning. / hyphens:auto alone proves no correct hyphenation.",
+    "example": "försäkringsinformation",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S09",
+    "source_ids": [
+      "SVL-S09"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R26",
+    "title": "Tre konsonanter / Triple consonants",
+    "guidance": "Vid avstavning av nattåg kan natt- följas av tåg. Kontrollera motorns stöd. | At the compound break, nattåg can require natt- followed by tåg; verify engine support.",
+    "condition": "triple consonant hyphenation",
+    "exceptions": "Lägg inte en extra konsonant i grundtexten. Undvik brytpunkten om stödet saknas. / Do not add a consonant to stored text; avoid the break if unsupported.",
+    "example": "nattåg",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S11",
+    "source_ids": [
+      "SVL-S11"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R27",
+    "title": "Rubrikens punkt / Headline punctuation",
+    "guidance": "En fristående vanlig rubrik saknar oftast slutpunkt. Bevara meningsbärande fråge- och utropstecken. | Ordinary standalone headlines usually omit a final period; retain meaningful question and exclamation marks.",
+    "condition": "headline period",
+    "exceptions": "Reklam, flermeningstitlar och radbundna rubriker kan avvika. / Advertising, multi-sentence and inline headings can differ.",
+    "example": "Vad vill du göra?",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S22",
+    "source_ids": [
+      "SVL-S22"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R28",
+    "title": "Reklamens röst / Advertising voice",
+    "guidance": "Bedöm reklam som läsning, uttryck eller en blandning. Punkten kan vara avsiktlig. | Review advertising as reading, expression or hybrid; a period may be intentional.",
+    "condition": "hybrid ad copy",
+    "exceptions": "Ändra inte ton eller innebörd för att uppnå en typografisk mall. / Do not change tone or meaning to fit a typographic template.",
+    "example": "Plats för fler idéer.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S22",
+    "source_ids": [
+      "SVL-S22"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R30",
+    "title": "de, dem och dom / Register",
+    "guidance": "Skilj neutral skriftsvenska från dialog och varumärkets röst innan de/dem/dom bedöms. | Distinguish neutral prose from dialogue and brand voice before reviewing de/dem/dom.",
+    "condition": "de dem dom",
+    "exceptions": "Ingen automatisk ersättning av dom. / Never automatically replace dom.",
+    "example": "De läser. / Jag visar dem texten.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S08",
+    "source_ids": [
+      "SVL-S08"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R32",
+    "title": "Tilltal / Address",
+    "guidance": "Kontrollera läsare och relation vid du eller ni. Ni ger inte automatiskt en artigare ton. | Check audience and relationship for du or ni; ni does not automatically sound more polite.",
+    "condition": "address du ni",
+    "exceptions": "Bevara citat och avsiktlig röst. / Preserve quotations and intentional voice.",
+    "example": "Här hittar du din beställning.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S20",
+    "source_ids": [
+      "SVL-S20"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVL-R33",
+    "title": "Klarspråk / Plain language",
+    "guidance": "I instruktioner: lyft läsarens viktigaste uppgift, använd konkreta rubriker och tydliga stycken. | For instructions, lead with the reader’s key task and use concrete headings and coherent paragraphs.",
+    "condition": "plain language structure",
+    "exceptions": "Berättelser och reklam kan ha annan dramaturgi. / Narrative and advertising can use another structure.",
+    "example": "Så hämtar du din beställning",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVL-S25",
+    "source_ids": [
+      "SVL-S25",
+      "SVL-S27"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R01",
+    "title": "Exakta tecken / Exact Unicode",
+    "guidance": "Bevara ursprungliga byte. Normalisering för jämförelse ger inte tillstånd att skriva om texten. | Preserve original bytes; normalization for comparison never authorizes rewriting.",
+    "condition": "unicode source preservation",
+    "exceptions": "A med kombinerande ring ska inte tyst bytas mot Å. / Never silently replace a combining sequence with Å.",
+    "example": "Åsa",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVR-S05",
+    "source_ids": [
+      "SVR-S05"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R03",
+    "title": "Diakritik i bild / Rendered accents",
+    "guidance": "Kontrollera ÅÄÖ i aktuellt typsnitt, vikt, radavstånd och textram. | Inspect ÅÄÖ in the actual font, weight, line height and frame.",
+    "condition": "mark collision",
+    "exceptions": "Statisk textkontroll kan inte bevisa att tecknen inte beskärs. / Static text checks cannot prove absence of clipping.",
+    "example": "ÅÄÖ\nåäö",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S12",
+    "source_ids": [
+      "SVDS-S12"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R04",
+    "title": "Typsnittets identitet / Font identity",
+    "guidance": "Ange fil, version, vikt, axlar och reservtypsnitt innan en visuell slutsats. | Record font file, version, weight, axes and fallback before visual conclusions.",
+    "condition": "font identity",
+    "exceptions": "En familjebeteckning bevisar inte vad som renderats. / A family name does not establish the rendered font.",
+    "example": "Åsa – 1 234,50 kr",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S01",
+    "source_ids": [
+      "SVDS-S01",
+      "SVDS-S02",
+      "SVDS-S03",
+      "SVDS-S22"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R07",
+    "title": "Måttens ursprung / Measurement provenance",
+    "guidance": "Ange medium, enhet och om måttet är en specifikation, CSS, PDF eller verklig visning. | Record medium, units and whether a value is specification, CSS, PDF or actual display.",
+    "condition": "metrics provenance",
+    "exceptions": "Härled inte punkter eller pixlar från ett perspektivfoto. / Do not derive points or pixels from a perspective photograph.",
+    "example": "16 px / 1 rem kräver angiven rotstorlek",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S07",
+    "source_ids": [
+      "SVDS-S07",
+      "SVDS-S17",
+      "SVR-S18"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R09",
+    "title": "Varumärkets gräns / Brand scope",
+    "guidance": "Begränsa en organisations typografiska skala till det varumärket och mediet. | Limit an organization’s typographic scale to that brand and medium.",
+    "condition": "brand scope",
+    "exceptions": "Det finns ingen allmän svensk minsta textstorlek från ett enskilt designsystem. / One design system establishes no national minimum size.",
+    "example": "Brödtext och affisch bedöms separat.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S01",
+    "source_ids": [
+      "SVDS-S01",
+      "SVDS-S06",
+      "SVDS-S16"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R12",
+    "title": "Semantiska rubriker / Semantic headings",
+    "guidance": "Skilj rubriknivå från visuell storlek. Bevara dokumentets logiska hierarki. | Separate heading level from visual size and preserve logical hierarchy.",
+    "condition": "semantic headings",
+    "exceptions": "En stor text är inte automatiskt H1. / Large text is not automatically H1.",
+    "example": "H2 kan ha samma visuella storlek som H3.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S07",
+    "source_ids": [
+      "SVDS-S07",
+      "SVDS-S16"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R13",
+    "title": "Användarens textavstånd / User spacing",
+    "guidance": "På webb: prova 1,5 radavstånd, 2 gånger efter stycke, 0,12em tecken och 0,16em ord utan innehållsförlust. | For web, test user overrides of 1.5 line, 2 paragraph, 0.12em letter and 0.16em word spacing without content loss.",
+    "condition": "text spacing override",
+    "exceptions": "Dessa är provvärden, inte obligatoriska standardvärden i designen. / These are override test values, not required design defaults.",
+    "example": "Långa sammansättningar i en knapp",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVR-S06",
+    "source_ids": [
+      "SVR-S06"
+    ],
+    "media": [
+      "web",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R14",
+    "title": "Textförstoring / Text resizing",
+    "guidance": "Prova tillämplig text vid 200 procent i verklig webbläsare och dokumentera resultatet. | Test applicable text at 200 percent in the actual browser and record the result.",
+    "condition": "text resize",
+    "exceptions": "Lämna provet ej kontrollerat om webbläsaren inte har körts. / Leave not_checked if no browser was exercised.",
+    "example": "Spara ändringar",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVR-S07",
+    "source_ids": [
+      "SVR-S07"
+    ],
+    "media": [
+      "web",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R15",
+    "title": "Ombrytning / Reflow",
+    "guidance": "Prova motsvarande 320 CSS-pixlars bredd och bedöm förlust av information och funktion. | Test 320 CSS px equivalent width for information and function loss.",
+    "condition": "reflow",
+    "exceptions": "Tvådimensionella tabeller och kartor bedöms enligt tillämpliga undantag. / Assess two-dimensional tables and maps under applicable exceptions.",
+    "example": "försäkringsinformation",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVR-S08",
+    "source_ids": [
+      "SVR-S08"
+    ],
+    "media": [
+      "web",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R17",
+    "title": "Kontrast i sitt sammanhang / Contextual contrast",
+    "guidance": "Bedöm tillämpligt kontrastkrav med storlek och vikt: normalt 4,5:1, stor text 3:1. | Assess applicable contrast with size and weight: ordinarily 4.5:1, large text 3:1.",
+    "condition": "contrast context",
+    "exceptions": "Kontrollera undantag och aktuella bakgrunder; förhållandet bevisar inte all läsbarhet. / Check exceptions and actual backgrounds; ratio alone does not establish all readability.",
+    "example": "Text över fotografi",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVR-S10",
+    "source_ids": [
+      "SVR-S10"
+    ],
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  },
+  {
+    "id": "SVR-R19",
+    "title": "Typsnittsrättigheter / Font rights",
+    "guidance": "Kontrollera den exakta fontversionens licens och inbäddningsvillkor. | Check exact font-version licensing and embedding terms.",
+    "condition": "font rights",
+    "exceptions": "En offentlig provbild ger inte rätt att distribuera typsnittet. / A public specimen grants no font redistribution permission.",
+    "example": "Inga typsnitt medföljer. / No fonts bundled.",
+    "example_status": "illustrative_not_native_reviewed",
+    "source_id": "SVDS-S12",
+    "source_ids": [
+      "SVDS-S12",
+      "SVC-S32",
+      "SVR-S16"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "verification": "conditional-human-review; native rendering not_checked",
+    "automatic_pass_allowed": false,
+    "autofix": false
+  }
+]

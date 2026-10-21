@@ -1,0 +1,604 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Tugma",
+  "slug": "kumihan-tugma",
+  "language": "tl",
+  "version": "0.1.0",
+  "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "613d46a671a0f03fcfd7d4bcefeac9ae96c69de4b1880c293f0cce31e5e54916"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "3da4e286b2edb7d2bfae8bc9343a374f02c8695b619b9b7e7534858ad16df5ab"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "3057ec798a1043bd11b755b02e6749cd381e8f9cb33479e23caea1241da5f098"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "d6beb4a0f1bf58ed75daa8a95bea7a066f9d116f94700a3c36352dc3cca97d92"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "5428c8541f54933a0b87336e3fdf94c2e52c7f9b1d41f873b64d0574bf61e46e"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "222beb79f2a7ed08ef0c4ecaffa80db8b5c86c7147669fc02ae0741b68c5299a"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "f288d525d57bba3e324cb5252504a3d2fd0cd86401174c258b6599b1382a6969"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "2c1ad1cdee3c66a74d789dbb0a57288a8066a5a83b23311d8c8cc648193c6ac7"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "1cfbf88134bea9bc623ebb88e8c8979ca920f845c01d8d119f0097c3768ef0fc"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "e1a5400e546a1cedd6b91fb3ab2fa9cf6753f971a10025b0d6d01d12f30454a7"
+    },
+    {
+      "path": "locales/en.json",
+      "sha256": "b965f2d95671cd3878a73e4385cf75261c52ce277e196ee406cbd408d5619f46"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "cfcb83c2257d776cfd3aceb06b671d812241023abfc85197b24bb226db00a618"
+    },
+    {
+      "path": "locales/tl.json",
+      "sha256": "45a778728602909c05819242939ab8b522261a77a2cf63896519ccd92f85fb7f"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "bbf7d77fa887dce215ad5c7cca53cb063960ecea0ce1fa35addf67f5780ece9f"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "76332d22d4eed487af249c5675c6f7e94034c83c6482e77e53469b1ec2fe9792"
+    },
+    {
+      "path": "references/research-trace.json",
+      "sha256": "270f259f545aed65605e62fe5ea7a2c880c4906787a140f2468795d933985096"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "a5f23a2b7a52892db3141df72269748903ddaff020cccc1065ad8cb14956b484"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "e38548d1bf652e27793cff6a90b40020d2b1d41ffa8af22c64a9f86d4901437b"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "3c777c38bffaa1e1a608e3d078f533d6eaf89a889449e2ff2a7b17cc800e2265"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "84860420d090771d02ff984245f3256e88a42181119b9f58ba1383b4b1fc579f"
+    },
+    {
+      "path": "skills/kumihan-tugma/INSTALL.md",
+      "sha256": "197ce3b442dd4e42c3e82407423fafcbc0c0e06a9808075816d66f65bb21cf2e"
+    },
+    {
+      "path": "skills/kumihan-tugma/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-tugma/README.md",
+      "sha256": "1e9849b1c85def734ed0f689fb41bc6c6f22caa9486f01024d733f9541c15c0f"
+    },
+    {
+      "path": "skills/kumihan-tugma/SKILL.md",
+      "sha256": "b409aca8f10a9e4671b3f578f25ac634ae056b0f5107f525cdbacb61e8308312"
+    },
+    {
+      "path": "skills/kumihan-tugma/THIRD_PARTY_NOTICES.md",
+      "sha256": "222beb79f2a7ed08ef0c4ecaffa80db8b5c86c7147669fc02ae0741b68c5299a"
+    },
+    {
+      "path": "skills/kumihan-tugma/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-tugma/fixtures/acceptance.json",
+      "sha256": "2c1ad1cdee3c66a74d789dbb0a57288a8066a5a83b23311d8c8cc648193c6ac7"
+    },
+    {
+      "path": "skills/kumihan-tugma/inventory.json",
+      "sha256": "e1a5400e546a1cedd6b91fb3ab2fa9cf6753f971a10025b0d6d01d12f30454a7"
+    },
+    {
+      "path": "skills/kumihan-tugma/locales/en.json",
+      "sha256": "b965f2d95671cd3878a73e4385cf75261c52ce277e196ee406cbd408d5619f46"
+    },
+    {
+      "path": "skills/kumihan-tugma/locales/supported.json",
+      "sha256": "cfcb83c2257d776cfd3aceb06b671d812241023abfc85197b24bb226db00a618"
+    },
+    {
+      "path": "skills/kumihan-tugma/locales/tl.json",
+      "sha256": "45a778728602909c05819242939ab8b522261a77a2cf63896519ccd92f85fb7f"
+    },
+    {
+      "path": "skills/kumihan-tugma/profiles/mediums.json",
+      "sha256": "76332d22d4eed487af249c5675c6f7e94034c83c6482e77e53469b1ec2fe9792"
+    },
+    {
+      "path": "skills/kumihan-tugma/references/research-trace.json",
+      "sha256": "270f259f545aed65605e62fe5ea7a2c880c4906787a140f2468795d933985096"
+    },
+    {
+      "path": "skills/kumihan-tugma/references/workflow.md",
+      "sha256": "a5f23a2b7a52892db3141df72269748903ddaff020cccc1065ad8cb14956b484"
+    },
+    {
+      "path": "skills/kumihan-tugma/rules/catalog.json",
+      "sha256": "e38548d1bf652e27793cff6a90b40020d2b1d41ffa8af22c64a9f86d4901437b"
+    },
+    {
+      "path": "skills/kumihan-tugma/runtime/check_source.py",
+      "sha256": "3c777c38bffaa1e1a608e3d078f533d6eaf89a889449e2ff2a7b17cc800e2265"
+    },
+    {
+      "path": "skills/kumihan-tugma/schemas/report.schema.json",
+      "sha256": "84860420d090771d02ff984245f3256e88a42181119b9f58ba1383b4b1fc579f"
+    },
+    {
+      "path": "skills/kumihan-tugma/sources.json",
+      "sha256": "2a98af1e512384c87d11b441b817134a08d644af5a7e9ac32a87745ccb605b2c"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/INSTALL.md",
+      "sha256": "2b1320ad01a89a0b67f10ccce90b24526292e68980239f6c9eb9cfe999b3e3d4"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/README.md",
+      "sha256": "11f416d7f9cf944b8eae986fd6e876bbcd3c40f97a33ffec03f10159eb6cc489"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/SKILL.md",
+      "sha256": "0dca12176093a25ab3fcff1a4e7e9c1401006c903bf1a79f0ace2e3ccdc77809"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "222beb79f2a7ed08ef0c4ecaffa80db8b5c86c7147669fc02ae0741b68c5299a"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/fixtures/acceptance.json",
+      "sha256": "2c1ad1cdee3c66a74d789dbb0a57288a8066a5a83b23311d8c8cc648193c6ac7"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/inventory.json",
+      "sha256": "e1a5400e546a1cedd6b91fb3ab2fa9cf6753f971a10025b0d6d01d12f30454a7"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/locales/en.json",
+      "sha256": "b965f2d95671cd3878a73e4385cf75261c52ce277e196ee406cbd408d5619f46"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/locales/supported.json",
+      "sha256": "cfcb83c2257d776cfd3aceb06b671d812241023abfc85197b24bb226db00a618"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/locales/tl.json",
+      "sha256": "45a778728602909c05819242939ab8b522261a77a2cf63896519ccd92f85fb7f"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/profiles/mediums.json",
+      "sha256": "76332d22d4eed487af249c5675c6f7e94034c83c6482e77e53469b1ec2fe9792"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/references/research-trace.json",
+      "sha256": "270f259f545aed65605e62fe5ea7a2c880c4906787a140f2468795d933985096"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/references/workflow.md",
+      "sha256": "a5f23a2b7a52892db3141df72269748903ddaff020cccc1065ad8cb14956b484"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/rules/catalog.json",
+      "sha256": "e38548d1bf652e27793cff6a90b40020d2b1d41ffa8af22c64a9f86d4901437b"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/runtime/check_source.py",
+      "sha256": "3c777c38bffaa1e1a608e3d078f533d6eaf89a889449e2ff2a7b17cc800e2265"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/schemas/report.schema.json",
+      "sha256": "84860420d090771d02ff984245f3256e88a42181119b9f58ba1383b4b1fc579f"
+    },
+    {
+      "path": "skills/kumihan-tugma-documents/sources.json",
+      "sha256": "2a98af1e512384c87d11b441b817134a08d644af5a7e9ac32a87745ccb605b2c"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/INSTALL.md",
+      "sha256": "c836ee9320257bbe74ccd92b93e631b43e146bbb9a2ad21a8ee2c31ce2c5b20f"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/README.md",
+      "sha256": "3e6b785d338df2d27747f343d8a9d499b2c5786196fde5da2ed8f8df8b6d6030"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/SKILL.md",
+      "sha256": "7ee71a10ae392cfa3158d694bdf153bb8f9723719330e27ef4903d9dcb16ba6f"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "222beb79f2a7ed08ef0c4ecaffa80db8b5c86c7147669fc02ae0741b68c5299a"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/fixtures/acceptance.json",
+      "sha256": "2c1ad1cdee3c66a74d789dbb0a57288a8066a5a83b23311d8c8cc648193c6ac7"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/inventory.json",
+      "sha256": "e1a5400e546a1cedd6b91fb3ab2fa9cf6753f971a10025b0d6d01d12f30454a7"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/locales/en.json",
+      "sha256": "b965f2d95671cd3878a73e4385cf75261c52ce277e196ee406cbd408d5619f46"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/locales/supported.json",
+      "sha256": "cfcb83c2257d776cfd3aceb06b671d812241023abfc85197b24bb226db00a618"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/locales/tl.json",
+      "sha256": "45a778728602909c05819242939ab8b522261a77a2cf63896519ccd92f85fb7f"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/profiles/mediums.json",
+      "sha256": "76332d22d4eed487af249c5675c6f7e94034c83c6482e77e53469b1ec2fe9792"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/references/research-trace.json",
+      "sha256": "270f259f545aed65605e62fe5ea7a2c880c4906787a140f2468795d933985096"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/references/workflow.md",
+      "sha256": "a5f23a2b7a52892db3141df72269748903ddaff020cccc1065ad8cb14956b484"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/rules/catalog.json",
+      "sha256": "e38548d1bf652e27793cff6a90b40020d2b1d41ffa8af22c64a9f86d4901437b"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/runtime/check_source.py",
+      "sha256": "3c777c38bffaa1e1a608e3d078f533d6eaf89a889449e2ff2a7b17cc800e2265"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/schemas/report.schema.json",
+      "sha256": "84860420d090771d02ff984245f3256e88a42181119b9f58ba1383b4b1fc579f"
+    },
+    {
+      "path": "skills/kumihan-tugma-review/sources.json",
+      "sha256": "2a98af1e512384c87d11b441b817134a08d644af5a7e9ac32a87745ccb605b2c"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/INSTALL.md",
+      "sha256": "d326ce94666511cb948466cc9c50f28b6a4a982ba4a5c9a9940c3b56f556904b"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/README.md",
+      "sha256": "2f16f0cbd24f797587d9c6fd92aafaea6f7f6fbd0db5d85521375d662f5620cb"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/SKILL.md",
+      "sha256": "5396d3251ab8e7cafc506aa5a7115d8d3b9ed28438a35914f6971ee70a22ce52"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "222beb79f2a7ed08ef0c4ecaffa80db8b5c86c7147669fc02ae0741b68c5299a"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/fixtures/acceptance.json",
+      "sha256": "2c1ad1cdee3c66a74d789dbb0a57288a8066a5a83b23311d8c8cc648193c6ac7"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/inventory.json",
+      "sha256": "e1a5400e546a1cedd6b91fb3ab2fa9cf6753f971a10025b0d6d01d12f30454a7"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/locales/en.json",
+      "sha256": "b965f2d95671cd3878a73e4385cf75261c52ce277e196ee406cbd408d5619f46"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/locales/supported.json",
+      "sha256": "cfcb83c2257d776cfd3aceb06b671d812241023abfc85197b24bb226db00a618"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/locales/tl.json",
+      "sha256": "45a778728602909c05819242939ab8b522261a77a2cf63896519ccd92f85fb7f"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/profiles/mediums.json",
+      "sha256": "76332d22d4eed487af249c5675c6f7e94034c83c6482e77e53469b1ec2fe9792"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/references/research-trace.json",
+      "sha256": "270f259f545aed65605e62fe5ea7a2c880c4906787a140f2468795d933985096"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/references/workflow.md",
+      "sha256": "a5f23a2b7a52892db3141df72269748903ddaff020cccc1065ad8cb14956b484"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/rules/catalog.json",
+      "sha256": "e38548d1bf652e27793cff6a90b40020d2b1d41ffa8af22c64a9f86d4901437b"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/runtime/check_source.py",
+      "sha256": "3c777c38bffaa1e1a608e3d078f533d6eaf89a889449e2ff2a7b17cc800e2265"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/schemas/report.schema.json",
+      "sha256": "84860420d090771d02ff984245f3256e88a42181119b9f58ba1383b4b1fc579f"
+    },
+    {
+      "path": "skills/kumihan-tugma-web/sources.json",
+      "sha256": "2a98af1e512384c87d11b441b817134a08d644af5a7e9ac32a87745ccb605b2c"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "2a98af1e512384c87d11b441b817134a08d644af5a7e9ac32a87745ccb605b2c"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 31,
+  "scope": "Deterministic offline consumer packages; native host invocation and rendering not checked",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-tugma-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4074086,
+      "sha256": "a63003858475ae1ea2ec58c14e632bb4ba38cffe420f7d066ba467102664d897",
+      "members": 91,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4074811,
+      "sha256": "ec7b11916a9f4146052fd3455d5051a0b248180e67c3679a954c90da240d400b",
+      "members": 92,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4074458,
+      "sha256": "af94a7a289665521f437bc973386cb003a61f0db9d7f348073d214fb35e8b896",
+      "members": 92,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-claude-skill-v0.1.0.zip",
+      "bytes": 814054,
+      "sha256": "339f8dcd1bb57ce93c904423bb7866e1eb522014500e55c34672cc34e6417fff",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-tugma",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-documents-claude-skill-v0.1.0.zip",
+      "bytes": 814401,
+      "sha256": "e61c3980804c2cb6ae17d0ec33549aa4914a9f94918cad5f90a706a83ee809ed",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-tugma-documents",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 814401,
+      "sha256": "e61c3980804c2cb6ae17d0ec33549aa4914a9f94918cad5f90a706a83ee809ed",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-tugma-documents",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 814401,
+      "sha256": "e61c3980804c2cb6ae17d0ec33549aa4914a9f94918cad5f90a706a83ee809ed",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-tugma-documents",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-gemini-skill-v0.1.0.zip",
+      "bytes": 814054,
+      "sha256": "339f8dcd1bb57ce93c904423bb7866e1eb522014500e55c34672cc34e6417fff",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-tugma",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 814054,
+      "sha256": "339f8dcd1bb57ce93c904423bb7866e1eb522014500e55c34672cc34e6417fff",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-tugma",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-review-claude-skill-v0.1.0.zip",
+      "bytes": 814282,
+      "sha256": "3747d3f18c8bb6f79c0c75065d2d3b8b6a44c69ee2dab6062d022098c8fb79a7",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-tugma-review",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-review-gemini-skill-v0.1.0.zip",
+      "bytes": 814282,
+      "sha256": "3747d3f18c8bb6f79c0c75065d2d3b8b6a44c69ee2dab6062d022098c8fb79a7",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-tugma-review",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 814282,
+      "sha256": "3747d3f18c8bb6f79c0c75065d2d3b8b6a44c69ee2dab6062d022098c8fb79a7",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-tugma-review",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-web-claude-skill-v0.1.0.zip",
+      "bytes": 814182,
+      "sha256": "d0f451d7a728268fe31d91f0c4a2a5dbf65944ababa8390a553e1bd4d0bcf6ac",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-tugma-web",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-web-gemini-skill-v0.1.0.zip",
+      "bytes": 814182,
+      "sha256": "d0f451d7a728268fe31d91f0c4a2a5dbf65944ababa8390a553e1bd4d0bcf6ac",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-tugma-web",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    },
+    {
+      "file": "kumihan-tugma-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 814182,
+      "sha256": "d0f451d7a728268fe31d91f0c4a2a5dbf65944ababa8390a553e1bd4d0bcf6ac",
+      "members": 18,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-tugma-web",
+      "slug": "kumihan-tugma",
+      "version": "0.1.0",
+      "source_sha256": "1775bbcc5ab3be9802c2aa518a38cf6c5a5525202e92ff00e26c060815af6e88"
+    }
+  ]
+}

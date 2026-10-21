@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜विन्यास -Vinyāsa",
+  "slug": "kumihan-vinyasa",
+  "language": "sa",
+  "version": "0.1.0",
+  "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "79ddc9bcada40a5d30363cc8e664e803447c734fdbaf80471ac7e216e9cc3ac0"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "84afa05e32184659980ce5c30fb8e39a760b29f780fc3fa3240ba3f2ba8f6ea3"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "5ef0ae59ab58907800413b50cf532561a27a2d8993fecb6d6604f9cd777576d1"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "2db1dfeb1a3702def4bd4c48f0e3572980fa472018e20956fb26e05361c5d530"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "5e1658d368318b4fb31e46ed01dc4d95f5587eecea345449bd28f6ab83c4636e"
+    },
+    {
+      "path": "README.md",
+      "sha256": "070e67cde636973f5acf127603c25203776dde66db0c7dc8a5472a94c2494f96"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "84b4645d13e8c24781425001ceeea21104621ea90ad4728ada18a42cc4a6a006"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "3165a3b693c0b3aaa7c69c37417e295da0ea574550552ef1839beae25c060529"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "7b37614502dcaa77c6b2e524297f53776843195383997ebda777b97d03cec488"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "1e8d932af469bdcd0092c07015c7056e065b24d1d0b13236c004be6b39e800f4"
+    },
+    {
+      "path": "locales/sa.json",
+      "sha256": "340ade94377c6b9dc765d8c1eb111764989ff7a171b816fb714c2fc09068187a"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "1abf47297bb774402ec6ded18b73d4939ca5a0029012a4a27cc64d92e26b0cc7"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "805d0f3b488451a9d083e8af44ae97466f539bc05d9416ba51788227fe35b854"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "910b823a57a4cd2548628a1a65b39693bbd664621d697763f6381dbc3af88b42"
+    },
+    {
+      "path": "references/research-trace.json",
+      "sha256": "b369839a62512cc298ecac59edeb60548d395347c23de77ec3d7be3987b1cdee"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "e63a253d2f92c6beefae0acde39af146e96d65636247ff9a01a0f9ba1638ebcb"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "0d56cc08beefd078b0f926d41f0ec1384ef6433cc8b190a3bbf2ba646e15569b"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "2adc99d9481b89fadf1525ff757b72ce9b8cbe2b9942b49a1aa4bf1e2493a3ee"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/NOTICE",
+      "sha256": "5e1658d368318b4fb31e46ed01dc4d95f5587eecea345449bd28f6ab83c4636e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/SKILL.md",
+      "sha256": "fce57fd7224f9dc04d2c886037fd5678c17acc0e57d4594c896557e71027d544"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/fixtures/acceptance.json",
+      "sha256": "3165a3b693c0b3aaa7c69c37417e295da0ea574550552ef1839beae25c060529"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/inventory.json",
+      "sha256": "1e8d932af469bdcd0092c07015c7056e065b24d1d0b13236c004be6b39e800f4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/locales/sa.json",
+      "sha256": "340ade94377c6b9dc765d8c1eb111764989ff7a171b816fb714c2fc09068187a"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/locales/supported.json",
+      "sha256": "1abf47297bb774402ec6ded18b73d4939ca5a0029012a4a27cc64d92e26b0cc7"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/profiles/mediums.json",
+      "sha256": "910b823a57a4cd2548628a1a65b39693bbd664621d697763f6381dbc3af88b42"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/references/research-trace.json",
+      "sha256": "b369839a62512cc298ecac59edeb60548d395347c23de77ec3d7be3987b1cdee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/references/workflow.md",
+      "sha256": "e63a253d2f92c6beefae0acde39af146e96d65636247ff9a01a0f9ba1638ebcb"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/rules/catalog.json",
+      "sha256": "0d56cc08beefd078b0f926d41f0ec1384ef6433cc8b190a3bbf2ba646e15569b"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/runtime/check_source.py",
+      "sha256": "2adc99d9481b89fadf1525ff757b72ce9b8cbe2b9942b49a1aa4bf1e2493a3ee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-vinyasa/sources.json",
+      "sha256": "6248fca5d8c483062b39d1a4a05f1a85006c6eb76cd59bec0dee4bfe9f5e65a6"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/NOTICE",
+      "sha256": "5e1658d368318b4fb31e46ed01dc4d95f5587eecea345449bd28f6ab83c4636e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/SKILL.md",
+      "sha256": "d336b932f45ee82d01d8270ffc0ebd51124f7b60d3c11e66aa8d9b2ec45dbc35"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/fixtures/acceptance.json",
+      "sha256": "3165a3b693c0b3aaa7c69c37417e295da0ea574550552ef1839beae25c060529"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/inventory.json",
+      "sha256": "1e8d932af469bdcd0092c07015c7056e065b24d1d0b13236c004be6b39e800f4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/locales/sa.json",
+      "sha256": "340ade94377c6b9dc765d8c1eb111764989ff7a171b816fb714c2fc09068187a"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/locales/supported.json",
+      "sha256": "1abf47297bb774402ec6ded18b73d4939ca5a0029012a4a27cc64d92e26b0cc7"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/profiles/mediums.json",
+      "sha256": "910b823a57a4cd2548628a1a65b39693bbd664621d697763f6381dbc3af88b42"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/references/research-trace.json",
+      "sha256": "b369839a62512cc298ecac59edeb60548d395347c23de77ec3d7be3987b1cdee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/references/workflow.md",
+      "sha256": "e63a253d2f92c6beefae0acde39af146e96d65636247ff9a01a0f9ba1638ebcb"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/rules/catalog.json",
+      "sha256": "0d56cc08beefd078b0f926d41f0ec1384ef6433cc8b190a3bbf2ba646e15569b"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/runtime/check_source.py",
+      "sha256": "2adc99d9481b89fadf1525ff757b72ce9b8cbe2b9942b49a1aa4bf1e2493a3ee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-documents/sources.json",
+      "sha256": "6248fca5d8c483062b39d1a4a05f1a85006c6eb76cd59bec0dee4bfe9f5e65a6"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/NOTICE",
+      "sha256": "5e1658d368318b4fb31e46ed01dc4d95f5587eecea345449bd28f6ab83c4636e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/SKILL.md",
+      "sha256": "ad08826c33d5794d4c71d9ec0d32b0aeeb58d4ffd8d1503d8309e8046f2d6705"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/fixtures/acceptance.json",
+      "sha256": "3165a3b693c0b3aaa7c69c37417e295da0ea574550552ef1839beae25c060529"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/inventory.json",
+      "sha256": "1e8d932af469bdcd0092c07015c7056e065b24d1d0b13236c004be6b39e800f4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/locales/sa.json",
+      "sha256": "340ade94377c6b9dc765d8c1eb111764989ff7a171b816fb714c2fc09068187a"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/locales/supported.json",
+      "sha256": "1abf47297bb774402ec6ded18b73d4939ca5a0029012a4a27cc64d92e26b0cc7"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/profiles/mediums.json",
+      "sha256": "910b823a57a4cd2548628a1a65b39693bbd664621d697763f6381dbc3af88b42"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/references/research-trace.json",
+      "sha256": "b369839a62512cc298ecac59edeb60548d395347c23de77ec3d7be3987b1cdee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/references/workflow.md",
+      "sha256": "e63a253d2f92c6beefae0acde39af146e96d65636247ff9a01a0f9ba1638ebcb"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/rules/catalog.json",
+      "sha256": "0d56cc08beefd078b0f926d41f0ec1384ef6433cc8b190a3bbf2ba646e15569b"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/runtime/check_source.py",
+      "sha256": "2adc99d9481b89fadf1525ff757b72ce9b8cbe2b9942b49a1aa4bf1e2493a3ee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-review/sources.json",
+      "sha256": "6248fca5d8c483062b39d1a4a05f1a85006c6eb76cd59bec0dee4bfe9f5e65a6"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/NOTICE",
+      "sha256": "5e1658d368318b4fb31e46ed01dc4d95f5587eecea345449bd28f6ab83c4636e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/SKILL.md",
+      "sha256": "0f0609844a028c43842b4ad5643de40b8ae57fd0e0d19106ddc09440885f3fa5"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/fixtures/acceptance.json",
+      "sha256": "3165a3b693c0b3aaa7c69c37417e295da0ea574550552ef1839beae25c060529"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/inventory.json",
+      "sha256": "1e8d932af469bdcd0092c07015c7056e065b24d1d0b13236c004be6b39e800f4"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/locales/sa.json",
+      "sha256": "340ade94377c6b9dc765d8c1eb111764989ff7a171b816fb714c2fc09068187a"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/locales/supported.json",
+      "sha256": "1abf47297bb774402ec6ded18b73d4939ca5a0029012a4a27cc64d92e26b0cc7"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/profiles/mediums.json",
+      "sha256": "910b823a57a4cd2548628a1a65b39693bbd664621d697763f6381dbc3af88b42"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/references/research-trace.json",
+      "sha256": "b369839a62512cc298ecac59edeb60548d395347c23de77ec3d7be3987b1cdee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/references/workflow.md",
+      "sha256": "e63a253d2f92c6beefae0acde39af146e96d65636247ff9a01a0f9ba1638ebcb"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/rules/catalog.json",
+      "sha256": "0d56cc08beefd078b0f926d41f0ec1384ef6433cc8b190a3bbf2ba646e15569b"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/runtime/check_source.py",
+      "sha256": "2adc99d9481b89fadf1525ff757b72ce9b8cbe2b9942b49a1aa4bf1e2493a3ee"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-vinyasa-web/sources.json",
+      "sha256": "6248fca5d8c483062b39d1a4a05f1a85006c6eb76cd59bec0dee4bfe9f5e65a6"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "6248fca5d8c483062b39d1a4a05f1a85006c6eb76cd59bec0dee4bfe9f5e65a6"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 20,
+  "scope": "Deterministic offline consumer packages; native host invocation and rendering not checked",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-vinyasa-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4050026,
+      "sha256": "5e52a2c9d764a282a1e02759b7b557825662d0e01561fbb110c743b20924853a",
+      "members": 78,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4050842,
+      "sha256": "cdf3e975effde233e03851b33695e3be019e0a2105f7c5d62d6efbb22f692495",
+      "members": 79,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4050486,
+      "sha256": "66dffcdf658a0e995f80a70ee9753fd2772125efc2637fa09f8e4ac6b4bc287a",
+      "members": 79,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-claude-skill-v0.1.0.zip",
+      "bytes": 808983,
+      "sha256": "dfe8fddbdedfc0bc5ef0091cb9fdcc1be26d4ffa7b3bed8c189d556cace04c69",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-documents-claude-skill-v0.1.0.zip",
+      "bytes": 809283,
+      "sha256": "64c3e5a25e0d03bb36e3be4433f63efa670ec08c945f5c37f587ce3a2ef9b693",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-documents",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 809283,
+      "sha256": "64c3e5a25e0d03bb36e3be4433f63efa670ec08c945f5c37f587ce3a2ef9b693",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-documents",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809283,
+      "sha256": "64c3e5a25e0d03bb36e3be4433f63efa670ec08c945f5c37f587ce3a2ef9b693",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-documents",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-gemini-skill-v0.1.0.zip",
+      "bytes": 808983,
+      "sha256": "dfe8fddbdedfc0bc5ef0091cb9fdcc1be26d4ffa7b3bed8c189d556cace04c69",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 808983,
+      "sha256": "dfe8fddbdedfc0bc5ef0091cb9fdcc1be26d4ffa7b3bed8c189d556cace04c69",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-review-claude-skill-v0.1.0.zip",
+      "bytes": 809192,
+      "sha256": "00c23be9e7ed9fe45e215b916f598f926d1bd05aeb9f84a3ec03b13e7e339d29",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-review",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-review-gemini-skill-v0.1.0.zip",
+      "bytes": 809192,
+      "sha256": "00c23be9e7ed9fe45e215b916f598f926d1bd05aeb9f84a3ec03b13e7e339d29",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-review",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809192,
+      "sha256": "00c23be9e7ed9fe45e215b916f598f926d1bd05aeb9f84a3ec03b13e7e339d29",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-review",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-web-claude-skill-v0.1.0.zip",
+      "bytes": 809100,
+      "sha256": "68ac317e324b4137dfc47d48ae6d7cea5e3651e2933b6c2b291dcddd695d0169",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-web",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-web-gemini-skill-v0.1.0.zip",
+      "bytes": 809100,
+      "sha256": "68ac317e324b4137dfc47d48ae6d7cea5e3651e2933b6c2b291dcddd695d0169",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-web",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    },
+    {
+      "file": "kumihan-vinyasa-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809100,
+      "sha256": "68ac317e324b4137dfc47d48ae6d7cea5e3651e2933b6c2b291dcddd695d0169",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-vinyasa-web",
+      "slug": "kumihan-vinyasa",
+      "version": "0.1.0",
+      "source_sha256": "72530b047cd8cb29217dfd5168e20990048e305e4656dd6835d05b3a21350090"
+    }
+  ]
+}

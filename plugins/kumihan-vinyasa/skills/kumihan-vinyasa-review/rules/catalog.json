@@ -1,0 +1,419 @@
+[
+  {
+    "id": "SA-001",
+    "title": "Identify language and script",
+    "condition": "When Sanskrit is explicit, record sa-Deva or sa-Latn as supplied; sa alone needs script confirmation.",
+    "guidance": "When Sanskrit is explicit, record sa-Deva or sa-Latn as supplied; sa alone needs script confirmation. Devanagari also writes other languages. Never infer Sanskrit from script alone.",
+    "exception": "Hindi or Marathi text receives no Sanskrit editorial adoption.",
+    "source_ids": [
+      "TYPE-10",
+      "TYPE-11"
+    ],
+    "source_id": "TYPE-10",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-002",
+    "title": "Protect exact source",
+    "condition": "Before review, retain source bytes, names, numbers, quotations, code and line structure.",
+    "guidance": "Before review, retain source bytes, names, numbers, quotations, code and line structure. Keep all suggestions separate; normalization is never authorization to rewrite.",
+    "exception": "A separately authorized normalized derivative must not replace the original.",
+    "source_ids": [
+      "TYPE-04",
+      "TYPE-18"
+    ],
+    "source_id": "TYPE-04",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-003",
+    "title": "Keep conjuncts intact",
+    "condition": "When Devanagari is supplied, preserve virama, consonant sequences, matras, repha, ZWJ/ZWNJ and logical order.",
+    "guidance": "When Devanagari is supplied, preserve virama, consonant sequences, matras, repha, ZWJ/ZWNJ and logical order. Review grapheme and shaping clusters in the target engine before any break or spacing adjustment.",
+    "exception": "Do not simulate visual order by moving Unicode code points.",
+    "source_ids": [
+      "TYPE-01",
+      "TYPE-02",
+      "TYPE-08"
+    ],
+    "source_id": "TYPE-01",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-004",
+    "title": "Respect line boundaries",
+    "condition": "For Devanagari compounds, try column width and language-aware line breaking before hyphenation.",
+    "guidance": "For Devanagari compounds, try column width and language-aware line breaking before hyphenation. Do not insert spaces or discretionary characters into Sanskrit automatically.",
+    "exception": "Manual educational segmentation belongs in a separately labelled derivative.",
+    "source_ids": [
+      "TYPE-03",
+      "TYPE-06",
+      "TYPE-07",
+      "H05"
+    ],
+    "source_id": "TYPE-03",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-005",
+    "title": "IAST is explicit",
+    "condition": "For sa-Latn preserve ā ī ū ṛ ṝ ḷ ḹ ṅ ñ ṭ ḍ ṇ ś ṣ ṃ ḥ and combining forms exactly.",
+    "guidance": "For sa-Latn preserve ā ī ū ṛ ṝ ḷ ḹ ṅ ñ ṭ ḍ ṇ ś ṣ ṃ ḥ and combining forms exactly. Ask which transliteration scheme is intended; do not equate IAST and ISO 15919 or auto-transliterate.",
+    "exception": "Roman letters or diacritics alone do not prove Sanskrit.",
+    "source_ids": [
+      "TYPE-14",
+      "TYPE-15",
+      "TYPE-04"
+    ],
+    "source_id": "TYPE-14",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-006",
+    "title": "Accents require expertise",
+    "condition": "If Vedic accents occur, retain all marks and ask for tradition, edition and specialist reference.",
+    "guidance": "If Vedic accents occur, retain all marks and ask for tradition, edition and specialist reference. Check mark collisions in the exact font/renderer; report linguistic correctness needs-review.",
+    "exception": "Classical Sanskrit coverage does not certify Vedic recitation or manuscript readings.",
+    "source_ids": [
+      "TYPE-17",
+      "TYPE-01"
+    ],
+    "source_id": "TYPE-17",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-007",
+    "title": "Preserve verse structure",
+    "condition": "For verse keep pāda, stanza, caesura markers and numbering supplied by the edition.",
+    "guidance": "For verse keep pāda, stanza, caesura markers and numbering supplied by the edition. Avoid changing line order to balance a display layout; metrical weight is not pixel width.",
+    "exception": "A poster may propose an alternative layout only beside the complete reading text.",
+    "source_ids": [
+      "H06",
+      "TYPE-18"
+    ],
+    "source_id": "H06",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-008",
+    "title": "Punctuation is contextual",
+    "condition": "When danda, double danda or avagraha occurs, preserve it and confirm edition conventions before proposing alternatives.",
+    "guidance": "When danda, double danda or avagraha occurs, preserve it and confirm edition conventions before proposing alternatives. Modern punctuation is not a universal error.",
+    "exception": "Do not project a textbook convention onto every historical manuscript or script.",
+    "source_ids": [
+      "H07",
+      "TYPE-01"
+    ],
+    "source_id": "H07",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-009",
+    "title": "Compare font coverage",
+    "condition": "For Devanagari compare licensed Tiro Devanagari Sanskrit, Shobhika or Noto candidates on the actual source, including conjuncts and accents.",
+    "guidance": "For Devanagari compare licensed Tiro Devanagari Sanskrit, Shobhika or Noto candidates on the actual source, including conjuncts and accents. Record file version and fallback. No font bytes are bundled.",
+    "exception": "Font family reputation is not evidence of complete Sanskrit coverage.",
+    "source_ids": [
+      "TYPE-20",
+      "TYPE-21",
+      "TYPE-26"
+    ],
+    "source_id": "TYPE-20",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-010",
+    "title": "Check IAST fallback",
+    "condition": "When mixing Devanagari and IAST, inspect all diacritics at body and note sizes; record the actual fallback face.",
+    "guidance": "When mixing Devanagari and IAST, inspect all diacritics at body and note sizes; record the actual fallback face. Do not substitute plain Latin letters to conceal missing glyphs.",
+    "exception": "Coverage and visual rhythm need separate checks.",
+    "source_ids": [
+      "TYPE-15",
+      "TYPE-26"
+    ],
+    "source_id": "TYPE-15",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-011",
+    "title": "Readable body first",
+    "condition": "For screen reading compare source-text specimens at audience-appropriate sizes and widths, then test zoom/reflow.",
+    "guidance": "For screen reading compare source-text specimens at audience-appropriate sizes and widths, then test zoom/reflow. A research starting point of 20–24 CSS px and line-height 1.65–1.9 for experienced adult Devanagari readers is untested guidance, not a standard.",
+    "exception": "For IAST, UI, print or different audiences choose a separate comparison rather than reusing this range.",
+    "source_ids": [
+      "TYPE-06",
+      "TYPE-07",
+      "R04"
+    ],
+    "source_id": "TYPE-06",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-012",
+    "title": "Avoid clipped marks",
+    "condition": "For UI labels and slides containing stacked marks, remove fixed-height clipping risks and test ascent, descent and fallback at final size.",
+    "guidance": "For UI labels and slides containing stacked marks, remove fixed-height clipping risks and test ascent, descent and fallback at final size. Prefer flexible containers and wrap checks over letter compression.",
+    "exception": "Static source diagnostics cannot establish rendered ink bounds.",
+    "source_ids": [
+      "TYPE-07",
+      "TYPE-08",
+      "R04"
+    ],
+    "source_id": "TYPE-07",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-013",
+    "title": "Separate original and translation",
+    "condition": "When Sanskrit, IAST, translation and commentary coexist, distinguish language and role semantically and visually while retaining corresponding verse or paragraph anchors.",
+    "guidance": "When Sanskrit, IAST, translation and commentary coexist, distinguish language and role semantically and visually while retaining corresponding verse or paragraph anchors. Do not shrink a primary reading route into decorative notes.",
+    "exception": "Translation and transliteration require separate explicit authorization.",
+    "source_ids": [
+      "R11",
+      "R12",
+      "TYPE-11"
+    ],
+    "source_id": "R11",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-014",
+    "title": "Chanting layout",
+    "condition": "For recitation material compare restart positions, verse spacing and accent visibility with practitioners of the specified tradition.",
+    "guidance": "For recitation material compare restart positions, verse spacing and accent visibility with practitioners of the specified tradition. Keep a full readable text alongside expressive headings.",
+    "exception": "No universal chanting font size or tradition-wide validation is claimed.",
+    "source_ids": [
+      "R13",
+      "TYPE-17"
+    ],
+    "source_id": "R13",
+    "media": [
+      "documents",
+      "web",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-015",
+    "title": "Accessible expression",
+    "condition": "For graphic headings retain a selectable textual equivalent and readable hierarchy.",
+    "guidance": "For graphic headings retain a selectable textual equivalent and readable hierarchy. Check contrast, zoom, reflow and reading order in the target output; never label a static-only review accessible PASS.",
+    "exception": "WCAG text-spacing override resilience is not a universal Sanskrit initial tracking value.",
+    "source_ids": [
+      "R04",
+      "R05",
+      "TYPE-07"
+    ],
+    "source_id": "R04",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-016",
+    "title": "Spacing respects clusters",
+    "condition": "For Devanagari avoid arbitrary tracking inside shaping clusters; inspect word spacing, column width and paragraph rhythm first.",
+    "guidance": "For Devanagari avoid arbitrary tracking inside shaping clusters; inspect word spacing, column width and paragraph rhythm first. For IAST compare actual diacritics before display tracking.",
+    "exception": "A visual treatment may be proposed separately, preserving source and reading copy.",
+    "source_ids": [
+      "TYPE-02",
+      "TYPE-06",
+      "TYPE-07"
+    ],
+    "source_id": "TYPE-02",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-017",
+    "title": "Print needs physical checks",
+    "condition": "For print compare body, note and caption samples at final scale; retain marks in embedded fonts and test search/copy and print output.",
+    "guidance": "For print compare body, note and caption samples at final scale; retain marks in embedded fonts and test search/copy and print output. Separate PDF export from native document acceptance.",
+    "exception": "No Office, PDF renderer or physical print result is implied by this package.",
+    "source_ids": [
+      "R04",
+      "R11",
+      "TYPE-08"
+    ],
+    "source_id": "R04",
+    "media": [
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-018",
+    "title": "Historical scripts are bounded",
+    "condition": "For Grantha, Śāradā, Siddham, Newa, Rañjanā or a manuscript transcription, retain exact supplied content and require script-specific expertise.",
+    "guidance": "For Grantha, Śāradā, Siddham, Newa, Rañjanā or a manuscript transcription, retain exact supplied content and require script-specific expertise. Do not apply sa-Deva glyph rules as universal Sanskrit rules.",
+    "exception": "Coverage here is sa-Deva and explicitly identified IAST; other scripts are needs-review.",
+    "source_ids": [
+      "TYPE-01",
+      "TYPE-18"
+    ],
+    "source_id": "TYPE-01",
+    "media": [
+      "entry",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-019",
+    "title": "Keep rights explicit",
+    "condition": "Before recommending or redistributing a font, inspect its actual license and version.",
+    "guidance": "Before recommending or redistributing a font, inspect its actual license and version. A free download is not redistribution permission; Murty licensing differs from open-font licensing.",
+    "exception": "Only the official product PNG and Apache-2.0 product files are included.",
+    "source_ids": [
+      "TYPE-20",
+      "TYPE-21",
+      "TYPE-25",
+      "TYPE-26"
+    ],
+    "source_id": "TYPE-20",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  },
+  {
+    "id": "SA-020",
+    "title": "Report evidence limits",
+    "condition": "Return source hash, explicit locale/script, medium, relevant rule/source IDs, separate proposals and evidence status.",
+    "guidance": "Return source hash, explicit locale/script, medium, relevant rule/source IDs, separate proposals and evidence status. Record host, renderer, browser, assistive technology and native Office/PDF checks not_checked until executed.",
+    "exception": "A byte-integrity PASS is not a typography, language or rendering PASS.",
+    "source_ids": [
+      "TYPE-08",
+      "TYPE-18",
+      "R04"
+    ],
+    "source_id": "TYPE-08",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "source-informed conditional guidance; native rendering not_checked"
+  }
+]

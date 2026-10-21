@@ -1,0 +1,142 @@
+[
+  {
+    "id": "MY-F01",
+    "text": "ဟန်ချက်",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F02",
+    "text": "my-MM",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F03",
+    "text": "မြန်မာ",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F04",
+    "text": "က္က ကိ ကီ ကု ကူ ကေ ကျ ကြ",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F05",
+    "text": "မြန်မာစာ",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F06",
+    "text": "မြန်မာစာ ရေးသားခြင်း",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F07",
+    "text": "ဝ ၀ ၀၁၂၃၄၅၆၇၈၉ ၊ ။",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F08",
+    "text": "သည် တယ် နှင့် နဲ့",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F09",
+    "text": "မည် မယ်",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F10",
+    "text": "lang=\"my\"",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F11",
+    "text": "က က္က 123 ABC",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F12",
+    "text": "ကျောင်း ကု ကူ",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F13",
+    "text": "16/28; 18/32; ratio 1.875–2.444",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F14",
+    "text": "ဟန်ချက်",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F15",
+    "text": "ခေါင်းစဉ်",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F16",
+    "text": "မြန်မာစာ",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F17",
+    "text": "၀ 0",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F18",
+    "text": "ကျောင်း ၀၁၂၃",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F19",
+    "text": "Padauk; Noto Myanmar",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-F20",
+    "text": "မူရင်း",
+    "locale": "my-MM",
+    "expected": "exact UTF-8 bytes preserved; guidance-only; renderer not_checked"
+  },
+  {
+    "id": "MY-NEG01",
+    "text": "မြန်မာ",
+    "locale": "shn",
+    "expected": "unsupported locale; no Burmese rules"
+  },
+  {
+    "id": "MY-NEG02",
+    "text": "ဝ ၀",
+    "candidate": "၀ ဝ",
+    "locale": "my",
+    "expected": "failed exact-byte integrity"
+  },
+  {
+    "id": "MY-NEG03",
+    "text": "က္က",
+    "candidate": "က က",
+    "locale": "my",
+    "expected": "failed exact-byte integrity"
+  }
+]

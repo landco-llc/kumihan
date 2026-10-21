@@ -1,0 +1,10 @@
+{
+  "language": "sa",
+  "locales": [
+    "sa",
+    "sa-Deva",
+    "sa-Latn"
+  ],
+  "script_policy": "sa requires explicit script confirmation; sa-Latn only when IAST identified",
+  "fallback": "unsupported locale receives no Sanskrit rule adoption"
+}

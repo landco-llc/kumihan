@@ -1,0 +1,773 @@
+[
+  {
+    "id": "TL-001",
+    "title": "Explicit language",
+    "title_tl": "Tukuyin ang wika",
+    "guidance": "When language metadata is supplied, retain tl or tl-PH as requested. Filipino fil is a separate requested identity; runtime aliasing does not authorize replacing the source language.",
+    "guidance_tl": "Panatilihin ang tinukoy na tl o tl-PH; huwag awtomatikong palitan ng fil.",
+    "condition": "language-metadata",
+    "exceptions": "Language unknown: ask rather than infer from Latin script.",
+    "example": "A library resolves tl to fil: report requested and resolved values separately.",
+    "media": [
+      "entry",
+      "review"
+    ],
+    "source_id": "L01",
+    "source_ids": [
+      "L01",
+      "L02",
+      "L03"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-003",
+    "title": "Language and script",
+    "title_tl": "Ihiwalay ang wika at sulat",
+    "guidance": "Record Tagalog language separately from Latin or Baybayin script. A font called Tagalog need not cover Latin prose or the peso sign.",
+    "guidance_tl": "Ihiwalay ang wika, sistema ng pagsulat at saklaw ng font.",
+    "condition": "script-scope",
+    "exceptions": "Do not infer a language from a font name.",
+    "example": "Tagalog Latin text and Baybayin text require separate font coverage tests.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L02",
+    "source_ids": [
+      "L02",
+      "L05",
+      "L07"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-004",
+    "title": "Register and house style",
+    "title_tl": "Tukuyin ang estilo",
+    "guidance": "Record audience, purpose and agreed editorial guide. Formal KWF orthography and a particular product voice apply within their scopes; neither overrides a quotation or brand name.",
+    "guidance_tl": "Iayon ang estilo sa mambabasa at gamit; panatilihin ang sipi at pangalan.",
+    "condition": "editorial-profile",
+    "exceptions": "No house style: provide conditional suggestions only.",
+    "example": "Use the supplied glossary in a financial UI.",
+    "media": [
+      "entry",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L08",
+      "L17",
+      "L21"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-005",
+    "title": "Preserve the original",
+    "title_tl": "Pangalagaan ang orihinal",
+    "guidance": "Keep exact UTF-8 bytes, names, numbers, punctuation, IDs and quotations. Separate layout advice, editorial suggestions and explicitly authorized rewriting. Never normalize or translate silently.",
+    "guidance_tl": "Panatilihin ang orihinal; ihiwalay ang mungkahi sa pagbabago ng teksto.",
+    "condition": "source-protection",
+    "exceptions": "Even equivalent Unicode normalization changes original bytes.",
+    "example": "Compare a candidate without overwriting the source.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L08"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-007",
+    "title": "Context for ng and nang",
+    "title_tl": "Suriin ang ng at nang sa konteksto",
+    "guidance": "If reviewing ng/nang, examine syntax and meaning with the chosen editorial authority; do not substitute by word length or adjacent suffix. na+ng and na+ang are not interchangeable contractions.",
+    "guidance_tl": "Suriin ang kahulugan at pangungusap bago magmungkahi ng ng o nang.",
+    "condition": "orthography-ng-nang",
+    "exceptions": "A quotation or unreviewed sentence remains unchanged.",
+    "example": "Flag ng/nang for contextual review rather than batch correction.",
+    "media": [
+      "review",
+      "documents"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L21"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-008",
+    "title": "din/rin and daw/raw",
+    "title_tl": "Huwag labis na iwasto ang din at rin",
+    "guidance": "Explain phonological recommendations and KWF allowances before suggesting a style edit. Never replace every din after a vowel or every daw with raw.",
+    "guidance_tl": "Huwag basta palitan ang din/rin o daw/raw; mahalaga ang konteksto.",
+    "condition": "orthography-din-rin",
+    "exceptions": "House-style consistency is an optional editorial proposal.",
+    "example": "Ako din is retained for contextual review.",
+    "media": [
+      "review",
+      "documents"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-009",
+    "title": "Diacritics preserve information",
+    "title_tl": "Panatilihin ang tuldik",
+    "guidance": "Preserve acute, grave and circumflex in source words and names. Check font coverage and clipping; do not invent missing accents. Keep the approved brand Tugma distinct from dictionary pronunciation tugmâ.",
+    "guidance_tl": "Panatilihin ang tuldik at ang napagkasunduang baybay ng pangalan.",
+    "condition": "orthography-diacritics",
+    "exceptions": "An unaccented brand is not automatically an error.",
+    "example": "Retain búhay, buháy and tugmâ exactly as supplied.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L21",
+      "TN01",
+      "TN09"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-010",
+    "title": "Character repertoire",
+    "title_tl": "Subukan ang ñ at ₱",
+    "guidance": "Test ñ/Ñ, source accents, combining sequences, punctuation, digits and ₱ in the actual font files and exports. Add characters required by names or other languages without calling all of them the Tagalog alphabet.",
+    "guidance_tl": "Subukan ang ñ, mga tuldik at ₱ sa aktuwal na font at export.",
+    "condition": "character-repertoire",
+    "exceptions": "ASCII coverage alone does not establish language coverage.",
+    "example": "Peña — ₱1,250.00 remains intact.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L19",
+      "TF14",
+      "TF16"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-011",
+    "title": "Normalization is separate",
+    "title_tl": "Huwag baguhin ang Unicode",
+    "guidance": "Compare exact bytes first. Canonical equivalence is a derived diagnostic and never permission to rewrite the original. Keep composed and decomposed diacritics intact through storage and export.",
+    "guidance_tl": "Ihiwalay ang pagsusuri ng Unicode sa pagbabago ng orihinal.",
+    "condition": "unicode-normalization",
+    "exceptions": "Invalid UTF-8 is rejected without rewriting a file.",
+    "example": "á and a + U+0301 can be equivalent but byte-distinct.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "UNI01",
+    "source_ids": [
+      "UNI01",
+      "L07"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-012",
+    "title": "Grapheme integrity",
+    "title_tl": "Panatilihin ang magkakaugnay na titik",
+    "guidance": "Treat combining sequences as units for visual review; orthographic ng and default Unicode grapheme boundaries are different concepts. Never add spaces or split accent marks to create tracking.",
+    "guidance_tl": "Huwag hatiin ang titik at kasamang tuldik para lamang sa ayos.",
+    "condition": "text-segmentation",
+    "exceptions": "The static checker does not implement shaping or grapheme segmentation.",
+    "example": "Inspect composed and decomposed vowels at display and body sizes.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "UNI02",
+    "source_ids": [
+      "UNI02",
+      "L07"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-013",
+    "title": "Hyphenation versus spelling",
+    "title_tl": "Ihiwalay ang gitling at paghahati sa dulo",
+    "guidance": "Preserve lexical hyphens in reduplication, affixes and borrowed forms. Treat line-end hyphenation as a separate renderer setting requiring a suitable dictionary and reader review.",
+    "guidance_tl": "Panatilihin ang gitling sa salita; hiwalay ang paghahati sa dulo ng linya.",
+    "condition": "hyphenation",
+    "exceptions": "English hyphenation support does not establish Tagalog support.",
+    "example": "Retain araw-araw; test wrapping without writing breaks into the source.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L08",
+      "L17"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-014",
+    "title": "Punctuation by function",
+    "title_tl": "Suriin ang bantas ayon sa gamit",
+    "guidance": "Distinguish an omission apostrophe, opening quote, hyphen and dash by intended function. Preserve supplied characters and propose changes only with contextual editorial permission.",
+    "guidance_tl": "Suriin ang kudlit, panipi at gatlang ayon sa gamit.",
+    "condition": "punctuation",
+    "exceptions": "Conflicting dictionary examples require review, not an invented rule.",
+    "example": "Retain ’di and quoted text; do not apply blanket smart quotes.",
+    "media": [
+      "documents",
+      "review"
+    ],
+    "source_id": "L07",
+    "source_ids": [
+      "L07",
+      "L21"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-017",
+    "title": "Baybayin is a separate editorial task",
+    "title_tl": "Hiwalay na hakbang ang Baybayin",
+    "guidance": "Only on explicit request, establish historical or contemporary conventions, phonology and final-consonant treatment with a competent reviewer. Keep Latin source and Baybayin candidate separately.",
+    "guidance_tl": "Gawin lamang sa malinaw na kahilingan ang transliterasyon sa Baybayin.",
+    "condition": "baybayin-conversion",
+    "exceptions": "Other Philippine languages and English require their own decisions.",
+    "example": "Changing the font is not verified transliteration.",
+    "media": [
+      "entry",
+      "documents",
+      "review"
+    ],
+    "source_id": "L05",
+    "source_ids": [
+      "L05",
+      "L06",
+      "TF10",
+      "TF11"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-018",
+    "title": "Baybayin code point distinctions",
+    "title_tl": "Panatilihin ang mga code point ng Baybayin",
+    "guidance": "Preserve U+170D versus U+171F and U+1714 versus U+1715; do not exchange modern/archaic RA or virama/pamudpod for appearance. Inspect shaping with the exact font and engine.",
+    "guidance_tl": "Panatilihin ang magkaibang titik at pananda ng Baybayin.",
+    "condition": "baybayin-codepoints",
+    "exceptions": "No automatic historic spelling conversion or font-shaping claim.",
+    "example": "Keep ᜍ and ᜟ distinct, and ᜔ and ᜕ distinct.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L05",
+    "source_ids": [
+      "L05",
+      "L06",
+      "TF12"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-020",
+    "title": "Actual font coverage",
+    "title_tl": "Suriin ang font at fallback",
+    "guidance": "Record font version/hash, cmap and actual fallback for Latin accents, ₱ and Baybayin. Character coverage alone is not proof of positioning, readability or accessible text extraction.",
+    "guidance_tl": "Itala ang bersiyon ng font at aktuwal na fallback; hindi sapat ang pangalan ng font.",
+    "condition": "font-coverage",
+    "exceptions": "No third-party fonts are bundled or licensed by this product.",
+    "example": "Check ₱ beside the amounts and Baybayin beside Latin prose.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "TF14",
+    "source_ids": [
+      "TF14",
+      "TF16"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "observed",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-023",
+    "title": "Code-switching is contextual",
+    "title_tl": "Igalang ang Taglish",
+    "guidance": "Treat Tagalog–English mixing as a possible intentional register. Review audience and brand voice separately from visual font matching; neither translate nor insert code-switching automatically.",
+    "guidance_tl": "Igalang ang sadyang paghahalo ng Tagalog at English.",
+    "condition": "mixed-language-register",
+    "exceptions": "A few advertisements do not prove that Taglish improves outcomes.",
+    "example": "Retain Mag-save ng file as supplied for audience review.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L08",
+    "source_ids": [
+      "L08",
+      "L14",
+      "L15",
+      "V13"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-025",
+    "title": "Politeness and voice",
+    "title_tl": "Iayon ang paggalang sa sitwasyon",
+    "guidance": "Assess speaker, reader, relationship and action before proposing po/opo or pronoun changes. A product-specific voice guideline is not a universal ban or requirement.",
+    "guidance_tl": "Iayon ang po/opo at panghalip sa kausap at sitwasyon.",
+    "condition": "politeness-and-voice",
+    "exceptions": "Preserve quotations and the existing agreed brand voice.",
+    "example": "A button need not receive an automatic po.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L08",
+    "source_ids": [
+      "L08",
+      "L11",
+      "L17"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-026",
+    "title": "Names and glossary",
+    "title_tl": "Igalang ang mga pangalan",
+    "guidance": "Keep approved names, casing, loanword spelling and terminology. Pronunciation accents, dictionary headwords and approved brand strings are distinct records.",
+    "guidance_tl": "Panatilihin ang pangalan, malaking titik at napagkasunduang termino.",
+    "condition": "terms-and-brand-spelling",
+    "exceptions": "Do not italicize every English-origin term automatically.",
+    "example": "Keep KUMIHAN｜Tugma and Peña unchanged.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L08",
+    "source_ids": [
+      "L08",
+      "L17",
+      "L21",
+      "TN01",
+      "TN09"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-027",
+    "title": "Role-based size proposals",
+    "title_tl": "Pumili ng laki ayon sa gamit",
+    "guidance": "Choose body, caption, UI and headline sizes from reader, medium, width, actual font and distance. Compare two or more samples; record units and measured results. As a design trial, compare headings at 1.5× and 2× body size, then assess hierarchy and wrapping.",
+    "guidance_tl": "Pumili ng laki ayon sa gamit at mambabasa; ihambing ang mga pagsubok.",
+    "condition": "role-based-size",
+    "exceptions": "Print pt, screen CSS px and projection viewing distance are not interchangeable.",
+    "example": "An illustrative 16 CSS px body with 24/32 px headings is a trial, not a Tagalog standard.",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "source_id": "V01",
+    "source_ids": [
+      "V01",
+      "V02",
+      "V13"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-028",
+    "title": "Mixed font metrics",
+    "title_tl": "Ihambing ang nakikitang laki",
+    "guidance": "Compare x-height, cap height, weight, baseline and marks at the actual size. Bind any adjustment ratio to the tested fonts and role; equal point sizes need not look equal.",
+    "guidance_tl": "Ihambing ang nakikitang laki, bigat at baseline ng mga font.",
+    "condition": "mixed-typeface-metrics",
+    "exceptions": "No universal cross-script size multiplier.",
+    "example": "Review Latin, Baybayin, digits and ₱ in the same line.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "TF14",
+    "source_ids": [
+      "TF14",
+      "TF16",
+      "V01",
+      "V02"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-029",
+    "title": "Measure and leading",
+    "title_tl": "Ihambing ang lapad at agwat",
+    "guidance": "Review line width, leading, paragraph spacing and alignment together using real Tagalog copy. Compare ragged-right with justified narrow columns; check gaps and clipped accents before selecting.",
+    "guidance_tl": "Ihambing ang lapad ng linya, pagitan at pagkakahanay gamit ang tunay na teksto.",
+    "condition": "measure-leading-and-alignment",
+    "exceptions": "These are design starting points, not language defaults or accessibility certification.",
+    "example": "Trial leading at 1.4 and 1.6 for body copy; retain the better measured result.",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "source_id": "L05",
+    "source_ids": [
+      "L05",
+      "A11Y02"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-030",
+    "title": "Tracking by role",
+    "title_tl": "Ihiwalay ang pagitan ng pamagat at katawan",
+    "guidance": "Evaluate headline tracking independently from running text; preserve word silhouettes and accent clearance at small and large widths. Adjust style, not source spaces.",
+    "guidance_tl": "Ihiwalay ang pagitan ng mga titik sa pamagat at tuloy-tuloy na teksto.",
+    "condition": "tracking-and-kerning",
+    "exceptions": "No universal negative tracking for Tagalog.",
+    "example": "A tight poster headline does not justify tight body text.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "TF01",
+    "source_ids": [
+      "TF01",
+      "TF03",
+      "TF08"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-031",
+    "title": "Graphic versus readable type",
+    "title_tl": "Ihiwalay ang larawan at nababasang teksto",
+    "guidance": "Use expressive distortion only for an explicitly graphic role, with readable equivalent information and licensing checks. Keep functional labels and continuous reading text legible.",
+    "guidance_tl": "Ihiwalay ang malikhaing hugis ng titik sa impormasyong kailangang basahin.",
+    "condition": "display-expression",
+    "exceptions": "Typeface creator commentary does not grant redistribution rights.",
+    "example": "A display logo may be expressive while its CTA stays readable.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "TF03",
+    "source_ids": [
+      "TF03",
+      "TF08",
+      "V01",
+      "V02"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-033",
+    "title": "Semantic reading order",
+    "title_tl": "Panatilihin ang ayos ng pagbasa",
+    "guidance": "Keep headings, captions, prices, conditions and actions in meaningful reading order. Check DOM or document tags separately from visual hierarchy.",
+    "guidance_tl": "Panatilihin ang makabuluhang ayos ng pamagat, paliwanag at kundisyon.",
+    "condition": "semantic-hierarchy",
+    "exceptions": "Source inspection cannot prove screen-reader or PDF-tag behavior.",
+    "example": "A large caption is not automatically an h1.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "V13"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "design-proposal",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-034",
+    "title": "Real text and alternatives",
+    "title_tl": "Gumamit ng tunay na teksto kung maaari",
+    "guidance": "Where applicable prefer real text over images of text; document essential exceptions such as logos. Provide equivalent information and an accessible name containing visible action labels.",
+    "guidance_tl": "Gumamit ng tunay na teksto kung maaari at angkop na alternatibong impormasyon.",
+    "condition": "images-of-text",
+    "exceptions": "Alt text alone does not satisfy all images-of-text requirements.",
+    "example": "A decorative duplicate may need no repeated announcement.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "A11Y04"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-036",
+    "title": "Language metadata and parts",
+    "title_tl": "Itala ang wika sa markup",
+    "guidance": "Use the requested language tag and annotate clearly different language passages where applicable. Consider exceptions for proper names, technical terms and established loanwords; test actual speech separately.",
+    "guidance_tl": "Itala ang wika ng pahina at ng malinaw na ibang bahaging pangwika.",
+    "condition": "language-accessibility",
+    "exceptions": "A correct lang value does not guarantee a Tagalog voice.",
+    "example": "Do not tag every English-origin word lang=en.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "L02",
+    "source_ids": [
+      "L02",
+      "L18",
+      "A11Y01",
+      "A11Y05"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-037",
+    "title": "Contrast by role",
+    "title_tl": "Suriin ang contrast",
+    "guidance": "For applicable WCAG AA text, evaluate 4.5:1 for normal text and 3:1 for qualifying large-scale text using actual colors, size and weight; document exceptions. Do not round a failure upward.",
+    "guidance_tl": "Suriin ang contrast ayon sa laki, bigat at gamit ng teksto.",
+    "condition": "contrast",
+    "exceptions": "A ratio alone does not prove visual readability on every device.",
+    "example": "A logo exception does not extend to all brand copy.",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "A11Y06"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-038",
+    "title": "Resize text",
+    "title_tl": "Subukan ang pagpapalaki",
+    "guidance": "In an actual browser verify text enlargement to 200% without loss of content or functionality; inspect intermediate sizes and fixed-height controls.",
+    "guidance_tl": "Subukan ang pagpapalaki ng teksto nang walang nawawalang impormasyon o gamit.",
+    "condition": "text-resize",
+    "exceptions": "A narrow viewport snapshot is not a text-zoom test.",
+    "example": "A clipped button label needs review.",
+    "media": [
+      "web",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "A11Y07"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-039",
+    "title": "Reflow",
+    "title_tl": "Subukan ang reflow",
+    "guidance": "Test applicable vertical content at 320 CSS px equivalent without unnecessary two-dimensional scrolling; restrict documented exceptions to inherently two-dimensional sections.",
+    "guidance_tl": "Subukan ang makitid na ayos nang hindi nawawala ang nilalaman.",
+    "condition": "reflow",
+    "exceptions": "Hiding overflow is not a successful reflow result.",
+    "example": "A table exception does not permit page-wide overflow.",
+    "media": [
+      "web",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "A11Y03"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-040",
+    "title": "User text-spacing overrides",
+    "title_tl": "Subukan ang pagbabago ng pagitan",
+    "guidance": "For applicable markup test simultaneous user overrides: line height 1.5×, paragraph-after 2×, letter spacing .12em and word spacing .16em. Inspect content and function loss and script-specific applicability.",
+    "guidance_tl": "Subukan ang itinakdang pagitan ng gumagamit at tingnan kung may nawawala.",
+    "condition": "user-text-spacing",
+    "exceptions": "These WCAG test settings are not required author defaults or a native PDF test.",
+    "example": "Inspect long labels, diacritics and footnotes after overrides.",
+    "media": [
+      "web",
+      "review"
+    ],
+    "source_id": "A11Y01",
+    "source_ids": [
+      "A11Y01",
+      "A11Y02"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  },
+  {
+    "id": "TL-041",
+    "title": "Font rights",
+    "title_tl": "Suriin ang lisensiya ng font",
+    "guidance": "Verify the exact font version and EULA for use, embedding, modification and redistribution. Free download or commercial use does not automatically allow bundling or service use.",
+    "guidance_tl": "Suriin ang lisensiya para sa paggamit, pag-embed at pamamahagi.",
+    "condition": "font-license",
+    "exceptions": "Recheck current terms rather than relying on an old specimen page.",
+    "example": "Keep third-party font files out of this package.",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "source_id": "TF01",
+    "source_ids": [
+      "TF01",
+      "TF03",
+      "TF04",
+      "TF06",
+      "TF09",
+      "TF15",
+      "TF17"
+    ],
+    "status": "guidance-only",
+    "evidence_kind": "normative",
+    "automatic_pass_allowed": false,
+    "verification": "human-context-review; native rendering not_checked"
+  }
+]

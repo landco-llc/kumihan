@@ -1,0 +1,23 @@
+{
+  "name": "kumihan-rytmi",
+  "version": "0.1.0",
+  "description": "Suomenkielisen tekstin typografiaa verkkoon, asiakirjoihin ja esityksiin. Säilyttää alkuperäisen tekstin ja erottaa tarkistuksen muutosehdotuksista. | Finnish typography guidance for web, documents and presentations; preserves original text and separates review from proposed changes.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Rytmi",
+    "shortDescription": "Suomenkielisen tekstin typografiaa verkkoon, asiakirjoihin ja esityksiin. Säilyttää alkuperäisen tekstin ja erottaa tarkistuksen muutosehdotuksista. | Finnish typography guidance for web, documents and presentations; preserves original text and separates review from proposed changes.",
+    "longDescription": "Suomenkielisen tekstin typografiaa verkkoon, asiakirjoihin ja esityksiin. Säilyttää alkuperäisen tekstin ja erottaa tarkistuksen muutosehdotuksista. | Finnish typography guidance for web, documents and presentations; preserves original text and separates review from proposed changes.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Suomenkielisen tekstin typografiaa verkkoon, asiakirjoihin ja esityksiin. Säilyttää alkuperäisen tekstin ja erottaa tarkistuksen muutosehdotuksista.",
+      "Finnish typography guidance for web, documents and presentations; preserves original text and separates review from proposed changes."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

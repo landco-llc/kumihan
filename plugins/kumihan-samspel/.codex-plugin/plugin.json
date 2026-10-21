@@ -1,0 +1,23 @@
+{
+  "name": "kumihan-samspel",
+  "version": "0.1.0",
+  "description": "Stöd för svensk typografi på webb, i dokument och vid granskning, med originaltexten bevarad. | Swedish typography guidance for web, documents and read-only review, preserving original text.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Samspel",
+    "shortDescription": "Stöd för svensk typografi på webb, i dokument och vid granskning, med originaltexten bevarad. | Swedish typography guidance for web, documents and read-only review, preserving original text.",
+    "longDescription": "Stöd för svensk typografi på webb, i dokument och vid granskning, med originaltexten bevarad. | Swedish typography guidance for web, documents and read-only review, preserving original text.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Stöd för svensk typografi på webb, i dokument och vid granskning, med originaltexten bevarad.",
+      "Swedish typography guidance for web, documents and read-only review, preserving original text."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

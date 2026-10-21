@@ -1,0 +1,37 @@
+{
+  "reading": {
+    "purpose": "continuous Sanskrit reading",
+    "design_starting_point": {
+      "font_size_css_px": [
+        20,
+        24
+      ],
+      "line_height": [
+        1.65,
+        1.9
+      ]
+    },
+    "status": "untested_starting_range_not_standard",
+    "assumptions": "experienced adult Devanagari readers; actual font and viewport comparison required"
+  },
+  "ui": {
+    "purpose": "short labels",
+    "guidance": "flexible height, marks and wrapping checks"
+  },
+  "presentation": {
+    "purpose": "slides",
+    "guidance": "test at viewing distance; retain readable source text"
+  },
+  "expressive": {
+    "purpose": "headings, poster or copy",
+    "guidance": "preserve complete source, selectable equivalent and distinct reading route"
+  },
+  "print": {
+    "purpose": "document output",
+    "guidance": "test final physical size, fonts and copy/paste"
+  },
+  "notes": {
+    "purpose": "apparatus and commentary",
+    "guidance": "preserve anchors and keep diacritics readable"
+  }
+}

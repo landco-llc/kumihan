@@ -1,0 +1,586 @@
+[
+  {
+    "id": "UK-001",
+    "key": "locale",
+    "title": "Мова й локаль",
+    "title_uk": "Мова й локаль",
+    "requirement_en": "Use explicit uk or uk-UA for Ukrainian; uk is not a country label for British English. Never infer language from Cyrillic alone.",
+    "condition": "Entry language selection",
+    "exceptions": "No guidance for en-UK, ru or und",
+    "example": "uk-UA / Україна",
+    "source_ids": [
+      "T34",
+      "T38"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-002",
+    "key": "letters",
+    "title": "Українські літери",
+    "title_uk": "Українські літери",
+    "requirement_en": "Preserve Ґ/ґ, Є/є, І/і and Ї/ї as distinct characters; never substitute similar Latin or Russian glyphs. Historical quotations remain intact.",
+    "condition": "Any source text",
+    "exceptions": "Do not modernize protected historical text",
+    "example": "Ґрунт і Україна",
+    "source_ids": [
+      "L01",
+      "L22",
+      "T21"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-003",
+    "key": "apostrophe",
+    "title": "Апостроф",
+    "title_uk": "Апостроф",
+    "requirement_en": "Keep U+0027, U+2019 and U+02BC exactly as supplied. An editorial proposal may discuss apostrophe choice in words such as сім’я, but never replace globally or infer correctness from adjacency.",
+    "condition": "Editorial word review",
+    "exceptions": "Names, identifiers, quotation marks and code can require other characters",
+    "example": "сім’я / свято / пʼять",
+    "source_ids": [
+      "L01",
+      "T21"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-004",
+    "key": "combining",
+    "title": "Комбіновані знаки",
+    "title_uk": "Комбіновані знаки",
+    "requirement_en": "Keep exact Unicode sequences including decomposed ї and stress marks. NFC equivalence is diagnostic only; preserve author bytes.",
+    "condition": "Unicode integrity",
+    "exceptions": "Normalization needs explicit authorization",
+    "example": "ї / ї / сло́во",
+    "source_ids": [
+      "T23",
+      "T24"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-005",
+    "key": "orthography",
+    "title": "Правопис і джерело",
+    "title_uk": "Правопис і джерело",
+    "requirement_en": "Ask for the applicable orthographic edition and publisher policy before spelling proposals. Distinguish contemporary prose from historical quotation and accepted alternatives.",
+    "condition": "Spelling suggestions",
+    "exceptions": "Do not treat all older publication dates as errors",
+    "example": "збережений історичний текст",
+    "source_ids": [
+      "L01",
+      "L02",
+      "L03"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-006",
+    "key": "mixedscript",
+    "title": "Змішані абетки",
+    "title_uk": "Змішані абетки",
+    "requirement_en": "Flag suspicious Latin/Cyrillic mixtures for inspection while retaining the original. A brand, URL, formula or quoted phrase can legitimately mix scripts.",
+    "condition": "Mixed-script tokens",
+    "exceptions": "No automatic homoglyph replacement",
+    "example": "Київ / Kyiv / ID-A1",
+    "source_ids": [
+      "T40"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-007",
+    "key": "names",
+    "title": "Власні назви",
+    "title_uk": "Власні назви",
+    "requirement_en": "Preserve names, trademarks, capitalization, URLs and transliteration choices. Ask before translation, retransliteration or editorial modernization.",
+    "condition": "Names and identifiers",
+    "exceptions": "Source ownership and quotation scope override cosmetic preferences",
+    "example": "RE:Ukraine / Київ",
+    "source_ids": [
+      "L01",
+      "T40"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-008",
+    "key": "hyphenation",
+    "title": "Перенесення слів",
+    "title_uk": "Перенесення слів",
+    "requirement_en": "Use Ukrainian-aware hyphenation only after dictionary and renderer testing. Do not split grapheme clusters or inject hard hyphens into names, source strings or IDs.",
+    "condition": "Long text and narrow columns",
+    "exceptions": "Emergency overflow treatment is a layout proposal, not spelling correction",
+    "example": "український / ID-12345",
+    "source_ids": [
+      "L01",
+      "T24",
+      "T25"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-009",
+    "key": "quotation",
+    "title": "Лапки й цитати",
+    "title_uk": "Лапки й цитати",
+    "requirement_en": "Discuss publisher quotation nesting and punctuation separately from content; preserve quoted words and current quote bytes until a specific change is authorized.",
+    "condition": "Editorial quotations",
+    "exceptions": "Code strings and citations retain exact punctuation",
+    "example": "«Україна» / “цитата”",
+    "source_ids": [
+      "L01"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-010",
+    "key": "numbers",
+    "title": "Числа й одиниці",
+    "title_uk": "Числа й одиниці",
+    "requirement_en": "Separate localized display from stored numeric values. Use a verified uk-UA formatter for dates, currency and grouping; confirm meaning before changing ambiguous separators.",
+    "condition": "UI and tabular numeric output",
+    "exceptions": "Do not rewrite source values or identifiers",
+    "example": "1 234,50 ₴ / 03.04.2026",
+    "source_ids": [
+      "C04",
+      "C09",
+      "C10"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-011",
+    "key": "plurals",
+    "title": "Форми множини",
+    "title_uk": "Форми множини",
+    "requirement_en": "Use Ukrainian locale plural categories and test representative values with a verified formatter; do not assemble translated messages by suffix substitution.",
+    "condition": "Interface counts",
+    "exceptions": "This tool is not a translation engine",
+    "example": "1 / 2 / 5 / 21 / 1,5",
+    "source_ids": [
+      "C04",
+      "C06"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-012",
+    "key": "fonts",
+    "title": "Покриття шрифту",
+    "title_uk": "Покриття шрифту",
+    "requirement_en": "Check real font coverage for Ukrainian letters, italics, combining accents and punctuation. Cyrillic coverage alone does not demonstrate Ukrainian quality.",
+    "condition": "Font selection",
+    "exceptions": "No national font style is mandatory",
+    "example": "Ґ Є І Ї ґ є і ї",
+    "source_ids": [
+      "T26",
+      "T27",
+      "T28",
+      "T29"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-013",
+    "key": "rights",
+    "title": "Ліцензії шрифтів",
+    "title_uk": "Ліцензії шрифтів",
+    "requirement_en": "Check the actual license for web embedding, desktop use and distribution. A free download or institutional use does not grant redistribution rights. No font files are bundled.",
+    "condition": "Font licensing",
+    "exceptions": "Check the selected release and purchase agreement",
+    "example": "Arsenal / Fixel / licensed commercial font",
+    "source_ids": [
+      "T11",
+      "T15",
+      "T19",
+      "T20"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-014",
+    "key": "body-display",
+    "title": "Текст і виразний заголовок",
+    "title_uk": "Текст і виразний заголовок",
+    "requirement_en": "Choose reading, expressive or hybrid intent. Expressive overlapping or condensed display lettering needs a separately readable alternative for essential information.",
+    "condition": "Headings, posters and body copy",
+    "exceptions": "A brand case is not a national norm",
+    "example": "читабельний текст / виразний заголовок",
+    "source_ids": [
+      "R03",
+      "R04",
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-015",
+    "key": "scale",
+    "title": "Розмір і ритм",
+    "title_uk": "Розмір і ритм",
+    "requirement_en": "Propose size and leading from audience, medium, distance and actual font metrics. A 16 px body and 1.5 leading can be a comparison starting point, not a universal Ukrainian minimum.",
+    "condition": "Readable web or document layout",
+    "exceptions": "Published design-system values are contextual; measure the actual output",
+    "example": "compare 16/24 and 18/27 in the target layout",
+    "source_ids": [
+      "R02",
+      "R03",
+      "T37"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-016",
+    "key": "contrast",
+    "title": "Контраст і доступність",
+    "title_uk": "Контраст і доступність",
+    "requirement_en": "Check foreground/background contrast and focus visibility in the actual UI. Colour or typographic style alone must not carry essential meaning.",
+    "condition": "Web and interface design",
+    "exceptions": "Static text checks cannot certify contrast",
+    "example": "link / warning / focus",
+    "source_ids": [
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-017",
+    "key": "spacing",
+    "title": "Інтервали й масштабування",
+    "title_uk": "Інтервали й масштабування",
+    "requirement_en": "Test user text-spacing overrides and zoom without clipping or overlap. Do not use fixed-height boxes that hide Ukrainian accents, descenders or wrapped content.",
+    "condition": "Web and presentation layouts",
+    "exceptions": "Expressive crop is unsuitable for essential copy",
+    "example": "Ї ґ Й at increased line height",
+    "source_ids": [
+      "T35",
+      "T36",
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-018",
+    "key": "langhtml",
+    "title": "Позначення мови",
+    "title_uk": "Позначення мови",
+    "requirement_en": "Set the appropriate HTML lang for Ukrainian text and mark foreign-language spans where needed; language metadata supports pronunciation but does not prove correctness.",
+    "condition": "Web page markup",
+    "exceptions": "Do not overwrite foreign quotations",
+    "example": "<html lang=\"uk-UA\">",
+    "source_ids": [
+      "T34",
+      "T38"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-019",
+    "key": "reflow",
+    "title": "Переформатування",
+    "title_uk": "Переформатування",
+    "requirement_en": "Test narrow reflow and long Ukrainian words at enlarged text size; prefer flexible layout over break-all or hidden overflow.",
+    "condition": "Responsive web and UI",
+    "exceptions": "Never insert zero-width characters into a protected token",
+    "example": "україномовний інтерфейс",
+    "source_ids": [
+      "T32",
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-020",
+    "key": "documents",
+    "title": "Документи й читання",
+    "title_uk": "Документи й читання",
+    "requirement_en": "Check tagged heading order, table reading order, font embedding permissions and copy/paste in the actual PDF or Office output. Source checks do not establish native document acceptance.",
+    "condition": "Documents and presentations",
+    "exceptions": "Export needs target-client inspection",
+    "example": "заголовок → текст → таблиця",
+    "source_ids": [
+      "T39",
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-021",
+    "key": "stress",
+    "title": "Наголос і навчальні тексти",
+    "title_uk": "Наголос і навчальні тексти",
+    "requirement_en": "Preserve supplied stress marks and distinguish teaching or linguistic notation from ordinary prose. Do not add or remove accents without a verified source and permission.",
+    "condition": "Learning and linguistic documents",
+    "exceptions": "Absence of stress marking in ordinary prose is not an error",
+    "example": "сло́во",
+    "source_ids": [
+      "T24",
+      "L01"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-022",
+    "key": "alignment",
+    "title": "Вирівнювання й колонка",
+    "title_uk": "Вирівнювання й колонка",
+    "requirement_en": "Compare left alignment and justified text using actual Ukrainian word lengths, hyphenation and spacing. Avoid forced line breaks whose appearance depends on one viewport.",
+    "condition": "Long-form typography",
+    "exceptions": "Poetry, tables and authored lineation can require intentional breaks",
+    "example": "редакційний текст у вузькій колонці",
+    "source_ids": [
+      "R02",
+      "T32",
+      "T36"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-023",
+    "key": "copy",
+    "title": "Тон і призначення",
+    "title_uk": "Тон і призначення",
+    "requirement_en": "Keep the author’s register, word order and intended audience. Separate proposed copy changes from layout advice; read-only review never rewrites.",
+    "condition": "UI copy and expressive headlines",
+    "exceptions": "No automatic shortening or translation",
+    "example": "Зберегти зміни",
+    "source_ids": [
+      "L01",
+      "R04"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  },
+  {
+    "id": "UK-024",
+    "key": "evidence",
+    "title": "Межі перевірки",
+    "title_uk": "Межі перевірки",
+    "requirement_en": "Report static findings, measurements and unrun checks separately. Native rendering, expert proofreading and host invocation remain not_checked until actually exercised.",
+    "condition": "Every result",
+    "exceptions": "Guidance is not a compliance certificate",
+    "example": "passed / needs-review / not-checked",
+    "source_ids": [
+      "T42"
+    ],
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "verification": "conditional-guidance",
+    "status": "adopted-bounded-guidance"
+  }
+]

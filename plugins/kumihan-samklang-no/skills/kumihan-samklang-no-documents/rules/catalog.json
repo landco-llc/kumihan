@@ -1,0 +1,1076 @@
+[
+  {
+    "id": "NO-001",
+    "title": "Language and task scope",
+    "title_no": "Språk og bruksområde",
+    "condition_no": "Når tekst skal settes eller vurderes, registrer målform, medium og beskyttede tekstområder.",
+    "condition": "When composing or reviewing, record the written standard, medium and protected spans.",
+    "recommendation_no": "Når tekst skal settes eller vurderes, registrer målform, medium og beskyttede tekstområder.",
+    "recommendation": "When composing or reviewing, record the written standard, medium and protected spans.",
+    "exceptions": [
+      "Do not infer a standard from shared vocabulary."
+    ],
+    "source_ids": [
+      "T13",
+      "L01"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-002",
+    "title": "The no macrolanguage",
+    "title_no": "Makrospråket no",
+    "condition_no": "Behold no som gyldig tagg; be om bokmål eller nynorsk før målformspesifikke råd.",
+    "condition": "Keep no valid; request Bokmål or Nynorsk before standard-specific guidance.",
+    "recommendation_no": "Behold no som gyldig tagg; be om bokmål eller nynorsk før målformspesifikke råd.",
+    "recommendation": "Keep no valid; request Bokmål or Nynorsk before standard-specific guidance.",
+    "exceptions": [
+      "Never silently map no to nb."
+    ],
+    "source_ids": [
+      "T13"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-003",
+    "title": "Names, quotations and identifiers",
+    "title_no": "Navn, sitater og koder",
+    "condition_no": "Bevar navn, registrerte betegnelser, sitater, historisk skrivemåte, URL-er og maskindata.",
+    "condition": "Preserve names, registered labels, quotations, historical spelling, URLs and machine data.",
+    "recommendation_no": "Bevar navn, registrerte betegnelser, sitater, historisk skrivemåte, URL-er og maskindata.",
+    "recommendation": "Preserve names, registered labels, quotations, historical spelling, URLs and machine data.",
+    "exceptions": [
+      "No punctuation or spelling cleanup inside protected spans."
+    ],
+    "source_ids": [
+      "L05",
+      "L17",
+      "L27",
+      "L34"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-004",
+    "title": "Accepted variants",
+    "title_no": "Tillatte former",
+    "condition_no": "Kontroller valgte former mot riktig ordbok; skill gyldige former fra redaksjonell konsekvens.",
+    "condition": "Check accepted forms in the correct dictionary; separate validity from editorial consistency.",
+    "recommendation_no": "Kontroller valgte former mot riktig ordbok; skill gyldige former fra redaksjonell konsekvens.",
+    "recommendation": "Check accepted forms in the correct dictionary; separate validity from editorial consistency.",
+    "exceptions": [
+      "Nynorsk a/e/kløyvd infinitive choices are not Bokmål ending bans."
+    ],
+    "source_ids": [
+      "L03",
+      "L04",
+      "L26",
+      "L31"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "nb",
+      "nn"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-005",
+    "title": "No automatic conversion between standards",
+    "title_no": "Ingen automatisk målformskonvertering",
+    "condition_no": "Ikke oversett mellom bokmål og nynorsk som en del av typografisk arbeid.",
+    "condition": "Do not translate between Bokmål and Nynorsk as part of typography.",
+    "recommendation_no": "Ikke oversett mellom bokmål og nynorsk som en del av typografisk arbeid.",
+    "recommendation": "Do not translate between Bokmål and Nynorsk as part of typography.",
+    "exceptions": [
+      "Lexicon and syntax cannot be converted by replacing suffixes."
+    ],
+    "source_ids": [
+      "L01",
+      "L25",
+      "L30"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "nb",
+      "nn"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-006",
+    "title": "ÆØÅ, accents and Aa names",
+    "title_no": "ÆØÅ, aksenter og Aa-navn",
+    "condition_no": "Bevar ÆØÅ/æøå, aksenter og personens egen Aa-skrivemåte.",
+    "condition": "Preserve ÆØÅ/æøå, accents and the person’s own Aa spelling.",
+    "recommendation_no": "Bevar ÆØÅ/æøå, aksenter og personens egen Aa-skrivemåte.",
+    "recommendation": "Preserve ÆØÅ/æøå, accents and the person’s own Aa spelling.",
+    "exceptions": [
+      "Missing glyphs require font review, never ASCII substitution."
+    ],
+    "source_ids": [
+      "T12",
+      "L17",
+      "L27"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-007",
+    "title": "Derived normalization",
+    "title_no": "Avledet normalisering",
+    "condition_no": "Lag eventuelle NFC-sammenligningsnøkler separat; behold originalens bytefølge.",
+    "condition": "Create any NFC comparison keys separately; retain original bytes.",
+    "recommendation_no": "Lag eventuelle NFC-sammenligningsnøkler separat; behold originalens bytefølge.",
+    "recommendation": "Create any NFC comparison keys separately; retain original bytes.",
+    "exceptions": [
+      "Canonical equivalence does not authorize source rewriting."
+    ],
+    "source_ids": [
+      "T15"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-008",
+    "title": "Collation and search",
+    "title_no": "Sortering og søk",
+    "condition_no": "Oppgi locale, sorteringsstyrke og implementasjonsversjon ved sortering og søk.",
+    "condition": "Record locale, collation strength and implementation version for sorting and search.",
+    "recommendation_no": "Oppgi locale, sorteringsstyrke og implementasjonsversjon ved sortering og søk.",
+    "recommendation": "Record locale, collation strength and implementation version for sorting and search.",
+    "exceptions": [
+      "Do not infer surname pronunciation from Aa alone."
+    ],
+    "source_ids": [
+      "T14",
+      "L23",
+      "L28"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-009",
+    "title": "Quotation marks",
+    "title_no": "Sitattegn",
+    "condition_no": "Følg valgt sitatsystem; «…» er en vanlig mulighet, ikke et universelt krav.",
+    "condition": "Follow the selected quotation system; «…» is common, not universal.",
+    "recommendation_no": "Følg valgt sitatsystem; «…» er en vanlig mulighet, ikke et universelt krav.",
+    "recommendation": "Follow the selected quotation system; «…» is common, not universal.",
+    "exceptions": [
+      "Respect nested and foreign-language quotes and code."
+    ],
+    "source_ids": [
+      "L08"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-010",
+    "title": "Punctuation around quotations",
+    "title_no": "Tegnsetting ved sitater",
+    "condition_no": "Vurder sitatets omfang før tegnsetting foreslås.",
+    "condition": "Establish quotation scope before suggesting punctuation changes.",
+    "recommendation_no": "Vurder sitatets omfang før tegnsetting foreslås.",
+    "recommendation": "Establish quotation scope before suggesting punctuation changes.",
+    "exceptions": [
+      "Do not add a comma outside quoted speech ending in ? or !."
+    ],
+    "source_ids": [
+      "L08",
+      "L19"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-011",
+    "title": "Commas follow syntax",
+    "title_no": "Komma etter setningsstruktur",
+    "condition_no": "Skill oppramsing, helsetninger, leddsetninger og innskudd.",
+    "condition": "Distinguish lists, coordinated clauses, subordinate clauses and insertions.",
+    "recommendation_no": "Skill oppramsing, helsetninger, leddsetninger og innskudd.",
+    "recommendation": "Distinguish lists, coordinated clauses, subordinate clauses and insertions.",
+    "exceptions": [
+      "Neither always insert nor always remove commas before og."
+    ],
+    "source_ids": [
+      "L19"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-012",
+    "title": "Hyphens and dashes",
+    "title_no": "Bindestrek og tankestrek",
+    "condition_no": "Skill innskudd, replikk, intervall og sammensetning.",
+    "condition": "Distinguish insertions, dialogue, ranges and compounds.",
+    "recommendation_no": "Skill innskudd, replikk, intervall og sammensetning.",
+    "recommendation": "Distinguish insertions, dialogue, ranges and compounds.",
+    "exceptions": [
+      "No blanket replacement of hyphens; preserve technical dates."
+    ],
+    "source_ids": [
+      "L09",
+      "L10",
+      "L14"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-013",
+    "title": "Compound words",
+    "title_no": "Sammensatte ord",
+    "condition_no": "Kontroller betydning og ordbok før særskriving eller sammenskriving foreslås.",
+    "condition": "Check meaning and dictionary evidence before proposing joined or separate words.",
+    "recommendation_no": "Kontroller betydning og ordbok før særskriving eller sammenskriving foreslås.",
+    "recommendation": "Check meaning and dictionary evidence before proposing joined or separate words.",
+    "exceptions": [
+      "Long words alone do not justify inserted spaces or permanent hyphens."
+    ],
+    "source_ids": [
+      "L10",
+      "L11"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-014",
+    "title": "Numbers and units",
+    "title_no": "Tall og enheter",
+    "condition_no": "Vurder mellomrom og linjebinding for tall, enheter, prosent og temperatur.",
+    "condition": "Review spacing and line binding for numbers, units, percentages and temperatures.",
+    "recommendation_no": "Vurder mellomrom og linjebinding for tall, enheter, prosent og temperatur.",
+    "recommendation": "Review spacing and line binding for numbers, units, percentages and temperatures.",
+    "exceptions": [
+      "Angle exceptions and storage policy matter; no mandatory NBSP code point is assumed."
+    ],
+    "source_ids": [
+      "L13",
+      "L21"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-015",
+    "title": "Dates, times and decimals",
+    "title_no": "Dato, klokkeslett og desimaltall",
+    "condition_no": "Bruk feltets betydning før en tallfølge tolkes eller formateres.",
+    "condition": "Use field meaning before interpreting or formatting numeric sequences.",
+    "recommendation_no": "Bruk feltets betydning før en tallfølge tolkes eller formateres.",
+    "recommendation": "Use field meaning before interpreting or formatting numeric sequences.",
+    "exceptions": [
+      "09.05 is ambiguous without context; preserve machine dates and IDs."
+    ],
+    "source_ids": [
+      "L14"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-016",
+    "title": "Headings, genitives and abbreviations",
+    "title_no": "Overskrifter, genitiv og forkortelser",
+    "condition_no": "Vurder setningsstart, egennavn, genitiv og forkortelser hver for seg.",
+    "condition": "Review sentence case, proper names, genitives and abbreviations separately.",
+    "recommendation_no": "Vurder setningsstart, egennavn, genitiv og forkortelser hver for seg.",
+    "recommendation": "Review sentence case, proper names, genitives and abbreviations separately.",
+    "exceptions": [
+      "Do not import English Title Case or possessive rules."
+    ],
+    "source_ids": [
+      "L15",
+      "L16",
+      "L18"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-017",
+    "title": "Combining sequences",
+    "title_no": "Kombinerende tegn",
+    "condition_no": "Prøv avkorting, markering og kopiering uten å skille bokstav og kombinerende tegn.",
+    "condition": "Test truncation, selection and copy without separating base and combining marks.",
+    "recommendation_no": "Prøv avkorting, markering og kopiering uten å skille bokstav og kombinerende tegn.",
+    "recommendation": "Test truncation, selection and copy without separating base and combining marks.",
+    "exceptions": [
+      "Code points are not the same as graphemes; actual rendering is unverified."
+    ],
+    "source_ids": [
+      "T15",
+      "L21"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-018",
+    "title": "Written standard and hyphenation dictionary",
+    "title_no": "Målform og orddelingsordbok",
+    "condition_no": "Prøv automatisk orddeling separat for bokmål og nynorsk med aktuell ordbok.",
+    "condition": "Test automatic hyphenation separately for Bokmål and Nynorsk with the actual dictionary.",
+    "recommendation_no": "Prøv automatisk orddeling separat for bokmål og nynorsk med aktuell ordbok.",
+    "recommendation": "Test automatic hyphenation separately for Bokmål and Nynorsk with the actual dictionary.",
+    "exceptions": [
+      "Missing dictionaries must be reported; do not claim native hyphenation support."
+    ],
+    "source_ids": [
+      "T16",
+      "L12"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "nb",
+      "nn"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-019",
+    "title": "Soft hyphens and source",
+    "title_no": "Myk bindestrek og original",
+    "condition_no": "Skill opprinnelig bindestrek, myk bindestrek og tegn som bare vises ved linjeskift.",
+    "condition": "Distinguish original hyphens, soft hyphens and visual line-end marks.",
+    "recommendation_no": "Skill opprinnelig bindestrek, myk bindestrek og tegn som bare vises ved linjeskift.",
+    "recommendation": "Distinguish original hyphens, soft hyphens and visual line-end marks.",
+    "exceptions": [
+      "Do not remove all U+00AD or hyphens; inspect PDF extraction and copy."
+    ],
+    "source_ids": [
+      "T16",
+      "L21"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-020",
+    "title": "Long words, URLs and IDs",
+    "title_no": "Lange ord, URL-er og ID-er",
+    "condition_no": "Vurder bredde, orddeling, nødbryting eller rulling etter tekstens rolle.",
+    "condition": "Review width, hyphenation, emergency wrapping or scrolling by role.",
+    "recommendation_no": "Vurder bredde, orddeling, nødbryting eller rulling etter tekstens rolle.",
+    "recommendation": "Review width, hyphenation, emergency wrapping or scrolling by role.",
+    "exceptions": [
+      "Never delete content to fit; break-all is not a universal paragraph default."
+    ],
+    "source_ids": [
+      "T16",
+      "L12"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-021",
+    "title": "Glyph coverage and font choice",
+    "title_no": "Tegndekning og skrifttype",
+    "condition_no": "Prøv ÆØÅ, aksenter, kombinerende tegn, tall og tegnsetting i valgt font og reservefont.",
+    "condition": "Test ÆØÅ, accents, combining marks, numerals and punctuation in selected and fallback fonts.",
+    "recommendation_no": "Prøv ÆØÅ, aksenter, kombinerende tegn, tall og tegnsetting i valgt font og reservefont.",
+    "recommendation": "Test ÆØÅ, accents, combining marks, numerals and punctuation in selected and fallback fonts.",
+    "exceptions": [
+      "A Nordic font name does not establish coverage; no fonts are bundled."
+    ],
+    "source_ids": [
+      "T11",
+      "T12",
+      "T14"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-022",
+    "title": "Confusable glyphs and numeric columns",
+    "title_no": "Like tegn og tallkolonner",
+    "condition_no": "Sammenlign I/l/1, ø/o/0 og tabelltall i faktisk font og størrelse.",
+    "condition": "Compare I/l/1, ø/o/0 and tabular numerals in the actual font and size.",
+    "recommendation_no": "Sammenlign I/l/1, ø/o/0 og tabelltall i faktisk font og størrelse.",
+    "recommendation": "Compare I/l/1, ø/o/0 and tabular numerals in the actual font and size.",
+    "exceptions": [
+      "OpenType feature tags are font-specific and never change numeric content."
+    ],
+    "source_ids": [
+      "T07",
+      "T11"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-023",
+    "title": "Font loading and fallback",
+    "title_no": "Fontlasting og reservefont",
+    "condition_no": "Prøv vellykket, forsinket og mislykket fontlasting uten innholdstap.",
+    "condition": "Test successful, delayed and failed font loading without content loss.",
+    "recommendation_no": "Prøv vellykket, forsinket og mislykket fontlasting uten innholdstap.",
+    "recommendation": "Test successful, delayed and failed font loading without content loss.",
+    "exceptions": [
+      "Changed line count alone is not failure; inspect licensing before distribution."
+    ],
+    "source_ids": [
+      "T05"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-024",
+    "title": "Sámi languages require separate coverage",
+    "title_no": "Samiske språk er egen dekning",
+    "condition_no": "Oppgi og prøv hvert samisk språk separat når det inngår i dokumentet.",
+    "condition": "Declare and test each Sámi language separately when present.",
+    "recommendation_no": "Oppgi og prøv hvert samisk språk separat når det inngår i dokumentet.",
+    "recommendation": "Declare and test each Sámi language separately when present.",
+    "exceptions": [
+      "Norwegian support never implies Sámi support; preserve all supplied text."
+    ],
+    "source_ids": [
+      "T11",
+      "T13"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-025",
+    "title": "Reading text, display and semantics",
+    "title_no": "Lesetekst, visning og semantikk",
+    "condition_no": "Skill visuell rolle fra semantiske overskriftsnivåer.",
+    "condition": "Separate visual role from semantic heading levels.",
+    "recommendation_no": "Skill visuell rolle fra semantiske overskriftsnivåer.",
+    "recommendation": "Separate visual role from semantic heading levels.",
+    "exceptions": [
+      "Do not change a heading level solely to enlarge its appearance."
+    ],
+    "source_ids": [
+      "T05",
+      "T06",
+      "T07",
+      "T08",
+      "T11"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-026",
+    "title": "Size as a trial hypothesis",
+    "title_no": "Størrelse som prøvehypotese",
+    "condition_no": "Sammenlign størrelse etter font, rolle, medium, publikum og avstand.",
+    "condition": "Compare sizes by font, role, medium, audience and viewing distance.",
+    "recommendation_no": "Sammenlign størrelse etter font, rolle, medium, publikum og avstand.",
+    "recommendation": "Compare sizes by font, role, medium, audience and viewing distance.",
+    "exceptions": [
+      "18–20px reading and 16–18px UI are trial ranges at stated conditions, never national rules."
+    ],
+    "source_ids": [
+      "T05",
+      "T06",
+      "T08",
+      "T10"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-027",
+    "title": "Line height by task",
+    "title_no": "Linjehøyde etter oppgave",
+    "condition_no": "Prøv langtekst og korte etiketter separat; oppgi enheter og grunnstørrelse.",
+    "condition": "Test long text and short labels separately; state units and root size.",
+    "recommendation_no": "Prøv langtekst og korte etiketter separat; oppgi enheter og grunnstørrelse.",
+    "recommendation": "Test long text and short labels separately; state units and root size.",
+    "exceptions": [
+      "1.45–1.7 for long text is a comparison hypothesis, not a measured optimum."
+    ],
+    "source_ids": [
+      "T06",
+      "T08",
+      "T10"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-028",
+    "title": "Letter spacing",
+    "title_no": "Bokstavavstand",
+    "condition_no": "Bruk fontens standard som kontroll og vurder lesetekst og uttrykksfull tekst hver for seg.",
+    "condition": "Use font defaults as a control and evaluate reading and expressive copy separately.",
+    "recommendation_no": "Bruk fontens standard som kontroll og vurder lesetekst og uttrykksfull tekst hver for seg.",
+    "recommendation": "Use font defaults as a control and evaluate reading and expressive copy separately.",
+    "exceptions": [
+      "Do not confuse px, percentages and em or apply negative tracking to all Norwegian."
+    ],
+    "source_ids": [
+      "T05",
+      "T06",
+      "T08",
+      "T11"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-029",
+    "title": "Narrow screens and large text",
+    "title_no": "Smal skjerm og stor tekst",
+    "condition_no": "Sammenlign ombrekking og omplassering for lange overskrifter og etiketter.",
+    "condition": "Compare wrapping and rearrangement for long headings and labels.",
+    "recommendation_no": "Sammenlign ombrekking og omplassering for lange overskrifter og etiketter.",
+    "recommendation": "Compare wrapping and rearrangement for long headings and labels.",
+    "exceptions": [
+      "Do not shrink all roles by the same factor or treat organizational tokens as national thresholds."
+    ],
+    "source_ids": [
+      "T05",
+      "T08",
+      "T10"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-030",
+    "title": "User text spacing",
+    "title_no": "Brukerens tekstavstand",
+    "condition_no": "Prøv samtidig linjehøyde 1,5, avsnittsavstand 2em, bokstavavstand 0,12em og ordavstand 0,16em.",
+    "condition": "Test combined 1.5 line height, 2em paragraph spacing, 0.12em letter spacing and 0.16em word spacing.",
+    "recommendation_no": "Prøv samtidig linjehøyde 1,5, avsnittsavstand 2em, bokstavavstand 0,12em og ordavstand 0,16em.",
+    "recommendation": "Test combined 1.5 line height, 2em paragraph spacing, 0.12em letter spacing and 0.16em word spacing.",
+    "exceptions": [
+      "These are override test conditions, not compulsory initial design tokens or legal certification."
+    ],
+    "source_ids": [
+      "T17"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-031",
+    "title": "Zoom and system preferences",
+    "title_no": "Forstørring og systeminnstillinger",
+    "condition_no": "Prøv 200 prosent tekstforstørring og større systemtekst med innhold og betjening intakt.",
+    "condition": "Test 200 percent text enlargement and larger system text with intact content and controls.",
+    "recommendation_no": "Prøv 200 prosent tekstforstørring og større systemtekst med innhold og betjening intakt.",
+    "recommendation": "Test 200 percent text enlargement and larger system text with intact content and controls.",
+    "exceptions": [
+      "Initial 16px or 18px size alone does not establish accessibility."
+    ],
+    "source_ids": [
+      "T17",
+      "T10"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  },
+  {
+    "id": "NO-032",
+    "title": "Measurements and claims",
+    "title_no": "Målte verdier og påstander",
+    "condition_no": "Skill publiserte tokenverdier, beregninger, målinger og brukervurderinger.",
+    "condition": "Separate published tokens, calculations, measurements and user evaluation.",
+    "recommendation_no": "Skill publiserte tokenverdier, beregninger, målinger og brukervurderinger.",
+    "recommendation": "Separate published tokens, calculations, measurements and user evaluation.",
+    "exceptions": [
+      "Record font/version, OS, browser, viewport, root size, zoom, role and language; never report unrun checks as measured."
+    ],
+    "source_ids": [
+      "T05",
+      "T06",
+      "T08",
+      "T10",
+      "T14"
+    ],
+    "status": "conditional-guidance",
+    "verification": "guidance-only",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "standard_scope": [
+      "shared"
+    ],
+    "example": {
+      "no": "Bevar originalen; vurder forslaget separat.",
+      "en": "Keep the original; assess the proposal separately."
+    }
+  }
+]

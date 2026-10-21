@@ -1,0 +1,624 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Samklang",
+  "slug": "kumihan-samklang-da",
+  "language": "da",
+  "version": "0.1.0",
+  "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "992a4b9cf49601ecdd5823d6c1a586e445c7bc969885c77b08375cc83ad0cc2d"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "afbf7178f45a34169bff2e2ea368c3730a2e41a87c2256f72c6068cd66b1bb32"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "c3ac1caaf77da28582093125fd0dd5ecbfc30b19e6d1073c54c00e8f6ef07b65"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "fb657303d3f15fd9209628f69abecffeece618d6faecf29ad156b259dc89f2f9"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE",
+      "sha256": "5f02be7db831a9694ad27ba4552cf09fa71dcc698adfca1d0d3390d43e739383"
+    },
+    {
+      "path": "README.md",
+      "sha256": "9baecc05fa38cc60bba999c7ce508e8b2a0c5df44344a93665d8a36a6b256e72"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "b863e2b49f96551024baf910fb6e6aa3216a8e3e1ed5f9d48d83c2d9ae488c23"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "defb8f2b33c863c103ae0b7af12cf8222f216e95fce27fa93556fd7f15783700"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "3e94870388b1a5527565401908209bdea1ab652407c399e8f33905c77acdd10c"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "6a6e73de4c1e5427969e0696b2067ff5b54587948068f986c0616a77ccae628f"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "c42eb2f8e00af5fd49afe736d1597f3dc0a0da0ef11a6e9eef34955f0537c115"
+    },
+    {
+      "path": "locales/da-DK.json",
+      "sha256": "6a2168d473b8a80735e4b5e02fa24c76c260cb6b9c5095f5cadf619d6c5518a5"
+    },
+    {
+      "path": "locales/da.json",
+      "sha256": "9506a7d47e8c24ffb9ffbe96073d1fe15180a4ec73642ec154edff1edc198e32"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "0e9461edc72662022872e3600a0dcb933746d70ee73e776f052f37152e88afb2"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "79659f7d69226e841e6fd55a38ec1e55a99aab6204998bb17d169d78936b3f02"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "1d20eb1db38cae355128711df21996c9225871219b2c871f33151a3f365a5b89"
+    },
+    {
+      "path": "references/research-trace.json",
+      "sha256": "dd447557e08fe8cc5b7d25a514e7e957ac3436df4ac1bbcf0a05c2da34a69a24"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "9fd2dbe40ca7579abe0be4dae8189c353f3ec94917a5ee60bd3b0b23ebd16a56"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "eb2cdca539572904dbc2e783e0a9a6881df82bfcdf7942d68bb549f0e9a2cda5"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "98aceda8fc6bf066af487c3e61065195466cd0dacbf3650545c872b8b2de9ec1"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/INSTALL.md",
+      "sha256": "db1a221be5312eae1758022277d9cea0b790a92591b2bcef18fcfdb165470f9b"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/NOTICE",
+      "sha256": "5f02be7db831a9694ad27ba4552cf09fa71dcc698adfca1d0d3390d43e739383"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/README.md",
+      "sha256": "9baecc05fa38cc60bba999c7ce508e8b2a0c5df44344a93665d8a36a6b256e72"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/SKILL.md",
+      "sha256": "f6da4a159d3e398a269a1484e7eef9922d19cf5da1acb01166aa354592c26aef"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/THIRD_PARTY_NOTICES.md",
+      "sha256": "b863e2b49f96551024baf910fb6e6aa3216a8e3e1ed5f9d48d83c2d9ae488c23"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/fixtures/acceptance.json",
+      "sha256": "3e94870388b1a5527565401908209bdea1ab652407c399e8f33905c77acdd10c"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/inventory.json",
+      "sha256": "c42eb2f8e00af5fd49afe736d1597f3dc0a0da0ef11a6e9eef34955f0537c115"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/locales/da-DK.json",
+      "sha256": "6a2168d473b8a80735e4b5e02fa24c76c260cb6b9c5095f5cadf619d6c5518a5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/locales/da.json",
+      "sha256": "9506a7d47e8c24ffb9ffbe96073d1fe15180a4ec73642ec154edff1edc198e32"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/locales/supported.json",
+      "sha256": "0e9461edc72662022872e3600a0dcb933746d70ee73e776f052f37152e88afb2"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/profiles/mediums.json",
+      "sha256": "1d20eb1db38cae355128711df21996c9225871219b2c871f33151a3f365a5b89"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/references/research-trace.json",
+      "sha256": "dd447557e08fe8cc5b7d25a514e7e957ac3436df4ac1bbcf0a05c2da34a69a24"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/references/workflow.md",
+      "sha256": "9fd2dbe40ca7579abe0be4dae8189c353f3ec94917a5ee60bd3b0b23ebd16a56"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/rules/catalog.json",
+      "sha256": "eb2cdca539572904dbc2e783e0a9a6881df82bfcdf7942d68bb549f0e9a2cda5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/runtime/check_source.py",
+      "sha256": "98aceda8fc6bf066af487c3e61065195466cd0dacbf3650545c872b8b2de9ec1"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-samklang-da/sources.json",
+      "sha256": "229cd21329a6224180bd423c0ebe6f3e2cabb4a9cb7d8a4e1abc1127d0ef0293"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/INSTALL.md",
+      "sha256": "db1a221be5312eae1758022277d9cea0b790a92591b2bcef18fcfdb165470f9b"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/NOTICE",
+      "sha256": "5f02be7db831a9694ad27ba4552cf09fa71dcc698adfca1d0d3390d43e739383"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/README.md",
+      "sha256": "9baecc05fa38cc60bba999c7ce508e8b2a0c5df44344a93665d8a36a6b256e72"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/SKILL.md",
+      "sha256": "45b8b0477e7923cc860261ee0bbc268323245284c1ae7ed05d9c03f5249724e3"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "b863e2b49f96551024baf910fb6e6aa3216a8e3e1ed5f9d48d83c2d9ae488c23"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/fixtures/acceptance.json",
+      "sha256": "3e94870388b1a5527565401908209bdea1ab652407c399e8f33905c77acdd10c"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/inventory.json",
+      "sha256": "c42eb2f8e00af5fd49afe736d1597f3dc0a0da0ef11a6e9eef34955f0537c115"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/locales/da-DK.json",
+      "sha256": "6a2168d473b8a80735e4b5e02fa24c76c260cb6b9c5095f5cadf619d6c5518a5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/locales/da.json",
+      "sha256": "9506a7d47e8c24ffb9ffbe96073d1fe15180a4ec73642ec154edff1edc198e32"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/locales/supported.json",
+      "sha256": "0e9461edc72662022872e3600a0dcb933746d70ee73e776f052f37152e88afb2"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/profiles/mediums.json",
+      "sha256": "1d20eb1db38cae355128711df21996c9225871219b2c871f33151a3f365a5b89"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/references/research-trace.json",
+      "sha256": "dd447557e08fe8cc5b7d25a514e7e957ac3436df4ac1bbcf0a05c2da34a69a24"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/references/workflow.md",
+      "sha256": "9fd2dbe40ca7579abe0be4dae8189c353f3ec94917a5ee60bd3b0b23ebd16a56"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/rules/catalog.json",
+      "sha256": "eb2cdca539572904dbc2e783e0a9a6881df82bfcdf7942d68bb549f0e9a2cda5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/runtime/check_source.py",
+      "sha256": "98aceda8fc6bf066af487c3e61065195466cd0dacbf3650545c872b8b2de9ec1"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-documents/sources.json",
+      "sha256": "229cd21329a6224180bd423c0ebe6f3e2cabb4a9cb7d8a4e1abc1127d0ef0293"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/INSTALL.md",
+      "sha256": "db1a221be5312eae1758022277d9cea0b790a92591b2bcef18fcfdb165470f9b"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/NOTICE",
+      "sha256": "5f02be7db831a9694ad27ba4552cf09fa71dcc698adfca1d0d3390d43e739383"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/README.md",
+      "sha256": "9baecc05fa38cc60bba999c7ce508e8b2a0c5df44344a93665d8a36a6b256e72"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/SKILL.md",
+      "sha256": "da4dc203863f88e1fc7d66870b99c3cb3bb28b18c8164c9870c63ed2f3e39215"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "b863e2b49f96551024baf910fb6e6aa3216a8e3e1ed5f9d48d83c2d9ae488c23"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/fixtures/acceptance.json",
+      "sha256": "3e94870388b1a5527565401908209bdea1ab652407c399e8f33905c77acdd10c"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/inventory.json",
+      "sha256": "c42eb2f8e00af5fd49afe736d1597f3dc0a0da0ef11a6e9eef34955f0537c115"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/locales/da-DK.json",
+      "sha256": "6a2168d473b8a80735e4b5e02fa24c76c260cb6b9c5095f5cadf619d6c5518a5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/locales/da.json",
+      "sha256": "9506a7d47e8c24ffb9ffbe96073d1fe15180a4ec73642ec154edff1edc198e32"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/locales/supported.json",
+      "sha256": "0e9461edc72662022872e3600a0dcb933746d70ee73e776f052f37152e88afb2"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/profiles/mediums.json",
+      "sha256": "1d20eb1db38cae355128711df21996c9225871219b2c871f33151a3f365a5b89"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/references/research-trace.json",
+      "sha256": "dd447557e08fe8cc5b7d25a514e7e957ac3436df4ac1bbcf0a05c2da34a69a24"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/references/workflow.md",
+      "sha256": "9fd2dbe40ca7579abe0be4dae8189c353f3ec94917a5ee60bd3b0b23ebd16a56"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/rules/catalog.json",
+      "sha256": "eb2cdca539572904dbc2e783e0a9a6881df82bfcdf7942d68bb549f0e9a2cda5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/runtime/check_source.py",
+      "sha256": "98aceda8fc6bf066af487c3e61065195466cd0dacbf3650545c872b8b2de9ec1"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-review/sources.json",
+      "sha256": "229cd21329a6224180bd423c0ebe6f3e2cabb4a9cb7d8a4e1abc1127d0ef0293"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/INSTALL.md",
+      "sha256": "db1a221be5312eae1758022277d9cea0b790a92591b2bcef18fcfdb165470f9b"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/NOTICE",
+      "sha256": "5f02be7db831a9694ad27ba4552cf09fa71dcc698adfca1d0d3390d43e739383"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/README.md",
+      "sha256": "9baecc05fa38cc60bba999c7ce508e8b2a0c5df44344a93665d8a36a6b256e72"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/SKILL.md",
+      "sha256": "64452d3f63d590fad153abb79586ae2e45c8821951ace5aaacd481cb58f39699"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "b863e2b49f96551024baf910fb6e6aa3216a8e3e1ed5f9d48d83c2d9ae488c23"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/fixtures/acceptance.json",
+      "sha256": "3e94870388b1a5527565401908209bdea1ab652407c399e8f33905c77acdd10c"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/inventory.json",
+      "sha256": "c42eb2f8e00af5fd49afe736d1597f3dc0a0da0ef11a6e9eef34955f0537c115"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/locales/da-DK.json",
+      "sha256": "6a2168d473b8a80735e4b5e02fa24c76c260cb6b9c5095f5cadf619d6c5518a5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/locales/da.json",
+      "sha256": "9506a7d47e8c24ffb9ffbe96073d1fe15180a4ec73642ec154edff1edc198e32"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/locales/supported.json",
+      "sha256": "0e9461edc72662022872e3600a0dcb933746d70ee73e776f052f37152e88afb2"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/profiles/mediums.json",
+      "sha256": "1d20eb1db38cae355128711df21996c9225871219b2c871f33151a3f365a5b89"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/references/research-trace.json",
+      "sha256": "dd447557e08fe8cc5b7d25a514e7e957ac3436df4ac1bbcf0a05c2da34a69a24"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/references/workflow.md",
+      "sha256": "9fd2dbe40ca7579abe0be4dae8189c353f3ec94917a5ee60bd3b0b23ebd16a56"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/rules/catalog.json",
+      "sha256": "eb2cdca539572904dbc2e783e0a9a6881df82bfcdf7942d68bb549f0e9a2cda5"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/runtime/check_source.py",
+      "sha256": "98aceda8fc6bf066af487c3e61065195466cd0dacbf3650545c872b8b2de9ec1"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-samklang-da-web/sources.json",
+      "sha256": "229cd21329a6224180bd423c0ebe6f3e2cabb4a9cb7d8a4e1abc1127d0ef0293"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "229cd21329a6224180bd423c0ebe6f3e2cabb4a9cb7d8a4e1abc1127d0ef0293"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 32,
+  "scope": "Deterministic offline consumer packages; native host invocation and rendering not checked",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-samklang-da-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4087823,
+      "sha256": "9c82816bb2a62b5681992c99d381f12416c941bbc110cb6972393350d420a6db",
+      "members": 96,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4088594,
+      "sha256": "01b7cda407167b4ca51f178aac0cfd883de78d927444b383eff72900514aa2c8",
+      "members": 97,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4088255,
+      "sha256": "9850bf4fd6d8be299c9cc1f40fadd48cebd0d4b6f90198b7010ed1ce3c0cefe0",
+      "members": 97,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-claude-skill-v0.1.0.zip",
+      "bytes": 816733,
+      "sha256": "f79891b777e3bdc50ac5e75f111c7e29491a41f5d9b4d1ad445b171db0aa1f13",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-documents-claude-skill-v0.1.0.zip",
+      "bytes": 817117,
+      "sha256": "8f4c8ec49d8439edbd3c4dc5f212be5edee942091eab046454e73bdc959c5d87",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-documents",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 817117,
+      "sha256": "8f4c8ec49d8439edbd3c4dc5f212be5edee942091eab046454e73bdc959c5d87",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-documents",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 817117,
+      "sha256": "8f4c8ec49d8439edbd3c4dc5f212be5edee942091eab046454e73bdc959c5d87",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-documents",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-gemini-skill-v0.1.0.zip",
+      "bytes": 816733,
+      "sha256": "f79891b777e3bdc50ac5e75f111c7e29491a41f5d9b4d1ad445b171db0aa1f13",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 816733,
+      "sha256": "f79891b777e3bdc50ac5e75f111c7e29491a41f5d9b4d1ad445b171db0aa1f13",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-review-claude-skill-v0.1.0.zip",
+      "bytes": 816989,
+      "sha256": "31558af57604cc5d6df51e90f9fc223b2e2af32b994e32ef56fc9a443928db32",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-review",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-review-gemini-skill-v0.1.0.zip",
+      "bytes": 816989,
+      "sha256": "31558af57604cc5d6df51e90f9fc223b2e2af32b994e32ef56fc9a443928db32",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-review",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 816989,
+      "sha256": "31558af57604cc5d6df51e90f9fc223b2e2af32b994e32ef56fc9a443928db32",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-review",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-web-claude-skill-v0.1.0.zip",
+      "bytes": 816878,
+      "sha256": "685c8d693ed491ba868cae831417670de2f0e7981b834039a6faa3d99932b666",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-web",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-web-gemini-skill-v0.1.0.zip",
+      "bytes": 816878,
+      "sha256": "685c8d693ed491ba868cae831417670de2f0e7981b834039a6faa3d99932b666",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-web",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    },
+    {
+      "file": "kumihan-samklang-da-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 816878,
+      "sha256": "685c8d693ed491ba868cae831417670de2f0e7981b834039a6faa3d99932b666",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-samklang-da-web",
+      "slug": "kumihan-samklang-da",
+      "version": "0.1.0",
+      "source_sha256": "de8046abd117ae0c1d5b7e4e1cf1b4b84c1f4136d2a8e3da0c98e8238bcb60d8"
+    }
+  ]
+}

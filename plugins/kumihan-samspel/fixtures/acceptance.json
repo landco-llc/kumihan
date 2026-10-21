@@ -1,0 +1,77 @@
+{
+  "notice": "Short illustrative Swedish strings; byte-preservation cases, not visual or linguistic acceptance.",
+  "cases": [
+    {
+      "case_id": "SV-CASE-01",
+      "text": "ÅÄÖ åäö Éva",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-02",
+      "text": "Åsa och Öberg",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-03",
+      "text": "nattåg",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-04",
+      "text": "”Välkommen”",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-05",
+      "text": "25 % och 1 234,50 kr",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-06",
+      "text": "ministerium",
+      "locale": "sv-FI",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-07",
+      "text": "9.45 / 9:45",
+      "locale": "sv-FI",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-08",
+      "text": "EU:s EU-regler",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-09",
+      "text": "försäkringsinformation",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-10",
+      "text": "Plats för fler idéer.",
+      "locale": "sv",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-11",
+      "text": "dom",
+      "locale": "sv",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    },
+    {
+      "case_id": "SV-CASE-12",
+      "text": "ID: AB-123; https://example.org/a",
+      "locale": "sv-SE",
+      "expected": "Exact bytes retained; contextual language and rendering review required."
+    }
+  ]
+}

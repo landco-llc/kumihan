@@ -1,0 +1,43 @@
+{
+  "status": "design-proposals-not-measured-optima",
+  "web": {
+    "body_css_px": [
+      16,
+      18
+    ],
+    "line_height": [
+      1.5,
+      1.65
+    ],
+    "heading_body_ratio": [
+      2,
+      3
+    ],
+    "condition": "Only a starting comparison without adopted brand scale; test reader, font and width."
+  },
+  "documents": {
+    "body_pt": [
+      10.5,
+      12
+    ],
+    "line_height": [
+      1.35,
+      1.55
+    ],
+    "condition": "Print starting proposal; actual paper and reader test required."
+  },
+  "presentation": {
+    "body_pt": [
+      24,
+      28
+    ],
+    "heading_pt": [
+      36,
+      44
+    ],
+    "condition": "Starting proposal only; test projection and farthest seat."
+  },
+  "display": {
+    "condition": "No fixed size; readable essential information alongside graphic expression."
+  }
+}

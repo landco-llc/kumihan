@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source",
+    "source_sha256",
+    "source_integrity",
+    "locale",
+    "guidance",
+    "native_rendering"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_integrity": {
+      "type": "object"
+    },
+    "locale": {
+      "enum": [
+        "tl",
+        "tl-PH",
+        "und"
+      ]
+    },
+    "guidance": {
+      "type": "array"
+    },
+    "native_rendering": {
+      "const": "not_checked"
+    }
+  }
+}

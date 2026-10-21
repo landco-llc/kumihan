@@ -1,0 +1,242 @@
+{
+  "schema_version": "1.0",
+  "language": "no",
+  "sources": [
+    {
+      "id": "L01",
+      "title": "Normering av nynorsk og bokmål",
+      "url": "https://sprakradet.no/nyord-og-rettskrivingsendringer/normering-av-norsk/normering/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L03",
+      "title": "Rettleiing om konsekvent nynorsk",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/praktisk-sprakbruk/nynorskhjelp/rettleiing-om-konsekvent-nynorsk/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L04",
+      "title": "A-endelser i bokmål: døra, men dronningen, brevene, har hoppet?",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/a-endelser-i-bokmal-dora-men-dronningen-brevene-har-hoppet/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L05",
+      "title": "Kvifor har vi æ, ø og å i alfabetet?",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/kvifor-har-vi-ae-o-og-a-i-alfabetet/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "history"
+    },
+    {
+      "id": "L08",
+      "title": "Hermeteikn",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/hermeteikn/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L09",
+      "title": "Tankestrek",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/tankestrek/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L10",
+      "title": "Bindestrek",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/bindestrek/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L11",
+      "title": "Eitt eller fleire ord",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/eitt-eller-fleire-ord/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L12",
+      "title": "Orddeling ved linjeskift",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/orddeling-ved-linjeskift/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L13",
+      "title": "Mellomrom",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/mellomrom/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L14",
+      "title": "Tall, tid og dato",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tall-tid-dato/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L15",
+      "title": "Forkortelser",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/forkortelser/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L16",
+      "title": "Stor eller liten forbokstav",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/stor-eller-liten-forbokstav/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L17",
+      "title": "Aksentteikn",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/aksentteikn/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L18",
+      "title": "Apostrof",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/apostrof/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L19",
+      "title": "Kommaregler",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/kommaregler/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L21",
+      "title": "UAX #14: Unicode Line Breaking Algorithm",
+      "url": "https://www.unicode.org/reports/tr14/",
+      "publisher": "Unicode Consortium",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L23",
+      "title": "Norwegian collation tailoring (CLDR 48)",
+      "url": "https://www.unicode.org/cldr/charts/48/collation/no.html",
+      "publisher": "Unicode Consortium",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L25",
+      "title": "Den vanlegaste nynorskfeilen: presens st-passiv",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/den-vanlegaste-nynorskfeilen-presens-st-passiv/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L26",
+      "title": "Kan en skrive «sjøl» i en fagartikkel?",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/kan-en-skrive-sjol-i-en-fagartikkel/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L27",
+      "title": "Æ, ø og å i internasjonal sammenheng",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/ae-o-og-a-i-internasjonal-sammenheng/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L28",
+      "title": "Alfabeter og alfabetisering",
+      "url": "https://ihs.ordnett.no/sprakverktoy/sprakvett/alfabeter-og-alfabetisering/",
+      "publisher": "Ordnett / Kunnskapsforlaget",
+      "evidence_kind": "dictionary"
+    },
+    {
+      "id": "L30",
+      "title": "Retningsliner: Opptak av tyske og danske importord i nynorske ordbøker og ordlister",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/ordlister-og-ordboker/ord-som-kan-takast-inn-i-nynorske-ordlister/retningsliner/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L31",
+      "title": "Deltaker eller deltager, gjentakelse eller gjentagelse?",
+      "url": "https://sprakradet.no/spraksporsmal-og-svar/deltaker-eller-deltager-gjentakelse-eller-gjentagelse/",
+      "publisher": "Språkrådet",
+      "evidence_kind": "normative"
+    },
+    {
+      "id": "L34",
+      "title": "Henrik Ibsens skrifter: Tekstkritiske retningslinjer",
+      "url": "https://ibsen.uio.no/tekstkritiskeRetningslinjer.html?facs=Ja",
+      "publisher": "Universitetet i Oslo / Henrik Ibsens skrifter",
+      "evidence_kind": "history"
+    },
+    {
+      "id": "T05",
+      "title": "Punkt — Typografi / Font",
+      "url": "https://punkt.oslo.kommune.no/latest/grunnleggende/ressurser/typografi/"
+    },
+    {
+      "id": "T06",
+      "title": "NAV Aksel — Typografi",
+      "url": "https://aksel.nav.no/grunnleggende/styling/typografi"
+    },
+    {
+      "id": "T07",
+      "title": "Designsystemet — Typography",
+      "url": "https://designsystemet.no/en/fundamentals/theme/typography"
+    },
+    {
+      "id": "T08",
+      "title": "Designsystemet — Tokens / Sizes",
+      "url": "https://designsystemet.no/en/fundamentals/theme/variables"
+    },
+    {
+      "id": "T10",
+      "title": "DNB Eufemia — Font size / line height / weight",
+      "url": "https://eufemia.dnb.no/uilib/typography/font-size/"
+    },
+    {
+      "id": "T11",
+      "title": "NRK Sans — official typography / creator account",
+      "url": "https://info.nrk.no/design/profiler/hovedidentitet/skrift-og-typografi/"
+    },
+    {
+      "id": "T12",
+      "title": "Språkrådet — Aksentteikn",
+      "url": "https://sprakradet.no/godt-og-korrekt-sprak/rettskriving-og-grammatikk/tegn/aksentteikn/"
+    },
+    {
+      "id": "T13",
+      "title": "IANA language registry / W3C language tags",
+      "url": "https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"
+    },
+    {
+      "id": "T14",
+      "title": "Unicode CLDR48 — nb / nn exemplars and Norwegian collation",
+      "url": "https://www.unicode.org/cldr/charts/48/summary/nb.html"
+    },
+    {
+      "id": "T15",
+      "title": "Unicode UAX15 — Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/"
+    },
+    {
+      "id": "T16",
+      "title": "W3C CSS Text3 — Hyphenation",
+      "url": "https://www.w3.org/TR/css-text-3/#hyphenation"
+    },
+    {
+      "id": "T17",
+      "title": "Uu-tilsynet — Text spacing / resize",
+      "url": "https://www.uutilsynet.no/wcag-standarden/1412-tekstavstand-niva-aa/146"
+    }
+  ],
+  "coverage": "Public source metadata supports conditional guidance, not native rendering certification."
+}

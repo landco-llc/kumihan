@@ -1,0 +1,23 @@
+{
+  "name": "kumihan-vinyasa",
+  "version": "0.1.0",
+  "description": "संस्कृतपाठस्य अक्षरविन्यासे साहाय्यम्। मूलपाठं रक्षति। | Source-preserving Sanskrit typography guidance for Devanagari and explicitly identified IAST, web, documents and read-only review.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜विन्यास -Vinyāsa",
+    "shortDescription": "संस्कृतपाठस्य अक्षरविन्यासे साहाय्यम्। मूलपाठं रक्षति। | Source-preserving Sanskrit typography guidance for Devanagari and explicitly identified IAST, web, documents and read-only review.",
+    "longDescription": "संस्कृतपाठस्य अक्षरविन्यासे साहाय्यम्। मूलपाठं रक्षति। | Source-preserving Sanskrit typography guidance for Devanagari and explicitly identified IAST, web, documents and read-only review.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "संस्कृतपाठस्य अक्षरविन्यासे साहाय्यम्। मूलपाठं रक्षति।",
+      "Source-preserving Sanskrit typography guidance for Devanagari and explicitly identified IAST, web, documents and read-only review."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}
