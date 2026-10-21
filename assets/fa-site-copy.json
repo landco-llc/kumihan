@@ -116,7 +116,29 @@
       "KUMIHAN ژاپنی",
       "kumihan.html"
     ],
-    "top": "بازگشت به بالا"
+    "top": "بازگشت به بالا",
+    "regions": {
+      "eyebrow": "IRAN / AFGHANISTAN",
+      "h2": [
+        "یک زبان فارسی",
+        "با عرف‌های منطقه‌ای متفاوت"
+      ],
+      "body": "انتخاب صریح کاربر بر فراداده و حدس مقدم است. در هر دو منطقه نیم‌فاصله، ک و ی فارسی، اعداد و تاریخ‌ها همان‌گونه که آمده‌اند حفظ می‌شوند و تغییر تقویم یا ارقام به اجازهٔ صریح نیاز دارد.",
+      "cards": [
+        {
+          "tag": "IR",
+          "name": "ایران",
+          "code": "fa-IR",
+          "p": "پیشنهاد پیش‌فرض برای متن تازهٔ فارسی ایران. ارقام فارسی فقط با درخواست ارقام محلی به کار می‌رود و تقویم صریح تعیین می‌شود، بدون تبدیل خودکار."
+        },
+        {
+          "tag": "AF",
+          "name": "افغانستان",
+          "code": "fa-AF",
+          "p": "لحن دری و منطقه‌ای فقط در حد راهنماست. نام ماه‌ها ممکن است با fa-IR فرق کند (حمل و فروردین) و هیچ‌کدام خودکار اصلاح نمی‌شود. متن fa-IR فقط برچسب تازه نمی‌گیرد و بازبینی ویراستار بومی لازم است."
+        }
+      ]
+    }
   },
   "en": {
     "title": "KUMIHAN｜تراز — Natural Persian typography, made with AI",
@@ -234,7 +256,29 @@
       "KUMIHAN Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top"
+    "top": "Back to top",
+    "regions": {
+      "eyebrow": "IRAN / AFGHANISTAN",
+      "h2": [
+        "One Persian language,",
+        "two regional conventions"
+      ],
+      "body": "An explicit locale choice outranks metadata and guesses. In both regions ZWNJ, Persian Kaf/Yeh, digits and dates stay exactly as supplied; calendar or digit changes need explicit authority.",
+      "cards": [
+        {
+          "tag": "IR",
+          "name": "Iran",
+          "code": "fa-IR",
+          "p": "The proposed default for new Iranian Persian copy. Persian (arabext) digits only when localized digits are requested; the calendar is stated explicitly, never auto-converted."
+        },
+        {
+          "tag": "AF",
+          "name": "Afghanistan",
+          "code": "fa-AF",
+          "p": "Dari and regional register are guidance-only. Month names can differ from fa-IR (حمل vs فروردین) and neither is auto-corrected. fa-IR text is never simply relabelled; native review required."
+        }
+      ]
+    }
   },
   "ja": {
     "title": "KUMIHAN｜تراز — ペルシア語のデザインをもっと自然に",
@@ -353,6 +397,28 @@
       "日本語版 KUMIHAN",
       "kumihan.html"
     ],
-    "top": "ページ上部へ"
+    "top": "ページ上部へ",
+    "regions": {
+      "eyebrow": "IRAN / AFGHANISTAN",
+      "h2": [
+        "同じペルシア語でも",
+        "地域の慣習は異なる"
+      ],
+      "body": "ロケールはメタデータや推測より利用者の明示指定を優先。どちらの地域でもZWNJ、ペルシア語のک・ی、数字・日付は原文のまま保持し、暦や数字の変換には明示的な許可が必要です。",
+      "cards": [
+        {
+          "tag": "IR",
+          "name": "イラン",
+          "code": "fa-IR",
+          "p": "イラン向け新規ペルシア語コピーの既定案。ペルシア数字（arabext）は現地数字を求められた場合のみ使い、暦は明示して自動変換しません。"
+        },
+        {
+          "tag": "AF",
+          "name": "アフガニスタン",
+          "code": "fa-AF",
+          "p": "ダリー語・地域の語調はガイダンスのみ。月名はfa-IRと異なる場合があり（حمل／فروردین）、どちらも誤りとして直しません。fa-IRの文章は流用せず、母語話者の校閲が必要です。"
+        }
+      ]
+    }
   }
 }

@@ -23,13 +23,51 @@ def x(value):
     return escape(str(value), quote=True)
 
 
+# The regional band (copy "regions"), as on KUMIHAN｜字衡: it takes the dark band's place.
+REGION_CSS = """
+    .locale-layout { grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); }
+    .locale-cards { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; align-self: center; }
+    .locale-cards article { padding: 24px 22px; border: 1px solid rgba(250,246,238,.22); background: rgba(250,246,238,.04); min-width: 0; }
+    .locale-tag { display: flex; align-items: baseline; gap: 10px; }
+    .locale-tag span { font: 800 11px/1 Arial, sans-serif; letter-spacing: .14em; color: #ff8b85; }
+    .locale-tag strong { font-size: 18px; }
+    .locale-cards code { display: block; margin: 10px 0 8px; font: 600 12px/1.5 ui-monospace, Menlo, Consolas, monospace; color: #c4c0b9; }
+    .idea-band .locale-cards p { margin: 0; font-size: 13px; line-height: 1.95; color: #c4c0b9; }
+    @media (max-width: 790px) { .locale-layout { grid-template-columns: minmax(0,1fr); } }
+    @media (max-width: 560px) { .locale-cards { grid-template-columns: minmax(0,1fr); } }
+"""
+
+
 def canonical_css(header, overrides):
-    """Canonical index CSS from _layouts/landing.html plus product overrides."""
+    """Canonical index CSS from _layouts/landing.html plus the regional band and product overrides."""
     layout = (ROOT / "_layouts" / "landing.html").read_text(encoding="utf-8")
     match = re.search(r"<style>([\s\S]*?)</style>", layout)
     if match is None:
         raise ValueError("Canonical KUMIHAN index stylesheet was not found")
-    return f"/* {header} */\n" + match.group(1).strip("\n") + "\n" + overrides.lstrip("\n")
+    return f"/* {header} */\n" + match.group(1).strip("\n") + REGION_CSS + overrides.lstrip("\n")
+
+
+def band(p, c):
+    """The dark band: the shared idea copy, or the edition's regional variants when it has them."""
+    r = c.get("regions")
+    if not r:
+        return f"""<section class="idea-band" aria-labelledby="idea-title">
+  <div class="shell idea-layout">
+    <div><p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(c['idea_eyebrow'])}</p><h2 id="idea-title">{two(c['idea_h2'], 'strong', '')}</h2><p>{x(c['idea_body'])}</p></div>
+    <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><small>FORM FOLLOWS MEANING</small></div>
+  </div>
+</section>"""
+    cards = "".join(
+        f'<article lang="{x(card["code"])}"><div class="locale-tag"><span lang="en" dir="ltr">{x(card["tag"])}</span>'
+        f'<strong lang="{x(p["lang"])}">{x(card["name"])}</strong></div>'
+        f'<code lang="en" dir="ltr">{x(card["code"])}</code><p lang="{x(p["lang"])}">{x(card["p"])}</p></article>'
+        for card in r["cards"])
+    return f"""<section class="idea-band" id="regions" aria-labelledby="idea-title">
+  <div class="shell idea-layout locale-layout">
+    <div><p class="eyebrow" dir="ltr"><span class="line" aria-hidden="true"></span> {x(r['eyebrow'])}</p><h2 id="idea-title">{"<br>".join(x(t) for t in r['h2'])}</h2><p>{x(r['body'])}</p></div>
+    <div class="locale-cards">{cards}</div>
+  </div>
+</section>"""
 
 
 def lines(parts, cls="accent"):
@@ -127,12 +165,7 @@ def landing(p, c):
     <div class="feature-grid">{features}</div>
   </div>
 </section>
-<section class="idea-band" aria-labelledby="idea-title">
-  <div class="shell idea-layout">
-    <div><p class="eyebrow"><span class="line" aria-hidden="true"></span> {x(c['idea_eyebrow'])}</p><h2 id="idea-title">{two(c['idea_h2'], 'strong', '')}</h2><p>{x(c['idea_body'])}</p></div>
-    <div class="idea-art" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><small>FORM FOLLOWS MEANING</small></div>
-  </div>
-</section>
+{band(p, c)}
 <section class="skills-section" id="skills" aria-labelledby="skills-title">
   <div class="shell">
     <div class="section-heading"><div><div class="section-number" dir="ltr">03 / THE SKILLS</div><h2 id="skills-title">{x(c['skills_h2'][0])}<br>{x(c['skills_h2'][1])}</h2></div><p>{x(c['skills_deck'])}</p></div>

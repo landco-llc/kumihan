@@ -1,7 +1,8 @@
 """The Bangla Japanese and English pages carry the shared KUMIHAN copy (tools/base_copy.py).
 
 The Bangla pages are maintained by hand, so this checks the rendered text
-instead of a copy file. Skill labels (Web, Documents, Review) are not shown.
+instead of a copy file. Skill labels (Web, Documents, Review) are not shown, and the
+regional band takes the place of the shared idea band.
 """
 import html
 import sys
@@ -31,6 +32,8 @@ class SharedCopy(unittest.TestCase):
             for key, value in base_copy.shared(lang, "bn").items():
                 if key == "footer_sub":
                     continue  # every page shares tools/site_footer.py
+                if key.startswith("idea_") and 'id="regions"' in text:
+                    continue  # the dark band shows Bangladesh / India instead (product_site.band)
                 if key == "skills":
                     value = [pair[1] for pair in value if pair]
                 for s in strings(value):
