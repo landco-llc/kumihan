@@ -32,8 +32,6 @@ PRODUCTS = {
     'da': ('samklang-da', 'samklang-da', 15),
     'no': ('samklang-no', 'samklang-no', 15),
     'uk': ('mira-uk', 'mira-uk', 15),
-    # English: packages in the shared downloads <Host>/ folders, as the Japanese edition's.
-    'en': ('measure', 'measure', 15),
 }
 
 

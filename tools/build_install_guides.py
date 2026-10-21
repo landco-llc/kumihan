@@ -43,7 +43,7 @@ PAGES = {
     "ko": "ko", "pl": "szyk", "pt": "compasso", "ru": "lad", "sw": "mizani", "vi": "nhip-chu",
     "zh-hans": "zilu", "zh-hant": "ziheng", "zu": "hlela",
     "sa": "vinyasa", "my": "kumihan-my", "tl": "tugma", "fi": "rytmi", "sv": "samspel",
-    "da": "samklang-da", "no": "samklang-no", "uk": "mira-uk", "en": "measure",
+    "da": "samklang-da", "no": "samklang-no", "uk": "mira-uk",
 }
 RTL = {"ar", "fa", "he"}
 

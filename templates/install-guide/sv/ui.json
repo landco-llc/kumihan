@@ -1,0 +1,21 @@
+{
+ "skip": "Hoppa till innehållet",
+ "nav": "AI-plattformar",
+ "language": "Språk",
+ "home": "KUMIHAN startsida",
+ "breadcrumb": "Installationsguide",
+ "toc_title": "På den här sidan",
+ "toc_summary": "Visa sidans innehåll",
+ "platforms": "Välj AI-plattform",
+ "note_title": "INSTALLATION / Innan du börjar",
+ "note": "Beroende på din miljö kan vissa av de beskrivna stegen saknas. Kontrollera det faktiska beteendet i den AI-värd du tänker använda.",
+ "source": "Öppna de ursprungliga installationsanvisningarna",
+ "steps": "Steg och anvisningar",
+ "titles": {"chatgpt": "Installera för ChatGPT / Codex", "claude": "Installera för Claude", "gemini": "Installera för Gemini"},
+ "leads": {
+  "chatgpt": "Välj att installera färdigheter eller en plugin beroende på var du vill använda dem",
+  "claude": "Claude Code och Claude-chatten installeras på olika sätt",
+  "gemini": "Så installerar du för Gemini CLI och Gemini-appen"
+ },
+ "roles": {"base": "startpunkt", "web": "webbsidor", "documents": "rapporter och bilder", "review": "granskning"}
+}

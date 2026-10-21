@@ -13,7 +13,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 SEMVER = re.compile(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\Z")
 
 
-CURRENT_PRODUCT_SLUGS = ['kumihan-accord', 'kumihan-ar', 'kumihan-bn', 'kumihan-compasso', 'kumihan-equilibrio', 'kumihan-fa', 'kumihan-geuljjaim', 'kumihan-grafia', 'kumihan-hi', 'kumihan-hlela', 'kumihan-lad', 'kumihan-laras', 'kumihan-lumnung', 'kumihan-measure', 'kumihan-mira-uk', 'kumihan-mizani', 'kumihan-my', 'kumihan-nhip-chu', 'kumihan-rytmi', 'kumihan-samklang-da', 'kumihan-samklang-no', 'kumihan-samspel', 'kumihan-satzbild', 'kumihan-szyk', 'kumihan-th', 'kumihan-tugma', 'kumihan-vinyasa', 'kumihan-ziheng', 'kumihan-zilu']
+CURRENT_PRODUCT_SLUGS = ['kumihan-accord', 'kumihan-ar', 'kumihan-bn', 'kumihan-compasso', 'kumihan-equilibrio', 'kumihan-fa', 'kumihan-geuljjaim', 'kumihan-grafia', 'kumihan-hi', 'kumihan-hlela', 'kumihan-lad', 'kumihan-laras', 'kumihan-lumnung', 'kumihan-mira-uk', 'kumihan-mizani', 'kumihan-my', 'kumihan-nhip-chu', 'kumihan-rytmi', 'kumihan-samklang-da', 'kumihan-samklang-no', 'kumihan-samspel', 'kumihan-satzbild', 'kumihan-szyk', 'kumihan-th', 'kumihan-tugma', 'kumihan-vinyasa', 'kumihan-ziheng', 'kumihan-zilu']
 
 def version_of(path):
     obj=json.loads(path.read_text(encoding="utf-8"))

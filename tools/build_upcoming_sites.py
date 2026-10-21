@@ -3,7 +3,7 @@
 
 KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he), विन्यास (sa),
 Soulad (cs), Arány (hu), ဟန်ချက် (my), Concinnitas (la), Tugma (tl), Rytmi (fi),
-Samspel (sv) and Samklang (da) each get a
+Samspel (sv), Samklang (da, no) and Міра (uk) each get a
 landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html);
 Measure (en) has an English and a Japanese landing (kumihan-en[.ja].html),
 in the canonical KUMIHAN index structure (tools/product_site.py). Copy lives in
@@ -46,6 +46,8 @@ EDITIONS = {
     "fi": ("Rytmi", "rytmi", "FI", "FI", "fi_FI", ("Ää", "↗", "¶", "◎")),
     "sv": ("Samspel", "samspel", "SV", "SV", "sv_SE", ("Åö", "↗", "¶", "◎")),
     "da": ("Samklang", "samklang-da", "DA", "DA", "da_DK", ("Æøå", "↗", "¶", "◎")),
+    "no": ("Samklang", "samklang-no", "NO", "NO", "nb_NO", ("Øy", "↗", "¶", "◎")),
+    "uk": ("Міра", "mira-uk", "UK", "УК", "uk_UA", ("Ґ Ї", "↗", "¶", "◎")),
 }
 RTL = {"he"}
 HOSTS = ("ChatGPT / Codex", "Claude / Claude Code", "Gemini")
@@ -81,7 +83,9 @@ def gateway(code, lang):
 
 
 def brand(code):
-    return f'<bdi dir="ltr">KUMIHAN<span class="brand-sub">｜{x(EDITIONS[code][0])}</span></bdi>'
+    # Burmese clusters must not take the brand's negative tracking (see web_fonts.py).
+    lang = ' lang="my"' if code == "my" else ""
+    return f'<bdi dir="ltr">KUMIHAN<span class="brand-sub"{lang}>｜{x(EDITIONS[code][0])}</span></bdi>'
 
 
 def landing(code, lang, c):

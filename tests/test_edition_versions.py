@@ -117,7 +117,7 @@ class SnapshotAndCoverage(unittest.TestCase):
     def test_catalogue_source_and_release_integrity(self):
         facts=v.load()['editions']
         self.assertEqual(set(facts),set(v.catalogue()))
-        self.assertEqual(len(facts),21)
+        self.assertEqual(len(facts),29)
         for code,spec in v.catalogue().items():
             with self.subTest(edition=code):
                 f=facts[code]
@@ -144,13 +144,13 @@ class SnapshotAndCoverage(unittest.TestCase):
         from build_version_site import outputs, readme
         from build_gateways import outputs as gateways, GATEWAYS
         facts=v.load()
-        # 21 editions with release facts plus 15 shown as coming soon (no facts yet);
-        # 36 tops: English (Measure) has no top of its own.
-        self.assertEqual(len(GATEWAYS),36)
+        # 29 editions with version facts plus 9 shown as coming soon (no facts yet);
+        # 38 tops: English (Measure) has no top of its own.
+        self.assertEqual(len(GATEWAYS),38)
         for path,html in gateways().items():
             if 'http-equiv="refresh"' in html:continue
-            self.assertEqual(html.count('class="version-state"'),36,path)
-            self.assertEqual(len(re.findall(r'<span class="state" aria-label="[^"]+"><span class="version-state"',html)),15,path)
+            self.assertEqual(html.count('class="version-state"'),38,path)
+            self.assertEqual(len(re.findall(r'<span class="state" aria-label="[^"]+"><span class="version-state"',html)),9,path)
         pages=[*v.ROOT.glob('kumihan*.html'),v.ROOT/'en.html',v.ROOT/'zh-tw.html',*(v.ROOT/'docs').glob('install-*.html')]
         counts={'landing':0,'install':0}
         generated=outputs()
@@ -168,7 +168,7 @@ class SnapshotAndCoverage(unittest.TestCase):
                     self.assertTrue(href in {a['url'] for a in facts['editions'][code]['verified_assets']}
                                     or is_source_download(href, facts['editions'][code]), (relative,href))
                 for pre in re.findall(r'<pre\b.*?</pre>',html,re.S):self.assertNotIn('vX.Y.Z',pre)
-        self.assertEqual(counts,{'landing':63,'install':186})
+        self.assertEqual(counts,{'landing':87,'install':258})
         self.assertEqual(readme(generated['README.md'],facts),generated['README.md'])
         self.assertNotIn('新版Release未作成',generated['README.md'])
         self.assertNotIn('await approval',generated['README.md'])

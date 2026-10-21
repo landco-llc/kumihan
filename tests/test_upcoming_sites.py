@@ -3,7 +3,7 @@
 Each of el, nl, ms, tr, he, sa, cs, hu, my, la, tl, fi, sv, da, no and uk has a landing in its
 language, English and Japanese, and a top page; English (en) has an English and a Japanese
 landing and is listed on every top. Editions with packages in the version catalogue (sa, my,
-tl, fi, sv, da, no, uk, en) link their skills and installation guides; the others claim no
+tl, fi, sv, da, no, uk) link their skills and installation guides; the others claim no
 release, download or installation guide.
 """
 import json
@@ -18,7 +18,7 @@ import build_gateways as gateways  # noqa: E402
 import build_upcoming_sites as upcoming  # noqa: E402
 
 CODES = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da", "no", "uk")
-RELEASED = ("sa", "my", "tl", "en", "fi", "sv", "da", "no", "uk")
+RELEASED = ("sa", "my", "tl", "fi", "sv", "da", "no", "uk")
 COMING = tuple(c for c in CODES if c not in RELEASED)
 TOPS = tuple(c for c in CODES if c != "en")
 

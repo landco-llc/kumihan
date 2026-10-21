@@ -83,11 +83,12 @@ LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "j
          "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa",
          "el": "el", "nl": "latin", "ms": "latin", "tr": "latin", "he": "he", "sa": "hi",
          "cs": "latin", "hu": "latin", "la": "latin", "tl": "latin", "my": "my",
-         "fi": "latin", "sv": "latin", "da": "latin"}
+         "fi": "latin", "sv": "latin", "da": "latin",
+         "no": "latin", "uk": "ru"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
          "अक्षर-संगति বাংলা অক্ষরসজ্জা فارسی تراز ភាសាខ្មែរ លំនឹង ក あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文 "
-         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך संस्कृतम् विन्यास सं क्ष မြန်မာ ဟန်ချက် မြ င်္ဂ")
+         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך संस्कृतम् विन्यास सं क्ष မြန်မာ ဟန်ချက် မြ င်္ဂ Українська Міра УК Ґ Ї")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
           "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn", "Noto Sans Hebrew", "Noto Sans Myanmar", "Noto Sans")
@@ -129,7 +130,7 @@ GLYPH_FAMILIES = {
     "bn": "Tiro Bangla", "el": "GFS Didot", "my": "Noto Serif Myanmar",
 }
 # The card characters; the stylesheet carries only these glyphs.
-GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ Ř Ő မြ Æ Â Th Öö Å Ø"
+GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ Ř Ő မြ Æ Â Th Öö Å Ø Øy Ї"
 
 
 def glyph_url():
@@ -221,6 +222,8 @@ def css():
     out.append("/* Khmer (no spaces between words) and isiZulu (long agglutinated words): the same, for")
     out.append("   headings and paragraphs. */")
     out.append('html:is([lang="km"], [lang="zu"]) :is(h1, h2, h3, p, li, summary) { overflow-wrap: anywhere; }')
+    out.append("/* Burmese (the KUMIHAN｜ဟန်ချက် brand in page headers): no tracking inside syllable clusters. */")
+    out.append('[lang="my"], .brand .brand-sub[lang="my"] { letter-spacing: normal; }')
     return "\n".join(out) + "\n" + FOOTER.CSS
 
 
