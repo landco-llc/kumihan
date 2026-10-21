@@ -46,10 +46,11 @@ EDITIONS = {
     "ms": ("KUMIHAN｜Jalin", "Jalin", "マレー語", "Malay", "0.1.0"),
     "tr": ("KUMIHAN｜Ahenk", "Ahenk", "トルコ語", "Turkish", "0.1.0"),
     "he": ("KUMIHAN｜מקצב", "מקצב", "ヘブライ語", "Hebrew", "0.1.0"),
+    "sa": ("KUMIHAN｜विन्यास", "विन्यास", "サンスクリット語", "Sanskrit", "0.1.0"),
 }
 # Editions with pages but no package or Release yet: their copy lives together in
 # assets/upcoming-site-copy.json and the release wording below replaces the shared one.
-UPCOMING = ("el", "nl", "ms", "tr", "he")
+UPCOMING = ("el", "nl", "ms", "tr", "he", "sa")
 
 COPY_FILES = {"it": "equilibrio", "de": "satzbild", "hi": "hi", "fr": "accord", "ar": "ar", "pt": "compasso", "es": "grafia",
               "pl": "szyk", "id": "laras", "ru": "lad", "sw": "mizani", "zu": "hlela",

@@ -915,7 +915,7 @@ for _reader, _cards in CARDS.items():
         _cards["fa"] = FA_CARD_COPY[_reader]
 
 
-# Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב):
+# Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב, विन्यास):
 # registry, top page, names and cards from assets/upcoming-editions.json. "names" is the
 # edition's name in each reader language and "card" its card in each earlier reader
 # language; "edition_names" and "cards" are the new reader language's own tables.
@@ -928,11 +928,11 @@ for _code, _e in UPCOMING.items():
     EDITION_NAMES[_code] = dict(_e["edition_names"])
     CARDS[_code] = {c: tuple(pair) for c, pair in _e["cards"].items()}
 for _code, _e in UPCOMING.items():
+    # A reader added earlier keeps its own name and card for an edition added later.
     for _reader, _name in _e["names"].items():
-        if _reader not in UPCOMING:
-            EDITION_NAMES[_reader][_code] = _name
+        EDITION_NAMES[_reader].setdefault(_code, _name)
     for _reader, _pair in _e["card"].items():
-        CARDS[_reader][_code] = tuple(_pair)
+        CARDS[_reader].setdefault(_code, tuple(_pair))
 CARDS["pl"] = {code: tuple(_PL_ONE_LETTER.sub("\\1\u00a0", s) for s in pair) for code, pair in CARDS["pl"].items()}
 
 
@@ -1039,7 +1039,7 @@ def page(key, c):
 <link href="assets/gateway.css?v={css_version()}" rel="stylesheet"/>
 <link rel="stylesheet" href="assets/version-info.css">
 {alternates}<link href="{BASE}{file}" rel="canonical"/>
-{WEB_FONTS.head(html_lang)}
+<link rel="stylesheet" href="{WEB_FONTS.local_css(WEB_FONTS.glyph_url())}">{WEB_FONTS.head(html_lang)}
 
 </head>
 <body>
