@@ -94,7 +94,7 @@ v0.1.8 では、目的に応じた情報階層、文字と図像の関係、ブ�
 | 対象 | スクリプト |
 | --- | --- |
 | トップページ | `tools/build_gateways.py` |
-| 各言語版のサイト | `tools/build_*_site.py`、`tools/build_nhip_chu_site.mjs` |
+| 各言語版のサイト | `tools/build_*_site.py` |
 | 日英ページの共通コピー | `tools/base_copy.py` |
 | 書体・共通フッター | `tools/web_fonts.py`、`tools/site_footer.py`（書体ファイルの取り込みは `tools/fetch_fonts.py`） |
 | シェア表示 | `tools/site_share.py` |
