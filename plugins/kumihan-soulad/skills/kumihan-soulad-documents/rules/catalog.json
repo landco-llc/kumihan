@@ -1,0 +1,366 @@
+[
+  {
+    "id": "CS-TYPE-01",
+    "language": "cs",
+    "title": "Diacritics are letters",
+    "description_en": "Preserve č ř ů ď ť ě and uppercase marks; do not replace ď/ť with d/t plus apostrophe. Verify glyph clearance in the actual font.",
+    "requirement": "Preserve č ř ů ď ť ě and uppercase marks; do not replace ď/ť with d/t plus apostrophe. Verify glyph clearance in the actual font.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 65
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-02",
+    "language": "cs",
+    "title": "Normalization is derived only",
+    "description_en": "Keep original NFC/NFD byte identity. Never apply NFKC to manuscripts or turn NBSP into ordinary spaces silently.",
+    "requirement": "Keep original NFC/NFD byte identity. Never apply NFKC to manuscripts or turn NBSP into ordinary spaces silently.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 77
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-03",
+    "language": "cs",
+    "title": "One-letter word binding",
+    "description_en": "Consider k s v z o u a i with the following Czech phrase; check grammatical role, quotation language and code before proposing NBSP. Never insert it automatically.",
+    "requirement": "Consider k s v z o u a i with the following Czech phrase; check grammatical role, quotation language and code before proposing NBSP. Never insert it automatically.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 87
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-04",
+    "language": "cs",
+    "title": "Bound semantic units",
+    "description_en": "Review quantity/unit, initials/name and date bindings; avoid an unbreakable whole address or sentence on narrow screens.",
+    "requirement": "Review quantity/unit, initials/name and date bindings; avoid an unbreakable whole address or sentence on narrow screens.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-05",
+    "language": "cs",
+    "title": "Czech hyphenation context",
+    "description_en": "Use Czech dictionaries with recorded edition and morphological boundaries. A CSS hyphens declaration alone is not proof of correct breaks.",
+    "requirement": "Use Czech dictionaries with recorded edition and morphological boundaries. A CSS hyphens declaration alone is not proof of correct breaks.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-06",
+    "language": "cs",
+    "title": "Czech quotation",
+    "description_en": "Review „…“ and nested ‚…‘ in local-language context; punctuation position depends on whether a full sentence or fragment is quoted.",
+    "requirement": "Review „…“ and nested ‚…‘ in local-language context; punctuation position depends on whether a full sentence or fragment is quoted.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-07",
+    "language": "cs",
+    "title": "Hyphen dash minus",
+    "description_en": "Preserve lexical hyphen, en dash ranges and mathematical minus as distinct roles. No blanket replacement.",
+    "requirement": "Preserve lexical hyphen, en dash ranges and mathematical minus as distinct roles. No blanket replacement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 108
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-08",
+    "language": "cs",
+    "title": "Percent depends on meaning",
+    "description_en": "Distinguish quantity 30 % from adjectival 30% sleva and quantity 24 h from adjectival 24h; never infer grammar from a percent formatter.",
+    "requirement": "Distinguish quantity 30 % from adjectival 30% sleva and quantity 24 h from adjectival 24h; never infer grammar from a percent formatter.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-09",
+    "language": "cs",
+    "title": "Temperature and angle",
+    "description_en": "Distinguish 18 °C from 45°; keep °C together without applying angle spacing rules to temperature.",
+    "requirement": "Distinguish 18 °C from 45°; keep °C together without applying angle spacing rules to temperature.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-10",
+    "language": "cs",
+    "title": "Dates and time variants",
+    "description_en": "Record document convention for 20. 10. 2026, business numeric dates, 8.05 or 8:05; preserve values and accepted variants.",
+    "requirement": "Record document convention for 20. 10. 2026, business numeric dates, 8.05 or 8:05; preserve values and accepted variants.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 129
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-11",
+    "language": "cs",
+    "title": "Inflection and information order",
+    "description_en": "Do not reorder words for fit or concatenate dictionary forms; Czech cases, numerals and clitics require contextual editorial review.",
+    "requirement": "Do not reorder words for fit or concatenate dictionary forms; Czech cases, numerals and clitics require contextual editorial review.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 137
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-12",
+    "language": "cs",
+    "title": "Names and casing",
+    "description_en": "Preserve official names and diacritics. Do not impose English Title Case; all-caps display is a separate authorized style.",
+    "requirement": "Preserve official names and diacritics. Do not impose English Title Case; all-caps display is a separate authorized style.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 147
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-13",
+    "language": "cs",
+    "title": "Voice and register",
+    "description_en": "Distinguish standard colloquial, regional and nonstandard voice; change ty/vy or shorten copy only on explicit request.",
+    "requirement": "Distinguish standard colloquial, regional and nonstandard voice; change ty/vy or shorten copy only on explicit request.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 153
+      }
+    ]
+  },
+  {
+    "id": "CS-TYPE-14",
+    "language": "cs",
+    "title": "Font and medium evidence",
+    "description_en": "Choose actual font, weight, size and medium; measure accents, fallback, line breaks and licenses rather than copying a universal heading ratio.",
+    "requirement": "Choose actual font, weight, size and medium; measure accents, fallback, line breaks and licenses rather than copying a universal heading ratio.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "7f6d543edc069fbcce46f0770b47ee63b3ecda45",
+        "filename": "CS_Research_20261020.source.md",
+        "line": 22
+      }
+    ]
+  }
+]

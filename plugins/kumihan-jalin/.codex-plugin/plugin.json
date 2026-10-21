@@ -1,0 +1,22 @@
+{
+  "name": "kumihan-jalin",
+  "version": "0.1.0",
+  "description": "Panduan tipografi bahasa Melayu yang mengekalkan teks asal dan menyatakan batas semakan. | Malay typography guidance with original-text preservation and explicit verification limits.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Jalin",
+    "shortDescription": "Tipografi Melayu | Malay typography",
+    "longDescription": "Panduan tipografi bahasa Melayu yang mengekalkan teks asal dan menyatakan batas semakan. | Malay typography guidance with original-text preservation and explicit verification limits.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Semak tipografi bahasa Melayu tanpa mengubah teks asal. | Review Malay typography while preserving the original text."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

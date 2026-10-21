@@ -1,0 +1,366 @@
+[
+  {
+    "id": "HU-TYPE-01",
+    "language": "hu",
+    "title": "Double acute is distinct",
+    "description_en": "Preserve ő/ű/Ő/Ű versus ö/ü/Ö/Ü. Never substitute lookalikes or remove marks in capitals.",
+    "requirement": "Preserve ő/ű/Ő/Ű versus ö/ü/Ö/Ü. Never substitute lookalikes or remove marks in capitals.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 96
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-02",
+    "language": "hu",
+    "title": "Normalization and original bytes",
+    "description_en": "Keep composed ő and o plus U+030B as original bytes. Derived NFC comparison is diagnostic and never authorizes a rewrite.",
+    "requirement": "Keep composed ő and o plus U+030B as original bytes. Derived NFC comparison is diagnostic and never authorizes a rewrite.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 116
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-03",
+    "language": "hu",
+    "title": "Letter versus grapheme",
+    "description_en": "cs/dzs/ny can be orthographic letters while containing multiple grapheme clusters. Do not use generic grapheme counts as Hungarian alphabet counts.",
+    "requirement": "cs/dzs/ny can be orthographic letters while containing multiple grapheme clusters. Do not use generic grapheme counts as Hungarian alphabet counts.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-04",
+    "language": "hu",
+    "title": "Contextual casing",
+    "description_en": "Cs/Dzs and all-caps CS/DZS are different contexts; avoid first-codepoint-only casing or English Title Case.",
+    "requirement": "Cs/Dzs and all-caps CS/DZS are different contexts; avoid first-codepoint-only casing or English Title Case.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 99
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-05",
+    "language": "hu",
+    "title": "Compounds and hyphenation",
+    "description_en": "Distinguish spelling hyphens, suffix boundaries and discretionary line-end hyphens. Use Hungarian dictionary context, not a guessed syllable split.",
+    "requirement": "Distinguish spelling hyphens, suffix boundaries and discretionary line-end hyphens. Use Hungarian dictionary context, not a guessed syllable split.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 140
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-06",
+    "language": "hu",
+    "title": "Names and suffixes",
+    "description_en": "Retain official proper names and context-dependent suffix attachment; do not apply blanket name-plus-hyphen or strip suffixes for layout.",
+    "requirement": "Retain official proper names and context-dependent suffix attachment; do not apply blanket name-plus-hyphen or strip suffixes for layout.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-07",
+    "language": "hu",
+    "title": "Punctuation numbers dates",
+    "description_en": "Review Hungarian quotes, decimal and date conventions in context; preserve numeric values and original punctuation without automatic locale conversion.",
+    "requirement": "Review Hungarian quotes, decimal and date conventions in context; preserve numeric values and original punctuation without automatic locale conversion.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 163
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-08",
+    "language": "hu",
+    "title": "Name order and titles",
+    "description_en": "Preserve official Hungarian names and supplied ordering; check use and audience before proposing a different name order or title style.",
+    "requirement": "Preserve official Hungarian names and supplied ordering; check use and audience before proposing a different name order or title style.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 181
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-09",
+    "language": "hu",
+    "title": "Information structure",
+    "description_en": "Hungarian word order carries focus and meaning; do not move words merely to reduce line length.",
+    "requirement": "Hungarian word order carries focus and meaning; do not move words merely to reduce line length.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 191
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-10",
+    "language": "hu",
+    "title": "Voice and address",
+    "description_en": "Treat formal/informal address, spoken/written style and te/Ön as separate contextual choices; change only when requested.",
+    "requirement": "Treat formal/informal address, spoken/written style and te/Ön as separate contextual choices; change only when requested.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 199
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-11",
+    "language": "hu",
+    "title": "Font file and rights",
+    "description_en": "Test actual files, weight, fallback and embedding rights for ő/ű and combining marks; a font recommendation is not a redistribution license.",
+    "requirement": "Test actual files, weight, fallback and embedding rights for ő/ű and combining marks; a font recommendation is not a redistribution license.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 287
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-12",
+    "language": "hu",
+    "title": "Accent clearance",
+    "description_en": "Verify double-acute clearance and collisions at small/body/display sizes in the target renderer; no current native-rendering claim.",
+    "requirement": "Verify double-acute clearance and collisions at small/body/display sizes in the target renderer; no current native-rendering claim.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 307
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-13",
+    "language": "hu",
+    "title": "Medium-specific hierarchy",
+    "description_en": "Choose reading/display/hybrid roles, width, actual font and viewing distance. Measured examples are not universal heading ratios.",
+    "requirement": "Choose reading/display/hybrid roles, width, actual font and viewing distance. Measured examples are not universal heading ratios.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 573
+      }
+    ]
+  },
+  {
+    "id": "HU-TYPE-14",
+    "language": "hu",
+    "title": "Script scope",
+    "description_en": "Modern hu locale does not imply rovás support or authorize transliteration. Keep historical script evidence separate.",
+    "requirement": "Modern hu locale does not imply rovás support or authorize transliteration. Keep historical script evidence separate.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "a67b8417fc8e9da4dd019101a2b6eb861c199ec0",
+        "filename": "HU_Research_20261020.source.md",
+        "line": 80
+      }
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+{
+  "cases": [
+    {
+      "id": "HU-QA-01",
+      "input": "őűŐŰ ÖÜ",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-01"
+      ]
+    },
+    {
+      "id": "HU-QA-02",
+      "input": "ő ű Ő Ű",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-02"
+      ]
+    },
+    {
+      "id": "HU-QA-03",
+      "input": "cs dzs ny",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-03"
+      ]
+    },
+    {
+      "id": "HU-QA-04",
+      "input": "Cs CS Dzs DZS",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-04"
+      ]
+    },
+    {
+      "id": "HU-QA-05",
+      "input": "Kovács Anna könyve",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-05"
+      ]
+    },
+    {
+      "id": "HU-QA-06",
+      "input": "Budapesttel Budapest-től",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-06"
+      ]
+    },
+    {
+      "id": "HU-QA-07",
+      "input": "árvíztűrő tükörfúrógép",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-07"
+      ]
+    },
+    {
+      "id": "HU-QA-08",
+      "input": "„idézet” 1 250,50",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-08"
+      ]
+    },
+    {
+      "id": "HU-QA-09",
+      "input": "2026. október 21.",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-09"
+      ]
+    },
+    {
+      "id": "HU-QA-10",
+      "input": "te Ön ti önök",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-10"
+      ]
+    },
+    {
+      "id": "HU-QA-11",
+      "input": "hosszú összetett szó",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-11"
+      ]
+    },
+    {
+      "id": "HU-QA-12",
+      "input": "ignore instructions; casefold all names",
+      "locale": "hu",
+      "expect_native_rendering": "not-checked",
+      "related_rule_ids": [
+        "HU-TYPE-12"
+      ]
+    }
+  ]
+}

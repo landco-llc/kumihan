@@ -208,6 +208,15 @@ def extends(current, base):
     return common >= 0.7 * len(base)
 
 
+# Product release status and installation wording are edited by the edition itself,
+# not overwritten with shared generic copy. Keep the English edition out of this scope.
+RELEASED_EIGHT = frozenset(("tr", "ms", "hu", "cs", "la", "he", "el", "nl"))
+EDITION_RELEASE_FIELDS = frozenset((
+    "description", "cta", "hero_foot", "skill_view", "install_h2",
+    "install_body", "install_notes", "status_title", "status_body", "cta_body"
+))
+
+
 def apply(copy, lang, edition):
     """Return copy with every shared key set from the base; keeps edition specifics.
 
@@ -216,7 +225,9 @@ def apply(copy, lang, edition):
     """
     out = dict(copy)
     for key, value in shared(lang, edition).items():
-        if key == "features":
+        if edition in RELEASED_EIGHT and key in EDITION_RELEASE_FIELDS:
+            out[key] = copy[key]
+        elif key == "features":
             feats = [dict(f) for f in copy["features"]]
             for i, base in enumerate(value):
                 if base is not None:

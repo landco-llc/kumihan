@@ -1,0 +1,644 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Ahenk",
+  "slug": "kumihan-ahenk",
+  "language": "tr",
+  "version": "0.1.0",
+  "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "451cd0f5f978a4d86341277fe5071774b1cdd64e65c15b18cb85a2936d34a588"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "9ccc6176216f439a362af9f0a80310fc359b727a3d805cad021bf06c9d22fd85"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "07f734e9c0b7ae1185e10498ce3bbef9750fda26ab213e40fdab560c2e4e9267"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "9ad14e7f27ded213903fa9dd9f20ee39b3409f65b11c1aae0edc80af26dff637"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "1c40fad15ccf13468b00ec356885ad6e23ce552388a6f53813007f8f006ba8c8"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "dff5356b1bdc8b8ca47df2090ef66a5afe81e27c49d9431d2d2e21dcd4af04f1"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "1dbc1448489ebe91b01c7a4fb4e14224922d1dcc0be5e7209001b48fc4e809f9"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "entrypoints/kumihan-ahenk-documents.md",
+      "sha256": "7aa01645f98f795d1c8cc384238cdfc337077ed2c52719dbaf9b92600794984a"
+    },
+    {
+      "path": "entrypoints/kumihan-ahenk-review.md",
+      "sha256": "1eb289b1d1c5b8fba372bf7442bfd9a1d4d1ca0505474690c482b7c73c7d0a7c"
+    },
+    {
+      "path": "entrypoints/kumihan-ahenk-web.md",
+      "sha256": "514ec12f5bd8a712860897c22dc5a504cc0547253434884b804d8d87daf388a9"
+    },
+    {
+      "path": "entrypoints/kumihan-ahenk.md",
+      "sha256": "075d51005e0790f14aeaac4bd435545e3f57cfc8beb82ddbd402ec71348a0301"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "bb7d61a6f2d52e834cbb1ee90412f9890da6596e93864d964462e94fbea5213b"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "1e3a4b06f11f11168d21f29c5267681cbb005c8d556569256bab16086b7bb2ab"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "2e000ffb7377a325a90759c52d21604fe0d0f0c110f06fbf3421c02da51f5c15"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "0255243161ba97c19c798f19aa3b83eee0153facda23e64820b0168426aa686a"
+    },
+    {
+      "path": "locales/tr-TR.json",
+      "sha256": "62d3e33df7f5b57250d4f40a5f1a5f5504e687dcb9d684157f11e107fffc44e6"
+    },
+    {
+      "path": "locales/tr.json",
+      "sha256": "63b56339596ad91467a7f44b9d9f2585aa6870f3c2af5e1960812e57d590141c"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "8c99459fdf644a8479e12b1ac45b71ff0f17601b3d6f84ecef74d60080e3c96e"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "d88149dd8d032d2a3b6221d6996b0b67dd3f455a45378442a0442bd541b70bdc"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-ahenk/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ahenk/SKILL.md",
+      "sha256": "1de9afbb2cca343d61cc42666865ba6bb91df925744e1b8ce98c73673454ada8"
+    },
+    {
+      "path": "skills/kumihan-ahenk/THIRD_PARTY_NOTICES.md",
+      "sha256": "dff5356b1bdc8b8ca47df2090ef66a5afe81e27c49d9431d2d2e21dcd4af04f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk/agents/openai.yaml",
+      "sha256": "d23ad87bdbffe82736e458749e45eb25d00c099c5eb6c9049800bbc2e4efe2f0"
+    },
+    {
+      "path": "skills/kumihan-ahenk/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-ahenk/fixtures/acceptance.json",
+      "sha256": "bb7d61a6f2d52e834cbb1ee90412f9890da6596e93864d964462e94fbea5213b"
+    },
+    {
+      "path": "skills/kumihan-ahenk/inventory.json",
+      "sha256": "2e000ffb7377a325a90759c52d21604fe0d0f0c110f06fbf3421c02da51f5c15"
+    },
+    {
+      "path": "skills/kumihan-ahenk/locales/supported.json",
+      "sha256": "0255243161ba97c19c798f19aa3b83eee0153facda23e64820b0168426aa686a"
+    },
+    {
+      "path": "skills/kumihan-ahenk/locales/tr-TR.json",
+      "sha256": "62d3e33df7f5b57250d4f40a5f1a5f5504e687dcb9d684157f11e107fffc44e6"
+    },
+    {
+      "path": "skills/kumihan-ahenk/locales/tr.json",
+      "sha256": "63b56339596ad91467a7f44b9d9f2585aa6870f3c2af5e1960812e57d590141c"
+    },
+    {
+      "path": "skills/kumihan-ahenk/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-ahenk/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-ahenk/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-ahenk/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-ahenk/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-ahenk/rules/catalog.json",
+      "sha256": "d88149dd8d032d2a3b6221d6996b0b67dd3f455a45378442a0442bd541b70bdc"
+    },
+    {
+      "path": "skills/kumihan-ahenk/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-ahenk/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-ahenk/sources.json",
+      "sha256": "f423e4f45ba5deaf60577ee418cf74918e5306c79ac37baaa4ad83d5293264f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/SKILL.md",
+      "sha256": "f048ce9846f483bfef51939ee8bf0b5bd0ab8daef6216308be85d99c41dc49e5"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "dff5356b1bdc8b8ca47df2090ef66a5afe81e27c49d9431d2d2e21dcd4af04f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/agents/openai.yaml",
+      "sha256": "d23ad87bdbffe82736e458749e45eb25d00c099c5eb6c9049800bbc2e4efe2f0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/fixtures/acceptance.json",
+      "sha256": "bb7d61a6f2d52e834cbb1ee90412f9890da6596e93864d964462e94fbea5213b"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/inventory.json",
+      "sha256": "2e000ffb7377a325a90759c52d21604fe0d0f0c110f06fbf3421c02da51f5c15"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/locales/supported.json",
+      "sha256": "0255243161ba97c19c798f19aa3b83eee0153facda23e64820b0168426aa686a"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/locales/tr-TR.json",
+      "sha256": "62d3e33df7f5b57250d4f40a5f1a5f5504e687dcb9d684157f11e107fffc44e6"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/locales/tr.json",
+      "sha256": "63b56339596ad91467a7f44b9d9f2585aa6870f3c2af5e1960812e57d590141c"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/rules/catalog.json",
+      "sha256": "d88149dd8d032d2a3b6221d6996b0b67dd3f455a45378442a0442bd541b70bdc"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-documents/sources.json",
+      "sha256": "f423e4f45ba5deaf60577ee418cf74918e5306c79ac37baaa4ad83d5293264f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/SKILL.md",
+      "sha256": "6660ca68cc8d4a15b787e2c2af436eeb1145cff653bfcd7c6e1ec45f8a4ace94"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "dff5356b1bdc8b8ca47df2090ef66a5afe81e27c49d9431d2d2e21dcd4af04f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/agents/openai.yaml",
+      "sha256": "d23ad87bdbffe82736e458749e45eb25d00c099c5eb6c9049800bbc2e4efe2f0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/fixtures/acceptance.json",
+      "sha256": "bb7d61a6f2d52e834cbb1ee90412f9890da6596e93864d964462e94fbea5213b"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/inventory.json",
+      "sha256": "2e000ffb7377a325a90759c52d21604fe0d0f0c110f06fbf3421c02da51f5c15"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/locales/supported.json",
+      "sha256": "0255243161ba97c19c798f19aa3b83eee0153facda23e64820b0168426aa686a"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/locales/tr-TR.json",
+      "sha256": "62d3e33df7f5b57250d4f40a5f1a5f5504e687dcb9d684157f11e107fffc44e6"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/locales/tr.json",
+      "sha256": "63b56339596ad91467a7f44b9d9f2585aa6870f3c2af5e1960812e57d590141c"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/rules/catalog.json",
+      "sha256": "d88149dd8d032d2a3b6221d6996b0b67dd3f455a45378442a0442bd541b70bdc"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-review/sources.json",
+      "sha256": "f423e4f45ba5deaf60577ee418cf74918e5306c79ac37baaa4ad83d5293264f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/SKILL.md",
+      "sha256": "6206d7a6b54ffa0da82aee85c6832cee9fbc18801ff9adbd501eff1181498029"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "dff5356b1bdc8b8ca47df2090ef66a5afe81e27c49d9431d2d2e21dcd4af04f1"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/agents/openai.yaml",
+      "sha256": "d23ad87bdbffe82736e458749e45eb25d00c099c5eb6c9049800bbc2e4efe2f0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/fixtures/acceptance.json",
+      "sha256": "bb7d61a6f2d52e834cbb1ee90412f9890da6596e93864d964462e94fbea5213b"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/inventory.json",
+      "sha256": "2e000ffb7377a325a90759c52d21604fe0d0f0c110f06fbf3421c02da51f5c15"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/locales/supported.json",
+      "sha256": "0255243161ba97c19c798f19aa3b83eee0153facda23e64820b0168426aa686a"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/locales/tr-TR.json",
+      "sha256": "62d3e33df7f5b57250d4f40a5f1a5f5504e687dcb9d684157f11e107fffc44e6"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/locales/tr.json",
+      "sha256": "63b56339596ad91467a7f44b9d9f2585aa6870f3c2af5e1960812e57d590141c"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/rules/catalog.json",
+      "sha256": "d88149dd8d032d2a3b6221d6996b0b67dd3f455a45378442a0442bd541b70bdc"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-ahenk-web/sources.json",
+      "sha256": "f423e4f45ba5deaf60577ee418cf74918e5306c79ac37baaa4ad83d5293264f1"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "f423e4f45ba5deaf60577ee418cf74918e5306c79ac37baaa4ad83d5293264f1"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 25,
+  "scope": "Private deterministic packaging; no publication or native-host acceptance",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-ahenk-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4064470,
+      "sha256": "cb80f85f22f745eb055ac83c1d2f6312795618015bb0c434bba3010c52bdd67b",
+      "members": 101,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4065309,
+      "sha256": "ad103cb40625b58d93e6a1397d16db3cc6c329aae1c74e3e806081ee029b1d5a",
+      "members": 102,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4065108,
+      "sha256": "f1e0f74aa93474e20c0af7bd6ad70d02ca20a64ebfc9afd02e8f1d8c5875f22b",
+      "members": 102,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-claude-skill-v0.1.0.zip",
+      "bytes": 811447,
+      "sha256": "4408124b1bbdd2f6f5886afed5ef56468eb7505eacf297e5162f9cb5c3e1a297",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-ahenk",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-documents-claude-skill-v0.1.0.zip",
+      "bytes": 811822,
+      "sha256": "c5ca3d2aa29d3d93db14c8ec48006123887e7ee701dca3facb01ba1c5d1424b3",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-documents",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 811822,
+      "sha256": "c5ca3d2aa29d3d93db14c8ec48006123887e7ee701dca3facb01ba1c5d1424b3",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-documents",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 811822,
+      "sha256": "c5ca3d2aa29d3d93db14c8ec48006123887e7ee701dca3facb01ba1c5d1424b3",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-documents",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-gemini-skill-v0.1.0.zip",
+      "bytes": 811447,
+      "sha256": "4408124b1bbdd2f6f5886afed5ef56468eb7505eacf297e5162f9cb5c3e1a297",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-ahenk",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 811447,
+      "sha256": "4408124b1bbdd2f6f5886afed5ef56468eb7505eacf297e5162f9cb5c3e1a297",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-ahenk",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-review-claude-skill-v0.1.0.zip",
+      "bytes": 811700,
+      "sha256": "a4dd699ec69549e4715f2226866589c3a5261e72d06c5ca6cf9e90c8d031ac6a",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-review",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-review-gemini-skill-v0.1.0.zip",
+      "bytes": 811700,
+      "sha256": "a4dd699ec69549e4715f2226866589c3a5261e72d06c5ca6cf9e90c8d031ac6a",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-review",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 811700,
+      "sha256": "a4dd699ec69549e4715f2226866589c3a5261e72d06c5ca6cf9e90c8d031ac6a",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-review",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-web-claude-skill-v0.1.0.zip",
+      "bytes": 811601,
+      "sha256": "2fe898ac5ab78244fa68b8c539c200cc77dc6e6cff1beb2337f3ba76cc09c0dd",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-web",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-web-gemini-skill-v0.1.0.zip",
+      "bytes": 811601,
+      "sha256": "2fe898ac5ab78244fa68b8c539c200cc77dc6e6cff1beb2337f3ba76cc09c0dd",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-web",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    },
+    {
+      "file": "kumihan-ahenk-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 811601,
+      "sha256": "2fe898ac5ab78244fa68b8c539c200cc77dc6e6cff1beb2337f3ba76cc09c0dd",
+      "members": 19,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-ahenk-web",
+      "slug": "kumihan-ahenk",
+      "version": "0.1.0",
+      "source_sha256": "257ee6c2285e19d21de072046c226a5b4825add45ba0f88339c35200be23284e"
+    }
+  ]
+}

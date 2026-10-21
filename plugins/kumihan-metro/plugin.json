@@ -1,0 +1,26 @@
+{
+  "name": "kumihan-metro",
+  "version": "0.1.0",
+  "description": "Οδηγίες ελληνικής τυπογραφίας με διατήρηση του αρχικού κειμένου και σαφή όρια ελέγχου. | Greek typography guidance with original-text preservation and explicit verification limits.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "locale": "el",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "KUMIHAN｜Μέτρο",
+        "shortDescription": "Ελληνική τυπογραφία | Greek typography",
+        "longDescription": "Οδηγίες ελληνικής τυπογραφίας με διατήρηση του αρχικού κειμένου και σαφή όρια ελέγχου. | Greek typography guidance with original-text preservation and explicit verification limits.",
+        "developerName": "L&Co. LLC",
+        "category": "Productivity",
+        "defaultPrompt": [
+          "Ελέγξτε την ελληνική τυπογραφία χωρίς αλλαγή του αρχικού κειμένου. | Review Greek typography while preserving the original text."
+        ],
+        "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+        "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+      }
+    }
+  }
+}

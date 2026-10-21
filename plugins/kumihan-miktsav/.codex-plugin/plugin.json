@@ -1,0 +1,22 @@
+{
+  "name": "kumihan-miktsav",
+  "version": "0.1.0",
+  "description": "הנחיות טיפוגרפיה בעברית תוך שמירה על טקסט המקור וציון גבולות הבדיקה. | Hebrew typography guidance with original-text preservation and explicit verification limits.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜מקצב",
+    "shortDescription": "טיפוגרפיה בעברית | Hebrew typography",
+    "longDescription": "הנחיות טיפוגרפיה בעברית תוך שמירה על טקסט המקור וציון גבולות הבדיקה. | Hebrew typography guidance with original-text preservation and explicit verification limits.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "בדקו את הטיפוגרפיה בעברית בלי לשנות את טקסט המקור. | Review Hebrew typography while preserving the original text."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

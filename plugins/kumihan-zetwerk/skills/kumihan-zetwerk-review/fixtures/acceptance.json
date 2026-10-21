@@ -1,0 +1,276 @@
+{
+  "schema_version": "1.0",
+  "language": "nl",
+  "scope": "Exact UTF-8 preservation and advisory diagnostics only; these are not render or proofreading tests.",
+  "research_fixture_completion": "NOT_CLAIMED; short probes derived from cited research sections",
+  "cases": [
+    {
+      "id": "NL-PRESERVE-01",
+      "input": "IJsland coöperatie poëzie",
+      "locale": "nl",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 60
+        },
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 77
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-01",
+        "NL-TYPE-04"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-02",
+      "input": "'s Morgens risico's € 5,00",
+      "locale": "nl-NL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 103
+        },
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 112
+        },
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 172
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-08",
+        "NL-TYPE-09",
+        "NL-NUM-01"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-03",
+      "input": "íj́",
+      "locale": "nl-BE",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 69
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-03"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-04",
+      "input": "Ĳ ij IJ y",
+      "locale": "nl",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 64
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-02"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-05",
+      "input": "co-ouderschap gala-avond",
+      "locale": "nl-NL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 77
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-04"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-06",
+      "input": "reeën knieën oliën essentiële",
+      "locale": "nl-BE",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 77
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-04"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-07",
+      "input": "langetermijnplanning A4-formaat",
+      "locale": "nl",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 88
+        },
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 95
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-05",
+        "NL-TYPE-06"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-08",
+      "input": "beëindigen parapluutje sherry'tje cafeetje",
+      "locale": "nl-NL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 136
+        }
+      ],
+      "related_rule_ids": [
+        "NL-HYPH-01"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-09",
+      "input": "balletje druïde",
+      "locale": "nl-BE",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 148
+        }
+      ],
+      "related_rule_ids": [
+        "NL-HYPH-02"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-10",
+      "input": "moeders oma's Agnes' sms'en",
+      "locale": "nl",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 103
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-08"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-11",
+      "input": "Anna van den Bos / Anna Van den Bossche",
+      "locale": "nl-NL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 114
+        }
+      ],
+      "related_rule_ids": [
+        "NL-TYPE-10"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-12",
+      "input": "bankkaart lidkaart nl-BE",
+      "locale": "nl-BE",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 408
+        }
+      ],
+      "related_rule_ids": [
+        "NL-COPY-03"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-13",
+      "input": "tot en met 20 oktober 2026",
+      "locale": "nl",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 198
+        }
+      ],
+      "related_rule_ids": [
+        "NL-DATE-01"
+      ]
+    },
+    {
+      "id": "NL-PRESERVE-14",
+      "input": "je u jouw GRO/OT",
+      "locale": "nl-NL",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 371
+        },
+        {
+          "git_blob": "bd28848dbc4c940f5fb7eb30744eebbe7971c4c5",
+          "filename": "NL_Research_20261019.source.txt",
+          "line": 408
+        }
+      ],
+      "related_rule_ids": [
+        "NL-COPY-01",
+        "NL-COPY-03"
+      ]
+    }
+  ]
+}
