@@ -1,0 +1,21 @@
+{
+ "skip": "Skip to content",
+ "nav": "AI platforms",
+ "language": "Language",
+ "home": "KUMIHAN home",
+ "breadcrumb": "Installation guide",
+ "toc_title": "On this page",
+ "toc_summary": "Show page contents",
+ "platforms": "Choose an AI platform",
+ "note_title": "INSTALLATION / Before you start",
+ "note": "Some installation steps may be unavailable in your environment. Verify native behavior on your intended AI host.",
+ "source": "View the original installation notes",
+ "steps": "Steps & guidance",
+ "titles": {"chatgpt": "Install for ChatGPT / Codex", "claude": "Install for Claude", "gemini": "Install for Gemini"},
+ "leads": {
+  "chatgpt": "Choose individual Skills or a plugin depending on how you use ChatGPT or Codex",
+  "claude": "Use the installation method that fits Claude Code or Claude chat",
+  "gemini": "Learn how to install for Gemini CLI or the Gemini app"
+ },
+ "roles": {"base": "starting point", "web": "web pages", "documents": "reports and slides", "review": "review"}
+}

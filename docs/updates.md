@@ -47,7 +47,7 @@ GitHubからKUMIHANを導入・更新できます。
 codex plugin marketplace add landco-llc/kumihan --ref main
 ```
 
-登録したら、Pluginsの画面で **KUMIHAN Git Preview** を選び、**KUMIHAN v0.1.6** をインストールします。
+登録したら、Pluginsの画面で **KUMIHAN Git Preview** を選び、**KUMIHAN** をインストールします。
 
 **更新するとき**
 
@@ -112,7 +112,7 @@ KUMIHAN does not update itself. When a new version is published on GitHub, updat
 codex plugin marketplace add landco-llc/kumihan --ref main
 ```
 
-Then open Plugins, choose **KUMIHAN Git Preview**, and install **KUMIHAN v0.1.6**.
+Then open Plugins, choose **KUMIHAN Git Preview**, and install **KUMIHAN**.
 
 **skills CLI: first-time setup** (example for Codex)
 

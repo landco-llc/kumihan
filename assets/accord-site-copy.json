@@ -116,41 +116,7 @@
    "KUMIHAN · japonais",
    "kumihan.html"
   ],
-  "top": "Haut de page",
-  "guide": {
-   "breadcrumb": "Guide d’installation",
-   "nav": "Guides d’installation",
-   "toc_title": "Sur cette page",
-   "toc_summary": "Afficher le sommaire",
-   "platforms": "Choisir un outil d’IA",
-   "note_title": "v0.1.1 / GitHub Release",
-   "note": "L’installation et l’appel dans chaque outil n’ont pas encore été vérifiés. Certaines étapes peuvent ne pas être disponibles dans votre environnement.",
-   "source": "Ouvrir INSTALL.md",
-   "steps": "Étapes et précautions",
-   "top": "Retour à KUMIHAN｜Accord",
-   "title": "Installer KUMIHAN｜Accord pour {host}",
-   "lead": "Choisissez le paquet complet ou un skill individuel selon ce que votre outil prend en charge.",
-   "sections": [
-    "Choisir le format",
-    "Télécharger et vérifier",
-    "Installer",
-    "Tester sans modifier le texte",
-    "Mettre à jour",
-    "Limites"
-   ],
-   "format": "Le plugin regroupe les quatre skills. Chaque skill est aussi disponible seul, avec ses règles et ses références. Un fichier joint dans une conversation n’est pas une installation.",
-   "plugin": "Plugin",
-   "skill": "Skill individuel",
-   "download": "Téléchargez les ZIP depuis GitHub Release v0.1.1 et comparez leur empreinte SHA-256 avec SHA256SUMS.txt avant l’installation.",
-   "chatgpt": "Utilisez le plugin ChatGPT / Codex avec un importateur de plugins pris en charge, ou chaque skill individuel via une interface Skills lorsqu’elle existe. L’approbation dans le répertoire officiel des plugins est une procédure distincte.",
-   "claude": "Décompressez le plugin Claude Code en conservant le dossier kumihan-accord, puis lancez Claude Code avec ce dossier. Vous pouvez aussi passer par le marketplace du dépôt. Pour Claude, importez un skill individuel via l’interface Skills si votre compte la propose.",
-   "gemini": "Décompressez l’extension dans un dossier vide afin que gemini-extension.json se trouve dans le dossier kumihan-accord, puis installez-la depuis ce chemin. N’installez pas la racine du dépôt comme extension : il s’agit du produit japonais. L’import dans l’application Gemini n’a pas été vérifié.",
-   "test": "Indiquez la langue, le style éditorial et le mode de travail. Exemple de demande :",
-   "prompt": "Utilise kumihan-accord-review pour relire cette page en français avec le style fr-fr-editorial, sans modifier le texte d’origine. Sépare les constats vérifiés des points à confirmer.",
-   "check": "Vérification statique facultative, en lecture seule :",
-   "update": "Sauvegardez vos personnalisations, vérifiez la version et les empreintes, puis mettez à jour selon la méthode prise en charge par votre outil. Un nouveau commit ne met pas à jour une installation existante. N’écrasez pas les plugins des autres langues.",
-   "limits": "Une publication sur GitHub ne signifie pas une approbation dans les répertoires officiels de ChatGPT, Claude ou Gemini. Le fonctionnement dans chaque outil et le rendu réel demandent une exécution effective. Les vérifications statiques ne remplacent pas une relecture par un éditeur francophone."
-  }
+  "top": "Haut de page"
  },
  "en": {
   "house_style": null,
@@ -269,41 +235,7 @@
    "KUMIHAN Japanese",
    "en.html"
   ],
-  "top": "Back to top",
-  "guide": {
-   "breadcrumb": "Installation guide",
-   "nav": "Installation guides",
-   "toc_title": "On this page",
-   "toc_summary": "Show page contents",
-   "platforms": "Select an AI platform",
-   "note_title": "v0.1.1 / GitHub Release",
-   "note": "Installation and invocation in each tool have not been verified yet. Some steps may be unavailable in your environment.",
-   "source": "View source INSTALL.md",
-   "steps": "Steps & guidance",
-   "top": "Back to KUMIHAN｜Accord",
-   "title": "Install KUMIHAN｜Accord for {host}",
-   "lead": "Choose the full package or an individual skill, depending on what your tool supports.",
-   "sections": [
-    "Choose a format",
-    "Download and verify",
-    "Install",
-    "Test without editing",
-    "Updates",
-    "Known limits"
-   ],
-   "format": "The plugin bundles all four skills. Each skill is also available on its own with its full rules and references. Attaching a file to a chat does not install it.",
-   "plugin": "Plugin",
-   "skill": "Individual skill",
-   "download": "Download the ZIP files from GitHub Release v0.1.1 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-   "chatgpt": "Use the ChatGPT / Codex plugin with a supported plugin importer, or each individual skill through a Skills interface where available. Official Plugin Directory approval is a separate process.",
-   "claude": "Unzip the Claude Code plugin, keeping the kumihan-accord directory, then start Claude Code with that directory. You can also use the repository marketplace. For Claude, import an individual skill through the Skills interface if your account offers it.",
-   "gemini": "Unzip the extension into an empty directory so gemini-extension.json is inside the kumihan-accord directory, then install it from that path. Do not install the repository root as this extension; it is the Japanese product. Gemini app import has not been verified.",
-   "test": "Set the locale, house style and work mode explicitly. Example request:",
-   "prompt": "Use kumihan-accord-review to review this French page with the fr-fr-editorial house style, without changing the original text. Separate verified findings from items that still need checking.",
-   "check": "Optional read-only static check:",
-   "update": "Back up customizations, verify the version and checksums, and update through your tool’s supported process. New git commits do not update existing installations. Do not overwrite sibling language plugins.",
-   "limits": "A GitHub release does not imply official directory approval for ChatGPT, Claude or Gemini. Native host behavior and actual rendering need real execution. Static checks do not replace review by a French editor."
-  }
+  "top": "Back to top"
  },
  "ja": {
   "house_style": null,
@@ -423,40 +355,6 @@
    "日本語版 KUMIHAN",
    "kumihan.html"
   ],
-  "top": "ページ上部へ",
-  "guide": {
-   "breadcrumb": "導入ガイド",
-   "nav": "導入ページ",
-   "toc_title": "このページの目次",
-   "toc_summary": "このページの目次を表示",
-   "platforms": "AIプラットフォームを選ぶ",
-   "note_title": "v0.1.1 / GitHub Release",
-   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-   "source": "元のINSTALL.mdを開く",
-   "steps": "手順と注意事項",
-   "top": "KUMIHAN｜Accordへ戻る",
-   "title": "{host}にKUMIHAN｜Accordを導入",
-   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-   "sections": [
-    "導入形式を選ぶ",
-    "ダウンロードと照合",
-    "導入する",
-    "原稿を変えずに試す",
-    "更新",
-    "対応範囲と限界"
-   ],
-   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-   "plugin": "プラグイン",
-   "skill": "個別スキル",
-   "download": "GitHub Release v0.1.1からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-   "chatgpt": "ChatGPT / Codex用プラグインは、対応するプラグインの取り込み機能で使います。Skillsの画面がある場合は、個別スキルを1つずつ導入できます。公式プラグインディレクトリへの掲載は別の手続きです。",
-   "claude": "Claude Codeプラグインを、kumihan-accordフォルダを保ったまま展開し、そのフォルダを指定してClaude Codeを起動します。リポジトリのマーケットプレイスからも導入できます。Claudeでは、アカウントにSkillsの画面がある場合に個別スキルを取り込みます。",
-   "gemini": "拡張を空のフォルダに展開し、kumihan-accordフォルダ内にgemini-extension.jsonがあることを確認してから、そのパスを指定して導入します。リポジトリのルートは日本語版の製品のため、この拡張として導入しないでください。Geminiアプリへの取り込みは確認していません。",
-   "test": "言語・編集スタイル・作業モードを明示します。依頼の例：",
-   "prompt": "kumihan-accord-reviewで、このフランス語のページを編集スタイルfr-fr-editorialで、原文を変えずにレビューしてください。確認できた点と、まだ確認が必要な点を分けてください。",
-   "check": "任意の静的チェック（読み取り専用）：",
-   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-   "limits": "GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。静的チェックは、フランス語の編集者による確認の代わりにはなりません。"
-  }
+  "top": "ページ上部へ"
  }
 }

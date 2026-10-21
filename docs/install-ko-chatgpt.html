@@ -1,15 +1,79 @@
----
-layout: geuljjaim
-lang: ko-KR
-locale_key: ko
-title: ChatGPT / Codex — 설치 가이드
-description: KUMIHAN｜글짜임 v0.1.0은 독립 패키지입니다. 일본어판이나 字衡을 설치할 필요가 없습니다. 먼저 사용할 호스트의 Skill
-  지원 여부를 확인하세요.
-og_locale: ko_KR
-canonical_path: /docs/install-ko-chatgpt.html
-home_path: /kumihan-ko.html
-ko_path: /docs/install-ko-chatgpt.html
-en_path: /docs/install-ko-chatgpt.en.html
-ja_path: /docs/install-ko-chatgpt.ja.html
----
-<p>KUMIHAN｜글짜임을 ChatGPT / Codex에서 사용하기 위한 절차입니다.</p><section id="download"><h2>01 / 한국어 배포물 선택</h2><p>번들은 네 가지 Skill을 포함합니다. 하나만 필요하면 단독 ZIP을 선택하세요. 아래 파일은 모두 동일한 한국어판입니다. 공개 마켓플레이스 등록이나 네이티브 호스트 설치 성공을 뜻하지 않습니다.</p><ul class="downloads"><li><a href="{{ '/plugins/kumihan-geuljjaim/downloads/plugins/kumihan-geuljjaim-plugin-v0.1.0.zip' | relative_url }}">플러그인 번들 ZIP — 0.1.0</a></li><li><a href="{{ '/plugins/kumihan-geuljjaim/downloads/skills/kumihan-geuljjaim-v0.1.0.zip' | relative_url }}">단독 Skill — kumihan-geuljjaim</a></li><li><a href="{{ '/plugins/kumihan-geuljjaim/downloads/skills/kumihan-geuljjaim-web-v0.1.0.zip' | relative_url }}">단독 Skill — kumihan-geuljjaim-web</a></li><li><a href="{{ '/plugins/kumihan-geuljjaim/downloads/skills/kumihan-geuljjaim-documents-v0.1.0.zip' | relative_url }}">단독 Skill — kumihan-geuljjaim-documents</a></li><li><a href="{{ '/plugins/kumihan-geuljjaim/downloads/skills/kumihan-geuljjaim-review-v0.1.0.zip' | relative_url }}">단독 Skill — kumihan-geuljjaim-review</a></li></ul><p><a href="{{ '/plugins/kumihan-geuljjaim/downloads/SHA256SUMS.txt' | relative_url }}">SHA256SUMS.txt</a> · <a href="{{ '/plugins/kumihan-geuljjaim/downloads/MANIFEST.json' | relative_url }}">MANIFEST.json</a></p><p>다운로드 후 SHA256SUMS.txt와 파일의 SHA-256을 비교하고 압축을 풉니다. ZIP의 Skill 폴더에는 SKILL.md와 로컬 참조가 들어 있습니다. 일반 채팅에 파일을 첨부하는 것만으로 설치되지 않습니다.</p></section><section id="steps"><h2>02 / 설치와 다시 읽기</h2><p class="note">Codex에서 파일 기반 Skills를 지원한다면 압축을 푼 각 Skill 폴더를 프로젝트의 .agents/skills/ 아래에 둡니다. plugin ZIP은 지원하는 호스트의 플러그인 가져오기 기능에서만 사용하세요. ChatGPT에서 해당 기능이 없다면 설치 완료로 간주하지 말고 소스의 지침을 명시적으로 읽어 사용하세요. 이 릴리스의 네이티브 호출은 미검증입니다.</p><ol><li>기존 설정과 같은 이름의 Skill 폴더를 백업합니다. 한국어판만 교체하고 다른 언어판은 변경하지 않습니다.</li><li>선택한 Skill 폴더 전체를 옮깁니다. SKILL.md만 복사하면 로컬 참조가 빠집니다. 버전은 0.1.0입니다.</li><li>호스트를 다시 열거나 Skill 목록을 새로고침합니다. 목록에 이름이 보이는지 확인하고 아래 예시로 동작을 확인하세요.</li></ol><p><a href="https://developers.openai.com/codex/skills/">ChatGPT / Codex — Skills ↗</a></p></section><section id="smoke"><h2>03 / 첫 검토</h2><p>예시를 실행한 뒤 한국어 대상·원문과 숫자 보존·읽기 전용 소견을 확인하세요. 파일 변경이 없어야 하며, 확인하지 않은 항목을 passed로 보고하면 안 됩니다.</p><pre><code id="review-prompt" lang="ko-KR">ko-KR의 상품 소개 페이지를 검토해 주세요. 상품명, 가격, 원산지와 숫자는 바꾸지 말고 줄바꿈과 정보 구조만 확인해 주세요.</code></pre><div class="copy-prompt"><button class="button" type="button" data-copy-target="review-prompt" data-success="복사했어요" data-failure="복사하지 못했어요. 예시를 직접 선택해 주세요.">예시 복사</button><p role="status" class="copy-status" aria-live="polite"></p></div></section><section id="updates"><h2>04 / 업데이트와 한계</h2><p>업데이트는 같은 한국어 패키지의 릴리스와 체크섬을 확인한 뒤 백업한 폴더를 교체합니다. 호스트를 다시 읽고 첫 검토를 반복하세요. 자동 교정·원어민 교열·Office/PDF·네이티브 호스트 동작은 보장하지 않습니다. 일반 마켓플레이스에는 미등록입니다.</p><p><a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim/downloads">GitHub Downloads v0.1.0 ↗</a> · <a href="https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-geuljjaim">README / INSTALL / UPDATES ↗</a></p></section>
+<!doctype html>
+<html lang="ko-KR">
+<head><link rel="stylesheet" href="../assets/version-info.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f5f3ee">
+<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">
+<link rel="stylesheet" href="../assets/kumihan-install.css">
+<script src="../assets/kumihan-install.js" defer></script>
+<link rel="stylesheet" href="../assets/fonts/google/99d844a3d837.css?v=ddc95dc628"><link rel="stylesheet" href="../assets/fonts/google/58389be38149.css?v=55149002f4"><link rel="stylesheet" href="../assets/kumihan-fonts.css?v=6c93c6e4a7">
+<title>ChatGPT·Codex에 설치하기 | KUMIHAN｜글짜임</title>
+<meta name="description" content="사용할 곳에 맞춰 스킬 또는 플러그인 설치 방법을 선택할 수 있습니다">
+<link rel="canonical" href="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html">
+<link rel="alternate" hreflang="en" href="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.en.html">
+<link rel="alternate" hreflang="ja" href="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.ja.html">
+<link rel="alternate" hreflang="ko-KR" href="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html">
+<link rel="alternate" hreflang="x-default" href="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://landco.co.jp/#organization","name":"L\u0026Co. LLC","url":"https://landco.co.jp/"},{"@type":"WebSite","@id":"https://landco-llc.github.io/kumihan/#website","url":"https://landco-llc.github.io/kumihan/","name":"KUMIHAN","publisher":{"@id":"https://landco.co.jp/#organization"}},{"@type":"WebPage","@id":"https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html#webpage","url":"https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html","name":"ChatGPT·Codex에 설치하기 | KUMIHAN｜글짜임","description":"사용할 곳에 맞춰 스킬 또는 플러그인 설치 방법을 선택할 수 있습니다","inLanguage":"ko-KR","isPartOf":{"@id":"https://landco-llc.github.io/kumihan/#website"},"publisher":{"@id":"https://landco.co.jp/#organization"}}]}</script>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KUMIHAN">
+<meta property="og:title" content="ChatGPT·Codex에 설치하기 | KUMIHAN｜글짜임">
+<meta property="og:description" content="KUMIHAN은 언어마다 다른 글짜임과 타이포그래피, 정보 구조를 고려하는 오픈소스 디자인 가이드입니다. 사용할 곳에 맞춰 스킬 또는 플러그인 설치 방법을 선택할 수 있습니다">
+<meta property="og:url" content="https://landco-llc.github.io/kumihan/docs/install-ko-chatgpt.html">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://landco-llc.github.io/kumihan/assets/kumihan-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="KUMIHAN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChatGPT·Codex에 설치하기 | KUMIHAN｜글짜임">
+<meta name="twitter:description" content="KUMIHAN은 언어마다 다른 글짜임과 타이포그래피, 정보 구조를 고려하는 오픈소스 디자인 가이드입니다. 사용할 곳에 맞춰 스킬 또는 플러그인 설치 방법을 선택할 수 있습니다">
+<meta name="twitter:image" content="https://landco-llc.github.io/kumihan/assets/kumihan-share.png">
+</head>
+<body>
+<a class="skip skip-link" href="#main">본문으로 건너뛰기</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="../kumihan-ko.html">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a>
+    <nav class="header-nav" aria-label="AI 플랫폼"><a href="install-ko-chatgpt.html" aria-current="page">ChatGPT / Codex</a><a href="install-ko-claude.html">Claude</a><a href="install-ko-gemini.html">Gemini</a></nav>
+  </div>
+</header>
+<section class="hero" aria-labelledby="page-title">
+  <div class="shell">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../top-ko.html">KUMIHAN 홈</a><span aria-hidden="true">/</span><a href="../kumihan-ko.html">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a><span aria-hidden="true">/</span><span>설치 가이드</span></nav>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">INSTALL GUIDE / 01 OF 03</div>
+        <h1 id="page-title">ChatGPT·Codex에 설치하기</h1>
+        <p class="hero-desc">사용할 곳에 맞춰 스킬 또는 플러그인 설치 방법을 선택할 수 있습니다</p>
+        <nav class="language-switch" aria-label="언어"><a href="install-ko-chatgpt.html" lang="ko-KR" hreflang="ko-KR" data-language aria-current="page">한국어</a><a href="install-ko-chatgpt.en.html" lang="en" hreflang="en" data-language>English</a><a href="install-ko-chatgpt.ja.html" lang="ja" hreflang="ja" data-language>日本語</a></nav>
+      </div>
+      <div class="hero-logo"><img src="../assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png" alt="KUMIHAN official logo" width="1254" height="1254"></div>
+    </div>
+  </div>
+</section>
+<nav class="platform-nav" aria-label="AI 플랫폼 선택">
+  <div class="shell platform-inner"><a href="install-ko-chatgpt.html" aria-current="page"><span>01 / ChatGPT / Codex</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ko-claude.html"><span>02 / Claude</span><span class="arrow" aria-hidden="true">↗</span></a><a href="install-ko-gemini.html"><span>03 / Gemini</span><span class="arrow" aria-hidden="true">↗</span></a></div>
+</nav>
+<div class="shell content-layout">
+  <aside class="toc" aria-label="이 페이지의 목차"><!-- edition-version:current --><div class="edition-version" lang="en" data-edition-version="current" data-release-status="published" dir="ltr"><strong>Current Version <a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0"><bdi dir="ltr">v0.1.0</bdi></a></strong><span>Published · Published at <time datetime="2026-10-18T13:50:22Z"><bdi dir="ltr">2026-10-18T13:50:22Z</bdi></time></span></div><!-- /edition-version:current -->
+    <details class="toc-details" open>
+      <summary>이 페이지의 목차 보기</summary>
+      <h2 class="toc-title">이 페이지의 목차</h2>
+      <ol><li><a href="#step-1">1. 설치 방법 선택</a></li><li><a href="#step-2">2. 파일 다운로드</a></li><li><a href="#a">A. ChatGPT에 스킬 추가하기</a></li><li><a href="#b">B. ChatGPT에 플러그인으로 등록하기</a></li><li><a href="#c">C. Codex에 폴더 복사하기</a></li><li><a href="#step-3">3. 사용해 보기</a></li><li><a href="#section-7">파일이 올바른지 확인하기(선택)</a></li></ol>
+    </details>
+    <div class="toc-note"><strong>INSTALLATION / 사용 전 확인 사항</strong><p>사용 환경에 따라 안내한 조작을 사용할 수 없는 경우가 있습니다. 해당 AI 호스트에서 실제 동작을 확인하세요.</p></div>
+    <a class="source-link" href="https://github.com/landco-llc/kumihan/blob/main/plugins/kumihan-geuljjaim/INSTALL.md" target="_blank" rel="noopener noreferrer">원래 설치 안내 열기 ↗</a>
+  </aside>
+  <main class="guide" id="main" tabindex="-1">
+    <div class="guide-head"><span>DOCUMENTATION / ChatGPT / Codex</span><span class="step-label">절차와 주의 사항</span></div>
+    <div class="guide-pane"><p>KUMIHAN｜글짜임을 ChatGPT와 Codex에서 사용하기 위한 절차입니다.</p><blockquote><p><strong>v0.1.0 안내</strong>
+직접 사용하는 환경에서 설치를 시험해 보실 수 있도록 제공하는 버전입니다. 각 도구에서의 동작은 아직 충분히 확인되지 않아 제대로 작동하지 않을 수 있습니다.</p></blockquote><h2 id="step-1">1. 설치 방법 선택</h2><table><thead><tr><th>사용할 곳</th><th>권장 방법</th></tr></thead><tbody><tr><td>ChatGPT(스킬 업로드가 가능한 경우)</td><td><a href="#a">A. 스킬을 하나씩 추가하기</a></td></tr><tr><td>ChatGPT(나만의 플러그인으로 등록하려는 경우)</td><td><a href="#b">B. 플러그인으로 한 번에 등록하기</a></td></tr><tr><td>Codex(컴퓨터에서 사용하는 경우)</td><td><a href="#c">C. 폴더 복사하기</a></td></tr></tbody></table><p><strong>스킬</strong>은 기능 하나이고, <strong>플러그인</strong>은 네 가지 스킬을 하나로 묶은 패키지입니다.</p><h2 id="step-2">2. 파일 다운로드</h2><p>파일은 <a href="https://github.com/landco-llc/kumihan/releases/tag/kumihan-ko-v0.1.0" target="_blank" rel="noopener noreferrer">릴리스 페이지</a>에 있습니다. 링크를 누르면 ZIP 파일이 다운로드됩니다.</p><p><strong>플러그인(네 가지 스킬을 묶은 것)</strong></p><ul><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/kumihan-geuljjaim-plugin-v0.1.0.zip">kumihan-geuljjaim-plugin-v0.1.0.zip</a></li></ul><p><strong>스킬(개별)</strong></p><ul><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/kumihan-geuljjaim-v0.1.0.zip">kumihan-geuljjaim</a> — 시작점</li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/kumihan-geuljjaim-web-v0.1.0.zip">kumihan-geuljjaim-web</a> — 웹페이지</li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/kumihan-geuljjaim-documents-v0.1.0.zip">kumihan-geuljjaim-documents</a> — 보고서·슬라이드</li><li><a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/kumihan-geuljjaim-review-v0.1.0.zip">kumihan-geuljjaim-review</a> — 검토</li></ul><h2 id="a">A. ChatGPT에 스킬 추가하기</h2><p>ChatGPT 화면에 &#x27;Skills&#x27;와 업로드 항목이 있는 경우에 사용할 수 있는 방법입니다.</p><ol><li>스킬 ZIP 파일을 하나 선택해 업로드합니다.</li><li>표시된 내용을 확인하고 추가합니다.</li><li>필요한 스킬 수만큼 같은 절차를 반복합니다.</li></ol><p><strong>주의 사항</strong></p><ul><li>이 방법에서는 플러그인 ZIP을 사용할 수 없습니다. 스킬 ZIP을 사용하세요.</li><li>채팅에 파일을 첨부하는 것만으로는 스킬로 추가되지 않습니다.</li><li>화면에서 항목이 보이지 않는다면 사용 중인 요금제나 앱에서 아직 제공되지 않을 수 있습니다. <a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener noreferrer">OpenAI 공식 안내</a>를 확인하세요.</li></ul><h2 id="b">B. ChatGPT에 플러그인으로 등록하기</h2><p>네 가지 스킬을 묶어 나만의 플러그인으로 등록하는 방법입니다.</p><ol><li>ChatGPT에서 새 대화를 열고 <code>@plugin-creator</code>를 선택합니다.</li><li>플러그인 ZIP 파일을 첨부합니다.</li><li>다음과 같이 요청합니다.<blockquote><p>이 패키지를 나만 사용하는 비공개 플러그인으로 등록해 주세요. 공개 디렉터리에는 제출하지 마세요.</p></blockquote></li><li>등록되면 Plugins의 &#x27;Personal&#x27; 또는 &#x27;Created by me&#x27;에 <strong>KUMIHAN｜글짜임</strong>이 표시됩니다.</li><li>필요하면 설치한 뒤 새 대화에서 활성화합니다.</li></ol><p><strong>주의 사항</strong></p><ul><li>팀 워크스페이스에 등록될 수 있습니다. 나만 사용하려면 등록하기 전에 저장 위치를 확인하세요.</li><li>요금제나 워크스페이스 설정에 따라 이 기능을 사용할 수 없을 수 있습니다. 자세한 내용은 <a href="https://learn.chatgpt.com/docs/build-plugins" target="_blank" rel="noopener noreferrer">Build plugins</a>와 <a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener noreferrer">Plugins</a>를 참고하세요.</li><li>이 방법으로 등록한 플러그인은 내 계정에서만 사용할 수 있으며, 공개 디렉터리에는 게시되지 않습니다.</li></ul><h2 id="c">C. Codex에 폴더 복사하기</h2><p>스킬 ZIP의 압축을 풀면 <code>kumihan-geuljjaim</code> 등의 폴더가 생깁니다. 이 폴더를 Codex가 읽어 들이는 위치에 복사합니다.</p><table><thead><tr><th>사용 범위</th><th>복사할 위치</th></tr></thead><tbody><tr><td>특정 프로젝트에서만 사용</td><td>프로젝트 안의 <code>.agents/skills/</code></td></tr><tr><td>모든 프로젝트에서 사용</td><td>홈 폴더의 <code>~/.agents/skills/</code></td></tr></tbody></table><p>예를 들어 프로젝트에 <code>kumihan-geuljjaim</code>를 추가하려면 다음과 같이 합니다.</p><pre><code class="language-sh">mkdir -p /path/to/your-project/.agents/skills
+cp -R kumihan-geuljjaim /path/to/your-project/.agents/skills/</code></pre><p><strong>주의 사항</strong></p><ul><li>폴더는 안의 내용까지 통째로 복사하세요. 일부 파일만으로는 제대로 작동하지 않습니다.</li><li>같은 이름의 폴더가 이미 있다면 덮어쓰기 전에 내용을 확인하세요.</li></ul><h2 id="step-3">3. 사용해 보기</h2><p>설치가 끝나면 새 대화를 열고 스킬을 호출합니다.</p><table><thead><tr><th>도구</th><th>호출 방법</th></tr></thead><tbody><tr><td>ChatGPT</td><td><code>@</code>에서 선택</td></tr><tr><td>Codex</td><td><code>$</code> 또는 <code>/skills</code>에서 선택</td></tr></tbody></table><p>처음에는 파일을 변경하지 않는 요청으로 시험해 보시길 권장합니다.</p><blockquote><p>한국어 보고서를 만들 예정입니다. 주의할 점을 알려 주세요. 파일은 변경하지 마세요.</p></blockquote><h2 id="section-7">파일이 올바른지 확인하기(선택)</h2><p>다운로드한 파일이 손상되지 않았는지 확인하려면 <a href="https://github.com/landco-llc/kumihan/releases/download/kumihan-ko-v0.1.0/SHA256SUMS.txt">SHA256SUMS.txt</a>를 사용합니다.</p><p>다운로드한 ZIP 파일과 같은 폴더에 SHA256SUMS.txt를 두고, 터미널에서 다음 명령을 실행합니다. <code>shasum</code>이 없는 환경에서는 Windows PowerShell의 <code>Get-FileHash</code> 등으로 SHA-256을 대조하세요.</p><pre><code class="language-sh">shasum -a 256 -c --ignore-missing SHA256SUMS.txt</code></pre><p>다운로드한 파일의 행에 <code>OK</code>가 표시되면 문제가 없습니다.</p><hr><p>다른 도구: <a href="install-ko-claude.html">Claude</a> · <a href="install-ko-gemini.html">Gemini</a></p><p>화면과 제공 조건은 바뀔 수 있습니다. 최신 정보는 각 서비스의 공식 안내를 확인하세요(이 페이지 확인일: 2026년 10월 14일).</p></div>
+  </main>
+</div>
+<footer class="kumihan-footer"><div class="kf-inner"><div class="kf-brand"><div class="kf-mark">KUMIHAN</div><p class="kf-note">Open-source typography &amp; design guidance by <a href="https://landco.co.jp/" target="_blank" rel="noopener noreferrer">L&amp;Co. LLC</a>.</p></div><nav class="kf-links" aria-label="KUMIHAN"><a href="../top-ko.html">KUMIHAN</a><details class="kf-menu"><summary>언어 선택</summary><ul><li><a href="../kumihan-ko.html" class="current"><span class="code">KO</span> - 한국어</a></li><li><a href="../kumihan-ar.en.html"><span class="code">AR</span> - 아랍어</a></li><li><a href="../kumihan-bn.en.html"><span class="code">BN</span> - 벵골어</a></li><li><a href="../kumihan-de.en.html"><span class="code">DE</span> - 독일어</a></li><li><a href="../kumihan-el.en.html"><span class="code">EL</span> - 그리스어</a></li><li><a href="../kumihan-es.en.html"><span class="code">ES</span> - 스페인어</a></li><li><a href="../kumihan-fa.en.html"><span class="code">FA</span> - 페르시아어</a></li><li><a href="../kumihan-fr.en.html"><span class="code">FR</span> - 프랑스어</a></li><li><a href="../kumihan-he.en.html"><span class="code">HE</span> - 히브리어</a></li><li><a href="../kumihan-hi.en.html"><span class="code">HI</span> - 힌디어</a></li><li><a href="../kumihan-id.en.html"><span class="code">ID</span> - 인도네시아어</a></li><li><a href="../kumihan-it.en.html"><span class="code">IT</span> - 이탈리아어</a></li><li><a href="../en.html"><span class="code">JA</span> - 일본어</a></li><li><a href="../kumihan-km.en.html"><span class="code">KM</span> - 크메르어</a></li><li><a href="../kumihan-ms.en.html"><span class="code">MS</span> - 말레이어</a></li><li><a href="../kumihan-nl.en.html"><span class="code">NL</span> - 네덜란드어</a></li><li><a href="../kumihan-pl.en.html"><span class="code">PL</span> - 폴란드어</a></li><li><a href="../kumihan-pt.en.html"><span class="code">PT</span> - 포르투갈어</a></li><li><a href="../kumihan-ru.en.html"><span class="code">RU</span> - 러시아어</a></li><li><a href="../kumihan-sa.en.html"><span class="code">SA</span> - 산스크리트어</a></li><li><a href="../kumihan-sw.en.html"><span class="code">SW</span> - 스와힐리어</a></li><li><a href="../kumihan-th-en.html"><span class="code">TH</span> - 태국어</a></li><li><a href="../kumihan-tr.en.html"><span class="code">TR</span> - 튀르키예어</a></li><li><a href="../kumihan-vi.en.html"><span class="code">VI</span> - 베트남어</a></li><li><a href="../kumihan-zh-cn.en.html"><span class="code">ZH-HANS</span> - 중국어(간체)</a></li><li><a href="../kumihan-zh-han.en.html"><span class="code">ZH-HANT</span> - 중국어(번체)</a></li><li><a href="../kumihan-zu.en.html"><span class="code">ZU</span> - 줄루어</a></li></ul></details><a href="https://github.com/landco-llc/kumihan" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/landco-llc/kumihan/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Apache 2.0</a><a href="../privacy.html#ko">개인정보 처리방침</a></nav></div></footer>
+</body>
+</html>

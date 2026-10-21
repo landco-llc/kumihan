@@ -76,7 +76,7 @@
     .toc-note { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 28px; }
     .toc-note strong { display: block; color: var(--red); font: 780 12px/1.7 Arial, Helvetica, sans-serif; }
     .toc-note p { font-size: 12px; line-height: 1.85; color: var(--muted); margin: 7px 0 0; }
-    .source-link { display: inline-block; margin-top: 18px; font-size: 12px; font-weight: 750; text-underline-offset: 4px; }
+    .source-link { display: inline-block; max-width: 100%; margin-top: 18px; font-size: 12px; font-weight: 750; text-underline-offset: 4px; overflow-wrap: anywhere; hyphens: auto; }
     .guide { min-width: 0; }
     .guide-head { border-top: 3px solid var(--ink); padding: 22px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .guide-head span { color: var(--muted); font: 700 11px/1.4 Arial, Helvetica, sans-serif; letter-spacing: .11em; }
@@ -103,7 +103,7 @@
     .guide-pane td { background: #fffefa; }
     .guide-pane code { font: 500 .9em/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background: #e9e7e1; padding: 2px 5px; border-radius: 3px; overflow-wrap: anywhere; }
     .guide-pane pre { margin: 0; padding: 22px 22px 24px; overflow-x: auto; -webkit-overflow-scrolling: touch; font: 500 13px/1.8 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #faf7f0; background: #252521; tab-size: 2; white-space: pre; }
-    .guide-pane pre code { padding: 0; margin: 0; color: inherit; background: transparent; font-size: inherit; line-height: inherit; overflow-wrap: normal; }
+    .guide-pane pre code { padding: 0; margin: 0; color: inherit; background: transparent; font-size: inherit; line-height: inherit; overflow-wrap: anywhere; }
     .code-shell { position: relative; margin: 22px 0 26px; border: 1px solid #3c3c35; min-width: 0; }
     .code-shell .highlighter-rouge, .code-shell .highlight { margin: 0; }
     .code-shell pre { padding-top: 58px; }

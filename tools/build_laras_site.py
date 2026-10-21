@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the KUMIHAN｜Laras site (fr / en / ja); --check verifies committed output.
 
-Landings follow the canonical KUMIHAN index (_layouts/landing.html) and install
-guides use the shared install-guide frame (tools/install_frame.py). Copy lives
+Landings follow the canonical KUMIHAN index (_layouts/landing.html); install
+guides come from tools/build_install_guides.py. Copy lives
 in assets/laras-site-copy.json. Following kumihan-laras-web, Indonesian pages
 declare lang="id" and new Indonesian copy uses the explicitly selected
 id-standard house style; supplied text is reproduced byte for byte and
@@ -27,7 +27,6 @@ REPO = "https://github.com/landco-llc/kumihan"
 SOURCE = REPO + "/tree/main/plugins/kumihan-laras"
 VERSION = "0.1.0"
 RELEASE = REPO + f"/releases/tag/kumihan-id-v{VERSION}"
-DOWNLOAD = REPO + f"/releases/download/kumihan-id-v{VERSION}/"
 BRAND = 'KUMIHAN<span class="brand-sub">｜Laras</span>'
 LANGS = {"id": "", "en": ".en", "ja": ".ja"}
 LABELS = {"id": "ID", "en": "EN", "ja": "日本語"}
@@ -36,21 +35,8 @@ SKILLS = ("kumihan-laras", "kumihan-laras-web", "kumihan-laras-documents", "kumi
 SKILL_TYPES = ("01 / ENTRY", "02 / WEB", "03 / DOCUMENTS", "04 / REVIEW")
 SKILL_SYMBOLS = ("di", "↗", "¶", "◎")
 HOSTS = {"chatgpt": "ChatGPT / Codex", "claude": "Claude / Claude Code", "gemini": "Gemini"}
-PLUGIN = {"chatgpt": "kumihan-laras-chatgpt-codex-plugin", "claude": "kumihan-laras-claude-code-plugin",
-          "gemini": "kumihan-laras-gemini-cli-extension"}
-COMMANDS = {
-    "chatgpt": [],
-    "claude": ["claude --plugin-dir /absolute/path/kumihan-laras",
-               "claude plugin validate /absolute/path/kumihan-laras",
-               "/plugin marketplace add landco-llc/kumihan\n/plugin install kumihan-laras@kumihan-marketplace"],
-    "gemini": ["gemini extensions install /absolute/path/kumihan-laras\ngemini extensions list"],
-}
-CHECK = "python runtime/checks.py input.txt --locale id-ID"
 GATEWAY = {"id": "top-id.html", "en": "index.html", "ja": "top-ja.html"}
 
-_spec = spec_from_file_location("kumihan_install_frame", Path(__file__).with_name("install_frame.py"))
-FRAME = module_from_spec(_spec)
-_spec.loader.exec_module(FRAME)
 
 OVERRIDES = r"""
     /* KUMIHAN｜Laras (kumihan-laras-web): lang="id" with dictionary hyphenation
@@ -130,54 +116,11 @@ def landing(lang, c):
         gateway=(GATEWAY[lang], c["gateway_label"]), family=c["family"]), c)
 
 
-def guide(host, lang, c):
-    g = c["guide"]
-    path = guide_path(host, lang)
-    title = g["title"].format(host=HOSTS[host])
-    alternates = "".join(f'<link rel="alternate" hreflang="{k}" href="{BASE}{guide_path(host, k)}">' for k in LANGS)
-    head = (f'<title>{x(title)}</title>\n<meta name="description" content="{x(g["lead"])}">\n'
-            f'<link rel="canonical" href="{BASE}{path}">{alternates}<link rel="alternate" hreflang="x-default" href="{BASE}{guide_path(host, "id")}">\n'
-            f'<meta property="og:type" content="website"><meta property="og:locale" content="{OG[lang]}"><meta property="og:title" content="{x(title)}">'
-            f'<meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}{LOGO}">\n'
-            f'<link rel="icon" href="../assets/favicon-32x32.png" type="image/png">')
-    assets = [PLUGIN[host]] + [f"{name}-{host}-skill" for name in SKILLS]
-    downloads = "".join(
-        f'<li><a href="{DOWNLOAD}{name}-v{VERSION}.zip">{x(g["plugin"] if i == 0 else g["skill"])}: {name}-v{VERSION}.zip</a></li>'
-        for i, name in enumerate(assets))
-    commands = "".join(f"<pre><code>{x(cmd)}</code></pre>" for cmd in COMMANDS[host])
-    ids = ("format", "download", "steps", "test", "updates", "limits")
-    bodies = (
-        f'<p>{x(g["format"])}</p>',
-        f'<p>{x(g["download"])}</p><ul class="download-list">{downloads}</ul>'
-        f'<p><a href="{DOWNLOAD}SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="{DOWNLOAD}MANIFEST.json">MANIFEST.json</a> · <a href="{RELEASE}">GitHub Release v{VERSION}</a></p>',
-        f'<p>{x(g[host])}</p>{commands}<p><a href="{SOURCE}/INSTALL.md">INSTALL.md</a></p>',
-        f'<p>{x(g["test"])}</p><blockquote><p>{x(g["prompt"])}</p></blockquote><p>{x(g["check"])}</p><pre><code>{x(CHECK)}</code></pre>',
-        f'<p>{x(g["update"])}</p>',
-        f'<p class="note">{x(g["limits"])}</p>',
-    )
-    content = "".join(f'<section id="{i}"><h2>{n + 1:02d} / {x(s)}</h2>{b}</section>'
-                      for n, (i, s, b) in enumerate(zip(ids, g["sections"], bodies)))
-    ui = dict(g, skip=c["skip"], language=c["lang_label"], source_href=SOURCE + "/INSTALL.md")
-    frame = FRAME.Frame(
-        lang=lang, head=head, css="../assets/kumihan-install.css", asset_root="../", brand=BRAND,
-        home="../" + landing_path(lang),
-        hosts=[(name.split(" / ")[0] if h == "claude" else name, guide_path(h, lang).removeprefix("docs/"), h == host)
-               for h, name in HOSTS.items()],
-        languages=[(k, LABELS[k] if k != "id" else "Bahasa Indonesia", guide_path(host, k).removeprefix("docs/"), k == lang) for k in LANGS],
-        number=f"0{list(HOSTS).index(host) + 1}", title=x(title), description=x(g["lead"]),
-        toc=list(zip(ids, g["sections"])), content=content, platform=HOSTS[host], ui=ui,
-        footer_sub=x(c["footer_sub"]) + f"<br>v{VERSION} · Apache-2.0 · Developed by L&amp;Co. LLC",
-        footer_links=[("GitHub", SOURCE, True), ("Apache-2.0", REPO + "/blob/main/LICENSE", True)],
-        gateway=("../" + GATEWAY[lang], c["gateway_label"]))
-    return FRAME.render(frame)
-
-
 @version_outputs
 @seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "laras-site-copy.json").read_text(encoding="utf-8"))
     files = {landing_path(lang): landing(lang, copy[lang]) for lang in LANGS}
-    files.update({guide_path(host, lang): guide(host, lang, copy[lang]) for host in HOSTS for lang in LANGS})
     files["assets/laras-site.css"] = SITE.canonical_css("KUMIHAN｜Laras index: canonical KUMIHAN index CSS + Laras settings.", OVERRIDES)
     return files
 

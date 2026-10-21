@@ -116,41 +116,7 @@
       "KUMIHAN · Jepang",
       "kumihan.html"
     ],
-    "top": "Kembali ke atas",
-    "guide": {
-      "breadcrumb": "Panduan pemasangan",
-      "nav": "Panduan pemasangan",
-      "toc_title": "Di halaman ini",
-      "toc_summary": "Lihat daftar isi",
-      "platforms": "Pilih alat AI",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Instalasi dan pemanggilan di tiap layanan AI belum seluruhnya teruji. Sebagian langkah mungkin tidak tersedia pada akun atau aplikasi Anda.",
-      "source": "Buka INSTALL.md",
-      "steps": "Langkah dan catatan",
-      "top": "Kembali ke KUMIHAN｜Laras",
-      "title": "Pasang KUMIHAN｜Laras untuk {host}",
-      "lead": "Pilih plugin lengkap atau skill terpisah sesuai fitur yang tersedia pada alat Anda.",
-      "sections": [
-        "Pilih format",
-        "Unduh dan verifikasi",
-        "Pasang",
-        "Uji tanpa mengubah naskah",
-        "Perbarui",
-        "Cakupan dan batasan"
-      ],
-      "format": "Plugin memuat empat skill. Setiap skill juga tersedia sebagai arsip tersendiri bersama aturan dan sumbernya. Mengunggah ZIP ke percakapan tidak otomatis memasangnya.",
-      "plugin": "Plugin",
-      "skill": "Skill mandiri",
-      "download": "Unduh berkas ZIP dari GitHub Release v0.1.0 lalu cocokkan nilai SHA-256 dengan SHA256SUMS.txt.",
-      "chatgpt": "Gunakan cara impor plugin yang disediakan akun ChatGPT atau Codex Anda. Untuk Codex, ekstrak skill ke .agents/skills/ proyek. Ketersediaan impor berbeda menurut akun.",
-      "claude": "Ekstrak plugin Claude Code dengan folder kumihan-laras yang utuh, lalu jalankan Claude Code dengan --plugin-dir. Jika didukung, Anda dapat memakai marketplace repositori.",
-      "gemini": "Ekstrak ekstensi dengan gemini-extension.json di root folder kumihan-laras lalu pasang lewat Gemini CLI. Pengimporan skill di aplikasi Gemini perlu diverifikasi terpisah.",
-      "test": "Sebutkan peran teks, medium, ragam bahasa dan izin penyuntingan. Contoh:",
-      "prompt": "Gunakan kumihan-laras-review untuk meninjau halaman bahasa Indonesia ini tanpa mengubah naskah asli. Beri rekomendasi dan sebutkan hal-hal yang belum diperiksa.",
-      "check": "Pemeriksaan statis opsional (baca-saja):",
-      "update": "Simpan penyesuaian lokal, verifikasi versi serta checksum baru, lalu perbarui lewat alat yang sesuai. Pemasangan tidak otomatis diperbarui oleh commit GitHub.",
-      "limits": "Publikasi di GitHub tidak berarti terdaftar dalam direktori resmi ChatGPT, Claude atau Gemini. Hasil pengecekan statis tidak menggantikan pemeriksaan tampilan nyata atau penyunting manusia."
-    }
+    "top": "Kembali ke atas"
   },
   "en": {
     "house_style": "id-standard",
@@ -269,41 +235,7 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜Laras",
-      "title": "Install KUMIHAN｜Laras in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files from GitHub Release v0.1.0 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides. In Codex, extract each skill into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the Claude Code plugin, keeping the kumihan-laras folder, then launch Claude Code with that folder. You can also install it from the repository marketplace. In Claude, import an individual skill only through a Skills interface, if your account offers one.",
-      "gemini": "Extract the extension into an empty folder, confirm that gemini-extension.json is inside the kumihan-laras folder, then install it from that path. Do not install the repository root as the extension: it is the Japanese product. Import into the Gemini app has not been verified.",
-      "test": "State the language, region (id-ID or id-ID), house style, and working mode. Example request:",
-      "prompt": "Use kumihan-laras-review for this Indonesian page. Do not modify original copy; list grounded suggestions and what remains unchecked.",
-      "check": "Optional read-only static check:",
-      "update": "Save your customizations, verify the new version and its checksums, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "Publishing on GitHub is not a listing in the official ChatGPT, Claude, or Gemini directories. Actual behavior and rendering must be checked in each tool. Static checks do not replace review by a native Indonesian editor."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": "id-standard",
@@ -423,40 +355,6 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜Larasへ戻る",
-      "title": "{host}にKUMIHAN｜Larasを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。Codexでは、各スキルをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "Claude Codeプラグインを、kumihan-larasフォルダを保ったまま展開し、そのフォルダを指定してClaude Codeを起動します。リポジトリのマーケットプレイスからも導入できます。Claudeでは、アカウントにSkillsの画面がある場合に個別スキルを取り込みます。",
-      "gemini": "拡張を空のフォルダに展開し、kumihan-larasフォルダ内にgemini-extension.jsonがあることを確認してから、そのパスを指定して導入します。リポジトリのルートは日本語版の製品のため、この拡張として導入しないでください。Geminiアプリへの取り込みは確認していません。",
-      "test": "言語・地域（id-ID・id-ID）・編集スタイル・作業モードを明示します。依頼の例：",
-      "prompt": "kumihan-laras-reviewでこのインドネシア語ページを原稿変更なしで確認し、根拠付きの提案と未検証項目を分けてください。",
-      "check": "任意の静的確認（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。静的チェックは、インドネシア語の母語話者による確認の代わりにはなりません。"
-    }
+    "top": "ページ上部へ"
   }
 }

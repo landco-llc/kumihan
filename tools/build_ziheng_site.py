@@ -282,10 +282,6 @@ def render(lang, c):
 def outputs():
     copy = json.loads((ROOT / "assets" / "ziheng-site-copy.json").read_text(encoding="utf-8"))
     files = {f"kumihan-zh-han{sfx}.html": render(lang, copy[lang]) for lang, sfx in LANGS.items()}
-    # Legacy guides are authored independently; templates preserve that copy.
-    templates = ROOT / "templates/ziheng"
-    files.update({p.relative_to(templates).as_posix(): p.read_text(encoding="utf-8")
-                  for p in sorted(templates.rglob("*.html"))})
     files["assets/ziheng-site.css"] = canonical_css()
     # Current install surfaces must use admitted Release roles, while the shared
     # renderer separately retains explicitly requested historical source links.

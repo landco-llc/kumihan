@@ -24,9 +24,23 @@ class HostPackages(unittest.TestCase):
     self.assertNotIn('mcpServers',m)
     if host=='gemini':self.assertIn(prefix+m['contextFileName'],z.namelist())
  def test_guides_link_their_host_packages(self):
-  for host in ['claude','gemini']:
+  """Guides (tools/build_install_guides.py) link exactly the host's verified Release assets."""
+  import re
+  m=json.loads((BASE/'downloads/MANIFEST.json').read_text())
+  facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['ko']
+  released={a['name']:a for a in facts['verified_assets']}
+  sums=next(x['url'] for x in facts['verified_metadata'] if x['name']=='SHA256SUMS.txt')
+  for host,key in [('chatgpt','chatgpt-codex'),('claude','claude'),('gemini','gemini')]:
+   names={Path(x['file']).name for x in m['archives'] if x['host']==key}
+   self.assertEqual(len(names),5)
+   self.assertTrue(names<=set(released),names-set(released))
+   for x in m['archives']:
+    if x['host']==key:self.assertEqual(released[Path(x['file']).name]['sha256'],x['sha256'],x['file'])
+   expected={released[n]['url'] for n in names}|{sums}
    for suffix in ['', '.en','.ja']:
     body=(ROOT/f'docs/install-ko-{host}{suffix}.html').read_text()
-    self.assertIn(f'/downloads/{host}/kumihan-geuljjaim-{host}-bundle-v0.1.0.zip',body)
+    links=set(re.findall(r'href="([^"]*/releases/download/[^"]*)"',body))
+    self.assertEqual(links,expected,f'install-ko-{host}{suffix}')
+    if host!='chatgpt':self.assertIn(f'/kumihan-geuljjaim-{host}-bundle-v0.1.0.zip"',body)
     self.assertNotIn('/downloads/plugins/',body)
     self.assertNotIn('/downloads/skills/',body)

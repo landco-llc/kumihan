@@ -14,6 +14,8 @@ def commands(check=False):
     builders += [tools/'build_gateways.py', tools/'build_privacy.py', tools/'build_jekyll_seo.py']
     result=[[sys.executable,str(p)] for p in builders]
     result.append(['node',str(tools/'build_nhip_chu_site.mjs')])
+    # Every edition's installation guides come from one template, after the sites.
+    result.append([sys.executable,str(tools/'build_install_guides.py')])
     result.append([sys.executable,str(tools/'web_fonts.py')])
     # Preservation is a reviewed release contract, never a generated internal report.
     result.append([sys.executable,str(tools/'check_seo_preservation.py')])

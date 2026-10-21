@@ -38,13 +38,20 @@ class ZiHengWebsiteTests(unittest.TestCase):
                 self.assertIn('KUMIHAN｜字衡', content)
                 self.assertEqual([attr.get('lang') for tag,attr in parsed.tags if tag=='html'], [language])
                 self.assertEqual(sum(tag=='h1' for tag,_ in parsed.tags), 1)
-                self.assertTrue(any(tag=='meta' and attr.get('name')=='kumihan-product-route' and attr.get('content')=='zh-han' for tag,attr in parsed.tags))
                 self.assertTrue(any(tag=='link' and attr.get('rel')=='canonical' and path in attr.get('href','') for tag,attr in parsed.tags))
                 alts=[attr for tag,attr in parsed.tags if tag=='link' and attr.get('rel')=='alternate']
                 self.assertEqual({a.get('hreflang') for a in alts},{'ja','en','zh-Hant-TW','x-default'})
-                self.assertEqual(len([1 for tag,attr in parsed.tags if tag=='nav' and 'lang-picker' in attr.get('class','')]),1)
                 self.assertNotIn('lang="zh-han"',content)
                 self.assertNotIn('kumihan-zh-ch.html',content)
+                if path.startswith('docs/'):
+                    # Install guide (tools/build_install_guides.py): shared frame language switch.
+                    self.assertEqual(len([1 for tag,attr in parsed.tags if tag=='nav' and 'language-switch' in attr.get('class','')]),1)
+                    switch=[attr for tag,attr in parsed.tags if tag=='a' and 'data-language' in attr]
+                    self.assertEqual([a['lang'] for a in switch],['zh-Hant-TW','en','ja'])
+                    self.assertEqual([a['lang'] for a in switch if a.get('aria-current')=='page'],[language])
+                    continue
+                self.assertTrue(any(tag=='meta' and attr.get('name')=='kumihan-product-route' and attr.get('content')=='zh-han' for tag,attr in parsed.tags))
+                self.assertEqual(len([1 for tag,attr in parsed.tags if tag=='nav' and 'lang-picker' in attr.get('class','')]),1)
 
     def test_internal_links_and_images_exist(self):
         for path in CASE:
@@ -68,13 +75,23 @@ class ZiHengWebsiteTests(unittest.TestCase):
             content=(ROOT/path).read_text(encoding='utf-8')
             self.assertIn(zipfilename, content, path)
             self.assertIn('zh-Hant-TW',content)
-            self.assertIn('zh-Hant-HK',content)
+            if not path.startswith('docs/'):
+                self.assertIn('zh-Hant-HK',content)
+        facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['zh-hant']
+        sums=next(m['url'] for m in facts['verified_metadata'] if m['name']=='SHA256SUMS.txt')
+        codex={a['url'] for a in facts['verified_assets'] if '-openai-codex-' in a['name']}
+        plugin=next(a for a in facts['verified_assets'] if a['name']==zipfilename)
+        self.assertIn(plugin['url'],codex)
+        self.assertEqual(len(codex),5)  # plugin ZIP + four skill ZIPs
         for path in ('docs/install-ziheng.html','docs/install-ziheng.en.html','docs/install-ziheng.ja.html'):
-            content=(ROOT/path).read_text(encoding='utf-8')
-            facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['zh-hant']
-            plugin=next(a for a in facts['verified_assets'] if a['name']==zipfilename)
-            self.assertIn(plugin['sha256'],content)
-            self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
+            with self.subTest(path=path):
+                content=(ROOT/path).read_text(encoding='utf-8')
+                parsed=PageTags();parsed.feed(content)
+                # Downloads are exactly the verified ChatGPT/Codex Release assets + SHA256SUMS.txt.
+                downloads={attr['href'] for tag,attr in parsed.tags if tag=='a' and '/releases/download/' in attr.get('href','')}
+                self.assertEqual(downloads,codex|{sums})
+                self.assertIn('0.2.0',content)
+                self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
 
     def test_logo_styles_and_japanese_site_footer(self):
         self.assertTrue((ROOT/'assets/ziheng-site.css').is_file())

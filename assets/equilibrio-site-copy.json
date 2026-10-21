@@ -117,40 +117,6 @@
    "kumihan.html"
   ],
   "top": "Torna su",
-  "guide": {
-   "breadcrumb": "Guida all’installazione",
-   "nav": "Guide all’installazione",
-   "toc_title": "In questa pagina",
-   "toc_summary": "Mostra l’indice",
-   "platforms": "Scegli lo strumento di IA",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "L’installazione e l’invocazione nei singoli strumenti non sono state verificate. Le funzioni disponibili dipendono dall’ambiente e dall’account.",
-   "source": "Apri INSTALL.md",
-   "steps": "Passaggi e indicazioni",
-   "top": "Torna a KUMIHAN｜Equilibrio",
-   "title": "Installare KUMIHAN｜Equilibrio in {host}",
-   "lead": "Scegli il plugin completo oppure le singole skill in base alle funzioni supportate dal tuo strumento.",
-   "sections": [
-    "Scegli il formato",
-    "Scarica e verifica",
-    "Installa",
-    "Prova senza modificare l’originale",
-    "Aggiorna",
-    "Ambito e limiti"
-   ],
-   "format": "Il plugin contiene tutte e quattro le skill. Ogni skill è disponibile anche da sola, con regole e riferimenti locali. Allegare uno ZIP a una chat non equivale a installarlo.",
-   "plugin": "Plugin",
-   "skill": "Skill indipendente",
-   "download": "Scarica i file della stessa versione. Prima di estrarli, confronta SHA-256 e dimensioni con MANIFEST.json. Con tutti i 17 file nella stessa cartella, esegui (su macOS: shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Usa il plugin ChatGPT/Codex soltanto in un client che supporta l’importazione di agent plugin. L’archivio contiene kumihan-equilibrio/ con plugin.json e .codex-plugin/plugin.json. Per Codex, estrai le skill in .agents/skills/ nel progetto. La disponibilità delle skill in ChatGPT dipende dall’account.",
-   "claude": "Estrai il plugin Claude Code mantenendo la cartella kumihan-equilibrio/. Se la versione in uso lo supporta, valida il plugin e avvia Claude Code con questa cartella. Le skill indipendenti possono essere collocate in .claude/skills/. In Claude usa soltanto un’interfaccia per skill effettivamente disponibile.",
-   "gemini": "Estrai l’estensione in una cartella vuota con gemini-extension.json alla radice. Installa da quel percorso e leggi la richiesta di autorizzazione. Non installare l’intero repository come Equilibrio. L’importazione in Gemini Apps non è verificata.",
-   "test": "Scegli separatamente it-IT o it-CH, mezzo, norme editoriali, tono e modalità di modifica. Esempio:",
-   "prompt": "Usa kumihan-equilibrio-review. Conserva testo originale, numeri e nomi; separa osservazioni e proposte.",
-   "check": "Controllo statico facoltativo, in sola lettura:",
-   "update": "Conserva le impostazioni personali e verifica versione e checksum. Aggiorna con il metodo supportato dal tuo strumento. Un nuovo commit non aggiorna automaticamente un’installazione. Mantieni gli altri plugin linguistici.",
-   "limits": "40 proposte di regole, un rilevatore limitato di candidati CSS e un confronto dei byte. I 48 casi di ricerca mantengono stati di verifica separati. Non è un correttore grammaticale completo né una certificazione visiva. Importazione nativa, icone, cataloghi dei fornitori e revisione madrelingua non verificati."
-  },
   "publication_state": "published"
  },
  "en": {
@@ -271,40 +237,6 @@
    "en.html"
   ],
   "top": "Back to top",
-  "guide": {
-   "breadcrumb": "Installation guide",
-   "nav": "Installation guides",
-   "toc_title": "On this page",
-   "toc_summary": "Show contents",
-   "platforms": "Choose an AI platform",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-   "source": "Open the original INSTALL.md",
-   "steps": "Steps and notes",
-   "top": "Back to KUMIHAN｜Equilibrio",
-   "title": "Install KUMIHAN｜Equilibrio in {host}",
-   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-   "sections": [
-    "Choose a format",
-    "Download and verify",
-    "Install",
-    "Try it without changing the source",
-    "Update",
-    "Scope and limits"
-   ],
-   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-   "plugin": "Plugin",
-   "skill": "Individual skill",
-   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-equilibrio/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-   "claude": "Extract the Claude Code plugin, keeping the kumihan-equilibrio/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
-   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Equilibrio. Import into the Gemini app has not been verified.",
-   "test": "Choose it-IT or it-CH, medium, house style, voice and edit mode independently. Example:",
-   "prompt": "Use kumihan-equilibrio-review. Preserve the source, figures, and names; keep observations separate from proposals.",
-   "check": "Optional static check (read-only):",
-   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-   "limits": "40 research guidance candidates; a bounded CSS candidate detector and byte comparison. 48 proposed research cases retain separate evidence states. No complete grammar checker or visual certification. Native import, icon UI, provider listings and Italian native editorial review are not verified."
-  },
   "publication_state": "published"
  },
  "ja": {
@@ -426,40 +358,6 @@
    "kumihan.html"
   ],
   "top": "ページ上部へ",
-  "guide": {
-   "breadcrumb": "導入ガイド",
-   "nav": "導入ページ",
-   "toc_title": "このページの目次",
-   "toc_summary": "このページの目次を表示",
-   "platforms": "AIプラットフォームを選ぶ",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-   "source": "元のINSTALL.mdを開く",
-   "steps": "手順と注意事項",
-   "top": "KUMIHAN｜Equilibrioへ戻る",
-   "title": "{host}にKUMIHAN｜Equilibrioを導入",
-   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-   "sections": [
-    "導入形式を選ぶ",
-    "ダウンロードと照合",
-    "導入する",
-    "原稿を変えずに試す",
-    "更新",
-    "対応範囲と限界"
-   ],
-   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-   "plugin": "プラグイン",
-   "skill": "個別スキル",
-   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
-   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-equilibrio/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-   "claude": "Claude Codeプラグインを、kumihan-equilibrio/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
-   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをEquilibrioとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
-   "test": "it-ITまたはit-CH、媒体、編集方針、人称と編集モードを別々に指定します。例：",
-   "prompt": "kumihan-equilibrio-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
-   "check": "任意の静的チェック（読み取り専用）：",
-   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-   "limits": "40件の研究規則案と、限定したCSS候補検出・バイト比較を収録。48件の研究ケースは確認状況を別管理します。完全な文法校正器や表示認証ではありません。実ホスト導入・アイコン表示・公式ストア掲載・イタリア語母語校閲は未確認です。"
-  },
   "publication_state": "published"
  }
 }

@@ -116,41 +116,7 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Buyela phezulu",
-    "guide": {
-      "breadcrumb": "Umhlahlandlela wokufaka",
-      "nav": "Izindlela zokufaka",
-      "toc_title": "Okuqukethwe",
-      "toc_summary": "Bonisa izigaba",
-      "platforms": "Khetha ithuluzi le-AI",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Ukufakwa kumathuluzi nokubukeka ezipheqululini akukakaqinisekiswa.",
-      "source": "Vula INSTALL.md",
-      "steps": "Izinyathelo",
-      "top": "Buyela ku-KUMIHAN｜Hlela",
-      "title": "Faka i-KUMIHAN｜Hlela ku-{host}",
-      "lead": "Khetha iplagin enamakhono amane noma ikhono elilodwa ngokwethuluzi lakho.",
-      "sections": [
-        "Khetha iphakheji",
-        "Landa futhi uqinisekise",
-        "Faka",
-        "Hlola ngaphandle kokushintsha",
-        "Buyekeza",
-        "Imikhawulo"
-      ],
-      "format": "Iplagin iqukethe amakhono amane. Ikhono ngalinye litholakala lodwa.",
-      "plugin": "Iplagin",
-      "skill": "Ikhono",
-      "download": "Landa amafayela e-v0.1.0 ku-GitHub Release bese uqhathanisa ama-SHA-256.",
-      "chatgpt": "Sebenzisa indlela yokufaka amakhono lapho ithuluzi lakho liyisekela. Ku-Codex, faka amakhono ku-.agents/skills/.",
-      "claude": "Khipha iphakheji kufolda kumihan-hlela bese usebenzisa claude plugin validate.",
-      "gemini": "Khipha isandiso esine-gemini-extension.json bese usebenzisa gemini extensions install. Izinhlelo zokusebenza ze-Gemini zidinga ukuhlolwa okuhlukile.",
-      "test": "Chaza ulimi, uhlobo lomsebenzi nemvume. Isibonelo:",
-      "prompt": "Sebenzisa kumihan-hlela-review. Hlola umbhalo wesiZulu ngaphandle kokushintsha okwangempela.",
-      "check": "Qinisekisa ukuthi umbhalo wangempela awushintshi.",
-      "update": "Landa inguqulo entsha ku-GitHub bese uqinisekisa ama-checksum.",
-      "limits": "Ukuhlolwa kolimi, ukwahlukaniswa kwamagama nokubonakala okungakenziwa kumele kubhalwe njengokungakaqinisekiswa."
-    }
+    "top": "Buyela phezulu"
   },
   "en": {
     "house_style": "id-standard",
@@ -269,41 +235,7 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜Hlela",
-      "title": "Install KUMIHAN｜Hlela in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files from GitHub Release v0.1.0 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides. In Codex, extract each skill into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the plugin keeping the kumihan-hlela folder, validate with claude plugin validate and use claude --plugin-dir where supported. Individual skills may be placed in .claude/skills/. Native host support must be verified.",
-      "gemini": "Extract the extension with gemini-extension.json under kumihan-hlela, then install from that folder with Gemini CLI. Gemini Apps use is a separate, unverified workflow.",
-      "test": "Specify isiZulu locale (sw-TZ, sw-KE etc.), medium, house style and edit permission. Example:",
-      "prompt": "Use kumihan-hlela-review to review isiZulu typography without changing the original source text.",
-      "check": "Optional read-only static check:",
-      "update": "Save your customizations, verify the new version and its checksums, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "24 proposed isiZulu checks and a source-byte comparator are supplied. Browser rendering, native host registration, marketplace listing and native editorial review are not verified."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": "id-standard",
@@ -423,40 +355,6 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜Hlelaへ戻る",
-      "title": "{host}にKUMIHAN｜Hlelaを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。Codexでは、各スキルをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "kumihan-hlelaフォルダを保ってClaude Codeプラグインを展開し、claude plugin validateで確認します。対応する場合はclaude --plugin-dirを使います。単独スキルは.claude/skills/へ配置できます。",
-      "gemini": "kumihan-hlelaフォルダ内にgemini-extension.jsonがある構造で展開し、Gemini CLIから導入します。Geminiアプリへの取り込みは別手順で未検証です。",
-      "test": "対象地域（sw-TZ・sw-KEなど）と媒体・文体・編集権限を指定します。依頼例：",
-      "prompt": "kumihan-hlela-reviewでズールー語の文字組を原稿非変更でレビューしてください。",
-      "check": "任意の静的確認（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "ズールー語の24要件と原文字列のバイト比較を収録しています。ブラウザ実表示、各サービスへの登録、公式カタログ掲載、母語校閲は未検証です。"
-    }
+    "top": "ページ上部へ"
   }
 }

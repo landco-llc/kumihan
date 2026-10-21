@@ -65,15 +65,21 @@ def check(base, output, executable):
             page.goto(urljoin(base,rel),wait_until='networkidle')
             page.keyboard.press('Tab')
             if page.locator(':focus').count()!=1 or page.locator(':focus').get_attribute('href')!='#main': failures.append(f'{rel}: skip focus')
-            lang_links=page.locator('.languages a')
-            if lang_links.count()!=3 or page.locator('.languages [aria-current=page]').count()!=1: failures.append(f'{rel}: locale navigation')
+            # Landings (Jekyll) and guides (tools/build_install_guides.py) share the .language-switch nav.
+            lang_links=page.locator('.language-switch a')
+            if lang_links.count()!=3 or page.locator('.language-switch [aria-current=page]').count()!=1: failures.append(f'{rel}: locale navigation')
             if rel.startswith('docs/'):
                 platform=rel.split('install-ko-')[1].split('.')[0]
                 if not all(f'install-ko-{platform}' in x for x in lang_links.evaluate_all('(xs)=>xs.map(x=>x.href)')): failures.append(f'{rel}: platform lost')
-                prompt=page.locator('#review-prompt').inner_text()
-                page.locator('[data-copy-target]').click()
-                page.wait_for_function('()=>document.querySelector("[role=status]").textContent.length>0')
-                if page.evaluate('()=>navigator.clipboard.readText()')!=prompt: failures.append(f'{rel}: clipboard mismatch')
+                # assets/kumihan-install.js adds a Copy button to every command block.
+                shell=page.locator('main .code-shell').first
+                if page.locator('main .code-shell').count()!=page.locator('main pre').count() or shell.count()==0:
+                    failures.append(f'{rel}: command blocks without copy button')
+                else:
+                    command=shell.locator('pre').inner_text().rstrip('\n')
+                    shell.locator('button.copy-code').click()
+                    page.wait_for_function('()=>document.querySelector("main .copy-status-live").textContent.length>0')
+                    if page.evaluate('()=>navigator.clipboard.readText()')!=command: failures.append(f'{rel}: clipboard mismatch')
         for width in (320,375,768,1440):
             page.set_viewport_size(dict(width=width,height=1000))
             page.goto(urljoin(base,'kumihan-ko.html'),wait_until='networkidle')

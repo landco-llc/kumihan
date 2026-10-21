@@ -116,41 +116,7 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ទៅខាងលើ",
-    "guide": {
-      "breadcrumb": "ការណែនាំអំពីការដំឡើង",
-      "nav": "របៀបដំឡើង",
-      "toc_title": "មាតិកា",
-      "toc_summary": "មើលមាតិកា",
-      "platforms": "ជ្រើសឧបករណ៍ AI",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "ការដំឡើងនៅលើឧបករណ៍នីមួយៗមិនទាន់បានផ្ទៀងផ្ទាត់ទាំងអស់ទេ។",
-      "source": "បើកឯកសារ INSTALL.md",
-      "steps": "ជំហាន",
-      "top": "ត្រឡប់ទៅ KUMIHAN｜លំនឹង",
-      "title": "ដំឡើង KUMIHAN｜លំនឹង នៅលើ {host}",
-      "lead": "ជ្រើស Plugin ពេញ ឬជំនាញនីមួយៗតាមឧបករណ៍របស់អ្នក។",
-      "sections": [
-        "ជ្រើសប្រភេទឯកសារ",
-        "ទាញយក និងផ្ទៀងផ្ទាត់",
-        "ដំឡើង",
-        "សាកល្បងដោយរក្សាអត្ថបទដើម",
-        "ធ្វើបច្ចុប្បន្នភាព",
-        "វិសាលភាព និងកម្រិត"
-      ],
-      "format": "Plugin មានជំនាញ ៤។ ជំនាញនីមួយៗអាចទាញយកដាច់ដោយឡែក។ ការភ្ជាប់ ZIP ទៅក្នុងការជជែកមិនមែនជាការដំឡើងទេ។",
-      "plugin": "Plugin",
-      "skill": "ជំនាញ",
-      "download": "ទាញយក ZIP កំណែ v0.1.0 ពី GitHub Release ហើយផ្ទៀងផ្ទាត់ SHA-256 មុនដំឡើង។",
-      "chatgpt": "សូមប្រើមុខងារដំឡើងដែលកម្មវិធីរបស់អ្នកគាំទ្រ។ សម្រាប់ Codex អាចដាក់ជំនាញនៅក្នុង .agents/skills/។",
-      "claude": "ស្រាយ ZIP ដោយរក្សាថត kumihan-lumnung រួចពិនិត្យតាម claude plugin validate។",
-      "gemini": "ស្រាយ ZIP ដែលមាន gemini-extension.json រួចដំឡើងតាម Gemini CLI។",
-      "test": "សូមបញ្ជាក់ភាសា km-KH ប្រភេទការងារ និងសិទ្ធិកែប្រែ។ ឧទាហរណ៍៖",
-      "prompt": "ប្រើ kumihan-lumnung-review ពិនិត្យអក្សរខ្មែរ ដោយមិនកែអត្ថបទដើម។",
-      "check": "ពិនិត្យអត្ថបទដើមដោយមិនសរសេរជាន់លើ៖",
-      "update": "ទាញយកកំណែថ្មី និងផ្ទៀងផ្ទាត់ checksum មុនធ្វើបច្ចុប្បន្នភាព។",
-      "limits": "ច្បាប់ ៣០ និងសេណារីយ៉ូ ២៤ ជាសេចក្តីណែនាំ។ ការបង្ហាញនៅលើកម្មវិធីពិត និងការត្រួតពិនិត្យដោយអ្នកប្រើភាសាខ្មែរនៅតែត្រូវការផ្ទៀងផ្ទាត់។"
-    }
+    "top": "ទៅខាងលើ"
   },
   "en": {
     "house_style": "id-standard",
@@ -269,41 +235,7 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜លំនឹង",
-      "title": "Install KUMIHAN｜លំនឹង in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files from GitHub Release v0.1.0 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides. In Codex, extract each skill into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the plugin keeping the kumihan-lumnung folder, validate with claude plugin validate and use claude --plugin-dir where supported. Individual skills may be placed in .claude/skills/. Native host support must be verified.",
-      "gemini": "Extract the extension with gemini-extension.json under kumihan-lumnung, then install from that folder with Gemini CLI. Gemini Apps use is a separate, unverified workflow.",
-      "test": "Specify Khmer locale km-KH, medium, house style and source-editing permission. Example:",
-      "prompt": "Use kumihan-lumnung-review to review Khmer typography without changing the original text.",
-      "check": "Optional read-only static check:",
-      "update": "Save your customizations, verify the new version and its checksums, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "30 Khmer rules, 24 proposed scenarios and a read-only source-byte comparator are provided. Native browser shaping, provider registration and Khmer proofreading are not automatically verified."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": "id-standard",
@@ -423,40 +355,6 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜លំនឹងへ戻る",
-      "title": "{host}にKUMIHAN｜លំនឹងを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。Codexでは、各スキルをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "kumihan-lumnungフォルダを保ってClaude Codeプラグインを展開し、claude plugin validateで確認します。対応する場合はclaude --plugin-dirを使います。単独スキルは.claude/skills/へ配置できます。",
-      "gemini": "kumihan-lumnungフォルダ内にgemini-extension.jsonがある構造で展開し、Gemini CLIから導入します。Geminiアプリへの取り込みは別手順で未検証です。",
-      "test": "対象言語（km-KH）、媒体、文体、編集権限を指定します。依頼例：",
-      "prompt": "kumihan-lumnung-reviewでクメール語の文字組を原稿非変更でレビューしてください。",
-      "check": "任意の静的確認（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "クメール語の30ルールと24シナリオ、原文字列のバイト比較を収録しています。ブラウザ実表示、ホストへの導入、母語校閲は未確認です。"
-    }
+    "top": "ページ上部へ"
   }
 }

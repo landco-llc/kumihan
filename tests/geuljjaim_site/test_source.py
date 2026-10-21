@@ -5,24 +5,44 @@ import yaml
 ROOT=Path(__file__).resolve().parents[2]
 class SourceContract(unittest.TestCase):
  def test_twelve_pages_have_matching_locale_paths(self):
+  """3 Jekyll landings + 9 static guides from tools/build_install_guides.py."""
+  import re
+  site='https://landco-llc.github.io/kumihan'
   for platform in [None,'chatgpt','claude','gemini']:
    group={}
    for loc,suffix,lang in [('ko','','ko-KR'),('en','.en','en'),('ja','.ja','ja')]:
     name=f'docs/install-ko-{platform}{suffix}.html' if platform else f'kumihan-ko{suffix}.html'
     with self.subTest(path=name):
      self.assertTrue((ROOT/name).is_file(),name)
-     fm,body=(ROOT/name).read_text().split('---',2)[1:]
-     meta=yaml.safe_load(fm)
-     self.assertEqual(meta['lang'],lang)
-     self.assertEqual(meta['layout'], 'geuljjaim-index' if platform is None else 'geuljjaim')
-     self.assertEqual(meta['canonical_path'],'/'+name)
+     src=(ROOT/name).read_text()
+     if platform is None:
+      fm,body=src.split('---',2)[1:]
+      meta=yaml.safe_load(fm)
+      self.assertEqual(meta['lang'],lang)
+      self.assertEqual(meta['layout'],'geuljjaim-index')
+      self.assertEqual(meta['canonical_path'],'/'+name)
+      paths={l:meta[f'{l}_path'] for l in ('ko','en','ja')}
+     else:
+      self.assertFalse(src.startswith('---'),'guides are static HTML without front matter')
+      body=src
+      self.assertEqual(re.search(r'<html lang="([^"]+)"',src).group(1),lang)
+      self.assertNotIn('dir="rtl"',src)
+      self.assertEqual(re.findall(r'<link rel="canonical" href="([^"]+)"',src),[site+'/'+name])
+      alternates=dict(re.findall(r'<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"',src))
+      self.assertEqual(alternates.pop('x-default'),f'{site}/docs/install-ko-{platform}.html')
+      code={'ko-KR':'ko','en':'en','ja':'ja'}
+      self.assertEqual(set(alternates),set(code))
+      paths={code[h]:u.removeprefix(site) for h,u in alternates.items()}
+      switch=re.findall(r'<a href="([^"]+)" lang="([^"]+)" hreflang="[^"]+" data-language',src)
+      self.assertEqual(switch,[(f'install-ko-{platform}{s}.html',l) for s,l in (('','ko-KR'),('.en','en'),('.ja','ja'))])
+      self.assertIn('<a class="brand" href="../kumihan-ko'+suffix+'.html">KUMIHAN<span class="brand-sub" lang="ko-KR">｜글짜임</span></a>',src)
      self.assertIn('KUMIHAN｜글짜임',body)
      self.assertIn('v0.1.0',body)
      self.assertNotIn('drive.google.com',body)
      self.assertNotIn('<br',body)
-     group[loc]=(meta,body)
-   for meta,body in group.values():
-    for loc,(other,_) in group.items(): self.assertEqual(meta[f'{loc}_path'],other['canonical_path'])
+     group[loc]=('/'+name,paths)
+   for own,paths in group.values():
+    self.assertEqual(paths,{loc:other for loc,(other,_) in group.items()},own)
  def test_landing_display_copy_avoids_sentence_punctuation(self):
   """KUMIHAN web-marketing display role; excludes regular body content."""
   import re

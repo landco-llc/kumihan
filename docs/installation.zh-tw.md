@@ -68,7 +68,7 @@
 
    > 請將這個套件註冊為我個人使用的私人外掛，不要提交至公開外掛目錄。
 
-4. 若註冊成功，可在 Plugins 的「Personal」或「Created by me」找到 **KUMIHAN v0.1.6**。
+4. 若註冊成功，可在 Plugins 的「Personal」或「Created by me」找到 **KUMIHAN**。
 5. 視需要安裝，並在新對話中啟用。
 
 **注意事項**

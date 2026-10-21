@@ -7,6 +7,12 @@ from pathlib import Path
 import sys
 from playwright.sync_api import sync_playwright
 from build_satzbild_site import outputs
+import build_install_guides
+
+
+def pages():
+ """The 3 landings (build_satzbild_site.py) and the 9 installation guides (build_install_guides.py)."""
+ return list(outputs())+[build_install_guides.guide_path('de',h,l) for h in build_install_guides.HOSTS for l in ('de','en','ja')]
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--base',default='http://127.0.0.1:8765/kumihan/');p.add_argument('--output',type=Path,required=True);p.add_argument('--chromium',default='/usr/bin/chromium');a=p.parse_args();a.output.mkdir(parents=True,exist_ok=True)
@@ -14,12 +20,12 @@ def main():
  with sync_playwright() as playwright:
   browser=playwright.chromium.launch(executable_path=a.chromium or None,args=['--no-sandbox'])
   page=browser.new_page();page.route('https://**/*',lambda route:route.abort())
-  for path in outputs():
+  for path in pages():
    print('measuring '+path,flush=True)
    for width in (320,375,768,1280):
     for scale in (1,2):
      for spacing in (False,True):
-      page.set_viewport_size({'width':width,'height':1000});response=page.goto(a.base+path,wait_until='domcontentloaded');page.evaluate('document.fonts.ready')
+      page.set_viewport_size({'width':width,'height':1000});response=page.goto(a.base+path,wait_until='load');page.evaluate('document.fonts.ready')
       if scale==2:page.evaluate("() => {const values=[...document.querySelectorAll('body,body *')].map(e=>[e,parseFloat(getComputedStyle(e).fontSize)]);values.forEach(([e,v])=>e.style.setProperty('font-size',v*2+'px','important'));}")
       page.add_style_tag(content='/* measurement */'+('*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}' if spacing else ''))
       observed=page.evaluate('''() => ({width:innerWidth,scroll:document.documentElement.scrollWidth,lang:document.documentElement.lang,images:[...document.images].every(i=>i.complete&&i.naturalWidth>0),clipped:[...document.querySelectorAll('main *,header *,footer *')].filter(e=>{const s=getComputedStyle(e);return ['hidden','clip'].includes(s.overflowY)&&e.scrollHeight>e.clientHeight+1}).map(e=>e.tagName),links:[...document.querySelectorAll('a[href]')].every(e=>e.textContent.trim().length>0 || e.getAttribute('aria-label')),focus:!!document.querySelector('a.skip, a.skip-link')})''')

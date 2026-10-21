@@ -116,41 +116,7 @@
       "KUMIHAN · japoński",
       "kumihan.html"
     ],
-    "top": "Powrót na górę",
-    "guide": {
-      "breadcrumb": "Instrukcja instalacji",
-      "nav": "Instrukcje instalacji",
-      "toc_title": "Na tej stronie",
-      "toc_summary": "Pokaż spis treści",
-      "platforms": "Wybierz narzędzie AI",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Instalacja i wywołanie w konkretnym kliencie nie zostały zweryfikowane we wszystkich wariantach. Dostępne funkcje zależą od narzędzia i planu.",
-      "source": "Otwórz źródłowy INSTALL.md",
-      "steps": "Instrukcje i uwagi",
-      "top": "Wróć do KUMIHAN｜Szyk",
-      "title": "Zainstaluj KUMIHAN｜Szyk w {host}",
-      "lead": "W zależności od obsługiwanych funkcji wybierz cały plugin lub pojedyncze umiejętności.",
-      "sections": [
-        "Wybierz format",
-        "Pobierz i sprawdź",
-        "Zainstaluj",
-        "Sprawdź bez zmian w źródle",
-        "Aktualizuj",
-        "Zakres i ograniczenia"
-      ],
-      "format": "Plugin zawiera cztery umiejętności. Każda jest też dostępna jako osobny pakiet ZIP z zasadami, profilami i źródłami. Samo dodanie ZIP do rozmowy nie musi oznaczać instalacji.",
-      "plugin": "Plugin",
-      "skill": "Pojedyncza umiejętność",
-      "download": "Pobierz paczki ZIP tej wersji. Zweryfikuj pliki za pomocą MANIFEST.json i SHA256SUMS.txt przed instalacją. W systemie macOS użyj polecenia shasum -a 256 -c SHA256SUMS.txt.",
-      "chatgpt": "Plugin dla ChatGPT / Codex instaluj wyłącznie przez obsługiwany interfejs klienta. Po rozpakowaniu folder kumihan-szyk zawiera plugin.json oraz .codex-plugin/plugin.json. Umiejętności Codex można umieścić w katalogu projektu .agents/skills/. Import do ChatGPT zależy od funkcji konta.",
-      "claude": "Rozpakuj plugin dla Claude Code jako folder kumihan-szyk. Sprawdź dostępne polecenie claude plugin validate i zainstaluj zgodnie z oficjalną instrukcją. Do Claude można importować osobne umiejętności, jeśli interfejs obsługuje tę funkcję.",
-      "gemini": "Rozpakuj rozszerzenie do pustego katalogu z gemini-extension.json w katalogu głównym. W Gemini CLI użyj gemini extensions install i sprawdź gemini extensions list. Aplikacja Gemini może wymagać osobnego importu umiejętności.",
-      "test": "Podaj język polski, profil regionalny, zakres i tryb pracy. Przykład:",
-      "prompt": "Oceń polską typografię za pomocą kumihan-szyk-review, zachowaj oryginalne nazwy, liczby i tekst oraz oddziel uwagi od pomiarów.",
-      "check": "Opcjonalny odczytowy skrypt kontroli statycznej:",
-      "update": "Przed wymianą pakietu zachowaj lokalne zmiany. Sprawdź tag i sumy kontrolne. Nowy commit nie aktualizuje automatycznie zainstalowanej umiejętności.",
-      "limits": "40 proponowanych reguł badawczych, 64 proponowane przypadki i ograniczone kontrole offline. To nie jest pełny korektor ani gwarancja wyglądu. Publikacja na GitHubie nie oznacza umieszczenia w oficjalnych katalogach narzędzi AI."
-    }
+    "top": "Powrót na górę"
   },
   "en": {
     "house_style": null,
@@ -269,41 +235,7 @@
       "KUMIHAN Japanese",
       "en.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜Szyk",
-      "title": "Install KUMIHAN｜Szyk in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-szyk/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the Claude Code plugin, keeping the kumihan-szyk/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
-      "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Szyk. Import into the Gemini app has not been verified.",
-      "test": "State the Polish locale, project voice and allowed mode explicitly. Example request:",
-      "prompt": "Use kumihan-szyk-review to check Polish typography, preserve all original content and separate observations from suggestions.",
-      "check": "Optional static check (read-only):",
-      "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "40 proposed research rules, 64 proposed fixtures and bounded offline static checks. Not a complete proofing engine or a guarantee of visual quality. GitHub Release does not mean marketplace listing or verified native-host installation."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": null,
@@ -423,40 +355,6 @@
       "日本語版 KUMIHAN",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜Szykへ戻る",
-      "title": "{host}にKUMIHAN｜Szykを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-szyk/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "Claude Codeプラグインを、kumihan-szyk/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
-      "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをSzykとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
-      "test": "ポーランド語・媒体・文体・作業モードを明示します。依頼の例：",
-      "prompt": "kumihan-szyk-reviewでポーランド語の文字組みを確認し、原稿・数字・名前を変えず、観察事項と提案を区別してください。",
-      "check": "任意の静的チェック（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "研究由来の40規則・64ケースと限定的な静的検査を提供します。完全校正や描画品質の保証ではありません。GitHubでの公開はAIツールの公式ディレクトリ掲載やネイティブ動作確認を意味しません。"
-    }
+    "top": "ページ上部へ"
   }
 }

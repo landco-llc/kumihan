@@ -11,7 +11,6 @@ class Site(unittest.TestCase):
             self.assertIn("KUMIHAN｜Лад",copy["title"])
             self.assertEqual(len(copy["features"]),4)
             self.assertEqual(len(copy["skills"]),4)
-            self.assertEqual(len(copy["guide"]["sections"]),6)
             self.assertNotIn("Compasso",json.dumps(copy,ensure_ascii=False))
             self.assertNotIn("Portuguese",json.dumps(copy,ensure_ascii=False))
         self.assertTrue(d["en"]["h1"][0].startswith("Natural Russian"))

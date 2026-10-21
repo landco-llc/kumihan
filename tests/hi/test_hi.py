@@ -49,7 +49,13 @@ class Packages(unittest.TestCase):
    d=json.loads(path.read_text());self.assertRegex(d['description'],r'[\u0900-\u097f]');self.assertRegex(d['description'],r'[A-Za-z]');self.assertNotRegex(d['description'],r'[\u3040-\u30ff]');self.assertEqual(d['name'],'kumihan-hi')
   d=json.loads((p/'plugin.json').read_text());self.assertEqual(d['extensions']['com.openai']['interface']['displayName'],'KUMIHAN｜अक्षर-संगति')
 
-import build_hi_site, base_copy
+import build_hi_site, base_copy, build_install_guides
+GUIDES={build_install_guides.guide_path('hi',h,l):(h,l) for h in build_install_guides.HOSTS for l in ('hi','en','ja')}
+def release_downloads(host):
+ facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['hi']
+ other=[h for h in ('chatgpt','claude','gemini') if h!=host]
+ urls={a['url'] for a in facts['verified_assets'] if host in a['name'].lower() or (host=='chatgpt' and not any(o in a['name'].lower() for o in other))}
+ return urls|{m['url'] for m in facts['verified_metadata'] if m['name']=='SHA256SUMS.txt'}
 from html.parser import HTMLParser
 from urllib.parse import urlparse, unquote
 class Links(HTMLParser):
@@ -61,7 +67,9 @@ class Links(HTMLParser):
    if a.get(k):self.links.append(a[k])
 class Site(unittest.TestCase):
  def test_generated_pages_and_links(self):
-  outputs=build_hi_site.outputs();self.assertEqual(len(outputs),13)
+  outputs=build_hi_site.outputs();guides=build_install_guides.outputs()
+  self.assertEqual(sum(n.endswith('.html') for n in outputs),3);self.assertTrue(set(GUIDES)<=set(guides))
+  outputs=dict(outputs,**{n:guides[n] for n in GUIDES});self.assertEqual(sum(n.endswith('.html') for n in outputs),12)
   for name,text in outputs.items():
    self.assertEqual((ROOT/name).read_text(),text,name)
    if not name.endswith('.html'):continue
@@ -83,10 +91,11 @@ class Site(unittest.TestCase):
  def test_download_filenames_and_gateway(self):
   with tempfile.TemporaryDirectory() as tmp:
    build_hi.build(Path(tmp));names={p.name for p in Path(tmp).iterdir()}
-   for host in build_hi.HOSTS:
-    for lang in ['hi','en','ja']:
-     p=Links();p.feed(build_hi_site.guide(host,lang,json.loads((ROOT/'assets/hi-site-copy.json').read_text())[lang]))
-     for link in p.links:
-      if '/releases/download/' in link:self.assertIn(link.rsplit('/',1)[-1],names)
+   for name,(host,lang) in GUIDES.items():
+    p=Links();p.feed((ROOT/name).read_text())
+    downloads={link for link in p.links if '/releases/download/' in link}
+    self.assertEqual(downloads,release_downloads(host),name)
+    for link in downloads:
+     if link.endswith('.zip'):self.assertIn(link.rsplit('/',1)[-1],names)
   for page in ['top-ja.html','index.html']:
    p=(ROOT/page).read_text();self.assertIn('kumihan-hi',p);self.assertIn('target="_blank"',p)

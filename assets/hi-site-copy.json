@@ -116,41 +116,7 @@
       "KUMIHAN 日本語",
       "kumihan.html"
     ],
-    "top": "ऊपर जाएँ",
-    "guide": {
-      "breadcrumb": "स्थापना मार्गदर्शिका",
-      "nav": "स्थापना मार्गदर्शिकाएँ",
-      "toc_title": "इस पृष्ठ पर",
-      "toc_summary": "विषय सूची दिखाएँ",
-      "platforms": "AI प्लेटफ़ॉर्म चुनें",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "हर होस्ट में वास्तविक स्थापना और उपयोग की जाँच नहीं हुई है। कुछ विकल्प आपके खाते या संस्करण में उपलब्ध नहीं हो सकते।",
-      "source": "मूल INSTALL.md पढ़ें",
-      "steps": "चरण और टिप्पणियाँ",
-      "top": "KUMIHAN｜अक्षर-संगति पर लौटें",
-      "title": "KUMIHAN｜अक्षर-संगति को {host} में स्थापित करें",
-      "lead": "अपने टूल की सुविधा के अनुसार पूरा प्लगइन या स्वतंत्र Skills चुनें।",
-      "sections": [
-        "प्रारूप चुनें",
-        "डाउनलोड और सत्यापन",
-        "स्थापना",
-        "मूल पाठ बदले बिना आज़माएँ",
-        "अपडेट",
-        "सीमा और प्रमाण"
-      ],
-      "format": "प्लगइन में चारों Skills हैं। हर स्वतंत्र Skill में उसके नियम, संदर्भ और आइकन भी हैं। चैट में ZIP संलग्न करना प्लगइन स्थापित करना नहीं है।",
-      "plugin": "प्लगइन / एक्सटेंशन",
-      "skill": "स्वतंत्र Skill",
-      "download": "GitHub Release v0.1.0 से ZIP लें और SHA256SUMS.txt से SHA-256 मिलाएँ।",
-      "chatgpt": "ChatGPT / Codex में केवल उपलब्ध प्लगइन आयात सुविधा का उपयोग करें। Codex में स्वतंत्र Skill को .agents/skills/ में रखें। ChatGPT Skills की सुविधा खाते और UI पर निर्भर है।",
-      "claude": "Claude Code प्लगइन निकालें, validate करें और --plugin-dir से शुरू करें। स्वतंत्र Skills को ~/.claude/skills/ में रख सकते हैं। Claude चैट में समर्थित Skills UI होने पर ही आयात करें।",
-      "gemini": "एक्सटेंशन निकालें और kumihan-hi फ़ोल्डर में gemini-extension.json की पुष्टि करें। उसी पथ से CLI एक्सटेंशन स्थापित करें। Gemini ऐप में फ़ाइल संलग्न करने से CLI एक्सटेंशन स्थापित नहीं होता।",
-      "test": "भाषा, लिपि, locale, पाठक, माध्यम, कार्य और पाठ बदलने का अधिकार बताएँ। उदाहरण:",
-      "prompt": "kumihan-hi-review से क्षि क्षी त्रि ज्ञ श्र स्त्री की समीक्षा करें। मूल पाठ न बदलें। स्थिर जाँच, वास्तविक प्रदर्शन और NOT_CHECKED को अलग रखें।",
-      "check": "वैकल्पिक स्थिर जाँच; केवल पढ़ती है:",
-      "update": "अपनी स्थानीय सेटिंग सुरक्षित रखें, नए संस्करण के चेकसम जाँचें और होस्ट के समर्थित तरीके से अपडेट करें। अन्य भाषा के प्लगइन न बदलें।",
-      "limits": "GitHub पर प्रकाशन आधिकारिक ChatGPT, Claude या Gemini निर्देशिका की स्वीकृति नहीं है। स्थिर जाँच वास्तविक फ़ॉन्ट, उपकरण या मातृभाषी समीक्षा का विकल्प नहीं है। नई हिंदी प्रति मातृभाषी द्वारा जाँची नहीं गई है।"
-    }
+    "top": "ऊपर जाएँ"
   },
   "en": {
     "house_style": null,
@@ -269,41 +235,7 @@
       "KUMIHAN Japanese",
       "en.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜अक्षर-संगति",
-      "title": "Install KUMIHAN｜अक्षर-संगति in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files from GitHub Release v0.1.0 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides. In Codex, extract each skill into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the Claude Code plugin and validate it before launching with --plugin-dir. Standalone Skills can be copied to ~/.claude/skills/. Claude chat custom Skills depend on your account’s supported UI.",
-      "gemini": "Extract the extension into an empty folder, confirm that gemini-extension.json is inside the kumihan-hi folder, then install it from that path. Do not install the repository root as the extension: it is the Japanese product. Import into the Gemini app has not been verified.",
-      "test": "State Hindi/Devanagari, locale, reader, medium, task mode and content policy. Example:",
-      "prompt": "Use kumihan-hi-review to review क्षि क्षी त्रि ज्ञ श्र स्त्री without changing the original. Separate static evidence, rendering observations and NOT_CHECKED.",
-      "check": "Optional static check (read-only):",
-      "update": "Save your customizations, verify the new version and its checksums, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "Publishing on GitHub is not a listing in the official ChatGPT, Claude, or Gemini directories. Actual behavior and rendering must be checked in each tool. Static checks do not replace review by a native Hindi editor."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": null,
@@ -423,40 +355,6 @@
       "日本語版 KUMIHAN",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜अक्षर-संगतिへ戻る",
-      "title": "{host}にKUMIHAN｜अक्षर-संगतिを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。Codexでは、各スキルをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "Claude Codeプラグインを展開し、validate後に--plugin-dirで起動します。独立Skillは~/.claude/skills/へ配置できます。ClaudeチャットのカスタムSkillsは利用アカウントの対応UIを確認してください。",
-      "gemini": "拡張を空のフォルダに展開し、kumihan-hiフォルダ内にgemini-extension.jsonがあることを確認してから、そのパスを指定して導入します。リポジトリのルートは日本語版の製品のため、この拡張として導入しないでください。Geminiアプリへの取り込みは確認していません。",
-      "test": "Hindi/Devanagari、locale、読者、媒体、作業モード、原稿の変更権限を指定します。例：",
-      "prompt": "kumihan-hi-reviewでक्षि क्षी त्रि ज्ञ श्र स्त्रीを原稿を変えずにレビューしてください。静的確認、実表示、未検証を分けてください。",
-      "check": "任意の静的チェック（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。静的チェックは、ヒンディー語の母語話者による確認の代わりにはなりません。"
-    }
+    "top": "ページ上部へ"
   }
 }
