@@ -123,31 +123,31 @@
         "Kiswahili kimoja",
         "desturi tofauti za kila eneo"
       ],
-      "body": "Eneo halikisiwi kutoka “sw”: chagua sw-TZ, sw-KE, sw-UG au sw-CD waziwazi. Sarafu na saa za eneo hutoka kwenye maelezo ya kazi, na matini asilia hayabadilishwi.",
+      "body": "Mizani hutumia wasifu wa kila eneo na huzingatia sifa zake: msamiati, uhusiano na lugha nyingine, na desturi za kuandika namba na saa. Tofauti za maeneo huheshimiwa bila kulazimishwa kufanana, na matini asilia huhifadhiwa.",
       "cards": [
         {
           "tag": "TZ",
           "name": "Tanzania",
           "code": "sw-TZ",
-          "p": "Namba hupangwa kwa Intl/CLDR na sw-TZ. Saa za Kiswahili huwekwa lebo tofauti na saa za kawaida; muda halisi wa tukio hausogezwi saa sita."
+          "p": "Kiswahili ni lugha ya taifa, kinachotumika serikalini, shuleni na katika vyombo vya habari; saa za Kiswahili (saa moja asubuhi) ni za kawaida."
         },
         {
           "tag": "KE",
           "name": "Kenya",
           "code": "sw-KE",
-          "p": "Tumia lang=\"sw-KE\". Sheng ya vijana wa Kenya haichukuliwi kama kanuni ya Kiswahili chote; nakala ya chapa iliyoidhinishwa huheshimiwa."
+          "p": "Kiswahili hutumika pamoja na Kiingereza, na maandishi mara nyingi huchanganya lugha hizo; Sheng husikika katika lugha isiyo rasmi ya vijana mjini."
         },
         {
           "tag": "UG",
           "name": "Uganda",
           "code": "sw-UG",
-          "p": "Wasifu wa sw-UG huchaguliwa waziwazi. Sarafu haikisiwi kutoka lugha wala eneo; itajwe wazi, na kiasi asilia kihifadhiwe."
+          "p": "Kiingereza hutawala maandishi rasmi; Kiswahili, ambacho pia ni lugha rasmi, hutumika zaidi kama lugha ya mawasiliano mapana."
         },
         {
           "tag": "CD",
           "name": "DR Kongo",
           "code": "sw-CD",
-          "p": "Namba na sarafu za sw-CD hupangwa kando, si kwa kunakili mpangilio wa nchi nyingine. Kiasi asilia hubaki kama kilivyotolewa."
+          "p": "Huzungumzwa hasa mashariki mwa nchi; Kiswahili cha Kongo kina maneno mengi kutoka Kifaransa, lugha rasmi ya nchi."
         }
       ]
     }
@@ -276,31 +276,31 @@
         "One Swahili language",
         "different regional customs"
       ],
-      "body": "Region is never inferred from “sw”: choose sw-TZ, sw-KE, sw-UG or sw-CD explicitly. Currency and time zone come from the brief, and the source text stays unchanged.",
+      "body": "Mizani works with a profile for each region and adapts to its character—vocabulary, the interplay with other languages, and local conventions for numbers and time. Regional variants are respected rather than flattened, and the source text is preserved.",
       "cards": [
         {
           "tag": "TZ",
           "name": "Tanzania",
           "code": "sw-TZ",
-          "p": "Numbers are formatted with Intl/CLDR for sw-TZ. Swahili time is labeled separately from civil time; actual event timestamps are never shifted six hours."
+          "p": "The national language, used across government, schools and the media; Swahili time (saa moja asubuhi, 7 a.m.) is part of everyday life."
         },
         {
           "tag": "KE",
           "name": "Kenya",
           "code": "sw-KE",
-          "p": "Use lang=\"sw-KE\". Kenyan youth slang (Sheng) is not treated as a universal Swahili convention; approved brand copy is respected."
+          "p": "Swahili sits alongside English, and writing often mixes the two; Sheng is heard in informal urban youth speech."
         },
         {
           "tag": "UG",
           "name": "Uganda",
           "code": "sw-UG",
-          "p": "The sw-UG profile is selected explicitly. Currency is never inferred from language or region—it must be stated, and original amounts are kept."
+          "p": "English dominates formal writing; Swahili, also an official language, serves mainly as a wider lingua franca."
         },
         {
           "tag": "CD",
           "name": "DR Congo",
           "code": "sw-CD",
-          "p": "sw-CD numbers and currency are formatted separately, not copied from another country’s pattern. Original amounts stay as supplied."
+          "p": "Spoken mainly in the east of the country; Congolese Swahili carries many loanwords from French, the official language."
         }
       ]
     }
@@ -430,31 +430,31 @@
         "同じスワヒリ語でも",
         "地域の習慣は異なる"
       ],
-      "body": "「sw」から地域を推測せず、sw-TZ・sw-KE・sw-UG・sw-CDを明示して選びます。通貨とタイムゾーンは依頼から受け取り、原文は変更しません。",
+      "body": "地域ごとのプロファイルを使い分け、語彙・他言語との関わり・数字や時刻の慣習といった特性に合わせて対応します。地域による違いを一律にそろえず、原文はそのまま保持します。",
       "cards": [
         {
           "tag": "TZ",
           "name": "タンザニア",
           "code": "sw-TZ",
-          "p": "数値はsw-TZを指定してIntl/CLDRで整形。スワヒリ時間は通常の時刻と区別して表示し、実際の日時を6時間ずらしません。"
+          "p": "国語として行政・学校・報道で広く使われ、スワヒリ時間（saa moja asubuhi＝朝7時）も日常的です。"
         },
         {
           "tag": "KE",
           "name": "ケニア",
           "code": "sw-KE",
-          "p": "lang=\"sw-KE\"を指定。ケニアの若者言葉シェンをスワヒリ語全体の規範とみなさず、承認済みのブランド表現を尊重します。"
+          "p": "英語と並んで使われ、文章でも両言語がよく混ざります。都市の若者のくだけた言葉にはシェンも聞かれます。"
         },
         {
           "tag": "UG",
           "name": "ウガンダ",
           "code": "sw-UG",
-          "p": "sw-UGのプロファイルを明示して選択。通貨は言語や地域から推測せず明記し、元の金額を保持します。"
+          "p": "公的な文章は英語が中心。スワヒリ語も公用語で、主に広域の共通語として使われます。"
         },
         {
           "tag": "CD",
           "name": "コンゴ民主共和国",
           "code": "sw-CD",
-          "p": "sw-CDの数値と通貨は他国の書式を流用せず個別に整形。元の金額は受け取ったまま保持します。"
+          "p": "主に国の東部で話され、コンゴのスワヒリ語には公用語であるフランス語からの借用語が多くあります。"
         }
       ]
     }

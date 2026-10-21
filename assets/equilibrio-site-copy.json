@@ -124,19 +124,19 @@
     "Lo stesso italiano",
     "usanze diverse in ogni regione"
    ],
-   "body": "La variante regionale va indicata in modo esplicito: se manca, resta sconosciuta e non viene dedotta. Testo, numeri e date originali restano invariati; la formattazione riguarda solo la visualizzazione.",
+   "body": "Equilibrio lavora con un profilo per ogni regione e si adatta ai suoi tratti: il lessico, la scrittura dei numeri e le convenzioni locali. Le varianti regionali sono rispettate senza essere uniformate e il testo originale resta invariato.",
    "cards": [
     {
      "tag": "IT",
      "name": "Italia",
      "code": "it-IT",
-     "p": "Riferimento Intl registrato: 12.345,67 e 12,5%. Le norme redazionali UE sono un profilo distinto; valuta e fuso orario si indicano a parte."
+     "p": "L’italiano standard di riferimento, con la virgola decimale e il punto per le migliaia (12.345,67)."
     },
     {
      "tag": "CH",
      "name": "Svizzera",
      "code": "it-CH",
-     "p": "Riferimento Intl registrato: 12’345.67 e 12.5%. Lo stile della Cancelleria federale (12 345,67) è un profilo distinto; i valori non vengono convertiti in it-IT."
+     "p": "Lingua ufficiale in Ticino e nel Grigioni italiano, con elvetismi propri (azione, licenza di condurre) e cifre come 12’345.67."
     }
    ]
   }
@@ -266,19 +266,19 @@
     "One Italian language",
     "different regional customs"
    ],
-   "body": "The regional variant must be stated explicitly; if missing, it stays unknown and is never inferred. Original text, figures and dates stay unchanged; formatting applies only to display.",
+   "body": "Equilibrio works with a profile for each region and adapts to its character—vocabulary, the way numbers are written and local conventions. Regional variants are respected rather than flattened, and the source text is preserved.",
    "cards": [
     {
      "tag": "IT",
      "name": "Italy",
      "code": "it-IT",
-     "p": "Recorded Intl reference: 12.345,67 and 12,5%. EU institutional style is a separate profile; currency and time zone are set independently."
+     "p": "The reference standard Italian, with a decimal comma and a point for thousands (12.345,67)."
     },
     {
      "tag": "CH",
      "name": "Switzerland",
      "code": "it-CH",
-     "p": "Recorded Intl reference: 12’345.67 and 12.5%. The Swiss Federal Chancellery style (12 345,67) is a separate profile; values are never converted to it-IT."
+     "p": "An official language in Ticino and Italian-speaking Graubünden, with its own Swiss terms (azione, licenza di condurre) and figures like 12’345.67."
     }
    ]
   }
@@ -409,19 +409,19 @@
     "同じイタリア語でも",
     "地域の習慣は異なる"
    ],
-   "body": "地域は明示して指定し、未指定なら推測しません。原文の文字・数値・日付は保持し、整形は表示の段階だけで行います。",
+   "body": "地域ごとのプロファイルを使い分け、語彙・数の書き方・地域の慣習といった特性に合わせて対応します。地域による違いを一律にそろえず、原文はそのまま保持します。",
    "cards": [
     {
      "tag": "IT",
      "name": "イタリア",
      "code": "it-IT",
-     "p": "記録したIntlの参考値は12.345,67、12,5%。EU機関の編集規程は別プロファイルとし、通貨とタイムゾーンは個別に指定します。"
+     "p": "基準となる標準イタリア語。小数点はコンマ、桁区切りはピリオドです（12.345,67）。"
     },
     {
      "tag": "CH",
      "name": "スイス",
      "code": "it-CH",
-     "p": "記録したIntlの参考値は12’345.67、12.5%。スイス連邦官房方式（12 345,67）は別プロファイルとし、it-ITの表記へ置き換えません。"
+     "p": "ティチーノ州などの公用語。azioneなどスイス独自の語があり、数は12’345.67と書きます。"
     }
    ]
   }
