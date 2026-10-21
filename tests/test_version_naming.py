@@ -13,15 +13,17 @@ sys.path.insert(0, str(ROOT / "tools"))
 SEMVER = re.compile(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\Z")
 
 
+CURRENT_PRODUCT_SLUGS = ['kumihan-accord', 'kumihan-ar', 'kumihan-bn', 'kumihan-compasso', 'kumihan-equilibrio', 'kumihan-fa', 'kumihan-geuljjaim', 'kumihan-grafia', 'kumihan-hi', 'kumihan-hlela', 'kumihan-lad', 'kumihan-laras', 'kumihan-lumnung', 'kumihan-mira-uk', 'kumihan-mizani', 'kumihan-my', 'kumihan-nhip-chu', 'kumihan-rytmi', 'kumihan-samklang-da', 'kumihan-samklang-no', 'kumihan-samspel', 'kumihan-satzbild', 'kumihan-szyk', 'kumihan-th', 'kumihan-tugma', 'kumihan-vinyasa', 'kumihan-ziheng', 'kumihan-zilu']
+
 def version_of(path):
     obj=json.loads(path.read_text(encoding="utf-8"))
     return obj.get("version")
 
 
 class VersionNamingPolicyTests(unittest.TestCase):
-    def test_current_21_product_versions_have_no_preview_suffix(self):
+    def test_current_product_versions_have_no_preview_suffix(self):
         products = [ROOT] + sorted(p for p in (ROOT/"plugins").iterdir() if p.is_dir() and (p/"plugin.json").is_file())
-        self.assertEqual(len(products), 21)
+        self.assertEqual({p.name for p in products if p != ROOT}, set(CURRENT_PRODUCT_SLUGS))
         for product in products:
             with self.subTest(product=product.name):
                 manifest=product/"plugin.json"

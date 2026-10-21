@@ -1,0 +1,46 @@
+{
+  "cases": [
+    {
+      "id": "conjunct",
+      "locale": "sa-Deva",
+      "text": "श्रीः क्ष त्र ज्ञ क्‍ष क्‌ष",
+      "expected": "exact bytes retained; cluster shaping not_checked"
+    },
+    {
+      "id": "vedic",
+      "locale": "sa-Deva",
+      "text": "अ॒ग्निमी॑ळे पु॒रोहि॑तम्",
+      "expected": "accents retained; tradition needs-review"
+    },
+    {
+      "id": "iast",
+      "locale": "sa-Latn",
+      "text": "ā ī ū ṛ ṝ ḷ ḹ ṅ ñ ṭ ḍ ṇ ś ṣ ṃ ḥ ṛ",
+      "expected": "precomposed and decomposed forms remain distinct bytes"
+    },
+    {
+      "id": "punctuation",
+      "locale": "sa-Deva",
+      "text": "सोऽहम् । १ ॥",
+      "expected": "avagraha danda digits retained"
+    },
+    {
+      "id": "wrong-language",
+      "locale": "hi-IN",
+      "text": "यह हिन्दी है।",
+      "expected": "unsupported locale; no Sanskrit guidance"
+    },
+    {
+      "id": "ambiguous",
+      "locale": "sa",
+      "text": "धर्मः",
+      "expected": "supported language; script confirmation required"
+    },
+    {
+      "id": "unknown",
+      "locale": "und",
+      "text": "ā",
+      "expected": "unsupported; do not infer Sanskrit"
+    }
+  ]
+}

@@ -1,0 +1,420 @@
+{
+  "notice": "Synthetic original specimens; byte preservation tests do not validate Danish grammar or rendering.",
+  "cases": [
+    {
+      "case_id": "DA-CASE-01",
+      "text": "Aarhus, Åse, 1.234,50 kr.",
+      "rule_ids": [
+        "DA-R01"
+      ],
+      "source_ids": [
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "SYS16"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-02",
+      "text": "Æblegrød, smørrebrød og blåbær",
+      "rule_ids": [
+        "DA-R02"
+      ],
+      "source_ids": [
+        "L02",
+        "L03",
+        "L04",
+        "SYS15"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-03",
+      "text": "Å / Å",
+      "rule_ids": [
+        "DA-R04"
+      ],
+      "source_ids": [
+        "SYS16"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-04",
+      "text": "Aarhus / Århus",
+      "rule_ids": [
+        "DA-R05"
+      ],
+      "source_ids": [
+        "L04",
+        "L05",
+        "SYS17"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-05",
+      "text": "Zebra, Æble, Ørn, Ål",
+      "rule_ids": [
+        "DA-R06"
+      ],
+      "source_ids": [
+        "SYS17"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-06",
+      "text": "I kan gemme ændringerne.",
+      "rule_ids": [
+        "DA-R08"
+      ],
+      "source_ids": [
+        "L13",
+        "L14"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-07",
+      "text": "arbejdsmiljørepræsentant",
+      "rule_ids": [
+        "DA-R09"
+      ],
+      "source_ids": [
+        "L15",
+        "L35"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-08",
+      "text": "EU-regler / 3-årig",
+      "rule_ids": [
+        "DA-R10"
+      ],
+      "source_ids": [
+        "L16"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-09",
+      "text": "Lars’ bog",
+      "rule_ids": [
+        "DA-R11"
+      ],
+      "source_ids": [
+        "L19"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-10",
+      "text": "Jeg ved, at du kommer. / Jeg ved at du kommer.",
+      "rule_ids": [
+        "DA-R12"
+      ],
+      "source_ids": [
+        "L09",
+        "L10",
+        "L11"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-11",
+      "text": "Når du kommer, åbner vi døren.",
+      "rule_ids": [
+        "DA-R13"
+      ],
+      "source_ids": [
+        "L09",
+        "L10"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-12",
+      "text": "»En lille pause« / “En lille pause”",
+      "rule_ids": [
+        "DA-R14"
+      ],
+      "source_ids": [
+        "L20",
+        "L26"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-13",
+      "text": "kl. 9.45 / 21. oktober 2026 / 2026-10-21",
+      "rule_ids": [
+        "DA-R16"
+      ],
+      "source_ids": [
+        "L12",
+        "L25"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-14",
+      "text": "1.234,50 kr. / EUR",
+      "rule_ids": [
+        "DA-R17"
+      ],
+      "source_ids": [
+        "L26",
+        "SYS15"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-15",
+      "text": "ratio 0.25 → 25 %; 10^9 → milliard",
+      "rule_ids": [
+        "DA-R18"
+      ],
+      "source_ids": [
+        "L26",
+        "SYS15"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-16",
+      "text": "25 % / 1.250,00 kr.",
+      "rule_ids": [
+        "DA-R19"
+      ],
+      "source_ids": [
+        "L23",
+        "L24",
+        "L26"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-17",
+      "text": "<p lang=\"da\">arbejdsmiljørepræsentant</p>",
+      "rule_ids": [
+        "DA-R20"
+      ],
+      "source_ids": [
+        "L17",
+        "L18",
+        "SYS19",
+        "SYS20"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-18",
+      "text": "arbejds­miljø",
+      "rule_ids": [
+        "DA-R22"
+      ],
+      "source_ids": [
+        "L17",
+        "SYS19",
+        "SYS20"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-19",
+      "text": "Plads til en pause / pris og vilkår",
+      "rule_ids": [
+        "DA-R23"
+      ],
+      "source_ids": [
+        "D07",
+        "D13",
+        "D24",
+        "SYS10"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-20",
+      "text": "ÆØÅ 0123456789",
+      "rule_ids": [
+        "DA-R24"
+      ],
+      "source_ids": [
+        "D21",
+        "D22",
+        "D23",
+        "SYS01",
+        "SYS07"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-21",
+      "text": "Åse / café / ǿ",
+      "rule_ids": [
+        "DA-R25"
+      ],
+      "source_ids": [
+        "SYS07",
+        "SYS12",
+        "PDF02",
+        "PDF03"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-22",
+      "text": "H1 / brødtekst",
+      "rule_ids": [
+        "DA-R27"
+      ],
+      "source_ids": [
+        "SYS02",
+        "SYS03",
+        "D05",
+        "D25"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-23",
+      "text": "Kunst / åbent 10–17",
+      "rule_ids": [
+        "DA-R29"
+      ],
+      "source_ids": [
+        "SYS08",
+        "SYS10",
+        "D24"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-24",
+      "text": "Plads til en pause",
+      "rule_ids": [
+        "DA-R30"
+      ],
+      "source_ids": [
+        "L27",
+        "L28",
+        "L30",
+        "D13"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-25",
+      "text": "Gem ændringer / Vi kunne ikke gemme ændringerne. Prøv igen.",
+      "rule_ids": [
+        "DA-R31"
+      ],
+      "source_ids": [
+        "L31",
+        "SYS05",
+        "SYS06",
+        "D15"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-26",
+      "text": "h1 → h2 → h3",
+      "rule_ids": [
+        "DA-R32"
+      ],
+      "source_ids": [
+        "SYS02",
+        "SYS13"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-27",
+      "text": "Lange etiketter ved 200% og 320 CSS px",
+      "rule_ids": [
+        "DA-R33"
+      ],
+      "source_ids": [
+        "SYS21",
+        "SYS22",
+        "SYS26"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-28",
+      "text": "linjehøjde 1.5, afsnit 2em, bogstaver .12em, ord .16em",
+      "rule_ids": [
+        "DA-R35"
+      ],
+      "source_ids": [
+        "SYS23",
+        "SYS24",
+        "SYS26"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-29",
+      "text": "Åse / Lars’ / tabelkolonner",
+      "rule_ids": [
+        "DA-R38"
+      ],
+      "source_ids": [
+        "SYS13",
+        "PDF01",
+        "PDF02",
+        "PDF03"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-30",
+      "text": "Afgang 10.45",
+      "rule_ids": [
+        "DA-R42"
+      ],
+      "source_ids": [
+        "D08",
+        "D16",
+        "D17"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-31",
+      "text": "16/24 som ét sammenligningspunkt",
+      "rule_ids": [
+        "DA-R51"
+      ],
+      "source_ids": [
+        "SYS02",
+        "SYS03",
+        "D05",
+        "D25"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    },
+    {
+      "case_id": "DA-CASE-32",
+      "text": "Papir og projektion vurderes særskilt.",
+      "rule_ids": [
+        "DA-R52"
+      ],
+      "source_ids": [
+        "SYS11",
+        "D16",
+        "D17",
+        "PDF01",
+        "PDF02"
+      ],
+      "expected": "Exact supplied UTF-8 retained; target rendering not-checked"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "policy": "Public source IDs trace conditional guidance. No unrun research acceptance result is claimed as product PASS.",
+  "rules": [
+    {
+      "rule_id": "TL-001",
+      "source_ids": [
+        "L01",
+        "L02",
+        "L03"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-003",
+      "source_ids": [
+        "L02",
+        "L05",
+        "L07"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-004",
+      "source_ids": [
+        "L07",
+        "L08",
+        "L17",
+        "L21"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-005",
+      "source_ids": [
+        "L07",
+        "L08"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-007",
+      "source_ids": [
+        "L07",
+        "L21"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-008",
+      "source_ids": [
+        "L07"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-009",
+      "source_ids": [
+        "L07",
+        "L21",
+        "TN01",
+        "TN09"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-010",
+      "source_ids": [
+        "L07",
+        "L19",
+        "TF14",
+        "TF16"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-011",
+      "source_ids": [
+        "UNI01",
+        "L07"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-012",
+      "source_ids": [
+        "UNI02",
+        "L07"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-013",
+      "source_ids": [
+        "L07",
+        "L08",
+        "L17"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-014",
+      "source_ids": [
+        "L07",
+        "L21"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-017",
+      "source_ids": [
+        "L05",
+        "L06",
+        "TF10",
+        "TF11"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-018",
+      "source_ids": [
+        "L05",
+        "L06",
+        "TF12"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-020",
+      "source_ids": [
+        "TF14",
+        "TF16"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-023",
+      "source_ids": [
+        "L08",
+        "L14",
+        "L15",
+        "V13"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-025",
+      "source_ids": [
+        "L08",
+        "L11",
+        "L17"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-026",
+      "source_ids": [
+        "L08",
+        "L17",
+        "L21",
+        "TN01",
+        "TN09"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-027",
+      "source_ids": [
+        "V01",
+        "V02",
+        "V13"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-028",
+      "source_ids": [
+        "TF14",
+        "TF16",
+        "V01",
+        "V02"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-029",
+      "source_ids": [
+        "L05",
+        "A11Y02"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-030",
+      "source_ids": [
+        "TF01",
+        "TF03",
+        "TF08"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-031",
+      "source_ids": [
+        "TF03",
+        "TF08",
+        "V01",
+        "V02"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-033",
+      "source_ids": [
+        "A11Y01",
+        "V13"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-034",
+      "source_ids": [
+        "A11Y01",
+        "A11Y04"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-036",
+      "source_ids": [
+        "L02",
+        "L18",
+        "A11Y01",
+        "A11Y05"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-037",
+      "source_ids": [
+        "A11Y01",
+        "A11Y06"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-038",
+      "source_ids": [
+        "A11Y01",
+        "A11Y07"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-039",
+      "source_ids": [
+        "A11Y01",
+        "A11Y03"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-040",
+      "source_ids": [
+        "A11Y01",
+        "A11Y02"
+      ],
+      "status": "guidance-only"
+    },
+    {
+      "rule_id": "TL-041",
+      "source_ids": [
+        "TF01",
+        "TF03",
+        "TF04",
+        "TF06",
+        "TF09",
+        "TF15",
+        "TF17"
+      ],
+      "status": "guidance-only"
+    }
+  ]
+}

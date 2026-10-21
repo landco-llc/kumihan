@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "FI-BYTES-01",
+      "locale": "fi-FI",
+      "text": "Äiti, öljy, Åbo. Tuli, tulli, tuuli. EU:ssa; 10 %:n; 25 km:n.",
+      "expected": "exact bytes retained"
+    },
+    {
+      "id": "FI-NFD-02",
+      "locale": "fi",
+      "text": "äiti ja öljy",
+      "expected": "combining marks preserved; no normalization"
+    },
+    {
+      "id": "FI-COMPOUND-03",
+      "locale": "fi",
+      "text": "lentokonesuihkuturbiinimoottori",
+      "expected": "long-compound review; no inserted spaces"
+    },
+    {
+      "id": "FI-MACHINE-04",
+      "locale": "fi",
+      "text": "API=1.25; 2026-10-21; v0.1.0; https://example.org/a/b",
+      "expected": "machine punctuation preserved"
+    },
+    {
+      "id": "FI-LOCALE-05",
+      "locale": "sv-FI",
+      "text": "Åbo",
+      "expected": "no Finnish guidance; unresolved locale"
+    },
+    {
+      "id": "FI-CANDIDATE-06",
+      "locale": "fi",
+      "text": "tuuli",
+      "candidate": "tuli",
+      "expected": "failed exact-byte integrity"
+    },
+    {
+      "id": "FI-NATIVE-07",
+      "locale": "fi",
+      "text": "Säilytä ääkköset.",
+      "expected": "native rendering and Office/PDF not_checked"
+    }
+  ]
+}

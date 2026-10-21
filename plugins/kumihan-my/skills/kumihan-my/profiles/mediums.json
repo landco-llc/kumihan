@@ -1,0 +1,15 @@
+{
+  "entry": {
+    "purpose": "Confirm Burmese, source permissions, encoding provenance and output medium"
+  },
+  "web": {
+    "purpose": "UI/editorial hierarchy, font fallback, clusters, responsive wrapping and accessibility"
+  },
+  "documents": {
+    "purpose": "Documents/slides/PDF; page flow and host-specific shaping/embedding checks"
+  },
+  "review": {
+    "purpose": "Read-only findings, original source hash and explicit unrun checks"
+  },
+  "numeric_presets": "Contextual comparisons only; no universal Myanmar scale"
+}

@@ -1,0 +1,568 @@
+{
+  "schema_version": "1.0",
+  "name": "kumihan-my",
+  "slug": "kumihan-my",
+  "language": "my",
+  "version": "0.1.0",
+  "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "22726f706f6924159023199b74d5c4f852f520e2b0359b15a6a7a07fa2775d9a"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "75249876f49aac840c352fac233ebac4b757cb24e797f9a84a869f9b8fe8a4fc"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "729a51a79b892207343409ec2464ef906780a79892297ecac720e49351c0b151"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "a666248311fbf082c3d00cc479d7d3ea07c7a6cdce272555546f6b1a2ee7d01f"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "c0005aff83958a9546dbe785b3ed12b9de93a9b35e3599db89a493aa3f9709fa"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "1244ffeffa37ab04edee45848c05d8d5f3f20e5ecd91b285f8efb0b8b8e26655"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "5ff491f937cfd0cc8d70c923a794a7967acebeefafec7d2ee8ea55767e1088c4"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "512d0e59c2c0a5af2cc40a32a4d7e1f1d6e9aaaf22cea089de934b41cefb6f05"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "5a47230e6deebaec25f51721817dc2b4ec4b4c899396a398bca69ddca626a908"
+    },
+    {
+      "path": "locales/my-MM.json",
+      "sha256": "7e3d0b894d225415c2b0bff9e4c3262f8b696afdf9c814e2532ab3c1001caa58"
+    },
+    {
+      "path": "locales/my.json",
+      "sha256": "3af7c1000b3cded7aa2128ad4601335f5a2c2d2518317261bb15074ff88c82c5"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "96f5004f0da483bc296fcba871f9f94a25455b3409156963251a4255c1619e72"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "1aefaa06af6a47fda64f1264fd3f67a4a995f232d56fefb90caf0229670047c3"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "93cddb595b0c8de330a7e5eca3a666b3750f79ebb48970116096d2068efebf56"
+    },
+    {
+      "path": "references/research-trace.json",
+      "sha256": "46ecafd57d2097c103047a591db68950cd2637d1ed212403baa31d95c28a9eca"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "5b2f5911623327037d7fdb5aa4fafc80a08cf6a0e97887944723db072927d401"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "8c007fec36c2539035c96c752ff1ba207652e914a24f47967d13692267fc487f"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "0cc71928bb63979ed328fb93b76ce9958f5f97893934a7207130608f90bf4713"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "c258625a90cd82b1df4685766e80d454b1d5a3f8fa34c76983cf2c0ebc4bf8b0"
+    },
+    {
+      "path": "skills/kumihan-my/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-my/SKILL.md",
+      "sha256": "b08cce9848c9162080614861893f77cca97a79eaa6ae7014b98a0d1bf6321fc1"
+    },
+    {
+      "path": "skills/kumihan-my/THIRD_PARTY_NOTICES.md",
+      "sha256": "1244ffeffa37ab04edee45848c05d8d5f3f20e5ecd91b285f8efb0b8b8e26655"
+    },
+    {
+      "path": "skills/kumihan-my/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-my/fixtures/acceptance.json",
+      "sha256": "5ff491f937cfd0cc8d70c923a794a7967acebeefafec7d2ee8ea55767e1088c4"
+    },
+    {
+      "path": "skills/kumihan-my/inventory.json",
+      "sha256": "5a47230e6deebaec25f51721817dc2b4ec4b4c899396a398bca69ddca626a908"
+    },
+    {
+      "path": "skills/kumihan-my/locales/my-MM.json",
+      "sha256": "7e3d0b894d225415c2b0bff9e4c3262f8b696afdf9c814e2532ab3c1001caa58"
+    },
+    {
+      "path": "skills/kumihan-my/locales/my.json",
+      "sha256": "3af7c1000b3cded7aa2128ad4601335f5a2c2d2518317261bb15074ff88c82c5"
+    },
+    {
+      "path": "skills/kumihan-my/locales/supported.json",
+      "sha256": "96f5004f0da483bc296fcba871f9f94a25455b3409156963251a4255c1619e72"
+    },
+    {
+      "path": "skills/kumihan-my/profiles/mediums.json",
+      "sha256": "93cddb595b0c8de330a7e5eca3a666b3750f79ebb48970116096d2068efebf56"
+    },
+    {
+      "path": "skills/kumihan-my/references/research-trace.json",
+      "sha256": "46ecafd57d2097c103047a591db68950cd2637d1ed212403baa31d95c28a9eca"
+    },
+    {
+      "path": "skills/kumihan-my/references/workflow.md",
+      "sha256": "5b2f5911623327037d7fdb5aa4fafc80a08cf6a0e97887944723db072927d401"
+    },
+    {
+      "path": "skills/kumihan-my/rules/catalog.json",
+      "sha256": "8c007fec36c2539035c96c752ff1ba207652e914a24f47967d13692267fc487f"
+    },
+    {
+      "path": "skills/kumihan-my/runtime/check_source.py",
+      "sha256": "0cc71928bb63979ed328fb93b76ce9958f5f97893934a7207130608f90bf4713"
+    },
+    {
+      "path": "skills/kumihan-my/schemas/report.schema.json",
+      "sha256": "c258625a90cd82b1df4685766e80d454b1d5a3f8fa34c76983cf2c0ebc4bf8b0"
+    },
+    {
+      "path": "skills/kumihan-my/sources.json",
+      "sha256": "9b8e405e9b497e4accdc4087690cbff92a8b4b95e3aeed3aaca7d5f40561734a"
+    },
+    {
+      "path": "skills/kumihan-my-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-my-documents/SKILL.md",
+      "sha256": "59e8768829bb5be182b2f994b7ac1b350d739e1270a3ac0c9a75da017d413c16"
+    },
+    {
+      "path": "skills/kumihan-my-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "1244ffeffa37ab04edee45848c05d8d5f3f20e5ecd91b285f8efb0b8b8e26655"
+    },
+    {
+      "path": "skills/kumihan-my-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-my-documents/fixtures/acceptance.json",
+      "sha256": "5ff491f937cfd0cc8d70c923a794a7967acebeefafec7d2ee8ea55767e1088c4"
+    },
+    {
+      "path": "skills/kumihan-my-documents/inventory.json",
+      "sha256": "5a47230e6deebaec25f51721817dc2b4ec4b4c899396a398bca69ddca626a908"
+    },
+    {
+      "path": "skills/kumihan-my-documents/locales/my-MM.json",
+      "sha256": "7e3d0b894d225415c2b0bff9e4c3262f8b696afdf9c814e2532ab3c1001caa58"
+    },
+    {
+      "path": "skills/kumihan-my-documents/locales/my.json",
+      "sha256": "3af7c1000b3cded7aa2128ad4601335f5a2c2d2518317261bb15074ff88c82c5"
+    },
+    {
+      "path": "skills/kumihan-my-documents/locales/supported.json",
+      "sha256": "96f5004f0da483bc296fcba871f9f94a25455b3409156963251a4255c1619e72"
+    },
+    {
+      "path": "skills/kumihan-my-documents/profiles/mediums.json",
+      "sha256": "93cddb595b0c8de330a7e5eca3a666b3750f79ebb48970116096d2068efebf56"
+    },
+    {
+      "path": "skills/kumihan-my-documents/references/research-trace.json",
+      "sha256": "46ecafd57d2097c103047a591db68950cd2637d1ed212403baa31d95c28a9eca"
+    },
+    {
+      "path": "skills/kumihan-my-documents/references/workflow.md",
+      "sha256": "5b2f5911623327037d7fdb5aa4fafc80a08cf6a0e97887944723db072927d401"
+    },
+    {
+      "path": "skills/kumihan-my-documents/rules/catalog.json",
+      "sha256": "8c007fec36c2539035c96c752ff1ba207652e914a24f47967d13692267fc487f"
+    },
+    {
+      "path": "skills/kumihan-my-documents/runtime/check_source.py",
+      "sha256": "0cc71928bb63979ed328fb93b76ce9958f5f97893934a7207130608f90bf4713"
+    },
+    {
+      "path": "skills/kumihan-my-documents/schemas/report.schema.json",
+      "sha256": "c258625a90cd82b1df4685766e80d454b1d5a3f8fa34c76983cf2c0ebc4bf8b0"
+    },
+    {
+      "path": "skills/kumihan-my-documents/sources.json",
+      "sha256": "9b8e405e9b497e4accdc4087690cbff92a8b4b95e3aeed3aaca7d5f40561734a"
+    },
+    {
+      "path": "skills/kumihan-my-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-my-review/SKILL.md",
+      "sha256": "9cea13ac1ba358a8ed103aa7697ea8de035e01a760653081c2791fad4b695aa2"
+    },
+    {
+      "path": "skills/kumihan-my-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "1244ffeffa37ab04edee45848c05d8d5f3f20e5ecd91b285f8efb0b8b8e26655"
+    },
+    {
+      "path": "skills/kumihan-my-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-my-review/fixtures/acceptance.json",
+      "sha256": "5ff491f937cfd0cc8d70c923a794a7967acebeefafec7d2ee8ea55767e1088c4"
+    },
+    {
+      "path": "skills/kumihan-my-review/inventory.json",
+      "sha256": "5a47230e6deebaec25f51721817dc2b4ec4b4c899396a398bca69ddca626a908"
+    },
+    {
+      "path": "skills/kumihan-my-review/locales/my-MM.json",
+      "sha256": "7e3d0b894d225415c2b0bff9e4c3262f8b696afdf9c814e2532ab3c1001caa58"
+    },
+    {
+      "path": "skills/kumihan-my-review/locales/my.json",
+      "sha256": "3af7c1000b3cded7aa2128ad4601335f5a2c2d2518317261bb15074ff88c82c5"
+    },
+    {
+      "path": "skills/kumihan-my-review/locales/supported.json",
+      "sha256": "96f5004f0da483bc296fcba871f9f94a25455b3409156963251a4255c1619e72"
+    },
+    {
+      "path": "skills/kumihan-my-review/profiles/mediums.json",
+      "sha256": "93cddb595b0c8de330a7e5eca3a666b3750f79ebb48970116096d2068efebf56"
+    },
+    {
+      "path": "skills/kumihan-my-review/references/research-trace.json",
+      "sha256": "46ecafd57d2097c103047a591db68950cd2637d1ed212403baa31d95c28a9eca"
+    },
+    {
+      "path": "skills/kumihan-my-review/references/workflow.md",
+      "sha256": "5b2f5911623327037d7fdb5aa4fafc80a08cf6a0e97887944723db072927d401"
+    },
+    {
+      "path": "skills/kumihan-my-review/rules/catalog.json",
+      "sha256": "8c007fec36c2539035c96c752ff1ba207652e914a24f47967d13692267fc487f"
+    },
+    {
+      "path": "skills/kumihan-my-review/runtime/check_source.py",
+      "sha256": "0cc71928bb63979ed328fb93b76ce9958f5f97893934a7207130608f90bf4713"
+    },
+    {
+      "path": "skills/kumihan-my-review/schemas/report.schema.json",
+      "sha256": "c258625a90cd82b1df4685766e80d454b1d5a3f8fa34c76983cf2c0ebc4bf8b0"
+    },
+    {
+      "path": "skills/kumihan-my-review/sources.json",
+      "sha256": "9b8e405e9b497e4accdc4087690cbff92a8b4b95e3aeed3aaca7d5f40561734a"
+    },
+    {
+      "path": "skills/kumihan-my-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-my-web/SKILL.md",
+      "sha256": "ffd08131e87a7e6bef29f10d651c71624c3ac3dc07533954637310f3f130e321"
+    },
+    {
+      "path": "skills/kumihan-my-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "1244ffeffa37ab04edee45848c05d8d5f3f20e5ecd91b285f8efb0b8b8e26655"
+    },
+    {
+      "path": "skills/kumihan-my-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-my-web/fixtures/acceptance.json",
+      "sha256": "5ff491f937cfd0cc8d70c923a794a7967acebeefafec7d2ee8ea55767e1088c4"
+    },
+    {
+      "path": "skills/kumihan-my-web/inventory.json",
+      "sha256": "5a47230e6deebaec25f51721817dc2b4ec4b4c899396a398bca69ddca626a908"
+    },
+    {
+      "path": "skills/kumihan-my-web/locales/my-MM.json",
+      "sha256": "7e3d0b894d225415c2b0bff9e4c3262f8b696afdf9c814e2532ab3c1001caa58"
+    },
+    {
+      "path": "skills/kumihan-my-web/locales/my.json",
+      "sha256": "3af7c1000b3cded7aa2128ad4601335f5a2c2d2518317261bb15074ff88c82c5"
+    },
+    {
+      "path": "skills/kumihan-my-web/locales/supported.json",
+      "sha256": "96f5004f0da483bc296fcba871f9f94a25455b3409156963251a4255c1619e72"
+    },
+    {
+      "path": "skills/kumihan-my-web/profiles/mediums.json",
+      "sha256": "93cddb595b0c8de330a7e5eca3a666b3750f79ebb48970116096d2068efebf56"
+    },
+    {
+      "path": "skills/kumihan-my-web/references/research-trace.json",
+      "sha256": "46ecafd57d2097c103047a591db68950cd2637d1ed212403baa31d95c28a9eca"
+    },
+    {
+      "path": "skills/kumihan-my-web/references/workflow.md",
+      "sha256": "5b2f5911623327037d7fdb5aa4fafc80a08cf6a0e97887944723db072927d401"
+    },
+    {
+      "path": "skills/kumihan-my-web/rules/catalog.json",
+      "sha256": "8c007fec36c2539035c96c752ff1ba207652e914a24f47967d13692267fc487f"
+    },
+    {
+      "path": "skills/kumihan-my-web/runtime/check_source.py",
+      "sha256": "0cc71928bb63979ed328fb93b76ce9958f5f97893934a7207130608f90bf4713"
+    },
+    {
+      "path": "skills/kumihan-my-web/schemas/report.schema.json",
+      "sha256": "c258625a90cd82b1df4685766e80d454b1d5a3f8fa34c76983cf2c0ebc4bf8b0"
+    },
+    {
+      "path": "skills/kumihan-my-web/sources.json",
+      "sha256": "9b8e405e9b497e4accdc4087690cbff92a8b4b95e3aeed3aaca7d5f40561734a"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "9b8e405e9b497e4accdc4087690cbff92a8b4b95e3aeed3aaca7d5f40561734a"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 20,
+  "scope": "Deterministic offline consumer packages; native host invocation and rendering not checked",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-my-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4047713,
+      "sha256": "60a904aa342311b457c080f8c152e3d6bd3d5c142660818d2eb3836650f5dfd7",
+      "members": 82,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4048544,
+      "sha256": "fdcae369dbe20d9eb6623a223b20a1ed0a40ef08740e5969a2eda9eb24d356d8",
+      "members": 83,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4048253,
+      "sha256": "6f998c18356979fc38f39da7f57d4cf3460a8538fe5fa62d0057491032b3fb27",
+      "members": 83,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-claude-skill-v0.1.0.zip",
+      "bytes": 808725,
+      "sha256": "2002d7c572cfacec04cbc93c5b069a6c4ff95508642dc5353e3de073721f02c5",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-my",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-documents-claude-skill-v0.1.0.zip",
+      "bytes": 809049,
+      "sha256": "7ee6462b3b5322d0a5727dd2d906688b8523a280abea7ff0092ad7714c6e8985",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-my-documents",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 809049,
+      "sha256": "7ee6462b3b5322d0a5727dd2d906688b8523a280abea7ff0092ad7714c6e8985",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-my-documents",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809049,
+      "sha256": "7ee6462b3b5322d0a5727dd2d906688b8523a280abea7ff0092ad7714c6e8985",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-my-documents",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-gemini-skill-v0.1.0.zip",
+      "bytes": 808725,
+      "sha256": "2002d7c572cfacec04cbc93c5b069a6c4ff95508642dc5353e3de073721f02c5",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-my",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 808725,
+      "sha256": "2002d7c572cfacec04cbc93c5b069a6c4ff95508642dc5353e3de073721f02c5",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-my",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-review-claude-skill-v0.1.0.zip",
+      "bytes": 808953,
+      "sha256": "80bf8d1af0b023dc698f58bf90773da04d160c465f46c8c42b749b0570585d43",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-my-review",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-review-gemini-skill-v0.1.0.zip",
+      "bytes": 808953,
+      "sha256": "80bf8d1af0b023dc698f58bf90773da04d160c465f46c8c42b749b0570585d43",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-my-review",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 808953,
+      "sha256": "80bf8d1af0b023dc698f58bf90773da04d160c465f46c8c42b749b0570585d43",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-my-review",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-web-claude-skill-v0.1.0.zip",
+      "bytes": 808854,
+      "sha256": "6efb1443375c2ad0cb9563593824a71039a270e388015dd65e2b38d27136853b",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-my-web",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-web-gemini-skill-v0.1.0.zip",
+      "bytes": 808854,
+      "sha256": "6efb1443375c2ad0cb9563593824a71039a270e388015dd65e2b38d27136853b",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-my-web",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    },
+    {
+      "file": "kumihan-my-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 808854,
+      "sha256": "6efb1443375c2ad0cb9563593824a71039a270e388015dd65e2b38d27136853b",
+      "members": 16,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-my-web",
+      "slug": "kumihan-my",
+      "version": "0.1.0",
+      "source_sha256": "5337d73780c5650d0eb8c56048a9637162dc67295b50d7382c7699b41c6e142a"
+    }
+  ]
+}

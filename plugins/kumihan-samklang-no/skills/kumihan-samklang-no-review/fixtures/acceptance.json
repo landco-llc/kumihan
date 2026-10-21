@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "scope": "Static source integrity, explicit locale routing and conservative diagnostics only; native rendering unrun",
+  "cases": [
+    {
+      "id": "NO-C01",
+      "locale": "nb-NO",
+      "text": "Du kan endre personverninnstillingene dine."
+    },
+    {
+      "id": "NO-C02",
+      "locale": "nn-NO",
+      "text": "Du kan endre personverninnstillingane dine."
+    },
+    {
+      "id": "NO-C03",
+      "locale": "no",
+      "text": "Aasen — «Eg kjem i morgon.»"
+    },
+    {
+      "id": "NO-C04",
+      "locale": "nn-NO",
+      "text": "Eg vil skrive. Eg vil skriva."
+    },
+    {
+      "id": "NO-C05",
+      "locale": "nb-NO",
+      "text": "Døra var åpen, og dronningen kom inn."
+    },
+    {
+      "id": "NO-C06",
+      "locale": "nn-NO",
+      "text": "fór / fòr / fôr / for; lét / lèt; òg; vêr"
+    },
+    {
+      "id": "NO-C07",
+      "locale": "nb-NO",
+      "text": "Åse / Åse / ÆØÅ æøå"
+    },
+    {
+      "id": "NO-C08",
+      "locale": "nn-NO",
+      "text": "hørings­uttalelse / 20-åring / 1 234,50 kr"
+    },
+    {
+      "id": "NO-C09",
+      "locale": "nb-NO",
+      "text": "Annas bok / Lars’ bok / 2026-10-21 / 09.05"
+    },
+    {
+      "id": "NO-C10",
+      "locale": "nn-NO",
+      "text": "Søknad om arbeidsavklaringspenger / I l 1; ø o 0"
+    },
+    {
+      "id": "NO-C11",
+      "locale": "da-DK",
+      "text": "ÆØÅ Danmark"
+    },
+    {
+      "id": "NO-C12",
+      "locale": "sv-SE",
+      "text": "ÅÄÖ Sverige"
+    },
+    {
+      "id": "NO-C13",
+      "locale": "se",
+      "text": "Áá Čč Đđ Ŋŋ Šš Ŧŧ Žž"
+    },
+    {
+      "id": "NO-C14",
+      "locale": "und",
+      "text": "Aasen"
+    }
+  ]
+}

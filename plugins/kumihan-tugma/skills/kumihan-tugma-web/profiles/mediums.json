@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "profiles": {
+    "entry": {
+      "goal": "Tukuyin ang gamit at pahintulot. / Route by medium and permission."
+    },
+    "web": {
+      "goal": "Web, editorial, marketing and UI: verify language markup, wrapping, readable actions and actual accessibility behavior."
+    },
+    "documents": {
+      "goal": "Reports, publishing and presentations: verify print/export, hierarchy, viewing distance, fonts and text extraction."
+    },
+    "review": {
+      "goal": "Read-only findings, source evidence and separate proposals; no writeback."
+    }
+  },
+  "expression_modes": [
+    "reading",
+    "expressive",
+    "hybrid"
+  ],
+  "font_size": "Conditional trials only; record units, reader, font, width and distance. No Tagalog national average."
+}

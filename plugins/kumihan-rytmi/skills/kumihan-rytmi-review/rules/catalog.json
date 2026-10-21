@@ -1,0 +1,1603 @@
+[
+  {
+    "id": "FI-R001",
+    "title": "Separate reading and display roles",
+    "title_fi": "Roolit erikseen",
+    "guidance": "Separate body, UI, heading and decorative letters; confine authorized expression to its region.",
+    "guidance_fi": "Erota leipäteksti, käyttöliittymä, otsikko ja koristeellinen kirjain. Rajaa hyväksytty muotoilu kyseiseen alueeseen.",
+    "source_id": "D10",
+    "source_ids": [
+      "D10",
+      "D17",
+      "D21",
+      "D24",
+      "V03",
+      "V04"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing separate reading and display roles in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "heading/body/CTA/display",
+      "note": "Keep decorative A separate from the body copy.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R002",
+    "title": "Record numeric provenance",
+    "title_fi": "Arvot ja yksiköt",
+    "guidance": "Record size, unit, medium, version and source; distinguish observations, computed ratios and proposals.",
+    "guidance_fi": "Kirjaa koko, yksikkö, media, versio ja lähde. Erota havainto, laskettu suhde ja ehdotus.",
+    "source_id": "D02",
+    "source_ids": [
+      "D02",
+      "D13",
+      "U04",
+      "U05a",
+      "U10",
+      "V01",
+      "V02"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing record numeric provenance in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "18 px body; 36 px heading",
+      "note": "Ratio 2:1 is a computed project example, not a Finnish norm.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R003",
+    "title": "Declare the actual language",
+    "title_fi": "Kieli ja alue",
+    "guidance": "Use fi, or fi-FI where region matters; mark language changes. Swedish sv and Northern Sami se are not Finnish.",
+    "guidance_fi": "Käytä suomelle fi-tunnistetta ja tarvittaessa fi-FI-tunnistetta. Merkitse vieraskieliset jaksot erikseen; sv ja se eivät ole suomea.",
+    "source_id": "U15",
+    "source_ids": [
+      "U15",
+      "U16",
+      "U18",
+      "D22"
+    ],
+    "applicable_media": [
+      "web",
+      "pdf",
+      "office"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing declare the actual language in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "lang=\"fi\"; lang=\"en\"",
+      "note": "Declare the English quotation separately.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R004",
+    "title": "Choose register explicitly",
+    "title_fi": "Yleiskieli ja selkokieli",
+    "guidance": "Do not turn standard prose into colloquial or easy language without permission; easy language needs audience and content review.",
+    "guidance_fi": "Älä muuta yleiskieltä puhekieleksi tai selkokieleksi ilman lupaa. Selkokieli vaatii kohderyhmän ja sisällön arviointia.",
+    "source_id": "L16",
+    "source_ids": [
+      "L16",
+      "L17",
+      "L31",
+      "D09",
+      "D21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "cta",
+      "caption",
+      "display"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing choose register explicitly in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "yleiskieli / puhekieli / selkokieli",
+      "note": "Ask the requested register; do not infer easy language from large text.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R005",
+    "title": "Organize for the reader",
+    "title_fi": "Lukijan tehtävä",
+    "guidance": "Expose actor, condition, deadline and next action; distinguish the short action label from explanatory prose.",
+    "guidance_fi": "Tee toimija, ehto, määräaika ja seuraava toiminto näkyviksi. Erota lyhyt toimintopainike selittävästä tekstistä.",
+    "source_id": "L29",
+    "source_ids": [
+      "L29",
+      "D21",
+      "D22",
+      "D23"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "cta",
+      "label"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing organize for the reader in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Aloita hakemus",
+      "note": "Keep application deadline in readable text.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R006",
+    "title": "Preserve letters and length",
+    "title_fi": "Säilytä kirjaimet",
+    "guidance": "Preserve ä, ö, å, names and repeated vowels/consonants. Tuli, tulli and tuuli are different words.",
+    "guidance_fi": "Säilytä ä, ö, å, nimet sekä toistuvat vokaalit ja konsonantit. Tuli, tulli ja tuuli ovat eri sanoja.",
+    "source_id": "L03",
+    "source_ids": [
+      "L03",
+      "L04",
+      "L37",
+      "L38",
+      "D06"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing preserve letters and length in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "tuli / tulli / tuuli",
+      "note": "Do not collapse repeated letters.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R007",
+    "title": "Preserve Unicode bytes",
+    "title_fi": "Unicode-alkuperä",
+    "guidance": "Never overwrite original bytes with normalized analysis text; do not split combining sequences or grapheme clusters.",
+    "guidance_fi": "Älä korvaa alkuperäistä normalisoidulla analyysitekstillä. Älä katkaise yhdistelmämerkkiä tai grafeemiryhmää.",
+    "source_id": "U19",
+    "source_ids": [
+      "U19",
+      "U20",
+      "L03"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing preserve unicode bytes in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "ä / ä",
+      "note": "Derived NFC equality does not permit byte replacement.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R008",
+    "title": "Check coverage and rights",
+    "title_fi": "Fontin kattavuus",
+    "guidance": "Test real names and äöå in the actual font; verify use and redistribution rights. Fonts are not bundled.",
+    "guidance_fi": "Kokeile oikeita nimiä ja äöå-merkkejä todellisella fontilla. Tarkista käyttö- ja jakeluoikeudet; fontteja ei sisälly pakettiin.",
+    "source_id": "D01",
+    "source_ids": [
+      "D01",
+      "D04",
+      "U06",
+      "U09",
+      "U13",
+      "U18"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing check coverage and rights in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Ää Öö Åå Šš Žž",
+      "note": "Inspect actual glyphs; family name alone proves no coverage.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R009",
+    "title": "Preserve compounds",
+    "title_fi": "Yhdyssanat",
+    "guidance": "Do not insert spaces into long compounds for layout; consult a dictionary or language reviewer for uncertain boundaries.",
+    "guidance_fi": "Älä lisää välilyöntejä pitkään yhdyssanaan ulkoasun vuoksi. Tarkista epävarma sananraja sanakirjasta tai kielen asiantuntijalta.",
+    "source_id": "L04",
+    "source_ids": [
+      "L04",
+      "L05"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "cta",
+      "label",
+      "caption",
+      "display"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing preserve compounds in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "lentokonesuihkuturbiinimoottori",
+      "note": "Do not insert spaces to make the word fit.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R010",
+    "title": "Distinguish hyphen functions",
+    "title_fi": "Yhdysmerkki ja ajatusviiva",
+    "guidance": "Preserve lexical hyphens such as linja-auto; do not conflate hyphens, minus signs and range dashes.",
+    "guidance_fi": "Säilytä sanan yhdysmerkki, esimerkiksi linja-auto. Älä korvaa yhdysmerkkiä, miinusmerkkiä ja ajatusviivaa samalla säännöllä.",
+    "source_id": "L08",
+    "source_ids": [
+      "L08",
+      "L09",
+      "L10",
+      "L11",
+      "L12"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing distinguish hyphen functions in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "linja-auto; 20–29",
+      "note": "Lexical hyphen and range dash have different roles.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R011",
+    "title": "Review hyphenation boundaries",
+    "title_fi": "Tavutusrajat",
+    "guidance": "Review syllable and compound boundaries; avoid leaving an isolated vowel at a line edge and respect name/abbreviation constraints.",
+    "guidance_fi": "Arvioi tavujen ja yhdyssanan osien rajat. Vältä yksittäisen vokaalin jättämistä riville; suojaa nimet ja lyhenteet.",
+    "source_id": "L05",
+    "source_ids": [
+      "L05",
+      "L07",
+      "D01",
+      "D13"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing review hyphenation boundaries in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "yhdys-sana",
+      "note": "Treat a shown break as a trial; verify dictionary and context.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R012",
+    "title": "Verify actual hyphenation",
+    "title_fi": "Automaattinen tavutus",
+    "guidance": "hyphens:auto alone proves nothing; test language, dictionary, browser, OS and actual break positions.",
+    "guidance_fi": "Pelkkä hyphens:auto ei todista onnistumista. Tarkista kieli, sanasto, selain, käyttöjärjestelmä ja todelliset katkaisukohdat.",
+    "source_id": "U16",
+    "source_ids": [
+      "U16",
+      "U17",
+      "U08",
+      "L05"
+    ],
+    "applicable_media": [
+      "web",
+      "office",
+      "pdf"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing verify actual hyphenation in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "hyphens:auto; lang=fi",
+      "note": "Record actual break positions in the target browser.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R013",
+    "title": "Protect case suffixes",
+    "title_fi": "Taivutuspäätteet",
+    "guidance": "Preserve abbreviation, number and unit suffixes such as EU:ssa, 10 %:n and 25 km:n; do not detach them.",
+    "guidance_fi": "Säilytä lyhenteiden, lukujen ja yksiköiden päätteet: EU:ssa, 10 %:n, 25 km:n. Älä irrota päätettä kannastaan.",
+    "source_id": "L06",
+    "source_ids": [
+      "L06",
+      "L07",
+      "L20",
+      "L21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "data",
+      "caption"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing protect case suffixes in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "EU:ssa; 10 %:n; 25 km:n",
+      "note": "Retain suffix colon and grammatical ending.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R014",
+    "title": "Respect quotation context",
+    "title_fi": "Lainausmerkit",
+    "guidance": "Finnish quotation may use ”näin”; retain the approved house style, foreign quotation and code literals.",
+    "guidance_fi": "Suomalaisessa lainauksessa voidaan käyttää merkkejä ”näin”. Säilytä hyväksytty tyyli, vieraskielinen lainaus ja koodin merkit.",
+    "source_id": "L13",
+    "source_ids": [
+      "L13",
+      "U18",
+      "U21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption",
+      "display"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing respect quotation context in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "”Näin” / \"code\"",
+      "note": "Do not change code quote bytes to prose punctuation.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R015",
+    "title": "Review heading function",
+    "title_fi": "Otsikon kirjainkoko",
+    "guidance": "Use sentence-style capitalization for ordinary headings; preserve names and intentional brand case. Judge end punctuation by function.",
+    "guidance_fi": "Tavallinen otsikko alkaa isolla alkukirjaimella; säilytä erisnimet ja tarkoituksellinen brändityyli. Arvioi loppumerkki otsikon tehtävän mukaan.",
+    "source_id": "L14",
+    "source_ids": [
+      "L14",
+      "L15",
+      "D01",
+      "D09",
+      "D13"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "heading",
+      "label",
+      "caption",
+      "display"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing review heading function in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Tervetuloa Helsinkiin",
+      "note": "Preserve proper-name capitalization.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R016",
+    "title": "Review syntax and protected spans",
+    "title_fi": "Pilkku ja vinoviiva",
+    "guidance": "Do not insert a comma before every conjunction; review slash spacing in context and protect URLs/code.",
+    "guidance_fi": "Älä lisää pilkkua aina konjunktion eteen. Arvioi vinoviivan välit asiayhteydessä; suojaa URL-osoitteet ja koodi.",
+    "source_id": "L23",
+    "source_ids": [
+      "L23",
+      "L24",
+      "L27"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing review syntax and protected spans in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "https://example.org/a/b",
+      "note": "Do not insert prose slash spacing inside a URL.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R017",
+    "title": "Separate prose and machine values",
+    "title_fi": "Lukujen esitys",
+    "guidance": "Finnish prose uses decimal commas and grouping spaces; preserve IDs, years, version strings and API values.",
+    "guidance_fi": "Suomalaisessa tekstissä desimaalierotin on pilkku ja ryhmittelyssä käytetään väliä. Säilytä tunnukset, vuosiluvut, versiot ja API-arvot.",
+    "source_id": "L18",
+    "source_ids": [
+      "L18",
+      "L19",
+      "U18",
+      "U21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "data",
+      "label",
+      "caption"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing separate prose and machine values in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "1 234,56; v0.1.0",
+      "note": "Keep localized prose and machine version strings separate.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R018",
+    "title": "Keep value-unit groups together",
+    "title_fi": "Luku ja yksikkö",
+    "guidance": "Check spacing and suffixes across values, units, percent and currency; do not infer currency from region alone.",
+    "guidance_fi": "Tarkista luvun, yksikön, prosenttimerkin ja valuutan välit sekä taivutuspääte. Älä päättele valuuttaa aluekoodista.",
+    "source_id": "L20",
+    "source_ids": [
+      "L20",
+      "L21",
+      "L06",
+      "U21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "data",
+      "label",
+      "caption"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing keep value-unit groups together in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "25 km:n; 10 %:n",
+      "note": "Keep value, unit and ending accessible at narrow width.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R019",
+    "title": "Distinguish prose and machine dates",
+    "title_fi": "Päiväys ja kellonaika",
+    "guidance": "Preserve machine ISO forms; review prose dates, lowercase month names and context-dependent time punctuation.",
+    "guidance_fi": "Säilytä koneellinen ISO-muoto. Arvioi tekstin päiväys, kuukauden pieni alkukirjain sekä pisteen ja kaksoispisteen käyttö ajan ilmauksessa.",
+    "source_id": "L22",
+    "source_ids": [
+      "L22",
+      "L25",
+      "L26",
+      "U21"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "data",
+      "label",
+      "caption"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing distinguish prose and machine dates in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "21.10.2026; 2026-10-21",
+      "note": "Preserve machine date when it is part of an identifier/API.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R020",
+    "title": "Keep sorting separate",
+    "title_fi": "Aakkostus",
+    "guidance": "Verify collation version and runtime behavior; never replace original names with sorting keys.",
+    "guidance_fi": "Tarkista käytössä olevan aakkostuksen versio ja vertailijan toiminta. Älä muuta alkuperäisiä nimiä lajitteluavaimen mukana.",
+    "source_id": "L28",
+    "source_ids": [
+      "L28",
+      "U18"
+    ],
+    "applicable_media": [
+      "web",
+      "pdf",
+      "office",
+      "print"
+    ],
+    "roles": [
+      "data",
+      "label",
+      "index"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing keep sorting separate in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "W / V / Å / Ä / Ö",
+      "note": "Test actual collator instead of replacing letters.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R021",
+    "title": "Keep semantic hierarchy",
+    "title_fi": "Otsikkorakenne",
+    "guidance": "Choose heading level from document structure, not visual size; smaller-screen sizes do not change semantics.",
+    "guidance_fi": "Valitse otsikkotaso rakenteen eikä fonttikoon perusteella. Pienen näytön otsikkokoko ei muuta asiakirjan rakennetta.",
+    "source_id": "U03",
+    "source_ids": [
+      "U03",
+      "U04",
+      "D21",
+      "D22"
+    ],
+    "applicable_media": [
+      "web",
+      "pdf",
+      "office"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "label"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing keep semantic hierarchy in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "h2 styled smaller than h1",
+      "note": "Preserve semantic hierarchy during responsive styling.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R022",
+    "title": "Make information accessible",
+    "title_fi": "Tekstikuvat",
+    "guidance": "Prefer real text where equivalent presentation is possible; distinguish logos from essential information and review alternatives/reading order.",
+    "guidance_fi": "Suosi oikeaa tekstiä, kun sama esitys voidaan toteuttaa sillä. Erota logo ja välttämätön tieto; arvioi vaihtoehtoinen teksti ja lukujärjestys.",
+    "source_id": "U27",
+    "source_ids": [
+      "U27",
+      "D10",
+      "D17",
+      "D24",
+      "V03"
+    ],
+    "applicable_media": [
+      "web",
+      "pdf",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "display",
+      "brand_name",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing make information accessible in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "price drawn inside a poster image",
+      "note": "Provide equivalent price information and correct reading order.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R023",
+    "title": "Allow content to fit",
+    "title_fi": "Pitkät sanat ja painikkeet",
+    "guidance": "Allow long compounds and action labels to wrap; avoid hiding content with fixed heights or forced width compression.",
+    "guidance_fi": "Anna pitkille sanoille ja toimintopainikkeille tilaa rivittyä. Älä piilota sisältöä kiinteällä korkeudella tai kirjainleveyden pakolla.",
+    "source_id": "L01",
+    "source_ids": [
+      "L01",
+      "L04",
+      "D21",
+      "U07",
+      "U24"
+    ],
+    "applicable_media": [
+      "web",
+      "office",
+      "pdf"
+    ],
+    "roles": [
+      "cta",
+      "label",
+      "heading",
+      "body"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing allow content to fit in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Jatka hakemuksen täyttämistä",
+      "note": "Trial multi-line button labels without clipping.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R024",
+    "title": "Scope size proposals",
+    "title_fi": "Kokosuhteet",
+    "guidance": "Record font, width, distance and role before proposing ratios; a measured page does not establish a national rule.",
+    "guidance_fi": "Kirjaa fontti, leveys, katseluetäisyys ja rooli ennen kokosuhdetta. Yhden sivun mittaus ei ole suomalainen yleissääntö.",
+    "source_id": "U01",
+    "source_ids": [
+      "U01",
+      "U04",
+      "U07",
+      "D02",
+      "D13",
+      "V01"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "caption",
+      "cta"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing scope size proposals in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "body 18 px; heading 36 px",
+      "note": "Example proposal only; test font, width and reader.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R025",
+    "title": "Preserve font distinctions",
+    "title_fi": "Fontin leikkaus ja akselit",
+    "guidance": "Distinguish Text/Headline, weight, width and optical size; confirm the actual font supports proposed axes.",
+    "guidance_fi": "Erota Text ja Headline sekä paino, leveys ja optinen koko. Varmista, että todellinen fontti tukee ehdotettuja akseleita.",
+    "source_id": "D02",
+    "source_ids": [
+      "D02",
+      "D03",
+      "D06",
+      "D08",
+      "D24",
+      "V02"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "display",
+      "data"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing preserve font distinctions in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Text / Headline / opsz",
+      "note": "Verify real font axes before assigning optical size.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R026",
+    "title": "Scope Suomi.fi tokens",
+    "title_fi": "Suomi.fi-rajaukset",
+    "guidance": "Use Suomi.fi values only in that system; distinguish Source Sans 3 from older Source Sans Pro and separate body, lead and heading roles.",
+    "guidance_fi": "Käytä Suomi.fi-arvoja vain kyseisen järjestelmän yhteydessä. Erota Source Sans 3 vanhasta Source Sans Prosta sekä teksti-, lead- ja otsikkoroolit.",
+    "source_id": "U01",
+    "source_ids": [
+      "U01",
+      "U02",
+      "U03",
+      "U04"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "cta",
+      "label"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing scope suomi.fi tokens in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Source Sans 3 / Source Sans Pro",
+      "note": "Keep current and older Suomi.fi font guidance separate.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R027",
+    "title": "Scope HDS tokens",
+    "title_fi": "HDS-tunnukset",
+    "guidance": "Pin HDS tokens to their source version; state the root size for rem conversion. A token is not permission for every role.",
+    "guidance_fi": "Liitä HDS-arvot lähdeversioon. Ilmoita rem-muunnoksen juurikoko; tunnuksen olemassaolo ei tarkoita soveltuvuutta joka rooliin.",
+    "source_id": "U05a",
+    "source_ids": [
+      "U05a",
+      "U05b",
+      "U05c"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "label",
+      "cta"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing scope hds tokens in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "1rem at root 16px",
+      "note": "State this conversion assumption; do not assume every project uses it.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R028",
+    "title": "Separate brand settings",
+    "title_fi": "Kela ja Kanta",
+    "guidance": "Do not mix Kela and Kanta fonts; Kela web hyphenation/size policy is not universal Finnish guidance.",
+    "guidance_fi": "Älä sekoita Kelan ja Kannan fontteja. Kelan verkkotekstin tavutus- tai kokoratkaisu ei ole kaikkien suomalaisten sivujen sääntö.",
+    "source_id": "U06",
+    "source_ids": [
+      "U06",
+      "U07",
+      "U08",
+      "U09"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "label",
+      "cta"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing separate brand settings in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Kela / Kanta",
+      "note": "A Kela no-auto-hyphenation policy does not forbid all Finnish hyphenation.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R029",
+    "title": "Scope Helsinki rules",
+    "title_fi": "Helsingin nimi",
+    "guidance": "Separate Helsinki-name restrictions from body text and current fonts from historical ones; Office substitutions are medium-specific.",
+    "guidance_fi": "Erota Helsingin nimen tavutusrajoitus yleisestä leipätekstistä ja nykyinen fontti historiallisesta. Office-korvaus on mediakohtainen.",
+    "source_id": "D01",
+    "source_ids": [
+      "D01",
+      "D04",
+      "U05c"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage"
+    ],
+    "roles": [
+      "brand_name",
+      "heading",
+      "body"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing scope helsinki rules in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Helsinki",
+      "note": "A city-name restriction does not automatically apply to ordinary body words.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R030",
+    "title": "Separate university media",
+    "title_fi": "Yliopiston eri mediat",
+    "guidance": "Do not transfer University of Helsinki print/video sizes to web body text; test äöå clearance in the actual font.",
+    "guidance_fi": "Älä siirrä Helsingin yliopiston painetun aineiston tai videon mittoja verkkoleipätekstiin. Tarkista äöå-merkkien riviväli oikealla fontilla.",
+    "source_id": "U10",
+    "source_ids": [
+      "U10",
+      "U11"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "video"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "caption",
+      "display"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing separate university media in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "video caption / web body",
+      "note": "Do not transplant caption pixel values to web body copy.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R031",
+    "title": "Scope Finlandica examples",
+    "title_fi": "Finlandica-esimerkit",
+    "guidance": "Retain Finlandica Text/Headline roles and pt units; do not convert application tracking to CSS without unit evidence.",
+    "guidance_fi": "Säilytä Finlandican Text/Headline-roolit ja pt-yksiköt. Älä muunna sovelluskohtaista merkkiväliä CSS-arvoksi ilman yksikkötietoa.",
+    "source_id": "D02",
+    "source_ids": [
+      "D02",
+      "D03",
+      "V02"
+    ],
+    "applicable_media": [
+      "print",
+      "pdf"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "label",
+      "display"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing scope finlandica examples in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Finlandica Headline / Text",
+      "note": "Keep pt sample sizes and tracking units attached to their context.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R032",
+    "title": "Scope Metropolia examples",
+    "title_fi": "Metropolian roolit",
+    "guidance": "Separate short uppercase headings, long headings and body; retain guideline ratios and example sizes as distinct evidence.",
+    "guidance_fi": "Erota lyhyt suuraakkosotsikko pitkästä otsikosta ja leipätekstistä. Säilytä ohjeen suhdeluku ja esimerkkikoko erillisinä havaintoina.",
+    "source_id": "D13",
+    "source_ids": [
+      "D13"
+    ],
+    "applicable_media": [
+      "print",
+      "pdf",
+      "web"
+    ],
+    "roles": [
+      "heading",
+      "body",
+      "cta",
+      "caption"
+    ],
+    "strength": "brand_specific",
+    "condition": "When reviewing scope metropolia examples in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "short heading / long heading",
+      "note": "Preserve separate Metropolia roles and original ratio/sample evidence.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R033",
+    "title": "Trial easy-language print",
+    "title_fi": "Selkojulkaisun painoasu",
+    "guidance": "For easy-language print, trial the guide's 12–16 pt and roughly 50–60 character lines with actual size/readers; numbers do not certify accessibility.",
+    "guidance_fi": "Kokeile selkopainotuotteessa ohjeen 12–16 pt:tä ja noin 50–60 merkin riviä lukijan ja todellisen koon kanssa. Numero ei ole sertifiointi.",
+    "source_id": "L17",
+    "source_ids": [
+      "L17",
+      "L31",
+      "U14"
+    ],
+    "applicable_media": [
+      "print",
+      "pdf"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing trial easy-language print in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "12–16 pt; about 50–60 characters",
+      "note": "Easy-language print trial under source conditions; no readability certificate.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R034",
+    "title": "Do not freeze print line breaks",
+    "title_fi": "Painon ja verkon rivit",
+    "guidance": "Do not automatically transplant fixed easy-language print breaks to web; test meaning, narrow width and zoom.",
+    "guidance_fi": "Älä siirrä painetun selkotekstin kiinteitä rivinvaihtoja automaattisesti verkkoon. Testaa merkitys, kapea leveys ja suurennus.",
+    "source_id": "L31",
+    "source_ids": [
+      "L31",
+      "U14",
+      "U24"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "caption"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing do not freeze print line breaks in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "print semantic line break",
+      "note": "Test responsive web behavior before keeping a hard break.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R035",
+    "title": "Check applicable contrast",
+    "title_fi": "Kontrasti",
+    "guidance": "Evaluate applicable WCAG thresholds/exceptions: generally 4.5:1, or 3:1 for large text; test dynamic backgrounds/states.",
+    "guidance_fi": "Arvioi WCAG:n soveltuvat rajat ja poikkeukset: tavallisesti 4,5:1, suurelle tekstille 3:1. Mittaa myös vaihtuvat taustat ja tilat.",
+    "source_id": "U26",
+    "source_ids": [
+      "U26"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing check applicable contrast in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "4.5:1 / 3:1",
+      "note": "Apply large-text definition and exceptions; not visual guesswork.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R036",
+    "title": "Test text resizing",
+    "title_fi": "Tekstin suurennus",
+    "guidance": "Test 200% text resizing in the actual browser, including forms/errors; CSS simulation is not browser acceptance.",
+    "guidance_fi": "Testaa oikeassa selaimessa 200 %:n tekstinsuurennus, myös lomakkeet ja virheilmoitukset. Älä rinnasta CSS-simulaatiota selaintestiin.",
+    "source_id": "U23",
+    "source_ids": [
+      "U23"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing test text resizing in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "200% text zoom",
+      "note": "Inspect the real browser, controls and error states.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R037",
+    "title": "Test narrow reflow",
+    "title_fi": "Kapea uudelleenrivitys",
+    "guidance": "Test 320 CSS px-equivalent reflow without lost information/function; assess inherently two-dimensional exceptions separately.",
+    "guidance_fi": "Testaa 320 CSS px:n vastaava leveys ilman tiedon tai toiminnon menetystä. Arvioi aidosti kaksiulotteisen sisällön poikkeukset erikseen.",
+    "source_id": "U24",
+    "source_ids": [
+      "U24"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing test narrow reflow in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "320 CSS px equivalent",
+      "note": "A 390 px screenshot is not this acceptance test.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R038",
+    "title": "Test spacing overrides",
+    "title_fi": "Välien ylikirjoitus",
+    "guidance": "Test applicable WCAG line/paragraph/letter/word spacing overrides together; they are resilience tests, not mandatory default styling.",
+    "guidance_fi": "Testaa WCAG:n soveltuvat rivin-, kappaleen-, kirjain- ja sanavälien ylikirjoitukset yhdessä. Ne eivät ole pakollinen oletustyyli.",
+    "source_id": "U25",
+    "source_ids": [
+      "U25"
+    ],
+    "applicable_media": [
+      "web"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data"
+    ],
+    "strength": "normative",
+    "condition": "When reviewing test spacing overrides in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "line 1.5; paragraph 2em; letter .12em; word .16em",
+      "note": "Where applicable, test the simultaneous override; do not force as design defaults.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R039",
+    "title": "Test numeric features",
+    "title_fi": "Taulukon numerot",
+    "guidance": "Trial tabular figures in comparison tables; verify actual font support separately from locale formatting.",
+    "guidance_fi": "Kokeile tasalevyisiä numeroita vertailutaulukossa. Varmista fontin tuki erikseen lukujen kieliasun tarkistuksesta.",
+    "source_id": "U22",
+    "source_ids": [
+      "U22",
+      "U21",
+      "L18",
+      "L19"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office"
+    ],
+    "roles": [
+      "data",
+      "label"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing test numeric features in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "1 111 / 8 888",
+      "note": "Verify tabular figures and locale formatting independently.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R040",
+    "title": "Reopen and inspect exports",
+    "title_fi": "PDF ja Office",
+    "guidance": "Reopen exports in the target application; check font rights, fallback, wrapping, search, copy, language and reading order.",
+    "guidance_fi": "Avaa vienti kohdesovelluksessa; tarkista fonttioikeudet, korvaus, rivit, haku, kopiointi, kieli ja lukujärjestys.",
+    "source_id": "D01",
+    "source_ids": [
+      "D01",
+      "D13",
+      "U17",
+      "U19",
+      "U20"
+    ],
+    "applicable_media": [
+      "pdf",
+      "office"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing reopen and inspect exports in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Ää EU:ssa in PDF export",
+      "note": "Verify copy/search, font fallback and logical reading order after reopening.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R041",
+    "title": "Test real Finnish words",
+    "title_fi": "Pisteet ja toistuvat kirjaimet",
+    "guidance": "Test äöå, case and repeated vowels/consonants at varied weights/backgrounds; retain spelling.",
+    "guidance_fi": "Testaa äöå, suuret ja pienet kirjaimet sekä toistuvat vokaalit ja konsonantit eri painoilla ja taustoilla. Säilytä oikeinkirjoitus.",
+    "source_id": "L03",
+    "source_ids": [
+      "L03",
+      "L37",
+      "L38",
+      "D06",
+      "D12",
+      "U09",
+      "V04"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing test real finnish words in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "Äiti, öljy, Åbo; tulli, tuuli",
+      "note": "Check dots/ring, repeated letters and contrast at actual size.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  },
+  {
+    "id": "FI-R042",
+    "title": "Report only executed evidence",
+    "title_fi": "Todisteen rajaus",
+    "guidance": "Distinguish source reading, measurement, image inspection and target-application testing; mark unperformed checks not_checked.",
+    "guidance_fi": "Erota lähteen lukeminen, mittaus, kuvan tarkistus ja kohdesovelluksen testi. Merkitse tekemätön tarkistus not_checked-tilaan.",
+    "source_id": "V01",
+    "source_ids": [
+      "V01",
+      "V02",
+      "V03",
+      "V04",
+      "U04",
+      "U05a",
+      "U23",
+      "U24",
+      "U25"
+    ],
+    "applicable_media": [
+      "web",
+      "print",
+      "pdf",
+      "office",
+      "signage",
+      "video"
+    ],
+    "roles": [
+      "body",
+      "heading",
+      "label",
+      "cta",
+      "caption",
+      "data",
+      "display",
+      "brand_name"
+    ],
+    "strength": "proposal",
+    "condition": "When reviewing report only executed evidence in a supported Finnish context.",
+    "exception": "Retain intentional house style, protected quotations, names and machine data; seek authorization before textual edits.",
+    "example": {
+      "text": "static source inspection",
+      "note": "Do not mark Office/PDF rendering or native host invocation as passed.",
+      "status": "illustrative; not a render result"
+    },
+    "status": "guidance-only",
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false
+  }
+]

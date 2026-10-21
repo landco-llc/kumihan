@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "profiles": {
+    "entry": {
+      "goal": "Välj medium och tillstånd. / Select medium and permissions."
+    },
+    "web": {
+      "goal": "Kontrollera språk, ombrytning, diakritik och UI. / Review lang, wrapping, accents and UI.",
+      "native_checks": [
+        "200 percent text resizing",
+        "320 CSS px reflow",
+        "user spacing overrides",
+        "actual loaded font",
+        "keyboard and screen reader"
+      ]
+    },
+    "documents": {
+      "goal": "Skilj löptext, rubrik, tabell och presentation. / Distinguish prose, title, table and presentation.",
+      "native_checks": [
+        "Office reopen",
+        "PDF extraction and glyph inspection",
+        "font embedding rights",
+        "presentation viewing distance"
+      ]
+    },
+    "review": {
+      "goal": "Skrivskyddade iakttagelser med källor. / Read-only findings with sources."
+    }
+  },
+  "font_size": "No national default. As a trial for ordinary reading web UI, compare 1rem body and 1.5 line height at the actual root/font; evaluate larger alternatives as reader and medium need. This is a design proposal, not a Swedish standard.",
+  "ratio": "Build hierarchy with content roles, weight, spacing and actual font. Never transfer a brand scale universally.",
+  "expression_modes": [
+    "reading",
+    "expressive",
+    "hybrid"
+  ],
+  "media_contexts": [
+    "web-editorial",
+    "web-marketing",
+    "web-ui",
+    "report-document",
+    "presentation",
+    "display-copy"
+  ]
+}

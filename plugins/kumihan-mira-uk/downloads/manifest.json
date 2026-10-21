@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Міра",
+  "slug": "kumihan-mira-uk",
+  "language": "uk",
+  "version": "0.1.0",
+  "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "e52e0dbfae56c60a36e995ab02ff4cc26380f9fcb83579a99537f46a12e4790f"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "6cc0425e5fda9527ce3f2898ab6262ca5b39596b3e10abd227fc94d4eed3e06d"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "81076097b3200dbe4552933ac7ad723157d9df63d641fd9e7a2dda9a5dc0b773"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "44d5561914a69a9245dcf04d5d132ca552cd45c584fc00826beb14818eef1e6d"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "7ab94bd1253c6cc4b4f1d1c84edb9ec7331b0d405b4f2c8fe1d47a8af1df596f"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "02d302c6da78d18b16c5edd0977cbb73912152bf8ce8f5e8240751c7336e3fd8"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "b7a03bce9fe29cb8bff969a5a1127a429f0e33599409fea627bdca46e846c322"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "4bfc365ec9ceb8b3ee6b07d43c42b4be653a91fe9b7e0d47e2d284d23d7e5721"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "fb1ba26e86a036486201f532c32a67e564011ad2c6e6577e43438db64c95dc82"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "b2a9e4b5526bf043da11f465fc44844833aaaebf71e1d384429f1071ad917e9d"
+    },
+    {
+      "path": "locales/uk-UA.json",
+      "sha256": "90271b359d71be780eaa70e4e2197431f04a24f1cafeb16515b307bc094f3330"
+    },
+    {
+      "path": "locales/uk.json",
+      "sha256": "fd556c9aa38e5088fa95dab4477f0e9fcf0a61c29c23fa2c571124d73b979176"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "0d7f3552808d9f396c3e21f28dfdc707a40ac95a472dcb99862151b352900660"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "9964941f7c7bb4d76ca346c93a649e87bf152b7daa3f713bce0dd0c0f474248e"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "fbacc304dc38fb1465dce9a2326e6d36f0cf3ee1c365071b49d4fd003c704d50"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "07237714a2e07ff51803c0cc6a8fbe39f53f5d759b9dbdc069733a29a3c1118d"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "029e1a4ed9fb43864c10ab58ec558bc865f251d6b2f3707dc7469adc036b0503"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/SKILL.md",
+      "sha256": "2e92ed06a6db56295055521eb1fbfcf1660dbd8628e668db8a83535567634762"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/fixtures/acceptance.json",
+      "sha256": "b7a03bce9fe29cb8bff969a5a1127a429f0e33599409fea627bdca46e846c322"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/inventory.json",
+      "sha256": "fb1ba26e86a036486201f532c32a67e564011ad2c6e6577e43438db64c95dc82"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/locales/supported.json",
+      "sha256": "b2a9e4b5526bf043da11f465fc44844833aaaebf71e1d384429f1071ad917e9d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/locales/uk-UA.json",
+      "sha256": "90271b359d71be780eaa70e4e2197431f04a24f1cafeb16515b307bc094f3330"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/locales/uk.json",
+      "sha256": "fd556c9aa38e5088fa95dab4477f0e9fcf0a61c29c23fa2c571124d73b979176"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/profiles/mediums.json",
+      "sha256": "9964941f7c7bb4d76ca346c93a649e87bf152b7daa3f713bce0dd0c0f474248e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/references/workflow.md",
+      "sha256": "fbacc304dc38fb1465dce9a2326e6d36f0cf3ee1c365071b49d4fd003c704d50"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/rules/catalog.json",
+      "sha256": "07237714a2e07ff51803c0cc6a8fbe39f53f5d759b9dbdc069733a29a3c1118d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/runtime/check_source.py",
+      "sha256": "029e1a4ed9fb43864c10ab58ec558bc865f251d6b2f3707dc7469adc036b0503"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk/sources.json",
+      "sha256": "d9f2ff2dccf7eacb0c43860491be5258af846d723558eec7b79383ef98a6cd2e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/SKILL.md",
+      "sha256": "8e643ab1cfea763861a6c57fdd84463c8c61408de9be752b2b59dd251a875081"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/fixtures/acceptance.json",
+      "sha256": "b7a03bce9fe29cb8bff969a5a1127a429f0e33599409fea627bdca46e846c322"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/inventory.json",
+      "sha256": "fb1ba26e86a036486201f532c32a67e564011ad2c6e6577e43438db64c95dc82"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/locales/supported.json",
+      "sha256": "b2a9e4b5526bf043da11f465fc44844833aaaebf71e1d384429f1071ad917e9d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/locales/uk-UA.json",
+      "sha256": "90271b359d71be780eaa70e4e2197431f04a24f1cafeb16515b307bc094f3330"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/locales/uk.json",
+      "sha256": "fd556c9aa38e5088fa95dab4477f0e9fcf0a61c29c23fa2c571124d73b979176"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/profiles/mediums.json",
+      "sha256": "9964941f7c7bb4d76ca346c93a649e87bf152b7daa3f713bce0dd0c0f474248e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/references/workflow.md",
+      "sha256": "fbacc304dc38fb1465dce9a2326e6d36f0cf3ee1c365071b49d4fd003c704d50"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/rules/catalog.json",
+      "sha256": "07237714a2e07ff51803c0cc6a8fbe39f53f5d759b9dbdc069733a29a3c1118d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/runtime/check_source.py",
+      "sha256": "029e1a4ed9fb43864c10ab58ec558bc865f251d6b2f3707dc7469adc036b0503"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-documents/sources.json",
+      "sha256": "d9f2ff2dccf7eacb0c43860491be5258af846d723558eec7b79383ef98a6cd2e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/SKILL.md",
+      "sha256": "e1945c50dc34269dbf75abd78eec1575284f2091d0c5deddd3d578bd3af4fa0b"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/fixtures/acceptance.json",
+      "sha256": "b7a03bce9fe29cb8bff969a5a1127a429f0e33599409fea627bdca46e846c322"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/inventory.json",
+      "sha256": "fb1ba26e86a036486201f532c32a67e564011ad2c6e6577e43438db64c95dc82"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/locales/supported.json",
+      "sha256": "b2a9e4b5526bf043da11f465fc44844833aaaebf71e1d384429f1071ad917e9d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/locales/uk-UA.json",
+      "sha256": "90271b359d71be780eaa70e4e2197431f04a24f1cafeb16515b307bc094f3330"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/locales/uk.json",
+      "sha256": "fd556c9aa38e5088fa95dab4477f0e9fcf0a61c29c23fa2c571124d73b979176"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/profiles/mediums.json",
+      "sha256": "9964941f7c7bb4d76ca346c93a649e87bf152b7daa3f713bce0dd0c0f474248e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/references/workflow.md",
+      "sha256": "fbacc304dc38fb1465dce9a2326e6d36f0cf3ee1c365071b49d4fd003c704d50"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/rules/catalog.json",
+      "sha256": "07237714a2e07ff51803c0cc6a8fbe39f53f5d759b9dbdc069733a29a3c1118d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/runtime/check_source.py",
+      "sha256": "029e1a4ed9fb43864c10ab58ec558bc865f251d6b2f3707dc7469adc036b0503"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-review/sources.json",
+      "sha256": "d9f2ff2dccf7eacb0c43860491be5258af846d723558eec7b79383ef98a6cd2e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/SKILL.md",
+      "sha256": "d0ea0f611d4740750ed21e1a846401077544d615b31263596ce7f60ada8dc9a0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/fixtures/acceptance.json",
+      "sha256": "b7a03bce9fe29cb8bff969a5a1127a429f0e33599409fea627bdca46e846c322"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/inventory.json",
+      "sha256": "fb1ba26e86a036486201f532c32a67e564011ad2c6e6577e43438db64c95dc82"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/locales/supported.json",
+      "sha256": "b2a9e4b5526bf043da11f465fc44844833aaaebf71e1d384429f1071ad917e9d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/locales/uk-UA.json",
+      "sha256": "90271b359d71be780eaa70e4e2197431f04a24f1cafeb16515b307bc094f3330"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/locales/uk.json",
+      "sha256": "fd556c9aa38e5088fa95dab4477f0e9fcf0a61c29c23fa2c571124d73b979176"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/profiles/mediums.json",
+      "sha256": "9964941f7c7bb4d76ca346c93a649e87bf152b7daa3f713bce0dd0c0f474248e"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/references/workflow.md",
+      "sha256": "fbacc304dc38fb1465dce9a2326e6d36f0cf3ee1c365071b49d4fd003c704d50"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/rules/catalog.json",
+      "sha256": "07237714a2e07ff51803c0cc6a8fbe39f53f5d759b9dbdc069733a29a3c1118d"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/runtime/check_source.py",
+      "sha256": "029e1a4ed9fb43864c10ab58ec558bc865f251d6b2f3707dc7469adc036b0503"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-mira-uk-web/sources.json",
+      "sha256": "d9f2ff2dccf7eacb0c43860491be5258af846d723558eec7b79383ef98a6cd2e"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "d9f2ff2dccf7eacb0c43860491be5258af846d723558eec7b79383ef98a6cd2e"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 24,
+  "scope": "Deterministic offline consumer packages; native host invocation and rendering not checked",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-mira-uk-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4052829,
+      "sha256": "8422ab77c9b340891a41bb19c025cb2f0ac36c0ed1de33ebe1db74473638d6ea",
+      "members": 73,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4053658,
+      "sha256": "e4237dd8d38e2588bab06dd02f1630e9e38cf29aa3bbb23b04396d6787769515",
+      "members": 74,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4053355,
+      "sha256": "e775f0028ef6c4ba44cba3ac44563b2cbd9588557c75ccd17e31767f6ddd57d1",
+      "members": 74,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-claude-skill-v0.1.0.zip",
+      "bytes": 809591,
+      "sha256": "6bfa61c7404ac8012f6258ce5f7dad3eb52b77eff7cbb4cc5eea5e711ee5e69e",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-documents-claude-skill-v0.1.0.zip",
+      "bytes": 809874,
+      "sha256": "17b2f04c7530e3d38ffe78ef719d7646c1705b97fbf36406e01ab8e5e8e4732b",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-documents",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 809874,
+      "sha256": "17b2f04c7530e3d38ffe78ef719d7646c1705b97fbf36406e01ab8e5e8e4732b",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-documents",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809874,
+      "sha256": "17b2f04c7530e3d38ffe78ef719d7646c1705b97fbf36406e01ab8e5e8e4732b",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-documents",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-gemini-skill-v0.1.0.zip",
+      "bytes": 809591,
+      "sha256": "6bfa61c7404ac8012f6258ce5f7dad3eb52b77eff7cbb4cc5eea5e711ee5e69e",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809591,
+      "sha256": "6bfa61c7404ac8012f6258ce5f7dad3eb52b77eff7cbb4cc5eea5e711ee5e69e",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-review-claude-skill-v0.1.0.zip",
+      "bytes": 809787,
+      "sha256": "bb809fbaab08746e8cfbb1eb8c81b264c90c7b1ab21a2b8bfa393d57b3839314",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-review",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-review-gemini-skill-v0.1.0.zip",
+      "bytes": 809787,
+      "sha256": "bb809fbaab08746e8cfbb1eb8c81b264c90c7b1ab21a2b8bfa393d57b3839314",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-review",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809787,
+      "sha256": "bb809fbaab08746e8cfbb1eb8c81b264c90c7b1ab21a2b8bfa393d57b3839314",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-review",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-web-claude-skill-v0.1.0.zip",
+      "bytes": 809702,
+      "sha256": "e6d0f6a34a4a1496ecdc923391b9a3e9aab2f45d25dd72a4b986864470b6e9a5",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-web",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-web-gemini-skill-v0.1.0.zip",
+      "bytes": 809702,
+      "sha256": "e6d0f6a34a4a1496ecdc923391b9a3e9aab2f45d25dd72a4b986864470b6e9a5",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-web",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    },
+    {
+      "file": "kumihan-mira-uk-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 809702,
+      "sha256": "e6d0f6a34a4a1496ecdc923391b9a3e9aab2f45d25dd72a4b986864470b6e9a5",
+      "members": 14,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-mira-uk-web",
+      "slug": "kumihan-mira-uk",
+      "version": "0.1.0",
+      "source_sha256": "c31c9b16e27aae7ef3f1f74a1c3d58834825b8e46777de25264d8b00315c5f2d"
+    }
+  ]
+}

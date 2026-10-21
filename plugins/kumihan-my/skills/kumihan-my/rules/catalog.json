@@ -1,0 +1,449 @@
+[
+  {
+    "id": "MY-001",
+    "title": "Preserve exact source",
+    "title_my": "မူရင်းစာသားကို ထိန်းသိမ်းပါ။",
+    "condition": "Any supplied source",
+    "guidance": "Keep bytes, names, numbers, punctuation and quotations unchanged. Return suggestions separately; never normalize or convert encoding silently.",
+    "source_ids": [
+      "T07",
+      "T08"
+    ],
+    "source_id": "T07",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ဟန်ချက်",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-002",
+    "title": "Language is not script",
+    "title_my": "ဘာသာစကားကို အတည်ပြုပါ။",
+    "condition": "Myanmar script input without an explicit language",
+    "guidance": "Ask whether the text is Burmese; Myanmar script also serves other languages. Support only explicit my or my-MM here.",
+    "source_ids": [
+      "T01",
+      "E08"
+    ],
+    "source_id": "T01",
+    "media": [
+      "entry",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "my-MM",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-003",
+    "title": "Encoding uncertainty",
+    "title_my": "ကုဒ်စနစ်ကို အလိုအလျောက် မပြောင်းပါနှင့်။",
+    "condition": "Unicode/Zawgyi provenance is unknown",
+    "guidance": "Record encoding as unknown and request provenance or specialist detection. A UTF-8 decode does not prove Unicode Myanmar; detection is probabilistic. Keep conversion as an approved separate candidate.",
+    "source_ids": [
+      "T07",
+      "T08"
+    ],
+    "source_id": "T07",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မြန်မာ",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-004",
+    "title": "Protect shaping clusters",
+    "title_my": "ပေါင်းစပ်အက္ခရာများကို မခွဲပါနှင့်။",
+    "condition": "Tracking, slicing, colored spans or animation affects Myanmar text",
+    "guidance": "Do not split at code-point counts or insert spaces between marks. Inspect shaping and orthographic syllables in the target engine; generic graphemes alone do not certify safety.",
+    "source_ids": [
+      "T01",
+      "T02",
+      "T03"
+    ],
+    "source_id": "T01",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "က္က ကိ ကီ ကု ကူ ကေ ကျ ကြ",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-005",
+    "title": "Meaningful line breaks",
+    "title_my": "အဓိပ္ပာယ်အလိုက် စာကြောင်းခွဲပါ။",
+    "condition": "Narrow layouts or heading wrapping",
+    "guidance": "Use language-aware break candidates and review phrase meaning and clusters. Never adopt break-all or equal-character slicing as Burmese defaults; dictionary segmentation can miss names.",
+    "source_ids": [
+      "T04",
+      "T05",
+      "L09"
+    ],
+    "source_id": "T04",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မြန်မာစာ",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-006",
+    "title": "Spaces are not word counts",
+    "title_my": "စကားလုံးအရေအတွက်ကို နေရာလွတ်ဖြင့်သာ မတွက်ပါနှင့်။",
+    "condition": "Word limit or copy fitting",
+    "guidance": "Burmese spaces often mark phrases. Do not count whitespace tokens as lexical words or insert spaces after every syllable.",
+    "source_ids": [
+      "T01",
+      "L09"
+    ],
+    "source_id": "T01",
+    "media": [
+      "entry",
+      "web",
+      "documents"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မြန်မာစာ ရေးသားခြင်း",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-007",
+    "title": "Punctuation and digit identity",
+    "title_my": "ပုဒ်ဖြတ်ပုဒ်ရပ်နှင့် ကိန်းဂဏန်းများကို ထိန်းသိမ်းပါ။",
+    "condition": "Mixed digits, units or punctuation",
+    "guidance": "Keep ၊ and ။, Myanmar digits and Latin digits as supplied. Confirm numeral policy for amounts, IDs and phones; never substitute ဝ for ၀ or reverse them.",
+    "source_ids": [
+      "L10",
+      "T22",
+      "T01"
+    ],
+    "source_id": "L10",
+    "media": [
+      "entry",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ဝ ၀ ၀၁၂၃၄၅၆၇၈၉ ၊ ။",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-008",
+    "title": "Register by audience",
+    "title_my": "ဖတ်ရှုသူနှင့် ရည်ရွယ်ချက်ကို စစ်ဆေးပါ။",
+    "condition": "Copy editing or UI wording is requested",
+    "guidance": "Confirm speaker, reader, purpose and register. Written text is not necessarily literary; do not mechanically replace သည် with တယ် or နဲ့ with နှင့်. Native review of proposed copy remains needed.",
+    "source_ids": [
+      "L11",
+      "D06"
+    ],
+    "source_id": "L11",
+    "media": [
+      "entry",
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "သည် တယ် နှင့် နဲ့",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-009",
+    "title": "Preserve predicate meaning",
+    "title_my": "စာကြောင်း၏ အဓိပ္ပာယ်ကို ထိန်းသိမ်းပါ။",
+    "condition": "Shortening a heading or call to action",
+    "guidance": "Check predicate, conditions, politeness and intent before proposing shorter copy. Do not import English word order or remove sentence endings just to fit a box.",
+    "source_ids": [
+      "L08",
+      "L11"
+    ],
+    "source_id": "L08",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မည် မယ်",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-010",
+    "title": "Correct language tags",
+    "title_my": "ဘာသာစကား အညွှန်းကို စစ်ဆေးပါ။",
+    "condition": "Web page or mixed-language run",
+    "guidance": "Use my/my-MM for known Burmese and appropriate tags for English spans. MM is a region, not the language; an observed mm-MM or en page tag is not a standard.",
+    "source_ids": [
+      "E07",
+      "E08"
+    ],
+    "source_id": "E07",
+    "media": [
+      "web",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "lang=\"my\"",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-011",
+    "title": "Font coverage and fallback",
+    "title_my": "ဖောင့်နှင့် အစားထိုးဖောင့်ကို စစ်ဆေးပါ။",
+    "condition": "Selecting or changing font family/version",
+    "guidance": "Compare Myanmar shaping coverage and Latin fallback at actual sizes. Noto Sans Myanmar, UI, Serif and Padauk differ; a matching em value does not imply matching visible size or safe line height.",
+    "source_ids": [
+      "T09",
+      "T10",
+      "T11",
+      "T12",
+      "T19"
+    ],
+    "source_id": "T09",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "က က္က 123 ABC",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-012",
+    "title": "Clipping is a target test",
+    "title_my": "စာလုံးများ ပြတ်တောက်ခြင်း ရှိမရှိ စစ်ဆေးပါ။",
+    "condition": "Buttons, tables, fixed boxes or exports",
+    "guidance": "Inspect top/bottom marks, fallback, line boxes and stacked forms at target size. Neither font metrics nor a small test corpus establishes a universal minimum line height.",
+    "source_ids": [
+      "T02",
+      "T09",
+      "T10",
+      "T12"
+    ],
+    "source_id": "T02",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ကျောင်း ကု ကူ",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-013",
+    "title": "Contextual size proposal",
+    "title_my": "စာလုံးအရွယ်ကို အသုံးပြုမည့်နေရာအလိုက် စမ်းသပ်ပါ။",
+    "condition": "Prototype editorial web typography",
+    "guidance": "As a comparison only, BBC static declarations used body 16/28px below 600px and 18/32px above, H1 30/44 and 44/72. Try context-appropriate values and verify your font, corpus and viewport; these are not national averages or verified rendering.",
+    "source_ids": [
+      "E02",
+      "E03"
+    ],
+    "source_id": "E02",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "16/28; 18/32; ratio 1.875–2.444",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-014",
+    "title": "Reading versus graphic role",
+    "title_my": "ဖတ်ရန်စာနှင့် အလှဆင်စာကို ခွဲခြားပါ။",
+    "condition": "Display lettering, campaign or expressive heading",
+    "guidance": "Choose a reading, expressive or hybrid role. Keep conditions and instructions readable as text; experimental vowel separation or distortions need native legibility review, not automatic approval.",
+    "source_ids": [
+      "D04",
+      "D06",
+      "E10"
+    ],
+    "source_id": "D04",
+    "media": [
+      "web",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ဟန်ချက်",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-015",
+    "title": "Responsive roles differ",
+    "title_my": "ခေါင်းစဉ်နှင့် ကိုယ်ထည်စာကို သီးခြား စမ်းသပ်ပါ။",
+    "condition": "Hierarchy across narrow and wide layouts",
+    "guidance": "Adjust heading/body ratio, line height and line count independently. Avoid shrinking a banner so conditions become unreadable; preserve equivalent readable content.",
+    "source_ids": [
+      "E02",
+      "E03",
+      "E10",
+      "E11"
+    ],
+    "source_id": "E02",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ခေါင်းစဉ်",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-016",
+    "title": "Accessibility checks are explicit",
+    "title_my": "လက်တွေ့ အသုံးပြုနိုင်မှုကို စမ်းသပ်ပါ။",
+    "condition": "Web acceptance",
+    "guidance": "Test 200% text resizing separately from 400% zoom/reflow, user spacing, screen reading and keyboard tasks in the real client. WCAG spacing values are user-override tests, not universal author typography prescriptions.",
+    "source_ids": [
+      "E09",
+      "E11",
+      "E12"
+    ],
+    "source_id": "E09",
+    "media": [
+      "web",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မြန်မာစာ",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-017",
+    "title": "Do not count ch as characters",
+    "title_my": "ch ကို အက္ခရာအရေအတွက်ဟု မယူဆပါနှင့်။",
+    "condition": "Line length specification",
+    "guidance": "ch normally follows the zero glyph advance, not a Burmese character count. Compare actual phrases and font fallback rather than claiming a universal 60ch line length.",
+    "source_ids": [
+      "E13"
+    ],
+    "source_id": "E13",
+    "media": [
+      "web",
+      "documents"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "၀ 0",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-018",
+    "title": "Office and PDF evidence",
+    "title_my": "PDF နှင့် စာရွက်စာတမ်းကို သီးခြား စစ်ဆေးပါ။",
+    "condition": "Document, slide or PDF delivery",
+    "guidance": "Check font availability/license and embedding, shaping, extraction, copy/paste, slide-distance readability and page breaks in the actual host. Static source PASS is not Office/PDF acceptance.",
+    "source_ids": [
+      "T02",
+      "T12",
+      "T19"
+    ],
+    "source_id": "T02",
+    "media": [
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "ကျောင်း ၀၁၂၃",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-019",
+    "title": "Rights without bundled fonts",
+    "title_my": "ဖောင့် အသုံးပြုခွင့်ကို စစ်ဆေးပါ။",
+    "condition": "Distributing a document or product",
+    "guidance": "Check exact font version and embedding/redistribution license. No third-party font, portfolio image or research figure is bundled by this product.",
+    "source_ids": [
+      "T12",
+      "T19"
+    ],
+    "source_id": "T12",
+    "media": [
+      "entry",
+      "documents",
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "Padauk; Noto Myanmar",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  },
+  {
+    "id": "MY-020",
+    "title": "Read-only review report",
+    "title_my": "အကြံပြုချက်ကို မူရင်းနှင့် သီးခြား ဖော်ပြပါ။",
+    "condition": "Review task",
+    "guidance": "Report rule/source IDs, location, evidence, suggested action and uncertainty without editing. Mark native rendering, encoding identification, proofing and host invocation not_checked until actually performed.",
+    "source_ids": [
+      "T07",
+      "T08",
+      "T02"
+    ],
+    "source_id": "T07",
+    "media": [
+      "review"
+    ],
+    "exceptions": "Preserve intentional source forms; proposals require contextual and user authorization. Do not infer Burmese from script alone.",
+    "example": "မူရင်း",
+    "status": "guidance-only",
+    "automatic_pass_allowed": false,
+    "verification": "static-contract plus target-host/native review where required"
+  }
+]
