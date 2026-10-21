@@ -25,7 +25,7 @@ def main():
    for width in (320,375,768,1280):
     for scale in (1,2):
      for spacing in (False,True):
-      page.set_viewport_size({'width':width,'height':1000});response=page.goto(a.base+path,wait_until='domcontentloaded');page.evaluate('document.fonts.ready')
+      page.set_viewport_size({'width':width,'height':1000});response=page.goto(a.base+path,wait_until='load');page.evaluate('document.fonts.ready')
       if scale==2:page.evaluate("() => {const values=[...document.querySelectorAll('body,body *')].map(e=>[e,parseFloat(getComputedStyle(e).fontSize)]);values.forEach(([e,v])=>e.style.setProperty('font-size',v*2+'px','important'));}")
       page.add_style_tag(content='/* measurement */'+('*{line-height:1.5!important;letter-spacing:.12em!important;word-spacing:.16em!important}p{margin-bottom:2em!important}' if spacing else ''))
       page.evaluate('() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)))')
