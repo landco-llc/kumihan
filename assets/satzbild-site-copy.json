@@ -117,40 +117,6 @@
    "kumihan.html"
   ],
   "top": "Nach oben",
-  "guide": {
-   "breadcrumb": "Einrichtungsanleitung",
-   "nav": "Einrichtungsanleitungen",
-   "toc_title": "Auf dieser Seite",
-   "toc_summary": "Inhaltsverzeichnis anzeigen",
-   "platforms": "KI-Werkzeug wählen",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "Installation und Aufruf wurden in den einzelnen Werkzeugen noch nicht geprüft. Je nach Umgebung sind nicht alle Schritte verfügbar.",
-   "source": "Original INSTALL.md öffnen",
-   "steps": "Schritte und Hinweise",
-   "top": "Zurück zu KUMIHAN｜Satzbild",
-   "title": "KUMIHAN｜Satzbild in {host} einrichten",
-   "lead": "Wählen Sie je nach Unterstützung Ihres Werkzeugs das vollständige Plugin oder einzelne Skills.",
-   "sections": [
-    "Format wählen",
-    "Herunterladen und prüfen",
-    "Einrichten",
-    "Ohne Änderung am Original testen",
-    "Aktualisieren",
-    "Umfang und Grenzen"
-   ],
-   "format": "Das Plugin enthält alle vier Skills. Jeder Skill ist auch einzeln mit eigenen Regeln und Referenzen verfügbar. Das Anhängen einer ZIP-Datei an einen Chat installiert nichts.",
-   "plugin": "Plugin",
-   "skill": "Einzelner Skill",
-   "download": "Laden Sie die Dateien dieser Version herunter. Prüfen Sie vor der Einrichtung SHA-256 und Dateigröße anhand von MANIFEST.json. Mit allen 17 Dateien im selben Ordner ausführen (unter macOS: shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Verwenden Sie das ChatGPT/Codex-Plugin nur über eine tatsächlich unterstützte Plugin-Importfunktion. Das Archiv enthält kumihan-satzbild/ mit plugin.json und .codex-plugin/plugin.json. Einzelne Codex-Skills werden in .agents/skills/ des Projekts entpackt. Die Skills-Funktion in ChatGPT hängt vom Konto ab.",
-   "claude": "Entpacken Sie das Claude-Code-Plugin unter Beibehaltung des Ordners kumihan-satzbild/. Wenn Ihre Version dies unterstützt, validieren Sie das Plugin und starten Claude Code mit diesem Ordner. Einzelne Skills können lokal in .claude/skills/ liegen. In Claude nur eine tatsächlich verfügbare Skills-Oberfläche verwenden.",
-   "gemini": "Entpacken Sie die Erweiterung in einen leeren Ordner mit gemini-extension.json direkt im Wurzelverzeichnis. Installieren Sie sie über diesen Pfad und lesen Sie die Berechtigungsabfrage. Installieren Sie nicht das gesamte Repository als Satzbild. Der Import in Gemini Apps ist nicht geprüft.",
-   "test": "Geben Sie Sprachvariante (de-DE/de-AT/de-CH), Anrede (du/Sie), Medium und Arbeitsmodus an. Beispiel:",
-   "prompt": "Nutze kumihan-satzbild-review. Bewahre Originaltext, Zahlen und Namen; trenne Beobachtungen von Vorschlägen.",
-   "check": "Optionaler statischer Test (nur lesend):",
-   "update": "Sichern Sie eigene Einstellungen und prüfen Sie neue Version und Prüfsumme. Aktualisieren Sie über die unterstützte Methode Ihres Werkzeugs. Ein neuer Commit aktualisiert eine bestehende Installation nicht. Andere Sprachplugins bleiben erhalten.",
-   "limits": "44 Regelkandidaten und eine begrenzte CSS-Kandidatenregel; 48 vorgeschlagene Forschungsfälle werden getrennt geführt. Kein vollständiges Korrektorat und keine visuelle Zertifizierung. Nativer Import, Symboldarstellung und Aufnahme in Anbieter-Verzeichnisse sind nicht verifiziert."
-  },
   "publication_state": "published"
  },
  "en": {
@@ -271,40 +237,6 @@
    "en.html"
   ],
   "top": "Back to top",
-  "guide": {
-   "breadcrumb": "Installation guide",
-   "nav": "Installation guides",
-   "toc_title": "On this page",
-   "toc_summary": "Show contents",
-   "platforms": "Choose an AI platform",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-   "source": "Open the original INSTALL.md",
-   "steps": "Steps and notes",
-   "top": "Back to KUMIHAN｜Satzbild",
-   "title": "Install KUMIHAN｜Satzbild in {host}",
-   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-   "sections": [
-    "Choose a format",
-    "Download and verify",
-    "Install",
-    "Try it without changing the source",
-    "Update",
-    "Scope and limits"
-   ],
-   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-   "plugin": "Plugin",
-   "skill": "Individual skill",
-   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-satzbild/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-   "claude": "Extract the Claude Code plugin, keeping the kumihan-satzbild/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
-   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Satzbild. Import into the Gemini app has not been verified.",
-   "test": "State the locale (de-DE/de-AT/de-CH), form of address (du/Sie), medium and working mode. Example request:",
-   "prompt": "Use kumihan-satzbild-review. Preserve the source, figures, and names; keep observations separate from proposals.",
-   "check": "Optional static check (read-only):",
-   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-   "limits": "44 guidance candidates and one bounded CSS candidate rule; 48 proposed research cases remain separately tracked. This is not a complete proofreader or visual certification. Native import, icon display and provider marketplace listing are not verified."
-  },
   "publication_state": "published"
  },
  "ja": {
@@ -426,40 +358,6 @@
    "kumihan.html"
   ],
   "top": "ページ上部へ",
-  "guide": {
-   "breadcrumb": "導入ガイド",
-   "nav": "導入ページ",
-   "toc_title": "このページの目次",
-   "toc_summary": "このページの目次を表示",
-   "platforms": "AIプラットフォームを選ぶ",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-   "source": "元のINSTALL.mdを開く",
-   "steps": "手順と注意事項",
-   "top": "KUMIHAN｜Satzbildへ戻る",
-   "title": "{host}にKUMIHAN｜Satzbildを導入",
-   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-   "sections": [
-    "導入形式を選ぶ",
-    "ダウンロードと照合",
-    "導入する",
-    "原稿を変えずに試す",
-    "更新",
-    "対応範囲と限界"
-   ],
-   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-   "plugin": "プラグイン",
-   "skill": "個別スキル",
-   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
-   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-satzbild/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-   "claude": "Claude Codeプラグインを、kumihan-satzbild/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
-   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをSatzbildとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
-   "test": "言語地域（de-DE・de-AT・de-CH）・呼びかけ（du/Sie）・媒体・作業モードを明示します。依頼の例：",
-   "prompt": "kumihan-satzbild-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
-   "check": "任意の静的チェック（読み取り専用）：",
-   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-   "limits": "44件の指針候補と1種類の限定的なCSS注意候補です。48件の研究ケースは別途管理し、全件合格とは扱いません。完全な校正や表示品質の保証ではなく、実ホストでの導入・アイコン表示・公式ストア掲載は未検証です。"
-  },
   "publication_state": "published"
  }
 }

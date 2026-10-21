@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Generated with product-specific KUMIHAN｜Nhịp Chữ skills after standalone Skills were completed.
-// No external dependencies. --check is non-writing; otherwise regenerate all twelve HTML files.
+// No external dependencies. --check is non-writing; otherwise regenerate the three landings
+// (install guides: tools/build_install_guides.py).
 import {execFileSync} from "node:child_process";
 import {readFileSync,writeFileSync} from "node:fs";
 // KUMIHAN index (language gateway) for each page language.
@@ -43,8 +44,6 @@ const DATA=JSON.parse(readFileSync(new URL("../assets/nhip-chu-site-copy.json", 
 function e(s){return String(s).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;")}
 function pageName(lang){return "kumihan-vi"+(lang==="vi"?"":"."+lang)+".html";}
 function guideName(host,lang){return "install-nhip-chu-"+host+(lang==="vi"?"":"."+lang)+".html";}
-function hostZip(host){return META.id+"-"+({chatgpt:"chatgpt-codex-plugin",claude:"claude-code-plugin",gemini:"gemini-cli-extension"})[host]+"-v"+META.version+".zip";}
-function skillZip(host,suffix){return META.id+suffix+"-"+host+"-skill-v"+META.version+".zip";}
 function hostLabel(host){return {chatgpt:"ChatGPT / Codex",claude:"Claude / Claude Code",gemini:"Gemini"}[host];}
 function altLinks(guide,host){return ["vi","en","ja"].map(lang=>'<link rel="alternate" hreflang="'+lang+'" href="'+e(META.base+(guide?"docs/"+guideName(host,lang):pageName(lang)))+'">').join("\n");}
 function renderLanding(lang){
@@ -99,54 +98,9 @@ ${footer(lang,"")}
 </body></html>
 `;
 }
-function renderGuide(host,lang){
- const c=DATA[lang],g=c.guide,label=hostLabel(host),file=guideName(host,lang);
- const labelHead=(lang==="vi"?"Cài đặt cho ":lang==="ja"?"導入方法：":"Install for ")+label;
- const langs=["vi","en","ja"].map(l=>`<a href="${guideName(host,l)}" lang="${l}" hreflang="${l}"${l===lang?' aria-current="page"':""}>${{vi:"Tiếng Việt",en:"EN",ja:"日本語"}[l]}</a>`).join("");
- const nav=["chatgpt","claude","gemini"].map((h,i)=>`<a href="${guideName(h,lang)}"${h===host?' aria-current="page"':""}>${"0"+(i+1)} / ${e(hostLabel(h))}<span class="arrow" aria-hidden="true">↗</span></a>`).join("");
- const zips=["","-web","-documents","-review"].map(s=>`<li><a href="${META.download+skillZip(host,s)}">${e(skillZip(host,s))}</a></li>`).join("");
- const cmd=host==="claude"?`claude --plugin-dir /absolute/path/${META.id}\nclaude plugin validate /absolute/path/${META.id}`:host==="gemini"?`gemini extensions install /absolute/path/${META.id}\ngemini extensions list`:"";
- const step=host==="claude"?
-  (lang==="vi"?"Giải nén tệp ZIP vào thư mục trống, giữ nguyên thư mục sản phẩm; dùng Claude Code để nạp plugin. Có thể dùng marketplace của kho mã nguồn khi công cụ hỗ trợ.":lang==="ja"?"ZIPを展開し製品フォルダを保持したままClaude Codeで読み込みます。対応する環境ではリポジトリのマーケットプレイスから導入できます。":"Unzip into an empty directory, keep the product folder and load it from Claude Code. The repository marketplace is an alternative where supported."):
-  host==="gemini"?
-  (lang==="vi"?"Giải nén để gemini-extension.json nằm trong thư mục plugin và cài bằng Gemini CLI. Chưa xác minh việc nhập trong ứng dụng chat Gemini.":lang==="ja"?"gemini-extension.jsonが製品フォルダに入るよう展開してGemini CLIで導入します。Geminiチャットアプリへの導入は未検証です。":"Unzip so gemini-extension.json is in the product folder, then install with Gemini CLI. Gemini chat app importing is not verified."):
-  (lang==="vi"?"Dùng trình cài plugin được hỗ trợ trên ChatGPT/Codex hoặc chọn một kỹ năng riêng khi có giao diện Skills. Đính kèm tệp ZIP không phải cài đặt.":lang==="ja"?"ChatGPT/Codexで対応しているプラグイン導入機能を使うか、Skills対応画面で単独スキルを選びます。ZIP添付はインストールではありません。":"Use a supported ChatGPT/Codex plugin importer or a standalone Skill through an available Skills interface. A ZIP attachment is not an install.");
- return `<!doctype html>
-<html lang="${lang}">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f5f3ee">
-<title>${e(labelHead)} | ${e(META.display)}</title><meta name="description" content="${e(g.lead)}">
-<link rel="canonical" href="${META.base}docs/${file}">${altLinks(true,host)}
-<link rel="alternate" hreflang="x-default" href="${META.base}docs/${guideName(host,"vi")}">
-<link rel="icon" href="../assets/favicon-32x32.png" type="image/png"><link rel="stylesheet" href="../assets/kumihan-install.css">
-<style>html[lang="vi"] body{font-family:"Be Vietnam Pro","Noto Sans",system-ui,Arial,sans-serif}html[lang="vi"] :is(h1,h2,h3){letter-spacing:-.02em;line-height:1.45}html[lang="vi"] .guide-pane{line-height:1.95} .hero .language-switch{flex-wrap:wrap} .guide-pane section{scroll-margin-top:28px} .guide-pane li{overflow-wrap:anywhere}</style>
-${fonts(lang,"../")}
-</head><body>
-<a class="skip skip-link" href="#main">${e(c.skip)}</a>
-<header class="site-header"><div class="shell header-inner"><a class="brand" href="../${pageName(lang)}">KUMIHAN<span class="brand-sub">｜Nhịp Chữ</span></a>
-<nav class="header-nav" aria-label="${e(g.nav)}"><a href="${guideName("chatgpt",lang)}"${host==="chatgpt"?' aria-current="page"':""}>ChatGPT / Codex</a><a href="${guideName("claude",lang)}"${host==="claude"?' aria-current="page"':""}>Claude</a><a href="${guideName("gemini",lang)}"${host==="gemini"?' aria-current="page"':""}>Gemini</a></nav></div></header>
-<section class="hero" aria-labelledby="page-title"><div class="shell"><nav class="breadcrumb" aria-label="${e(g.crumb)}"><a href="../${GATEWAY[lang]}">${e(c.family)}</a><span aria-hidden="true">/</span><a href="../${pageName(lang)}">${e(META.display)}</a><span aria-hidden="true">/</span>${e(g.crumb)}</nav>
-<div class="hero-grid"><div><p class="eyebrow">INSTALL GUIDE / ${host==="chatgpt"?"01":host==="claude"?"02":"03"} OF 03</p><h1 id="page-title">${e(labelHead)}</h1><p class="hero-desc">${e(g.lead)}</p><nav class="language-switch" aria-label="${e(c.language)}">${langs}</nav></div>
-<div class="hero-logo"><img src="../assets/${META.logo}" width="1254" height="1254" alt="KUMIHAN official logo"></div></div></div></section>
-<nav class="platform-nav" aria-label="${e(g.nav)}"><div class="shell platform-inner">${nav}</div></nav>
-<div class="shell content-layout" id="main"><aside class="toc" aria-label="${e(g.toc)}"><details class="toc-details" open><summary>${e(g.toc)}</summary><h2 class="toc-title">${e(g.toc)}</h2>
-<ol><li><a href="#format">${e(g.formats)}</a></li><li><a href="#download">${e(g.download)}</a></li><li><a href="#steps">${e(g.install)}</a></li><li><a href="#test">${e(g.test)}</a></li><li><a href="#updates">${e(g.updates)}</a></li><li><a href="#limits">${e(g.limits)}</a></li></ol></details>
-<div class="toc-note"><strong>${e(g.note)}</strong><a class="source-link" href="${META.repo}/blob/main/plugins/${META.id}/INSTALL.md">${e(g.source)} ↗</a></div></aside>
-<article class="guide" aria-labelledby="guide-title"><div class="guide-head"><span>INSTALLATION / ${host.toUpperCase()}</span><span class="step-label">v${META.version}</span></div>
-<div class="guide-pane"><h2 id="guide-title">${e(g.crumb)}</h2>
-<section id="format"><h2>${e(g.formats)}</h2><p>${e(g.formatDesc)}</p><ul><li>${e(g.plugin)}: <code>${e(hostZip(host))}</code></li><li>${e(g.skill)}: <code>${e(skillZip(host,""))}</code></li></ul></section>
-<section id="download"><h2>${e(g.download)}</h2><p>${e(g.downloadDesc)}</p><p><a href="${META.download+hostZip(host)}">${e(hostZip(host))}</a></p><p><a href="${META.download}SHA256SUMS.txt">SHA256SUMS.txt</a> · <a href="${META.download}MANIFEST.json">MANIFEST.json</a></p><h3>4 Skills</h3><ul class="download-list">${zips}</ul></section>
-<section id="steps"><h2>${e(g.install)}</h2><p>${e(step)}</p>${cmd?`<h3>${e(g.cmd)}</h3><pre><code>${e(cmd)}</code></pre>`:""}${host==="claude"?`<pre><code>/plugin marketplace add landco-llc/kumihan\n/plugin install ${META.id}@kumihan-marketplace</code></pre>`:""}</section>
-<section id="test"><h2>${e(g.test)}</h2><p>${e(g.testing)}</p><blockquote><p>${e(g.prompt)}</p></blockquote><pre><code>python runtime/checks.py input.txt --locale vi-VN</code></pre></section>
-<section id="updates"><h2>${e(g.updates)}</h2><p>${e(g.updateDesc)}</p></section>
-<section id="limits"><h2>${e(g.limits)}</h2><p>${e(g.limitDesc)}</p></section>
-</div></article></div>
-${footer(lang,"../")}
-</body></html>\n`;
-}
 const out={};
 for(const lang of ["vi","en","ja"]){
  out[pageName(lang)]=share(renderLanding(lang));
- for(const host of ["chatgpt","claude","gemini"])out["docs/"+guideName(host,lang)]=share(renderGuide(host,lang));
 }
 const base=resolve(new URL("..",import.meta.url).pathname);
 let invalid=[];

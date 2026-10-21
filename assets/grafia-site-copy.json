@@ -116,41 +116,7 @@
    "KUMIHAN · japonés",
    "kumihan.html"
   ],
-  "top": "Volver arriba",
-  "guide": {
-   "breadcrumb": "Guía de instalación",
-   "nav": "Guías de instalación",
-   "toc_title": "En esta página",
-   "toc_summary": "Mostrar el índice",
-   "platforms": "Elegir una herramienta de IA",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "La instalación y la invocación en cada herramienta aún no se han verificado. Algunos pasos pueden no estar disponibles en tu entorno.",
-   "source": "Abrir el INSTALL.md original",
-   "steps": "Pasos y precauciones",
-   "top": "Volver a KUMIHAN｜Grafía",
-   "title": "Instalar KUMIHAN｜Grafía en {host}",
-   "lead": "Según lo que admita tu herramienta, elige el plugin completo o skills individuales.",
-   "sections": [
-    "Elegir el formato",
-    "Descargar y verificar",
-    "Instalar",
-    "Probar sin cambiar el original",
-    "Actualizar",
-    "Alcance y límites"
-   ],
-   "format": "El plugin incluye las cuatro skills. Cada skill también se distribuye por separado, con sus reglas y referencias. Adjuntar un ZIP a una conversación no instala nada.",
-   "plugin": "Plugin",
-   "skill": "Skill individual",
-   "download": "Descarga los ZIP de esta versión y compara SHA-256 y tamaño con MANIFEST.json antes de instalar. Con los 17 archivos en una misma carpeta, ejecuta (en macOS, shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Usa el plugin de ChatGPT / Codex solo mediante la función de importación de plugins que ofrezca tu cliente; se extrae como kumihan-grafia/ con plugin.json y .codex-plugin/plugin.json. Para Skills de Codex, extrae cada carpeta en .agents/skills/ del proyecto. La subida de Skills en ChatGPT depende de tu cuenta.",
-   "claude": "Extrae el plugin de Claude Code manteniendo la carpeta kumihan-grafia/. Si tu versión lo admite, valídalo y luego inicia Claude Code con esa carpeta. En Claude, sube cada ZIP de skill solo desde una interfaz real de Skills.",
-   "gemini": "Extrae el ZIP de la extensión en una carpeta vacía: gemini-extension.json debe quedar en su raíz. Instálala indicando esa ruta y lee la solicitud de consentimiento. No instales la raíz de este repositorio como Grafía. La importación en la app de Gemini no está verificada.",
-   "test": "Indica el idioma, la región, el tratamiento y el modo de trabajo. Ejemplo de petición:",
-   "prompt": "Usa kumihan-grafia-review. Conserva el original, las cifras y los nombres; separa las observaciones de las propuestas.",
-   "check": "Comprobación estática opcional (solo lectura):",
-   "update": "Guarda tus ajustes, verifica la nueva versión y su suma de control, y actualiza con el método que admita tu herramienta. Un nuevo commit no actualiza una instalación existente. No sobrescribas los plugins de otros idiomas.",
-   "limits": "48 pautas y 5 patrones estáticos acotados: no es un corrector completo ni una certificación visual. Publicar en GitHub no equivale a figurar en los directorios oficiales de ChatGPT, Claude o Gemini. El funcionamiento y la visualización reales deben comprobarse en cada herramienta."
-  }
+  "top": "Volver arriba"
  },
  "en": {
   "house_style": null,
@@ -269,41 +235,7 @@
    "KUMIHAN Japanese",
    "en.html"
   ],
-  "top": "Back to top",
-  "guide": {
-   "breadcrumb": "Installation guide",
-   "nav": "Installation guides",
-   "toc_title": "On this page",
-   "toc_summary": "Show contents",
-   "platforms": "Choose an AI platform",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-   "source": "Open the original INSTALL.md",
-   "steps": "Steps and notes",
-   "top": "Back to KUMIHAN｜Grafía",
-   "title": "Install KUMIHAN｜Grafía in {host}",
-   "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-   "sections": [
-    "Choose a format",
-    "Download and verify",
-    "Install",
-    "Try it without changing the source",
-    "Update",
-    "Scope and limits"
-   ],
-   "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-   "plugin": "Plugin",
-   "skill": "Individual skill",
-   "download": "Download the ZIP files for this version and compare SHA-256 and byte length with MANIFEST.json before installing. With all 17 files in one folder, run (on macOS, shasum -a 256 -c SHA256SUMS.txt):",
-   "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides; it extracts to kumihan-grafia/ with plugin.json and .codex-plugin/plugin.json. For Codex Skills, extract each folder into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-   "claude": "Extract the Claude Code plugin, keeping the kumihan-grafia/ folder. Where supported, validate it, then launch Claude Code with that folder. In Claude, upload each skill ZIP only through an actual Skills interface.",
-   "gemini": "Extract the extension ZIP into an empty folder; gemini-extension.json must sit at its root. Install it from that path and read the consent prompt. Do not install this repository’s root as Grafía. Import into the Gemini app has not been verified.",
-   "test": "State the language, region, form of address, and working mode. Example request:",
-   "prompt": "Use kumihan-grafia-review. Preserve the source, figures, and names; keep observations separate from proposals.",
-   "check": "Optional static check (read-only):",
-   "update": "Save your customizations, verify the new version and its checksum, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-   "limits": "48 guidance records and 5 bounded static patterns: not a complete proofreader or a visual certification. Publishing on GitHub is not a listing in the official ChatGPT, Claude, or Gemini directories. Actual behavior and rendering must be checked in each tool."
-  }
+  "top": "Back to top"
  },
  "ja": {
   "house_style": null,
@@ -423,40 +355,6 @@
    "日本語版 KUMIHAN",
    "kumihan.html"
   ],
-  "top": "ページ上部へ",
-  "guide": {
-   "breadcrumb": "導入ガイド",
-   "nav": "導入ページ",
-   "toc_title": "このページの目次",
-   "toc_summary": "このページの目次を表示",
-   "platforms": "AIプラットフォームを選ぶ",
-   "note_title": "v0.1.0 / GitHub Release",
-   "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-   "source": "元のINSTALL.mdを開く",
-   "steps": "手順と注意事項",
-   "top": "KUMIHAN｜Grafíaへ戻る",
-   "title": "{host}にKUMIHAN｜Grafíaを導入",
-   "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-   "sections": [
-    "導入形式を選ぶ",
-    "ダウンロードと照合",
-    "導入する",
-    "原稿を変えずに試す",
-    "更新",
-    "対応範囲と限界"
-   ],
-   "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-   "plugin": "プラグイン",
-   "skill": "個別スキル",
-   "download": "このバージョンのZIPを取得し、導入前にMANIFEST.jsonのSHA-256とバイト数を照合してください。17ファイルを同じフォルダに置いて、次を実行します（macOSはshasum -a 256 -c SHA256SUMS.txt）。",
-   "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。展開するとkumihan-grafia/にplugin.jsonと.codex-plugin/plugin.jsonが入っています。CodexのSkillsは、各フォルダをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-   "claude": "Claude Codeプラグインを、kumihan-grafia/フォルダを保ったまま展開します。対応するバージョンでは検証してから、そのフォルダを指定してClaude Codeを起動します。Claudeでは、Skillsの画面がある場合にのみ個別スキルのZIPを取り込みます。",
-   "gemini": "拡張のZIPを空のフォルダに展開し、gemini-extension.jsonがその直下にあることを確認します。そのパスを指定して導入し、権限の確認を読んでください。このリポジトリのルートをGrafíaとして導入しないでください。Geminiアプリへの取り込みは確認していません。",
-   "test": "言語・地域・呼びかけ（tú・vos・usted）・作業モードを明示します。依頼の例：",
-   "prompt": "kumihan-grafia-reviewで、原稿・数字・名前を変えずに確認し、確認した点と提案を分けてください。",
-   "check": "任意の静的チェック（読み取り専用）：",
-   "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-   "limits": "48件の指針と5種類の限定的な静的検査です。完全な校正や見た目の品質を保証するものではありません。GitHubでの公開は、ChatGPT・Claude・Geminiの公式ディレクトリへの掲載を意味しません。各ツールでの動作と実際の表示は、実行して確かめる必要があります。"
-  }
+  "top": "ページ上部へ"
  }
 }

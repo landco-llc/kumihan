@@ -8,7 +8,7 @@ import re
 from urllib.parse import unquote, quote
 import yaml
 import edition_versions as v
-from version_display import panel, role, x, rewrite_downloads, apply_html
+from version_display import panel, role, x, apply_html
 ROOT=v.ROOT
 
 
@@ -83,15 +83,13 @@ def outputs():
     for p in sorted((ROOT/'docs').glob('installation*.md')):
         out['_includes/version/docs/'+p.name]=generated_markdown(p.read_text(),f)
     ko=facts['editions']['ko']
-    for p in [*ROOT.glob('kumihan-ko*.html'), *(ROOT/'docs').glob('install-ko-*.html')]:
+    # 글짜임's landings are Jekyll sources; its guides are static (build_install_guides.py).
+    for p in ROOT.glob('kumihan-ko*.html'):
         source=p.read_text();meta,body=source.split('---',2)[1:]
         lang=yaml.safe_load(meta)['lang']
         relative=p.relative_to(ROOT).as_posix()
-        if relative.startswith('docs/'):
-            body=rewrite_downloads(body,ko)
-        else:
-            wrapped=f'<html lang="{lang}"><head></head><body>'+body+'</body></html>'
-            body=apply_html(wrapped,relative).split('<body>',1)[1].split('</body>',1)[0]
+        wrapped=f'<html lang="{lang}"><head></head><body>'+body+'</body></html>'
+        body=apply_html(wrapped,relative).split('<body>',1)[1].split('</body>',1)[0]
         out['_includes/version/pages/'+relative]=body
         out[f'_includes/version/ko-current-{lang}.html']=panel(ko,lang)+'\n'
     return out

@@ -1,0 +1,21 @@
+{
+ "skip": "Aller au contenu",
+ "nav": "Plateformes d’IA",
+ "language": "Langue",
+ "home": "Accueil KUMIHAN",
+ "breadcrumb": "Guide d’installation",
+ "toc_title": "Sur cette page",
+ "toc_summary": "Afficher le sommaire",
+ "platforms": "Choisir une plateforme d’IA",
+ "note_title": "INSTALLATION / Avant de commencer",
+ "note": "Selon votre environnement, certaines opérations décrites ici peuvent ne pas être disponibles. Vérifiez le fonctionnement réel sur l’hôte d’IA concerné.",
+ "source": "Ouvrir les instructions d’installation d’origine",
+ "steps": "Étapes et précautions",
+ "titles": {"chatgpt": "Installer pour ChatGPT / Codex", "claude": "Installer pour Claude", "gemini": "Installer pour Gemini"},
+ "leads": {
+  "chatgpt": "Selon l’endroit où vous l’utilisez, choisissez d’installer des skills ou un plugin",
+  "claude": "Claude Code et le chat Claude ne s’installent pas de la même manière",
+  "gemini": "Découvrez comment installer pour Gemini CLI et l’application Gemini"
+ },
+ "roles": {"base": "point de départ", "web": "pages web", "documents": "rapports et diapositives", "review": "relecture"}
+}

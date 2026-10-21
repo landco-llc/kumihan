@@ -116,41 +116,7 @@
       "KUMIHAN · Kijapani",
       "kumihan.html"
     ],
-    "top": "Rudi juu",
-    "guide": {
-      "breadcrumb": "Mwongozo wa kusakinisha",
-      "nav": "Miongozo ya usakinishaji",
-      "toc_title": "Katika ukurasa huu",
-      "toc_summary": "Onyesha yaliyomo",
-      "platforms": "Chagua zana ya AI",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Usakinishaji kwenye kila mwenyeji wa AI na mwonekano wa alama haujathibitishwa. Upatikanaji hutegemea programu na akaunti.",
-      "source": "Fungua INSTALL.md",
-      "steps": "Hatua na maelezo",
-      "top": "Rudi KUMIHAN｜Mizani",
-      "title": "Sakinisha KUMIHAN｜Mizani kwenye {host}",
-      "lead": "Chagua programu-jalizi yenye ujuzi nne au ujuzi mmoja kulingana na zana unayotumia.",
-      "sections": [
-        "Chagua kifurushi",
-        "Pakua na uhakiki",
-        "Sakinisha",
-        "Jaribu bila kubadili asili",
-        "Sasisha",
-        "Mipaka na uthibitisho"
-      ],
-      "format": "Programu-jalizi ina ujuzi nne. Kila ujuzi pia unapakuliwa pekee pamoja na kanuni na marejeo. Kuambatisha ZIP kwenye mazungumzo si usakinishaji.",
-      "plugin": "Programu-jalizi",
-      "skill": "Ujuzi mmoja",
-      "download": "Pakua ZIP za v0.1.0 kutoka GitHub Release na ulinganishe SHA-256 kabla ya kutumia.",
-      "chatgpt": "Tumia kipengele halisi cha kuleta programu-jalizi ikiwa kinapatikana. Kwa Codex, weka ujuzi kwenye .agents/skills/. Upatikanaji wa ChatGPT hutofautiana kwa akaunti.",
-      "claude": "Fungua programu-jalizi kwenye folda kumihan-mizani, kisha thibitisha kwa claude plugin validate. Tumia claude --plugin-dir inapopatikana.",
-      "gemini": "Fungua kiendelezi katika folda yenye gemini-extension.json na uingize kwa gemini extensions install. Gemini Apps huhitaji uthibitisho tofauti.",
-      "test": "Bainisha lugha, eneo, chombo na ruhusa za kuhariri. Kwa mfano:",
-      "prompt": "Tumia kumihan-mizani-review kukagua ukurasa huu wa Kiswahili. Usibadili matini asilia; taja ushahidi na mambo yasiyokaguliwa.",
-      "check": "Ukaguzi wa hiari wa kusoma pekee:",
-      "update": "Hifadhi marekebisho yako, linganisha toleo na SHA-256, kisha sasisha kwa njia inayotumika. Sasisho la GitHub halisakinishi lenyewe.",
-      "limits": "Kanuni 24 ni mapendekezo yenye hali ya ushahidi, si cheti cha sarufi, uwezo wa kufikia, au mwonekano. Mapitio ya mzungumzaji mzawa, majaribio ya kivinjari na usajili katika maduka rasmi bado hayajathibitishwa."
-    }
+    "top": "Rudi juu"
   },
   "en": {
     "house_style": "id-standard",
@@ -269,41 +235,7 @@
       "KUMIHAN · Japanese",
       "kumihan.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "Installation and invocation have not yet been checked in each tool. Some steps may not be available in your environment.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜Mizani",
-      "title": "Install KUMIHAN｜Mizani in {host}",
-      "lead": "Choose the full plugin or individual skills, depending on what your tool supports.",
-      "sections": [
-        "Choose a format",
-        "Download and verify",
-        "Install",
-        "Try it without changing the source",
-        "Update",
-        "Scope and limits"
-      ],
-      "format": "The plugin contains all four skills. Each skill is also distributed on its own, with its rules and references. Attaching a ZIP to a chat does not install anything.",
-      "plugin": "Plugin",
-      "skill": "Individual skill",
-      "download": "Download the ZIP files from GitHub Release v0.1.0 and compare their SHA-256 with SHA256SUMS.txt before installing.",
-      "chatgpt": "Use the ChatGPT / Codex plugin only through the plugin import feature your client provides. In Codex, extract each skill into the project’s .agents/skills/ directory. ChatGPT Skills upload depends on your account.",
-      "claude": "Extract the plugin keeping the kumihan-mizani folder, validate with claude plugin validate and use claude --plugin-dir where supported. Individual skills may be placed in .claude/skills/. Native host support must be verified.",
-      "gemini": "Extract the extension with gemini-extension.json under kumihan-mizani, then install from that folder with Gemini CLI. Gemini Apps use is a separate, unverified workflow.",
-      "test": "Specify Swahili locale (sw-TZ, sw-KE etc.), medium, house style and edit permission. Example:",
-      "prompt": "Use kumihan-mizani-review for this Swahili page. Preserve ng’ and all source text; report confirmed issues and unchecked items separately.",
-      "check": "Optional read-only static check:",
-      "update": "Save your customizations, verify the new version and its checksums, then update the way your tool supports. A new commit alone does not update an existing installation. Do not overwrite plugins for other languages.",
-      "limits": "24 proposed Swahili checks and a source-byte comparator are supplied. Browser rendering, native host registration, marketplace listing and native editorial review are not verified."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": "id-standard",
@@ -423,40 +355,6 @@
       "KUMIHAN · 日本語",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "各ツールでの導入・呼び出しはまだ確認していません。利用環境によっては、掲載した操作が使えない場合があります。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜Mizaniへ戻る",
-      "title": "{host}にKUMIHAN｜Mizaniを導入",
-      "lead": "ツールの対応状況に合わせて、プラグイン一式か個別のスキルを選べます。",
-      "sections": [
-        "導入形式を選ぶ",
-        "ダウンロードと照合",
-        "導入する",
-        "原稿を変えずに試す",
-        "更新",
-        "対応範囲と限界"
-      ],
-      "format": "プラグインには4つのスキルがすべて入っています。各スキルは、ルールと参考資料をそろえた単体でも配布しています。チャットにファイルを添付しただけでは導入されません。",
-      "plugin": "プラグイン",
-      "skill": "個別スキル",
-      "download": "GitHub Release v0.1.0からZIPを取得し、導入前にSHA256SUMS.txtとSHA-256を照合してください。",
-      "chatgpt": "ChatGPT / Codex用プラグインは、クライアントが提供するプラグインの取り込み機能からのみ使います。Codexでは、各スキルをプロジェクトの.agents/skills/に展開します。ChatGPTのSkillsアップロードはアカウントの機能によります。",
-      "claude": "kumihan-mizaniフォルダを保ってClaude Codeプラグインを展開し、claude plugin validateで確認します。対応する場合はclaude --plugin-dirを使います。単独スキルは.claude/skills/へ配置できます。",
-      "gemini": "kumihan-mizaniフォルダ内にgemini-extension.jsonがある構造で展開し、Gemini CLIから導入します。Geminiアプリへの取り込みは別手順で未検証です。",
-      "test": "対象地域（sw-TZ・sw-KEなど）と媒体・文体・編集権限を指定します。依頼例：",
-      "prompt": "kumihan-mizani-reviewでスワヒリ語ページを原稿変更なしで確認してください。ng’などの表記を保ち、根拠と未検証事項を区別してください。",
-      "check": "任意の静的確認（読み取り専用）：",
-      "update": "カスタマイズを保存し、新しいバージョンとチェックサムを確認してから、ツールが対応する方法で更新します。新しいコミットだけでは既存の導入は更新されません。他言語のプラグインは上書きしないでください。",
-      "limits": "スワヒリ語の24要件と原文字列のバイト比較を収録しています。ブラウザ実表示、各サービスへの登録、公式カタログ掲載、母語校閲は未検証です。"
-    }
+    "top": "ページ上部へ"
   }
 }

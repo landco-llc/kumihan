@@ -68,7 +68,7 @@ This method registers all four skills as your own private plugin.
 
    > Please register this package as my private plugin. Do not submit it to the public directory.
 
-4. Once registered, **KUMIHAN v0.1.6** appears under Plugins, in "Personal" or "Created by me".
+4. Once registered, **KUMIHAN** appears under Plugins, in "Personal" or "Created by me".
 5. Install it if needed, then enable it in a new conversation.
 
 **Notes**

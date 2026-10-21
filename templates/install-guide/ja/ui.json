@@ -1,0 +1,21 @@
+{
+ "skip": "本文へ移動",
+ "nav": "AIプラットフォーム",
+ "language": "言語",
+ "home": "KUMIHAN トップ",
+ "breadcrumb": "導入ガイド",
+ "toc_title": "このページの目次",
+ "toc_summary": "このページの目次を表示",
+ "platforms": "AIプラットフォームを選ぶ",
+ "note_title": "INSTALLATION / ご利用前に",
+ "note": "利用環境によっては掲載した操作が利用できない場合があります。対応するAIホストでの実動作をご確認ください。",
+ "source": "元の導入手順を開く",
+ "steps": "手順と注意事項",
+ "titles": {"chatgpt": "ChatGPT・Codexへの導入", "claude": "Claudeへの導入", "gemini": "Geminiへの導入"},
+ "leads": {
+  "chatgpt": "使いたい場所に合わせて、スキルまたはプラグインの導入方法を選べます",
+  "claude": "Claude CodeとClaudeチャットでは導入方法が異なります",
+  "gemini": "Gemini CLIとGeminiアプリ向けの導入方法を確認できます"
+ },
+ "roles": {"base": "最初の入口", "web": "Webページ", "documents": "報告書・スライド", "review": "レビュー"}
+}

@@ -116,41 +116,7 @@
       "KUMIHAN — японская версия",
       "kumihan.html"
     ],
-    "top": "Наверх",
-    "guide": {
-      "breadcrumb": "Установка",
-      "nav": "Платформы",
-      "toc_title": "На странице",
-      "toc_summary": "Показать",
-      "platforms": "Выберите платформу",
-      "note_title": "Перед установкой",
-      "note": "ZIP-файл в чате не устанавливает плагин.",
-      "source": "Код и источники",
-      "steps": "Шаги",
-      "top": "Наверх",
-      "title": "Установка для {host}",
-      "lead": "Четыре отдельных Skills для русской типографики и дизайна.",
-      "sections": [
-        "Выбрать пакет",
-        "Скачать и проверить",
-        "Установить",
-        "Протестировать",
-        "Обновить",
-        "Ограничения"
-      ],
-      "format": "Четыре самостоятельных Skills и объединяющий плагин.",
-      "plugin": "Плагин",
-      "skill": "Отдельный Skill",
-      "download": "Скачайте архивы ZIP v0.1.0 и проверьте SHA256SUMS.txt.",
-      "chatgpt": "В Codex установите Skill в .agents/skills/. Для ChatGPT требуется поддерживаемый интерфейс, а не ZIP в чате.",
-      "claude": "В Claude Code используйте claude --plugin-dir /absolute/path/kumihan-lad. Проверьте обнаружение Skill.",
-      "gemini": "В Gemini CLI используйте gemini extensions install /absolute/path/kumihan-lad и проверьте список расширений.",
-      "test": "Проверьте доступность четырёх Skills и сохранность текста; одна проверка JSON недостаточна.",
-      "prompt": "Проверьте русскую типографику без изменения оригинала.",
-      "check": "python runtime/checks.py original.txt --locale ru-RU",
-      "update": "Проверьте новые контрольные суммы, сохраните настройки и переустановите пакет.",
-      "limits": "Статический анализ не удостоверяет браузер, PDF, нативные приложения или редактуру."
-    }
+    "top": "Наверх"
   },
   "en": {
     "house_style": null,
@@ -269,41 +235,7 @@
       "KUMIHAN Japanese",
       "en.html"
     ],
-    "top": "Back to top",
-    "guide": {
-      "breadcrumb": "Installation guide",
-      "nav": "Installation guides",
-      "toc_title": "On this page",
-      "toc_summary": "Show contents",
-      "platforms": "Choose an AI platform",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "A ZIP attached to a conversation is not a plugin installation.",
-      "source": "Open the original INSTALL.md",
-      "steps": "Steps and notes",
-      "top": "Back to KUMIHAN｜Лад",
-      "title": "Install on {host}",
-      "lead": "Four independent Russian typography and content-led design Skills.",
-      "sections": [
-        "Choose package",
-        "Download and verify",
-        "Install",
-        "Test",
-        "Update",
-        "Limits"
-      ],
-      "format": "Four independent Skills and a plugin package.",
-      "plugin": "Plugin package",
-      "skill": "Standalone Skill",
-      "download": "Download v0.1.0 ZIPs and verify SHA256SUMS.txt.",
-      "chatgpt": "For Codex extract Skill to .agents/skills/. ChatGPT requires a supported plugin interface; chat attachments do not install plugins.",
-      "claude": "Use claude --plugin-dir /absolute/path/kumihan-lad in Claude Code and verify native discovery.",
-      "gemini": "Use gemini extensions install /absolute/path/kumihan-lad in Gemini CLI and list extensions.",
-      "test": "State the language, region (ru-RU or ru-RU), house style, and working mode. Example request:",
-      "prompt": "Review Russian typography without changing the source.",
-      "check": "python runtime/checks.py original.txt --locale ru-RU",
-      "update": "Verify checksums, preserve house styles and reinstall via the host.",
-      "limits": "Static checks cannot prove native host, browser, Office/PDF or human editorial quality."
-    }
+    "top": "Back to top"
   },
   "ja": {
     "house_style": null,
@@ -423,40 +355,6 @@
       "日本語版 KUMIHAN",
       "kumihan.html"
     ],
-    "top": "ページ上部へ",
-    "guide": {
-      "breadcrumb": "導入ガイド",
-      "nav": "導入ページ",
-      "toc_title": "このページの目次",
-      "toc_summary": "このページの目次を表示",
-      "platforms": "AIプラットフォームを選ぶ",
-      "note_title": "v0.1.0 / GitHub Release",
-      "note": "ZIPを会話に添付するだけではプラグインは登録されません。",
-      "source": "元のINSTALL.mdを開く",
-      "steps": "手順と注意事項",
-      "top": "KUMIHAN｜Ладへ戻る",
-      "title": "{host} への導入",
-      "lead": "ロシア語の自然な文字組と内容に合うデザインを支える4つのスキル。",
-      "sections": [
-        "パッケージを選ぶ",
-        "ダウンロードと照合",
-        "導入",
-        "動作確認",
-        "更新",
-        "制約"
-      ],
-      "format": "4つの独立スキルと、まとめて導入できるプラグインがあります。",
-      "plugin": "プラグイン",
-      "skill": "独立Skill",
-      "download": "v0.1.0付きZIPとSHA256SUMS.txtを確認してください。",
-      "chatgpt": "Codexでは.agents/skills/へ展開します。ChatGPTは対応するプラグイン登録UIを利用します。ZIP添付だけでは登録されません。",
-      "claude": "Claude Codeではclaude --plugin-dir /absolute/path/kumihan-ladを利用し認識を確認してください。",
-      "gemini": "Gemini CLIではgemini extensions install /absolute/path/kumihan-ladを実行し認識を確認してください。",
-      "test": "言語・地域（ru-RU・ru-RU）・編集スタイル・作業モードを明示します。依頼の例：",
-      "prompt": "原稿を変えずにロシア語の文字組をレビューして。",
-      "check": "python runtime/checks.py original.txt --locale ru-RU",
-      "update": "チェックサムを確認し、独自設定を保存して再導入します。",
-      "limits": "静的なチェックはネイティブホスト・ブラウザ・Office/PDF・母語話者確認の代わりになりません。"
-    }
+    "top": "ページ上部へ"
   }
 }
