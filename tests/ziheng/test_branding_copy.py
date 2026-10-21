@@ -1,10 +1,16 @@
 """Regression: ZiHeng uses only its approved logo and punctuation-free headline copy.
 
+Landings are built by tools/build_ziheng_site.py; the nine install guides by
+tools/build_install_guides.py from the shared template (modeled on the Japanese
+KUMIHAN guide, whose numbered "1. ..." / "A. ..." section headings are part of the
+standard), so guide section headings are checked for structure, not punctuation.
+
 The KUMIHAN / ZiHeng skills informed editorial changes; this is a static check,
 not a live-browser visual or host-native skill acceptance claim.
 """
 from html.parser import HTMLParser
 from pathlib import Path
+import json
 import re
 import unittest
 
@@ -24,6 +30,8 @@ SITE_PAGES = (
     "docs/install-ziheng-gemini.ja.html",
 )
 HOST_PAGES = [p for p in SITE_PAGES if "install-ziheng-claude" in p or "install-ziheng-gemini" in p]
+LANDINGS = [p for p in SITE_PAGES if not p.startswith("docs/")]
+GUIDES = [p for p in SITE_PAGES if p.startswith("docs/")]
 PUNCTUATION = re.compile(r"[、。，,.!?！？：:；;（）()「」『』“”‘’—–]")
 
 
@@ -33,9 +41,15 @@ class HeadingReader(HTMLParser):
         self.current = None
         self.headings = []
         self.og_title = None
+        self.ids = set()
+        self.hrefs = []
 
     def handle_starttag(self, tag, attrs):
         meta = dict(attrs)
+        if meta.get("id"):
+            self.ids.add(meta["id"])
+        if tag == "a" and meta.get("href"):
+            self.hrefs.append(meta["href"])
         if tag == "meta" and meta.get("property") == "og:title":
             self.og_title = meta.get("content")
         if tag in ("title", "h1", "h2", "h3"):
@@ -56,7 +70,7 @@ class HeadingReader(HTMLParser):
 
 
 class ZiHengApprovedBrandAndHeadlines(unittest.TestCase):
-    def test_all_twelve_pages_use_punctuation_free_headings(self):
+    def test_all_twelve_pages_use_punctuation_free_headlines(self):
         for path in SITE_PAGES:
             with self.subTest(page=path):
                 html = (ROOT / path).read_text(encoding="utf-8")
@@ -66,8 +80,12 @@ class ZiHengApprovedBrandAndHeadlines(unittest.TestCase):
                 self.assertTrue(tags.headings)
                 self.assertEqual(len([h for h, _ in tags.headings if h == "title"]), 1)
                 self.assertEqual(len([h for h, _ in tags.headings if h == "h1"]), 1)
+                # Landings: every heading; guides: the headline (title / h1 / og:title).
+                checked = tags.headings if path in LANDINGS else [
+                    (h, t) for h, t in tags.headings if h in ("title", "h1")]
                 for element, copy in tags.headings:
                     self.assertTrue(copy, (path, element))
+                for element, copy in checked:
                     self.assertIsNone(PUNCTUATION.search(copy), (path, element, copy))
                 self.assertIsNotNone(tags.og_title, path)
                 self.assertIsNone(PUNCTUATION.search(tags.og_title), (path, "og:title"))
@@ -84,14 +102,29 @@ class ZiHengApprovedBrandAndHeadlines(unittest.TestCase):
                 self.assertIn("KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png", html)
                 self.assertIn('KUMIHAN<span class="brand-rule">｜</span>字衡', html)
 
-    def test_host_steps_preserve_instructions_as_body_copy(self):
-        for path in HOST_PAGES:
+    def test_guides_follow_standard_sections_with_verified_downloads(self):
+        facts = json.loads((ROOT / "assets/edition-versions.json").read_text(encoding="utf-8"))["editions"]["zh-hant"]
+        assets = {a["name"]: a["url"] for a in facts["verified_assets"]}
+        for path in GUIDES:
             with self.subTest(page=path):
                 html = (ROOT / path).read_text(encoding="utf-8")
-                self.assertEqual(html.count('class="step-detail"'), 4)
-                self.assertEqual(html.count("<h3>"), 4)
-                self.assertIn('class="steps"', html)
-                self.assertIn("0.2.0.zip", html)
+                tags = HeadingReader()
+                tags.feed(html)
+                h2 = [t for h, t in tags.headings if h == "h2"]
+                # Choose a method, host sections A/B/C, try it out (numbered).
+                self.assertTrue(any(t.startswith("1. ") for t in h2), h2)
+                for letter in "ABC":
+                    self.assertTrue(any(t.startswith(letter + ". ") for t in h2), (letter, h2))
+                self.assertTrue(any(re.match(r"[23]\. ", t) for t in h2), h2)
+                # The method table and table of contents jump to sections that exist.
+                for href in tags.hrefs:
+                    if href.startswith("#"):
+                        self.assertIn(href[1:], tags.ids, href)
+                for anchor in ("#a", "#b", "#c"):
+                    self.assertIn(anchor, tags.hrefs)
+                host = "claude" if "-claude" in path else "gemini" if "-gemini" in path else "openai-codex"
+                plugin = f"kumihan-ziheng-{host}-plugin-0.2.0.zip"
+                self.assertIn(f'href="{assets[plugin]}"', html)
 
 
 if __name__ == "__main__":

@@ -11,6 +11,18 @@ ROOT=Path(__file__).resolve().parents[2]
 SPEC=importlib.util.spec_from_file_location('thai_site_builder',ROOT/'tools/build_th_site.py')
 SITE=importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(SITE)
+GSPEC=importlib.util.spec_from_file_location('install_guides_builder',ROOT/'tools/build_install_guides.py')
+GUIDES=importlib.util.module_from_spec(GSPEC)
+GSPEC.loader.exec_module(GUIDES)
+
+NAME='KUMIHAN｜ดุลอักษร'
+BASE='https://landco-llc.github.io/kumihan/'
+DOWNLOAD='https://github.com/landco-llc/kumihan/releases/download/kumihan-th-v0.1.1/'
+SKILLS=('kumihan-th','kumihan-th-web','kumihan-th-documents','kumihan-th-review')
+def host_assets(host):
+ suffix={'chatgpt':'','claude':'-Claude-skill','gemini':'-Gemini-Apps-skill'}[host]
+ package={'chatgpt':'kumihan-th-plugin','claude':'kumihan-th-Claude-Code-plugin','gemini':'kumihan-th-Gemini-CLI-extension'}[host]
+ return [package+'-v0.1.1.zip']+[s+suffix+'-v0.1.1.zip' for s in SKILLS]
 
 class Document(HTMLParser):
  def __init__(self,text):
@@ -20,39 +32,53 @@ class Document(HTMLParser):
 class ThaiSiteContract(unittest.TestCase):
  def test_generated_output_current(self):
   subprocess.run([sys.executable,str(ROOT/'tools/build_th_site.py'),'--check'],check=True,capture_output=True)
+ def check_local_links(self,path,doc):
+  for tag,a in doc.elements:
+   if tag!='a' or 'href' not in a:continue
+   url=urlparse(a['href'])
+   if url.scheme:continue
+   target=(ROOT/path).parent/url.path if url.path else ROOT/path
+   self.assertTrue(target.is_file(),a['href'])
+   if url.fragment:
+    targetdoc=Document(target.read_text())
+    self.assertIn(url.fragment,{a.get('id') for _,a in targetdoc.elements})
  def test_all_localized_pages_and_links(self):
-  pages=[SITE.home(l) for l in SITE.COPY]+[SITE.guide(h,l) for h in SITE.HOSTS for l in SITE.COPY]
-  for path in pages:
+  for lang in SITE.COPY:
+   path=SITE.home(lang)
    with self.subTest(path=path):
     text=(ROOT/path).read_text();doc=Document(text)
-    expected=next(l for l in SITE.COPY if path==SITE.home(l) or any(path==SITE.guide(h,l) for h in SITE.HOSTS))
-    self.assertEqual(next(a['lang'] for t,a in doc.elements if t=='html'),expected)
+    self.assertEqual(next(a['lang'] for t,a in doc.elements if t=='html'),lang)
     canon=[a['href'] for t,a in doc.elements if t=='link' and a.get('rel')=='canonical']
-    self.assertEqual(canon,[SITE.BASE+path])
+    self.assertEqual(canon,[BASE+path])
     self.assertEqual({a['hreflang'] for t,a in doc.elements if t=='link' and a.get('rel')=='alternate'},{'th-TH','en','ja','x-default'})
-    self.assertIn(SITE.NAME,text)
-    ids={a['id'] for _,a in doc.elements if 'id' in a}
-    for tag,a in doc.elements:
-     if tag!='a' or 'href' not in a:continue
-     url=urlparse(a['href'])
-     if url.scheme:continue
-     target=(ROOT/path).parent/url.path if url.path else ROOT/path
-     self.assertTrue(target.is_file(),a['href'])
-     if url.fragment:
-      targetdoc=Document(target.read_text())
-      self.assertIn(url.fragment,{a.get('id') for _,a in targetdoc.elements})
+    self.assertIn(NAME,text)
+    self.check_local_links(path,doc)
     self.assertIn('not-checked',text)
+  # Guides come from tools/build_install_guides.py: native lang = the landing's <html lang>.
+  for host in SITE.HOSTS:
+   for lang in SITE.COPY:
+    path=SITE.guide(host,lang)
+    with self.subTest(path=path):
+     self.assertEqual(path,GUIDES.guide_path('th',host,lang))
+     text=(ROOT/path).read_text();doc=Document(text)
+     self.assertEqual(next(a['lang'] for t,a in doc.elements if t=='html'),lang)
+     self.assertNotIn('dir',next(a for t,a in doc.elements if t=='html'))
+     canon=[a['href'] for t,a in doc.elements if t=='link' and a.get('rel')=='canonical']
+     self.assertEqual(canon,[BASE+path])
+     alternates={a['hreflang']:a['href'] for t,a in doc.elements if t=='link' and a.get('rel')=='alternate'}
+     self.assertEqual(alternates,{**{l:BASE+SITE.guide(host,l) for l in SITE.COPY},'x-default':BASE+SITE.guide(host,'th')})
+     switch={a['href']:a['lang'] for t,a in doc.elements if t=='a' and 'data-language' in a}
+     self.assertEqual(switch,{Path(SITE.guide(host,l)).name:l for l in SITE.COPY})
+     self.assertIn('<a class="brand" href="../'+SITE.home(lang)+'">KUMIHAN<span class="brand-sub" lang="th">｜ดุลอักษร</span></a>',text)
+     self.assertIn(NAME,text)
+     self.check_local_links(path,doc)
  def test_exact_assets_and_host_scope(self):
   for host in SITE.HOSTS:
    for lang in SITE.COPY:
     text=(ROOT/SITE.guide(host,lang)).read_text()
-    suffix={'chatgpt':'','claude':'-Claude-skill','gemini':'-Gemini-Apps-skill'}[host]
-    package={'chatgpt':'kumihan-th-plugin','claude':'kumihan-th-Claude-Code-plugin','gemini':'kumihan-th-Gemini-CLI-extension'}[host]
-    for asset in [package+'-v0.1.1.zip']+[s+suffix+'-v0.1.1.zip' for s in SITE.SKILLS]:
-     self.assertIn(asset,text)
-    self.assertIn('SHA256SUMS.txt',text)
-    self.assertIn('น้ำชา เก่ง ภาษาไทย',text)
-    self.assertIn('data-copy="sample"',text)
+    for asset in host_assets(host):
+     self.assertIn('href="'+DOWNLOAD+asset+'"',text)
+    self.assertIn('href="'+DOWNLOAD+'SHA256SUMS.txt"',text)
     self.assertNotIn('v0.1.7',text)
  def test_release_download_links_use_flat_asset_names(self):
   # GitHub Release assets are a flat namespace, unlike the repo source tree.
@@ -61,9 +87,11 @@ class ThaiSiteContract(unittest.TestCase):
   manifest=json.loads((ROOT/'plugins/kumihan-th/downloads/MANIFEST.json').read_text())
   asset_names={item['release_asset'] for item in manifest['archives']}
   self.assertEqual(len(asset_names),15)
-  self.assertTrue(SITE.DOWNLOAD.endswith('/kumihan-th-v0.1.1/'))
+  facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['th']
+  self.assertEqual(facts['release_url'],DOWNLOAD.replace('/download/','/tag/').rstrip('/'))
+  self.assertEqual({a['url'] for a in facts['verified_assets']},{DOWNLOAD+n for n in asset_names})
   for host in SITE.HOSTS:
-   host_names={Path(path).name for path in SITE.host_assets(host)}
+   host_names=set(host_assets(host))
    self.assertEqual(len(host_names),5)
    self.assertTrue(host_names <= asset_names)
    for lang in SITE.COPY:
@@ -72,7 +100,7 @@ class ThaiSiteContract(unittest.TestCase):
      links=[a['href'] for tag,a in page.elements
             if tag=='a' and a.get('href','').endswith('.zip')]
      self.assertEqual(len(links),5)
-     self.assertEqual(set(links),{SITE.DOWNLOAD+name for name in host_names})
+     self.assertEqual(set(links),{DOWNLOAD+name for name in host_names})
      self.assertTrue(all(urlparse(url).path.rsplit('/',1)[-1] in asset_names
                          for url in links))
  def test_no_destructive_typography_hacks(self):
