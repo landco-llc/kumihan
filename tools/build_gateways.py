@@ -915,14 +915,17 @@ for _reader, _cards in CARDS.items():
         _cards["fa"] = FA_CARD_COPY[_reader]
 
 
-# Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב, विन्यास):
-# registry, top page, names and cards from assets/upcoming-editions.json. "names" is the
-# edition's name in each reader language and "card" its card in each earlier reader
-# language; "edition_names" and "cards" are the new reader language's own tables.
+# Editions with pages but no package yet (KUMIHAN｜Μέτρο, Zetwerk, Jalin, Ahenk, מקצב, विन्यास,
+# Soulad, Arány, ဟန်ချက်, Concinnitas, Tugma, Measure, Rytmi, Samspel, Samklang): registry, top page, names and cards
+# from assets/upcoming-editions.json. "names" is the edition's name in each reader language
+# and "card" its card in each earlier reader language; "edition_names" and "cards" are the
+# new reader language's own tables. English (Measure) adds no reader: its top is index.html.
 UPCOMING = json.loads((ROOT / "assets" / "upcoming-editions.json").read_text(encoding="utf-8"))
 for _code, _e in UPCOMING.items():
-    GATEWAYS[_code] = tuple(_e["gateway"])
     PRODUCTS[_code] = _e["product"]
+    if "gateway" not in _e:
+        continue
+    GATEWAYS[_code] = tuple(_e["gateway"])
     UI[_code] = _e["ui"]
     PICK[_code] = _e["pick"]
     EDITION_NAMES[_code] = dict(_e["edition_names"])

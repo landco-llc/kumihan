@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Build the landings of language editions not yet distributed; --check verifies committed output.
 
-KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he) and विन्यास (sa) each get a
-landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html),
+KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he), विन्यास (sa),
+Soulad (cs), Arány (hu), ဟန်ချက် (my), Concinnitas (la), Tugma (tl), Rytmi (fi),
+Samspel (sv) and Samklang (da) each get a
+landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html);
+Measure (en) has an English and a Japanese landing (kumihan-en[.ja].html),
 in the canonical KUMIHAN index structure (tools/product_site.py). Their skills
 have no Release, ZIP, installation guide or public source yet, so the pages say
 "coming soon": skill cards and AI tools are shown without links and the status
@@ -30,6 +33,15 @@ EDITIONS = {
     "tr": ("Ahenk", "ahenk", "TR", "TR", "tr_TR", ("İı", "↗", "¶", "◎")),
     "he": ("מקצב", "miktsav", "HE", "עב", "he_IL", ("ך", "↗", "¶", "◎")),
     "sa": ("विन्यास", "vinyasa", "SA", "सं", "sa_IN", ("क्ष", "↗", "¶", "◎")),
+    "cs": ("Soulad", "soulad", "CS", "CS", "cs_CZ", ("Řů", "↗", "¶", "◎")),
+    "hu": ("Arány", "arany", "HU", "HU", "hu_HU", ("Őű", "↗", "¶", "◎")),
+    "my": ("ဟန်ချက်", "hanhkyak", "MY", "မြ", "my_MM", ("င်္ဂ", "↗", "¶", "◎")),
+    "la": ("Concinnitas", "concinnitas", "LA", "LA", "la_VA", ("ā æ", "↗", "¶", "◎")),
+    "tl": ("Tugma", "tugma", "TL", "TL", "tl_PH", ("â ñ", "↗", "¶", "◎")),
+    "en": ("Measure", "measure", "EN", "EN", "en_US", ("&", "↗", "¶", "◎")),
+    "fi": ("Rytmi", "rytmi", "FI", "FI", "fi_FI", ("Ää", "↗", "¶", "◎")),
+    "sv": ("Samspel", "samspel", "SV", "SV", "sv_SE", ("Åö", "↗", "¶", "◎")),
+    "da": ("Samklang", "samklang", "DA", "DA", "da_DK", ("Æøå", "↗", "¶", "◎")),
 }
 RTL = {"he"}
 HOSTS = ("ChatGPT / Codex", "Claude / Claude Code", "Gemini")
@@ -42,7 +54,8 @@ x = SITE.x
 
 
 def langs(code):
-    return {code: "", "en": ".en", "ja": ".ja"}
+    """Page languages and file suffixes; English (Measure) is its own language, so it has two."""
+    return {code: "", **{lang: "." + lang for lang in ("en", "ja") if lang != code}}
 
 
 def landing_path(code, lang):
@@ -81,7 +94,7 @@ def landing(code, lang, c):
 
 def css(code):
     sub, slug, label, *_ = EDITIONS[code]
-    rtl = {"he": RTL_CSS, "sa": DEVANAGARI_CSS}.get(code, "")
+    rtl = {"he": RTL_CSS, "sa": DEVANAGARI_CSS, "my": MYANMAR_CSS}.get(code, "")
     return SITE.canonical_css(f"KUMIHAN｜{sub} index: canonical KUMIHAN index CSS + edition settings (tools/build_upcoming_sites.py).",
                               OVERRIDES.replace("@LABEL@", label).replace("@LANG@", code) + rtl)
 
@@ -139,6 +152,24 @@ DEVANAGARI_CSS = r"""
     html[lang="sa"] :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { line-height: 1.55; }
     html[lang="sa"] body { line-height: 1.9; }
     html[lang="sa"] .skill-end { letter-spacing: 0; font-size: 12px; }
+"""
+
+# Burmese: no tracking or forced breaks inside syllable clusters (kinzi, stacked
+# consonants, medials), lines broken at the phrase spaces, and tall lines so marks
+# above and below are never clipped.
+MYANMAR_CSS = r"""
+    html[lang="my"] :is(h1, h2, h3, p, li, .eyebrow, .feature-index, .section-number, .skill-desc, .feature p, .button) { letter-spacing: normal; }
+    html[lang="my"] :is(h1, h2, h3, p, li) { word-break: normal; overflow-wrap: normal; text-wrap: wrap; }
+    html[lang="my"] .hero h1 { font-size: clamp(30px,4vw,58px); line-height: 1.7; }
+    html[lang="my"] :is(.intro-text h2, .section-heading h2, .idea-band h2, .install-intro h2, .cta-layout h2) { line-height: 1.75; }
+    html[lang="my"] :is(h3, .button, .skill-name, .platform-name) { line-height: 1.7; }
+    html[lang="my"] body { line-height: 1.95; }
+    html[lang="my"] .skill-end { letter-spacing: 0; font-size: 12px; }
+    /* The header brand is set in Arial with negative tracking, which splits Burmese clusters. */
+    .brand .brand-sub { letter-spacing: 0; font-family: "Myanmar Sangam MN", "Myanmar Text", "Noto Sans Myanmar", sans-serif; }
+    @media (max-width: 560px) {
+      html[lang="my"] .hero h1 { font-size: clamp(26px,7.4vw,38px); line-height: 1.7; }
+    }
 """
 
 # Right-to-left (as the Arabic and Persian editions): the canonical index CSS uses

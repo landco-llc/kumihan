@@ -64,6 +64,10 @@ SCRIPTS = {
     "el": ('"Helvetica Neue", "Segoe UI", Roboto', "Georgia", "Noto Sans", "Noto Serif"),
     # Hebrew: Arial Hebrew (macOS/iOS) and Segoe UI (Windows), then Noto Hebrew.
     "he": ('"Arial Hebrew", "Segoe UI", Arial', '"Times New Roman"', "Noto Sans Hebrew", "Noto Serif Hebrew"),
+    # Burmese: Myanmar Sangam MN (macOS/iOS) and Myanmar Text (Windows), then Noto Myanmar (Unicode, not Zawgyi).
+    # Latin first: the Noto Myanmar files have no Latin letters, and the page mixes in Latin names.
+    "my": ('"Helvetica Neue", "Segoe UI", "Myanmar Sangam MN", "Myanmar Text"', 'Georgia, "Myanmar Sangam MN", "Myanmar Text"',
+           "Noto Sans Myanmar", "Noto Serif Myanmar"),
 }
 # After the Google family, before the generic family (Latin system fallbacks
 # that exist almost everywhere; Arial/Times only for Latin text).
@@ -71,20 +75,22 @@ LATIN_TAIL = {"latin": ("Arial", '"Times New Roman"'), "vi": ("Arial", '"Times N
 AXES = {"Be Vietnam Pro": "wght@400;500;600;700;800", "Noto Serif": "wght@100..900",
         "Inter": "wght@100..900", "Source Serif 4": "wght@200..900", "Noto Naskh Arabic": "wght@400..700",
         "Noto Sans Thai": "wght@100..900", "Noto Serif Thai": "wght@100..900",
-        "Vazirmatn": "wght@100..900"}
+        "Vazirmatn": "wght@100..900", "Noto Serif Myanmar": "wght@400;700"}
 # Page language (html lang attribute) -> script key
 LANGS = {"km": "km", "km-KH": "km", "it": "latin", "ru": "ru", "de": "latin", "ja": "ja", "en": "latin", "es": "latin", "fr": "latin", "pt": "latin", "ar": "ar",
          "ko": "ko", "ko-KR": "ko", "th": "th", "th-TH": "th", "zh-Hans-CN": "zh-hans",
          "zh-Hant-TW": "zh-hant", "zh-Hant-HK": "zh-hk", "hi": "hi", "vi": "vi",
          "pl": "latin", "id": "latin", "bn": "bn", "sw": "latin", "zu": "latin", "fa": "fa",
-         "el": "el", "nl": "latin", "ms": "latin", "tr": "latin", "he": "he", "sa": "hi"}
+         "el": "el", "nl": "latin", "ms": "latin", "tr": "latin", "he": "he", "sa": "hi",
+         "cs": "latin", "hu": "latin", "la": "latin", "tl": "latin", "my": "my",
+         "fi": "latin", "sv": "latin", "da": "latin"}
 # Characters of language and product names shown on pages of other languages.
 NAMES = ("日本語 한국어 ไทย 简体中文 繁體中文 繁体中文 العربية हिंदी 字衡 字律 글짜임 ดุลอักษร نضيد "
          "अक्षर-संगति বাংলা অক্ষরসজ্জা فارسی تراز ភាសាខ្មែរ លំនឹង ក あ 한 ก 汉 漢 ع अ 臺灣 香港 台灣 中文 "
-         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך संस्कृतम् विन्यास सं क्ष")
+         "Ελληνικά Μέτρο ΕΛ ς עברית מקצב עב ך संस्कृतम् विन्यास सं क्ष မြန်မာ ဟန်ချက် မြ င်္ဂ")
 # Subset families for those names, in the order they are tried.
 SUBSET = ("Noto Sans JP", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Noto Sans Thai", "Noto Naskh Arabic",
-          "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn", "Noto Sans Hebrew", "Noto Sans")
+          "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Khmer", "Vazirmatn", "Noto Sans Hebrew", "Noto Sans Myanmar", "Noto Sans")
 
 
 def script(lang):
@@ -120,10 +126,10 @@ GLYPH_FAMILIES = {
     "ja": "Shippori Mincho", "ko": "Nanum Myeongjo", "zh-Hans-CN": "Noto Serif SC", "zh-Hant-TW": "Noto Serif TC",
     "th": "Noto Serif Thai", "km": "Noto Serif Khmer", "ar": "Amiri", "fa": "Noto Nastaliq Urdu",
     "he": "Frank Ruhl Libre", "hi": "Tiro Devanagari Hindi", "sa": "Tiro Devanagari Sanskrit",
-    "bn": "Tiro Bangla", "el": "GFS Didot",
+    "bn": "Tiro Bangla", "el": "GFS Didot", "my": "Noto Serif Myanmar",
 }
 # The card characters; the stylesheet carries only these glyphs.
-GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ"
+GLYPHS = "Ä Ñ Ç È Ł Ã Ж İ Ắ IJ Ng Aa -lah ng’ Ω あ 한 汉 漢 ก ក ع ژ א अ क्ष অ Ř Ő မြ Æ Â Th Öö Å Ø"
 
 
 def glyph_url():
@@ -140,6 +146,8 @@ def glyph_css():
         out.append(f'.type-art .glyph .character[lang="{lang}"] {{ font-family: "{family}", var(--serif); font-weight: 400; }}')
     # Amiri's ع has a deep descending tail: lift it so it clears the label.
     out.append('.type-art .glyph .character[lang="ar"] { line-height: 1; transform: translateY(-.32em); }')
+    # Myanmar letters with a medial (မြ) stand far taller than the other cards' letters.
+    out.append('.type-art .glyph .character[lang="my"] { line-height: 1; transform: scale(.6); }')
     return out
 
 
@@ -197,7 +205,7 @@ def css():
         out.append(f"{html} {{ --display: {s}; --sans: {s}; --font-jp: {s}; --serif: {r}; }}")
         out.append(f"{body} {{ font-family: {s}; }}")
     out.append("/* Text marked as another non-Latin language inside a page uses that script's fonts. */")
-    for key in ("fa", "km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru", "el", "he"):
+    for key in ("fa", "km", "ja", "ko", "th", "zh-hans", "zh-hant", "zh-hk", "ar", "hi", "bn", "ru", "el", "he", "my"):
         langs = [l for l, k in LANGS.items() if k == key]
         sel = ", ".join(f'body [lang="{l}"]' for l in langs)
         out.append(f"{sel} {{ font-family: {stacks(key)[0]}; }}")
