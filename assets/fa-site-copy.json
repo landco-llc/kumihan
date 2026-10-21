@@ -123,19 +123,19 @@
         "یک زبان فارسی",
         "با عرف‌های منطقه‌ای متفاوت"
       ],
-      "body": "انتخاب صریح کاربر بر فراداده و حدس مقدم است. در هر دو منطقه نیم‌فاصله، ک و ی فارسی، اعداد و تاریخ‌ها همان‌گونه که آمده‌اند حفظ می‌شوند و تغییر تقویم یا ارقام به اجازهٔ صریح نیاز دارد.",
+      "body": "مهارت‌ها برای هر منطقه با پروفایلی جداگانه کار می‌کنند و با ویژگی‌های آن هماهنگ می‌شوند: تقویم و نام ماه‌ها، ارقام و واژگان. تفاوت‌های منطقه‌ای محترم شمرده می‌شوند و یکسان‌سازی نمی‌شوند، و متن اصلی دست‌نخورده می‌ماند.",
       "cards": [
         {
           "tag": "IR",
           "name": "ایران",
           "code": "fa-IR",
-          "p": "پیشنهاد پیش‌فرض برای متن تازهٔ فارسی ایران. ارقام فارسی فقط با درخواست ارقام محلی به کار می‌رود و تقویم صریح تعیین می‌شود، بدون تبدیل خودکار."
+          "p": "تقویم رسمی هجری شمسی است با ماه‌هایی چون فروردین و اردیبهشت، و ارقام فارسی (۱۲۳) در متن رایج است."
         },
         {
           "tag": "AF",
           "name": "افغانستان",
           "code": "fa-AF",
-          "p": "لحن دری و منطقه‌ای فقط در حد راهنماست. نام ماه‌ها ممکن است با fa-IR فرق کند (حمل و فروردین) و هیچ‌کدام خودکار اصلاح نمی‌شود. متن fa-IR فقط برچسب تازه نمی‌گیرد و بازبینی ویراستار بومی لازم است."
+          "p": "فارسی در این‌جا دری نام دارد؛ ماه‌های سال شمسی با نام برج‌ها (حمل، ثور، جوزا) خوانده می‌شوند و واژگان ویژهٔ خود را دارد."
         }
       ]
     }
@@ -263,19 +263,19 @@
         "One Persian language",
         "different regional customs"
       ],
-      "body": "An explicit locale choice outranks metadata and guesses. In both regions ZWNJ, Persian Kaf/Yeh, digits and dates stay exactly as supplied; calendar or digit changes need explicit authority.",
+      "body": "The skills work with a profile for each region and adapt to its character—calendar and month names, digits and vocabulary. Regional variants are respected rather than flattened, and the source text is preserved.",
       "cards": [
         {
           "tag": "IR",
           "name": "Iran",
           "code": "fa-IR",
-          "p": "The proposed default for new Iranian Persian copy. Persian (arabext) digits only when localized digits are requested; the calendar is stated explicitly, never auto-converted."
+          "p": "The official calendar is the Solar Hijri, with months such as فروردین and اردیبهشت, and Persian digits (۱۲۳) are common in text."
         },
         {
           "tag": "AF",
           "name": "Afghanistan",
           "code": "fa-AF",
-          "p": "Dari and regional register are guidance-only. Month names can differ from fa-IR (حمل vs فروردین) and neither is auto-corrected. fa-IR text is never simply relabelled; native review required."
+          "p": "Here Persian is called Dari; solar months take zodiac names (حمل, ثور, جوزا), and the vocabulary has its own features."
         }
       ]
     }
@@ -404,19 +404,19 @@
         "同じペルシア語でも",
         "地域の習慣は異なる"
       ],
-      "body": "ロケールはメタデータや推測より利用者の明示指定を優先。どちらの地域でもZWNJ、ペルシア語のک・ی、数字・日付は原文のまま保持し、暦や数字の変換には明示的な許可が必要です。",
+      "body": "地域ごとのプロファイルを使い分け、暦と月名・数字・語彙といった特性に合わせて対応します。地域による違いを一律にそろえず、原文はそのまま保持します。",
       "cards": [
         {
           "tag": "IR",
           "name": "イラン",
           "code": "fa-IR",
-          "p": "イラン向け新規ペルシア語コピーの既定案。ペルシア数字（arabext）は現地数字を求められた場合のみ使い、暦は明示して自動変換しません。"
+          "p": "公式の暦は太陽ヒジュラ暦で、月名はفروردین・اردیبهشتなど。文中ではペルシア数字（۱۲۳）が一般的です。"
         },
         {
           "tag": "AF",
           "name": "アフガニスタン",
           "code": "fa-AF",
-          "p": "ダリー語・地域の語調はガイダンスのみ。月名はfa-IRと異なる場合があり（حمل／فروردین）、どちらも誤りとして直しません。fa-IRの文章は流用せず、母語話者の校閲が必要です。"
+          "p": "ペルシア語はダリー語と呼ばれ、月名には黄道十二宮の名（حمل・ثور・جوزا）を使い、語彙にも独自の特徴があります。"
         }
       ]
     }

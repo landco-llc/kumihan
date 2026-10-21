@@ -123,31 +123,31 @@
         "One Portuguese language",
         "different regional customs"
       ],
-      "body": "Region and house style are explicit choices: geography never dictates quotation marks, separators, currency or form of address. With no region set, the “pt” profile stays unresolved, and existing copy is never converted automatically.",
+      "body": "Compasso works with a profile for each region and adapts to its character—forms of address, vocabulary and spelling. Regional variants are respected rather than flattened, and the source text is preserved.",
       "cards": [
         {
           "tag": "BR",
           "name": "Brazil",
           "code": "pt-BR",
-          "p": "The pt-BR editorial style suggests “…” quotes, but the house style manual takes precedence. Valid Brazilian variants such as “fato” are not corrected."
+          "p": "The largest Portuguese-speaking population. “Você” is the everyday form of address, with its own vocabulary (ônibus, celular, fato)."
         },
         {
           "tag": "PT",
           "name": "Portugal",
           "code": "pt-PT",
-          "p": "The pt-PT editorial style suggests «…» quotes; the EU institutional profile uses institutional number formats and SI percent spacing. “Facto” stays."
+          "p": "Informal address commonly uses “tu,” and the vocabulary has its own features (autocarro, telemóvel, facto)."
         },
         {
           "tag": "AO",
           "name": "Angola",
           "code": "pt-AO",
-          "p": "An explicit profile with a decimal comma. Thousands separators and quotes depend on the house style; form of address and vocabulary come from the project."
+          "p": "Writing stays close to the European norm, and the vocabulary draws on national languages such as Kimbundu."
         },
         {
           "tag": "MZ",
           "name": "Mozambique",
           "code": "pt-MZ",
-          "p": "An explicit profile with a decimal comma. Currency and time zone have no default, and “bilião” or “mil milhões” is checked against the source value."
+          "p": "The written norm is close to the European one, and Portuguese lives alongside Bantu languages such as Emakhuwa and Xichangana."
         }
       ]
     }
@@ -277,31 +277,31 @@
         "同じポルトガル語でも",
         "地域の習慣は異なる"
       ],
-      "body": "地域と編集スタイルは明示的に選びます。国から引用符・区切り記号・通貨・呼びかけを決めず、地域が未指定なら「pt」は未確定のまま。既存の文章を自動で変換しません。",
+      "body": "地域ごとのプロファイルを使い分け、呼びかけ方・語彙・つづりといった特性に合わせて対応します。地域による違いを一律にそろえず、原文はそのまま保持します。",
       "cards": [
         {
           "tag": "BR",
           "name": "ブラジル",
           "code": "pt-BR",
-          "p": "pt-BRの編集スタイルは“…”を候補としますが、媒体の表記ルールを優先。fatoなど正当なブラジルの語形は直しません。"
+          "p": "ポルトガル語話者が最も多い国。呼びかけはvocêが一般的で、語彙も独自です（ônibus、celular）。"
         },
         {
           "tag": "PT",
           "name": "ポルトガル",
           "code": "pt-PT",
-          "p": "pt-PTの編集スタイルは«…»が候補。EU機関向けプロファイルでは機関の数値書式とSIのパーセント表記を使います。factoは維持します。"
+          "p": "くだけた呼びかけにtuをよく使い、語彙にも独自の特徴があります（autocarro、telemóvel）。"
         },
         {
           "tag": "AO",
           "name": "アンゴラ",
           "code": "pt-AO",
-          "p": "小数点はコンマの明示プロファイル。桁区切りと引用符は編集スタイル次第で、呼びかけと語彙はプロジェクトから受け継ぎます。"
+          "p": "書き言葉はヨーロッパの規範に近く、キンブンド語など国内の言語に由来する語も使われます。"
         },
         {
           "tag": "MZ",
           "name": "モザンビーク",
           "code": "pt-MZ",
-          "p": "小数点はコンマの明示プロファイル。通貨とタイムゾーンに既定値はなく、biliãoやmil milhõesは原数値で確認します。"
+          "p": "書き言葉はヨーロッパの規範に近く、マクア語やシャンガーナ語などバントゥー諸語と共存しています。"
         }
       ]
     }
@@ -430,31 +430,31 @@
         "A mesma língua",
         "costumes diferentes em cada região"
       ],
-      "body": "Região e estilo editorial são escolhas explícitas: a geografia não impõe aspas, separadores, moeda nem tratamento. Sem região definida, o perfil «pt» fica por resolver e o texto existente nunca é convertido automaticamente.",
+      "body": "O Compasso trabalha com um perfil para cada região e ajusta-se aos seus traços: o tratamento, o léxico e a ortografia. Respeita as variantes sem as uniformizar e conserva o texto original.",
       "cards": [
         {
           "tag": "BR",
           "name": "Brasil",
           "code": "pt-BR",
-          "p": "O estilo editorial pt-BR propõe aspas “…”, mas o manual da casa prevalece. Variantes brasileiras válidas, como «fato», não são corrigidas."
+          "p": "A maior comunidade lusófona. «Você» é o tratamento corrente e o léxico é próprio (ônibus, celular, fato)."
         },
         {
           "tag": "PT",
           "name": "Portugal",
           "code": "pt-PT",
-          "p": "O estilo editorial pt-PT propõe aspas «…»; o perfil institucional europeu usa números institucionais e percentagem segundo o SI. «Facto» mantém-se."
+          "p": "O tratamento por «tu» é comum no registo informal, e o léxico tem traços próprios (autocarro, telemóvel, facto)."
         },
         {
           "tag": "AO",
           "name": "Angola",
           "code": "pt-AO",
-          "p": "Perfil explícito com vírgula decimal. Separador de milhares e aspas dependem do estilo da casa; tratamento e vocabulário herdam-se do projeto."
+          "p": "A escrita segue de perto a norma europeia, e o léxico integra palavras de línguas nacionais como o quimbundo."
         },
         {
           "tag": "MZ",
           "name": "Moçambique",
           "code": "pt-MZ",
-          "p": "Perfil explícito com vírgula decimal. Moeda e fuso horário não têm valor por defeito, e «bilião» ou «mil milhões» confirmam-se no valor original."
+          "p": "A norma escrita aproxima-se da europeia, e o português convive com línguas bantu como o emakhuwa e o xichangana."
         }
       ]
     }

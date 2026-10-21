@@ -124,25 +124,25 @@
     "Dieselbe Sprache",
     "unterschiedliche regionale Gepflogenheiten"
    ],
-   "body": "Die Sprachvariante wird ausdrücklich festgelegt; ist sie unbekannt, bleibt sie offen und wird nicht als de-DE angenommen. Währung, Zeitzone, du/Sie und Hausstil werden nie aus dem Land abgeleitet.",
+   "body": "Satzbild arbeitet mit einem Profil für jede Region und passt sich ihrer Eigenart an: Anführungszeichen, Schreibung und Wortschatz. Regionale Varianten werden respektiert statt vereinheitlicht, und der Ausgangstext bleibt erhalten.",
    "cards": [
     {
      "tag": "DE",
      "name": "Deutschland",
      "code": "de-DE",
-     "p": "Anführungszeichen „…“ und ‚…‘, alternativ »…« und ›…‹. ß, ẞ und SS bleiben wie geliefert und werden nicht stillschweigend zurückverwandelt."
+     "p": "Üblich sind Anführungszeichen „…“, und nach langem Vokal oder Diphthong steht ß (Straße, heiß)."
     },
     {
      "tag": "AT",
      "name": "Österreich",
      "code": "de-AT",
-     "p": "Anführungszeichen wie in de-DE. Regionale Wörter wie Jänner oder Marille werden nicht vereinheitlicht; Unterschiede bei Zahlen und Eurobeträgen bleiben erhalten."
+     "p": "Der Wortschatz hat eigene Züge (Jänner, Marille, Paradeiser), festgehalten im Österreichischen Wörterbuch."
     },
     {
      "tag": "CH",
      "name": "Schweiz",
      "code": "de-CH",
-     "p": "Anführungszeichen «…» und ‹…›; üblich ist ss statt ß (Strasse). Namen und gelieferte Zeichen bleiben erhalten; Runtime-Ausgabe und kantonaler Hausstil sind getrennte Profile."
+     "p": "Statt ß wird ss geschrieben (Strasse), Anführungszeichen sind «…», und Helvetismen wie Velo oder Trottoir gehören dazu."
     }
    ]
   }
@@ -272,25 +272,25 @@
     "One German language",
     "different regional customs"
    ],
-   "body": "The locale is set explicitly; if unknown, it stays unknown and is not assumed to be de-DE. Currency, time zone, du/Sie and house style are never inferred from the country.",
+   "body": "Satzbild works with a profile for each region and adapts to its character—quotation marks, spelling and vocabulary. Regional variants are respected rather than flattened, and the source text is preserved.",
    "cards": [
     {
      "tag": "DE",
      "name": "Germany",
      "code": "de-DE",
-     "p": "Quotation marks „…“ and ‚…‘, with »…« and ›…‹ as alternatives. ß, ẞ and SS stay as supplied and are never silently converted back."
+     "p": "Quotation marks „…“ are the norm, and ß follows a long vowel or diphthong (Straße, heiß)."
     },
     {
      "tag": "AT",
      "name": "Austria",
      "code": "de-AT",
-     "p": "Same quotation marks as de-DE. Regional words such as Jänner or Marille are not standardized, and differences in numbers and euro amounts are kept."
+     "p": "The vocabulary has its own features (Jänner, Marille, Paradeiser), recorded in the Österreichisches Wörterbuch."
     },
     {
      "tag": "CH",
      "name": "Switzerland",
      "code": "de-CH",
-     "p": "Quotation marks «…» and ‹…›; ss is the ordinary convention instead of ß (Strasse). Names and supplied text are preserved; runtime output and cantonal house style are separate profiles."
+     "p": "ss is written instead of ß (Strasse), quotation marks are «…», and Swiss words such as Velo and Trottoir are part of everyday writing."
     }
    ]
   }
@@ -421,25 +421,25 @@
     "同じドイツ語でも",
     "地域の習慣は異なる"
    ],
-   "body": "地域は明示して指定し、不明ならde-DEとみなしません。通貨・タイムゾーン・du/Sie・ハウススタイルも国から推測しません。",
+   "body": "地域ごとのプロファイルを使い分け、引用符・つづり・語彙といった特性に合わせて対応します。地域による違いを一律にそろえず、原文はそのまま保持します。",
    "cards": [
     {
      "tag": "DE",
      "name": "ドイツ",
      "code": "de-DE",
-     "p": "引用符は„…“と‚…‘、代替として»…«と›…‹。ß・ẞ・SSは原稿のまま保持し、勝手に書き換えません。"
+     "p": "引用符は„…“が一般的で、長母音や二重母音の後にはßを使います（Straße）。"
     },
     {
      "tag": "AT",
      "name": "オーストリア",
      "code": "de-AT",
-     "p": "引用符はde-DEと同じ。JännerやMarilleなどの地域語をドイツの語に統一せず、数値とユーロ表記の違いも保持します。"
+     "p": "語彙に独自の特徴があり（Jänner、Marille、Paradeiser）、オーストリア語辞典に記録されています。"
     },
     {
      "tag": "CH",
      "name": "スイス",
      "code": "de-CH",
-     "p": "引用符は«…»と‹…›。通常はßではなくss（Strasse）。固有名と原稿の文字は保持し、runtime出力と州の規程は別プロファイルで扱います。"
+     "p": "ßの代わりにss（Strasse）、引用符は«…»。VeloやTrottoirなどスイス独自の語も使います。"
     }
    ]
   }
