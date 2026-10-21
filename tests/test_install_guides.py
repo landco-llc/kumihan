@@ -58,7 +58,7 @@ class InstallGuides(unittest.TestCase):
         for code in G.editions():
             ed = G.edition(code)
             allowed = {url for h in ed["hosts"].values() for url in
-                       [h["plugin"][1], *(entry[1] for entry in h["skills"].values())]} | {ed["sums"]}
+                       [h["plugin"][1], *(entry[1] for entry in h["skills"].values())]} | {G.sums(ed, h) for h in G.HOSTS}
             for host in G.HOSTS:
                 html = self.files[G.guide_path(code, host, "ja")]
                 zips = set(re.findall(r'href="([^"]+\.zip)"', html))
@@ -66,7 +66,7 @@ class InstallGuides(unittest.TestCase):
                     self.assertTrue(zips)
                     self.assertLessEqual(zips, allowed)
                     self.assertIn(ed["hosts"][host]["plugin"][1], zips)
-                    self.assertIn(f'href="{ed["sums"]}"', html)
+                    self.assertIn(f'href="{G.sums(ed, host)}"', html)
 
     def test_display_name_and_no_stale_version_label(self):
         for code in G.editions():
@@ -84,7 +84,7 @@ class InstallGuides(unittest.TestCase):
                 html = self.files[G.guide_path(code, "claude", lang)]
                 with self.subTest(code=code, lang=lang):
                     self.assertRegex(html, rf'<html lang="{re.escape(attr)}"')
-                    self.assertEqual(len(re.findall(r'rel="alternate" hreflang=', html)), 4)
+                    self.assertEqual(len(re.findall(r'rel="alternate" hreflang=', html)), len({code, "en", "ja"}) + 1)
                     if lang == code and code in G.RTL:
                         self.assertIn('dir="rtl"', html.split(">", 2)[1])
 

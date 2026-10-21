@@ -40,10 +40,10 @@ class ReconciliationTests(unittest.TestCase):
         source = '<html lang="en"><head><title>T</title><meta name="description" content="D"></head></html>'
         page = Page('index.html', seo.enrich_html(source, 'index.html'))
         alternates = dict(page.alternates)
-        self.assertEqual(len(alternates), 37)
+        self.assertEqual(len(alternates), 39)
         self.assertEqual(alternates['en'], seo.CONFIG['site_url'])
         self.assertEqual(alternates['x-default'], seo.CONFIG['site_url'])
-        for lang in ["fa", "km", "zu", "sw", "el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "fi", "sv", "da"]: self.assertIn(lang, alternates)
+        for lang in ["fa", "km", "zu", "sw", "el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "fi", "sv", "da", "no", "uk"]: self.assertIn(lang, alternates)
 
     def test_unknown_share_language_fails(self):
         with self.assertRaises(ValueError): site_share.description('xx', 'Unknown')
@@ -66,7 +66,7 @@ class PrivacyIntegrationTests(unittest.TestCase):
             self.assertEqual(len(page.graphs), 1)
             self.assertEqual(set(dict(page.alternates)), {'en'})
             self.assertEqual(page.meta['og:url'], [page.canonical])
-            self.assertEqual(content.count('class="privacy-language"'), 36)
+            self.assertEqual(content.count('class="privacy-language"'), 38)
             self.assertIn('privacy', content)
 
     def test_privacy_builder_is_checked_by_common_pipeline(self):

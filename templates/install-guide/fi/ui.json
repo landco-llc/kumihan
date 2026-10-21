@@ -1,0 +1,21 @@
+{
+ "skip": "Siirry sisältöön",
+ "nav": "Tekoälyalustat",
+ "language": "Kieli",
+ "home": "KUMIHAN-etusivu",
+ "breadcrumb": "Asennusopas",
+ "toc_title": "Tällä sivulla",
+ "toc_summary": "Näytä sivun sisältö",
+ "platforms": "Valitse tekoälyalusta",
+ "note_title": "INSTALLATION / Ennen kuin aloitat",
+ "note": "Kaikki vaiheet eivät välttämättä ole käytettävissä ympäristössäsi. Varmista toiminta siinä tekoälytyökalussa, jota aiot käyttää.",
+ "source": "Avaa alkuperäiset asennusohjeet",
+ "steps": "Vaiheet ja huomiot",
+ "titles": {"chatgpt": "Asennus: ChatGPT / Codex", "claude": "Asennus: Claude", "gemini": "Asennus: Gemini"},
+ "leads": {
+  "chatgpt": "Valitse taidot tai lisäosa sen mukaan, missä käytät ChatGPT:tä tai Codexia",
+  "claude": "Claude Codeen ja Claude-chattiin asennetaan eri tavoin",
+  "gemini": "Näin asennat Gemini CLI:hin ja Gemini-sovellukseen"
+ },
+ "roles": {"base": "aloituskohta", "web": "verkkosivut", "documents": "raportit ja diat", "review": "tarkistus"}
+}

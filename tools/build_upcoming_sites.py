@@ -1,22 +1,26 @@
 #!/usr/bin/env python3
-"""Build the landings of language editions not yet distributed; --check verifies committed output.
+"""Build the landings of the newer language editions; --check verifies committed output.
 
 KUMIHAN｜Μέτρο (el), Zetwerk (nl), Jalin (ms), Ahenk (tr), מקצב (he), विन्यास (sa),
 Soulad (cs), Arány (hu), ဟန်ချက် (my), Concinnitas (la), Tugma (tl), Rytmi (fi),
-Samspel (sv) and Samklang (da) each get a
+Samspel (sv), Samklang (da, no) and Міра (uk) each get a
 landing in their own language, English and Japanese (kumihan-<code>[.en|.ja].html);
 Measure (en) has an English and a Japanese landing (kumihan-en[.ja].html),
-in the canonical KUMIHAN index structure (tools/product_site.py). Their skills
-have no Release, ZIP, installation guide or public source yet, so the pages say
-"coming soon": skill cards and AI tools are shown without links and the status
-names v0.1.0 as in preparation. Copy lives in assets/upcoming-site-copy.json.
-When an edition is released, give it its own builder with installation guides
-and remove it here.
+in the canonical KUMIHAN index structure (tools/product_site.py). Copy lives in
+assets/upcoming-site-copy.json.
+
+An edition whose packages are in the version catalogue (tools/edition_versions.py) is
+released: skill cards link to its source, AI tools to its installation guides
+(tools/build_install_guides.py) and the version panel shows its packages. The others
+have no package yet, so their pages say "coming soon": skill cards and AI tools are
+shown without links and the status names v0.1.0 as in preparation.
 """
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from seo_adapter import seo_outputs
+from version_display import version_outputs
+import edition_versions as V
 import argparse
 import json
 from importlib.util import module_from_spec, spec_from_file_location
@@ -35,13 +39,15 @@ EDITIONS = {
     "sa": ("विन्यास", "vinyasa", "SA", "सं", "sa_IN", ("क्ष", "↗", "¶", "◎")),
     "cs": ("Soulad", "soulad", "CS", "CS", "cs_CZ", ("Řů", "↗", "¶", "◎")),
     "hu": ("Arány", "arany", "HU", "HU", "hu_HU", ("Őű", "↗", "¶", "◎")),
-    "my": ("ဟန်ချက်", "hanhkyak", "MY", "မြ", "my_MM", ("င်္ဂ", "↗", "¶", "◎")),
+    "my": ("ဟန်ချက်", "my", "MY", "မြ", "my_MM", ("င်္ဂ", "↗", "¶", "◎")),
     "la": ("Concinnitas", "concinnitas", "LA", "LA", "la_VA", ("ā æ", "↗", "¶", "◎")),
     "tl": ("Tugma", "tugma", "TL", "TL", "tl_PH", ("â ñ", "↗", "¶", "◎")),
     "en": ("Measure", "measure", "EN", "EN", "en_US", ("&", "↗", "¶", "◎")),
     "fi": ("Rytmi", "rytmi", "FI", "FI", "fi_FI", ("Ää", "↗", "¶", "◎")),
     "sv": ("Samspel", "samspel", "SV", "SV", "sv_SE", ("Åö", "↗", "¶", "◎")),
-    "da": ("Samklang", "samklang", "DA", "DA", "da_DK", ("Æøå", "↗", "¶", "◎")),
+    "da": ("Samklang", "samklang-da", "DA", "DA", "da_DK", ("Æøå", "↗", "¶", "◎")),
+    "no": ("Samklang", "samklang-no", "NO", "NO", "nb_NO", ("Øy", "↗", "¶", "◎")),
+    "uk": ("Міра", "mira-uk", "UK", "УК", "uk_UA", ("Ґ Ї", "↗", "¶", "◎")),
 }
 RTL = {"he"}
 HOSTS = ("ChatGPT / Codex", "Claude / Claude Code", "Gemini")
@@ -62,12 +68,24 @@ def landing_path(code, lang):
     return f"kumihan-{code}{langs(code)[lang]}.html"
 
 
+def released(code):
+    """True when the edition's packages are in the version catalogue."""
+    return code in V.catalogue()
+
+
+def guide(code, host, lang):
+    from build_install_guides import guide_path
+    return guide_path(code, host, lang)
+
+
 def gateway(code, lang):
     return {"en": "index.html", "ja": "top-ja.html"}.get(lang, f"top-{code}.html")
 
 
 def brand(code):
-    return f'<bdi dir="ltr">KUMIHAN<span class="brand-sub">｜{x(EDITIONS[code][0])}</span></bdi>'
+    # Burmese clusters must not take the brand's negative tracking (see web_fonts.py).
+    lang = ' lang="my"' if code == "my" else ""
+    return f'<bdi dir="ltr">KUMIHAN<span class="brand-sub"{lang}>｜{x(EDITIONS[code][0])}</span></bdi>'
 
 
 def landing(code, lang, c):
@@ -83,12 +101,20 @@ def landing(code, lang, c):
             f'<link rel="icon" href="assets/favicon-32x32.png" type="image/png">\n<link rel="stylesheet" href="assets/{slug}-site.css">')
     names = [f"kumihan-{slug}"] + [f"kumihan-{slug}-{s}" for s in ("web", "documents", "review")]
     switches = {code: switch, "en": "EN", "ja": "日本語"}
+    if released(code):
+        source = f"{REPO}/tree/main/plugins/kumihan-{slug}"
+        skills = [(name, f"{source}/skills/{name}", symbols[i]) for i, name in enumerate(names)]
+        hosts = [(name, guide(code, host, lang)) for host, name in zip(("chatgpt", "claude", "gemini"), HOSTS)]
+        from build_install_guides import edition
+        release = edition(code)["release"]
+    else:
+        skills, hosts, release = [(name, None, symbols[i]) for i, name in enumerate(names)], [(name, None) for name in HOSTS], REPO
     return SITE.landing(dict(
         lang=lang, dir="rtl" if lang in RTL else None, head=head, brand=brand(code), home_label=f"KUMIHAN｜{sub}",
         languages=[(k, switches[k], landing_path(code, k), k == lang) for k in langs(code)],
-        logo=LOGO, repo=REPO, release=REPO, license=REPO + "/blob/main/LICENSE",
-        skills=[(name, None, symbols[i]) for i, name in enumerate(names)],
-        hosts=[(name, None) for name in HOSTS],
+        logo=LOGO, repo=REPO, release=release, license=REPO + "/blob/main/LICENSE",
+        skills=skills,
+        hosts=hosts,
         gateway=(gateway(code, lang), c["gateway_label"]), family=c["family"]), c)
 
 
@@ -211,6 +237,7 @@ RTL_CSS = r"""
 """
 
 
+@version_outputs
 @seo_outputs
 def outputs():
     copy = json.loads((ROOT / "assets" / "upcoming-site-copy.json").read_text(encoding="utf-8"))

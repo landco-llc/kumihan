@@ -64,17 +64,41 @@ def panel(f, lang, slot='current'):
     return f'<!-- edition-version:{slot} --><div {attrs}>{text}</div><!-- /edition-version:{slot} -->'
 
 
+def consumer_archives(code, version):
+    """Offline consumer packages (plugins/<product>/downloads/manifest.json): every ZIP must
+    match the manifest's size and SHA-256 and pass a CRC check, or generation stops."""
+    if code not in v.catalogue(): return frozenset()
+    folder = ROOT / 'plugins' / v.catalogue()[code]['product'] / 'downloads'
+    manifest = folder / 'manifest.json'
+    if not manifest.exists(): return frozenset()
+    data = json.loads(manifest.read_bytes())
+    if data['version'].removeprefix('v') != version:
+        raise ValueError('Consumer package manifest version mismatch: '+code)
+    admitted = set()
+    for row in data['packages']:
+        path = folder / row['file']
+        if not path.resolve().is_relative_to(folder.resolve()):
+            raise ValueError('Package path escapes distribution')
+        content = path.read_bytes()
+        if len(content) != row['bytes'] or hashlib.sha256(content).hexdigest() != row['sha256']:
+            raise ValueError('Package checksum mismatch: '+str(path))
+        with zipfile.ZipFile(path) as archive:
+            if archive.testzip() is not None: raise ValueError('Package CRC mismatch: '+str(path))
+        admitted.add(path.relative_to(ROOT).as_posix())
+    return frozenset(admitted)
+
+
 def role(name): return VERSION.sub('@VERSION@', unquote(Path(urlsplit(unescape(name)).path).name))
 
 
-@lru_cache(maxsize=4)
+@lru_cache(maxsize=64)
 def source_archives(code, version):
     """Admit existing source ZIPs by full path, never by ambiguous basename.
 
     This is an offline source-distribution contract, independent of Releases.
     A missing/corrupt manifest or ZIP aborts generation rather than hiding links.
     """
-    if code not in ('zh-hans', 'zh-hant'): return frozenset()
+    if code not in ('zh-hans', 'zh-hant'): return consumer_archives(code, version)
     product = v.catalogue()[code]['product']
     base = ROOT / 'plugins' / product
     manifests = sorted(base.glob('downloads*/MANIFEST.json'))

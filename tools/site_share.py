@@ -26,7 +26,8 @@ LOCALES = {"ja": "ja_JP", "en": "en_US", "ko": "ko_KR", "zh-hans": "zh_CN", "zh-
            "pt": "pt_PT", "de": "de_DE", "it": "it_IT", "pl": "pl_PL", "id": "id_ID", "ru": "ru_RU", "sw": "sw_TZ",
            "zu": "zu_ZA", "km": "km_KH", "el": "el_GR", "nl": "nl_NL", "ms": "ms_MY", "tr": "tr_TR", "he": "he_IL", "sa": "sa_IN",
            "cs": "cs_CZ", "hu": "hu_HU", "my": "my_MM", "la": "la_VA", "tl": "tl_PH",
-           "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK"}
+           "fi": "fi_FI", "sv": "sv_SE", "da": "da_DK",
+           "no": "nb_NO", "uk": "uk_UA"}
 # A single tag, attributes in any order.
 TAG = re.compile(r'[ \t]*<meta\b(?:\s+[\w:-]+="[^"]*")*\s*/?>\n?')
 SHARED = re.compile(r'\s(?:property="og:|name="twitter:)')
