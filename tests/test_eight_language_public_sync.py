@@ -10,12 +10,14 @@ ED = {'tr':'ahenk','ms':'jalin','hu':'arany','cs':'soulad','la':'concinnitas',
       'he':'miktsav','el':'metro','nl':'zetwerk'}
 
 class EightProductSync(unittest.TestCase):
-    def test_scope_excludes_english_measure(self):
+    def test_eight_family_scope_remains_distinct_from_released_english(self):
         from sys import path
         path.insert(0,str(ROOT/'tools'))
         import edition_versions
-        self.assertNotIn('en',edition_versions.catalogue())
-        # The English edition may exist from an unrelated upstream change; this PR must not alter it.
+        catalogue=edition_versions.catalogue()
+        self.assertEqual(catalogue['en']['product'],'kumihan-measure')
+        self.assertEqual({code: catalogue[code]['product'] for code in ED},
+                         {code: 'kumihan-'+slug for code,slug in ED.items()})
 
     def test_eight_source_packages_and_checksums(self):
         facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']

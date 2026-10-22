@@ -13,7 +13,7 @@ REPO = 'https://github.com/landco-llc/kumihan'
 FACTS = ROOT / 'assets/edition-versions.json'
 # Existing product tag slugs are intentionally independent of language codes.
 PRODUCTS = {
-    'ja': ('', '', 15), 'ar': ('ar', 'ar', 15), 'bn': ('bn', 'bn', 7),
+    'ja': ('', '', 15), 'en': ('measure', 'measure', 15), 'ar': ('ar', 'ar', 15), 'bn': ('bn', 'bn', 7),
     'de': ('satzbild', 'de', 15), 'es': ('grafia', 'grafia', 15),
     'fa': ('fa', 'fa', 15), 'fr': ('accord', 'fr', 15), 'hi': ('hi', 'hi', 15),
     'id': ('laras', 'id', 15), 'it': ('equilibrio', 'it', 15),

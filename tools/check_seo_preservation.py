@@ -21,6 +21,9 @@ def audit(root=ROOT):
                     continue
             if family=='bodies':
                 body=re.search(rb'<body\b[\s\S]*',raw,re.I); raw=body[0] if body else b''
+            from en_measure_release_transition import admitted as en_admitted
+            if en_admitted(root, path, expected, raw):
+                continue
             if hashlib.sha256(raw).hexdigest()!=expected:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors

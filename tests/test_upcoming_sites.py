@@ -18,7 +18,7 @@ import build_gateways as gateways  # noqa: E402
 import build_upcoming_sites as upcoming  # noqa: E402
 
 CODES = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da", "no", "uk")
-RELEASED = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "fi", "sv", "da", "no", "uk")
+RELEASED = ("el", "nl", "ms", "tr", "he", "sa", "cs", "hu", "my", "la", "tl", "en", "fi", "sv", "da", "no", "uk")
 COMING = tuple(c for c in CODES if c not in RELEASED)
 TOPS = tuple(c for c in CODES if c != "en")
 
