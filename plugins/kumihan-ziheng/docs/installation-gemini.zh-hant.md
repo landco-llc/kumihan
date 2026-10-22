@@ -1,52 +1,29 @@
-# KUMIHAN｜字衡 — Gemini / 字衡安裝
+# KUMIHAN｜字衡 — Gemini / 安裝指南
 
-**v0.1.0** — 提供 Gemini CLI 專用擴充功能及 Gemini 應用程式的四個獨立技能 ZIP。
+完整套件與四個獨立技能使用相同的字衡規則。請從對應主機的網站指南取得目前已驗證的公開 ZIP、SHA-256 與版本；不要從日本語 KUMIHAN 的 monorepo 根目錄安裝字衡。
 
-> 此套件只提供組版指引；原生主機的安裝／技能呼叫未於本次測試驗收。請先用臺灣與香港小樣本核對。
+## 目前公開版與下載校驗
 
-## 安裝步驟
+[安裝指南](https://landco-llc.github.io/kumihan/docs/install-ziheng-gemini.html)
 
-**1.** 下載專用的 Gemini CLI 擴充功能 ZIP 並解壓縮至新的空白資料夾。
-
-```sh
-unzip kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip -d /absolute/path/kumihan-ziheng
-```
-
-**2.** 將此資料夾指定給 Gemini CLI 安裝指令，重新啟動工作階段後檢查技能。
+將 Gemini CLI 專用延伸 ZIP 解壓縮到新的本機資料夾，再安裝該資料夾。Gemini 應用程式若提供技能匯入功能，使用個別 Skill ZIP。
 
 ```sh
-gemini extensions install "/absolute/path/kumihan-ziheng"
+gemini extensions install "/absolute/path/to/extracted-ziheng-extension"
 ```
 
-**3.** GitHub monorepo 根目錄屬於「日文 KUMIHAN」擴充功能；不得直接使用根網址安裝並宣稱裝好了字衡。
+## Skills
 
-```sh
-gemini extensions list
-```
+- `kumihan-ziheng`
+- `kumihan-ziheng-web`
+- `kumihan-ziheng-documents`
+- `kumihan-ziheng-review`
 
-**4.** Gemini 應用程式：若帳戶支援技能匯入，請使用下方的單一技能 ZIP，並於該主機重新驗收。
+先備份既有資料夾，校驗 ZIP 後完整替換相同主機與版本的套件，再重新載入。不要混搭不同版本的 references、rules 或 scripts。
 
-## 下載與校驗
+原始碼的 active MANIFEST.json 和 SHA256SUMS.txt 描述本次原始碼配布；它可能比網站的正式公開版新。v0.1.0 與 v0.2.0 的舊 ZIP 保留，原 manifest 與 checksum 在 history/<version>/。
 
-- [下載完整套件 (kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip)](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/extensions/kumihan-ziheng-Gemini-CLI-extension-0.1.0.zip)
-- SHA-256（完整套件）: `6f199799a7905d55636c28cf5598bd143cadc90b7aa2460aa4b7befb9df24e75`
+- [MANIFEST.json](../downloads%20Gemini/MANIFEST.json)
+- [SHA256SUMS.txt](../downloads%20Gemini/SHA256SUMS.txt)
 
-### 四個獨立技能
-
-- [kumihan-ziheng](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-Gemini-Apps-skill-0.1.0.zip)
-- [kumihan-ziheng-web](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-web-Gemini-Apps-skill-0.1.0.zip)
-- [kumihan-ziheng-documents](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-documents-Gemini-Apps-skill-0.1.0.zip)
-- [kumihan-ziheng-review](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Gemini/skills/kumihan-ziheng-review-Gemini-Apps-skill-0.1.0.zip)
-
-臺灣與香港的規則分別對應 zh-Hant-TW、zh-Hant-HK。請明確指定地區並保留原稿。
-
-`shasum -a 256 -c SHA256SUMS.txt`
-
-- [查看原始碼](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng)
-
-- [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng/downloads%20Gemini/SHA256SUMS.txt)
-
-
-Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
-
-Current v0.2.0 full bundle SHA-256: `f535fdd34b66ef3b87d594e80b2fd60396e8ae3d3a8cc014dac71c4f7f36ce71`. The older checksum above applies only to its explicitly named v0.1.0 archive.
+實際主機探索、安裝、技能呼叫與描畫仍需在使用者環境驗收。以 zh-Hant-TW／zh-Hant-HK 及固定原稿測試；直排時分別檢查標點、混排、閱讀順序與 Unicode 序列。

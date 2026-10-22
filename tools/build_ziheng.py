@@ -97,7 +97,7 @@ def plan_outputs(root=ROOT):
                     'LICENSE': shared['LICENSE'],
                     'THIRD_PARTY_NOTICES.md': shared['THIRD_PARTY_NOTICES.md']}
     outputs[f'{PRODUCT}/LICENSE'] = shared['LICENSE']
-    for doc in ['README.md', 'INSTALL.md', 'UPDATES.md']:
+    for doc in ['README.md', 'INSTALL.md', 'UPDATES.md'] + (['VERIFICATION.md'] if version not in ('0.1.0', '0.2.0') else []):
         plugin_files[doc] = (base/doc).read_bytes()
     from legacy_release_documents import documents
     for name,raw in documents(root, f'kumihan-ziheng-{version}.zip').items():

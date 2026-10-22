@@ -33,7 +33,7 @@
   ],
   "concept_body": "字衡把文字組版視為內容設計的一部分。先確認讀者、媒體與地區，再判斷字體、標點、行距、斷行與資訊層次。它不強制所有設計採用同一套字型或固定版型。",
   "features_h2": "閱讀體驗從細節建立",
-  "features_deck": "文字安排要有依據，也要留給設計判斷空間。",
+  "features_deck": "從閱讀與展示的目的出發，分別判斷橫排與直排的文字安排。",
   "features": [
    {
     "mark": "「」",
@@ -47,8 +47,8 @@
    },
    {
     "mark": "Aa 字",
-    "h3": "配合內容設計版面",
-    "p": "按讀者、媒體、層次與實際顯示條件調整版面，而不是套用固定字型配方或同一種卡片模板。"
+    "h3": "直排也從用途開始",
+    "p": "先分辨正文閱讀、展示文案與混合版面，再處理標點、欄距及數字與拉丁字母片段。保留原稿，依實際字型與環境檢視。"
    },
    {
     "mark": "✓",
@@ -109,11 +109,11 @@
   ],
   "install_extra": "也可以直接<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>取得 ZIP</a>，或在 <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> 檢視原始碼。",
   "status_h": "清楚區分已驗證與尚未驗證的範圍",
-  "status_body": "字衡包含 15 條地區規則、16 條共通政策與四個技能。僅有部分靜態子功能可以用程式檢查；實際瀏覽器排版、Word／PDF 與各主機行為不可一概宣稱通過。 v0.2.0 原始碼候選新增語體、角色、原稿權限與證據契約。32個案例是驗證定義；尚未完成的描畫、操作及當地校閱分別記錄。原始碼版本為 v0.2.0；保留的下載連結為 v0.1.0，Release 尚未公開。",
+  "status_body": "四個獨立技能補充直排與橫排的用途判斷、臺港標點體例、字型與混排檢查，以及 30 個直排案例。案例定義、靜態候選、實際描畫、操作及當地校閱分開記錄；瀏覽器、Office／PDF 與輔助技術的效果需在目標環境驗證。正式公開版與原始碼版號請見本頁版本資訊。",
   "cta_h2": "用更慎重的方式對待每一行文字",
   "cta_body": "開放原始碼、可獨立導入，讓文字組版的判斷能夠檢查、說明與改進。",
   "cta_button": "前往 GitHub",
-  "footer_sub": "臺灣／香港繁體中文文字組版 AI 技能。<br>v0.1.0 · Apache-2.0 · 由 L&amp;Co. LLC 開發",
+  "footer_sub": "臺灣／香港繁體中文文字組版 AI 技能。<br>Apache-2.0 · 由 L&amp;Co. LLC 開發",
   "footer_nav": [
    "關於字衡",
    "GitHub",
@@ -121,7 +121,8 @@
    "日文版 KUMIHAN"
   ],
   "lang_label": "Language / 語言 / 言語",
-  "status_title": "RELEASED / v0.2.0"
+  "status_title": "VERTICAL TYPOGRAPHY",
+  "status_link": "取得目前公開 ZIP ↗"
  },
  "en": {
   "description": "KUMIHAN｜字衡 is a set of open-source AI skills for creating and reviewing Traditional Chinese websites, articles, reports, and presentations—with care for readability, layout, and the integrity of your original content.",
@@ -157,7 +158,7 @@
   ],
   "concept_body": "Every brief, audience, and message is different. KUMIHAN｜字衡 helps AI shape typography, spacing, and hierarchy around the meaning and priorities of each piece—rather than applying one template to everything.",
   "features_h2": "Four things worth getting right",
-  "features_deck": "Practical priorities for creating and reviewing Traditional Chinese content.",
+  "features_deck": "Choose horizontal or vertical composition around the purpose of reading and display.",
   "features": [
    {
     "idx": "01 / TYPE",
@@ -168,8 +169,8 @@
    {
     "idx": "02 / STRUCTURE",
     "mark": "▮▮▯",
-    "h3": "Purposeful structure",
-    "p": "Shape the layout around the information, its priority, and the reader’s goal."
+    "h3": "Vertical type with a purpose",
+    "p": "Distinguish reading copy, display copy and hybrid layouts before choosing punctuation, column spacing and treatment of numbers and Latin text. Check the actual font and rendering environment."
    },
    {
     "idx": "03 / FIDELITY",
@@ -238,10 +239,10 @@
    "Setup guide for Gemini CLI and the Gemini app"
   ],
   "install_extra": "You can also <a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>download the ZIP</a> or view the source on <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
-  "status_title": "RELEASED / v0.2.0",
+  "status_title": "VERTICAL TYPOGRAPHY",
   "status_h": "Clear verification boundaries",
-  "status_body": "ZiHeng includes 15 regional rules, 16 shared policies and four skills. Only limited static checks are automated; browser layout, Office/PDF rendering and host behavior are not universally verified. The v0.2.0 source candidate separates register, element role, source permissions and evidence. Its 32 case definitions are separate from rendered, interaction and native-language acceptance. The source version is v0.2.0; retained download links are v0.1.0. No formal Release is published.",
-  "status_link": "Download v0.1.0 ↗",
+  "status_body": "Four independent skills cover purpose-led vertical and horizontal composition, Taiwan and Hong Kong punctuation, font evidence, mixed-script runs and 30 vertical case definitions. Definitions, static candidates, rendered evidence, interaction and native-language review remain separate. Browser, Office/PDF and assistive-technology behavior require checks in the target environment. See the version panels for the published and source versions.",
+  "status_link": "Download current published ZIP ↗",
   "cta_h2": [
    "Another way to design",
    "in Traditional Chinese"
@@ -292,7 +293,7 @@
   ],
   "concept_body": "目的も読み手も違うのに、同じ構成を繰り返さない。文章の意味や情報の優先順位を踏まえて、文字組み・余白・レイアウトを考える。KUMIHAN｜字衡は、デザインを画一化するためではなく、一つひとつの制作物をよりよくするための指針を提供します。",
   "features_h2": "伝えるための4つの視点",
-  "features_deck": "制作と見直しに共通する、KUMIHAN｜字衡が大切にする考え方。",
+  "features_deck": "文章として読むか、グラフィックとして見せるか。用途から横書きと縦書きを考えます。",
   "features": [
    {
     "idx": "01 / TYPE",
@@ -303,8 +304,8 @@
    {
     "idx": "02 / STRUCTURE",
     "mark": "▮▮▯",
-    "h3": "内容に合う構成",
-    "p": "伝える順番と情報の重要度を整理し、目的に合ったレイアウトを考えます。"
+    "h3": "用途から考える縦書き",
+    "p": "本文、見せるコピー、両者を組み合わせた構成を分け、約物、列間、数字や欧文の扱いを選びます。原稿を保持し、実際のフォントと表示環境で確認します。"
    },
    {
     "idx": "03 / FIDELITY",
@@ -373,10 +374,10 @@
    "Gemini CLI・Geminiアプリ向けの導入ガイド"
   ],
   "install_extra": "<a href=\"https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip\" download>ZIPを入手</a>、または <a href=\"https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a> でソースを確認できます。",
-  "status_title": "RELEASED / v0.2.0",
+  "status_title": "VERTICAL TYPOGRAPHY",
   "status_h": "できることと未検証の範囲を明確に",
-  "status_body": "繁体中国語固有の15規則と共通16ポリシー、4スキルを収録。一部の静的チェック以外はガイドラインであり、ブラウザやOffice/PDFの描画、ホストでの実動作を一律に保証しません。 v0.2.0ソース候補では文体・役割・原稿権限と証拠契約を分離しました。32項目の定義と実描画・操作・母語校閲の結果は別に記録します。ソース版は v0.2.0、保持するダウンロードリンクは v0.1.0 です。正式Releaseは未公開です。",
-  "status_link": "v0.1.0のダウンロード ↗",
+  "status_body": "4つの独立スキルに、縦書きと横書きの用途別判断、台湾と香港の約物、フォント情報、混植の確認と30件の縦書きケースを追加。ケース定義、静的な候補、実描画、操作、現地の言語校閲を分けて扱います。ブラウザー、Office／PDF、支援技術の動作は対象環境で確認が必要です。公開版とソース版は本ページのバージョン表示をご確認ください。",
+  "status_link": "現在の公開 ZIPを入手 ↗",
   "cta_h2": [
    "繁体中国語のデザインに",
    "もうひとつの選択肢を"

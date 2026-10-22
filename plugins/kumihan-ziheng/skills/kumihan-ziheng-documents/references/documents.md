@@ -9,3 +9,5 @@
 直排、注音／ruby、複雜分頁與跨應用程式的字型替換僅提供指引。本套件沒有 Office/PDF renderer 或轉檔服務。使用者環境不支援時明示 `unsupported`；尚未執行時標記 `not-checked`。
 
 依 [表現與用途別尺度](expression-and-scale.md) 區分投影、分享、報告與題字；數值為比較起點。地域不明可繼續原稿保護及資訊結構工作。
+
+直排逐段選擇方向、混植、注音與語意標記，參見 [直排布局](vertical-layout.md)。記錄實際 [字型實例](vertical-fonts.md)，原生應用的開啟／編輯／儲存／重新開啟與PDF的搜尋／複製／讀序分開留證；native-application不等於native-proofreading。

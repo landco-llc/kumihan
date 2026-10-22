@@ -1157,6 +1157,930 @@
       ],
       "limits": "Research bibliography; source text described in supplied research, not independently re-fetched in this update",
       "provenance": "Supplied 2026-10-20 research bibliography; access date belongs to research, not this implementation"
+    },
+    {
+      "id": "ZV-S01",
+      "title": "Requirements for Chinese Text Layout / 中文排版需求",
+      "url": "https://www.w3.org/TR/2026/DNOTE-clreq-20261007/",
+      "version": "Group Note Draft, 2026-10-07",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§2.1; §5; §6; §7、特に約物圧縮と中西混植"
+      ],
+      "limits": "Group Note Draft, a work in progress; regional practice is not a universal mandate or browser conformance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-S02",
+      "title": "重訂標點符號手冊 修訂版：修訂說明",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/haushou.htm",
+      "version": "教育部手冊、民国97年12月修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "修訂説明・発行年月・横式と直式の区別"
+      ],
+      "limits": "Taiwan educational editorial guidance; preserve publisher alternatives and supplied source text.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-S03",
+      "title": "重訂標點符號手冊：句號",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h1.htm",
+      "version": "教育部手冊、修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "位置・附注、公式縦式見本、PDF p2/21"
+      ],
+      "limits": "Official text and vertical specimen; not a test of a particular font or renderer.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_specimen_visual_inspection"
+    },
+    {
+      "id": "ZV-S04",
+      "title": "重訂標點符號手冊：引號",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h6.htm",
+      "version": "教育部手冊、修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "位置・説明・西文の注記・公式縦式見本"
+      ],
+      "limits": "Taiwan quotation guidance; does not authorize source conversion or establish one Hong Kong house style.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_specimen_visual_inspection"
+    },
+    {
+      "id": "ZV-S05",
+      "title": "重訂標點符號手冊：破折號・刪節號",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h10.htm",
+      "version": "教育部手冊、修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "位置、刪節号は公式PDF p13/21で確認"
+      ],
+      "limits": "Two-character dash/ellipsis treatment; actual advance, joins and line boundaries require rendering. Ellipsis verified in official PDF because HTML retrieval was corrupted.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_pdf_text_reading"
+    },
+    {
+      "id": "ZV-S06",
+      "title": "重訂標點符號手冊：書名號",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h12.htm",
+      "version": "教育部手冊、修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "位置・附注、縦式見本、PDF p14/21"
+      ],
+      "limits": "Wavy title marks and bracket-style title marks are alternatives. Display exceptions do not authorize deleting marks from fixed prose.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_specimen_visual_inspection"
+    },
+    {
+      "id": "ZV-S07",
+      "title": "重訂標點符號手冊：專名號",
+      "url": "https://language.moe.gov.tw/001/Upload/FILES/SITE_CONTENT/M0001/HAU/h13.htm",
+      "version": "教育部手冊、修訂版",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "位置、公式縦式見本"
+      ],
+      "limits": "Vertical left-side proper-name marking; not a guarantee of a particular application default.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_specimen_visual_inspection"
+    },
+    {
+      "id": "ZV-S08",
+      "title": "政府公文寫作手冊 第三版：總論",
+      "url": "https://www.csb.gov.hk/tc_chi/publications_stat/publication/files/general_principles_3ed.pdf",
+      "version": "政府公文用手冊 第三版、2019",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "本文p2–4、p13、p15、p19"
+      ],
+      "limits": "2019 Hong Kong government correspondence guide; not a universal rule for all Hong Kong publishing.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_pdf_text"
+    },
+    {
+      "id": "ZV-S09",
+      "title": "CSS Writing Modes Level 3",
+      "url": "https://www.w3.org/TR/css-writing-modes-3/",
+      "version": "W3C Recommendation, 2019-12-10",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§3.2、§5.1、§9.1、縦メトリクスとvert/vrt2"
+      ],
+      "limits": "Recommendation defining CSS behavior; implementation support and actual output still need environment-specific verification.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S10",
+      "title": "Unicode UAX #50: Unicode Vertical Text Layout",
+      "url": "https://www.unicode.org/reports/tr50/tr50-35.html",
+      "version": "UAX #50 revision 35, Unicode 18.0.0, 2026-07-31",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§1、§3.1–3.2.4"
+      ],
+      "limits": "Default vertical orientation and typographic character units; not a complete layout-quality test.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S11",
+      "title": "CSS Text Decoration Level 3",
+      "url": "https://www.w3.org/TR/css-text-decor-3/",
+      "version": "Candidate Recommendation Draft, 2022-05-05",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§2.8、§3.4"
+      ],
+      "limits": "Candidate Recommendation Draft. Annotation collisions and application support require separate observation.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S12",
+      "title": "CSS Text Level 3",
+      "url": "https://www.w3.org/TR/css-text-3/",
+      "version": "Candidate Recommendation Draft, 2026-08-14",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§5.1–5.2"
+      ],
+      "limits": "Candidate Recommendation Draft. Source-level break opportunities do not prove rendered line-edge quality.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S13",
+      "title": "CSS Text Level 4",
+      "url": "https://www.w3.org/TR/css-text-4/",
+      "version": "Working Draft, 2026-08-14",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§8.4–8.5"
+      ],
+      "limits": "Working Draft. Do not assume text-autospace or text-spacing-trim support in every engine.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S14",
+      "title": "CSS Ruby Annotation Layout Level 1",
+      "url": "https://www.w3.org/TR/css-ruby-1/",
+      "version": "Working Draft, 2022-12-31",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§3.2、§3.4、§4.1"
+      ],
+      "limits": "Working Draft. Bopomofo base/tone relationships and clipping require actual output and interaction checks.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S15",
+      "title": "Understanding SC 1.3.2: Meaningful Sequence",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html",
+      "version": "WCAG 2.2 Understanding document, informative",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Meaningful Sequence"
+      ],
+      "limits": "Informative WCAG Understanding explanation; no assistive-technology test is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_explanatory_document_text"
+    },
+    {
+      "id": "ZV-S16",
+      "title": "Understanding SC 1.4.10: Reflow",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "version": "WCAG 2.2 Understanding document, informative",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Reflow、縦横スクロールに応じた寸法"
+      ],
+      "limits": "Informative WCAG Understanding explanation. Writing direction and scroll direction are separate.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_explanatory_document_text"
+    },
+    {
+      "id": "ZV-S17",
+      "title": "Understanding SC 1.4.5: Images of Text",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html",
+      "version": "WCAG 2.2 Understanding document, informative",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Images of Text、例外と本質的表現"
+      ],
+      "limits": "Informative WCAG Understanding explanation. Essential images of text have scoped exceptions; alternatives require review.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_explanatory_document_text"
+    },
+    {
+      "id": "ZV-S18",
+      "title": "Unicode UAX #14: Unicode Line Breaking Algorithm",
+      "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "version": "UAX #14 revision 57, Unicode 18.0.0, 2026-09-01",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "§1、§6、§8"
+      ],
+      "limits": "Line-break opportunities and tailoring, not actual line fitting with the selected font.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-S19",
+      "title": "別離前的獨白（括號和破折號）",
+      "url": "https://emm.edcity.hk/media/0_f5bm5500",
+      "version": "公式教育教材ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "教材説明文"
+      ],
+      "limits": "Official educational page text only; video not reviewed and the lesson is not a universal publishing rule.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_educational_page_text"
+    },
+    {
+      "id": "ZV-S20",
+      "title": "Announcing The Unicode Standard, Version 18.0",
+      "url": "https://blog.unicode.org/2026/09/announcing-unicode-standard-version-180.html",
+      "version": "公式公開告知、2026-09-16",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Unicode 18公開の確認"
+      ],
+      "limits": "Release announcement corroborates referenced Unicode document editions; not a typography rule.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_release_announcement_text"
+    },
+    {
+      "id": "ZV-F01",
+      "title": "蘭陽明體的故事（1）巧合",
+      "url": "https://blog.justfont.com/2021/09/story-of-lym-1/",
+      "version": "公式制作記録、2021-09-11",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "『澗于集』との出会い、民初刻本、制作着想"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_designer_account_text"
+    },
+    {
+      "id": "ZV-F02",
+      "title": "日星宋體貳號：數位修復字型，把活字傳下去",
+      "url": "https://blog.justfont.com/2025/06/rixing-song2-revivals/",
+      "version": "公式制作記録、2025-06-19",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "銅模修復、墨の痕跡、デジタル版と用途"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_designer_account_text"
+    },
+    {
+      "id": "ZV-F03",
+      "title": "隆重宣佈｜justfont 的新品種文字（金萱）",
+      "url": "https://blog.justfont.com/2015/08/introducing-jinshuan/",
+      "version": "公式制作記録、2015-08-07、更新注記あり",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "明黒融合、短本文とdisplay、骨格と小中大サイズの精修"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_designer_account_text"
+    },
+    {
+      "id": "ZV-F04",
+      "title": "AR Ming Traditional Chinese UL：書体見本",
+      "url": "https://www.morisawa.co.jp/fonts/specimen/detail/2757",
+      "version": "公式商品見本",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "書体の特徴、繁体圏への設計と長文用途"
+      ],
+      "limits": "Official specimen search excerpt only; full specimen and font binaries not inspected.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_search_result_excerpt"
+    },
+    {
+      "id": "ZV-F05",
+      "title": "北魏真書計劃 Zansyu",
+      "url": "https://talkinghandscreate.com/Zansyu",
+      "version": "公式プロジェクト記録",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "源起、願景、目標、Project Background"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_designer_account_text"
+    },
+    {
+      "id": "ZV-F06",
+      "title": "New Pan-CJK Font Release: Source Han Sans 2.0",
+      "url": "https://blog.adobe.com/en/publish/2018/11/19/new-pan-cjk-font-source-han-sans-2-0",
+      "version": "公式リリース解説、2018-11-19",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "香港向け・HKSCS-2016・注音の改良"
+      ],
+      "limits": "Official release search excerpt only; TC/HK resources are not an acceptance result for all fonts or applications.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_search_result_excerpt"
+    },
+    {
+      "id": "ZV-F07",
+      "title": "Source Han Serif official repository",
+      "url": "https://github.com/adobe-fonts/source-han-serif",
+      "version": "公式ソース・配布リポジトリ、現行ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "現行製品名、Traditional Chinese / Hong Kong資源"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_repository_page_text"
+    },
+    {
+      "id": "ZV-F08",
+      "title": "Noto CJK fonts official repository",
+      "url": "https://github.com/notofonts/noto-cjk",
+      "version": "公式ソース・配布リポジトリ、現行ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "TC / HKの名称、ダウンロードと配布形式"
+      ],
+      "limits": "Official repository search excerpt only; verify the actual distribution and font file for use.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_search_result_excerpt"
+    },
+    {
+      "id": "ZV-F09",
+      "title": "昭源宋體 Chiron Sung HK：README",
+      "url": "https://github.com/chiron-fonts/chiron-sung-hk",
+      "version": "公式リポジトリREADME、現行ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "与上游字體比較、字樣、Locl GSUB功能"
+      ],
+      "limits": "Author-selected Hong Kong print forms differ from handwritten standards; locl presence does not prove regional switching.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_repository_document_text"
+    },
+    {
+      "id": "ZV-F10",
+      "title": "昭源字體 official site",
+      "url": "https://chiron-fonts.github.io/",
+      "version": "公式製品・配布情報、2026-10-22確認",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "現行版、Text家族、HKSCS追加字、ライセンス説明"
+      ],
+      "limits": "Product release and branch descriptions; font name and release label alone do not prove coverage or output quality.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_product_site_text"
+    },
+    {
+      "id": "ZV-F11",
+      "title": "芫荽 / Iansui：README",
+      "url": "https://github.com/ButTaiwan/iansui",
+      "version": "公式リポジトリREADME、現行ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "簡介、收錄字數、字形調整原則"
+      ],
+      "limits": "Klee One-derived Taiwan learning design. Family history does not imply coverage of every Cantonese character.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_repository_document_text"
+    },
+    {
+      "id": "ZV-F12",
+      "title": "蘭陽明體 official specimen",
+      "url": "https://justfont.com/lanyangming/",
+      "version": "公式商品・組見本ページ",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "W2–W7の用途提案、書体の特徴、適用事例"
+      ],
+      "limits": "Primary creator history and product description; not an exhaustive printing history, licensed font bundle or output acceptance result.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_product_site_text"
+    },
+    {
+      "id": "ZV-F13",
+      "title": "文鼎書苑宋：Text / Display設計",
+      "url": "https://www.morisawa-arphic.com.tw/cn/ar-shuyuansong/",
+      "version": "公式書体解説",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "TextとDisplayの用途、横画の太さ、全角符号の幅"
+      ],
+      "limits": "Official product search excerpt only; Text/Display design rationale does not establish universal size thresholds.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_search_result_excerpt"
+    },
+    {
+      "id": "ZV-F14",
+      "title": "華康金剛黑 official site",
+      "url": "https://www.dynacw.com.tw/king/",
+      "version": "公式商品解説",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "画面・印刷、字重階層、多言語対応の制作目的"
+      ],
+      "limits": "Official product search excerpt only; no font binary or output acceptance performed.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_search_result_excerpt"
+    },
+    {
+      "id": "ZV-F15",
+      "title": "OpenType Registered Features: u–z",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/features_uz",
+      "version": "OpenType 1.9.1の登録機能仕様、参照日時点",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "vert、vrt2、vhal、vpal、vkrn、vapk、vchw"
+      ],
+      "limits": "Feature tags describe shaping functions; presence alone does not prove a lookup applies to a target glyph.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-F16",
+      "title": "OpenType vmtx: Vertical Metrics Table",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/vmtx",
+      "version": "OpenType 1.9.1の表仕様、参照日時点",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Overview、Vertical origin and advance height"
+      ],
+      "limits": "Vertical metrics specification; table presence alone does not prove correct alignment.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-F17",
+      "title": "OpenType VORG: Vertical Origin Table",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/vorg",
+      "version": "OpenType 1.9.1の表仕様、参照日時点",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "VORGの適用範囲、vmtxとの関係"
+      ],
+      "limits": "Optional CFF/CFF2 vertical-origin table. Absence in a TrueType font is not itself a defect.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-F18",
+      "title": "OpenType Registered Features: k–o / locl",
+      "url": "https://learn.microsoft.com/en-us/typography/opentype/spec/features_ko",
+      "version": "OpenType 1.9.1の登録機能仕様、参照日時点",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "locl: Localized Forms"
+      ],
+      "limits": "Localized-form substitution mechanism; actual language system and lookup must be traced.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_technical_specification_text"
+    },
+    {
+      "id": "ZV-F19",
+      "title": "芫荽 Issue #20：中文直排時標點符號偏移",
+      "url": "https://github.com/ButTaiwan/iansui/issues/20",
+      "version": "修正済みの歴史的issue、2023",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "作者説明、v1.000でのvrt2表除去、完了記録"
+      ],
+      "limits": "Historical maintainer issue and fix, not proof that every current app/font combination passes.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_maintainer_issue_discussion"
+    },
+    {
+      "id": "ZV-F20",
+      "title": "昭源宋體 Issue #3：字型不支援引號直排輸入",
+      "url": "https://github.com/chiron-fonts/chiron-sung-hk/issues/3",
+      "version": "修正済みの歴史的issue、2022",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "v1.005修正、Word/Webの確認と報告者応答"
+      ],
+      "limits": "Historical maintainer issue and reported Word/Web verification; current versions require independent checking.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_maintainer_issue_discussion"
+    },
+    {
+      "id": "ZV-F21",
+      "title": "芫荽 official release v1.020",
+      "url": "https://github.com/ButTaiwan/iansui/releases/tag/v1.020",
+      "version": "release tag v1.020, published 2025-05-30",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "release metadata、iansui.zip内TTF"
+      ],
+      "limits": "Release tag and inspected binary identity are separate; static inspection is not browser, Office or native-user acceptance.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "official_api_metadata_and_binary_static_inspection"
+    },
+    {
+      "id": "ZV-D01",
+      "title": "文協百年活動網站",
+      "url": "https://e-s.tw/works/tca-100",
+      "version": "2021／Web（制作者によるページモックアップ）／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "制作解説・文協百年全ページモックアップ"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D02",
+      "title": "金山茶葉／金山茶業 Web ファーストビュー",
+      "url": "https://www.a-ark.com.tw/webdesign/types/",
+      "version": "制作年不明（紹介ページ・画像は2026年に確認）／Web（制作会社掲載画像）／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "形象官網の金山茶葉ファーストビュー画像・説明"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D03",
+      "title": "金馬60品牌識別系統",
+      "url": "https://bito.tv/zh-tw/work/163/%E9%87%91%E9%A6%AC-60-%E5%93%81%E7%89%8C%E8%AD%98%E5%88%A5%E7%B3%BB%E7%B5%B1",
+      "version": "2023／映画賞ブランド、ポスター、モーション／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Layoutの中国語直書き／英語横書きとモーションの説明"
+      ],
+      "limits": "Creator description confirms the design; source images were not visually inspected in the research.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D04",
+      "title": "陳幼堅《絲綢之路巡禮名曲集》レコードジャケット",
+      "url": "https://magazine.mplus.org.hk/imaging-cantopop-design-and-performativity-side-a/tc/",
+      "version": "1983／音楽パッケージ／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "陳幼堅《絲綢之路巡禮名曲集》1983の収蔵画像"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D05",
+      "title": "陳幼堅 梅艷芳《壞女孩》バックジャケット",
+      "url": "https://magazine.mplus.org.hk/imaging-cantopop-design-and-performativity-side-a/tc/",
+      "version": "1985／音楽パッケージ／曲目とクレジット／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "陳幼堅 梅艷芳《壞女孩》1985のバックジャケット画像"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D06",
+      "title": "陳幼堅 林子祥演唱會 新聞広告シリーズ",
+      "url": "https://magazine.mplus.org.hk/imaging-cantopop-design-and-performativity-side-a/tc/",
+      "version": "1986–1987（確認画像は1986-12-22、12-27掲載）／新聞広告／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "林子祥演唱會の新聞広告シリーズ、1986-12-22・12-27の2画像"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D07",
+      "title": "Hong Kong Historical Shops／Wholly Wholly Ltd",
+      "url": "https://dfaawards.viewingrooms.com/artworks/10662-hong-kong-historical-shops-wholly-wholly-ltd-hong-kong/",
+      "version": "DFA2025受賞／書籍装丁・背／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Wholly Wholly Ltd作品の書脊・装丁の説明"
+      ],
+      "limits": "Award/project description confirms a signboard reference; no measured general reader emotion or purchase effect.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D08",
+      "title": "天仁茗茶 茶罐設計／FINPO",
+      "url": "https://www.finpo.com.tw/work/%E5%A4%A9%E4%BB%81%E8%8C%97%E8%8C%B6%E7%B3%BB%E5%88%97%E8%8C%B6%E7%BD%90%E8%A8%AD%E8%A8%88",
+      "version": "制作年不明／茶パッケージ／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "高山金萱・凍頂烏龍の缶デザイン画像と解説"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D09",
+      "title": "琅茶 WOLF TEA 2025端午茶禮カタログ",
+      "url": "https://wolftea.com/wp-content/uploads/2025/03/%E7%90%85%E8%8C%B6%EF%BD%9C2O25%E7%AB%AF%E5%8D%88%E8%8C%B6%E7%A6%AE%E7%9B%92%E6%8E%A8%E8%96%A6-3.pdf",
+      "version": "2025／ブランドPDFカタログ／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "PDF第13・14ページ、印刷頁12・13"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D10",
+      "title": "故宮文物月刊411《自然生姿態—于右任書法特展》",
+      "url": "https://www.npm.edu.tw/NewChineseArtDownload.ashx?bid=3392",
+      "version": "2017-06／美術誌の本文・見開き／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "PDF第1・2ページ、故宮文物月刊411の印刷頁42–45"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D11",
+      "title": "江志強《歸真—詠春江志強》",
+      "url": "https://www.jointpublishing.com/publishing/%E6%AD%B8%E7%9C%9F-%E8%A9%A0%E6%98%A5%E6%B1%9F%E5%BF%97%E5%BC%B7/",
+      "version": "2020-07-13／人物・武術ノンフィクション書籍本文／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "出版社書誌と試読PDF第4ページ、印刷頁46–47"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D12",
+      "title": "岳清《紙上戲台—粵劇戲橋珍賞（1910s–2010s）》",
+      "url": "https://www.jointpublishing.com/publishing/%E7%B4%99%E4%B8%8A%E6%88%B2%E5%8F%B0-%E7%B2%B5%E5%8A%87%E6%88%B2%E6%A9%8B%E7%8F%8D%E8%B3%9E%EF%BC%881910s-2010s%EF%BC%89/",
+      "version": "2022／歴史資料集・目次・序文／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "出版社書誌と試読PDF第1・2ページ、目次・序文と歴史資料"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D13",
+      "title": "尤炳軒《香港海水魚類圖鑑》",
+      "url": "https://www.jointpublishing.com/publishing/%E9%A6%99%E6%B8%AF%E6%B5%B7%E6%B0%B4%E9%AD%9A%E9%A1%9E%E5%9C%96%E9%91%91/",
+      "version": "2024-07-01／科学・フィールドガイド／visual-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "出版社書誌と試読PDF第1ページ、印刷頁24–25"
+      ],
+      "limits": "Official work/creator material; observations and stated intent are distinct. No commercial effect or full interaction acceptance is implied.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_official_visual_inspection"
+    },
+    {
+      "id": "ZV-D14",
+      "title": "馬世芳《昨日書》の本文設計記録",
+      "url": "https://vocus.cc/article/602f3b94d110b4bc8a07c1e0",
+      "version": "著者の2010年制作記録、2021年更新／文学書・本文制作／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "本文の字体・列数・字間・行間・余白を比較した制作記録"
+      ],
+      "limits": "Author account of one book design, not a universal column count; images not inspected.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_creator_account_text"
+    },
+    {
+      "id": "ZV-D15",
+      "title": "《當代英雄從台灣出發》",
+      "url": "https://www.bookrep.com.tw/?at=bookcontent&cl=book&id=15820&md=gwindex",
+      "version": "2021-11-17／中国語・ロシア語対訳書／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "出版社掲載の後記、中国語右開き・ロシア語左開きの構成"
+      ],
+      "limits": "Publisher description only; no independent bilingual book interaction test.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D16",
+      "title": "《愛是生命的豐滿—漂鳥集＆新月集》",
+      "url": "https://www.bookrep.com.tw/?at=bookcontent&cl=book&id=21969&md=gwindex",
+      "version": "2026-10-07／翻訳詩集／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "出版社書誌の直排という商品説明"
+      ],
+      "limits": "Publisher explicitly labels a vertical poetry edition; interior visuals and market prevalence not checked.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D17",
+      "title": "劉開工作室《雲門舞集—流浪者之歌 水月》",
+      "url": "https://tcmb.culture.tw/zh-tw/detail?id=11000041358&indexCode=MOCCOLLECTIONS",
+      "version": "1998／舞踊公演ポスター／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "1998年の舞踊公演ポスターの収蔵品記述"
+      ],
+      "limits": "Museum description only; image not visually inspected in the research.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D18",
+      "title": "陳子福《雙拜堂》映画ポスター",
+      "url": "https://collections.nmth.gov.tw/CollectionContent.aspx?RNO=2010.019.1042&a=132",
+      "version": "1965／映画ポスター／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "陳子福《雙拜堂》ポスターの題名配置に関する収蔵品記述"
+      ],
+      "limits": "Museum description only; Taiwanese distribution context and Hong Kong film origin kept distinct.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text"
+    },
+    {
+      "id": "ZV-D19",
+      "title": "pixiv小說・繁体中国語の直排と預覽圖生成器",
+      "url": "https://www.pixiv.help/hc/zh-tw/articles/26538147642265--pixiv%E5%B0%8F%E8%AA%AA%E9%A0%90%E8%A6%BD%E5%9C%96%E7%94%9F%E6%88%90%E5%99%A8-%E5%8A%9F%E8%83%BD%E7%B0%A1%E4%BB%8B",
+      "version": "機能改修公表2026-04-27／ヘルプ2026-10-22確認／オンライン小説・SNS用抜粋画像機能／text-confirmed; UI-control-only visually-inspected",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "公式ヘルプの文字方向選択・抜粋画像生成、2026-04-27機能改修発表"
+      ],
+      "limits": "Official help text and direction-selection controls only; generated output and complete interaction not tested.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_document_text_and_ui_control_visual_inspection_only"
+    },
+    {
+      "id": "ZV-D20",
+      "title": "梅問題 minwt：自分の申時七茶サイトの縦組改修",
+      "url": "https://www.minwt.com/webdesign-dev/css/23738.html",
+      "version": "2022／Web実装の作者記録／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "申時七茶サイトでwriting-modeを用いた改修の説明"
+      ],
+      "limits": "Creator implementation account; not a browser compatibility or typography acceptance test.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_creator_account_text"
+    },
+    {
+      "id": "ZV-D21",
+      "title": "zhung 網頁直式排版初體驗",
+      "url": "https://zhung.com.tw/article/%E7%B6%B2%E9%A0%81%E7%9B%B4%E5%BC%8F%E6%8E%92%E7%89%88%E5%88%9D%E9%AB%94%E9%A9%97/",
+      "version": "2025／2026更新／Web実装の実験記録／text-confirmed",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "縦本文の横方向への拡張・段組・英数字処理の試行"
+      ],
+      "limits": "Creator implementation experiment; short headings do not establish that long vertical text is usable.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_creator_account_text"
+    },
+    {
+      "id": "ZV-R01",
+      "title": "Pan et al. — The Corpus of Bidirectional Reading of Traditional Chinese Text: An Extension of the Multilingual Eye-Movement Corpus",
+      "url": "https://www.nature.com/articles/s41597-026-06989-8",
+      "version": "Scientific Data 13, 628 (2026); DOI 10.1038/s41597-026-06989-8",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Abstract; Methods; Participants; validation"
+      ],
+      "limits": "Primary article text recovered through indexed retrieval; no raw-data reanalysis. Hong Kong university participants and selected reading stimuli limit generalization.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_article_indexed_full_text_and_search_retrieval"
+    },
+    {
+      "id": "ZV-R02",
+      "title": "Wang — To space or not space? Interword spacing effects on Chinese children’s reading materials",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25950240/",
+      "version": "Ergonomics 58(12), 1947–1959 (2015); DOI 10.1080/00140139.2015.1047802",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Abstract and bibliographic record"
+      ],
+      "limits": "Primary abstract only. Children aged 10–11 and selected screen-reading tasks do not establish adult or print preferences.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_article_abstract_only"
+    },
+    {
+      "id": "ZV-R03",
+      "title": "Huang et al. — How the Dominant Reading Direction Changes Parafoveal Processing: A Combined EEG/Eye-Tracking Study",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/psyp.70205",
+      "version": "Psychophysiology 62(12), e70205; first published 2025-12-04",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Abstract; Participants; Methods; Discussion"
+      ],
+      "limits": "Short word-list task and student sample; does not establish long-page usability, purchasing effects or all-age preferences.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_article_full_text"
+    },
+    {
+      "id": "ZV-R04",
+      "title": "Chen et al. — The influence of Chinese typography on information dissemination in graphic design: based on eye-tracking data",
+      "url": "https://www.nature.com/articles/s41598-024-64964-y",
+      "version": "Scientific Reports (2024); DOI 10.1038/s41598-024-64964-y",
+      "kind": "vertical-research-reference",
+      "accessed_at": "2026-10-22",
+      "sections": [
+        "Materials; Subjects; eye-tracking results; limitations"
+      ],
+      "limits": "Simplified Chinese, two posters, one font and brief exposure; not evidence for Traditional Chinese long-form reading or conversion rates.",
+      "provenance": "Primary-source evidence catalogued 2026-10-22. Access date records the research; production output acceptance remains separate.",
+      "evidence_scope": "primary_article_full_text_and_indexed_retrieval"
     }
   ]
 }

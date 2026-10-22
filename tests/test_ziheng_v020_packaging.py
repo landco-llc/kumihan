@@ -17,9 +17,9 @@ class PackagingTests(unittest.TestCase):
             for rel in ['plugins/kumihan-ziheng','skills/kumihan','assets','tools']:
                 shutil.copytree(ROOT/rel,root/rel,ignore=shutil.ignore_patterns('__pycache__'))
             shutil.copy2(ROOT/'LICENSE',root/'LICENSE')
-            old={p.relative_to(root).as_posix():p.read_bytes() for p in (root/'plugins/kumihan-ziheng').rglob('*0.1.0.zip')}
-            self.assertEqual(len(old),15)
-            path=root/'plugins/kumihan-ziheng/plugin.json';m=json.loads(path.read_text());m['version']='0.2.0';path.write_text(json.dumps(m))
+            old={p.relative_to(root).as_posix():p.read_bytes() for p in (root/'plugins/kumihan-ziheng').rglob('*.zip') if p.name.endswith(('-0.1.0.zip','-0.2.0.zip'))}
+            self.assertEqual(len(old),30)
+            path=root/'plugins/kumihan-ziheng/plugin.json';m=json.loads(path.read_text());m['version']='0.2.2';path.write_text(json.dumps(m))
             planned=build_ziheng.plan_outputs(root)
             for rel,b in planned.items():
                 p=root/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
@@ -46,6 +46,7 @@ class PackagingTests(unittest.TestCase):
         from version_display import source_archives
         source_archives.cache_clear()
         self.assertEqual(len(source_archives('zh-hant','0.1.0')),15)
+        self.assertEqual(len(source_archives('zh-hant','0.2.0')),15)
     def test_current_fifteen_archives_crc_size_hash_icons_and_determinism(self):
         import io,zipfile,build_ziheng,build_ziheng_hosts
         first=build_ziheng.plan_outputs(ROOT);second=build_ziheng.plan_outputs(ROOT);self.assertEqual(set(first),set(second))
@@ -53,7 +54,7 @@ class PackagingTests(unittest.TestCase):
         hosts=build_ziheng_hosts.plan_outputs(ROOT);again=build_ziheng_hosts.plan_outputs(ROOT);self.assertTrue(all(v==again[k] for k,v in hosts.items()))
         count=0
         for folder in ['downloads','downloads Claude','downloads Gemini']:
-            data=json.loads((BASE/folder/'MANIFEST.json').read_text());self.assertEqual(data['version'],'0.2.0');self.assertEqual(len(data['archives']),5)
+            data=json.loads((BASE/folder/'MANIFEST.json').read_text());self.assertEqual(data['version'],json.loads((BASE/'plugin.json').read_text())['version']);self.assertEqual(len(data['archives']),5)
             for row in data['archives']:
                 p=BASE/folder/row['file'];raw=p.read_bytes();self.assertEqual(len(raw),row['bytes']);self.assertEqual(hashlib.sha256(raw).hexdigest(),row['sha256'])
                 with zipfile.ZipFile(io.BytesIO(raw)) as z:
@@ -74,7 +75,7 @@ class PackagingTests(unittest.TestCase):
     def test_legacy_url_stays_admitted_after_shared_version_snapshot_updates(self):
         import edition_versions,copy
         from version_display import rewrite_downloads,source_archives
-        f=copy.deepcopy(edition_versions.load()['editions']['zh-hant']);f['source_version']='0.2.0'
+        f=copy.deepcopy(edition_versions.load()['editions']['zh-hant']);f['source_version']='0.2.2'
         path='../plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.1.0.zip'
         out=rewrite_downloads(f'<a href="{path}">History</a>',f)
         self.assertIn('href="'+path+'"',out)

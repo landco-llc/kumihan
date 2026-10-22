@@ -1,0 +1,2956 @@
+{
+  "schema_version": "0.2.2",
+  "title": "KUMIHAN 字衡 vertical fixture contracts",
+  "created_on": "2026-10-22",
+  "document_status": "Shipped original test contracts; typography execution records are separate and not checked.",
+  "counts": {
+    "TW": 12,
+    "HK": 10,
+    "shared": 8,
+    "total": 30
+  },
+  "adoption_map": "../../references/vertical-adoption.json",
+  "text_contract": {
+    "encoding": "UTF-8",
+    "offset_unit": "zero-based Unicode code points",
+    "end_offsets": "exclusive",
+    "offsets_are_not": [
+      "UTF-16 code units",
+      "grapheme-cluster indices"
+    ],
+    "normalization": "none",
+    "digest_scope": "Decoded JSON text value encoded to UTF-8, including literal LF paragraph separators; not the JSON source bytes.",
+    "annotations_scope": "Annotations are separate semantic/ruby data; execution artifacts must additionally hash the full input bundle.",
+    "copy_expectation": "Compare the intended selection against the specified logical text. Record real line-ending behavior and source extraction scope; do not silently normalize away differences."
+  },
+  "allowed_result_statuses": [
+    "passed",
+    "failed",
+    "needs-review",
+    "not-checked",
+    "unsupported",
+    "not-applicable",
+    "waived"
+  ],
+  "current_execution_status": "not-checked",
+  "context_adapter_note": "review_context is an authored test scenario using supported v2 medium and element_role values; it is not automatic classification of customer text. Original research role and medium remain available. Each annotated element needs its own context when reviewing a hybrid page.",
+  "execution_contract": "../../schemas/vertical-evidence-v022.schema.json",
+  "fixtures": [
+    {
+      "id": "V-TW01",
+      "name": "中央点号と縦横対照",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "TW-MOE-reference",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "雨停了，窗外仍有水聲。你聽見了嗎？請慢慢讀；讀完，再往下看。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 30,
+      "text_utf8_sha256": "a6081456d2f46528c61fa2640f0f1f3649b58e1561d878f115013bb5c65e4ffe",
+      "annotations": [],
+      "inspect": [
+        "句号・逗号・疑問符・分号の字面位置",
+        "正方形の字枠と縦送り",
+        "fallback前後の位置"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A05",
+        "V-A09",
+        "V-A11",
+        "V-A14"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "選択した中央点号体例と実glyphが整合する。",
+          "本文中・列端で原稿の符号が保持される。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "同じfont/サイズの横縦対照を作る。",
+        "点号の位置を字枠と対照し、実glyph/担当fontを記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S03",
+        "ZV-F19"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "TW-MOE-reference",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW02",
+      "name": "入れ子の引号",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "TW-corner-outer-single-inner-double",
+      "role": "quotation",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "她說：「我記得老師提醒過：『先看清題目，再動筆。』」",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 26,
+      "text_utf8_sha256": "3afa357a288d6c348744e97b127e140a1d039cba3149f70cd0eaccebbcd1daf2",
+      "annotations": [],
+      "inspect": [
+        "「」と『』の階層",
+        "縦の右上/左下の形",
+        "開始/終了付近の列端"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A05",
+        "V-A06",
+        "V-A07"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "文字列の引号階層を保持し、縦字形が上下を囲む。",
+          "引用の閉じ方と句読点を現地編集者が確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "開始/終了符号の直前直後へ列端が来るようinline-sizeを調整する。",
+        "公式縦式見本と形を照合する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S03",
+        "ZV-S04",
+        "ZV-S09"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "TW-corner-outer-single-inner-double",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW03",
+      "name": "括弧・書名号と禁則",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "TW-MOE-reference",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "先讀《山城筆記》（修訂版），再看〈雨後小記〉；最後寫下自己的想法。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 33,
+      "text_utf8_sha256": "36b5a32044b6386b4379fbd7aa75df1c2cc803e800e8e31f758e5ebe95ee6ec4",
+      "annotations": [],
+      "inspect": [
+        "丸括弧・二重/一重山括弧",
+        "始め括弧の列末と終わり括弧の列頭",
+        "回避後の空白"
+      ],
+      "candidate_ids": [
+        "V-A06",
+        "V-A07",
+        "V-A08",
+        "V-A14"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "採用した禁則に反する端点がない。",
+          "短い列で回避不可能なら理由を記し、文字削除で解消しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "対象符号が最後の一〜二枠に来る複数の列長を作る。",
+        "通常/拡大/fallback後を別々に記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S06",
+        "ZV-S09",
+        "ZV-S12",
+        "ZV-S18"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "TW-MOE-reference",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW04",
+      "name": "二字分ダッシュと六点省略",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "literary-modern-Chinese",
+      "editorial_style": "TW-two-em-punctuation",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "門外傳來熟悉的聲音——她終於回來了。話說到一半，她忽然停住……",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 31,
+      "text_utf8_sha256": "69fcaf1bc5d3b3a4c49f23d62f8d7963115bd8acc17314901047ed47e6138268",
+      "annotations": [],
+      "inspect": [
+        "U+2014×2の接続と送り",
+        "U+2026×2の六点と方向",
+        "単位の途中での改列"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A07",
+        "V-A08",
+        "V-A11"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "選択体例の二字分に相当する連続形が保たれる。",
+          "入力符号を縦用互換文字へ変更しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "約物単位を列中、列末、次列頭の近くに配置する。",
+        "文字列とglyph配置を別に記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S05",
+        "ZV-S09"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "literary-modern-Chinese",
+        "editorial_style": "TW-two-em-punctuation",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW05",
+      "name": "文芸段落の連続性",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "literary-modern-Chinese",
+      "editorial_style": "publisher-style-to-be-selected",
+      "role": "literary-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "暮色沿著窗框慢慢落下，桌上的茶已經涼了。我把書翻回前一頁，想再讀一次那個沒有說完的句子。\n\n巷口傳來腳步聲。有人停了一會兒，又向遠處走去；房間裡只剩下紙張翻動的聲音。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 83,
+      "text_utf8_sha256": "e7fb264735863e4f59f98ac2cd80f5448a1352a496ebc537fb1072b0906c2876",
+      "annotations": [],
+      "inspect": [
+        "段落順・改段落",
+        "列移りと行送り",
+        "字面の黒みと余白",
+        "横組比較"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A04",
+        "V-A07",
+        "V-B07",
+        "V-C01"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "同じ原稿を複数版面で比較する。",
+          "列数や字級に普遍的な最適値を与えず、理解課題と読者条件を記録する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "font/weightを固定し、列長と列間を一変数ずつ比較する。",
+        "文の連続性と段落認識を台湾の対象読者で確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-D10",
+        "ZV-D14",
+        "ZV-D16",
+        "ZV-R01",
+        "ZV-R02"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "literary-modern-Chinese",
+        "editorial_style": "publisher-style-to-be-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW06",
+      "name": "台湾注音と軽声",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "learning-modern-Chinese",
+      "editorial_style": "TW-zhuyin-right",
+      "role": "learning-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "茶涼了，孩子問：「還好嗎？」",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 14,
+      "text_utf8_sha256": "1d0be60ac6bc79334241c5e2a887f0e4e11bc5740f32597417d381903ab17440",
+      "annotations": [
+        {
+          "type": "zhuyin",
+          "text": "茶",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 1,
+          "annotation_text": "ㄔㄚˊ"
+        },
+        {
+          "type": "zhuyin",
+          "text": "好",
+          "start_code_point": 10,
+          "end_code_point_exclusive": 11,
+          "annotation_text": "ㄏㄠˇ"
+        },
+        {
+          "type": "zhuyin",
+          "text": "嗎",
+          "start_code_point": 11,
+          "end_code_point_exclusive": 12,
+          "annotation_text": "˙ㄇㄚ"
+        }
+      ],
+      "inspect": [
+        "基底字と注音",
+        "軽声点・声調",
+        "右側の注音と列間",
+        "検索/コピー/読み上げ"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A06",
+        "V-A10",
+        "V-B04",
+        "V-B10"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "指定した基底と注音の対応が保持される。",
+          "配置と発音を現地校閲し、ATの動作は環境ごとに記録する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "注音を本文に混ぜず構造化して配置する。",
+        "基底を列端へ近づけ、通常/拡大を確認する。",
+        "同一artifactで検索・選択・ATを別々に試す。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S14",
+        "ZV-F06",
+        "ZV-F11"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "learning-modern-Chinese",
+        "editorial_style": "TW-zhuyin-right",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": [
+          "bopomofo"
+        ]
+      }
+    },
+    {
+      "id": "V-TW07",
+      "name": "専名線・書名波線・強調点",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "TW-side-marks",
+      "role": "annotated-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "林青在臺南讀山城筆記，並把慢慢看寫在書籤上。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 22,
+      "text_utf8_sha256": "1d4386f363905720efec02688ee18a470253f93185b93e5ea8c7ad63ebef7afb",
+      "annotations": [
+        {
+          "type": "proper-name-line",
+          "text": "林青",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 2
+        },
+        {
+          "type": "proper-name-line",
+          "text": "臺南",
+          "start_code_point": 3,
+          "end_code_point_exclusive": 5
+        },
+        {
+          "type": "book-title-wavy-line",
+          "text": "山城筆記",
+          "start_code_point": 6,
+          "end_code_point_exclusive": 10
+        },
+        {
+          "type": "emphasis-dot",
+          "text": "慢慢看",
+          "start_code_point": 13,
+          "end_code_point_exclusive": 16
+        }
+      ],
+      "inspect": [
+        "専名線と書名波線は縦左/横下",
+        "強調点は縦右/横下",
+        "注記範囲と隣接列の衝突"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A05",
+        "V-B03",
+        "V-B04"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "指定範囲と線/点の対応が一致する。",
+          "書名はfixture内の架空の書名であり、注記の採用を編集者が確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "横縦対照で左右/上下を確認する。",
+        "字級と列間を変えて注記の衝突を観察する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S06",
+        "ZV-S07",
+        "ZV-S11",
+        "ZV-S14"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "TW-side-marks",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": [
+          "proper-name-mark",
+          "title-mark",
+          "text-emphasis"
+        ]
+      }
+    },
+    {
+      "id": "V-TW08",
+      "name": "数字・時刻・通貨と縦中横",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "diagnostic-data-sequence",
+      "editorial_style": "numeric-style-to-be-selected",
+      "role": "data-label",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "第12頁｜2026年10月22日｜上午9:30｜每盒NT$1,280｜250g",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 39,
+      "text_utf8_sha256": "b3c95ab2e86d6fbcfeb80c2d5b889fbfe3d63f64c711213a5842ed12d3c754dc",
+      "annotations": [],
+      "inspect": [
+        "短い12と長い2026の選択差",
+        "時刻のコロン",
+        "通貨・桁区切り・単位",
+        "読みとコピー"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A12",
+        "V-B02",
+        "V-B06"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "数字、先頭/末尾の記号、単位を保持する。",
+          "2桁等の限定runのみ縦中横を比較し、全数値を一マスにしない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "値ごとに正立/回転/縦中横/別横組を比較する。",
+        "小サイズと拡大で桁を読み取り、コピー値を照合する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S09",
+        "ZV-D09"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "diagnostic-data-sequence",
+        "editorial_style": "numeric-style-to-be-selected",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "data-label",
+        "medium": "web-ui",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW09",
+      "name": "略語と長いLatin run",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "mixed-script-editorial-choice",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "茶席記錄：以 PDF 保存，檔名為 Tea Notes 2026；品牌縮寫為 ABC。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 43,
+      "text_utf8_sha256": "dcf8f25cc6be7024c599f1a8df28aa0e3c007fa10efa1189865226ee64b537fb",
+      "annotations": [],
+      "inspect": [
+        "PDF/ABCとTea Notes 2026のrun区分",
+        "Latin単語内の分断",
+        "中欧文アキと既存空白"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A10",
+        "V-A11",
+        "V-A12",
+        "V-B01"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "文字列と既存空白は保持する。",
+          "向きの選択をrunごとに記録し、文脈に合う読みを確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "短い略語と長いrunを別設定にする。",
+        "選択/コピーと正立/回転の読み順を比較する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S09",
+        "ZV-S10",
+        "ZV-D09",
+        "ZV-D11"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "mixed-script-editorial-choice",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW10",
+      "name": "縦コピーと横の案内・CTA",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "original-promotional-draft",
+      "editorial_style": "element-specific",
+      "role": "composite-page",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "把午後，留給一盞茶。\n單次體驗四十分鐘，請先選擇時段。\n查看可預約時段",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 35,
+      "text_utf8_sha256": "152b73f1c162b325afa2a39790aa99a559b0c38f36d135eaf4bd8385804d2d23",
+      "annotations": [
+        {
+          "type": "element",
+          "text": "把午後，留給一盞茶。",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 10,
+          "element_id": "title",
+          "role": "headline",
+          "expression_mode": "display",
+          "writing_mode": "vertical-rl"
+        },
+        {
+          "type": "element",
+          "text": "單次體驗四十分鐘，請先選擇時段。",
+          "start_code_point": 11,
+          "end_code_point_exclusive": 27,
+          "element_id": "details",
+          "role": "body",
+          "expression_mode": "reading",
+          "writing_mode": "horizontal-tb"
+        },
+        {
+          "type": "element",
+          "text": "查看可預約時段",
+          "start_code_point": 28,
+          "end_code_point_exclusive": 35,
+          "element_id": "action",
+          "role": "cta",
+          "expression_mode": "reading",
+          "writing_mode": "horizontal-tb"
+        }
+      ],
+      "inspect": [
+        "主コピー/条件/CTAの役割",
+        "縦横領域間の読順",
+        "CTAの内容と動作",
+        "未測定の効果主張"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A13",
+        "V-B05",
+        "V-B06",
+        "V-C04"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "架空の体験案内として、コピーと条件を識別できる。",
+          "操作対象は横組候補で比較する。売上や高級感の向上は期待結果に含めない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "題字を縦、案内とCTAを横にした構成を作る。",
+        "DOM/フォーカス順と画面幅の違いを確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "intended_element_order": [
+        "title",
+        "details",
+        "action"
+      ],
+      "fictional_scenario": true,
+      "source_refs": [
+        "ZV-S15",
+        "ZV-S17",
+        "ZV-D02",
+        "ZV-D08",
+        "ZV-D09",
+        "ZV-R03",
+        "ZV-R04"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "original-promotional-draft",
+        "editorial_style": "element-specific",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "composite-page",
+        "medium": "web-marketing",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW11",
+      "name": "短い題字と意図的改列",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "original-literary-short-copy",
+      "editorial_style": "display-composition-to-be-reviewed",
+      "role": "display-headline",
+      "expression_mode": "display",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "雨過山青\n茶醒人靜",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 9,
+      "text_utf8_sha256": "ffaa99d4ef19492a317c3ad89acb92af01c5f992ef7104066dc25d4862885a88",
+      "annotations": [],
+      "inspect": [
+        "二つの短句の関係",
+        "字間・列頭・面積",
+        "名称/意味の判読と代替文字列"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A13",
+        "V-B05",
+        "V-C02",
+        "V-C04"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "改行を含めた元の短句を保持する。",
+          "文芸的表現の自然さと視覚構成を現地校閲する。",
+          "採用した字間はdisplay要素に限定する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "実寸と縮小表示で構成を比較する。",
+        "見た目を使えない場合に取得できる文字列を確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S17",
+        "ZV-D02",
+        "ZV-D03",
+        "ZV-D04",
+        "ZV-D08"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "original-literary-short-copy",
+        "editorial_style": "display-composition-to-be-reviewed",
+        "expression_mode": "display",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "display-headline",
+        "medium": "display-copy",
+        "features": []
+      }
+    },
+    {
+      "id": "V-TW12",
+      "name": "縦読み案内と横組への切替",
+      "group": "TW",
+      "locale": "zh-Hant-TW",
+      "editorial_region": "TW",
+      "register": "modern-written-Chinese",
+      "editorial_style": "TW-corner-quotation",
+      "role": "instruction-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "讀書會須知\n請先完成預約，並保留確認信。若需更改時段，請在活動前聯絡主辦單位。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 39,
+      "text_utf8_sha256": "337c258f3e040766e5236eeef624b37183625d4413c531152e2684a742b7b844",
+      "annotations": [],
+      "inspect": [
+        "本文順と見出し",
+        "縦横切替",
+        "読む位置とフォーカス",
+        "画面内の欠落"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A04",
+        "V-A13",
+        "V-B06",
+        "V-B10",
+        "V-C01"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "切替後も原稿、入力状態、意味のある順序を保持する。",
+          "内容は架空の案内であり実際の予約サービスを指さない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "読書位置を記録して縦→横→縦へ切り替える。",
+        "実UA拡大とキーボード操作を別々に記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S15",
+        "ZV-S16",
+        "ZV-D19",
+        "ZV-D21"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-TW",
+        "editorial_region": "TW",
+        "register": "modern-written-Chinese",
+        "editorial_style": "TW-corner-quotation",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK01",
+      "name": "指定された彎引號を保持する",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "modern-written-Chinese",
+      "editorial_style": "HK-curly-quotation-selected",
+      "role": "quotation",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "她說：“請先閱讀說明，再填寫資料。”同事回應：“我會核對日期和姓名。”",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 35,
+      "text_utf8_sha256": "56943438df476dde9277d5294fe0d4cf9b3b9e3d68ddd7647f277ff5e75bf850",
+      "annotations": [],
+      "inspect": [
+        "彎引號の原稿保全",
+        "選択体例での縦方向/位置",
+        "引用と句読点の関係"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A05",
+        "V-A06",
+        "V-A12"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "HKという理由だけで「」へ変更しない。",
+          "この体例の縦での向き・位置・句読点を担当編集者が確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "横の原稿と縦表示を照合する。",
+        "採用するfontとengineの引用符処理を記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S08",
+        "ZV-S10"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "modern-written-Chinese",
+        "editorial_style": "HK-curly-quotation-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK02",
+      "name": "香港で選ぶ直角引号体例",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "modern-written-Chinese",
+      "editorial_style": "HK-publisher-corner-quotation-selected",
+      "role": "quotation",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "他說：「把『街角記錄』放回書架，再看看那張舊照片。」",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 26,
+      "text_utf8_sha256": "570ce281fd7828fce538d297a00685799f5c982852ea9909710e43b759769d03",
+      "annotations": [],
+      "inspect": [
+        "corner体例を選んだ理由",
+        "入れ子",
+        "列端と縦字形"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A06",
+        "V-A07"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "HK01とは別の選択体例として保持する。",
+          "本文の符号と縦glyphを分離して確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "HK01と地域値を同じにし、editorial_styleだけを切り替える。",
+        "既存原稿の自動符号変換がないことを確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S08",
+        "ZV-S09",
+        "ZV-F20"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "modern-written-Chinese",
+        "editorial_style": "HK-publisher-corner-quotation-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK03",
+      "name": "書面粤語の語体を保持する",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "written-Cantonese-draft-needs-local-review",
+      "editorial_style": "HK-Cantonese-editorial-review-required",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "呢間舖頭嘅招牌仲喺度，佢話明日會再嚟睇。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 20,
+      "text_utf8_sha256": "22444dd6a0265b1a4ac4101890d0651e638262f6fe4b304f2a0e4df74bf4577b",
+      "annotations": [],
+      "inspect": [
+        "粤語字のcoverageと地域glyph",
+        "書面中文への自動書換え",
+        "会話としての自然さ",
+        "縦の語のつながり"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A05",
+        "V-A10",
+        "V-B07"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "文字列を保持して表示する。",
+          "未校閲の自作草案であり、香港の標準的な範文とは扱わない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "実font/fallbackを記録する。",
+        "対象媒体に詳しい香港の編集者が全文を確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-F09",
+        "ZV-F10"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "written-Cantonese-draft-needs-local-review",
+        "editorial_style": "HK-Cantonese-editorial-review-required",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK04",
+      "name": "粤語字と希少字のcoverage",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "diagnostic-character-sequence",
+      "editorial_style": "no-lexical-frequency-claim",
+      "role": "diagnostic-sample",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "喺、嘅、佢、咗、㗎；𫬷、𭉝、㗩。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 16,
+      "text_utf8_sha256": "248f72bded024f1b370f62612e54850f26b1365bb673048e8dc8fca028337660",
+      "annotations": [],
+      "inspect": [
+        "𫬷 U+2BB37、𭉝 U+2D25D、㗩 U+35E9",
+        "cmapと実glyph",
+        "fallbackの縦送り・位置・黒み"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A09",
+        "V-A10",
+        "V-A11",
+        "V-A14",
+        "V-C03"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "コードポイントを分割・置換しない。",
+          "担当fontと欠字/代替を文字ごとに記録する。",
+          "既存の静的検査結果をこのfixtureの実行結果へコピーしない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "新しく指定した実ファイルでcoverageを調べる。",
+        "fallback有/無を別条件で描画し、glyphと送りを比較する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "diagnostic_only": true,
+      "not_a_claim_of_common_usage": true,
+      "source_refs": [
+        "ZV-S10",
+        "ZV-F09",
+        "ZV-F10",
+        "ZV-F11",
+        "ZV-F18",
+        "ZV-F21"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "diagnostic-character-sequence",
+        "editorial_style": "no-lexical-frequency-claim",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "diagnostic-sample",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK05",
+      "name": "香港向け文芸段落",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "literary-modern-Chinese",
+      "editorial_style": "publisher-style-to-be-selected",
+      "role": "literary-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "清晨，他沿著舊街慢慢走。店舖還未開門，牆上的招牌先在日光裡醒來。\n\n他停在轉角，讀了一遍店名，才想起父親說過的往事。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 58,
+      "text_utf8_sha256": "afbbfe415e7665ca0b2af21def6176b41b59ab9d3cad99e4f65f58e9be20098d",
+      "annotations": [],
+      "inspect": [
+        "現代書面中文の保持",
+        "段落間・列移り",
+        "読み課題と版面",
+        "横組との同原稿比較"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A03",
+        "V-A04",
+        "V-B07",
+        "V-C01"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "HK向けを理由に粤語へ書き換えない。",
+          "文面と理解課題を香港の対象読者に確認する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "同じ原稿の横縦を作り、fontと実寸を記録する。",
+        "列長/列間の変更を一変数ずつ比較する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-D07",
+        "ZV-D11",
+        "ZV-R01",
+        "ZV-R02"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "literary-modern-Chinese",
+        "editorial_style": "publisher-style-to-be-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK06",
+      "name": "日付・価格・数量・単位",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "diagnostic-data-sequence",
+      "editorial_style": "numeric-style-to-be-selected",
+      "role": "data-label",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "2026年10月22日｜18:30｜HK$280｜12人｜3.5cm｜編號007",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 40,
+      "text_utf8_sha256": "09bb4a03ce11cd86c66b59806f822db5307e17cc2deebd281c43abb7a695c191",
+      "annotations": [],
+      "inspect": [
+        "長い年と短い日",
+        "価格・時刻・小数",
+        "先頭ゼロ007",
+        "数値と単位の一体性"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A12",
+        "V-B02",
+        "V-B06"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "値、通貨、先頭ゼロ、単位を保持する。",
+          "縦中横等はrun単位の比較案とし、漢数字化はしない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "数値runごとの向きを指定する。",
+        "列端と小サイズ、コピーで値の取り違えを調べる。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S08",
+        "ZV-S09",
+        "ZV-D05",
+        "ZV-D09"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "diagnostic-data-sequence",
+        "editorial_style": "numeric-style-to-be-selected",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "data-label",
+        "medium": "web-ui",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK07",
+      "name": "縦分類ラベルとLatin run",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "diagnostic-label-sequence",
+      "editorial_style": "mixed-script-editorial-choice",
+      "role": "classification-label",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "分類標籤：海水魚類；拉丁字樣：Alpha beta；資料編號：HK-042。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 38,
+      "text_utf8_sha256": "3da7ad1207a66b1aa108a24a413f964504acb176d14eff4c575a4c196bbb3d82",
+      "annotations": [],
+      "inspect": [
+        "分類名とLatin runの役割",
+        "単語の一体性",
+        "ASCIIハイフンを含む識別子"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A12",
+        "V-B01"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "Alpha betaは診断文字列であり実在の学名を主張しない。",
+          "分類名、Latin run、番号を適切な方向で識別できる。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "縦ラベル・回転run・横の補足という構成を比較する。",
+        "番号のコピーと単語の綴りを照合する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S09",
+        "ZV-S10",
+        "ZV-D13"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "diagnostic-label-sequence",
+        "editorial_style": "mixed-script-editorial-choice",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "classification-label",
+        "medium": "web-ui",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK08",
+      "name": "儀礼文の漢数字と指定原稿",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "original-formal-draft",
+      "editorial_style": "ceremonial-vertical-style-to-be-reviewed",
+      "role": "invitation-heading",
+      "expression_mode": "display",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "二〇二六年十月二十二日\n敬邀出席交流會",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 19,
+      "text_utf8_sha256": "f8092032d2cc7bd96b74943a67624504deecea8de1134f2d3cbb7e7419740058",
+      "annotations": [],
+      "inspect": [
+        "〇を含む漢数字",
+        "日付と招待文の区分",
+        "原稿保持と儀礼体例"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A03",
+        "V-B02",
+        "V-B05"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "入力にある漢数字をそのまま保持する。",
+          "公文手冊の用途範囲を参照し、実案件の儀礼/敬語表現を現地校閲する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "日付と表題の列の関係を比較する。",
+        "同じ文面の可読な文字代替を確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "fictional_scenario": true,
+      "source_refs": [
+        "ZV-S08",
+        "ZV-D07"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "original-formal-draft",
+        "editorial_style": "ceremonial-vertical-style-to-be-reviewed",
+        "expression_mode": "display",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "invitation-heading",
+        "medium": "display-copy",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK09",
+      "name": "題字と実用情報のhybrid",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "original-promotional-draft",
+      "editorial_style": "element-specific",
+      "role": "composite-page",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "街角有光\n展覽資料與開放時間\n查看詳情",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 19,
+      "text_utf8_sha256": "620ef4be2a239ed1eb2d7f3cfe0c32555c11b6c358c045f3e86f8c58f5af1882",
+      "annotations": [
+        {
+          "type": "element",
+          "text": "街角有光",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 4,
+          "element_id": "title",
+          "role": "headline",
+          "expression_mode": "display",
+          "writing_mode": "vertical-rl"
+        },
+        {
+          "type": "element",
+          "text": "展覽資料與開放時間",
+          "start_code_point": 5,
+          "end_code_point_exclusive": 14,
+          "element_id": "details",
+          "role": "navigation-label",
+          "expression_mode": "reading",
+          "writing_mode": "horizontal-tb"
+        },
+        {
+          "type": "element",
+          "text": "查看詳情",
+          "start_code_point": 15,
+          "end_code_point_exclusive": 19,
+          "element_id": "action",
+          "role": "cta",
+          "expression_mode": "reading",
+          "writing_mode": "horizontal-tb"
+        }
+      ],
+      "inspect": [
+        "題字の形と読順",
+        "開放時間等へ進める手掛かり",
+        "画像代替とフォーカス",
+        "未測定の商業効果"
+      ],
+      "candidate_ids": [
+        "V-A03",
+        "V-A13",
+        "V-B05",
+        "V-B06",
+        "V-B10",
+        "V-C04"
+      ],
+      "expected": {
+        "classification": [
+          "設計提案",
+          "要現地確認"
+        ],
+        "conditions": [
+          "題字と案内の役割が分かれ、詳細へ到達できる。",
+          "招牌文化への連想は制作仮説として示し、香港の全読者の反応と断定しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "題字の縦と情報の横を同一画面へ配置する。",
+        "実寸・拡大・ATを環境別に確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "intended_element_order": [
+        "title",
+        "details",
+        "action"
+      ],
+      "fictional_scenario": true,
+      "source_refs": [
+        "ZV-S15",
+        "ZV-S17",
+        "ZV-D06",
+        "ZV-D07",
+        "ZV-D12",
+        "ZV-R03",
+        "ZV-R04"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "original-promotional-draft",
+        "editorial_style": "element-specific",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "composite-page",
+        "medium": "web-marketing",
+        "features": []
+      }
+    },
+    {
+      "id": "V-HK10",
+      "name": "隣接約物と条件付き圧縮",
+      "group": "HK",
+      "locale": "zh-Hant-HK",
+      "editorial_region": "HK",
+      "register": "modern-written-Chinese",
+      "editorial_style": "HK-compression-policy-to-be-selected",
+      "role": "body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "他問：“今天開門嗎？”她答：“開門，請進。”（詳情見《街角筆記》。）",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 34,
+      "text_utf8_sha256": "de081b9a3f7514c744186a839a75affa4151228e227362ed85dc46f0aaf77921",
+      "annotations": [],
+      "inspect": [
+        "中央点号と引用符/括弧の隣接",
+        "文中/列端の送り",
+        "CSS/font機能の重複",
+        "全幅条件との比較"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A05",
+        "V-A06",
+        "V-A07",
+        "V-B01",
+        "V-C02"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "未圧縮と選択した圧縮条件を別結果にする。",
+          "縦の：；？！を含め、全約物一律半字化を期待しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "preserve-fullwidthを比較基準にする。",
+        "同一原稿で文中・列端・複数約物の送りを測る。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S01",
+        "ZV-S08",
+        "ZV-S13",
+        "ZV-F15"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant-HK",
+        "editorial_region": "HK",
+        "register": "modern-written-Chinese",
+        "editorial_style": "HK-compression-policy-to-be-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH01",
+      "name": "原稿bytes・異体字・結合列の保全",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "diagnostic-character-sequence",
+      "editorial_style": "preserve-unknown-region",
+      "role": "protected-data",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "原樣資料：臺／台、裏／裡、後／后、發／髮；Café／Café；葛󠄀。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 35,
+      "text_utf8_sha256": "46e3528c797d21c3d364773340db974367ff976451616b91b6c44bd46ddc377e",
+      "annotations": [],
+      "inspect": [
+        "正規化前後で異なるLatin列",
+        "異体字/別字の保持",
+        "IVS-like列の保全",
+        "bytes/code points/抽出の区別"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A02",
+        "V-A10",
+        "V-A14",
+        "V-C03"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "このfixtureのUTF-8文字列hashとcode point列を保存する。",
+          "葛＋U+E0100は保全診断用で、登録collectionや正しい異体glyphを認定しない。",
+          "地域不明のままTW/HK体例を強制しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "文字列の入出力digestを照合する。",
+        "表示とclipboardを別に検証し、Unicode正規化を挟まない。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "ivs_status": "preservation-only-registration-and-glyph-not-verified",
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S10"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "diagnostic-character-sequence",
+        "editorial_style": "preserve-unknown-region",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "protected-data",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH02",
+      "name": "書記素単位の方向とfallback",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "diagnostic-grapheme-sequence",
+      "editorial_style": "orientation-test-no-locale-inference",
+      "role": "mixed-script-sample",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "Café / Ä / 👩‍💻 / 葛󠄀 / KUMIHAN",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 31,
+      "text_utf8_sha256": "cbef6c45a37173809615c85dcd404f9f7835f552a7d75ec2f53cb63d935662a3",
+      "annotations": [],
+      "inspect": [
+        "基底＋結合マーク",
+        "ZWJ絵文字",
+        "基底＋異体字セレクタ",
+        "長いLatin run"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A10",
+        "V-A11",
+        "V-A12"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "方向処理で書記素の内部を分割しない。",
+          "未対応glyphは担当fontとfallbackを記録し、原稿を削除しない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "run単位の方向指定とengine既定を比較する。",
+        "各clusterのglyph列・回転・コピーを確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "ivs_status": "preservation-only-registration-and-glyph-not-verified",
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S10",
+        "ZV-F16",
+        "ZV-F18"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "diagnostic-grapheme-sequence",
+        "editorial_style": "orientation-test-no-locale-inference",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "mixed-script-sample",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH03",
+      "name": "URL・メール・ファイル名",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "diagnostic-data-sequence",
+      "editorial_style": "preserve-exact-identifiers",
+      "role": "reference-data",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "資料：https://example.org/zh-Hant/vertical?q=TW%2FHK&n=12#sample\n電郵：reader@example.org\n檔案：ZH_HANT_v2.0.pdf",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 103,
+      "text_utf8_sha256": "83959812087bb765ab1c46c96ec08f2c6ab1a46b11a39c2d4aeca56cb706f9a3",
+      "annotations": [
+        {
+          "type": "protected-url",
+          "text": "https://example.org/zh-Hant/vertical?q=TW%2FHK&n=12#sample",
+          "start_code_point": 3,
+          "end_code_point_exclusive": 61,
+          "href": "https://example.org/zh-Hant/vertical?q=TW%2FHK&n=12#sample"
+        },
+        {
+          "type": "protected-email",
+          "text": "reader@example.org",
+          "start_code_point": 65,
+          "end_code_point_exclusive": 83
+        },
+        {
+          "type": "protected-filename",
+          "text": "ZH_HANT_v2.0.pdf",
+          "start_code_point": 87,
+          "end_code_point_exclusive": 103
+        }
+      ],
+      "inspect": [
+        "href/表示/コピーの一致",
+        "折返しと識別子",
+        "空白/ZWSPの混入",
+        "フォーカスと操作"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A12",
+        "V-A13",
+        "V-B06",
+        "V-B10"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "URLのquery、fragment、percent-encodingを保持する。",
+          "折返しのために原稿へ空白やZWSPを挿入しない。",
+          "example.orgは診断用で、外部送信は不要。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "狭い領域で方向・折返しを比較する。",
+        "表示文字、link target、clipboardを別々に照合する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "source_refs": [
+        "ZV-S08",
+        "ZV-S09",
+        "ZV-S15"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "diagnostic-data-sequence",
+        "editorial_style": "preserve-exact-identifiers",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "reference-data",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH04",
+      "name": "DOM順と視覚順・コピー",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "diagnostic-instruction-sequence",
+      "editorial_style": "semantic-order-test",
+      "role": "composite-page",
+      "expression_mode": "hybrid",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "先讀主題\n再讀說明\n最後選擇時段",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 16,
+      "text_utf8_sha256": "0941b66e9345b42db3d7294e73e8bb6888a8a860f48c031633c57a3c009921dd",
+      "annotations": [
+        {
+          "type": "element",
+          "text": "先讀主題",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 4,
+          "element_id": "title",
+          "role": "heading",
+          "expression_mode": "reading",
+          "writing_mode": "vertical-rl"
+        },
+        {
+          "type": "element",
+          "text": "再讀說明",
+          "start_code_point": 5,
+          "end_code_point_exclusive": 9,
+          "element_id": "details",
+          "role": "body",
+          "expression_mode": "reading",
+          "writing_mode": "vertical-rl"
+        },
+        {
+          "type": "element",
+          "text": "最後選擇時段",
+          "start_code_point": 10,
+          "end_code_point_exclusive": 16,
+          "element_id": "action",
+          "role": "cta",
+          "expression_mode": "reading",
+          "writing_mode": "horizontal-tb"
+        }
+      ],
+      "inspect": [
+        "DOM/アクセシビリティツリー順",
+        "縦列と横の操作領域",
+        "Tab順",
+        "全文コピー"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A03",
+        "V-A04",
+        "V-A13",
+        "V-A14",
+        "V-B10"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "title→details→actionの意味順を取得できる。",
+          "視覚的な列移動で原稿やDOMを逆順にしない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "構造を3要素として作り、見た目の順とDOM/ツリーを照合する。",
+        "Tab移動、全体選択、コピーを操作で記録する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "intended_element_order": [
+        "title",
+        "details",
+        "action"
+      ],
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S15",
+        "ZV-S17"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "diagnostic-instruction-sequence",
+        "editorial_style": "semantic-order-test",
+        "expression_mode": "hybrid",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "composite-page",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH05",
+      "name": "縦横切替と状態保持",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "modern-written-Chinese",
+      "editorial_style": "preserve-on-switch",
+      "role": "interactive-reading-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "風從右側的窗進來，書頁輕輕翻動。讀完這一段，請查看下一節。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 29,
+      "text_utf8_sha256": "3d4516ea0231a8eb2ec4165a62db8621e8e987d4b03c83e7491c8e3f304e8221",
+      "annotations": [],
+      "inspect": [
+        "切替前後の原稿hash",
+        "論理的な読書位置",
+        "focus/input state",
+        "選択/コピー"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A04",
+        "V-A13",
+        "V-B06",
+        "V-B10"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "切替で文字列、入力値、意味順を変えない。",
+          "読む位置を文字列内の論理位置へ対応させる。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "前半まで読んでfocusと入力状態を記録する。",
+        "縦→横→縦へ切り替え、位置・状態・コピーを照合する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "proposed_auxiliary_input": {
+        "label": "備註",
+        "value": "已閱讀",
+        "proposal": true
+      },
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S15",
+        "ZV-S16",
+        "ZV-D19"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "modern-written-Chinese",
+        "editorial_style": "preserve-on-switch",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": [
+          "writing-mode-switch"
+        ]
+      }
+    },
+    {
+      "id": "V-SH06",
+      "name": "拡大・reflow・列端の統合",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "modern-written-Chinese",
+      "editorial_style": "locale-neutral-until-selected",
+      "role": "reading-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "她翻開《新頁》（試讀本），讀到最後一行時停了下來。「這段話還有下文嗎？」她問。回答只寫了一半——其餘的內容，要到下一節才能看見。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 64,
+      "text_utf8_sha256": "1139243fceeecb5bec0278222ff5109651bffd9a3e2d9779264db9009c8412de",
+      "annotations": [],
+      "inspect": [
+        "高さ256 CSS pxの横スクロール縦組",
+        "幅320 CSS pxの縦スクロール横組",
+        "実UA 200%/400%",
+        "欠落/二方向往復/列端"
+      ],
+      "candidate_ids": [
+        "V-A04",
+        "V-A06",
+        "V-A07",
+        "V-B06",
+        "V-B07",
+        "V-C02"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "対応する書字方向のreflow条件で情報が失われない。",
+          "例外は必要な二次元領域に限定して記録する。",
+          "CSS scaleのみの検査を実UA拡大と扱わない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "横/縦それぞれに対応するviewport条件を作る。",
+        "実UAの拡大方法と取得した寸法を記録する。",
+        "約物と長いrunのある列端を観察する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "viewport_conditions": [
+        {
+          "writing_mode": "vertical-rl",
+          "primary_scroll_axis": "horizontal",
+          "constraint": "height=256 CSS px",
+          "basis": "S16"
+        },
+        {
+          "writing_mode": "horizontal-tb",
+          "primary_scroll_axis": "vertical",
+          "constraint": "width=320 CSS px",
+          "basis": "S16"
+        }
+      ],
+      "source_refs": [
+        "ZV-S09",
+        "ZV-S12",
+        "ZV-S15",
+        "ZV-S16",
+        "ZV-S18"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "modern-written-Chinese",
+        "editorial_style": "locale-neutral-until-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-editorial",
+        "features": []
+      }
+    },
+    {
+      "id": "V-SH07",
+      "name": "Office原生形式とPDFの分離",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "modern-written-Chinese",
+      "editorial_style": "document-editorial-style-to-be-selected",
+      "role": "document-body",
+      "expression_mode": "reading",
+      "medium": "office-and-pdf",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "標題：閱讀的方向\n她說：「同一份文字，應能被搜尋、選取與閱讀。」\n資料編號：A-12；日期：2026-10-22。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 57,
+      "text_utf8_sha256": "d08fac291e78d4be3d1fc904ce8d8049283e388998ed3f82df88e8e76af94762",
+      "annotations": [],
+      "inspect": [
+        "Office保存/再開/編集後の縦組",
+        "PDFのglyphと埋込/置換",
+        "検索/選択/コピー/抽出順",
+        "artifactごとのdigest"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A09",
+        "V-A11",
+        "V-A14",
+        "V-B08",
+        "V-B09"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件"
+        ],
+        "conditions": [
+          "nativeファイルとPDFの結果を別に記録する。",
+          "画面の良好な表示だけで抽出や再編集を合格にしない。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "指定Office版で編集・保存・再開する。",
+        "指定経路でPDFへ書き出し、viewerで表示と操作を確認する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "artifact_stages": [
+        {
+          "stage": "source",
+          "status": "not-checked",
+          "digest": null
+        },
+        {
+          "stage": "office-native",
+          "status": "not-checked",
+          "digest": null
+        },
+        {
+          "stage": "exported-pdf",
+          "status": "not-checked",
+          "digest": null
+        }
+      ],
+      "source_refs": [
+        "ZV-S15",
+        "ZV-F16",
+        "ZV-F17",
+        "ZV-F20"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "modern-written-Chinese",
+        "editorial_style": "document-editorial-style-to-be-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "report-document",
+        "features": [
+          "pdf-export",
+          "native-office"
+        ]
+      }
+    },
+    {
+      "id": "V-SH08",
+      "name": "AT・ruby・強調・リンクの相互作用",
+      "group": "shared",
+      "locale": "zh-Hant",
+      "editorial_region": "unknown",
+      "register": "modern-written-Chinese",
+      "editorial_style": "annotation-policy-to-be-selected",
+      "role": "annotated-interactive-body",
+      "expression_mode": "reading",
+      "medium": "web",
+      "writing_mode": "vertical-rl",
+      "source_policy": "fixed",
+      "origin": "original-research-fixture-not-a-published-example",
+      "text": "茶香未散。請閱讀說明，再開啟下一頁。",
+      "text_encoding": "UTF-8",
+      "text_code_point_count": 18,
+      "text_utf8_sha256": "8c4d1aebfeeae74052e919bf7efd75ce45668cd84ef7737cd7f3c35b50381d35",
+      "annotations": [
+        {
+          "type": "zhuyin",
+          "text": "茶",
+          "start_code_point": 0,
+          "end_code_point_exclusive": 1,
+          "annotation_text": "ㄔㄚˊ",
+          "applies_only_if": "TW-zhuyin-policy-selected"
+        },
+        {
+          "type": "emphasis-dot",
+          "text": "閱讀說明",
+          "start_code_point": 6,
+          "end_code_point_exclusive": 10
+        },
+        {
+          "type": "link",
+          "text": "下一頁",
+          "start_code_point": 14,
+          "end_code_point_exclusive": 17,
+          "href": "https://example.org/next"
+        }
+      ],
+      "inspect": [
+        "基底とrubyの読順/重複",
+        "強調範囲と意味",
+        "link labelとfocus",
+        "横縦の操作差"
+      ],
+      "candidate_ids": [
+        "V-A01",
+        "V-A13",
+        "V-A14",
+        "V-B03",
+        "V-B04",
+        "V-B10"
+      ],
+      "expected": {
+        "classification": [
+          "仕様条件",
+          "要現地確認"
+        ],
+        "conditions": [
+          "視覚配置、DOM、コピー、読み上げを別結果にする。",
+          "注音採用時はTWの注音方針を明示し、地域未知の一般既定にはしない。",
+          "対象ATの機能不足は理由付きunsupportedとして区別する。"
+        ],
+        "not_an_execution_result": true
+      },
+      "proposed_procedures": [
+        "地域/注音の採用条件を確定したvariantを作る。",
+        "OS/UA/AT/音声を記録して見出し・リンク・rubyを実操作する。"
+      ],
+      "variants": [
+        {
+          "id": "horizontal-reference",
+          "writing_mode": "horizontal-tb",
+          "proposal": true
+        },
+        {
+          "id": "vertical-baseline",
+          "writing_mode": "vertical-rl",
+          "text_orientation": "mixed",
+          "proposal": true
+        }
+      ],
+      "execution_status_by_method": {
+        "static": "not-checked",
+        "rendered": "not-checked",
+        "interaction": "not-checked",
+        "native-application": "not-checked",
+        "native-proofreading": "not-checked"
+      },
+      "status": "not-checked",
+      "result": null,
+      "execution_evidence": [],
+      "variant_precondition": "注音の検証variantではlocale=zh-Hant-TWと注音体例を明示する。shared分類は操作契約が共通であることを意味する。",
+      "source_refs": [
+        "ZV-S11",
+        "ZV-S14",
+        "ZV-S15",
+        "ZV-S17"
+      ],
+      "review_context": {
+        "content_locale": "zh-Hant",
+        "editorial_region": "unknown",
+        "register": "modern-written-Chinese",
+        "editorial_style": "annotation-policy-to-be-selected",
+        "expression_mode": "reading",
+        "writing_mode": "vertical-rl",
+        "source_policy": "fixed",
+        "element_role": "prose",
+        "medium": "web-ui",
+        "features": [
+          "bopomofo",
+          "text-emphasis",
+          "assistive-technology"
+        ]
+      }
+    }
+  ]
+}
