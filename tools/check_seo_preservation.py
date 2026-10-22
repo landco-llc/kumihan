@@ -36,6 +36,10 @@ def audit(root=ROOT):
             from ziheng_v022_transition import admitted as ziheng_admitted
             if ziheng_admitted(root,path,expected,raw,family):
                 continue
+            from zilu_v012_transition import allowed as zilu_allowed
+            if zilu_allowed(path,family,root): continue
+            from ziheng_zilu_source_composition import admitted as composed_admitted
+            if composed_admitted(root,path,expected,raw,family): continue
             if hashlib.sha256(raw).hexdigest()!=expected:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors

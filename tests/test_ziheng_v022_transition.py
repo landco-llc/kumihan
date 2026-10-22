@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
 from check_seo_preservation import audit  # noqa: E402
+from ziheng_zilu_source_composition import ziheng_source_bytes  # noqa: E402
 from locale_resolver import resolve_context, resolve_rules  # noqa: E402
 from ziheng_v022_transition import (  # noqa: E402
     BASELINE, BASELINE_SHA256, BASE_COMMIT, LOCALE_BASELINE,
@@ -29,10 +30,7 @@ def digest(value):
 
 
 def scoped_bytes(path, family):
-    raw = (ROOT / path).read_bytes()
-    if family == "bodies":
-        raw = re.search(rb"<body\b[\s\S]*", raw, re.I)[0]
-    return raw
+    return ziheng_source_bytes(ROOT, path, family)
 
 
 def write_contract_root(root, record):
@@ -99,7 +97,7 @@ class ZihengV022Transition(unittest.TestCase):
         self.assertEqual(change["after_line"], change["preimage_line"].replace(
             "| v0.2.0 |", "| v0.2.2 |", 1))
         self.assertIn("Published **v0.2.0**", change["after_line"])
-        raw = (ROOT / "README.md").read_bytes()
+        raw = scoped_bytes("README.md", "protected")
         previous = raw.replace(change["after_line"].encode(), change["preimage_line"].encode(), 1)
         self.assertEqual(sha(previous), self.record["paths"]["README.md"]["preimage_sha256"])
 
@@ -140,7 +138,7 @@ class ZihengV022Transition(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             write_contract_root(root, tampered)
-            self.assertFalse(admitted(root, name, row["before"], (ROOT / name).read_bytes(), "protected"))
+            self.assertFalse(admitted(root, name, row["before"], scoped_bytes(name, "protected"), "protected"))
 
     def test_rebaselined_original_contract_is_rejected(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -148,14 +146,14 @@ class ZihengV022Transition(unittest.TestCase):
             write_contract_root(root, self.record)
             name = "README.md"
             row = self.record["paths"][name]
-            self.assertTrue(admitted(root, name, row["before"], (ROOT / name).read_bytes(), "protected"))
+            self.assertTrue(admitted(root, name, row["before"], scoped_bytes(name, "protected"), "protected"))
             (root / BASELINE).write_bytes((root / BASELINE).read_bytes() + b" ")
-            self.assertFalse(admitted(root, name, row["before"], (ROOT / name).read_bytes(), "protected"))
+            self.assertFalse(admitted(root, name, row["before"], scoped_bytes(name, "protected"), "protected"))
 
     def test_old_zip_remains_frozen_in_full_preservation_audit(self):
         name = next(path for path in self.baseline["protected"]
                     if path.startswith("plugins/kumihan-ziheng/") and path.endswith(".zip"))
-        raw = (ROOT / name).read_bytes()
+        raw = scoped_bytes(name, "protected")
         before = self.baseline["protected"][name]
         self.assertEqual(sha(raw), before)
         self.assertFalse(admitted(ROOT, name, before, raw, "protected"))

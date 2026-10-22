@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.2",
   "reviewed_on": "2026-10-18",
   "note": "Public references only; no articles, images or font binaries redistributed. Research retrieval status is historical evidence, not a new fetch.",
   "sources": [
@@ -718,6 +718,46 @@
       "accessed": "2026-10-18",
       "sections": "SIL Open Font License 1.1",
       "evidence_type": "license-primary"
+    },
+    {
+      "id": "ZV-GB-PUNCT",
+      "title": "标点符号用法",
+      "url": "https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091548267.pdf",
+      "classification": "normative-in-selected-scope",
+      "version": "GB/T 15834-2011 §5.2.4 and selected clauses",
+      "retrieval": "Reference adopted from reviewed source; no new network verification claimed."
+    },
+    {
+      "id": "ZV-GB-NUM",
+      "title": "出版物上数字用法",
+      "url": "https://www.moe.gov.cn/ewebeditor/uploadfile/2015/01/13/20150113091154536.pdf",
+      "classification": "normative-in-selected-scope",
+      "version": "GB/T 15835-2011 selected scope",
+      "retrieval": "Reference adopted from reviewed source; no new network verification claimed."
+    },
+    {
+      "id": "ZV-CSS",
+      "title": "CSS Writing Modes",
+      "url": "https://www.w3.org/TR/css-writing-modes-3/",
+      "classification": "technical",
+      "version": "Level 3 §5.1.2",
+      "retrieval": "Reference adopted from reviewed source; no new network verification claimed."
+    },
+    {
+      "id": "ZV-CLREQ",
+      "title": "Chinese Text Layout",
+      "url": "https://www.w3.org/TR/2026/DNOTE-clreq-20261007/",
+      "classification": "technical",
+      "version": "2026-10-07 Draft Note",
+      "retrieval": "Reference adopted from reviewed source; no new network verification claimed."
+    },
+    {
+      "id": "ZV-WCAG",
+      "title": "WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "classification": "normative-in-selected-scope",
+      "version": "2.2 SC1.4.4/1.4.10/1.4.12",
+      "retrieval": "Reference adopted from reviewed source; no new network verification claimed."
     }
   ]
 }

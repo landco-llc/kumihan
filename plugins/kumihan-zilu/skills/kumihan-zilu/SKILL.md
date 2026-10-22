@@ -16,3 +16,5 @@ description: "用于简体中文入口与范围，保护原稿并区分静态与
 可选离线辅助：`python scripts/checks.py original.txt --candidate candidate.txt`。输出 JSON；不渲染或改写。 / Optional offline helper compares complete text and prints JSON; it does not render or edit.
 
 示例：请保留原文检查这个页面。 / Example: Review this page while preserving its source text.
+
+纵排任务先选择目的，再读 [纵排指引](references/vertical.md) 与 `rules/vertical.json`；使用 `profiles/cn-vertical-*.json` 或 `profiles/cn-classical-reference.json`。保留原稿，按媒体实测。 / For vertical tasks select a purpose, consult vertical guidance and rules, preserve source and validate target output.

@@ -11,6 +11,8 @@ sys.path.insert(0, str(ROOT / "tools"))
 from en_measure_release_transition import admitted, RECORD, TAG  # noqa: E402
 from check_seo_preservation import audit  # noqa: E402
 from ziheng_v022_transition import admitted as ziheng_admitted  # noqa: E402
+from ziheng_zilu_source_composition import admitted as composed_admitted  # noqa: E402
+from zilu_v012_transition import EXPECTED, BODY_EXPECTED  # noqa: E402
 
 
 class EnglishReleaseTransition(unittest.TestCase):
@@ -28,8 +30,10 @@ class EnglishReleaseTransition(unittest.TestCase):
             if row["family"] == "bodies":
                 content = re.search(rb"<body\b[\s\S]*", content, re.I)[0]
             current_hash=hashlib.sha256(content).hexdigest()
-            if not ziheng_admitted(ROOT, name, row["before"], content, row["family"]):
-                self.assertEqual(current_hash, later.get(name, {}).get("after", row["after"]))
+            if not (composed_admitted(ROOT, name, row["before"], content, row["family"]) or
+                    ziheng_admitted(ROOT, name, row["before"], content, row["family"])):
+                zilu = EXPECTED if row["family"] == "protected" else BODY_EXPECTED
+                self.assertEqual(current_hash, zilu.get(name, later.get(name, {}).get("after", row["after"])))
             if name not in later:
                 self.assertTrue(admitted(ROOT, name, row["before"], content))
             else:

@@ -10,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PRODUCT = 'plugins/kumihan-zilu'
+VERSION = '0.1.2'
 NAMES = ('kumihan-zilu', 'kumihan-zilu-web', 'kumihan-zilu-documents', 'kumihan-zilu-review')
 
 
@@ -39,9 +40,10 @@ def plan_outputs(root=ROOT):
     root = Path(root)
     base = root / PRODUCT
     manifest = json.loads((base/'plugin.json').read_text())
-    if (manifest['name'],manifest['version']) != ('kumihan-zilu','0.1.0'):
+    if (manifest['name'],manifest['version']) != ('kumihan-zilu',VERSION):
         raise ValueError('Unexpected ZiLu identity/version')
     shared = {'rules/catalog.json':(base/'rules/zh-hans-cn.json').read_bytes(),
+              'rules/vertical.json':(base/'rules/vertical.json').read_bytes(),
               'sources/public-sources.json':(base/'sources.json').read_bytes(),
               'scripts/checks.py':(base/'runtime/checks.py').read_bytes(),
               'LICENSE':(root/'LICENSE').read_bytes(),
@@ -58,6 +60,7 @@ def plan_outputs(root=ROOT):
     plugin = {p:(base/p).read_bytes() for p in ('plugin.json','README.md','README.en.md','INSTALL.md','UPDATES.md','THIRD_PARTY_NOTICES.md')}
     plugin['LICENSE'] = shared['LICENSE']
     plugin['rules/zh-hans-cn.json'] = shared['rules/catalog.json']
+    plugin['rules/vertical.json'] = shared['rules/vertical.json']
     plugin['sources.json'] = shared['sources/public-sources.json']
     logo = 'assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'
     plugin[logo] = (root/logo).read_bytes()
@@ -71,13 +74,13 @@ def plan_outputs(root=ROOT):
     for name in NAMES:
         files = dict(shared)
         files['SKILL.md'] = (base/'entrypoints'/f'{name}.md').read_bytes()
-        files['inventory.json'] = encode(dict(skill=name, version='0.1.0',
+        files['inventory.json'] = encode(dict(skill=name, version=VERSION,
             files=[dict(path=p, bytes=len(b), sha256=digest(b)) for p,b in sorted(files.items())]))
         skills[name] = files
         for p,b in files.items():
             outputs[f'{PRODUCT}/skills/{name}/{p}'] = b
             plugin[f'skills/{name}/{p}'] = b
-    archives = {'plugins/kumihan-zilu-plugin-v0.1.0.zip':archive({'kumihan-zilu/'+p:b for p,b in plugin.items()})}
+    archives = {f'plugins/kumihan-zilu-plugin-v{VERSION}.zip':archive({'kumihan-zilu/'+p:b for p,b in plugin.items()})}
     for host in ('claude','gemini'):
         host_files = {p:b for p,b in plugin.items() if p not in ('plugin.json','.codex-plugin/plugin.json')}
         for p in (['.claude-plugin/plugin.json'] if host=='claude' else ['gemini-extension.json','GEMINI.md']):
@@ -85,15 +88,15 @@ def plan_outputs(root=ROOT):
         # Gemini requires gemini-extension.json at the directory passed to install.
         prefix = 'kumihan-zilu/' if host=='claude' else ''
         kind = 'claude-plugin' if host=='claude' else 'gemini-extension'
-        archives[f'{host}/kumihan-zilu-{kind}-v0.1.0.zip'] = archive({prefix+p:b for p,b in host_files.items()})
+        archives[f'{host}/kumihan-zilu-{kind}-v{VERSION}.zip'] = archive({prefix+p:b for p,b in host_files.items()})
     for i,name in enumerate(NAMES):
         role = ('entry','web','documents','review')[i]
         for host in ('','claude','gemini'):
             folder = host or 'skills'
             host_suffix = '-'+host if host else ''
             # All three support directory-based agent skills. App upload support is host-dependent.
-            archives[f'{folder}/kumihan-zilu-{role}{host_suffix}-skill-v0.1.0.zip'] = archive({name+'/'+p:b for p,b in skills[name].items()})
-    meta = dict(product='KUMIHAN｜字律', name='kumihan-zilu', version='0.1.0',locale='zh-Hans-CN',
+            archives[f'{folder}/kumihan-zilu-{role}{host_suffix}-skill-v{VERSION}.zip'] = archive({name+'/'+p:b for p,b in skills[name].items()})
+    meta = dict(product='KUMIHAN｜字律', name='kumihan-zilu', version=VERSION,locale='zh-Hans-CN',
         native_host_invocation='NOT_CHECKED', marketplace_listing='NOT_VERIFIED',
         archives=[dict(file=p,bytes=len(b),sha256=digest(b)) for p,b in sorted(archives.items())])
     archives['MANIFEST.json'] = encode(meta)
@@ -110,7 +113,9 @@ def main():
     changed = [p for p,b in outputs.items() if not (ROOT/p).is_file() or (ROOT/p).read_bytes()!=b]
     generated = {p.relative_to(ROOT).as_posix() for folder in ('skills','downloads','assets','.codex-plugin')
                  for p in (ROOT/PRODUCT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
-    stale = generated-set(outputs)
+    # Retain immutable older release ZIPs; only current generated sources are pruned.
+    retained = {p for p in generated if '/downloads/history/' in p or ('/downloads/' in p and p.endswith('.zip') and f'-v{VERSION}.zip' not in p)}
+    stale = generated-set(outputs)-retained
     if args.check:
         for p in sorted(set(changed)|stale):print('out of date: '+p)
         if changed or stale:return 1

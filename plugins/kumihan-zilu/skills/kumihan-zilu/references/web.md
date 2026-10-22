@@ -12,3 +12,5 @@ Review text-autospace and spacing-trim separately with support checks; preserve 
 
 验收 320/375/768/1440 CSS px、200%文字、用户间距覆盖、键盘和焦点、语义标签与语言、CTA实际行为。检查数值单位、URL、长名称与底部内容。不得缩小或裁剪内容来隐藏失败。
 Test widths, text resize, spacing overrides, keyboard, semantics and real actions. Record browser, viewport, font and evidence. Static checks, screenshots and human judgment stay separate.
+
+纵排参见 [purpose and target-output checks](vertical.md)。26项分开记录指导、静态与实测范围，未检查不是合格。

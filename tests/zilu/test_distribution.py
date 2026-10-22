@@ -21,7 +21,7 @@ class Distribution(unittest.TestCase):
         m=self.builder();a=m.plan_outputs();self.assertEqual(a,m.plan_outputs())
         zips={p:b for p,b in a.items() if p.endswith('.zip')};self.assertEqual(len(zips),15)
         for path,raw in zips.items():
-            self.assertIn('v0.1.0',path)
+            self.assertIn('v0.1.2',path)
             with zipfile.ZipFile(io.BytesIO(raw)) as z:
                 self.assertIsNone(z.testzip());names=z.namelist();self.assertEqual(len(names),len(set(names)))
                 for info in z.infolist():
@@ -61,3 +61,9 @@ class Distribution(unittest.TestCase):
         root=json.loads((BASE/'plugin.json').read_text())
         ui=root['extensions']['com.openai']['interface']
         self.assertEqual(ui['displayName'],'KUMIHAN｜字律');self.assertLessEqual(len(ui['shortDescription']),30)
+
+    def test_old_release_archives_are_preserved(self):
+        old = list((BASE/'downloads').rglob('*v0.1.0.zip'))
+        self.assertEqual(len(old), 15)
+        self.assertEqual(json.loads((BASE/'plugin.json').read_text())['version'], '0.1.2')
+        self.assertEqual(json.loads(self.builder().plan_outputs()['plugins/kumihan-zilu/downloads/MANIFEST.json'])['version'], '0.1.2')
