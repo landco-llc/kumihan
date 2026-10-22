@@ -18,6 +18,7 @@ class EnglishReleaseTransition(unittest.TestCase):
         baseline = json.loads((ROOT / "tests/contracts/release-preservation.json").read_text(encoding="utf-8"))
         self.assertEqual(record["tag"], TAG)
         self.assertEqual(len(record["paths"]), 23)
+        later = json.loads((ROOT / "tests/contracts/multilingual-v010-release-transition.json").read_text())["paths"]
         for name, row in record["paths"].items():
             self.assertTrue(name in ("README.md", "index.html") or
                             (name.startswith("top-") and name.endswith(".html")), name)
@@ -25,8 +26,12 @@ class EnglishReleaseTransition(unittest.TestCase):
             content = (ROOT / name).read_bytes()
             if row["family"] == "bodies":
                 content = re.search(rb"<body\b[\s\S]*", content, re.I)[0]
-            self.assertEqual(hashlib.sha256(content).hexdigest(), row["after"])
-            self.assertTrue(admitted(ROOT, name, row["before"], content))
+            current_hash=hashlib.sha256(content).hexdigest()
+            self.assertEqual(current_hash, later.get(name, {}).get("after", row["after"]))
+            if name not in later:
+                self.assertTrue(admitted(ROOT, name, row["before"], content))
+            else:
+                self.assertEqual(later[name]["before"], row["before"])
             self.assertFalse(admitted(ROOT, name, row["before"], content + b"tampered"))
         self.assertEqual(audit(), [])
 

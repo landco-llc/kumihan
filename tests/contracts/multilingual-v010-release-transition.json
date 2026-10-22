@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "scope": "17-language-release-promotion",
+  "paths": {
+    "README.md": {
+      "family": "protected",
+      "before": "68af18a56a9244f36a8ae5a5fa861fd4309989f9c58d44342406edc4aeeb076b",
+      "after": "a76adaa53685cbd634a62bb61af7981288bc26ba48c148fc4c01ca29390b9894"
+    },
+    "docs/install-zilu-chatgpt.en.html": {
+      "family": "bodies",
+      "before": "6e46624df3d27d2fd6eabd15dad3095e85c2e8d679dd22188f3c6b24bff9b0a2",
+      "after": "746681e2fe44e7bb1e2eb9a7818e3b48338712e25a2d9ebfec242c84b5a96e24"
+    },
+    "docs/install-zilu-chatgpt.html": {
+      "family": "bodies",
+      "before": "607898e749731ec1037fd6e1c3f262dae5f340c36256aa86ef889511f565e7ca",
+      "after": "8a6ff0eb9ba35b47a8677403ef75c773c8493b627fb97c62711ea4b097c44070"
+    },
+    "docs/install-zilu-chatgpt.ja.html": {
+      "family": "bodies",
+      "before": "06e501a902a9ad7914e2c9d275e714e37387b24f60da7ddcf5e38a4070be6866",
+      "after": "2b655ff04f978e5cb9397f3aa733bb510e56d464a7a9318d7f2245f5cdb8b674"
+    },
+    "docs/install-zilu-claude.en.html": {
+      "family": "bodies",
+      "before": "a349689bf4b7d4495c8fe4701792bca2b3c1a9fc6320a182b9b0c7a6ef1cc685",
+      "after": "42950a35e1d30bd6adf59c57d1740e48a4baac31cbf19e1ab62b43368ae73d07"
+    },
+    "docs/install-zilu-claude.html": {
+      "family": "bodies",
+      "before": "cffd99af4b77eb6b9eee82956dd54ec26f57fa7bb3a73a19ac9a48da1880a20a",
+      "after": "f70ef89ab7fa34344b292f0eea7ce07412074b340771302052cbcb024560325d"
+    },
+    "docs/install-zilu-claude.ja.html": {
+      "family": "bodies",
+      "before": "060e864fdf75f673a0eea38d0f021b5bcfb096ccbf4a32690735ab0b61cfc6f6",
+      "after": "56b342d07016c193b3029761f56da8e86369a2f44c94f22383d1594143429c8c"
+    },
+    "docs/install-zilu-gemini.en.html": {
+      "family": "bodies",
+      "before": "aa8d42c8a8bc8dabdd1fcb5e911e27b5d49414a926da7dae88e2592612ea9f8b",
+      "after": "868c7fbc1dbd72ec3bfc9ee9dff0a476d50d0b73d81be9355913b49d37bfebcd"
+    },
+    "docs/install-zilu-gemini.html": {
+      "family": "bodies",
+      "before": "6a6bf61275e6b9d625483f50a6baf0452e0c46c7fe94ccf7f2bcfcc496a338b8",
+      "after": "38d36e01eb322d5beaef16d0685d5c547f1ff8c5cdd3ca2d74e5cf7431abc801"
+    },
+    "docs/install-zilu-gemini.ja.html": {
+      "family": "bodies",
+      "before": "92746b35af698e80ac4d2fc838675abb9cebdf7df5e023419e4471fc571ead4b",
+      "after": "6e00c2b9627c5ebedc0828a6030a3b17c05ebffe14412946384b8f82139e15cf"
+    },
+    "index.html": {
+      "family": "bodies",
+      "before": "0dcc7a94a9c6dfd2128d431f072bba76b65537f07ad2301e923be4f394b0c07a",
+      "after": "6a6cfc158b044014ca191920a3ecea0314591a74dfdf40473700657b1329c753"
+    },
+    "kumihan-zh-cn.en.html": {
+      "family": "bodies",
+      "before": "82001199da9f79afce652b486a80e41509a6a3ddff6feb7b462e7d3908634844",
+      "after": "871ef1936d62cb4037296f8e81d1eeb7b4e6ad2b9a457a6a13f74dd077e0e533"
+    },
+    "kumihan-zh-cn.html": {
+      "family": "bodies",
+      "before": "1ef144c1f9c2730e6efad88f2bd2e42d00a0814bf38f0491944a8479fbe4ae85",
+      "after": "17f27999c50eefb5a44c87671eeaa95aaf690bb7379467d0ae1eea042b1a3d40"
+    },
+    "kumihan-zh-cn.ja.html": {
+      "family": "bodies",
+      "before": "7aa40063cb5d9e1c64d1c0ecf0e5f978cff10f040a32f89bb80b5ffc2b20b69e",
+      "after": "db5d5cd07362cf1f1f664d59dc899da900189b7f689dcd3c39a479acda62bfff"
+    },
+    "top-ar.html": {
+      "family": "bodies",
+      "before": "d31471c155d7d2120cbc315bcef6f50c0a9a37efe15036e07ba675305ba6bafc",
+      "after": "53051fdd6bf675ea76a5f870c661a5888c2a5a45b457f9b5bbb9822fde059ea2"
+    },
+    "top-bn.html": {
+      "family": "bodies",
+      "before": "b047a714120c0b6718a8c7562ba5ea7abbb3b928d1c8899331b4c25445701bf5",
+      "after": "a9ff91eab3ebc3e671b449607c48f2e07d8f234b9c5db1df1d1fd88c90b5b241"
+    },
+    "top-de.html": {
+      "family": "bodies",
+      "before": "0607b2b362f993f443f61c0103266d26661cdf4ebd69c7b360ddadc064496f85",
+      "after": "609d62ca1568f42ebcc903c7d5b2a48b9a97670003c805e66b9d751a283233ed"
+    },
+    "top-es.html": {
+      "family": "bodies",
+      "before": "6cc2acbe57d59518670543f9643a2ef791238ffda50583182969aeb92173c1fd",
+      "after": "6b514de3b2ca2f42ca5bd2f96e0b0b13dcba137b67ede38ba9b8cf45958509dc"
+    },
+    "top-fa.html": {
+      "family": "bodies",
+      "before": "49fdb1c901659d5cc4895e047b5984acc3ea15ee0a8999bba60f8e78fc97d00d",
+      "after": "567dd3e0886798428e5ceaa2cb0967629aa60141b014b93cef49a8d03b9a3422"
+    },
+    "top-fr.html": {
+      "family": "bodies",
+      "before": "164fe62b30077dd1a0b3f7918fb210782dbb2b5549cb4ac08d4d024d7e29225c",
+      "after": "33ab11648644c8fa55d3717e6b96cc36060ce9e20db0c144cd7940e7072d1535"
+    },
+    "top-hi.html": {
+      "family": "bodies",
+      "before": "40b7aec7b0c40b1a2d5007afb4ea0cff1d97e7e2554bcd0aade9712268fb908f",
+      "after": "acb76bd3b06e91014f0bae308ec89791bd2d532929fcd34ec0ca9baf26194d8a"
+    },
+    "top-id.html": {
+      "family": "bodies",
+      "before": "9412b3377b744c61a3a6d2555a04d2998a8333b471907b1362a7f920757b99f0",
+      "after": "9421c440a06f8c776bc54f825bc9cf5edb170fc18a4faece253f68699993326e"
+    },
+    "top-it.html": {
+      "family": "bodies",
+      "before": "f612d38dfee81b8ccee7037aee78c17f2d912a3a560d05e075914a3de4c04cd0",
+      "after": "b24f5a62e1b90f4f51a5c82dc2f3b301439a7299ab6e4cc1d0456ae6d1770cb3"
+    },
+    "top-ja.html": {
+      "family": "bodies",
+      "before": "7734a94bea753b3011f1d9121dbc315d00102f197064455e648af7b6b83d8877",
+      "after": "3eaacb197429bf93e9931366c71a254330080a4ea2364f071810698211b3cc6c"
+    },
+    "top-km.html": {
+      "family": "bodies",
+      "before": "d821ccc7eebda51e1e0467ae217bd58da6831afe29faa3e27129079dc776b421",
+      "after": "eeaca4fe5e03f428e8551df4ce4cb4ec504baa5dc102408865974f40536f3088"
+    },
+    "top-ko.html": {
+      "family": "bodies",
+      "before": "76924f22563f5eb5c7b58626a975991485cd00a5444a2b4f78521a81e7661310",
+      "after": "053586cb4b81bc952785acfc02cd9bfa7a4ff6c3e79729f3288ed641fb6138d4"
+    },
+    "top-pl.html": {
+      "family": "bodies",
+      "before": "72d8ec2c24e04d9287b3a1edda4872fc02727c631de375c02b1ae1061cdb4e1e",
+      "after": "cf0a44de839837ab1a5304f23cfb08ab92565bda39366ebf1136616d61b3cfb3"
+    },
+    "top-pt.html": {
+      "family": "bodies",
+      "before": "2f7c75c576c1095fb894de7eee52208fbae0c2003816249b93ea97f5f084455e",
+      "after": "1e0309bce6d92acc818ab19b7175148f0f7650304d6ad655719f570dde7e85db"
+    },
+    "top-ru.html": {
+      "family": "bodies",
+      "before": "f18a652e5c7d424067c48b768a8e9d090883189e35c84c1256db09283525d54b",
+      "after": "2837d299a5b82ed6336f295d2e392300a994ac3e1acefdeceee94a1c2e459e04"
+    },
+    "top-sw.html": {
+      "family": "bodies",
+      "before": "19b4646d5e0daf535c892be9382f4ef2ccb820098e84fdebc5e4fa73cbbd313f",
+      "after": "948647834443c2f68fd2bce5d06f8b1b4d7f48e5f7e97bea147b38cda6501519"
+    },
+    "top-th.html": {
+      "family": "bodies",
+      "before": "b1ba64f07be3c3a54e29bbd942461023a17cd484c1082f478d4eb0d2a99cb187",
+      "after": "2bd15a43c15d82b8fc86c2d241959e836d775dbe50e34af0615e823edc529d33"
+    },
+    "top-vi.html": {
+      "family": "bodies",
+      "before": "17fa9e79ea9d7221ab0ccb6bb49c9c39d7c67c5086618d174219e91edd6e0ba3",
+      "after": "3adb9e517ee86b79888b0bc34c5d3a0f2c3e20dd53190aebf4c1d9080b48a56c"
+    },
+    "top-zh-cn.html": {
+      "family": "bodies",
+      "before": "5f61ac36f27fed5046579ecd03f64e760c6bf6a89d152381bfc4fc3f49e2c76a",
+      "after": "d6767df34dfda74dc68d98eff467d842bfe88caeb2aabcb89943f0521299d43a"
+    },
+    "top-zh-han.html": {
+      "family": "bodies",
+      "before": "1c468672642d1e1cd327b7d4c87137b462597f6f67cb1658443a6b495157da29",
+      "after": "ff2fa465ba3ef6c71958a3d566c18779f89dd49bd9459001a8d2def685ea1c91"
+    },
+    "top-zu.html": {
+      "family": "bodies",
+      "before": "963c1ccd5bc3d195b6f8d2b396416ff4d412804a6339f4d0c8be3cf7b9885b66",
+      "after": "734772ba481673f6ce96faa0dae64e6729077adc8085cbe98ef88909776af626"
+    }
+  }
+}
