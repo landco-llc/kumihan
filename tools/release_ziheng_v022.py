@@ -3,7 +3,7 @@
 
 Preparation is local. Publication is restricted to the public repository's
 protected-main push workflow, after its independent verification job succeeds.
-Existing tags/releases are never replaced, resumed or deleted.
+Existing published tags/releases are never replaced or deleted. A single pinned, empty interrupted draft can be resumed.
 """
 import argparse
 import hashlib
@@ -218,6 +218,29 @@ def verify_download(files):
                 raise ValueError('Downloaded bytes differ: '+name)
 
 
+# One-off recovery authorization for the empty draft created by the successful
+# verify job and interrupted publisher on 2026-10-22. This is not a generic
+# permission to resume any draft or to replace any old Release.
+RECOVERY_DRAFT_ID = 420671387
+RECOVERY_TARGET_SHA = '68005357d896cae8cc002052a4bc0f802a71d202'
+RECOVERY_CREATED_AT = '2026-10-22T12:04:49Z'
+
+
+def validate_recovery_draft(draft, notes):
+    if not draft or draft.get('id') != RECOVERY_DRAFT_ID:
+        raise ValueError('Expected the exact interrupted ZiHeng v0.2.2 draft ID')
+    if (draft.get('draft') is not True or draft.get('prerelease') is True or
+        draft.get('tag_name') != TAG or
+        draft.get('target_commitish') != RECOVERY_TARGET_SHA or
+        draft.get('created_at') != RECOVERY_CREATED_AT or
+        draft.get('name') != 'KUMIHAN｜字衡 v0.2.2' or
+        (draft.get('body') or '').strip() != notes.strip()):
+        raise ValueError('Interrupted draft identity or notes changed; do not modify')
+    if draft.get('assets') != []:
+        raise ValueError('Draft assets are no longer empty; do not modify')
+    return RECOVERY_TARGET_SHA
+
+
 def publish():
     if (os.environ.get('GITHUB_REPOSITORY') != REPOSITORY or
         os.environ.get('GITHUB_REF') != 'refs/heads/main' or
@@ -229,30 +252,27 @@ def publish():
     head = subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     if sha != head or api(f'repos/{REPOSITORY}/commits/main')['sha'] != sha:
         raise ValueError('Checkout and current protected main must match the tested workflow commit')
+    # All source packages are freshly byte-checked at the new protected-main
+    # commit. No source packages, release request or archived versions may change.
     files = check()
     assert_tag_absent()
-    if listed_release() is not None:
-        raise ValueError('Release already exists; leave it unchanged for review')
-    gh('release','create',TAG,'--repo',REPOSITORY,'--draft','--target',sha,
-       '--title','KUMIHAN｜字衡 v0.2.2','--notes-file',str(ROOT/NOTES),'--latest=false')
     draft = listed_release()
-    if not draft or not draft['draft'] or draft['assets']:
-        raise ValueError('Expected a new empty draft; publication stopped')
-    gh('release','upload',TAG,'--repo',REPOSITORY,
-       *(str(ROOT/RELEASE/name) for name in sorted(files)))
-    uploaded = api(f'repos/{REPOSITORY}/releases/{draft["id"]}')
-    verify_remote_assets(uploaded,files)
+    target = validate_recovery_draft(draft, (ROOT / NOTES).read_text(encoding='utf-8'))
+    gh('release', 'upload', TAG, '--repo', REPOSITORY,
+       *(str(ROOT / RELEASE / name) for name in sorted(files)))
+    uploaded = api(f'repos/{REPOSITORY}/releases/{RECOVERY_DRAFT_ID}')
+    verify_remote_assets(uploaded, files)
     verify_download(files)
-    gh('release','edit',TAG,'--repo',REPOSITORY,'--draft=false','--latest=false')
+    # Only a completely verified draft may become published.
+    gh('release', 'edit', TAG, '--repo', REPOSITORY, '--draft=false', '--latest=false')
     published = api(f'repos/{REPOSITORY}/releases/tags/{TAG}')
     if published['draft'] or published['prerelease'] or not published.get('published_at'):
         raise ValueError('Publication readback did not confirm a stable public release')
-    if api(f'repos/{REPOSITORY}/git/ref/tags/{TAG}')['object']['sha'] != sha:
-        raise ValueError('Published tag does not match the tested source commit')
-    verify_remote_assets(published,files)
+    if api(f'repos/{REPOSITORY}/git/ref/tags/{TAG}')['object']['sha'] != target:
+        raise ValueError('Published tag does not match the originally verified source commit')
+    verify_remote_assets(published, files)
     verify_download(files)
     print(published['html_url'])
-
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
