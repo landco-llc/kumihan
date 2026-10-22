@@ -109,20 +109,27 @@ def source_archives(code, version):
         if data['version'].removeprefix('v') != version:
             # Only Ziheng has an exact, checksummed historical source contract.
             # Retain pre-update URLs independently of active source candidates.
-            if code != 'zh-hant' or version != '0.1.0':
+            if code == 'zh-hans' and version == '0.1.0':
+                historical = manifest.parent/'history/0.1.0/MANIFEST.json'
+                raw = historical.read_bytes()
+                if hashlib.sha256(raw).hexdigest() != '4ce535b78bd601cb706ffcf8e1a7568293d1569f6f6c809fa32553127e471f9f':
+                    raise ValueError('Historical ZiLu manifest mismatch')
+                data = json.loads(raw)
+            elif code != 'zh-hant' or version != '0.1.0':
                 raise ValueError('Source ZIP manifest version mismatch: '+code)
-            from ziheng_retention import retained_outputs
-            retained = retained_outputs(ROOT, (manifest.parent.name,))
-            history = manifest.parent / 'history' / version / 'MANIFEST.json'
-            if history.relative_to(ROOT).as_posix() not in retained:
-                raise ValueError('Historical source manifest not retained')
-            data = json.loads(history.read_bytes())
-            if data['version'].removeprefix('v') != version:
-                raise ValueError('Historical source version mismatch')
-            for row in data['archives']:
-                rel = (manifest.parent / row['file']).relative_to(ROOT).as_posix()
-                if rel not in retained:
-                    raise ValueError('Historical archive not retained: ' + rel)
+            if code == 'zh-hant':
+                from ziheng_retention import retained_outputs
+                retained = retained_outputs(ROOT, (manifest.parent.name,))
+                history = manifest.parent / 'history' / version / 'MANIFEST.json'
+                if history.relative_to(ROOT).as_posix() not in retained:
+                    raise ValueError('Historical source manifest not retained')
+                data = json.loads(history.read_bytes())
+                if data['version'].removeprefix('v') != version:
+                    raise ValueError('Historical source version mismatch')
+                for row in data['archives']:
+                    rel = (manifest.parent / row['file']).relative_to(ROOT).as_posix()
+                    if rel not in retained:
+                        raise ValueError('Historical archive not retained: ' + rel)
         for row in data['archives']:
             path = manifest.parent / row['file']
             if not path.resolve().is_relative_to(manifest.parent.resolve()):
@@ -149,6 +156,7 @@ def is_source_download(url, f):
         if parsed.scheme: return False
         path = path.removeprefix('../').removeprefix('/kumihan/').lstrip('/')
     if f['release_status'] == 'unpublished' and path in source_archives(f.get('edition'), f['source_version']): return True
+    if f['release_status'] == 'unpublished' and f.get('edition') == 'zh-hans' and path in source_archives('zh-hans','0.1.0'): return True
     if f.get('edition') == 'zh-hant':
         from ziheng_retention import retained_outputs
         # Exact path/digest retention only; no basename or arbitrary old version.

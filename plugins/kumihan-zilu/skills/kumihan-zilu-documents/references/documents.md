@@ -7,5 +7,7 @@ Separate reports, slides and display copy. Protect data and notes; adjust hierar
 DOCX/PPTX/PDF逐一检查最终字体、字形、标点、换行、表格、裁切、复制/提取文字和阅读顺序；一个格式的通过不继承到另一个。字体可用、可嵌入、可再分发是不同事实。
 Inspect each exported format in its target renderer. Availability, embedding and redistribution rights differ. Preserve source-to-export text evidence.
 
-纵排、拼音、ruby 在 v0.1.0 为 deferred/unsupported；不自动生成或改写人名读音、不用逐字换行模拟纵排。
-Vertical composition and ruby are deferred. Keep supplied readings; state unsupported environments rather than substituting an unverified layout.
+v0.1.2提供纵排目的指导，拼音/ruby的自动生成仍保留；使用支给对应，不逐字换行模拟纵排。
+Vertical purpose guidance is available; automatic ruby generation remains deferred. Keep supplied readings; state unsupported environments rather than substituting an unverified layout.
+
+纵排参见 [purpose and target-output checks](vertical.md)。26项分开记录指导、静态与实测范围，未检查不是合格。

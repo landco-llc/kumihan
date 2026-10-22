@@ -33,6 +33,8 @@ def audit(root=ROOT):
             from multilingual_release_transition import admitted as release_admitted
             if release_admitted(root,path,expected,raw,family):
                 continue
+            from zilu_v012_transition import allowed as zilu_allowed
+            if zilu_allowed(path,family,root): continue
             if hashlib.sha256(raw).hexdigest()!=expected:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors

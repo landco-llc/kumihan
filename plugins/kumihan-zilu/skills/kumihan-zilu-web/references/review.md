@@ -11,4 +11,6 @@ Return positions, source, evidence, environment, source version, exceptions, sta
 Advertising language requires contextual legal/editorial review, never an automatic legality verdict. UI copy and static warnings require context.
 
 helper 只提供完整文本字节比较与两种上下文候选；它不覆盖全部36规则、不计算行框、不检测全部字素、不证明WCAG/GB符合性。
-The helper compares complete UTF-8 text and flags two contextual patterns only. It does not certify all 36 rules, grapheme segmentation, line boxes or accessibility.
+The helper compares complete UTF-8 text and flags two text patterns and bounded explicit vertical-context risks. It does not certify all 36 rules, grapheme segmentation, line boxes or accessibility.
+
+纵排参见 [purpose and target-output checks](vertical.md)。26项分开记录指导、静态与实测范围，未检查不是合格。
