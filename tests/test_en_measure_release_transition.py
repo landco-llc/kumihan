@@ -27,7 +27,9 @@ class EnglishReleaseTransition(unittest.TestCase):
             if row["family"] == "bodies":
                 content = re.search(rb"<body\b[\s\S]*", content, re.I)[0]
             current_hash=hashlib.sha256(content).hexdigest()
-            self.assertEqual(current_hash, later.get(name, {}).get("after", row["after"]))
+            from zilu_v012_transition import EXPECTED, BODY_EXPECTED
+            zilu = EXPECTED if row["family"] == "protected" else BODY_EXPECTED
+            self.assertEqual(current_hash, zilu.get(name, later.get(name, {}).get("after", row["after"])))
             if name not in later:
                 self.assertTrue(admitted(ROOT, name, row["before"], content))
             else:

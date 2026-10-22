@@ -28,6 +28,37 @@
       "items": {
         "type": "string"
       }
+    },
+    "profile": {
+      "enum": [
+        "cn-vertical-reading",
+        "cn-vertical-display",
+        "cn-vertical-publication-gb",
+        "cn-classical-reference"
+      ]
+    },
+    "writing_mode": {
+      "enum": [
+        "horizontal-tb",
+        "vertical-rl",
+        "vertical-lr",
+        "unspecified"
+      ]
+    },
+    "direction_reason": {
+      "type": "string"
+    },
+    "selected_standards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "css": {
+      "type": "string"
+    },
+    "per_character_breaks": {
+      "type": "boolean"
     }
   }
 }

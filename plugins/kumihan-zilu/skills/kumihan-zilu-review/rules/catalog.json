@@ -746,7 +746,7 @@
   {
     "id": "KH-CN-R026",
     "title": "纵排单独验证 | Validate vertical layout separately",
-    "status": "deferred",
+    "status": "advisory-only",
     "scope": "vertical / オプション",
     "source_ids": [
       "S04",
@@ -760,7 +760,7 @@
     },
     "authority_class": "normative-in-selected-scope",
     "severity": "required",
-    "criterion": "纵排为后续范围；单独核对方向、数字和约物，不逐字换行模拟。 | Vertical layout is deferred; do not simulate it with per-character newlines.",
+    "criterion": "目的别纵排指导及有界上下文检查；逐媒体实测。 | Purpose-specific vertical guidance and bounded context lint; validate each target renderer.",
     "exceptions": [
       "承認された縦中横等は局所方針として記録"
     ],
@@ -769,7 +769,7 @@
       "copy-round-trip"
     ],
     "evidence_grade": "instruction-and-manual-evidence",
-    "implementation": "unsupported in v0.1.0; preserve input",
+    "implementation": "See rules/vertical.json and references/vertical.md; no automatic renderer or source rewriting",
     "change_authority": "No automatic text edits. Only expressly authorized formatting or separately reviewed editorial proposals.",
     "autofix_allowed": false
   },

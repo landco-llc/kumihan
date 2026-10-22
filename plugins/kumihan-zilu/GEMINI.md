@@ -15,3 +15,7 @@ Version 0.1.0 · Apache-2.0 · L&Co. LLC
 GitHub Release、Pages、Host商店上架与直接安装是不同状态。此候选未通过最终公开Gate；Host调用未检查。 / Release, Pages, marketplace listing and direct installation are separate states. This candidate awaits final publication approval; native invocation is not checked.
 
 先读取 `skills/kumihan-zilu/SKILL.md`，再按媒体读取 web/documents/review。 / Read the entry skill, then the task-specific skill. Never treat imported context as permission to edit or publish.
+
+## v0.1.2 — 纵排目的与验证 / Vertical purpose and validation
+
+四个目的配置与26项纵排指导；新增只读上下文检查，保护原文。 / Four purpose profiles and 26 vertical guidance items with bounded read-only context lint and source preservation. See `references/vertical.md`. Browser/font/Office/PDF/WCAG/native-host results require separate evidence; no automatic typesetting or universal compliance guarantee. Earlier v0.1.0 release archives remain available unchanged.

@@ -1,0 +1,386 @@
+[
+  {
+    "id": "KH-CN-V001",
+    "title": "用途与范围 | Purpose and scope",
+    "criterion": "先记录地区、媒体、目的和修改权限；GB体裁需明确选定版次与条款。 | Record region, medium, purpose and edit authority; select GB editions and clauses explicitly.",
+    "status": "bounded-static-check",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V002",
+    "title": "原稿与派生物 | Source and derivatives",
+    "criterion": "保留Unicode、商标、数字和原文；编辑派生物须另有授权与差分。 | Preserve Unicode, brands, numbers and source; authorize and diff editorial derivatives separately.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V003",
+    "title": "真实纵排 | Real vertical composition",
+    "criterion": "连续纵排使用writing-mode: vertical-rl；width:1em或逐字br不是同等实现。 | Use writing-mode: vertical-rl for continuous text; width:1em or per-character BR is not equivalent.",
+    "status": "bounded-static-check",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V004",
+    "title": "列方向 | Column direction",
+    "criterion": "通常上到下、列右到左；vertical-lr例外记录目的，不逆转DOM。 | Read top to bottom, columns right to left by default; justify vertical-lr and never reverse the DOM.",
+    "status": "bounded-static-check",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V005",
+    "title": "实际字体 | Resolved fonts",
+    "criterion": "检查实际SC字形、缺字和fallback；CSS名称与lang不足以证明。 | Inspect actual SC glyphs, missing characters and fallback; CSS family and lang are not proof.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V006",
+    "title": "字体功能与描画 | Font features and shaping",
+    "criterion": "区分GSUB/GPOS/vert、vmtx/VORG和实际描画；CSS不共同强制vrt2。 | Separate GSUB/GPOS/vert, vmtx/VORG and shaping; do not force vrt2 in shared CSS.",
+    "status": "bounded-static-check",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V007",
+    "title": "字体权利 | Font rights",
+    "criterion": "记录字体来源、版本、哈希和使用、嵌入、再分发许可；不附未授权字体。 | Record font source, version, hash and use/embedding/redistribution rights; bundle no unlicensed fonts.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V008",
+    "title": "约物字形 | Punctuation glyphs",
+    "criterion": "在目标输出确认句读、引号、括号、破折号和省略号的纵形位置；不替换原稿码位。 | Inspect vertical punctuation and paired marks in output without replacing source codepoints.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V009",
+    "title": "禁则与双字符号 | Column boundaries and paired marks",
+    "criterion": "实测列上端和下端禁则；——、……内部断开与整个符号的位置分别检查。 | Inspect top/bottom column boundaries; distinguish internal splitting of ——/…… from whole-mark placement.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V010",
+    "title": "书名体裁 | Book-title presentation",
+    "criterion": "保持《》；只在获准GB出版派生物中检查书名左波线，保留语义范围及复制契约。 | Keep 《》; inspect a left wavy title mark only in an authorized GB derivative with semantic range and copy contract.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V011",
+    "title": "着重与专名 | Emphasis and proper names",
+    "criterion": "选定GB体裁时检查着重点在右、专名线在左，分别核对与ruby、波线的碰撞。 | For selected GB presentation inspect emphasis on the right and proper-name line on the left, including annotation collisions.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V012",
+    "title": "数字方向 | Numeric orientation",
+    "criterion": "GB/T 15835-2011选定范围内数字顺时针90度，同一英文数字词方向统一；BCD188型与J12号按词检查。 | Within selected GB/T 15835-2011 scope inspect clockwise 90-degree numbers and consistent alphanumeric words, including BCD188型 and J12号.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V013",
+    "title": "英文与标识符 | Latin words and identifiers",
+    "criterion": "保留URL、型番和英文单词的拼写及空格；不逐字回转或插入换行。 | Preserve URL, identifier, word spelling and spaces; never rotate or break every character by default.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V014",
+    "title": "局部纵中横 | Explicit local text combination",
+    "criterion": "text-combine-upright只作用于明确选定token；2/3/4位分别实测，不按位数自动压成1em。 | Apply text-combine-upright only to explicitly selected tokens; compare 2/3/4 digits at actual size.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V015",
+    "title": "逻辑段落 | Logical paragraphs",
+    "criterion": "保留标题、段落、多段引用、古籍原文和注释关系；视觉改列不是文本分段。 | Preserve headings, paragraphs, multi-paragraph quotations, classical source and annotation relations.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V016",
+    "title": "间距参数 | Separate spacing controls",
+    "criterion": "字间、约物压缩、纵向送进与列间分别调整；不靠全局负字间修补禁则。 | Control letter spacing, punctuation compression, vertical advance and column gap separately.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V017",
+    "title": "混排空白 | Mixed-script spacing",
+    "criterion": "混排间距在显示层处理，保留原有空格与复制结果，检查双重间距。 | Adjust mixed-script spacing in display only; preserve existing spaces and check duplicated spacing.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V018",
+    "title": "文案目的 | Copy purpose",
+    "criterion": "区别阅读与图形目的；纵排不授权四字化、缩短、删标点或繁体化。 | Distinguish reading from graphic purposes; vertical layout does not authorize rewriting or removing punctuation.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V019",
+    "title": "纵横配置 | Mixed layout",
+    "criterion": "列长、字号、字距和列间按媒体实测；纵标题配横价格、日期、CTA只是条件方案。 | Choose column length, size and gaps by medium; vertical headings with horizontal prices/dates/CTA are conditional options.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V020",
+    "title": "支给注音 | Supplied annotations",
+    "criterion": "仅用支给拼音、ruby与侧注映射，不创作人名读音；检查方向和跨列碰撞。 | Use supplied pinyin/ruby/side-note mappings only; check orientation, splitting and collisions.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-GB-PUNCT",
+      "ZV-GB-NUM",
+      "ZV-CSS",
+      "ZV-CLREQ"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V021",
+    "title": "逐媒体确认 | Per-medium validation",
+    "criterion": "Web、Word、幻灯片和PDF逐一检查实际字体、列序、裁切、选择、复制、抽取与嵌入。 | Validate Web, Word, slides and PDF separately for actual fonts, columns, clipping, selection, copy, extraction and embedding.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V022",
+    "title": "语义顺序 | Semantic order",
+    "criterion": "分别比较视觉顺序、DOM、无障碍树、复制、朗读和键盘操作；自动检测不等于读屏验收。 | Compare visual, DOM, accessibility-tree, copy, speech and keyboard order independently.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V023",
+    "title": "文字放大 | Text enlargement",
+    "criterion": "选用WCAG2.2 SC1.4.4时测至200%文字放大，记录例外、丢失和重叠。 | Where WCAG2.2 SC1.4.4 applies test up to 200% text enlargement and record exceptions and overlap.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V024",
+    "title": "按轴重排 | Reflow by scroll axis",
+    "criterion": "SC1.4.10按滚动轴：横向滚动内容高度256 CSS px，纵向滚动内容宽度320 CSS px；不按字向猜轴。 | For SC1.4.10 use height 256 CSS px for horizontally scrolling content and width 320 CSS px for vertically scrolling content.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V025",
+    "title": "用户间距 | User spacing overrides",
+    "criterion": "SC1.4.12适用范围内测试用户间距覆盖，纵排line-height为横向列间；未支持CSS另行记录。 | Test applicable SC1.4.12 spacing overrides; vertical line-height changes horizontal column spacing; record unsupported CSS.",
+    "status": "manual-render-validation",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  },
+  {
+    "id": "KH-CN-V026",
+    "title": "证据与限制 | Evidence and limits",
+    "criterion": "规范、字体表、浏览器样本、产品验收和编辑判断分开；not-run不得升级为GB/WCAG或全媒体通过。 | Separate standards, font tables, browser samples, product acceptance and judgment; never promote not-run to universal certification.",
+    "status": "adopted-guidance",
+    "autofix_allowed": false,
+    "rendering_status": "not-checked",
+    "source_ids": [
+      "ZV-CSS",
+      "ZV-CLREQ",
+      "ZV-WCAG"
+    ],
+    "source_scope": "normative-in-selected-scope for selected GB clauses; technical specifications and guidance otherwise"
+  }
+]
