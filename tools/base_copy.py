@@ -208,12 +208,12 @@ def extends(current, base):
     return common >= 0.7 * len(base)
 
 
-# Product release status and installation wording are edited by the edition itself,
-# not overwritten with shared generic copy. Keep the English edition out of this scope.
-RELEASED_EIGHT = frozenset(("tr", "ms", "hu", "cs", "la", "he", "el", "nl"))
+# Release-specific wording belongs to each edition, not shared generic copy.
+# English Measure joined the released editions after its independent package QA.
+RELEASED_COPY_OVERRIDES = frozenset(("tr", "ms", "hu", "cs", "la", "he", "el", "nl", "en"))
 EDITION_RELEASE_FIELDS = frozenset((
     "description", "cta", "hero_foot", "skill_view", "install_h2",
-    "install_body", "install_notes", "status_title", "status_body", "cta_body"
+    "install_body", "install_notes", "status_title", "status_body", "status_link", "cta_body"
 ))
 
 
@@ -225,7 +225,7 @@ def apply(copy, lang, edition):
     """
     out = dict(copy)
     for key, value in shared(lang, edition).items():
-        if edition in RELEASED_EIGHT and key in EDITION_RELEASE_FIELDS:
+        if edition in RELEASED_COPY_OVERRIDES and key in EDITION_RELEASE_FIELDS:
             out[key] = copy[key]
         elif key == "features":
             feats = [dict(f) for f in copy["features"]]
