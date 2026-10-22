@@ -1,0 +1,1692 @@
+{
+  "rules": [
+    {
+      "rule_id": "EN-CORE-001",
+      "research_title": "原文の保護",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H24",
+        "H25"
+      ],
+      "scope": "引用・名前・コード・識別子を扱う。",
+      "automation_boundary": "自動書換えを抑制する。表記統一より忠実性が優先する範囲を保持する。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-002",
+      "research_title": "引用符の整合",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H23",
+        "H40"
+      ],
+      "scope": "引用符の扱いが、選んだ編集規約と一致しない。",
+      "automation_boundary": "修正候補を提示する。英米差や組織別方針を確認し、旧版の方針を現行として強制しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-003",
+      "research_title": "日付の曖昧さ",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H37",
+        "H41"
+      ],
+      "scope": "日・月が数値だけで表記され、地域が不明である。",
+      "automation_boundary": "確認を促す。値の変換と表示形式の変換を分け、地域の推定だけで日付値を変えない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-004",
+      "research_title": "数字機能の選択",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H15",
+        "H16"
+      ],
+      "scope": "本文・数値比較・価格表示の数字を設定する。",
+      "automation_boundary": "組合せの候補を提示する。liningとtabularを同義に扱わない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-005",
+      "research_title": "光学サイズ",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H14"
+      ],
+      "scope": "選択したフォントがopsz軸を持つ。",
+      "automation_boundary": "自動値を説明し、上書きを可能にする。デザインの軸と表示サイズを同一情報として扱わない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-006",
+      "research_title": "類似字のリスク",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H09"
+      ],
+      "scope": "ID、コード、数字主体のUIに書体を使用する。",
+      "automation_boundary": "プレビューを提示し、書体分類だけで識別性を判定しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-007",
+      "research_title": "文字欠落",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H18"
+      ],
+      "scope": "必要な文字が選択したフォントに含まれていない。",
+      "automation_boundary": "欠落には強い通知を出す。英字だけのサンプルで対応可否を判断しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-008",
+      "research_title": "文断片",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H27",
+        "H32"
+      ],
+      "scope": "見出し、ボタン、広告に完全文ではない表現がある。",
+      "automation_boundary": "既定では文法エラーにしない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-009",
+      "research_title": "圧縮された名詞列",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H22",
+        "H30"
+      ],
+      "scope": "国際向けの説明・操作に、圧縮された名詞列がある。",
+      "automation_boundary": "読み解き候補を提示する。短さだけで分かりやすさを保証しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-010",
+      "research_title": "段落の主題",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H28"
+      ],
+      "scope": "情報説明の長文を扱う。",
+      "automation_boundary": "主題の混在を説明する。一律の文数や主題文の位置を必須にしない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-011",
+      "research_title": "用語の一貫性",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H22",
+        "H29"
+      ],
+      "scope": "同じ概念に複数の名称が使われている。",
+      "automation_boundary": "反復を機械的に言い換えない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-012",
+      "research_title": "可読性の主張",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H19"
+      ],
+      "scope": "書体を推薦する。",
+      "automation_boundary": "理由と適用条件を表示する。普遍的な最適書体や改善率を断言しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-CORE-013",
+      "research_title": "分類の扱い",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "H20"
+      ],
+      "scope": "多言語の書体を検索・分類する。",
+      "automation_boundary": "Vox分類を現在の普遍的標準として強制しない。",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-001",
+      "research_title": "language、script、locale、directionを分離",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "scope": {
+        "conditions": [
+          "複数の言語や文字体系を含む原稿、UI、テンプレートを取り込む場合",
+          "数値・日時などlocale依存の内容がある場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "必須項目と矛盾の検出",
+        "can_check": [
+          "メタデータの有無と明示値の矛盾を候補として検出する"
+        ],
+        "must_not": [
+          "文字体系だけから言語・地域・方向を確定しない",
+          "同等性や主従の目的を機械的に決定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-002",
+      "research_title": "明示言語を推測で上書きしない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "scope": {
+        "conditions": [
+          "コンテンツ、利用者、翻訳資源に明示言語がある場合",
+          "自動言語推定が併用される場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "優先順の検査",
+        "can_check": [
+          "明示値と推測値の優先順を検査する"
+        ],
+        "must_not": [
+          "短文の推測を根拠に明示言語を自動上書きしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-003",
+      "research_title": "Latinだけで英語と断定しない",
+      "decision": "revise",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "RESEARCH:EN-MIX-003"
+      ],
+      "scope": {
+        "conditions": [
+          "Latinの短文、固有名、ブランド名、製品コード、URLを判定する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "判定信頼度の記録",
+        "can_check": [
+          "判定の根拠と信頼度、不明状態を記録する"
+        ],
+        "must_not": [
+          "Latinであることを英語の証明としない",
+          "判定結果を原稿変更の許可とみなさない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-004",
+      "research_title": "母文と挿入語を区別",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M06",
+        "M07",
+        "M08"
+      ],
+      "scope": {
+        "conditions": [
+          "一つの文章内に別言語の語や製品名が挿入される場合",
+          "和欧文・中西文・韓英の文中混植を扱う場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "範囲の抽出",
+        "can_check": [
+          "言語タグや利用者指定に基づき母文と挿入範囲を候補抽出する"
+        ],
+        "must_not": [
+          "文字体系の違いだけで母文の組版規則を決めない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-005",
+      "research_title": "原文と見かけの空きを分離",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M06",
+        "M22"
+      ],
+      "scope": {
+        "conditions": [
+          "文字体系の境界に見かけの空きを設ける場合",
+          "文面を保護する商品名、検索語、URL、コードを扱う場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "文字列差分",
+        "can_check": [
+          "処理前後およびコピー後の文字列差分を確認する"
+        ],
+        "must_not": [
+          "見かけの空きのためにASCII空白等を一律挿入しない",
+          "未対応CSSの代替として無許可の原稿変更を行わない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-006",
+      "research_title": "非LatinへLatin trackingを無条件継承しない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M21",
+        "M23",
+        "M24",
+        "M25",
+        "M26",
+        "M27"
+      ],
+      "scope": {
+        "conditions": [
+          "Latin用trackingやletter-spacingが他の文字体系へ継承される場合",
+          "接続・結合・補助記号を含む見出しやUIを扱う場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "CSS・書式の候補検出",
+        "can_check": [
+          "CSS・書式の継承と対象文字体系を照合して候補を抽出する"
+        ],
+        "must_not": [
+          "Arabic等の接続を切る字間調整を自動実行しない",
+          "全ての非Latin文字に一律の禁止値や倍率を決めない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-007",
+      "research_title": "CJK地域字形を保持",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M20",
+        "M32"
+      ],
+      "scope": {
+        "conditions": [
+          "Han文字を含むja、zh-Hans、zh-Hant-TW等の内容を表示する場合",
+          "複数のCJKフォントから字形を選択する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "言語とフォント候補の照合",
+        "can_check": [
+          "言語・地域指定とフォント候補の対応を照合する"
+        ],
+        "must_not": [
+          "Unicode上で同じ文字だから同じ地域字形でよいと判定しない",
+          "文字coverageだけで適切な字形を自動合格にしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-008",
+      "research_title": "固定の混植倍率を普遍化しない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M18",
+        "M19",
+        "M29"
+      ],
+      "scope": {
+        "conditions": [
+          "異なる文字体系のサイズ、weight、ベースラインを調整する場合",
+          "既存ブランドの倍率を別書体へ転用しようとする場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "設定の根拠欄を要求",
+        "can_check": [
+          "倍率やトークンの根拠、書体、用途を記録する欄の有無を検査する"
+        ],
+        "must_not": [
+          "IBM Plex等の公表倍率を全書体へ適用しない",
+          "同じポイント数やweight番号だけで同等性を判定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-009",
+      "research_title": "フォールバックの字形と行高を確認",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M18",
+        "M33"
+      ],
+      "scope": {
+        "conditions": [
+          "フォント読込失敗、未収録文字、OSフォントによる代替が起こり得る場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "フォント不足の候補検出",
+        "can_check": [
+          "フォント不足や使用ファミリー、幾何学的な変化を候補として記録する"
+        ],
+        "must_not": [
+          "字形が一つ表示されたことだけで正しい言語字形と判定しない",
+          "未確認の出力環境を合格扱いしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-010",
+      "research_title": "動的なRTL/LTR挿入物を隔離",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "scope": {
+        "conditions": [
+          "LTR文中にRTLの氏名等を挿入する場合",
+          "RTL文中に英語の型番、数字、記号等を挿入する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "HTML構造の候補検出",
+        "can_check": [
+          "HTMLの方向指定、隔離要素、動的挿入箇所を候補抽出する"
+        ],
+        "must_not": [
+          "未知の内容を英語またはLTRと断定しない",
+          "隔離マークアップがあるだけで表示・コピー順を保証しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-011",
+      "research_title": "文字列を逆順に保存しない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M09"
+      ],
+      "scope": {
+        "conditions": [
+          "RTLまたは双方向文字列を保存・変換・出力する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "変換処理の検査",
+        "can_check": [
+          "文字列反転等の変換処理と入出力差分を検査する"
+        ],
+        "must_not": [
+          "見た目を整えるために保存順を反転しない",
+          "画像の見た目だけで論理順を合格にしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-012",
+      "research_title": "Arabic/Persianの接続制御を保持",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M24"
+      ],
+      "scope": {
+        "conditions": [
+          "ArabicやPersianの接続制御を含む原稿を処理する場合",
+          "不可視文字を削除または正規化する機能を適用する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "不可視文字変更の差分",
+        "can_check": [
+          "ZWNJ等を含む処理前後の差分を示す"
+        ],
+        "must_not": [
+          "不可視であることだけを理由に接続制御を削除しない",
+          "文字コード一覧だけで正しい接続か断定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-013",
+      "research_title": "Unicodeの結合単位を壊さない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M13"
+      ],
+      "scope": {
+        "conditions": [
+          "選択、省略、文字数制限、文字単位アニメーション、改行を行う場合",
+          "結合文字、分解Jamo、Indic、emoji等を含む場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "分節器と版の記録",
+        "can_check": [
+          "分節器とUnicode・ICU・ランタイムの版、および境界結果を記録する"
+        ],
+        "must_not": [
+          "コードポイント数を見た目の文字数と同一視しない",
+          "古い資料だけで現行Unicodeの挙動を断定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-014",
+      "research_title": "文字体系ごとの改行方針を選ぶ",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M06",
+        "M07",
+        "M08",
+        "M12",
+        "M28"
+      ],
+      "scope": {
+        "conditions": [
+          "多言語の改行、均等割付、狭幅レイアウトを設定する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "プロファイルの整合検査",
+        "can_check": [
+          "言語・用途と改行プロファイルの整合を検査する"
+        ],
+        "must_not": [
+          "英語の空白分割や任意文字分割を全言語へ適用しない",
+          "中文の厳密グリッド等の例外を通常本文へ無条件適用しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-015",
+      "research_title": "高さ固定による補助記号の切れを検出",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M18",
+        "M34"
+      ],
+      "scope": {
+        "conditions": [
+          "固定高、overflow、狭いline-heightを使う要素がある場合",
+          "Vietnamese等の上下記号や結合を含む場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "寸法上の危険箇所抽出",
+        "can_check": [
+          "要素寸法、クリップ、衝突の可能性を候補抽出する"
+        ],
+        "must_not": [
+          "Latinの基本字だけの試験で全coverageを合格にしない",
+          "矩形の一致だけでmark位置の正しさを判定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-016",
+      "research_title": "言語別強調方法を選ぶ",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M05",
+        "M37"
+      ],
+      "scope": {
+        "conditions": [
+          "italic、bold、大文字化等の強調を翻訳や別文字体系へ展開する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "italic等の継承検出",
+        "can_check": [
+          "言語をまたぐ強調スタイルの継承を候補として抽出する"
+        ],
+        "must_not": [
+          "英語のitalicを全言語の必須強調法としない",
+          "Awan Zaman固有の方針をArabic文字全体の禁止規則にしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-017",
+      "research_title": "localeに依存する値を適切に表示",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M15",
+        "M16",
+        "M17"
+      ],
+      "scope": {
+        "conditions": [
+          "数値、通貨、日付、時刻、単位等を表示する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "localeと値型の確認",
+        "can_check": [
+          "値型、locale、書式処理の指定と期待値を照合する"
+        ],
+        "must_not": [
+          "見た目の都合で数値、通貨、単位の意味を変えない",
+          "言語名だけで利用者の全locale選好を推定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-018",
+      "research_title": "翻訳長の変化へ追随する",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M42"
+      ],
+      "scope": {
+        "conditions": [
+          "UIラベル、カード、ボタン等を翻訳する場合",
+          "原文と訳文で長さや行数が変化する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "クリップ・重なり候補検出",
+        "can_check": [
+          "クリップ、重なり、要素からのはみ出しを候補検出する"
+        ],
+        "must_not": [
+          "一律1.3倍等の擬似翻訳だけで合格にしない",
+          "容器へ収めるために読めない大きさまで自動縮小しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-019",
+      "research_title": "言語の主従・同等性を明示する",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M35",
+        "M36",
+        "M39",
+        "M40"
+      ],
+      "scope": {
+        "conditions": [
+          "二言語以上の案内、見出し、対訳、ブランドを設計する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "目的欄の有無の検査",
+        "can_check": [
+          "主従・同等・原文と訳文等の目的欄があるか検査する"
+        ],
+        "must_not": [
+          "英語を常に上・大・濃に設定しない",
+          "同じポイント数だけで視認性の同等性を自動合格にしない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-020",
+      "research_title": "氏名の原綴りを保持する",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M41"
+      ],
+      "scope": {
+        "conditions": [
+          "氏名、表示名、個人の原綴りを入力・保存・表示する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "変換差分と入力制約の検査",
+        "can_check": [
+          "入力制約、文字列差分、ASCII化やTitle Case等の変換を検査する"
+        ],
+        "must_not": [
+          "本人の指定を無視して綴り・大文字小文字・姓名順を変更しない",
+          "全ての氏名をfirst/lastの二分構造とみなさない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-021",
+      "research_title": "新しいCSS機能の対応を確認する",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M18",
+        "M22"
+      ],
+      "scope": {
+        "conditions": [
+          "text-autospace、font-size-adjust等のCSS機能を採用する場合",
+          "草案や実装差のある機能に依存する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "使用機能と対応記録",
+        "can_check": [
+          "使用機能、対象環境、対応確認の記録を検査する"
+        ],
+        "must_not": [
+          "仕様本文の存在を実装対応の証明としない",
+          "未対応時に原稿を無許可で書き換えない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-022",
+      "research_title": "グラフィック字形の編集を分離する",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M35",
+        "M36"
+      ],
+      "scope": {
+        "conditions": [
+          "二言語ロゴ、ポスター見出し、カスタム字形等を編集する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "用途と許可の確認",
+        "can_check": [
+          "本文・UI・display-copy等の用途と編集許可の有無を確認する"
+        ],
+        "must_not": [
+          "カスタムロゴの変形を本文や入力文字列へ一般適用しない",
+          "字形の真正性を機械的な類似度だけで判定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-023",
+      "research_title": "原稿の正規化を無断実行しない",
+      "decision": "adopt",
+      "reason": "Adopt as conditional advice; no automatic typography acceptance.",
+      "source_ids": [
+        "M14"
+      ],
+      "scope": {
+        "conditions": [
+          "Unicode正規化、幅変換、不可視文字の整理等を実行する場合",
+          "氏名、引用、価格、単位、識別子を含む保護原稿を処理する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "前後差分",
+        "can_check": [
+          "正規化前後の差分と許可範囲を照合する"
+        ],
+        "must_not": [
+          "検索用の正規化を表示原稿へ無条件に適用しない",
+          "NFKCで失われる区別を装飾上不要と断定しない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-MIX-024",
+      "research_title": "公表値と実測値を区別する",
+      "decision": "revise",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "RESEARCH:EN-MIX-024"
+      ],
+      "scope": {
+        "conditions": [
+          "倍率、サイズ、行高、可読性等の根拠を登録する場合",
+          "公開デザイン事例や実測データをルール化する場合"
+        ],
+        "context_required": true
+      },
+      "automation_boundary": {
+        "mode": "detect_and_suggest",
+        "table_summary": "証拠種別の必須化",
+        "can_check": [
+          "証拠種別、公表元または測定条件、結果の記録を必須化する"
+        ],
+        "must_not": [
+          "公表設定値を独立実測として扱わない",
+          "未実施の可読性試験やレンダリング結果を補わない"
+        ],
+        "automatic_pass_allowed": false
+      },
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-001",
+      "research_title": "役割を踏まえた視覚階層",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R04",
+        "R05"
+      ],
+      "scope": [
+        "見出し・本文・補足が同居する画面や紙面"
+      ],
+      "automation_boundary": "サイズ比だけで合否を決めない",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-002",
+      "research_title": "英語の折返しと長い識別子",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R15",
+        "R22"
+      ],
+      "scope": [
+        "通常英語とURL・コードが同居する出力"
+      ],
+      "automation_boundary": "意味単位の改行と広告の意図は人が判断",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-003",
+      "research_title": "利用者の文字間隔変更",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R08",
+        "R25"
+      ],
+      "scope": [
+        "WCAG 1.4.12が適用されるWebのテキスト"
+      ],
+      "automation_boundary": "作者の初期値をこの数値へ固定する規則にはしない",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-004",
+      "research_title": "狭幅でのreflow",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R09",
+        "R25"
+      ],
+      "scope": [
+        "WCAG 1.4.10の対象となるWebコンテンツ"
+      ],
+      "automation_boundary": "本質的に二次元の配置が必要な例外を別に扱う",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-005",
+      "research_title": "文字の200%拡大",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R10",
+        "R25"
+      ],
+      "scope": [
+        "WCAG 1.4.4の適用対象"
+      ],
+      "automation_boundary": "rem使用だけで合格にしない",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-006",
+      "research_title": "フォント読込とfallback",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R17",
+        "R24"
+      ],
+      "scope": [
+        "Web fontを利用する出力"
+      ],
+      "automation_boundary": "Font Loading完了はglyph品質の保証ではない",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-007",
+      "research_title": "文字のコントラスト",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "R11",
+        "R25"
+      ],
+      "scope": [
+        "WCAG 1.4.3の適用対象"
+      ],
+      "automation_boundary": "写真上の背景差、例外、対象範囲を個別に判断",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    },
+    {
+      "rule_id": "EN-OUT-008",
+      "research_title": "最終出力の検証範囲",
+      "decision": "adopt",
+      "reason": "Conservative guidance with source/static/rendered evidence separated; research synthesis explicitly attributed.",
+      "source_ids": [
+        "K01",
+        "R24"
+      ],
+      "scope": [
+        "PDF、Office、HTML等を納品またはレビューするとき"
+      ],
+      "automation_boundary": "PDFプレビューからnative Officeや全ブラウザー対応を推定しない",
+      "product_test_id": "test_detached_skills_source_locale_and_context",
+      "status": "guidance-implemented; native-acceptance-not-checked"
+    }
+  ],
+  "tests": [
+    {
+      "test_id": "EN-CORE-T01",
+      "title": "一般本文",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査のサンプル設計）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-CORE-T02",
+      "title": "識別",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査作成例）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-CORE-T03",
+      "title": "数字",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査作成例）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-CORE-T04",
+      "title": "見出し",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査作成例）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-CORE-T05",
+      "title": "操作",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査作成例）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-CORE-T06",
+      "title": "文字収録",
+      "source_ids": [
+        "本報告「開発評価に使う最小のサンプル集合」（本調査のサンプル設計）"
+      ],
+      "rule_ids": [],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T01",
+      "title": "日本語本文と`Green Tea`",
+      "source_ids": [
+        "M06",
+        "M12"
+      ],
+      "rule_ids": [
+        "EN-MIX-004",
+        "EN-MIX-005",
+        "EN-MIX-014"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T02",
+      "title": "`Green Tea（煎茶）`と英文括弧版",
+      "source_ids": [
+        "M06"
+      ],
+      "rule_ids": [
+        "EN-MIX-004",
+        "EN-MIX-005",
+        "EN-MIX-023"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T03",
+      "title": "同じ漢字を`ja`、`zh-Hans`、`zh-Hant-TW`で表示",
+      "source_ids": [
+        "M18",
+        "M20",
+        "M32"
+      ],
+      "rule_ids": [
+        "EN-MIX-001",
+        "EN-MIX-002",
+        "EN-MIX-007",
+        "EN-MIX-009"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T04",
+      "title": "韓国語見出しと英語製品名",
+      "source_ids": [
+        "M08",
+        "M28"
+      ],
+      "rule_ids": [
+        "EN-MIX-004",
+        "EN-MIX-014"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T05",
+      "title": "Hangul完成形と分解Jamo",
+      "source_ids": [
+        "M13"
+      ],
+      "rule_ids": [
+        "EN-MIX-013",
+        "EN-MIX-014"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T06",
+      "title": "英語UI内のArabic人名と`— 3 items`",
+      "source_ids": [
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "rule_ids": [
+        "EN-MIX-010",
+        "EN-MIX-011"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T07",
+      "title": "Arabic本文内の`TEA-250-A`",
+      "source_ids": [
+        "M09",
+        "M10"
+      ],
+      "rule_ids": [
+        "EN-MIX-010",
+        "EN-MIX-011"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T08",
+      "title": "Hebrew名、括弧、英語肩書、件数",
+      "source_ids": [
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "rule_ids": [
+        "EN-MIX-010",
+        "EN-MIX-011"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T09",
+      "title": "PersianのZWNJを含む原稿",
+      "source_ids": [
+        "M24"
+      ],
+      "rule_ids": [
+        "EN-MIX-006",
+        "EN-MIX-012",
+        "EN-MIX-023"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T10",
+      "title": "`हिन्दी`と`क्षि`",
+      "source_ids": [
+        "M13",
+        "M23"
+      ],
+      "rule_ids": [
+        "EN-MIX-006",
+        "EN-MIX-013",
+        "EN-MIX-014"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T11",
+      "title": "Bengaliの結合子音を含む実原稿",
+      "source_ids": [
+        "M13",
+        "M27"
+      ],
+      "rule_ids": [
+        "EN-MIX-006",
+        "EN-MIX-013",
+        "EN-MIX-015"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T12",
+      "title": "Thaiの語間空白がない実文と英語名",
+      "source_ids": [
+        "M25",
+        "M28"
+      ],
+      "rule_ids": [
+        "EN-MIX-004",
+        "EN-MIX-014",
+        "EN-MIX-015"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T13",
+      "title": "KhmerとZWSPを含む原稿",
+      "source_ids": [
+        "M26",
+        "M28"
+      ],
+      "rule_ids": [
+        "EN-MIX-013",
+        "EN-MIX-014",
+        "EN-MIX-023"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T14",
+      "title": "`Nguyễn Tiếng Việt ĐẶC BIỆT`",
+      "source_ids": [
+        "M18",
+        "M34"
+      ],
+      "rule_ids": [
+        "EN-MIX-009",
+        "EN-MIX-015",
+        "EN-MIX-016"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T15",
+      "title": "`Zoë Łukasz O’Connor`",
+      "source_ids": [
+        "M18",
+        "M33",
+        "M41"
+      ],
+      "rule_ids": [
+        "EN-MIX-003",
+        "EN-MIX-009",
+        "EN-MIX-020"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T16",
+      "title": "primary font読込失敗",
+      "source_ids": [
+        "M18",
+        "M33"
+      ],
+      "rule_ids": [
+        "EN-MIX-009",
+        "EN-MIX-015",
+        "EN-MIX-021"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T17",
+      "title": "表示幅320pxと200%拡大",
+      "source_ids": [
+        "M18",
+        "M42"
+      ],
+      "rule_ids": [
+        "EN-MIX-009",
+        "EN-MIX-015",
+        "EN-MIX-018"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T18",
+      "title": "短い英語ラベルと実際の長い訳語",
+      "source_ids": [
+        "M42"
+      ],
+      "rule_ids": [
+        "EN-MIX-015",
+        "EN-MIX-018"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T19",
+      "title": "同じ数値を複数localeで表示",
+      "source_ids": [
+        "M15",
+        "M16",
+        "M17"
+      ],
+      "rule_ids": [
+        "EN-MIX-001",
+        "EN-MIX-017"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T20",
+      "title": "曖昧な数字日付",
+      "source_ids": [
+        "M15",
+        "M17"
+      ],
+      "rule_ids": [
+        "EN-MIX-001",
+        "EN-MIX-017"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T21",
+      "title": "対等二言語の見出し",
+      "source_ids": [
+        "M29",
+        "M35",
+        "M36",
+        "M39",
+        "M40"
+      ],
+      "rule_ids": [
+        "EN-MIX-008",
+        "EN-MIX-016",
+        "EN-MIX-019",
+        "EN-MIX-022"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T22",
+      "title": "英語と他言語の二段対訳",
+      "source_ids": [
+        "M39",
+        "M40",
+        "M43"
+      ],
+      "rule_ids": [
+        "EN-MIX-008",
+        "EN-MIX-019"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T23",
+      "title": "HTMLからPDFまたはOfficeへの出力",
+      "source_ids": [
+        "M09",
+        "M18",
+        "M19",
+        "M20",
+        "M33"
+      ],
+      "rule_ids": [
+        "EN-MIX-009",
+        "EN-MIX-010",
+        "EN-MIX-011",
+        "EN-MIX-015",
+        "EN-MIX-021",
+        "EN-MIX-024"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "MIX-T24",
+      "title": "`①`、全角文字、NBSPを含む保護原稿",
+      "source_ids": [
+        "M14"
+      ],
+      "rule_ids": [
+        "EN-MIX-005",
+        "EN-MIX-020",
+        "EN-MIX-023"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T001",
+      "title": "役割を踏まえた視覚階層",
+      "source_ids": [
+        "R04",
+        "R05"
+      ],
+      "rule_ids": [
+        "EN-OUT-001"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T002",
+      "title": "英語の折返しと長い識別子",
+      "source_ids": [
+        "R15",
+        "R22"
+      ],
+      "rule_ids": [
+        "EN-OUT-002"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T003",
+      "title": "利用者の文字間隔変更",
+      "source_ids": [
+        "R08",
+        "R25"
+      ],
+      "rule_ids": [
+        "EN-OUT-003"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T004",
+      "title": "狭幅でのreflow",
+      "source_ids": [
+        "R09",
+        "R25"
+      ],
+      "rule_ids": [
+        "EN-OUT-004"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T005",
+      "title": "文字の200%拡大",
+      "source_ids": [
+        "R10",
+        "R25"
+      ],
+      "rule_ids": [
+        "EN-OUT-005"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T006",
+      "title": "フォント読込とfallback",
+      "source_ids": [
+        "R17",
+        "R24"
+      ],
+      "rule_ids": [
+        "EN-OUT-006"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T007",
+      "title": "文字のコントラスト",
+      "source_ids": [
+        "R11",
+        "R25"
+      ],
+      "rule_ids": [
+        "EN-OUT-007"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    },
+    {
+      "test_id": "EN-OUT-T008",
+      "title": "最終出力の検証範囲",
+      "source_ids": [
+        "K01",
+        "R24"
+      ],
+      "rule_ids": [
+        "EN-OUT-008"
+      ],
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "reason": "Research visual/semantic acceptance is not established by product static preservation tests.",
+      "product_static_test": "test_detached_skills_source_locale_and_context",
+      "actual_result": null
+    }
+  ]
+}

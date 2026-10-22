@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Source-preserving static review",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "source",
+    "source_sha256",
+    "source_integrity",
+    "locale",
+    "resolved_language",
+    "native_rendering",
+    "language_quality",
+    "guidance",
+    "diagnostics"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "source_integrity": {
+      "type": "object",
+      "required": [
+        "status",
+        "bytes_equal",
+        "metadata_equal"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "passed",
+            "failed"
+          ]
+        },
+        "bytes_equal": {
+          "type": "boolean"
+        },
+        "metadata_equal": {
+          "type": "boolean"
+        }
+      }
+    },
+    "locale": {
+      "type": "string"
+    },
+    "resolved_language": {
+      "type": "string"
+    },
+    "native_rendering": {
+      "const": "not-checked"
+    },
+    "language_quality": {
+      "const": "needs-review"
+    },
+    "guidance": {
+      "type": "array"
+    },
+    "diagnostics": {
+      "type": "array"
+    }
+  },
+  "additionalProperties": true
+}

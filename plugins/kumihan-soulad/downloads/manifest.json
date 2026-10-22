@@ -1,0 +1,552 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Soulad",
+  "slug": "kumihan-soulad",
+  "language": "cs",
+  "version": "0.1.0",
+  "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "9d02e928874e5c083ce534ddf70d6bdacb71edbd3f0885571995444213bcece8"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "e9aef95d18e405d54529c64f3875aed9c2e866e3ce2469db8debbf29d588a727"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "cb3e85a69a1669ef52506e833feb8d638109c791dcc32b622ca143765736b000"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "077c87522d2e60d2ecd8623c2b404cd2d443f3d86e09595e9c23024a784018d8"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a630e475c41f340090e01e84a3c054a62fec7c938d4be66a4e7f452eb76c47e1"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "dc5f67772adb71dda39bdc40966fae65e52fe37c7ce77c1349cd8741c7283eba"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "0da7ace2c3ac1d36b64babdd4f770e4901a991237618a59879fcfe2e02be3fd5"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "064cab819e014ee5bd996c4d4247cad6384cd4ac7af8f91bd405f8d6dc788b77"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "a1a1e15ca90c0ea72600a432d21a021ce0d77af50e1e3b208bf152759cb6ff9a"
+    },
+    {
+      "path": "locales/cs-CZ.json",
+      "sha256": "70f2c28dfe57abba6383cd42e6918a6ebde59ff1c3ec8d5e848ee338e6ad26c1"
+    },
+    {
+      "path": "locales/cs.json",
+      "sha256": "ecbf84d406902e9787a3ffdc63d2bb5b1616282a43d679d4f76039fcbd30476d"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "3a40538fac781bceea6fca0104af83058b9265757bb4e91272d6cd573590ff24"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "e858a47424fafb26a55070145a474e2c46dc317e5bb35d752714c380b863ff9a"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "db4299614d741dd2c83f82fc8e9b708465cb5b15543033a833b958dad3f34a19"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "02c5839dc2bb2838f36ed16dd7d31aaf544aab7214523825a401b4c9b774c551"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-soulad/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-soulad/SKILL.md",
+      "sha256": "187996bb5ae6d468176f2cfcf96650ee3861a13348e0ae3e15308b9e51d7a266"
+    },
+    {
+      "path": "skills/kumihan-soulad/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-soulad/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-soulad/fixtures/acceptance.json",
+      "sha256": "0da7ace2c3ac1d36b64babdd4f770e4901a991237618a59879fcfe2e02be3fd5"
+    },
+    {
+      "path": "skills/kumihan-soulad/inventory.json",
+      "sha256": "a1a1e15ca90c0ea72600a432d21a021ce0d77af50e1e3b208bf152759cb6ff9a"
+    },
+    {
+      "path": "skills/kumihan-soulad/locales/cs-CZ.json",
+      "sha256": "70f2c28dfe57abba6383cd42e6918a6ebde59ff1c3ec8d5e848ee338e6ad26c1"
+    },
+    {
+      "path": "skills/kumihan-soulad/locales/cs.json",
+      "sha256": "ecbf84d406902e9787a3ffdc63d2bb5b1616282a43d679d4f76039fcbd30476d"
+    },
+    {
+      "path": "skills/kumihan-soulad/locales/supported.json",
+      "sha256": "3a40538fac781bceea6fca0104af83058b9265757bb4e91272d6cd573590ff24"
+    },
+    {
+      "path": "skills/kumihan-soulad/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-soulad/references/workflow.md",
+      "sha256": "db4299614d741dd2c83f82fc8e9b708465cb5b15543033a833b958dad3f34a19"
+    },
+    {
+      "path": "skills/kumihan-soulad/rules/catalog.json",
+      "sha256": "02c5839dc2bb2838f36ed16dd7d31aaf544aab7214523825a401b4c9b774c551"
+    },
+    {
+      "path": "skills/kumihan-soulad/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-soulad/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-soulad/sources.json",
+      "sha256": "d1cf389e1fa450ce203cc1528f28fcb6b3a95f1384e8fabccf54ae8786ea0dac"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/SKILL.md",
+      "sha256": "dee97249ccba7e1a1a50aee126fc5fc94917dd0b507d418ecec4e6aa7bd1d8e6"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/fixtures/acceptance.json",
+      "sha256": "0da7ace2c3ac1d36b64babdd4f770e4901a991237618a59879fcfe2e02be3fd5"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/inventory.json",
+      "sha256": "a1a1e15ca90c0ea72600a432d21a021ce0d77af50e1e3b208bf152759cb6ff9a"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/locales/cs-CZ.json",
+      "sha256": "70f2c28dfe57abba6383cd42e6918a6ebde59ff1c3ec8d5e848ee338e6ad26c1"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/locales/cs.json",
+      "sha256": "ecbf84d406902e9787a3ffdc63d2bb5b1616282a43d679d4f76039fcbd30476d"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/locales/supported.json",
+      "sha256": "3a40538fac781bceea6fca0104af83058b9265757bb4e91272d6cd573590ff24"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/references/workflow.md",
+      "sha256": "db4299614d741dd2c83f82fc8e9b708465cb5b15543033a833b958dad3f34a19"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/rules/catalog.json",
+      "sha256": "02c5839dc2bb2838f36ed16dd7d31aaf544aab7214523825a401b4c9b774c551"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-soulad-documents/sources.json",
+      "sha256": "d1cf389e1fa450ce203cc1528f28fcb6b3a95f1384e8fabccf54ae8786ea0dac"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/SKILL.md",
+      "sha256": "9968c862ad364becc16d63bdbb30feab22fc4055136195cb0bf213b323f804f5"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/fixtures/acceptance.json",
+      "sha256": "0da7ace2c3ac1d36b64babdd4f770e4901a991237618a59879fcfe2e02be3fd5"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/inventory.json",
+      "sha256": "a1a1e15ca90c0ea72600a432d21a021ce0d77af50e1e3b208bf152759cb6ff9a"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/locales/cs-CZ.json",
+      "sha256": "70f2c28dfe57abba6383cd42e6918a6ebde59ff1c3ec8d5e848ee338e6ad26c1"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/locales/cs.json",
+      "sha256": "ecbf84d406902e9787a3ffdc63d2bb5b1616282a43d679d4f76039fcbd30476d"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/locales/supported.json",
+      "sha256": "3a40538fac781bceea6fca0104af83058b9265757bb4e91272d6cd573590ff24"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/references/workflow.md",
+      "sha256": "db4299614d741dd2c83f82fc8e9b708465cb5b15543033a833b958dad3f34a19"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/rules/catalog.json",
+      "sha256": "02c5839dc2bb2838f36ed16dd7d31aaf544aab7214523825a401b4c9b774c551"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-soulad-review/sources.json",
+      "sha256": "d1cf389e1fa450ce203cc1528f28fcb6b3a95f1384e8fabccf54ae8786ea0dac"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/SKILL.md",
+      "sha256": "3a9e3d1403b5353e79003ecff8f716392711b10cd2e5b4b450f16f5f812e2820"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "63f26dafc4d85419473bf0216fdee45b3de0c3e3dfdcba5a6b2cf100a32c2e73"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/fixtures/acceptance.json",
+      "sha256": "0da7ace2c3ac1d36b64babdd4f770e4901a991237618a59879fcfe2e02be3fd5"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/inventory.json",
+      "sha256": "a1a1e15ca90c0ea72600a432d21a021ce0d77af50e1e3b208bf152759cb6ff9a"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/locales/cs-CZ.json",
+      "sha256": "70f2c28dfe57abba6383cd42e6918a6ebde59ff1c3ec8d5e848ee338e6ad26c1"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/locales/cs.json",
+      "sha256": "ecbf84d406902e9787a3ffdc63d2bb5b1616282a43d679d4f76039fcbd30476d"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/locales/supported.json",
+      "sha256": "3a40538fac781bceea6fca0104af83058b9265757bb4e91272d6cd573590ff24"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/references/workflow.md",
+      "sha256": "db4299614d741dd2c83f82fc8e9b708465cb5b15543033a833b958dad3f34a19"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/rules/catalog.json",
+      "sha256": "02c5839dc2bb2838f36ed16dd7d31aaf544aab7214523825a401b4c9b774c551"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/runtime/check_source.py",
+      "sha256": "47b6074d82d22aceb1e72019451ce1348c26bc2679d30a2c3511aa002bcf96cb"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-soulad-web/sources.json",
+      "sha256": "d1cf389e1fa450ce203cc1528f28fcb6b3a95f1384e8fabccf54ae8786ea0dac"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "d1cf389e1fa450ce203cc1528f28fcb6b3a95f1384e8fabccf54ae8786ea0dac"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 14,
+  "scope": "Private deterministic packaging; no publication or native-host acceptance",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-soulad-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4031267,
+      "sha256": "6adf6ca1ce664daefd7ab27477242ce6256e7b02f209cd414dc044b392b964bf",
+      "members": 78,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4031957,
+      "sha256": "288d96262379d606e6917dea23b5a8643fd0c050a48c88a0de41f3c4c8b5cbbc",
+      "members": 79,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4031656,
+      "sha256": "98050da1a4c03b7e528732568e51901402d1dd4ef34f84e44a55949b72565067",
+      "members": 79,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-claude-skill-v0.1.0.zip",
+      "bytes": 805428,
+      "sha256": "47e0bca11592f23f9319789d07e2bf59e68ebe836327c962d235392bac69eca7",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-soulad",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-documents-claude-skill-v0.1.0.zip",
+      "bytes": 805740,
+      "sha256": "c408fe9b7092a2fa4ac15870538fe3e9b3f2ff6ccd53ba50d5b4d22ac30de28c",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-soulad-documents",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 805740,
+      "sha256": "c408fe9b7092a2fa4ac15870538fe3e9b3f2ff6ccd53ba50d5b4d22ac30de28c",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-soulad-documents",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805740,
+      "sha256": "c408fe9b7092a2fa4ac15870538fe3e9b3f2ff6ccd53ba50d5b4d22ac30de28c",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-soulad-documents",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-gemini-skill-v0.1.0.zip",
+      "bytes": 805428,
+      "sha256": "47e0bca11592f23f9319789d07e2bf59e68ebe836327c962d235392bac69eca7",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-soulad",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805428,
+      "sha256": "47e0bca11592f23f9319789d07e2bf59e68ebe836327c962d235392bac69eca7",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-soulad",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-review-claude-skill-v0.1.0.zip",
+      "bytes": 805640,
+      "sha256": "b7bec610ca481f7bb08cfbc611b9e26cf044b76846e18aee45810420e557682a",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-soulad-review",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-review-gemini-skill-v0.1.0.zip",
+      "bytes": 805640,
+      "sha256": "b7bec610ca481f7bb08cfbc611b9e26cf044b76846e18aee45810420e557682a",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-soulad-review",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805640,
+      "sha256": "b7bec610ca481f7bb08cfbc611b9e26cf044b76846e18aee45810420e557682a",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-soulad-review",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-web-claude-skill-v0.1.0.zip",
+      "bytes": 805549,
+      "sha256": "c67bda37ad09e8e35ad3585865035ad8e779967cc25a59c6f016d40fdb8a4042",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-soulad-web",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-web-gemini-skill-v0.1.0.zip",
+      "bytes": 805549,
+      "sha256": "c67bda37ad09e8e35ad3585865035ad8e779967cc25a59c6f016d40fdb8a4042",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-soulad-web",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    },
+    {
+      "file": "kumihan-soulad-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 805549,
+      "sha256": "c67bda37ad09e8e35ad3585865035ad8e779967cc25a59c6f016d40fdb8a4042",
+      "members": 15,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-soulad-web",
+      "slug": "kumihan-soulad",
+      "version": "0.1.0",
+      "source_sha256": "184c83c1a442f9871ac98ee0a28e312f391b2b1ce483860fdc4157f38012853e"
+    }
+  ]
+}

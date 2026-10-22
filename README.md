@@ -17,8 +17,16 @@ KUMIHANは、言語ごとの文字組と、文字を使うデザイン全体を�
 
 ## 言語版
 
-日本語版のKUMIHANと、20の言語版があります。どの版も同じ4つのスキル（入口・Web・資料・レビュー）で構成され、単独で導入できます。各言語版のサイトは、その言語・英語・日本語の3ページで、導入ガイドへの案内もあります。
+日本語版のKUMIHANと、36の言語版があります。どの版も同じ4つのスキル（入口・Web・資料・レビュー）で構成され、単独で導入できます。各言語版のサイトは、その言語・英語・日本語の3ページで、導入ガイドへの案内もあります。
 
+| CS | KUMIHAN｜Soulad（チェコ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-cs.html) | [plugins/kumihan-soulad](plugins/kumihan-soulad/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| EL | KUMIHAN｜Μέτρο（ギリシャ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-el.html) | [plugins/kumihan-metro](plugins/kumihan-metro/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| HE | KUMIHAN｜מקצב（ヘブライ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-he.html) | [plugins/kumihan-miktsav](plugins/kumihan-miktsav/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| HU | KUMIHAN｜Arány（ハンガリー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-hu.html) | [plugins/kumihan-arany](plugins/kumihan-arany/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| LA | KUMIHAN｜Concinnitas（ラテン語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-la.html) | [plugins/kumihan-concinnitas](plugins/kumihan-concinnitas/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| MS | KUMIHAN｜Jalin（マレー語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-ms.html) | [plugins/kumihan-jalin](plugins/kumihan-jalin/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| NL | KUMIHAN｜Zetwerk（オランダ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-nl.html) | [plugins/kumihan-zetwerk](plugins/kumihan-zetwerk/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
+| TR | KUMIHAN｜Ahenk（トルコ語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-tr.html) | [plugins/kumihan-ahenk](plugins/kumihan-ahenk/README.md) | ZIP配布中 / ZIP available — GitHub Release準備中 / Release pending · ソース版 / source v0.1.0 |
 | コード | 言語版 | 版 | サイト | ソース | リリース |
 | --- | --- | --- | --- | --- | --- |
 | JA | KUMIHAN（日本語） | v0.2.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan.html) | [skills/](skills/) | 公開済 / Published **v0.2.0** · 2026-10-20T11:57:20Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/v0.2.0) |
@@ -78,7 +86,7 @@ v0.1.8 では、目的に応じた情報階層、文字と図像の関係、ブ�
 
 [landco-llc.github.io/kumihan](https://landco-llc.github.io/kumihan/) は GitHub Pages で公開しています。
 
-- 22言語のトップページ（英語が `index.html`、日本語が `top-ja.html`、その他は `top-<code>.html`）
+- 38言語のトップページ（英語が `index.html`、日本語が `top-ja.html`、その他は `top-<code>.html`）
 - 全ページ共通のフッター（言語版メニュー、GitHub、ライセンス、プライバシーポリシー）と、ページの言語に合わせたシェア表示
 - 書体は言語ごとに指定し、端末の書体を優先します。補う書体（Google Fonts の書体）もこのサイトから配信し、Google への通信はありません
 - [プライバシーポリシー](https://landco-llc.github.io/kumihan/privacy.html)：日本語版と英語版が正本（相違時は日本語版が優先）、その他の言語は参考訳
@@ -113,7 +121,7 @@ KUMIHAN is an open-source project for language-aware typography and thoughtful d
 
 ### Language editions
 
-Japanese KUMIHAN and 20 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; <!-- version-status:chinese -->Simplified Chinese (字律): source packages available; GitHub Release unpublished; Traditional Chinese (字衡): published [v0.2.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ziheng-v0.2.0).<!-- /version-status:chinese -->
+Japanese KUMIHAN and 36 language editions — Arabic, Bangla, German, Spanish, Persian, French, Hindi, Indonesian, Italian, Khmer, Korean, Polish, Portuguese, Russian, Swahili, Thai, Vietnamese, Simplified Chinese, Traditional Chinese and isiZulu. Every edition has the same four skills (entry, web, documents, review), installs on its own, and has a website in its language, English and Japanese. See the table above for each edition's site, source and release; <!-- version-status:chinese -->Simplified Chinese (字律): source packages available; GitHub Release unpublished; Traditional Chinese (字衡): published [v0.2.0](https://github.com/landco-llc/kumihan/releases/tag/kumihan-ziheng-v0.2.0).<!-- /version-status:chinese -->
 
 ### Installation
 
@@ -121,7 +129,7 @@ Choose the guide for your AI tool (ChatGPT / Codex, Claude / Claude Code, Gemini
 
 ### Website
 
-[landco-llc.github.io/kumihan](https://landco-llc.github.io/kumihan/) is published with GitHub Pages: top pages in 22 languages (English at `index.html`), a shared footer and language-matched link previews on every page, typefaces per language with system fonts first and fallback web fonts served from the site itself (no requests to Google), and the [privacy policy](https://landco-llc.github.io/kumihan/privacy.html) (Japanese and English authoritative, Japanese prevails; other languages are reference translations).
+[landco-llc.github.io/kumihan](https://landco-llc.github.io/kumihan/) is published with GitHub Pages: top pages in 38 languages (English at `index.html`), a shared footer and language-matched link previews on every page, typefaces per language with system fonts first and fallback web fonts served from the site itself (no requests to Google), and the [privacy policy](https://landco-llc.github.io/kumihan/privacy.html) (Japanese and English authoritative, Japanese prevails; other languages are reference translations).
 
 ### Status
 

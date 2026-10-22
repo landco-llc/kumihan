@@ -1,0 +1,844 @@
+{
+  "schema_version": "1.0",
+  "name": "KUMIHAN｜Jalin",
+  "slug": "kumihan-jalin",
+  "language": "ms",
+  "version": "0.1.0",
+  "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497",
+  "source_files": [
+    {
+      "path": ".claude-plugin/plugin.json",
+      "sha256": "9dca13d5eddf1217227b2624607df24c04109e5a2faaf09d08d711e2a88ebb24"
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "sha256": "cb61ff7ca307449199adef0bf82f09253598815cc39967ad769d32c143ba38ce"
+    },
+    {
+      "path": "GEMINI.md",
+      "sha256": "ebdff606095c443d85fb3bdabebc6409dfc5a4758fd97e150bd03e9aa3248bb1"
+    },
+    {
+      "path": "INSTALL.md",
+      "sha256": "2bbfa51f984324740008f8943ff83feffb77315fcde1583df9d86756d91cb978"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ee8b370ae425ac0103296e386232bdb56c86719c6bb5f0962dd2620cf59d8262"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "f54f163a2f52cc935b421aa1733cd9625fbede72caf68fda1ae99f5e8648c5d2"
+    },
+    {
+      "path": "UPDATES.md",
+      "sha256": "78c14d11c9fdbd3dd1c15deb8df8f15ffa354abb5f96645ae5f85baf62a475bf"
+    },
+    {
+      "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "entrypoints/kumihan-jalin-documents.md",
+      "sha256": "06756ca7ed56850311da659e04f0e8fbd54d15518b20bad0a56cdfc5e76e9552"
+    },
+    {
+      "path": "entrypoints/kumihan-jalin-review.md",
+      "sha256": "62467d426e68b802651f9388f4b5dd9ab0b6e5e47a22e8c94827c639851a2ee1"
+    },
+    {
+      "path": "entrypoints/kumihan-jalin-web.md",
+      "sha256": "5d001584d1c7c9eab351afd0c24764250040f06ecaffc34f6938328144168c61"
+    },
+    {
+      "path": "entrypoints/kumihan-jalin.md",
+      "sha256": "90f00283fc238fc9c3ec97727205c3d94bd18a25ed655c8255d7c8291884275a"
+    },
+    {
+      "path": "fixtures/acceptance.json",
+      "sha256": "1d2ac37a5c3aedaacc484e903e4f2eca64ef4db9c60392e0748de647dddbf4af"
+    },
+    {
+      "path": "gemini-extension.json",
+      "sha256": "6f964aae78e8483473eb2da8cadcb566e8342ca5b56bf7a8180c26257cf5b36d"
+    },
+    {
+      "path": "inventory.json",
+      "sha256": "5832451d51791fb89401cb1ffd7231898dc0242aa09db332f5c15fb0fe15a491"
+    },
+    {
+      "path": "locales/ms-Arab-BN.json",
+      "sha256": "5cef974f0b67578e531c5d605e1edc7c99473e401e31f4ebba7a73c74f67ab2b"
+    },
+    {
+      "path": "locales/ms-Arab-MY.json",
+      "sha256": "e9d7ba33840aa9c0413ade77f7f22c88bae01dc33b4d11808ba7ac1955fc97f9"
+    },
+    {
+      "path": "locales/ms-Arab-SG.json",
+      "sha256": "949e9dbeb495be9aad059f85630aaada032846f60666d6b2f73790f2fb70039c"
+    },
+    {
+      "path": "locales/ms-Arab.json",
+      "sha256": "2d91d504acaae6cd2416c24f782d0c674d8e0d1424ab721b90c9031a378bb1e5"
+    },
+    {
+      "path": "locales/ms-BN.json",
+      "sha256": "8adde49526e95f675e3cb3437c5b82ec0e11f28c079ca677fed4ffb3c5805be6"
+    },
+    {
+      "path": "locales/ms-Latn-BN.json",
+      "sha256": "efef89edb0e521108ded3590608b8007e50d2aad72c00fa56a3cf9b04d7ba4ed"
+    },
+    {
+      "path": "locales/ms-Latn-MY.json",
+      "sha256": "1bf9dcd90466f6090acdf811f9cf02c2f2070a394b3b3aecd5f817f9b09fa630"
+    },
+    {
+      "path": "locales/ms-Latn-SG.json",
+      "sha256": "f20f315730e88c525d10ed7ce2ef37b15d2511a8ccef801dfcc9b44da18d562a"
+    },
+    {
+      "path": "locales/ms-Latn.json",
+      "sha256": "569619f98da560cf6ce06f49d794f4c582c73cad0924f22cdd2828683265cf03"
+    },
+    {
+      "path": "locales/ms-MY.json",
+      "sha256": "88897c5869a96d4eb98b1787c30b12d671f2467a23a8c5338dcba941b164f2d5"
+    },
+    {
+      "path": "locales/ms-SG.json",
+      "sha256": "d0cca6b5c57809a2f2b6bc2a984f15b9b61033645a4e4c5de381a7f4152c0c2e"
+    },
+    {
+      "path": "locales/ms.json",
+      "sha256": "e2118d6bdb85ff7ee9350246d2e78a3813e09ab495f925d89c93b6ab6ee8ed10"
+    },
+    {
+      "path": "locales/supported.json",
+      "sha256": "d47fe48e74d053ae1ddf32cb40083e9aa368e06c7729e979432f8f1a3e235cdd"
+    },
+    {
+      "path": "plugin.json",
+      "sha256": "55cea4e2efaa9eba8c2d533241be1381583c042663017a636244a2f73aacf116"
+    },
+    {
+      "path": "profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "rules/catalog.json",
+      "sha256": "39b4c22ce6afdc57aa0da0bcb31b669e444cfaf46dbd525fc37ae3fe622f7ea3"
+    },
+    {
+      "path": "runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-jalin/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-jalin/SKILL.md",
+      "sha256": "4d83472556f743f7208cf81855a0c9b1a3b82e1a1c0f748e112286a7ba9fabfa"
+    },
+    {
+      "path": "skills/kumihan-jalin/THIRD_PARTY_NOTICES.md",
+      "sha256": "f54f163a2f52cc935b421aa1733cd9625fbede72caf68fda1ae99f5e8648c5d2"
+    },
+    {
+      "path": "skills/kumihan-jalin/agents/openai.yaml",
+      "sha256": "f9b4131b73f224ac19f448c5881abd010b790b0bc019a02e1d24dc5c5bfa4afa"
+    },
+    {
+      "path": "skills/kumihan-jalin/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-jalin/fixtures/acceptance.json",
+      "sha256": "1d2ac37a5c3aedaacc484e903e4f2eca64ef4db9c60392e0748de647dddbf4af"
+    },
+    {
+      "path": "skills/kumihan-jalin/inventory.json",
+      "sha256": "5832451d51791fb89401cb1ffd7231898dc0242aa09db332f5c15fb0fe15a491"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Arab-BN.json",
+      "sha256": "5cef974f0b67578e531c5d605e1edc7c99473e401e31f4ebba7a73c74f67ab2b"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Arab-MY.json",
+      "sha256": "e9d7ba33840aa9c0413ade77f7f22c88bae01dc33b4d11808ba7ac1955fc97f9"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Arab-SG.json",
+      "sha256": "949e9dbeb495be9aad059f85630aaada032846f60666d6b2f73790f2fb70039c"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Arab.json",
+      "sha256": "2d91d504acaae6cd2416c24f782d0c674d8e0d1424ab721b90c9031a378bb1e5"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-BN.json",
+      "sha256": "8adde49526e95f675e3cb3437c5b82ec0e11f28c079ca677fed4ffb3c5805be6"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Latn-BN.json",
+      "sha256": "efef89edb0e521108ded3590608b8007e50d2aad72c00fa56a3cf9b04d7ba4ed"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Latn-MY.json",
+      "sha256": "1bf9dcd90466f6090acdf811f9cf02c2f2070a394b3b3aecd5f817f9b09fa630"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Latn-SG.json",
+      "sha256": "f20f315730e88c525d10ed7ce2ef37b15d2511a8ccef801dfcc9b44da18d562a"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-Latn.json",
+      "sha256": "569619f98da560cf6ce06f49d794f4c582c73cad0924f22cdd2828683265cf03"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-MY.json",
+      "sha256": "88897c5869a96d4eb98b1787c30b12d671f2467a23a8c5338dcba941b164f2d5"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms-SG.json",
+      "sha256": "d0cca6b5c57809a2f2b6bc2a984f15b9b61033645a4e4c5de381a7f4152c0c2e"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/ms.json",
+      "sha256": "e2118d6bdb85ff7ee9350246d2e78a3813e09ab495f925d89c93b6ab6ee8ed10"
+    },
+    {
+      "path": "skills/kumihan-jalin/locales/supported.json",
+      "sha256": "d47fe48e74d053ae1ddf32cb40083e9aa368e06c7729e979432f8f1a3e235cdd"
+    },
+    {
+      "path": "skills/kumihan-jalin/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-jalin/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-jalin/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-jalin/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-jalin/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-jalin/rules/catalog.json",
+      "sha256": "39b4c22ce6afdc57aa0da0bcb31b669e444cfaf46dbd525fc37ae3fe622f7ea3"
+    },
+    {
+      "path": "skills/kumihan-jalin/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-jalin/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-jalin/sources.json",
+      "sha256": "c333bfc0aef42ec1681281099417b7bce671a13293622837013966d979281a70"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/SKILL.md",
+      "sha256": "9250e66e6121619742d300a8970a4609974922abdf226d24038d6e03eb186ce3"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/THIRD_PARTY_NOTICES.md",
+      "sha256": "f54f163a2f52cc935b421aa1733cd9625fbede72caf68fda1ae99f5e8648c5d2"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/agents/openai.yaml",
+      "sha256": "f9b4131b73f224ac19f448c5881abd010b790b0bc019a02e1d24dc5c5bfa4afa"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/fixtures/acceptance.json",
+      "sha256": "1d2ac37a5c3aedaacc484e903e4f2eca64ef4db9c60392e0748de647dddbf4af"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/inventory.json",
+      "sha256": "5832451d51791fb89401cb1ffd7231898dc0242aa09db332f5c15fb0fe15a491"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Arab-BN.json",
+      "sha256": "5cef974f0b67578e531c5d605e1edc7c99473e401e31f4ebba7a73c74f67ab2b"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Arab-MY.json",
+      "sha256": "e9d7ba33840aa9c0413ade77f7f22c88bae01dc33b4d11808ba7ac1955fc97f9"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Arab-SG.json",
+      "sha256": "949e9dbeb495be9aad059f85630aaada032846f60666d6b2f73790f2fb70039c"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Arab.json",
+      "sha256": "2d91d504acaae6cd2416c24f782d0c674d8e0d1424ab721b90c9031a378bb1e5"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-BN.json",
+      "sha256": "8adde49526e95f675e3cb3437c5b82ec0e11f28c079ca677fed4ffb3c5805be6"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Latn-BN.json",
+      "sha256": "efef89edb0e521108ded3590608b8007e50d2aad72c00fa56a3cf9b04d7ba4ed"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Latn-MY.json",
+      "sha256": "1bf9dcd90466f6090acdf811f9cf02c2f2070a394b3b3aecd5f817f9b09fa630"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Latn-SG.json",
+      "sha256": "f20f315730e88c525d10ed7ce2ef37b15d2511a8ccef801dfcc9b44da18d562a"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-Latn.json",
+      "sha256": "569619f98da560cf6ce06f49d794f4c582c73cad0924f22cdd2828683265cf03"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-MY.json",
+      "sha256": "88897c5869a96d4eb98b1787c30b12d671f2467a23a8c5338dcba941b164f2d5"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms-SG.json",
+      "sha256": "d0cca6b5c57809a2f2b6bc2a984f15b9b61033645a4e4c5de381a7f4152c0c2e"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/ms.json",
+      "sha256": "e2118d6bdb85ff7ee9350246d2e78a3813e09ab495f925d89c93b6ab6ee8ed10"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/locales/supported.json",
+      "sha256": "d47fe48e74d053ae1ddf32cb40083e9aa368e06c7729e979432f8f1a3e235cdd"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/rules/catalog.json",
+      "sha256": "39b4c22ce6afdc57aa0da0bcb31b669e444cfaf46dbd525fc37ae3fe622f7ea3"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-jalin-documents/sources.json",
+      "sha256": "c333bfc0aef42ec1681281099417b7bce671a13293622837013966d979281a70"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/SKILL.md",
+      "sha256": "0f68f766fdffb37a8c6b0938e46f95aeaca3896d485fbbeb3b254115b83e8d86"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/THIRD_PARTY_NOTICES.md",
+      "sha256": "f54f163a2f52cc935b421aa1733cd9625fbede72caf68fda1ae99f5e8648c5d2"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/agents/openai.yaml",
+      "sha256": "f9b4131b73f224ac19f448c5881abd010b790b0bc019a02e1d24dc5c5bfa4afa"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/fixtures/acceptance.json",
+      "sha256": "1d2ac37a5c3aedaacc484e903e4f2eca64ef4db9c60392e0748de647dddbf4af"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/inventory.json",
+      "sha256": "5832451d51791fb89401cb1ffd7231898dc0242aa09db332f5c15fb0fe15a491"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Arab-BN.json",
+      "sha256": "5cef974f0b67578e531c5d605e1edc7c99473e401e31f4ebba7a73c74f67ab2b"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Arab-MY.json",
+      "sha256": "e9d7ba33840aa9c0413ade77f7f22c88bae01dc33b4d11808ba7ac1955fc97f9"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Arab-SG.json",
+      "sha256": "949e9dbeb495be9aad059f85630aaada032846f60666d6b2f73790f2fb70039c"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Arab.json",
+      "sha256": "2d91d504acaae6cd2416c24f782d0c674d8e0d1424ab721b90c9031a378bb1e5"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-BN.json",
+      "sha256": "8adde49526e95f675e3cb3437c5b82ec0e11f28c079ca677fed4ffb3c5805be6"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Latn-BN.json",
+      "sha256": "efef89edb0e521108ded3590608b8007e50d2aad72c00fa56a3cf9b04d7ba4ed"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Latn-MY.json",
+      "sha256": "1bf9dcd90466f6090acdf811f9cf02c2f2070a394b3b3aecd5f817f9b09fa630"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Latn-SG.json",
+      "sha256": "f20f315730e88c525d10ed7ce2ef37b15d2511a8ccef801dfcc9b44da18d562a"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-Latn.json",
+      "sha256": "569619f98da560cf6ce06f49d794f4c582c73cad0924f22cdd2828683265cf03"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-MY.json",
+      "sha256": "88897c5869a96d4eb98b1787c30b12d671f2467a23a8c5338dcba941b164f2d5"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms-SG.json",
+      "sha256": "d0cca6b5c57809a2f2b6bc2a984f15b9b61033645a4e4c5de381a7f4152c0c2e"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/ms.json",
+      "sha256": "e2118d6bdb85ff7ee9350246d2e78a3813e09ab495f925d89c93b6ab6ee8ed10"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/locales/supported.json",
+      "sha256": "d47fe48e74d053ae1ddf32cb40083e9aa368e06c7729e979432f8f1a3e235cdd"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/rules/catalog.json",
+      "sha256": "39b4c22ce6afdc57aa0da0bcb31b669e444cfaf46dbd525fc37ae3fe622f7ea3"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-jalin-review/sources.json",
+      "sha256": "c333bfc0aef42ec1681281099417b7bce671a13293622837013966d979281a70"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/SKILL.md",
+      "sha256": "d9205c3a16be58f0d22c94f50502b35e7ad80c8f948e0578baaf28eac1d4b24d"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/THIRD_PARTY_NOTICES.md",
+      "sha256": "f54f163a2f52cc935b421aa1733cd9625fbede72caf68fda1ae99f5e8648c5d2"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/agents/openai.yaml",
+      "sha256": "f9b4131b73f224ac19f448c5881abd010b790b0bc019a02e1d24dc5c5bfa4afa"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+      "sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/fixtures/acceptance.json",
+      "sha256": "1d2ac37a5c3aedaacc484e903e4f2eca64ef4db9c60392e0748de647dddbf4af"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/inventory.json",
+      "sha256": "5832451d51791fb89401cb1ffd7231898dc0242aa09db332f5c15fb0fe15a491"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Arab-BN.json",
+      "sha256": "5cef974f0b67578e531c5d605e1edc7c99473e401e31f4ebba7a73c74f67ab2b"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Arab-MY.json",
+      "sha256": "e9d7ba33840aa9c0413ade77f7f22c88bae01dc33b4d11808ba7ac1955fc97f9"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Arab-SG.json",
+      "sha256": "949e9dbeb495be9aad059f85630aaada032846f60666d6b2f73790f2fb70039c"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Arab.json",
+      "sha256": "2d91d504acaae6cd2416c24f782d0c674d8e0d1424ab721b90c9031a378bb1e5"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-BN.json",
+      "sha256": "8adde49526e95f675e3cb3437c5b82ec0e11f28c079ca677fed4ffb3c5805be6"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Latn-BN.json",
+      "sha256": "efef89edb0e521108ded3590608b8007e50d2aad72c00fa56a3cf9b04d7ba4ed"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Latn-MY.json",
+      "sha256": "1bf9dcd90466f6090acdf811f9cf02c2f2070a394b3b3aecd5f817f9b09fa630"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Latn-SG.json",
+      "sha256": "f20f315730e88c525d10ed7ce2ef37b15d2511a8ccef801dfcc9b44da18d562a"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-Latn.json",
+      "sha256": "569619f98da560cf6ce06f49d794f4c582c73cad0924f22cdd2828683265cf03"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-MY.json",
+      "sha256": "88897c5869a96d4eb98b1787c30b12d671f2467a23a8c5338dcba941b164f2d5"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms-SG.json",
+      "sha256": "d0cca6b5c57809a2f2b6bc2a984f15b9b61033645a4e4c5de381a7f4152c0c2e"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/ms.json",
+      "sha256": "e2118d6bdb85ff7ee9350246d2e78a3813e09ab495f925d89c93b6ab6ee8ed10"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/locales/supported.json",
+      "sha256": "d47fe48e74d053ae1ddf32cb40083e9aa368e06c7729e979432f8f1a3e235cdd"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/profiles/mediums.json",
+      "sha256": "72251680131bc977c4d478f18c36bca39ecf4bbbe2c1d40ac9e25a5dfd7cebd7"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/references/documents.md",
+      "sha256": "9df1e7cbfaf52c1cd92b61e88458e734c55c63ecb08c887c5d1edc02a04b7355"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/references/review.md",
+      "sha256": "ff781438ebead4a8d614e62fe33b5ec1527b87a49c4f848d7ce18d9ced28160f"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/references/web.md",
+      "sha256": "0f876ed1f63219d08aaddc1937f5c872b5ed6ee6e64fe1d265305bc94139408f"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/references/workflow.md",
+      "sha256": "bb1e5f1f07270f1269a5543c2a899278ae233604a5f3a66db460dc0709ab0e1e"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/rules/catalog.json",
+      "sha256": "39b4c22ce6afdc57aa0da0bcb31b669e444cfaf46dbd525fc37ae3fe622f7ea3"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/runtime/check_source.py",
+      "sha256": "48b023d2ff6d92c2d425d8546eeb57a6e1e39a2c9d3042ccd3738cd35435445e"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/schemas/report.schema.json",
+      "sha256": "4fa041401344dca52ccdcf56454e33f69a986a4c730a8909930c5e162b4a0ed0"
+    },
+    {
+      "path": "skills/kumihan-jalin-web/sources.json",
+      "sha256": "c333bfc0aef42ec1681281099417b7bce671a13293622837013966d979281a70"
+    },
+    {
+      "path": "sources.json",
+      "sha256": "c333bfc0aef42ec1681281099417b7bce671a13293622837013966d979281a70"
+    }
+  ],
+  "package_count": 15,
+  "rule_count": 24,
+  "scope": "Private deterministic packaging; no publication or native-host acceptance",
+  "native_host_invocation": "not-checked",
+  "native_rendering": "not-checked",
+  "packages": [
+    {
+      "file": "kumihan-jalin-Claude-Code-plugin-v0.1.0.zip",
+      "bytes": 4076620,
+      "sha256": "ed0caa276e39f0c6d3215d6ba8c6aa506ad11e8b88200fb8b4a63635ddab00f5",
+      "members": 151,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "plugin",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-GPT-Codex-plugin-v0.1.0.zip",
+      "bytes": 4077434,
+      "sha256": "284086d664643acb84b291d58eacf155804aa7acfc117fbd1eacf3c3798443c0",
+      "members": 152,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "plugin",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-Gemini-CLI-extension-v0.1.0.zip",
+      "bytes": 4077234,
+      "sha256": "6b7e29be9876b7830921005c7cfd316a635464c7bd81d212b731ebedd1899635",
+      "members": 152,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "extension",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-claude-skill-v0.1.0.zip",
+      "bytes": 813459,
+      "sha256": "63cb8898acaf2067337609cf5ab83f6fce16f6a83399f0d207b2cf083dc29114",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-jalin",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-documents-claude-skill-v0.1.0.zip",
+      "bytes": 814034,
+      "sha256": "511c55f0d6fa9afa6d9db081e61baf75dd779c57f5cbfb1b29d250b9ea6b3c1b",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-jalin-documents",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 814034,
+      "sha256": "511c55f0d6fa9afa6d9db081e61baf75dd779c57f5cbfb1b29d250b9ea6b3c1b",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-jalin-documents",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-documents-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 814034,
+      "sha256": "511c55f0d6fa9afa6d9db081e61baf75dd779c57f5cbfb1b29d250b9ea6b3c1b",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-jalin-documents",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-gemini-skill-v0.1.0.zip",
+      "bytes": 813459,
+      "sha256": "63cb8898acaf2067337609cf5ab83f6fce16f6a83399f0d207b2cf083dc29114",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-jalin",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 813459,
+      "sha256": "63cb8898acaf2067337609cf5ab83f6fce16f6a83399f0d207b2cf083dc29114",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-jalin",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-review-claude-skill-v0.1.0.zip",
+      "bytes": 813852,
+      "sha256": "1f9a087dfb9d5ab931255bbe7849b47cd63c03ac6d85ee9c69c9e8eec034dd65",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-jalin-review",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-review-gemini-skill-v0.1.0.zip",
+      "bytes": 813852,
+      "sha256": "1f9a087dfb9d5ab931255bbe7849b47cd63c03ac6d85ee9c69c9e8eec034dd65",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-jalin-review",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-review-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 813852,
+      "sha256": "1f9a087dfb9d5ab931255bbe7849b47cd63c03ac6d85ee9c69c9e8eec034dd65",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-jalin-review",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-web-claude-skill-v0.1.0.zip",
+      "bytes": 813692,
+      "sha256": "b0a05daf9ed38aae0614c2ffa46c9e071cd01c5fc99731e68bb45489c8ffdf7f",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "claude",
+      "kind": "skill",
+      "skill": "kumihan-jalin-web",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-web-gemini-skill-v0.1.0.zip",
+      "bytes": 813692,
+      "sha256": "b0a05daf9ed38aae0614c2ffa46c9e071cd01c5fc99731e68bb45489c8ffdf7f",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gemini",
+      "kind": "skill",
+      "skill": "kumihan-jalin-web",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    },
+    {
+      "file": "kumihan-jalin-web-gpt-codex-skill-v0.1.0.zip",
+      "bytes": 813692,
+      "sha256": "b0a05daf9ed38aae0614c2ffa46c9e071cd01c5fc99731e68bb45489c8ffdf7f",
+      "members": 29,
+      "crc": "passed",
+      "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
+      "host": "gpt-codex",
+      "kind": "skill",
+      "skill": "kumihan-jalin-web",
+      "slug": "kumihan-jalin",
+      "version": "0.1.0",
+      "source_sha256": "dd7323a4a36ac05414a6dda2288177e40e4779c7ffcbcd9e2ab45629be03d497"
+    }
+  ]
+}

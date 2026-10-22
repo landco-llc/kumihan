@@ -1,0 +1,22 @@
+{
+  "name": "kumihan-arany",
+  "version": "0.1.0",
+  "description": "Magyar tipográfiai útmutatás az eredeti szöveg megőrzésével. | Hungarian typography guidance preserving original text.",
+  "author": {
+    "name": "L&Co. LLC"
+  },
+  "license": "Apache-2.0",
+  "interface": {
+    "displayName": "KUMIHAN｜Arány",
+    "shortDescription": "Magyar tipográfiai útmutatás az eredeti szöveg megőrzésével. | Hungarian typography guidance preserving original text.",
+    "longDescription": "Magyar tipográfiai útmutatás az eredeti szöveg megőrzésével. | Hungarian typography guidance preserving original text.",
+    "developerName": "L&Co. LLC",
+    "category": "Productivity",
+    "defaultPrompt": [
+      "Magyar tipográfiai útmutatás az eredeti szöveg megőrzésével. | Hungarian typography guidance preserving original text."
+    ],
+    "logo": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
+    "composerIcon": "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
+  },
+  "skills": "./skills/"
+}

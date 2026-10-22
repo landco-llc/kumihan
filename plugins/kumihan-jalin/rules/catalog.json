@@ -1,0 +1,626 @@
+[
+  {
+    "id": "MS-SCOPE-01",
+    "language": "ms",
+    "title": "Malay is not Indonesian",
+    "description_en": "Honor explicit ms versus id, document language and uncertainty; shared phrases such as Terima kasih are insufficient to choose the language or region.",
+    "requirement": "Honor explicit ms versus id, document language and uncertainty; shared phrases such as Terima kasih are insufficient to choose the language or region.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 12
+      }
+    ]
+  },
+  {
+    "id": "MS-SCOPE-02",
+    "language": "ms",
+    "title": "Guarded Jawi support",
+    "description_en": "Separate exact preservation, direction/shaping checks and native proofreading. Do not claim full Jawi support or transliterate Jawi into Rumi to evade an unsupported task.",
+    "requirement": "Separate exact preservation, direction/shaping checks and native proofreading. Do not claim full Jawi support or transliterate Jawi into Rumi to evade an unsupported task.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 14
+      }
+    ]
+  },
+  {
+    "id": "MS-META-01",
+    "language": "ms",
+    "title": "Independent context axes",
+    "description_en": "Keep language, script, region, register, medium, role and expression independent; ms-MY does not by itself prove Rumi or a formal voice.",
+    "requirement": "Keep language, script, region, register, medium, role and expression independent; ms-MY does not by itself prove Rumi or a formal voice.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 29
+      }
+    ]
+  },
+  {
+    "id": "MS-META-02",
+    "language": "ms",
+    "title": "Explicit span metadata",
+    "description_en": "Preserve explicit span language and script over inherited defaults. Arab is a script label, not proof of Arabic language; unknown context remains unresolved.",
+    "requirement": "Preserve explicit span language and script over inherited defaults. Arab is a script label, not proof of Arabic language; unknown context remains unresolved.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 25
+      }
+    ]
+  },
+  {
+    "id": "MS-SOURCE-01",
+    "language": "ms",
+    "title": "Source and derived layers",
+    "description_en": "Preserve text order, invisible characters, stable names and original metadata. Keep comparison/search keys and editorial suggestions separate with traceable diffs.",
+    "requirement": "Preserve text order, invisible characters, stable names and original metadata. Keep comparison/search keys and editorial suggestions separate with traceable diffs.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 48
+      }
+    ]
+  },
+  {
+    "id": "MS-SOURCE-02",
+    "language": "ms",
+    "title": "Meaning and voice protection",
+    "description_en": "Keep conditions, negation, quantities, actors and quotations. Layout pressure does not authorize deleting a condition, standardizing dialogue or changing a brand's case.",
+    "requirement": "Keep conditions, negation, quantities, actors and quotations. Layout pressure does not authorize deleting a condition, standardizing dialogue or changing a brand's case.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 53
+      }
+    ]
+  },
+  {
+    "id": "MS-EDIT-01",
+    "language": "ms",
+    "title": "Advisory editing boundary",
+    "description_en": "Flag semantic, regional and author-intent questions for review. A likely correction does not grant permission to rewrite or to convert Malay into Indonesian.",
+    "requirement": "Flag semantic, regional and author-intent questions for review. A likely correction does not grant permission to rewrite or to convert Malay into Indonesian.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 71
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-01",
+    "language": "ms",
+    "title": "di prefix versus preposition",
+    "description_en": "Review disusun and di rumah through word function and context; do not join or separate every occurrence of di using a string replacement.",
+    "requirement": "Review disusun and di rumah through word function and context; do not join or separate every occurrence of di using a string replacement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 83
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-02",
+    "language": "ms",
+    "title": "Compound spelling",
+    "description_en": "Preserve reka bentuk and susun atur, consult an identified regional dictionary and version, and avoid treating a fixed list of joined compounds as timeless completeness.",
+    "requirement": "Preserve reka bentuk and susun atur, consult an identified regional dictionary and version, and avoid treating a fixed list of joined compounds as timeless completeness.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 84
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-03",
+    "language": "ms",
+    "title": "Lexical reduplication",
+    "description_en": "Preserve buku-buku and distinguish its lexical hyphen from a temporary line-end hyphen; never remove repetition to fit a label.",
+    "requirement": "Preserve buku-buku and distinguish its lexical hyphen from a temporary line-end hyphen; never remove repetition to fit a label.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 85
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-04",
+    "language": "ms",
+    "title": "Particles and register",
+    "description_en": "Review -lah and pun by grammatical function and established exceptions; bacalah is not automatically slang and pun cannot be globally joined.",
+    "requirement": "Review -lah and pun by grammatical function and established exceptions; bacalah is not automatically slang and pun cannot be globally joined.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 86
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-05",
+    "language": "ms",
+    "title": "Inclusive and exclusive reference",
+    "description_en": "kami and kita differ in who is included. Explain any suggested change of responsibility or audience, leaving the original source intact.",
+    "requirement": "kami and kita differ in who is included. Explain any suggested change of responsibility or audience, leaving the original source intact.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 88
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-06",
+    "language": "ms",
+    "title": "Dialogue and regional voice",
+    "description_en": "A formal brief may justify an advisory note about tak or Jom, while quotations and dialogue remain protected. Region does not prescribe a single voice.",
+    "requirement": "A formal brief may justify an advisory note about tak or Jom, while quotations and dialogue remain protected. Region does not prescribe a single voice.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 89
+      }
+    ]
+  },
+  {
+    "id": "MS-RUMI-07",
+    "language": "ms",
+    "title": "Mixed-language and brand spans",
+    "description_en": "Separate a loanword, foreign quotation and official product name before proposing spelling or English-titlecase changes.",
+    "requirement": "Separate a loanword, foreign quotation and official product name before proposing spelling or English-titlecase changes.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 90
+      }
+    ]
+  },
+  {
+    "id": "MS-NUM-01",
+    "language": "ms",
+    "title": "Formatter and editorial contracts",
+    "description_en": "Preserve quantities, dates and currency codes. Conflicting DBP examples or house styles need an identified edition and context rather than global comma/space replacement.",
+    "requirement": "Preserve quantities, dates and currency codes. Conflicting DBP examples or house styles need an identified edition and context rather than global comma/space replacement.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 92
+      }
+    ]
+  },
+  {
+    "id": "MS-WRAP-01",
+    "language": "ms",
+    "title": "Long affixed words",
+    "description_en": "Adjust width and ordinary word wrapping before proposing hyphenation. Do not substitute English or Indonesian dictionaries, break all letters or remove meaning.",
+    "requirement": "Adjust width and ordinary word wrapping before proposing hyphenation. Do not substitute English or Indonesian dictionaries, break all letters or remove meaning.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 93
+      }
+    ]
+  },
+  {
+    "id": "MS-JAWI-01",
+    "language": "ms",
+    "title": "Jawi characters and variants",
+    "description_en": "Test چ ڠ ڤ ڽ ݢ ۏ and preserve ڬ separately; this probe is not the complete Jawi repertoire and does not authorize replacing ga variants.",
+    "requirement": "Test چ ڠ ڤ ڽ ݢ ۏ and preserve ڬ separately; this probe is not the complete Jawi repertoire and does not authorize replacing ga variants.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 103
+      }
+    ]
+  },
+  {
+    "id": "MS-JAWI-02",
+    "language": "ms",
+    "title": "Joining and mark placement",
+    "description_en": "Contextual forms belong to the shaping engine and font. Do not replace logical text with presentation forms; cmap coverage alone is not correct shaping.",
+    "requirement": "Contextual forms belong to the shaping engine and font. Do not replace logical text with presentation forms; cmap coverage alone is not correct shaping.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 101
+      }
+    ]
+  },
+  {
+    "id": "MS-JAWI-03",
+    "language": "ms",
+    "title": "Logical direction and extraction",
+    "description_en": "Keep Jawi in logical order, declare known RTL paragraphs and isolate complete LTR amounts, URLs and phone spans when needed. Never reverse strings to imitate RTL.",
+    "requirement": "Keep Jawi in logical order, declare known RTL paragraphs and isolate complete LTR amounts, URLs and phone spans when needed. Never reverse strings to imitate RTL.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 118
+      }
+    ]
+  },
+  {
+    "id": "MS-JAWI-04",
+    "language": "ms",
+    "title": "Segmentation and controls",
+    "description_en": "Keep grapheme/mark relationships, ZWJ and ZWNJ intact. Avoid Latin tracking, arbitrary tatweel and per-codepoint font changes across joining runs.",
+    "requirement": "Keep grapheme/mark relationships, ZWJ and ZWNJ intact. Avoid Latin tracking, arbitrary tatweel and per-codepoint font changes across joining runs.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 120
+      }
+    ]
+  },
+  {
+    "id": "MS-JAWI-05",
+    "language": "ms",
+    "title": "Malay OpenType language",
+    "description_en": "Distinguish Malay MLY from Malayalam MAL. Record actual font, version, hash, language selection and glyph results; a language table alone is not certification.",
+    "requirement": "Distinguish Malay MLY from Malayalam MAL. Record actual font, version, hash, language selection and glyph results; a language table alone is not certification.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 114
+      }
+    ]
+  },
+  {
+    "id": "MS-FONT-01",
+    "language": "ms",
+    "title": "Optical Rumi and Jawi balance",
+    "description_en": "Compare actual body size, marks, baseline, line clearance and fallback in the selected medium; no universal Rumi-to-Jawi pixel multiplier is justified.",
+    "requirement": "Compare actual body size, marks, baseline, line clearance and fallback in the selected medium; no universal Rumi-to-Jawi pixel multiplier is justified.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 126
+      }
+    ]
+  },
+  {
+    "id": "MS-PROFILE-01",
+    "language": "ms",
+    "title": "Purpose and measured evidence",
+    "description_en": "Choose reading, display or hybrid structure from the task. Keep published design tokens, isolated observed examples and design starting values distinct.",
+    "requirement": "Choose reading, display or hybrid structure from the task. Keep published design tokens, isolated observed examples and design starting values distinct.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 130
+      }
+    ]
+  },
+  {
+    "id": "MS-QA-01",
+    "language": "ms",
+    "title": "Host-specific acceptance",
+    "description_en": "Test real zoom, reflow and applicable text spacing separately, then reopen Office/PDF output and verify fonts, extraction and reading order. Static checks do not certify these hosts.",
+    "requirement": "Test real zoom, reflow and applicable text spacing separately, then reopen Office/PDF output and verify fonts, extraction and reading order. Static checks do not certify these hosts.",
+    "auto_fix": false,
+    "severity": "advisory",
+    "medium": [
+      "web",
+      "document",
+      "presentation",
+      "display",
+      "review"
+    ],
+    "status": "needs-review",
+    "verification": "guidance-only",
+    "rendering": "not-checked",
+    "source_refs": [
+      {
+        "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+        "filename": "MS_Development_Reference_20261020.source.txt",
+        "line": 134
+      }
+    ]
+  }
+]

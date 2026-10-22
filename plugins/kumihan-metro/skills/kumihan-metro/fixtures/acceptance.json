@@ -1,0 +1,294 @@
+{
+  "schema_version": "1.0",
+  "language": "el",
+  "scope": "Exact UTF-8 preservation and advisory diagnostics only; these are not render or proofreading tests.",
+  "research_fixture_completion": "NOT_CLAIMED; short probes derived from cited research sections",
+  "cases": [
+    {
+      "id": "EL-PRESERVE-01",
+      "input": "ή Ή Μάιος Μαΐου σςΣ",
+      "locale": "el",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 430
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 431
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 433
+        }
+      ],
+      "related_rule_ids": [
+        "EL-07",
+        "EL-08",
+        "EL-10"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-02",
+      "input": "ό,τι 1,25; ΑΒC 2026",
+      "locale": "el-GR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 434
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 436
+        }
+      ],
+      "related_rule_ids": [
+        "EL-11",
+        "EL-13"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-03",
+      "input": "ά",
+      "locale": "el-CY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 427
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 429
+        }
+      ],
+      "related_rule_ids": [
+        "EL-04",
+        "EL-06"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-04",
+      "input": "Ελλάδα el-GR / Κύπρος el-CY",
+      "locale": "el",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 425
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 459
+        }
+      ],
+      "related_rule_ids": [
+        "EL-02",
+        "EL-31"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-05",
+      "input": "κόσμος ΚΟΣΜΟΣ",
+      "locale": "el-GR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 431
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 433
+        }
+      ],
+      "related_rule_ids": [
+        "EL-08",
+        "EL-10"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-06",
+      "input": "«κείμενο» · ; ;",
+      "locale": "el-CY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 434
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 437
+        }
+      ],
+      "related_rule_ids": [
+        "EL-11",
+        "EL-14"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-07",
+      "input": "ἄνθρωπος",
+      "locale": "el",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 458
+        }
+      ],
+      "related_rule_ids": [
+        "EL-30"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-08",
+      "input": "Έκδοση KUMIHAN v0.1.0",
+      "locale": "el-GR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 426
+        },
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 439
+        }
+      ],
+      "related_rule_ids": [
+        "EL-03",
+        "EL-16"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-09",
+      "input": "12.345,67 EUR",
+      "locale": "el-CY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 449
+        }
+      ],
+      "related_rule_ids": [
+        "EL-21"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-10",
+      "input": "1 αρχείο / 2 αρχεία",
+      "locale": "el",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 451
+        }
+      ],
+      "related_rule_ids": [
+        "EL-23"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-11",
+      "input": "2026-10-20 16:05",
+      "locale": "el-GR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 452
+        }
+      ],
+      "related_rule_ids": [
+        "EL-24"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-12",
+      "input": "https://example.test/Μέτρο",
+      "locale": "el-CY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 426
+        }
+      ],
+      "related_rule_ids": [
+        "EL-03"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-13",
+      "input": "Logo ΜΕΤΡΟ",
+      "locale": "el",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 456
+        }
+      ],
+      "related_rule_ids": [
+        "EL-28"
+      ]
+    },
+    {
+      "id": "EL-PRESERVE-14",
+      "input": "πάπια ΐ ΰ",
+      "locale": "el-GR",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "c9406c2dfeff205e2f8d7a45951713389a19f225",
+          "filename": "EL_Research_20261019.source.txt",
+          "line": 430
+        }
+      ],
+      "related_rule_ids": [
+        "EL-07"
+      ]
+    }
+  ]
+}

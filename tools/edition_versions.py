@@ -32,6 +32,14 @@ PRODUCTS = {
     'da': ('samklang-da', 'samklang-da', 15),
     'no': ('samklang-no', 'samklang-no', 15),
     'uk': ('mira-uk', 'mira-uk', 15),
+    'tr': ('ahenk', 'ahenk', 15),
+    'ms': ('jalin', 'jalin', 15),
+    'hu': ('arany', 'arany', 15),
+    'cs': ('soulad', 'soulad', 15),
+    'la': ('concinnitas', 'concinnitas', 15),
+    'he': ('miktsav', 'miktsav', 15),
+    'el': ('metro', 'metro', 15),
+    'nl': ('zetwerk', 'zetwerk', 15),
 }
 
 

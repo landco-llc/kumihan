@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "language": "ms",
+  "scope": "Exact UTF-8 preservation and advisory diagnostics only; these are not render or proofreading tests.",
+  "research_fixture_completion": "NOT_CLAIMED; short probes derived from cited research sections",
+  "cases": [
+    {
+      "id": "MS-PRESERVE-01",
+      "input": "disusun di rumah buku-buku",
+      "locale": "ms",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 83
+        },
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 85
+        }
+      ],
+      "related_rule_ids": [
+        "MS-RUMI-01",
+        "MS-RUMI-03"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-02",
+      "input": "kami kita tak Jom",
+      "locale": "ms-MY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 88
+        },
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 89
+        }
+      ],
+      "related_rule_ids": [
+        "MS-RUMI-05",
+        "MS-RUMI-06"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-03",
+      "input": "چڠڤڽݢۏ ڬ‌ب https://example.test RM25.50",
+      "locale": "ms-SG",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 103
+        },
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 120
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-01",
+        "MS-JAWI-04"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-04",
+      "input": "Terima kasih",
+      "locale": "ms-BN",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 12
+        }
+      ],
+      "related_rule_ids": [
+        "MS-SCOPE-01"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-05",
+      "input": "reka bentuk susun atur",
+      "locale": "ms-Latn",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 84
+        }
+      ],
+      "related_rule_ids": [
+        "MS-RUMI-02"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-06",
+      "input": "bacalah pun",
+      "locale": "ms-Arab",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 86
+        }
+      ],
+      "related_rule_ids": [
+        "MS-RUMI-04"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-07",
+      "input": "Jom baca panduan ini.",
+      "locale": "ms-Latn-MY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 89
+        }
+      ],
+      "related_rule_ids": [
+        "MS-RUMI-06"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-08",
+      "input": "ms-SG / ms-BN / ms-MY",
+      "locale": "ms-Latn-SG",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 29
+        }
+      ],
+      "related_rule_ids": [
+        "MS-META-01"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-09",
+      "input": "KUMIHAN RM25.50 (2026)",
+      "locale": "ms-Latn-BN",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 118
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-03"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-10",
+      "input": "10 000 / 10,000",
+      "locale": "ms-Arab-MY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 92
+        }
+      ],
+      "related_rule_ids": [
+        "MS-NUM-01"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-11",
+      "input": "ب‍ب ب‌ب",
+      "locale": "ms-Arab-SG",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 120
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-04"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-12",
+      "input": "بڽب بݢب بڬب",
+      "locale": "ms-Arab-BN",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 103
+        },
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 101
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-01",
+        "MS-JAWI-02"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-13",
+      "input": "https://example.test +60 12 345 6789",
+      "locale": "ms",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 118
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-03"
+      ]
+    },
+    {
+      "id": "MS-PRESERVE-14",
+      "input": "Rumi / Jawi / MLY / MAL",
+      "locale": "ms-MY",
+      "expect_source_equal": true,
+      "expect_native_rendering": "not-checked",
+      "source_refs": [
+        {
+          "git_blob": "13747f53808522c2bee836fd45639da12fdc2159",
+          "filename": "MS_Development_Reference_20261020.source.txt",
+          "line": 114
+        }
+      ],
+      "related_rule_ids": [
+        "MS-JAWI-05"
+      ]
+    }
+  ]
+}
