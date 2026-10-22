@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>字衡 0.2.2 — 縱橫對照試樣</title>
+<style>
+  body { margin: 2rem; font-family: serif; }
+  main { display: flex; flex-wrap: wrap; gap: 2rem; }
+  section { border: 1px solid currentColor; padding: 1rem; max-inline-size: 100%; }
+  .sample { font-size: 1.25rem; line-height: 1.8; letter-spacing: normal; }
+  .vertical { writing-mode: vertical-rl; text-orientation: mixed; inline-size: 16em; max-block-size: 100%; overflow: auto; }
+  .tcy { text-combine-upright: all; }
+  a { overflow-wrap: anywhere; }
+</style>
+<h1>縱橫對照試樣</h1>
+<p>此頁是待驗證的原創試樣。字型由環境提供；未記錄實際字型、環境與觀察前，不代表通過字形、排版或輔助科技驗證。16em 是此試樣的比較起點，不是通用列長。</p>
+<main>
+  <section aria-labelledby="h-horizontal">
+    <h2 id="h-horizontal">橫排參照</h2>
+    <p class="sample" data-fixture="V-TW01">雨停了，窗外仍有水聲。你聽見了嗎？請慢慢讀；讀完，再往下看。</p>
+  </section>
+  <section aria-labelledby="h-vertical">
+    <h2 id="h-vertical">直排基準</h2>
+    <p class="sample vertical" data-fixture="V-TW01">雨停了，窗外仍有水聲。你聽見了嗎？請慢慢讀；讀完，再往下看。</p>
+  </section>
+</main>
+<p>逐項確認標點位置、列端、選取與複製、縮放、鍵盤順序及閱讀順序。不要以 CSS 宣告或這個範例本身充當實測證據。</p>
+</html>

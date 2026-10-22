@@ -305,29 +305,6 @@ def outputs():
                     if page.endswith('.html'):
                         files[page] = files[page].replace(old_url, asset['url']).replace(row['sha256'], asset['sha256'])
                         files[page] = re.sub(re.escape(stem) + r'-v?0\.1\.0\.zip', lambda _: asset['name'], files[page])
-        old_notice = ('Source candidate v0.2.0: context, source protection and evidence contracts updated. '
-                      'The source version is v0.2.0; retained download links are v0.1.0. '
-                      'The candidate is not a formal Release or native-host acceptance.')
-        new_notice = (f"Published v{facts['published_version']}: context, source protection and evidence contracts updated. "
-                      'Download links and SHA-256 values match the verified GitHub Release. '
-                      'Native-host installation and skill invocation still require separate acceptance.')
-        for page in files:
-            if page.endswith('.html'):
-                files[page] = files[page].replace(old_notice, new_notice)
-                host = 'claude' if 'claude' in page else 'gemini' if 'gemini' in page else 'openai-codex'
-                bundle = assets[f"kumihan-ziheng-{host}-plugin-{facts['published_version']}.zip"]
-                files[page] = re.sub(r'(full bundle SHA-256: <code>)[0-9a-f]{64}',
-                                     lambda m: m[1] + bundle['sha256'], files[page])
-                for old, new in [
-                    ('The source version is v0.2.0; retained download links are v0.1.0. No formal Release is published.',
-                     'The published version and current download links are v0.2.0; the GitHub Release is verified.'),
-                    ('原始碼版本為 v0.2.0；保留的下載連結為 v0.1.0，Release 尚未公開。',
-                     '公開版本與目前下載連結為 v0.2.0，GitHub Release 已驗證。'),
-                    ('ソース版は v0.2.0、保持するダウンロードリンクは v0.1.0 です。正式Releaseは未公開です。',
-                     '公開版と現在のダウンロードリンクは v0.2.0 です。GitHub Releaseの検証は完了しています。'),
-                    ('v0.2.0 source candidate', 'v0.2.0'), ('v0.2.0 原始碼候選', 'v0.2.0'),
-                    ('v0.2.0ソース候補', 'v0.2.0')]:
-                    files[page] = files[page].replace(old, new)
     # Source candidate panels and retained downloads refer to different versions.
     # Label only Ziheng's exact legacy ZIP links; preserve every URL and other copy.
     def legacy_label(match):

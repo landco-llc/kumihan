@@ -70,7 +70,9 @@ class ZiHengWebsiteTests(unittest.TestCase):
                         self.assertTrue(target.is_file(), (path,key,value))
 
     def test_installation_claims_versioned_zip_and_unversioned_display(self):
-        zipfilename='kumihan-ziheng-openai-codex-plugin-0.2.0.zip'
+        facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['zh-hant']
+        version=facts['published_version']
+        zipfilename=f'kumihan-ziheng-openai-codex-plugin-{version}.zip'
         for path in CASE:
             content=(ROOT/path).read_text(encoding='utf-8')
             self.assertIn(zipfilename, content, path)
@@ -90,7 +92,7 @@ class ZiHengWebsiteTests(unittest.TestCase):
                 # Downloads are exactly the verified ChatGPT/Codex Release assets + SHA256SUMS.txt.
                 downloads={attr['href'] for tag,attr in parsed.tags if tag=='a' and '/releases/download/' in attr.get('href','')}
                 self.assertEqual(downloads,codex|{sums})
-                self.assertIn('0.2.0',content)
+                self.assertIn(version,content)
                 self.assertNotIn('https://chatgpt.com/plugins/plugins_',content)
 
     def test_logo_styles_and_japanese_site_footer(self):

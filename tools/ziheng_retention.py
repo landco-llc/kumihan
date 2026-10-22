@@ -5,6 +5,8 @@ from pathlib import Path
 
 PRODUCT = 'plugins/kumihan-ziheng'
 FOLDERS = ('downloads', 'downloads Claude', 'downloads Gemini')
+# Explicit immutable release baselines; arbitrary historical versions remain rejected.
+VERSIONS = ('0.1.0', '0.2.0')
 
 
 def retained_outputs(root, folders):
@@ -22,8 +24,8 @@ def retained_outputs(root, folders):
         if len(rel.parts) < 4 or rel.parts[:2] != ('plugins','kumihan-ziheng') or rel.parts[2] not in FOLDERS:
             raise ValueError('Retention must stay within Ziheng downloads')
         suffix = rel.parts[3:]
-        old_zip = len(suffix)==2 and suffix[0] in ('plugins','extensions','skills') and suffix[1].endswith('-0.1.0.zip')
-        old_meta = suffix[:2]==('history','0.1.0') and len(suffix)==3 and suffix[2] in ('MANIFEST.json','SHA256SUMS.txt')
+        old_zip = len(suffix)==2 and suffix[0] in ('plugins','extensions','skills') and any(suffix[1].endswith('-'+version+'.zip') for version in VERSIONS)
+        old_meta = len(suffix)==3 and suffix[0]=='history' and suffix[1] in VERSIONS and suffix[2] in ('MANIFEST.json','SHA256SUMS.txt')
         if not (old_zip or old_meta):
             raise ValueError('Only fixed historical archives/metadata may be retained')
         if rel.parts[2] not in folders: continue
@@ -41,6 +43,7 @@ def is_retained_manifest(root, path):
     root=Path(root).resolve()
     try: rel=Path(path).resolve().relative_to(root).as_posix()
     except ValueError: return False
-    known={PRODUCT+'/'+folder+'/history/0.1.0/MANIFEST.json' for folder in FOLDERS}
+    known={PRODUCT+'/'+folder+'/history/'+version+'/MANIFEST.json'
+           for folder in FOLDERS for version in VERSIONS}
     if rel not in known: return False
     return rel in retained_outputs(root,FOLDERS)

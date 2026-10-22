@@ -1,0 +1,534 @@
+{
+  "schema_version": "1.0.0",
+  "product_version": "0.2.2",
+  "scope": "Public rule-to-fixture traceability for vertical composition. Adoption is not execution or typography acceptance.",
+  "counts": {
+    "research_candidates": 28,
+    "priority": 14,
+    "conditional": 10,
+    "deferred": 4,
+    "vertical_fixtures": 30,
+    "zh_hant_rules": 18,
+    "shared_rules": 16,
+    "total_rules": 34
+  },
+  "source_namespace": "ZV-",
+  "source_registry": "../sources/public-sources.json",
+  "fixture_suite": "../fixtures/research-v022/cases.json",
+  "retained_sets": "The earlier 32 research-v020 fixtures remain a separate set. The new 30 cases are not 30 passing layout results.",
+  "candidates": [
+    {
+      "candidate_id": "V-A01",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-015",
+        "ZH-HANT-011",
+        "CONTENT-001",
+        "CONTENT-004"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW01",
+        "V-TW02",
+        "V-TW04",
+        "V-TW05",
+        "V-TW06",
+        "V-TW07",
+        "V-TW08",
+        "V-TW09",
+        "V-TW10",
+        "V-TW11",
+        "V-TW12",
+        "V-HK01",
+        "V-HK02",
+        "V-HK03",
+        "V-HK04",
+        "V-HK05",
+        "V-HK06",
+        "V-HK07",
+        "V-HK08",
+        "V-HK10",
+        "V-SH01",
+        "V-SH02",
+        "V-SH03",
+        "V-SH04",
+        "V-SH05",
+        "V-SH07",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-A02",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-001"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-HK01",
+        "V-HK02",
+        "V-HK03",
+        "V-HK05",
+        "V-HK08",
+        "V-SH01"
+      ]
+    },
+    {
+      "candidate_id": "V-A03",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-018",
+        "DESIGN-001",
+        "DESIGN-005"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW05",
+        "V-TW10",
+        "V-TW11",
+        "V-TW12",
+        "V-HK05",
+        "V-HK07",
+        "V-HK08",
+        "V-HK09",
+        "V-SH04"
+      ]
+    },
+    {
+      "candidate_id": "V-A04",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-012",
+        "ZH-HANT-018"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW05",
+        "V-TW12",
+        "V-HK05",
+        "V-SH04",
+        "V-SH05",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-A05",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-012"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW01",
+        "V-TW02",
+        "V-TW07",
+        "V-HK01",
+        "V-HK03",
+        "V-HK10"
+      ]
+    },
+    {
+      "candidate_id": "V-A06",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-003",
+        "ZH-HANT-004",
+        "ZH-HANT-012"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW02",
+        "V-TW03",
+        "V-TW06",
+        "V-HK01",
+        "V-HK02",
+        "V-HK10",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-A07",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW02",
+        "V-TW03",
+        "V-TW04",
+        "V-TW05",
+        "V-HK02",
+        "V-HK10",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-A08",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-006"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW03",
+        "V-TW04"
+      ]
+    },
+    {
+      "candidate_id": "V-A09",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-016",
+        "EVIDENCE-002"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW01",
+        "V-HK04",
+        "V-SH07"
+      ]
+    },
+    {
+      "candidate_id": "V-A10",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-002",
+        "ZH-HANT-016"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW06",
+        "V-TW09",
+        "V-HK03",
+        "V-HK04",
+        "V-SH01",
+        "V-SH02"
+      ]
+    },
+    {
+      "candidate_id": "V-A11",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-016",
+        "ZH-HANT-012"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW01",
+        "V-TW04",
+        "V-TW09",
+        "V-HK04",
+        "V-SH02",
+        "V-SH07"
+      ]
+    },
+    {
+      "candidate_id": "V-A12",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-008",
+        "ZH-HANT-009"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW08",
+        "V-TW09",
+        "V-HK01",
+        "V-HK06",
+        "V-HK07",
+        "V-SH02",
+        "V-SH03"
+      ]
+    },
+    {
+      "candidate_id": "V-A13",
+      "tier": "A",
+      "rule_ids": [
+        "ZH-HANT-018"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW10",
+        "V-TW11",
+        "V-TW12",
+        "V-HK09",
+        "V-SH03",
+        "V-SH04",
+        "V-SH05",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-A14",
+      "tier": "A",
+      "rule_ids": [
+        "EVIDENCE-001",
+        "EVIDENCE-002",
+        "EVIDENCE-005"
+      ],
+      "adoption": "adopted-contract",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW01",
+        "V-TW03",
+        "V-HK04",
+        "V-SH01",
+        "V-SH04",
+        "V-SH07",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-B01",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-007"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW09",
+        "V-HK07",
+        "V-HK10"
+      ]
+    },
+    {
+      "candidate_id": "V-B02",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-008"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW08",
+        "V-HK06",
+        "V-HK08"
+      ]
+    },
+    {
+      "candidate_id": "V-B03",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-017"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW07",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-B04",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-013"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW06",
+        "V-TW07",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-B05",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-018",
+        "DESIGN-005",
+        "DESIGN-006"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW10",
+        "V-TW11",
+        "V-HK08",
+        "V-HK09"
+      ]
+    },
+    {
+      "candidate_id": "V-B06",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-010",
+        "ZH-HANT-018"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW08",
+        "V-TW10",
+        "V-TW12",
+        "V-HK06",
+        "V-HK09",
+        "V-SH03",
+        "V-SH05",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-B07",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-018",
+        "DESIGN-005"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW05",
+        "V-HK03",
+        "V-HK05",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-B08",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-014"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-SH07"
+      ]
+    },
+    {
+      "candidate_id": "V-B09",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-014"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-SH07"
+      ]
+    },
+    {
+      "candidate_id": "V-B10",
+      "tier": "B",
+      "rule_ids": [
+        "ZH-HANT-018",
+        "ZH-HANT-013"
+      ],
+      "adoption": "conditional-guidance",
+      "implementation": "rules-references-and-validation-contracts",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW06",
+        "V-TW12",
+        "V-HK09",
+        "V-SH03",
+        "V-SH04",
+        "V-SH05",
+        "V-SH08"
+      ]
+    },
+    {
+      "candidate_id": "V-C01",
+      "tier": "C",
+      "rule_ids": [
+        "ZH-HANT-001",
+        "ZH-HANT-018"
+      ],
+      "adoption": "deferred",
+      "implementation": "boundary-guidance-only",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW05",
+        "V-TW12",
+        "V-HK05"
+      ]
+    },
+    {
+      "candidate_id": "V-C02",
+      "tier": "C",
+      "rule_ids": [
+        "ZH-HANT-007",
+        "ZH-HANT-018"
+      ],
+      "adoption": "deferred",
+      "implementation": "boundary-guidance-only",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW11",
+        "V-HK10",
+        "V-SH06"
+      ]
+    },
+    {
+      "candidate_id": "V-C03",
+      "tier": "C",
+      "rule_ids": [
+        "ZH-HANT-016",
+        "EVIDENCE-001"
+      ],
+      "adoption": "deferred",
+      "implementation": "boundary-guidance-only",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-HK04",
+        "V-SH01"
+      ]
+    },
+    {
+      "candidate_id": "V-C04",
+      "tier": "C",
+      "rule_ids": [
+        "ZH-HANT-018",
+        "CONTENT-002"
+      ],
+      "adoption": "deferred",
+      "implementation": "boundary-guidance-only",
+      "output_acceptance": "not-checked",
+      "fixture_ids": [
+        "V-TW10",
+        "V-TW11",
+        "V-HK09"
+      ]
+    }
+  ]
+}

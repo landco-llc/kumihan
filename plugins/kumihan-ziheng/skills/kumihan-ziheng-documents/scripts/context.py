@@ -20,7 +20,10 @@ DEFAULTS = dict(content_locale=None, editorial_region=None, register=None,
                 medium=None, writing_mode=None, source_policy='fixed', features=[],
                 audience_and_distance=None)
 # Audited neutral policies, not all Chinese typography records.
-NEUTRAL = {'ZH-HANT-001', 'ZH-HANT-009', 'ZH-HANT-011', 'ZH-HANT-015'}
+NEUTRAL = {'ZH-HANT-001', 'ZH-HANT-009', 'ZH-HANT-011', 'ZH-HANT-015',
+           'ZH-HANT-016', 'ZH-HANT-018'}
+VERTICAL = ('vertical-rl', 'vertical-lr')
+DECORATIONS = {'proper-name-mark', 'title-mark', 'text-emphasis'}
 TAGS = {'zh-hant-tw': 'zh-Hant-TW', 'zh-hant-hk': 'zh-Hant-HK',
         'zh-hant-mo': 'zh-Hant-MO', 'zh-hant': 'zh-Hant'}
 
@@ -83,15 +86,30 @@ def select_review_rules(context, records, profile):
                 if c['element_role'] != 'prose': reasons.append('Requires declared Chinese prose role')
             if rid == 'ZH-HANT-005' and c['element_role'] != 'prose':
                 reasons.append('Requires caller-classified Chinese prose')
-            if rid == 'ZH-HANT-012' and c['writing_mode'] not in ('vertical-rl', 'vertical-lr'):
+            if rid in ('ZH-HANT-012', 'ZH-HANT-016', 'ZH-HANT-017', 'ZH-HANT-018') and c['writing_mode'] not in VERTICAL:
                 reasons.append('Vertical writing not selected')
+            if rid in ('ZH-HANT-016', 'ZH-HANT-018') and not chinese:
+                reasons.append('Traditional Chinese content context required')
+            if rid == 'ZH-HANT-017':
+                if not DECORATIONS & set(c['features']):
+                    reasons.append('Semantic text decoration feature not selected')
+                if c['editorial_style'] is None:
+                    reasons.append('Requires selected editorial_style for decoration placement')
+            if rid == 'ZH-HANT-018':
+                if c['element_role'] is None or c['expression_mode'] is None:
+                    reasons.append('Requires declared element_role and expression_mode')
             if rid == 'ZH-HANT-013' and not {'ruby', 'bopomofo'} & set(c['features']):
                 reasons.append('Ruby/Bopomofo feature not selected')
             if rid == 'ZH-HANT-014' and c['medium'] not in ('report-document', 'presentation') and 'pdf-export' not in c['features']:
                 reasons.append('Office/PDF output not selected')
         if reasons: deferred.append({'rule_id':rid, 'reasons':reasons})
         else: applicable.append(rid)
+    limitations = ['Selection is not execution or typography acceptance.',
+                   'Unknown tags are not BCP47-validated; MO regional guidance is unsupported.']
+    if c['writing_mode'] == 'vertical-lr':
+        limitations.append('vertical-lr is an explicit layout choice requiring editorial justification; selection does not endorse ordinary Chinese column order.')
+    if chinese and not supported:
+        limitations.append('Neutral font identity and reading-order obligations do not establish TW/HK regional glyph acceptance.')
     return dict(selection_only=True, candidate_rule_ids=[r['id'] for r in candidates],
                 applicable_rule_ids=applicable, deferred_rules=deferred,
-                limitations=['Selection is not execution or typography acceptance.',
-                             'Unknown tags are not BCP47-validated; MO regional guidance is unsupported.'])
+                limitations=limitations)

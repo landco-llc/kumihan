@@ -24,14 +24,14 @@
 
 ## 能力與限制
 
-15 條獨立撰寫的字衡規則，加上從既有正本生成的 16 條共通政策。
-5 條字衡規則有狹窄的靜態工具範圍，詳見各規則 verification.notes；
-其餘 10 條是 guidance-only。implemented 不表示整條排版規則可自動判定。
+字衡的地區規則與從既有正本生成的共通政策分開管理。
+部分規則有狹窄的靜態工具範圍，詳見各規則 verification.notes；
+其他判斷需依實際作品提出指引。implemented 不表示整條排版規則可自動判定。
 ASCII 標點和引號只回報 needs-review 候選。精確 bytes 比對不保證擷取完整或視覺正確。
 
 套件沒有 renderer。實際行端、地區字形、200% 放大、直排、注音／ruby、Word、PowerPoint、PDF 匯出及原生主機安裝／呼叫尚未驗收。
 香港的機構別引號體例需確認；不套用臺灣教育部體例作為香港的預設。
-22 件原創 fixture 是本次靜態測試資料；未取得較早研究集的 52 候選／28 案例原本，不宣稱已全部移植或驗證。
+原有靜態 fixture、v0.2.0 的 32 個研究案例與 v0.2.2 的 30 個直排案例各自保留身分。案例定義、規則選擇與實際驗收結果分開記錄。
 
 [驗證範圍](VERIFICATION.md) 說明實測及未測範圍。
 Apache-2.0，見 [LICENSE](LICENSE)；出處與素材限制見 [notices](THIRD_PARTY_NOTICES.md)。
@@ -63,8 +63,12 @@ Downloads: [Claude](https://github.com/landco-llc/kumihan/blob/main/plugins/kumi
 
 **KUMIHAN｜字衡** 為不含版號的顯示名稱，避免影響 `@` 提及操作。版本寫在 ZIP 檔名（例如 `kumihan-ziheng-0.1.0.zip`）與套件資訊中。
 
-## v0.2.0 source candidate / 原始碼候選
+## v0.2.2 直排更新 / Vertical typography
 
-Four independent Skills now separate editorial region, register, element role, expression mode and source permissions. New context/evidence helpers are bounded, read-only contracts; 32 research fixtures are definitions, not 32 automated detectors or rendered passes. See [verification scope](VERIFICATION.md) for acceptance limits.
+四個獨立技能依文字角色選擇閱讀、展示或混合表現，分別檢視直排與橫排的標點、引號、行端、字距、欄距及閱讀順序。先確認臺灣／香港的編輯體例、原稿權限、實際字型與輸出環境；不把整段旋轉、負字距或字型品牌當作直排品質的證據。
 
-四個技能補充編輯、表現與用途別尺度；保留原稿及原有介面。未驗證的地域字形、Office、AT與母語校閱分開記錄。三個host各有完整套件及四個獨立Skill，依各downloads目錄MANIFEST核對0.2.0候選；舊0.1.0仍保留。正式Release、Marketplace與稼働MCP尚未套用。
+數字、拉丁字母、網址、注音及標示符號依內容與用途處理。固定原稿維持原字元、Unicode 序列與數值；字型替代、縱向字形、實際行端及讀取順序須在目標環境分開驗證。30 個直排案例提供可重複的檢視輸入，不等同於 30 件描畫或母語校閱通過。
+
+The four independent Skills now include purpose-led vertical typography guidance, mixed-script run handling, contextual spacing and explicit font/rendering evidence. Reading copy, display copy and hybrid compositions keep separate purposes. Existing text and Unicode sequences remain protected. The new 30 vertical case definitions do not claim browser, native Office, accessibility or native-language acceptance.
+
+原始碼版本以本目錄 `plugin.json` 為準；正式公開版及已驗證下載以[字衡網站](https://landco-llc.github.io/kumihan/kumihan-zh-han.html)與 [Release 紀錄](https://github.com/landco-llc/kumihan/releases?q=kumihan-ziheng)為準。v0.1.0、v0.2.0 的舊 ZIP 與 URL 保留；網站發布、GitHub Release 與各主機的 Marketplace 登錄是不同狀態。

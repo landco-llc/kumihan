@@ -1,9 +1,9 @@
 [
   {
     "id": "ZH-HANT-001",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "明示語言、字體系統與地區",
-    "requirement_en": "Resolve only explicit zh-Hant-TW or zh-Hant-HK plus a supported medium; never infer region from Han characters.",
+    "requirement_en": "Resolve explicit locale, editorial region, register, editorial style, element role, expression mode and writing mode separately. The v1 resolver accepts TW/HK only; v2 may retain unresolved zh-Hant for named neutral checks. Do not infer region or Cantonese register from glyphs, font names or size.",
     "kind": "project-policy",
     "strength": "must",
     "impact": "warning",
@@ -21,11 +21,15 @@
     ],
     "source_refs": [
       "ZH-POLICY",
-      "CLREQ"
+      "CLREQ",
+      "ZV-S01",
+      "ZV-S08"
     ],
     "source_sections": {
       "ZH-POLICY": "revision 1",
-      "CLREQ": "1.2"
+      "CLREQ": "1.2",
+      "ZV-S01": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S08": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -37,7 +41,7 @@
     "verification": {
       "method": "static",
       "coverage": "implemented",
-      "notes": "Selection only; tools/locale_resolver.py rejects unknown contexts."
+      "notes": "Metadata and selection only; an applicable rule is an obligation to inspect, never an output pass."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -53,14 +57,22 @@
     },
     "case_ids": [
       "F01",
-      "F32"
+      "F32",
+      "V-TW05",
+      "V-TW12",
+      "V-HK01",
+      "V-HK02",
+      "V-HK03",
+      "V-HK05",
+      "V-HK08",
+      "V-SH01"
     ]
   },
   {
     "id": "ZH-HANT-002",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "保留地區字形與異體字",
-    "requirement_en": "Keep supplied character identities and variation sequences. Inspect glyphs with the actual regional language tag and available licensed font; do not replace 臺/台 or 裏/裡 automatically.",
+    "requirement_en": "Preserve supplied characters, combining sequences and variation selectors. Test coverage, chosen regional glyphs and actual fallback separately with the exact font instance; TC/HK labels or locl presence alone cannot establish acceptance.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -78,11 +90,19 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-F06",
+      "ZV-F09",
+      "ZV-F11",
+      "ZV-F18"
     ],
     "source_sections": {
       "CLREQ": "4.1; 3.1",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-F06": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F11": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F18": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -94,7 +114,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "Glyph appearance is separate from source identity; no glyph detector."
+      "notes": "Glyph appearance is separate from source identity and cmap coverage; no automatic regional-glyph detector."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -111,14 +131,20 @@
     "case_ids": [
       "F14",
       "F19",
-      "F20"
+      "F20",
+      "V-TW06",
+      "V-TW09",
+      "V-HK03",
+      "V-HK04",
+      "V-SH01",
+      "V-SH02"
     ]
   },
   {
     "id": "ZH-HANT-003",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "臺灣引號體例",
-    "requirement_en": "For newly authored Taiwan prose, recommend 「」 outside and 『』 inside when no house style is specified. Original quotes, proper names and agreed alternate styles stay unchanged.",
+    "requirement_en": "For Taiwan prose with corner-quote house style, keep outer 「」 and inner 『』 as supplied. Inspect horizontal opening/closing positions at upper-left/lower-right and vertical positions at upper-right/lower-left; test nesting, column edges and the actual font without substituting presentation-form characters.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -136,12 +162,16 @@
     "source_refs": [
       "TW-MOE",
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S04",
+      "ZV-S09"
     ],
     "source_sections": {
       "TW-MOE": "引號",
       "CLREQ": "5.2",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S04": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -153,7 +183,7 @@
     "verification": {
       "method": "static",
       "coverage": "implemented",
-      "notes": "runtime/checks.py flags curly quotes only in explicitly classified prose under corner style; no nesting or completeness detector."
+      "notes": "Static checker flags only limited curly-quote candidates in explicitly classified corner-style prose; vertical glyph position, nesting and complete quote matching require separate review."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -168,14 +198,21 @@
       "approval_required": true
     },
     "case_ids": [
-      "F06"
+      "F06",
+      "V-TW02",
+      "V-TW03",
+      "V-TW06",
+      "V-HK01",
+      "V-HK02",
+      "V-HK10",
+      "V-SH06"
     ]
   },
   {
     "id": "ZH-HANT-004",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "香港引號體例另行確認",
-    "requirement_en": "For Hong Kong, record the publisher or document-specific quote style. Do not import Taiwan educational conventions as a universal Hong Kong rule; preserve original corner or curly quotation until a style is chosen.",
+    "requirement_en": "Record the Hong Kong document or publisher quote style before judging it. Corner and curly quotation treatments require their own vertical output check. A government correspondence guide or Taiwan educational rule does not establish a universal Hong Kong style; preserve supplied quotation.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -192,11 +229,15 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S08",
+      "ZV-F20"
     ],
     "source_sections": {
       "CLREQ": "5.1 regional note; 5.2",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S08": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F20": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -208,7 +249,7 @@
     "verification": {
       "method": "static",
       "coverage": "implemented",
-      "notes": "Checker emits a quote candidate only when caller explicitly chooses corner; no default Hong Kong style and no compliance claim."
+      "notes": "Checker emits a quote candidate only for explicitly selected corner style. No default Hong Kong style, vertical-glyph or compliance claim."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -223,14 +264,21 @@
       "approval_required": true
     },
     "case_ids": [
-      "F07"
+      "F07",
+      "V-TW02",
+      "V-TW03",
+      "V-TW06",
+      "V-HK01",
+      "V-HK02",
+      "V-HK10",
+      "V-SH06"
     ]
   },
   {
     "id": "ZH-HANT-005",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "區分中文正文與受保護片段",
-    "requirement_en": "Consider fullwidth punctuation for newly authored Chinese prose. ASCII marks in names, URLs, code, English quotations and protected spans are not a prose-punctuation fault.",
+    "requirement_en": "Classify Chinese prose and protected runs before offering punctuation advice. ASCII marks inside names, URLs, code, English quotations, currencies or units are not automatically prose faults. Fixed source punctuation remains unchanged when layout orientation changes.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -248,11 +296,15 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S09",
+      "ZV-S15"
     ],
     "source_sections": {
       "CLREQ": "5.1",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S15": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -264,7 +316,7 @@
     "verification": {
       "method": "static",
       "coverage": "implemented",
-      "notes": "Only ASCII ,;:!? candidates in a caller-classified prose segment. Not an HTML parser or grammar checker; candidates remain needs-review."
+      "notes": "Only limited ASCII ,;:!? candidates in caller-classified prose; no grammar, HTML, layout or mixed-run detector."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -285,9 +337,9 @@
   },
   {
     "id": "ZH-HANT-006",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "實際行首行尾檢視",
-    "requirement_en": "Inspect observed lines for closing punctuation at a line start and opening brackets at a line end using the chosen editorial strictness. DOM punctuation alone is not a rendered violation.",
+    "requirement_en": "Inspect actual rendered line or column boundaries under the selected editorial strictness. Check opening/closing marks and keep adopted two-character dash and six-dot ellipsis units together; measure joins, advance and alignment rather than relying on source presence or applying nowrap to a whole paragraph.",
     "kind": "standard-reference",
     "strength": "should",
     "impact": "warning",
@@ -305,11 +357,17 @@
     ],
     "source_refs": [
       "CLREQ",
-      "UAX14"
+      "UAX14",
+      "ZV-S05",
+      "ZV-S18",
+      "ZV-S19"
     ],
     "source_sections": {
       "CLREQ": "6.1.1–6.1.2",
-      "UAX14": "1; 6; 8"
+      "UAX14": "1; 6; 8",
+      "ZV-S05": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S18": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S19": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -321,7 +379,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "No line-layout engine. Strictness varies by publication; source scanning cannot pass line-edge quality."
+      "notes": "No line-layout engine. Explicit break-offset helper can inspect reported boundaries only; source scanning cannot pass actual column quality."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -340,14 +398,21 @@
       "F10",
       "F11",
       "F12",
-      "F17"
+      "F17",
+      "V-TW02",
+      "V-TW03",
+      "V-TW04",
+      "V-TW05",
+      "V-HK02",
+      "V-HK10",
+      "V-SH06"
     ]
   },
   {
     "id": "ZH-HANT-007",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "標點壓縮不是必要條件",
-    "requirement_en": "Taiwan publications often retain full punctuation width; Hong Kong publications often use squeezing. Choose and record the project treatment, inspect available shaping support, and keep exceptions; neither region mandates a universal setting.",
+    "requirement_en": "Choose punctuation compression by house style, punctuation class, position and font support. Taiwan often retains full advances and Hong Kong often squeezes, but neither is compulsory. In vertical CLReq treatment retain one-character advances for ：；？！; compare contextual punctuation spacing without blanket halfwidth replacement or negative tracking.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -365,11 +430,17 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S01",
+      "ZV-S13",
+      "ZV-F15"
     ],
     "source_sections": {
       "CLREQ": "6.3.2",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S01": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S13": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F15": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -381,7 +452,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "Do not implement squeezing by replacing characters or inserting invisible characters."
+      "notes": "Rendered guidance only. Compare in-column, column-edge and adjacent punctuation; feature tags or CSS trim declarations alone do not prove effective spacing."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -397,14 +468,19 @@
     },
     "case_ids": [
       "F15",
-      "F16"
+      "F16",
+      "V-TW09",
+      "V-TW11",
+      "V-HK07",
+      "V-HK10",
+      "V-SH06"
     ]
   },
   {
     "id": "ZH-HANT-008",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "中西文與數字混排",
-    "requirement_en": "Preserve original Latin case, digits, currencies, units and fullwidth forms. Adjust layout only within permission; do not NFKC-normalize to make mixed text fit.",
+    "requirement_en": "Preserve Latin case, numbers, currencies, units, leading zeros and source forms. In vertical text choose upright, sideways or selected text-combine-upright treatment for meaningful runs such as a short page number, date, price or scientific name; do not combine all ASCII or split grapheme/variation sequences to fit.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -422,11 +498,17 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S09",
+      "ZV-S10",
+      "ZV-S08"
     ],
     "source_sections": {
       "CLREQ": "6.3.3",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S10": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S08": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -438,7 +520,7 @@
     "verification": {
       "method": "assisted",
       "coverage": "guidance-only",
-      "notes": "Optical spacing and baseline judgment needs actual fonts; no automatic spacing repair."
+      "notes": "Run metadata can be checked statically; actual width, glyph orientation, fallback and readability require the selected engine and font. No automatic spacing or numeral rewriting."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -454,14 +536,22 @@
     },
     "case_ids": [
       "F12",
-      "F18"
+      "F18",
+      "V-TW08",
+      "V-TW09",
+      "V-HK01",
+      "V-HK06",
+      "V-HK07",
+      "V-HK08",
+      "V-SH02",
+      "V-SH03"
     ]
   },
   {
     "id": "ZH-HANT-009",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "網址與程式碼的換行",
-    "requirement_en": "Keep URL targets and displayed source bytes. Try scoped overflow-wrap on long tokens and test copy/paste and navigation; avoid global break-all or generic nowrap.",
+    "requirement_en": "Preserve URL/email/code bytes and targets. For long tokens test a scoped wrapping treatment or a horizontal information region, then verify copy, selection and navigation separately. Avoid global break-all, generic nowrap, inserted joiners or per-character line breaks.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -479,11 +569,15 @@
     ],
     "source_refs": [
       "UAX14",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S09",
+      "ZV-S15"
     ],
     "source_sections": {
       "UAX14": "1; 6; 8",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S15": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -495,7 +589,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "A code or URL exemption is not a pass for rendered overflow."
+      "notes": "A protected URL/code role is not a pass for visual overflow or interaction."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -510,14 +604,21 @@
       "approval_required": true
     },
     "case_ids": [
-      "F13"
+      "F13",
+      "V-TW08",
+      "V-TW09",
+      "V-HK01",
+      "V-HK06",
+      "V-HK07",
+      "V-SH02",
+      "V-SH03"
     ]
   },
   {
     "id": "ZH-HANT-010",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "窄螢幕與文字放大",
-    "requirement_en": "Check 320 CSS px reflow and actual 200% text enlargement separately; retain labels, notes and controls. Do not hide lost content with clipping.",
+    "requirement_en": "Test reflow according to actual scroll direction: 320 CSS px physical width for vertically scrolling content, 256 CSS px physical height for horizontally scrolling content. Test actual 200% text enlargement separately, including orientation switches, labels, notes and controls; do not conceal loss with clipping.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -531,10 +632,14 @@
       "zh-Hant-HK"
     ],
     "source_refs": [
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S16",
+      "ZV-S15"
     ],
     "source_sections": {
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S16": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S15": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -546,7 +651,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "Project accessibility check, not an automated WCAG certification. Renderer absent means not-checked."
+      "notes": "Environment-specific rendered and interaction evidence; writing-mode alone does not establish scroll direction or WCAG conformance."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -564,14 +669,22 @@
       "F25",
       "F26",
       "F27",
-      "F28"
+      "F28",
+      "V-TW08",
+      "V-TW10",
+      "V-TW12",
+      "V-HK06",
+      "V-HK09",
+      "V-SH03",
+      "V-SH05",
+      "V-SH06"
     ]
   },
   {
     "id": "ZH-HANT-011",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "不插入無意義不可見字元",
-    "requirement_en": "Do not add spaces, ZWSP, ZWJ or joiners to force a pleasing line. Preserve meaningful supplied combining marks and emoji/variation sequences.",
+    "requirement_en": "Do not insert spaces, ZWSP, ZWJ or forced line breaks merely to create vertical appearance or fit. Preserve supplied combining marks, variation selectors and emoji sequences; do not blanket-strip invisible characters or normalize Unicode.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -589,11 +702,15 @@
     ],
     "source_refs": [
       "UAX14",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S10",
+      "ZV-S18"
     ],
     "source_sections": {
       "UAX14": "1; 6; 8",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S10": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S18": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -605,7 +722,7 @@
     "verification": {
       "method": "static",
       "coverage": "guidance-only",
-      "notes": "Use exact source/output byte helper where extraction is exact; do not blanket-strip invisibles."
+      "notes": "Exact-byte helper checks the supplied extraction only. Grapheme-sensitive output and extraction completeness require independent evidence."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -621,14 +738,41 @@
     },
     "case_ids": [
       "F18",
-      "F20"
+      "F20",
+      "V-TW01",
+      "V-TW02",
+      "V-TW04",
+      "V-TW05",
+      "V-TW06",
+      "V-TW07",
+      "V-TW08",
+      "V-TW09",
+      "V-TW10",
+      "V-TW11",
+      "V-TW12",
+      "V-HK01",
+      "V-HK02",
+      "V-HK03",
+      "V-HK04",
+      "V-HK05",
+      "V-HK06",
+      "V-HK07",
+      "V-HK08",
+      "V-HK10",
+      "V-SH01",
+      "V-SH02",
+      "V-SH03",
+      "V-SH04",
+      "V-SH05",
+      "V-SH07",
+      "V-SH08"
     ]
   },
   {
     "id": "ZH-HANT-012",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "直排與標點方向",
-    "requirement_en": "Use writing-mode and actual font/renderer support for vertical composition. Do not replace ordinary punctuation with presentation forms solely to rotate it.",
+    "requirement_en": "For ordinary vertical Chinese prose start with vertical-rl: glyphs progress top-to-bottom and columns right-to-left in logical source order. Distinguish writing-mode from direction, text-orientation and graphic rotation. Under selected TW/HK centered-punctuation practice inspect central dots, vertical brackets/quotes and column edges with actual glyphs; preserve ordinary source code points.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -646,11 +790,21 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S01",
+      "ZV-S03",
+      "ZV-S04",
+      "ZV-S09",
+      "ZV-S10"
     ],
     "source_sections": {
       "CLREQ": "2.1.2–2.1.3",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S01": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S03": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S04": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S10": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -662,7 +816,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "Vertical rendering and compatibility not checked; inspect each output."
+      "notes": "Vertical rendering is guidance-only. vertical-lr may be inspected as an explicitly justified exception; it is not the normal Chinese prose default. No reverse-string or per-character-newline conversion."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -680,14 +834,34 @@
       "F14",
       "F17",
       "F21",
-      "F22"
+      "F22",
+      "V-TW01",
+      "V-TW02",
+      "V-TW03",
+      "V-TW04",
+      "V-TW05",
+      "V-TW06",
+      "V-TW07",
+      "V-TW09",
+      "V-TW12",
+      "V-HK01",
+      "V-HK02",
+      "V-HK03",
+      "V-HK04",
+      "V-HK05",
+      "V-HK10",
+      "V-SH02",
+      "V-SH04",
+      "V-SH05",
+      "V-SH06",
+      "V-SH07"
     ]
   },
   {
     "id": "ZH-HANT-013",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "注音與行間注",
-    "requirement_en": "Keep Bopomofo and ruby text with its base and tone marks. Plan the annotation layout and inspect clipping and reading order.",
+    "requirement_en": "When ruby/Bopomofo is selected, bind annotations and tones to explicit base ranges. Taiwan Bopomofo commonly occupies the base character’s right side in both horizontal and vertical settings; inspect tone placement, neutral tone, collisions and column edges rather than rotating a Japanese-ruby template.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -705,11 +879,15 @@
     ],
     "source_refs": [
       "CLREQ",
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S14",
+      "ZV-S01"
     ],
     "source_sections": {
       "CLREQ": "5.5.3",
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S14": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S01": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -721,7 +899,7 @@
     "verification": {
       "method": "rendered",
       "coverage": "guidance-only",
-      "notes": "Advanced ruby/Bopomofo rendering unsupported by the supplied helper."
+      "notes": "Actual annotation layout, reading, selection and AT behavior need separate target-environment checks; no supplied ruby renderer or pronunciation verifier."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -737,14 +915,22 @@
     },
     "case_ids": [
       "F23",
-      "F24"
+      "F24",
+      "V-TW06",
+      "V-TW07",
+      "V-TW12",
+      "V-HK09",
+      "V-SH03",
+      "V-SH04",
+      "V-SH05",
+      "V-SH08"
     ]
   },
   {
     "id": "ZH-HANT-014",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "文件與匯出分開檢驗",
-    "requirement_en": "Check each page/slide for overflow, headings, captions and notes; compare extractable text before/after export and inspect the exported PDF in its actual reader.",
+    "requirement_en": "Treat editable Office documents and each PDF export as independent outputs. Record application/OS/version, font substitution, paragraph/text-box direction, save/reopen behavior, and PDF appearance, text extraction, search, copy, links and structure order where required; do not transfer a Web pass to Office or PDF.",
     "kind": "project-policy",
     "strength": "should",
     "impact": "warning",
@@ -761,10 +947,18 @@
       "zh-Hant-HK"
     ],
     "source_refs": [
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-F19",
+      "ZV-F20",
+      "ZV-S15",
+      "ZV-S17"
     ],
     "source_sections": {
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-F19": "See public source registry sections and references/vertical-layout.md",
+      "ZV-F20": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S15": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S17": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -776,7 +970,7 @@
     "verification": {
       "method": "manual",
       "coverage": "guidance-only",
-      "notes": "No DOCX/PPTX/PDF renderer or exact extractor is supplied; extraction loss remains not-checked."
+      "notes": "No Office/PDF renderer or exact extractor is supplied. Native application operation and native linguistic proofreading are different methods; extraction loss remains explicit."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -791,14 +985,15 @@
       "approval_required": true
     },
     "case_ids": [
-      "F30"
+      "F30",
+      "V-SH07"
     ]
   },
   {
     "id": "ZH-HANT-015",
-    "revision": 2,
+    "revision": 3,
     "title_zh_hant": "保護字元序列與原稿",
-    "requirement_en": "Preserve original source sequences, names, quotation, numbers and punctuation without normalization or traditional/simplified conversion.",
+    "requirement_en": "Preserve fixed source bytes and Unicode sequences, names, quotation, numbers, spaces, paragraphs and URLs without NFC/NFKC, script conversion, numeral conversion or vertical presentation-form substitution. Keep an authorized revision and its exact scope separate from the original.",
     "kind": "project-policy",
     "strength": "must",
     "impact": "blocker",
@@ -815,10 +1010,16 @@
       "zh-Hant-HK"
     ],
     "source_refs": [
-      "ZH-POLICY"
+      "ZH-POLICY",
+      "ZV-S09",
+      "ZV-S10",
+      "ZV-S15"
     ],
     "source_sections": {
-      "ZH-POLICY": "revision 1"
+      "ZH-POLICY": "revision 1",
+      "ZV-S09": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S10": "See public source registry sections and references/vertical-layout.md",
+      "ZV-S15": "See public source registry sections and references/vertical-layout.md"
     },
     "conditions": [
       {
@@ -830,7 +1031,7 @@
     "verification": {
       "method": "static",
       "coverage": "implemented",
-      "notes": "runtime/checks.py check_preservation compares supplied bytes only; visual integrity and extraction completeness remain separate."
+      "notes": "Exact-byte preservation compares only supplied bytes. A matching hash does not establish extraction completeness, visual integrity or unreviewed text beyond that scope."
     },
     "fix_policy": {
       "mode": "explicit-refine",
@@ -847,7 +1048,278 @@
     "case_ids": [
       "F03",
       "F04",
-      "F20"
+      "F20",
+      "V-TW01",
+      "V-TW02",
+      "V-TW04",
+      "V-TW05",
+      "V-TW06",
+      "V-TW07",
+      "V-TW08",
+      "V-TW09",
+      "V-TW10",
+      "V-TW11",
+      "V-TW12",
+      "V-HK01",
+      "V-HK02",
+      "V-HK03",
+      "V-HK04",
+      "V-HK05",
+      "V-HK06",
+      "V-HK07",
+      "V-HK08",
+      "V-HK10",
+      "V-SH01",
+      "V-SH02",
+      "V-SH03",
+      "V-SH04",
+      "V-SH05",
+      "V-SH07",
+      "V-SH08"
+    ]
+  },
+  {
+    "id": "ZH-HANT-016",
+    "revision": 1,
+    "title_zh_hant": "字型實例與直排塑形證據",
+    "requirement_en": "Record the actual font file, release label, internal version, SHA-256, face/variation instance and observed fallback. Separate coverage, regional glyphs, vertical metrics and shaping. CSS Writing Modes uses vert and Unicode orientation, not vrt2; other engines need their own recorded path. Feature presence or brand name cannot pass output quality.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZV-S09",
+      "ZV-S10",
+      "ZV-F09",
+      "ZV-F11",
+      "ZV-F15",
+      "ZV-F16",
+      "ZV-F17",
+      "ZV-F18",
+      "ZV-F19",
+      "ZV-F20",
+      "ZV-F21"
+    ],
+    "source_sections": {
+      "ZV-S09": "See public source registry sections",
+      "ZV-S10": "See public source registry sections",
+      "ZV-F09": "See public source registry sections",
+      "ZV-F11": "See public source registry sections",
+      "ZV-F15": "See public source registry sections",
+      "ZV-F16": "See public source registry sections",
+      "ZV-F17": "See public source registry sections",
+      "ZV-F18": "See public source registry sections",
+      "ZV-F19": "See public source registry sections",
+      "ZV-F20": "See public source registry sections",
+      "ZV-F21": "See public source registry sections"
+    },
+    "conditions": [
+      {
+        "when": "A vertical writing mode is explicitly selected; keep regional-glyph acceptance unresolved when regional editorial context is unknown.",
+        "impact": "warning",
+        "scope": "named vertical element and observed output"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Static font evidence is distinct from rendered glyph acceptance. The evidence helper validates declared records only; it does not inspect a font binary or certify a renderer."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "V-TW01",
+      "V-TW04",
+      "V-TW06",
+      "V-TW09",
+      "V-HK03",
+      "V-HK04",
+      "V-SH01",
+      "V-SH02",
+      "V-SH07"
+    ]
+  },
+  {
+    "id": "ZH-HANT-017",
+    "revision": 1,
+    "title_zh_hant": "專名線、書名波線與著重點分開定位",
+    "requirement_en": "When a semantic decoration is selected, record its base range and editorial meaning. Taiwan proper-name lines and wavy title marks are below horizontal text and left of vertical text; Chinese emphasis dots are below horizontal text and right of vertical text. Check the chosen Hong Kong house style independently, including ruby collisions and orientation switches.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZV-S06",
+      "ZV-S07",
+      "ZV-S11",
+      "ZV-S14"
+    ],
+    "source_sections": {
+      "ZV-S06": "See public source registry sections",
+      "ZV-S07": "See public source registry sections",
+      "ZV-S11": "See public source registry sections",
+      "ZV-S14": "See public source registry sections"
+    },
+    "conditions": [
+      {
+        "when": "Vertical composition, explicit TW/HK editorial style, and at least one of proper-name-mark, title-mark or text-emphasis is selected.",
+        "impact": "warning",
+        "scope": "named vertical element and observed output"
+      }
+    ],
+    "verification": {
+      "method": "rendered",
+      "coverage": "guidance-only",
+      "notes": "Guidance for selected semantic annotations only; source text and annotation data remain separate. CSS default positions do not prove correct rendering."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "V-TW07",
+      "V-SH08"
+    ]
+  },
+  {
+    "id": "ZH-HANT-018",
+    "revision": 1,
+    "title_zh_hant": "按閱讀、題字與混合用途安排直排",
+    "requirement_en": "Declare element role and reading/display/hybrid intent before choosing vertical composition. Compare column length, spacing, size and weight against continuous reading, recognition or action tasks; do not apply one score or optimal value to all roles. Preserve logical order, essential information, copy/search/focus and state when switching direction.",
+    "kind": "project-policy",
+    "strength": "should",
+    "impact": "warning",
+    "media": [
+      "web-editorial",
+      "web-marketing",
+      "web-ui",
+      "report-document",
+      "presentation",
+      "display-copy"
+    ],
+    "locales": [
+      "zh-Hant-TW",
+      "zh-Hant-HK"
+    ],
+    "source_refs": [
+      "ZV-S09",
+      "ZV-S15",
+      "ZV-S16",
+      "ZV-S17",
+      "ZV-D01",
+      "ZV-D04",
+      "ZV-D06",
+      "ZV-D09",
+      "ZV-D10",
+      "ZV-D11",
+      "ZV-D13",
+      "ZV-D14",
+      "ZV-R01",
+      "ZV-R02",
+      "ZV-R03",
+      "ZV-R04"
+    ],
+    "source_sections": {
+      "ZV-S09": "See public source registry sections",
+      "ZV-S15": "See public source registry sections",
+      "ZV-S16": "See public source registry sections",
+      "ZV-S17": "See public source registry sections",
+      "ZV-D01": "See public source registry sections",
+      "ZV-D04": "See public source registry sections",
+      "ZV-D06": "See public source registry sections",
+      "ZV-D09": "See public source registry sections",
+      "ZV-D10": "See public source registry sections",
+      "ZV-D11": "See public source registry sections",
+      "ZV-D13": "See public source registry sections",
+      "ZV-D14": "See public source registry sections",
+      "ZV-R01": "See public source registry sections",
+      "ZV-R02": "See public source registry sections",
+      "ZV-R03": "See public source registry sections",
+      "ZV-R04": "See public source registry sections"
+    },
+    "conditions": [
+      {
+        "when": "A vertical element has both a declared element_role and expression_mode. Region-neutral order/interaction checks do not establish regional typography acceptance.",
+        "impact": "warning",
+        "scope": "named vertical element and observed output"
+      }
+    ],
+    "verification": {
+      "method": "assisted",
+      "coverage": "guidance-only",
+      "notes": "Purpose-specific design and interaction guidance. Creator intent, visual interpretation and experimental measurements are different evidence; no universal cultural or commercial effect is claimed."
+    },
+    "fix_policy": {
+      "mode": "explicit-refine",
+      "protected_content": [
+        "source text, names, numbers, punctuation, Unicode sequences"
+      ],
+      "guidance": "Never auto-rewrite supplied content. Apply layout advice only inside authorized scope; audit stays read-only."
+    },
+    "exception_policy": {
+      "allowed": true,
+      "bounds": "Record original quotes, code, URLs, proper names and house style as scoped context; no silent regional substitution.",
+      "approval_required": true
+    },
+    "case_ids": [
+      "V-TW05",
+      "V-TW06",
+      "V-TW08",
+      "V-TW10",
+      "V-TW11",
+      "V-TW12",
+      "V-HK03",
+      "V-HK05",
+      "V-HK06",
+      "V-HK07",
+      "V-HK08",
+      "V-HK09",
+      "V-HK10",
+      "V-SH03",
+      "V-SH04",
+      "V-SH05",
+      "V-SH06",
+      "V-SH08"
     ]
   }
 ]

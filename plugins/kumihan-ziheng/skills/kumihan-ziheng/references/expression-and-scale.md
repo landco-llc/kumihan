@@ -36,3 +36,5 @@ CSS px不是實體像素。CSS 12pt=16px，但不能據此推定螢幕mm或投�
 投影／標示可用角度 2×atan(h/2D) 比較實體字高與距離；沒有「此角度所有人可讀」的合格線。會場未定就保留 not-checked。大數值可比標題大；不建立全域固定字級階層。表情、古典感、親切感需依文字、材料與品牌實證，不能直接以明體／黑體／手寫分類斷定。[ZR-D01/D05/D13/D14]
 
 下一步讀 [驗證矩陣](verification-matrix.md)，字體與作品背景見 [研究摘要](research-20261020.md)。
+
+直排不直接沿用上表的橫排估算：先記錄inline列長、block列間、字型與觀看條件，再比較reading／display／hybrid任務。參見 [直排布局](vertical-layout.md) 與 [直排實作品與用途](vertical-expression.md)。

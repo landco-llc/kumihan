@@ -1,52 +1,37 @@
-# KUMIHAN｜字衡 — Claude / Install ZiHeng
+# KUMIHAN｜字衡 — Claude / Installation guide
 
-**v0.1.0** — One Claude Code plugin and four independent skill ZIPs for supported Claude chat accounts.
+The full bundle and four independent Skills use the same ZiHeng rules. Use the host-specific website guide for the currently verified published ZIPs, SHA-256 values and version. The Japanese KUMIHAN monorepo root is a different product.
 
-> This package offers typography guidance, not an automatic renderer. Native host installation and invocation have not yet passed live host acceptance. Test both Taiwan and Hong Kong samples first.
+## Current published downloads and checksums
 
-## Installation steps
+[Installation guide](https://landco-llc.github.io/kumihan/docs/install-ziheng-claude.en.html)
 
-**1.** Claude Code: register the KUMIHAN marketplace from GitHub without replacing the Japanese plugin.
+Claude Code can install ZiHeng independently from the KUMIHAN marketplace, or load the extracted full bundle as a local plugin folder. Use individual Skill ZIPs when the Claude app provides skill import.
 
 ```sh
 claude plugin marketplace add "https://github.com/landco-llc/kumihan.git#main"
 ```
 
-**2.** Install the ZiHeng plugin by its distinct name from within Claude Code.
-
 ```text
 /plugin install kumihan-ziheng@kumihan-marketplace
 ```
-
-**3.** Alternatively extract the plugin ZIP and load its local folder directly.
 
 ```sh
 claude --plugin-dir "/absolute/path/kumihan-ziheng"
 ```
 
-**4.** Claude chat: if Skill import is supported on your account, import one standalone skill ZIP at a time; the Claude Code plugin ZIP is not the chat skill upload format.
+## Skills
 
-## Downloads and checksums
+- `kumihan-ziheng`
+- `kumihan-ziheng-web`
+- `kumihan-ziheng-documents`
+- `kumihan-ziheng-review`
 
-- [Download full package (kumihan-ziheng-Claude-Code-plugin-0.1.0.zip)](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/plugins/kumihan-ziheng-Claude-Code-plugin-0.1.0.zip)
-- Full package SHA-256: `b37ee0c95c7575b773667f0256eadd3ecf983d7f1e9db26761614ee71c76fe0e`
+Back up the existing folder, verify the ZIP and replace the complete package for the same host and version, then reload. Do not mix references, rules or scripts from different versions.
 
-### Four individual skills
+The active source MANIFEST.json and SHA256SUMS.txt describe the source distribution, which may be newer than the published version shown on the website. Historical v0.1.0 and v0.2.0 ZIPs remain available; their original metadata is under history/<version>/.
 
-- [kumihan-ziheng](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-Claude-skill-0.1.0.zip)
-- [kumihan-ziheng-web](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-web-Claude-skill-0.1.0.zip)
-- [kumihan-ziheng-documents](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-documents-Claude-skill-0.1.0.zip)
-- [kumihan-ziheng-review](https://raw.githubusercontent.com/landco-llc/kumihan/main/plugins/kumihan-ziheng/downloads%20Claude/skills/kumihan-ziheng-review-Claude-skill-0.1.0.zip)
+- [MANIFEST.json](../downloads%20Claude/MANIFEST.json)
+- [SHA256SUMS.txt](../downloads%20Claude/SHA256SUMS.txt)
 
-Taiwan and Hong Kong use explicit zh-Hant-TW and zh-Hant-HK profiles. Preserve the original characters.
-
-`shasum -a 256 -c SHA256SUMS.txt`
-
-- [View source](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng)
-
-- [SHA256SUMS.txt](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-ziheng/downloads%20Claude/SHA256SUMS.txt)
-
-
-Version candidate: v0.2.0. Back up the existing folder, verify the active host MANIFEST/SHA256, replace the complete folder and reload. Historical v0.1.0 URLs remain available. Native host acceptance and formal Release are not implied.
-
-Current v0.2.0 full bundle SHA-256: `5da65c3d2085ec55e48309c01ee8a6a148ffecff13f490ec9747b24a0c51b06e`. The older checksum above applies only to its explicitly named v0.1.0 archive.
+Native host discovery, installation, invocation and rendering require acceptance in the intended environment. Test zh-Hant-TW and zh-Hant-HK with fixed text; inspect vertical punctuation, mixed runs, reading order and unchanged Unicode sequences separately.

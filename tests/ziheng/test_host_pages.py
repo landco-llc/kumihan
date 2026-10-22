@@ -20,6 +20,8 @@ class Tags(HTMLParser):
 
 class HostDocsTests(unittest.TestCase):
     def test_host_page_localization_and_links(self):
+        facts=json.loads((ROOT/'assets/edition-versions.json').read_text())['editions']['zh-hant']
+        version=facts['published_version']
         for host in HOSTS:
             for suffix,tag in LANGS.items():
                 path=ROOT/f'docs/install-ziheng-{host}{suffix}.html'
@@ -35,7 +37,7 @@ class HostDocsTests(unittest.TestCase):
                     self.assertEqual([(d['lang'],d['href']) for d in switch],
                                      [(t,f'install-ziheng-{host}{x}.html') for x,t in LANGS.items()])
                     self.assertEqual([d['lang'] for d in switch if d.get('aria-current')=='page'],[tag])
-                    self.assertIn('kumihan-ziheng-'+host+'-plugin-0.2.0.zip',s)
+                    self.assertIn(f'kumihan-ziheng-{host}-plugin-{version}.zip',s)
                     self.assertIn('kumihan-install.css',s)  # canonical KUMIHAN install-guide layout
                     self.assertTrue(any(n=='link' and d.get('rel')=='canonical' and path.name in d.get('href','') for n,d in parsed.all))
                     alts={d['hreflang']:d['href'] for n,d in parsed.all if n=='link' and d.get('rel')=='alternate'}
@@ -67,10 +69,15 @@ class HostDocsTests(unittest.TestCase):
     def test_host_markdown_zip_checksum_and_instruction_separation(self):
         mapping={"":'zh-hant','.en':'en','.ja':'ja'}
         facts=json.loads((ROOT/'assets/edition-versions.json').read_text(encoding='utf-8'))['editions']['zh-hant']
+        version=facts['published_version']
         sums=next(m['url'] for m in facts['verified_metadata'] if m['name']=='SHA256SUMS.txt')
         for host in HOSTS:
             folder=f'downloads {host.title()}'
-            dist=json.loads((PRODUCT/folder/'MANIFEST.json').read_text())
+            manifest=PRODUCT/folder/'MANIFEST.json'
+            if json.loads(manifest.read_text())['version'] != version:
+                manifest=PRODUCT/folder/'history'/version/'MANIFEST.json'
+            dist=json.loads(manifest.read_text())
+            self.assertEqual(dist['version'],version)
             bundle=next(x for x in dist['archives'] if x['file'].startswith('plugins/' if host=='claude' else 'extensions/'))
             # Each packaged archive is published as exactly one verified Release asset of this host
             # with the same SHA-256; the guide must link exactly those assets plus SHA256SUMS.txt.
@@ -80,7 +87,7 @@ class HostDocsTests(unittest.TestCase):
                 self.assertEqual(len(match),1,(host,archive['file']))
                 expected.add(match[0]['url'])
             plugin=next(a for a in facts['verified_assets'] if a['sha256']==bundle['sha256'] and f'-{host}-' in a['name'])
-            self.assertEqual(plugin['name'],f'kumihan-ziheng-{host}-plugin-0.2.0.zip')
+            self.assertEqual(plugin['name'],f'kumihan-ziheng-{host}-plugin-{version}.zip')
             for suffix,locale in mapping.items():
                 with self.subTest(host=host,lang=locale):
                     page=(ROOT/f'docs/install-ziheng-{host}{suffix}.html').read_text(encoding='utf-8')
@@ -89,8 +96,10 @@ class HostDocsTests(unittest.TestCase):
                     downloads={d['href'] for n,d in parsed.all if n=='a' and '/releases/download/' in d.get('href','')}
                     self.assertEqual(downloads,expected|{sums})
                     self.assertIn(f'href="{plugin["url"]}"',page)
-                    self.assertIn(bundle['sha256'],guide)
-                    self.assertIn('0.2.0',page)
+                    self.assertIn(f'https://landco-llc.github.io/kumihan/docs/install-ziheng-{host}{suffix}.html',guide)
+                    self.assertIn('MANIFEST.json',guide)
+                    self.assertIn('SHA256SUMS.txt',guide)
+                    self.assertIn(version,page)
                     self.assertIn('0.1.0',guide)
                     for skill in ('kumihan-ziheng','kumihan-ziheng-web','kumihan-ziheng-documents','kumihan-ziheng-review'):
                         self.assertIn(skill,guide)

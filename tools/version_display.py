@@ -109,7 +109,8 @@ def source_archives(code, version):
         if data['version'].removeprefix('v') != version:
             # Only Ziheng has an exact, checksummed historical source contract.
             # Retain pre-update URLs independently of active source candidates.
-            if code != 'zh-hant' or version != '0.1.0':
+            from ziheng_retention import VERSIONS
+            if code != 'zh-hant' or version not in VERSIONS:
                 raise ValueError('Source ZIP manifest version mismatch: '+code)
             from ziheng_retention import retained_outputs
             retained = retained_outputs(ROOT, (manifest.parent.name,))
@@ -153,7 +154,7 @@ def is_source_download(url, f):
         from ziheng_retention import retained_outputs
         # Exact path/digest retention only; no basename or arbitrary old version.
         retained = retained_outputs(ROOT, ('downloads', 'downloads Claude', 'downloads Gemini'))
-        return path.endswith('-0.1.0.zip') and path in retained
+        return path.endswith('.zip') and path in retained
     return False
 
 
