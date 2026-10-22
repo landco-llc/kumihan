@@ -38,6 +38,7 @@ SKILLS = ("base", "web", "documents", "review")
 # Existing address prefix of each edition's guides (docs/install-<prefix>-<host>[.en|.ja].html;
 # 字衡's ChatGPT guide has no host suffix).
 PAGES = {
+    "en": "measure",
     "ar": "kumihan-ar", "bn": "kumihan-bn", "fa": "kumihan-fa", "hi": "kumihan-hi", "th": "kumihan-th",
     "de": "satzbild", "es": "grafia", "fr": "accord", "id": "laras", "it": "equilibrio", "km": "lumnung",
     "ko": "ko", "pl": "szyk", "pt": "compasso", "ru": "lad", "sw": "mizani", "vi": "nhip-chu",
