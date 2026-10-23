@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'releases/kumihan-ziheng-v0.2.2/REQUEST.json'
+      - 'tools/release_ziheng_v022.py'
 permissions:
   contents: read
 concurrency:

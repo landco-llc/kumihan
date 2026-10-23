@@ -74,7 +74,8 @@ class ZihengOneVersionRelease(unittest.TestCase):
         import yaml
         workflow = yaml.load((ROOT/'.github/workflows/publish-ziheng-v022.yml').read_text(),Loader=yaml.BaseLoader)
         self.assertEqual(workflow['on'],{'push':{'branches':['main'],
-                         'paths':['releases/kumihan-ziheng-v0.2.2/REQUEST.json']}})
+                         'paths':['releases/kumihan-ziheng-v0.2.2/REQUEST.json',
+                                  'tools/release_ziheng_v022.py']}})
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         self.assertEqual(workflow['jobs']['publish']['needs'],'verify')
         self.assertEqual(workflow['jobs']['publish']['permissions'],{'contents':'write'})
@@ -110,6 +111,36 @@ class ZihengOneVersionRelease(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError,'restricted'):
                     release.publish()
                 gh.assert_not_called()
+
+    def test_draft_recovery_accepts_only_the_exact_empty_interrupted_draft(self):
+        notes = (ROOT / release.NOTES).read_text(encoding='utf-8')
+        source = {
+            'id': 420671387,
+            'draft': True,
+            'prerelease': False,
+            'tag_name': release.TAG,
+            'target_commitish': release.RECOVERY_TARGET_SHA,
+            'created_at': release.RECOVERY_CREATED_AT,
+            'name': 'KUMIHAN｜字衡 v0.2.2',
+            'body': notes,
+            'assets': [],
+        }
+        self.assertEqual(release.validate_recovery_draft(source, notes),
+                         release.RECOVERY_TARGET_SHA)
+        for key, value in [
+            ('id', 420671388), ('draft', False), ('prerelease', True),
+            ('tag_name', 'kumihan-ziheng-v0.2.0'),
+            ('target_commitish', '0' * 40), ('created_at', 'not-the-original'),
+            ('name', 'Wrong release'), ('body', 'Unreviewed text'),
+            ('assets', [{'name': 'unknown.zip'}])
+        ]:
+            with self.subTest(field=key):
+                mutated = dict(source, **{key: value})
+                with self.assertRaises(ValueError):
+                    release.validate_recovery_draft(mutated, notes)
+        with self.assertRaises(ValueError):
+            release.validate_recovery_draft(None, notes)
+
 
     def test_absence_check_rejects_existing_tag_and_authentication_errors(self):
         for code,stdout in ((0,'HTTP/2.0 200 OK\n'),(1,'HTTP/2.0 403 Forbidden\n'),(1,'')):
