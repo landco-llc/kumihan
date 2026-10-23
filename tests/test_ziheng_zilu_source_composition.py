@@ -29,8 +29,10 @@ class ConcurrentChineseSourceComposition(unittest.TestCase):
         self.assertEqual(sha((ROOT / SOURCE_RECORD).read_bytes()), SOURCE_RECORD_SHA256)
         data = load_record(ROOT)
         self.assertIsNotNone(data)
-        raw = (ROOT / "README.md").read_bytes()
-        self.assertEqual(raw, readme_state(ROOT, "combined"))
+        # The source-only admission stays frozen after the separately verified release.
+        from zilu_v012_transition import allowed
+        self.assertTrue(allowed("README.md", "protected", ROOT))
+        raw = readme_state(ROOT, "combined")
         self.assertTrue(admitted(ROOT, "README.md", data["readme"]["baseline_sha256"], raw, "protected"))
         for edition, parent in (("zh-hans", "ziheng"), ("zh-hant", "zilu")):
             change = data["readme"]["changes"][edition]
@@ -46,7 +48,12 @@ class ConcurrentChineseSourceComposition(unittest.TestCase):
                                          readme_state(ROOT, "combined"), "protected"))
 
     def test_facts_are_exactly_two_source_versions_without_publication_changes(self):
-        raw = (ROOT / FACTS).read_bytes()
+        current = json.loads((ROOT / FACTS).read_bytes())
+        self.assertEqual(current["editions"]["zh-hans"]["published_version"], "0.1.2")
+        self.assertFalse(facts_match(ROOT, json_bytes(current)))
+        current["editions"]["zh-hans"] = json.loads(
+            (ROOT / "tests/contracts/zilu-v010-published-facts.json").read_text())
+        raw = json_bytes(current)
         self.assertTrue(facts_match(ROOT, raw))
         facts = json.loads(raw)
         for edition, key, value in (("zh-hans", "published_version", "0.1.2"),

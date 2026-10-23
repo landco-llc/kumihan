@@ -1,0 +1,121 @@
+{
+  "edition": "zh-hans",
+  "source_manifest": "plugins/kumihan-zilu/plugin.json",
+  "tag_prefix": "kumihan-zilu-v",
+  "source_version": "0.1.2",
+  "published_version": "0.1.0",
+  "release_status": "published",
+  "published_at": "2026-10-22T05:19:10Z",
+  "release_url": "https://github.com/landco-llc/kumihan/releases/tag/kumihan-zilu-v0.1.0",
+  "tag": "kumihan-zilu-v0.1.0",
+  "verified_assets": [
+    {
+      "name": "kumihan-zilu-claude-plugin-v0.1.0.zip",
+      "bytes": 981671,
+      "sha256": "25655fc65b3c23b470089849333f94f733403576c88f791c2369974735976a4c",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-claude-plugin-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-documents-claude-skill-v0.1.0.zip",
+      "bytes": 40158,
+      "sha256": "55b0cf408f48d246936a63b74c9f72a859ba3d745728232e7deb21708799b805",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-documents-claude-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-documents-gemini-skill-v0.1.0.zip",
+      "bytes": 40158,
+      "sha256": "55b0cf408f48d246936a63b74c9f72a859ba3d745728232e7deb21708799b805",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-documents-gemini-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-documents-skill-v0.1.0.zip",
+      "bytes": 40158,
+      "sha256": "55b0cf408f48d246936a63b74c9f72a859ba3d745728232e7deb21708799b805",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-documents-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-entry-claude-skill-v0.1.0.zip",
+      "bytes": 39564,
+      "sha256": "86776df8e7d3f14711dc2f81f2abb37e860705ae298afd1ff066717b07879b22",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-entry-claude-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-entry-gemini-skill-v0.1.0.zip",
+      "bytes": 39564,
+      "sha256": "86776df8e7d3f14711dc2f81f2abb37e860705ae298afd1ff066717b07879b22",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-entry-gemini-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-entry-skill-v0.1.0.zip",
+      "bytes": 39564,
+      "sha256": "86776df8e7d3f14711dc2f81f2abb37e860705ae298afd1ff066717b07879b22",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-entry-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-gemini-extension-v0.1.0.zip",
+      "bytes": 979481,
+      "sha256": "7110180fbc47265c739d0347b95121d76e1ff3329b6985edc5b2a803b432c24f",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-gemini-extension-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-plugin-v0.1.0.zip",
+      "bytes": 983099,
+      "sha256": "9c80f7ae3de2e4c1042cd072e256ac42f22bc09a628b3386401d5bd9ccbb6536",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-plugin-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-review-claude-skill-v0.1.0.zip",
+      "bytes": 39966,
+      "sha256": "560899d9cf81728c050bdaa82a9aba966b818ca4bdc7480b40cf27136d6b7c5f",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-review-claude-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-review-gemini-skill-v0.1.0.zip",
+      "bytes": 39966,
+      "sha256": "560899d9cf81728c050bdaa82a9aba966b818ca4bdc7480b40cf27136d6b7c5f",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-review-gemini-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-review-skill-v0.1.0.zip",
+      "bytes": 39966,
+      "sha256": "560899d9cf81728c050bdaa82a9aba966b818ca4bdc7480b40cf27136d6b7c5f",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-review-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-web-claude-skill-v0.1.0.zip",
+      "bytes": 39811,
+      "sha256": "4a0d724aa058ea932fbd94325f1ba25546ec453cc941cac708abbcdf694d2925",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-web-claude-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-web-gemini-skill-v0.1.0.zip",
+      "bytes": 39811,
+      "sha256": "4a0d724aa058ea932fbd94325f1ba25546ec453cc941cac708abbcdf694d2925",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-web-gemini-skill-v0.1.0.zip"
+    },
+    {
+      "name": "kumihan-zilu-web-skill-v0.1.0.zip",
+      "bytes": 39811,
+      "sha256": "4a0d724aa058ea932fbd94325f1ba25546ec453cc941cac708abbcdf694d2925",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/kumihan-zilu-web-skill-v0.1.0.zip"
+    }
+  ],
+  "release_id": 420334463,
+  "verified_metadata": [
+    {
+      "name": "MANIFEST.json",
+      "bytes": 2680,
+      "sha256": "45d054c3cdf245a8dc867eeb8d07c1f017bf4b91582f072eab3464a036ac3891",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/MANIFEST.json"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 1597,
+      "sha256": "b20a83ad06fd06baafe238370b852a8f26dbf887812adbe027c7b75b9a4efb0c",
+      "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-zilu-v0.1.0/SHA256SUMS.txt"
+    }
+  ],
+  "source_manifest_sha256": "2354720f8c40b45ba82bc248e8442af9728eddf9d0fd99a4714ee2ba1ab7ea24",
+  "source_commit": "ca421d9033cd0ed67bdc8804fca854b31b889e65",
+  "source_tree": "235eccd634244d7ac380770b9337778c55cd0fc3"
+}

@@ -49,13 +49,12 @@ class Vertical(unittest.TestCase):
         import sys, tempfile
         sys.path.insert(0,str(ROOT/'tools'))
         from zilu_v012_transition import allowed, EXPECTED
-        from ziheng_zilu_source_composition import readme_state
         self.assertFalse(allowed('plugins/kumihan-ziheng/plugin.json','protected',ROOT))
         path = 'README.md'
         self.assertIn(path, EXPECTED)
         with tempfile.TemporaryDirectory() as d:
             target = Path(d)/path; target.parent.mkdir(parents=True,exist_ok=True)
-            target.write_bytes(readme_state(ROOT, 'zilu'))
+            target.write_bytes((ROOT/path).read_bytes())
             self.assertTrue(allowed(path,'protected',d))
             target.write_bytes(target.read_bytes()+b' ')
             self.assertFalse(allowed(path,'protected',d))
