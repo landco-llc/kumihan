@@ -74,7 +74,7 @@ class PackageTests(unittest.TestCase):
         schema=json.loads((PRODUCT/'schemas/rule.schema.json').read_text())
         jsonschema.Draft202012Validator.check_schema(schema)
         records=json.loads((PRODUCT/'rules/zh-hant.json').read_text())
-        self.assertEqual(len(records),15)
+        self.assertEqual(len(records),18)
         for r in records: jsonschema.validate(r,schema)
         for group in ['content','design','evidence']:
             for r in json.loads((ROOT/f'skills/kumihan/rules/{group}.json').read_text()):jsonschema.validate(r,schema)
@@ -164,9 +164,9 @@ class DistributionContractTests(unittest.TestCase):
             shutil.copy2(ROOT/'LICENSE',root/'LICENSE')
             before={p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()}
             script=root/'tools/build_ziheng.py'
-            subprocess.run([sys.executable,str(script),'--set-version','0.2.0'],check=True,capture_output=True)
+            subprocess.run([sys.executable,str(script),'--set-version','0.2.3'],check=True,capture_output=True)
             self.assertEqual(before,{p.relative_to(root):p.read_bytes() for p in (root/'skills').rglob('*') if p.is_file()})
-            self.assertTrue((root/'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.0.zip').is_file())
+            self.assertTrue((root/'plugins/kumihan-ziheng/downloads/plugins/kumihan-ziheng-0.2.3.zip').is_file())
             self.assertEqual(len(list((root/'plugins/kumihan-ziheng/downloads').rglob('*-0.1.0.zip'))), 5)
             target=root/'plugins/kumihan-ziheng/skills/kumihan-ziheng/SKILL.md'
             target.write_bytes(b'changed')

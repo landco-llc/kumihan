@@ -1,8 +1,22 @@
-# 驗證方法與32項的範圍
+# 驗證方法與案例的範圍
 
-本版保留31個產品規則ID。研究提案P01–P32（A18/B10/C4）與F01–F32是不同集合；[案例契約](../fixtures/research-v020/cases.json)逐項記錄來源、條件、輸入、預期、例外、方法與限制。定義fixture不代表32項合格；候選結果在版本候選報告另記。
+v0.2.2 有34個產品規則ID（18個繁體中文規則與16個共通規則）；既有31個ID保持，新增ZH-HANT-016–018。先前研究提案P01–P32（A18/B10/C4）與F01–F32是不同集合；[案例契約](../fixtures/research-v020/cases.json)逐項記錄來源、條件、輸入、預期、例外、方法與限制。定義fixture不代表32項合格；候選結果在版本候選報告另記。
 
-## 可執行契約
+
+## v0.2.2 直排契約
+
+[直排案例](../fixtures/research-v022/cases.json) 是 TW12／HK10／shared8，共30個獨立輸入；[採用對應](vertical-adoption.json) 把14個基礎、10個條件式和4個保留提案連到規則。這些件數不能和舊32例、規則34個或個別 shaping 條件合計為通過率。fixture 本身的 result 為 null，執行欄位保持 not-checked；實際觀察另外保存。
+
+- `scripts/checks.py` 的 `validate_vertical_fixture`／`validate_vertical_suite` 檢查原稿hash、完整輸入契約與未執行模板；沒有渲染原稿。`inspect_vertical_runs(text, runs)` 只查已宣告範圍，`inspect_vertical_pair_breaks(text, break_offsets)` 只查呼叫者提供的斷點。零候選不等於列端或書記素全部合格。
+- `scripts/context.py` 為016、017、018保留適用條件：直排字型證據；已選語意標記與地域體例；已有element_role／expression_mode的直排閱讀及操作。016與018可做地域中立部分，不能由此通過未定地域的glyph。未選功能或缺少條件時記入deferred；不是failed。
+- [直排證據schema](../schemas/vertical-evidence-v022.schema.json) 與 `scripts/evidence.py` 的 `validate_vertical_evidence(record)` 是加列契約，不改寫v2既有方法enum。一筆紀錄連結一個artifact digest、完整fixture輸入digest、variant、scope、method與證據。JSON有效只是宣告結構合格，不能認證截圖、操作者或檔案的真實性。
+- 方法明確區分 static、rendered、interaction、native-application、native-proofreading。最後兩者分別是原生應用操作與當地語文校閱，不能互相替代。舊v2的native-review值仍依舊契約使用，不把新方法硬塞入舊schema。
+- glyph／font的passed必須有實檔識別、配發版、內部版、SHA及實際使用的fallback；描畫另要glyph觀察、畫面／測量和shaping路徑。只有`vert`標籤、CSS family或字型品牌不足。無法識別時可以記觀察與限制，但不得聲稱該glyph範圍passed。
+- Web、Office、PDF分別記錄OS、應用與引擎版本、尺寸、放大方法、字級、字重、列長、列間、字距及功能。AT另外標識實際AT與版本。換方向測內容和狀態；reflow根據捲動方向選物理寬320或高256 CSS px，不從writing-mode猜測。
+
+詳細判斷參見 [直排布局](vertical-layout.md)、[字型證據](vertical-fonts.md) 與 [用途比較](vertical-expression.md)。參考來源為ZV-*；本版沒有附帶字型白名單、組版引擎、Office renderer或母語校閱服務。
+
+## 既有可執行契約
 
 1. `scripts/context.py` 的 `resolve_review_context(raw)` 接收新增metadata，不修改v1 strict context。`select_review_rules(context, records, profile)` 回傳 candidate_rule_ids（profile/medium聯集）、applicable_rule_ids（條件已滿足，待檢查）、deferred_rules（缺項或未採功能及原因）、selection_only=true。適用不等於執行／passed，候選不進合否分母。未知地域僅使用明列的中立規則；臺灣不適用004，香港不適用003；未選引號、直排、ruby等需保留理由。
 2. `scripts/checks.py` 的 `check_preservation(bytes, bytes)` 只比較提供的bytes與SHA，不保證抽取完整；segment wrapper只對caller已分類的TW/HK中文正文提出有限標點候選，其他role保護。位置為0起算Unicode code point，非UTF-16或grapheme。舊review_text介面不變；raw HTML不當正文解析。零候選不產生artifact passed。

@@ -123,7 +123,7 @@ class ZiHengApprovedBrandAndHeadlines(unittest.TestCase):
                 for anchor in ("#a", "#b", "#c"):
                     self.assertIn(anchor, tags.hrefs)
                 host = "claude" if "-claude" in path else "gemini" if "-gemini" in path else "openai-codex"
-                plugin = f"kumihan-ziheng-{host}-plugin-0.2.0.zip"
+                plugin = f"kumihan-ziheng-{host}-plugin-{facts['published_version']}.zip"
                 self.assertIn(f'href="{assets[plugin]}"', html)
 
 

@@ -67,16 +67,16 @@ class VersionNamingPolicyTests(unittest.TestCase):
 
     def test_ziheng_active_distribution_and_site_names(self):
         z=ROOT/"plugins/kumihan-ziheng"
-        self.assertEqual(version_of(z/"plugin.json"),"0.2.0")
+        self.assertEqual(version_of(z/"plugin.json"),"0.2.2")
         for dr in ("downloads","downloads Claude","downloads Gemini"):
             with self.subTest(platform=dr):
                 folder=z/dr
                 obj=json.loads((folder/"MANIFEST.json").read_text())
-                self.assertEqual(obj["version"], "0.2.0")
+                self.assertEqual(obj["version"], version_of(z/"plugin.json"))
                 self.assertEqual(len(obj["archives"]), 5)
                 for a in obj["archives"]:
                     self.assertNotIn("preview",a["file"].lower())
-                    self.assertIn("0.2.0.zip",a["file"])
+                    self.assertTrue(a["file"].endswith("-"+obj["version"]+".zip"))
                     self.assertTrue((folder/a["file"]).is_file())
         live_sources=[
             z/"README.md",z/"INSTALL.md",z/"UPDATES.md",

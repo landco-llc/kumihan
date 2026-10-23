@@ -21,3 +21,5 @@
 method 分為 static、rendered、assisted、manual。沒有實際描畫就不填 rendered PASS；沒有精確原稿／擷取就不宣稱字元保全 PASS。不能免除默默改寫原稿的問題。
 
 結束時在有能力的環境重算目標 digest，記錄前後值。不一致就報告，不要偷偷還原。審閱自己的測試摘要不等於獨立原生主機驗收。
+
+v0.2.2直排案例與證據另按 [驗證矩陣](verification-matrix.md) 的直排契約。`validate_vertical_evidence`只驗宣告的一致性，不能驗證圖像或操作是否實際發生。審閱時照樣保持唯讀，不因需要更多證據就執行作品程式或擴大範圍。

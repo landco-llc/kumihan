@@ -42,8 +42,8 @@ Gemini CLI 無法將 monorepo 根目錄視作字衡延伸；請解壓 Gemini CLI
 香港未指定引號體例時應先確認；URL、程式碼和英文引文不應被改寫。
 唯讀檢視前後比較目標 digest，保留 needs-review／not-checked。
 
-## v0.2.0 candidate migration
+## v0.2.2 migration
 
-Use the active MANIFEST.json in downloads, downloads Claude or downloads Gemini to select exactly one full bundle or the four Skills for the same host/version. Verify SHA256SUMS.txt before replacing the backed-up installation folder. Do not combine v0.1.0 and v0.2.0 references/scripts. Native host discovery/invocation still needs acceptance testing. Historical v0.1.0 paths remain usable.
+Use the active MANIFEST.json in downloads, downloads Claude or downloads Gemini to select exactly one full bundle or the four Skills for the same host/version. Verify SHA256SUMS.txt before replacing the backed-up installation folder. Do not combine references/scripts from different versions. Native host discovery/invocation still needs acceptance testing. Historical v0.1.0 and v0.2.0 paths remain usable; their original manifests and checksums are retained under history/<version>/.
 
-先備份舊版，按相同host取得並校驗0.2.0候選；整包替換、重載、以固定原稿小樣本確認。版本升級不是正式公開或自動更新。
+先備份舊版，按相同 host 取得並校驗 v0.2.2 套件；整包替換、重載、以固定原稿小樣本確認。直排小樣本應包含標點、引號、數字／拉丁字母片段及原有 Unicode 序列。版本升級不會自動更新既有安裝；正式公開版本與下載連結以[網站](https://landco-llc.github.io/kumihan/kumihan-zh-han.html)的已驗證版本為準。

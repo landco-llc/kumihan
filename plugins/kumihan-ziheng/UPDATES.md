@@ -16,7 +16,7 @@ python3 tools/build_dist.py --check
 不會呼叫日本語 builder 或重新包裝日本語 ZIP。修改版號可用：
 
 ```sh
-python3 tools/build_ziheng.py --set-version 0.2.0
+python3 tools/build_ziheng.py --set-version 0.2.2
 ```
 
 此命令只修改字衡正本 manifest，再產生字衡輸出。建置或更改版本都不是發布。
@@ -51,10 +51,20 @@ python3 tools/build_ziheng_hosts.py --check
 
 Claude 的 `.claude-plugin/plugin.json` 與 Gemini 的 `gemini-extension.json` 由字衡 Host builder 產生；原本的日本語 KUMIHAN 配布不會改變。生成的 `downloads Claude/`、`downloads Gemini/` 各含五個 ZIP、完整 manifest 及 SHA-256。
 
-## v0.2.0 候選更新
+## v0.2.0 歷史更新
 
 新增地域／語體／角色／原稿權限的v2契約、證據sidecar、32個研究案例定義與16個作品決策卡。4個Skill保留獨立資料，靜態候選不代表描畫或母語驗收。原本v1介面與31個產品ID不變。
 
-更新時先備份原安裝，取得相同host的完整0.2.0候選，核對該host active MANIFEST及SHA256，整個目錄替換，不混搭版本。重載後用固定原稿小樣本確認。現有使用者不會自動更新；原0.1.0 ZIP及URL保留，history/0.1.0留存原manifest與checksum。正式Release與Marketplace未更新。
+v0.2.0 的 GitHub Release 已公開。原 v0.1.0 ZIP 與 URL 保留，history/0.1.0 留存原 manifest 與 checksum；原生主機及 Marketplace 的驗收狀態另行記錄。
 
 `retained-distributions.json`只允許列明path與digest的歷史bytes。`--check`不寫入，會拒絕舊版損壞；未知stale不會因保留舊版而獲豁免。
+
+## v0.2.2 直排更新
+
+依臺灣與香港的直排研究，補充閱讀／展示／混合表現、標點與引號位置、連續破折號及刪節號、數字與拉丁字母片段、注音與標示符號、字型縱向資訊、橫直排切換及閱讀順序的判斷。字距與標點壓縮依編輯體例、文字角色及實際環境選擇，不預設整頁負字距或自動改寫原稿。
+
+新增 30 個直排案例；與原有 v0.2.0 案例分開管理。靜態契約、實際描畫、操作、原生文件應用程式及當地校閱分開記錄；未執行的驗證不因打包或規則選擇而變成通過。
+
+更新時先備份原安裝，取得相同 host 的完整 v0.2.2 套件，核對該配布的 MANIFEST 與 SHA256SUMS，整個目錄替換，不混搭版本。重載後以固定原稿小樣本確認。現有使用者不會自動更新；v0.1.0 與 v0.2.0 ZIP 和 URL 保留，其原 manifest 與 checksum 存在各下載目錄的 history/<version>/。
+
+原始碼建置、正式 Release 與主機 Marketplace 發布分別確認；目前正式下載請以[網站顯示的已驗證版本](https://landco-llc.github.io/kumihan/kumihan-zh-han.html)為準。
