@@ -1,4 +1,4 @@
-# KUMIHAN｜Measure 0.1.0
+# KUMIHAN｜Measure 0.1.1
 
 Four standalone Skills and host packages for English typography (en, en-US, en-GB). Download versioned packages from [downloads/](downloads/) and verify the matching host SHA256SUMS file before installation.
 

@@ -781,5 +781,137 @@
     "scope": [
       "PDF、Office、HTML等を納品またはレビューするとき"
     ]
+  },
+  {
+    "id": "EN-REG-001",
+    "title": "Regional spelling is a proposal",
+    "guidance": "Preserve names such as World Health Organization, AirAsia, trademarks, quotations, code, IDs and approved exceptions. Regional spelling candidates require explicit editing permission; never apply global suffix replacement.",
+    "source_id": "REG-S01",
+    "source_ids": [
+      "REG-S01",
+      "REG-S02",
+      "REG-S04",
+      "REG-S08",
+      "REG-S33"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-REG-002",
+    "title": "House style has a bounded scope",
+    "guidance": "Select an explicit organization, publication and applicable medium before offering changes. University of Oxford -ise and OUP Music & Letters -ize are distinct; en-GB alone selects neither. Microsoft sentence case and SGDS UI contractions guidance are not country-wide rules.",
+    "source_id": "REG-S02",
+    "source_ids": [
+      "REG-S02",
+      "REG-S04",
+      "REG-S05",
+      "REG-S24"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-REG-003",
+    "title": "Context-dependent regional vocabulary",
+    "guidance": "Ask about meeting intent before interpreting table; prepone, CR/comfort room, robot, grand and takeaway may be valid regional or contextual usage. Mark needs-review; do not diagnose an error or replace meaning from locale alone.",
+    "source_id": "REG-S28",
+    "source_ids": [
+      "REG-S28",
+      "REG-S31",
+      "REG-S37",
+      "REG-S42",
+      "REG-S43",
+      "REG-S44",
+      "REG-S47"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-REG-004",
+    "title": "Canadian spelling combinations",
+    "guidance": "Retain Canadian combinations such as centre with organize and program. Choose the supplied Canadian house style; do not normalize all words to a British or US dictionary.",
+    "source_id": "REG-S08",
+    "source_ids": [
+      "REG-S08"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-REG-005",
+    "title": "Tone and grammar require intent",
+    "guidance": "Regional usage and register are contextual. Preserve deliberate fragments, brand voice and regional grammar; offer audience-scoped alternatives only with permission, never a universal correctness score.",
+    "source_id": "REG-S33",
+    "source_ids": [
+      "REG-S33",
+      "REG-S45",
+      "REG-S47"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
+  },
+  {
+    "id": "EN-REG-006",
+    "title": "Regional names and display values",
+    "guidance": "Preserve te reo Māori macrons, names, mixed scripts, date meaning, numeric values, currency codes and time zones. Ambiguous dates stay needs-review; locale formatting is not currency conversion or permission to normalize Unicode.",
+    "source_id": "REG-S18",
+    "source_ids": [
+      "REG-S18",
+      "REG-S58",
+      "REG-S59",
+      "REG-S69",
+      "H37",
+      "H41",
+      "M14",
+      "M15",
+      "M16",
+      "M17"
+    ],
+    "verification": "static-source-and-human-review",
+    "automatic_pass_allowed": false,
+    "status": "guidance-only",
+    "scope": {
+      "conditions": [
+        "Explicit English locale and applicable editorial context supplied"
+      ],
+      "context_required": true
+    }
   }
 ]

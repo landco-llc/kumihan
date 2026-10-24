@@ -11,6 +11,8 @@ Original text is immutable by default. Preserve names, code/IDs, numbers, quotat
 
 Read [workflow](references/workflow.md), [rules](rules/catalog.json), [research trace](references/research-trace.json), [sources](sources.json), [profiles](profiles/mediums.json), [locales](locales/supported.json), [fixtures](fixtures/acceptance.json), [report schema](schemas/report.schema.json), [coverage](inventory.json) and [license](LICENSE). This Skill includes all referenced files and the official PNG independently.
 
-Run `python runtime/check_source.py SOURCE --locale en-US --medium review` here. Add `--candidate FILE` to compare exact bytes without writing either file. Supported explicit locales are en, en-US and en-GB. Unknown or other-language text gets no English rule adoption.
+Run `python runtime/check_source.py SOURCE --locale en-US --medium review` here. Add `--candidate FILE` to compare exact bytes without writing either file. Supported primary contexts are en-US, en-GB, en-CA, en-AU, en-IN and en-SG; ten further regions are advisory. Unspecified en stays region-neutral. Unknown or other-language text gets no English rule adoption.
 
 Return original SHA/integrity, context, findings with rule and source IDs, separately authorized proposals, measured evidence and unrun checks. Use passed/failed/needs-review/not-checked/unsupported. Native rendering, host invocation and Office/PDF remain not-checked until actually exercised. Research rules are guidance; the 38 research test definitions are not product PASS evidence.
+
+Read [regional typography](references/regional-typography.md), [house styles](profiles/house-styles.json) and [regional acceptance scope](fixtures/regional-acceptance.json). House styles require explicit organization and medium selection. Regional vocabulary and ambiguous dates need review; never convert meaning or protected source bytes automatically.

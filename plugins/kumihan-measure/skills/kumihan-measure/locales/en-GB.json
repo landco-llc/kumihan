@@ -1,4 +1,20 @@
 {
   "language": "en",
-  "locale": "en-GB"
+  "locale": "en-GB",
+  "coverage": "supported",
+  "fallback": "en",
+  "scope": "Scoped editorial suggestions; not a complete regional dictionary.",
+  "guidance": "Do not infer -ise, quotation style or serial commas from the region: Oxford University and OUP Music & Letters differ.",
+  "source_ids": [
+    "REG-S01",
+    "REG-S02",
+    "REG-S03",
+    "REG-S04",
+    "REG-S49",
+    "REG-S50",
+    "REG-S52"
+  ],
+  "review_status": "needs-review",
+  "native_rendering": "not-checked",
+  "automatic_rewrite": false
 }

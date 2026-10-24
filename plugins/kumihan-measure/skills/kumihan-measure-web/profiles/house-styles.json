@@ -1,0 +1,174 @@
+{
+  "schema_version": "1.0",
+  "precedence": [
+    "source-preservation-and-edit-permission",
+    "explicit-organisation-and-matching-scope",
+    "explicit-regional-context",
+    "region-unspecified-en"
+  ],
+  "unknown_house_style": "needs-review; preserve supplied house-style text and do not silently select another organisation",
+  "locale_alone_activates_house_style": false,
+  "profiles": [
+    {
+      "id": "oxford-university",
+      "organisation": "University of Oxford",
+      "locale": "en-GB",
+      "scope": [
+        "university-editorial"
+      ],
+      "source_ids": [
+        "REG-S02",
+        "REG-S03"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "verb_suffix": "-ise",
+        "quotation_marks": "single; nested double"
+      },
+      "limits": "Organisation-specific; requires explicit selection and matching scope. Protect source, proper names, quotations and code.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "oup-music-and-letters",
+      "organisation": "OUP Music & Letters",
+      "locale": "en-GB",
+      "scope": [
+        "journal-submission"
+      ],
+      "source_ids": [
+        "REG-S04"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "verb_suffix": "-ize",
+        "serial_comma": "use"
+      },
+      "limits": "Specific journal author guide; not all OUP publications or all British English.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "microsoft",
+      "organisation": "Microsoft",
+      "locale": "en-US",
+      "scope": [
+        "product-content",
+        "web-ui"
+      ],
+      "source_ids": [
+        "REG-S05"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "capitalisation": "sentence case"
+      },
+      "limits": "Organisation-specific; requires explicit selection and matching scope. Protect source, proper names, quotations and code.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "queens-university",
+      "organisation": "Queen’s University",
+      "locale": "en-CA",
+      "scope": [
+        "university-editorial"
+      ],
+      "source_ids": [
+        "REG-S08"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "spelling_examples": [
+          "centre",
+          "cheque",
+          "organize",
+          "program"
+        ]
+      },
+      "limits": "Organisation-specific; requires explicit selection and matching scope. Protect source, proper names, quotations and code.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "canada-ca",
+      "organisation": "Canada.ca",
+      "locale": "en-CA",
+      "scope": [
+        "government-web-content"
+      ],
+      "source_ids": [
+        "REG-S09"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "prose_date": "month day year",
+        "numeric_date": "yyyy-mm-dd only where the guide calls for numeric dates"
+      },
+      "limits": "Organisation-specific; requires explicit selection and matching scope. Protect source, proper names, quotations and code.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "australian-government",
+      "organisation": "Australian Government Style Manual",
+      "locale": "en-AU",
+      "scope": [
+        "government-editorial"
+      ],
+      "source_ids": [
+        "REG-S12",
+        "REG-S13",
+        "REG-S14"
+      ],
+      "version_or_date": "current page observed 2026-10-22",
+      "conventions": {
+        "quotation_marks": "single; nested double",
+        "quoted_spelling": "preserve original"
+      },
+      "limits": "Organisation-specific; requires explicit selection and matching scope. Protect source, proper names, quotations and code.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "sgds-current",
+      "organisation": "Singapore Government Design System",
+      "locale": "en-SG",
+      "scope": [
+        "government-web-ui"
+      ],
+      "source_ids": [
+        "REG-S24",
+        "REG-S25"
+      ],
+      "version_or_date": "current guidance observed 2026-10-22; content from official indexed extract, live DOM not checked",
+      "conventions": {
+        "spelling": "UK",
+        "capitalisation": "sentence case",
+        "contractions": "avoid in this UI scope",
+        "font_example": "Inter"
+      },
+      "limits": "Government UI only, not Singapore advertising or national speech. Do not combine with legacy SGDS v1 Lato.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    },
+    {
+      "id": "sgds-v1",
+      "organisation": "Singapore Government Design System v1",
+      "locale": "en-SG",
+      "scope": [
+        "legacy-government-web-ui"
+      ],
+      "source_ids": [
+        "REG-S26"
+      ],
+      "version_or_date": "legacy version 1",
+      "conventions": {
+        "font_example": "Lato"
+      },
+      "limits": "Historical comparison only; not a fallback for the current SGDS profile.",
+      "activation": "explicit-house-style-and-matching-scope",
+      "automatic_rewrite": false
+    }
+  ]
+}

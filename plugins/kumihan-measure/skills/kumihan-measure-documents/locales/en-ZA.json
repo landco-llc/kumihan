@@ -1,0 +1,17 @@
+{
+  "language": "en",
+  "locale": "en-ZA",
+  "coverage": "advisory",
+  "fallback": "en",
+  "scope": "Contextual advice only; language quality needs review.",
+  "guidance": "Regional vocabulary such as robot needs context; decimal punctuation depends on explicit formatting context and runtime.",
+  "source_ids": [
+    "REG-S36",
+    "REG-S37",
+    "REG-S65",
+    "REG-S66"
+  ],
+  "review_status": "needs-review",
+  "native_rendering": "not-checked",
+  "automatic_rewrite": false
+}
