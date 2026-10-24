@@ -18,8 +18,8 @@ class DistributionTests(unittest.TestCase):
   prefix='plugins/kumihan-grafia/downloads/';files={p[len(prefix):]:b for p,b in outputs.items() if p.startswith(prefix)}
   names=set()
   for host,plugin,skill in [('GPT-Codex','GPT-Codex-plugin','GPT-Codex-skill'),('Claude','Claude-Code-plugin','Claude-skill'),('Gemini','Gemini-CLI-extension','Gemini-Apps-skill')]:
-   names.add('kumihan-grafia-'+plugin+'-v0.1.0.zip')
-   for suffix in ('','-web','-documents','-review'):names.add('kumihan-grafia'+suffix+'-'+skill+'-v0.1.0.zip')
+   names.add('kumihan-grafia-'+plugin+'-v0.1.1.zip')
+   for suffix in ('','-web','-documents','-review'):names.add('kumihan-grafia'+suffix+'-'+skill+'-v0.1.1.zip')
   self.assertEqual(set(files),names|{'MANIFEST.json','SHA256SUMS.txt'})
   manifest=json.loads(files['MANIFEST.json']);self.assertEqual(len(manifest['archives']),15)
   for item in manifest['archives']:
@@ -27,6 +27,24 @@ class DistributionTests(unittest.TestCase):
   for line in files['SHA256SUMS.txt'].decode().splitlines():
    digest,name=line.split('  ');self.assertEqual(hashlib.sha256(files[name]).hexdigest(),digest)
   self.assertEqual(len(files['SHA256SUMS.txt'].decode().splitlines()),16)
+ def test_build_and_check_preserve_preexisting_v010_archives(self):
+  # Exercise main's cleanup, not just plan_outputs: old published bytes must survive.
+  import contextlib
+  from unittest.mock import patch
+  m=self.builder()
+  with tempfile.TemporaryDirectory() as directory:
+   root=Path(directory);downloads=root/'plugins/kumihan-grafia/downloads';downloads.mkdir(parents=True)
+   old=downloads/'kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip'
+   old.write_bytes(b'previously published immutable fixture')
+   current='plugins/kumihan-grafia/downloads/kumihan-grafia-GPT-Codex-plugin-v0.1.1.zip'
+   planned={current:b'new edition'}
+   with patch.object(m,'ROOT',root),patch.object(m,'plan_outputs',return_value=planned):
+    with patch('sys.argv',['build_grafia.py']),contextlib.redirect_stdout(io.StringIO()):
+     self.assertEqual(m.main(),0)
+    self.assertTrue(old.exists(),'Build deleted an existing v0.1.0 archive')
+    self.assertEqual(old.read_bytes(),b'previously published immutable fixture')
+    with patch('sys.argv',['build_grafia.py','--check']),contextlib.redirect_stdout(io.StringIO()):
+     self.assertEqual(m.main(),0)
  def test_archive_closure_host_roots_and_safety(self):
   outputs=self.builder().plan_outputs()
   for path,b in outputs.items():

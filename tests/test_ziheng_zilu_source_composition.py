@@ -52,7 +52,8 @@ class ConcurrentChineseSourceComposition(unittest.TestCase):
                                          readme_state(ROOT, "combined"), "protected"))
 
     def test_facts_are_exactly_two_source_versions_without_publication_changes(self):
-        current = json.loads((ROOT / FACTS).read_bytes())
+        from grafia_v011_transition import predecessor_facts as grafia_predecessor
+        current = json.loads(grafia_predecessor((ROOT / FACTS).read_bytes(), ROOT))
         self.assertEqual(current["editions"]["zh-hans"]["published_version"], "0.1.2")
         self.assertFalse(facts_match(ROOT, json_bytes(current)))
         current["editions"]["zh-hans"] = json.loads(

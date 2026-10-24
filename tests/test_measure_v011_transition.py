@@ -18,7 +18,8 @@ class MeasureSourceAdmission(unittest.TestCase):
         self.assertFalse(admitted(ROOT,'README.md',data['baseline_sha256'],raw.replace(b'Published',b'Changed',1),'protected'))
 
     def test_only_english_source_facts_change(self):
-        current=json.loads((ROOT/'assets/edition-versions.json').read_text())
+        from grafia_v011_transition import predecessor_facts as grafia_predecessor
+        current=json.loads(grafia_predecessor((ROOT/'assets/edition-versions.json').read_bytes(),ROOT))
         self.assertEqual(current['editions']['en']['source_version'],'0.1.1')
         original=json.loads((ROOT/'tests/contracts/en-measure-v010-published-facts.json').read_text())
         expected=copy.deepcopy(original);expected['source_version']='0.1.1'

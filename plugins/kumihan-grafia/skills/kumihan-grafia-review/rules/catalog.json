@@ -9,7 +9,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -43,7 +44,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -76,7 +78,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -109,7 +112,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -142,7 +146,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -175,7 +180,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -209,7 +215,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -223,10 +230,11 @@
     "source_refs": [
       "S07"
     ],
-    "explanation": "Elegir comillas según el medio; revisar el espacio interior y conservar citas literales.",
+    "explanation": "Elegir comillas según house style y medio, distinguiendo edición impresa, guía institucional e Intl/CLDR. No fijar España=«» ni América=“”; revisar espacios interiores conservando citas literales y código.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "«Té»",
     "negative_example": "« Té » sin motivo",
@@ -242,7 +250,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -275,7 +284,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -311,7 +321,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -344,7 +355,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -378,7 +390,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -412,7 +425,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -446,7 +460,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -480,7 +495,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -513,7 +529,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -548,7 +565,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -582,7 +600,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -615,7 +634,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -648,7 +668,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -682,7 +703,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -715,7 +737,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -748,7 +771,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -781,7 +805,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -816,7 +841,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -851,7 +877,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -868,10 +895,11 @@
       "LW09",
       "LW18"
     ],
-    "explanation": "Configurar por separado idioma, mercado, tratamiento, locale, moneda, zona y SEO.",
+    "explanation": "Separar idioma del texto y sus fragmentos, mercado, lector, medio, papel del componente, tratamiento, locale de formato, moneda, zona y SEO. es no implica España; es-US no implica en-US; es-419 no fija las opciones de cada país.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "locale es; moneda no especificada",
     "negative_example": "es implica EUR",
@@ -887,7 +915,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -903,10 +932,11 @@
       "LW02",
       "LW03"
     ],
-    "explanation": "Comprobar tratamiento y paradigma verbal con la intención del autor, nunca solo con el país.",
+    "explanation": "Revisar pronombre, paradigma verbal y plural con audiencia, medio y estilo aprobado. Conservar vos + te/tu/tuyo, voseo chileno y combinaciones regionales autorizadas; no deducir tú/vos/usted ni vosotros/ustedes solo del país.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "Vos tenés / tú tienes según el proyecto",
     "negative_example": "Argentina implica reescritura automática",
@@ -922,7 +952,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -938,10 +969,11 @@
       "LW17",
       "LW18"
     ],
-    "explanation": "Conservar valores y precisión; separar cantidad, identificador, fecha e instante.",
+    "explanation": "Conservar valores originales y precisión; separar cantidad, identificador, fecha e instante. ahorita/ahora/ya no determinan una fecha, plazo ni garantía; no inventar datos para desambiguar.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "valor original 1234.56",
     "negative_example": "redondear el dato al mostrarlo",
@@ -957,7 +989,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -973,10 +1006,11 @@
       "LW11",
       "LW12"
     ],
-    "explanation": "Distinguir política editorial y nodos formateados con Intl.",
+    "explanation": "Separar política editorial y salida de Intl/CLDR. El formato regional de un nodo UI no se normaliza con reglas de prosa sobre porcentaje, espacios o agrupación sin confirmar su modo.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "dato Intl identificado",
     "negative_example": "reemplazar separadores de Intl con regex",
@@ -992,7 +1026,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1008,10 +1043,11 @@
       "LW16",
       "LW17"
     ],
-    "explanation": "Exigir moneda explícita y registrar precisión y opciones resueltas cuando se formatea dinero.",
+    "explanation": "Exigir moneda explícita: $ no identifica USD. Registrar valor original, precisión mostrada, redondeo, resolvedOptions y formatToParts; el redondeo de presentación no autoriza cambiar el valor.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "currency: MXN declarada",
     "negative_example": "$ implica USD",
@@ -1027,7 +1063,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1041,10 +1078,11 @@
     "source_refs": [
       "LW18"
     ],
-    "explanation": "Distinguir date-only de instante; pedir zona explícita cuando corresponda.",
+    "explanation": "Distinguir date-only de instante y conservar el valor. No convertir una fecha de calendario en UTC ni inferir orden de fecha o zona por es-US; pedir zona explícita para el instante cuando corresponda.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "fecha civil conservada",
     "negative_example": "convertir cumpleaños a UTC automáticamente",
@@ -1060,7 +1098,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1074,10 +1113,11 @@
     "source_refs": [
       "LW43"
     ],
-    "explanation": "Usar glosario de marca y mercado revisado, manteniendo variantes legítimas.",
+    "explanation": "Usar glosario de sentido, mercado, lector y medio con estilo aprobado. aplicar/no aplica no es un error por sí mismo según el DPD actual; no prohibir variantes legítimas con normas antiguas ni etiquetas geográficas excluyentes.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "computador según glosario",
     "negative_example": "corregir computador por país sin contexto",
@@ -1093,7 +1133,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1108,10 +1149,11 @@
       "LW10",
       "LW16"
     ],
-    "explanation": "Observar supportedLocalesOf, resolvedOptions y formatToParts en el entorno real.",
+    "explanation": "Registrar entrada, locale solicitado, supportedLocalesOf, resolvedOptions, formatToParts y versión real de Node/navegador/ICU/CLDR. Una observación no certifica otro entorno ni todas las variantes de es-419.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "registrar ICU y opciones",
     "negative_example": "suponer idéntica salida en todos los runtimes",
@@ -1127,7 +1169,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1161,7 +1204,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1194,7 +1238,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1227,7 +1272,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1264,7 +1310,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1297,7 +1344,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1330,7 +1378,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1365,7 +1414,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1400,7 +1450,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1433,7 +1484,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1448,10 +1500,11 @@
       "ES-D01",
       "ES-D07"
     ],
-    "explanation": "Explicar qué estructura comparte la marca y qué cambia con cada contenido.",
+    "explanation": "Explicar qué estructura comparte la marca y qué cambia con contenido, producto, ruta, campaña y fecha. Una diferencia observada no demuestra una preferencia nacional ni permite reutilizar copy ajeno.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "componentes con razón editorial",
     "negative_example": "repetición sin atender al contenido",
@@ -1467,7 +1520,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1502,7 +1556,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1520,10 +1575,11 @@
       "ES-D13",
       "ES-D14"
     ],
-    "explanation": "Evaluar especificidad y claridad de título, cuerpo y acción para el lector real.",
+    "explanation": "Evaluar claridad de título, cuerpo y acción para el lector y medio reales. Conservar hechos y copy aprobado; una propuesta regional no puede añadir promesas, clientes objetivo ni condiciones sin autorización.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "CTA que describe el siguiente paso",
     "negative_example": "frase vacía que oculta la acción",
@@ -1539,7 +1595,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1554,10 +1611,11 @@
       "GRAFIA-POLICY",
       "GRAFIA-POLICY"
     ],
-    "explanation": "Contrastar afirmaciones con hechos autorizados; señalar evidencia ausente sin inventarla.",
+    "explanation": "Contrastar afirmaciones con hechos autorizados y edición de la fuente. Separar texto obtenido, especificación, imagen observada, medición y propuesta; registrar CONFLICTED_SOURCE/NEEDS_HUMAN_EDITORIAL sin completar unidades o datos por conjetura.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "origen y cantidad documentados",
     "negative_example": "añadir propiedades terapéuticas sin evidencia",
@@ -1573,7 +1631,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
@@ -1590,10 +1649,11 @@
       "ES-D09",
       "ES-D15"
     ],
-    "explanation": "Registrar idioma mostrado, mercado, autoría, fecha y alcance observado por separado.",
+    "explanation": "Registrar idioma mostrado, mercado, autoría, fecha, edición y alcance observado por separado; no elevar observaciones históricas o de una muestra a normas vigentes de todo un país.",
     "exceptions": [
       "Respetar citas, nombres, código, marcas y excepciones aprobadas.",
-      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente."
+      "El alcance, el medio y la intención pueden cambiar la propuesta; no corregir automáticamente.",
+      "Consultar references/regional-language.md y locales/regional/context-policy.json; el contexto no autoriza edición automática."
     ],
     "positive_example": "sitio inglés de estudio español identificado",
     "negative_example": "país del estudio implica idioma del caso",
@@ -1609,7 +1669,8 @@
       "es-CO",
       "es-CL",
       "es-PE",
-      "es-419"
+      "es-419",
+      "es-US"
     ],
     "media": [
       "web",
