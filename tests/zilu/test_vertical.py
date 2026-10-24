@@ -54,7 +54,9 @@ class Vertical(unittest.TestCase):
         self.assertIn(path, EXPECTED)
         with tempfile.TemporaryDirectory() as d:
             target = Path(d)/path; target.parent.mkdir(parents=True,exist_ok=True)
-            target.write_bytes((ROOT/path).read_bytes())
+            # Exercise the frozen ZiLu admission against its exact retained README.
+            from en_measure_v011_transition import predecessor
+            target.write_bytes(predecessor(ROOT)[1])
             self.assertTrue(allowed(path,'protected',d))
             target.write_bytes(target.read_bytes()+b' ')
             self.assertFalse(allowed(path,'protected',d))
