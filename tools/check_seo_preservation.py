@@ -46,6 +46,8 @@ def audit(root=ROOT):
             if zilu_allowed(path,family,root): continue
             from ziheng_zilu_source_composition import admitted as composed_admitted
             if composed_admitted(root,path,expected,raw,family): continue
+            from grafia_v011_published_transition import admitted as grafia_published
+            if grafia_published(root,path,expected,raw,family): continue
             from grafia_v011_transition import allowed as grafia_allowed
             if grafia_allowed(path,family,root,expected_preimage=expected): continue
             if hashlib.sha256(raw).hexdigest()!=expected:

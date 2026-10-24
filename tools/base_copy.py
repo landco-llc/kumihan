@@ -28,7 +28,7 @@ EDITIONS = {
     "ar": ("KUMIHAN｜نضيد", "نضيد", "アラビア語", "Arabic", "0.1.0"),
     "ru": ("KUMIHAN｜Лад", "Лад", "ロシア語", "Russian", "0.1.0"),
     "pt": ("KUMIHAN｜Compasso", "Compasso", "ポルトガル語", "Portuguese", "0.1.0"),
-    "es": ("KUMIHAN｜Grafía", "Grafía", "スペイン語", "Spanish", "0.1.0"),
+    "es": ("KUMIHAN｜Grafía", "Grafía", "スペイン語", "Spanish", "0.1.1"),
     "ko": ("KUMIHAN｜글짜임", "글짜임", "韓国語", "Korean", "0.1.0"),
     "th": ("KUMIHAN｜ดุลอักษร", "ดุลอักษร", "タイ語", "Thai", "0.1.1"),
     "zh-hans": ("KUMIHAN｜字律", "字律", "簡体中国語", "Simplified Chinese", "0.1.0"),

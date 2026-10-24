@@ -60,7 +60,7 @@ PRODUCTS = {
                pages={"id": "kumihan-id.html", "en": "kumihan-id.en.html", "ja": "kumihan-id.ja.html"}),
     "ar": dict(name="العربية", lang="ar", brand="KUMIHAN｜نضيد", glyph="ع", label="AR · ARABIC", version="v0.1.0",
                pages={"ar": "kumihan-ar.html", "en": "kumihan-ar.en.html", "ja": "kumihan-ar.ja.html"}),
-    "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.0",
+    "es": dict(name="Español", lang="es", brand="KUMIHAN｜Grafía", glyph="Ñ", label="ES · SPANISH", version="v0.1.1",
                pages={"es": "kumihan-es.html", "en": "kumihan-es.en.html", "ja": "kumihan-es.ja.html"}),
     "fr": dict(name="Français", lang="fr", brand="KUMIHAN｜Accord", glyph="Ç", label="FR · FRENCH", version="v0.1.1",
                pages={"fr": "kumihan-fr.html", "en": "kumihan-fr.en.html", "ja": "kumihan-fr.ja.html"}),
