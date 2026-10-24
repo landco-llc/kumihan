@@ -16,7 +16,10 @@ def scoped(name,family):
     if name == 'README.md':
         from grafia_v011_transition import predecessor_readme
         raw=predecessor_readme(raw,ROOT)
-    return re.search(rb'<body\b[\s\S]*',raw,re.I)[0] if family=='bodies' else raw
+    if family=='bodies':
+        from grafia_v011_published_transition import predecessor_body as grafia_predecessor
+        return grafia_predecessor(ROOT,name,re.search(rb'<body\b[\s\S]*',raw,re.I)[0])
+    return raw
 
 class MeasurePublishedAdmission(unittest.TestCase):
     def test_current_facts_and_pages_match_exact_published_admission(self):

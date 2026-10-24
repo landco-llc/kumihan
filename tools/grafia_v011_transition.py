@@ -58,6 +58,12 @@ def predecessor_readme(raw, root):
     data = load(root)
     if data is None: raise ValueError('Changed Grafía source admission')
     row = data['readme']
+    if hashlib.sha256(raw).hexdigest() not in (row['before_sha256'], row['after_sha256']):
+        try:
+            from grafia_v011_published_transition import predecessor_readme as published_predecessor
+            raw = published_predecessor(raw, root)
+        except (ImportError, OSError, ValueError, KeyError, TypeError) as error:
+            raise ValueError('Unrecognized Grafía README successor') from error
     if hashlib.sha256(raw).hexdigest() == row['before_sha256']: return raw
     if hashlib.sha256(raw).hexdigest() != row['after_sha256']: raise ValueError('Changed current README')
     before, after = row['before_line'].encode(), row['after_line'].encode()
@@ -73,6 +79,12 @@ def predecessor_facts(raw, root):
     data = load(root)
     if data is None: raise ValueError('Changed Grafía source admission')
     row = data['facts']
+    if hashlib.sha256(raw).hexdigest() not in (row['before_sha256'], row['after_sha256']):
+        try:
+            from grafia_v011_published_transition import predecessor_facts as published_predecessor
+            raw = published_predecessor(raw, root)
+        except (ImportError, OSError, ValueError, KeyError, TypeError) as error:
+            raise ValueError('Unrecognized Grafía facts successor') from error
     if hashlib.sha256(raw).hexdigest() == row['before_sha256']: return raw
     if hashlib.sha256(raw).hexdigest() != row['after_sha256']: raise ValueError('Changed current edition facts')
     facts = json.loads(raw)

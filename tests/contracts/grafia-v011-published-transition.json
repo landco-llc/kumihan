@@ -1,0 +1,627 @@
+{
+  "scope": "grafia-v011-published-site",
+  "release_id": 422889710,
+  "tag": "kumihan-grafia-v0.1.1",
+  "target_commit": "087d8c94e4d25ca83ba1aba871dbdf942afa0841",
+  "published_at": "2026-10-24T18:02:19Z",
+  "facts_sha256": "1e2bbd12d44b3fed46c13b9f9a1d6156f8462ed7066d3e53cbd754a451950206",
+  "frozen_inputs": {
+    "tests/contracts/release-preservation.json": "689cb61441ebd3e52634241ecadbc6c925a445f0b1570889e719d3f0d585a7f4",
+    "tests/contracts/grafia-v011-source-transition.json": "427c4708e778c5c27212b35de844f028b10b057629b2d5ffd0663690385d10d9"
+  },
+  "paths": {
+    "README.md": {
+      "kind": "readme-es-row",
+      "family": "protected",
+      "baseline_sha256": "68af18a56a9244f36a8ae5a5fa861fd4309989f9c58d44342406edc4aeeb076b",
+      "after_sha256": "60747391347fe9f028764358139f211a826710895670e9f7208559aa3de23818"
+    },
+    "docs/install-grafia-chatgpt.en.html": {
+      "family": "bodies",
+      "baseline_sha256": "2d565a65917b60856b49f514b5dd3de02e999150e412821af3104bc245f77e7d",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "fd80b4a30e0e205f0c699847ea255bcb46ac39aa887f0ee9f340c20ee37b6056",
+      "after_sha256": "a5f978031ea37a89f6888055157877310b8515c6ce4fc0088f3ff524cb78cfa6",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-chatgpt.html": {
+      "family": "bodies",
+      "baseline_sha256": "5d70bb31929a343211347a029b16886950d6facf79d31837ab50b515883a9ff0",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "64d9aa58c9f88211df2386257d11f24e6a9b2ff6feca869e12014471f62d7062",
+      "after_sha256": "f23ebc71ea95af623ef0984267f738e5b6c80ca6dbb43fcad47c2c2112afe939",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-chatgpt.ja.html": {
+      "family": "bodies",
+      "baseline_sha256": "a81db2bb1e4528a2f446e3a63907bceb380af1fd73e75b950e9a8a4f2dc38984",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "bf8f350840ad892cc575f12624a29a331c077ce663623d7185af93a126de1b7e",
+      "after_sha256": "9f0e8fef0dafe66078a0778daa9200c03d43cea9752f572e7b270fbc9b72214e",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-claude.en.html": {
+      "family": "bodies",
+      "baseline_sha256": "84e4d5f97bdac83f4c4edb80eb5c379706ce8650c39c8d83a03b13c1908990f6",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "c6d559f24a02fdaedeff000466d614637ef77e935971deb33201f07febd827fd",
+      "after_sha256": "603cbb23cb456d2bff5b7b83d7a2268f6a694c1ccb9d7ab6e9bcbac22042216d",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-claude.html": {
+      "family": "bodies",
+      "baseline_sha256": "53a62ce6d40acf269ed8d5e976b8b04c65b6ee65e7e0ad549f05accfdb81a528",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "5c1919817591fb4736b3c35015740426b8dca3d4f3b56de7215a3dc282f78d25",
+      "after_sha256": "cff76f5ad18c458f0cd14dca8441b7d0dd0773cba33a4bc2a9988101c0cd977e",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-claude.ja.html": {
+      "family": "bodies",
+      "baseline_sha256": "85eee19b3684d415ee31921cf0b730d04493e9c083a1eb2d39d3aff1c791dca5",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "bc867177d1d006de5595a0c756946e7abe486099ad2718d971395393dddf851d",
+      "after_sha256": "a9e47ed611a5122174288633d3f4535a9bcf63014a78e631824c0b3c40ce3760",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-gemini.en.html": {
+      "family": "bodies",
+      "baseline_sha256": "8b092b66039ebc8804f7af53fc38d2eb8e88aff4759eb6ea217559805b02ddb9",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "d733353bbc540522003e43eb6951f6aac3fbdae98a749d8307628eb373374ab8",
+      "after_sha256": "e13549b46800c2f7aa3ad36d698995022c62d4c4904fea9f57c40d5d5078240b",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-gemini.html": {
+      "family": "bodies",
+      "baseline_sha256": "640006d5131913be76d210689ab4d81926614760e036a6e5015c8c89e32435be",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "2bdf68e3f7f39522ab6f4620a3cd16371f2848a311c6a06ea45a5ce6c656920f",
+      "after_sha256": "60cef07b5a36582da5393b973a9ae58ec6343fddd715db6d8c9a0824820fddf4",
+      "kind": "grafia-page"
+    },
+    "docs/install-grafia-gemini.ja.html": {
+      "family": "bodies",
+      "baseline_sha256": "d092e289fd5746ca683bd648d7e0053dd050c135b838a0ec5db6ff8e913d00eb",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "2a9ae22158aa8008640901a74bd643562b399c7cf15a66f4738f6cd14e53e9f2",
+      "after_sha256": "34e50994e38ef83d08de81ae56df53fbf962a142e9f6c156c349e21e3ad2c5fd",
+      "kind": "grafia-page"
+    },
+    "index.html": {
+      "family": "bodies",
+      "baseline_sha256": "0dcc7a94a9c6dfd2128d431f072bba76b65537f07ad2301e923be4f394b0c07a",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "0512e2ae55d0804891d191e4e87475595c29e15dc0dd05664bacf73dfc1e3e73",
+      "after_sha256": "e95ea73c0a2eba7381beccbd641f7b6a24037946bcaccbd94f709b8ed9819ecf",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanish typography that respects regional usage, preserves the source and separates verified evidence from editorial judgment.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>View the Spanish edition</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanish typography that respects regional usage, preserves the source and separates verified evidence from editorial judgment.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>View the Spanish edition</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "kumihan-es.en.html": {
+      "family": "bodies",
+      "baseline_sha256": "c7fea3b04e22c38d126835d718d71b66a85577878e199f2e8366d3961c07787e",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "672fb2d2d544bf61304112e6deb4c1ea530f46f172a488396934129980a59a83",
+      "after_sha256": "1338bbef7b1c4b24b72249e1b113413495199f39e492bf75a80b0ba0fdb1265f",
+      "kind": "grafia-page"
+    },
+    "kumihan-es.html": {
+      "family": "bodies",
+      "baseline_sha256": "d78a7456578b23302acf7ca72c16ac1a4f801255def2808f637b341d07319447",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "21c548a26cbea48ef4a7fe7d5b7fc68227f9a85f9f54690b6e98e4a1a09f5d1a",
+      "after_sha256": "bb6c927706346ccc9aa6099f75704f1ab9d6336ae67ff80fab8a99230a378af2",
+      "kind": "grafia-page"
+    },
+    "kumihan-es.ja.html": {
+      "family": "bodies",
+      "baseline_sha256": "73798ec6a9911cafa77518acb1a35b56e96ec65e2b3d6c9f813efa4f009d8df2",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "3aca9bad48a3fa501878a2b6e66771d8c5f4fe2cb70706c9a46c39d48db22e86",
+      "after_sha256": "c5078a2d5de51bbc67c0a0bf33c39c4a125dc7a1305401fca3ae3e495963fb1a",
+      "kind": "grafia-page"
+    },
+    "top-ar.html": {
+      "family": "bodies",
+      "baseline_sha256": "d31471c155d7d2120cbc315bcef6f50c0a9a37efe15036e07ba675305ba6bafc",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "561376a6c54c4812de7f04d2a74730d06b28b9ed292bb001e9597bed30e63677",
+      "after_sha256": "7f9a659db43a437ee99d741ba9e5cae67a63c78f07890780590552407994ea96",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>عرض النسخة الإسبانية</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">تنضيد إسباني يحترم الاستخدام الإقليمي ويحافظ على الأصل، ويفصل بين الأدلة المتحقق منها والقرار التحريري.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>عرض النسخة الإسبانية</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-bn.html": {
+      "family": "bodies",
+      "baseline_sha256": "b047a714120c0b6718a8c7562ba5ea7abbb3b928d1c8899331b4c25445701bf5",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "c236f38fcb800583a9e569111e5ec74d9c825f62be70cb5f0fff0ba43f21259f",
+      "after_sha256": "4b2a98209505319af93f950dc5331414dac9b64292a40fb7e2c4947b8b32031a",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">আঞ্চলিক ব্যবহারকে সম্মান করে, মূল লেখা রক্ষা করে এবং যাচাই-করা তথ্যকে সম্পাদকীয় বিচার থেকে আলাদা রাখা স্প্যানিশ টাইপোগ্রাফি।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>স্প্যানিশ সংস্করণ দেখুন</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">আঞ্চলিক ব্যবহারকে সম্মান করে, মূল লেখা রক্ষা করে এবং যাচাই-করা তথ্যকে সম্পাদকীয় বিচার থেকে আলাদা রাখা স্প্যানিশ টাইপোগ্রাফি।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>স্প্যানিশ সংস্করণ দেখুন</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-cs.html": {
+      "family": "bodies",
+      "baseline_sha256": "627d4fbbb327e60cad1aa682da94d2695ab939c016a6054ffa5adcb2815d6206",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "627d4fbbb327e60cad1aa682da94d2695ab939c016a6054ffa5adcb2815d6206",
+      "after_sha256": "fd6e1d9edb93424d0a4f922c5ace86dff4d52a36ec9f6e4cf847ec9970d3ad05",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Španělská typografie, která respektuje regionální úzus, chrání zdrojový text a odděluje ověřené doklady od redakčního úsudku.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Zobrazit španělskou verzi</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Španělská typografie, která respektuje regionální úzus, chrání zdrojový text a odděluje ověřené doklady od redakčního úsudku.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Zobrazit španělskou verzi</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-da.html": {
+      "family": "bodies",
+      "baseline_sha256": "277404d5a0bf15f67ce0fb998a09566449e5e73f4b2a282f1310170df9ae1149",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "277404d5a0bf15f67ce0fb998a09566449e5e73f4b2a282f1310170df9ae1149",
+      "after_sha256": "c10117d295cfc614844d001af4ee3f4be38d1a8cbdd8b6db524b55338ca06b35",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi, der respekterer regional sprogbrug, bevarer kilden og adskiller verificeret dokumentation fra redaktionelle vurderinger.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Se udgaven på spansk</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi, der respekterer regional sprogbrug, bevarer kilden og adskiller verificeret dokumentation fra redaktionelle vurderinger.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Se udgaven på spansk</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-de.html": {
+      "family": "bodies",
+      "baseline_sha256": "0607b2b362f993f443f61c0103266d26661cdf4ebd69c7b360ddadc064496f85",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "9c09c257821b3260950b7b2dd66fd620c13935e5b5e05ab3988bc4b625e0fccd",
+      "after_sha256": "6fadb2f97faf06eaea698b9be1eea3e011f241639bc0ff848d3b68faf61e3ded",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanische Typografie, die regionalen Sprachgebrauch respektiert, das Original bewahrt und geprüfte Belege von redaktionellem Urteil trennt.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Spanische Version ansehen</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanische Typografie, die regionalen Sprachgebrauch respektiert, das Original bewahrt und geprüfte Belege von redaktionellem Urteil trennt.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Spanische Version ansehen</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-el.html": {
+      "family": "bodies",
+      "baseline_sha256": "dd7daa48eab149da58c534dd43449a443eef2aea9bacb4243d05523f8ccfcbb0",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "dd7daa48eab149da58c534dd43449a443eef2aea9bacb4243d05523f8ccfcbb0",
+      "after_sha256": "0809f8330069bae27b49e16f79d171bd195934ed1d2f0a4fbaf67f7d3342173f",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Ισπανική τυπογραφία που σέβεται την τοπική χρήση, διατηρεί το πρωτότυπο και διακρίνει τα επαληθευμένα τεκμήρια από την επιμελητική κρίση.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Δείτε την έκδοση στα ισπανικά</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Ισπανική τυπογραφία που σέβεται την τοπική χρήση, διατηρεί το πρωτότυπο και διακρίνει τα επαληθευμένα τεκμήρια από την επιμελητική κρίση.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Δείτε την έκδοση στα ισπανικά</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-es.html": {
+      "family": "bodies",
+      "baseline_sha256": "6cc2acbe57d59518670543f9643a2ef791238ffda50583182969aeb92173c1fd",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "a447286c7013f069a8e64926438b15fbc4435f1c49390e501b8dfb1734cc8a9d",
+      "after_sha256": "d3bf3f504480031d89d55b40749f5b20dc6e6f831a4d6fcfac1ab4364bf40c09",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card current\" aria-labelledby=\"language-es\"><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografía en español que respeta el uso regional, conserva el original y separa la evidencia comprobada del criterio editorial.</p><a class=\"lang-action\" href=\"kumihan-es.html\"><span>Ver la edición en español</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card current\" aria-labelledby=\"language-es\"><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografía en español que respeta el uso regional, conserva el original y separa la evidencia comprobada del criterio editorial.</p><a class=\"lang-action\" href=\"kumihan-es.html\"><span>Ver la edición en español</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-fa.html": {
+      "family": "bodies",
+      "baseline_sha256": "49fdb1c901659d5cc4895e047b5984acc3ea15ee0a8999bba60f8e78fc97d00d",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "9b29fbca679fb0cff0e1d323d8b4400841bdde5820acf527797f70d1bcf745f6",
+      "after_sha256": "ae7999dd0a12dd62ca5f7f6a83cb31e2a3eca73587caeec15208665557dd5326",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">حروف‌چینی اسپانیایی که کاربرد منطقه‌ای را محترم می‌شمارد، متن اصلی را حفظ می‌کند و شواهد تأییدشده را از داوری ویرایشی جدا می‌کند.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>دیدن نسخهٔ اسپانیایی</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">حروف‌چینی اسپانیایی که کاربرد منطقه‌ای را محترم می‌شمارد، متن اصلی را حفظ می‌کند و شواهد تأییدشده را از داوری ویرایشی جدا می‌کند.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>دیدن نسخهٔ اسپانیایی</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-fi.html": {
+      "family": "bodies",
+      "baseline_sha256": "bde33fb7a12974ff2a7c1e89eece79d432df0efff3adb859fce47234074a1c7a",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "bde33fb7a12974ff2a7c1e89eece79d432df0efff3adb859fce47234074a1c7a",
+      "after_sha256": "9b823acd6fd09a1df70f32bd7038da1d3c8f54063f02cbd57d127ed47059c34c",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Espanjankielinen typografia, joka kunnioittaa alueellisia käytäntöjä, säilyttää lähdetekstin ja erottaa varmennetun näytön toimituksellisesta harkinnasta.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Katso espanjankielinen versio</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Espanjankielinen typografia, joka kunnioittaa alueellisia käytäntöjä, säilyttää lähdetekstin ja erottaa varmennetun näytön toimituksellisesta harkinnasta.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Katso espanjankielinen versio</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-fr.html": {
+      "family": "bodies",
+      "baseline_sha256": "164fe62b30077dd1a0b3f7918fb210782dbb2b5549cb4ac08d4d024d7e29225c",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "0bcbaa9753f73feaa99791a8b928768df74967f17a3733f7789c47b6d168234c",
+      "after_sha256": "2030e6bc1c4fa804b42d5c9e481cd7877951a10ffaf11f7bd1eba6010545488a",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typographie espagnole qui respecte les usages régionaux, préserve la source et distingue les preuves vérifiées du jugement éditorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Voir l’édition espagnole</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typographie espagnole qui respecte les usages régionaux, préserve la source et distingue les preuves vérifiées du jugement éditorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Voir l’édition espagnole</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-he.html": {
+      "family": "bodies",
+      "baseline_sha256": "bb08c187b0c5c0d9cbafbb07bb87662a0800a11d5b1bf02366400c32d984c90a",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "bb08c187b0c5c0d9cbafbb07bb87662a0800a11d5b1bf02366400c32d984c90a",
+      "after_sha256": "fe426ec38e407c3773b3f9a7ade3bca03472b6e1862e551edb5db1a7232c0f14",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">טיפוגרפיה ספרדית שמכבדת שימושים אזוריים, שומרת על המקור ומפרידה בין ראיות שאומתו לבין שיקול דעת עריכתי.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>למהדורה בספרדית</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">טיפוגרפיה ספרדית שמכבדת שימושים אזוריים, שומרת על המקור ומפרידה בין ראיות שאומתו לבין שיקול דעת עריכתי.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>למהדורה בספרדית</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-hi.html": {
+      "family": "bodies",
+      "baseline_sha256": "40b7aec7b0c40b1a2d5007afb4ea0cff1d97e7e2554bcd0aade9712268fb908f",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "8c3c3c21306c6e6f03475ccb25b157db09a389377addfa3558e7fe4ca6dd56f3",
+      "after_sha256": "cab235aaaacddf330614a3539c2ebf8a9a8a7cafbe922048ded1597554e26820",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">क्षेत्रीय प्रयोग का सम्मान करने वाली, मूल को सुरक्षित रखने और जाँचे गए प्रमाण को संपादकीय निर्णय से अलग रखने वाली स्पेनिश टाइपोग्राफ़ी।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>स्पेनिश संस्करण देखें</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">क्षेत्रीय प्रयोग का सम्मान करने वाली, मूल को सुरक्षित रखने और जाँचे गए प्रमाण को संपादकीय निर्णय से अलग रखने वाली स्पेनिश टाइपोग्राफ़ी।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>स्पेनिश संस्करण देखें</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-hu.html": {
+      "family": "bodies",
+      "baseline_sha256": "ff02e630e9ee0434784e2027f0dd797a0930f1835afec8ba992c860f32756ae5",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "ff02e630e9ee0434784e2027f0dd797a0930f1835afec8ba992c860f32756ae5",
+      "after_sha256": "ae7c8e90ca0aaeabbd004a49162ddaaad730f555ce2ecc0f29dbdbec39d1fbd9",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanyol tipográfia, amely tiszteletben tartja a regionális szokásokat, megőrzi a forrást, és elválasztja az igazolt tényeket a szerkesztői döntésektől.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>A spanyol változat megtekintése</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spanyol tipográfia, amely tiszteletben tartja a regionális szokásokat, megőrzi a forrást, és elválasztja az igazolt tényeket a szerkesztői döntésektől.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>A spanyol változat megtekintése</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-id.html": {
+      "family": "bodies",
+      "baseline_sha256": "9412b3377b744c61a3a6d2555a04d2998a8333b471907b1362a7f920757b99f0",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "2768b8aa35f53f1aca59ce955e4ee2e1b070f8b96cbcc3f44c3ec221cd554863",
+      "after_sha256": "f7b21b66a208ca6750f17bb328cc8777300cdef875127ef498196f37d4bfd9c1",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografi Spanyol yang menghormati penggunaan regional, menjaga naskah asli, dan memisahkan bukti terverifikasi dari pertimbangan editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Lihat edisi bahasa Spanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografi Spanyol yang menghormati penggunaan regional, menjaga naskah asli, dan memisahkan bukti terverifikasi dari pertimbangan editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Lihat edisi bahasa Spanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-it.html": {
+      "family": "bodies",
+      "baseline_sha256": "f612d38dfee81b8ccee7037aee78c17f2d912a3a560d05e075914a3de4c04cd0",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "70f9d357a17d4b9c5a9838f732d91af5a501dbc42747ab42715b9674237dae0d",
+      "after_sha256": "90e70cfd42c30e6b62081824136340277d6bd3a663898b81f34ca83ae418b7df",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografia spagnola che rispetta l’uso regionale, preserva il testo e distingue le prove verificate dal giudizio editoriale.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Vai all’edizione spagnola</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografia spagnola che rispetta l’uso regionale, preserva il testo e distingue le prove verificate dal giudizio editoriale.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Vai all’edizione spagnola</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-ja.html": {
+      "family": "bodies",
+      "baseline_sha256": "7734a94bea753b3011f1d9121dbc315d00102f197064455e648af7b6b83d8877",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "3d3e409cf45a0a0e9bab818aae8073edd9036b563c607d32bf2bf3552099c390",
+      "after_sha256": "39c484671f666eca0d23b620dfcd14aea0623d4f7d4a5ed75789f01effb4c5b8",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · 正式公開\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"ja\">正式公開</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">スペイン語の文字組と原稿保全。地域の表現を尊重し、確認できた根拠と編集判断を分けて伝えます。</p><a class=\"lang-action\" href=\"kumihan-es.ja.html\"><span>スペイン語版を見る</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · 正式公開\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"ja\">正式公開</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">スペイン語の文字組と原稿保全。地域の表現を尊重し、確認できた根拠と編集判断を分けて伝えます。</p><a class=\"lang-action\" href=\"kumihan-es.ja.html\"><span>スペイン語版を見る</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-km.html": {
+      "family": "bodies",
+      "baseline_sha256": "d821ccc7eebda51e1e0467ae217bd58da6831afe29faa3e27129079dc776b421",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "5c5b2e03167dbc7dde847637192422dd810eaf2d09408a1103bbf5c884a81bd3",
+      "after_sha256": "95de5eabd8fd91bd6b8507dfb9b095bb5abc8f0fb329fc1d963d632b39f159fd",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">ការរៀបចំអក្សរអេស្ប៉ាញ ដែលគោរពការប្រើប្រាស់តាមតំបន់ រក្សាអត្ថបទដើម និងបែងចែកភស្តុតាងដែលបានផ្ទៀងផ្ទាត់ពីការសម្រេចចិត្តផ្នែកនិពន្ធ។</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>មើលកំណែអេស្ប៉ាញ</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">ការរៀបចំអក្សរអេស្ប៉ាញ ដែលគោរពការប្រើប្រាស់តាមតំបន់ រក្សាអត្ថបទដើម និងបែងចែកភស្តុតាងដែលបានផ្ទៀងផ្ទាត់ពីការសម្រេចចិត្តផ្នែកនិពន្ធ។</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>មើលកំណែអេស្ប៉ាញ</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-ko.html": {
+      "family": "bodies",
+      "baseline_sha256": "76924f22563f5eb5c7b58626a975991485cd00a5444a2b4f78521a81e7661310",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "a7f76177e5c040af0511ca295a470a06ed3807f6eee0518a31cb6d37b75f1495",
+      "after_sha256": "1ba07f80d07a91916d2d05c371ee6138d6fa42a004c7dbfe21a72b523e72816d",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">지역별 표현을 존중하고 원고를 지키며, 확인한 근거와 편집 판단을 구분하는 스페인어 글짜임.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>스페인어 버전 보기</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">지역별 표현을 존중하고 원고를 지키며, 확인한 근거와 편집 판단을 구분하는 스페인어 글짜임.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>스페인어 버전 보기</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-la.html": {
+      "family": "bodies",
+      "baseline_sha256": "340768bff2a64d2a17a2692a3d13e5c14e1acf0b675878cb1bd54d2f2952b50f",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "340768bff2a64d2a17a2692a3d13e5c14e1acf0b675878cb1bd54d2f2952b50f",
+      "after_sha256": "a72684175fa8ecdffa35e694c64fb9bca6ce69269eb06fbdb4e2927160b6d73e",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typographia Hispanica, quae usum regionum observat, textum primigenium servat et testimonia probata a iudicio editoris distinguit.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Editionem Hispanicam vide</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typographia Hispanica, quae usum regionum observat, textum primigenium servat et testimonia probata a iudicio editoris distinguit.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Editionem Hispanicam vide</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-ms.html": {
+      "family": "bodies",
+      "baseline_sha256": "d6d1b31a5729adf786444c425cebf9820f09b6d9f07b5a137ea234b4cf0b7984",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "d6d1b31a5729adf786444c425cebf9820f09b6d9f07b5a137ea234b4cf0b7984",
+      "after_sha256": "b97eeb0157f5a6edb5c6e9a01b557ed840123ad201842ff4cc57541fc25eabfd",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografi bahasa Sepanyol yang menghormati penggunaan serantau, mengekalkan teks asal dan memisahkan bukti yang disahkan daripada pertimbangan editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Lihat edisi bahasa Sepanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografi bahasa Sepanyol yang menghormati penggunaan serantau, mengekalkan teks asal dan memisahkan bukti yang disahkan daripada pertimbangan editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Lihat edisi bahasa Sepanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-my.html": {
+      "family": "bodies",
+      "baseline_sha256": "d013c02eada462dbf19497600b7b660cf67d73da5d952fece9466007a4c9c75b",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "d013c02eada462dbf19497600b7b660cf67d73da5d952fece9466007a4c9c75b",
+      "after_sha256": "5a9a953de8cb02c8c1aa9ad931ecede533f992e80aa054bdb2a469e43068fc75",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">ဒေသဆိုင်ရာ အသုံးအနှုန်းကို လေးစားပြီး မူရင်းကို ထိန်းသိမ်းကာ အတည်ပြုထားသော အထောက်အထားနှင့် တည်းဖြတ်သူ၏ ဆုံးဖြတ်ချက်ကို ခွဲခြားသော စပိန်ဘာသာ စာစီစာရိုက်။</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>စပိန်ဘာသာ ဗားရှင်းကို ကြည့်ရန်</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">ဒေသဆိုင်ရာ အသုံးအနှုန်းကို လေးစားပြီး မူရင်းကို ထိန်းသိမ်းကာ အတည်ပြုထားသော အထောက်အထားနှင့် တည်းဖြတ်သူ၏ ဆုံးဖြတ်ချက်ကို ခွဲခြားသော စပိန်ဘာသာ စာစီစာရိုက်။</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>စပိန်ဘာသာ ဗားရှင်းကို ကြည့်ရန်</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-nl.html": {
+      "family": "bodies",
+      "baseline_sha256": "c36c1809834b86be8c9fc859771e9e64e627db676c09d8a4d896e84b4ff160e1",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "c36c1809834b86be8c9fc859771e9e64e627db676c09d8a4d896e84b4ff160e1",
+      "after_sha256": "198dd77981513679e10537c72ccc7e47043b4556c279ef7d1b805652c90feffc",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spaanse typografie die regionaal taalgebruik respecteert, de bron behoudt en geverifieerd bewijs scheidt van redactioneel oordeel.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Bekijk de Spaanse editie</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spaanse typografie die regionaal taalgebruik respecteert, de bron behoudt en geverifieerd bewijs scheidt van redactioneel oordeel.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Bekijk de Spaanse editie</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-no.html": {
+      "family": "bodies",
+      "baseline_sha256": "86c87be67de51c414a48e0b44f34e16090d63ce5030d2e2ca8cff143039bc612",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "86c87be67de51c414a48e0b44f34e16090d63ce5030d2e2ca8cff143039bc612",
+      "after_sha256": "e1ec1c20042da870c5b4e4b04e83e4cd32fd09f83d3e0abf2061f570c4737c41",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi som respekterer regional bruk, bevarer kilden og skiller dokumentert belegg fra redaksjonelt skjønn.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Se utgaven på spansk</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi som respekterer regional bruk, bevarer kilden og skiller dokumentert belegg fra redaksjonelt skjønn.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Se utgaven på spansk</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-pl.html": {
+      "family": "bodies",
+      "baseline_sha256": "72d8ec2c24e04d9287b3a1edda4872fc02727c631de375c02b1ae1061cdb4e1e",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "d103c9f3a5023543c42c83ce84c3f3d25e9d7079e562403ccc3725b186e57656",
+      "after_sha256": "44af32e96e557ab50c2b511c73f7811f4f6a018cb30558ab7e5d79da5f13cd1b",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typografia hiszpańska szanująca regionalne zwyczaje językowe, chroniąca oryginał i oddzielająca sprawdzone dowody od oceny redakcyjnej.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Zobacz wersję hiszpańską</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typografia hiszpańska szanująca regionalne zwyczaje językowe, chroniąca oryginał i oddzielająca sprawdzone dowody od oceny redakcyjnej.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Zobacz wersję hiszpańską</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-pt.html": {
+      "family": "bodies",
+      "baseline_sha256": "2f7c75c576c1095fb894de7eee52208fbae0c2003816249b93ea97f5f084455e",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "64cf75b4e06ecd46c221a382b785d132ee2511e1f5c97917dfdccfe8efabf551",
+      "after_sha256": "f2d9a8709a34d48c46800cd0b0e553e3fa45ce9f5d6567c54698a59074d6bf99",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografia espanhola que respeita o uso regional, preserva o original e separa a evidência verificada do critério editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Ver a edição em espanhol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipografia espanhola que respeita o uso regional, preserva o original e separa a evidência verificada do critério editorial.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Ver a edição em espanhol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-ru.html": {
+      "family": "bodies",
+      "baseline_sha256": "f18a652e5c7d424067c48b768a8e9d090883189e35c84c1256db09283525d54b",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "8adc5189734e635f658975848eac3608597180744bd69155d2838e725125d79e",
+      "after_sha256": "f694302a37fcfc14af80f4fd96c9b068d48feba13b258fce6ef42e794cc4970b",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Испанская типографика: региональные нормы, сохранность текста и разделение проверенных фактов и редакторских решений.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Открыть испанскую версию</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Испанская типографика: региональные нормы, сохранность текста и разделение проверенных фактов и редакторских решений.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Открыть испанскую версию</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-sa.html": {
+      "family": "bodies",
+      "baseline_sha256": "a85229ceb20f7b97ade9b946ef0f07d5a8e600aa741d391bdb8d187a9e318485",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "a85229ceb20f7b97ade9b946ef0f07d5a8e600aa741d391bdb8d187a9e318485",
+      "after_sha256": "c65d0aee655c3dea3c9f68422ca5b8099db0778e6b9fa6eb83685d7eb4d0683e",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">प्रादेशिकप्रयोगं मानयन्, मूलपाठं रक्षन्, सत्यापितप्रमाणं सम्पादकीयनिर्णयात् पृथक् कुर्वन् स्पेनिश-अक्षरविन्यासः।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>स्पेनिश-संस्करणं पश्यतु</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">प्रादेशिकप्रयोगं मानयन्, मूलपाठं रक्षन्, सत्यापितप्रमाणं सम्पादकीयनिर्णयात् पृथक् कुर्वन् स्पेनिश-अक्षरविन्यासः।</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>स्पेनिश-संस्करणं पश्यतु</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-sv.html": {
+      "family": "bodies",
+      "baseline_sha256": "45d703fcd92d66144e9f1d2995c7cf6e706a153e0b42ad2484dc9c212a5d5197",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "45d703fcd92d66144e9f1d2995c7cf6e706a153e0b42ad2484dc9c212a5d5197",
+      "after_sha256": "31dfd696b123036313d0db40bc355709354a1a6ea117d156cc95ee1a06fad3a1",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi som respekterar regionalt bruk, bevarar källtexten och skiljer verifierade belägg från redaktionella bedömningar.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Visa utgåvan på spanska</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Spansk typografi som respekterar regionalt bruk, bevarar källtexten och skiljer verifierade belägg från redaktionella bedömningar.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Visa utgåvan på spanska</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-sw.html": {
+      "family": "bodies",
+      "baseline_sha256": "19b4646d5e0daf535c892be9382f4ef2ccb820098e84fdebc5e4fa73cbbd313f",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "421262928ffbaea7c711531e94b901ec03bb7e23ee3f73179ab54f66098e8426",
+      "after_sha256": "9908b068177514ee7a663aa1b15e921d21b737209ded1fc8f3926adc1b982352",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Uchapaji wa Kihispania unaoheshimu matumizi ya kimaeneo, kuhifadhi maandishi asilia na kutenganisha ushahidi uliothibitishwa na maamuzi ya kihariri.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Tazama toleo la Kihispania</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Uchapaji wa Kihispania unaoheshimu matumizi ya kimaeneo, kuhifadhi maandishi asilia na kutenganisha ushahidi uliothibitishwa na maamuzi ya kihariri.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Tazama toleo la Kihispania</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-th.html": {
+      "family": "bodies",
+      "baseline_sha256": "b1ba64f07be3c3a54e29bbd942461023a17cd484c1082f478d4eb0d2a99cb187",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "4e0132215d5883fa7c48c922ed1c14709176beec2b32188aed16f08a319c99c9",
+      "after_sha256": "83db11d328d52cb7051a14e6cb066f7e87df654bc6eabb04fc220e417c8d5540",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">การจัดวางตัวอักษรสเปนที่เคารพการใช้ภาษาตามภูมิภาค รักษาต้นฉบับ และแยกหลักฐานที่ตรวจแล้วออกจากการตัดสินใจทางบรรณาธิการ</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>ดูเวอร์ชันภาษาสเปน</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">การจัดวางตัวอักษรสเปนที่เคารพการใช้ภาษาตามภูมิภาค รักษาต้นฉบับ และแยกหลักฐานที่ตรวจแล้วออกจากการตัดสินใจทางบรรณาธิการ</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>ดูเวอร์ชันภาษาสเปน</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-tl.html": {
+      "family": "bodies",
+      "baseline_sha256": "d95547c854090eea96178d59c6927d5296572518aaddd9cfd01e1b592e706c85",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "d95547c854090eea96178d59c6927d5296572518aaddd9cfd01e1b592e706c85",
+      "after_sha256": "495e2e096384a6950217168ab7a708f98b827a51a3120b1847944ec1060e9e09",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipograpiyang Espanyol na gumagalang sa gamit sa bawat rehiyon, nag-iingat sa orihinal, at naghihiwalay sa napatunayang ebidensiya at sa pasya ng editor.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Tingnan ang edisyon sa Espanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Tipograpiyang Espanyol na gumagalang sa gamit sa bawat rehiyon, nag-iingat sa orihinal, at naghihiwalay sa napatunayang ebidensiya at sa pasya ng editor.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Tingnan ang edisyon sa Espanyol</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-tr.html": {
+      "family": "bodies",
+      "baseline_sha256": "d775d8888b3047b489ff25dd38d9dd351452ba1bc3cee6e2319876204cd582fe",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "d775d8888b3047b489ff25dd38d9dd351452ba1bc3cee6e2319876204cd582fe",
+      "after_sha256": "50e12a622e55394d95c92714591ac3c9ce5cc7946dd1ac3d90e9c525406fa43e",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Bölgesel kullanıma saygı gösteren, kaynağı koruyan ve doğrulanmış kanıtı editoryal yargıdan ayıran İspanyolca tipografi.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>İspanyolca sürümünü görüntüle</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Bölgesel kullanıma saygı gösteren, kaynağı koruyan ve doğrulanmış kanıtı editoryal yargıdan ayıran İspanyolca tipografi.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>İspanyolca sürümünü görüntüle</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-uk.html": {
+      "family": "bodies",
+      "baseline_sha256": "f358f249f5ca24ea0cc106a43656c777a00dcd9ac77936ee700a829b6a37eddd",
+      "baseline_kind": "current-reviewed-preimage",
+      "preimage_sha256": "f358f249f5ca24ea0cc106a43656c777a00dcd9ac77936ee700a829b6a37eddd",
+      "after_sha256": "38d556e550b5751b5be1e547708d32214f4bf9b5668e7c8de98138a981b83de1",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Іспанська типографіка, що враховує регіональні норми, зберігає оригінал і відокремлює перевірені факти від редакторських рішень.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Відкрити іспанську версію</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Іспанська типографіка, що враховує регіональні норми, зберігає оригінал і відокремлює перевірені факти від редакторських рішень.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Відкрити іспанську версію</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-vi.html": {
+      "family": "bodies",
+      "baseline_sha256": "17fa9e79ea9d7221ab0ccb6bb49c9c39d7c67c5086618d174219e91edd6e0ba3",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "c8a3d7bb87d92dfaa642c1ec214b0e43a498c1ad817267d859c8daa2ebe06029",
+      "after_sha256": "b9d7c74b6fbbf08e5ffd76bc9249c49a751515776494dff0dac68cf8502e29d0",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typography tiếng Tây Ban Nha tôn trọng cách dùng theo vùng, giữ nguyên bản gốc và tách bằng chứng đã kiểm chứng khỏi nhận định biên tập.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Xem phiên bản tiếng Tây Ban Nha</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Typography tiếng Tây Ban Nha tôn trọng cách dùng theo vùng, giữ nguyên bản gốc và tách bằng chứng đã kiểm chứng khỏi nhận định biên tập.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Xem phiên bản tiếng Tây Ban Nha</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-zh-cn.html": {
+      "family": "bodies",
+      "baseline_sha256": "5f61ac36f27fed5046579ecd03f64e760c6bf6a89d152381bfc4fc3f49e2c76a",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "c4a8f0a21d75f994bac7a186ed9aa1004d5d81e14b28e39ea7636526063197cd",
+      "after_sha256": "252204cc3df86c5f51ba7c0c01099c56b6b0686fd5ecbf0f373d95535f536d3e",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · 正式公开\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"zh-Hans-CN\">正式公开</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">尊重各地区用法、保留原稿，并区分已确认依据与编辑判断的西班牙文排版。</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>前往西班牙文版</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · 正式公开\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"zh-Hans-CN\">正式公开</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">尊重各地区用法、保留原稿，并区分已确认依据与编辑判断的西班牙文排版。</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>前往西班牙文版</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-zh-han.html": {
+      "family": "bodies",
+      "baseline_sha256": "1c468672642d1e1cd327b7d4c87137b462597f6f67cb1658443a6b495157da29",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "c533caba028af4f0b34321b413313ce4af0c8869aa6631c0bded808f1710c4b2",
+      "after_sha256": "8f81ba64300b9658fba339b3b240b26b1befd4b7ab84ce5d09f1a3fc8f40b25b",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · 正式公開\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"zh-Hant-TW\">正式公開</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">尊重各地區用法、保留原稿，並區分已確認依據與編輯判斷的西班牙文排版。</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>前往西班牙文版</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · 正式公開\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"zh-Hant-TW\">正式公開</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">尊重各地區用法、保留原稿，並區分已確認依據與編輯判斷的西班牙文排版。</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>前往西班牙文版</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    },
+    "top-zu.html": {
+      "family": "bodies",
+      "baseline_sha256": "963c1ccd5bc3d195b6f8d2b396416ff4d412804a6339f4d0c8be3cf7b9885b66",
+      "baseline_kind": "immutable-release-snapshot",
+      "preimage_sha256": "702cd0ac9880a56ef68a36e46ccc15ba63091958d441c7b5aff645a54993ec29",
+      "after_sha256": "d61153e52b9727a5fdac7a1d0d469210614e7818b6b61690a0e7e3bfecae38bf",
+      "kind": "gateway-es-card",
+      "before_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.0 · Published\"><bdi dir=\"ltr\">v0.1.0</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Ukuhlelwa kombhalo kwesi-Spanish okuhlonipha ukusetshenziswa kwezifunda, kugcine umbhalo wokuqala futhi kuhlukanise ubufakazi obuqinisekisiwe nezinqumo zokuhlela.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Buka isi-Spanish</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>",
+      "after_card": "<article class=\"lang-card\" aria-labelledby=\"language-es\" data-extra><div class=\"lang-card-head\"><span class=\"lang-index\">ES</span><span class=\"state\" aria-label=\"v0.1.1 · Published\"><bdi dir=\"ltr\">v0.1.1</bdi><span class=\"version-state\" lang=\"en\">Published</span></span></div><h3 class=\"lang-title\" id=\"language-es\" lang=\"es\">Español</h3><p class=\"lang-sub\"><bdi dir=\"ltr\">KUMIHAN｜Grafía</bdi></p><p class=\"lang-desc\">Ukuhlelwa kombhalo kwesi-Spanish okuhlonipha ukusetshenziswa kwezifunda, kugcine umbhalo wokuqala futhi kuhlukanise ubufakazi obuqinisekisiwe nezinqumo zokuhlela.</p><a class=\"lang-action\" href=\"kumihan-es.en.html\"><span>Buka isi-Spanish</span><span aria-hidden=\"true\" class=\"action-arrow\">↗</span></a></article>"
+    }
+  },
+  "facts": {
+    "before_sha256": "49a91d0aaf96c77140e18d4c88bea6c2648d3ba466956f506bcdea39aba56a4c",
+    "after_sha256": "6c41dc71677d8f70b3652ddd1af9aa25da6c756929a5ca2d7fd242e331acf306",
+    "before_es": {
+      "edition": "es",
+      "source_manifest": "plugins/kumihan-grafia/plugin.json",
+      "tag_prefix": "kumihan-grafia-v",
+      "source_version": "0.1.1",
+      "published_version": "0.1.0",
+      "release_status": "published",
+      "published_at": "2026-10-18T16:19:58Z",
+      "release_url": "https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0",
+      "tag": "kumihan-grafia-v0.1.0",
+      "verified_assets": [
+        {
+          "name": "kumihan-grafia-Claude-Code-plugin-v0.1.0.zip",
+          "bytes": 915302,
+          "sha256": "d700dbaf79e2dd7bd4f844d8b11061638eeb3bcb7c569e54a26a3c58e5d4f9d4",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-Code-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Claude-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip",
+          "bytes": 916286,
+          "sha256": "fcfa4372f06b8d5eb91cf6f5217e50950ab3ddeb489e877c9b388a3cbefe2302",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip",
+          "bytes": 911978,
+          "sha256": "bf44aafcfed736a3fb5a03b850dd12d089d6cc129983cd677d09629ec5448c6b",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Claude-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Claude-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Claude-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip"
+        }
+      ],
+      "release_id": 416559271,
+      "source_commit": "6d556a5208e55adb7dc185314df3fc9808c28746",
+      "source_tree": "2411f2095a945a579415045fa0b7532216dfcbec",
+      "source_manifest_sha256": "a29c1adb9774aa42faf409fdc49f6951b945ca811d1833967f8d3509bbd78065",
+      "verified_metadata": [
+        {
+          "name": "MANIFEST.json",
+          "bytes": 5315,
+          "sha256": "683b17692838f9980861cf05202bc0a5a07680ddb3ec9c97f39a4676df41c477",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/MANIFEST.json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 1768,
+          "sha256": "cdf33ff2bf365a07ec82ee78dd95ed9bad9df248759bd6999b9f68e4c0fdefdb",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/SHA256SUMS.txt"
+        }
+      ]
+    }
+  },
+  "readme": {
+    "before_sha256": "40b2e2ecda6f77a6d9d310a338e83cdc43e00d7b72a755e13912a3dafc4d79a9",
+    "after_sha256": "60747391347fe9f028764358139f211a826710895670e9f7208559aa3de23818",
+    "before_line": "| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:19:58Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |",
+    "after_line": "| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | 公開済 / Published **v0.1.1** · 2026-10-24T18:02:19Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.1) |"
+  }
+}

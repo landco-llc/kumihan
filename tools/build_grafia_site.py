@@ -26,7 +26,7 @@ BASE = "https://landco-llc.github.io/kumihan/"
 LOGO = "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 REPO = "https://github.com/landco-llc/kumihan"
 SOURCE = REPO + "/tree/main/plugins/kumihan-grafia"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 RELEASE = REPO + f"/releases/tag/kumihan-grafia-v{VERSION}"
 BRAND = 'KUMIHAN<span class="brand-sub">｜Grafía</span>'
 LANGS = {"es": "", "en": ".en", "ja": ".ja"}
