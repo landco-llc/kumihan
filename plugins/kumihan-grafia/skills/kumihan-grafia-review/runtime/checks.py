@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import re
 
-LOCALES=('es','es-ES','es-MX','es-AR','es-CO','es-CL','es-PE','es-419')
+LOCALES=('es','es-ES','es-MX','es-AR','es-CO','es-CL','es-PE','es-419','es-US')
 PATTERNS=(
  ('ES-T06',r'[?!]\.', 'Revisar el punto tras el cierre; distinguir citas y usos especiales.'),
  ('ES-T07',r'«[ \u00a0\u202f]|[ \u00a0\u202f]»', 'Revisar espacios interiores; conservar citas y excepciones aprobadas.'),

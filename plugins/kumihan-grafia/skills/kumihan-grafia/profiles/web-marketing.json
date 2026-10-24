@@ -51,5 +51,31 @@
     "ES-DQ06"
   ],
   "font_policy": "Inspect project fonts and rights; no preset font collection.",
-  "evidence": "Static candidates, rendered observations and editorial judgments are separate."
+  "evidence": "Static candidates, rendered observations and editorial judgments are separate.",
+  "regional_typography": {
+    "reference": "references/regional-typography.md",
+    "policy": "Guidance for editorial and rendered review; no country-based font, size, spacing or hyphenation preset.",
+    "component_roles": [
+      "headline",
+      "body",
+      "UI",
+      "transaction"
+    ],
+    "inherit_context": [
+      "language",
+      "market",
+      "brand_house_style",
+      "component_role",
+      "render_environment"
+    ],
+    "unknown_context": "inherit/null; do not infer project decisions from a country tag",
+    "required_observations": [
+      "decorative headline versus readable supporting copy",
+      "complete CTA and conditions at narrow widths",
+      "price and unit groups without full-paragraph nowrap"
+    ],
+    "unobserved_status": "not-checked",
+    "source_conflict_status": "needs-review",
+    "automatic_text_change": false
+  }
 }

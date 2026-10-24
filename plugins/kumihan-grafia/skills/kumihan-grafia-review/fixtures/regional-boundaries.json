@@ -1,0 +1,259 @@
+{
+  "schema": "grafia.regional.boundaries.v1",
+  "scope": "Synthetic executable helper boundaries; not original research/native editorial acceptance. Expected findings are candidates, never hard errors.",
+  "cases": [
+    {
+      "id": "ES-SYN-01",
+      "name": "address-mixed",
+      "locale": "es-AR",
+      "input": "Vos tenés tu libro; tú tenés el tuyo.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R03"
+      ]
+    },
+    {
+      "id": "ES-SYN-02",
+      "name": "chile-voseo",
+      "locale": "es-CL",
+      "input": "Tú sabís; vos sabís.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R03"
+      ]
+    },
+    {
+      "id": "ES-SYN-03",
+      "name": "colombia-tu",
+      "locale": "es-CO",
+      "input": "Tú eliges; usted confirma.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R02"
+      ]
+    },
+    {
+      "id": "ES-SYN-04",
+      "name": "aplicar",
+      "locale": "es-MX",
+      "input": "Puedes aplicar al puesto; no aplica.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R06"
+      ]
+    },
+    {
+      "id": "ES-SYN-05",
+      "name": "ahorita",
+      "locale": "es-MX",
+      "input": "«Ahorita», dijo. Envío: ahorita.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R07"
+      ]
+    },
+    {
+      "id": "ES-SYN-06",
+      "name": "semantic-guagua",
+      "locale": "es-419",
+      "input": "guagua / palta / tuanis / coger",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R05"
+      ]
+    },
+    {
+      "id": "ES-SYN-07",
+      "name": "mixed-us",
+      "locale": "es-US",
+      "input": "Compra el plan Plus. Read the terms.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R08"
+      ]
+    },
+    {
+      "id": "ES-SYN-08",
+      "name": "unknown-money",
+      "locale": "es-419",
+      "input": "$ 1.234,50 y $ 1,234.50",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R01",
+        "ES-REG-R12"
+      ]
+    },
+    {
+      "id": "ES-SYN-09",
+      "name": "precise-money",
+      "locale": "es-CO",
+      "input": "COP 1234567.89123",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R12"
+      ]
+    },
+    {
+      "id": "ES-SYN-10",
+      "name": "civil-date",
+      "locale": "es-ES",
+      "input": "2026-10-25 / 25/10/2026",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R13"
+      ]
+    },
+    {
+      "id": "ES-SYN-11",
+      "name": "instant",
+      "locale": "es-MX",
+      "input": "2026-10-25T00:30:00Z",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R13"
+      ]
+    },
+    {
+      "id": "ES-SYN-12",
+      "name": "unicode",
+      "locale": "es",
+      "input": "¿¡ Ñ Á Ü ñ ñ 1.º/2.ª",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R16",
+        "ES-REG-R24"
+      ]
+    },
+    {
+      "id": "ES-SYN-13",
+      "name": "spacing",
+      "locale": "es",
+      "input": "35 % y 24 °C",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R18"
+      ]
+    },
+    {
+      "id": "ES-SYN-14",
+      "name": "quotes",
+      "locale": "es",
+      "input": "«Té» “Té” \"SELECT tea\"",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R15"
+      ]
+    },
+    {
+      "id": "ES-SYN-15",
+      "name": "accented-brand",
+      "locale": "es",
+      "input": "ÁCME® — SKU-Ñ-01 https://example.invalid/á?x=ñ",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R24"
+      ]
+    },
+    {
+      "id": "ES-SYN-16",
+      "name": "title",
+      "locale": "es",
+      "input": "Vienes mañana?\n2458 / 2 458 / vídeos / videos",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R16"
+      ]
+    },
+    {
+      "id": "ES-SYN-17",
+      "name": "editorial-percent",
+      "locale": "es-MX",
+      "input": "35%",
+      "candidate_rule_ids": [
+        "ES-T17"
+      ],
+      "proposal_ids": [
+        "ES-REG-R11"
+      ]
+    },
+    {
+      "id": "ES-SYN-18",
+      "name": "interior-quotes",
+      "locale": "es",
+      "input": "« Té »",
+      "candidate_rule_ids": [
+        "ES-T07"
+      ],
+      "proposal_ids": [
+        "ES-REG-R15"
+      ]
+    },
+    {
+      "id": "ES-SYN-19",
+      "name": "special-close",
+      "locale": "es",
+      "input": "¿Vienes?.",
+      "candidate_rule_ids": [
+        "ES-T06"
+      ],
+      "proposal_ids": [
+        "ES-REG-R16"
+      ]
+    },
+    {
+      "id": "ES-SYN-20",
+      "name": "css-candidate",
+      "locale": "es",
+      "input": "word-break: break-all",
+      "candidate_rule_ids": [
+        "ES-X03"
+      ],
+      "proposal_ids": [
+        "ES-REG-R18"
+      ]
+    },
+    {
+      "id": "ES-SYN-21",
+      "name": "hreflang-candidate",
+      "locale": "es-419",
+      "input": "<a hreflang=\"es-419\">Texto</a>",
+      "candidate_rule_ids": [
+        "ES-L09"
+      ],
+      "proposal_ids": [
+        "ES-REG-R10"
+      ]
+    },
+    {
+      "id": "ES-SYN-22",
+      "name": "lang-aggregate",
+      "locale": "es-419",
+      "input": "<p lang=\"es-419\">Texto</p>",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R10"
+      ]
+    },
+    {
+      "id": "ES-SYN-23",
+      "name": "brand-role",
+      "locale": "es-MX",
+      "input": "TÍTULO con sombra; cuerpo legible.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R20"
+      ]
+    },
+    {
+      "id": "ES-SYN-24",
+      "name": "missing-deadline",
+      "locale": "es-PE",
+      "input": "Ya llega. Ahora sí. Ahorita.",
+      "candidate_rule_ids": [],
+      "proposal_ids": [
+        "ES-REG-R07"
+      ]
+    }
+  ]
+}

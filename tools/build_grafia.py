@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic offline Grafía v0.1.0 distributions. --check never writes."""
+"""Deterministic offline Grafía v0.1.1 distributions. --check never writes."""
 import argparse
 import hashlib
 import io
@@ -10,6 +10,8 @@ import zipfile
 
 ROOT=Path(__file__).resolve().parents[1]
 PRODUCT='plugins/kumihan-grafia'
+VERSION='0.1.1'
+LEGACY_VERSION='0.1.0'
 NAMES=tuple('kumihan-grafia'+s for s in ('','-web','-documents','-review'))
 LOGO='assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png'
 LOGO_SHA='1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e'
@@ -36,16 +38,17 @@ def plan_outputs(root=ROOT):
  for p in base.rglob('*'):
   if p.is_symlink():raise ValueError('Symlink source: '+str(p))
  manifest=json.loads((base/'plugin.json').read_bytes())
- if (manifest['name'],manifest['version'])!=('kumihan-grafia','0.1.0'):raise ValueError('Identity mismatch')
+ if (manifest['name'],manifest['version'])!=('kumihan-grafia',VERSION):raise ValueError('Identity mismatch')
  interface=manifest['extensions']['com.openai']['interface']
  if interface['displayName']!='KUMIHAN｜Grafía':raise ValueError('Display identity mismatch')
  for field in ('shortDescription','longDescription'):bilingual(interface[field])
  bilingual(manifest['description'])
  for p in ('.claude-plugin/plugin.json','gemini-extension.json'):
   host=json.loads((base/p).read_bytes());bilingual(host['description'])
-  if (host['name'],host['version'],host['displayName'])!=('kumihan-grafia','0.1.0','KUMIHAN｜Grafía'):raise ValueError('Host identity mismatch')
+  if (host['name'],host['version'],host['displayName'])!=('kumihan-grafia',VERSION,'KUMIHAN｜Grafía'):raise ValueError('Host identity mismatch')
  rules=json.loads((base/'rules/catalog.json').read_bytes());sources=json.loads((base/'sources/public-sources.json').read_bytes())
- if len(rules)!=48 or len({r['id'] for r in rules})!=48:raise ValueError('48 unique rules required')
+ expected_ids={f'ES-{family}{i:02d}' for family,count in (('T',25),('L',9),('X',8),('DQ',6)) for i in range(1,count+1)}
+ if len(rules)!=48 or {r['id'] for r in rules}!=expected_ids:raise ValueError('48 stable rule IDs required')
  if not {s for r in rules for s in r['source_refs']} <= {s['id'] for s in sources['sources']}:raise ValueError('Missing source')
  logo=(root/LOGO).read_bytes()
  if digest(logo)!=LOGO_SHA:raise ValueError('Logo mismatch')
@@ -61,7 +64,7 @@ def plan_outputs(root=ROOT):
   files=dict(shared);files['SKILL.md']=(base/'entrypoints'/f'{name}.md').read_bytes()
   match=re.search(r'^description: "(.+)"$',files['SKILL.md'].decode(),re.M)
   if not match:raise ValueError('Missing skill description')
-  bilingual(match.group(1));files['inventory.json']=inventory(files,skill=name,version='0.1.0')
+  bilingual(match.group(1));files['inventory.json']=inventory(files,skill=name,version=VERSION)
   skills[name]=files
   outputs.update({f'{PRODUCT}/skills/{name}/{p}':b for p,b in files.items()})
  common={p:(base/p).read_bytes() for p in ('README.md','INSTALL.md','UPDATES.md','THIRD_PARTY_NOTICES.md','RELEASE_NOTES.md')}
@@ -71,15 +74,15 @@ def plan_outputs(root=ROOT):
   package=dict(common)
   for name,files in skills.items():
    package.update({f'skills/{name}/{p}':b for p,b in files.items()})
-   filename=f'{name}-{skill_suffix}-v0.1.0.zip'
+   filename=f'{name}-{skill_suffix}-v{VERSION}.zip'
    archives[filename]=archive({f'{name}/{p}':b for p,b in files.items()});host_by_file[filename]=host
   if host=='GPT-Codex':package.update({'plugin.json':(base/'plugin.json').read_bytes(),'.codex-plugin/plugin.json':encode(overlay)})
   elif host=='Claude':package['.claude-plugin/plugin.json']=(base/'.claude-plugin/plugin.json').read_bytes()
   else:package.update({p:(base/p).read_bytes() for p in ('gemini-extension.json','GEMINI.md')})
-  package['inventory.json']=inventory(package,product='KUMIHAN｜Grafía',host=host,version='0.1.0')
+  package['inventory.json']=inventory(package,product='KUMIHAN｜Grafía',host=host,version=VERSION)
   prefix='' if host=='Gemini' else 'kumihan-grafia/'
-  filename=f'kumihan-grafia-{plugin_suffix}-v0.1.0.zip';archives[filename]=archive({prefix+p:b for p,b in package.items()});host_by_file[filename]=host
- archives['MANIFEST.json']=encode(dict(product='KUMIHAN｜Grafía',version='0.1.0',tag='kumihan-grafia-v0.1.0',logo_sha256=LOGO_SHA,native_host='not-checked',marketplace_listing='not-verified',archives=[dict(file=p,source_path=f'{PRODUCT}/downloads/{p}',host=host_by_file[p],version='0.1.0',bytes=len(b),sha256=digest(b)) for p,b in sorted(archives.items())]))
+  filename=f'kumihan-grafia-{plugin_suffix}-v{VERSION}.zip';archives[filename]=archive({prefix+p:b for p,b in package.items()});host_by_file[filename]=host
+ archives['MANIFEST.json']=encode(dict(product='KUMIHAN｜Grafía',version=VERSION,tag=f'kumihan-grafia-v{VERSION}',logo_sha256=LOGO_SHA,native_host='not-checked',marketplace_listing='not-verified',archives=[dict(file=p,source_path=f'{PRODUCT}/downloads/{p}',host=host_by_file[p],version=VERSION,bytes=len(b),sha256=digest(b)) for p,b in sorted(archives.items())]))
  archives['SHA256SUMS.txt']=''.join(f'{digest(b)}  {p}\n' for p,b in sorted(archives.items())).encode()
  outputs.update({f'{PRODUCT}/downloads/{p}':b for p,b in archives.items()})
  return outputs
@@ -89,6 +92,10 @@ def main():
  outputs=plan_outputs();changed=[p for p,b in outputs.items() if not (ROOT/p).is_file() or (ROOT/p).read_bytes()!=b]
  generated={p.relative_to(ROOT).as_posix() for folder in ('skills','downloads','assets','.codex-plugin') for p in (ROOT/PRODUCT/folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts}
  stale=generated-set(outputs)
+ # Existing v0.1.0 archives are immutable historical assets, not current build outputs.
+ legacy={f"{PRODUCT}/downloads/{name}-{suffix}-v{LEGACY_VERSION}.zip" for name in NAMES for _,suffix in HOSTS.values()}
+ legacy|={f"{PRODUCT}/downloads/kumihan-grafia-{suffix}-v{LEGACY_VERSION}.zip" for suffix,_ in HOSTS.values()}
+ stale-=legacy
  if args.check:
   for p in sorted(set(changed)|stale):print('out of date: '+p)
   if changed or stale:return 1

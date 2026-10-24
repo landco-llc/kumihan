@@ -1,0 +1,92 @@
+{
+  "kind": "optional-regional-context-guidance",
+  "execution": "Guidance for contextual review; not a formatter, dialect detector or automatic rewrite engine.",
+  "resolution_order": [
+    "explicit instruction for this passage or component",
+    "approved component/medium house style",
+    "approved project style",
+    "unchanged source and unknown/inherit"
+  ],
+  "conflict_policy": "Keep both scoped values and request editorial resolution only when it blocks this decision; continue independent checks.",
+  "legacy_compatibility": "Flat pronoun/verb_paradigm/plural/currency/timeZone remain supported. Nested optional context describes scope; conflicting explicit values require review, not silent precedence.",
+  "never_derive": [
+    "market from language",
+    "currency or timeZone from market or language",
+    "address from country",
+    "deadlines from ahorita/ahora/ya",
+    "currency from $",
+    "a UTC instant from a date-only value"
+  ],
+  "address": {
+    "dimensions": [
+      "pronoun",
+      "verb_paradigm",
+      "plural",
+      "audience",
+      "medium",
+      "component_role",
+      "approved_style"
+    ],
+    "valid_contextual_combinations": [
+      "vos + te + tu/tuyo",
+      "approved tú + verbal voseo",
+      "approved Chilean voseo",
+      "usted on one medium and tú on another"
+    ],
+    "finding": "requires-editorial-review; variants are not errors from country or token co-occurrence alone"
+  },
+  "glossary": [
+    {
+      "term": "aplicar / no aplica",
+      "semantic_sense": "solicitud, candidatura o aplicabilidad",
+      "market_scope": "American usage; confirm intended meaning and audience",
+      "normative_edition": "RAE/ASALE DPD, segunda edición, research retrieved 2026-10-22",
+      "source": "https://www.rae.es/dpd/aplicar",
+      "policy": "Accepted usage is not a hard error; solicitar may be an approved house-style alternative. No automatic replacement."
+    },
+    {
+      "term": "ahorita / ahora / ya",
+      "semantic_sense": "context-dependent present, recent past, near future or discourse function",
+      "market_scope": "Context and audience; no exclusive country assignment",
+      "sources": [
+        "https://www.asale.org/damer/ahorita",
+        "https://dem.colmex.mx/ver/ahorita",
+        "https://dle.rae.es/ahora",
+        "https://dle.rae.es/ya"
+      ],
+      "policy": "For delivery, refund or contract timing report an unconfirmed deadline; do not generate a date, duration or promise."
+    },
+    {
+      "term": "guagua / palta / coger",
+      "semantic_sense": null,
+      "market_scope": "Requires the intended sense, audience and medium",
+      "sources": [
+        "https://www.asale.org/damer/guagua",
+        "https://www.asale.org/damer/palta",
+        "https://dem.colmex.mx/Ver/coger"
+      ],
+      "policy": "Review a concrete sense and risk in context; geographical dictionary labels are not exclusive bans or automatic substitutions."
+    }
+  ],
+  "formatting": {
+    "copy_language": "May be es-419 across multiple markets",
+    "format_locale": "Explicit per numeric/date/currency display; es-419 is not a substitute for every country override",
+    "editorial_vs_intl": "Do not apply editorial percent/grouping spacing rules to formatter output without the selected display policy",
+    "money": "Preserve raw value, explicit currency code, precision and rounding policy separately",
+    "dates": "Keep date-only values as calendar dates; instants need an explicit relevant time zone",
+    "evidence": [
+      "original input",
+      "requested locale",
+      "supportedLocalesOf",
+      "resolvedOptions",
+      "formatToParts",
+      "Node/browser/ICU/CLDR versions"
+    ],
+    "evidence_limit": "One runtime observation is not native Office, browser, PDF or locale-wide acceptance"
+  },
+  "seo": "es-419 is a valid language tag; do not turn it into Google hreflang or invent alternate URLs. Use supported alternates and real pages.",
+  "us_mixed_language": "es-US is Spanish for an audience, not en-US or a literal translation. Record span language and retain official English names; do not import English Title Case globally.",
+  "brand_comparison": "Keep product, route, campaign, date, legal scope and typography role distinct. Do not republish competitor copy as original KUMIHAN text.",
+  "quotation_policy": "Approved medium/house style governs; do not impose Spain=«» and America=“”. Preserve quoted text, code, trademarks and identifiers.",
+  "preservation": "Review never writes source bytes. Authorized edits are proposals with a diff and original retained; preserve decomposed Unicode, accents, names, quantities, prices, URLs and promises."
+}

@@ -1,0 +1,863 @@
+{
+  "schema": "grafia.research-case-status.v1",
+  "scope": "Research scenario acceptance remains separate from executable synthetic boundaries. Related IDs denote proposal overlap only.",
+  "research_fixture_count": 60,
+  "fixtures": [
+    {
+      "id": "ES-REG-F001",
+      "proposal_ids": [
+        "ES-REG-R01"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F002",
+      "proposal_ids": [
+        "ES-REG-R01",
+        "ES-REG-R10",
+        "ES-REG-R12"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08",
+        "ES-SYN-09",
+        "ES-SYN-21",
+        "ES-SYN-22"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F003",
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-03",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F004",
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-03"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F005",
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R04"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-03"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F006",
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R04"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-03"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F007",
+      "proposal_ids": [
+        "ES-REG-R03"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-02"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F008",
+      "proposal_ids": [
+        "ES-REG-R03",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-02",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F009",
+      "proposal_ids": [
+        "ES-REG-R02"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-03"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F010",
+      "proposal_ids": [
+        "ES-REG-R02",
+        "ES-REG-R03"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-01",
+        "ES-SYN-02",
+        "ES-SYN-03"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F011",
+      "proposal_ids": [
+        "ES-REG-R04"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F012",
+      "proposal_ids": [
+        "ES-REG-R04"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F013",
+      "proposal_ids": [
+        "ES-REG-R05"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F014",
+      "proposal_ids": [
+        "ES-REG-R05",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F015",
+      "proposal_ids": [
+        "ES-REG-R05"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F016",
+      "proposal_ids": [
+        "ES-REG-R05"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F017",
+      "proposal_ids": [
+        "ES-REG-R05"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F018",
+      "proposal_ids": [
+        "ES-REG-R05",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-06"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F019",
+      "proposal_ids": [
+        "ES-REG-R06"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-04"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F020",
+      "proposal_ids": [
+        "ES-REG-R06",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-04",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F021",
+      "proposal_ids": [
+        "ES-REG-R06"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-04"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F022",
+      "proposal_ids": [
+        "ES-REG-R07",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-05",
+        "ES-SYN-12",
+        "ES-SYN-15",
+        "ES-SYN-24"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F023",
+      "proposal_ids": [
+        "ES-REG-R07",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-05",
+        "ES-SYN-12",
+        "ES-SYN-15",
+        "ES-SYN-24"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F024",
+      "proposal_ids": [
+        "ES-REG-R07",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-05",
+        "ES-SYN-12",
+        "ES-SYN-15",
+        "ES-SYN-24"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F025",
+      "proposal_ids": [
+        "ES-REG-R08",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-07",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F026",
+      "proposal_ids": [
+        "ES-REG-R08",
+        "ES-REG-R23"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-07"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F027",
+      "proposal_ids": [
+        "ES-REG-R09",
+        "ES-REG-R22"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F028",
+      "proposal_ids": [
+        "ES-REG-R09",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F029",
+      "proposal_ids": [
+        "ES-REG-R10"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-21",
+        "ES-SYN-22"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F030",
+      "proposal_ids": [
+        "ES-REG-R10",
+        "ES-REG-R11"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-17",
+        "ES-SYN-21",
+        "ES-SYN-22"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F031",
+      "proposal_ids": [
+        "ES-REG-R11",
+        "ES-REG-R18"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-13",
+        "ES-SYN-17",
+        "ES-SYN-20"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F032",
+      "proposal_ids": [
+        "ES-REG-R11"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-17"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F033",
+      "proposal_ids": [
+        "ES-REG-R11",
+        "ES-REG-R14"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-17"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F034",
+      "proposal_ids": [
+        "ES-REG-R11",
+        "ES-REG-R18"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-13",
+        "ES-SYN-17",
+        "ES-SYN-20"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F035",
+      "proposal_ids": [
+        "ES-REG-R12"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08",
+        "ES-SYN-09"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F036",
+      "proposal_ids": [
+        "ES-REG-R12",
+        "ES-REG-R14"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08",
+        "ES-SYN-09"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F037",
+      "proposal_ids": [
+        "ES-REG-R01",
+        "ES-REG-R12"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08",
+        "ES-SYN-09"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F038",
+      "proposal_ids": [
+        "ES-REG-R13",
+        "ES-REG-R14"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-10",
+        "ES-SYN-11"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F039",
+      "proposal_ids": [
+        "ES-REG-R13",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-10",
+        "ES-SYN-11",
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F040",
+      "proposal_ids": [
+        "ES-REG-R01",
+        "ES-REG-R13"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-08",
+        "ES-SYN-10",
+        "ES-SYN-11"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F041",
+      "proposal_ids": [
+        "ES-REG-R14",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F042",
+      "proposal_ids": [
+        "ES-REG-R14"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F043",
+      "proposal_ids": [
+        "ES-REG-R15"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-14",
+        "ES-SYN-18"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F044",
+      "proposal_ids": [
+        "ES-REG-R15",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-12",
+        "ES-SYN-14",
+        "ES-SYN-15",
+        "ES-SYN-18"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F045",
+      "proposal_ids": [
+        "ES-REG-R15"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-14",
+        "ES-SYN-18"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F046",
+      "proposal_ids": [
+        "ES-REG-R16"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-12",
+        "ES-SYN-16",
+        "ES-SYN-19"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F047",
+      "proposal_ids": [
+        "ES-REG-R16"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-12",
+        "ES-SYN-16",
+        "ES-SYN-19"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F048",
+      "proposal_ids": [
+        "ES-REG-R16",
+        "ES-REG-R19",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-12",
+        "ES-SYN-15",
+        "ES-SYN-16",
+        "ES-SYN-19"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F049",
+      "proposal_ids": [
+        "ES-REG-R17"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F050",
+      "proposal_ids": [
+        "ES-REG-R17",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F051",
+      "proposal_ids": [
+        "ES-REG-R18"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-13",
+        "ES-SYN-20"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F052",
+      "proposal_ids": [
+        "ES-REG-R18",
+        "ES-REG-R23"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-13",
+        "ES-SYN-20"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F053",
+      "proposal_ids": [
+        "ES-REG-R19"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F054",
+      "proposal_ids": [
+        "ES-REG-R19",
+        "ES-REG-R20",
+        "ES-REG-R21"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-23"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F055",
+      "proposal_ids": [
+        "ES-REG-R20",
+        "ES-REG-R22"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-23"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F056",
+      "proposal_ids": [
+        "ES-REG-R22"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F057",
+      "proposal_ids": [
+        "ES-REG-R22"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F058",
+      "proposal_ids": [
+        "ES-REG-R22"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F059",
+      "proposal_ids": [
+        "ES-REG-R20",
+        "ES-REG-R23"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-23"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    },
+    {
+      "id": "ES-REG-F060",
+      "proposal_ids": [
+        "ES-REG-R21",
+        "ES-REG-R24"
+      ],
+      "execution_status": "NOT_RUN",
+      "pass_fail_result": null,
+      "reason": "Research editorial/render/native acceptance scenario not executed; helper boundaries are partial method evidence, not replacement acceptance.",
+      "related_synthetic_boundaries": [
+        "ES-SYN-12",
+        "ES-SYN-15"
+      ],
+      "synthetic_coverage_substitutes_original": false
+    }
+  ]
+}

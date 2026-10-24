@@ -1,0 +1,840 @@
+{
+  "scope": "grafia-v011-source-only",
+  "frozen_inputs": {
+    "tests/contracts/release-preservation.json": "689cb61441ebd3e52634241ecadbc6c925a445f0b1570889e719d3f0d585a7f4"
+  },
+  "changes": {
+    "protected": {
+      "README.md": {
+        "snapshot_before": "68af18a56a9244f36a8ae5a5fa861fd4309989f9c58d44342406edc4aeeb076b",
+        "after": "40b2e2ecda6f77a6d9d310a338e83cdc43e00d7b72a755e13912a3dafc4d79a9"
+      },
+      "plugins/kumihan-grafia/.claude-plugin/plugin.json": {
+        "snapshot_before": "1310e149833126635aaf4f89f1923225c340d70bb8bc5bf7f99dc2db649f77df",
+        "after": "59245d51df70314e94132d54f52baad1e37c77659e0efd4534cbffb73afd8cdb"
+      },
+      "plugins/kumihan-grafia/.codex-plugin/plugin.json": {
+        "snapshot_before": "33e4204c43b9fa3b5ba73585afa3426a9d6d6abf3380929f787200d224dbe9da",
+        "after": "e72f8f7b052ba91b5df95c5c43054119b9e225ae14952bf9c9b88080c8d0af91"
+      },
+      "plugins/kumihan-grafia/README.md": {
+        "snapshot_before": "057fc9533879fc65ae1c1e6ce0d2c2047caa7169dd55611580d0e010dabd9d80",
+        "after": "303ce205b29b8b3592724cfeedd6567d7c0d2b33c7adc66e52c01f3649a03674"
+      },
+      "plugins/kumihan-grafia/RELEASE_NOTES.md": {
+        "snapshot_before": "5c5d1e2d4548766bd552f2b649a364af8ee370a62f87da0ad04d285023719d56",
+        "after": "8ff3201c095c3ebf439925bfe22fe5f609ace808a54183628d159e1a91060fbe"
+      },
+      "plugins/kumihan-grafia/UPDATES.md": {
+        "snapshot_before": "66735d35d9f773fdab99508cbdbd294fb4e80cb230f9a9bc72fbaf96bd59fb25",
+        "after": "566b836ff1922e5958e298f1658bd1504ef678b9c854965a3d19e213d80371e4"
+      },
+      "plugins/kumihan-grafia/downloads/MANIFEST.json": {
+        "snapshot_before": "683b17692838f9980861cf05202bc0a5a07680ddb3ec9c97f39a4676df41c477",
+        "after": "0291d2162a272f7d68722bab5ea3e7c6504e2198cf064e258fc78d188212e893"
+      },
+      "plugins/kumihan-grafia/downloads/SHA256SUMS.txt": {
+        "snapshot_before": "cdf33ff2bf365a07ec82ee78dd95ed9bad9df248759bd6999b9f68e4c0fdefdb",
+        "after": "493d82e88bb80fc12f27903e57a46180f6ae3d299fe56f09025bf857ae07b7d7"
+      },
+      "plugins/kumihan-grafia/entrypoints/kumihan-grafia-documents.md": {
+        "snapshot_before": "2064f9c76f5bab275006177ba127e467d98d8b93733e83a4845d87faba0de3bc",
+        "after": "65fdaa9cfcca14b8315850f93988dc47cb5272a5fb7de7421e37b9b70ff59611"
+      },
+      "plugins/kumihan-grafia/entrypoints/kumihan-grafia-review.md": {
+        "snapshot_before": "1e2bb062b329e476eaa528392a2349c507ca195600893c219169183813bce8dc",
+        "after": "60bd238ff372de10236fcf3a3f032188d02d6f2ed05567ec5bdbe79dce31fb13"
+      },
+      "plugins/kumihan-grafia/entrypoints/kumihan-grafia-web.md": {
+        "snapshot_before": "26cd0a26a90f6dc74f44017ca68e015f388fde41202d3006c8ebb60530b5ac64",
+        "after": "9b91dd9582ed2742eca2f974f0d97eeec9dac33387534d79c8166be06e291bb7"
+      },
+      "plugins/kumihan-grafia/entrypoints/kumihan-grafia.md": {
+        "snapshot_before": "abcd188697f154d7dc4815e32f32be5e064d848f063729a5545664bbe988fe41",
+        "after": "05048bb50137366b9d66215fbfb4e52983e601f2a298a8d310fbfaef64d9d150"
+      },
+      "plugins/kumihan-grafia/fixtures/acceptance-ledger.json": {
+        "snapshot_before": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1",
+        "after": "5103b6428b0acaba527eb71d33b141ca4427f4c3d4fc592a360e76f4be59d16a"
+      },
+      "plugins/kumihan-grafia/gemini-extension.json": {
+        "snapshot_before": "689ee0c06e6fe650e3e0f217b6a2151357da5fbc2f22fabec7a5408ad6f420f8",
+        "after": "c2993de8e6fb8e65ce30e68a3f2e90d478a57456c057f1e682bd19d0ae22d02d"
+      },
+      "plugins/kumihan-grafia/locales/es-419.json": {
+        "snapshot_before": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458",
+        "after": "bda25334e34ee6725e138b38f3b999f63c6a254083f01b9cda945cde57ca5958"
+      },
+      "plugins/kumihan-grafia/locales/es-AR.json": {
+        "snapshot_before": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc",
+        "after": "5d76720dc2a8729a0a55546e232e11365cfbf0865d9585327c307baac09b05b5"
+      },
+      "plugins/kumihan-grafia/locales/es-CL.json": {
+        "snapshot_before": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46",
+        "after": "5e4ef997cdd7c9f1862974fa994ef3828da62051f400838dfb4203edc05b8ed7"
+      },
+      "plugins/kumihan-grafia/locales/es-CO.json": {
+        "snapshot_before": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e",
+        "after": "73ddd6081d97c7f40c843662f079c0f4dd35380e0caf124af5b4013e10383f4d"
+      },
+      "plugins/kumihan-grafia/locales/es-ES.json": {
+        "snapshot_before": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3",
+        "after": "f7bc577c5f1a6600bb77b069351253b9e66f39c6de0c494f0da413574379356d"
+      },
+      "plugins/kumihan-grafia/locales/es-MX.json": {
+        "snapshot_before": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258",
+        "after": "75a1e826b97820a7c32406ad1ebe8a00d4924d4ce0e5e111a161bf9252469ca1"
+      },
+      "plugins/kumihan-grafia/locales/es-PE.json": {
+        "snapshot_before": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf",
+        "after": "4307c74dcb76a2c57259ee8dd5fe0ed61902b740c9f4a46f94ca8300bb16a760"
+      },
+      "plugins/kumihan-grafia/locales/es.json": {
+        "snapshot_before": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e",
+        "after": "b6318fffa90aaf810c2597ecf994ac50ebf74150c913c8968ebd4b0c067b2877"
+      },
+      "plugins/kumihan-grafia/plugin.json": {
+        "snapshot_before": "a29c1adb9774aa42faf409fdc49f6951b945ca811d1833967f8d3509bbd78065",
+        "after": "a067c923e24887b0d6267907f3f0bdbe74d224a01140471f62ae0103b1fede0b"
+      },
+      "plugins/kumihan-grafia/profiles/display-copy.json": {
+        "snapshot_before": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc",
+        "after": "ff6bb0f85f19687e6dccb7ebc1304fb80575fb369fe05495317f75a1767d4ab1"
+      },
+      "plugins/kumihan-grafia/profiles/presentation.json": {
+        "snapshot_before": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8",
+        "after": "1bef2d070ea5116296fadcac8b7fa708af8db8bae1a6df4ce249b222d5f4c4cb"
+      },
+      "plugins/kumihan-grafia/profiles/report-document.json": {
+        "snapshot_before": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a",
+        "after": "32249fc368a66e9afac09a7a40de914d1b1f8c3ca4da75aa2e687b1ca3fd9b21"
+      },
+      "plugins/kumihan-grafia/profiles/web-editorial.json": {
+        "snapshot_before": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2",
+        "after": "f4f33c2c17776b3bc6a5b6d3e944776f05a76217b57f45688b0482486c3434f5"
+      },
+      "plugins/kumihan-grafia/profiles/web-marketing.json": {
+        "snapshot_before": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c",
+        "after": "ac6f0a95657cb4d241cec0e836b418607f964f450b67dfb7b59e8c32b0fb4781"
+      },
+      "plugins/kumihan-grafia/profiles/web-ui.json": {
+        "snapshot_before": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04",
+        "after": "537621dc4a51b15febe66471fff8e2e6891ed4241c6f31cc50abbb48ded6a4dd"
+      },
+      "plugins/kumihan-grafia/references/documents.md": {
+        "snapshot_before": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26",
+        "after": "1eae15cbb93c1dcd9345a6419bd3ddadb9dccdfd3de7e43091acaeb60235d1ed"
+      },
+      "plugins/kumihan-grafia/references/review.md": {
+        "snapshot_before": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65",
+        "after": "0bbfd292fba9751315b1baa6287db63692ac8e21b3ca65e55672431c5b5b1ca8"
+      },
+      "plugins/kumihan-grafia/references/web.md": {
+        "snapshot_before": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d",
+        "after": "ef17222ff034bba98d3d5802e41c9a392e0f7bbd6aa87bd25c4cd323349f18bb"
+      },
+      "plugins/kumihan-grafia/references/workflow.md": {
+        "snapshot_before": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d",
+        "after": "feb97c5d0d9cbf14b2c234bb730feea028e7608a7588545f417e5e26f78a01a4"
+      },
+      "plugins/kumihan-grafia/rules/catalog.json": {
+        "snapshot_before": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc",
+        "after": "e5ccb1726468d32ec9450db841ddc83855eca36ab29494be8b94effdd6481b7e"
+      },
+      "plugins/kumihan-grafia/runtime/checks.py": {
+        "snapshot_before": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f",
+        "after": "f36ecc447b7fc717d8584a7c4cd2c5cdf813250e1924386ebfab8869c7f4141f"
+      },
+      "plugins/kumihan-grafia/schemas/report.schema.json": {
+        "snapshot_before": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6",
+        "after": "c9d25f30b79383d717fffba6a624b0132810ad05fb7b2b691eada6514c79cb4e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/SKILL.md": {
+        "snapshot_before": "2064f9c76f5bab275006177ba127e467d98d8b93733e83a4845d87faba0de3bc",
+        "after": "65fdaa9cfcca14b8315850f93988dc47cb5272a5fb7de7421e37b9b70ff59611"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/fixtures/acceptance-ledger.json": {
+        "snapshot_before": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1",
+        "after": "5103b6428b0acaba527eb71d33b141ca4427f4c3d4fc592a360e76f4be59d16a"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/inventory.json": {
+        "snapshot_before": "2bdc6843c702b98bea4634d43ca823850246e2969dd3af65c5ff547209937a48",
+        "after": "67a172d4fedc18fe2a4cfaa4cdd755b300dd6cb3614b99e2044a50b4066b33a0"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-419.json": {
+        "snapshot_before": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458",
+        "after": "bda25334e34ee6725e138b38f3b999f63c6a254083f01b9cda945cde57ca5958"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-AR.json": {
+        "snapshot_before": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc",
+        "after": "5d76720dc2a8729a0a55546e232e11365cfbf0865d9585327c307baac09b05b5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-CL.json": {
+        "snapshot_before": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46",
+        "after": "5e4ef997cdd7c9f1862974fa994ef3828da62051f400838dfb4203edc05b8ed7"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-CO.json": {
+        "snapshot_before": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e",
+        "after": "73ddd6081d97c7f40c843662f079c0f4dd35380e0caf124af5b4013e10383f4d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-ES.json": {
+        "snapshot_before": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3",
+        "after": "f7bc577c5f1a6600bb77b069351253b9e66f39c6de0c494f0da413574379356d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-MX.json": {
+        "snapshot_before": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258",
+        "after": "75a1e826b97820a7c32406ad1ebe8a00d4924d4ce0e5e111a161bf9252469ca1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es-PE.json": {
+        "snapshot_before": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf",
+        "after": "4307c74dcb76a2c57259ee8dd5fe0ed61902b740c9f4a46f94ca8300bb16a760"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/locales/es.json": {
+        "snapshot_before": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e",
+        "after": "b6318fffa90aaf810c2597ecf994ac50ebf74150c913c8968ebd4b0c067b2877"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/display-copy.json": {
+        "snapshot_before": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc",
+        "after": "ff6bb0f85f19687e6dccb7ebc1304fb80575fb369fe05495317f75a1767d4ab1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/presentation.json": {
+        "snapshot_before": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8",
+        "after": "1bef2d070ea5116296fadcac8b7fa708af8db8bae1a6df4ce249b222d5f4c4cb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/report-document.json": {
+        "snapshot_before": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a",
+        "after": "32249fc368a66e9afac09a7a40de914d1b1f8c3ca4da75aa2e687b1ca3fd9b21"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/web-editorial.json": {
+        "snapshot_before": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2",
+        "after": "f4f33c2c17776b3bc6a5b6d3e944776f05a76217b57f45688b0482486c3434f5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/web-marketing.json": {
+        "snapshot_before": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c",
+        "after": "ac6f0a95657cb4d241cec0e836b418607f964f450b67dfb7b59e8c32b0fb4781"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/profiles/web-ui.json": {
+        "snapshot_before": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04",
+        "after": "537621dc4a51b15febe66471fff8e2e6891ed4241c6f31cc50abbb48ded6a4dd"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/references/documents.md": {
+        "snapshot_before": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26",
+        "after": "1eae15cbb93c1dcd9345a6419bd3ddadb9dccdfd3de7e43091acaeb60235d1ed"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/references/review.md": {
+        "snapshot_before": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65",
+        "after": "0bbfd292fba9751315b1baa6287db63692ac8e21b3ca65e55672431c5b5b1ca8"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/references/web.md": {
+        "snapshot_before": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d",
+        "after": "ef17222ff034bba98d3d5802e41c9a392e0f7bbd6aa87bd25c4cd323349f18bb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/references/workflow.md": {
+        "snapshot_before": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d",
+        "after": "feb97c5d0d9cbf14b2c234bb730feea028e7608a7588545f417e5e26f78a01a4"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/rules/catalog.json": {
+        "snapshot_before": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc",
+        "after": "e5ccb1726468d32ec9450db841ddc83855eca36ab29494be8b94effdd6481b7e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/runtime/checks.py": {
+        "snapshot_before": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f",
+        "after": "f36ecc447b7fc717d8584a7c4cd2c5cdf813250e1924386ebfab8869c7f4141f"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-documents/schemas/report.schema.json": {
+        "snapshot_before": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6",
+        "after": "c9d25f30b79383d717fffba6a624b0132810ad05fb7b2b691eada6514c79cb4e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/SKILL.md": {
+        "snapshot_before": "1e2bb062b329e476eaa528392a2349c507ca195600893c219169183813bce8dc",
+        "after": "60bd238ff372de10236fcf3a3f032188d02d6f2ed05567ec5bdbe79dce31fb13"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/fixtures/acceptance-ledger.json": {
+        "snapshot_before": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1",
+        "after": "5103b6428b0acaba527eb71d33b141ca4427f4c3d4fc592a360e76f4be59d16a"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/inventory.json": {
+        "snapshot_before": "89d6dd4ee372c757f6c1bae171e63f82ff082988af037bd026eda232396ce403",
+        "after": "557956f7aac71fd3f3397858551f3b9f7ec8140e839c1a723724f6f442477e91"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-419.json": {
+        "snapshot_before": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458",
+        "after": "bda25334e34ee6725e138b38f3b999f63c6a254083f01b9cda945cde57ca5958"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-AR.json": {
+        "snapshot_before": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc",
+        "after": "5d76720dc2a8729a0a55546e232e11365cfbf0865d9585327c307baac09b05b5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-CL.json": {
+        "snapshot_before": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46",
+        "after": "5e4ef997cdd7c9f1862974fa994ef3828da62051f400838dfb4203edc05b8ed7"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-CO.json": {
+        "snapshot_before": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e",
+        "after": "73ddd6081d97c7f40c843662f079c0f4dd35380e0caf124af5b4013e10383f4d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-ES.json": {
+        "snapshot_before": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3",
+        "after": "f7bc577c5f1a6600bb77b069351253b9e66f39c6de0c494f0da413574379356d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-MX.json": {
+        "snapshot_before": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258",
+        "after": "75a1e826b97820a7c32406ad1ebe8a00d4924d4ce0e5e111a161bf9252469ca1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es-PE.json": {
+        "snapshot_before": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf",
+        "after": "4307c74dcb76a2c57259ee8dd5fe0ed61902b740c9f4a46f94ca8300bb16a760"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/locales/es.json": {
+        "snapshot_before": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e",
+        "after": "b6318fffa90aaf810c2597ecf994ac50ebf74150c913c8968ebd4b0c067b2877"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/display-copy.json": {
+        "snapshot_before": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc",
+        "after": "ff6bb0f85f19687e6dccb7ebc1304fb80575fb369fe05495317f75a1767d4ab1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/presentation.json": {
+        "snapshot_before": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8",
+        "after": "1bef2d070ea5116296fadcac8b7fa708af8db8bae1a6df4ce249b222d5f4c4cb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/report-document.json": {
+        "snapshot_before": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a",
+        "after": "32249fc368a66e9afac09a7a40de914d1b1f8c3ca4da75aa2e687b1ca3fd9b21"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/web-editorial.json": {
+        "snapshot_before": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2",
+        "after": "f4f33c2c17776b3bc6a5b6d3e944776f05a76217b57f45688b0482486c3434f5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/web-marketing.json": {
+        "snapshot_before": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c",
+        "after": "ac6f0a95657cb4d241cec0e836b418607f964f450b67dfb7b59e8c32b0fb4781"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/profiles/web-ui.json": {
+        "snapshot_before": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04",
+        "after": "537621dc4a51b15febe66471fff8e2e6891ed4241c6f31cc50abbb48ded6a4dd"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/references/documents.md": {
+        "snapshot_before": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26",
+        "after": "1eae15cbb93c1dcd9345a6419bd3ddadb9dccdfd3de7e43091acaeb60235d1ed"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/references/review.md": {
+        "snapshot_before": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65",
+        "after": "0bbfd292fba9751315b1baa6287db63692ac8e21b3ca65e55672431c5b5b1ca8"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/references/web.md": {
+        "snapshot_before": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d",
+        "after": "ef17222ff034bba98d3d5802e41c9a392e0f7bbd6aa87bd25c4cd323349f18bb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/references/workflow.md": {
+        "snapshot_before": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d",
+        "after": "feb97c5d0d9cbf14b2c234bb730feea028e7608a7588545f417e5e26f78a01a4"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/rules/catalog.json": {
+        "snapshot_before": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc",
+        "after": "e5ccb1726468d32ec9450db841ddc83855eca36ab29494be8b94effdd6481b7e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/runtime/checks.py": {
+        "snapshot_before": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f",
+        "after": "f36ecc447b7fc717d8584a7c4cd2c5cdf813250e1924386ebfab8869c7f4141f"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-review/schemas/report.schema.json": {
+        "snapshot_before": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6",
+        "after": "c9d25f30b79383d717fffba6a624b0132810ad05fb7b2b691eada6514c79cb4e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/SKILL.md": {
+        "snapshot_before": "26cd0a26a90f6dc74f44017ca68e015f388fde41202d3006c8ebb60530b5ac64",
+        "after": "9b91dd9582ed2742eca2f974f0d97eeec9dac33387534d79c8166be06e291bb7"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/fixtures/acceptance-ledger.json": {
+        "snapshot_before": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1",
+        "after": "5103b6428b0acaba527eb71d33b141ca4427f4c3d4fc592a360e76f4be59d16a"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/inventory.json": {
+        "snapshot_before": "e831d9a0e85740eb7763a1fefded6a6232f5de6b61a08f8c1cdbe858ff0469cd",
+        "after": "3e5cf0bf7b537e4e67967f91d372da71cf3841f68462d0cad9153d7afa930475"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-419.json": {
+        "snapshot_before": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458",
+        "after": "bda25334e34ee6725e138b38f3b999f63c6a254083f01b9cda945cde57ca5958"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-AR.json": {
+        "snapshot_before": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc",
+        "after": "5d76720dc2a8729a0a55546e232e11365cfbf0865d9585327c307baac09b05b5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-CL.json": {
+        "snapshot_before": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46",
+        "after": "5e4ef997cdd7c9f1862974fa994ef3828da62051f400838dfb4203edc05b8ed7"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-CO.json": {
+        "snapshot_before": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e",
+        "after": "73ddd6081d97c7f40c843662f079c0f4dd35380e0caf124af5b4013e10383f4d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-ES.json": {
+        "snapshot_before": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3",
+        "after": "f7bc577c5f1a6600bb77b069351253b9e66f39c6de0c494f0da413574379356d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-MX.json": {
+        "snapshot_before": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258",
+        "after": "75a1e826b97820a7c32406ad1ebe8a00d4924d4ce0e5e111a161bf9252469ca1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es-PE.json": {
+        "snapshot_before": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf",
+        "after": "4307c74dcb76a2c57259ee8dd5fe0ed61902b740c9f4a46f94ca8300bb16a760"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/locales/es.json": {
+        "snapshot_before": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e",
+        "after": "b6318fffa90aaf810c2597ecf994ac50ebf74150c913c8968ebd4b0c067b2877"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/display-copy.json": {
+        "snapshot_before": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc",
+        "after": "ff6bb0f85f19687e6dccb7ebc1304fb80575fb369fe05495317f75a1767d4ab1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/presentation.json": {
+        "snapshot_before": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8",
+        "after": "1bef2d070ea5116296fadcac8b7fa708af8db8bae1a6df4ce249b222d5f4c4cb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/report-document.json": {
+        "snapshot_before": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a",
+        "after": "32249fc368a66e9afac09a7a40de914d1b1f8c3ca4da75aa2e687b1ca3fd9b21"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/web-editorial.json": {
+        "snapshot_before": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2",
+        "after": "f4f33c2c17776b3bc6a5b6d3e944776f05a76217b57f45688b0482486c3434f5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/web-marketing.json": {
+        "snapshot_before": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c",
+        "after": "ac6f0a95657cb4d241cec0e836b418607f964f450b67dfb7b59e8c32b0fb4781"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/profiles/web-ui.json": {
+        "snapshot_before": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04",
+        "after": "537621dc4a51b15febe66471fff8e2e6891ed4241c6f31cc50abbb48ded6a4dd"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/references/documents.md": {
+        "snapshot_before": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26",
+        "after": "1eae15cbb93c1dcd9345a6419bd3ddadb9dccdfd3de7e43091acaeb60235d1ed"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/references/review.md": {
+        "snapshot_before": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65",
+        "after": "0bbfd292fba9751315b1baa6287db63692ac8e21b3ca65e55672431c5b5b1ca8"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/references/web.md": {
+        "snapshot_before": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d",
+        "after": "ef17222ff034bba98d3d5802e41c9a392e0f7bbd6aa87bd25c4cd323349f18bb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/references/workflow.md": {
+        "snapshot_before": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d",
+        "after": "feb97c5d0d9cbf14b2c234bb730feea028e7608a7588545f417e5e26f78a01a4"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/rules/catalog.json": {
+        "snapshot_before": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc",
+        "after": "e5ccb1726468d32ec9450db841ddc83855eca36ab29494be8b94effdd6481b7e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/runtime/checks.py": {
+        "snapshot_before": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f",
+        "after": "f36ecc447b7fc717d8584a7c4cd2c5cdf813250e1924386ebfab8869c7f4141f"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia-web/schemas/report.schema.json": {
+        "snapshot_before": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6",
+        "after": "c9d25f30b79383d717fffba6a624b0132810ad05fb7b2b691eada6514c79cb4e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/SKILL.md": {
+        "snapshot_before": "abcd188697f154d7dc4815e32f32be5e064d848f063729a5545664bbe988fe41",
+        "after": "05048bb50137366b9d66215fbfb4e52983e601f2a298a8d310fbfaef64d9d150"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/fixtures/acceptance-ledger.json": {
+        "snapshot_before": "0b6fbf86f661781992d2397cd5176fe927910799e53a5fef0f17879d11f3f4b1",
+        "after": "5103b6428b0acaba527eb71d33b141ca4427f4c3d4fc592a360e76f4be59d16a"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/inventory.json": {
+        "snapshot_before": "ecf485f8b41aa881231722580a2231318b6927697d51520ab7c8d0b79fe4738a",
+        "after": "9824e86d8cb77ec38b41336e6e9cc92ac5e330c08faf76366c97259e523e711d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-419.json": {
+        "snapshot_before": "d1696f96cdc22a5108238e440c68c6568d9bbe5af8647e650f53058245b6c458",
+        "after": "bda25334e34ee6725e138b38f3b999f63c6a254083f01b9cda945cde57ca5958"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-AR.json": {
+        "snapshot_before": "1091d75d2c3df4858fcdec1805db79ca01f56bbea15a097dc9152dd75a64d1cc",
+        "after": "5d76720dc2a8729a0a55546e232e11365cfbf0865d9585327c307baac09b05b5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-CL.json": {
+        "snapshot_before": "6d35c03a66489108c8401c9b216bd200bea2116c14f7a35d746f542ddd009e46",
+        "after": "5e4ef997cdd7c9f1862974fa994ef3828da62051f400838dfb4203edc05b8ed7"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-CO.json": {
+        "snapshot_before": "4989dda7395946f77640a6d608f8acb5f1694eb40e9fc657c4332968c2472d1e",
+        "after": "73ddd6081d97c7f40c843662f079c0f4dd35380e0caf124af5b4013e10383f4d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-ES.json": {
+        "snapshot_before": "65855868321a6e1340932f8817ea945379df570f8f519c9b5505e885c8d3fee3",
+        "after": "f7bc577c5f1a6600bb77b069351253b9e66f39c6de0c494f0da413574379356d"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-MX.json": {
+        "snapshot_before": "2b17247ecb4662b52ddf2356020580ff6290e743c73e2e0457c72c24fc810258",
+        "after": "75a1e826b97820a7c32406ad1ebe8a00d4924d4ce0e5e111a161bf9252469ca1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es-PE.json": {
+        "snapshot_before": "52c184b1524b6da50d3ef862ff1cb09b1c43c20f3bdb9b0812e488c042c20ddf",
+        "after": "4307c74dcb76a2c57259ee8dd5fe0ed61902b740c9f4a46f94ca8300bb16a760"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/locales/es.json": {
+        "snapshot_before": "1393de0187ecead3f6f0e621eedc84781191629b5b783ebde10ce98028c1759e",
+        "after": "b6318fffa90aaf810c2597ecf994ac50ebf74150c913c8968ebd4b0c067b2877"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/display-copy.json": {
+        "snapshot_before": "eb1c222c06e41e07f2b0e352fb5eb7f4959a26ba0de0781ceb4dbbf3662cc7bc",
+        "after": "ff6bb0f85f19687e6dccb7ebc1304fb80575fb369fe05495317f75a1767d4ab1"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/presentation.json": {
+        "snapshot_before": "e7da0bcb6255c8dc8ec5040b6071132f553d2ea36e8c24deeea40987566d97e8",
+        "after": "1bef2d070ea5116296fadcac8b7fa708af8db8bae1a6df4ce249b222d5f4c4cb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/report-document.json": {
+        "snapshot_before": "cc4434e05af472c1c45f181efb418e2cac6b398ba2a5dec109c3f6d06a10b87a",
+        "after": "32249fc368a66e9afac09a7a40de914d1b1f8c3ca4da75aa2e687b1ca3fd9b21"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/web-editorial.json": {
+        "snapshot_before": "a39bcc710f0aa74832c76ede8eff267bcd72ffd6b2dff865a27906f1a6e3f9d2",
+        "after": "f4f33c2c17776b3bc6a5b6d3e944776f05a76217b57f45688b0482486c3434f5"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/web-marketing.json": {
+        "snapshot_before": "ccc92a435517798887c580e1328e49f6a16b16728eb7e5e6242f5258b70ae59c",
+        "after": "ac6f0a95657cb4d241cec0e836b418607f964f450b67dfb7b59e8c32b0fb4781"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/profiles/web-ui.json": {
+        "snapshot_before": "8e3f222a2e89356f05e1fd34c2959811b078d440ab3523c5c8c6a79d79e24d04",
+        "after": "537621dc4a51b15febe66471fff8e2e6891ed4241c6f31cc50abbb48ded6a4dd"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/references/documents.md": {
+        "snapshot_before": "53de4718d8ba1e70de74c5d8c7670b11cd5d980e36bcbf42cbcd45e23dfd1a26",
+        "after": "1eae15cbb93c1dcd9345a6419bd3ddadb9dccdfd3de7e43091acaeb60235d1ed"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/references/review.md": {
+        "snapshot_before": "b2c54ca582764cf8f12ba17c73409aa19085c9f98749c45e91bf58a7cc369b65",
+        "after": "0bbfd292fba9751315b1baa6287db63692ac8e21b3ca65e55672431c5b5b1ca8"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/references/web.md": {
+        "snapshot_before": "bfa13f2c0e61b39eeb9e56808c0f452b4529e85e0f43e2ed79229da41eff9d5d",
+        "after": "ef17222ff034bba98d3d5802e41c9a392e0f7bbd6aa87bd25c4cd323349f18bb"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/references/workflow.md": {
+        "snapshot_before": "f11aa36fec5336c451c7bf9fbe9049a51f0fb8596d37178bc67006fb620e154d",
+        "after": "feb97c5d0d9cbf14b2c234bb730feea028e7608a7588545f417e5e26f78a01a4"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/rules/catalog.json": {
+        "snapshot_before": "28379c569ca4e9392a78754eeb06a4e0ca12d8d5be0601a3f1a02413862319bc",
+        "after": "e5ccb1726468d32ec9450db841ddc83855eca36ab29494be8b94effdd6481b7e"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/runtime/checks.py": {
+        "snapshot_before": "b9c6bd8cb825f3c4f0854a0ea951606cf44500351cec1d776baf87183a44470f",
+        "after": "f36ecc447b7fc717d8584a7c4cd2c5cdf813250e1924386ebfab8869c7f4141f"
+      },
+      "plugins/kumihan-grafia/skills/kumihan-grafia/schemas/report.schema.json": {
+        "snapshot_before": "9f1a73d50f3a33fdb0c2e2f42308254d2940b518d2cc052565d486f205b8a5c6",
+        "after": "c9d25f30b79383d717fffba6a624b0132810ad05fb7b2b691eada6514c79cb4e"
+      }
+    },
+    "bodies": {
+      "docs/install-grafia-chatgpt.en.html": {
+        "snapshot_before": "2d565a65917b60856b49f514b5dd3de02e999150e412821af3104bc245f77e7d",
+        "after": "fd80b4a30e0e205f0c699847ea255bcb46ac39aa887f0ee9f340c20ee37b6056"
+      },
+      "docs/install-grafia-chatgpt.html": {
+        "snapshot_before": "5d70bb31929a343211347a029b16886950d6facf79d31837ab50b515883a9ff0",
+        "after": "64d9aa58c9f88211df2386257d11f24e6a9b2ff6feca869e12014471f62d7062"
+      },
+      "docs/install-grafia-chatgpt.ja.html": {
+        "snapshot_before": "a81db2bb1e4528a2f446e3a63907bceb380af1fd73e75b950e9a8a4f2dc38984",
+        "after": "bf8f350840ad892cc575f12624a29a331c077ce663623d7185af93a126de1b7e"
+      },
+      "docs/install-grafia-claude.en.html": {
+        "snapshot_before": "84e4d5f97bdac83f4c4edb80eb5c379706ce8650c39c8d83a03b13c1908990f6",
+        "after": "c6d559f24a02fdaedeff000466d614637ef77e935971deb33201f07febd827fd"
+      },
+      "docs/install-grafia-claude.html": {
+        "snapshot_before": "53a62ce6d40acf269ed8d5e976b8b04c65b6ee65e7e0ad549f05accfdb81a528",
+        "after": "5c1919817591fb4736b3c35015740426b8dca3d4f3b56de7215a3dc282f78d25"
+      },
+      "docs/install-grafia-claude.ja.html": {
+        "snapshot_before": "85eee19b3684d415ee31921cf0b730d04493e9c083a1eb2d39d3aff1c791dca5",
+        "after": "bc867177d1d006de5595a0c756946e7abe486099ad2718d971395393dddf851d"
+      },
+      "docs/install-grafia-gemini.en.html": {
+        "snapshot_before": "8b092b66039ebc8804f7af53fc38d2eb8e88aff4759eb6ea217559805b02ddb9",
+        "after": "d733353bbc540522003e43eb6951f6aac3fbdae98a749d8307628eb373374ab8"
+      },
+      "docs/install-grafia-gemini.html": {
+        "snapshot_before": "640006d5131913be76d210689ab4d81926614760e036a6e5015c8c89e32435be",
+        "after": "2bdf68e3f7f39522ab6f4620a3cd16371f2848a311c6a06ea45a5ce6c656920f"
+      },
+      "docs/install-grafia-gemini.ja.html": {
+        "snapshot_before": "d092e289fd5746ca683bd648d7e0053dd050c135b838a0ec5db6ff8e913d00eb",
+        "after": "2a9ae22158aa8008640901a74bd643562b399c7cf15a66f4738f6cd14e53e9f2"
+      },
+      "kumihan-es.en.html": {
+        "snapshot_before": "c7fea3b04e22c38d126835d718d71b66a85577878e199f2e8366d3961c07787e",
+        "after": "672fb2d2d544bf61304112e6deb4c1ea530f46f172a488396934129980a59a83"
+      },
+      "kumihan-es.html": {
+        "snapshot_before": "d78a7456578b23302acf7ca72c16ac1a4f801255def2808f637b341d07319447",
+        "after": "21c548a26cbea48ef4a7fe7d5b7fc68227f9a85f9f54690b6e98e4a1a09f5d1a"
+      },
+      "kumihan-es.ja.html": {
+        "snapshot_before": "73798ec6a9911cafa77518acb1a35b56e96ec65e2b3d6c9f813efa4f009d8df2",
+        "after": "3aca9bad48a3fa501878a2b6e66771d8c5f4fe2cb70706c9a46c39d48db22e86"
+      }
+    }
+  },
+  "readme": {
+    "before_sha256": "b6212888b3a936a2fc75c00aef6679e2a667d66a3b5b2b8fd82b08fbe6bff15f",
+    "after_sha256": "40b2e2ecda6f77a6d9d310a338e83cdc43e00d7b72a755e13912a3dafc4d79a9",
+    "before_line": "| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.0 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:19:58Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |",
+    "after_line": "| ES | KUMIHAN｜Grafía（スペイン語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-es.html) | [plugins/kumihan-grafia](plugins/kumihan-grafia/README.md) | 公開済 / Published **v0.1.0** · 2026-10-18T16:19:58Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0) |"
+  },
+  "facts": {
+    "before_sha256": "89eddaf9e1c101e1433913df07ceff88d188e3c8d26af55964571c2575ab74e1",
+    "after_sha256": "49a91d0aaf96c77140e18d4c88bea6c2648d3ba466956f506bcdea39aba56a4c",
+    "before_es": {
+      "edition": "es",
+      "source_manifest": "plugins/kumihan-grafia/plugin.json",
+      "tag_prefix": "kumihan-grafia-v",
+      "source_version": "0.1.0",
+      "published_version": "0.1.0",
+      "release_status": "published",
+      "published_at": "2026-10-18T16:19:58Z",
+      "release_url": "https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0",
+      "tag": "kumihan-grafia-v0.1.0",
+      "verified_assets": [
+        {
+          "name": "kumihan-grafia-Claude-Code-plugin-v0.1.0.zip",
+          "bytes": 915302,
+          "sha256": "d700dbaf79e2dd7bd4f844d8b11061638eeb3bcb7c569e54a26a3c58e5d4f9d4",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-Code-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Claude-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip",
+          "bytes": 916286,
+          "sha256": "fcfa4372f06b8d5eb91cf6f5217e50950ab3ddeb489e877c9b388a3cbefe2302",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip",
+          "bytes": 911978,
+          "sha256": "bf44aafcfed736a3fb5a03b850dd12d089d6cc129983cd677d09629ec5448c6b",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Claude-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Claude-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Claude-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip"
+        }
+      ],
+      "release_id": 416559271,
+      "source_commit": "6d556a5208e55adb7dc185314df3fc9808c28746",
+      "source_tree": "2411f2095a945a579415045fa0b7532216dfcbec",
+      "source_manifest_sha256": "a29c1adb9774aa42faf409fdc49f6951b945ca811d1833967f8d3509bbd78065",
+      "verified_metadata": [
+        {
+          "name": "MANIFEST.json",
+          "bytes": 5315,
+          "sha256": "683b17692838f9980861cf05202bc0a5a07680ddb3ec9c97f39a4676df41c477",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/MANIFEST.json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 1768,
+          "sha256": "cdf33ff2bf365a07ec82ee78dd95ed9bad9df248759bd6999b9f68e4c0fdefdb",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/SHA256SUMS.txt"
+        }
+      ]
+    },
+    "after_es": {
+      "edition": "es",
+      "source_manifest": "plugins/kumihan-grafia/plugin.json",
+      "tag_prefix": "kumihan-grafia-v",
+      "source_version": "0.1.1",
+      "published_version": "0.1.0",
+      "release_status": "published",
+      "published_at": "2026-10-18T16:19:58Z",
+      "release_url": "https://github.com/landco-llc/kumihan/releases/tag/kumihan-grafia-v0.1.0",
+      "tag": "kumihan-grafia-v0.1.0",
+      "verified_assets": [
+        {
+          "name": "kumihan-grafia-Claude-Code-plugin-v0.1.0.zip",
+          "bytes": 915302,
+          "sha256": "d700dbaf79e2dd7bd4f844d8b11061638eeb3bcb7c569e54a26a3c58e5d4f9d4",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-Code-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Claude-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip",
+          "bytes": 916286,
+          "sha256": "fcfa4372f06b8d5eb91cf6f5217e50950ab3ddeb489e877c9b388a3cbefe2302",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-plugin-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27037,
+          "sha256": "f4d928b8f125cc9a809117a3afb3ff5b2007e31771169baff3148a896776230f",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip",
+          "bytes": 911978,
+          "sha256": "bf44aafcfed736a3fb5a03b850dd12d089d6cc129983cd677d09629ec5448c6b",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-Gemini-CLI-extension-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Claude-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27606,
+          "sha256": "33028362a13787fd2c4d371dc3177092bd7fb95e7c3c3b174e19c9a48106ea59",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-documents-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Claude-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27439,
+          "sha256": "a3a8b4517e3dc05c185bd58130e7278f1a951ea402f53b06ba823cb96c2f240a",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-review-Gemini-Apps-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Claude-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Claude-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-GPT-Codex-skill-v0.1.0.zip"
+        },
+        {
+          "name": "kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip",
+          "bytes": 27271,
+          "sha256": "613f335d572ea6a1ba3be85ae0c2a1322963248e7d10d1b4001fd230a883b953",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/kumihan-grafia-web-Gemini-Apps-skill-v0.1.0.zip"
+        }
+      ],
+      "release_id": 416559271,
+      "source_commit": "6d556a5208e55adb7dc185314df3fc9808c28746",
+      "source_tree": "2411f2095a945a579415045fa0b7532216dfcbec",
+      "source_manifest_sha256": "a29c1adb9774aa42faf409fdc49f6951b945ca811d1833967f8d3509bbd78065",
+      "verified_metadata": [
+        {
+          "name": "MANIFEST.json",
+          "bytes": 5315,
+          "sha256": "683b17692838f9980861cf05202bc0a5a07680ddb3ec9c97f39a4676df41c477",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/MANIFEST.json"
+        },
+        {
+          "name": "SHA256SUMS.txt",
+          "bytes": 1768,
+          "sha256": "cdf33ff2bf365a07ec82ee78dd95ed9bad9df248759bd6999b9f68e4c0fdefdb",
+          "url": "https://github.com/landco-llc/kumihan/releases/download/kumihan-grafia-v0.1.0/SHA256SUMS.txt"
+        }
+      ]
+    }
+  }
+}

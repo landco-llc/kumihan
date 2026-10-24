@@ -22,7 +22,7 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(r['preservation']['status'],'failed')
         self.assertEqual(r['original_hash'],hashlib.sha256(a).hexdigest())
     def test_unknown_locale_rejected(self):
-        for loc in ['fr','es-US','es-XX','es_ES','']:
+        for loc in ['fr','es-XX','es_ES','']:
             with self.subTest(loc=loc):
                 self.assertIsNotNone(self.api,'Grafía helper must exist')
                 with self.assertRaises(ValueError): self.api.review(b'original',locale=loc)
