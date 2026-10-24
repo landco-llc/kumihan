@@ -20,6 +20,7 @@ REPO='landco-llc/kumihan'
 TAG='kumihan-measure-v0.1.1'
 TARGET='db6f453160e46c568a007c76afd2030bc8e61512'
 DRAFT=422834442
+PUBLISHED_AT='2026-10-24T16:17:36Z'
 FOLDER=Path('releases')/TAG
 REQUEST=FOLDER/'REQUEST.json'
 NOTES=FOLDER/'RELEASE_NOTES.md'
@@ -68,7 +69,7 @@ def assert_unique_draft():
 def validate_release(release,r,notes,*,draft,empty=False):
     if (release.get('id')!=DRAFT or release.get('draft') is not draft or release.get('prerelease') is not False or
         release.get('tag_name')!=TAG or release.get('target_commitish')!=TARGET or
-        release.get('created_at')!=r['created_at'] or release.get('name')!=r['title'] or
+        (draft and release.get('created_at')!=r['created_at']) or release.get('name')!=r['title'] or
         (release.get('body') or '').strip()!=notes.strip()):
         raise ValueError('Exact draft identity or state changed')
     if empty and release.get('assets')!=[]:
@@ -96,6 +97,14 @@ def verify_download(files):
         for name,raw in files.items():
             if (folder/name).read_bytes()!=raw:raise ValueError('Downloaded asset bytes differ')
 
+def verify_published(release,r,notes,files):
+    validate_release(release,r,notes,draft=False)
+    if (release.get('published_at')!=PUBLISHED_AT or
+        release.get('html_url')!='https://github.com/'+REPO+'/releases/tag/'+TAG or
+        api(f'repos/{REPO}/git/ref/tags/{TAG}')['object']['sha']!=TARGET):
+        raise ValueError('Published tag, URL or date differs')
+    verify_remote_assets(release,files);verify_download(files)
+
 def publish():
     if (os.environ.get('GITHUB_REPOSITORY'),os.environ.get('GITHUB_REF'),os.environ.get('GITHUB_EVENT_NAME'))!=(REPO,'refs/heads/main','push'):
         raise ValueError('Only the native protected-main push workflow may publish')
@@ -105,9 +114,14 @@ def publish():
     subprocess.run(['git','merge-base','--is-ancestor',TARGET,head],cwd=ROOT,check=True)
     subprocess.run(['git','diff','--exit-code',TARGET,'--','plugins/kumihan-measure'],cwd=ROOT,check=True)
     files=check();r=request();notes=(ROOT/NOTES).read_text()
+    release=api(f'repos/{REPO}/releases/{DRAFT}')
+    if release.get('draft') is False:
+        # A completed fixed release is immutable: read back only, never upload/edit.
+        verify_published(release,r,notes,files)
+        print(release['html_url'])
+        return
     assert_tag_absent()
     assert_unique_draft()
-    release=api(f'repos/{REPO}/releases/{DRAFT}')
     validate_release(release,r,notes,draft=True)
     missing=verify_remote_subset(release,files)
     existing={name:raw for name,raw in files.items() if name not in missing}
@@ -125,10 +139,7 @@ def publish():
     validate_release(fresh,r,notes,draft=True);verify_remote_assets(fresh,files);assert_tag_absent();assert_unique_draft()
     gh('release','edit',TAG,'--repo',REPO,'--draft=false','--latest=false')
     published=api(f'repos/{REPO}/releases/tags/{TAG}')
-    validate_release(published,r,notes,draft=False)
-    if not published.get('published_at') or api(f'repos/{REPO}/git/ref/tags/{TAG}')['object']['sha']!=TARGET:
-        raise ValueError('Published tag or date differs')
-    verify_remote_assets(published,files);verify_download(files)
+    verify_published(published,r,notes,files)
     print(published['html_url'])
 
 if __name__=='__main__':
