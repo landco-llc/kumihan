@@ -3952,7 +3952,7 @@
    "hero_foot": [
     "OPEN SOURCE",
     "FOUR SKILLS",
-    "v0.1.0 AVAILABLE"
+    "v0.1.1 AVAILABLE"
    ],
    "concept_h2": [
     "Not a uniform look—",
@@ -3966,7 +3966,7 @@
      "idx": "01 / TYPE",
      "mark": "Hxg",
      "h3": "English typography",
-     "p": "Latin script is not only English, and a region is not a house style, so script (Latn), language (en), region (en-US, en-GB, en-AU) and house style are recorded separately. The measure—line length—is set together with word spacing and hyphenation: left-aligned text by default on the web, justification only where each line is checked for rivers, and no break-all splitting ordinary words."
+     "p": "Latin script is not only English, and a region is not a house style, so script (Latn), language (en), region (en-US, en-GB, en-AU) and house style are recorded separately. The measure—line length—is set together with word spacing and hyphenation: left-aligned text by default on the web, justification only where each line is checked for rivers, and no break-all splitting ordinary words. The six primary regional contexts are US, GB, CA, AU, IN and SG; ten further regions are advisory. Unspecified en remains region-neutral, and organization styles apply only when explicitly selected for their documented scope."
     },
     {
      "idx": "02 / STRUCTURE",
@@ -3978,7 +3978,7 @@
      "idx": "03 / FIDELITY",
      "mark": "“ ‘ ’ ”",
      "h3": "Source fidelity",
-     "p": "Protect names, quotations, numbers, dates, codes and intended meaning. Quotation marks, the serial comma, dates (October 20, 2026 or 20 October 2026) and spelling follow the chosen house style and are never silently switched to another region’s; names, quotations and code keep their own form. Figures are treated by type—a leading zero, a year or a currency is more than digits—and lining or oldstyle, proportional or tabular are separate choices."
+     "p": "Protect names, quotations, numbers, dates, codes and intended meaning. Quotation marks, the serial comma, dates (October 20, 2026 or 20 October 2026) and spelling follow the chosen house style and are never silently switched to another region’s; names, quotations and code keep their own form. Figures are treated by type—a leading zero, a year or a currency is more than digits—and lining or oldstyle, proportional or tabular are separate choices. Keep World Health Organization, AirAsia, quoted text and code unchanged. Regional meanings such as table or prepone and ambiguous dates need contextual review, not automatic conversion."
     },
     {
      "idx": "04 / REVIEW",
@@ -4001,7 +4001,7 @@
    "skills": [
     [
      "Measure",
-     "Scope purpose, audience, medium, role (reading, interface or display), language and region (en-US, en-GB, en-AU), house style and authorized edits before designing."
+     "Scope purpose, audience, medium, role (reading, interface or display), language and region (en-US, en-GB, en-AU), house style and authorized edits before designing. Distinguish six primary regional contexts from ten advisory regions and scope each organization style explicitly."
     ],
     [
      "Web",
@@ -4021,20 +4021,20 @@
     "Installation guides",
     "for three AI platforms"
    ],
-   "install_body": "KUMIHAN｜Measure v0.1.0 offers four independent skills and 15 ZIPs. Choose the guide for ChatGPT/Codex, Claude/Claude Code or Gemini. Native-host imports and rendering have not been fully verified.",
+   "install_body": "KUMIHAN｜Measure v0.1.1 offers four independent skills and 15 ZIPs. Choose the guide for ChatGPT/Codex, Claude/Claude Code or Gemini. Native-host imports and rendering have not been fully verified.",
    "install_notes": [
     "ChatGPT / Codex installation guide",
     "Claude / Claude Code installation guide",
     "Gemini installation guide"
    ],
-   "status_title": "RELEASED / v0.1.0",
-   "status_body": "KUMIHAN｜Measure v0.1.0 provides four independent skills, 45 English typography rules and 15 ZIP archives. The installation guides are available. Native AI-host invocation, real browser/Office rendering and expert editorial verification have not been fully completed.",
-   "status_link": "Download v0.1.0 ↗",
+   "status_title": "RELEASED / v0.1.1",
+   "status_body": "KUMIHAN｜Measure v0.1.1 provides four independent skills, 51 English typography rules and 15 ZIP archives. The installation guides are available. Native AI-host invocation, real browser/Office rendering and expert editorial verification have not been fully completed.",
+   "status_link": "Download v0.1.1 ↗",
    "cta_h2": [
     "Another way to design",
     "in English"
    ],
-   "cta_body": "KUMIHAN｜Measure v0.1.0 packages, checksums and installation guides are now openly available on GitHub.",
+   "cta_body": "KUMIHAN｜Measure v0.1.1 packages, checksums and installation guides are now openly available on GitHub.",
    "cta_button": "View on GitHub",
    "footer_sub": "English typography skills for AI-assisted design.",
    "gateway_label": "KUMIHAN home",
@@ -4071,7 +4071,7 @@
    "hero_foot": [
     "OPEN SOURCE",
     "FOUR SKILLS",
-    "v0.1.0 AVAILABLE"
+    "v0.1.1 AVAILABLE"
    ],
    "concept_h2": [
     "「見た目をそろえる」より",
@@ -4085,7 +4085,7 @@
      "idx": "01 / TYPE",
      "mark": "Hxg",
      "h3": "英語の文字組み",
-     "p": "ラテン文字は英語だけの文字ではなく、地域が決まってもハウススタイルまでは決まりません。文字体系（Latn）、言語（en）、地域（en-US、en-GB、en-AU）、編集規約を別々に記録します。行長（measure）は語間やハイフネーションと合わせて設計し、Webの本文は左揃えを基本に、両端揃えは各行の空きの流れ（リバー）を確かめたうえで使います。通常の単語をbreak-allで分断しません。"
+     "p": "ラテン文字は英語だけの文字ではなく、地域が決まってもハウススタイルまでは決まりません。文字体系（Latn）、言語（en）、地域（en-US、en-GB、en-AU）、編集規約を別々に記録します。行長（measure）は語間やハイフネーションと合わせて設計し、Webの本文は左揃えを基本に、両端揃えは各行の空きの流れ（リバー）を確かめたうえで使います。通常の単語をbreak-allで分断しません。 US・GB・CA・AU・IN・SGの6地域を優先し、追加10地域は助言の範囲で扱います。地域未指定のenは中立のまま保ち、組織の規約は明示された対象用途だけに適用します。"
     },
     {
      "idx": "02 / STRUCTURE",
@@ -4097,7 +4097,7 @@
      "idx": "03 / FIDELITY",
      "mark": "“ ‘ ’ ”",
      "h3": "原稿を大切に",
-     "p": "名前・引用・数値・日時・コード・意味を守ります。引用符、列挙のコンマ（serial comma）、日付（October 20, 2026／20 October 2026）、綴りは選んだハウススタイルに従い、黙って別の地域の書き方に統一しません。固有名・引用・コードは元の表記を保ちます。数字は種類で扱い（先頭のゼロ、年、通貨は単なる数字列ではない）、lining／oldstyleとproportional／tabularを別々に選びます。"
+     "p": "名前・引用・数値・日時・コード・意味を守ります。引用符、列挙のコンマ（serial comma）、日付（October 20, 2026／20 October 2026）、綴りは選んだハウススタイルに従い、黙って別の地域の書き方に統一しません。固有名・引用・コードは元の表記を保ちます。数字は種類で扱い（先頭のゼロ、年、通貨は単なる数字列ではない）、lining／oldstyleとproportional／tabularを別々に選びます。 World Health OrganizationやAirAsia、引用、コードは変更しません。tableやpreponeの地域による語義、曖昧な日付は自動変換せず、文脈を確認します。"
     },
     {
      "idx": "04 / REVIEW",
@@ -4120,7 +4120,7 @@
    "skills": [
     [
      "Measure",
-     "目的・読者・媒体・役割（読む文章、操作するUI、見せる文字）・言語と地域（en-US、en-GB、en-AU）・ハウススタイル・編集権限を先に整理します。"
+     "目的・読者・媒体・役割（読む文章、操作するUI、見せる文字）・言語と地域（en-US、en-GB、en-AU）・ハウススタイル・編集権限を先に整理します。 優先する6地域と助言対象の10地域を区別し、組織の規約は対象用途を明示して扱います。"
     ],
     [
      "Web",
@@ -4140,20 +4140,20 @@
     "AIツール別",
     "導入ガイド"
    ],
-   "install_body": "KUMIHAN｜Measure v0.1.0の4独立スキルと15 ZIPを公開しました。ChatGPT・Codex、Claude・Claude Code、Geminiの導入方法をご案内します。実ホストでの導入・表示確認は完了していません。",
+   "install_body": "KUMIHAN｜Measure v0.1.1の4独立スキルと15 ZIPを公開しました。ChatGPT・Codex、Claude・Claude Code、Geminiの導入方法をご案内します。実ホストでの導入・表示確認は完了していません。",
    "install_notes": [
     "ChatGPT・Codex向け導入ガイド",
     "Claude・Claude Code向け導入ガイド",
     "Gemini向け導入ガイド"
    ],
-   "status_title": "RELEASED / v0.1.0",
-   "status_body": "KUMIHAN｜Measure v0.1.0は4つの独立スキル・英語文字組の45規則・15 ZIPを提供します。導入ガイドも公開済みです。実際のAIホストへの導入、ブラウザ・Officeでの表示、専門家による英語組版の校閲は十分に検証できていません。",
-   "status_link": "v0.1.0をダウンロード ↗",
+   "status_title": "RELEASED / v0.1.1",
+   "status_body": "KUMIHAN｜Measure v0.1.1は4つの独立スキル・英語文字組の51規則・15 ZIPを提供します。導入ガイドも公開済みです。実際のAIホストへの導入、ブラウザ・Officeでの表示、専門家による英語組版の校閲は十分に検証できていません。",
+   "status_link": "v0.1.1をダウンロード ↗",
    "cta_h2": [
     "英語のデザインに",
     "もうひとつの選択肢を"
    ],
-   "cta_body": "KUMIHAN｜Measure v0.1.0のパッケージ・チェックサム・導入ガイドをGitHubで公開しています。",
+   "cta_body": "KUMIHAN｜Measure v0.1.1のパッケージ・チェックサム・導入ガイドをGitHubで公開しています。",
    "cta_button": "GitHubで見る",
    "footer_sub": "English typography skills for AI-assisted design.",
    "gateway_label": "KUMIHAN トップ",

@@ -21,6 +21,9 @@ def audit(root=ROOT):
                     continue
             if family=='bodies':
                 body=re.search(rb'<body\b[\s\S]*',raw,re.I); raw=body[0] if body else b''
+            from en_measure_v011_published_transition import admitted as en_v011_published
+            if en_v011_published(root,path,expected,raw,family):
+                continue
             from en_measure_v011_transition import admitted as en_v011_admitted
             if en_v011_admitted(root,path,expected,raw,family):
                 continue

@@ -61,7 +61,8 @@ class UpcomingEditions(unittest.TestCase):
             slug = upcoming.EDITIONS[code][1]
             for lang, path, text in pages(code):
                 with self.subTest(page=path.name):
-                    self.assertIn("RELEASED / v0.1.0", text)
+                    version='0.1.1' if code=='en' else '0.1.0'
+                    self.assertIn('RELEASED / v'+version, text)
                     self.assertNotIn("COMING SOON", text)
                     self.assertEqual(len(re.findall(rf'class="skill-card" href="[^"]*plugins/kumihan-{re.escape(slug)}/skills/', text)), 4)
                     for host in ("chatgpt", "claude", "gemini"):
@@ -77,7 +78,8 @@ class UpcomingEditions(unittest.TestCase):
                     card = top_card(text, code)
                     self.assertIsNotNone(card)
                     if code in RELEASED:
-                        self.assertIn('<bdi dir="ltr">v0.1.0</bdi>', card.group(0))
+                        version='0.1.1' if code=='en' else '0.1.0'
+                        self.assertIn('<bdi dir="ltr">v'+version+'</bdi>', card.group(0))
                     else:
                         self.assertNotIn("<bdi dir=\"ltr\">v", card.group(0).split("</div>")[0])
                         self.assertRegex(card.group(0), r'class="version-state"[^>]*>(?:Coming soon|配布準備中|準備中|准备中)<')

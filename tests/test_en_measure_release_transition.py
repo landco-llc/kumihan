@@ -33,6 +33,8 @@ class EnglishReleaseTransition(unittest.TestCase):
                 content = predecessor(ROOT)[1]
             if row["family"] == "bodies":
                 content = re.search(rb"<body\b[\s\S]*", content, re.I)[0]
+                from en_measure_v011_published_transition import predecessor_body
+                content = predecessor_body(ROOT,name,content)
             current_hash=hashlib.sha256(content).hexdigest()
             if not (composed_admitted(ROOT, name, row["before"], content, row["family"]) or
                     ziheng_admitted(ROOT, name, row["before"], content, row["family"])):

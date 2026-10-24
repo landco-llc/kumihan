@@ -70,7 +70,7 @@ class ExactMeasurePublisher(unittest.TestCase):
         files={name:b'x' for name in self.request['assets']}
         rows=[{'name':n,'size':1,'digest':'sha256:'+release.digest(b'x')} for n in files]
         uploaded=dict(self.draft,assets=rows)
-        published=dict(uploaded,draft=False,published_at='2026-10-25T00:00:00Z',html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
+        published=dict(uploaded,draft=False,published_at=release.PUBLISHED_AT,html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
         responses=[{'sha':'a'*40},self.draft,uploaded,uploaded,published,{'object':{'sha':release.TARGET}}]
         with patch.dict(os.environ,env,clear=True),patch.object(release.subprocess,'check_output',return_value='a'*40+'\n'),patch.object(release.subprocess,'run'),patch.object(release,'api',side_effect=responses) as api,patch.object(release,'check',return_value=files),patch.object(release,'request',return_value=self.request),patch.object(release,'assert_tag_absent') as tag,patch.object(release,'assert_unique_draft') as unique,patch.object(release,'verify_download') as download,patch.object(release,'gh') as gh,contextlib.redirect_stdout(io.StringIO()):
             release.publish()
@@ -91,7 +91,7 @@ class ExactMeasurePublisher(unittest.TestCase):
         first=next(iter(files));existing={first:files[first]}
         rows=[{'name':n,'size':1,'digest':'sha256:'+release.digest(b'x')} for n in files]
         initial=dict(self.draft,assets=[rows[0]]);uploaded=dict(self.draft,assets=rows)
-        published=dict(uploaded,draft=False,published_at='2026-10-25T00:00:00Z',html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
+        published=dict(uploaded,draft=False,published_at=release.PUBLISHED_AT,html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
         responses=[{'sha':'a'*40},initial,uploaded,uploaded,published,{'object':{'sha':release.TARGET}}]
         with patch.dict(os.environ,env,clear=True),patch.object(release.subprocess,'check_output',return_value='a'*40+'\n'),patch.object(release.subprocess,'run'),patch.object(release,'api',side_effect=responses),patch.object(release,'check',return_value=files),patch.object(release,'request',return_value=self.request),patch.object(release,'assert_tag_absent'),patch.object(release,'assert_unique_draft'),patch.object(release,'verify_download') as download,patch.object(release,'gh') as gh,contextlib.redirect_stdout(io.StringIO()):
             release.publish()
@@ -106,4 +106,34 @@ class ExactMeasurePublisher(unittest.TestCase):
         initial=dict(self.draft,assets=[{'name':first,'size':1,'digest':'sha256:'+release.digest(b'x')}])
         with patch.dict(os.environ,env,clear=True),patch.object(release.subprocess,'check_output',return_value='a'*40+'\n'),patch.object(release.subprocess,'run'),patch.object(release,'api',side_effect=[{'sha':'a'*40},initial]),patch.object(release,'check',return_value=files),patch.object(release,'request',return_value=self.request),patch.object(release,'assert_tag_absent'),patch.object(release,'assert_unique_draft'),patch.object(release,'verify_download',side_effect=ValueError('Downloaded bytes differ')),patch.object(release,'gh') as gh:
             with self.assertRaises(ValueError):release.publish()
+            gh.assert_not_called()
+
+    def test_already_published_is_read_only_even_when_created_at_changed(self):
+        import contextlib
+        import io
+        env={'GITHUB_REPOSITORY':release.REPO,'GITHUB_REF':'refs/heads/main','GITHUB_EVENT_NAME':'push','GITHUB_SHA':'a'*40}
+        files={name:b'x' for name in self.request['assets']}
+        rows=[{'name':n,'size':1,'digest':'sha256:'+release.digest(b'x')} for n in files]
+        published=dict(self.draft,draft=False,created_at='2026-10-24T16:06:25Z',assets=rows,
+            published_at=release.PUBLISHED_AT,html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
+        with patch.dict(os.environ,env,clear=True),patch.object(release.subprocess,'check_output',return_value='a'*40+'\n'),patch.object(release.subprocess,'run'),patch.object(release,'api',side_effect=[{'sha':'a'*40},published,{'object':{'sha':release.TARGET}}]),patch.object(release,'check',return_value=files),patch.object(release,'request',return_value=self.request),patch.object(release,'assert_tag_absent') as absent,patch.object(release,'assert_unique_draft') as unique,patch.object(release,'verify_download') as download,patch.object(release,'gh') as gh,contextlib.redirect_stdout(io.StringIO()):
+            release.publish()
+            gh.assert_not_called();absent.assert_not_called();unique.assert_not_called()
+            download.assert_called_once_with(files)
+
+    def test_published_state_cannot_accept_wrong_identity_date_target_or_bytes(self):
+        files={name:b'x' for name in self.request['assets']}
+        rows=[{'name':n,'size':1,'digest':'sha256:'+release.digest(b'x')} for n in files]
+        published=dict(self.draft,draft=False,created_at='changed by GitHub',assets=rows,
+            published_at=release.PUBLISHED_AT,html_url='https://github.com/'+release.REPO+'/releases/tag/'+release.TAG)
+        for field,value in [('id',1),('tag_name','other'),('target_commitish','a'*40),('body','changed'),('published_at','2026-10-25T00:00:00Z'),('assets',rows[:-1])]:
+            modified=dict(published,**{field:value})
+            with patch.object(release,'api',return_value={'object':{'sha':release.TARGET}}),patch.object(release,'verify_download'),patch.object(release,'gh') as gh:
+                with self.assertRaises(ValueError):release.verify_published(modified,self.request,self.notes,files)
+                gh.assert_not_called()
+        with patch.object(release,'api',return_value={'object':{'sha':'0'*40}}),patch.object(release,'verify_download') as download:
+            with self.assertRaises(ValueError):release.verify_published(published,self.request,self.notes,files)
+            download.assert_not_called()
+        with patch.object(release,'api',return_value={'object':{'sha':release.TARGET}}),patch.object(release,'verify_download',side_effect=ValueError('Downloaded bytes differ')),patch.object(release,'gh') as gh:
+            with self.assertRaises(ValueError):release.verify_published(published,self.request,self.notes,files)
             gh.assert_not_called()
