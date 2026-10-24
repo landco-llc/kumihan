@@ -1,4 +1,8 @@
 {
   "language": "en",
-  "locale": "en"
+  "locale": "en",
+  "coverage": "supported",
+  "scope": "Region-unspecified English; no automatic en-US selection.",
+  "fallback": null,
+  "source_policy": "Preserve supplied bytes; ask for region or house style only when material to the requested task."
 }

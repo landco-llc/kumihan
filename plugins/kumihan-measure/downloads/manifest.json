@@ -3,16 +3,16 @@
   "name": "KUMIHAN｜Measure",
   "slug": "kumihan-measure",
   "language": "en",
-  "version": "0.1.0",
-  "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
+  "version": "0.1.1",
+  "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
   "source_files": [
     {
       "path": ".claude-plugin/plugin.json",
-      "sha256": "6008970d9f87349ca511664febc7e94b35c8b340d6ef67d3f062cf83f35741f5"
+      "sha256": "d3521d9324195da166a21749cba4fd7e8727dee830cb4d3c25883e27893b8efd"
     },
     {
       "path": ".codex-plugin/plugin.json",
-      "sha256": "2e79b69b16a22d209458dc6e4581dfea8182e499827694dd77ec30d79c1e09ba"
+      "sha256": "e610d22a2aa80e524e8696938ba05feb9866855e4c5360cfbaabbb2abfd11d5b"
     },
     {
       "path": "GEMINI.md",
@@ -20,7 +20,7 @@
     },
     {
       "path": "INSTALL.md",
-      "sha256": "0f6472e4ed35090d73a5c81fe729a6fdd48ea20035abf01dca5198ed8988da5b"
+      "sha256": "934a74a7f2f7505af1fac29e3f9c529b43f36eddb72a47f5c5af58c077e8ee5d"
     },
     {
       "path": "LICENSE",
@@ -28,15 +28,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "2d4f19a5cd57000c2d6fabb7d3e52b09531057f2db9772d6808060a2ceef3cbf"
+      "sha256": "2ced0a1b70d9104bc884bcaec1ac5112b0bc7849aeb0088b24174195b48bb9b4"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "2d4f19a5cd57000c2d6fabb7d3e52b09531057f2db9772d6808060a2ceef3cbf"
+      "sha256": "2ced0a1b70d9104bc884bcaec1ac5112b0bc7849aeb0088b24174195b48bb9b4"
     },
     {
       "path": "UPDATES.md",
-      "sha256": "4211fc591c2a727e41b01647234bd788895a1c067c7cbc1f53d5c2fbc0eff1f1"
+      "sha256": "89a5902fe1e3717ed863b4263ab53869933acc58e849a54f596de409e694699e"
     },
     {
       "path": "assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -47,36 +47,104 @@
       "sha256": "bcc35ec91553ed55b511e60d36ed2281a8d626bd3b541c59c02a7f6db17ed2da"
     },
     {
+      "path": "fixtures/regional-acceptance.json",
+      "sha256": "38eb94fd9637c891d491c7321df19fd3f5b63f357744f4fc5034f00c18a7a2dc"
+    },
+    {
       "path": "gemini-extension.json",
-      "sha256": "24a9121ac0cd3503f4ef498c31461ed308e0e080912f6056deb94e9564051c0d"
+      "sha256": "7b31c8fe78516584d9b3db8167e80505087502d0211780621f340ecfbae0c8f3"
     },
     {
       "path": "inventory.json",
-      "sha256": "1f6ca22137e32b18df8f1e21f1e7a5df5adb881de6dbc50f2610de9b33e29742"
+      "sha256": "fe5c2b98a7e30e34332e6c8c8276b23a0c90a606f22dcf1ce6795a9900177651"
+    },
+    {
+      "path": "locales/en-AU.json",
+      "sha256": "ec041e91bab122eb015564a9981fb16c5c5cc93234753e18f178a1ec94c6677d"
+    },
+    {
+      "path": "locales/en-CA.json",
+      "sha256": "fe8d9cdf2b085da0f96d74cfe5decc3c59697b78e99388075cbbd6c5bb464310"
     },
     {
       "path": "locales/en-GB.json",
-      "sha256": "048e1ec0c9f17a027ef9dfbca41e9679b659862b76a80bcb7614f8323a53d0fd"
+      "sha256": "54fea07bdbb5fd15715ed37624bda4c5742a688a1c02c773c9165303fdbcb612"
+    },
+    {
+      "path": "locales/en-GH.json",
+      "sha256": "d542162c6a012c4120ace9ce82e2e502c833cd5a566607b20333cb2be4846190"
+    },
+    {
+      "path": "locales/en-HK.json",
+      "sha256": "c6bbe8d162272b65c5361880097b82c7dca57570efc3c694e69978eef82549db"
+    },
+    {
+      "path": "locales/en-IE.json",
+      "sha256": "b5368a33d321826229e75f3e46e4443159abc06aa6d1dfbd17d5d63757616d21"
+    },
+    {
+      "path": "locales/en-IN.json",
+      "sha256": "fc60aea6ccba781dccdec816ef0e5b66b6f7de4677d5dc6ed4f6f2ba329c2945"
+    },
+    {
+      "path": "locales/en-JM.json",
+      "sha256": "3932f7a8b0c9f1e603c4811d7926362408094eae4d0bdef4d766fbd41f99432c"
+    },
+    {
+      "path": "locales/en-KE.json",
+      "sha256": "72d13f14c084506a856c7c54f3bc3ec3a1131dad7d95e4ff6c41a940fac2358e"
+    },
+    {
+      "path": "locales/en-MY.json",
+      "sha256": "ed2ea645a0dccaef6ee6c8f09125d4af35304ad7eda8d4d4278fc41526d83c9a"
+    },
+    {
+      "path": "locales/en-NG.json",
+      "sha256": "b54284af8f33e503819b2493442038478b85b67d8a9b04e8c7fbaeda6d66184d"
+    },
+    {
+      "path": "locales/en-NZ.json",
+      "sha256": "9e0e3b9ad04fc79755a819e2e80d269050c415dd9b2b0ea03dc9fc8e105d6a93"
+    },
+    {
+      "path": "locales/en-PH.json",
+      "sha256": "823d62144879d8ff82381018aaf3221897df5923c3450d57c63d88de8bcc9c7f"
+    },
+    {
+      "path": "locales/en-SG.json",
+      "sha256": "5053cee6c6e49054ef87c72e5bc8c1f8d1ddea3497f18badc2f692afe2dd6e22"
     },
     {
       "path": "locales/en-US.json",
-      "sha256": "5b9acfead9edcec0b16bd6dca6fd6df0df4413c498c7264a31a57db626ce354f"
+      "sha256": "121be09bb850b3036d136b25b6502373d41024f6b548c9b6caff82904ad24967"
+    },
+    {
+      "path": "locales/en-ZA.json",
+      "sha256": "45025719289213f1a7b13db21c832445084c7cea7328762978566facec993c38"
     },
     {
       "path": "locales/en.json",
-      "sha256": "23c21d2865cc361110985e24489ffc0e4478fe8be18a991cc6d4d2a30173922c"
+      "sha256": "244fc55292f69b4512146a21b8165a9f3f126738847ed81cf3d36712b887803c"
     },
     {
       "path": "locales/supported.json",
-      "sha256": "e9367e16bb0e8eeca3495f9deb74c49fe969ee19ebbee9acc0b13fb6918d7b46"
+      "sha256": "ccc41aca083298345d9a4d9a40fcb2862547214e8c4577e9bd7794cf23dd8976"
     },
     {
       "path": "plugin.json",
-      "sha256": "3bf87f1de8d47f49b1eeac77582d26713003edac78a9dfcd848c0208366711d3"
+      "sha256": "7dde0d1b8b65bbfdcc790268a6677cab48832b81ae1633b20ad2bbc04cad1bf9"
+    },
+    {
+      "path": "profiles/house-styles.json",
+      "sha256": "6689d96fa6ee635261e58a8875968cb1e4aee583c8ea426f732135c89f5f7f11"
     },
     {
       "path": "profiles/mediums.json",
       "sha256": "9973a74aa15df8c5db37fc83bc5512520e74e76e8a1457728e77ea777a42e30b"
+    },
+    {
+      "path": "references/regional-typography.md",
+      "sha256": "3627832443c819c1cd54703fbfdab70fd61cf272de8df25ac6dca324315afda0"
     },
     {
       "path": "references/research-trace.json",
@@ -84,15 +152,15 @@
     },
     {
       "path": "references/workflow.md",
-      "sha256": "68f2487101c8d82bdba82c3da4709568e4991d8ab93cfdfd10ab4011c4d2ab93"
+      "sha256": "d1ee7d91d83840a27aa6e4720cd7902b644b33013f9bda64d01a1508ebef3967"
     },
     {
       "path": "rules/catalog.json",
-      "sha256": "b1fd6412d38aed6d1553e643990b6eff4ee7e47fc9ba70cb7ee22dfaebfe3831"
+      "sha256": "f39c41d218269d7e3d65ff5a4b39e437970e1249ab001f0f0d131dbecb785aa4"
     },
     {
       "path": "runtime/check_source.py",
-      "sha256": "eda15bac58bb0251756edcc5d96247d99bcddce1e7b6c97c2b8ba60c4949de58"
+      "sha256": "b7851ffaf79e2e9e3ad54a39d7580ef335f5db5d81e1d1ef962377de924f5e53"
     },
     {
       "path": "schemas/report.schema.json",
@@ -104,7 +172,7 @@
     },
     {
       "path": "skills/kumihan-measure/SKILL.md",
-      "sha256": "2f724260bf9a067aeee68e10cfa1acdbe03d3ea73b73dbae96af14c1c80b4653"
+      "sha256": "70aeb043c26950b6a3b470b7739f653856547b2966df55430568613a6c9a6e6e"
     },
     {
       "path": "skills/kumihan-measure/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -115,28 +183,96 @@
       "sha256": "bcc35ec91553ed55b511e60d36ed2281a8d626bd3b541c59c02a7f6db17ed2da"
     },
     {
+      "path": "skills/kumihan-measure/fixtures/regional-acceptance.json",
+      "sha256": "38eb94fd9637c891d491c7321df19fd3f5b63f357744f4fc5034f00c18a7a2dc"
+    },
+    {
       "path": "skills/kumihan-measure/inventory.json",
-      "sha256": "1f6ca22137e32b18df8f1e21f1e7a5df5adb881de6dbc50f2610de9b33e29742"
+      "sha256": "fe5c2b98a7e30e34332e6c8c8276b23a0c90a606f22dcf1ce6795a9900177651"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-AU.json",
+      "sha256": "ec041e91bab122eb015564a9981fb16c5c5cc93234753e18f178a1ec94c6677d"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-CA.json",
+      "sha256": "fe8d9cdf2b085da0f96d74cfe5decc3c59697b78e99388075cbbd6c5bb464310"
     },
     {
       "path": "skills/kumihan-measure/locales/en-GB.json",
-      "sha256": "048e1ec0c9f17a027ef9dfbca41e9679b659862b76a80bcb7614f8323a53d0fd"
+      "sha256": "54fea07bdbb5fd15715ed37624bda4c5742a688a1c02c773c9165303fdbcb612"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-GH.json",
+      "sha256": "d542162c6a012c4120ace9ce82e2e502c833cd5a566607b20333cb2be4846190"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-HK.json",
+      "sha256": "c6bbe8d162272b65c5361880097b82c7dca57570efc3c694e69978eef82549db"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-IE.json",
+      "sha256": "b5368a33d321826229e75f3e46e4443159abc06aa6d1dfbd17d5d63757616d21"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-IN.json",
+      "sha256": "fc60aea6ccba781dccdec816ef0e5b66b6f7de4677d5dc6ed4f6f2ba329c2945"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-JM.json",
+      "sha256": "3932f7a8b0c9f1e603c4811d7926362408094eae4d0bdef4d766fbd41f99432c"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-KE.json",
+      "sha256": "72d13f14c084506a856c7c54f3bc3ec3a1131dad7d95e4ff6c41a940fac2358e"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-MY.json",
+      "sha256": "ed2ea645a0dccaef6ee6c8f09125d4af35304ad7eda8d4d4278fc41526d83c9a"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-NG.json",
+      "sha256": "b54284af8f33e503819b2493442038478b85b67d8a9b04e8c7fbaeda6d66184d"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-NZ.json",
+      "sha256": "9e0e3b9ad04fc79755a819e2e80d269050c415dd9b2b0ea03dc9fc8e105d6a93"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-PH.json",
+      "sha256": "823d62144879d8ff82381018aaf3221897df5923c3450d57c63d88de8bcc9c7f"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-SG.json",
+      "sha256": "5053cee6c6e49054ef87c72e5bc8c1f8d1ddea3497f18badc2f692afe2dd6e22"
     },
     {
       "path": "skills/kumihan-measure/locales/en-US.json",
-      "sha256": "5b9acfead9edcec0b16bd6dca6fd6df0df4413c498c7264a31a57db626ce354f"
+      "sha256": "121be09bb850b3036d136b25b6502373d41024f6b548c9b6caff82904ad24967"
+    },
+    {
+      "path": "skills/kumihan-measure/locales/en-ZA.json",
+      "sha256": "45025719289213f1a7b13db21c832445084c7cea7328762978566facec993c38"
     },
     {
       "path": "skills/kumihan-measure/locales/en.json",
-      "sha256": "23c21d2865cc361110985e24489ffc0e4478fe8be18a991cc6d4d2a30173922c"
+      "sha256": "244fc55292f69b4512146a21b8165a9f3f126738847ed81cf3d36712b887803c"
     },
     {
       "path": "skills/kumihan-measure/locales/supported.json",
-      "sha256": "e9367e16bb0e8eeca3495f9deb74c49fe969ee19ebbee9acc0b13fb6918d7b46"
+      "sha256": "ccc41aca083298345d9a4d9a40fcb2862547214e8c4577e9bd7794cf23dd8976"
+    },
+    {
+      "path": "skills/kumihan-measure/profiles/house-styles.json",
+      "sha256": "6689d96fa6ee635261e58a8875968cb1e4aee583c8ea426f732135c89f5f7f11"
     },
     {
       "path": "skills/kumihan-measure/profiles/mediums.json",
       "sha256": "9973a74aa15df8c5db37fc83bc5512520e74e76e8a1457728e77ea777a42e30b"
+    },
+    {
+      "path": "skills/kumihan-measure/references/regional-typography.md",
+      "sha256": "3627832443c819c1cd54703fbfdab70fd61cf272de8df25ac6dca324315afda0"
     },
     {
       "path": "skills/kumihan-measure/references/research-trace.json",
@@ -144,15 +280,15 @@
     },
     {
       "path": "skills/kumihan-measure/references/workflow.md",
-      "sha256": "68f2487101c8d82bdba82c3da4709568e4991d8ab93cfdfd10ab4011c4d2ab93"
+      "sha256": "d1ee7d91d83840a27aa6e4720cd7902b644b33013f9bda64d01a1508ebef3967"
     },
     {
       "path": "skills/kumihan-measure/rules/catalog.json",
-      "sha256": "b1fd6412d38aed6d1553e643990b6eff4ee7e47fc9ba70cb7ee22dfaebfe3831"
+      "sha256": "f39c41d218269d7e3d65ff5a4b39e437970e1249ab001f0f0d131dbecb785aa4"
     },
     {
       "path": "skills/kumihan-measure/runtime/check_source.py",
-      "sha256": "eda15bac58bb0251756edcc5d96247d99bcddce1e7b6c97c2b8ba60c4949de58"
+      "sha256": "b7851ffaf79e2e9e3ad54a39d7580ef335f5db5d81e1d1ef962377de924f5e53"
     },
     {
       "path": "skills/kumihan-measure/schemas/report.schema.json",
@@ -160,7 +296,7 @@
     },
     {
       "path": "skills/kumihan-measure/sources.json",
-      "sha256": "ebd636de795dfd2d9b792babb51f64f46bc27d8c688bb5aa340ac9b176660242"
+      "sha256": "735d817523f1e5767d83a604563cc5d0fd47bb84ab58107b32116c03fee66493"
     },
     {
       "path": "skills/kumihan-measure-documents/LICENSE",
@@ -168,7 +304,7 @@
     },
     {
       "path": "skills/kumihan-measure-documents/SKILL.md",
-      "sha256": "3520044d19af10f65b19b36b4e86377b13de4759b2eff2e46ab8511726dfd7a4"
+      "sha256": "3759ef8d1c363172487c42e54e06f7832b472169d7f56f12a2df0647ee468f77"
     },
     {
       "path": "skills/kumihan-measure-documents/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -179,28 +315,96 @@
       "sha256": "bcc35ec91553ed55b511e60d36ed2281a8d626bd3b541c59c02a7f6db17ed2da"
     },
     {
+      "path": "skills/kumihan-measure-documents/fixtures/regional-acceptance.json",
+      "sha256": "38eb94fd9637c891d491c7321df19fd3f5b63f357744f4fc5034f00c18a7a2dc"
+    },
+    {
       "path": "skills/kumihan-measure-documents/inventory.json",
-      "sha256": "1f6ca22137e32b18df8f1e21f1e7a5df5adb881de6dbc50f2610de9b33e29742"
+      "sha256": "fe5c2b98a7e30e34332e6c8c8276b23a0c90a606f22dcf1ce6795a9900177651"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-AU.json",
+      "sha256": "ec041e91bab122eb015564a9981fb16c5c5cc93234753e18f178a1ec94c6677d"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-CA.json",
+      "sha256": "fe8d9cdf2b085da0f96d74cfe5decc3c59697b78e99388075cbbd6c5bb464310"
     },
     {
       "path": "skills/kumihan-measure-documents/locales/en-GB.json",
-      "sha256": "048e1ec0c9f17a027ef9dfbca41e9679b659862b76a80bcb7614f8323a53d0fd"
+      "sha256": "54fea07bdbb5fd15715ed37624bda4c5742a688a1c02c773c9165303fdbcb612"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-GH.json",
+      "sha256": "d542162c6a012c4120ace9ce82e2e502c833cd5a566607b20333cb2be4846190"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-HK.json",
+      "sha256": "c6bbe8d162272b65c5361880097b82c7dca57570efc3c694e69978eef82549db"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-IE.json",
+      "sha256": "b5368a33d321826229e75f3e46e4443159abc06aa6d1dfbd17d5d63757616d21"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-IN.json",
+      "sha256": "fc60aea6ccba781dccdec816ef0e5b66b6f7de4677d5dc6ed4f6f2ba329c2945"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-JM.json",
+      "sha256": "3932f7a8b0c9f1e603c4811d7926362408094eae4d0bdef4d766fbd41f99432c"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-KE.json",
+      "sha256": "72d13f14c084506a856c7c54f3bc3ec3a1131dad7d95e4ff6c41a940fac2358e"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-MY.json",
+      "sha256": "ed2ea645a0dccaef6ee6c8f09125d4af35304ad7eda8d4d4278fc41526d83c9a"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-NG.json",
+      "sha256": "b54284af8f33e503819b2493442038478b85b67d8a9b04e8c7fbaeda6d66184d"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-NZ.json",
+      "sha256": "9e0e3b9ad04fc79755a819e2e80d269050c415dd9b2b0ea03dc9fc8e105d6a93"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-PH.json",
+      "sha256": "823d62144879d8ff82381018aaf3221897df5923c3450d57c63d88de8bcc9c7f"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-SG.json",
+      "sha256": "5053cee6c6e49054ef87c72e5bc8c1f8d1ddea3497f18badc2f692afe2dd6e22"
     },
     {
       "path": "skills/kumihan-measure-documents/locales/en-US.json",
-      "sha256": "5b9acfead9edcec0b16bd6dca6fd6df0df4413c498c7264a31a57db626ce354f"
+      "sha256": "121be09bb850b3036d136b25b6502373d41024f6b548c9b6caff82904ad24967"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/locales/en-ZA.json",
+      "sha256": "45025719289213f1a7b13db21c832445084c7cea7328762978566facec993c38"
     },
     {
       "path": "skills/kumihan-measure-documents/locales/en.json",
-      "sha256": "23c21d2865cc361110985e24489ffc0e4478fe8be18a991cc6d4d2a30173922c"
+      "sha256": "244fc55292f69b4512146a21b8165a9f3f126738847ed81cf3d36712b887803c"
     },
     {
       "path": "skills/kumihan-measure-documents/locales/supported.json",
-      "sha256": "e9367e16bb0e8eeca3495f9deb74c49fe969ee19ebbee9acc0b13fb6918d7b46"
+      "sha256": "ccc41aca083298345d9a4d9a40fcb2862547214e8c4577e9bd7794cf23dd8976"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/profiles/house-styles.json",
+      "sha256": "6689d96fa6ee635261e58a8875968cb1e4aee583c8ea426f732135c89f5f7f11"
     },
     {
       "path": "skills/kumihan-measure-documents/profiles/mediums.json",
       "sha256": "9973a74aa15df8c5db37fc83bc5512520e74e76e8a1457728e77ea777a42e30b"
+    },
+    {
+      "path": "skills/kumihan-measure-documents/references/regional-typography.md",
+      "sha256": "3627832443c819c1cd54703fbfdab70fd61cf272de8df25ac6dca324315afda0"
     },
     {
       "path": "skills/kumihan-measure-documents/references/research-trace.json",
@@ -208,15 +412,15 @@
     },
     {
       "path": "skills/kumihan-measure-documents/references/workflow.md",
-      "sha256": "68f2487101c8d82bdba82c3da4709568e4991d8ab93cfdfd10ab4011c4d2ab93"
+      "sha256": "d1ee7d91d83840a27aa6e4720cd7902b644b33013f9bda64d01a1508ebef3967"
     },
     {
       "path": "skills/kumihan-measure-documents/rules/catalog.json",
-      "sha256": "b1fd6412d38aed6d1553e643990b6eff4ee7e47fc9ba70cb7ee22dfaebfe3831"
+      "sha256": "f39c41d218269d7e3d65ff5a4b39e437970e1249ab001f0f0d131dbecb785aa4"
     },
     {
       "path": "skills/kumihan-measure-documents/runtime/check_source.py",
-      "sha256": "eda15bac58bb0251756edcc5d96247d99bcddce1e7b6c97c2b8ba60c4949de58"
+      "sha256": "b7851ffaf79e2e9e3ad54a39d7580ef335f5db5d81e1d1ef962377de924f5e53"
     },
     {
       "path": "skills/kumihan-measure-documents/schemas/report.schema.json",
@@ -224,7 +428,7 @@
     },
     {
       "path": "skills/kumihan-measure-documents/sources.json",
-      "sha256": "ebd636de795dfd2d9b792babb51f64f46bc27d8c688bb5aa340ac9b176660242"
+      "sha256": "735d817523f1e5767d83a604563cc5d0fd47bb84ab58107b32116c03fee66493"
     },
     {
       "path": "skills/kumihan-measure-review/LICENSE",
@@ -232,7 +436,7 @@
     },
     {
       "path": "skills/kumihan-measure-review/SKILL.md",
-      "sha256": "df8ae96339320e9a16b8a3284707581d59257232b94280ddcfac7c7141778e07"
+      "sha256": "1525c9fbb0497862579f8505e63a7ad8351f0d9579f3e3da6d416a8f919e30d5"
     },
     {
       "path": "skills/kumihan-measure-review/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -243,28 +447,96 @@
       "sha256": "bcc35ec91553ed55b511e60d36ed2281a8d626bd3b541c59c02a7f6db17ed2da"
     },
     {
+      "path": "skills/kumihan-measure-review/fixtures/regional-acceptance.json",
+      "sha256": "38eb94fd9637c891d491c7321df19fd3f5b63f357744f4fc5034f00c18a7a2dc"
+    },
+    {
       "path": "skills/kumihan-measure-review/inventory.json",
-      "sha256": "1f6ca22137e32b18df8f1e21f1e7a5df5adb881de6dbc50f2610de9b33e29742"
+      "sha256": "fe5c2b98a7e30e34332e6c8c8276b23a0c90a606f22dcf1ce6795a9900177651"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-AU.json",
+      "sha256": "ec041e91bab122eb015564a9981fb16c5c5cc93234753e18f178a1ec94c6677d"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-CA.json",
+      "sha256": "fe8d9cdf2b085da0f96d74cfe5decc3c59697b78e99388075cbbd6c5bb464310"
     },
     {
       "path": "skills/kumihan-measure-review/locales/en-GB.json",
-      "sha256": "048e1ec0c9f17a027ef9dfbca41e9679b659862b76a80bcb7614f8323a53d0fd"
+      "sha256": "54fea07bdbb5fd15715ed37624bda4c5742a688a1c02c773c9165303fdbcb612"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-GH.json",
+      "sha256": "d542162c6a012c4120ace9ce82e2e502c833cd5a566607b20333cb2be4846190"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-HK.json",
+      "sha256": "c6bbe8d162272b65c5361880097b82c7dca57570efc3c694e69978eef82549db"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-IE.json",
+      "sha256": "b5368a33d321826229e75f3e46e4443159abc06aa6d1dfbd17d5d63757616d21"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-IN.json",
+      "sha256": "fc60aea6ccba781dccdec816ef0e5b66b6f7de4677d5dc6ed4f6f2ba329c2945"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-JM.json",
+      "sha256": "3932f7a8b0c9f1e603c4811d7926362408094eae4d0bdef4d766fbd41f99432c"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-KE.json",
+      "sha256": "72d13f14c084506a856c7c54f3bc3ec3a1131dad7d95e4ff6c41a940fac2358e"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-MY.json",
+      "sha256": "ed2ea645a0dccaef6ee6c8f09125d4af35304ad7eda8d4d4278fc41526d83c9a"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-NG.json",
+      "sha256": "b54284af8f33e503819b2493442038478b85b67d8a9b04e8c7fbaeda6d66184d"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-NZ.json",
+      "sha256": "9e0e3b9ad04fc79755a819e2e80d269050c415dd9b2b0ea03dc9fc8e105d6a93"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-PH.json",
+      "sha256": "823d62144879d8ff82381018aaf3221897df5923c3450d57c63d88de8bcc9c7f"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-SG.json",
+      "sha256": "5053cee6c6e49054ef87c72e5bc8c1f8d1ddea3497f18badc2f692afe2dd6e22"
     },
     {
       "path": "skills/kumihan-measure-review/locales/en-US.json",
-      "sha256": "5b9acfead9edcec0b16bd6dca6fd6df0df4413c498c7264a31a57db626ce354f"
+      "sha256": "121be09bb850b3036d136b25b6502373d41024f6b548c9b6caff82904ad24967"
+    },
+    {
+      "path": "skills/kumihan-measure-review/locales/en-ZA.json",
+      "sha256": "45025719289213f1a7b13db21c832445084c7cea7328762978566facec993c38"
     },
     {
       "path": "skills/kumihan-measure-review/locales/en.json",
-      "sha256": "23c21d2865cc361110985e24489ffc0e4478fe8be18a991cc6d4d2a30173922c"
+      "sha256": "244fc55292f69b4512146a21b8165a9f3f126738847ed81cf3d36712b887803c"
     },
     {
       "path": "skills/kumihan-measure-review/locales/supported.json",
-      "sha256": "e9367e16bb0e8eeca3495f9deb74c49fe969ee19ebbee9acc0b13fb6918d7b46"
+      "sha256": "ccc41aca083298345d9a4d9a40fcb2862547214e8c4577e9bd7794cf23dd8976"
+    },
+    {
+      "path": "skills/kumihan-measure-review/profiles/house-styles.json",
+      "sha256": "6689d96fa6ee635261e58a8875968cb1e4aee583c8ea426f732135c89f5f7f11"
     },
     {
       "path": "skills/kumihan-measure-review/profiles/mediums.json",
       "sha256": "9973a74aa15df8c5db37fc83bc5512520e74e76e8a1457728e77ea777a42e30b"
+    },
+    {
+      "path": "skills/kumihan-measure-review/references/regional-typography.md",
+      "sha256": "3627832443c819c1cd54703fbfdab70fd61cf272de8df25ac6dca324315afda0"
     },
     {
       "path": "skills/kumihan-measure-review/references/research-trace.json",
@@ -272,15 +544,15 @@
     },
     {
       "path": "skills/kumihan-measure-review/references/workflow.md",
-      "sha256": "68f2487101c8d82bdba82c3da4709568e4991d8ab93cfdfd10ab4011c4d2ab93"
+      "sha256": "d1ee7d91d83840a27aa6e4720cd7902b644b33013f9bda64d01a1508ebef3967"
     },
     {
       "path": "skills/kumihan-measure-review/rules/catalog.json",
-      "sha256": "b1fd6412d38aed6d1553e643990b6eff4ee7e47fc9ba70cb7ee22dfaebfe3831"
+      "sha256": "f39c41d218269d7e3d65ff5a4b39e437970e1249ab001f0f0d131dbecb785aa4"
     },
     {
       "path": "skills/kumihan-measure-review/runtime/check_source.py",
-      "sha256": "eda15bac58bb0251756edcc5d96247d99bcddce1e7b6c97c2b8ba60c4949de58"
+      "sha256": "b7851ffaf79e2e9e3ad54a39d7580ef335f5db5d81e1d1ef962377de924f5e53"
     },
     {
       "path": "skills/kumihan-measure-review/schemas/report.schema.json",
@@ -288,7 +560,7 @@
     },
     {
       "path": "skills/kumihan-measure-review/sources.json",
-      "sha256": "ebd636de795dfd2d9b792babb51f64f46bc27d8c688bb5aa340ac9b176660242"
+      "sha256": "735d817523f1e5767d83a604563cc5d0fd47bb84ab58107b32116c03fee66493"
     },
     {
       "path": "skills/kumihan-measure-web/LICENSE",
@@ -296,7 +568,7 @@
     },
     {
       "path": "skills/kumihan-measure-web/SKILL.md",
-      "sha256": "bf0be94dff9cd3f4fec83781af0a5be52b5e2b20c9355866240ab9ec8b6abfaf"
+      "sha256": "6c54da04b032d97eea693388d9053d63400b257625a506dab7501d1bbb6f52cc"
     },
     {
       "path": "skills/kumihan-measure-web/assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png",
@@ -307,28 +579,96 @@
       "sha256": "bcc35ec91553ed55b511e60d36ed2281a8d626bd3b541c59c02a7f6db17ed2da"
     },
     {
+      "path": "skills/kumihan-measure-web/fixtures/regional-acceptance.json",
+      "sha256": "38eb94fd9637c891d491c7321df19fd3f5b63f357744f4fc5034f00c18a7a2dc"
+    },
+    {
       "path": "skills/kumihan-measure-web/inventory.json",
-      "sha256": "1f6ca22137e32b18df8f1e21f1e7a5df5adb881de6dbc50f2610de9b33e29742"
+      "sha256": "fe5c2b98a7e30e34332e6c8c8276b23a0c90a606f22dcf1ce6795a9900177651"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-AU.json",
+      "sha256": "ec041e91bab122eb015564a9981fb16c5c5cc93234753e18f178a1ec94c6677d"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-CA.json",
+      "sha256": "fe8d9cdf2b085da0f96d74cfe5decc3c59697b78e99388075cbbd6c5bb464310"
     },
     {
       "path": "skills/kumihan-measure-web/locales/en-GB.json",
-      "sha256": "048e1ec0c9f17a027ef9dfbca41e9679b659862b76a80bcb7614f8323a53d0fd"
+      "sha256": "54fea07bdbb5fd15715ed37624bda4c5742a688a1c02c773c9165303fdbcb612"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-GH.json",
+      "sha256": "d542162c6a012c4120ace9ce82e2e502c833cd5a566607b20333cb2be4846190"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-HK.json",
+      "sha256": "c6bbe8d162272b65c5361880097b82c7dca57570efc3c694e69978eef82549db"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-IE.json",
+      "sha256": "b5368a33d321826229e75f3e46e4443159abc06aa6d1dfbd17d5d63757616d21"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-IN.json",
+      "sha256": "fc60aea6ccba781dccdec816ef0e5b66b6f7de4677d5dc6ed4f6f2ba329c2945"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-JM.json",
+      "sha256": "3932f7a8b0c9f1e603c4811d7926362408094eae4d0bdef4d766fbd41f99432c"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-KE.json",
+      "sha256": "72d13f14c084506a856c7c54f3bc3ec3a1131dad7d95e4ff6c41a940fac2358e"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-MY.json",
+      "sha256": "ed2ea645a0dccaef6ee6c8f09125d4af35304ad7eda8d4d4278fc41526d83c9a"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-NG.json",
+      "sha256": "b54284af8f33e503819b2493442038478b85b67d8a9b04e8c7fbaeda6d66184d"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-NZ.json",
+      "sha256": "9e0e3b9ad04fc79755a819e2e80d269050c415dd9b2b0ea03dc9fc8e105d6a93"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-PH.json",
+      "sha256": "823d62144879d8ff82381018aaf3221897df5923c3450d57c63d88de8bcc9c7f"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-SG.json",
+      "sha256": "5053cee6c6e49054ef87c72e5bc8c1f8d1ddea3497f18badc2f692afe2dd6e22"
     },
     {
       "path": "skills/kumihan-measure-web/locales/en-US.json",
-      "sha256": "5b9acfead9edcec0b16bd6dca6fd6df0df4413c498c7264a31a57db626ce354f"
+      "sha256": "121be09bb850b3036d136b25b6502373d41024f6b548c9b6caff82904ad24967"
+    },
+    {
+      "path": "skills/kumihan-measure-web/locales/en-ZA.json",
+      "sha256": "45025719289213f1a7b13db21c832445084c7cea7328762978566facec993c38"
     },
     {
       "path": "skills/kumihan-measure-web/locales/en.json",
-      "sha256": "23c21d2865cc361110985e24489ffc0e4478fe8be18a991cc6d4d2a30173922c"
+      "sha256": "244fc55292f69b4512146a21b8165a9f3f126738847ed81cf3d36712b887803c"
     },
     {
       "path": "skills/kumihan-measure-web/locales/supported.json",
-      "sha256": "e9367e16bb0e8eeca3495f9deb74c49fe969ee19ebbee9acc0b13fb6918d7b46"
+      "sha256": "ccc41aca083298345d9a4d9a40fcb2862547214e8c4577e9bd7794cf23dd8976"
+    },
+    {
+      "path": "skills/kumihan-measure-web/profiles/house-styles.json",
+      "sha256": "6689d96fa6ee635261e58a8875968cb1e4aee583c8ea426f732135c89f5f7f11"
     },
     {
       "path": "skills/kumihan-measure-web/profiles/mediums.json",
       "sha256": "9973a74aa15df8c5db37fc83bc5512520e74e76e8a1457728e77ea777a42e30b"
+    },
+    {
+      "path": "skills/kumihan-measure-web/references/regional-typography.md",
+      "sha256": "3627832443c819c1cd54703fbfdab70fd61cf272de8df25ac6dca324315afda0"
     },
     {
       "path": "skills/kumihan-measure-web/references/research-trace.json",
@@ -336,15 +676,15 @@
     },
     {
       "path": "skills/kumihan-measure-web/references/workflow.md",
-      "sha256": "68f2487101c8d82bdba82c3da4709568e4991d8ab93cfdfd10ab4011c4d2ab93"
+      "sha256": "d1ee7d91d83840a27aa6e4720cd7902b644b33013f9bda64d01a1508ebef3967"
     },
     {
       "path": "skills/kumihan-measure-web/rules/catalog.json",
-      "sha256": "b1fd6412d38aed6d1553e643990b6eff4ee7e47fc9ba70cb7ee22dfaebfe3831"
+      "sha256": "f39c41d218269d7e3d65ff5a4b39e437970e1249ab001f0f0d131dbecb785aa4"
     },
     {
       "path": "skills/kumihan-measure-web/runtime/check_source.py",
-      "sha256": "eda15bac58bb0251756edcc5d96247d99bcddce1e7b6c97c2b8ba60c4949de58"
+      "sha256": "b7851ffaf79e2e9e3ad54a39d7580ef335f5db5d81e1d1ef962377de924f5e53"
     },
     {
       "path": "skills/kumihan-measure-web/schemas/report.schema.json",
@@ -352,240 +692,240 @@
     },
     {
       "path": "skills/kumihan-measure-web/sources.json",
-      "sha256": "ebd636de795dfd2d9b792babb51f64f46bc27d8c688bb5aa340ac9b176660242"
+      "sha256": "735d817523f1e5767d83a604563cc5d0fd47bb84ab58107b32116c03fee66493"
     },
     {
       "path": "sources.json",
-      "sha256": "ebd636de795dfd2d9b792babb51f64f46bc27d8c688bb5aa340ac9b176660242"
+      "sha256": "735d817523f1e5767d83a604563cc5d0fd47bb84ab58107b32116c03fee66493"
     }
   ],
   "package_count": 15,
-  "rule_count": 45,
+  "rule_count": 51,
   "scope": "Consumer offline packages; native-host invocation and rendering not verified",
   "native_host_invocation": "not-checked",
   "native_rendering": "not-checked",
   "packages": [
     {
-      "file": "kumihan-measure-Claude-Code-plugin-v0.1.0.zip",
-      "bytes": 4222762,
-      "sha256": "81700ef4bfbfa755f8cdc68ce0e0726605e703f1ce3ae4fe71b09a611e8b593e",
-      "members": 84,
+      "file": "kumihan-measure-Claude-Code-plugin-v0.1.1.zip",
+      "bytes": 4343663,
+      "sha256": "bfaa7d603311672c2cf527697b7462316b6732ff83bbeebaf36e24d385dffc2a",
+      "members": 169,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "claude",
       "kind": "plugin",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-Claude-Code-plugin-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-Claude-Code-plugin-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-GPT-Codex-plugin-v0.1.0.zip",
-      "bytes": 4223627,
-      "sha256": "84d75364d5e9dc9a5133f0c3f594395f1adf3df0447dfb201016a21becfeb7f4",
-      "members": 85,
+      "file": "kumihan-measure-GPT-Codex-plugin-v0.1.1.zip",
+      "bytes": 4344529,
+      "sha256": "8e5aa42a66c55e20a0c4a70e9619675e02fbd5fb19c01a3cc5f894fa6876e907",
+      "members": 170,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gpt-codex",
       "kind": "plugin",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-GPT-Codex-plugin-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-GPT-Codex-plugin-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-Gemini-CLI-extension-v0.1.0.zip",
-      "bytes": 4223252,
-      "sha256": "c8b30b6b7b02f812d4f8909ca9f3d51ff4e25eeaad3a58c6d6ccd76428d481d3",
-      "members": 85,
+      "file": "kumihan-measure-Gemini-CLI-extension-v0.1.1.zip",
+      "bytes": 4344152,
+      "sha256": "4725d0a3898879cb9433bb242d5cdbc9d32d630e758b55f488bffdb1625bfd91",
+      "members": 170,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gemini",
       "kind": "extension",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-Gemini-CLI-extension-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-Gemini-CLI-extension-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-claude-skill-v0.1.0.zip",
-      "bytes": 843387,
-      "sha256": "423893cb5b41adcb55cb4f9e35c4ba956455b60a00e8f461e1a12d364ae21304",
-      "members": 16,
+      "file": "kumihan-measure-claude-skill-v0.1.1.zip",
+      "bytes": 866834,
+      "sha256": "ceb1b1c43968a649c731944b376420016b9445735eb803a15b22f38bcd39de8b",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "claude",
       "kind": "skill",
       "skill": "kumihan-measure",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-claude-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-claude-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-documents-claude-skill-v0.1.0.zip",
-      "bytes": 843756,
-      "sha256": "5c0fbf9297a0f6854c008e43d40e6418fbfc1bfe294ea5e07cc26a996560ff84",
-      "members": 16,
+      "file": "kumihan-measure-documents-claude-skill-v0.1.1.zip",
+      "bytes": 867544,
+      "sha256": "432235ac9e3467388804bcc31f5a447239811e81941d25980dda289901632b5f",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "claude",
       "kind": "skill",
       "skill": "kumihan-measure-documents",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-claude-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-claude-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-documents-gemini-skill-v0.1.0.zip",
-      "bytes": 843756,
-      "sha256": "5c0fbf9297a0f6854c008e43d40e6418fbfc1bfe294ea5e07cc26a996560ff84",
-      "members": 16,
+      "file": "kumihan-measure-documents-gemini-skill-v0.1.1.zip",
+      "bytes": 867544,
+      "sha256": "432235ac9e3467388804bcc31f5a447239811e81941d25980dda289901632b5f",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gemini",
       "kind": "skill",
       "skill": "kumihan-measure-documents",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-gemini-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-gemini-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-documents-gpt-codex-skill-v0.1.0.zip",
-      "bytes": 843756,
-      "sha256": "5c0fbf9297a0f6854c008e43d40e6418fbfc1bfe294ea5e07cc26a996560ff84",
-      "members": 16,
+      "file": "kumihan-measure-documents-gpt-codex-skill-v0.1.1.zip",
+      "bytes": 867544,
+      "sha256": "432235ac9e3467388804bcc31f5a447239811e81941d25980dda289901632b5f",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gpt-codex",
       "kind": "skill",
       "skill": "kumihan-measure-documents",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-gpt-codex-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-documents-gpt-codex-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-gemini-skill-v0.1.0.zip",
-      "bytes": 843387,
-      "sha256": "423893cb5b41adcb55cb4f9e35c4ba956455b60a00e8f461e1a12d364ae21304",
-      "members": 16,
+      "file": "kumihan-measure-gemini-skill-v0.1.1.zip",
+      "bytes": 866834,
+      "sha256": "ceb1b1c43968a649c731944b376420016b9445735eb803a15b22f38bcd39de8b",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gemini",
       "kind": "skill",
       "skill": "kumihan-measure",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-gemini-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-gemini-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-gpt-codex-skill-v0.1.0.zip",
-      "bytes": 843387,
-      "sha256": "423893cb5b41adcb55cb4f9e35c4ba956455b60a00e8f461e1a12d364ae21304",
-      "members": 16,
+      "file": "kumihan-measure-gpt-codex-skill-v0.1.1.zip",
+      "bytes": 866834,
+      "sha256": "ceb1b1c43968a649c731944b376420016b9445735eb803a15b22f38bcd39de8b",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gpt-codex",
       "kind": "skill",
       "skill": "kumihan-measure",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-gpt-codex-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-gpt-codex-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-review-claude-skill-v0.1.0.zip",
-      "bytes": 843628,
-      "sha256": "8ba277773ccdf207f35bffda612d40252d3e46132809143b6ede94f22894cd7c",
-      "members": 16,
+      "file": "kumihan-measure-review-claude-skill-v0.1.1.zip",
+      "bytes": 867311,
+      "sha256": "e6968759200f981fdd345343c9927cbfe6a7a7a5f5aff208ed58807f03bdc8c0",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "claude",
       "kind": "skill",
       "skill": "kumihan-measure-review",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-claude-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-claude-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-review-gemini-skill-v0.1.0.zip",
-      "bytes": 843628,
-      "sha256": "8ba277773ccdf207f35bffda612d40252d3e46132809143b6ede94f22894cd7c",
-      "members": 16,
+      "file": "kumihan-measure-review-gemini-skill-v0.1.1.zip",
+      "bytes": 867311,
+      "sha256": "e6968759200f981fdd345343c9927cbfe6a7a7a5f5aff208ed58807f03bdc8c0",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gemini",
       "kind": "skill",
       "skill": "kumihan-measure-review",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-gemini-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-gemini-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-review-gpt-codex-skill-v0.1.0.zip",
-      "bytes": 843628,
-      "sha256": "8ba277773ccdf207f35bffda612d40252d3e46132809143b6ede94f22894cd7c",
-      "members": 16,
+      "file": "kumihan-measure-review-gpt-codex-skill-v0.1.1.zip",
+      "bytes": 867311,
+      "sha256": "e6968759200f981fdd345343c9927cbfe6a7a7a5f5aff208ed58807f03bdc8c0",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gpt-codex",
       "kind": "skill",
       "skill": "kumihan-measure-review",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-gpt-codex-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-review-gpt-codex-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-web-claude-skill-v0.1.0.zip",
-      "bytes": 843548,
-      "sha256": "b433a98a0b5f30b7ae062824aff4a7320c7febae939f9c5018bdb51d5e554922",
-      "members": 16,
+      "file": "kumihan-measure-web-claude-skill-v0.1.1.zip",
+      "bytes": 867133,
+      "sha256": "9477bae2cce779869242bbff2e1c96e96c187a4edc1aa2dd513fb4d4f671edfa",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "claude",
       "kind": "skill",
       "skill": "kumihan-measure-web",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-claude-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-claude-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-web-gemini-skill-v0.1.0.zip",
-      "bytes": 843548,
-      "sha256": "b433a98a0b5f30b7ae062824aff4a7320c7febae939f9c5018bdb51d5e554922",
-      "members": 16,
+      "file": "kumihan-measure-web-gemini-skill-v0.1.1.zip",
+      "bytes": 867133,
+      "sha256": "9477bae2cce779869242bbff2e1c96e96c187a4edc1aa2dd513fb4d4f671edfa",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gemini",
       "kind": "skill",
       "skill": "kumihan-measure-web",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-gemini-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-gemini-skill-v0.1.1.zip"
     },
     {
-      "file": "kumihan-measure-web-gpt-codex-skill-v0.1.0.zip",
-      "bytes": 843548,
-      "sha256": "b433a98a0b5f30b7ae062824aff4a7320c7febae939f9c5018bdb51d5e554922",
-      "members": 16,
+      "file": "kumihan-measure-web-gpt-codex-skill-v0.1.1.zip",
+      "bytes": 867133,
+      "sha256": "9477bae2cce779869242bbff2e1c96e96c187a4edc1aa2dd513fb4d4f671edfa",
+      "members": 33,
       "crc": "passed",
       "icon_sha256": "1d1ae2cb4f7f69f7b5f54b050ff8c6fb2c315b75ded8003f8b605855d633f96e",
       "host": "gpt-codex",
       "kind": "skill",
       "skill": "kumihan-measure-web",
       "slug": "kumihan-measure",
-      "version": "0.1.0",
-      "source_sha256": "a9afdbf7b09f677d889cb28753019f7d6cf06c29fc952cb1ed004b8d2bcb44c8",
-      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-gpt-codex-skill-v0.1.0.zip"
+      "version": "0.1.1",
+      "source_sha256": "39c2e670ea8d8bfab9f83323caf2737004a079e7bb3c481939701b1b2097d059",
+      "path": "plugins/kumihan-measure/downloads/kumihan-measure-web-gpt-codex-skill-v0.1.1.zip"
     }
   ]
 }

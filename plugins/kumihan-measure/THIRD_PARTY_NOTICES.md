@@ -1,4 +1,4 @@
-# KUMIHAN｜Measure 0.1.0
+# KUMIHAN｜Measure 0.1.1
 
 English typography guidance for readable text, expressive copy, interface content and multilingual layouts, with source-preserving review. | 英文の読みやすさ、表現的なコピー、UI、混植に合わせた文字組を支援し、原文を保護しながら改善を提案します。
 

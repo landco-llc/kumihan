@@ -1,0 +1,605 @@
+{
+  "notice": "Product acceptance mapping of 32 regional candidates. Static preservation checks do not execute the proposed editorial, visual, runtime or release acceptance. Cases are summarized for product use; no external artwork or fonts are reproduced.",
+  "cases": [
+    {
+      "case_id": "EN-REG-001",
+      "text": "World Health Organization",
+      "context": {
+        "locale": "en-GB",
+        "protected": true
+      },
+      "source_ids": [],
+      "expected": "Keep World Health Organization exactly; regional spelling advice cannot change an official name.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Confirm protected-name context and authorized editorial scope."
+    },
+    {
+      "case_id": "EN-REG-002",
+      "text": "AirAsia",
+      "context": {
+        "locale": "en-GB",
+        "protected": true
+      },
+      "source_ids": [
+        "REG-S33"
+      ],
+      "expected": "Keep brand spelling and capitalization exactly, including AirAsia.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Confirm brand ownership and protected scope."
+    },
+    {
+      "case_id": "EN-REG-003",
+      "text": "\"color\"; const color = \"blue\";",
+      "context": {
+        "locale": "en-GB",
+        "protected_spans": [
+          "quote",
+          "code"
+        ]
+      },
+      "source_ids": [],
+      "expected": "Preserve quoted strings and code; spelling suggestions do not authorize changing protected spans.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Confirm exact quoted/code spans."
+    },
+    {
+      "case_id": "EN-REG-004",
+      "text": "organize",
+      "context": {
+        "locale": "en-GB",
+        "house_style": "Oxford University",
+        "role": "editable-body",
+        "copyedit_permission": true
+      },
+      "source_ids": [
+        "REG-S02"
+      ],
+      "expected": "Offer organise only within the explicitly selected University of Oxford editable scope and permission; record an authorized proposal separately.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Human approval of the scoped spelling proposal."
+    },
+    {
+      "case_id": "EN-REG-005",
+      "text": "organise",
+      "context": {
+        "locale": "en-GB",
+        "house_style": "OUP Music & Letters",
+        "role": "editable-body",
+        "copyedit_permission": true
+      },
+      "source_ids": [
+        "REG-S04"
+      ],
+      "expected": "Offer organize only for the selected OUP Music & Letters house style; never infer a UK-wide rule.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Human approval of the journal-specific proposal."
+    },
+    {
+      "case_id": "EN-REG-006",
+      "text": "organize",
+      "context": {
+        "locale": "en-GB",
+        "house_style": null,
+        "copyedit_permission": false
+      },
+      "source_ids": [
+        "REG-S02",
+        "REG-S04"
+      ],
+      "expected": "Keep organize when no editing permission or scoped house style is supplied.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Human editorial judgment if a style is subsequently selected."
+    },
+    {
+      "case_id": "EN-REG-007",
+      "text": "Manage Your Account",
+      "context": {
+        "locale": "en-US",
+        "house_style": "Microsoft",
+        "role": "UI-heading",
+        "copyedit_permission": true
+      },
+      "source_ids": [
+        "REG-S05"
+      ],
+      "expected": "For explicit Microsoft UI context, offer sentence case after checking proper names and editing permission.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Proper-name and UI meaning review."
+    },
+    {
+      "case_id": "EN-REG-008",
+      "text": "You can't continue.",
+      "context": {
+        "locale": "en-SG",
+        "house_style": "SGDS current",
+        "role": "UI",
+        "copyedit_permission": true
+      },
+      "source_ids": [
+        "REG-S24"
+      ],
+      "expected": "For explicit current SGDS UI context, offer cannot with scope and meaning retained.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Current SGDS UI applicability and semantic review."
+    },
+    {
+      "case_id": "EN-REG-009",
+      "text": "Let's explore.",
+      "context": {
+        "locale": "en-SG",
+        "house_style": null,
+        "role": "brand-copy",
+        "copyedit_permission": false
+      },
+      "source_ids": [
+        "REG-S24"
+      ],
+      "expected": "Keep brand contractions; Singapore locale alone does not select SGDS UI rules.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Brand voice review if requested."
+    },
+    {
+      "case_id": "EN-REG-010",
+      "text": "A—B",
+      "context": {
+        "locale": "en-GB",
+        "house_style": "OUP Music & Letters"
+      },
+      "source_ids": [
+        "REG-S04",
+        "REG-S24"
+      ],
+      "expected": "Keep the dash pending scoped review; never apply SGDS restrictions to an OUP journal automatically.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "House-style and quotation review."
+    },
+    {
+      "case_id": "EN-REG-011",
+      "text": "Let us table the proposal.",
+      "context": {
+        "audience": "US and UK"
+      },
+      "source_ids": [
+        "REG-S42"
+      ],
+      "expected": "Request meaning of table in this meeting context; do not choose postponement or introduction.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Author confirmation of intended meeting meaning."
+    },
+    {
+      "case_id": "EN-REG-012",
+      "text": "Please prepone the review.",
+      "context": {
+        "locale": "en-IN",
+        "audience": "local"
+      },
+      "source_ids": [
+        "REG-S28"
+      ],
+      "expected": "Treat prepone as regional usage; preserve text rather than labeling it a typo.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Local-audience usage review."
+    },
+    {
+      "case_id": "EN-REG-013",
+      "text": "Please prepone the review.",
+      "context": {
+        "locale": "en-IN",
+        "audience": "international",
+        "copyedit_permission": false
+      },
+      "source_ids": [
+        "REG-S28"
+      ],
+      "expected": "Offer an international-audience explanation of prepone separately; infer no actual date.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "International-audience meaning review."
+    },
+    {
+      "case_id": "EN-REG-014",
+      "text": "CR",
+      "context": {
+        "locale": "en-PH",
+        "context": null
+      },
+      "source_ids": [
+        "REG-S31"
+      ],
+      "expected": "Request context for CR; do not expand an ambiguous abbreviation automatically.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Author confirmation of abbreviation meaning."
+    },
+    {
+      "case_id": "EN-REG-015",
+      "text": "Turn left at the robot.",
+      "context": {
+        "locale": "en-ZA",
+        "audience": "international"
+      },
+      "source_ids": [
+        "REG-S37"
+      ],
+      "expected": "Confirm traffic context for robot before proposing traffic lights; preserve source.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Traffic-context and audience review."
+    },
+    {
+      "case_id": "EN-REG-016",
+      "text": "Takeaway",
+      "context": {
+        "locale": "en-GB",
+        "role": "menu-service"
+      },
+      "source_ids": [
+        "REG-S43",
+        "REG-S44"
+      ],
+      "expected": "Compare takeaway/takeout in the supplied service context without adding delivery claims.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Menu/service meaning review."
+    },
+    {
+      "case_id": "EN-REG-017",
+      "text": "04/05/2026",
+      "context": {
+        "locale": "en",
+        "date_text": "04/05/2026",
+        "input_schema": null
+      },
+      "source_ids": [],
+      "expected": "Keep the numeric date ambiguous until its input schema and intended date are known.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Input date schema and intended calendar value."
+    },
+    {
+      "case_id": "EN-REG-018",
+      "text": "1234567.89",
+      "context": {
+        "number": 1234567.89,
+        "locale": "en-IN",
+        "fraction_digits": 2,
+        "reference_environment": "Node 22.16.0 / ICU 77.1 / CLDR 47.0",
+        "reference_display": "12,34,567.89"
+      },
+      "source_ids": [
+        "REG-S59"
+      ],
+      "expected": "The reference number display belongs only to the recorded runtime; run the target runtime independently.",
+      "expected_status": "not-checked",
+      "classification": "runtime-reference",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Target Intl runtime, ICU/CLDR versions and resolved options."
+    },
+    {
+      "case_id": "EN-REG-019",
+      "text": "1234567.89",
+      "context": {
+        "number": 1234567.89,
+        "locale": "en-ZA",
+        "fraction_digits": 2,
+        "reference_environment": "Node 22.16.0 / ICU 77.1 / CLDR 47.0",
+        "reference_display": "1 234 567,89"
+      },
+      "source_ids": [
+        "REG-S58"
+      ],
+      "expected": "Distinguish NBSP and decimal comma in the reference display; do not parse formatted display as a value.",
+      "expected_status": "not-checked",
+      "classification": "runtime-reference",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Target Intl runtime and code-point inspection of grouping/decimal marks."
+    },
+    {
+      "case_id": "EN-REG-020",
+      "text": "USD 1234.50",
+      "context": {
+        "locale": "en-SG",
+        "amount": 1234.5,
+        "currency": "USD"
+      },
+      "source_ids": [],
+      "expected": "Keep the supplied amount and USD currency code; locale is not currency conversion.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Explicit currency/value review; no currency conversion."
+    },
+    {
+      "case_id": "EN-REG-021",
+      "text": "2026-04-05T13:05:00",
+      "context": {
+        "timestamp": "2026-04-05T13:05:00",
+        "timezone": null,
+        "audience": "international"
+      },
+      "source_ids": [],
+      "expected": "Keep timestamp and absent timezone; never infer a timezone from audience or locale.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Explicit timezone and timestamp schema."
+    },
+    {
+      "case_id": "EN-REG-022",
+      "text": "Māori",
+      "context": {
+        "locale": "en-NZ",
+        "protected": true
+      },
+      "source_ids": [
+        "REG-S18"
+      ],
+      "expected": "Keep Māori macrons; glyph availability still requires the actual font and renderer.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Actual font glyph coverage and renderer inspection."
+    },
+    {
+      "case_id": "EN-REG-023",
+      "text": "Gomoka",
+      "context": {
+        "locale": "en-KE",
+        "span_language": "sw",
+        "protected": true
+      },
+      "source_ids": [
+        "REG-S38"
+      ],
+      "expected": "Keep the Swahili span and its language metadata; an English locale is not an English-only dictionary mandate.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Span-language and actual glyph review."
+    },
+    {
+      "case_id": "EN-REG-024",
+      "text": "Rich text heading",
+      "context": {
+        "house_style": "MYDS",
+        "role": "rich-text-heading"
+      },
+      "source_ids": [
+        "REG-S27"
+      ],
+      "expected": "Check MYDS version and rich-text heading role before suggesting a font; general headings and rich-text headings differ.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "MYDS version, role, installed font and renderer."
+    },
+    {
+      "case_id": "EN-REG-025",
+      "text": "SGDS heading",
+      "context": {
+        "house_style": "SGDS",
+        "font_sources": [
+          "v1 Lato",
+          "current Inter"
+        ]
+      },
+      "source_ids": [
+        "REG-S25",
+        "REG-S26"
+      ],
+      "expected": "Resolve SGDS version before advising on Lato or Inter; do not combine historical and current tokens.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "SGDS version and actual font selection."
+    },
+    {
+      "case_id": "EN-REG-026",
+      "text": "GOV.UK body",
+      "context": {
+        "house_style": "GOV.UK",
+        "frontend_version": null,
+        "mobile_body_px": 16
+      },
+      "source_ids": [
+        "REG-S50",
+        "REG-S51"
+      ],
+      "expected": "Confirm GOV.UK Frontend version before comparing mobile body tokens; published tokens are scoped guidance.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Frontend version and actual computed style."
+    },
+    {
+      "case_id": "EN-REG-027",
+      "text": "Spacing override sample",
+      "context": {
+        "role": "web-body",
+        "test_spacing": {
+          "line_height": 1.5,
+          "paragraph_after_em": 2,
+          "letter_em": 0.12,
+          "word_em": 0.16
+        }
+      },
+      "source_ids": [
+        "REG-S61"
+      ],
+      "expected": "Use spacing values as user-override stress conditions, never compulsory design defaults.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Actual renderer with user spacing overrides and no loss of content."
+    },
+    {
+      "case_id": "EN-REG-028",
+      "text": "Missing font sample",
+      "context": {
+        "font_file_available": false,
+        "rendered": false
+      },
+      "source_ids": [],
+      "expected": "Without font files and actual rendering, glyph coverage, width, clipping and appearance are not checked.",
+      "expected_status": "not-checked",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Actual font files and target renderer."
+    },
+    {
+      "case_id": "EN-REG-029",
+      "text": "Unspecified English audience",
+      "context": {
+        "locale": "en",
+        "audience": null
+      },
+      "source_ids": [
+        "REG-S60"
+      ],
+      "expected": "Keep en unspecified; do not save en-US as an inferred explicit selection.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Explicit audience or editorial locale selection."
+    },
+    {
+      "case_id": "EN-REG-030",
+      "text": "A quieter moment.",
+      "context": {
+        "protected": true,
+        "overflow": true
+      },
+      "source_ids": [],
+      "expected": "Preserve fixed copy despite overflow; propose layout changes separately from copy edits.",
+      "expected_status": "needs-review",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Actual layout, narrow width and author permission for any copy edits."
+    },
+    {
+      "case_id": "EN-REG-031",
+      "text": "PowerPoint sample",
+      "context": {
+        "pdf_render_pass": true,
+        "native_powerpoint_test": false
+      },
+      "source_ids": [],
+      "expected": "Record PDF evidence only for PDF; native PowerPoint remains not checked without a native test.",
+      "expected_status": "not-checked",
+      "classification": "human-and-renderer-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Native PowerPoint opening, fonts, extraction and slide inspection."
+    },
+    {
+      "case_id": "EN-REG-032",
+      "text": "Public package boundary",
+      "context": {
+        "publish_target": "landco-llc/kumihan",
+        "files": [
+          "research.md",
+          "instruction.md",
+          "public-package.zip"
+        ]
+      },
+      "source_ids": [],
+      "expected": "Exclude internal research and development instructions from public packages; audit the actual allowlisted bytes.",
+      "expected_status": "needs-review",
+      "classification": "scoped-editorial-review",
+      "execution_status": "not-run",
+      "actual_result": null,
+      "product_static_test": "test_every_candidate_preserves_bytes_and_metadata",
+      "remaining_check": "Member-by-member package allowlist and confidential-byte audit."
+    }
+  ]
+}

@@ -31,7 +31,11 @@ class ConcurrentChineseSourceComposition(unittest.TestCase):
         self.assertIsNotNone(data)
         # The source-only admission stays frozen after the separately verified release.
         from zilu_v012_transition import allowed
-        self.assertTrue(allowed("README.md", "protected", ROOT))
+        from en_measure_v011_transition import predecessor
+        with tempfile.TemporaryDirectory() as temporary:
+            old_root=Path(temporary)
+            (old_root/'README.md').write_bytes(predecessor(ROOT)[1])
+            self.assertTrue(allowed("README.md", "protected", old_root))
         raw = readme_state(ROOT, "combined")
         self.assertTrue(admitted(ROOT, "README.md", data["readme"]["baseline_sha256"], raw, "protected"))
         for edition, parent in (("zh-hans", "ziheng"), ("zh-hant", "zilu")):
@@ -53,6 +57,8 @@ class ConcurrentChineseSourceComposition(unittest.TestCase):
         self.assertFalse(facts_match(ROOT, json_bytes(current)))
         current["editions"]["zh-hans"] = json.loads(
             (ROOT / "tests/contracts/zilu-v010-published-facts.json").read_text())
+        current['editions']['en'] = json.loads(
+            (ROOT / 'tests/contracts/en-measure-v010-published-facts.json').read_text())
         raw = json_bytes(current)
         self.assertTrue(facts_match(ROOT, raw))
         facts = json.loads(raw)

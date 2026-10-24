@@ -111,6 +111,15 @@ def review_bytes(raw, locale='und', medium='review', candidate=None, source_meta
         note('format-controls-preserved', controls)
     if language == 'en':
         note('english-context-review', {'locale': canonical, 'house_style': house_style or 'unspecified', 'message': 'Quotations, capitalization, abbreviations and numbers depend on publisher style; source retained.'})
+        note('regional-edit-permission', {
+            'text_permission': text_permission,
+            'message': 'Regional spelling and tone are proposals only; names, trademarks, quotes, code, IDs and values remain protected even when rewriting is authorized.'})
+        if re.search(r'\b(?:table|prepone|CR|robot|grand|takeaway|takeout)\b', text, re.I):
+            note('regional-meaning-review', 'Regional vocabulary can have different meanings. Confirm audience, intent and context; no substitution or error judgment is made.')
+        if house_style:
+            note('house-style-scope-review', {
+                'house_style': house_style, 'medium': medium,
+                'message': 'Confirm organization, publication, applicable role and version. Oxford University and OUP differ; Microsoft and SGDS UI guidance is not a country-wide default.'})
         if re.search(r'\b\d{1,2}/\d{1,2}/\d{2,4}\b', text):
             note('ambiguous-date', 'Confirm intended date and regional/house style before suggesting display changes.')
         if re.search(r'[\u0590-\u08ff]', text):

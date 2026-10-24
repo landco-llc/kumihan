@@ -1,4 +1,18 @@
 {
   "language": "en",
-  "locale": "en-US"
+  "locale": "en-US",
+  "coverage": "supported",
+  "fallback": "en",
+  "scope": "Scoped editorial suggestions; not a complete regional dictionary.",
+  "guidance": "Spelling candidates require the requested US house style; sentence case and contractions depend on the organisation and medium.",
+  "source_ids": [
+    "REG-S05",
+    "REG-S06",
+    "REG-S07",
+    "REG-S42",
+    "REG-S48"
+  ],
+  "review_status": "needs-review",
+  "native_rendering": "not-checked",
+  "automatic_rewrite": false
 }

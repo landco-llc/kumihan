@@ -1,6 +1,6 @@
 # Offline installation / オフライン導入
 
-Download the versioned v0.1.0 ZIP for your host from [downloads/](downloads/) in the [consumer repository](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-measure/downloads). These packages live at `plugins/kumihan-measure/downloads/`; use `SHA256SUMS-gpt-codex`, `SHA256SUMS-claude` or `SHA256SUMS-gemini` to verify your download. Each host offers a whole plugin/extension and four standalone Skills. Install either the whole package or the Skills you need.
+Download the versioned v0.1.1 ZIP for your host from [downloads/](downloads/) in the [consumer repository](https://github.com/landco-llc/kumihan/tree/main/plugins/kumihan-measure/downloads). These packages live at `plugins/kumihan-measure/downloads/`; use `SHA256SUMS-gpt-codex`, `SHA256SUMS-claude` or `SHA256SUMS-gemini` to verify your download. Each host offers a whole plugin/extension and four standalone Skills. Install either the whole package or the Skills you need.
 
 ホストに合った版数付きZIPを製品専用の `downloads/` から取得し、対応するホスト別SHA256SUMSで照合してください。
 

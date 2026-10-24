@@ -3,8 +3,47 @@
   "locales": [
     "en",
     "en-US",
-    "en-GB"
+    "en-GB",
+    "en-CA",
+    "en-AU",
+    "en-IN",
+    "en-SG",
+    "en-NZ",
+    "en-IE",
+    "en-MY",
+    "en-PH",
+    "en-HK",
+    "en-ZA",
+    "en-NG",
+    "en-KE",
+    "en-GH",
+    "en-JM"
   ],
   "direction": "ltr",
-  "resolution": "explicit-locale-only"
+  "resolution": "explicit-locale-only",
+  "coverage": {
+    "supported": [
+      "en-US",
+      "en-GB",
+      "en-CA",
+      "en-AU",
+      "en-IN",
+      "en-SG"
+    ],
+    "advisory": [
+      "en-NZ",
+      "en-IE",
+      "en-MY",
+      "en-PH",
+      "en-HK",
+      "en-ZA",
+      "en-NG",
+      "en-KE",
+      "en-GH",
+      "en-JM"
+    ]
+  },
+  "fallback": "en",
+  "fallback_scope": "General English preservation and guidance only; never infer region, culture, voice or organisation.",
+  "editing_policy": "Suggestions only within explicitly authorised scope; preserve names, quotations, code, values and source bytes."
 }
