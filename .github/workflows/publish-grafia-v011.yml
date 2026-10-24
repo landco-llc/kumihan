@@ -1,0 +1,58 @@
+name: Publish verified Grafía v0.1.1
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'releases/kumihan-grafia-v0.1.1/REQUEST.json'
+      - 'tools/release_grafia_v011.py'
+permissions:
+  contents: read
+concurrency:
+  group: publish-kumihan-grafia-v0.1.1
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.repository == 'landco-llc/kumihan' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python -m unittest discover -s tests/grafia -v
+      - run: python tools/public_boundary.py
+      - run: python tools/build_grafia.py --check
+      - run: python tools/build_seo.py --check
+      - run: python tools/release_grafia_v011.py --check
+      - run: git diff --exit-code
+  publish:
+    needs: verify
+    if: github.repository == 'landco-llc/kumihan' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.12'
+      - name: Finish only the exact Grafía draft
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/release_grafia_v011.py --publish
