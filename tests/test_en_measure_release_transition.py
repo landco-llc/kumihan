@@ -33,6 +33,8 @@ class EnglishReleaseTransition(unittest.TestCase):
                 content = predecessor(ROOT)[1]
             if row["family"] == "bodies":
                 content = re.search(rb"<body\b[\s\S]*", content, re.I)[0]
+                from grafia_v011_published_transition import predecessor_body as grafia_predecessor
+                content = grafia_predecessor(ROOT,name,content)
                 from en_measure_v011_published_transition import predecessor_body
                 content = predecessor_body(ROOT,name,content)
             current_hash=hashlib.sha256(content).hexdigest()
