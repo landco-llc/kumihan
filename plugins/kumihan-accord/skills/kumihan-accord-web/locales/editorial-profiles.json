@@ -1,0 +1,838 @@
+{
+  "schema_version": 1,
+  "namespace": "kumihan.accord.editorial",
+  "revision": "0.1.0",
+  "selection": "explicit-only",
+  "default_profile": null,
+  "capability": "reference-only",
+  "no_implicit_inheritance": true,
+  "profiles": [
+    {
+      "namespace": "kumihan.accord.editorial",
+      "id": "ulb-document-fr",
+      "revision": "0.1.0",
+      "kind": "editorial-reference",
+      "authority": {
+        "id": "ulb-la-boussole",
+        "name": "Université libre de Bruxelles — La Boussole / Annick Englebert"
+      },
+      "source_edition": "page updated 2020-04-08",
+      "accessed_on": "2026-10-25",
+      "application": {
+        "explicit_adoption_required": true,
+        "language": "fr",
+        "documents": [
+          "French university reports",
+          "documents explicitly adopting this guide"
+        ],
+        "media": [
+          "word-processor document"
+        ],
+        "exclusions": [
+          "source quotations",
+          "code",
+          "URLs",
+          "non-French or unknown-language spans",
+          "uneditable source",
+          "country-wide Belgian UI default"
+        ]
+      },
+      "coverage": {
+        "punctuation": "reference-only",
+        "guillemets": "reference-only",
+        "numbers": "not-covered",
+        "currency": "not-covered"
+      },
+      "rules": [
+        {
+          "id": "ULB-PUNCTUATION",
+          "topic": "space before : ; ! ?",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "preceding_body_text": true,
+            "medium": "word-processor document"
+          },
+          "accepted_forms": [
+            {
+              "kind": "nonbreaking-space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "source quotations",
+            "code",
+            "URLs",
+            "non-French or unknown-language spans",
+            "uneditable source"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU03",
+              "locator": "Espacements conventionnels en typographie"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "ULB-GUILLEMETS",
+          "topic": "space inside « »",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "quotation_marks_owned_by_text": true
+          },
+          "accepted_forms": [
+            {
+              "kind": "nonbreaking-space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "source quotations",
+            "code",
+            "URLs",
+            "non-French or unknown-language spans",
+            "uneditable source"
+          ],
+          "holds": [
+            "Professional fine spacing is a distinct medium; no Unicode value inferred."
+          ],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU03",
+              "locator": "Espacements conventionnels en typographie"
+            }
+          ],
+          "capability": "reference-only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU03",
+          "locator": "Espacements conventionnels en typographie"
+        }
+      ],
+      "limitations": [
+        "No national Belgian default. Source does not specify a Unicode code point. No numeric or currency inheritance."
+      ],
+      "status": "reference-only",
+      "runtime_selection": false
+    },
+    {
+      "namespace": "kumihan.accord.editorial",
+      "id": "ch-federal-official-fr",
+      "revision": "0.1.0",
+      "kind": "editorial-reference",
+      "authority": {
+        "id": "swiss-federal-chancellery-fr",
+        "name": "Chancellerie fédérale suisse — Section française"
+      },
+      "source_edition": null,
+      "accessed_on": "2026-10-25",
+      "application": {
+        "explicit_adoption_required": true,
+        "language": "fr",
+        "documents": [
+          "FF",
+          "RS",
+          "RO",
+          "related French legislative documents",
+          "documents explicitly adopting this guide"
+        ],
+        "media": [
+          "document",
+          "PDF",
+          "print"
+        ],
+        "exclusions": [
+          "source quotations",
+          "code",
+          "URLs",
+          "non-French or unknown-language spans",
+          "uneditable source",
+          "German-language federal guidance",
+          "general commercial Swiss default"
+        ]
+      },
+      "coverage": {
+        "general_quantity": "reference-only",
+        "decimal_separator": "reference-only",
+        "currency_examples": "reference-only",
+        "punctuation": "not-covered",
+        "guillemets": "not-covered"
+      },
+      "rules": [
+        {
+          "id": "CH-FED-GROUPS",
+          "topic": "general quantities with at least five integer digits",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity",
+            "minimum_integer_digits": 5
+          },
+          "accepted_forms": [
+            {
+              "kind": "three-digit-groups",
+              "separator": "nonbreaking-space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "year",
+            "legal number",
+            "address",
+            "identifier",
+            "unparsed money",
+            "source quotations",
+            "code",
+            "URLs",
+            "non-French or unknown-language spans",
+            "uneditable source"
+          ],
+          "holds": [
+            {
+              "condition": "four integer digits",
+              "action": "preserve",
+              "reason": "unresolved_source_inconsistency_p7_p9",
+              "examples": [
+                "5400",
+                "5 400",
+                "5'400"
+              ]
+            }
+          ],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU01",
+              "locator": "printed p.7 / PDF index 6"
+            },
+            {
+              "catalog": "KMHN_FR_20261025_09",
+              "id": "EUP2-06",
+              "locator": "p.7 versus p.9 threshold"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "CH-FED-DECIMAL",
+          "topic": "decimal separator",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity"
+          },
+          "accepted_forms": [
+            {
+              "literal": ","
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "identifier",
+            "year",
+            "unparsed money"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU01",
+              "locator": "printed p.7 / PDF index 6"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "CH-FED-NO-APOSTROPHE",
+          "topic": "quantity grouping excludes apostrophes",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity",
+            "minimum_integer_digits": 5
+          },
+          "accepted_forms": [
+            {
+              "kind": "nonbreaking-space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "word apostrophe",
+            "quotation"
+          ],
+          "holds": [
+            "Four-digit insertion and removal both held."
+          ],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU01",
+              "locator": "printed p.7 footnote"
+            }
+          ],
+          "capability": "reference-only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU01",
+          "locator": "official French instructions; public listing 2016-05-27"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-06",
+          "locator": "threshold inconsistency"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-07",
+          "locator": "official publication listing"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-08",
+          "locator": "bounded successor / errata search"
+        }
+      ],
+      "limitations": [
+        "2016-05-27 is the public listing date, not an inferred edition date.",
+        "p.7 and p.9 conflict for four digits; no official correction established.",
+        "No punctuation defaults; no France inheritance. Currency examples do not implement a money formatter."
+      ],
+      "status": "reference-only",
+      "runtime_selection": false
+    },
+    {
+      "namespace": "kumihan.accord.editorial",
+      "id": "ch-vd-editorial-fr",
+      "revision": "0.1.0",
+      "kind": "editorial-reference",
+      "authority": {
+        "id": "etat-de-vaud-bic",
+        "name": "État de Vaud — Bureau d’information et de communication"
+      },
+      "source_edition": null,
+      "accessed_on": "2026-10-25",
+      "application": {
+        "explicit_adoption_required": true,
+        "language": "fr",
+        "documents": [
+          "documents explicitly adopting Vaud editorial guidance"
+        ],
+        "media": [
+          "body text",
+          "table",
+          "print"
+        ],
+        "web_adoption": "requires separate item-specific decision",
+        "exclusions": [
+          "source quotations",
+          "code",
+          "URLs",
+          "non-French or unknown-language spans",
+          "uneditable source",
+          "simultaneous federal policy for the same quantity"
+        ]
+      },
+      "coverage": {
+        "general_quantity": "reference-only",
+        "decimal_separator": "reference-only",
+        "currency_labels": "reference-only",
+        "guillemets": "reference-only",
+        "complete_punctuation_table": "not-covered"
+      },
+      "rules": [
+        {
+          "id": "CH-VD-GROUPS",
+          "topic": "general quantities with at least five integer digits",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity",
+            "minimum_integer_digits": 5
+          },
+          "accepted_forms": [
+            {
+              "kind": "three-digit-groups",
+              "separator": "'",
+              "unicode": "U+0027"
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "year",
+            "identifier",
+            "unparsed money",
+            "word apostrophe"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU02",
+              "locator": "Nombres"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "CH-VD-DECIMAL",
+          "topic": "decimal separator",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity"
+          },
+          "accepted_forms": [
+            {
+              "literal": ","
+            }
+          ],
+          "normalization": null,
+          "exceptions": [],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU02",
+              "locator": "Nombres"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "CH-VD-CURRENCY",
+          "topic": "currency labels by document role",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "currency": "CHF",
+            "typed_kind": "money"
+          },
+          "accepted_forms": [
+            {
+              "literal": "fr.",
+              "role": "body text"
+            },
+            {
+              "literal": "CHF",
+              "role": "international table"
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "currency inferred from locale"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU02",
+              "locator": "Monnaie"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "CH-VD-GUILLEMETS",
+          "topic": "normal guillemets interior spacing",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "quotation_marks_owned_by_text": true,
+            "medium": "print"
+          },
+          "accepted_forms": [
+            {
+              "kind": "fine-space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "source quotations",
+            "code",
+            "URLs",
+            "non-French or unknown-language spans",
+            "uneditable source"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU02",
+              "locator": "Guillemets"
+            }
+          ],
+          "capability": "reference-only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU02",
+          "locator": "Usages typographiques"
+        }
+      ],
+      "limitations": [
+        "Source edition unknown.",
+        "Excluded from automatic adoption: electronic straight quotes, omitted high-punctuation spacing, avoidance of accented capitals. These reflect historical medium constraints.",
+        "No complete punctuation table or exact code point inferred. No federal/Vaud merge."
+      ],
+      "status": "reference-only",
+      "runtime_selection": false
+    },
+    {
+      "namespace": "kumihan.accord.editorial",
+      "id": "lu-sip-editorial-fr",
+      "revision": "0.1.0",
+      "kind": "editorial-reference",
+      "authority": {
+        "id": "luxembourg-sip",
+        "name": "Luxembourg — Service information et presse"
+      },
+      "source_edition": "third revised edition, January 2012",
+      "accessed_on": "2026-10-25",
+      "application": {
+        "explicit_adoption_required": true,
+        "language": "fr",
+        "documents": [
+          "administrative French documents with adopting organization explicitly identified"
+        ],
+        "media": [
+          "document",
+          "print",
+          "administrative Web with Renow and organization-specific review"
+        ],
+        "exclusions": [
+          "source quotations",
+          "code",
+          "URLs",
+          "non-French or unknown-language spans",
+          "uneditable source",
+          "country-wide Luxembourg default",
+          "organization-specific rules superseded without review"
+        ]
+      },
+      "coverage": {
+        "punctuation": "reference-only",
+        "guillemets": "reference-only",
+        "general_quantity": "reference-only",
+        "decimal_separator": "reference-only",
+        "currency_placement": "reference-only"
+      },
+      "rules": [
+        {
+          "id": "LU-SIP-PUNCTUATION",
+          "topic": "space before : ; ! ? and inside « »",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "adopting_organization_required": true
+          },
+          "accepted_forms": [
+            {
+              "kind": "space",
+              "unicode": null,
+              "nonbreaking": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "source quotations",
+            "code",
+            "URLs",
+            "non-French or unknown-language spans",
+            "uneditable source"
+          ],
+          "holds": [
+            "Width and nonbreaking behavior require an explicit product policy."
+          ],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU04",
+              "locator": "printed p.164 / PDF index 165"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "LU-SIP-GROUPS",
+          "topic": "general quantity groups",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity"
+          },
+          "accepted_forms": [
+            {
+              "kind": "three-digit-groups",
+              "separator": "space",
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "year",
+            "postal code",
+            "page number",
+            "identifier",
+            "unparsed money"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU04",
+              "locator": "printed p.175 / PDF index 176"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "LU-SIP-DECIMAL",
+          "topic": "decimal separator",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "general-quantity"
+          },
+          "accepted_forms": [
+            {
+              "literal": ","
+            }
+          ],
+          "normalization": null,
+          "exceptions": [],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU04",
+              "locator": "printed p.175 / PDF index 176"
+            }
+          ],
+          "capability": "reference-only"
+        },
+        {
+          "id": "LU-SIP-CURRENCY",
+          "topic": "currency follows amount with space",
+          "evidence_kind": "publisher_rule",
+          "conditions": {
+            "explicit_profile": true,
+            "typed_kind": "money",
+            "explicit_currency_required": true
+          },
+          "accepted_forms": [
+            {
+              "kind": "amount-space-currency",
+              "currency_label": [
+                "name",
+                "symbol",
+                "code"
+              ],
+              "unicode": null
+            }
+          ],
+          "normalization": null,
+          "exceptions": [
+            "currency inferred from locale"
+          ],
+          "holds": [],
+          "evidence_refs": [
+            {
+              "catalog": "KMHN_FR_20261025_04",
+              "id": "EU04",
+              "locator": "printed pp.181,239 / PDF indices 182,240"
+            }
+          ],
+          "capability": "reference-only"
+        }
+      ],
+      "evidence_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU04",
+          "locator": "third revised edition, January 2012"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-09",
+          "locator": "current catalog is not a new edition"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-10",
+          "locator": "2012 PDF"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-11",
+          "locator": "Renow and organization-specific rules"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-12",
+          "locator": "OSAPS 2025 is a distinct publication"
+        }
+      ],
+      "limitations": [
+        "SIP 2012 is not a 2026 national compulsory standard.",
+        "Old telephone, postal address and institutional information excluded.",
+        "Space Unicode and nonbreaking behavior unspecified; normalization remains null.",
+        "Intl fr-LU output is a separate observation, not this editorial policy."
+      ],
+      "status": "reference-only",
+      "runtime_selection": false
+    }
+  ],
+  "existing_style_metadata": [
+    {
+      "id": "fr-fr-editorial",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "FR01",
+          "locator": "spacing pp.30–35"
+        }
+      ],
+      "scope": "explicit editorial policy; not nationwide law"
+    },
+    {
+      "id": "fr-ca-oqlf",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "CA01",
+          "locator": "spacing before punctuation"
+        }
+      ],
+      "accepted_before_high_punctuation": [
+        "none",
+        "fine-nonbreaking-space"
+      ],
+      "scope": "explicit OQLF selection; acceptable forms and normalization are separate"
+    },
+    {
+      "id": "eu-interinstitutional",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "FR06",
+          "locator": "French §6.4"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-01",
+          "locator": "French §6.4"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_09",
+          "id": "EUP2-03",
+          "locator": "§4.2.3"
+        }
+      ],
+      "authority": "EU interinstitutional",
+      "source_edition": null,
+      "accessed_on": "2026-10-25",
+      "application": {
+        "explicit_adoption_required": true,
+        "language": "fr",
+        "media": [
+          "Word preparation",
+          "print composition",
+          "electronic publication",
+          "Internet manuscript preparation"
+        ],
+        "exclusions": [
+          "source quotations",
+          "code",
+          "URLs",
+          "non-French or unknown-language spans",
+          "uneditable source",
+          "transcribed legal preambles"
+        ]
+      },
+      "accepted_forms": {
+        "before_:;!?": [
+          "none"
+        ],
+        "inside_guillemets": [
+          "none"
+        ]
+      },
+      "limitations": [
+        "A Brussels or Luxembourg location does not select this style.",
+        "Online retrieval date and annual 2026 edition / PDF generation date are distinct."
+      ]
+    }
+  ],
+  "research_profile_mapping": {
+    "proposed:andre-editorial-fine": {
+      "target": "fr-fr-editorial",
+      "kind": "existing-house-style",
+      "condition": "explicit editorial selection; supported punctuation subset only"
+    },
+    "proposed:oqlf-web": {
+      "target": "fr-ca-oqlf",
+      "kind": "existing-house-style",
+      "condition": "explicit OQLF selection; supported punctuation subset only"
+    },
+    "proposed:eu-interinstitutional-6": {
+      "target": "eu-interinstitutional",
+      "kind": "existing-house-style",
+      "condition": "explicit EU policy; French §6.4"
+    },
+    "proposed:ulb-word-processing": {
+      "target": "ulb-document-fr",
+      "kind": "reference-only"
+    },
+    "proposed:ch-federal-official": {
+      "target": "ch-federal-official-fr",
+      "kind": "reference-only"
+    },
+    "proposed:vaud-editorial": {
+      "target": "ch-vd-editorial-fr",
+      "kind": "reference-only"
+    },
+    "proposed:lu-sip-2012": {
+      "target": "lu-sip-editorial-fr",
+      "kind": "reference-only"
+    },
+    "proposed:canada-ca-web-content": {
+      "target": null,
+      "kind": "outside_supported_scope",
+      "reason": "distinct authority, not equivalent to OQLF"
+    },
+    "proposed:quebec-government-web": {
+      "target": null,
+      "kind": "reference-only",
+      "reason": "organization-specific content guidance is not punctuation normalization"
+    },
+    "proposed:federal-inclusive-writing": {
+      "target": null,
+      "kind": "reference-only",
+      "reason": "editorial review; no automatic abbreviation rewriting"
+    },
+    "proposed:explicit-monetary-format": {
+      "target": null,
+      "kind": "outside_supported_scope",
+      "reason": "no exact money formatter connected"
+    }
+  }
+}

@@ -101,7 +101,7 @@ class TestAccordIcons(unittest.TestCase):
         for name in ("plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", "gemini-extension.json"):
             with self.subTest(manifest=name):
                 d = json.loads((plugin / name).read_text(encoding="utf-8"))
-                self.assertEqual(d["version"], "0.1.1")
+                self.assertEqual(d["version"], "0.1.2")
                 self.assertEqual(d["name"], "kumihan-accord")
         claude = json.loads((plugin / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
         self.assertEqual(claude["icon"], "./assets/KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png")

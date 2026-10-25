@@ -47,5 +47,721 @@
       "url": "https://openfontlicense.org/open-font-license-official-text/",
       "scope": "Font licensing"
     }
-  ]
+  ],
+  "namespace": "accord-source-catalog@0.1.0",
+  "reference_catalogs": [
+    {
+      "catalog": "KMHN_FR_20261025_04",
+      "status": "public-reference-metadata",
+      "sources": [
+        {
+          "id": "CA01",
+          "publisher": "Office québécois de la langue française (OQLF)",
+          "title": "Espacement avant et après les signes de ponctuation et les symboles",
+          "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles",
+          "scope": "Québec/OQLF; Canada全土のすべての媒体の義務ではない",
+          "source_kind": "normative-guidance",
+          "published_or_version": "2024",
+          "date_basis": "page_last_updated_year",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "OQLFの推奨であり、カナダ全土・全媒体の義務ではない。細い非改行空白の許容を残す。原典はUnicode符号位置を指定していない。"
+          ]
+        },
+        {
+          "id": "CA05",
+          "publisher": "Gouvernement du Québec, Système de design gouvernemental",
+          "title": "Rédaction épicène",
+          "url": "https://design.quebec.ca/contenu/principes-redaction/redaction-epicene",
+          "scope": "ケベック政府のWebコンテンツ",
+          "source_kind": "institutional-content-guidance",
+          "published_or_version": "2026-10-13",
+          "date_basis": "page_last_updated",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "ケベック政府の方針。省略doubletsを連続本文へ常用する指示ではなく、連邦の別方針を上書きしない。"
+          ]
+        },
+        {
+          "id": "CA06",
+          "publisher": "Bureau de la traduction, Services publics et Approvisionnement Canada",
+          "title": "Écriture inclusive : doublets abrégés",
+          "url": "https://nos-langues.canada.ca/fr/cles-de-la-redaction/ecriture-inclusive-doublets-abreges",
+          "scope": "連邦翻訳局のフランス語執筆支援",
+          "source_kind": "normative-guidance",
+          "published_or_version": "2022-09-20",
+          "date_basis": "page_last_modified",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "連邦翻訳局の執筆支援。必要な省略形の推奨であり、全ての本文へ中点を挿入する指示ではない。"
+          ]
+        },
+        {
+          "id": "CA33",
+          "publisher": "Office québécois de la langue française (OQLF)",
+          "title": "Les termes rédaction épicène et écriture inclusive",
+          "url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/25421/banque-de-depannage-linguistique/la-redaction-et-la-communication/feminisation-et-redaction-epicene/redaction-epicene/les-termes-redaction-epicene-et-ecriture-inclusive",
+          "scope": "OQLFの定義と推奨。一般社会の使用禁止ではない",
+          "source_kind": "normative-guidance",
+          "published_or_version": "2025",
+          "date_basis": "page_last_updated_year",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "OQLFの定義と推奨。一般社会における用法すべての許可・禁止とは解釈しない。"
+          ]
+        },
+        {
+          "id": "EU-A02",
+          "publisher": "Organisation internationale de la Francophonie",
+          "title": "Kit F/francophonie — Parle-nous de ta ville, fiche enseignant",
+          "url": "https://parlonsfrancais.francophonie.org/app/uploads/2023/02/KIT-FRANCOPHONIE_01_E.pdf",
+          "scope": "ベルギーの語彙を紹介するOIFのフランス語教育教材。",
+          "source_kind": "primary-supplement",
+          "published_or_version": null,
+          "date_basis": "公開・改訂日未確認",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "教材図説を全国民の使用率・語調・国民性の根拠にしない。"
+          ]
+        },
+        {
+          "id": "EU-A05",
+          "publisher": "Swisscom",
+          "title": "Vendre son téléphone portable avec Swisscom Buyback",
+          "url": "https://www.swisscom.ch/fr/clients-prives/abonnement-mobile/vendre-telephone-portable.html",
+          "scope": "Swisscomの可変ページにおける携帯電話名称。検索索引のみ。",
+          "source_kind": "primary-supplement",
+          "published_or_version": null,
+          "date_basis": "公開・改訂日未確認",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "検索索引における現行コピーの観測。natelの使用頻度を測定したものではない。"
+          ]
+        },
+        {
+          "id": "EU01",
+          "publisher": "Chancellerie fédérale suisse, Services linguistiques centraux, Section française",
+          "title": "Instructions de la Chancellerie fédérale sur la présentation des textes officiels en français",
+          "url": "https://www.bk.admin.ch/dam/fr/sd-web/t4P98Y1Vnyz-/objekt_55266.pdf",
+          "scope": "スイス連邦のFF・RS・ROと関連立法文書。全スイス商業文書の統一規則ではない。",
+          "source_kind": "normative",
+          "published_or_version": "2016-05-27（公開ページの日付）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "p.9／index8には3桁超と書かれ、p.7の4桁超と内部不整合。4桁例1700・5400と主節p.7を優先する実装判断は提案として明示する。引用符・高位句読点の全表はこのPDFにない。"
+          ]
+        },
+        {
+          "id": "EU02",
+          "publisher": "État de Vaud, Bureau d’information et de communication",
+          "title": "Usages typographiques",
+          "url": "https://www.vd.ch/cha/bic/usages-typographiques",
+          "scope": "Vaud州の編集・コミュニケーションガイド",
+          "source_kind": "normative",
+          "published_or_version": "記載なし（少なくとも2017年のfax通達を引用）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "電子媒体のアクセント付き大文字を避けるなど、古い技術制約を前提とする記述が残る。現在のUnicode Web既定値へ一括移植しない。連邦官房EU01とも衝突する州固有規則。"
+          ]
+        },
+        {
+          "id": "EU03",
+          "publisher": "Université libre de Bruxelles, La Boussole / Annick Englebert",
+          "title": "Espacements conventionnels en typographie",
+          "url": "https://boussole.ulb.be/index.php/la-composition/la-mise-en-texte/66-espacements-conventionnels-en-typographie",
+          "scope": "大学の仏語レポート、一般的ワープロ組版",
+          "source_kind": "normative-institutional",
+          "published_or_version": "更新2020-04-08",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "ベルギー全体の法定・商業UI規則ではない。細い空白のUnicodeコードポイントは指定していない。"
+          ]
+        },
+        {
+          "id": "EU04",
+          "publisher": "Luxembourg, Service information et presse (SIP)",
+          "title": "Guide de rédaction — Édition 2012",
+          "url": "https://sip.gouvernement.lu/dam-assets/publications/guide-manuel/minist-etat/sip/guide-de-redaction/guide-de-redaction.pdf",
+          "scope": "ルクセンブルク行政職員向けフランス語編集参照",
+          "source_kind": "normative-institutional",
+          "published_or_version": "2012（公開ページ最終変更2018-04-20）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "2012版。『espace』の全てをNBSPまたはNNBSPとまでは指定しない。現在のfr-LU Intl出力と編集規範を同一視しない。郵便・電話等の古い記述は現行実装へ移植しない。"
+          ]
+        },
+        {
+          "id": "EU07",
+          "publisher": "Dis voir / Mathieu Avanzi, Université de Neuchâtelの研究者",
+          "title": "Huitante, octante ou quatre-vingts ?",
+          "url": "https://dis-voir.ch/2024/11/16/huitante-octante-ou-quatre-vingts/",
+          "scope": "参加型言語地理調査。ベルギー・スイスとRomandie内の差",
+          "source_kind": "observed-research",
+          "published_or_version": "公開日2024-11-16。現ページの図は2015–2025調査と表記、更新日は不明",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "自己申告の参加者調査で国民悉皆調査ではない。州内・年齢・場面の差を消した必須置換規則にしない。公開日と図の調査期間にズレがあり2026年の使用率として再ラベルしない。"
+          ]
+        },
+        {
+          "id": "EU08",
+          "publisher": "Dis voir / Mathieu Avanzi",
+          "title": "Le français de Suisse romande change-t-il de visage ? Ces vieux mots qui disparaissent…",
+          "url": "https://dis-voir.ch/2025/02/01/le-francais-de-suisse-romande-change-t-il-de-visage-ces-vieux-mots-qui-disparaissent/",
+          "scope": "RomandieとWallonie等の食事語彙・世代差",
+          "source_kind": "observed-research",
+          "published_or_version": "2025-02-01",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "原文の20%/70%に関する説明は方向が読み取りにくいため数値を転載しない。系列が存在することと、全話者が常用することを区別。フランスやカナダ全体への独自推定はしない。"
+          ]
+        },
+        {
+          "id": "EU09",
+          "publisher": "Musée de la communication, Berne / Juri Jaquemet（ICT資料担当学芸員）",
+          "title": "L’histoire du Natel en Suisse",
+          "url": "https://www.mfk.ch/fr/echanger/blog/le-natel-ou-la-telephonie-mobile-en-suisse",
+          "scope": "スイス携帯電話の資料・商標・語彙史",
+          "source_kind": "primary-historical-context",
+          "published_or_version": "ページで日付未確認",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "2026年の利用頻度や全製品名称の廃止の証拠ではない。natelを全fr-CH UIの既定語へ強制しない。名称固有のNATELを一般名へ自動書換えしない。"
+          ]
+        },
+        {
+          "id": "EU10",
+          "publisher": "Proximus Belgique",
+          "title": "Découvrez les prix et promotions de nos abonnements GSM",
+          "url": "https://www.proximus.be/fr/abonnement-gsm/composer",
+          "scope": "ベルギー顧客向け仏語携帯契約EC・FAQ",
+          "source_kind": "observed-ui",
+          "published_or_version": "可変ページ、観測日2026-10-25 JST",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "価格やキャンペーンは可変。検索・本文抽出は視覚位置・Unicode空白の完全な証拠ではない。ブランドの表記をベルギー標準として一般化しない。"
+          ]
+        },
+        {
+          "id": "EU11",
+          "publisher": "Base Design（制作主体）",
+          "title": "Bozar — Cultural Bazaar",
+          "url": "https://www.basedesign.com/projects/bozar",
+          "scope": "Bruxelles文化施設の視覚・言語アイデンティティ",
+          "source_kind": "observed-design",
+          "published_or_version": "ケース本文に公開日なし。写真中のイベントは2021–2022",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "博物館ブランドの事例でありベルギー全体のデザイン規範ではない。写真は採用当時の事例、現サイトと同一とは断言しない。"
+          ]
+        },
+        {
+          "id": "EU12",
+          "publisher": "Minale Design Strategy（制作主体）",
+          "title": "LETEC",
+          "url": "https://www.minaledesignstrategy.com/en/work/letec",
+          "scope": "Wallonie公共交通ブランドと利用者接点",
+          "source_kind": "observed-design",
+          "published_or_version": "ケース本文に公開日なし",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "制作側の利用者増加等の成果主張は因果を検証していないため転用しない。広告の軽快さをtu使用や国民性に結びつけない。"
+          ]
+        },
+        {
+          "id": "EU13",
+          "publisher": "Base Design（制作主体）",
+          "title": "Kanal-Centre Pompidou — Factory of Futures",
+          "url": "https://www.basedesign.com/projects/kanal-centre-pompidou",
+          "scope": "Bruxellesの文化施設、2026年公開ブランド",
+          "source_kind": "observed-design",
+          "published_or_version": "アイデンティティ公開2026-01-28（本文）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "2026-10-25時点では施設の一般公開2026-11-28は将来予定。開館済みと書かない。可変書体から本文や行政UIまで同じ可読性評価を推定しない。"
+          ]
+        },
+        {
+          "id": "EU14",
+          "publisher": "Base Design / BaseGVA（制作主体）",
+          "title": "Jardin Botanique de Genève — Science, Pointed Forward",
+          "url": "https://www.basedesign.com/projects/jardin-botanique-de-geneve",
+          "scope": "Genèveの植物園・研究機関のブランドとWeb",
+          "source_kind": "observed-design",
+          "published_or_version": "本文に日付なし。2026年の事例として検索に掲載、画像パス2026-06-19",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "agency mockup/事例画像であり現行Webの全挙動やWCAG適合を確認したものではない。黒やサンセリフをRomandieの既定にしない。"
+          ]
+        },
+        {
+          "id": "EU15",
+          "publisher": "Notter+Vigne（制作主体）",
+          "title": "Lausanne Jardins — Association Jardin Urbain, 2024",
+          "url": "https://notter-vigne.ch/projets/lausanne-jardins-2024/",
+          "scope": "Lausanneの庭園イベントのビジュアルコミュニケーション",
+          "source_kind": "observed-design-candidate",
+          "published_or_version": "2024（事例ページに記載）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "本文抽出は確認済み。画像取得が失敗し視覚分析は未実施。確認済み事例数・視覚特徴の議論に混ぜず、親の追加目視用候補として扱う。"
+          ]
+        },
+        {
+          "id": "EU16",
+          "publisher": "Apart Design Studio（制作主体）",
+          "title": "Lëtzebuerg City Bibliothèque: Branding & Website Design",
+          "url": "https://apart.lu/case-studies/letzebuerg-city-bibliotheque-branding-website-design",
+          "scope": "Luxembourg市の多言語図書館、名称・屋外広告・Web",
+          "source_kind": "observed-design",
+          "published_or_version": "公開日記載なし（事例画像内のイベント日付は2024）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "色と丸形だけで言語識別を済ませるアクセシビリティ規則を示す事例ではない。市立図書館の名称を一般本文の混交言語推奨へ拡張しない。"
+          ]
+        },
+        {
+          "id": "EU17",
+          "publisher": "Binsfeld（制作主体）",
+          "title": "Théâtres de la Ville de Luxembourg — Identité visuelle",
+          "url": "https://binsfeld.lu/portfolio_page/theatres-de-la-ville-de-luxembourg-identite-visuelle/",
+          "scope": "Luxembourg市の劇場群",
+          "source_kind": "observed-design-text",
+          "published_or_version": "記載なし（画像URLに2021/07、公開日の確証ではない）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "一次画像URLは確認済みだが、画像の目視は未実施。色・書体等の視覚上の詳細を制作者本文以上に断定しない。"
+          ]
+        },
+        {
+          "id": "EU18",
+          "publisher": "Binsfeld（制作主体）",
+          "title": "Luxembourg House — Nouveau site internet",
+          "url": "https://binsfeld.lu/portfolio_page/luxembourg-house-nouveau-site-internet/",
+          "scope": "Luxembourg産品を扱うconcept storeのWeb事例",
+          "source_kind": "observed-design-text",
+          "published_or_version": "記載なし（画像URLに2017/12、公開日の確証ではない）",
+          "date_basis": "元資料の記載。URL内の日付は公開日の確証と区別。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "一次画像URLは確認済みだが、画像の目視は未実施。現在のEC価格・購入フローの証拠ではない。地域産品という案件目的を国民性と見なさない。"
+          ]
+        },
+        {
+          "id": "FR01",
+          "publisher": "Jacques André",
+          "title": "Petites leçons de typographie",
+          "url": "https://jacques-andre.fr/faqtypo/lessons.pdf",
+          "scope": "France editorial recommendation",
+          "source_kind": "primary-reference",
+          "published_or_version": "2025-06-01",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Author's practice guide; not universal national law"
+          ]
+        },
+        {
+          "id": "FR05",
+          "publisher": "Académie française",
+          "title": "Questions de langue: Accentuation des majuscules",
+          "url": "https://www.academie-francaise.fr/questions-de-langue",
+          "scope": "French orthography",
+          "source_kind": "primary-reference",
+          "published_or_version": "date not stated",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Restore missing accents only with semantic context; preserve source"
+          ]
+        },
+        {
+          "id": "FR06",
+          "publisher": "Publications Office of the European Union",
+          "title": "6.4 Espacement des signes de ponctuation",
+          "url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=fr/6.4-word-processor-punctuation-marks-spacing.html",
+          "scope": "EU interinstitutional style",
+          "source_kind": "primary-reference",
+          "published_or_version": "live on access",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Institutional multilingual convention, not BE or LU regional standard"
+          ]
+        },
+        {
+          "id": "TECH01",
+          "publisher": "Unicode Consortium",
+          "title": "UAX #14 Unicode Line Breaking Algorithm",
+          "url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+          "scope": "Unicode breaking semantics",
+          "source_kind": "technical-reference",
+          "published_or_version": "Unicode18.0 revision57 2026-09-01",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "String semantics do not prove renderer behavior"
+          ]
+        },
+        {
+          "id": "TECH02",
+          "publisher": "W3C CSSWG",
+          "title": "CSS Text Module Level 3",
+          "url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+          "scope": "Web line breaking and hyphenation",
+          "source_kind": "technical-reference",
+          "published_or_version": "CR Draft2026-08-14",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Draft; actual browser behavior separately tested"
+          ]
+        },
+        {
+          "id": "TECH03",
+          "publisher": "W3C",
+          "title": "Web Content Accessibility Guidelines 2.2",
+          "url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+          "scope": "Web accessibility",
+          "source_kind": "technical-reference",
+          "published_or_version": "Recommendation2024-12-12",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Subset checks are not full compliance"
+          ]
+        },
+        {
+          "id": "TECH04",
+          "publisher": "Ecma International",
+          "title": "ECMA-402 13th edition",
+          "url": "https://402.ecma-international.org/13.0/",
+          "scope": "Intl APIs",
+          "source_kind": "technical-reference",
+          "published_or_version": "June2026",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Numeric formatting is not currency conversion or editorial policy"
+          ]
+        },
+        {
+          "id": "TECH11",
+          "publisher": "SIL / OFL",
+          "title": "SIL Open Font License1.1",
+          "url": "https://openfontlicense.org/open-font-license-official-text/",
+          "scope": "Font distribution condition",
+          "source_kind": "technical-reference",
+          "published_or_version": "OFL1.1",
+          "date_basis": "元資料の版・日付表記",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limitations": [
+            "Not a legal opinion; specific font files still require verification"
+          ]
+        }
+      ]
+    },
+    {
+      "catalog": "KMHN_FR_20261025_09",
+      "status": "public-source-reverification-metadata",
+      "sources": [
+        {
+          "id": "EUP2-01",
+          "publisher": "Office des publications de l’Union européenne",
+          "title": "6.4. Espacement des signes de ponctuation — version française",
+          "url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=fr/6.4-word-processor-punctuation-marks-spacing.html",
+          "scope": "EU機関間共通編集規則・仏語版の第3部",
+          "version_or_date": "閲覧時点のオンライン版。節の改訂日未記載。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "国別の一般規則ではない。発行主体不明の原稿、引用、URL、コードへ一括適用しない。"
+          ]
+        },
+        {
+          "id": "EUP2-02",
+          "publisher": "Office des publications de l’Union européenne",
+          "title": "Code de rédaction interinstitutionnel — PDF web courant",
+          "url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=download_pdf_pdf-web%2FISG_fr_4web.pdf",
+          "scope": "仏語PDFの印刷p.114、凡例の続きp.115",
+          "version_or_date": "343頁。PDFメタデータ生成日時2026-10-22 21:22:01 +02:00。節の改訂日ではない。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "動的PDF。ページ番号・ハッシュは今回取得分。任意アプリでの描画試験ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-03",
+          "publisher": "Office des publications de l’Union européenne",
+          "title": "4.2.3. Préparation du texte",
+          "url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=fr/4.2.3-text-preparation.html",
+          "scope": "紙・CD/DVD・インターネット等への原稿準備",
+          "version_or_date": "閲覧時点のオンライン版",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "出版工程の指定と一般Web製品の実装仕様を同一視しない。"
+          ]
+        },
+        {
+          "id": "EUP2-04",
+          "publisher": "Office des publications de l’Union européenne",
+          "title": "5.10. Citations",
+          "url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=fr/5.10-quotations.html",
+          "scope": "EU共通規則内の引用・句読点",
+          "version_or_date": "閲覧時点のオンライン版",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "引用原文を通常本文と同じように自動変更する根拠にはしない。"
+          ]
+        },
+        {
+          "id": "EUP2-05",
+          "publisher": "Office des publications de l’Union européenne",
+          "title": "Code de rédaction interinstitutionnel — édition annuelle 2026",
+          "url": "https://op.europa.eu/fr/publication-detail/-/publication/396d9d57-3eba-11f1-814f-01aa75ed71a1",
+          "scope": "年次印刷版と動的Web/PDFの区別",
+          "version_or_date": "2026-04-20時点の内容、公開2026-04-22、ISBN 978-92-78-44912-4",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "目視したEUP2-02は動的Web PDFであり、この年次版そのものを目視したという意味ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-06",
+          "publisher": "Chancellerie fédérale — Services linguistiques centraux, section française",
+          "title": "Instructions de la Chancellerie fédérale sur la présentation des textes officiels en français",
+          "url": "https://www.bk.admin.ch/dam/fr/sd-web/t4P98Y1Vnyz-/objekt_55266.pdf",
+          "scope": "FF・RS・RO等。第4章p.7と第5章p.9。",
+          "version_or_date": "Mai 2016。現行配布ページのファイル日付2016-05-27。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "4桁に関する正誤表・明示的な優先順位は今回未確認。",
+            "p.7の主節・具体例を優先するのは実装上の判断であり、公式の訂正ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-07",
+          "publisher": "Chancellerie fédérale",
+          "title": "Instructions de la Chancellerie fédérale — page officielle de diffusion",
+          "url": "https://www.bk.admin.ch/fr/instructions-de-la-chancellerie-federale-sur-la-presentation-des-textes-officiels-en-francais",
+          "scope": "仏語規則の現行公開導線と対象文書",
+          "version_or_date": "閲覧時点で2016-05-27のPDFを掲示",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "現在のページと限定公式検索での確認。「訂正がどこにも存在しない」という証明ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-08",
+          "publisher": "Schweizerische Bundeskanzlei",
+          "title": "Schreibweisungen — Schreibweisungen für anderssprachige Texte",
+          "url": "https://www.bk.admin.ch/de/schreibweisungen",
+          "scope": "言語別の規則の分離",
+          "version_or_date": "独語の更新資料に2025-11-10等を掲載",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "独語の更新は仏語2016年PDFの4桁条件の訂正根拠ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-09",
+          "publisher": "Gouvernement luxembourgeois / SIP",
+          "title": "Guide de rédaction (Édition 2012) — catalogue officiel",
+          "url": "https://gouvernement.lu/fr/publications.gouv2024_sip%2Bfr%2Bpublications%2Bguide-manuel%2Bsip%2Bguide-de-redaction.html",
+          "scope": "行政向けSIPガイドの公開カタログ",
+          "version_or_date": "書籍2012。仏語ページ最終変更2018-04-20、英語ページ2024-09-11。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "公開されていることは全住民・全企業に対する強制標準を意味しない。後継版不存在の網羅的証明ではない。"
+          ]
+        },
+        {
+          "id": "EUP2-10",
+          "publisher": "Service information et presse",
+          "title": "Guide de rédaction — 3e édition revue, janvier 2012",
+          "url": "https://sip.gouvernement.lu/dam-assets/publications/guide-manuel/minist-etat/sip/guide-de-redaction/guide-de-redaction.pdf",
+          "scope": "国家行政の職員向け参照資料",
+          "version_or_date": "第3改訂版、2012年1月",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "現在の制度名、電話・住所、数値ライブラリ等を2012年のまま決定しない。組織別・媒体別の採用範囲を指定する。"
+          ]
+        },
+        {
+          "id": "EUP2-11",
+          "publisher": "CTIE / Renow",
+          "title": "Stratégie de contenu",
+          "url": "https://renow.public.lu/fr/guides-pratiques/strategie-contenu.html",
+          "scope": "国家機関のWebサイト・ポータルの内容戦略",
+          "version_or_date": "ページ最終変更2020-03-23。閲覧時点も公開。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "旧リンクは今回汎用Publicationsページに遷移。PDFはEUP2-09から別に照合。",
+            "2020年のページ更新を2026年の政策改定と扱わない。"
+          ]
+        },
+        {
+          "id": "EUP2-12",
+          "publisher": "OSAPS, Luxembourg",
+          "title": "Guide de rédaction en langage clair — services bancaires",
+          "url": "https://accessibilite-produits-services.public.lu/fr/publications/guidelc.html",
+          "scope": "銀行サービス向けの別ガイド",
+          "version_or_date": "Services bancaires 11/2025。ページ最終変更2025-11-28。",
+          "accessed_on": "2026-10-25",
+          "access_timezone": "Asia/Tokyo",
+          "limits": [
+            "本文PDF全体・法的適合は今回未評価。SIP2012の全面的な置換規則として採用しない。"
+          ]
+        }
+      ]
+    }
+  ],
+  "source_namespace_crosswalk": [
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR01",
+      "existing_url": "https://jacques-andre.fr/faqtypo/lessons.pdf",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "FR01",
+      "research_url": "https://jacques-andre.fr/faqtypo/lessons.pdf",
+      "relation": "same_url_content_revision_not_assumed",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR02",
+      "existing_url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "CA01",
+      "research_url": "https://vitrinelinguistique.oqlf.gouv.qc.ca/22039/la-typographie/espacement/espacement-avant-et-apres-les-signes-de-ponctuation-et-les-symboles",
+      "relation": "same_url_content_revision_not_assumed",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR03",
+      "existing_url": "https://style-guide.europa.eu/fr/content/-/isg/topic?identifier=6.4-word-processor-punctuation-marks-spacing",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "FR06",
+      "research_url": "https://style-guide.europa.eu/o/opportal-service/isg?resource=fr/6.4-word-processor-punctuation-marks-spacing.html",
+      "relation": "same_document_family_different_url_or_version_pin",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR04",
+      "existing_url": "https://www.unicode.org/reports/tr14/",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "TECH01",
+      "research_url": "https://www.unicode.org/reports/tr14/tr14-57.html",
+      "relation": "same_document_family_different_url_or_version_pin",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR05",
+      "existing_url": "https://www.academie-francaise.fr/questions-de-langue",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "FR05",
+      "research_url": "https://www.academie-francaise.fr/questions-de-langue",
+      "relation": "same_url_content_revision_not_assumed",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR06",
+      "existing_url": "https://www.w3.org/TR/css-text-3/",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "TECH02",
+      "research_url": "https://www.w3.org/TR/2026/CRD-css-text-3-20260814/",
+      "relation": "same_document_family_different_url_or_version_pin",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR07",
+      "existing_url": "https://www.w3.org/TR/WCAG22/",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "TECH03",
+      "research_url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "relation": "same_document_family_different_url_or_version_pin",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR08",
+      "existing_url": "https://402.ecma-international.org/13.0/",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "TECH04",
+      "research_url": "https://402.ecma-international.org/13.0/",
+      "relation": "same_url_content_revision_not_assumed",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    },
+    {
+      "existing_namespace": "accord-source-catalog@0.1.0",
+      "existing_id": "FR09",
+      "existing_url": "https://openfontlicense.org/open-font-license-official-text/",
+      "research_namespace": "KMHN_FR_20261025_04",
+      "research_id": "TECH11",
+      "research_url": "https://openfontlicense.org/open-font-license-official-text/",
+      "relation": "same_url_content_revision_not_assumed",
+      "note": "IDでは結合しない。URLが同じでも取得日と版の同一性は別途確認する。"
+    }
+  ],
+  "resolution_policy": "Resolve by (catalog, id), retaining locator. Legacy source_ref strings resolve only in accord-source-catalog@0.1.0. URL equality does not establish identical source edition."
 }

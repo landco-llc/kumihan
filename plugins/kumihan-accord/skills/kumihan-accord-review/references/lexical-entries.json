@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "revision": "0.1.0",
+  "status": "reference-only",
+  "automatic_replacement": false,
+  "entries": [
+    {
+      "id": "regional-seventy-ninety",
+      "concept": "cardinal numbers 70 and 90",
+      "forms": [
+        {
+          "form": "septante",
+          "sense": 70
+        },
+        {
+          "form": "nonante",
+          "sense": 90
+        }
+      ],
+      "audience_scope": [
+        "Belgium",
+        "French-speaking Switzerland"
+      ],
+      "register": "not intrinsically informal",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU07",
+          "locator": "regional survey"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU-A02",
+          "locator": "PDF index 4"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "quoted source",
+        "approved terminology"
+      ],
+      "limitations": [
+        "Observed regional usage does not require substitution. Do not transfer this distribution to Luxembourg."
+      ]
+    },
+    {
+      "id": "regional-eighty",
+      "concept": "cardinal number 80",
+      "forms": [
+        {
+          "form": "huitante",
+          "audience": [
+            "Vaud",
+            "Fribourg",
+            "Valais with variation"
+          ]
+        },
+        {
+          "form": "quatre-vingts",
+          "audience": [
+            "Genève",
+            "Arc jurassien",
+            "Valais with variation"
+          ]
+        }
+      ],
+      "audience_scope": [
+        "French-speaking Switzerland with canton and audience specified"
+      ],
+      "register": "context dependent",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU07",
+          "locator": "huitante / octante / quatre-vingts survey"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "quoted source",
+        "approved terminology"
+      ],
+      "limitations": [
+        "Do not force huitante across Switzerland. Preserve source when canton or audience is unknown. Octante is not a general BE/CH generation default. Survey is self-reported and not a 2026 population rate."
+      ]
+    },
+    {
+      "id": "meal-time-senses",
+      "concept": "meal timing",
+      "forms": [
+        {
+          "form": "déjeuner",
+          "sense": "morning meal in the observed regional series"
+        },
+        {
+          "form": "dîner",
+          "sense": "midday meal in the observed regional series"
+        },
+        {
+          "form": "souper",
+          "sense": "evening meal in the observed regional series"
+        }
+      ],
+      "audience_scope": [
+        "Romandie",
+        "Wallonie with regional and generational variation"
+      ],
+      "register": "context dependent",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU08",
+          "locator": "meal series and generation variation"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU-A02",
+          "locator": "PDF index 4"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "reservation time",
+        "hotel booking time",
+        "quoted source"
+      ],
+      "limitations": [
+        "Do not infer or change times. Suggest explicit time or repas du midi when semantic clarification is needed. Other regional senses remain possible."
+      ]
+    },
+    {
+      "id": "gsm-mobile",
+      "concept": "mobile phone versus GSM technology",
+      "forms": [
+        {
+          "form": "GSM",
+          "sense": "mobile phone in observed Proximus UI"
+        },
+        {
+          "form": "gsm",
+          "sense": "mobile phone in observed Proximus UI"
+        },
+        {
+          "form": "mobile",
+          "sense": "mobile phone"
+        },
+        {
+          "form": "smartphone",
+          "sense": "smartphone"
+        }
+      ],
+      "audience_scope": [
+        "Proximus Belgian French customer UI"
+      ],
+      "register": "publisher and component specific",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU10",
+          "locator": "subscription UI / FAQ"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "GSM telecommunications standard",
+        "approved product or contract name"
+      ],
+      "limitations": [
+        "Forms coexist. No mandatory Belgian label inferred."
+      ]
+    },
+    {
+      "id": "natel-mobile",
+      "concept": "Swiss mobile phone vocabulary and brand history",
+      "forms": [
+        {
+          "form": "natel",
+          "sense": "generic mobile phone usage"
+        },
+        {
+          "form": "NATEL",
+          "sense": "protected product or contract name"
+        }
+      ],
+      "audience_scope": [
+        "Switzerland, depending on audience and publisher"
+      ],
+      "register": "context dependent",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU09",
+          "locator": "Natel history"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU-A05",
+          "locator": "search-index observation only"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "NATEL product name",
+        "NATEL contract name",
+        "quoted source"
+      ],
+      "limitations": [
+        "2017 plan-name change does not establish extinction of the word in 2026. EU-A05 is search-index evidence, not full-page verification. No default for every fr-CH UI."
+      ]
+    },
+    {
+      "id": "address-and-voice",
+      "concept": "address form, speaker and CTA role",
+      "forms": [
+        {
+          "form": "vous",
+          "sense": "publisher addresses customer"
+        },
+        {
+          "form": "tu",
+          "sense": "explicitly approved address form only"
+        },
+        {
+          "form": "first person",
+          "sense": "customer voice in action label"
+        },
+        {
+          "form": "infinitive",
+          "sense": "CTA action"
+        }
+      ],
+      "audience_scope": [
+        "publisher-specific French UI"
+      ],
+      "register": "requires explicit register, voice, role and address policy",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU10",
+          "locator": "vous, infinitive CTA and customer first-person examples"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU12",
+          "locator": "outdoor advertising address"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU16",
+          "locator": "Web CTA and address"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "approved brand voice",
+        "quoted copy"
+      ],
+      "limitations": [
+        "Country and playful visual design do not choose tu. Role-specific forms may coexist in one interface."
+      ]
+    },
+    {
+      "id": "inclusive-editorial-options",
+      "concept": "inclusive / epicene wording",
+      "forms": [
+        {
+          "form": "epicene wording",
+          "sense": "review candidate"
+        },
+        {
+          "form": "full doublets",
+          "sense": "review candidate"
+        },
+        {
+          "form": "abbreviated doublets",
+          "sense": "authority and medium dependent"
+        }
+      ],
+      "audience_scope": [
+        "Québec organizational content",
+        "Canadian federal content with distinct policy"
+      ],
+      "register": "authority-specific editorial review",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "CA05",
+          "locator": "Rédaction épicène"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "CA06",
+          "locator": "Doublets abrégés"
+        },
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "CA33",
+          "locator": "Terminology"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "approved source wording",
+        "legal or organizational names"
+      ],
+      "limitations": [
+        "No single nationwide or worldwide French replacement rule. Readability and medium require review; alternatives are not exact-string assertions."
+      ]
+    },
+    {
+      "id": "approved-multilingual-name",
+      "concept": "approved organization name",
+      "forms": [
+        {
+          "form": "Lëtzebuerg City Bibliothèque",
+          "sense": "official mixed-language library name"
+        }
+      ],
+      "audience_scope": [
+        "named organization and its audience"
+      ],
+      "register": "proper name",
+      "source_refs": [
+        {
+          "catalog": "KMHN_FR_20261025_04",
+          "id": "EU16",
+          "locator": "name rationale"
+        }
+      ],
+      "evidence_kind": "observed_usage",
+      "action": "suggest-for-review",
+      "automatic_replacement": false,
+      "generation_requires": [
+        "known sense",
+        "intended audience",
+        "customer glossary or editorial decision"
+      ],
+      "protected_uses": [
+        "entire approved name",
+        "language labels"
+      ],
+      "limitations": [
+        "Do not split or retranslate approved name. Multilingual context does not establish every reader’s abilities or service language count."
+      ]
+    }
+  ]
+}

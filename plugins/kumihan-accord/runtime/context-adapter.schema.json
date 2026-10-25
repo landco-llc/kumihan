@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:kumihan:accord:context-audit:0.1.0",
+  "title": "Opt-in plain-text audit request; no common schema changes",
+  "description": "Shape only: runtime checks source binding and scope. No formatter, resolver, document editor or renderer capability. Existing common context scalar axes are reused, not extended.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "text",
+    "context"
+  ],
+  "properties": {
+    "text": {
+      "type": "string"
+    },
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "house_style": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "region": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "market": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "register": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "medium": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "norm_edition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "format_locale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "intent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "extensions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "namespace",
+              "version",
+              "critical",
+              "payload"
+            ],
+            "properties": {
+              "namespace": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"
+              },
+              "version": {
+                "type": "string",
+                "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+              },
+              "critical": {
+                "type": "boolean"
+              },
+              "payload": {}
+            }
+          }
+        }
+      }
+    },
+    "raw_locale": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "protected_ranges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "start",
+          "end",
+          "coordinate"
+        ],
+        "properties": {
+          "start": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "coordinate": {
+            "const": "scalar"
+          }
+        }
+      }
+    },
+    "typed_values": {
+      "type": "array",
+      "description": "Preserved at boundary, unsupported for evaluation; nonempty returns outside_supported_scope."
+    }
+  }
+}
