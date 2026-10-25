@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 RECORD = 'tests/contracts/fr-accord-v012-source-transition.json'
-RECORD_SHA = '87d971ac863a64a05ee47dec8d15f3cb529bc8af90ce351d3370695a1e1e1551'
+RECORD_SHA = '4f36f498eb5bc1e08b62b7fa73bc2be11ab49dd1f1077f6026f0fa2e54d8da25'
 def sha(raw): return hashlib.sha256(raw).hexdigest()
 def admitted(root, path, expected, raw, family):
     try:
