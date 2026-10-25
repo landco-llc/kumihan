@@ -11,6 +11,8 @@ from zipfile import ZipFile
 LOGO = "KUMIHAN_OFFICIAL_LOGO_MASTER_20261014.png"
 SKILLS = ("kumihan-accord", "kumihan-accord-web", "kumihan-accord-documents", "kumihan-accord-review")
 ROOT = "kumihan-accord/"
+SOURCE = Path(__file__).resolve().parents[1] / "plugins/kumihan-accord"
+RESOURCE_TREES = ("runtime", "rules", "schemas", "locales", "references")
 PNG_SIGNATURE = bytes.fromhex("89504e470d0a1a0a")
 
 
@@ -39,8 +41,8 @@ def skill_icons(archive, skill_root, members):
 
 def check(out):
     manifest = json.loads((out / "MANIFEST.json").read_text(encoding="utf-8"))
-    assert manifest["product"] == "KUMIHAN｜Accord" and manifest["version"] == "0.1.1"
-    assert manifest["tag"] == "kumihan-fr-v0.1.1"
+    assert manifest["product"] == "KUMIHAN｜Accord" and manifest["version"] == "0.1.2"
+    assert manifest["tag"] == "kumihan-fr-v0.1.2"
     packs = manifest["packages"]
     assert len(packs) == 15 and len({p["name"] for p in packs}) == 15
     checksums = (out / "SHA256SUMS.txt").read_text(encoding="utf-8").splitlines()
@@ -52,7 +54,7 @@ def check(out):
     inspected = 0
     for pkg in packs:
         filename = pkg["name"]
-        assert filename.endswith("-v0.1.1.zip")
+        assert filename.endswith("-v0.1.2.zip")
         archive_bytes = (out / filename).read_bytes()
         assert hashlib.sha256(archive_bytes).hexdigest() == pkg["sha256"]
         with ZipFile(out / filename) as zipfile:
@@ -60,6 +62,7 @@ def check(out):
             members = zipfile.namelist()
             assert len(members) == len(set(members)) and members
             assert not any(p.startswith("/") or ".." in Path(p).parts for p in members)
+            assert not any(Path(p).name in {"mcp.json", ".mcp.json", "AGENTS.md"} or "/control/" in p or "/server/" in p for p in members)
             assert any(p.endswith("/LICENSE") for p in members)
             assert any(p.endswith("/rules/catalog.json") for p in members)
             skills = [p.removesuffix("/SKILL.md") for p in members if p.endswith("/SKILL.md")]
@@ -82,7 +85,7 @@ def check(out):
                 )
                 assert ROOT + name in members
                 data = json.loads(zipfile.read(ROOT + name))
-                assert data["name"] == "kumihan-accord" and data["version"] == "0.1.1"
+                assert data["name"] == "kumihan-accord" and data["version"] == "0.1.2"
                 assert " | " in data["description"]
                 if "chatgpt-codex" in filename:
                     for m in (data, json.loads(zipfile.read(ROOT + ".codex-plugin/plugin.json"))):
@@ -100,6 +103,14 @@ def check(out):
                     # Gemini CLI docs do not define a standard icon UI field.
                     # Include the asset, but never claim Gemini displays it.
                     assert "gemini-extension.json" in name
+            resource_roots = skills if "-skill-" in filename else [ROOT.rstrip("/"), *skills]
+            for resource_root in resource_roots:
+                for tree in RESOURCE_TREES:
+                    for source in (SOURCE / tree).rglob("*"):
+                        if source.is_file() and "__pycache__" not in source.parts and source.suffix != ".pyc":
+                            entry = resource_root + "/" + source.relative_to(SOURCE).as_posix()
+                            assert entry in members and zipfile.read(entry) == source.read_bytes(), entry
+                assert zipfile.read(resource_root + "/sources.json") == (SOURCE / "sources.json").read_bytes()
             for sha in digests:
                 if canonical_logo_digest is None:
                     canonical_logo_digest = sha

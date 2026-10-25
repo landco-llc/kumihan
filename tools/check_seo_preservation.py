@@ -50,6 +50,8 @@ def audit(root=ROOT):
             if grafia_published(root,path,expected,raw,family): continue
             from grafia_v011_transition import allowed as grafia_allowed
             if grafia_allowed(path,family,root,expected_preimage=expected): continue
+            from fr_accord_v012_source_transition import admitted as fr_source_admitted
+            if fr_source_admitted(root,path,expected,raw,family): continue
             if hashlib.sha256(raw).hexdigest()!=expected:
                 errors.append(f'{family}: main bytes changed: {path}')
     return errors

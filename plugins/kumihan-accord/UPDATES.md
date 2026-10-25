@@ -1,3 +1,7 @@
+## 0.1.2
+
+Version 0.1.2 keeps earlier release artifacts unchanged. No automatic host update. See RELEASE_NOTES.md and references/regional-capabilities.md for the limited executed helper scope and reference-only regional resources.
+
 # Updates / Actualizaciones
 
 Español: guarda las personalizaciones, verifica versión y SHA-256 y actualiza según el método compatible con tu host; no sobrescribas otras lenguas.

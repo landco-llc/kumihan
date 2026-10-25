@@ -1,0 +1,254 @@
+{
+  "scope": "fr-v012-source-only-published-v011",
+  "baseline": "1b27c93da59179ebdc82f323a86f812382f94bb8",
+  "frozen_contract_sha256": "689cb61441ebd3e52634241ecadbc6c925a445f0b1570889e719d3f0d585a7f4",
+  "facts_sha256": "c246586f75ce76f7305af71494833448c064cd8b182984baf6ec6c9ec7d083aa",
+  "rows": [
+    {
+      "path": "plugins/kumihan-accord/.claude-plugin/plugin.json",
+      "family": "protected",
+      "historical": "37f0a89ada5c0c35c23cb45147b39bb9072a71351fdc53026b5ad4257f347d85",
+      "successor": "905bdd4304463875574fda796fd12e1999b5a5b3bf0b7c890d55c3204c133b2f"
+    },
+    {
+      "path": "plugins/kumihan-accord/.codex-plugin/plugin.json",
+      "family": "protected",
+      "historical": "368fad0bb4f75ea63141b37a994b6e6ed0d236c8374b0389cc1f0632a90e27b6",
+      "successor": "b9cd65184efc918bb396c356f7ae1d178d963d352d53e894cac14e27cbb5eee3"
+    },
+    {
+      "path": "plugins/kumihan-accord/INSTALL.md",
+      "family": "protected",
+      "historical": "346baa1e6940ecafc57219eed1b7e0af38b8848c99312f777e88c1342a7c3f02",
+      "successor": "ba35663b3bdcdb3f612c79e36c825871708347eac96a0bb78b5ecc34b91ca40d"
+    },
+    {
+      "path": "plugins/kumihan-accord/RELEASE_NOTES.md",
+      "family": "protected",
+      "historical": "4452355ff47121aa5165ea0e3025b3a3d741ad288879b488e635fc429fe03a22",
+      "successor": "5041dafa67724d27e1355db3f0244759c8339206aeacc0638fd29322dc438c2f"
+    },
+    {
+      "path": "plugins/kumihan-accord/UPDATES.md",
+      "family": "protected",
+      "historical": "f32d79087248c707f48738aa0d17b8cef59dce58af0690e3163af38933ccbb58",
+      "successor": "a86d950373db75aa8b4f8cab3c44091826d06b12edf1c2672dddc5dcc14366a3"
+    },
+    {
+      "path": "plugins/kumihan-accord/gemini-extension.json",
+      "family": "protected",
+      "historical": "29badaa4a52f33c6c0b074f28d4aa4890b21853ef208f9703bdc3327cb7829a2",
+      "successor": "141bb5bcd4e25128d4d14495279cd9e700650800c12e337a667d3cf410848d19"
+    },
+    {
+      "path": "plugins/kumihan-accord/plugin.json",
+      "family": "protected",
+      "historical": "b0963bf52e40ce9e892d2844c3528f7c5a1b6ab3c3d1bd0697e57e8d8d84b464",
+      "successor": "35b44df7381cf3684d36e3f64eb54bb0cd6f2b868cf59ab88f2d687755170c7b"
+    },
+    {
+      "path": "plugins/kumihan-accord/references/review.md",
+      "family": "protected",
+      "historical": "ea443c55b156f18de1d6ea62d71a3541b4822ad9f012de3e606a160d30ed4030",
+      "successor": "276ea107841558762c012e5373a2b718dd309550b3b5915b5dea9c58a354935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/runtime/checks.py",
+      "family": "protected",
+      "historical": "a4cde64d7024fb263f6dd030783b6f74de87852568017f7e3194a67424529d9a",
+      "successor": "faa57323e84425602ff861678b1cc28573127a571bcfb461e9a946d79b0746c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-documents/SKILL.md",
+      "family": "protected",
+      "historical": "28b944776539c429acb5d0dbc33fd08243f551a1c14b79ed746d54dafe0b3d1b",
+      "successor": "3c4ab6c0a98dd0acf2993dd6bddfa1ace14f3ae24beacef9f01b33945dfa4768"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-documents/references/review.md",
+      "family": "protected",
+      "historical": "ea443c55b156f18de1d6ea62d71a3541b4822ad9f012de3e606a160d30ed4030",
+      "successor": "276ea107841558762c012e5373a2b718dd309550b3b5915b5dea9c58a354935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-documents/runtime/checks.py",
+      "family": "protected",
+      "historical": "a4cde64d7024fb263f6dd030783b6f74de87852568017f7e3194a67424529d9a",
+      "successor": "faa57323e84425602ff861678b1cc28573127a571bcfb461e9a946d79b0746c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-documents/sources.json",
+      "family": "protected",
+      "historical": "093c4fae2d85631c33f4b6d65e1247ad3878a1505cb2928039b3db35ce7fa6c2",
+      "successor": "df14735be406ea932dcab2fb061e1bff33c3f50929ce94331c9c1b25fe6bf158"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-review/SKILL.md",
+      "family": "protected",
+      "historical": "24444339a6923ac6a75a80e23eb584c2db089f3131a12deeb65fa715c936e85f",
+      "successor": "e07ef2e886fc1c3f4ca48ae902121a0a42e264976aa22b2725c76e7c76c2935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-review/references/review.md",
+      "family": "protected",
+      "historical": "ea443c55b156f18de1d6ea62d71a3541b4822ad9f012de3e606a160d30ed4030",
+      "successor": "276ea107841558762c012e5373a2b718dd309550b3b5915b5dea9c58a354935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-review/runtime/checks.py",
+      "family": "protected",
+      "historical": "a4cde64d7024fb263f6dd030783b6f74de87852568017f7e3194a67424529d9a",
+      "successor": "faa57323e84425602ff861678b1cc28573127a571bcfb461e9a946d79b0746c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-review/sources.json",
+      "family": "protected",
+      "historical": "093c4fae2d85631c33f4b6d65e1247ad3878a1505cb2928039b3db35ce7fa6c2",
+      "successor": "df14735be406ea932dcab2fb061e1bff33c3f50929ce94331c9c1b25fe6bf158"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-web/SKILL.md",
+      "family": "protected",
+      "historical": "29345bb99da423bff6eba5851023380994871c9056669daaa1c2afe120d40d8d",
+      "successor": "bd9485bcd5729ceca15d5b1e247fd0dfb4451d7b8984065df598be5b8c4d5735"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-web/references/review.md",
+      "family": "protected",
+      "historical": "ea443c55b156f18de1d6ea62d71a3541b4822ad9f012de3e606a160d30ed4030",
+      "successor": "276ea107841558762c012e5373a2b718dd309550b3b5915b5dea9c58a354935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-web/runtime/checks.py",
+      "family": "protected",
+      "historical": "a4cde64d7024fb263f6dd030783b6f74de87852568017f7e3194a67424529d9a",
+      "successor": "faa57323e84425602ff861678b1cc28573127a571bcfb461e9a946d79b0746c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord-web/sources.json",
+      "family": "protected",
+      "historical": "093c4fae2d85631c33f4b6d65e1247ad3878a1505cb2928039b3db35ce7fa6c2",
+      "successor": "df14735be406ea932dcab2fb061e1bff33c3f50929ce94331c9c1b25fe6bf158"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord/SKILL.md",
+      "family": "protected",
+      "historical": "e302f1906da5b942d97c72709d6e90536a8abad623685aca18b1d06486ea3599",
+      "successor": "ee68c28c8ff221bdc7ecf1a5a51c1d393de8dbc18eed20e38c62d0e0b6cbd2ec"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord/references/review.md",
+      "family": "protected",
+      "historical": "ea443c55b156f18de1d6ea62d71a3541b4822ad9f012de3e606a160d30ed4030",
+      "successor": "276ea107841558762c012e5373a2b718dd309550b3b5915b5dea9c58a354935a"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord/runtime/checks.py",
+      "family": "protected",
+      "historical": "a4cde64d7024fb263f6dd030783b6f74de87852568017f7e3194a67424529d9a",
+      "successor": "faa57323e84425602ff861678b1cc28573127a571bcfb461e9a946d79b0746c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/skills/kumihan-accord/sources.json",
+      "family": "protected",
+      "historical": "093c4fae2d85631c33f4b6d65e1247ad3878a1505cb2928039b3db35ce7fa6c2",
+      "successor": "df14735be406ea932dcab2fb061e1bff33c3f50929ce94331c9c1b25fe6bf158"
+    },
+    {
+      "path": "plugins/kumihan-accord/sources.json",
+      "family": "protected",
+      "historical": "093c4fae2d85631c33f4b6d65e1247ad3878a1505cb2928039b3db35ce7fa6c2",
+      "successor": "df14735be406ea932dcab2fb061e1bff33c3f50929ce94331c9c1b25fe6bf158"
+    },
+    {
+      "path": "kumihan-fr.en.html",
+      "family": "bodies",
+      "historical": "2bfba1ddb747cfda9e8f99d2a04a0fcaf941076edf703781d0561bf464309448",
+      "successor": "33e620af315954962ecc1fb2bde7f3dd07d291c042db66ad2f0ef64991200a2f"
+    },
+    {
+      "path": "kumihan-fr.html",
+      "family": "bodies",
+      "historical": "253f65ae1230e44b426fd8fed517d9cc744e2ee34f69479cbe00434147a117bb",
+      "successor": "f723302b010d745d8a355293bfc6ac948b7776af8a50a491178cf5deb73e26be"
+    },
+    {
+      "path": "kumihan-fr.ja.html",
+      "family": "bodies",
+      "historical": "a2901b5e25cb9f826cefb14a71977c6be320695c07000d531668d3c4c06e78f6",
+      "successor": "cdeb4ca297be81f3e5abd45725e9c3fa600ebb0545d7f60ab69fed84f732755e"
+    },
+    {
+      "path": "docs/install-accord-chatgpt.en.html",
+      "family": "bodies",
+      "historical": "92c18acc41c766780495ad17111421eda12bdd05dbd15295231dc3c19b593cec",
+      "successor": "a9be43b0defaf8219a01870f50263a5d92a501872d4c310a93d74ced9a4dd197"
+    },
+    {
+      "path": "docs/install-accord-chatgpt.html",
+      "family": "bodies",
+      "historical": "e6b92c2316384f6d94326cf060f6239758886e7319d98b048c58129d566dd62d",
+      "successor": "f2eeb2b58a8b3c5b930823945c3fa20ef7283cb14086a70d967c754e65ad5da9"
+    },
+    {
+      "path": "docs/install-accord-chatgpt.ja.html",
+      "family": "bodies",
+      "historical": "a268f18aa3c90ea79f8edbadb99aa02835355d5bfab9d8f32b1034f6d2b6d438",
+      "successor": "98086bdfe9a9d1a286fc95fd0e5f8dbb75a333f749c6f3073e323ebae301756d"
+    },
+    {
+      "path": "docs/install-accord-claude.en.html",
+      "family": "bodies",
+      "historical": "bc93f01929f945aa6f5f5463c2ab328386574cc3cab5f3280bbff03d73c6bf99",
+      "successor": "dce49c0a63a93badbcee2890dc508341d81bdd1da2c2e0a96e954987aaeaefac"
+    },
+    {
+      "path": "docs/install-accord-claude.html",
+      "family": "bodies",
+      "historical": "2ece642e82b077dd5d6c6c3ce552a55a2296d16fa8fcbe8deaf7db2f93c2dc99",
+      "successor": "9d9040bb0b14a2561a1d685ad76d68b6ee96e7d3a435878ab7daf043084f0c9b"
+    },
+    {
+      "path": "docs/install-accord-claude.ja.html",
+      "family": "bodies",
+      "historical": "0228bbe970f4402c078f9d8be7fc3b0c4edf1cb232635f56185753afeac669a7",
+      "successor": "e6d752e2d5248fe4e7f6d72b48f4fb91b979c4320bf2874b2e9c0e7daf96be3f"
+    },
+    {
+      "path": "docs/install-accord-gemini.en.html",
+      "family": "bodies",
+      "historical": "2021c4cbb2dd045e8d926e65a8fc87c9b706e924fa46ba972d64a960005da5f0",
+      "successor": "d31b8657005ed4ee1b9e29876b6351fefa583780fd54ca5d011859441b40cd93"
+    },
+    {
+      "path": "docs/install-accord-gemini.html",
+      "family": "bodies",
+      "historical": "c136e1a4039227ec571105b3fb194f8f884c1772c8b985b97d378f2a8ea34962",
+      "successor": "95a196aa06f74b398ced10f17a8659e0b89c6beac1ce1c3f7386ee2c6e032cca"
+    },
+    {
+      "path": "docs/install-accord-gemini.ja.html",
+      "family": "bodies",
+      "historical": "710dbb5b926aa60eea5212e6c833a2f9f8016740fad95cfd116f838bf9071472",
+      "successor": "a016e73891121911c0e542b74f7d8762d603af00b6ff0597472e4b8b76a194c7"
+    },
+    {
+      "path": "plugins/kumihan-accord/README.md",
+      "family": "protected",
+      "historical": "2b8ce85eaf4ff4356379ccee93a1411f701dfaf01d5284026e6ec8651d24a643",
+      "successor": "8f78a1094d8cb5d931e2f2120d7192279013be83be433ba0b8f0cb4c53c198aa"
+    }
+  ],
+  "predecessors": {
+    "README.md": {
+      "before": "60747391347fe9f028764358139f211a826710895670e9f7208559aa3de23818",
+      "after": "66fede7cc846009c6269fd5fe96f0141db5a47f0e92ed6de12c9dbb42ff2489e",
+      "before_line": "| FR | KUMIHAN｜Accord（フランス語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T16:10:42Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |",
+      "after_line": "| FR | KUMIHAN｜Accord（フランス語） | v0.1.2 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T16:10:42Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |"
+    },
+    "assets/edition-versions.json": {
+      "before": "6c41dc71677d8f70b3652ddd1af9aa25da6c756929a5ca2d7fd242e331acf306",
+      "after": "c246586f75ce76f7305af71494833448c064cd8b182984baf6ec6c9ec7d083aa"
+    }
+  }
+}

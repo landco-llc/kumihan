@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build 15 reproducible Accord v0.1.1 archives and checksums (stdlib only)."""
+"""Build 15 reproducible Accord v0.1.2 archives and checksums (stdlib only)."""
 import argparse
 import hashlib
 import json
@@ -36,7 +36,7 @@ def build(out):
             assert any(f.name=="SKILL.md" for f,_ in entries)
             assert any(f.name=="openai.yaml" for f,_ in entries)
             assert any(f.name.endswith(".png") for f,_ in entries)
-            target=out/f"{name}-{host}-skill-v0.1.1.zip"
+            target=out/f"{name}-{host}-skill-v0.1.2.zip"
             write_zip(target,entries)
             hashes.append((target.name,hashlib.sha256(target.read_bytes()).hexdigest()))
         entries=[]
@@ -44,18 +44,18 @@ def build(out):
             rel=f.relative_to(SOURCE).as_posix()
             include=rel.startswith(("skills/","rules/","locales/","references/","schemas/","runtime/","entrypoints/","assets/")) or rel in COMMON or rel=="sources.json" or rel in META[host]
             if include:entries.append((f,"kumihan-accord/"+rel))
-        target=out/f"kumihan-accord-{PLUGINS[host]}-v0.1.1.zip"
+        target=out/f"kumihan-accord-{PLUGINS[host]}-v0.1.2.zip"
         write_zip(target,entries)
         hashes.append((target.name,hashlib.sha256(target.read_bytes()).hexdigest()))
     hashes.sort()
     (out/"SHA256SUMS.txt").write_text("".join(f"{digest}  {name}\n" for name,digest in hashes),encoding="utf-8")
-    (out/"MANIFEST.json").write_text(json.dumps({"product":"KUMIHAN｜Accord","version":"0.1.1",
-          "tag":"kumihan-fr-v0.1.1","packages":[{"name":n,"sha256":h} for n,h in hashes]},
+    (out/"MANIFEST.json").write_text(json.dumps({"product":"KUMIHAN｜Accord","version":"0.1.2",
+          "tag":"kumihan-fr-v0.1.2","packages":[{"name":n,"sha256":h} for n,h in hashes]},
           ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     return len(hashes)
 
 if __name__=="__main__":
     parser=argparse.ArgumentParser()
-    parser.add_argument("--out",type=Path,default=ROOT/"dist"/"accord-v0.1.1")
+    parser.add_argument("--out",type=Path,default=ROOT/"dist"/"accord-v0.1.2")
     args=parser.parse_args()
     print(f"Built {build(args.out)} ZIPs")
