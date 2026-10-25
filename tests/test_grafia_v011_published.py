@@ -13,6 +13,8 @@ class GrafiaPublishedAdmission(unittest.TestCase):
         from grafia_v011_published_transition import load, predecessor_facts, predecessor_readme
         data,facts=load(ROOT)
         raw=(ROOT/'assets/edition-versions.json').read_bytes()
+        from fr_accord_v012_source_transition import predecessor
+        raw=predecessor(raw,ROOT,'assets/edition-versions.json')
         self.assertEqual(json.loads(raw)['editions']['es'],facts)
         before=json.loads(predecessor_facts(raw,ROOT))
         self.assertEqual(before['editions']['es']['published_version'],'0.1.0')
@@ -20,6 +22,7 @@ class GrafiaPublishedAdmission(unittest.TestCase):
         for code,row in json.loads(raw)['editions'].items():
             if code!='es':self.assertEqual(row,before['editions'][code],code)
         readme=(ROOT/'README.md').read_bytes()
+        readme=predecessor(readme,ROOT,'README.md')
         previous=predecessor_readme(readme,ROOT)
         row=data['readme'];self.assertEqual(previous.replace(row['before_line'].encode(),row['after_line'].encode(),1),readme)
 
@@ -50,7 +53,8 @@ class GrafiaPublishedAdmission(unittest.TestCase):
         from grafia_v011_published_transition import RECORD, FACTS, FROZEN, load
         import shutil
         import tempfile
-        names=(RECORD,FACTS,*FROZEN,'assets/edition-versions.json')
+        from fr_accord_v012_source_transition import RECORD as FR_RECORD
+        names=(RECORD,FACTS,*FROZEN,'assets/edition-versions.json',FR_RECORD)
         with tempfile.TemporaryDirectory() as t:
             root=Path(t)
             for name in names:
