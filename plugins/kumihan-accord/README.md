@@ -23,7 +23,7 @@ Release: [GitHub Release v0.1.2](https://github.com/landco-llc/kumihan/releases/
 
 The public display name is KUMIHAN｜Accord; versions occur only in ZIP filenames and technical manifests. Machine identifier kumihan-accord is ASCII for Claude and Gemini compatibility. The package is free. Each skill includes its full independent rules and references.
 
-[Installation / Instalación](INSTALL.md) · [Rules](rules/catalog.json) · [Sources](sources.json) · [Review limitations](LIGHT_REVIEW.md).
+[Installation / Instalación](INSTALL.md) · [Rules](rules/catalog.json) · [Sources](sources.json) · [Review limitations](VERIFICATION.md).
 
 GitHub releases do not imply ChatGPT, Claude or Gemini official directory approval. Native host and rendering tests need real execution.
 
