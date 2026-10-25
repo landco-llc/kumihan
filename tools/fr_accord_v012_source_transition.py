@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 RECORD = 'tests/contracts/fr-accord-v012-source-transition.json'
-RECORD_SHA = 'f90951c46fcc4f38b7ab7b378b0dedade2892cbb40e412ce56293510a2eed89e'
+RECORD_SHA = '87d971ac863a64a05ee47dec8d15f3cb529bc8af90ce351d3370695a1e1e1551'
 def sha(raw): return hashlib.sha256(raw).hexdigest()
 def admitted(root, path, expected, raw, family):
     try:
@@ -17,3 +17,21 @@ def admitted(root, path, expected, raw, family):
         return any(r['path']==path and r['family']==family and r['historical']==expected and r['successor']==sha(raw) for r in data['rows'])
     except (OSError, ValueError, KeyError, TypeError):
         return False
+
+def predecessor(raw, root, name):
+    encoded=(Path(root)/RECORD).read_bytes()
+    if sha(encoded)!=RECORD_SHA: raise ValueError('Changed FR source admission')
+    row=json.loads(encoded)['predecessors'][name]
+    if sha(raw)==row['before']: return raw
+    if sha(raw)!=row['after']: raise ValueError('Unknown FR successor')
+    if name=='assets/edition-versions.json':
+        data=json.loads(raw)
+        if data['editions']['fr']['source_version']!='0.1.2': raise ValueError('Changed FR source')
+        data['editions']['fr']['source_version']='0.1.1'
+        previous=(json.dumps(data,ensure_ascii=False,indent=2)+'\n').encode()
+    else:
+        old,new=row['before_line'].encode(),row['after_line'].encode()
+        if raw.count(new)!=1: raise ValueError('Changed FR README row')
+        previous=raw.replace(new,old,1)
+    if sha(previous)!=row['before']: raise ValueError('Changed non-FR content')
+    return previous

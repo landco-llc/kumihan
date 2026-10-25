@@ -184,5 +184,17 @@
       "historical": "a2901b5e25cb9f826cefb14a71977c6be320695c07000d531668d3c4c06e78f6",
       "successor": "cdeb4ca297be81f3e5abd45725e9c3fa600ebb0545d7f60ab69fed84f732755e"
     }
-  ]
+  ],
+  "predecessors": {
+    "README.md": {
+      "before": "60747391347fe9f028764358139f211a826710895670e9f7208559aa3de23818",
+      "after": "66fede7cc846009c6269fd5fe96f0141db5a47f0e92ed6de12c9dbb42ff2489e",
+      "before_line": "| FR | KUMIHAN｜Accord（フランス語） | v0.1.1 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T16:10:42Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |",
+      "after_line": "| FR | KUMIHAN｜Accord（フランス語） | v0.1.2 | [サイト](https://landco-llc.github.io/kumihan/kumihan-fr.html) | [plugins/kumihan-accord](plugins/kumihan-accord/README.md) | 公開済 / Published **v0.1.1** · 2026-10-18T16:10:42Z · [Release](https://github.com/landco-llc/kumihan/releases/tag/kumihan-fr-v0.1.1) |"
+    },
+    "assets/edition-versions.json": {
+      "before": "6c41dc71677d8f70b3652ddd1af9aa25da6c756929a5ca2d7fd242e331acf306",
+      "after": "c246586f75ce76f7305af71494833448c064cd8b182984baf6ec6c9ec7d083aa"
+    }
+  }
 }

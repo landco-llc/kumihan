@@ -32,13 +32,17 @@ def load(root):
         data['facts']['before_es']!=source['facts']['after_es'] or
         data['readme']['before_sha256']!=source['readme']['after_sha256']):
         raise ValueError('Changed exact Grafía source predecessor')
-    if sha((root/'assets/edition-versions.json').read_bytes())!=data['facts']['after_sha256']:
+    from fr_accord_v012_source_transition import predecessor
+    current_facts=predecessor((root/'assets/edition-versions.json').read_bytes(),root,'assets/edition-versions.json')
+    if sha(current_facts)!=data['facts']['after_sha256']:
         raise ValueError('Changed current edition facts')
     return data,facts
 
 
 def predecessor_facts(raw,root):
     data,facts=load(root);row=data['facts']
+    from fr_accord_v012_source_transition import predecessor
+    raw=predecessor(raw,root,'assets/edition-versions.json')
     if sha(raw)==row['before_sha256']:return raw
     if sha(raw)!=row['after_sha256']:raise ValueError('Changed current edition facts')
     content=json.loads(raw)
@@ -51,6 +55,8 @@ def predecessor_facts(raw,root):
 
 def predecessor_readme(raw,root):
     data,_=load(root);row=data['readme']
+    from fr_accord_v012_source_transition import predecessor
+    raw=predecessor(raw,root,'README.md')
     if sha(raw)==row['before_sha256']:return raw
     if sha(raw)!=row['after_sha256']:raise ValueError('Changed current README')
     before,after=row['before_line'].encode(),row['after_line'].encode()
@@ -76,6 +82,9 @@ def predecessor_body(root,path,raw):
 def admitted(root,path,before,raw,family):
     try:
         data,_=load(root);row=data['paths'].get(path)
+        if path=='README.md':
+            from fr_accord_v012_source_transition import predecessor
+            raw=predecessor(raw,root,path)
         if not row or row['family']!=family or row['baseline_sha256']!=before or sha(raw)!=row['after_sha256']:return False
         if row['kind']=='gateway-es-card':return sha(predecessor_body(root,path,raw))==row['preimage_sha256']
         if row['kind']=='readme-es-row':return sha(predecessor_readme(raw,root))==data['readme']['before_sha256']
